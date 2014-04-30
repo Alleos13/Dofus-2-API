@@ -90,7 +90,7 @@ package com.ankamagames.berilia.types.graphic
          }
       }
       
-      protected function changeState(newState:*) : void {
+      function changeState(newState:*) : void {
          var target:GraphicContainer = null;
          var properties:Array = null;
          var ui:UiRootContainer = null;
@@ -144,7 +144,7 @@ package com.ankamagames.berilia.types.graphic
          }
       }
       
-      protected function makeSnapshot(currentState:*, target:GraphicContainer) : void {
+      function makeSnapshot(currentState:*, target:GraphicContainer) : void {
          var property:String = null;
          var propertyXml:XML = null;
          if(!this._snapshot[currentState])
@@ -180,7 +180,7 @@ package com.ankamagames.berilia.types.graphic
          }
       }
       
-      protected function restoreSnapshot(currentState:*) : void {
+      function restoreSnapshot(currentState:*) : void {
          var component:GraphicContainer = null;
          var ui:UiRootContainer = null;
          var target:String = null;

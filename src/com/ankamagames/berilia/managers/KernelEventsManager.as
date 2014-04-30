@@ -126,7 +126,7 @@ package com.ankamagames.berilia.managers
          FpsManager.getInstance().stopTracking("hook");
       }
       
-      private function processOldMessage(e:UiRenderEvent) : void {
+      function processOldMessage(e:UiRenderEvent) : void {
          var hook:Hook = null;
          var args:Array = null;
          var s:String = null;
@@ -165,7 +165,7 @@ package com.ankamagames.berilia.managers
          delete this._aLoadingUi[[e.uiTarget.name]];
       }
       
-      private function throwAsyncError(e:TimerEvent) : void {
+      function throwAsyncError(e:TimerEvent) : void {
          this._asyncErrorTimer.reset();
          if(!(this._asyncError.length))
          {

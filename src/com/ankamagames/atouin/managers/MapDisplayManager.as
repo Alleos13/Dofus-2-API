@@ -260,7 +260,7 @@ package com.ankamagames.atouin.managers
          this._renderer.modeTactic(yes);
       }
       
-      private function init() : void {
+      function init() : void {
          this._renderRequestStack = [];
          this._renderer = new MapRenderer(Atouin.getInstance().worldContainer,Elements.getInstance());
          this._renderer.addEventListener(RenderMapEvent.GFX_LOADING_START,this.logGfxLoadTime,false,0,true);
@@ -274,7 +274,7 @@ package com.ankamagames.atouin.managers
          this._loader.addEventListener(ResourceErrorEvent.ERROR,this.onMapFailed,false,0,true);
       }
       
-      private function mapDisplayed() : void {
+      function mapDisplayed() : void {
          this._currentMapRendered = true;
          InteractiveCellManager.getInstance().updateInteractiveCell(this._currentDataMap);
          this._renderRequestStack.shift();
@@ -284,7 +284,7 @@ package com.ankamagames.atouin.managers
          this.checkForRender();
       }
       
-      private function checkForRender() : void {
+      function checkForRender() : void {
          var dataMap:Map = null;
          var msg:MapsLoadingCompleteMessage = null;
          var atouin:Atouin = null;
@@ -333,7 +333,7 @@ package com.ankamagames.atouin.managers
          this._loader.load(new Uri(getMapUriFromId(pMap.mapId)),null);
       }
       
-      private function onMapLoaded(e:ResourceLoadedEvent) : void {
+      function onMapLoaded(e:ResourceLoadedEvent) : void {
          var request:RenderRequest = RenderRequest(this._renderRequestStack[0]);
          this._nMapLoadEnd = getTimer();
          var map:Map = new Map();
@@ -367,7 +367,7 @@ package com.ankamagames.atouin.managers
          FrustumManager.getInstance().updateMap();
       }
       
-      private function onMapFailed(e:ResourceErrorEvent) : void {
+      function onMapFailed(e:ResourceErrorEvent) : void {
          _log.error("Impossible de charger la map " + e.uri + " : " + e.errorMsg);
          this._currentMapRendered = true;
          this._renderRequestStack.shift();
@@ -375,7 +375,7 @@ package com.ankamagames.atouin.managers
          this.signalMapLoadingFailure(MapLoadingFailedMessage.NO_FILE);
       }
       
-      private function logGfxLoadTime(e:Event) : void {
+      function logGfxLoadTime(e:Event) : void {
          if(e.type == RenderMapEvent.GFX_LOADING_START)
          {
             this._nGfxLoadStart = getTimer();
@@ -386,7 +386,7 @@ package com.ankamagames.atouin.managers
          }
       }
       
-      private function tweenInterMap(e:Event) : void {
+      function tweenInterMap(e:Event) : void {
          this._screenshot.alpha = this._screenshot.alpha - this._screenshot.alpha / 3;
          if(this._screenshot.alpha < 0.01)
          {
@@ -396,7 +396,7 @@ package com.ankamagames.atouin.managers
          }
       }
       
-      private function mapRenderProgress(e:ProgressEvent) : void {
+      function mapRenderProgress(e:ProgressEvent) : void {
          if(!this._currentMap)
          {
             this._currentMapRendered = true;
@@ -410,7 +410,7 @@ package com.ankamagames.atouin.managers
          Atouin.getInstance().handler.process(msg);
       }
       
-      private function signalMapLoadingFailure(errorReasonId:uint) : void {
+      function signalMapLoadingFailure(errorReasonId:uint) : void {
          var msg:MapLoadingFailedMessage = new MapLoadingFailedMessage();
          if(!this._currentMap)
          {
@@ -424,7 +424,7 @@ package com.ankamagames.atouin.managers
          Atouin.getInstance().handler.process(msg);
       }
       
-      private function mapRendered(e:RenderMapEvent) : void {
+      function mapRendered(e:RenderMapEvent) : void {
          var tt:uint = 0;
          var tml:uint = 0;
          var tgl:* = 0;
@@ -463,7 +463,7 @@ package com.ankamagames.atouin.managers
          }
       }
       
-      private function removeScreenShot() : void {
+      function removeScreenShot() : void {
          this._screenshot.parent.removeChild(this._screenshot);
          this._screenshotData.fillRect(new Rectangle(0,0,this._screenshotData.width,this._screenshotData.height),4.27819008E9);
       }

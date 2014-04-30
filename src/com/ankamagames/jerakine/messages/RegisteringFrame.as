@@ -31,7 +31,7 @@ package com.ankamagames.jerakine.messages
          return false;
       }
       
-      protected function registerMessages() : void {
+      function registerMessages() : void {
          throw new AbstractMethodCallError();
       }
       
@@ -43,7 +43,7 @@ package com.ankamagames.jerakine.messages
          return true;
       }
       
-      protected function register(type:Class, handler:Function) : void {
+      function register(type:Class, handler:Function) : void {
          if((!this._allowsRegistration) || (!type) || (this._registeredTypes[type]))
          {
             throw new IllegalOperationError();

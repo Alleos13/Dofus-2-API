@@ -150,7 +150,7 @@ package com.ankamagames.berilia.api
          if(_apiClass[name])
          {
             apiDesc = DescribeTypeCache.typeDescription(_apiClass[name]);
-            api = new sharedDefinition.getDefinition("d2api::" + name + "Api") as Class();
+            api = null;
             apiRef = _apiClass[name];
             instancied = false;
             for each (meta in apiDesc..metadata)

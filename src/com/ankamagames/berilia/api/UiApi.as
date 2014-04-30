@@ -564,7 +564,7 @@ package com.ankamagames.berilia.api
       
       private var oldTextureBounds:Rectangle;
       
-      private function getInitBounds(pTx:Texture) : Rectangle {
+      function getInitBounds(pTx:Texture) : Rectangle {
          var bg:MovieClip = null;
          if((this.oldTextureUri == null) || ((pTx) && (pTx.uri)) && (!(this.oldTextureUri == pTx.uri.toString())))
          {
@@ -612,7 +612,7 @@ package com.ankamagames.berilia.api
          this.addPart("left",source,pTarget,0,pTarget.height / 2);
       }
       
-      private function addPart(name:String, source:DisplayObjectContainer, target:Rectangle, x:int, y:int) : DisplayObject {
+      function addPart(name:String, source:DisplayObjectContainer, target:Rectangle, x:int, y:int) : DisplayObject {
          if(!source)
          {
             return null;

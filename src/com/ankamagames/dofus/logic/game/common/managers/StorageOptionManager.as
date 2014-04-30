@@ -275,7 +275,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          return this.getStorageViewOrFilter();
       }
       
-      private function getStorageViewOrFilter() : IStorageView {
+      function getStorageViewOrFilter() : IStorageView {
          if(this.hasFilter())
          {
             return this.inventory.getView("storageFiltered") as IStorageView;
@@ -414,7 +414,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          this.getBankView(this.bankCategory).updateView();
       }
       
-      private function get inventory() : Inventory {
+      function get inventory() : Inventory {
          if(!this._inventory)
          {
             this._inventory = InventoryManager.getInstance().inventory;
@@ -422,7 +422,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          return this._inventory;
       }
       
-      private function refreshViews() : void {
+      function refreshViews() : void {
          var bidHouseFilterView:StorageBidHouseFilterView = null;
          var smithMagicFilterView:StorageSmithMagicFilterView = null;
          var craftFilterView:StorageCraftFilterView = null;
@@ -447,7 +447,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          }
       }
       
-      private function refreshView(viewName:String) : void {
+      function refreshView(viewName:String) : void {
          var view:IInventoryView = this.inventory.getView(viewName);
          this.inventory.removeView(viewName);
          var name:String = this.currentStorageView.name;

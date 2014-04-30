@@ -185,7 +185,7 @@ package com.ankamagames.berilia.components
          return super.process(msg);
       }
       
-      private function updateScrollBar(reset:Boolean=false) : void {
+      function updateScrollBar(reset:Boolean=false) : void {
          if(_tText.numLines * _tText.getLineMetrics(0).height < height)
          {
             _tText.scrollV = 0;
@@ -213,7 +213,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function updateScrollBarPos() : void {
+      function updateScrollBarPos() : void {
          if(this._nScrollPos >= 0)
          {
             this._sbScrollBar.x = this.width - this._sbScrollBar.width;
@@ -228,19 +228,19 @@ package com.ankamagames.berilia.components
          }
       }
       
-      override protected function updateAlign() : void {
+      override function updateAlign() : void {
          if(this._sbScrollBar.disabled)
          {
             super.updateAlign();
          }
       }
       
-      private function onTextWheel(e:MouseEvent) : void {
+      function onTextWheel(e:MouseEvent) : void {
          e.delta = e.delta * 3;
          this._sbScrollBar.onWheel(e);
       }
       
-      private function onScroll(e:Event) : void {
+      function onScroll(e:Event) : void {
          _tText.scrollV = this._sbScrollBar.value / this._sbScrollBar.max * _tText.maxScrollV;
       }
    }

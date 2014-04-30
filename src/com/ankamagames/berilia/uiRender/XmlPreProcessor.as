@@ -52,7 +52,7 @@ package com.ankamagames.berilia.uiRender
          }
       }
       
-      private function matchImport(node:XMLNode) : void {
+      function matchImport(node:XMLNode) : void {
          var currNode:XMLNode = null;
          if(node == null)
          {
@@ -86,7 +86,7 @@ package com.ankamagames.berilia.uiRender
          }
       }
       
-      private function replaceTemplateCall(node:XMLNode) : Boolean {
+      function replaceTemplateCall(node:XMLNode) : Boolean {
          var currNode:XMLNode = null;
          var currVarNode:XMLNode = null;
          var templateNode:XMLNode = null;
@@ -152,7 +152,7 @@ package com.ankamagames.berilia.uiRender
          return bRes;
       }
       
-      private function onTemplateLoaded(e:TemplateLoadedEvent) : void {
+      function onTemplateLoaded(e:TemplateLoadedEvent) : void {
          if((TemplateManager.getInstance().areLoaded(this._aImportFile)) && (this._bMustBeRendered))
          {
             this._bMustBeRendered = this.replaceTemplateCall(this._xDoc.firstChild);

@@ -96,7 +96,7 @@ package com.ankamagames.atouin.renderers
          }
       }
       
-      protected function getText(count:int) : String {
+      function getText(count:int) : String {
          return null;
       }
       

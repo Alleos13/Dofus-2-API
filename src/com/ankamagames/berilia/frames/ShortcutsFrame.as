@@ -97,7 +97,7 @@ package com.ankamagames.berilia.frames
          }
       }
       
-      private function handleMessage(pKeyboardMessage:KeyboardMessage) : Boolean {
+      function handleMessage(pKeyboardMessage:KeyboardMessage) : Boolean {
          var imeActive:* = false;
          var sh:Shortcut = null;
          var tf:TextField = null;
@@ -183,13 +183,13 @@ package com.ankamagames.berilia.frames
          return false;
       }
       
-      private function getShortcut(pKeyboardMessage:KeyboardMessage) : Shortcut {
+      function getShortcut(pKeyboardMessage:KeyboardMessage) : Shortcut {
          var sShortcut:String = BindsManager.getInstance().getShortcutString(pKeyboardMessage.keyboardEvent.keyCode,this.getCharCode(pKeyboardMessage));
          var bind:Bind = BindsManager.getInstance().getBind(new Bind(sShortcut,"",pKeyboardMessage.keyboardEvent.altKey,pKeyboardMessage.keyboardEvent.ctrlKey,pKeyboardMessage.keyboardEvent.shiftKey));
          return bind?Shortcut.getShortcutByName(bind.targetedShortcut):null;
       }
       
-      private function getCharCode(pKeyboardMessage:KeyboardMessage) : int {
+      function getCharCode(pKeyboardMessage:KeyboardMessage) : int {
          var charCode:* = 0;
          if((pKeyboardMessage.keyboardEvent.shiftKey) && (pKeyboardMessage.keyboardEvent.keyCode == 52))
          {
@@ -209,7 +209,7 @@ package com.ankamagames.berilia.frames
          return charCode;
       }
       
-      private function onWindowDeactivate(pEvent:Event) : void {
+      function onWindowDeactivate(pEvent:Event) : void {
          this._heldShortcuts.length = 0;
       }
       

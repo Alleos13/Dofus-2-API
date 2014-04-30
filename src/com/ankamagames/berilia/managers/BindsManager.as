@@ -509,7 +509,7 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      private function fillShortcutsEnum() : void {
+      function fillShortcutsEnum() : void {
          var i:String = null;
          ShortcutsEnum.BASIC_SHORTCUT_FORBIDDEN.push(new Bind("C","",false,true));
          ShortcutsEnum.BASIC_SHORTCUT_FORBIDDEN.push(new Bind("V","",false,true));
@@ -552,7 +552,7 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      private function parseBindsXml(sXml:String, removeOldbinds:Boolean) : void {
+      function parseBindsXml(sXml:String, removeOldbinds:Boolean) : void {
          var s:Bind = null;
          var shortcut:Shortcut = null;
          var bind:Bind = null;

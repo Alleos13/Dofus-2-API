@@ -36,7 +36,7 @@ package com.ankamagames.berilia.components.gridRenderer
          super.update(data,index,target,selected,subIndex);
       }
       
-      override protected function uiUpdate(ui:UiRootContainer, target:DisplayObject, data:*, selected:Boolean, subIndex:uint) : void {
+      override function uiUpdate(ui:UiRootContainer, target:DisplayObject, data:*, selected:Boolean, subIndex:uint) : void {
          if(DisplayObjectContainer(target).numChildren)
          {
             ui.uiClass[_updateFunctionName](SecureCenter.secure(data),_cptNameReferences[DisplayObjectContainer(target).getChildAt(0)],selected);

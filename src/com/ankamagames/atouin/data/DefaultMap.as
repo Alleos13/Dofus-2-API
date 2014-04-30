@@ -36,7 +36,7 @@ package com.ankamagames.atouin.data
       override public function fromRaw(raw:IDataInput, decryptionKey:ByteArray=null) : void {
       }
       
-      private function createLayer(id:uint) : Layer {
+      function createLayer(id:uint) : Layer {
          var bgLayer:Layer = null;
          bgLayer = new Layer(this);
          bgLayer.cells = new Array();

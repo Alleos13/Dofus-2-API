@@ -87,7 +87,7 @@ package com.ankamagames.dofus.console.debug
          }
       }
       
-      private function parseMonster() : void {
+      function parseMonster() : void {
          var monster:Monster = null;
          var npc:Npc = null;
          _monsters = new Dictionary();

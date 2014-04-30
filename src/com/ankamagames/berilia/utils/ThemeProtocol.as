@@ -15,7 +15,7 @@ package com.ankamagames.berilia.utils
       
       private static var _themePath:String;
       
-      override protected function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
+       function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
          var path:String = null;
          getAdapter(uri,forcedAdapter);
          if(!_themePath)

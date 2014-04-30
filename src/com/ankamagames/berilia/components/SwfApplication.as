@@ -97,7 +97,7 @@ package com.ankamagames.berilia.components
          return true;
       }
       
-      private function initLoader() : void {
+      function initLoader() : void {
          if(!this._ldr)
          {
             this._ldr = new Loader();
@@ -111,7 +111,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function clearLoader() : void {
+      function clearLoader() : void {
          if(this._ldr)
          {
             this._ldr.unloadAndStop();
@@ -122,7 +122,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onInit(e:Event) : void {
+      function onInit(e:Event) : void {
          this._app = this._ldr.content;
          this._app.width = width;
          this._app.height = height;
@@ -134,18 +134,18 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onMouseMouse(e:MouseEvent) : void {
+      function onMouseMouse(e:MouseEvent) : void {
          stage.dispatchEvent(e);
       }
       
-      private function onProgress(e:ProgressEvent) : void {
+      function onProgress(e:ProgressEvent) : void {
          if(this.loadProgressHandler != null)
          {
             this.loadProgressHandler(this,e);
          }
       }
       
-      private function onError(e:Event) : void {
+      function onError(e:Event) : void {
          this.clearLoader();
          if(this.loadErrorHandler != null)
          {

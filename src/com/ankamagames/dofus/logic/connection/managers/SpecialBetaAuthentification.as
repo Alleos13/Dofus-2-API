@@ -58,7 +58,7 @@ package com.ankamagames.dofus.logic.connection.managers
          return this._haveAccess;
       }
       
-      private function onDataReceived(e:Event) : void {
+      function onDataReceived(e:Event) : void {
          /*
           * Decompilation error
           * Code may be obfuscated

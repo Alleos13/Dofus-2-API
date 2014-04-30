@@ -35,7 +35,7 @@ package com.ankamagames.jerakine.resources.loaders
       
       protected var _filesTotal:uint = 0;
       
-      protected function checkCache(uri:Uri) : Boolean {
+      function checkCache(uri:Uri) : Boolean {
          var cr:CacheableResource = this.getCachedValue(uri);
          if(cr != null)
          {
@@ -74,7 +74,7 @@ package com.ankamagames.jerakine.resources.loaders
          this._cache = null;
       }
       
-      protected function dispatchSuccess(uri:Uri, resourceType:uint, resource:*) : void {
+      function dispatchSuccess(uri:Uri, resourceType:uint, resource:*) : void {
          var resourceUrl:String = null;
          var cr:CacheableResource = null;
          var rle:ResourceLoadedEvent = null;
@@ -115,7 +115,7 @@ package com.ankamagames.jerakine.resources.loaders
          }
       }
       
-      protected function dispatchFailure(uri:Uri, errorMsg:String, errorCode:uint) : void {
+      function dispatchFailure(uri:Uri, errorMsg:String, errorCode:uint) : void {
          var ree:ResourceErrorEvent = null;
          this._filesLoaded++;
          if(hasEventListener(ResourceErrorEvent.ERROR))

@@ -189,7 +189,7 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      private function processWaitingUi(sId:String, checkCache:Boolean=true) : void {
+      function processWaitingUi(sId:String, checkCache:Boolean=true) : void {
          var currentUi:RenderQueueItem = null;
          if(!this._aRendering[sId])
          {
@@ -204,7 +204,7 @@ package com.ankamagames.berilia.managers
          delete this._aRendering[[sId]];
       }
       
-      private function onUiRender(e:UiRenderEvent) : void {
+      function onUiRender(e:UiRenderEvent) : void {
          var uiDef:UiDefinition = e.uiRenderer.uiDefinition;
          if((((!(e.uiTarget.uiData.module is PreCompiledUiModule)) && (uiDef)) && (uiDef.useCache)) && (!this._aCache[uiDef.name]) && (BeriliaConstants.USE_UI_CACHE))
          {

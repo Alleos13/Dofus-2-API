@@ -293,7 +293,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return characterEntity;
       }
       
-      protected function updateActorLook(actorId:int, newLook:EntityLook, smoke:Boolean=false) : AnimatedCharacter {
+      function updateActorLook(actorId:int, newLook:EntityLook, smoke:Boolean=false) : AnimatedCharacter {
          var tel:TiphonEntityLook = null;
          var entity:GameContextActorInformations = null;
          var oldBone:* = 0;
@@ -364,7 +364,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return ac;
       }
       
-      protected function updateActorDisposition(actorId:int, newDisposition:EntityDispositionInformations) : void {
+      function updateActorDisposition(actorId:int, newDisposition:EntityDispositionInformations) : void {
          if(this._entities[actorId])
          {
             (this._entities[actorId] as GameContextActorInformations).disposition = newDisposition;
@@ -398,7 +398,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      protected function updateActorOrientation(actorId:int, newOrientation:uint) : void {
+      function updateActorOrientation(actorId:int, newOrientation:uint) : void {
          var displayAura:* = false;
          if(this._entities[actorId])
          {
@@ -425,7 +425,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      protected function hideActor(actorId:int) : void {
+      function hideActor(actorId:int) : void {
          var disp:IDisplayable = DofusEntities.getEntity(actorId) as IDisplayable;
          if(disp)
          {
@@ -437,7 +437,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      protected function removeActor(actorId:int) : void {
+      function removeActor(actorId:int) : void {
          this.hideActor(actorId);
          var tiphonSprite:TiphonSprite = DofusEntities.getEntity(actorId) as TiphonSprite;
          if(tiphonSprite)
@@ -456,7 +456,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      protected function switchPokemonMode() : Boolean {
+      function switchPokemonMode() : Boolean {
          var action:SwitchCreatureModeAction = null;
          if((this._creaturesLimit > -1) && (!(this._creaturesMode == (!Kernel.getWorker().getFrame(FightEntitiesFrame) && this._creaturesLimit < 50 && this._humanNumber >= this._creaturesLimit))))
          {
@@ -468,7 +468,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return false;
       }
       
-      protected function updateCreaturesLimit() : void {
+      function updateCreaturesLimit() : void {
          var vingtpourcent:* = NaN;
          this._creaturesLimit = OptionManager.getOptionManager("tiphon").creaturesMode;
          if((this._creaturesMode) && (this._creaturesLimit > 0))
@@ -485,7 +485,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          e.sprite.setAnimation(animsRandom[int(animsRandom.length * Math.random())]);
       }
       
-      private function onAtouinOptionChange(e:PropertyChangeEvent) : void {
+      function onAtouinOptionChange(e:PropertyChangeEvent) : void {
          var entities:Array = null;
          var entitie:* = undefined;
          if(e.propertyName == "useLowDefSkin")
@@ -505,18 +505,18 @@ package com.ankamagames.dofus.logic.game.common.frames
          return this._creaturesFightMode;
       }
       
-      private function onUpdateEntitySuccess(e:TiphonEvent) : void {
+      function onUpdateEntitySuccess(e:TiphonEvent) : void {
          e.sprite.removeEventListener(TiphonEvent.RENDER_FAILED,this.onUpdateEntityFail);
          e.sprite.removeEventListener(TiphonEvent.RENDER_SUCCEED,this.onUpdateEntitySuccess);
       }
       
-      private function onUpdateEntityFail(e:TiphonEvent) : void {
+      function onUpdateEntityFail(e:TiphonEvent) : void {
          e.sprite.removeEventListener(TiphonEvent.RENDER_FAILED,this.onUpdateEntityFail);
          e.sprite.removeEventListener(TiphonEvent.RENDER_SUCCEED,this.onUpdateEntitySuccess);
          TiphonSprite(e.sprite).setAnimation("AnimStatique");
       }
       
-      private function isIncarnation(entity:String) : Boolean {
+      function isIncarnation(entity:String) : Boolean {
          var incarnation:Incarnation = null;
          var boneIdMale:String = null;
          var boneIdFemale:String = null;
@@ -534,7 +534,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return false;
       }
       
-      protected function onPropertyChanged(e:PropertyChangeEvent) : void {
+      function onPropertyChanged(e:PropertyChangeEvent) : void {
          if(e.propertyName == "mapCoordinates")
          {
             KernelEventsManager.getInstance().processCallback(HookList.MapComplementaryInformationsData,this._worldPoint,this._currentSubAreaId,e.propertyValue);

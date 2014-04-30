@@ -90,7 +90,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return true;
       }
       
-      private function displayZone(name:String, cells:Vector.<uint>, color:uint) : void {
+      function displayZone(name:String, cells:Vector.<uint>, color:uint) : void {
          var s:Selection = new Selection();
          s.renderer = new ZoneDARenderer(PlacementStrataEnums.STRATA_MOVEMENT);
          s.color = new Color(color);

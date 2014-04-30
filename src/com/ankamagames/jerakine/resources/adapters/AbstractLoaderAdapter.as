@@ -95,7 +95,7 @@ package com.ankamagames.jerakine.resources.adapters
          this._uri = null;
       }
       
-      protected function getResource(ldr:LoaderInfo) : * {
+      function getResource(ldr:LoaderInfo) : * {
          throw new AbstractMethodCallError("This method should be overrided.");
       }
       
@@ -135,22 +135,22 @@ package com.ankamagames.jerakine.resources.adapters
          this._ldr = null;
       }
       
-      protected function init(ldr:LoaderInfo) : void {
+      function init(ldr:LoaderInfo) : void {
          var res:* = this.getResource(LoaderInfo(ldr));
          this.releaseLoader();
          this._observer.onLoaded(this._uri,this.getResourceType(),res);
       }
       
-      protected function onInit(e:Event) : void {
+      function onInit(e:Event) : void {
          this.init(LoaderInfo(e.target));
       }
       
-      protected function onError(ee:ErrorEvent) : void {
+      function onError(ee:ErrorEvent) : void {
          this.releaseLoader();
          this._observer.onFailed(this._uri,ee.text,ResourceErrorCode.RESOURCE_NOT_FOUND);
       }
       
-      protected function onProgress(pe:ProgressEvent) : void {
+      function onProgress(pe:ProgressEvent) : void {
          this._observer.onProgress(this._uri,pe.bytesLoaded,pe.bytesTotal);
       }
    }

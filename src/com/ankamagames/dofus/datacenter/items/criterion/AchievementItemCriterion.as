@@ -42,7 +42,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          return clonedCriterion;
       }
       
-      override protected function getCriterion() : int {
+      override function getCriterion() : int {
          var id:* = 0;
          var achievementFinishedList:Vector.<uint> = (Kernel.getWorker().getFrame(QuestFrame) as QuestFrame).finishedAchievementsIds;
          for each (id in achievementFinishedList)

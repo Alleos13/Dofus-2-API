@@ -178,7 +178,7 @@ package com.ankamagames.dofus.network.types.game.mount
          {
             output.writeInt(this.model);
             output.writeShort(this.ancestor.length);
-            _i3 = 0;
+            var _i3 = 0;
             while(_i3 < this.ancestor.length)
             {
                if(this.ancestor[_i3] < 0)
@@ -193,7 +193,7 @@ package com.ankamagames.dofus.network.types.game.mount
                }
             }
             output.writeShort(this.behaviors.length);
-            _i4 = 0;
+            var _i4 = 0;
             while(_i4 < this.behaviors.length)
             {
                if(this.behaviors[_i4] < 0)

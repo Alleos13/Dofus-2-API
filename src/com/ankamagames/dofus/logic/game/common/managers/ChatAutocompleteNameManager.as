@@ -67,11 +67,11 @@ package com.ankamagames.dofus.logic.game.common.managers
          return null;
       }
       
-      private function emptyCache() : void {
+      function emptyCache() : void {
          this._subStringCache = "";
       }
       
-      private function generateNameList(subString:String) : Vector.<String> {
+      function generateNameList(subString:String) : Vector.<String> {
          var entry:Object = null;
          var name:String = null;
          var lcName:String = null;
@@ -92,7 +92,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          return ret;
       }
       
-      private function getListByName(name:String) : Vector.<Object> {
+      function getListByName(name:String) : Vector.<Object> {
          var key:String = name.charAt(0).toLowerCase();
          if(!this._dict.hasOwnProperty(key))
          {
@@ -101,7 +101,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          return this._dict[key];
       }
       
-      private function indexOf(list:Vector.<Object>, name:String) : int {
+      function indexOf(list:Vector.<Object>, name:String) : int {
          var i:uint = 0;
          while(i < list.length)
          {
@@ -114,7 +114,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          return -1;
       }
       
-      private function insertEntry(entry:Object) : void {
+      function insertEntry(entry:Object) : void {
          var list:Vector.<Object> = this.getListByName(entry.name);
          var i:uint = 0;
          while((i < list.length) && (list[i].priority > entry.priority))

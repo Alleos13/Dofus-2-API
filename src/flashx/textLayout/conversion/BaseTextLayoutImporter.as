@@ -226,7 +226,7 @@ package flashx.textLayout.conversion
          this._textFlowConfiguration = param1;
       }
       
-      protected function importPropertyErrorHandler(param1:Property, param2:Object) : void {
+      function importPropertyErrorHandler(param1:Property, param2:Object) : void {
          reportError(Property.createErrorString(param1,param2));
       }
       
@@ -242,7 +242,7 @@ package flashx.textLayout.conversion
          return null;
       }
       
-      protected function importFromString(param1:String) : TextFlow {
+      function importFromString(param1:String) : TextFlow {
          var xmlTree:XML = null;
          var source:String = param1;
          var originalSettings:Object = XML.settings();
@@ -251,11 +251,11 @@ package flashx.textLayout.conversion
          xmlTree = new XML(source);
       }
       
-      protected function importFromXML(param1:XML) : TextFlow {
+      function importFromXML(param1:XML) : TextFlow {
          return this.parseContent(param1[0]);
       }
       
-      protected function parseContent(param1:XML) : TextFlow {
+      function parseContent(param1:XML) : TextFlow {
          var _loc2_:XML = param1..TextFlow[0];
          if(_loc2_)
          {
@@ -268,7 +268,7 @@ package flashx.textLayout.conversion
          return this._ns;
       }
       
-      protected function checkNamespace(param1:XML) : Boolean {
+      function checkNamespace(param1:XML) : Boolean {
          var _loc2_:Namespace = param1.namespace();
          if(!this._textFlowNamespace)
          {
@@ -434,19 +434,19 @@ package flashx.textLayout.conversion
          }
       }
       
-      protected function handleUnknownElement(param1:String, param2:XML, param3:FlowGroupElement) : void {
+      function handleUnknownElement(param1:String, param2:XML, param3:FlowGroupElement) : void {
          reportError(GlobalSettings.resourceStringFunction("unknownElement",[param1]));
       }
       
-      protected function handleUnknownAttribute(param1:String, param2:String) : void {
+      function handleUnknownAttribute(param1:String, param2:String) : void {
          reportError(GlobalSettings.resourceStringFunction("unknownAttribute",[param2,param1]));
       }
       
-      protected function getElementInfo(param1:XML) : FlowElementInfo {
+      function getElementInfo(param1:XML) : FlowElementInfo {
          return this._config.lookup(param1.name().localName);
       }
       
-      protected function GetClass(param1:XML) : Class {
+      function GetClass(param1:XML) : Class {
          var _loc2_:FlowElementInfo = this._config.lookup(param1.name().localName);
          return _loc2_?_loc2_.flowClass:null;
       }
@@ -503,7 +503,7 @@ package flashx.textLayout.conversion
          }
       }
       
-      protected function onResetImpliedPara(param1:ParagraphElement) : void {
+      function onResetImpliedPara(param1:ParagraphElement) : void {
       }
    }
 }

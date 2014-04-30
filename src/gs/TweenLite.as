@@ -378,7 +378,7 @@ package gs
          this.initted = true;
       }
       
-      protected function addSubTween(param1:String, param2:Function, param3:Object, param4:Object, param5:Object=null) : void {
+      function addSubTween(param1:String, param2:Function, param3:Object, param4:Object, param5:Object=null) : void {
          var _loc6_:String = null;
          this._subTweens[this._subTweens.length] = 
             {
@@ -492,7 +492,7 @@ package gs
          }
       }
       
-      protected function easeProxy(param1:Number, param2:Number, param3:Number, param4:Number) : Number {
+      function easeProxy(param1:Number, param2:Number, param3:Number, param4:Number) : Number {
          return this.vars.proxiedEase.apply(null,arguments.concat(this.vars.easeParams));
       }
       

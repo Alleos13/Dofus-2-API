@@ -169,7 +169,7 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
          return this._types;
       }
       
-      protected function getItemIndex(item:ItemWrapper, list:Vector.<ItemWrapper>=null) : int {
+      function getItemIndex(item:ItemWrapper, list:Vector.<ItemWrapper>=null) : int {
          var iw:ItemWrapper = null;
          if(list == null)
          {
@@ -188,7 +188,7 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
          return -1;
       }
       
-      private function sortItemsByIndex(a:ItemWrapper, b:ItemWrapper) : int {
+      function sortItemsByIndex(a:ItemWrapper, b:ItemWrapper) : int {
          if(a.sortOrder > b.sortOrder)
          {
             return -1;
@@ -200,7 +200,7 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
          return 1;
       }
       
-      private function compareFunction(a:ItemWrapper, b:ItemWrapper, sortDepth:uint=0) : int {
+      function compareFunction(a:ItemWrapper, b:ItemWrapper, sortDepth:uint=0) : int {
          var returnValue:* = 0;
          switch(this._sortFieldsCache[sortDepth])
          {
@@ -306,7 +306,7 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
          return this.compareFunction(a,b,++sortDepth);
       }
       
-      private function getItemAveragePrice(pItemGID:uint) : int {
+      function getItemAveragePrice(pItemGID:uint) : int {
          var avgPricesFrame:AveragePricesFrame = Kernel.getWorker().getFrame(AveragePricesFrame) as AveragePricesFrame;
          return avgPricesFrame.pricesData.items["item" + pItemGID];
       }

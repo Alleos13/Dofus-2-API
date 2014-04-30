@@ -86,23 +86,23 @@ package com.ankamagames.dofus.misc
          return movementPath;
       }
       
-      override protected function getLinearVelocity() : Number {
+      function getLinearVelocity() : Number {
          return RUN_LINEAR_VELOCITY;
       }
       
-      override protected function getHorizontalDiagonalVelocity() : Number {
+      function getHorizontalDiagonalVelocity() : Number {
          return RUN_HORIZONTAL_DIAGONAL_VELOCITY;
       }
       
-      override protected function getVerticalDiagonalVelocity() : Number {
+      function getVerticalDiagonalVelocity() : Number {
          return RUN_VERTICAL_DIAGONAL_VELOCITY;
       }
       
-      override protected function getAnimation() : String {
+      function getAnimation() : String {
          return RUN_ANIMATION;
       }
       
-      override protected function stopMovement(entity:IMovable) : void {
+      function stopMovement(entity:IMovable) : void {
          super.stopMovement(entity);
          var path:MovementPath = getRandomPath(entity);
          if(path.path.length > 0)

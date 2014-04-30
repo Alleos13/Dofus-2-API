@@ -93,11 +93,11 @@ package com.ankamagames.dofus.logic.common.managers
          this._notificationList = new Vector.<NotificationManager>();
       }
       
-      private function getNotification(pId:uint) : Notification {
+      function getNotification(pId:uint) : Notification {
          return this._notificationList[pId];
       }
       
-      private function openNotification(pNotif:Object) : void {
+      function openNotification(pNotif:Object) : void {
          KernelEventsManager.getInstance().processCallback(ChatHookList.Notification,pNotif);
          if(pNotif.notifyUser)
          {

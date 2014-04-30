@@ -231,7 +231,7 @@ package com.ankamagames.dofus.logic.game.common.misc.stackedMessages
          return returnValue;
       }
       
-      private function stopAction() : void {
+      function stopAction() : void {
          actionStarted = false;
          InteractiveElementBehavior.currentElementId = -1;
          this.removeIcon();

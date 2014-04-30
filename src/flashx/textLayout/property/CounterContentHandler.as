@@ -148,16 +148,12 @@ package flashx.textLayout.property
          }
          if(_counterContentPattern1.test(param1))
          {
-            return {"counter":"ordered"};
+			 return null;
          }
          if(_counterContentPattern2.test(param1))
          {
             _loc3_ = extractListStyleTypeFromCounter(param1);
-            return 
-               {
-                  "counter":"ordered",
-                  "ordered":_loc3_
-               };
+			return null;
          }
          if(_countersContentPattern1.test(param1))
          {
@@ -166,22 +162,13 @@ package flashx.textLayout.property
          if(_countersContentPattern2.test(param1))
          {
             _loc4_ = extractSuffixFromCounters2(param1);
-            return 
-               {
-                  "counters":"ordered",
-                  "suffix":_loc4_
-               };
+			return null;
          }
          if(_countersContentPattern3.test(param1))
          {
             _loc3_ = extractListStyleTypeFromCounters(param1);
             _loc4_ = extractSuffixFromCounters3(param1);
-            return 
-               {
-                  "counters":"ordered",
-                  "suffix":_loc4_,
-                  "ordered":_loc3_
-               };
+			return null;
          }
          return undefined;
       }

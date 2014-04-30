@@ -368,14 +368,14 @@ package com.ankamagames.dofus.kernel
          }
       }
       
-      private function onDofusOptionChange(e:PropertyChangeEvent) : void {
+      function onDofusOptionChange(e:PropertyChangeEvent) : void {
          if((e.propertyName == "allowLog") && (!e.propertyValue) && (_worker.contains(LogFrame)))
          {
             _worker.removeFrame(_worker.getFrame(LogFrame));
          }
       }
       
-      private function addInitialFrames(firstLaunch:Boolean=false) : void {
+      function addInitialFrames(firstLaunch:Boolean=false) : void {
          if(firstLaunch)
          {
             _worker.addFrame(new InitializationFrame());
@@ -411,7 +411,7 @@ package com.ankamagames.dofus.kernel
          }
       }
       
-      private function initCaches() : void {
+      function initCaches() : void {
          UriCacheFactory.init(".swf",new DisplayObjectCache(100));
          UriCacheFactory.init(".png",new Cache(200,new LruGarbageCollector()));
       }

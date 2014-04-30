@@ -248,7 +248,7 @@ package com.ankamagames.dofus.logic.game.approach.managers
          return this._state == STATE_FINISHED;
       }
       
-      private function download(partName:String) : void {
+      function download(partName:String) : void {
          var dpmsg:DownloadPartMessage = null;
          this._state = STATE_DOWNLOADING;
          if(this._parts[partName].state == PartStateEnum.PART_NOT_INSTALLED)

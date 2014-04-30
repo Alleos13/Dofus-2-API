@@ -161,7 +161,7 @@ package com.ankamagames.dofus.internalDatacenter.guild
       public function removeHolder(h:ISlotDataHolder) : void {
       }
       
-      private function init() : void {
+      function init() : void {
          var path:String = null;
          var pathFullSize:String = null;
          var iconId:* = 0;

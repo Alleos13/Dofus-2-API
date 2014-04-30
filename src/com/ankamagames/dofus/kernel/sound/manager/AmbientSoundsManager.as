@@ -274,10 +274,10 @@ package com.ankamagames.dofus.kernel.sound.manager
          this.stopMusicAndAmbient();
       }
       
-      private function init() : void {
+      function init() : void {
       }
       
-      private function onPropertyChanged(pEvent:PropertyChangeEvent) : void {
+      function onPropertyChanged(pEvent:PropertyChangeEvent) : void {
          if(pEvent.propertyName != "infiniteLoopMusics")
          {
             return;

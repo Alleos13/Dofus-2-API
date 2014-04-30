@@ -502,7 +502,7 @@ package flashx.textLayout.conversion
          this._importHtmlElement = param1;
       }
       
-      override protected function importFromString(param1:String) : TextFlow {
+      override function importFromString(param1:String) : TextFlow {
          var _loc2_:TextFlow = null;
          var _loc3_:XML = this.toXML(param1);
          if(_loc3_)
@@ -516,7 +516,7 @@ package flashx.textLayout.conversion
          return _loc2_;
       }
       
-      override protected function importFromXML(param1:XML) : TextFlow {
+      override function importFromXML(param1:XML) : TextFlow {
          var _loc2_:TextFlow = new TextFlow(_textFlowConfiguration);
          if(this.preserveHTMLElement)
          {
@@ -612,7 +612,7 @@ package flashx.textLayout.conversion
          return _loc2_;
       }
       
-      override protected function onResetImpliedPara(param1:ParagraphElement) : void {
+      override function onResetImpliedPara(param1:ParagraphElement) : void {
          replaceBreakElementsWithParaSplits(param1);
       }
       
@@ -638,7 +638,7 @@ package flashx.textLayout.conversion
          return _loc2_;
       }
       
-      protected function createInlineGraphicFromXML(param1:XML) : InlineGraphicElement {
+      function createInlineGraphicFromXML(param1:XML) : InlineGraphicElement {
          var _loc2_:InlineGraphicElement = new InlineGraphicElement();
          var _loc3_:Array = [_ilgFormatImporter,_ilgMiscFormatImporter,_classAndIdImporter];
          parseAttributes(param1,_loc3_);
@@ -661,7 +661,7 @@ package flashx.textLayout.conversion
          return null;
       }
       
-      protected function parseFontAttributes(param1:XML) : ITextLayoutFormat {
+      function parseFontAttributes(param1:XML) : ITextLayoutFormat {
          var _loc6_:* = NaN;
          var _loc7_:* = NaN;
          var _loc2_:Array = [_fontImporter,_fontMiscImporter];
@@ -689,10 +689,10 @@ package flashx.textLayout.conversion
          return _loc3_;
       }
       
-      override protected function handleUnknownAttribute(param1:String, param2:String) : void {
+      override function handleUnknownAttribute(param1:String, param2:String) : void {
       }
       
-      override protected function handleUnknownElement(param1:String, param2:XML, param3:FlowGroupElement) : void {
+      override function handleUnknownElement(param1:String, param2:XML, param3:FlowGroupElement) : void {
          var _loc4_:FlowGroupElement = null;
          var _loc8_:FlowElement = null;
          parseAttributes(param2,[_classAndIdImporter]);
@@ -734,11 +734,11 @@ package flashx.textLayout.conversion
          super.parseObject(param1.toUpperCase(),param2,param3,param4);
       }
       
-      override protected function checkNamespace(param1:XML) : Boolean {
+      override function checkNamespace(param1:XML) : Boolean {
          return true;
       }
       
-      protected function toXML(param1:String) : XML {
+      function toXML(param1:String) : XML {
          var xml:XML = null;
          var source:String = param1;
          var originalSettings:Object = XML.settings();
@@ -747,7 +747,7 @@ package flashx.textLayout.conversion
          xml = this.toXMLInternal(source);
       }
       
-      protected function toXMLInternal(param1:String) : XML {
+      function toXMLInternal(param1:String) : XML {
          var _loc5_:String = null;
          var _loc6_:Object = null;
          var _loc7_:String = null;
@@ -840,7 +840,7 @@ package flashx.textLayout.conversion
                return _loc2_;
             }
             
-            protected function doesStartTagCloseElement(param1:String) : Boolean {
+            function doesStartTagCloseElement(param1:String) : Boolean {
                switch(param1)
                {
                   case "BR":
@@ -851,7 +851,7 @@ package flashx.textLayout.conversion
                }
             }
             
-            protected function appendTextChild(param1:XML, param2:String) : void {
+            function appendTextChild(param1:XML, param2:String) : void {
                var xml:XML = null;
                var parent:XML = param1;
                var text:String = param2;

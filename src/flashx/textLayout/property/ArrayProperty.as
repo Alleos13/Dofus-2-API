@@ -20,7 +20,7 @@ package flashx.textLayout.property
          return this._memberType;
       }
       
-      protected function checkArrayTypes(param1:Object) : Boolean {
+      function checkArrayTypes(param1:Object) : Boolean {
          var _loc2_:Object = null;
          if(param1 == null)
          {

@@ -100,13 +100,13 @@ package com.ankamagames.berilia.utils.web
          }
       }
       
-      private function onConnect(event:Event) : void {
+      function onConnect(event:Event) : void {
          var htppSocket:HttpSocket = new HttpSocket(Object(event).socket,this._rootPath);
          htppSocket.addEventListener(Event.COMPLETE,this.onHttpSocketComplete);
          this._sockets.push(htppSocket);
       }
       
-      private function onHttpSocketComplete(e:Event) : void {
+      function onHttpSocketComplete(e:Event) : void {
          var httpSocketToRemove:HttpSocket = e.target as HttpSocket;
          this._sockets.splice(this._sockets.indexOf(httpSocketToRemove),1);
       }

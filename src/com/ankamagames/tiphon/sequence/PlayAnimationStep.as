@@ -187,10 +187,9 @@ package com.ankamagames.tiphon.sequence
          return "play " + this._animationName + " on " + (this._target?this._target.name:this._target);
       }
       
-      override protected function onTimeOut(e:TimerEvent) : void {
+       function onTimeOut(e:TimerEvent) : void {
          this._callbackExecuted = true;
          this.onAnimationEnd(null);
-         super.onTimeOut(e);
       }
    }
 }

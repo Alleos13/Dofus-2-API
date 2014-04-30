@@ -108,7 +108,7 @@ package com.ankamagames.berilia.types.graphic
          this._open = true;
       }
       
-      private function getInitialPos(pIcon:Object) : Object {
+      function getInitialPos(pIcon:Object) : Object {
          var iconPos:Object = null;
          for each (iconPos in this._initialPos)
          {
@@ -155,7 +155,7 @@ package com.ankamagames.berilia.types.graphic
          this.killAllTween();
       }
       
-      private function killAllTween() : void {
+      function killAllTween() : void {
          var t:TweenMax = null;
          for each (t in this._tween)
          {
@@ -165,7 +165,7 @@ package com.ankamagames.berilia.types.graphic
          this._tween = new Array();
       }
       
-      private function shapeTweenFinished(e:TweenEvent) : void {
+      function shapeTweenFinished(e:TweenEvent) : void {
          this._shape.graphics.clear();
       }
       

@@ -31,7 +31,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          return clonedCriterion;
       }
       
-      override protected function getCriterion() : int {
+      override function getCriterion() : int {
          var breed:int = PlayedCharacterManager.getInstance().infos.breed;
          return breed;
       }

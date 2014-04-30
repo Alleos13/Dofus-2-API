@@ -355,7 +355,7 @@ package com.ankamagames.berilia.components
          return this._aMountainsCtr[i];
       }
       
-      private function charactersDisplay() : void {
+      function charactersDisplay() : void {
          var g:GraphicContainer = null;
          var te:TiphonEntity = null;
          var children:uint = 0;
@@ -500,7 +500,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onMoutainPartRendered(event:Event) : void {
+      function onMoutainPartRendered(event:Event) : void {
          if(event.type == TiphonEvent.RENDER_SUCCEED)
          {
             event.target.removeEventListener(TiphonEvent.RENDER_SUCCEED,this.onMoutainPartRendered);
@@ -522,7 +522,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function createMountainsCtrBitmap(ctr:GraphicContainer, charWheelID:int) : void {
+      function createMountainsCtrBitmap(ctr:GraphicContainer, charWheelID:int) : void {
          var bmp:Bitmap = null;
          var previousAlpha:Number = ctr.alpha;
          ctr.alpha = 1;
@@ -559,12 +559,12 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function endRotationMountains() : void {
+      function endRotationMountains() : void {
          EnterFrameDispatcher.removeEventListener(this.onRotateMountains);
          this._bMovingMountains = false;
       }
       
-      private function rotateMountains(sens:int) : void {
+      function rotateMountains(sens:int) : void {
          var listener:IInterfaceListener = null;
          var listener2:IInterfaceListener = null;
          this._nSelectedChara = this._nSelectedChara - sens;
@@ -604,7 +604,7 @@ package com.ankamagames.berilia.components
          EnterFrameDispatcher.addEventListener(this.onRotateMountains,"mountainsRotation",StageShareManager.stage.frameRate);
       }
       
-      private function isIterable(obj:*) : Boolean {
+      function isIterable(obj:*) : Boolean {
          if(obj is Array)
          {
             return true;
@@ -639,7 +639,7 @@ package com.ankamagames.berilia.components
          return false;
       }
       
-      private function onRotateMountains(e:Event) : void {
+      function onRotateMountains(e:Event) : void {
          var ctr:GraphicContainer = null;
          var angle:* = NaN;
          var coef:* = NaN;

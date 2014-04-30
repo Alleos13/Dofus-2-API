@@ -175,7 +175,7 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      private function onLoadError(e:ResourceErrorEvent) : void {
+      function onLoadError(e:ResourceErrorEvent) : void {
          var f:File = null;
          _log.error("Cannot load " + e.uri + "(" + e.errorMsg + ")");
          var path:String = e.uri.toString();
@@ -191,7 +191,7 @@ package com.ankamagames.berilia.managers
          Berilia.getInstance().handler.process(new ThemeLoadErrorMessage(e.uri.fileName));
       }
       
-      private function onLoad(e:ResourceLoadedEvent) : void {
+      function onLoad(e:ResourceLoadedEvent) : void {
          switch(e.uri.fileType.toLowerCase())
          {
             case "dt":
@@ -200,7 +200,7 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      private function onDTLoad(e:ResourceLoadedEvent) : void {
+      function onDTLoad(e:ResourceLoadedEvent) : void {
          var thName:String = null;
          var thDesc:String = null;
          var th:Theme = null;
@@ -228,7 +228,7 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      private function searchDtFile(rootPath:File) : File {
+      function searchDtFile(rootPath:File) : File {
          var file:File = null;
          var dt:File = null;
          if(rootPath.nativePath.indexOf(".svn") != -1)

@@ -46,7 +46,7 @@ package com.ankamagames.tiphon.display
          play();
       }
       
-      override protected function displayFrame(frameIndex:uint) : Boolean {
+      override function displayFrame(frameIndex:uint) : Boolean {
          var changed:Boolean = super.displayFrame(frameIndex);
          if(changed)
          {

@@ -98,7 +98,7 @@ package com.ankamagames.jerakine.resources.protocols.impl
          delete this._openDict[[fs]];
       }
       
-      override protected function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
+       function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
          var file:File = new File(uri.path);
          var fs:FileStream = new FileStream();
          try
@@ -117,7 +117,7 @@ package com.ankamagames.jerakine.resources.protocols.impl
          _adapter.loadFromData(uri,ba,observer,dispatchProgress);
       }
       
-      override protected function extractPath(path:String) : String {
+       function extractPath(path:String) : String {
          var absolutePath:String = null;
          var absoluteFile:File = null;
          if(path.indexOf("..") != -1)

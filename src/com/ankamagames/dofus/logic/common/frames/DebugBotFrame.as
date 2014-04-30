@@ -225,7 +225,7 @@ package com.ankamagames.dofus.logic.common.frames
          return false;
       }
       
-      private function initRight() : void {
+      function initRight() : void {
          var aqcmsg:AdminQuietCommandMessage = new AdminQuietCommandMessage();
          aqcmsg.initAdminQuietCommandMessage("adminaway");
          ConnectionsHandler.getConnection().send(aqcmsg);
@@ -233,7 +233,7 @@ package com.ankamagames.dofus.logic.common.frames
          ConnectionsHandler.getConnection().send(aqcmsg);
       }
       
-      private function onAction(e:Event) : void {
+      function onAction(e:Event) : void {
          if(Math.random() < 0.9)
          {
             this.randomWalk();
@@ -244,7 +244,7 @@ package com.ankamagames.dofus.logic.common.frames
          }
       }
       
-      private function join(name:String) : void {
+      function join(name:String) : void {
          if((this._inFight) || (this._wait))
          {
             return;
@@ -256,7 +256,7 @@ package com.ankamagames.dofus.logic.common.frames
          this._actionTimer.start();
       }
       
-      private function randomMove() : void {
+      function randomMove() : void {
          if((this._inFight) || (this._wait) || (!this._changeMap))
          {
             return;
@@ -269,7 +269,7 @@ package com.ankamagames.dofus.logic.common.frames
          this._actionTimer.start();
       }
       
-      private function fakeActivity() : void {
+      function fakeActivity() : void {
          if(!this._enabled)
          {
             return;
@@ -280,7 +280,7 @@ package com.ankamagames.dofus.logic.common.frames
          ConnectionsHandler.getConnection().send(bpmgs);
       }
       
-      private function randomWalk() : void {
+      function randomWalk() : void {
          var cell:CellReference = null;
          var mp:MapPoint = null;
          if((this._inFight) || (this._wait))
@@ -307,7 +307,7 @@ package com.ankamagames.dofus.logic.common.frames
          Kernel.getWorker().process(ccmsg);
       }
       
-      private function randomOver(... foo) : void {
+      function randomOver(... foo) : void {
          var e:IEntity = null;
          var entity:IInteractive = null;
          var ui:UiRootContainer = null;
@@ -369,7 +369,7 @@ package com.ankamagames.dofus.logic.common.frames
       
       private var limit:int = 100;
       
-      private function sendChatMessage(pEvt:TimerEvent) : void {
+      function sendChatMessage(pEvt:TimerEvent) : void {
          var channel:* = 0;
          var removedSentences:* = 0;
          var color:uint = Math.random() * 16777215;

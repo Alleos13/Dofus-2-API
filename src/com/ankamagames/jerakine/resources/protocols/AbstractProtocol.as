@@ -32,21 +32,21 @@ package com.ankamagames.jerakine.resources.protocols
       public function cancel() : void {
       }
       
-      protected function release() : void {
+      function release() : void {
          throw new AbstractMethodCallError("AbstractProtocol childs must override the release method in order to free their resources.");
       }
       
-      protected function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
+      function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
          this.getAdapter(uri,forcedAdapter);
          this._adapter.loadDirectly(uri,uri.path,observer,dispatchProgress);
       }
       
-      protected function loadFromData(uri:Uri, data:ByteArray, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
+      function loadFromData(uri:Uri, data:ByteArray, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
          this.getAdapter(uri,forcedAdapter);
          this._adapter.loadFromData(uri,data,observer,dispatchProgress);
       }
       
-      protected function getAdapter(uri:Uri, forcedAdapter:Class) : void {
+      function getAdapter(uri:Uri, forcedAdapter:Class) : void {
          if(forcedAdapter == null)
          {
             this._adapter = AdapterFactory.getAdapter(uri);

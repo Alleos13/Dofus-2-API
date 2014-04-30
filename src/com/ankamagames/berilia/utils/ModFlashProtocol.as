@@ -28,22 +28,22 @@ package com.ankamagames.berilia.utils
          super.load(realUri,new ResourceObserverWrapper(this._onLoaded,this._onFailed,this._onProgress),dispatchProgress,cache,forcedAdapter,singleFile);
       }
       
-      override protected function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
+       function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
          getAdapter(uri,forcedAdapter);
          var moduleName:String = uri.path.substr(0,uri.path.indexOf("/"));
          var path:String = UiModuleManager.getInstance().getModulePath(moduleName) + uri.path.substr(uri.path.indexOf("/"));
          _adapter.loadDirectly(uri,extractPath(path),observer,dispatchProgress);
       }
       
-      private function _onLoaded(uri:Uri, resourceType:uint, resource:*) : void {
+      function _onLoaded(uri:Uri, resourceType:uint, resource:*) : void {
          this._observer2.onLoaded(this._uri,resourceType,resource);
       }
       
-      private function _onFailed(uri:Uri, errorMsg:String, errorCode:uint) : void {
+      function _onFailed(uri:Uri, errorMsg:String, errorCode:uint) : void {
          this._observer2.onFailed(this._uri,errorMsg,errorCode);
       }
       
-      private function _onProgress(uri:Uri, bytesLoaded:uint, bytesTotal:uint) : void {
+      function _onProgress(uri:Uri, bytesLoaded:uint, bytesTotal:uint) : void {
          this._observer2.onProgress(this._uri,bytesLoaded,bytesTotal);
       }
    }

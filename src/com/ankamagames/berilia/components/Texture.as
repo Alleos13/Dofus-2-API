@@ -265,7 +265,7 @@ package com.ankamagames.berilia.components
          return this._gotoFrame;
       }
       
-      private function hasLabel(mv:MovieClip, lbl:String) : Boolean {
+      function hasLabel(mv:MovieClip, lbl:String) : Boolean {
          var label:FrameLabel = null;
          var labels:Array = mv.currentLabels;
          for each (label in labels)
@@ -520,7 +520,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function reload() : void {
+      function reload() : void {
          var realUri:Uri = null;
          var forcedAdapter:Class = null;
          if((!(this._bitmap == null)) && (!(this._child == this._bitmap)))
@@ -617,7 +617,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function organize() : void {
+      function organize() : void {
          var rec:Rectangle = null;
          var ratio:Number = NaN;
          if(!this._child)
@@ -722,7 +722,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function initMask() : void {
+      function initMask() : void {
          if((mask) && (mask.parent == this))
          {
             removeChild(mask);
@@ -741,7 +741,7 @@ package com.ankamagames.berilia.components
       
       private var rle_uri_path;
       
-      private function onLoaded(rle:ResourceLoadedEvent) : void {
+      function onLoaded(rle:ResourceLoadedEvent) : void {
          var aswf:ASwf = null;
          var error:ResourceErrorEvent = null;
          if(__removed)
@@ -799,7 +799,7 @@ package com.ankamagames.berilia.components
                   {
                      try
                      {
-                        this._child = addChild(new aswf.applicationDomain.getDefinition(this._uri.subPath) as Class() as DisplayObject);
+                        this._child = addChild(null);
                      }
                      catch(e:Error)
                      {
@@ -848,7 +848,7 @@ package com.ankamagames.berilia.components
          this.initMask();
       }
       
-      private function onFailed(ree:ResourceErrorEvent) : void {
+      function onFailed(ree:ResourceErrorEvent) : void {
          var shp:Shape = null;
          if(__removed)
          {

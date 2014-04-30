@@ -375,14 +375,14 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function tabsDisplay() : void {
+      function tabsDisplay() : void {
          this.addPlusTab();
          this.addTab();
          this.length = this._nNbTabsRequired;
          this.selectedTab = 0;
       }
       
-      private function addTab() : void {
+      function addTab() : void {
          var btn:ButtonContainer = new ButtonContainer();
          btn.soundId = "16009";
          btn.width = this._nWidthTab;
@@ -467,7 +467,7 @@ package com.ankamagames.berilia.components
          this.replaceTab();
       }
       
-      private function addPlusTab() : void {
+      function addPlusTab() : void {
          this._btnPlus = new ButtonContainer();
          this._btnPlus.soundId = "16090";
          this._btnPlus.width = this._nWidthPlusTab;
@@ -508,7 +508,7 @@ package com.ankamagames.berilia.components
          this._nTotalWidth = this._nTotalWidth + this._nWidthPlusTab;
       }
       
-      private function removeTab() : void {
+      function removeTab() : void {
          var indexAlmostRemoved:* = 0;
          if(this._nNbTabs > 1)
          {
@@ -525,7 +525,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function replaceTab() : void {
+      function replaceTab() : void {
          var index:* = undefined;
          var currentPos:int = 0;
          for (index in this._aCtrs)
@@ -552,7 +552,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function isIterable(obj:*) : Boolean {
+      function isIterable(obj:*) : Boolean {
          if(obj is Array)
          {
             return true;
@@ -564,11 +564,11 @@ package com.ankamagames.berilia.components
          return false;
       }
       
-      private function removeContainerContent(target:GraphicContainer) : void {
+      function removeContainerContent(target:GraphicContainer) : void {
          target.remove();
       }
       
-      private function switchToEdition(value:Boolean) : void {
+      function switchToEdition(value:Boolean) : void {
          this._bNameEdition = value;
          if(value)
          {

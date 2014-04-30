@@ -40,7 +40,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          return clonedCriterion;
       }
       
-      override protected function getCriterion() : int {
+      override function getCriterion() : int {
          var id:* = 0;
          var emoticonList:Array = (Kernel.getWorker().getFrame(EmoticonFrame) as EmoticonFrame).emotes;
          for each (id in emoticonList)

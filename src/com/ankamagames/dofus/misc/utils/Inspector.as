@@ -347,7 +347,7 @@ class InteractiveItem extends Object
       return "";
    }
    
-   protected function toClipboard(txt:String) : void {
+   function toClipboard(txt:String) : void {
       Clipboard.generalClipboard.setData(ClipboardFormats.TEXT_FORMAT,txt);
    }
 }

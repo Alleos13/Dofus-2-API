@@ -99,7 +99,7 @@ package com.ankamagames.berilia.types.template
          return newDoc;
       }
       
-      private function parseTemplate() : void {
+      function parseTemplate() : void {
          this._xDoc = new XMLDocument();
          this._aTemplateParams = new Array();
          this._xDoc.ignoreWhite = true;
@@ -112,7 +112,7 @@ package com.ankamagames.berilia.types.template
          this.matchDynamicsParts(this._xDoc.firstChild);
       }
       
-      private function matchDynamicsParts(node:XMLNode) : void {
+      function matchDynamicsParts(node:XMLNode) : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -121,7 +121,7 @@ package com.ankamagames.berilia.types.template
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function replaceParam(txt:String, aVars:Array, prefix:String, recur:uint=1) : String {
+      function replaceParam(txt:String, aVars:Array, prefix:String, recur:uint=1) : String {
          /*
           * Decompilation error
           * Code may be obfuscated

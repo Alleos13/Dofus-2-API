@@ -114,7 +114,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          this._sounds = new Vector.<ISound>();
       }
       
-      private function removeLocalizedSounds() : void {
+      function removeLocalizedSounds() : void {
          this.stopLocalizedSounds();
          this._localizedSounds = new Vector.<LocalizedMapSound>();
       }

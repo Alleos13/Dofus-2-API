@@ -10,7 +10,7 @@ package com.somerandomdude.colortoolkit.schemes
          super(primaryColor);
       }
       
-      override protected function generate() : void {
+      override function generate() : void {
          var c1:HSB = new HSB();
          var c2:HSB = new HSB();
          c1.color = ColorUtil.rybRotate(_primaryColor,150);

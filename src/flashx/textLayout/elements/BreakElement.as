@@ -12,7 +12,7 @@ package flashx.textLayout.elements
          this.text = " ";
       }
       
-      override protected function get abstract() : Boolean {
+      override function get abstract() : Boolean {
          return false;
       }
       

@@ -149,7 +149,7 @@ package com.ankamagames.dofus.network.messages.game.guild
                               {
                                  output.writeShort(this.boostPoints);
                                  output.writeShort(this.spellId.length);
-                                 _i9 = 0;
+                                 var _i9 = 0;
                                  while(_i9 < this.spellId.length)
                                  {
                                     if(this.spellId[_i9] < 0)
@@ -164,7 +164,7 @@ package com.ankamagames.dofus.network.messages.game.guild
                                     }
                                  }
                                  output.writeShort(this.spellLevel.length);
-                                 _i10 = 0;
+                                 var _i10 = 0;
                                  while(_i10 < this.spellLevel.length)
                                  {
                                     if(this.spellLevel[_i10] < 0)

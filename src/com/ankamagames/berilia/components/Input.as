@@ -200,7 +200,7 @@ package com.ankamagames.berilia.components
          _tText.setSelection(this._nSelectionStart,this._nSelectionEnd);
       }
       
-      private function onTextChange(e:Event) : void {
+      function onTextChange(e:Event) : void {
          var pattern0:RegExp = null;
          var tempString:String = null;
          var toInt:* = NaN;
@@ -251,7 +251,7 @@ package com.ankamagames.berilia.components
                return str2;
             }
             
-            private function onTimerFormatDelay(e:TimerEvent) : void {
+            function onTimerFormatDelay(e:TimerEvent) : void {
                var newStringWithSpaces:String = null;
                this._timerFormatDelay.removeEventListener(TimerEvent.TIMER,this.onTimerFormatDelay);
                var caret:int = caretIndex;

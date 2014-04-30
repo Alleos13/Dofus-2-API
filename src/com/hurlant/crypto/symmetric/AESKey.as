@@ -213,7 +213,7 @@ package com.hurlant.crypto.symmetric
          Memory.gc();
       }
       
-      protected function shiftRows() : void {
+      function shiftRows() : void {
          var tmp:uint = 0;
          this.state[0] = Sbox[this.state[0]];
          this.state[4] = Sbox[this.state[4]];
@@ -237,7 +237,7 @@ package com.hurlant.crypto.symmetric
          this.state[3] = tmp;
       }
       
-      protected function invShiftRows() : void {
+      function invShiftRows() : void {
          var tmp:uint = 0;
          this.state[0] = InvSbox[this.state[0]];
          this.state[4] = InvSbox[this.state[4]];
@@ -261,7 +261,7 @@ package com.hurlant.crypto.symmetric
          this.state[15] = tmp;
       }
       
-      protected function mixSubColumns() : void {
+      function mixSubColumns() : void {
          this.tmp.length = 0;
          this.tmp[0] = Xtime2Sbox[this.state[0]] ^ Xtime3Sbox[this.state[5]] ^ Sbox[this.state[10]] ^ Sbox[this.state[15]];
          this.tmp[1] = Sbox[this.state[0]] ^ Xtime2Sbox[this.state[5]] ^ Xtime3Sbox[this.state[10]] ^ Sbox[this.state[15]];
@@ -283,7 +283,7 @@ package com.hurlant.crypto.symmetric
          this.state.writeBytes(this.tmp,0,Nb * 4);
       }
       
-      protected function invMixSubColumns() : void {
+      function invMixSubColumns() : void {
          var i:uint = 0;
          this.tmp.length = 0;
          this.tmp[0] = XtimeE[this.state[0]] ^ XtimeB[this.state[1]] ^ XtimeD[this.state[2]] ^ Xtime9[this.state[3]];
@@ -310,7 +310,7 @@ package com.hurlant.crypto.symmetric
          }
       }
       
-      protected function addRoundKey(key:ByteArray, offset:uint) : void {
+      function addRoundKey(key:ByteArray, offset:uint) : void {
          var idx:uint = 0;
          idx = 0;
          while(idx < 16)

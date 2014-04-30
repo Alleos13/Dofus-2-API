@@ -686,7 +686,7 @@ package com.ankamagames.berilia.components
          this._quantitySprite.graphics.endFill();
       }
       
-      private function updateTimer(t:int) : void {
+      function updateTimer(t:int) : void {
          var val:* = 0;
          this._timerMaxDuration = t;
          if(this._timerMaxDuration == 0)
@@ -1033,7 +1033,7 @@ package com.ankamagames.berilia.components
          super.remove();
       }
       
-      private function removeDrag() : void {
+      function removeDrag() : void {
          StageShareManager.stage.removeEventListener(MouseEvent.MOUSE_MOVE,this.onDragAndDropStart);
          if(this._icon)
          {
@@ -1043,11 +1043,11 @@ package com.ankamagames.berilia.components
          this._dragging = false;
       }
       
-      private function emptyFunction(... args) : * {
+      function emptyFunction(... args) : * {
          return null;
       }
       
-      private function onEnterFrame(pEvt:Event) : void {
+      function onEnterFrame(pEvt:Event) : void {
          var val:* = 0;
          var currentTime:int = getTimer();
          if(currentTime > this._timerStartTime + this._timerMaxDuration)
@@ -1070,7 +1070,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function loadTargetUri(e:Event) : void {
+      function loadTargetUri(e:Event) : void {
          StageShareManager.stage.removeEventListener(Event.ENTER_FRAME,this.loadTargetUri);
          if(this._icon)
          {
@@ -1083,11 +1083,11 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onTweenEnd(e:TweenEvent) : void {
+      function onTweenEnd(e:TweenEvent) : void {
          LinkedCursorSpriteManager.getInstance().removeItem(DRAG_AND_DROP_CURSOR_NAME);
       }
       
-      private function onSlotTextureFailed(e:TextureLoadFailedEvent) : void {
+      function onSlotTextureFailed(e:TextureLoadFailedEvent) : void {
          if((this._data) && (this._data.errorIconUri))
          {
             e.behavior.cancel = true;
@@ -1095,7 +1095,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onDragAndDropStart(e:Event) : void {
+      function onDragAndDropStart(e:Event) : void {
          var listener:IInterfaceListener = null;
          var d:LinkedCursorData = null;
          var bd:BitmapData = null;
@@ -1129,7 +1129,7 @@ package com.ankamagames.berilia.components
          KernelEventsManager.getInstance().processCallback(BeriliaHookList.DropStart,SecureCenter.secure(this));
       }
       
-      private function onAddedToStage(e:Event) : void {
+      function onAddedToStage(e:Event) : void {
          removeEventListener(Event.ADDED_TO_STAGE,this.onAddedToStage);
          var ui:Object = getUi();
          if((ui) && (this._icon))

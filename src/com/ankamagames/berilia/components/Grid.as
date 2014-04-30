@@ -810,7 +810,7 @@ package com.ankamagames.berilia.components
          return -1;
       }
       
-      private function sortFunction(a:*, b:*) : Number {
+      function sortFunction(a:*, b:*) : Number {
          if(a[this._sortProperty] < b[this._sortProperty])
          {
             return -1;
@@ -822,7 +822,7 @@ package com.ankamagames.berilia.components
          return 1;
       }
       
-      private function itemExists(o:*) : Boolean {
+      function itemExists(o:*) : Boolean {
          var i:* = 0;
          var len:* = 0;
          var data:* = undefined;
@@ -843,7 +843,7 @@ package com.ankamagames.berilia.components
          return false;
       }
       
-      private function initSlot() : void {
+      function initSlot() : void {
          var slot:DisplayObject = null;
          var item:GridItem = null;
          var totalSlot:uint = 0;
@@ -971,7 +971,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function updateFromIndex(newIndex:uint) : void {
+      function updateFromIndex(newIndex:uint) : void {
          var i:* = 0;
          var j:* = 0;
          var currentItem:GridItem = null;
@@ -1117,7 +1117,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function configVar() : void {
+      function configVar() : void {
          var useScrollBar:* = false;
          if(this._autoPosition)
          {
@@ -1150,7 +1150,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function isIterable(obj:*) : Boolean {
+      function isIterable(obj:*) : Boolean {
          if(obj is Array)
          {
             return true;
@@ -1170,7 +1170,7 @@ package com.ankamagames.berilia.components
          return false;
       }
       
-      protected function getGridItem(item:DisplayObject) : GridItem {
+      function getGridItem(item:DisplayObject) : GridItem {
          var currentItem:GridItem = null;
          if(!this._items)
          {
@@ -1194,7 +1194,7 @@ package com.ankamagames.berilia.components
          return null;
       }
       
-      private function getNearestSlot(mouseEvent:MouseEvent) : Slot {
+      function getNearestSlot(mouseEvent:MouseEvent) : Slot {
          var nextSlotIndexX:* = 0;
          var nextSlot:Slot = null;
          var nextDiffX:* = NaN;
@@ -1246,7 +1246,7 @@ package com.ankamagames.berilia.components
          return currentSlot;
       }
       
-      private function onScroll(e:Event) : void {
+      function onScroll(e:Event) : void {
          var i:* = 0;
          if((this._scrollBarV) && (this._scrollBarV.visible))
          {
@@ -1262,7 +1262,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onListWheel(e:MouseEvent) : void {
+      function onListWheel(e:MouseEvent) : void {
          if(this._verticalScroll)
          {
             if((this._scrollBarV) && (this._scrollBarV.visible))
@@ -1447,7 +1447,7 @@ package com.ankamagames.berilia.components
          return false;
       }
       
-      protected function dispatchMessage(msg:Message, handler:MessageHandler=null) : void {
+      function dispatchMessage(msg:Message, handler:MessageHandler=null) : void {
          if(!this.silent)
          {
             if(!handler)

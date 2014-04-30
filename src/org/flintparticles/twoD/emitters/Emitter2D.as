@@ -63,7 +63,7 @@ package org.flintparticles.twoD.emitters
          this._rotation = param1;
       }
       
-      override protected function initParticle(param1:Particle) : void {
+       function initParticle(param1:Particle) : void {
          var _loc2_:Particle2D = null;
          _loc2_ = Particle2D(param1);
          _loc2_.x = this._x;
@@ -71,7 +71,7 @@ package org.flintparticles.twoD.emitters
          _loc2_.rotation = this._rotation;
       }
       
-      override protected function sortParticles() : void {
+       function sortParticles() : void {
          var _loc1_:* = 0;
          var _loc2_:* = 0;
          if(this.spaceSort)

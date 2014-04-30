@@ -138,7 +138,7 @@ package com.ankamagames.dofus.datacenter.quest
          return this._objectives;
       }
       
-      private function initCurrentLevelRewards() : void {
+      function initCurrentLevelRewards() : void {
          var rewardsId:uint = 0;
          var rewards:QuestStepRewards = null;
          var playerLvl:uint = PlayedCharacterManager.getInstance().infos.level;
@@ -173,7 +173,7 @@ package com.ankamagames.dofus.datacenter.quest
          return this.getFixeExperienceReward(pPlayerLevel) * xpBonus;
       }
       
-      private function getFixeExperienceReward(level:int) : int {
+      function getFixeExperienceReward(level:int) : int {
          return level * Math.pow(100 + 2 * level,2) / 20 * this.duration * this.xpRatio;
       }
    }

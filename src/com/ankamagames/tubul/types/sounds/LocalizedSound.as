@@ -109,7 +109,7 @@ package com.ankamagames.tubul.types.sounds
          }
       }
       
-      override protected function applyParam() : void {
+      override function applyParam() : void {
          if(_soundWrapper == null)
          {
             return;

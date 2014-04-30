@@ -423,7 +423,7 @@ package com.ankamagames.jerakine.network
          return messageLength;
       }
       
-      protected function lowSend(msg:INetworkMessage, autoFlush:Boolean=true) : void {
+      function lowSend(msg:INetworkMessage, autoFlush:Boolean=true) : void {
          msg.pack(this);
          this._latestSent = getTimer();
          this._lastSent = getTimer();
@@ -438,7 +438,7 @@ package com.ankamagames.jerakine.network
          }
       }
       
-      protected function lowReceive(src:IDataInput) : INetworkMessage {
+      function lowReceive(src:IDataInput) : INetworkMessage {
          var msg:INetworkMessage = null;
          var staticHeader:uint = 0;
          var messageId:uint = 0;
@@ -509,7 +509,7 @@ package com.ankamagames.jerakine.network
          }
       }
       
-      protected function onConnect(e:Event) : void {
+      function onConnect(e:Event) : void {
          var msg:INetworkMessage = null;
          this._connecting = false;
          if(this._timeoutTimer)
@@ -535,7 +535,7 @@ package com.ankamagames.jerakine.network
          }
       }
       
-      protected function onClose(e:Event) : void {
+      function onClose(e:Event) : void {
          if(DEBUG_DATA)
          {
             _log.trace("Connection closed.");
@@ -550,11 +550,11 @@ package com.ankamagames.jerakine.network
          this._outputBuffer = new Array();
       }
       
-      protected function onSocketData(pe:ProgressEvent) : void {
+      function onSocketData(pe:ProgressEvent) : void {
          this.receive(this);
       }
       
-      protected function onSocketError(e:IOErrorEvent) : void {
+      function onSocketError(e:IOErrorEvent) : void {
          if(this._lagometer)
          {
             this._lagometer.stop();
@@ -564,7 +564,7 @@ package com.ankamagames.jerakine.network
          this._handler.process(new ServerConnectionFailedMessage(this,e.text));
       }
       
-      protected function onSocketTimeOut(e:Event) : void {
+      function onSocketTimeOut(e:Event) : void {
          if(this._lagometer)
          {
             this._lagometer.stop();
@@ -574,7 +574,7 @@ package com.ankamagames.jerakine.network
          this._handler.process(new ServerConnectionFailedMessage(this,"timeout§§§"));
       }
       
-      protected function onSecurityError(see:SecurityErrorEvent) : void {
+      function onSecurityError(see:SecurityErrorEvent) : void {
          if(this._lagometer)
          {
             this._lagometer.stop();

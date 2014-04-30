@@ -27,7 +27,7 @@ package com.ankamagames.dofus.console.debug
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function asynchInfo(console:ConsoleHandler) : void {
+      function asynchInfo(console:ConsoleHandler) : void {
          var sprite:* = undefined;
          var ts:Dictionary = TiphonSprite.MEMORY_LOG;
          for (sprite in ts)

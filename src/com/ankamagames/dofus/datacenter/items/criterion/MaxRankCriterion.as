@@ -28,7 +28,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          return clonedCriterion;
       }
       
-      override protected function getCriterion() : int {
+      override function getCriterion() : int {
          var frame:PartyManagementFrame = Kernel.getWorker().getFrame(PartyManagementFrame) as PartyManagementFrame;
          return frame.arenaRanks[1];
       }

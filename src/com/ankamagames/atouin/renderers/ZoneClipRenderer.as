@@ -150,7 +150,7 @@ package com.ankamagames.atouin.renderers
          }
       }
       
-      private function onPropertyChanged(e:PropertyChangeEvent) : void {
+      function onPropertyChanged(e:PropertyChangeEvent) : void {
          var j:* = 0;
          var zt:ZoneClipTile = null;
          if(e.propertyName == "transparentOverlayMode")

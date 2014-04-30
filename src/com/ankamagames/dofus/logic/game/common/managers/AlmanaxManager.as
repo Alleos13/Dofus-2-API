@@ -92,7 +92,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          return this._currentZodiac;
       }
       
-      private function setDefaultData(pAlmanaxElement:Object) : void {
+      function setDefaultData(pAlmanaxElement:Object) : void {
          if(pAlmanaxElement is AlmanaxEvent)
          {
             if(!pAlmanaxElement.bossText)
@@ -131,7 +131,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          }
       }
       
-      private function checkData() : void {
+      function checkData() : void {
          if(!this.isValidImageUrl(this._currentEvent.webImageUrl))
          {
             this.setDefaultData(this._currentEvent);
@@ -146,11 +146,11 @@ package com.ankamagames.dofus.logic.game.common.managers
          }
       }
       
-      private function isValidImageUrl(pUrl:String) : Boolean {
+      function isValidImageUrl(pUrl:String) : Boolean {
          return (pUrl) && (!(pUrl == "false"));
       }
       
-      private function onData(e:Event) : void {
+      function onData(e:Event) : void {
          var eventRawData:Object = this._rpcService.getResultData("event");
          var monthRawData:Object = this._rpcService.getResultData("month");
          var zodiacRawData:Object = this._rpcService.getResultData("zodiac");
@@ -180,7 +180,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          StoreDataManager.getInstance().setData(this._ds,"cacheDate",new Date());
       }
       
-      private function onError(e:Event) : void {
+      function onError(e:Event) : void {
          this._currentEvent = new AlmanaxEvent();
          this.setDefaultData(this._currentEvent);
          this._currentMonth = new AlmanaxMonth();

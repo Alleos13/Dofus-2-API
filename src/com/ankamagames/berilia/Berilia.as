@@ -700,14 +700,14 @@ package com.ankamagames.berilia
          return true;
       }
       
-      private function onUiLoaded(ure:UiRenderEvent) : void {
+      function onUiLoaded(ure:UiRenderEvent) : void {
          delete this._aLoadingUi[[ure.uiTarget.name]];
          this.updateHighestModalDepth();
          dispatchEvent(ure);
          KernelEventsManager.getInstance().processCallback(BeriliaHookList.UiLoaded,ure.uiTarget.name);
       }
       
-      private function updateHighestModalDepth() : void {
+      function updateHighestModalDepth() : void {
          var uiContainer:UiRootContainer = null;
          this._highestModalDepth = -1;
          for each (uiContainer in this._aUiList)
@@ -719,7 +719,7 @@ package com.ankamagames.berilia
          }
       }
       
-      private function isRegisteredUiName(sName:String) : Boolean {
+      function isRegisteredUiName(sName:String) : Boolean {
          return !(this._aUiList[sName] == null);
       }
    }

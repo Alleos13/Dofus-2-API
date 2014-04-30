@@ -223,7 +223,7 @@ package com.ankamagames.atouin
          Atouin.getInstance().handler.process(msg);
       }
       
-      private function onRollOutMapContainer(event:Event) : void {
+      function onRollOutMapContainer(event:Event) : void {
          var msg:MapContainerRollOutMessage = new MapContainerRollOutMessage();
          Atouin.getInstance().handler.process(msg);
       }
@@ -438,7 +438,7 @@ package com.ankamagames.atouin
          }
       }
       
-      private function removeUpdateCursorSprite(e:Event) : void {
+      function removeUpdateCursorSprite(e:Event) : void {
          EnterFrameDispatcher.removeEventListener(this.removeUpdateCursorSprite);
          if(this._cursorUpdateSprite.parent)
          {
@@ -446,7 +446,7 @@ package com.ankamagames.atouin
          }
       }
       
-      private function init() : void {
+      function init() : void {
          var elementsLoader:IResourceLoader = null;
          this._aSprites = new Array();
          if(!Elements.getInstance().parsed)
@@ -458,7 +458,7 @@ package com.ankamagames.atouin
          Pathfinding.init(AtouinConstants.PATHFINDER_MIN_X,AtouinConstants.PATHFINDER_MAX_X,AtouinConstants.PATHFINDER_MIN_Y,AtouinConstants.PATHFINDER_MAX_Y);
       }
       
-      private function onElementsError(ree:ResourceErrorEvent) : void {
+      function onElementsError(ree:ResourceErrorEvent) : void {
       }
    }
 }

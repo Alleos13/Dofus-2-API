@@ -127,7 +127,7 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private var _showShortcut:Boolean = true;
       
-      private function output(message:TypeMessage) : void {
+      function output(message:TypeMessage) : void {
          var type:* = 0;
          var text:String = null;
          var newLines:Array = null;
@@ -216,7 +216,7 @@ package com.ankamagames.dofus.console.moduleLogger
          }
       }
       
-      private function log(... args) : void {
+      function log(... args) : void {
          var message:TypeMessage = null;
          if((this._active) && (args.length))
          {
@@ -225,7 +225,7 @@ package com.ankamagames.dofus.console.moduleLogger
          }
       }
       
-      private function clearConsole(e:Event=null) : void {
+      function clearConsole(e:Event=null) : void {
          this._lines.splice(0,this._lines.length);
          this._allInfo.splice(0,this._allInfo.length);
          this._scrollBar.updateScrolling();
@@ -233,7 +233,7 @@ package com.ankamagames.dofus.console.moduleLogger
          this._textField.text = "";
       }
       
-      private function createUI() : void {
+      function createUI() : void {
          var book:ConsoleIcon = null;
          this._backGround = new Sprite();
          this._textField = new TextField();
@@ -290,7 +290,7 @@ package com.ankamagames.dofus.console.moduleLogger
          this.onResize();
       }
       
-      private function openFilterUI(open:Boolean) : void {
+      function openFilterUI(open:Boolean) : void {
          if(open)
          {
             this._window.stage.addChild(this._filterUI);
@@ -305,7 +305,7 @@ package com.ankamagames.dofus.console.moduleLogger
          }
       }
       
-      private function createWindow() : void {
+      function createWindow() : void {
          var options:NativeWindowInitOptions = null;
          if(!this._window)
          {
@@ -324,7 +324,7 @@ package com.ankamagames.dofus.console.moduleLogger
          }
       }
       
-      private function saveData() : void {
+      function saveData() : void {
          var data:Object = null;
          try
          {
@@ -344,7 +344,7 @@ package com.ankamagames.dofus.console.moduleLogger
          }
       }
       
-      private function loadData(data:Object) : void {
+      function loadData(data:Object) : void {
          if(data)
          {
             if(data.filter)
@@ -379,7 +379,7 @@ package com.ankamagames.dofus.console.moduleLogger
          }
       }
       
-      private function onIconFilterMouseDown(e:Event) : void {
+      function onIconFilterMouseDown(e:Event) : void {
          if(this._filterUI)
          {
             this.openFilterUI(!this._filterUI.parent);
@@ -390,7 +390,7 @@ package com.ankamagames.dofus.console.moduleLogger
          }
       }
       
-      private function onFilterChange(event:Event=null) : void {
+      function onFilterChange(event:Event=null) : void {
          var message:TypeMessage = null;
          var type:* = 0;
          var text:String = null;
@@ -427,7 +427,7 @@ package com.ankamagames.dofus.console.moduleLogger
          this.onResize();
       }
       
-      private function onResize(event:Event=null) : void {
+      function onResize(event:Event=null) : void {
          var posX:* = 0;
          var k:* = 0;
          this._backGround.graphics.clear();
@@ -478,7 +478,7 @@ package com.ankamagames.dofus.console.moduleLogger
          this._scrollBarH.resize();
       }
       
-      private function onTextClick(textEvent:TextEvent) : void {
+      function onTextClick(textEvent:TextEvent) : void {
          var text:String = textEvent.text;
          if(text.charAt(0) == "@")
          {
@@ -486,7 +486,7 @@ package com.ankamagames.dofus.console.moduleLogger
          }
       }
       
-      private function onBookClick(e:MouseEvent) : void {
+      function onBookClick(e:MouseEvent) : void {
          var target:ConsoleIcon = e.currentTarget as ConsoleIcon;
          var type:int = int(target.name.substr(1));
          if(type == TypeMessage.TYPE_HOOK)
@@ -521,13 +521,13 @@ package com.ankamagames.dofus.console.moduleLogger
          this.onFilterChange();
       }
       
-      private function saveText(e:Event) : void {
+      function saveText(e:Event) : void {
          var file:File = new File();
          file.browseForSave("Save");
          file.addEventListener(Event.SELECT,this.onFileSelect);
       }
       
-      private function onClose(e:Event) : void {
+      function onClose(e:Event) : void {
          _displayed = false;
          this._window = null;
          this.saveData();
@@ -537,7 +537,7 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private var regExp2:RegExp;
       
-      private function onFileSelect(e:Event) : void {
+      function onFileSelect(e:Event) : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -546,7 +546,7 @@ package com.ankamagames.dofus.console.moduleLogger
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function onScrollVChange(e:Event) : void {
+      function onScrollVChange(e:Event) : void {
          this._scrollBarH.resize();
       }
    }

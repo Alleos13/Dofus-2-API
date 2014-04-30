@@ -175,7 +175,7 @@ package com.ankamagames.dofus.logic.connection.managers
             });
       }
       
-      private function onDataSavedComplete(pEvt:Event) : void {
+      function onDataSavedComplete(pEvt:Event) : void {
          var rpcService:RpcServiceManager = pEvt.currentTarget as RpcServiceManager;
          if(this._so != null)
          {
@@ -185,13 +185,13 @@ package com.ankamagames.dofus.logic.connection.managers
          this.clearService(rpcService);
       }
       
-      private function onDataSavedError(pEvt:Event) : void {
+      function onDataSavedError(pEvt:Event) : void {
          _log.error("Can\'t send player\'s data to server !");
          var rpcService:RpcServiceManager = pEvt.currentTarget as RpcServiceManager;
          this.clearService(rpcService);
       }
       
-      private function clearService(rpcService:RpcServiceManager) : void {
+      function clearService(rpcService:RpcServiceManager) : void {
          rpcService.removeEventListener(Event.COMPLETE,this.onDataSavedComplete);
          rpcService.removeEventListener(IOErrorEvent.IO_ERROR,this.onDataSavedError);
          rpcService.removeEventListener(RpcServiceManager.SERVER_ERROR,this.onDataSavedError);

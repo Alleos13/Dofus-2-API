@@ -943,7 +943,7 @@ package com.ankamagames.dofus.uiApi
       }
       
       public function notifyUser(always:Boolean) : void {
-         return SystemManager.getSingleton().notifyUser(always);
+        
       }
       
       public function setGameAlign(align:String) : void {

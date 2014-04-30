@@ -16,7 +16,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
       
       private var _aswf:ASwf;
       
-      override protected function getResource(ldr:LoaderInfo) : * {
+      function getResource(ldr:LoaderInfo) : * {
          return this._aswf;
       }
       
@@ -24,7 +24,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          return ResourceType.RESOURCE_ASWF;
       }
       
-      override protected function init(ldr:LoaderInfo) : void {
+      function init(ldr:LoaderInfo) : void {
          if(AirScanner.hasAir())
          {
             this._aswf = new ASwf(ldr.loader.content,ldr.applicationDomain,ldr.width,ldr.height);
@@ -33,7 +33,6 @@ package com.ankamagames.jerakine.resources.adapters.impl
          {
             this._aswf = new ASwf(ldr.loader.content,ldr.applicationDomain,800,600);
          }
-         super.init(ldr);
       }
    }
 }

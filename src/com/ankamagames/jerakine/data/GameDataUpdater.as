@@ -31,7 +31,7 @@ package com.ankamagames.jerakine.data
          return _self;
       }
       
-      override protected function checkFileVersion(sFileName:String, sVersion:String) : Boolean {
+      override function checkFileVersion(sFileName:String, sVersion:String) : Boolean {
          return false;
       }
       
@@ -39,7 +39,7 @@ package com.ankamagames.jerakine.data
          GameDataFileAccessor.getInstance().close();
       }
       
-      override protected function onLoaded(e:ResourceLoadedEvent) : void {
+      override function onLoaded(e:ResourceLoadedEvent) : void {
          switch(e.uri.fileType)
          {
             case "d2o":

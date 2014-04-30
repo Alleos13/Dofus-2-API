@@ -85,7 +85,7 @@ package com.ankamagames.berilia.managers
          return null;
       }
       
-      private function loadFonts() : void {
+      function loadFonts() : void {
          var font:String = null;
          if(this._currentlyLoading != null)
          {
@@ -105,7 +105,7 @@ package com.ankamagames.berilia.managers
          this._loader.load(aQueue);
       }
       
-      private function onComplete(e:ResourceLoadedEvent) : void {
+      function onComplete(e:ResourceLoadedEvent) : void {
          var fontsList:Array = null;
          var i:* = 0;
          var fontClass:Class = Swl(e.resource).getDefinition(FileUtils.getFileStartName(e.uri.uri)) as Class;
@@ -130,11 +130,11 @@ package com.ankamagames.berilia.managers
          this._currentlyLoading = null;
       }
       
-      private function onAllFontLoaded(e:ResourceLoaderProgressEvent) : void {
+      function onAllFontLoaded(e:ResourceLoaderProgressEvent) : void {
          dispatchEvent(new Event(Event.COMPLETE));
       }
       
-      private function onError(e:ResourceErrorEvent) : void {
+      function onError(e:ResourceErrorEvent) : void {
          _log.error("Unabled to load a font : " + e.uri);
       }
    }

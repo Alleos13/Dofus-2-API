@@ -98,7 +98,7 @@ package com.ankamagames.dofus.logic.connection.frames
          return true;
       }
       
-      private function systemMessageDisplay(msg:SystemMessageDisplayMessage) : void {
+      function systemMessageDisplay(msg:SystemMessageDisplayMessage) : void {
          var i:* = undefined;
          var textId:uint = 0;
          var commonMod:Object = UiModuleManager.getInstance().getModule("Ankama_Common").mainClass;

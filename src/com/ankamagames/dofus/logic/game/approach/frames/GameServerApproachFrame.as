@@ -1058,11 +1058,11 @@ package com.ankamagames.dofus.logic.game.approach.frames
          return true;
       }
       
-      private function onEscapePopup() : void {
+      function onEscapePopup() : void {
          Kernel.getInstance().reset();
       }
       
-      private function requestCharactersList() : void {
+      function requestCharactersList() : void {
          var clrmsg:CharactersListRequestMessage = new CharactersListRequestMessage();
          if((ConnectionsHandler) && (ConnectionsHandler.getConnection()))
          {

@@ -45,7 +45,7 @@ package com.ankamagames.jerakine.data
          super.init(metaFileListe,clearAll);
       }
       
-      override protected function checkFileVersion(sFileName:String, sVersion:String) : Boolean {
+      override function checkFileVersion(sFileName:String, sVersion:String) : Boolean {
          return false;
       }
       
@@ -53,7 +53,7 @@ package com.ankamagames.jerakine.data
          I18nFileAccessor.getInstance().close();
       }
       
-      override protected function onLoaded(e:ResourceLoadedEvent) : void {
+      override function onLoaded(e:ResourceLoadedEvent) : void {
          var meta:LangMetaData = null;
          var uri:Uri = null;
          var realCount:uint = 0;

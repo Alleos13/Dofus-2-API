@@ -131,7 +131,7 @@ package com.ankamagames.berilia.types.data
          return format;
       }
       
-      private function makeMerge(sUrl:String) : void {
+      function makeMerge(sUrl:String) : void {
          this.merge(CssManager.getInstance().getCss(sUrl));
          this._inherited++;
          if(this.ready)

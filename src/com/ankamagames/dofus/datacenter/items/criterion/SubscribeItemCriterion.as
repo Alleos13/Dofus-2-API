@@ -24,7 +24,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          return clonedCriterion;
       }
       
-      override protected function getCriterion() : int {
+      override function getCriterion() : int {
          var timeRemaining:Number = PlayerManager.getInstance().subscriptionEndDate;
          if((timeRemaining > 0) || (PlayerManager.getInstance().hasRights))
          {

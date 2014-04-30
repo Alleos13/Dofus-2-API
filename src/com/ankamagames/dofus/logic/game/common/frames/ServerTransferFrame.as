@@ -38,7 +38,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return true;
       }
       
-      override protected function registerMessages() : void {
+       function registerMessages() : void {
          register(SelectedServerDataMessage,this.onSelectedServerDataMessage);
          register(HelloGameMessage,this.onHelloGameMessage);
          register(AuthenticationTicketAcceptedMessage,this.onAuthenticationTicketAcceptedMessage);
@@ -46,15 +46,15 @@ package com.ankamagames.dofus.logic.game.common.frames
          register(CharacterLoadingCompleteMessage,this.onCharacterLoadingCompleteMessage);
       }
       
-      protected function getConnectionType(msg:Message) : String {
+      function getConnectionType(msg:Message) : String {
          return ConnectionsHandler.getConnection().getConnectionId(msg);
       }
       
-      private function onCharacterSelectedSuccessMessage(msg:CharacterSelectedSuccessMessage) : void {
+      function onCharacterSelectedSuccessMessage(msg:CharacterSelectedSuccessMessage) : void {
          PlayedCharacterManager.getInstance().infos = msg.infos;
       }
       
-      private function onHelloGameMessage(msg:HelloGameMessage) : Boolean {
+      function onHelloGameMessage(msg:HelloGameMessage) : Boolean {
          var lang:String = XmlConfig.getInstance().getEntry("config.lang.current");
          var authMsg:AuthenticationTicketMessage = new AuthenticationTicketMessage();
          authMsg.initAuthenticationTicketMessage(lang,this._newServerLoginTicket);
@@ -71,7 +71,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return true;
       }
       
-      private function onAuthenticationTicketAcceptedMessage(msg:AuthenticationTicketAcceptedMessage) : Boolean {
+      function onAuthenticationTicketAcceptedMessage(msg:AuthenticationTicketAcceptedMessage) : Boolean {
          var clr:CharactersListRequestMessage = null;
          switch(this.getConnectionType(msg))
          {
@@ -83,7 +83,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      private function onCharacterLoadingCompleteMessage(msg:CharacterLoadingCompleteMessage) : Boolean {
+      function onCharacterLoadingCompleteMessage(msg:CharacterLoadingCompleteMessage) : Boolean {
          var gccrm:GameContextCreateRequestMessage = null;
          switch(this.getConnectionType(msg))
          {
@@ -95,7 +95,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      private function onSelectedServerDataMessage(msg:SelectedServerDataMessage) : Boolean {
+      function onSelectedServerDataMessage(msg:SelectedServerDataMessage) : Boolean {
          this._newServerLoginTicket = msg.ticket;
          ConnectionsHandler.getConnection().mainConnection.close();
          ConnectionsHandler.connectToKoliServer(msg.address,msg.port);

@@ -306,7 +306,7 @@ package com.ankamagames.berilia.components
          this.bindCss();
       }
       
-      private function bindCss() : void {
+      function bindCss() : void {
          var styleToDisplay:String = null;
          var sProperty:String = null;
          var oldCss:ExtendedStyleSheet = this._ssSheet;
@@ -333,7 +333,7 @@ package com.ankamagames.berilia.components
          this.changeCssClassSize(size,lineHeight,style);
       }
       
-      private function changeCssClassSize(size:uint, lineHeight:uint, style:String=null) : void {
+      function changeCssClassSize(size:uint, lineHeight:uint, style:String=null) : void {
          var i:* = undefined;
          if(style)
          {
@@ -350,7 +350,7 @@ package com.ankamagames.berilia.components
          this._textFlow.lineHeight = lineHeight;
       }
       
-      private function changeCssClassColor(color:String, style:String=null) : void {
+      function changeCssClassColor(color:String, style:String=null) : void {
          var i:* = undefined;
          if(style)
          {
@@ -396,7 +396,7 @@ package com.ankamagames.berilia.components
          return height;
       }
       
-      private function getParagraphHeight(p:ParagraphElement) : Number {
+      function getParagraphHeight(p:ParagraphElement) : Number {
          var line:TextFlowLine = null;
          var height:Number = 0;
          var pos:int = p.getAbsoluteStart();
@@ -418,7 +418,7 @@ package com.ankamagames.berilia.components
          return this._sbScrollBar.css;
       }
       
-      private function createTextField() : void {
+      function createTextField() : void {
          var ca:TextLayoutFormat = new TextLayoutFormat();
          ca.fontWeight = FontWeight.BOLD;
          ca.color = "#ff0000";
@@ -448,7 +448,7 @@ package com.ankamagames.berilia.components
       
       private var _isDamaged:Boolean = false;
       
-      private function onEnterFrame(pEvt:Event) : void {
+      function onEnterFrame(pEvt:Event) : void {
          if(this._isDamaged)
          {
             this._isDamaged = false;
@@ -456,13 +456,13 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onRollOutChat(pEvt:MouseEvent) : void {
+      function onRollOutChat(pEvt:MouseEvent) : void {
          TooltipManager.hideAll();
       }
       
       private var _currentSelection:String = "";
       
-      private function selectionChanged(pEvt:SelectionEvent) : void {
+      function selectionChanged(pEvt:SelectionEvent) : void {
          var prevPara:ParagraphElement = null;
          var range:ElementRange = pEvt.selectionState?ElementRange.createElementRange(pEvt.selectionState.textFlow,pEvt.selectionState.absoluteStart,pEvt.selectionState.absoluteEnd):null;
          this._currentSelection = "";
@@ -479,7 +479,7 @@ package com.ankamagames.berilia.components
             
          }
          
-         private function onMouseOverLink(pEvt:FlowElementMouseEvent) : void {
+         function onMouseOverLink(pEvt:FlowElementMouseEvent) : void {
             var link:LinkElement = null;
             var params:Array = null;
             var type:String = null;
@@ -494,12 +494,12 @@ package com.ankamagames.berilia.components
             }
          }
          
-         private function onMouseOutLink(pEvt:FlowElementMouseEvent) : void {
+         function onMouseOutLink(pEvt:FlowElementMouseEvent) : void {
             TooltipManager.hideAll();
             dispatchEvent(new LinkInteractionEvent(LinkInteractionEvent.ROLL_OUT));
          }
          
-         private function onTextClick(pEvt:FlowElementMouseEvent) : void {
+         function onTextClick(pEvt:FlowElementMouseEvent) : void {
             TooltipManager.hideAll();
             var text:String = (pEvt.flowElement as LinkElement).href;
             if(text != "")
@@ -510,12 +510,12 @@ package com.ankamagames.berilia.components
          
          private var _magicbool:Boolean = true;
          
-         private function onScroll(pEvt:Event) : void {
+         function onScroll(pEvt:Event) : void {
             this._magicbool = false;
             this._controller.verticalScrollPosition = this._sbScrollBar.value / this._sbScrollBar.max * this.maxScrollV * this._textFlow.lineHeight - this._controller.compositionHeight;
          }
          
-         private function scrollTextFlow(pEvt:Event) : void {
+         function scrollTextFlow(pEvt:Event) : void {
             var evt:ScrollEvent = null;
             if(pEvt is ScrollEvent)
             {
@@ -532,7 +532,7 @@ package com.ankamagames.berilia.components
             }
          }
          
-         private function updateScrollBar(reset:Boolean=false) : void {
+         function updateScrollBar(reset:Boolean=false) : void {
             this._sbScrollBar.visible = true;
             this._sbScrollBar.disabled = false;
             this._sbScrollBar.total = this.maxScrollV;
@@ -548,7 +548,7 @@ package com.ankamagames.berilia.components
             }
          }
          
-         private function updateScrollBarPos() : void {
+         function updateScrollBarPos() : void {
             if(this._nScrollPos >= 0)
             {
                this._sbScrollBar.x = this._controller.compositionWidth - this._sbScrollBar.width;
@@ -581,7 +581,7 @@ package com.ankamagames.berilia.components
             }
          }
          
-         private function createParagraphe(text:String) : ParagraphElement {
+         function createParagraphe(text:String) : ParagraphElement {
             this._textFlow.addEventListener(DamageEvent.DAMAGE,this.onDamage);
             var p:ParagraphElement = new ParagraphElement();
             p.format = this._TLFFormat;
@@ -604,12 +604,12 @@ package com.ankamagames.berilia.components
             return p;
          }
          
-         private function onDamage(pEvt:DamageEvent) : void {
+         function onDamage(pEvt:DamageEvent) : void {
             this._textFlow.removeEventListener(DamageEvent.DAMAGE,this.onDamage);
             this._isDamaged = true;
          }
          
-         private function createLinkElement(p:ParagraphElement, oText:Object) : void {
+         function createLinkElement(p:ParagraphElement, oText:Object) : void {
             var att:String = null;
             var link:LinkElement = new LinkElement();
             link.addEventListener(FlowElementMouseEvent.CLICK,this.onTextClick);
@@ -638,7 +638,7 @@ package com.ankamagames.berilia.components
             p.addChild(link);
          }
          
-         private function getAttributeValue(inText:String) : String {
+         function getAttributeValue(inText:String) : String {
             var realvalue:String = null;
             var tmp:Array = inText.split("=");
             tmp.shift();
@@ -653,7 +653,7 @@ package com.ankamagames.berilia.components
             return realvalue.replace(QUOTE_PATTERN,"");
          }
          
-         private function createSpan(p:ParagraphElement, sText:String, handleHtmlTags:Boolean, pStyle:String="") : void {
+         function createSpan(p:ParagraphElement, sText:String, handleHtmlTags:Boolean, pStyle:String="") : void {
             var smiley:Smiley = null;
             var textToShow:String = null;
             var kamaIndex:* = 0;
@@ -711,7 +711,7 @@ package com.ankamagames.berilia.components
             }
          }
          
-         private function createSpanElement(pText:String, pStyle:String) : SpanElement {
+         function createSpanElement(pText:String, pStyle:String) : SpanElement {
             var span:SpanElement = new SpanElement();
             var txt:String = pText;
             txt = StringUtil.replace(txt,"&amp;","&");
@@ -722,7 +722,7 @@ package com.ankamagames.berilia.components
             return span;
          }
          
-         private function createSpanElementsFromHtmlTags(p:ParagraphElement, pText:String, pStyle:String) : void {
+         function createSpanElementsFromHtmlTags(p:ParagraphElement, pText:String, pStyle:String) : void {
             var result:Object = null;
             var style:String = null;
             var attributes:Array = null;
@@ -772,7 +772,7 @@ package com.ankamagames.berilia.components
          
          private var _bmpdtList:Dictionary;
          
-         private function createImage(pUri:*, pTrigger:String) : InlineGraphicElement {
+         function createImage(pUri:*, pTrigger:String) : InlineGraphicElement {
             var inlineGraphic:InlineGraphicElement = null;
             var imgTx:Texture = null;
             var bmpdt:BitmapData = null;
@@ -823,7 +823,7 @@ package com.ankamagames.berilia.components
             return inlineGraphic;
          }
          
-         private function getFile(uri:String) : ByteArray {
+         function getFile(uri:String) : ByteArray {
             var fs:FileStream = null;
             var ba:ByteArray = null;
             var f:File = new File(uri);
@@ -855,7 +855,7 @@ package com.ankamagames.berilia.components
             this.updateScrollBar();
          }
          
-         private function getSmileyFromText(sTxt:String) : Smiley {
+         function getSmileyFromText(sTxt:String) : Smiley {
             var indexOfSmiley:* = 0;
             var currentSmiley:Smiley = null;
             var smiley:Smiley = null;

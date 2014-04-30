@@ -72,7 +72,7 @@ package com.ankamagames.dofus.network.messages.game.basic
          {
             output.writeShort(this.msgId);
             output.writeShort(this.parameters.length);
-            _i3 = 0;
+            var _i3 = 0;
             while(_i3 < this.parameters.length)
             {
                output.writeUTF(this.parameters[_i3]);
@@ -102,8 +102,8 @@ package com.ankamagames.dofus.network.messages.game.basic
             }
             else
             {
-               _parametersLen = input.readUnsignedShort();
-               _i3 = 0;
+               var _parametersLen = input.readUnsignedShort();
+               var _i3 = 0;
                while(_i3 < _parametersLen)
                {
                   _val3 = input.readUTF();

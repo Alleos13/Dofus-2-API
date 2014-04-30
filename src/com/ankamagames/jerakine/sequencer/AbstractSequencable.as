@@ -86,7 +86,7 @@ package com.ankamagames.jerakine.sequencer
          this._listeners[listener] = listener;
       }
       
-      protected function executeCallbacks() : void {
+      function executeCallbacks() : void {
          var listener:ISequencableListener = null;
          FightProfiler.getInstance().stop();
          if(this._timeOut)
@@ -137,7 +137,7 @@ package com.ankamagames.jerakine.sequencer
          return this._withTimeOut;
       }
       
-      protected function onTimeOut(e:TimerEvent) : void {
+      function onTimeOut(e:TimerEvent) : void {
          _log.error("Time out sur la step " + this + " (" + this._timeOut.delay + ")");
          this._withTimeOut = true;
          if(this._timeOut)

@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          return clonedCriterion;
       }
       
-      override protected function getCriterion() : int {
+      override function getCriterion() : int {
          var date:Date = new Date();
          return TimeManager.getInstance().getDateFromTime(date.getTime())[2];
       }

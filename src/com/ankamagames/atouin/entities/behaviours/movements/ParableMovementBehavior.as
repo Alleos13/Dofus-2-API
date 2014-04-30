@@ -51,19 +51,19 @@ package com.ankamagames.atouin.entities.behaviours.movements
          return _self;
       }
       
-      override protected function getLinearVelocity() : Number {
+      override function getLinearVelocity() : Number {
          return LINEAR_VELOCITY;
       }
       
-      override protected function getHorizontalDiagonalVelocity() : Number {
+      override function getHorizontalDiagonalVelocity() : Number {
          return HORIZONTAL_DIAGONAL_VELOCITY;
       }
       
-      override protected function getVerticalDiagonalVelocity() : Number {
+      override function getVerticalDiagonalVelocity() : Number {
          return VERTICAL_DIAGONAL_VELOCITY;
       }
       
-      override protected function getAnimation() : String {
+      override function getAnimation() : String {
          return ANIMATION;
       }
       
@@ -85,7 +85,7 @@ package com.ankamagames.atouin.entities.behaviours.movements
          initMovement(entity,tweenData);
       }
       
-      override protected function processMovement(tweenData:TweenEntityData, currentTime:uint) : void {
+      override function processMovement(tweenData:TweenEntityData, currentTime:uint) : void {
          var gravity2:* = NaN;
          tweenData.barycentre = _velocity * (currentTime - tweenData.start);
          if(tweenData.barycentre > 1)
@@ -118,7 +118,7 @@ package com.ankamagames.atouin.entities.behaviours.movements
          }
       }
       
-      private function checkAngle(initPoint:Point, finalPoint:Point) : Number {
+      function checkAngle(initPoint:Point, finalPoint:Point) : Number {
          var A:Number = Point.distance(initPoint,new Point(finalPoint.x,initPoint.y));
          var B:Number = Point.distance(initPoint,finalPoint);
          var angle:Number = Math.acos(A / B) * 180 / Math.PI;

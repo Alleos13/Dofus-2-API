@@ -117,7 +117,7 @@ package com.ankamagames.berilia.components
          this._video.clear();
       }
       
-      private function onNetStatus(event:NetStatusEvent) : void {
+      function onNetStatus(event:NetStatusEvent) : void {
          switch(event.info.code)
          {
             case "NetConnection.Connect.Failed":
@@ -157,22 +157,22 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onSecurityError(event:SecurityErrorEvent) : void {
+      function onSecurityError(event:SecurityErrorEvent) : void {
          Berilia.getInstance().handler.process(new VideoConnectFailedMessage(this));
          _log.error("Security Error: " + event);
       }
       
-      private function onASyncError(event:AsyncErrorEvent) : void {
+      function onASyncError(event:AsyncErrorEvent) : void {
          _log.warn("ASyncError: " + event);
       }
       
-      private function onBWDone() : void {
+      function onBWDone() : void {
       }
       
-      private function onMetaData(info:Object) : void {
+      function onMetaData(info:Object) : void {
       }
       
-      private function onPropertyChange(event:PropertyChangeEvent) : void {
+      function onPropertyChange(event:PropertyChangeEvent) : void {
          if((this._optionManager["muteAmbientSound"]) || (this._optionManager["tubulIsDesactivated"]))
          {
             this._soundTransform = new SoundTransform(0);
@@ -265,7 +265,7 @@ package com.ankamagames.berilia.components
          return this._mute;
       }
       
-      private function resizeVideo() : void {
+      function resizeVideo() : void {
          var videoRatio:* = NaN;
          var playerRatio:* = NaN;
          if((!(this._video.videoWidth == 0)) && (!(this._video.videoHeight == 0)) && (!(height == 0)))

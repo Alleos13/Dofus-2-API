@@ -71,7 +71,7 @@ package flashx.textLayout.elements
          return _eventMirror.willTrigger(param1);
       }
       
-      override protected function get abstract() : Boolean {
+      override function get abstract() : Boolean {
          return false;
       }
       

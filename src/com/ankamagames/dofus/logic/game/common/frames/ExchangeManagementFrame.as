@@ -99,15 +99,15 @@ package com.ankamagames.dofus.logic.game.common.frames
          this._priority = p;
       }
       
-      private function get roleplayContextFrame() : RoleplayContextFrame {
+      function get roleplayContextFrame() : RoleplayContextFrame {
          return Kernel.getWorker().getFrame(RoleplayContextFrame) as RoleplayContextFrame;
       }
       
-      private function get roleplayEntitiesFrame() : RoleplayEntitiesFrame {
+      function get roleplayEntitiesFrame() : RoleplayEntitiesFrame {
          return Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame;
       }
       
-      private function get roleplayMovementFrame() : RoleplayMovementFrame {
+      function get roleplayMovementFrame() : RoleplayMovementFrame {
          return Kernel.getWorker().getFrame(RoleplayMovementFrame) as RoleplayMovementFrame;
       }
       
@@ -431,7 +431,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      private function proceedExchange() : void {
+      function proceedExchange() : void {
       }
       
       public function pushed() : Boolean {
@@ -449,7 +449,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return true;
       }
       
-      private function get _kernelEventsManager() : KernelEventsManager {
+      function get _kernelEventsManager() : KernelEventsManager {
          return KernelEventsManager.getInstance();
       }
    }

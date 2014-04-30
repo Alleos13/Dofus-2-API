@@ -57,7 +57,7 @@ package com.ankamagames.atouin.types
          return this._processDrop;
       }
       
-      private function returnTrueFunction(... args) : Boolean {
+      function returnTrueFunction(... args) : Boolean {
          return true;
       }
    }

@@ -376,7 +376,7 @@ package com.ankamagames.berilia.frames
          return true;
       }
       
-      private function processRegisteredUiEvent(msg:Message, gridInstance:Grid) : void {
+      function processRegisteredUiEvent(msg:Message, gridInstance:Grid) : void {
          var args:Array = null;
          var fct:String = null;
          var ie:InstanceEvent = InstanceEvent(UIEventManager.getInstance().instances[this.currentDo]);
@@ -414,7 +414,7 @@ package com.ankamagames.berilia.frames
       
       private var _lastH:uint;
       
-      private function onStageResize(e:Event=null) : void {
+      function onStageResize(e:Event=null) : void {
          if((this._lastW == StageShareManager.stage.stageWidth) && (this._lastH == StageShareManager.stage.stageHeight))
          {
             return;

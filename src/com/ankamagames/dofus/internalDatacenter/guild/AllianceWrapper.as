@@ -314,7 +314,7 @@ package com.ankamagames.dofus.internalDatacenter.guild
          return returnValue;
       }
       
-      private function initDictionary() : void {
+      function initDictionary() : void {
          _rightDictionnary[IS_BOSS] = 0;
       }
    }

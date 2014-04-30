@@ -66,14 +66,14 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      private function checkSpeedHack(pEvt:TimerEvent) : void {
+      function checkSpeedHack(pEvt:TimerEvent) : void {
          this._timeToTest.stop();
          this._creationTimeFlash = getTimer();
          this._creationTimeOs = new Date().time;
          this._timerSpeedHack.start();
       }
       
-      private function onTimerComplete(pEvt:TimerEvent) : void {
+      function onTimerComplete(pEvt:TimerEvent) : void {
          this._timerSpeedHack.stop();
          var flashValue:uint = getTimer() - this._creationTimeFlash;
          var osValue:uint = new Date().time - this._creationTimeOs;

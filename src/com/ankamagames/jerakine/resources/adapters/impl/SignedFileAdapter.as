@@ -74,7 +74,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          super.free();
       }
       
-      override protected function getResource(dataFormat:String, data:*) : * {
+       function getResource(dataFormat:String, data:*) : * {
          return this._resource;
       }
       
@@ -82,7 +82,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          return ResourceType.RESOURCE_SIGNED_FILE;
       }
       
-      override protected function process(dataFormat:String, data:*) : void {
+       function process(dataFormat:String, data:*) : void {
          var sig:Signature = new Signature(this._signatureKey);
          var content:ByteArray = new ByteArray();
          try
@@ -118,7 +118,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          }
       }
       
-      override protected function getDataFormat() : String {
+       function getDataFormat() : String {
          return URLLoaderDataFormat.BINARY;
       }
       

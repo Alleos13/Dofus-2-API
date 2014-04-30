@@ -103,7 +103,7 @@ package com.ankamagames.dofus.datacenter.quest
          return this.getFixeExperienceReward(pPlayerLevel) * xpBonus;
       }
       
-      private function getFixeExperienceReward(level:int) : int {
+      function getFixeExperienceReward(level:int) : int {
          return level * Math.pow(100 + 2 * level,2) / 20 * this.experienceRatio;
       }
    }

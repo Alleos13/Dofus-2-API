@@ -111,7 +111,7 @@ package com.ankamagames.berilia.utils.web
       
       private const HEADER_END_SEPERATOR:String = "\n\n";
       
-      private function onFileIoError(e:Event) : void {
+      function onFileIoError(e:Event) : void {
          this._stream.removeEventListener(Event.COMPLETE,this.onFileReadDone);
          this._stream.removeEventListener(IOErrorEvent.IO_ERROR,this.onFileIoError);
          this._stream.close();
@@ -119,7 +119,7 @@ package com.ankamagames.berilia.utils.web
          this.throw404();
       }
       
-      private function onFileReadDone(e:Event) : void {
+      function onFileReadDone(e:Event) : void {
          this._stream.removeEventListener(Event.COMPLETE,this.onFileReadDone);
          this._stream.removeEventListener(IOErrorEvent.IO_ERROR,this.onFileIoError);
          this._contentBytes = new ByteArray();
@@ -131,12 +131,12 @@ package com.ankamagames.berilia.utils.web
          this.sendResponse();
       }
       
-      private function getRelativePath(f:File) : String {
+      function getRelativePath(f:File) : String {
          var rootPath:String = new File(HttpServer.getInstance().rootPath).nativePath;
          return f.nativePath.substring(rootPath.length + 1).split("\\").join("/");
       }
       
-      private function getImg(f:File) : String {
+      function getImg(f:File) : String {
          var img:String = "<img src=\"data:image/png;base64,";
          if(f.isDirectory)
          {
@@ -165,7 +165,7 @@ package com.ankamagames.berilia.utils.web
          return img + "\" />";
       }
       
-      private function onDirectoryList(e:FileListEvent) : void {
+      function onDirectoryList(e:FileListEvent) : void {
          var f:File = null;
          var isDir:* = false;
          this._statusHeader = "HTTP/1.0 200 OK";
@@ -188,7 +188,7 @@ package com.ankamagames.berilia.utils.web
          this.sendResponse();
       }
       
-      private function sendResponse() : void {
+      function sendResponse() : void {
          this._responseBytes = new ByteArray();
          this._responseBytes.writeUTFBytes(this._statusHeader);
          this._responseBytes.writeUTFBytes(this.HEADER_SEPERATOR);
@@ -213,7 +213,7 @@ package com.ankamagames.berilia.utils.web
          this._socket.flush();
       }
       
-      private function throw404() : void {
+      function throw404() : void {
          this._statusHeader = "HTTP/1.0 404 Not Found";
          this._mimeHeader = "Content-Type: text/html";
          var four0FourString:String = "<HTML><HEAD><TITLE>404 Not Found</TITLE></HEAD><BODY>404 Not Found</BODY></HTML>";
@@ -224,7 +224,7 @@ package com.ankamagames.berilia.utils.web
          this.sendResponse();
       }
       
-      private function throw403() : void {
+      function throw403() : void {
          this._statusHeader = "HTTP/1.0 403 Forbidden";
          this._mimeHeader = "Content-Type: text/html";
          var four0FourString:String = "<HTML><HEAD><TITLE>403 Forbidden</TITLE></HEAD><BODY>403 Forbidden</BODY></HTML>";
@@ -235,7 +235,7 @@ package com.ankamagames.berilia.utils.web
          this.sendResponse();
       }
       
-      private function throw501() : void {
+      function throw501() : void {
          this._statusHeader = "HTTP/1.0 501 Not Implemented";
          this._responseBytes = new ByteArray();
          this._responseBytes.writeUTFBytes(this._statusHeader);
@@ -244,7 +244,7 @@ package com.ankamagames.berilia.utils.web
          this._socket.writeBytes(this._responseBytes,0,this._responseBytes.bytesAvailable);
       }
       
-      private function throw500() : void {
+      function throw500() : void {
          this._statusHeader = "HTTP/1.0 500 Internal Server Error";
          this._responseBytes = new ByteArray();
          this._responseBytes.writeUTFBytes(this._statusHeader);
@@ -253,12 +253,12 @@ package com.ankamagames.berilia.utils.web
          this._socket.writeBytes(this._responseBytes,0,this._responseBytes.bytesAvailable);
       }
       
-      private function getMimeHeader(file:File) : String {
+      function getMimeHeader(file:File) : String {
          var extn:String = file.extension;
          return "Content-Type: " + MimeTypeHelper.getMimeType(extn);
       }
       
-      private function toRFC802(date:Date) : String {
+      function toRFC802(date:Date) : String {
          var output:String = "";
          switch(date.dayUTC)
          {

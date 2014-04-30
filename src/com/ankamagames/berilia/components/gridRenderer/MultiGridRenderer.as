@@ -152,7 +152,7 @@ package com.ankamagames.berilia.components.gridRenderer
          }
       }
       
-      protected function uiUpdate(ui:UiRootContainer, target:DisplayObject, data:*, selected:Boolean, subIndex:uint) : void {
+      function uiUpdate(ui:UiRootContainer, target:DisplayObject, data:*, selected:Boolean, subIndex:uint) : void {
          if(DisplayObjectContainer(target).numChildren)
          {
             ui.uiClass[this._updateFunctionName](SecureCenter.secure(data),this._cptNameReferences[DisplayObjectContainer(target).getChildAt(0)],selected,subIndex);
@@ -204,7 +204,7 @@ package com.ankamagames.berilia.components.gridRenderer
          return functionName;
       }
       
-      protected function buildLine(container:Sprite, name:String) : void {
+      function buildLine(container:Sprite, name:String) : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -213,7 +213,7 @@ package com.ankamagames.berilia.components.gridRenderer
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      protected function copyElement(basicElement:BasicElement, names:Object) : BasicElement {
+      function copyElement(basicElement:BasicElement, names:Object) : BasicElement {
          /*
           * Decompilation error
           * Code may be obfuscated

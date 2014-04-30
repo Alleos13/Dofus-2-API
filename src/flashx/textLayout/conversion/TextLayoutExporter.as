@@ -72,11 +72,11 @@ package flashx.textLayout.conversion
          return exportFlowGroupElement(param1,param2);
       }
       
-      override protected function get spanTextReplacementRegex() : RegExp {
+      override function get spanTextReplacementRegex() : RegExp {
          return brTabRegEx;
       }
       
-      override protected function getSpanTextReplacementXML(param1:String) : XML {
+      override function getSpanTextReplacementXML(param1:String) : XML {
          var _loc2_:XML = null;
          if(param1 == " ")
          {
@@ -180,7 +180,7 @@ package flashx.textLayout.conversion
          return _loc7_;
       }
       
-      override protected function exportFlowElement(param1:FlowElement) : XMLList {
+      override function exportFlowElement(param1:FlowElement) : XMLList {
          var _loc4_:Array = null;
          var _loc2_:XMLList = super.exportFlowElement(param1);
          var _loc3_:Object = param1.styles;
@@ -201,7 +201,7 @@ package flashx.textLayout.conversion
          return _loc2_;
       }
       
-      override protected function get formatDescription() : Object {
+      override function get formatDescription() : Object {
          return _formatDescription;
       }
    }

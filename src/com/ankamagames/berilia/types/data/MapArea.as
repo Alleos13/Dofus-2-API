@@ -85,7 +85,7 @@ package com.ankamagames.berilia.types.data
          this._freeTimer.start();
       }
       
-      private function onDeathCountDown(e:Event) : void {
+      function onDeathCountDown(e:Event) : void {
          if(this._freeTimer)
          {
             this._freeTimer.removeEventListener(TimerEvent.TIMER,this.onDeathCountDown);
@@ -113,7 +113,7 @@ package com.ankamagames.berilia.types.data
          }
       }
       
-      private function onLoad(e:ResourceLoadedEvent) : void {
+      function onLoad(e:ResourceLoadedEvent) : void {
          var checkScale:* = false;
          var currentScale:* = NaN;
          if((this._active) && (e.uri == this.src))

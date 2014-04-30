@@ -13,7 +13,7 @@ package com.ankamagames.berilia.utils
          super();
       }
       
-      override protected function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
+       function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
          getAdapter(uri,forcedAdapter);
          var moduleName:String = uri.path.substr(0,uri.path.indexOf("/"));
          var path:String = UiModuleManager.getInstance().getModulePath(moduleName);

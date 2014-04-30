@@ -408,7 +408,7 @@ package com.ankamagames.berilia.uiRender
          }
       }
       
-      private function makeContainer(ce:ContainerElement) : Sprite {
+      function makeContainer(ce:ContainerElement) : Sprite {
          var container:GraphicContainer = null;
          var sProperty:String = null;
          switch(true)
@@ -445,7 +445,7 @@ package com.ankamagames.berilia.uiRender
          return container as Sprite;
       }
       
-      private function makeComponent(ce:ComponentElement) : Sprite {
+      function makeComponent(ce:ComponentElement) : Sprite {
          var uiComponent:UIComponent = null;
          var sProperty:String = null;
          var cComponent:Class = getDefinitionByName(ce.className) as Class;
@@ -465,7 +465,7 @@ package com.ankamagames.berilia.uiRender
          return uiComponent as Sprite;
       }
       
-      private function makeScript() : void {
+      function makeScript() : void {
          if(this._scriptClass)
          {
             this._scUi.uiClass = new this._scriptClass();
@@ -479,7 +479,7 @@ package com.ankamagames.berilia.uiRender
          }
       }
       
-      private function fillUiScriptVar() : void {
+      function fillUiScriptVar() : void {
          var sVariable:String = null;
          var xmlVar:XMLList = null;
          var variable:XML = null;
@@ -521,12 +521,12 @@ package com.ankamagames.berilia.uiRender
          }
       }
       
-      private function makeShortcuts() : void {
+      function makeShortcuts() : void {
          var sShortcutName:String = null;
          var listener:GenericListener = null;
       }
       
-      private function finalizeContainer() : void {
+      function finalizeContainer() : void {
          var i:uint = 0;
          while(i < this._aFilnalizedLater.length)
          {
@@ -536,7 +536,7 @@ package com.ankamagames.berilia.uiRender
          this._aFilnalizedLater = new Array();
       }
       
-      private function makeModalContainer() : void {
+      function makeModalContainer() : void {
          var fct:Function = null;
          var listener:GenericListener = null;
          if(this._scUi.uiClass != null)
@@ -573,7 +573,7 @@ package com.ankamagames.berilia.uiRender
          this._uiDef.graphicTree.unshift(modalContainer);
       }
       
-      private function onParseComplete(e:ParsorEvent) : void {
+      function onParseComplete(e:ParsorEvent) : void {
          this.parsingTime = getTimer() - this._nTimeStamp;
          this._nTimeStamp = this.parsingTime + this._nTimeStamp;
          this._xpParser.removeEventListener(Event.COMPLETE,this.onParseComplete);

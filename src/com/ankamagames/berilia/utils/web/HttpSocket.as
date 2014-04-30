@@ -32,7 +32,7 @@ package com.ankamagames.berilia.utils.web
          return this._rootPath;
       }
       
-      private function onRequestSocketData(e:ProgressEvent) : void {
+      function onRequestSocketData(e:ProgressEvent) : void {
          var headerString:String = null;
          var initialRequestSignature:String = null;
          var initialRequestSignatureComponents:Array = null;
@@ -56,17 +56,17 @@ package com.ankamagames.berilia.utils.web
          }
       }
       
-      private function onRequestSocketClose(e:Event) : void {
+      function onRequestSocketClose(e:Event) : void {
          this.done();
       }
       
-      private function done() : void {
+      function done() : void {
          this.tearDown();
          var completeEvent:Event = new Event(Event.COMPLETE);
          this.dispatchEvent(completeEvent);
       }
       
-      private function testSocket(socket:Socket) : Boolean {
+      function testSocket(socket:Socket) : Boolean {
          if(!socket.connected)
          {
             this.done();

@@ -48,11 +48,11 @@ package com.ankamagames.dofus.logic.game.common.frames
          return Priority.NORMAL;
       }
       
-      private function get roleplayContextFrame() : RoleplayContextFrame {
+      function get roleplayContextFrame() : RoleplayContextFrame {
          return Kernel.getWorker().getFrame(RoleplayContextFrame) as RoleplayContextFrame;
       }
       
-      private function get commonExchangeManagementFrame() : CommonExchangeManagementFrame {
+      function get commonExchangeManagementFrame() : CommonExchangeManagementFrame {
          return Kernel.getWorker().getFrame(CommonExchangeManagementFrame) as CommonExchangeManagementFrame;
       }
       

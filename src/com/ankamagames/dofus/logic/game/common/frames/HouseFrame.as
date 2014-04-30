@@ -220,7 +220,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return true;
       }
       
-      private function getHouseInformations(houseID:uint) : HouseWrapper {
+      function getHouseInformations(houseID:uint) : HouseWrapper {
          var hi:HouseWrapper = null;
          var houseList:Dictionary = (Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame).housesInformations;
          for each (hi in houseList)

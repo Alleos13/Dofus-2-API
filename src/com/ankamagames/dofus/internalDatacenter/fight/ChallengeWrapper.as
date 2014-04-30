@@ -129,7 +129,7 @@ package com.ankamagames.dofus.internalDatacenter.fight
          }
       }
       
-      private function getFightFrame() : FightContextFrame {
+      function getFightFrame() : FightContextFrame {
          return Kernel.getWorker().getFrame(FightContextFrame) as FightContextFrame;
       }
    }

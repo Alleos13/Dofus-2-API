@@ -380,7 +380,7 @@ package com.ankamagames.atouin.data.map
          }
       }
       
-      private function computeGfxList(skipBackground:Boolean=false) : void {
+      function computeGfxList(skipBackground:Boolean=false) : void {
          var l:* = 0;
          var c:* = 0;
          var e:* = 0;

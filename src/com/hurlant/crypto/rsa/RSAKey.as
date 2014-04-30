@@ -296,11 +296,11 @@ package com.hurlant.crypto.rsa
             return s;
          }
          
-         protected function doPublic(x:BigInteger) : BigInteger {
+         function doPublic(x:BigInteger) : BigInteger {
             return x.modPowInt(this.e,this.n);
          }
          
-         protected function doPrivate2(x:BigInteger) : BigInteger {
+         function doPrivate2(x:BigInteger) : BigInteger {
             if((this.p == null) && (this.q == null))
             {
                return x.modPow(this.d,this.n);
@@ -315,7 +315,7 @@ package com.hurlant.crypto.rsa
             return r;
          }
          
-         protected function doPrivate(x:BigInteger) : BigInteger {
+         function doPrivate(x:BigInteger) : BigInteger {
             if((this.p == null) || (this.q == null))
             {
                return x.modPow(this.d,this.n);

@@ -287,7 +287,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function removeHtmlEvent() : void {
+      function removeHtmlEvent() : void {
          var link:Object = null;
          var input:Object = null;
          for each (link in this._linkList)
@@ -315,12 +315,12 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onResize(e:Event) : void {
+      function onResize(e:Event) : void {
          this._resizeTimer.reset();
          this._resizeTimer.start();
       }
       
-      private function onResizeEnd(e:Event) : void {
+      function onResizeEnd(e:Event) : void {
          this._resizeTimer.stop();
          var scale:Number = StageShareManager.windowScale;
          if(this._htmlLoader)
@@ -336,7 +336,7 @@ package com.ankamagames.berilia.components
       
       private var _domInit:Boolean;
       
-      private function onDomReady(e:Event) : void {
+      function onDomReady(e:Event) : void {
          if(!this._htmlLoader.window.document.body)
          {
             this._domInit = false;
@@ -362,7 +362,7 @@ package com.ankamagames.berilia.components
          Berilia.getInstance().handler.process(new BrowserDomReady(InteractiveObject(this)));
       }
       
-      private function isManualExternalLink(link:String) : Boolean {
+      function isManualExternalLink(link:String) : Boolean {
          var pattern:RegExp = null;
          for each (pattern in this._manualExternalLink)
          {
@@ -374,7 +374,7 @@ package com.ankamagames.berilia.components
          return false;
       }
       
-      private function modifyDOM(target:Object) : void {
+      function modifyDOM(target:Object) : void {
          var i:uint = 0;
          var a:Object = null;
          try
@@ -400,7 +400,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onLinkClick(e:*) : void {
+      function onLinkClick(e:*) : void {
          var target:Object = e.target;
          if(target.tagName == "IMG")
          {
@@ -413,23 +413,23 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onInputFocus(e:*) : void {
+      function onInputFocus(e:*) : void {
          this._inputFocus = true;
       }
       
-      private function onInputBlur(e:*) : void {
+      function onInputBlur(e:*) : void {
          this._inputFocus = false;
       }
       
-      private function onScroll(e:Event) : void {
+      function onScroll(e:Event) : void {
          this._htmlLoader.scrollV = this._vScrollBar.value;
       }
       
-      private function onBoundsChange(e:Event) : void {
+      function onBoundsChange(e:Event) : void {
          this.updateScrollbar();
       }
       
-      private function updateScrollbar() : void {
+      function updateScrollbar() : void {
          if(this._vScrollBar.max != this._htmlLoader.contentHeight - this._htmlLoader.height)
          {
             this._vScrollBar.min = 0;
@@ -437,11 +437,11 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onSessionTimeout(e:Event) : void {
+      function onSessionTimeout(e:Event) : void {
          Berilia.getInstance().handler.process(new BrowserSessionTimeout(InteractiveObject(this)));
       }
       
-      private function onLocationChange(e:Event) : void {
+      function onLocationChange(e:Event) : void {
          _log.trace("Load " + this._htmlLoader.location);
          this.removeHtmlEvent();
          this._inputFocus = false;

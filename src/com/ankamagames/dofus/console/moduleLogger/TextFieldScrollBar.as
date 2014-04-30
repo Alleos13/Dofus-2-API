@@ -118,12 +118,12 @@ package com.ankamagames.dofus.console.moduleLogger
          dispatchEvent(new Event(Event.CHANGE));
       }
       
-      private function updateTextPosition() : void {
+      function updateTextPosition() : void {
          var p:Number = this._scrollBar.y / (this._textField.height - this._scrollBar.height);
          this.scrollText(this._maxScroll * p);
       }
       
-      private function drawScrollBar() : void {
+      function drawScrollBar() : void {
          if(this._lines.length <= this._numLines)
          {
             visible = false;
@@ -144,7 +144,7 @@ package com.ankamagames.dofus.console.moduleLogger
          this._scrollBar.y = this._scroll * (this._textField.height - this._scrollBar.height) / this._maxScroll;
       }
       
-      private function createUI() : void {
+      function createUI() : void {
          if(this._background)
          {
             throw new Error();
@@ -164,13 +164,13 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private var offsetY:int;
       
-      private function onScrollBarMouseDown(mouseEvent:MouseEvent) : void {
+      function onScrollBarMouseDown(mouseEvent:MouseEvent) : void {
          this.offsetY = this._scrollBar.mouseY;
          stage.addEventListener(MouseEvent.MOUSE_MOVE,this.onMouseMove);
          stage.addEventListener(MouseEvent.MOUSE_UP,this.onMouseUp);
       }
       
-      private function onMouseWheel(mouseEvent:MouseEvent) : void {
+      function onMouseWheel(mouseEvent:MouseEvent) : void {
          if(!visible)
          {
             return;
@@ -184,12 +184,12 @@ package com.ankamagames.dofus.console.moduleLogger
          this.resize();
       }
       
-      private function onMouseUp(mouseEvent:MouseEvent) : void {
+      function onMouseUp(mouseEvent:MouseEvent) : void {
          stage.removeEventListener(MouseEvent.MOUSE_MOVE,this.onMouseMove);
          stage.removeEventListener(MouseEvent.MOUSE_UP,this.onMouseUp);
       }
       
-      private function onMouseMove(mouseEvent:MouseEvent) : void {
+      function onMouseMove(mouseEvent:MouseEvent) : void {
          var value:int = mouseY - this.offsetY;
          var maxValue:int = this._textField.height - this._scrollBar.height;
          if(value < 0)

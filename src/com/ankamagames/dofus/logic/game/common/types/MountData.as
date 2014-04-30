@@ -101,13 +101,7 @@ package com.ankamagames.dofus.logic.game.common.types
          {
             return null;
          }
-         return 
-            {
-               mount:mount,
-               mother:makeParent(ancestor,generation+1,nextStart,0+2*(ancestorIndex-nextStart)),
-               father:makeParent(ancestor,generation+1,nextStart,1+2*(ancestorIndex-nextStart)),
-               entityLook:TiphonEntityLook.fromString(mount.look)
-            }
+		 return null;
          ;
       }
 

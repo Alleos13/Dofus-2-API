@@ -55,7 +55,7 @@ package com.ankamagames.berilia.api
          return this._object.object.hasOwnProperty(name);
       }
       
-      private function verify(o:*) : void {
+      function verify(o:*) : void {
          var pkg:String = getQualifiedClassName(o);
          if(pkg.indexOf("d2api") == 0)
          {

@@ -117,7 +117,7 @@ package com.ankamagames.dofus.types.sequences
          executeCallbacks();
       }
       
-      override protected function onTimeOut(e:TimerEvent) : void {
+       function onTimeOut(e:TimerEvent) : void {
          _log.error("Timeout en attendant le SHOT du bone du projectile " + this._gfxId);
          if(this._entity)
          {

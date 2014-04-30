@@ -278,7 +278,7 @@ package com.ankamagames.dofus.logic.connection.frames
          return true;
       }
       
-      private function getSelectableServers() : Array {
+      function getSelectableServers() : Array {
          var server:* = undefined;
          var selectableServers:Array = new Array();
          for each (server in this._serversList)
@@ -291,7 +291,7 @@ package com.ankamagames.dofus.logic.connection.frames
          return selectableServers;
       }
       
-      private function broadcastServersListUpdate() : void {
+      function broadcastServersListUpdate() : void {
          var server:Object = null;
          this._serversUsedList = new Vector.<GameServerInformations>();
          PlayerManager.getInstance().serversList = new Vector.<int>();
@@ -306,7 +306,7 @@ package com.ankamagames.dofus.logic.connection.frames
          KernelEventsManager.getInstance().processCallback(HookList.ServersList,this._serversList);
       }
       
-      private function getUpdateServerFunction(serverToUpdate:GameServerInformations) : Function {
+      function getUpdateServerFunction(serverToUpdate:GameServerInformations) : Function {
          return function(element:*, index:int, arr:Vector.<GameServerInformations>):void
          {
             var gsi:* = element as GameServerInformations;
@@ -320,7 +320,7 @@ package com.ankamagames.dofus.logic.connection.frames
          };
       }
       
-      private function getUpdateServerStatusFunction(serverId:uint, newStatus:uint) : Function {
+      function getUpdateServerStatusFunction(serverId:uint, newStatus:uint) : Function {
          return function(element:*, index:int, arr:Vector.<GameServerInformations>):void
          {
             var gsi:* = element as GameServerInformations;

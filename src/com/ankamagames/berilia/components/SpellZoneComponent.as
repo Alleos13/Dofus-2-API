@@ -70,7 +70,7 @@ package com.ankamagames.berilia.components
          this.setRange(this._spellLevel.minimalRange,this._spellLevel.maximalRange);
       }
       
-      private function setRange(minRange:uint, maxRange:uint) : void {
+      function setRange(minRange:uint, maxRange:uint) : void {
          var additionalRange:uint = 0;
          var shape:IZoneShape = null;
          this._minRange = minRange;
@@ -162,7 +162,7 @@ package com.ankamagames.berilia.components
          this.removeCells();
       }
       
-      private function getCenterCellId(spellRange:uint) : uint {
+      function getCenterCellId(spellRange:uint) : uint {
          var posX:uint = spellRange;
          var posY:uint = 0;
          var centerCellId:uint = MapPoint.fromCoords(posX,posY).cellId;

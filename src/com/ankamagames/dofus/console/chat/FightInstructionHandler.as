@@ -63,7 +63,7 @@ package com.ankamagames.dofus.console.chat
          }
       }
       
-      private function getFighterId(name:String) : int {
+      function getFighterId(name:String) : int {
          var fighterId:* = 0;
          var fightFrame:FightContextFrame = Kernel.getWorker().getFrame(FightContextFrame) as FightContextFrame;
          var fighters:Vector.<int> = fightFrame.battleFrame.fightersList;
@@ -77,7 +77,7 @@ package com.ankamagames.dofus.console.chat
          return 0;
       }
       
-      private function listFighters(console:ConsoleHandler) : void {
+      function listFighters(console:ConsoleHandler) : void {
          var fightFrame:FightContextFrame = null;
          var fighters:Vector.<int> = null;
          var fighterId:* = 0;

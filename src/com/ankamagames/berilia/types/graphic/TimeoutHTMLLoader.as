@@ -56,7 +56,7 @@ package com.ankamagames.berilia.types.graphic
          return this._fromCache;
       }
       
-      private function onLocationChange(e:Event) : void {
+      function onLocationChange(e:Event) : void {
          if(this._timer)
          {
             this._timer.reset();
@@ -64,7 +64,7 @@ package com.ankamagames.berilia.types.graphic
          }
       }
       
-      private function onTimeOut(e:Event) : void {
+      function onTimeOut(e:Event) : void {
          this._timer.stop();
          dispatchEvent(new Event(TIMEOUT));
          if((!this._timer.running) && (this._uid))

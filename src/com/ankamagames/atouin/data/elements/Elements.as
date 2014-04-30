@@ -140,7 +140,7 @@ package com.ankamagames.atouin.data.elements
          }
       }
       
-      private function readElement(edId:uint) : GraphicalElementData {
+      function readElement(edId:uint) : GraphicalElementData {
          this._rawData["position"] = this._elementsIndex[edId];
          var edType:int = this._rawData.readByte();
          var ed:GraphicalElementData = GraphicalElementFactory.getGraphicalElementData(edId,edType);

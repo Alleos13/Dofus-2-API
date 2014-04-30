@@ -65,7 +65,7 @@ package com.ankamagames.berilia.components
          this.rerender();
       }
       
-      private function makeDataProvider(v:Vector.<TreeData>, result:Vector.<TreeData>=null) : Vector.<TreeData> {
+      function makeDataProvider(v:Vector.<TreeData>, result:Vector.<TreeData>=null) : Vector.<TreeData> {
          var node:TreeData = null;
          if(!result)
          {

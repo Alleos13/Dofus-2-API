@@ -194,7 +194,7 @@ package com.ankamagames.berilia.managers
          return newEss;
       }
       
-      protected function init() : void {
+      function init() : void {
          var aSavedCss:Array = null;
          var file:String = null;
          if(_useCache)
@@ -207,7 +207,7 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      private function parseCss(sUrl:String, content:String) : void {
+      function parseCss(sUrl:String, content:String) : void {
          var uri:Uri = new Uri(sUrl);
          var styleSheet:StyleSheet = new ExtendedStyleSheet(uri.uri);
          this._aCss[uri.uri] = styleSheet;
@@ -215,7 +215,7 @@ package com.ankamagames.berilia.managers
          styleSheet.parseCSS(content);
       }
       
-      private function updateWaitingMultiUrl(loadedUrl:String) : void {
+      function updateWaitingMultiUrl(loadedUrl:String) : void {
          var ok:* = false;
          var url:String = null;
          var i:uint = 0;
@@ -255,7 +255,7 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      private function dispatchWaitingCallbabk(url:String) : void {
+      function dispatchWaitingCallbabk(url:String) : void {
          var i:uint = 0;
          if(this._aWaiting[url])
          {
@@ -269,7 +269,7 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      protected function complete(e:ResourceLoadedEvent) : void {
+      function complete(e:ResourceLoadedEvent) : void {
          var aSavedCss:Array = null;
          if(_useCache)
          {
@@ -281,13 +281,13 @@ package com.ankamagames.berilia.managers
          this.parseCss(e.uri.uri,e.resource);
       }
       
-      protected function error(e:ResourceErrorEvent) : void {
+      function error(e:ResourceErrorEvent) : void {
          ErrorManager.addError("Impossible de trouver la feuille de style (url: " + e.uri + ")");
          this._aLoadingFile[e.uri.uri] = false;
          delete this._aWaiting[[e.uri.uri]];
       }
       
-      private function onCssParsed(e:CssEvent) : void {
+      function onCssParsed(e:CssEvent) : void {
          e.stylesheet.removeEventListener(CssEvent.CSS_PARSED,this.onCssParsed);
          var uri:Uri = new Uri(e.stylesheet.url);
          this.dispatchWaitingCallbabk(uri.uri);

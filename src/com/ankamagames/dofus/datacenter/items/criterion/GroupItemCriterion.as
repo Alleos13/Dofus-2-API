@@ -154,7 +154,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          return clonedCriterion;
       }
       
-      private function createNewGroups() : void {
+      function createNewGroups() : void {
          var crit:IItemCriterion = null;
          var ope:String = null;
          var curIndex:* = 0;
@@ -209,7 +209,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          this._singleOperatorType = this.checkSingleOperatorType(this._operators);
       }
       
-      private function split() : void {
+      function split() : void {
          var criterion:IItemCriterion = null;
          var indexOfNextCriterion:* = 0;
          var index:* = 0;
@@ -340,7 +340,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          }
       }
       
-      private function checkSingleOperatorType(pOperators:Vector.<String>) : Boolean {
+      function checkSingleOperatorType(pOperators:Vector.<String>) : Boolean {
          var op:String = null;
          if(pOperators.length > 0)
          {
@@ -355,7 +355,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          return true;
       }
       
-      private function getFirstCriterion(pCriteria:String) : IItemCriterion {
+      function getFirstCriterion(pCriteria:String) : IItemCriterion {
          var criterion:IItemCriterion = null;
          var dl:Vector.<String> = null;
          var ANDindex:* = 0;

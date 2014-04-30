@@ -385,7 +385,7 @@ package com.ankamagames.tiphon.display
          }
       }
       
-      protected function onLoadComplete(pEvt:TiphonEvent) : void {
+      function onLoadComplete(pEvt:TiphonEvent) : void {
          removeEventListener(TiphonEvent.RENDER_SUCCEED,this.onLoadComplete);
          var customStaticAnim:String = this._currentAnimation.indexOf("_Statique_") == -1?this._currentAnimation.replace("_","_Statique_"):null;
          var rider:TiphonSprite = this.getSubEntitySlot(2,0) as TiphonSprite;
@@ -1178,7 +1178,7 @@ package com.ankamagames.tiphon.display
          }
       }
       
-      protected function finalize() : void {
+      function finalize() : void {
          if(this.destroyed)
          {
             return;
@@ -1432,7 +1432,7 @@ package com.ankamagames.tiphon.display
          }
       }
       
-      protected function clearAnimation() : void {
+      function clearAnimation() : void {
          var num:* = 0;
          var i:* = 0;
          if(this._animMovieClip)
@@ -1636,7 +1636,7 @@ package com.ankamagames.tiphon.display
          TiphonDebugManager.displayDofusScriptError("Initialisation impossible : " + this._currentAnimation + ", " + this._currentDirection,this);
       }
       
-      protected function onAdded(e:Event) : void {
+      function onAdded(e:Event) : void {
          var carriedSprite:CarriedSprite = null;
          var child:DisplayObject = null;
          var splitedName:Array = null;

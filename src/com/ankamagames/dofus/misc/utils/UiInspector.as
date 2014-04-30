@@ -149,16 +149,7 @@ package com.ankamagames.dofus.misc.utils
       }
 
       private function getBeriliaElement(target:DisplayObject) : Array {
-         var result:Array = [];
-         for(;(target)&&(!(target is Stage))&&(target.parent);continue loop0)
-         {
-            if((target is UiRootContainer)||(target is GraphicContainer))
-            {
-               result.push(target);
-            }
-            target=target.parent;
-         }
-         return result;
+		  return null;
       }
 
       private var _uiRoot:UiRootContainer;
@@ -192,12 +183,12 @@ package com.ankamagames.dofus.misc.utils
          var ind:String = "";
          if(parentTarget)
          {
-            str=str+this.getGraphicContainerInfo(parentTarget,"Elément parent",ind);
+            str=str+this.getGraphicContainerInfo(parentTarget,"Elï¿½ment parent",ind);
             ind="&nbsp;&nbsp;&nbsp;";
          }
          if(target)
          {
-            str=str+this.getGraphicContainerInfo(target,"Elément",ind);
+            str=str+this.getGraphicContainerInfo(target,"Elï¿½ment",ind);
             help="<br/>---------- AIDE ---------<br/>";
             help=help+"[Ctrl + c] : Copier ces informations<br/>";
             help=help+"[Ctrl + Shift + s] : Cmd son survol<br/>";

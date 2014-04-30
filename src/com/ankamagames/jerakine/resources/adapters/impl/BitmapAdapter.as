@@ -13,11 +13,11 @@ package com.ankamagames.jerakine.resources.adapters.impl
          super();
       }
       
-      override protected function getResource(ldr:LoaderInfo) : * {
+       function getResource(ldr:LoaderInfo) : * {
          return Bitmap(ldr.loader.content).bitmapData;
       }
       
-      override public function getResourceType() : uint {
+	    public override function getResourceType() : uint {
          return ResourceType.RESOURCE_BITMAP;
       }
    }

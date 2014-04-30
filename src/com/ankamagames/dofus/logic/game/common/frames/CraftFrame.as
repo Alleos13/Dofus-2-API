@@ -133,7 +133,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return Priority.NORMAL;
       }
       
-      private function get socialFrame() : SocialFrame {
+      function get socialFrame() : SocialFrame {
          return Kernel.getWorker().getFrame(SocialFrame) as SocialFrame;
       }
       
@@ -149,11 +149,11 @@ package com.ankamagames.dofus.logic.game.common.frames
          return this._skillId;
       }
       
-      private function get roleplayContextFrame() : RoleplayContextFrame {
+      function get roleplayContextFrame() : RoleplayContextFrame {
          return Kernel.getWorker().getFrame(RoleplayContextFrame) as RoleplayContextFrame;
       }
       
-      private function get commonExchangeFrame() : CommonExchangeManagementFrame {
+      function get commonExchangeFrame() : CommonExchangeManagementFrame {
          return Kernel.getWorker().getFrame(CommonExchangeManagementFrame) as CommonExchangeManagementFrame;
       }
       
@@ -899,7 +899,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      private function resetLists() : void {
+      function resetLists() : void {
          this.paymentCraftList.kamaPayment = 0;
          this.paymentCraftList.kamaPaymentOnlySuccess = 0;
          this.paymentCraftList.objectsPayment = new Array();
@@ -1008,7 +1008,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          KernelEventsManager.getInstance().processCallback(CraftHookList.PaymentCraftList,this.paymentCraftList,true);
       }
       
-      private function sendUpdateHook(pPlayerExchangeCraftList:PlayerExchangeCraftList) : void {
+      function sendUpdateHook(pPlayerExchangeCraftList:PlayerExchangeCraftList) : void {
          switch(pPlayerExchangeCraftList)
          {
             case this.otherPlayerList:

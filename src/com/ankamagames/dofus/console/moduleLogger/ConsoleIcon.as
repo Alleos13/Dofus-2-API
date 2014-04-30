@@ -187,7 +187,7 @@ package com.ankamagames.dofus.console.moduleLogger
          this._icon.transform.colorTransform = color;
       }
       
-      private function onRollOver(e:MouseEvent) : void {
+      function onRollOver(e:MouseEvent) : void {
          transform.colorTransform = new ColorTransform(1.4,1.4,1.4);
          if(this._toolTip)
          {
@@ -205,7 +205,7 @@ package com.ankamagames.dofus.console.moduleLogger
          }
       }
       
-      private function onRollOut(e:MouseEvent) : void {
+      function onRollOut(e:MouseEvent) : void {
          transform.colorTransform = new ColorTransform(1,1,1);
          this.enabled = this._enabled;
          if(this._toolTip)

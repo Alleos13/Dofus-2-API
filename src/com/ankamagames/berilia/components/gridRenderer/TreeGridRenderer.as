@@ -298,7 +298,7 @@ package com.ankamagames.berilia.components.gridRenderer
          return functionName;
       }
       
-      private function updateBackground(raw:Sprite, index:uint, selected:Boolean) : void {
+      function updateBackground(raw:Sprite, index:uint, selected:Boolean) : void {
          var shape:Shape = null;
          if(!this._shapeIndex[raw])
          {
@@ -325,7 +325,7 @@ package com.ankamagames.berilia.components.gridRenderer
          }
       }
       
-      private function onRollOver(e:MouseEvent) : void {
+      function onRollOver(e:MouseEvent) : void {
          var raw:Sprite = null;
          if((e.target.name.indexOf("extension") == -1) && (e.target.text.length))
          {
@@ -338,7 +338,7 @@ package com.ankamagames.berilia.components.gridRenderer
          }
       }
       
-      private function onRollOut(e:MouseEvent) : void {
+      function onRollOut(e:MouseEvent) : void {
          var raw:Sprite = null;
          if(e.target.name.indexOf("extension") == -1)
          {
@@ -354,7 +354,7 @@ package com.ankamagames.berilia.components.gridRenderer
          }
       }
       
-      private function onRelease(e:MouseEvent) : void {
+      function onRelease(e:MouseEvent) : void {
          var listener:IInterfaceListener = null;
          var data:TreeData = this._indexRef[e.target.parent];
          data.expend = !data.expend;

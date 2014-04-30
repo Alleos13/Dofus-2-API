@@ -154,12 +154,12 @@ package com.ankamagames.dofus.logic.connection.managers
          _self = null;
       }
       
-      private function cipherMd5String(pwd:String) : String {
+      function cipherMd5String(pwd:String) : String {
          var _loc3_:* = false;
          return MD5.hash(pwd + this._salt);
       }
       
-      private function cipherRsa(login:String, pwd:String, certificate:TrustCertificate) : Vector.<int> {
+      function cipherRsa(login:String, pwd:String, certificate:TrustCertificate) : Vector.<int> {
          /*
           * Decompilation error
           * Code may be obfuscated

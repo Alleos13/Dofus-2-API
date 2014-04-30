@@ -13,12 +13,6 @@ package com.ankamagames.dofus.modules.utils
    import flash.utils.Dictionary;
    import by.blooddy.crypto.MD5;
    import com.ankamagames.jerakine.resources.adapters.impl.SignedFileAdapter;
-   import org.as3commons.bytecode.tags.DoABCTag;
-   import org.as3commons.bytecode.abc.AbcFile;
-   import org.as3commons.bytecode.abc.ClassInfo;
-   import org.as3commons.bytecode.tags.FileAttributesTag;
-   import org.as3commons.bytecode.swf.SWFFileIO;
-   import org.as3commons.bytecode.swf.SWFFile;
    
    public class ModuleInspector extends Object
    {
@@ -134,42 +128,7 @@ package com.ankamagames.dofus.modules.utils
       }
       
       public static function getScriptHookAndAction(swfContent:ByteArray) : Object {
-         var tag:DoABCTag = null;
-         var abcFile:AbcFile = null;
-         var infos:ClassInfo = null;
-         var attributesTag:FileAttributesTag = null;
-         var fileAttributesTags:Array = null;
-         var apiHookAction:* = new Object();
-         var io:SWFFileIO = new SWFFileIO();
-         var swfFile:SWFFile = io.read(swfContent);
-         apiHookAction.actions = new Array();
-         apiHookAction.apis = new Array();
-         apiHookAction.hooks = new Array();
-         for each (tag in swfFile.getTagsByType(DoABCTag))
-         {
-            abcFile = tag.abcFile;
-            for each (infos in abcFile.classInfo)
-            {
-               switch(infos.classMultiname.nameSpace.name)
-               {
-                  case "d2hooks":
-                     apiHookAction.hooks.push(infos.classMultiname.name);
-                     continue;
-                  case "d2actions":
-                     apiHookAction.actions.push(infos.classMultiname.name);
-                     continue;
-                  case "d2api":
-                     apiHookAction.apis.push(infos.classMultiname.name);
-                     continue;
-               }
-            }
-         }
-         fileAttributesTags = swfFile.getTagsByType(FileAttributesTag);
-         for each (attributesTag in fileAttributesTags)
-         {
-            apiHookAction.useNetwork = attributesTag.useNetwork;
-         }
-         return apiHookAction;
+         return null;
       }
    }
 }

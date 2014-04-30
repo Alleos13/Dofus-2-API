@@ -101,7 +101,7 @@ package com.ankamagames.atouin.managers
          return s.isInside(cellId);
       }
       
-      private function onPropertyChanged(pEvent:PropertyChangeEvent) : void {
+      function onPropertyChanged(pEvent:PropertyChangeEvent) : void {
          var s:Selection = null;
          var renderer:ZoneDARenderer = null;
          if(pEvent.propertyName == "transparentOverlayMode")
@@ -125,7 +125,7 @@ package com.ankamagames.atouin.managers
          }
       }
       
-      private function diff(a1:Vector.<uint>, a2:Vector.<uint>) : Vector.<uint> {
+      function diff(a1:Vector.<uint>, a2:Vector.<uint>) : Vector.<uint> {
          var elem:* = undefined;
          var res:Vector.<uint> = new Vector.<uint>();
          for each (elem in a2)

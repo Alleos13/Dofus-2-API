@@ -154,7 +154,7 @@ package com.ankamagames.berilia.components.gridRenderer
          return functionName;
       }
       
-      private function updateBackground(label:Label, index:uint, selected:Boolean) : void {
+      function updateBackground(label:Label, index:uint, selected:Boolean) : void {
          var shape:Shape = null;
          if(!this._shapeIndex[label])
          {
@@ -181,7 +181,7 @@ package com.ankamagames.berilia.components.gridRenderer
          }
       }
       
-      private function onRollOver(e:MouseEvent) : void {
+      function onRollOver(e:MouseEvent) : void {
          var target:Object = null;
          var label:Label = e.currentTarget as Label;
          if((this._overColor) && (label.text.length > 0))
@@ -195,7 +195,7 @@ package com.ankamagames.berilia.components.gridRenderer
          }
       }
       
-      private function onRollOut(e:MouseEvent) : void {
+      function onRollOut(e:MouseEvent) : void {
          var target:Object = null;
          var label:Label = e.currentTarget as Label;
          if(label.text.length > 0)

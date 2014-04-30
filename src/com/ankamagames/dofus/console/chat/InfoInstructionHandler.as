@@ -74,7 +74,7 @@ package com.ankamagames.dofus.console.chat
          }
       }
       
-      private function getVersion() : String {
+      function getVersion() : String {
          return "----------------------------------------------\n" + "DOFUS CLIENT v " + BuildInfos.BUILD_VERSION + "\n" + "(c) ANKAMA GAMES (" + BuildInfos.BUILD_DATE + ") \n" + "Flash player " + Capabilities.version + "\n----------------------------------------------";
       }
       

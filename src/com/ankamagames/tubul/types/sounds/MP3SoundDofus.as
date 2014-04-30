@@ -423,7 +423,7 @@ package com.ankamagames.tubul.types.sounds
          }
       }
       
-      protected function applyParam() : void {
+      function applyParam() : void {
          if(this._soundWrapper == null)
          {
             return;
@@ -431,7 +431,7 @@ package com.ankamagames.tubul.types.sounds
          this._soundWrapper.volume = this.effectiveVolume;
       }
       
-      protected function initSound() : void {
+      function initSound() : void {
          this._soundLoaded = false;
          this._onLoadingComplete = new Vector.<Callback>();
          this._eventDispatcher = new EventDispatcher();
@@ -512,7 +512,7 @@ package com.ankamagames.tubul.types.sounds
          sce = null;
       }
       
-      protected function onSoundComplete(pEvent:Event) : void {
+      function onSoundComplete(pEvent:Event) : void {
          this._soundWrapper.currentLoop = 0;
          if(this._silence)
          {

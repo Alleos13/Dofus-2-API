@@ -232,7 +232,7 @@ package com.ankamagames.atouin.managers
          }
       }
       
-      private function init() : void {
+      function init() : void {
          var c:GraphicCell = null;
          var i:uint = 0;
          while(i < AtouinConstants.MAP_CELLS_COUNT)
@@ -245,7 +245,7 @@ package com.ankamagames.atouin.managers
          }
       }
       
-      private function overStateChanged(oldValue:Boolean, newValue:Boolean) : void {
+      function overStateChanged(oldValue:Boolean, newValue:Boolean) : void {
          if(oldValue == newValue)
          {
             return;
@@ -263,7 +263,7 @@ package com.ankamagames.atouin.managers
          }
       }
       
-      private function registerOver(enabled:Boolean) : void {
+      function registerOver(enabled:Boolean) : void {
          var i:uint = 0;
          while(i < AtouinConstants.MAP_CELLS_COUNT)
          {
@@ -284,7 +284,7 @@ package com.ankamagames.atouin.managers
          }
       }
       
-      private function mouseClick(e:MouseEvent) : void {
+      function mouseClick(e:MouseEvent) : void {
          var a:Array = null;
          var entity:IEntity = null;
          var msg:CellClickMessage = null;
@@ -323,7 +323,7 @@ package com.ankamagames.atouin.managers
          }
       }
       
-      private function mouseOver(e:MouseEvent) : void {
+      function mouseOver(e:MouseEvent) : void {
          var _cellColor:uint = 0;
          var textInfo:String = null;
          var mp:MapPoint = null;
@@ -376,7 +376,7 @@ package com.ankamagames.atouin.managers
          Atouin.getInstance().handler.process(msg);
       }
       
-      private function mouseOut(e:MouseEvent) : void {
+      function mouseOut(e:MouseEvent) : void {
          var target:Sprite = Sprite(e.target);
          if(!target.parent)
          {
@@ -396,7 +396,7 @@ package com.ankamagames.atouin.managers
          Atouin.getInstance().handler.process(msg);
       }
       
-      private function onPropertyChanged(e:PropertyChangeEvent) : void {
+      function onPropertyChanged(e:PropertyChangeEvent) : void {
          if(e.propertyName == "alwaysShowGrid")
          {
             this.show(e.propertyValue);

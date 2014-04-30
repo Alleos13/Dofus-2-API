@@ -239,7 +239,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          return [nminute,nhour,nday,nmonth,nyear];
       }
       
-      private function initText() : void {
+      function initText() : void {
          this._nameYears = I18n.getUiText("ui.time.years");
          this._nameMonths = I18n.getUiText("ui.time.months");
          this._nameDays = I18n.getUiText("ui.time.days");

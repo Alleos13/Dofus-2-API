@@ -82,15 +82,15 @@ package com.ankamagames.dofus.logic.game.common.frames
          return this._emotesList;
       }
       
-      private function get socialFrame() : SocialFrame {
+      function get socialFrame() : SocialFrame {
          return Kernel.getWorker().getFrame(SocialFrame) as SocialFrame;
       }
       
-      private function get roleplayEntitiesFrame() : RoleplayEntitiesFrame {
+      function get roleplayEntitiesFrame() : RoleplayEntitiesFrame {
          return Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame;
       }
       
-      private function get roleplayMovementFrame() : RoleplayMovementFrame {
+      function get roleplayMovementFrame() : RoleplayMovementFrame {
          return Kernel.getWorker().getFrame(RoleplayMovementFrame) as RoleplayMovementFrame;
       }
       

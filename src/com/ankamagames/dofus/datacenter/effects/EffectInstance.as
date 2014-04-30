@@ -229,7 +229,7 @@ package com.ankamagames.dofus.datacenter.effects
          this._theoricDescription = UNDEFINED_DESCRIPTION;
       }
       
-      private function getTurnCountStr(bShowLast:Boolean) : String {
+      function getTurnCountStr(bShowLast:Boolean) : String {
          var sTmp:String = new String();
          if(this.delay > 0)
          {
@@ -259,84 +259,84 @@ package com.ankamagames.dofus.datacenter.effects
          return I18n.getUiText("ui.common.infinit");
       }
       
-      private function getEmoticonName(id:int) : String {
+      function getEmoticonName(id:int) : String {
          var o:Emoticon = Emoticon.getEmoticonById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      private function getItemTypeName(id:int) : String {
+      function getItemTypeName(id:int) : String {
          var o:ItemType = ItemType.getItemTypeById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      private function getMonsterName(id:int) : String {
+      function getMonsterName(id:int) : String {
          var o:Monster = Monster.getMonsterById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      private function getCompanionName(id:int) : String {
+      function getCompanionName(id:int) : String {
          var o:Companion = Companion.getCompanionById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      private function getMonsterGrade(pId:int, pGrade:int) : String {
+      function getMonsterGrade(pId:int, pGrade:int) : String {
          var m:Monster = Monster.getMonsterById(pId);
          return m?m.getMonsterGrade(pGrade).level.toString():UNKNOWN_NAME;
       }
       
-      private function getSpellName(id:int) : String {
+      function getSpellName(id:int) : String {
          var o:Spell = Spell.getSpellById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      private function getSpellLevelName(id:int) : String {
+      function getSpellLevelName(id:int) : String {
          var o:SpellLevel = SpellLevel.getLevelById(id);
          var name:String = o?this.getSpellName(o.spellId):UNKNOWN_NAME;
          trace(name);
          return o?this.getSpellName(o.spellId):UNKNOWN_NAME;
       }
       
-      private function getJobName(id:int) : String {
+      function getJobName(id:int) : String {
          var o:Job = Job.getJobById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      private function getDocumentTitle(id:int) : String {
+      function getDocumentTitle(id:int) : String {
          var o:Document = Document.getDocumentById(id);
          return o?o.title:UNKNOWN_NAME;
       }
       
-      private function getAlignmentSideName(id:int) : String {
+      function getAlignmentSideName(id:int) : String {
          var o:AlignmentSide = AlignmentSide.getAlignmentSideById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      private function getItemName(id:int) : String {
+      function getItemName(id:int) : String {
          var o:Item = Item.getItemById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      private function getMonsterSuperRaceName(id:int) : String {
+      function getMonsterSuperRaceName(id:int) : String {
          var o:MonsterSuperRace = MonsterSuperRace.getMonsterSuperRaceById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      private function getMonsterRaceName(id:int) : String {
+      function getMonsterRaceName(id:int) : String {
          var o:MonsterRace = MonsterRace.getMonsterRaceById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      private function getTitleName(id:int) : String {
+      function getTitleName(id:int) : String {
          var o:Title = Title.getTitleById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      private function getSpellStateName(id:int) : String {
+      function getSpellStateName(id:int) : String {
          var o:SpellState = SpellState.getSpellStateById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      private function parseZone() : void {
+      function parseZone() : void {
          var params:Array = null;
          var hasMinSize:* = false;
          if((this.rawZone) && (this.rawZone.length))
@@ -388,7 +388,7 @@ package com.ankamagames.dofus.datacenter.effects
          }
       }
       
-      private function prepareDescription(desc:String, effectId:uint) : String {
+      function prepareDescription(desc:String, effectId:uint) : String {
          var aTmp:Array = null;
          var nYear:String = null;
          var nMonth:String = null;

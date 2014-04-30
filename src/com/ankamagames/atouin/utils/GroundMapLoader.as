@@ -70,7 +70,7 @@ package com.ankamagames.atouin.utils
       
       private var _time:int = 0;
       
-      private function onJPGReady(e:Event) : void {
+      function onJPGReady(e:Event) : void {
          var bitmap:Bitmap = null;
          try
          {
@@ -106,7 +106,7 @@ package com.ankamagames.atouin.utils
          this._callBack(bitmap);
       }
       
-      private function onError(e:Event) : void {
+      function onError(e:Event) : void {
          _log.info("On a pas pu charger la map :/");
          this._errorCallBack(this._map.id);
          this._loader.contentLoaderInfo.removeEventListener(Event.INIT,this.onJPGReady);
@@ -114,14 +114,14 @@ package com.ankamagames.atouin.utils
          this._loader.contentLoaderInfo.removeEventListener(ProgressEvent.PROGRESS,this.onProgress);
       }
       
-      private function onProgress(e:ProgressEvent) : void {
+      function onProgress(e:ProgressEvent) : void {
          if(e.bytesLoaded == e.bytesTotal)
          {
             EnterFrameDispatcher.addEventListener(this.check,"GroundMapLoader");
          }
       }
       
-      private function check(e:Event) : void {
+      function check(e:Event) : void {
          if(this._time > 5)
          {
             if(!this._groundIsLoaded)

@@ -279,11 +279,11 @@ package com.ankamagames.dofus.logic.game.common.frames
          return this._todaysWonFights;
       }
       
-      private function get roleplayContextFrame() : RoleplayContextFrame {
+      function get roleplayContextFrame() : RoleplayContextFrame {
          return Kernel.getWorker().getFrame(RoleplayContextFrame) as RoleplayContextFrame;
       }
       
-      private function get roleplayEntitiesFrame() : RoleplayEntitiesFrame {
+      function get roleplayEntitiesFrame() : RoleplayEntitiesFrame {
          return Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame;
       }
       
@@ -1755,7 +1755,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      private function cleanPartyFightNotifications() : void {
+      function cleanPartyFightNotifications() : void {
          var notifName:String = null;
          if(this._partyFightNotification.length > 0)
          {
@@ -1767,7 +1767,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      private function createPartyFightNotification(mapId:uint, currentFight:PartyFightInformationsData, fightTeamLeaderId:int) : void {
+      function createPartyFightNotification(mapId:uint, currentFight:PartyFightInformationsData, fightTeamLeaderId:int) : void {
          var notifBaseText:String = I18n.getUiText("ui.party.joinTeamFightQuestion");
          var params:Array = new Array();
          params.push(currentFight.memberName);
@@ -1807,7 +1807,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return null;
       }
       
-      private function deleteParty(partyId:int) : void {
+      function deleteParty(partyId:int) : void {
          var isArena:Boolean = false;
          if(partyId == this._arenaPartyId)
          {
@@ -1833,7 +1833,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          KernelEventsManager.getInstance().processCallback(HookList.PartyLeave,partyId,isArena);
       }
       
-      private function createPartyPlayerContextMenu(pPlayerId:uint, pPartyId:int) : Object {
+      function createPartyPlayerContextMenu(pPlayerId:uint, pPartyId:int) : Object {
          var playerAlignmentInfos:ActorAlignmentInformations = null;
          var member:PartyMemberWrapper = null;
          var entityId:* = 0;
@@ -1890,7 +1890,7 @@ package com.ankamagames.dofus.logic.game.common.frames
             },"partyMember",pPartyId);
       }
       
-      private function onTimerTick(pEvent:TimerEvent) : void {
+      function onTimerTick(pEvent:TimerEvent) : void {
          var member:PartyMemberWrapper = null;
          var playerLPTM:LifePointTickManager = null;
          var additionalLifePoint:uint = 0;
@@ -1950,7 +1950,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      private function onFightStartTimerComplete(pEvent:TimerEvent) : void {
+      function onFightStartTimerComplete(pEvent:TimerEvent) : void {
          var key:Object = null;
          var fight:PartyFightInformationsData = null;
          for (key in this._partyFightsInformations)
@@ -1966,7 +1966,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      private function deletePartyFightInformation(key:Object, fight:PartyFightInformationsData) : void {
+      function deletePartyFightInformation(key:Object, fight:PartyFightInformationsData) : void {
          fight.timeUntilFightbegin.removeEventListener(TimerEvent.TIMER_COMPLETE,this.onFightStartTimerComplete);
          if(this._partyFightsInformations[key].length > 1)
          {

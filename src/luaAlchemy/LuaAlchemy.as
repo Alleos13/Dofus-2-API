@@ -1,6 +1,5 @@
 package luaAlchemy
 {
-   import cmodule.lua_wrapper.CLibInit;
    import flash.utils.ByteArray;
    
    public class LuaAlchemy extends Object
@@ -11,9 +10,7 @@ package luaAlchemy
          this.init(param1,param2);
       }
       
-      public static const libInit:CLibInit = new CLibInit();
-      
-      private static const _luaAssetInit = LuaAssets.init(libInit);
+      private static const _luaAssetInit = LuaAssets.init(null);
       
       private var luaState:uint = 0;
       

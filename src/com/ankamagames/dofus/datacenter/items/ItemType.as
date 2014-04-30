@@ -80,7 +80,7 @@ package com.ankamagames.dofus.datacenter.items
          return this._zoneMinSize;
       }
       
-      private function parseZone() : void {
+      function parseZone() : void {
          var params:Array = null;
          if((this.rawZone) && (this.rawZone.length))
          {

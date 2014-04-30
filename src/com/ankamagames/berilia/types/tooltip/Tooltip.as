@@ -90,12 +90,12 @@ package com.ankamagames.berilia.types.tooltip
          this.processCallback();
       }
       
-      private function onMainChunkLoaded(e:Event) : void {
+      function onMainChunkLoaded(e:Event) : void {
          this._mainblockLoaded = true;
          this.processCallback();
       }
       
-      private function processCallback() : void {
+      function processCallback() : void {
          if((this._mainblockLoaded) && (this._loadedblock == this._blocks.length))
          {
             this.makeTooltip();
@@ -106,7 +106,7 @@ package com.ankamagames.berilia.types.tooltip
          }
       }
       
-      private function makeTooltip() : void {
+      function makeTooltip() : void {
          var block:TooltipBlock = null;
          var result:Array = new Array();
          for each (block in this._blocks)
@@ -126,7 +126,7 @@ package com.ankamagames.berilia.types.tooltip
          }
       }
       
-      private function onChunkReady(e:Event) : void {
+      function onChunkReady(e:Event) : void {
          this._loadedblock++;
          this.processCallback();
       }

@@ -912,7 +912,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          }
       }
       
-      override protected function onPropertyChanged(e:PropertyChangeEvent) : void {
+       function onPropertyChanged(e:PropertyChangeEvent) : void {
          var id:String = null;
          var ac:AnimatedCharacter = null;
          var num:uint = 0;
@@ -995,9 +995,9 @@ package com.ankamagames.dofus.logic.game.fight.frames
          return this._realFightersLooks[pFighterId];
       }
       
-      override protected function updateActorDisposition(actorId:int, newDisposition:EntityDispositionInformations) : void {
+       function updateActorDisposition(actorId:int, newDisposition:EntityDispositionInformations) : void {
          var actor:IEntity = null;
-         super.updateActorDisposition(actorId,newDisposition);
+        
          if(newDisposition.cellId == -1)
          {
             actor = DofusEntities.getEntity(actorId);

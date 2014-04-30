@@ -17,7 +17,7 @@ package com.ankamagames.atouin.resources.adapters
          super();
       }
       
-      override protected function getResource(dataFormat:String, data:*) : * {
+       function getResource(dataFormat:String, data:*) : * {
          var ba:ByteArray = data as ByteArray;
          ba.endian = Endian.BIG_ENDIAN;
          var header:int = ba.readByte();
@@ -51,7 +51,7 @@ package com.ankamagames.atouin.resources.adapters
          return AtouinResourceType.RESOURCE_ELEMENTS;
       }
       
-      override protected function getDataFormat() : String {
+       function getDataFormat() : String {
          return URLLoaderDataFormat.BINARY;
       }
    }

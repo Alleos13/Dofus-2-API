@@ -829,7 +829,7 @@ package flashx.textLayout.elements
          return _loc3_;
       }
       
-      override protected function get abstract() : Boolean {
+      override function get abstract() : Boolean {
          return false;
       }
       

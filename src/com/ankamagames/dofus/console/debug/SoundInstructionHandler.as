@@ -166,7 +166,7 @@ package com.ankamagames.dofus.console.debug
          return [];
       }
       
-      private function getUiList(filter:String=null) : Array {
+      function getUiList(filter:String=null) : Array {
          var m:UiModule = null;
          var ui:UiData = null;
          var filter:String = filter.toLowerCase();
@@ -186,7 +186,7 @@ package com.ankamagames.dofus.console.debug
          return uiList;
       }
       
-      private function getParams(data:Array, types:Array) : Array {
+      function getParams(data:Array, types:Array) : Array {
          var iStr:String = null;
          var i:uint = 0;
          var v:String = null;
@@ -202,7 +202,7 @@ package com.ankamagames.dofus.console.debug
          return params;
       }
       
-      private function getParam(value:String, type:String) : * {
+      function getParam(value:String, type:String) : * {
          switch(type)
          {
             case "String":

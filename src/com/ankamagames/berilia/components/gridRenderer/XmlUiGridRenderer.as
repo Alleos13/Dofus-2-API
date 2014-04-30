@@ -162,7 +162,7 @@ package com.ankamagames.berilia.components.gridRenderer
          return functionName;
       }
       
-      private function onItemUiLoaded(e:UiRenderEvent) : void {
+      function onItemUiLoaded(e:UiRenderEvent) : void {
          var data:WaitingUpdate = null;
          if(this._dWaitingUpdate[e.uiTarget])
          {
@@ -172,7 +172,7 @@ package com.ankamagames.berilia.components.gridRenderer
          }
       }
       
-      private function updateBackground(uiContainer:UiRootContainer, index:uint) : void {
+      function updateBackground(uiContainer:UiRootContainer, index:uint) : void {
          var t:ColorTransform = null;
          var shape:Shape = null;
          if((this._bgColor1) || (this._bgColor2))

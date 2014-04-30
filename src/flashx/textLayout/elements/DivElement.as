@@ -11,7 +11,7 @@ package flashx.textLayout.elements
          super();
       }
       
-      override protected function get abstract() : Boolean {
+      override function get abstract() : Boolean {
          return false;
       }
       

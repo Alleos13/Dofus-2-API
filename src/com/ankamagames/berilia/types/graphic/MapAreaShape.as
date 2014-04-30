@@ -119,7 +119,7 @@ package com.ankamagames.berilia.types.graphic
          super.remove();
       }
       
-      private function onEnterFrame(e:Event) : void {
+      function onEnterFrame(e:Event) : void {
          var percent:Number = (getTimer() - this._t0) / this._duration;
          if(this.shape)
          {

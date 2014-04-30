@@ -59,7 +59,7 @@ package com.ankamagames.berilia.managers
          _self = null;
       }
       
-      private function onUiRenderAsk(e:UiRenderAskEvent) : void {
+      function onUiRenderAsk(e:UiRenderAskEvent) : void {
          var group:UiGroup = null;
          var actualGroupUis:Array = null;
          var uiName:String = null;

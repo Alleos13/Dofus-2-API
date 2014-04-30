@@ -207,7 +207,7 @@ package com.ankamagames.dofus.console.debug
          }
       }
       
-      private function getParams(data:Array, types:Array) : Array {
+      function getParams(data:Array, types:Array) : Array {
          var iStr:String = null;
          var i:uint = 0;
          var v:String = null;
@@ -223,7 +223,7 @@ package com.ankamagames.dofus.console.debug
          return params;
       }
       
-      private function getParam(value:String, type:String) : * {
+      function getParam(value:String, type:String) : * {
          switch(type)
          {
             case "String":

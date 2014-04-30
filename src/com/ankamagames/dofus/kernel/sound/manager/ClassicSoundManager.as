@@ -442,7 +442,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          this._XMLSoundFilesResourceLoader.load(this._XMLSoundFilesToLoad);
       }
       
-      private function playIntro() : void {
+      function playIntro() : void {
          if(!this.checkIfAvailable())
          {
             return;
@@ -589,7 +589,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          this.removeAllSounds();
       }
       
-      private function findXmlSoundsInDirectory(pDirectory:File) : void {
+      function findXmlSoundsInDirectory(pDirectory:File) : void {
          var filesAndDirectories:Array = null;
          var file:File = null;
          if(pDirectory.exists)
@@ -617,7 +617,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      private function init() : void {
+      function init() : void {
          this._previousSubareaId = -1;
          this._localizedSoundsManager = new LocalizedSoundsManager();
          this._ambientManager = new AmbientSoundsManager();
@@ -631,7 +631,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          this._lowPassFilter = new LowPassFilter();
       }
       
-      private function initTubul() : void {
+      function initTubul() : void {
          if(!this.soundIsActivate)
          {
             return;
@@ -666,7 +666,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          this.onTubulActivation(e);
       }
       
-      private function desactivateTubul() : void {
+      function desactivateTubul() : void {
          if(this.soundIsActivate)
          {
             return;
@@ -682,7 +682,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          Tubul.getInstance().clearBuses();
       }
       
-      private function checkIfAvailable() : Boolean {
+      function checkIfAvailable() : Boolean {
          return (this._forceSounds) && (this._soundDirectoryExist);
       }
       
@@ -765,7 +765,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      private function onXMLPresetsRollOffLoaded(pEvent:ResourceLoadedEvent) : void {
+      function onXMLPresetsRollOffLoaded(pEvent:ResourceLoadedEvent) : void {
          var preset:XML = null;
          var rollOffPreset:RollOffPreset = null;
          var presets:XMLList = (pEvent.resource as XML).elements();
@@ -776,12 +776,12 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      private function onXMLPresetsRollOffFailed(pEvent:ResourceErrorEvent) : void {
+      function onXMLPresetsRollOffFailed(pEvent:ResourceErrorEvent) : void {
          Tubul.getInstance().activate(false);
          _log.error("An XML sound file failed to load : " + pEvent.uri + " / [" + pEvent.errorCode + "] " + pEvent.errorMsg);
       }
       
-      private function onXMLSoundFileLoaded(pEvent:ResourceLoadedEvent) : void {
+      function onXMLSoundFileLoaded(pEvent:ResourceLoadedEvent) : void {
          var filename:String = pEvent.uri.fileName.split("." + pEvent.uri.fileType)[0];
          var splitedFilename:Array = filename.split("\\");
          filename = splitedFilename.pop();
@@ -799,22 +799,22 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      private function onXMLSoundFileFailed(pEvent:ResourceErrorEvent) : void {
+      function onXMLSoundFileFailed(pEvent:ResourceErrorEvent) : void {
          _log.warn("The xml sound file " + pEvent.uri + " failed to load !!");
       }
       
-      private function onRemoveSoundInTubul(pEvent:AudioBusEvent) : void {
+      function onRemoveSoundInTubul(pEvent:AudioBusEvent) : void {
          this.removeSoundEntity(pEvent.sound);
       }
       
-      private function onSoundAdminComplete(pEvent:SoundCompleteEvent) : void {
+      function onSoundAdminComplete(pEvent:SoundCompleteEvent) : void {
          pEvent.sound.eventDispatcher.removeEventListener(SoundCompleteEvent.SOUND_COMPLETE,this.onSoundAdminComplete);
          var soundId:String = pEvent.sound.uri.fileName.split(".mp3")[0];
          this._adminSounds[soundId] = null;
          delete this._adminSounds[[soundId]];
       }
       
-      private function onIntroMusicHarmonicOneLoaded(pEvent:LoadingSoundEvent) : void {
+      function onIntroMusicHarmonicOneLoaded(pEvent:LoadingSoundEvent) : void {
          this._introHarmonicOneLoaded = true;
          if(this._introHarmonicTwoLoaded)
          {
@@ -822,7 +822,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      private function onIntroMusicHarmonicTwoLoaded(pEvent:LoadingSoundEvent) : void {
+      function onIntroMusicHarmonicTwoLoaded(pEvent:LoadingSoundEvent) : void {
          this._introHarmonicTwoLoaded = true;
          if(this._introHarmonicOneLoaded)
          {
@@ -830,7 +830,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      private function onTubulActivation(pEvent:TubulEvent) : void {
+      function onTubulActivation(pEvent:TubulEvent) : void {
          switch(pEvent.activated)
          {
             case true:

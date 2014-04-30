@@ -122,7 +122,7 @@ package flashx.textLayout.compose
          return this._totalDepth;
       }
       
-      protected function reset() : void {
+      function reset() : void {
          this._totalDepth = 0;
          this._hasContent = false;
          this._currentParcelIndex = -1;
@@ -152,7 +152,7 @@ package flashx.textLayout.compose
          this._numParcels++;
       }
       
-      protected function addOneControllerToParcelList(param1:ContainerController) : void {
+      function addOneControllerToParcelList(param1:ContainerController) : void {
          var _loc4_:Rectangle = null;
          var _loc2_:ColumnState = param1.columnState;
          var _loc3_:* = 0;

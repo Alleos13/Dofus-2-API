@@ -529,11 +529,11 @@ package com.ankamagames.berilia.types.graphic
          }
       }
       
-      private function isRegisteredId(sName:String) : Boolean {
+      function isRegisteredId(sName:String) : Boolean {
          return !(this._aGraphicElementIndex[sName] == null);
       }
       
-      private function processSize() : void {
+      function processSize() : void {
          var ge:GraphicElement = null;
          var i:uint = 0;
          while(i < this._aSizeStack.length)
@@ -615,7 +615,7 @@ package com.ankamagames.berilia.types.graphic
          }
       }
       
-      private function getLocation(ptStart:Point, glLocation:GraphicLocation, doTarget:DisplayObject) : Point {
+      function getLocation(ptStart:Point, glLocation:GraphicLocation, doTarget:DisplayObject) : Point {
          var doRelative:DisplayObject = null;
          var ref:DisplayObject = null;
          var uiTarget:Array = null;
@@ -697,7 +697,7 @@ package com.ankamagames.berilia.types.graphic
          return ptStart;
       }
       
-      private function getOffsetModificator(nPoint:uint, doTarget:DisplayObject) : Point {
+      function getOffsetModificator(nPoint:uint, doTarget:DisplayObject) : Point {
          var nWidth:uint = (doTarget == null) || (doTarget is UiRootContainer)?StageShareManager.startWidth:doTarget.width;
          var nHeight:uint = (doTarget == null) || (doTarget is UiRootContainer)?StageShareManager.startHeight:doTarget.height;
          var pModificator:Point = new Point(0,0);
@@ -737,7 +737,7 @@ package com.ankamagames.berilia.types.graphic
          return pModificator;
       }
       
-      private function zSort(aSort:Array) : Boolean {
+      function zSort(aSort:Array) : Boolean {
          var ge:GraphicElement = null;
          var gl:GraphicLocation = null;
          var i:uint = 0;
@@ -783,7 +783,7 @@ package com.ankamagames.berilia.types.graphic
          return bSwap;
       }
       
-      private function onDefinitionUpdateTimer(e:TimerEvent) : void {
+      function onDefinitionUpdateTimer(e:TimerEvent) : void {
          UiRenderManager.getInstance().updateCachedUiDefinition();
          this._uiDefinitionUpdateTimer.removeEventListener(TimerEvent.TIMER,this.onDefinitionUpdateTimer);
          this._uiDefinitionUpdateTimer = null;

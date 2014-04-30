@@ -197,7 +197,7 @@ package flashx.textLayout.elements
          this.id = param2;
       }
       
-      protected function get abstract() : Boolean {
+      function get abstract() : Boolean {
          return true;
       }
       

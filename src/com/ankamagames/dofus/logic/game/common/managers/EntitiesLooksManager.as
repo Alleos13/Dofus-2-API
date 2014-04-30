@@ -279,7 +279,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          return look;
       }
       
-      private function isBoneCorrect(boneId:int) : Boolean {
+      function isBoneCorrect(boneId:int) : Boolean {
          if((boneId == 1) || (boneId == 113) || (boneId == 44) || (boneId == 1575) || (boneId == 1576))
          {
             return true;

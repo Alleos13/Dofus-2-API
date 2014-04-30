@@ -68,11 +68,11 @@ package com.ankamagames.dofus.logic.game.common.steps
          }
       }
       
-      private function updatePos(pCamPosObj:Object) : void {
+      function updatePos(pCamPosObj:Object) : void {
          this._camera.zoomOnPos(this._camera.currentZoom,pCamPosObj.x,pCamPosObj.y);
       }
       
-      private function moveComplete() : void {
+      function moveComplete() : void {
          executeCallbacks();
       }
    }

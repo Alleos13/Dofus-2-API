@@ -168,13 +168,13 @@ package com.ankamagames.berilia.uiRender
          this.preProccessXml();
       }
       
-      private function preProccessXml() : void {
+      function preProccessXml() : void {
          var tmp:XmlPreProcessor = new XmlPreProcessor(this._xmlDoc);
          tmp.addEventListener(PreProcessEndEvent.PRE_PROCESS_END,this.onPreProcessCompleted);
          tmp.processTemplate();
       }
       
-      private function mainProcess() : void {
+      function mainProcess() : void {
          if((this._xmlDoc) && (this._xmlDoc.firstChild))
          {
             dispatchEvent(new ParsorEvent(this.parseMainNode(this._xmlDoc.firstChild),false));
@@ -185,7 +185,7 @@ package com.ankamagames.berilia.uiRender
          }
       }
       
-      protected function parseMainNode(mainNodes:XMLNode) : UiDefinition {
+      function parseMainNode(mainNodes:XMLNode) : UiDefinition {
          var xnNode:XMLNode = null;
          var i:* = 0;
          var ui:UiDefinition = new UiDefinition();
@@ -256,7 +256,7 @@ package com.ankamagames.berilia.uiRender
          return ui;
       }
       
-      private function cleanLocalConstants(constants:Array) : void {
+      function cleanLocalConstants(constants:Array) : void {
          var constant:String = null;
          for (constant in constants)
          {
@@ -264,7 +264,7 @@ package com.ankamagames.berilia.uiRender
          }
       }
       
-      protected function parseConstants(xnNode:XMLNode, constants:Array) : void {
+      function parseConstants(xnNode:XMLNode, constants:Array) : void {
          var xnCurrentNode:XMLNode = null;
          var i:* = 0;
          var value:String = null;
@@ -340,7 +340,7 @@ package com.ankamagames.berilia.uiRender
          }
       }
       
-      protected function parseGraphicElement(xnNode:XMLNode, parentNode:XMLNode=null, be:BasicElement=null) : BasicElement {
+      function parseGraphicElement(xnNode:XMLNode, parentNode:XMLNode=null, be:BasicElement=null) : BasicElement {
          var xnCurrentNode:XMLNode = null;
          var i:* = 0;
          var j:String = null;
@@ -477,7 +477,7 @@ package com.ankamagames.berilia.uiRender
          return be;
       }
       
-      protected function parseStateContainer(xnNode:XMLNode, elementType:String) : * {
+      function parseStateContainer(xnNode:XMLNode, elementType:String) : * {
          var xnCurrentNode:XMLNode = null;
          var i:* = 0;
          var stateContainerElement:StateContainerElement = null;
@@ -557,7 +557,7 @@ package com.ankamagames.berilia.uiRender
          return stateContainerElement;
       }
       
-      protected function parseSetProperties(xnNode:XMLNode, item:Object) : void {
+      function parseSetProperties(xnNode:XMLNode, item:Object) : void {
          var xnCurrentNode:XMLNode = null;
          var i:* = 0;
          var target:String = null;
@@ -613,7 +613,7 @@ package com.ankamagames.berilia.uiRender
          }
       }
       
-      private function cleanComponentProperty(be:BasicElement, properties:Array=null) : Boolean {
+      function cleanComponentProperty(be:BasicElement, properties:Array=null) : Boolean {
          var val:* = undefined;
          var clazz:Class = null;
          var sProperty:String = null;
@@ -663,7 +663,7 @@ package com.ankamagames.berilia.uiRender
          return true;
       }
       
-      protected function getClassDesc(o:Object) : Object {
+      function getClassDesc(o:Object) : Object {
          var acc:XML = null;
          var v:XML = null;
          var cn:String = getQualifiedClassName(o);
@@ -684,7 +684,7 @@ package com.ankamagames.berilia.uiRender
          return res;
       }
       
-      protected function parseSize(xnNode:XMLNode, bAllowRelativeSize:Boolean) : GraphicSize {
+      function parseSize(xnNode:XMLNode, bAllowRelativeSize:Boolean) : GraphicSize {
          var xnCurrentNode:XMLNode = null;
          var k:* = 0;
          var posX:String = null;
@@ -738,7 +738,7 @@ package com.ankamagames.berilia.uiRender
          return graphicSize;
       }
       
-      protected function parseAnchors(xnNode:XMLNode) : Array {
+      function parseAnchors(xnNode:XMLNode) : Array {
          var xnCurrentNode:XMLNode = null;
          var i:* = 0;
          var k:* = 0;
@@ -832,7 +832,7 @@ package com.ankamagames.berilia.uiRender
          return aResult.length?aResult:null;
       }
       
-      protected function parseShortcutsEvent(xnNode:XMLNode) : Array {
+      function parseShortcutsEvent(xnNode:XMLNode) : Array {
          var xnCurrentNode:XMLNode = null;
          var k:* = 0;
          var sShortcutName:String = null;
@@ -854,7 +854,7 @@ package com.ankamagames.berilia.uiRender
          return aResult;
       }
       
-      private function parseEvent(xnNode:XMLNode) : Array {
+      function parseEvent(xnNode:XMLNode) : Array {
          var xnCurrentNode:XMLNode = null;
          var k:* = 0;
          var sEventClass:String = null;
@@ -960,7 +960,7 @@ package com.ankamagames.berilia.uiRender
          return aResult;
       }
       
-      private function getStrataNum(sName:String) : uint {
+      function getStrataNum(sName:String) : uint {
          var possiblilities:Array = null;
          if(sName == StrataEnum.STRATA_NAME_LOW)
          {
@@ -987,7 +987,7 @@ package com.ankamagames.berilia.uiRender
          return StrataEnum.STRATA_MEDIUM;
       }
       
-      private function suggest(word:String, aPossibilities:Array, max:uint=5, suggestCount:uint=3) : String {
+      function suggest(word:String, aPossibilities:Array, max:uint=5, suggestCount:uint=3) : String {
          var value:* = NaN;
          var i:* = 0;
          var suggest:String = "";
@@ -1025,15 +1025,15 @@ package com.ankamagames.berilia.uiRender
          return suggest;
       }
       
-      private function onPreProcessCompleted(event:Event) : void {
+      function onPreProcessCompleted(event:Event) : void {
          this.mainProcess();
       }
       
-      private function onXmlLoadComplete(e:ResourceLoadedEvent) : void {
+      function onXmlLoadComplete(e:ResourceLoadedEvent) : void {
          this.processXml(e.resource);
       }
       
-      private function onXmlLoadError(e:ResourceErrorEvent) : void {
+      function onXmlLoadError(e:ResourceErrorEvent) : void {
          dispatchEvent(new ParsingErrorEvent(e.uri.toString(),e.errorMsg));
       }
    }

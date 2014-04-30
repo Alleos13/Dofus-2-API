@@ -291,7 +291,7 @@ package com.ankamagames.berilia.components
          this._sprSliderInf.graphics.endFill();
       }
       
-      private function getCurrentPos() : void {
+      function getCurrentPos() : void {
          var hsl:Object = ColorUtils.rgb2hsl(this._nColor);
          this._texCursorGradient.x = hsl.h * this._nGradientWidth - this._texCursorGradient.width / 2;
          this._texCursorGradient.y = hsl.s * this._nHeight - this._texCursorGradient.height / 2;
@@ -303,7 +303,7 @@ package com.ankamagames.berilia.components
          this.getCurrentColor();
       }
       
-      private function getCurrentColor() : uint {
+      function getCurrentColor() : uint {
          var colorPoint:* = NaN;
          var r1:* = NaN;
          var g1:* = NaN;
@@ -408,7 +408,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onMoveGradientCursor(e:Event) : void {
+      function onMoveGradientCursor(e:Event) : void {
          if((!(this._nGradientX == mouseX)) || (!(this._nGradientY == mouseY)))
          {
             this._nGradientX = mouseX;
@@ -434,7 +434,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onMoveSliderCursor(e:Event) : void {
+      function onMoveSliderCursor(e:Event) : void {
          if(this._nSliderY != mouseY)
          {
             this._nSliderY = mouseY;
@@ -450,7 +450,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onTextureSliderLoaded(e:Event) : void {
+      function onTextureSliderLoaded(e:Event) : void {
          this._nLoadedSum++;
          this._texCursorSlider.removeEventListener(Event.COMPLETE,this.onTextureSliderLoaded);
          if(this._nLoadedSum >= 2)
@@ -459,7 +459,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onTextureGradientLoaded(e:Event) : void {
+      function onTextureGradientLoaded(e:Event) : void {
          this._nLoadedSum++;
          this._texCursorGradient.removeEventListener(Event.COMPLETE,this.onTextureGradientLoaded);
          if(this._nLoadedSum >= 2)

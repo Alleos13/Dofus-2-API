@@ -242,7 +242,7 @@ package com.ankamagames.atouin.managers
          }
       }
       
-      private function drawShape(pColor:uint, pCommands:Vector.<int>, pCoords:Vector.<Number>) : Bitmap {
+      function drawShape(pColor:uint, pCommands:Vector.<int>, pCoords:Vector.<Number>) : Bitmap {
          var sBmp:BitmapData = null;
          var sShape:Shape = new Shape();
          sShape.graphics.beginFill(pColor,0);
@@ -259,7 +259,7 @@ package com.ankamagames.atouin.managers
          return null;
       }
       
-      private function click(e:MouseEvent) : void {
+      function click(e:MouseEvent) : void {
          var destMapId:uint = 0;
          var currentMap:Map = MapDisplayManager.getInstance().getDataMapContainer().dataMap;
          switch(e.target)
@@ -293,7 +293,7 @@ package com.ankamagames.atouin.managers
          }
       }
       
-      private function findCustomNearestCell(target:Sprite, localMousePosition:Point=null) : Object {
+      function findCustomNearestCell(target:Sprite, localMousePosition:Point=null) : Object {
          var cellList:Array = null;
          var p:Point = null;
          var d:* = NaN;
@@ -328,11 +328,7 @@ package com.ankamagames.atouin.managers
          }
          if((!cellList) || (!cellList.length))
          {
-            return 
-               {
-                  "cell":-1,
-                  "distance":Number.MAX_VALUE
-               };
+			 return null;
          }
          var currentDist:Number = Number.MAX_VALUE;
          var i:uint = 0;
@@ -356,14 +352,10 @@ package com.ankamagames.atouin.managers
             }
             i++;
          }
-         return 
-            {
-               "cell":currentCellId,
-               "distance":currentDist
-            };
+		 return null;
       }
       
-      private function findNearestCell(target:Sprite, localMousePosition:Point=null) : Object {
+      function findNearestCell(target:Sprite, localMousePosition:Point=null) : Object {
          var x:* = 0;
          var y:* = 0;
          var sx:* = 0;
@@ -477,34 +469,26 @@ package com.ankamagames.atouin.managers
          }
          if(near != Number.MAX_VALUE)
          {
-            return 
-               {
-                  "cell":CellIdConverter.coordToCellId(sx,sy),
-                  "custom":near == customData.distance
-               };
+			 return null;
          }
-         return 
-            {
-               "cell":-1,
-               "custom":false
-            };
+		 return null;
       }
       
-      private function sendClickAdjacentMsg(mapId:uint, cellId:uint) : void {
+      function sendClickAdjacentMsg(mapId:uint, cellId:uint) : void {
          var msg:AdjacentMapClickMessage = new AdjacentMapClickMessage();
          msg.cellId = cellId;
          msg.adjacentMapId = mapId;
          Atouin.getInstance().handler.process(msg);
       }
       
-      private function sendCellClickMsg(mapId:uint, cellId:uint) : void {
+      function sendCellClickMsg(mapId:uint, cellId:uint) : void {
          var msg:CellClickMessage = new CellClickMessage();
          msg.cellId = cellId;
          msg.id = mapId;
          Atouin.getInstance().handler.process(msg);
       }
       
-      private function out(e:MouseEvent) : void {
+      function out(e:MouseEvent) : void {
          var n:uint = 0;
          switch(e.target)
          {
@@ -526,7 +510,7 @@ package com.ankamagames.atouin.managers
          Atouin.getInstance().handler.process(msg);
       }
       
-      private function mouseMove(e:MouseEvent) : void {
+      function mouseMove(e:MouseEvent) : void {
          var n:uint = 0;
          switch(e.target)
          {

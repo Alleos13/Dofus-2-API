@@ -454,7 +454,7 @@ package com.ankamagames.berilia.components
          super.remove();
       }
       
-      protected function showList(show:Boolean) : void {
+      function showList(show:Boolean) : void {
          var listener:IInterfaceListener = null;
          var listener2:IInterfaceListener = null;
          if(this._previousState != show)
@@ -479,7 +479,7 @@ package com.ankamagames.berilia.components
          this._previousState = show;
       }
       
-      protected function searchStringInCB(searchPhrase:String, startIndex:int=0) : void {
+      function searchStringInCB(searchPhrase:String, startIndex:int=0) : void {
          var i:* = 0;
          this._searchTimer.reset();
          this._searchTimer.start();
@@ -508,7 +508,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      protected function cleanString(spaced:String) : String {
+      function cleanString(spaced:String) : String {
          var regSpace:RegExp = new RegExp("\\s","g");
          var numberSeparator:String = " ";
          var pattern1:RegExp = new RegExp(regSpace);
@@ -517,7 +517,7 @@ package com.ankamagames.berilia.components
          return StringUtils.noAccent(tempString);
       }
       
-      private function onClick(e:MouseEvent) : void {
+      function onClick(e:MouseEvent) : void {
          var p:DisplayObject = DisplayObject(e.target);
          while(p.parent)
          {
@@ -530,12 +530,12 @@ package com.ankamagames.berilia.components
          this.showList(false);
       }
       
-      private function onAddedToStage(e:Event) : void {
+      function onAddedToStage(e:Event) : void {
          removeEventListener(Event.ADDED_TO_STAGE,this.onAddedToStage);
          StageShareManager.stage.addEventListener(MouseEvent.CLICK,this.onClick);
       }
       
-      private function onSearchTimerComplete(e:TimerEvent) : void {
+      function onSearchTimerComplete(e:TimerEvent) : void {
          this._searchStopped = true;
       }
    }

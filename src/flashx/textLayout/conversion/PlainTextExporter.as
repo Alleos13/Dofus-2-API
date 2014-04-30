@@ -47,7 +47,7 @@ package flashx.textLayout.conversion
          return null;
       }
       
-      protected function exportToString(param1:TextFlow) : String {
+      function exportToString(param1:TextFlow) : String {
          var _loc4_:ParagraphElement = null;
          var _loc5_:String = null;
          var _loc6_:FlowLeafElement = null;

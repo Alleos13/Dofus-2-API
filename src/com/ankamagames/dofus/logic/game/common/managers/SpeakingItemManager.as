@@ -221,14 +221,14 @@ package com.ankamagames.dofus.logic.game.common.managers
          _timer.removeEventListener("timer",this.onTimer);
       }
       
-      private function init() : void {
+      function init() : void {
          _timer = new Timer(MINUTE_DELAY);
          _timer.addEventListener(TimerEvent.TIMER,this.onTimer);
          _timer.start();
          this.generateNextMsgCount(true);
       }
       
-      private function generateNextMsgCount(noMin:Boolean) : void {
+      function generateNextMsgCount(noMin:Boolean) : void {
          var msgCount:Number = SPEAKING_ITEMS_MSG_COUNT;
          var delta:Number = SPEAKING_ITEMS_MSG_COUNT_DELTA;
          if(noMin)
@@ -241,7 +241,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          }
       }
       
-      private function onTimer(event:TimerEvent) : void {
+      function onTimer(event:TimerEvent) : void {
          this.triggerEvent(SPEAK_TRIGGER_MINUTE);
       }
    }

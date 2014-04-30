@@ -42,12 +42,12 @@ package com.ankamagames.dofus.console.moduleLogger
          this.drawScrollBar();
       }
       
-      private function updateTextPosition() : void {
+      function updateTextPosition() : void {
          var p:Number = this._scrollBar.x / (this._textField.width - this._scrollBar.width);
          this._textField.scrollH = this._textField.maxScrollH * p;
       }
       
-      private function drawScrollBar() : void {
+      function drawScrollBar() : void {
          if(this._textField.maxScrollH <= 1)
          {
             visible = false;
@@ -67,7 +67,7 @@ package com.ankamagames.dofus.console.moduleLogger
          this._scrollBar.x = this._textField.scrollH * (this._textField.width - this._scrollBar.width) / this._textField.maxScrollH;
       }
       
-      private function createUI() : void {
+      function createUI() : void {
          if(this._background)
          {
             throw new Error();
@@ -87,18 +87,18 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private var offsetX:int;
       
-      private function onScrollBarMouseDown(mouseEvent:MouseEvent) : void {
+      function onScrollBarMouseDown(mouseEvent:MouseEvent) : void {
          this.offsetX = this._scrollBar.mouseX;
          stage.addEventListener(MouseEvent.MOUSE_MOVE,this.onMouseMove);
          stage.addEventListener(MouseEvent.MOUSE_UP,this.onMouseUp);
       }
       
-      private function onMouseUp(mouseEvent:MouseEvent) : void {
+      function onMouseUp(mouseEvent:MouseEvent) : void {
          stage.removeEventListener(MouseEvent.MOUSE_MOVE,this.onMouseMove);
          stage.removeEventListener(MouseEvent.MOUSE_UP,this.onMouseUp);
       }
       
-      private function onMouseMove(mouseEvent:MouseEvent) : void {
+      function onMouseMove(mouseEvent:MouseEvent) : void {
          var value:int = stage.mouseX - this.offsetX;
          var maxValue:int = this._textField.width - this._scrollBar.width;
          if(value < 0)

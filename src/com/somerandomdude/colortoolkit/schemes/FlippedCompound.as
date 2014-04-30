@@ -10,7 +10,7 @@ package com.somerandomdude.colortoolkit.schemes
          super(primaryColor);
       }
       
-      override protected function generate() : void {
+      override function generate() : void {
          var _primaryHSB:HSB = new HSB();
          _primaryHSB.color = _primaryColor;
          var d:Number = 1;

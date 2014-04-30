@@ -26,7 +26,7 @@ package com.somerandomdude.colortoolkit.schemes
       
       public var alt:Boolean;
       
-      override protected function generate() : void {
+      override function generate() : void {
          var multiplier:* = NaN;
          var _primaryCol:Color = new Color(_primaryColor);
          var c1:HSB = new HSB();

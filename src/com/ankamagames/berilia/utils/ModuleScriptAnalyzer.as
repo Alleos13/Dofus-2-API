@@ -114,7 +114,7 @@ package com.ankamagames.berilia.utils
          return this._apis;
       }
       
-      private function onSwfLoaded(e:ResourceLoadedEvent) : void {
+      function onSwfLoaded(e:ResourceLoadedEvent) : void {
          var aswf:ASwf = e.resource;
          this._loader.removeEventListener(ResourceLoadedEvent.LOADED,this.onSwfLoaded);
          this._loader.removeEventListener(ResourceErrorEvent.ERROR,this.onSwfFailed);
@@ -122,7 +122,7 @@ package com.ankamagames.berilia.utils
          this._readyFct();
       }
       
-      private function process(appDomain:ApplicationDomain) : void {
+      function process(appDomain:ApplicationDomain) : void {
          var action:String = null;
          var hook:String = null;
          var api:String = null;
@@ -149,7 +149,7 @@ package com.ankamagames.berilia.utils
          }
       }
       
-      private function onSwfFailed(e:ResourceErrorEvent) : void {
+      function onSwfFailed(e:ResourceErrorEvent) : void {
          this._readyFct();
       }
    }

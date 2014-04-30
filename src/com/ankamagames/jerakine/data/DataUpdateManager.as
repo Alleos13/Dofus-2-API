@@ -75,11 +75,11 @@ package com.ankamagames.jerakine.data
       public function clear() : void {
       }
       
-      protected function checkFileVersion(sFileName:String, sVersion:String) : Boolean {
+      function checkFileVersion(sFileName:String, sVersion:String) : Boolean {
          return this._versions[sFileName] == sVersion;
       }
       
-      protected function onLoaded(e:ResourceLoadedEvent) : void {
+      function onLoaded(e:ResourceLoadedEvent) : void {
          var meta:LangMetaData = null;
          var uri:Uri = null;
          var container:Object = null;
@@ -118,7 +118,7 @@ package com.ankamagames.jerakine.data
          }
       }
       
-      protected function processFileData(container:Object, uri:Uri) : void {
+      function processFileData(container:Object, uri:Uri) : void {
       }
       
       private function onLoadFailed(e:ResourceErrorEvent) : void {

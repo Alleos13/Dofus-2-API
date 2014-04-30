@@ -64,7 +64,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return true;
       }
       
-      private function sendStartOkMount() : void {
+      function sendStartOkMount() : void {
          KernelEventsManager.getInstance().processCallback(MountHookList.ExchangeStartOkMount,mountFrame.stableList,mountFrame.paddockList);
       }
    }

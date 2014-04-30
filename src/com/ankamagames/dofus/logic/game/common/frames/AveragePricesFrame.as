@@ -86,7 +86,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      private function updatePricesData(pItemsIds:Vector.<uint>, pItemsAvgPrices:Vector.<uint>) : void {
+      function updatePricesData(pItemsIds:Vector.<uint>, pItemsAvgPrices:Vector.<uint>) : void {
          var nbItems:int = pItemsIds.length;
          this._pricesData = 
             {
@@ -102,7 +102,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          StoreDataManager.getInstance().setData(_dataStoreType,this._serverName,this._pricesData);
       }
       
-      private function updateAllowed() : Boolean {
+      function updateAllowed() : Boolean {
          var now:Date = null;
          var lastUpdateHour:String = null;
          var misc:MiscFrame = Kernel.getWorker().getFrame(MiscFrame) as MiscFrame;
@@ -123,7 +123,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return true;
       }
       
-      private function askPricesData() : void {
+      function askPricesData() : void {
          var oapgm:ObjectAveragePricesGetMessage = new ObjectAveragePricesGetMessage();
          oapgm.initObjectAveragePricesGetMessage();
          ConnectionsHandler.getConnection().send(oapgm);

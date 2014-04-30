@@ -830,7 +830,7 @@ package com.ankamagames.berilia.components
          return true;
       }
       
-      private function removeCustomCursor() : void {
+      function removeCustomCursor() : void {
          Mouse.show();
          LinkedCursorSpriteManager.getInstance().removeItem("mapViewerCursor");
       }
@@ -881,14 +881,14 @@ package com.ankamagames.berilia.components
          super.remove();
       }
       
-      private function getIconTextureGlobalCoords(pMapIconElement:MapIconElement) : Point {
+      function getIconTextureGlobalCoords(pMapIconElement:MapIconElement) : Point {
          var txX:Number = pMapIconElement.x * this.mapWidth + this.origineX + this.mapWidth / 2;
          var txY:Number = pMapIconElement.y * this.mapHeight + this.origineY + this.mapHeight / 2;
          var layer:Sprite = this._layers[pMapIconElement.layer] as Sprite;
          return layer.localToGlobal(new Point(txX,txY));
       }
       
-      private function updateIcons() : void {
+      function updateIcons() : void {
          var iconTexture:Texture = null;
          var mie:MapIconElement = null;
          var p:Point = null;
@@ -1051,7 +1051,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function getIconArrow(icon:Texture) : Texture {
+      function getIconArrow(icon:Texture) : Texture {
          var arrow:Texture = null;
          if(this._arrowAllocation[icon])
          {
@@ -1077,7 +1077,7 @@ package com.ankamagames.berilia.components
       
       private var zz:Number = 1;
       
-      private function processMapInfo() : void {
+      function processMapInfo() : void {
          var choosenMap:Map = null;
          var tmpZoomDist:* = NaN;
          var map:Map = null;
@@ -1117,7 +1117,7 @@ package com.ankamagames.berilia.components
          this.updateVisibleChunck();
       }
       
-      private function updateVisibleChunck() : void {
+      function updateVisibleChunck() : void {
          var rect:MapArea = null;
          if((!this._currentMap) || (!this._currentMap.areas))
          {
@@ -1151,7 +1151,7 @@ package com.ankamagames.berilia.components
          this._visibleMapAreas.fixed = true;
       }
       
-      private function initMask() : void {
+      function initMask() : void {
          if(this._mapContainer.mask)
          {
             this._mapContainer.mask.parent.removeChild(this._mapContainer.mask);
@@ -1171,7 +1171,7 @@ package com.ankamagames.berilia.components
          this._mapContainer.mask = maskCtr;
       }
       
-      private function initMap() : void {
+      function initMap() : void {
          var t3d:Sprite = null;
          this._mapContainer = new Sprite();
          this.initMask();
@@ -1207,7 +1207,7 @@ package com.ankamagames.berilia.components
          this.zoom(this.startScale);
       }
       
-      private function drawGrid() : void {
+      function drawGrid() : void {
          var i:uint = 0;
          var coordinate:* = NaN;
          var verticalLineCount:uint = 0;
@@ -1244,7 +1244,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function clearLayer(target:DisplayObjectContainer=null) : void {
+      function clearLayer(target:DisplayObjectContainer=null) : void {
          var child:DisplayObject = null;
          var l:DisplayObjectContainer = null;
          for each (l in this._layers)
@@ -1259,7 +1259,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function clearElementsGroups() : void {
+      function clearElementsGroups() : void {
          var mapGroupElement:MapGroupElement = null;
          while(this._groupsContainer.numChildren > 0)
          {
@@ -1269,7 +1269,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function clearMapAreaShapes() : void {
+      function clearMapAreaShapes() : void {
          var mapAreaShape:MapAreaShape = null;
          var layer:Sprite = null;
          var i:* = 0;
@@ -1288,7 +1288,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function updateIconSize() : void {
+      function updateIconSize() : void {
          var mie:MapIconElement = null;
          var me:MapElement = null;
          if((!this.autoSizeIcon) || (this._lastScaleIconUpdate == this._mapContainer.scaleX))
@@ -1306,12 +1306,12 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function forceMapRollOver() : void {
+      function forceMapRollOver() : void {
          this._mouseOnArrow = false;
          Berilia.getInstance().handler.process(new MapRollOverMessage(this,Math.floor((this._mapBitmapContainer.mouseX - this.origineX) / this.mapWidth),Math.floor((this._mapBitmapContainer.mouseY - this.origineY) / this.mapHeight)));
       }
       
-      private function clearMap(map:Map) : void {
+      function clearMap(map:Map) : void {
          var i:uint = 0;
          var l:uint = map.areas.length;
          i = 0;
@@ -1499,7 +1499,7 @@ package com.ankamagames.berilia.components
       
       private var _lastMouseY:int = 0;
       
-      private function onMapEnterFrame(e:Event) : void {
+      function onMapEnterFrame(e:Event) : void {
          var mx:* = 0;
          var my:* = 0;
          if((this._mapToClear) && (this.allChunksLoaded))
@@ -1533,7 +1533,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onWindowDeactivate(pEvent:Event) : void {
+      function onWindowDeactivate(pEvent:Event) : void {
          if(this._dragging)
          {
             this.process(new MouseUpMessage());

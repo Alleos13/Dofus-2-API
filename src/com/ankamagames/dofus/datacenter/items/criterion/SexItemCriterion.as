@@ -24,7 +24,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          return clonedCriterion;
       }
       
-      override protected function getCriterion() : int {
+      override function getCriterion() : int {
          return int(PlayedCharacterManager.getInstance().infos.sex);
       }
    }

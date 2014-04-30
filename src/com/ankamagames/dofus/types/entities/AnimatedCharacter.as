@@ -662,7 +662,7 @@ package com.ankamagames.dofus.types.entities
             super.addSubEntity(entity,category,slot);
          }
          
-         override protected function onAdded(e:Event) : void {
+          function onAdded(e:Event) : void {
             var name:String = null;
             var vsa:Vector.<SoundAnimation> = null;
             var sa:SoundAnimation = null;

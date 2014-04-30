@@ -91,8 +91,7 @@ package com.ankamagames.atouin.types
       }
       
       public static function getTile(pUriName:String, pClipName:String) : Sprite {
-         var o:LoadedTile = getRessource(pUriName);
-         return new o.getClip(pClipName).clip();
+	      return null;
       }
       
       private var _uri:Uri;
@@ -121,7 +120,7 @@ package com.ankamagames.atouin.types
       
       protected var _cellInstance:Sprite;
       
-      private function onClipLoaded(e:ResourceLoadedEvent) : void {
+      function onClipLoaded(e:ResourceLoadedEvent) : void {
          loader.removeEventListener(ResourceLoadedEvent.LOADED,this.onClipLoaded);
          var appDomain:ApplicationDomain = e.resource.applicationDomain;
          var o:LoadedTile = getRessource(e.uri.fileName);

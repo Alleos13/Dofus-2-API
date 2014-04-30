@@ -627,13 +627,13 @@ package com.ankamagames.berilia.components
          this._tText.selectable = false;
       }
       
-      private function createTextField() : void {
+      function createTextField() : void {
          this._tText = new TextField();
          this._tText.addEventListener(TextEvent.LINK,this.onTextClick);
          addChild(this._tText);
       }
       
-      private function changeCssClassColor(color:String, style:String=null) : void {
+      function changeCssClassColor(color:String, style:String=null) : void {
          var i:* = undefined;
          if(style)
          {
@@ -651,7 +651,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function changeCssClassSize(size:uint, style:String=null) : void {
+      function changeCssClassSize(size:uint, style:String=null) : void {
          var i:* = undefined;
          if(style)
          {
@@ -693,7 +693,7 @@ package com.ankamagames.berilia.components
          HyperlinkFactory.activeSmallHyperlink(this._tText);
       }
       
-      private function bindCss() : void {
+      function bindCss() : void {
          var styleToDisplay:String = null;
          var s:String = null;
          var sc:uint = 0;
@@ -989,7 +989,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function addTooltipExtension() : void {
+      function addTooltipExtension() : void {
          this._textFieldTooltipExtension = new TextField();
          this._textFieldTooltipExtension.selectable = false;
          this._textFieldTooltipExtension.height = 1;
@@ -1031,7 +1031,7 @@ package com.ankamagames.berilia.components
          this._textFieldTooltipExtension.addEventListener(MouseEvent.MOUSE_WHEEL,this.onTooltipExtensionOut,false,0,true);
       }
       
-      private function updateTooltipExtensionStyle() : void {
+      function updateTooltipExtensionStyle() : void {
          if(!this._textFieldTooltipExtension)
          {
             return;
@@ -1043,12 +1043,12 @@ package com.ankamagames.berilia.components
          this._textFieldTooltipExtension.textColor = this._textTooltipExtensionColor;
       }
       
-      private function onTextClick(e:TextEvent) : void {
+      function onTextClick(e:TextEvent) : void {
          e.stopPropagation();
          Berilia.getInstance().handler.process(new TextClickMessage(this,e.text));
       }
       
-      protected function updateAlign() : void {
+      function updateAlign() : void {
          if(!this._tText.textHeight)
          {
             return;
@@ -1091,13 +1091,13 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onTooltipExtensionOver(e:MouseEvent) : void {
+      function onTooltipExtensionOver(e:MouseEvent) : void {
          var docMain:Sprite = Berilia.getInstance().docMain;
          TooltipManager.show(new TextTooltipInfo(this._tText.text),this,UiModuleManager.getInstance().getModule("Ankama_Tooltips"),false,"TextExtension",LocationEnum.POINT_TOP,LocationEnum.POINT_BOTTOM,20,true,null,TooltipManager.defaultTooltipUiScript,null,"TextInfo");
          this._textFieldTooltipExtension.textColor = 16765814;
       }
       
-      private function onTooltipExtensionOut(e:MouseEvent=null) : void {
+      function onTooltipExtensionOut(e:MouseEvent=null) : void {
          TooltipManager.hide("TextExtension");
          this._textFieldTooltipExtension.textColor = this._textTooltipExtensionColor;
       }

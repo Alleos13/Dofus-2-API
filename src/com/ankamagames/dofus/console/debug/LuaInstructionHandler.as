@@ -48,12 +48,12 @@ package com.ankamagames.dofus.console.debug
          return null;
       }
       
-      private function onScriptSuccess(pEvent:LuaPlayerEvent) : void {
+      function onScriptSuccess(pEvent:LuaPlayerEvent) : void {
          pEvent.currentTarget.removeEventListener(LuaPlayerEvent.PLAY_SUCCESS,this.onScriptSuccess);
          ConsolesManager.getConsole("debug").output("Script successfully executed.");
       }
       
-      private function onScriptError(pEvent:LuaPlayerEvent) : void {
+      function onScriptError(pEvent:LuaPlayerEvent) : void {
          pEvent.currentTarget.removeEventListener(LuaPlayerEvent.PLAY_ERROR,this.onScriptError);
          ConsolesManager.getConsole("debug").output("Script error.\n" + pEvent.stackTrace);
       }

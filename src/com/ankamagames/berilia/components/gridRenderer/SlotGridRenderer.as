@@ -308,7 +308,7 @@ package com.ankamagames.berilia.components.gridRenderer
          return functionName;
       }
       
-      private function onTweenEnd(e:TweenEvent) : void {
+      function onTweenEnd(e:TweenEvent) : void {
          LinkedCursorSpriteManager.getInstance().removeItem(Slot.DRAG_AND_DROP_CURSOR_NAME);
       }
    }

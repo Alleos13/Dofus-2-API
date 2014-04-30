@@ -50,11 +50,7 @@ package com.ankamagames.tiphon.display
                i++;
             }
          }
-         return 
-            {
-               "animations":animations,
-               "frames":frames
-            };
+		 return null;
       }
       
       public static function optimize(val:int=1) : void {
@@ -130,7 +126,7 @@ package com.ankamagames.tiphon.display
          this.displayFrame(this._currentIndex > 0?this._currentIndex - 1:this._totalFrames - 1);
       }
       
-      protected function displayFrame(frameIndex:uint) : Boolean {
+      function displayFrame(frameIndex:uint) : Boolean {
          if(frameIndex == this._currentIndex)
          {
             return false;

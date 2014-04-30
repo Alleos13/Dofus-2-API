@@ -160,7 +160,7 @@ package com.ankamagames.dofus.console.moduleLUA
       
       private var _luaPlayer:LuaPlayer;
       
-      private function createWindow() : void {
+      function createWindow() : void {
          var options:NativeWindowInitOptions = null;
          if(!this._window)
          {
@@ -180,7 +180,7 @@ package com.ankamagames.dofus.console.moduleLUA
          }
       }
       
-      private function createUI() : void {
+      function createUI() : void {
          this._backGround = new Sprite();
          this._textField = new TextField();
          this._textField.multiline = true;
@@ -259,7 +259,7 @@ package com.ankamagames.dofus.console.moduleLUA
          this.onResize();
       }
       
-      protected function toggleRecord(event:MouseEvent) : void {
+      function toggleRecord(event:MouseEvent) : void {
          var pausingRecording:Boolean = false;
          try
          {
@@ -317,11 +317,11 @@ package com.ankamagames.dofus.console.moduleLUA
          }
       }
       
-      protected function setAutoTimer(event:MouseEvent) : void {
+      function setAutoTimer(event:MouseEvent) : void {
          event.target.toggled = !event.target.toggled;
       }
       
-      protected function toggleTimer(event:MouseEvent) : void {
+      function toggleTimer(event:MouseEvent) : void {
          this._btns[BTN_TIMER].toggled = this._waitStart == -1;
          if(this._waitStart == -1)
          {
@@ -338,18 +338,18 @@ package com.ankamagames.dofus.console.moduleLUA
          }
       }
       
-      protected function toggleMoveType(event:MouseEvent) : void {
+      function toggleMoveType(event:MouseEvent) : void {
          this._frame.moveType = int(event.target.name.replace("moveBtn",""));
          this._btns[BTN_MOVE_DEFAULT].toggled = this._btns[BTN_MOVE_WALK].toggled = this._btns[BTN_MOVE_RUN].toggled = this._btns[BTN_MOVE_TELEPORT].toggled = this._btns[BTN_MOVE_SLIDE].toggled = false;
          event.target.toggled = true;
       }
       
-      protected function toggleCameraAutoFollow(event:MouseEvent) : void {
+      function toggleCameraAutoFollow(event:MouseEvent) : void {
          event.target.toggled = !event.target.toggled;
          this._frame.autoFollowCam(event.target.toggled);
       }
       
-      protected function setZoom(event:MouseEvent) : void {
+      function setZoom(event:MouseEvent) : void {
          var currentZoom:int = this.getZoomValue();
          this._btns[BTN_CAMERA_ZOOM_IN].enabled = true;
          this._btns[BTN_CAMERA_ZOOM_OUT].enabled = true;
@@ -373,7 +373,7 @@ package com.ankamagames.dofus.console.moduleLUA
          this._frame.cameraZoom(currentZoom,true);
       }
       
-      protected function playScript(event:MouseEvent) : void {
+      function playScript(event:MouseEvent) : void {
          var script:String = null;
          try
          {
@@ -407,7 +407,7 @@ package com.ankamagames.dofus.console.moduleLUA
          }
       }
       
-      protected function stopRecord(event:MouseEvent) : void {
+      function stopRecord(event:MouseEvent) : void {
          if((this._frame) && (this._frame.running))
          {
             this._frame.stop();
@@ -417,7 +417,7 @@ package com.ankamagames.dofus.console.moduleLUA
          this.enableButtons(true,[BTN_RECORD,BTN_PLAY]);
       }
       
-      protected function loadScript(event:MouseEvent) : void {
+      function loadScript(event:MouseEvent) : void {
          var file:File = null;
          file = File.documentsDirectory;
          file.browseForOpen("Open LUA script...",[new FileFilter("Script LUA File","*.lua")]);
@@ -439,7 +439,7 @@ package com.ankamagames.dofus.console.moduleLUA
          });
       }
       
-      protected function export(event:MouseEvent) : void {
+      function export(event:MouseEvent) : void {
          var file:File = null;
          if(!this._frame)
          {
@@ -459,7 +459,7 @@ package com.ankamagames.dofus.console.moduleLUA
          });
       }
       
-      protected function resetWorld(event:MouseEvent) : void {
+      function resetWorld(event:MouseEvent) : void {
          var rpContextFrame:RoleplayContextFrame = null;
          var ies:Vector.<InteractiveElement> = null;
          var i:int = 0;
@@ -491,7 +491,7 @@ package com.ankamagames.dofus.console.moduleLUA
          }
       }
       
-      protected function toggleAutoReset(event:MouseEvent) : void {
+      function toggleAutoReset(event:MouseEvent) : void {
          event.target.toggled = !event.target.toggled;
          if(this._luaPlayer)
          {
@@ -499,7 +499,7 @@ package com.ankamagames.dofus.console.moduleLUA
          }
       }
       
-      protected function unlockBtns(event:MouseEvent) : void {
+      function unlockBtns(event:MouseEvent) : void {
          if(!this._iconList.mouseChildren)
          {
             this._iconList.mouseChildren = true;
@@ -557,26 +557,26 @@ package com.ankamagames.dofus.console.moduleLUA
          this._scrollBarH.resize();
       }
       
-      private function clearConsole() : void {
+      function clearConsole() : void {
          this._lines = new Vector.<String>();
          this._scrollBar.reset(this._lines);
          this._scrollBar.updateScrolling();
          this._scrollBarH.resize();
       }
       
-      private function onScriptCompleted(event:LuaPlayerEvent) : void {
+      function onScriptCompleted(event:LuaPlayerEvent) : void {
          this.printLine("<span class=\'gray\'>> Script finished playing.</span>",false);
          this._iconList.mouseChildren = true;
          this._iconList.alpha = 1;
       }
       
-      private function onScriptError(event:LuaPlayerEvent) : void {
+      function onScriptError(event:LuaPlayerEvent) : void {
          this.printLine("<span class=\'gray\'>> Script could not be played. Error:</span>\n<span class=\'red\'>" + event.stackTrace + "</span>",false);
          this._iconList.mouseChildren = true;
          this._iconList.alpha = 1;
       }
       
-      private function onResize(event:Event=null) : void {
+      function onResize(event:Event=null) : void {
          this._backGround.graphics.clear();
          this._backGround.graphics.beginFill(BACKGROUND_COLOR);
          this._backGround.graphics.drawRect(0,0,this._window.stage.stageWidth,this._window.stage.stageHeight);
@@ -609,17 +609,17 @@ package com.ankamagames.dofus.console.moduleLUA
          this._scrollBarH.resize();
       }
       
-      private function onScrollVChange(e:Event) : void {
+      function onScrollVChange(e:Event) : void {
          this._scrollBarH.resize();
       }
       
-      private function onClosing(event:Event) : void {
+      function onClosing(event:Event) : void {
          this.stopRecord(null);
          this._window.visible = false;
          event.preventDefault();
       }
       
-      private function enableButtons(enabled:Boolean, buttonIDs:Array) : void {
+      function enableButtons(enabled:Boolean, buttonIDs:Array) : void {
          var i:int = 0;
          while(i < this._btns.length - 4)
          {
@@ -656,7 +656,7 @@ package com.ankamagames.dofus.console.moduleLUA
          }
       }
       
-      private function getZoomValue() : int {
+      function getZoomValue() : int {
          return int(this._zoomState.text.replace("x",""));
       }
    }

@@ -419,7 +419,7 @@ package com.ankamagames.dofus.kernel.sound.manager
       public function retriveXMLSounds() : void {
       }
       
-      private function playIntro() : void {
+      function playIntro() : void {
       }
       
       public function playIntroMusic(pFirstHarmonic:Boolean=true) : void {
@@ -473,7 +473,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          this.removeAllSounds();
       }
       
-      private function init() : void {
+      function init() : void {
          this._previousSubareaId = -1;
          this._localizedSoundsManager = new LocalizedSoundsManager();
          this._ambientManager = new AmbientSoundsManager();
@@ -489,13 +489,13 @@ package com.ankamagames.dofus.kernel.sound.manager
          RegConnectionManager.getInstance().send(ProtocolEnum.SAY_HELLO,RegConnectionManager.getInstance().socketClientID,File.applicationDirectory.nativePath + "/config.xml");
       }
       
-      private function removeLocalizedSounds() : void {
+      function removeLocalizedSounds() : void {
          this._entitySounds = new Array();
          this._reverseEntitySounds = new Dictionary();
          RegConnectionManager.getInstance().send(ProtocolEnum.REMOVE_LOCALIZED_SOUNDS,RegConnectionManager.getInstance().socketClientID);
       }
       
-      private function checkIfAvailable() : Boolean {
+      function checkIfAvailable() : Boolean {
          return (this._forceSounds) && (this._soundDirectoryExist);
       }
       
@@ -572,11 +572,11 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      private function onRemoveSoundInTubul(pEvent:AudioBusEvent) : void {
+      function onRemoveSoundInTubul(pEvent:AudioBusEvent) : void {
          this.removeSoundEntity(pEvent.sound);
       }
       
-      private function onSoundAdminComplete(pEvent:SoundCompleteEvent) : void {
+      function onSoundAdminComplete(pEvent:SoundCompleteEvent) : void {
          pEvent.sound.eventDispatcher.removeEventListener(SoundCompleteEvent.SOUND_COMPLETE,this.onSoundAdminComplete);
          var soundId:String = pEvent.sound.uri.fileName.split(".mp3")[0];
          this._adminSounds[soundId] = null;
@@ -639,7 +639,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          return null;
       }
       
-      private function createSoundEvent(sb:SoundBones, animationType:String, params:String) : Vector.<SoundEventParamWrapper> {
+      function createSoundEvent(sb:SoundBones, animationType:String, params:String) : Vector.<SoundEventParamWrapper> {
          var sa:SoundAnimation = null;
          var soundEvents:Vector.<SoundEventParamWrapper> = new Vector.<SoundEventParamWrapper>();
          for each (sa in sb.getSoundAnimationByLabel(animationType,params))

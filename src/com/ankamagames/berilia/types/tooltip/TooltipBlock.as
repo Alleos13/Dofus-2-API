@@ -113,7 +113,7 @@ package com.ankamagames.berilia.types.tooltip
          return "[Abstract tooltip]";
       }
       
-      protected function onAllChunkLoaded() : void {
+      function onAllChunkLoaded() : void {
          if(this.onAllChunkLoadedCallback != null)
          {
             this.onAllChunkLoadedCallback();
@@ -121,7 +121,7 @@ package com.ankamagames.berilia.types.tooltip
          dispatchEvent(new Event(Event.COMPLETE));
       }
       
-      private function onLoaded(e:ResourceLoadedEvent) : void {
+      function onLoaded(e:ResourceLoadedEvent) : void {
          this._loadedChunk++;
          _chunckCache[e.uri.path] = e.resource;
          this.chunks[e.uri.tag] = e.resource;
@@ -131,7 +131,7 @@ package com.ankamagames.berilia.types.tooltip
          }
       }
       
-      private function onLoadError(e:ResourceErrorEvent) : void {
+      function onLoadError(e:ResourceErrorEvent) : void {
          this._loadedChunk++;
          if(this._loadedChunk == this._totalChunk)
          {

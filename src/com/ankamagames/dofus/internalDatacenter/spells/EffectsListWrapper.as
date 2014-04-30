@@ -67,7 +67,7 @@ package com.ankamagames.dofus.internalDatacenter.spells
          return this._categories;
       }
       
-      private function addBuff(category:int, buff:BasicBuff) : void {
+      function addBuff(category:int, buff:BasicBuff) : void {
          var b:BasicBuff = null;
          var e:Effect = null;
          if(!this._categories[category])
@@ -100,7 +100,7 @@ package com.ankamagames.dofus.internalDatacenter.spells
          this._categories[category].push(b);
       }
       
-      private function getCategory(effect:Effect) : int {
+      function getCategory(effect:Effect) : int {
          if(effect.characteristic == 71)
          {
             return CATEGORY_STATE;

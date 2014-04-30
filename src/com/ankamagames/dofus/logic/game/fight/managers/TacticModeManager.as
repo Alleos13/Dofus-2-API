@@ -923,7 +923,7 @@ package com.ankamagames.dofus.logic.game.fight.managers
       private function onBackgroundLoaded(pEvt:ResourceLoadedEvent=null) : void {
          pEvt.currentTarget.removeEventListener(ResourceLoadedEvent.LOADED,this.onBackgroundLoaded);
          var appDomain:ApplicationDomain = pEvt.resource.applicationDomain;
-         this._background = new appDomain.getDefinition("BG")() as Sprite;
+         this._background = null;
          this._background.name = "TacticModeBackground";
          MapDisplayManager.getInstance().renderer.container.addChildAt(this._background,0);
       }

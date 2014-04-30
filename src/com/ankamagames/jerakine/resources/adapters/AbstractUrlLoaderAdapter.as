@@ -70,30 +70,30 @@ package com.ankamagames.jerakine.resources.adapters
          this._observer = null;
       }
       
-      protected function process(dataFormat:String, data:*) : void {
+      function process(dataFormat:String, data:*) : void {
          this.dispatchSuccess(dataFormat,data);
       }
       
-      protected function dispatchSuccess(dataFormat:String, data:*) : void {
+      function dispatchSuccess(dataFormat:String, data:*) : void {
          var res:* = this.getResource(dataFormat,data);
          this.releaseLoader();
          this._observer.onLoaded(this._uri,this.getResourceType(),res);
       }
       
-      protected function dispatchFailure(errorMsg:String, errorCode:uint) : void {
+      function dispatchFailure(errorMsg:String, errorCode:uint) : void {
          this.releaseLoader();
          this._observer.onFailed(this._uri,errorMsg,errorCode);
       }
       
-      protected function getDataFormat() : String {
+      function getDataFormat() : String {
          return URLLoaderDataFormat.TEXT;
       }
       
-      protected function getUri() : Uri {
+      function getUri() : Uri {
          return this._uri;
       }
       
-      protected function getResource(dataFormat:String, data:*) : * {
+      function getResource(dataFormat:String, data:*) : * {
          throw new AbstractMethodCallError("This method should be overrided.");
       }
       
@@ -132,16 +132,16 @@ package com.ankamagames.jerakine.resources.adapters
          this._ldr = null;
       }
       
-      protected function onComplete(e:Event) : void {
+      function onComplete(e:Event) : void {
          this.process(this._ldr.dataFormat,this._ldr.data);
       }
       
-      protected function onError(ee:ErrorEvent) : void {
+      function onError(ee:ErrorEvent) : void {
          this.releaseLoader();
          this._observer.onFailed(this._uri,ee.text,ResourceErrorCode.RESOURCE_NOT_FOUND);
       }
       
-      protected function onProgress(pe:ProgressEvent) : void {
+      function onProgress(pe:ProgressEvent) : void {
          this._observer.onProgress(this._uri,pe.bytesLoaded,pe.bytesTotal);
       }
    }

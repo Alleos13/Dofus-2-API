@@ -1,7 +1,5 @@
 package luaAlchemy
 {
-   import cmodule.lua_wrapper.CLibInit;
-   
    public class lua_wrapper extends Object
    {
       
@@ -9,9 +7,7 @@ package luaAlchemy
          super();
       }
       
-      protected static const _lib_init:CLibInit = new CLibInit();
-      
-      protected static const _lib = _lib_init.init();
+      protected static const _lib = null;
       
       public static function luaInitializeState() : uint {
          return _lib.luaInitializeState();

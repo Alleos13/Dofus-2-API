@@ -40,15 +40,15 @@ package com.ankamagames.jerakine.resources.adapters.impl
       
       private var _scriptClass:Class;
       
-      override protected function getResource(dataFormat:String, data:*) : * {
+       function getResource(dataFormat:String, data:*) : * {
          return this._scriptClass;
       }
       
-      override public function getResourceType() : uint {
+	   override public function getResourceType() : uint {
          return ResourceType.RESOURCE_DX;
       }
       
-      override protected function process(dataFormat:String, data:*) : void {
+       function process(dataFormat:String, data:*) : void {
          var file:uint = 0;
          var version:uint = 0;
          var keyLen:int = 0;
@@ -89,7 +89,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          ldr.loadBytes(swf,loaderContext);
       }
       
-      override protected function getDataFormat() : String {
+       function getDataFormat() : String {
          return URLLoaderDataFormat.BINARY;
       }
       

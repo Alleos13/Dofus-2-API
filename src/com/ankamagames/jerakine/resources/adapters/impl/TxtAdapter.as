@@ -12,7 +12,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          super();
       }
       
-      override protected function getResource(dataFormat:String, data:*) : * {
+       function getResource(dataFormat:String, data:*) : * {
          if((dataFormat == ResourceType.getName(ResourceType.RESOURCE_BINARY)) && (data is IDataInput))
          {
             return IDataInput(data).readUTFBytes(IDataInput(data).bytesAvailable);

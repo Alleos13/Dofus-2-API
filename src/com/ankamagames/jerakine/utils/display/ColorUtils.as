@@ -72,12 +72,7 @@ package com.ankamagames.jerakine.utils.display
                hue--;
             }
          }
-         return 
-            {
-               "h":hue,
-               "s":sat,
-               "l":lum
-            };
+         return null;
       }
    }
 }

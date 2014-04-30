@@ -119,7 +119,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return true;
       }
       
-      private function leaveDialog() : void {
+      function leaveDialog() : void {
          Kernel.getWorker().process(ChangeWorldInteractionAction.create(true));
          Kernel.getWorker().removeFrame(this);
       }

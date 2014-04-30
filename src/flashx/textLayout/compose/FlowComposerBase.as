@@ -51,7 +51,7 @@ package flashx.textLayout.compose
          return this._damageAbsoluteStart;
       }
       
-      protected function initializeLines() : void {
+      function initializeLines() : void {
          var _loc2_:TextFlowLine = null;
          var _loc3_:TextLine = null;
          var _loc4_:TextBlock = null;
@@ -93,7 +93,7 @@ package flashx.textLayout.compose
          this._damageAbsoluteStart = 0;
       }
       
-      protected function finalizeLinesAfterCompose() : void {
+      function finalizeLinesAfterCompose() : void {
          var _loc1_:TextFlowLine = null;
          var _loc2_:* = 0;
          if(this._lines.length == 0)

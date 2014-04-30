@@ -549,7 +549,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onCharacterReady(e:Event) : void {
+      function onCharacterReady(e:Event) : void {
          var cat:* = undefined;
          (this._entity as EventDispatcher).removeEventListener(TiphonEvent.RENDER_SUCCEED,this.onCharacterReady);
          if(this._entity.rawAnimation)
@@ -620,7 +620,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function destroyOldEntity(entity:TiphonSprite) : void {
+      function destroyOldEntity(entity:TiphonSprite) : void {
          if(entity.parent)
          {
             removeChild(entity);
@@ -631,7 +631,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function needUpdate(e:Event=null) : void {
+      function needUpdate(e:Event=null) : void {
          var cat:* = undefined;
          var key:String = null;
          EnterFrameDispatcher.removeEventListener(this.needUpdate);
@@ -684,7 +684,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function onFade(e:Event) : void {
+      function onFade(e:Event) : void {
          if(this._entity)
          {
             this._entity.alpha = this._entity.alpha + (1 - this._entity.alpha) / 3;
@@ -704,11 +704,11 @@ package com.ankamagames.berilia.components
          }
       }
       
-      private function mouseOver(e:MouseEvent) : void {
+      function mouseOver(e:MouseEvent) : void {
          this._entity.transform.colorTransform = new ColorTransform(1.3,1.3,1.3,1);
       }
       
-      private function mouseOut(e:MouseEvent) : void {
+      function mouseOut(e:MouseEvent) : void {
          this._entity.transform.colorTransform = new ColorTransform(1,1,1,1);
       }
    }

@@ -593,110 +593,7 @@ package com.hurlant.math
       }
       
       bi_internal function divRemTo(m:BigInteger, q:BigInteger=null, r:BigInteger=null) : void {
-         var qd:int = 0;
-         var pm:BigInteger = m.abs();
-         if(pm.t <= 0)
-         {
-            return;
-         }
-         var pt:BigInteger = this.abs();
-         if(pt.t < pm.t)
-         {
-            if(q != null)
-            {
-               q.fromInt(0);
-            }
-            if(r != null)
-            {
-               this.copyTo(r);
-            }
-            return;
-         }
-         if(r == null)
-         {
-            r = this.nbi();
-         }
-         var y:BigInteger = this.nbi();
-         var ts:int = this.s;
-         var ms:int = m.s;
-         var nsh:int = DB - this.nbits(pm.a[pm.t - 1]);
-         if(nsh > 0)
-         {
-            pm.lShiftTo(nsh,y);
-            pt.lShiftTo(nsh,r);
-         }
-         else
-         {
-            pm.copyTo(y);
-            pt.copyTo(r);
-         }
-         var ys:int = y.t;
-         var y0:int = y.a[ys - 1];
-         if(y0 == 0)
-         {
-            return;
-         }
-         var yt:Number = y0 * (1 << F1) + (ys > 1?y.a[ys - 2] >> F2:0);
-         var d1:Number = FV / yt;
-         var d2:Number = (1 << F1) / yt;
-         var e:Number = 1 << F2;
-         var i:int = r.t;
-         var j:int = i - ys;
-         var t:BigInteger = q == null?this.nbi():q;
-         y.dlShiftTo(j,t);
-         if(r.compareTo(t) >= 0)
-         {
-            r.a[r.t++] = 1;
-            r.subTo(t,r);
-         }
-         ONE.dlShiftTo(ys,t);
-         t.subTo(y,y);
-         while(y.t < ys)
-         {
-            while(y hasNext _loc6_)
-            {
-               with(_loc9_)
-               {
-               }
-               y.t++;
-               if(0)
-               {
-                  _loc5_[_loc6_] = _loc8_;
-               }
-               }
-            }
-         }
-         while(--j >= 0)
-         {
-            qd = r.a[--i] == y0?DM:Number(r.a[i]) * d1 + (Number(r.a[i - 1]) + e) * d2;
-            if((r.a[i] = r.a[i] + y.am(0,qd,r,j,0,ys)) < qd)
-            {
-               y.dlShiftTo(j,t);
-               r.subTo(t,r);
-               while(r.a[i] < --qd)
-               {
-                  r.subTo(t,r);
-               }
-            }
-         }
-         if(q != null)
-         {
-            r.drShiftTo(ys,q);
-            if(ts != ms)
-            {
-               ZERO.subTo(q,q);
-            }
-         }
-         r.t = ys;
-         r.clamp();
-         if(nsh > 0)
-         {
-            r.rShiftTo(nsh,r);
-         }
-         if(ts < 0)
-         {
-            ZERO.subTo(r,r);
-         }
+         
       }
       
       bi_internal function invDigit() : int {
@@ -753,7 +650,7 @@ package com.hurlant.math
          return parseInt(str.charAt(index),36);
       }
       
-      protected function nbi() : * {
+      function nbi() : * {
          return new BigInteger();
       }
       
@@ -797,7 +694,7 @@ package com.hurlant.math
          return this.t == 0?this.s:this.a[0] << 16 >> 16;
       }
       
-      protected function chunkSize(r:Number) : int {
+      function chunkSize(r:Number) : int {
          return Math.floor(Math.LN2 * DB / Math.log(r));
       }
       
@@ -813,7 +710,7 @@ package com.hurlant.math
          return 1;
       }
       
-      protected function toRadix(b:uint=10) : String {
+      function toRadix(b:uint=10) : String {
          if((this.sigNum() == 0) || (b < 2) || (b > 32))
          {
             return "0";
@@ -833,7 +730,7 @@ package com.hurlant.math
          return z.intValue().toString(b) + r;
       }
       
-      protected function fromRadix(s:String, b:int=10) : void {
+      function fromRadix(s:String, b:int=10) : void {
          var x:* = 0;
          this.fromInt(0);
          var cs:int = this.chunkSize(b);
@@ -934,7 +831,7 @@ package com.hurlant.math
          return this.compareTo(a) > 0?this:a;
       }
       
-      protected function bitwiseTo(a:BigInteger, op:Function, r:BigInteger) : void {
+      function bitwiseTo(a:BigInteger, op:Function, r:BigInteger) : void {
          var i:* = 0;
          var f:* = 0;
          var m:int = Math.min(a.t,this.t);
@@ -970,7 +867,7 @@ package com.hurlant.math
          r.clamp();
       }
       
-      private function op_and(x:int, y:int) : int {
+      function op_and(x:int, y:int) : int {
          return x & y;
       }
       
@@ -980,7 +877,7 @@ package com.hurlant.math
          return r;
       }
       
-      private function op_or(x:int, y:int) : int {
+      function op_or(x:int, y:int) : int {
          return x | y;
       }
       
@@ -990,7 +887,7 @@ package com.hurlant.math
          return r;
       }
       
-      private function op_xor(x:int, y:int) : int {
+      function op_xor(x:int, y:int) : int {
          return x ^ y;
       }
       
@@ -1000,7 +897,7 @@ package com.hurlant.math
          return r;
       }
       
-      private function op_andnot(x:int, y:int) : int {
+      function op_andnot(x:int, y:int) : int {
          return x & ~y;
       }
       
@@ -1049,7 +946,7 @@ package com.hurlant.math
          return r;
       }
       
-      private function lbit(x:int) : int {
+      function lbit(x:int) : int {
          if(x == 0)
          {
             return -1;
@@ -1099,7 +996,7 @@ package com.hurlant.math
          return -1;
       }
       
-      private function cbit(x:int) : int {
+      function cbit(x:int) : int {
          var r:uint = 0;
          while(x != 0)
          {
@@ -1130,7 +1027,7 @@ package com.hurlant.math
          return !((this.a[j] & 1 << n % DB) == 0);
       }
       
-      protected function changeBit(n:int, op:Function) : BigInteger {
+      function changeBit(n:int, op:Function) : BigInteger {
          var r:BigInteger = BigInteger.ONE.shiftLeft(n);
          this.bitwiseTo(r,op,r);
          return r;
@@ -1148,7 +1045,7 @@ package com.hurlant.math
          return this.changeBit(n,this.op_xor);
       }
       
-      protected function addTo(a:BigInteger, r:BigInteger) : void {
+      function addTo(a:BigInteger, r:BigInteger) : void {
          var i:int = 0;
          var c:int = 0;
          var m:int = Math.min(a.t,this.t);
@@ -1497,7 +1394,7 @@ package com.hurlant.math
          return y;
       }
       
-      protected function modInt(n:int) : int {
+      function modInt(n:int) : int {
          var i:* = 0;
          if(n <= 0)
          {
@@ -1662,7 +1559,7 @@ package com.hurlant.math
          return x.millerRabin(t);
       }
       
-      protected function millerRabin(t:int) : Boolean {
+      function millerRabin(t:int) : Boolean {
          var y:BigInteger = null;
          var j:* = 0;
          var n1:BigInteger = this.subtract(BigInteger.ONE);

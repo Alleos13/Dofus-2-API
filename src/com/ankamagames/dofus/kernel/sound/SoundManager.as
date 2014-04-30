@@ -132,7 +132,7 @@ package com.ankamagames.dofus.kernel.sound
          this.manager.setBusVolume(TubulSoundConfiguration.BUS_SFX_ID,pVolume);
       }
       
-      private function onPropertyChanged(e:PropertyChangeEvent) : void {
+      function onPropertyChanged(e:PropertyChangeEvent) : void {
          switch(e.propertyName)
          {
             case "muteMusic":

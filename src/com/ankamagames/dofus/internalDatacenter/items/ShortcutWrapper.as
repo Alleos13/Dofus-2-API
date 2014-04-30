@@ -608,7 +608,7 @@ package com.ankamagames.dofus.internalDatacenter.items
       public function removeHolder(h:ISlotDataHolder) : void {
       }
       
-      private function getCharaId() : int {
+      function getCharaId() : int {
          if(CurrentPlayedFighterManager.getInstance().currentFighterId)
          {
             return CurrentPlayedFighterManager.getInstance().currentFighterId;

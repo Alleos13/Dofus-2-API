@@ -372,14 +372,14 @@ package com.ankamagames.berilia.types.data
          }
       }
       
-      private function initScriptAnalyser() : void {
+      function initScriptAnalyser() : void {
          if(!this._scriptAnalyser)
          {
             this._scriptAnalyser = new ModuleScriptAnalyzer(this,this.onScriptAnalyserReady,this._moduleAppDomain);
          }
       }
       
-      private function onScriptAnalyserReady() : void {
+      function onScriptAnalyserReady() : void {
          var f:Function = null;
          for each (f in this._actionScriptAnalyserCallback)
          {
@@ -398,105 +398,11 @@ package com.ankamagames.berilia.types.data
          this._apiScriptAnalyserCallback = null;
       }
       
-      protected function fillFromXml(xml:XML, nativePath:String, id:String) : void {
-         var uiGroup:UiGroup = null;
-         var group:XML = null;
-         var uiData:UiData = null;
-         var uis:XML = null;
-         var path:XML = null;
-         var uiNames:Array = null;
-         var groupName:String = null;
-         var uisXML:XMLList = null;
-         var uiName:XML = null;
-         var uisGroup:String = null;
-         var ui:XML = null;
-         var file:String = null;
-         var mod:String = null;
-         var fileuri:String = null;
-         this.setProperty("name",xml..header..name);
-         this.setProperty("version",xml..header..version);
-         this.setProperty("gameVersion",xml..header..gameVersion);
-         this.setProperty("author",xml..header..author);
-         this.setProperty("description",xml..header..description);
-         this.setProperty("shortDescription",xml..header..shortDescription);
-         this.setProperty("script",xml..script);
-         this.setProperty("shortcuts",xml..shortcuts);
-         this._rawXml = xml;
-         var nativePath:String = nativePath.split("app:/").join("");
-         if((nativePath.indexOf("file://") == -1) && (!(nativePath.substr(0,2) == "\\\\")))
-         {
-            nativePath = "file://" + nativePath;
-         }
-         this._id = id;
-         if(this.script)
-         {
-            this._script = nativePath + "/" + this.script;
-         }
-         if(this.shortcuts)
-         {
-            this._shortcuts = nativePath + "/" + this.shortcuts;
-         }
-         this._rootPath = nativePath + "/";
-         this._storagePath = unescape(this._rootPath + "storage/").replace("file://","");
-         var iconPath:String = xml..header..icon;
-         if((iconPath) && (iconPath.length))
-         {
-            this._iconUri = new Uri(this._rootPath + iconPath);
-         }
-         this._groups = new Vector.<UiGroup>();
-         for(;xml.uiGroup hasNext _loc5_;uiGroup = new UiGroup(group.@name,group.@exclusive.toString() == "true",group.@permanent.toString() == "true",uiNames),UiGroupManager.getInstance().registerGroup(uiGroup),this._groups.push(uiGroup))
-         {
-            group = nextValue(_loc5_,_loc6_);
-            uiNames = new Array();
-            groupName = group..@name;
-            try
-            {
-               uisXML = xml.uis.(@group == groupName);
-               for each (uiName in uisXML..@name)
-               {
-                  uiNames.push(uiName.toString());
-               }
-            }
-            catch(e:Error)
-            {
-               continue;
-            }
-         }
-         for each (uis in xml.uis)
-         {
-            uisGroup = uis.@group.toString();
-            for each (ui in uis..ui)
-            {
-               if(ui.@group.toString().length)
-               {
-                  uisGroup = ui.@group.toString();
-               }
-               file = null;
-               if(ui.@file.toString().length)
-               {
-                  if(ui.@file.indexOf("::") != -1)
-                  {
-                     mod = nativePath.split("Ankama")[0];
-                     fileuri = ui.@file;
-                     fileuri = fileuri.replace("::","/");
-                     file = mod + fileuri;
-                  }
-                  else
-                  {
-                     file = nativePath + "/" + ui.@file;
-                  }
-               }
-               uiData = new UiData(this,ui.@name,file,ui["class"],uisGroup);
-               this._uis[uiData.name] = uiData;
-            }
-         }
-         for each (path in xml.cachedFiles..path)
-         {
-            this.cachedFiles.push(path.children().toString());
-         }
+      function fillFromXml(xml:XML, nativePath:String, id:String) : void {
+        
       }
       
-      private function setProperty(key:String, value:String) : void {
+      function setProperty(key:String, value:String) : void {
          if((value) && (value.length))
          {
             this["_" + key] = value;

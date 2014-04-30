@@ -123,27 +123,27 @@ package com.ankamagames.berilia.types.data
          }
       }
       
-      private function initWriteMode() : void {
+      function initWriteMode() : void {
          this._output = new ByteArray();
          this._uiBuffer = new ByteArray();
          this._uiListPosition = new Dictionary();
          this._uiBuffer.objectEncoding = ObjectEncoding.AMF3;
       }
       
-      private function makeHeader(uiModule:UiModule) : void {
+      function makeHeader(uiModule:UiModule) : void {
          this._output.writeUTF("D2UI");
          this._output.writeUTF(uiModule.rawXml.toXMLString());
          this._uiListStartPosition = this._output.position;
          this._output.writeShort(0);
       }
       
-      private function readUidefinition(id:String) : UiDefinition {
+      function readUidefinition(id:String) : UiDefinition {
          this._input.objectEncoding = ObjectEncoding.AMF3;
          this._input.position = this._uiListPosition[id];
          return this._input.readObject();
       }
       
-      private function writeUiDefinition(definition:UiDefinition, ui:UiData) : void {
+      function writeUiDefinition(definition:UiDefinition, ui:UiData) : void {
          this._definitionCount++;
          this._uiListPosition[ui.name] = this._uiBuffer.position;
          this._uiBuffer.objectEncoding = ObjectEncoding.AMF3;

@@ -137,14 +137,14 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private var search2:RegExp;
       
-      private function displayBind(bind:Bind, ui:Object) : void {
+      function displayBind(bind:Bind, ui:Object) : void {
          this.type = TYPE_SHORTCUT;
          var textBind:String = "Shortcut : " + bind.key.toUpperCase() + " --&gt; \"" + bind.targetedShortcut + "\" " + (bind.alt?"Alt+":"") + (bind.ctrl?"Ctrl+":"") + (bind.shift?"Shift+":"");
          this.name = "Shortcut";
          this.textInfo = "<span class=\'gray\'>[" + this.getDate() + "]</span>" + "<span class=\'yellow\'> BIND   : <a href=\'event:@shortcut\'>" + textBind + "</a></span>" + "\n<span class=\'gray+\'>" + TAB + "target : " + ui + "</span>\n";
       }
       
-      private function displayInteractionMessage(msg:Message, ui:DisplayObject) : void {
+      function displayInteractionMessage(msg:Message, ui:DisplayObject) : void {
          var infos:Array = null;
          var num:* = 0;
          var i:* = 0;
@@ -173,7 +173,7 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private var vectorExp:RegExp;
       
-      private function displayHookInformations(hook:Hook, args:Array) : void {
+      function displayHookInformations(hook:Hook, args:Array) : void {
          var arg:Object = null;
          var className:String = null;
          var textArg:String = null;
@@ -206,7 +206,7 @@ package com.ankamagames.dofus.console.moduleLogger
          this.textInfo = text;
       }
       
-      private function displayLog(text:String, level:int) : void {
+      function displayLog(text:String, level:int) : void {
          var finalText:String = null;
          this.name = text;
          if(level == LogLevel.DEBUG)
@@ -264,7 +264,7 @@ package com.ankamagames.dofus.console.moduleLogger
          this.textInfo = finalText;
       }
       
-      private function displayActionInformations(action:Action) : void {
+      function displayActionInformations(action:Action) : void {
          var variable:XML = null;
          var name:String = null;
          var typel:String = null;
@@ -290,7 +290,7 @@ package com.ankamagames.dofus.console.moduleLogger
          this.textInfo = text;
       }
       
-      private function getDate() : String {
+      function getDate() : String {
          var date:Date = new Date();
          var hours:int = date.hours;
          var minutes:int = date.minutes;

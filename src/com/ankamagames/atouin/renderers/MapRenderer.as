@@ -553,7 +553,7 @@ package com.ankamagames.atouin.renderers
          }
       }
       
-      private function makeMap() : void {
+      function makeMap() : void {
          var layerCtr:DisplayObjectContainer = null;
          var cellInteractionCtr:DisplayObjectContainer = null;
          var groundLayerCtr:Bitmap = null;
@@ -789,7 +789,7 @@ package com.ankamagames.atouin.renderers
       
       private var colorTransform:ColorTransform;
       
-      private function drawGround(groundLayerCtr:Bitmap, cellCtr:BitmapCellContainer) : void {
+      function drawGround(groundLayerCtr:Bitmap, cellCtr:BitmapCellContainer) : void {
          var data:Object = null;
          var bmpdt:BitmapData = null;
          var hasColorTransform:* = false;
@@ -859,7 +859,7 @@ package com.ankamagames.atouin.renderers
       
       private var _destPoint:Point;
       
-      private function groundMapLoaded(ground:Bitmap) : void {
+      function groundMapLoaded(ground:Bitmap) : void {
          this._groundIsLoaded = true;
          if(this._mapIsReady)
          {
@@ -874,7 +874,7 @@ package com.ankamagames.atouin.renderers
          ground.smoothing = true;
       }
       
-      private function groundMapNotLoaded(mapId:int) : void {
+      function groundMapNotLoaded(mapId:int) : void {
          var mapDisplayManager:MapDisplayManager = null;
          if(this._map.id == mapId)
          {
@@ -883,7 +883,7 @@ package com.ankamagames.atouin.renderers
          }
       }
       
-      private function addCellBitmapsElements(cell:Cell, cellCtr:ICellContainer, transparent:Boolean=false, ground:Boolean=false) : Boolean {
+      function addCellBitmapsElements(cell:Cell, cellCtr:ICellContainer, transparent:Boolean=false, ground:Boolean=false) : Boolean {
          var elementDo:Object = null;
          var data:VisualData = null;
          var colors:Object = null;
@@ -936,7 +936,7 @@ package com.ankamagames.atouin.renderers
                            applicationDomain = this._swfApplicationDomain[ged.gfxId];
                            if(applicationDomain.hasDefinition("FX_0"))
                            {
-                              elementDo = new applicationDomain.getDefinition("FX_0")() as Sprite;
+                              elementDo = null;
                            }
                            else
                            {
@@ -1159,7 +1159,7 @@ package com.ankamagames.atouin.renderers
       
       private var _ceilBitmapData:BitmapData;
       
-      private function renderFixture(fixtures:Array, container:Bitmap) : void {
+      function renderFixture(fixtures:Array, container:Bitmap) : void {
          var bmpdt:BitmapData = null;
          var fixture:Fixture = null;
          var width:* = NaN;
@@ -1213,7 +1213,7 @@ package com.ankamagames.atouin.renderers
          return this._container;
       }
       
-      private function onAllGfxLoaded(e:ResourceLoaderProgressEvent) : void {
+      function onAllGfxLoaded(e:ResourceLoaderProgressEvent) : void {
          if(this._cancelRender)
          {
             return;
@@ -1228,7 +1228,7 @@ package com.ankamagames.atouin.renderers
          this.makeMap();
       }
       
-      private function onBitmapGfxLoaded(e:ResourceLoadedEvent) : void {
+      function onBitmapGfxLoaded(e:ResourceLoadedEvent) : void {
          if(this._cancelRender)
          {
             return;
@@ -1241,7 +1241,7 @@ package com.ankamagames.atouin.renderers
          MEMORY_LOG_1[e.resource] = 1;
       }
       
-      private function onSwfGfxLoaded(e:ResourceLoadedEvent) : void {
+      function onSwfGfxLoaded(e:ResourceLoadedEvent) : void {
          this._fileLoaded++;
          this._downloadProgressBar.scaleX = this._fileLoaded / this._fileToLoad;
          dispatchEvent(new ProgressEvent(ProgressEvent.PROGRESS,false,false,this._fileLoaded,this._fileToLoad));
@@ -1249,11 +1249,11 @@ package com.ankamagames.atouin.renderers
          MEMORY_LOG_2[e.resource] = 1;
       }
       
-      private function onGfxError(e:ResourceErrorEvent) : void {
+      function onGfxError(e:ResourceErrorEvent) : void {
          _log.error("Unable to load " + e.uri);
       }
       
-      private function onDownloadTimer(e:TimerEvent) : void {
+      function onDownloadTimer(e:TimerEvent) : void {
          if(Atouin.getInstance().options.showProgressBar)
          {
             this._container.addChild(this._progressBarCtr);

@@ -232,7 +232,7 @@ package com.ankamagames.atouin.types
          return null;
       }
       
-      private function updateAnimatedElement(target:Object) : void {
+      function updateAnimatedElement(target:Object) : void {
          var ts:WorldEntitySprite = target.element;
          var eed:EntityGraphicalElementData = target.data;
          var allowAnimatedGfx:Boolean = (this._temporaryEnable) && (this._allowAnimatedGfx);
@@ -280,7 +280,7 @@ package com.ankamagames.atouin.types
          }
       }
       
-      private function onEntityRendered(e:TiphonEvent) : void {
+      function onEntityRendered(e:TiphonEvent) : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -289,7 +289,7 @@ package com.ankamagames.atouin.types
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function onOptionChange(e:PropertyChangeEvent) : void {
+      function onOptionChange(e:PropertyChangeEvent) : void {
          var d:Object = null;
          if(e.propertyName == "allowAnimatedGfx")
          {

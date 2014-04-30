@@ -43,19 +43,6 @@ package com.ankamagames.jerakine
       
       private static var _include_HSL:HSL = null;
       
-      private static var _include_abcDeserializer:AbcDeserializer = null;
-      
-      private static var _include_abcFile:AbcFile = null;
-      
-      private static var _include_swfFileIO:SWFFileIO = null;
-      
-      private static var _include_swfFile:SWFFile = null;
-      
-      private static var _include_doAbcTag:DoABCTag = null;
-      
-      private static var _include_fileAttributesTag:FileAttributesTag = null;
-      
-      private static var _include_classInfos:ClassInfo = null;
       
       public static const LOADERS_POOL_INITIAL_SIZE:int = 5;
       

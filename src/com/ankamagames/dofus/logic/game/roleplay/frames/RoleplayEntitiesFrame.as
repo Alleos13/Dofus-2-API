@@ -1142,12 +1142,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          this._paddockItem = new Dictionary();
       }
       
-      override protected function switchPokemonMode() : Boolean {
-         if(super.switchPokemonMode())
-         {
-            KernelEventsManager.getInstance().processCallback(TriggerHookList.CreaturesMode);
-            return true;
-         }
+       function switchPokemonMode() : Boolean {
          return false;
       }
       
@@ -1454,7 +1449,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          return ac;
       }
       
-      override protected function updateActorLook(actorId:int, newLook:EntityLook, smoke:Boolean=false) : AnimatedCharacter {
+       function updateActorLook(actorId:int, newLook:EntityLook, smoke:Boolean=false) : AnimatedCharacter {
          var anim:String = null;
          var ac:AnimatedCharacter = DofusEntities.getEntity(actorId) as AnimatedCharacter;
          if(ac)

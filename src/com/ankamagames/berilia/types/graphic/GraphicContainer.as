@@ -726,7 +726,7 @@ package com.ankamagames.berilia.types.graphic
             });
       }
       
-      private function defaultDropValidatorFunction(target:*, data:*, source:*) : Boolean {
+      function defaultDropValidatorFunction(target:*, data:*, source:*) : Boolean {
          var parent:DisplayObject = this;
          do
          {
@@ -740,7 +740,7 @@ package com.ankamagames.berilia.types.graphic
             return false;
          }
          
-         private function defaultProcessDropFunction(target:*, data:*, source:*) : void {
+         function defaultProcessDropFunction(target:*, data:*, source:*) : void {
             var parent:DisplayObject = this;
             do
             {
@@ -753,7 +753,7 @@ package com.ankamagames.berilia.types.graphic
                }
             }
             
-            private function defaultRemoveDropSourceFunction(target:*) : void {
+            function defaultRemoveDropSourceFunction(target:*) : void {
                var parent:DisplayObject = this;
                do
                {
@@ -778,7 +778,7 @@ package com.ankamagames.berilia.types.graphic
                   return coord;
                }
                
-               protected function destroy(target:DisplayObjectContainer) : void {
+               function destroy(target:DisplayObjectContainer) : void {
                   var item:DisplayObject = null;
                   if((!target) || (target is MovieClip) && (MovieClip(target).totalFrames > 1))
                   {
@@ -838,7 +838,7 @@ package com.ankamagames.berilia.types.graphic
                   return super.contains(child);
                }
                
-               private function onEnterFrame(e:Event) : void {
+               function onEnterFrame(e:Event) : void {
                   var w:int = this._nStartWidth + StageShareManager.mouseX - this._nMouseX;
                   var h:int = this._nStartHeight + StageShareManager.mouseY - this._nMouseY;
                   if(this.minSize != null)
@@ -890,7 +890,7 @@ package com.ankamagames.berilia.types.graphic
                   }
                }
                
-               protected function canProcessMessage(pMsg:Message) : Boolean {
+               function canProcessMessage(pMsg:Message) : Boolean {
                   if(this._bSoftDisabled)
                   {
                      if(!((pMsg is ItemRollOutMessage) || (pMsg is ItemRollOverMessage) || (pMsg is MouseOverMessage) || (pMsg is MouseOutMessage)))

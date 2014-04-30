@@ -81,7 +81,7 @@ package com.ankamagames.jerakine.types.positions
          this.setFromCoords();
       }
       
-      protected function setFromMapId() : void {
+      function setFromMapId() : void {
          this._worldId = (this._mapId & 1073479680) >> 18;
          this._x = this._mapId >> 9 & 511;
          this._y = this._mapId & 511;
@@ -95,7 +95,7 @@ package com.ankamagames.jerakine.types.positions
          }
       }
       
-      protected function setFromCoords() : void {
+      function setFromCoords() : void {
          if((this._x > MAP_COORDS_MAX) || (this._y > MAP_COORDS_MAX) || (this._worldId > WORLD_ID_MAX))
          {
             throw new JerakineError("Coordinates or world identifier out of range.");

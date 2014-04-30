@@ -185,7 +185,7 @@ package com.ankamagames.dofus.console.debug
          return possibilities;
       }
       
-      private function enablereport(console:ConsoleHandler, cmd:String, args:Array) : void {
+      function enablereport(console:ConsoleHandler, cmd:String, args:Array) : void {
          if(args.length == 0)
          {
             DofusErrorHandler.manualActivation = !DofusErrorHandler.manualActivation;
@@ -216,7 +216,7 @@ package com.ankamagames.dofus.console.debug
          console.output("\tReport have been " + (DofusErrorHandler.manualActivation?"enabled":"disabled") + ". Dofus need to restart.");
       }
       
-      private function enableLogs(console:ConsoleHandler, cmd:String, args:Array) : void {
+      function enableLogs(console:ConsoleHandler, cmd:String, args:Array) : void {
          if(args.length == 0)
          {
             SOSTarget.enabled = !SOSTarget.enabled;
@@ -249,7 +249,7 @@ package com.ankamagames.dofus.console.debug
          }
       }
       
-      private function info(console:ConsoleHandler, cmd:String, args:Array) : void {
+      function info(console:ConsoleHandler, cmd:String, args:Array) : void {
          var iDataCenter:String = null;
          var className:String = null;
          var id:* = 0;
@@ -325,7 +325,7 @@ package com.ankamagames.dofus.console.debug
          }
       }
       
-      private function search(console:ConsoleHandler, cmd:String, args:Array) : void {
+      function search(console:ConsoleHandler, cmd:String, args:Array) : void {
          var iDataCenter:String = null;
          var member:String = null;
          var filter:String = null;
@@ -416,7 +416,7 @@ package com.ankamagames.dofus.console.debug
          }
       }
       
-      private function validArgs() : Dictionary {
+      function validArgs() : Dictionary {
          var subXML:XML = null;
          var varAndAccessors:Array = null;
          var dico:Dictionary = new Dictionary();
@@ -432,7 +432,7 @@ package com.ankamagames.dofus.console.debug
          return dico;
       }
       
-      private function getSimpleVariablesAndAccessors(clazz:String, addVectors:Boolean=false) : Array {
+      function getSimpleVariablesAndAccessors(clazz:String, addVectors:Boolean=false) : Array {
          var type:String = null;
          var currentXML:XML = null;
          var result:Array = new Array();
@@ -476,7 +476,7 @@ package com.ankamagames.dofus.console.debug
          return result;
       }
       
-      private function getIdFunction(clazz:String) : String {
+      function getIdFunction(clazz:String) : String {
          var subXML:XML = null;
          var parameterType:String = null;
          var xml:XML = describeType(getDefinitionByName(clazz));
@@ -497,7 +497,7 @@ package com.ankamagames.dofus.console.debug
          return null;
       }
       
-      private function getListingFunction(clazz:String) : String {
+      function getListingFunction(clazz:String) : String {
          var subXML:XML = null;
          var xml:XML = describeType(getDefinitionByName(clazz));
          for each (subXML in xml..method)

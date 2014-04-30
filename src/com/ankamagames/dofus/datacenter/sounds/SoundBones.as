@@ -71,7 +71,7 @@ package com.ankamagames.dofus.datacenter.sounds
          return sa;
       }
       
-      private function makeCacheDictionary() : void {
+      function makeCacheDictionary() : void {
          var i:String = null;
          this._cacheDictionary = new Dictionary();
          for (i in this.keys)

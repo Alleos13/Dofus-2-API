@@ -422,7 +422,7 @@ package com.ankamagames.dofus.logic.connection.frames
          return true;
       }
       
-      private function initAfterLoadConfig() : void {
+      function initAfterLoadConfig() : void {
          Kernel.getInstance().postInit();
          this._aFiles.push(LangManager.getInstance().getEntry("config.ui.asset.fontsList"));
          var i:uint = 0;
@@ -448,15 +448,15 @@ package com.ankamagames.dofus.logic.connection.frames
          }
       }
       
-      private function initPerformancesWatcher() : void {
+      function initPerformancesWatcher() : void {
          DofusFpsManager.init();
          FpsControler.Init(ScriptedAnimation);
       }
       
-      private function initStaticConstants() : void {
+      function initStaticConstants() : void {
       }
       
-      private function initModulesBindings() : void {
+      function initModulesBindings() : void {
          ApiBinder.addApi("Ui",UiApi);
          ApiBinder.addApi("System",SystemApi);
          ApiBinder.addApi("Data",DataApi);
@@ -575,16 +575,16 @@ package com.ankamagames.dofus.logic.connection.frames
          HyperlinkFactory.registerProtocol("subArea",HyperlinkShowSubArea.showSubArea,HyperlinkShowSubArea.getSubAreaName);
       }
       
-      private function displayLoadingScreen() : void {
+      function displayLoadingScreen() : void {
          this._loadingScreen = new LoadingScreen(false,true);
          Dofus.getInstance().addChild(this._loadingScreen);
       }
       
-      private function initTubul() : void {
+      function initTubul() : void {
          SoundManager.getInstance().checkSoundDirectory();
       }
       
-      private function checkInit() : void {
+      function checkInit() : void {
          var reste:uint = 0;
          var key:String = null;
          var d:XML = null;
@@ -651,13 +651,13 @@ package com.ankamagames.dofus.logic.connection.frames
          }
       }
       
-      private function initFonts() : void {
+      function initFonts() : void {
          EmbedFontManager.getInstance().addEventListener(Event.COMPLETE,this.onFontsManagerInit);
          var fontList:Array = FontManager.getInstance().getFontsList();
          EmbedFontManager.getInstance().initialize(fontList);
       }
       
-      private function setModulePercent(moduleName:String, prc:Number, add:Boolean=false) : void {
+      function setModulePercent(moduleName:String, prc:Number, add:Boolean=false) : void {
          var p:* = NaN;
          var id:uint = 0;
          if(!this._modPercents[moduleName])
@@ -685,13 +685,13 @@ package com.ankamagames.dofus.logic.connection.frames
          this._loadingScreen.value = totalPrc;
       }
       
-      private function onFontsManagerInit(e:Event) : void {
+      function onFontsManagerInit(e:Event) : void {
          this._aModuleInit["font"] = true;
          this.setModulePercent("font",100);
          this.checkInit();
       }
       
-      private function onI18nReady(e:Event) : void {
+      function onI18nReady(e:Event) : void {
          this._aModuleInit["i18n"] = true;
          this.setModulePercent("i18n",100);
          StoreDataManager.getInstance().setData(Constants.DATASTORE_LANG_VERSION,"lastLang",LangManager.getInstance().getEntry("config.lang.current"));
@@ -699,13 +699,13 @@ package com.ankamagames.dofus.logic.connection.frames
          Input.numberStrSeparator = I18n.getUiText("ui.common.numberSeparator");
       }
       
-      private function onGameDataReady(e:Event) : void {
+      function onGameDataReady(e:Event) : void {
          this._aModuleInit["gameData"] = true;
          this.setModulePercent("gameData",100);
          this.checkInit();
       }
       
-      private function onGameDataPartialDataReady(e:LangFileEvent) : void {
+      function onGameDataPartialDataReady(e:LangFileEvent) : void {
          if(!this._loadingScreen)
          {
             this._loadingScreen = new LoadingScreen();
@@ -716,13 +716,13 @@ package com.ankamagames.dofus.logic.connection.frames
          KernelEventsManager.getInstance().processCallback(HookList.LangFileLoaded,e.url,true);
       }
       
-      private function onI18nPartialDataReady(e:LangFileEvent) : void {
+      function onI18nPartialDataReady(e:LangFileEvent) : void {
          this._loadingScreen.log("[i18n] " + FileUtils.getFileName(e.url) + " parsed",LoadingScreen.INFO);
          this.setModulePercent("i18n",this._percentPerModule * 1 / I18nUpdater.getInstance().files.length,true);
          KernelEventsManager.getInstance().processCallback(HookList.LangFileLoaded,e.url,true);
       }
       
-      private function onDataFileError(e:FileEvent) : void {
+      function onDataFileError(e:FileEvent) : void {
          this._loadingScreen.log("Unabled to load  " + e.file,LoadingScreen.ERROR);
       }
    }

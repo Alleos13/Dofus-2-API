@@ -237,7 +237,7 @@ package com.ankamagames.berilia.types.graphic
          this.free();
       }
       
-      protected function selectSound() : String {
+      function selectSound() : String {
          if(this._soundId != "0")
          {
             return this._soundId;

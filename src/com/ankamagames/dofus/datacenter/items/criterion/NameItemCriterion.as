@@ -56,11 +56,11 @@ package com.ankamagames.dofus.datacenter.items.criterion
          return clonedCriterion;
       }
       
-      override protected function getCriterion() : int {
+      override function getCriterion() : int {
          return 0;
       }
       
-      private function getReadableOperator() : String {
+      function getReadableOperator() : String {
          var text:String = "";
          _log.debug("operator : " + _operator);
          switch(_operator.text)

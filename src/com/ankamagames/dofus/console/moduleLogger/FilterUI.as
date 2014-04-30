@@ -133,7 +133,7 @@ package com.ankamagames.dofus.console.moduleLogger
          }
       }
       
-      private function createUI() : void {
+      function createUI() : void {
          this._title = new TextField();
          this._title.addEventListener(TextEvent.LINK,this.onTitleClick);
          this._title.multiline = false;
@@ -159,7 +159,7 @@ package com.ankamagames.dofus.console.moduleLogger
          this.resize();
       }
       
-      private function updateTitleText() : void {
+      function updateTitleText() : void {
          if(this.excludeMode)
          {
             this._title.htmlText = "<a href=\'event:change\'><span class=\'red\'>Filter : Exclude mode</span></a>           <a href=\'event:active\'><span class=\'blue\'>(" + (this.isOn?"on":"off") + ")</span></a>";
@@ -172,7 +172,7 @@ package com.ankamagames.dofus.console.moduleLogger
          }
       }
       
-      private function onTitleClick(event:TextEvent) : void {
+      function onTitleClick(event:TextEvent) : void {
          if(event.text == "change")
          {
             this.excludeMode = !this.excludeMode;
@@ -190,10 +190,10 @@ package com.ankamagames.dofus.console.moduleLogger
          dispatchEvent(new Event(Event.CHANGE));
       }
       
-      private function onTextClick(event:TextEvent) : void {
+      function onTextClick(event:TextEvent) : void {
       }
       
-      private function onTextChange(event:Event=null) : void {
+      function onTextChange(event:Event=null) : void {
          if(this.excludeMode)
          {
             this._excludeText = this._filterList.text;
@@ -219,15 +219,15 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private var offsetY:int;
       
-      private function onMouseDown(e:Event) : void {
+      function onMouseDown(e:Event) : void {
       }
       
-      private function onMouseUp(e:Event) : void {
+      function onMouseUp(e:Event) : void {
          stage.removeEventListener(MouseEvent.MOUSE_UP,this.onMouseUp);
          stage.removeEventListener(MouseEvent.MOUSE_MOVE,this.onMouseMove);
       }
       
-      private function onMouseMove(e:MouseEvent) : void {
+      function onMouseMove(e:MouseEvent) : void {
          x = stage.mouseX - this.offsetX;
          y = stage.mouseY - this.offsetY;
          e.updateAfterEvent();

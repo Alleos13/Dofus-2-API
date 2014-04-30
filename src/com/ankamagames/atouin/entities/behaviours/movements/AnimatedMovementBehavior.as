@@ -187,27 +187,27 @@ package com.ankamagames.atouin.entities.behaviours.movements
          return _aEntitiesMoving[entity.id] != null?TweenEntityData(_aEntitiesMoving[entity.id]).nextCell:null;
       }
       
-      protected function getLinearVelocity() : Number {
+      function getLinearVelocity() : Number {
          throw new AtouinError("Abstract function call.");
       }
       
-      protected function getHorizontalDiagonalVelocity() : Number {
+      function getHorizontalDiagonalVelocity() : Number {
          throw new AtouinError("Abstract function call.");
       }
       
-      protected function getVerticalDiagonalVelocity() : Number {
+      function getVerticalDiagonalVelocity() : Number {
          throw new AtouinError("Abstract function call.");
       }
       
-      protected function getAnimation() : String {
+      function getAnimation() : String {
          throw new AtouinError("Abstract function call.");
       }
       
-      protected function mustChangeOrientation() : Boolean {
+      function mustChangeOrientation() : Boolean {
          return true;
       }
       
-      protected function initMovement(oMobile:IMovable, tweenData:TweenEntityData, wasLinked:Boolean=false) : void {
+      function initMovement(oMobile:IMovable, tweenData:TweenEntityData, wasLinked:Boolean=false) : void {
          var firstPe:PathElement = null;
          if(_aEntitiesMoving[oMobile.id] != null)
          {
@@ -233,7 +233,7 @@ package com.ankamagames.atouin.entities.behaviours.movements
          this.checkIfEnterFrameNeeded();
       }
       
-      protected function goNextCell(entity:IMovable) : void {
+      function goNextCell(entity:IMovable) : void {
          var pe:PathElement = null;
          var tweenData:TweenEntityData = _aEntitiesMoving[entity.id];
          tweenData.currentCell = entity.position;
@@ -284,7 +284,7 @@ package com.ankamagames.atouin.entities.behaviours.movements
          tweenData.barycentre = 0;
       }
       
-      protected function stopMovement(entity:IMovable) : void {
+      function stopMovement(entity:IMovable) : void {
          IAnimated(entity).setAnimation("AnimStatique");
          var callback:Function = (_aEntitiesMoving[entity.id] as TweenEntityData).callback;
          delete _aEntitiesMoving[[entity.id]];
@@ -296,7 +296,7 @@ package com.ankamagames.atouin.entities.behaviours.movements
          }
       }
       
-      private function getVelocity(ted:TweenEntityData, orientation:uint) : Number {
+      function getVelocity(ted:TweenEntityData, orientation:uint) : Number {
          if(orientation % 2 == 0)
          {
             if(orientation % 4 == 0)
@@ -308,7 +308,7 @@ package com.ankamagames.atouin.entities.behaviours.movements
          return ted.linearVelocity;
       }
       
-      protected function processMovement(tweenData:TweenEntityData, currentTime:uint) : void {
+      function processMovement(tweenData:TweenEntityData, currentTime:uint) : void {
          var listener:ISoundPositionListener = null;
          var newPoint:Point = null;
          tweenData.barycentre = tweenData.velocity * (currentTime - tweenData.start);
@@ -342,7 +342,7 @@ package com.ankamagames.atouin.entities.behaviours.movements
          }
       }
       
-      protected function processJump(entity:IMovable, newPosition:MapPoint) : void {
+      function processJump(entity:IMovable, newPosition:MapPoint) : void {
          var newCellSprite:Sprite = InteractiveCellManager.getInstance().getCell(newPosition.cellId);
          var displayObject:DisplayObject = entity as DisplayObject;
          displayObject.x = newCellSprite.x + newCellSprite.width / 2;
@@ -355,7 +355,7 @@ package com.ankamagames.atouin.entities.behaviours.movements
          this.synchroniseSubEntitiesPosition(entity);
       }
       
-      private function onEnterFrame(e:Event) : void {
+      function onEnterFrame(e:Event) : void {
          var tweenData:TweenEntityData = null;
          var currentTime:uint = getTimer();
          for each (tweenData in _aEntitiesMoving)
@@ -364,7 +364,7 @@ package com.ankamagames.atouin.entities.behaviours.movements
          }
       }
       
-      protected function checkIfEnterFrameNeeded() : void {
+      function checkIfEnterFrameNeeded() : void {
          if((_movingCount == 0) && (_enterFrameRegistered))
          {
             EnterFrameDispatcher.removeEventListener(this.onEnterFrame);

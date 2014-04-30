@@ -18,7 +18,7 @@ package com.ankamagames.jerakine.resources.protocols.impl
          _adapter.loadDirectly(uri,uri.protocol + "://" + uri.path,observer,dispatchProgress);
       }
       
-      override protected function release() : void {
+       function release() : void {
       }
       
       override public function cancel() : void {

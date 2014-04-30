@@ -839,7 +839,7 @@ package com.ankamagames.dofus.logic.game.common.frames
       public function onRefuseDrop() : void {
       }
       
-      private function onCellPointed(success:Boolean, cellId:uint, entityId:int) : void {
+      function onCellPointed(success:Boolean, cellId:uint, entityId:int) : void {
          var oucmsg:ObjectUseOnCellMessage = null;
          var ouCharmsg:ObjectUseOnCharacterMessage = null;
          if(success)
@@ -860,7 +860,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      private function useItem(oua:ObjectUseAction, iw:ItemWrapper) : void {
+      function useItem(oua:ObjectUseAction, iw:ItemWrapper) : void {
          var cursorIcon:Texture = null;
          var oummsg:ObjectUseMultipleMessage = null;
          var oumsg:ObjectUseMessage = null;
@@ -901,11 +901,11 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      private function addObject(objectItem:ObjectItem) : void {
+      function addObject(objectItem:ObjectItem) : void {
          InventoryManager.getInstance().inventory.addObjectItem(objectItem);
       }
       
-      private function getShortcutWrapperPropFromShortcut(shortcut:Shortcut) : Object {
+      function getShortcutWrapperPropFromShortcut(shortcut:Shortcut) : Object {
          var id:uint = 0;
          var type:uint = 0;
          var gid:uint = 0;
@@ -947,12 +947,7 @@ package com.ankamagames.dofus.logic.game.common.frames
                }
             }
          }
-         return 
-            {
-               "id":id,
-               "gid":gid,
-               "type":type
-            };
+		 return null;
       }
    }
 }

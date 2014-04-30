@@ -691,7 +691,7 @@ package com.ankamagames.dofus.internalDatacenter.spells
          return null;
       }
       
-      private function getWeaponProperty(name:*) : * {
+      function getWeaponProperty(name:*) : * {
          var modificator:* = 0;
          var weapon:ItemWrapper = PlayedCharacterManager.getInstance().currentWeapon as ItemWrapper;
          if(!weapon)
@@ -744,7 +744,7 @@ package com.ankamagames.dofus.internalDatacenter.spells
          }
       }
       
-      private function getCriticalHitProbability() : Number {
+      function getCriticalHitProbability() : Number {
          var modifValue:* = 0;
          var spellModif:CharacterSpellModification = CurrentPlayedFighterManager.getInstance().getSpellModifications(this.id,CharacterSpellModificationTypeEnum.CRITICAL_HIT_BONUS);
          if(spellModif)

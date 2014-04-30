@@ -484,7 +484,7 @@ package com.ankamagames.berilia.managers
          var hashUri:Uri = new Uri(hashUrl);
       }
       
-      private function onTimeOut() : void {
+      function onTimeOut() : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -493,7 +493,7 @@ package com.ankamagames.berilia.managers
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function timeOutFrameCount(e:Event) : void {
+      function timeOutFrameCount(e:Event) : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -502,7 +502,7 @@ package com.ankamagames.berilia.managers
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function launchModule() : void {
+      function launchModule() : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -511,7 +511,7 @@ package com.ankamagames.berilia.managers
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function launchUiCheck() : void {
+      function launchUiCheck() : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -520,7 +520,7 @@ package com.ankamagames.berilia.managers
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function processCachedFiles(files:Array) : void {
+      function processCachedFiles(files:Array) : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -529,7 +529,7 @@ package com.ankamagames.berilia.managers
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function onLoadError(e:ResourceErrorEvent) : void {
+      function onLoadError(e:ResourceErrorEvent) : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -538,7 +538,7 @@ package com.ankamagames.berilia.managers
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function switchToNoHttpMode() : void {
+      function switchToNoHttpMode() : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -547,7 +547,7 @@ package com.ankamagames.berilia.managers
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function onUiLoadError(e:ResourceErrorEvent) : void {
+      function onUiLoadError(e:ResourceErrorEvent) : void {
          if(_loc4_)
          {
             if(!_loc4_)
@@ -672,7 +672,7 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      private function onLoad(e:ResourceLoadedEvent) : void {
+      function onLoad(e:ResourceLoadedEvent) : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -681,7 +681,7 @@ package com.ankamagames.berilia.managers
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function onDMLoad(e:ResourceLoadedEvent) : void {
+      function onDMLoad(e:ResourceLoadedEvent) : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -690,7 +690,7 @@ package com.ankamagames.berilia.managers
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function onScriptLoadFail(e:IOErrorEvent, uiModule:UiModule) : void {
+      function onScriptLoadFail(e:IOErrorEvent, uiModule:UiModule) : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -701,7 +701,7 @@ package com.ankamagames.berilia.managers
       
       private var _moduleScriptLoadedRef:Dictionary;
       
-      private function onScriptLoad(e:ResourceLoadedEvent) : void {
+      function onScriptLoad(e:ResourceLoadedEvent) : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -710,7 +710,7 @@ package com.ankamagames.berilia.managers
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function onModuleScriptLoaded(e:Event, uiModule:UiModule=null) : void {
+      function onModuleScriptLoaded(e:Event, uiModule:UiModule=null) : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -719,7 +719,7 @@ package com.ankamagames.berilia.managers
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function onShortcutLoad(e:ResourceLoadedEvent) : void {
+      function onShortcutLoad(e:ResourceLoadedEvent) : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -728,67 +728,11 @@ package com.ankamagames.berilia.managers
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function onHashLoaded(e:ResourceLoadedEvent) : void {
-         var _loc6_:* = true;
-         if(!_loc5_)
-         {
-            if(_loc6_)
-            {
-            }
-            if(!_loc5_)
-            {
-               if(_loc6_)
-               {
-                  loop0:
-                  while(e.resource..file hasNext _loc3_)
-                  {
-                     if(_loc6_)
-                     {
-                     }
-                     if(_loc6_)
-                     {
-                        if(!_loc6_)
-                        {
-                           while(true)
-                           {
-                              this._modulesHashs[file.@name.toString()] = file.toString();
-                           }
-                        }
-                        while(true)
-                        {
-                           if(_loc5_)
-                           {
-                              break;
-                           }
-                           this._modulesHashs[file.@name.toString()] = file.toString();
-                        }
-                        if(_loc5_)
-                        {
-                        }
-                        continue;
-                     }
-                     while(true)
-                     {
-                        if(_loc5_)
-                        {
-                           if(!_loc5_)
-                           {
-                              this._modulesHashs[file.@name.toString()] = file.toString();
-                              continue;
-                           }
-                        }
-                        if(_loc5_)
-                        {
-                        }
-                        continue loop0;
-                     }
-                  }
-               }
-            }
-         }
+      function onHashLoaded(e:ResourceLoadedEvent) : void {
+        
       }
       
-      private function onAllUiChecked(e:ResourceLoaderProgressEvent) : void {
+      function onAllUiChecked(e:ResourceLoaderProgressEvent) : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -797,7 +741,7 @@ package com.ankamagames.berilia.managers
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function parseNextXml() : void {
+      function parseNextXml() : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -806,7 +750,7 @@ package com.ankamagames.berilia.managers
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function onXmlParsed(e:ParsorEvent) : void {
+      function onXmlParsed(e:ParsorEvent) : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -815,7 +759,7 @@ package com.ankamagames.berilia.managers
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function onXmlParsingError(e:ParsingErrorEvent) : void {
+      function onXmlParsingError(e:ParsingErrorEvent) : void {
          var _loc3_:* = false;
          if(!_loc3_)
          {
@@ -852,7 +796,7 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      private function onUiLoaded(e:ResourceLoadedEvent) : void {
+      function onUiLoaded(e:ResourceLoadedEvent) : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -863,7 +807,7 @@ package com.ankamagames.berilia.managers
       
       private var _uiLoaded:Dictionary;
       
-      private function searchDmFile(rootPath:File) : File {
+      function searchDmFile(rootPath:File) : File {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -872,7 +816,7 @@ package com.ankamagames.berilia.managers
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function onSharedDefinitionLoad(e:ResourceLoadedEvent) : void {
+      function onSharedDefinitionLoad(e:ResourceLoadedEvent) : void {
          /*
           * Decompilation error
           * Code may be obfuscated

@@ -538,11 +538,11 @@ package com.ankamagames.dofus.logic.game.common.frames
          return true;
       }
       
-      private function get _kernelEventsManager() : KernelEventsManager {
+      function get _kernelEventsManager() : KernelEventsManager {
          return KernelEventsManager.getInstance();
       }
       
-      private function getTypeObject(pType:uint) : TypeObjectData {
+      function getTypeObject(pType:uint) : TypeObjectData {
          var tod:TypeObjectData = null;
          if(this._bidHouseObjects == null)
          {
@@ -558,7 +558,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return null;
       }
       
-      private function getGIDObject(pType:uint, pGID:uint) : GIDObjectData {
+      function getGIDObject(pType:uint, pGID:uint) : GIDObjectData {
          var god:GIDObjectData = null;
          if(this._bidHouseObjects == null)
          {
@@ -579,7 +579,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return null;
       }
       
-      private function getGIDObjectIndex(pType:uint, pGID:uint) : int {
+      function getGIDObjectIndex(pType:uint, pGID:uint) : int {
          var god:GIDObjectData = null;
          if(this._bidHouseObjects == null)
          {
@@ -602,7 +602,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return -1;
       }
       
-      private function initSearchMode(types:Vector.<uint>) : void {
+      function initSearchMode(types:Vector.<uint>) : void {
          var nTypes:* = 0;
          var reset:* = false;
          var i:* = 0;

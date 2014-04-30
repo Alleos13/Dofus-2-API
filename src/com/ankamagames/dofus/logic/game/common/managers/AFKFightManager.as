@@ -113,13 +113,13 @@ package com.ankamagames.dofus.logic.game.common.managers
          return this._enabled;
       }
       
-      private function onActivity(event:Event) : void {
+      function onActivity(event:Event) : void {
          _log.info("Activity detected. Player is not AFK");
          this.confirm = false;
          this.enabled = false;
       }
       
-      private function onTimer(event:Event) : void {
+      function onTimer(event:Event) : void {
          this._securityTimerUp = true;
       }
    }

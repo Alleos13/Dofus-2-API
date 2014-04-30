@@ -82,12 +82,7 @@ package gs
       }
       
       public static function HEXtoRGB(param1:Number) : Object {
-         return 
-            {
-               "rb":param1 >> 16,
-               "gb":param1 >> 8 & 255,
-               "bb":param1 & 255
-            };
+		  return null;
       }
       
       public static function colorize(param1:Array, param2:Number, param3:Number=1) : Array {

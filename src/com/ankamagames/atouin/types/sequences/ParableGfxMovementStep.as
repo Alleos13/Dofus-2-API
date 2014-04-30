@@ -76,7 +76,7 @@ package com.ankamagames.atouin.types.sequences
          }
       }
       
-      private function onTweenEnd(e:TweenEvent) : void {
+      function onTweenEnd(e:TweenEvent) : void {
          if(this._waitEnd)
          {
             executeCallbacks();

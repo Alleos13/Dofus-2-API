@@ -23,7 +23,7 @@ package com.somerandomdude.colortoolkit.schemes
          this.generate();
       }
       
-      override protected function generate() : void {
+      override function generate() : void {
          var c1:HSB = new HSB();
          c1.color = ColorUtil.rybRotate(_primaryColor,this._angle);
          c1.brightness = c1.brightness + 10;

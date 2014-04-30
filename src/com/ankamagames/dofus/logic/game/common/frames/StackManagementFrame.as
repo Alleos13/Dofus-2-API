@@ -77,7 +77,7 @@ package com.ankamagames.dofus.logic.game.common.frames
       
       private var _waitingMessage:Message;
       
-      private function onActivate(pEvt:Event) : void {
+      function onActivate(pEvt:Event) : void {
          if((!KeyPoll.getInstance().isDown(KEY_CODE)) && (this._keyDown))
          {
             this.onKeyUp(null);
@@ -108,7 +108,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      private function getInputMessageAlreadyWatched(vector:Vector.<AbstractBehavior>, inpt:Class) : AbstractBehavior {
+      function getInputMessageAlreadyWatched(vector:Vector.<AbstractBehavior>, inpt:Class) : AbstractBehavior {
          var oldInput:AbstractBehavior = null;
          var behaviorStr:String = getQualifiedClassName(inpt);
          for each (oldInput in vector)
@@ -121,7 +121,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return null;
       }
       
-      private function initStackInputMessages(newMode:String) : void {
+      function initStackInputMessages(newMode:String) : void {
          var c:Class = null;
          var b:AbstractBehavior = null;
          var tmp:AbstractBehavior = null;
@@ -154,7 +154,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          this._currentMode = newMode;
       }
       
-      private function initStopMessages() : void {
+      function initStopMessages() : void {
          this._stopMessages = new Vector.<String>();
          this._stopMessages.push("NpcDialogCreationMessage");
          this._stopMessages.push("CurrentMapMessage");
@@ -232,7 +232,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      private function processStackInputMessages(pMsg:Message) : Boolean {
+      function processStackInputMessages(pMsg:Message) : Boolean {
          var elem:AbstractBehavior = null;
          var copy:AbstractBehavior = null;
          var elementInStack:AbstractBehavior = null;
@@ -315,7 +315,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return false;
       }
       
-      private function getSameInOutputList(copy:AbstractBehavior) : AbstractBehavior {
+      function getSameInOutputList(copy:AbstractBehavior) : AbstractBehavior {
          var be:AbstractBehavior = null;
          for each (be in this._stackOutputMessage)
          {
@@ -327,7 +327,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return null;
       }
       
-      private function processStackOutputMessages(pMsg:Message) : Boolean {
+      function processStackOutputMessages(pMsg:Message) : Boolean {
          var currentStackElement:AbstractBehavior = null;
          var isCatched:* = false;
          if(this._stackOutputMessage.length > 0)
@@ -380,7 +380,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return false;
       }
       
-      private function removeCheckPoint(stackElement:AbstractBehavior) : void {
+      function removeCheckPoint(stackElement:AbstractBehavior) : void {
          var ch:CheckPointEntity = null;
          stackElement.removeIcon();
          if(this._checkPointList.length > 0)
@@ -397,7 +397,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      private function emptyStack(all:Boolean=true) : void {
+      function emptyStack(all:Boolean=true) : void {
          var outputMessage:AbstractBehavior = null;
          var checkpoint:CheckPointEntity = null;
          if((this._stackOutputMessage.length == 1) && (this._stackOutputMessage[0].actionStarted == false))
@@ -428,11 +428,11 @@ package com.ankamagames.dofus.logic.game.common.frames
          this._limitReached = false;
       }
       
-      private function stopWatchingActions() : void {
+      function stopWatchingActions() : void {
          this.initStackInputMessages(AbstractBehavior.ALWAYS);
       }
       
-      private function addBehaviorToInputStack(behavior:AbstractBehavior, pIsActive:Boolean=true) : void {
+      function addBehaviorToInputStack(behavior:AbstractBehavior, pIsActive:Boolean=true) : void {
          var typeOfOtherBehavior:String = null;
          var b:AbstractBehavior = null;
          var typeOfNewBehavior:String = getQualifiedClassName(behavior);

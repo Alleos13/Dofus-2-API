@@ -30,7 +30,7 @@ package com.ankamagames.jerakine.sound
       
       protected var _pingTimer:Timer;
       
-      protected function removePingTimer() : void {
+      function removePingTimer() : void {
          this._pingTimer.stop();
          this._pingTimer.removeEventListener(TimerEvent.TIMER_COMPLETE,this.onPingTimerComplete);
          this._pingTimer = null;

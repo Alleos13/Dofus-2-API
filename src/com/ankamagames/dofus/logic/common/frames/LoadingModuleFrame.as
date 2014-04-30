@@ -90,7 +90,7 @@ package com.ankamagames.dofus.logic.common.frames
          return true;
       }
       
-      private function changeTip(e:Event) : void {
+      function changeTip(e:Event) : void {
          var tip:Tips = this._tips[Math.floor(this._tips.length * Math.random())] as Tips;
          if(tip)
          {
@@ -201,11 +201,11 @@ package com.ankamagames.dofus.logic.common.frames
          return true;
       }
       
-      private function dispatchEnd() : void {
+      function dispatchEnd() : void {
          Kernel.getWorker().process(new AllModulesLoadedMessage());
       }
       
-      private function launchGame() : void {
+      function launchGame() : void {
          if((getTimer() - this._startTime < 2000) && (!this._waitDone))
          {
             setTimeout(this.launchGame,2000 - (getTimer() - this._startTime));

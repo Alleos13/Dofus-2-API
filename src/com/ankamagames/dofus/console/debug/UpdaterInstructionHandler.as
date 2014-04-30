@@ -116,11 +116,11 @@ package com.ankamagames.dofus.console.debug
          return possibilities;
       }
       
-      private function onGetUpdaterSpeed(speed:int) : void {
+      function onGetUpdaterSpeed(speed:int) : void {
          this._lastConsole.output("updater download speed : " + speed);
       }
       
-      private function onPartInfo(part:ContentPart) : void {
+      function onPartInfo(part:ContentPart) : void {
          if(part)
          {
             this._lastConsole.output(part.id + "\t\t\t" + stateToString(part.state));

@@ -199,7 +199,7 @@ package com.ankamagames.dofus.console.debug
          }
       }
       
-      private function inspectUiElement(target:GraphicContainer, console:ConsoleHandler) : void {
+      function inspectUiElement(target:GraphicContainer, console:ConsoleHandler) : void {
          var txt:String = null;
          var property:String = null;
          var type:String = null;

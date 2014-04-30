@@ -106,7 +106,7 @@ package com.ankamagames.dofus.logic.game.approach.utils
          }
       }
       
-      private function onTimerEvent(te:TimerEvent) : void {
+      function onTimerEvent(te:TimerEvent) : void {
          var aping:uint = 0;
          var dssrmsg:DownloadSetSpeedRequestMessage = null;
          if(this._connection == null)

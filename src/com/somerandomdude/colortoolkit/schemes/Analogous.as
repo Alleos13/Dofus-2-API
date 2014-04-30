@@ -36,7 +36,7 @@ package com.somerandomdude.colortoolkit.schemes
          this.generate();
       }
       
-      override protected function generate() : void {
+      override function generate() : void {
          var one:* = NaN;
          var two:* = NaN;
          var t:* = NaN;

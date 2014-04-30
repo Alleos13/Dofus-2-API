@@ -108,16 +108,16 @@ package com.ankamagames.dofus.logic.game.common.managers
          }
       }
       
-      private function onActivity(event:Event) : void {
+      function onActivity(event:Event) : void {
          this.activity();
       }
       
-      private function onActivityTimerUp(event:Event) : void {
+      function onActivityTimerUp(event:Event) : void {
          this._isAfk = true;
          KernelEventsManager.getInstance().processCallback(HookList.InactivityNotification,true);
       }
       
-      private function onServerActivityTimerUp(event:Event) : void {
+      function onServerActivityTimerUp(event:Event) : void {
          if(this._hasActivity)
          {
             this._hasActivity = false;

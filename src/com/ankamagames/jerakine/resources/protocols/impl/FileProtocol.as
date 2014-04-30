@@ -42,12 +42,12 @@ package com.ankamagames.jerakine.resources.protocols.impl
          }
       }
       
-      override protected function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
+       function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
          getAdapter(uri,forcedAdapter);
          _adapter.loadDirectly(uri,this.extractPath(uri.path),observer,dispatchProgress);
       }
       
-      override protected function extractPath(path:String) : String {
+       function extractPath(path:String) : String {
          var absolutePath:String = null;
          var absoluteFile:File = null;
          var originalPath:String = path;

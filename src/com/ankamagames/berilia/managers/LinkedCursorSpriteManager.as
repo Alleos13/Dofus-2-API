@@ -95,7 +95,7 @@ package com.ankamagames.berilia.managers
          return true;
       }
       
-      private function updateCursors(e:*=null) : void {
+      function updateCursors(e:*=null) : void {
          var item:LinkedCursorData = null;
          var cursorName:String = null;
          if(this._mustClean)
@@ -127,7 +127,7 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      private function remove(name:String) : void {
+      function remove(name:String) : void {
          var o:Object = null;
          var s:DisplayObject = this.items[name].sprite as DisplayObject;
          if(s.parent)

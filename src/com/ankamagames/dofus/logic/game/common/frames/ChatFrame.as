@@ -1331,7 +1331,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          this._options = opt;
       }
       
-      private function onCssLoaded() : void {
+      function onCssLoaded() : void {
          var styleObj:Object = null;
          var _ssSheet:ExtendedStyleSheet = CssManager.getInstance().getCss(this._cssUri);
          var i:int = 0;
@@ -1345,11 +1345,11 @@ package com.ankamagames.dofus.logic.game.common.frames
          this._aChatColors.push(uint(this.color0x(styleObj["color"])));
       }
       
-      private function color0x(color:String) : String {
+      function color0x(color:String) : String {
          return color.replace("#","0x");
       }
       
-      private function displayCarac(pCarac:CharacterBaseCharacteristic) : String {
+      function displayCarac(pCarac:CharacterBaseCharacteristic) : String {
          var bonuses:int = pCarac.alignGiftBonus + pCarac.contextModif + pCarac.objectsAndMountBonus;
          var signe:String = "+";
          if(bonuses < 0)
@@ -1359,7 +1359,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return pCarac.base + " (" + signe + bonuses + ")";
       }
       
-      private function playAlertSound(pType:uint) : void {
+      function playAlertSound(pType:uint) : void {
          if(Kernel.getWorker().getFrame(LoadingModuleFrame) as LoadingModuleFrame)
          {
             return;
@@ -1391,7 +1391,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      private function saveMessage(channel:int=0, baseContent:String="", content:String="", timestamp:Number=0, fingerprint:String="", senderId:uint=0, senderName:String="", objects:Vector.<ItemWrapper>=null, receiverName:String="", receiverId:uint=0, textKey:uint=0, params:Array=null, admin:Boolean=false) : void {
+      function saveMessage(channel:int=0, baseContent:String="", content:String="", timestamp:Number=0, fingerprint:String="", senderId:uint=0, senderName:String="", objects:Vector.<ItemWrapper>=null, receiverName:String="", receiverId:uint=0, textKey:uint=0, params:Array=null, admin:Boolean=false) : void {
          var sentence:Object = null;
          var max:uint = 0;
          var i:uint = 0;
@@ -1452,11 +1452,11 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      private function getTimestamp() : Number {
+      function getTimestamp() : Number {
          return TimeManager.getInstance().getTimestamp();
       }
       
-      private function getRealTimestamp(time:Number) : Number {
+      function getRealTimestamp(time:Number) : Number {
          return time * 1000 + TimeManager.getInstance().timezoneOffset;
       }
       

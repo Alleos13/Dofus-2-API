@@ -315,11 +315,11 @@ package com.ankamagames.dofus.logic.game.common.managers
          }
       }
       
-      private function getMaxSummonedCreature() : uint {
+      function getMaxSummonedCreature() : uint {
          return this.characteristics.summonableCreaturesBoost.base + this.characteristics.summonableCreaturesBoost.objectsAndMountBonus + this.characteristics.summonableCreaturesBoost.alignGiftBonus + this.characteristics.summonableCreaturesBoost.contextModif;
       }
       
-      private function getCurrentSummonedCreature() : uint {
+      function getCurrentSummonedCreature() : uint {
          return this.currentSummonedCreature;
       }
       
@@ -342,7 +342,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          }
       }
       
-      private function getMaxSummonedBomb() : uint {
+      function getMaxSummonedBomb() : uint {
          return 3;
       }
       

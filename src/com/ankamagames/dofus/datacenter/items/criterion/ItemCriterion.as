@@ -85,7 +85,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          return clonedCriterion;
       }
       
-      protected function getInfos() : void {
+      function getInfos() : void {
          var operator:String = null;
          for each (operator in ItemCriterionOperator.OPERATORS_LIST)
          {
@@ -99,7 +99,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          }
       }
       
-      protected function getCriterion() : int {
+      function getCriterion() : int {
          var criterion:* = 0;
          var player:PlayedCharacterManager = PlayedCharacterManager.getInstance();
          switch(this._criterionRef)
@@ -168,7 +168,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          return criterion;
       }
       
-      private function getTotalCharac(pCharac:CharacterBaseCharacteristic) : int {
+      function getTotalCharac(pCharac:CharacterBaseCharacteristic) : int {
          return pCharac.base + pCharac.alignGiftBonus + pCharac.contextModif + pCharac.objectsAndMountBonus;
       }
    }

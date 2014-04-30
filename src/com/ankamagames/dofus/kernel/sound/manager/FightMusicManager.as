@@ -195,7 +195,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      private function init() : void {
+      function init() : void {
          this._fightMusicsId = TubulSoundConfiguration.fightMusicIds;
          this._fightMusicBalanceManager = new BalanceManager(this._fightMusicsId);
       }

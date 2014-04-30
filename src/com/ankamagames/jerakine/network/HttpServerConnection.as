@@ -116,7 +116,7 @@ package com.ankamagames.jerakine.network
          return messageLength;
       }
       
-      protected function lowReceive(src:IDataInput) : INetworkMessage {
+      function lowReceive(src:IDataInput) : INetworkMessage {
          var messageLength:uint = 0;
          if(src.bytesAvailable < 2)
          {
@@ -135,7 +135,7 @@ package com.ankamagames.jerakine.network
          return null;
       }
       
-      protected function receive(src:IDataInput, uri:Uri) : void {
+      function receive(src:IDataInput, uri:Uri) : void {
          var msg:INetworkMessage = null;
          var byteAvaible:uint = src.bytesAvailable;
          while(src.bytesAvailable > 0)

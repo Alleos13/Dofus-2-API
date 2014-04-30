@@ -32,7 +32,7 @@ package com.ankamagames.dofus.console.debug
          }
       }
       
-      private function testCharacter(event:TimerEvent) : void {
+      function testCharacter(event:TimerEvent) : void {
          var char:String = this.characters.substr(10 * Timer(event.target).currentCount,10);
          var ccmm:ChatClientMultiMessage = new ChatClientMultiMessage();
          ccmm.initChatAbstractClientMessage(char);

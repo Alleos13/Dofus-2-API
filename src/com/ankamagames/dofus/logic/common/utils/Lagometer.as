@@ -49,20 +49,20 @@ package com.ankamagames.dofus.logic.common.utils
          }
       }
       
-      protected function onTimerComplete(e:TimerEvent) : void {
+      function onTimerComplete(e:TimerEvent) : void {
          this.startLag();
       }
       
-      protected function startLag() : void {
+      function startLag() : void {
          this._lagging = true;
          this.updateUi();
       }
       
-      protected function updateUi() : void {
+      function updateUi() : void {
          KernelEventsManager.getInstance().processCallback(HookList.LaggingNotification,this._lagging);
       }
       
-      protected function stopLag() : void {
+      function stopLag() : void {
          this._lagging = false;
          this.updateUi();
       }

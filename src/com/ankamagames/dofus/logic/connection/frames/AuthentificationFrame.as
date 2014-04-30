@@ -131,7 +131,7 @@ package com.ankamagames.dofus.logic.connection.frames
       
       private var _streamingBetaAccess:Boolean = false;
       
-      private function onStreamingBetaAuthentification(e:Event) : void {
+      function onStreamingBetaAuthentification(e:Event) : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -518,7 +518,7 @@ package com.ankamagames.dofus.logic.connection.frames
          return true;
       }
       
-      private function processInvokeArgs() : void {
+      function processInvokeArgs() : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -527,7 +527,7 @@ package com.ankamagames.dofus.logic.connection.frames
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function onLoad(e:ResourceLoadedEvent) : void {
+      function onLoad(e:ResourceLoadedEvent) : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -536,7 +536,7 @@ package com.ankamagames.dofus.logic.connection.frames
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function onLoadError(e:ResourceErrorEvent) : void {
+      function onLoadError(e:ResourceErrorEvent) : void {
          /*
           * Decompilation error
           * Code may be obfuscated

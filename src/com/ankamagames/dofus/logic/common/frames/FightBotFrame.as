@@ -192,7 +192,7 @@ package com.ankamagames.dofus.logic.common.frames
          return false;
       }
       
-      private function initRight() : void {
+      function initRight() : void {
          this.sendAdminCmd("adminaway");
          this.sendAdminCmd("givelevel * 200");
          this.sendAdminCmd("givespell * 173 6");
@@ -200,13 +200,13 @@ package com.ankamagames.dofus.logic.common.frames
          this.sendAdminCmd("dring po=63,vita=8000,pa=100,agi=150 true");
       }
       
-      private function sendAdminCmd(cmd:String) : void {
+      function sendAdminCmd(cmd:String) : void {
          var aqcmsg:AdminQuietCommandMessage = new AdminQuietCommandMessage();
          aqcmsg.initAdminQuietCommandMessage(cmd);
          ConnectionsHandler.getConnection().send(aqcmsg);
       }
       
-      private function onAction(e:Event) : void {
+      function onAction(e:Event) : void {
          if(Math.random() < 0.9)
          {
             this.randomWalk();
@@ -219,7 +219,7 @@ package com.ankamagames.dofus.logic.common.frames
       
       private var _turnAction:Array;
       
-      private function nextTurnAction() : void {
+      function nextTurnAction() : void {
          var action:Object = null;
          if(this._turnAction.length)
          {
@@ -228,7 +228,7 @@ package com.ankamagames.dofus.logic.common.frames
          }
       }
       
-      private function addTurnAction(fct:Function, args:Array) : void {
+      function addTurnAction(fct:Function, args:Array) : void {
          this._turnAction.push(
             {
                "fct":fct,
@@ -236,13 +236,13 @@ package com.ankamagames.dofus.logic.common.frames
             });
       }
       
-      private function turnEnd() : void {
+      function turnEnd() : void {
          var finDeTourMsg:GameFightTurnFinishMessage = new GameFightTurnFinishMessage();
          finDeTourMsg.initGameFightTurnFinishMessage();
          ConnectionsHandler.getConnection().send(finDeTourMsg);
       }
       
-      private function join(name:String) : void {
+      function join(name:String) : void {
          if((this._inFight) || (this._wait))
          {
             return;
@@ -254,7 +254,7 @@ package com.ankamagames.dofus.logic.common.frames
          this._actionTimer.start();
       }
       
-      private function randomMove() : void {
+      function randomMove() : void {
          if((this._inFight) || (this._wait))
          {
             return;
@@ -267,7 +267,7 @@ package com.ankamagames.dofus.logic.common.frames
          this._actionTimer.start();
       }
       
-      private function fakeActivity() : void {
+      function fakeActivity() : void {
          if(!this._enabled)
          {
             return;
@@ -278,7 +278,7 @@ package com.ankamagames.dofus.logic.common.frames
          ConnectionsHandler.getConnection().send(bpmgs);
       }
       
-      private function randomWalk() : void {
+      function randomWalk() : void {
          var entity:* = undefined;
          var groupEntity:IEntity = null;
          if((this._inFight) || (this._wait))
@@ -310,7 +310,7 @@ package com.ankamagames.dofus.logic.common.frames
          Kernel.getWorker().process(ccmsg);
       }
       
-      private function fightRandomMove() : void {
+      function fightRandomMove() : void {
          var reachableCells:FightReachableCellsMaker = new FightReachableCellsMaker(FightEntitiesFrame.getCurrentInstance().getEntityInfos(PlayedCharacterManager.getInstance().id) as GameFightFighterInformations);
          if(!reachableCells.reachableCells.length)
          {
@@ -324,7 +324,7 @@ package com.ankamagames.dofus.logic.common.frames
          Kernel.getWorker().process(ccmsg);
       }
       
-      private function randomOver(... foo) : void {
+      function randomOver(... foo) : void {
          var e:IEntity = null;
          var entity:IInteractive = null;
          var ui:UiRootContainer = null;
@@ -382,7 +382,7 @@ package com.ankamagames.dofus.logic.common.frames
          this._lastElemOver = target;
       }
       
-      private function castSpell(spellId:uint, onMySelf:Boolean) : void {
+      function castSpell(spellId:uint, onMySelf:Boolean) : void {
          var cellId:uint = 0;
          var avaibleCells:Array = null;
          var entity:* = undefined;

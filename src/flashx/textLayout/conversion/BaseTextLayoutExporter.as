@@ -153,7 +153,7 @@ package flashx.textLayout.conversion
          return param2 == ConversionType.STRING_TYPE?convertXMLToString(_loc3_):_loc3_;
       }
       
-      protected function exportToXML(param1:TextFlow) : XML {
+      function exportToXML(param1:TextFlow) : XML {
          var _loc2_:XML = null;
          if(this._rootTag)
          {
@@ -169,7 +169,7 @@ package flashx.textLayout.conversion
          return _loc2_;
       }
       
-      protected function exportFlowElement(param1:FlowElement) : XMLList {
+      function exportFlowElement(param1:FlowElement) : XMLList {
          var _loc2_:String = getQualifiedClassName(param1);
          var _loc3_:String = this._config.lookupName(_loc2_);
          var _loc4_:XML = new XML("<" + _loc3_ + "/>");
@@ -177,17 +177,17 @@ package flashx.textLayout.conversion
          return XMLList(_loc4_);
       }
       
-      protected function get spanTextReplacementRegex() : RegExp {
+      function get spanTextReplacementRegex() : RegExp {
          return brRegEx;
       }
       
-      protected function getSpanTextReplacementXML(param1:String) : XML {
+      function getSpanTextReplacementXML(param1:String) : XML {
          var _loc2_:XML = <br/>;
          _loc2_.setNamespace(this.flowNS);
          return _loc2_;
       }
       
-      protected function exportParagraphFormattedElement(param1:FlowElement) : XMLList {
+      function exportParagraphFormattedElement(param1:FlowElement) : XMLList {
          var _loc4_:FlowElement = null;
          var _loc2_:XMLList = this.exportFlowElement(param1);
          var _loc3_:* = 0;
@@ -200,7 +200,7 @@ package flashx.textLayout.conversion
          return _loc2_;
       }
       
-      protected function exportList(param1:FlowElement) : XMLList {
+      function exportList(param1:FlowElement) : XMLList {
          var _loc4_:FlowElement = null;
          var _loc2_:XMLList = this.exportFlowElement(param1);
          var _loc3_:* = 0;
@@ -213,7 +213,7 @@ package flashx.textLayout.conversion
          return _loc2_;
       }
       
-      protected function exportListItem(param1:FlowElement) : XMLList {
+      function exportListItem(param1:FlowElement) : XMLList {
          var _loc4_:FlowElement = null;
          var _loc2_:XMLList = this.exportFlowElement(param1);
          var _loc3_:* = 0;
@@ -226,7 +226,7 @@ package flashx.textLayout.conversion
          return _loc2_;
       }
       
-      protected function exportContainerFormattedElement(param1:FlowElement) : XMLList {
+      function exportContainerFormattedElement(param1:FlowElement) : XMLList {
          return this.exportParagraphFormattedElement(param1);
       }
       
@@ -240,7 +240,7 @@ package flashx.textLayout.conversion
          return null;
       }
       
-      protected function exportStyles(param1:XMLList, param2:Array) : void {
+      function exportStyles(param1:XMLList, param2:Array) : void {
          var _loc3_:Object = null;
          var _loc4_:Object = null;
          param2.sortOn("xmlName");
@@ -268,7 +268,7 @@ package flashx.textLayout.conversion
          return this._ns;
       }
       
-      protected function get formatDescription() : Object {
+      function get formatDescription() : Object {
          return null;
       }
    }

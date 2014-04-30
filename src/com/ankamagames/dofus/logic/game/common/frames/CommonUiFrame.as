@@ -362,14 +362,14 @@ package com.ankamagames.dofus.logic.game.common.frames
          return true;
       }
       
-      private function onAnimEnd(pTimerEvent:TimerEvent) : void {
+      function onAnimEnd(pTimerEvent:TimerEvent) : void {
          pTimerEvent.currentTarget.removeEventListener(TimerEvent.TIMER,this.onAnimEnd);
          var dnvmsg:DisplayNumericalValueMessage = this._dnvmsgs[pTimerEvent.currentTarget];
          this.displayNumericalValue(DofusEntities.getEntity(dnvmsg.entityId),dnvmsg,7615756,1,1500);
          delete this._dnvmsgs[[pTimerEvent.currentTarget]];
       }
       
-      private function displayNumericalValue(pEntity:IEntity, pMsg:DisplayNumericalValueMessage, pColor:uint, pScrollSpeed:Number=1, pScrollDuration:uint=2500) : void {
+      function displayNumericalValue(pEntity:IEntity, pMsg:DisplayNumericalValueMessage, pColor:uint, pScrollSpeed:Number=1, pScrollDuration:uint=2500) : void {
          this.displayValue(pEntity,pMsg.value.toString(),pColor,pScrollSpeed,pScrollDuration);
          var dnvwabmsg:DisplayNumericalValueWithAgeBonusMessage = pMsg as DisplayNumericalValueWithAgeBonusMessage;
          if(dnvwabmsg)
@@ -378,7 +378,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      private function displayValue(pEntity:IEntity, pValue:String, pColor:uint, pScrollSpeed:Number, pScrollDuration:uint) : void {
+      function displayValue(pEntity:IEntity, pValue:String, pColor:uint, pScrollSpeed:Number, pScrollDuration:uint) : void {
          if(!pEntity)
          {
             return;
@@ -386,7 +386,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          CharacteristicContextualManager.getInstance().addStatContextual(pValue,pEntity,new TextFormat("Verdana",24,pColor,true),1,pScrollSpeed,pScrollDuration);
       }
       
-      private function systemMessageDisplay(msg:SystemMessageDisplayMessage) : void {
+      function systemMessageDisplay(msg:SystemMessageDisplayMessage) : void {
          var i:* = undefined;
          var msgContent:String = null;
          var message:InfoMessage = null;

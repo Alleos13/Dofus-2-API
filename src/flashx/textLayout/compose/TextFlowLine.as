@@ -1984,7 +1984,7 @@ package flashx.textLayout.compose
             this._backgroundManager = null;
          }
          
-         override protected function callbackWithTextLines(param1:Function, param2:Number, param3:Number) : void {
+          function callbackWithTextLines(param1:Function, param2:Number, param3:Number) : void {
             var _loc4_:TextLine = null;
             var _loc5_:TextBlock = null;
             for each (_loc4_ in _factoryComposer._lines)

@@ -308,7 +308,7 @@ package com.ankamagames.dofus.logic.game.common.misc
          toView.initialize(fromView.content);
       }
       
-      protected function addItemToViews(itemSet:ItemSet) : void {
+      function addItemToViews(itemSet:ItemSet) : void {
          var view:IInventoryView = null;
          for each (view in this._views)
          {
@@ -319,7 +319,7 @@ package com.ankamagames.dofus.logic.game.common.misc
          }
       }
       
-      protected function modifyItemFromViews(itemSet:ItemSet, oldItem:ItemWrapper) : void {
+      function modifyItemFromViews(itemSet:ItemSet, oldItem:ItemWrapper) : void {
          var mask:* = 0;
          var view:IInventoryView = null;
          var quantity:int = 0;
@@ -350,7 +350,7 @@ package com.ankamagames.dofus.logic.game.common.misc
          }
       }
       
-      protected function removeItemFromViews(itemSet:ItemSet) : void {
+      function removeItemFromViews(itemSet:ItemSet) : void {
          var view:IInventoryView = null;
          for each (view in this._views)
          {
@@ -361,7 +361,7 @@ package com.ankamagames.dofus.logic.game.common.misc
          }
       }
       
-      protected function initializeViews(items:Vector.<ItemWrapper>) : void {
+      function initializeViews(items:Vector.<ItemWrapper>) : void {
          var view:IInventoryView = null;
          for each (view in this._views)
          {
@@ -369,7 +369,7 @@ package com.ankamagames.dofus.logic.game.common.misc
          }
       }
       
-      protected function copyItem(target:ItemWrapper, source:ItemWrapper) : void {
+      function copyItem(target:ItemWrapper, source:ItemWrapper) : void {
          target.update(source.position,source.objectUID,source.objectGID,source.quantity,source.effectsList);
       }
    }

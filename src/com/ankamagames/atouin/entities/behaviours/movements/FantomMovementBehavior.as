@@ -37,19 +37,19 @@ package com.ankamagames.atouin.entities.behaviours.movements
          return _self;
       }
 
-      override protected function getLinearVelocity() : Number {
+      override function getLinearVelocity() : Number {
          return WALK_LINEAR_VELOCITY;
       }
 
-      override protected function getHorizontalDiagonalVelocity() : Number {
+      override function getHorizontalDiagonalVelocity() : Number {
          return WALK_HORIZONTAL_DIAGONAL_VELOCITY;
       }
 
-      override protected function getVerticalDiagonalVelocity() : Number {
+      override function getVerticalDiagonalVelocity() : Number {
          return WALK_VERTICAL_DIAGONAL_VELOCITY;
       }
 
-      override protected function getAnimation() : String {
+      override function getAnimation() : String {
          return WALK_ANIMATION;
       }
    }

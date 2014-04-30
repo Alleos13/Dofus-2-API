@@ -225,7 +225,7 @@ package com.ankamagames.dofus.console.debug
          return [];
       }
       
-      private function parseShortcutXml(sXml:String) : void {
+      function parseShortcutXml(sXml:String) : void {
          var shortcut:XML = null;
          var xmlShortcuts:XML = XML(sXml);
          var sBuffer:String = "";

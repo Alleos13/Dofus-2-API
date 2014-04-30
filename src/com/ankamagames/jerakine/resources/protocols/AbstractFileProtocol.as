@@ -30,7 +30,7 @@ package com.ankamagames.jerakine.resources.protocols
          return uri.normalizedUriWithoutSubPath;
       }
       
-      override protected function release() : void {
+      override function release() : void {
          if(_adapter)
          {
             _adapter.free();
@@ -75,7 +75,7 @@ package com.ankamagames.jerakine.resources.protocols
          throw new AbstractMethodCallError("AbstractProtocol childs must override the release method in order to free their resources.");
       }
       
-      protected function extractPath(path:String) : String {
+      function extractPath(path:String) : String {
          throw new AbstractMethodCallError("AbstractProtocol childs must override the release method in order to free their resources.");
       }
    }

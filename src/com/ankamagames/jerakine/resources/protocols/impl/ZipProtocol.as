@@ -78,7 +78,7 @@ package com.ankamagames.jerakine.resources.protocols.impl
          this.release();
       }
       
-      override protected function release() : void {
+       function release() : void {
          this.releaseZipLoader();
          this._uri = null;
          _observer = null;

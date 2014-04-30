@@ -128,7 +128,7 @@ package com.ankamagames.atouin.managers
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      private function registerInteractions(entity:IInteractive, register:Boolean) : void {
+      function registerInteractions(entity:IInteractive, register:Boolean) : void {
          var index:uint = 0;
          var interactions:uint = entity.enabledInteractions;
          while(interactions > 0)
@@ -224,13 +224,13 @@ package com.ankamagames.atouin.managers
          return result;
       }
       
-      private function onInteraction(e:Event) : void {
+      function onInteraction(e:Event) : void {
          var entity:IInteractive = IInteractive(e.target);
          var clazz:Class = InteractionsEnum.getMessage(e.type);
          entity.handler.process(new clazz(entity));
       }
       
-      private function onPropertyChanged(e:PropertyChangeEvent) : void {
+      function onPropertyChanged(e:PropertyChangeEvent) : void {
          var ent:IEntity = null;
          if(e.propertyName == "transparentOverlayMode")
          {

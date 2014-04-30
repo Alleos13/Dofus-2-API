@@ -93,7 +93,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      private function init() : void {
+      function init() : void {
          this._socketClientID = uint.MAX_VALUE * Math.random();
          if(AirScanner.isStreamingVersion())
          {
@@ -121,7 +121,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          this._buffer = [];
       }
       
-      private function showInformationPopup() : void {
+      function showInformationPopup() : void {
          var commonMod:Object = null;
          if(UiModuleManager.getInstance().getModule("Ankama_Common"))
          {
@@ -133,7 +133,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      private function setAsMain(pMain:Boolean) : void {
+      function setAsMain(pMain:Boolean) : void {
          if(pMain == this._isMain)
          {
             return;
@@ -157,7 +157,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      private function onSocketClose(e:Event) : void {
+      function onSocketClose(e:Event) : void {
          this._socketAvaible = false;
          _log.error("The socket has been closed");
          try
@@ -169,7 +169,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      private function onData(pEvent:ProgressEvent) : void {
+      function onData(pEvent:ProgressEvent) : void {
          var cmd:String = null;
          var functionName:String = null;
          var clientId:* = NaN;
@@ -212,15 +212,15 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      private function onSocketError(e:Event) : void {
+      function onSocketError(e:Event) : void {
          this._socketAvaible = false;
          _log.error("Connection to Reg failed");
       }
       
-      private function onSocketSecurityError(e:Event) : void {
+      function onSocketSecurityError(e:Event) : void {
       }
       
-      private function onSocketConnect(e:Event) : void {
+      function onSocketConnect(e:Event) : void {
          var cmd:Object = null;
          this._socketAvaible = true;
          if(this._buffer.length)

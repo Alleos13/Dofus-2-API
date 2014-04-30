@@ -142,7 +142,7 @@ package com.ankamagames.dofus.datacenter.spells
          return this._indexedParam[name];
       }
       
-      private function getValue(str:String) : * {
+      function getValue(str:String) : * {
          var num:* = NaN;
          var regNum:RegExp = new RegExp("^[+-]?[0-9.]*$");
          if(str.search(regNum) != -1)

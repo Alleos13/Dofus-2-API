@@ -80,19 +80,19 @@ package com.ankamagames.dofus.logic.common.frames
          return this._isFantomas;
       }
       
-      override protected function registerMessages() : void {
+       function registerMessages() : void {
          register(ConsoleMessage,this.onConsoleMessage);
          register(AuthorizedCommandAction,this.onAuthorizedCommandAction);
          register(ConsoleOutputMessage,this.onConsoleOutputMessage);
          register(QuitGameAction,this.onQuitGameAction);
       }
       
-      private function onConsoleMessage(cmsg:ConsoleMessage) : Boolean {
+      function onConsoleMessage(cmsg:ConsoleMessage) : Boolean {
          ConsolesManager.getConsole("debug").output(cmsg.content,cmsg.type);
          return true;
       }
       
-      private function onAuthorizedCommandAction(aca:AuthorizedCommandAction) : Boolean {
+      function onAuthorizedCommandAction(aca:AuthorizedCommandAction) : Boolean {
          var acmsg:AdminCommandMessage = null;
          if(aca.command.substr(0,1) == "/")
          {
@@ -135,7 +135,7 @@ package com.ankamagames.dofus.logic.common.frames
          return true;
       }
       
-      private function onConsoleOutputMessage(comsg:ConsoleOutputMessage) : Boolean {
+      function onConsoleOutputMessage(comsg:ConsoleOutputMessage) : Boolean {
          if(comsg.consoleId != "debug")
          {
             return false;
@@ -144,7 +144,7 @@ package com.ankamagames.dofus.logic.common.frames
          return true;
       }
       
-      private function onQuitGameAction(qga:QuitGameAction) : Boolean {
+      function onQuitGameAction(qga:QuitGameAction) : Boolean {
          Dofus.getInstance().quit();
          return true;
       }

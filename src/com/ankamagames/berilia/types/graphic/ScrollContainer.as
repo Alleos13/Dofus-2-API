@@ -279,20 +279,20 @@ package com.ankamagames.berilia.types.graphic
          return _aStrata[nStrata];
       }
       
-      private function onVerticalScroll(e:Event) : void {
+      function onVerticalScroll(e:Event) : void {
          this._content.y = -this._vScrollbar.value;
       }
       
-      private function onHorizontalScroll(e:Event) : void {
+      function onHorizontalScroll(e:Event) : void {
          this._content.x = -this._hScrollbar.value;
       }
       
-      private function onChildFinalized(e:Event) : void {
+      function onChildFinalized(e:Event) : void {
          e.target.removeEventListener(UiRenderEvent.UIRenderComplete,this.onChildFinalized);
          this.finalize();
       }
       
-      private function onChildRemoved(e:Event) : void {
+      function onChildRemoved(e:Event) : void {
       }
    }
 }

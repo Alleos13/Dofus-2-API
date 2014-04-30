@@ -23,7 +23,7 @@ package flashx.textLayout.factory
          return getControllerAt(0);
       }
       
-      override protected function preCompose() : Boolean {
+       function preCompose() : Boolean {
          return true;
       }
       

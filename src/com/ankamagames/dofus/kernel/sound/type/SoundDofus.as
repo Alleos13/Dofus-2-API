@@ -327,7 +327,7 @@ package com.ankamagames.dofus.kernel.sound.type
          return null;
       }
       
-      private function init() : void {
+      function init() : void {
          this._fadeVolume = 1;
          this._busVolume = 1;
          this._volume = 1;

@@ -68,7 +68,7 @@ package com.ankamagames.dofus.network.types.game.house
          {
             output.writeInt(this.houseId);
             output.writeShort(this.doorsOnMap.length);
-            _i2 = 0;
+            var _i2 = 0;
             while(_i2 < this.doorsOnMap.length)
             {
                if(this.doorsOnMap[_i2] < 0)
@@ -111,8 +111,8 @@ package com.ankamagames.dofus.network.types.game.house
          }
          else
          {
-            _doorsOnMapLen = input.readUnsignedShort();
-            _i2 = 0;
+            var _doorsOnMapLen = input.readUnsignedShort();
+            var _i2 = 0;
             while(_i2 < _doorsOnMapLen)
             {
                _val2 = input.readInt();

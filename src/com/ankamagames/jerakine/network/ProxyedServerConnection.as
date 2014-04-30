@@ -20,7 +20,7 @@ package com.ankamagames.jerakine.network
          this._proxy = value;
       }
       
-      override protected function lowSend(msg:INetworkMessage, autoFlush:Boolean=true) : void {
+      override function lowSend(msg:INetworkMessage, autoFlush:Boolean=true) : void {
          this._proxy.processAndSend(msg,this);
          if(autoFlush)
          {
@@ -28,7 +28,7 @@ package com.ankamagames.jerakine.network
          }
       }
       
-      override protected function lowReceive(src:IDataInput) : INetworkMessage {
+      override function lowReceive(src:IDataInput) : INetworkMessage {
          return this._proxy.processAndReceive(src);
       }
    }

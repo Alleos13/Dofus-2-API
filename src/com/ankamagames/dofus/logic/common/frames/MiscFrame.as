@@ -280,12 +280,12 @@ package com.ankamagames.dofus.logic.common.frames
          return Priority.LOW;
       }
       
-      private function onMouseLeave(e:Event) : void {
+      function onMouseLeave(e:Event) : void {
          this._mouseOnStage = false;
          this._stage.addEventListener(MouseEvent.MOUSE_MOVE,this.onMouseMove);
       }
       
-      private function onMouseMove(e:Event) : void {
+      function onMouseMove(e:Event) : void {
          this._mouseOnStage = true;
          this._stage.removeEventListener(MouseEvent.MOUSE_MOVE,this.onMouseMove);
       }

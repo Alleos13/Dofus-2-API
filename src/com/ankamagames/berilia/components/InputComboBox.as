@@ -188,12 +188,12 @@ package com.ankamagames.berilia.components
          return false;
       }
       
-      override protected function showList(show:Boolean) : void {
+      override function showList(show:Boolean) : void {
          super.dataProvider = this._origDataProvider;
          super.showList(show);
       }
       
-      override protected function searchStringInCB(searchPhrase:String, startIndex:int=0) : void {
+      override function searchStringInCB(searchPhrase:String, startIndex:int=0) : void {
          var cleanphrase:String = null;
          var newDtp:Vector.<String> = null;
          var label:String = null;
@@ -230,7 +230,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      override protected function cleanString(spaced:String) : String {
+      override function cleanString(spaced:String) : String {
          var unwantedChar:RegExp = new RegExp("\b","g");
          if(spaced.search(unwantedChar) != -1)
          {

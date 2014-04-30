@@ -611,7 +611,7 @@ package com.ankamagames.dofus.internalDatacenter.items
       public function removeHolder(h:ISlotDataHolder) : void {
       }
       
-      private function updateLivingObjects(effect:EffectInstance) : void {
+      function updateLivingObjects(effect:EffectInstance) : void {
          switch(effect.effectId)
          {
             case ACTION_ID_LIVING_OBJECT_FOOD_DATE:
@@ -637,7 +637,7 @@ package com.ankamagames.dofus.internalDatacenter.items
          }
       }
       
-      private function updatePresets(effect:EffectInstance) : void {
+      function updatePresets(effect:EffectInstance) : void {
          switch(effect.effectId)
          {
             case ACTION_ID_USE_PRESET:
@@ -646,7 +646,7 @@ package com.ankamagames.dofus.internalDatacenter.items
          }
       }
       
-      private function getLivingObjectLevel(xp:int) : uint {
+      function getLivingObjectLevel(xp:int) : uint {
          var i:int = 0;
          while(i < LEVEL_STEP.length)
          {
@@ -659,7 +659,7 @@ package com.ankamagames.dofus.internalDatacenter.items
          return LEVEL_STEP.length;
       }
       
-      private function updateEffects(updateEffects:Vector.<ObjectEffect>) : void {
+      function updateEffects(updateEffects:Vector.<ObjectEffect>) : void {
          var effect:ObjectEffect = null;
          var effectInstance:EffectInstance = null;
          var itbt:Item = Item.getItemById(this.objectGID);

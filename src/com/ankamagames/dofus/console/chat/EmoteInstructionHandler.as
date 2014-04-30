@@ -34,7 +34,7 @@ package com.ankamagames.dofus.console.chat
          return null;
       }
       
-      private function getEmoteId(cmd:String) : uint {
+      function getEmoteId(cmd:String) : uint {
          var emote:Emoticon = null;
          for each (emote in Emoticon.getEmoticons())
          {
