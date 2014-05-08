@@ -27,8 +27,8 @@ package com.ankamagames.dofus.network.messages.game.basic
          return 5664;
       }
       
-      public function initBasicWhoAmIRequestMessage(verbose:Boolean=false) : BasicWhoAmIRequestMessage {
-         this.verbose = verbose;
+      public function initBasicWhoAmIRequestMessage(param1:Boolean=false) : BasicWhoAmIRequestMessage {
+         this.verbose = param1;
          this._isInitialized = true;
          return this;
       }
@@ -38,30 +38,30 @@ package com.ankamagames.dofus.network.messages.game.basic
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_BasicWhoAmIRequestMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_BasicWhoAmIRequestMessage(param1);
       }
       
-      public function serializeAs_BasicWhoAmIRequestMessage(output:IDataOutput) : void {
-         output.writeBoolean(this.verbose);
+      public function serializeAs_BasicWhoAmIRequestMessage(param1:IDataOutput) : void {
+         param1.writeBoolean(this.verbose);
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_BasicWhoAmIRequestMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_BasicWhoAmIRequestMessage(param1);
       }
       
-      public function deserializeAs_BasicWhoAmIRequestMessage(input:IDataInput) : void {
-         this.verbose = input.readBoolean();
+      public function deserializeAs_BasicWhoAmIRequestMessage(param1:IDataInput) : void {
+         this.verbose = param1.readBoolean();
       }
    }
 }

@@ -6,9 +6,9 @@ package com.ankamagames.jerakine.messages.events
    public class FramePushedEvent extends Event
    {
       
-      public function FramePushedEvent(frame:Frame) {
+      public function FramePushedEvent(param1:Frame) {
          super(EVENT_FRAME_PUSHED,false,false);
-         this._frame = frame;
+         this._frame = param1;
       }
       
       public static const EVENT_FRAME_PUSHED:String = "event_frame_pushed";

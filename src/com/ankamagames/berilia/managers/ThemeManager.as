@@ -89,44 +89,44 @@ package com.ankamagames.berilia.managers
       }
       
       public function init() : void {
-         var uri:Uri = null;
-         var file:File = null;
-         var dtFile:File = null;
-         var len:* = 0;
-         var substr:String = null;
+         var _loc2_:Uri = null;
+         var _loc3_:File = null;
+         var _loc4_:File = null;
+         var _loc5_:* = 0;
+         var _loc6_:String = null;
          this._themes = new Array();
          this._themeNames = new Array();
          this._themeCount = 0;
          this._dtFileToLoad = 0;
-         var themePath:String = File.applicationDirectory.nativePath + File.separator + LangManager.getInstance().getEntry("config.ui.common.themes").replace("file://","");
-         this._themesRoot = new File(themePath);
+         var _loc1_:String = File.applicationDirectory.nativePath + File.separator + LangManager.getInstance().getEntry("config.ui.common.themes").replace("file://","");
+         this._themesRoot = new File(_loc1_);
          if(this._themesRoot.exists)
          {
-            for each (file in this._themesRoot.getDirectoryListing())
+            for each (_loc3_ in this._themesRoot.getDirectoryListing())
             {
-               if(!((!file.isDirectory) || (file.name.charAt(0) == ".")))
+               if(!(!_loc3_.isDirectory || _loc3_.name.charAt(0) == "."))
                {
-                  dtFile = this.searchDtFile(file);
-                  if(dtFile)
+                  _loc4_ = this.searchDtFile(_loc3_);
+                  if(_loc4_)
                   {
                      this._dtFileToLoad++;
-                     if(dtFile.url.indexOf("app:/") == 0)
+                     if(_loc4_.url.indexOf("app:/") == 0)
                      {
-                        len = "app:/".length;
-                        substr = dtFile.url.substring(len,dtFile.url.length);
-                        uri = new Uri(StringUtils.convertLatinToUtf(substr));
+                        _loc5_ = "app:/".length;
+                        _loc6_ = _loc4_.url.substring(_loc5_,_loc4_.url.length);
+                        _loc2_ = new Uri(StringUtils.convertLatinToUtf(_loc6_));
                      }
                      else
                      {
-                        uri = new Uri(dtFile.nativePath);
+                        _loc2_ = new Uri(_loc4_.nativePath);
                      }
-                     uri.tag = dtFile;
-                     this._loader.load(uri);
+                     _loc2_.tag = _loc4_;
+                     this._loader.load(_loc2_);
                   }
                   else
                   {
-                     ErrorManager.addError("Impossible de trouver le fichier de description de thème dans le dossier " + file.nativePath);
-                     Berilia.getInstance().handler.process(new ThemeLoadErrorMessage(file.name));
+                     ErrorManager.addError("Impossible de trouver le fichier de description de thème dans le dossier " + _loc3_.nativePath);
+                     Berilia.getInstance().handler.process(new ThemeLoadErrorMessage(_loc3_.name));
                   }
                }
             }
@@ -141,12 +141,12 @@ package com.ankamagames.berilia.managers
          return this._themes;
       }
       
-      public function getTheme(name:String) : Theme {
-         return this._themes[name];
+      public function getTheme(param1:String) : Theme {
+         return this._themes[param1];
       }
       
-      public function applyTheme(name:String) : void {
-         var uiSkinEntry:String = null;
+      public function applyTheme(param1:String) : void {
+         var _loc2_:String = null;
          if(this._dtFileToLoad == this._themeCount)
          {
             if(this._themeNames.length == 0)
@@ -156,67 +156,67 @@ package com.ankamagames.berilia.managers
             else
             {
                this._applyWaiting = null;
-               if(!this._themes[name])
+               if(!this._themes[param1])
                {
-                  name = this._themeNames[0];
-                  OptionManager.getOptionManager("dofus")["switchUiSkin"] = name;
+                  param1 = this._themeNames[0];
+                  OptionManager.getOptionManager("dofus")["switchUiSkin"] = param1;
                   UiRenderManager.getInstance().clearCache();
                }
-               this._currentTheme = name;
-               uiSkinEntry = LangManager.getInstance().getEntry("config.ui.common.themes") + name + "/";
-               LangManager.getInstance().setEntry("config.ui.skin",uiSkinEntry,"string");
-               XmlConfig.getInstance().setEntry("config.ui.skin",uiSkinEntry);
-               LangManager.getInstance().loadFile(uiSkinEntry + "colors.xml");
+               this._currentTheme = param1;
+               _loc2_ = LangManager.getInstance().getEntry("config.ui.common.themes") + param1 + "/";
+               LangManager.getInstance().setEntry("config.ui.skin",_loc2_,"string");
+               XmlConfig.getInstance().setEntry("config.ui.skin",_loc2_);
+               LangManager.getInstance().loadFile(_loc2_ + "colors.xml");
             }
          }
          else
          {
-            this._applyWaiting = name;
+            this._applyWaiting = param1;
          }
       }
       
-      function onLoadError(e:ResourceErrorEvent) : void {
-         var f:File = null;
-         _log.error("Cannot load " + e.uri + "(" + e.errorMsg + ")");
-         var path:String = e.uri.toString();
+      private function onLoadError(param1:ResourceErrorEvent) : void {
+         var _loc3_:File = null;
+         _log.error("Cannot load " + param1.uri + "(" + param1.errorMsg + ")");
+         var _loc2_:String = param1.uri.toString();
          try
          {
-            f = e.uri.toFile();
-            path = path + ("(" + f.nativePath + ")");
+            _loc3_ = param1.uri.toFile();
+            _loc2_ = _loc2_ + ("(" + _loc3_.nativePath + ")");
          }
          catch(e:Error)
          {
          }
-         ErrorManager.addError("Cannot load " + path);
-         Berilia.getInstance().handler.process(new ThemeLoadErrorMessage(e.uri.fileName));
+         ErrorManager.addError("Cannot load " + _loc2_);
+         Berilia.getInstance().handler.process(new ThemeLoadErrorMessage(param1.uri.fileName));
       }
       
-      function onLoad(e:ResourceLoadedEvent) : void {
-         switch(e.uri.fileType.toLowerCase())
+      private function onLoad(param1:ResourceLoadedEvent) : void {
+         switch(param1.uri.fileType.toLowerCase())
          {
             case "dt":
-               this.onDTLoad(e);
+               this.onDTLoad(param1);
                break;
          }
       }
       
-      function onDTLoad(e:ResourceLoadedEvent) : void {
-         var thName:String = null;
-         var thDesc:String = null;
-         var th:Theme = null;
+      private function onDTLoad(param1:ResourceLoadedEvent) : void {
+         var _loc6_:String = null;
+         var _loc7_:String = null;
+         var _loc8_:Theme = null;
          this._themeCount++;
-         var dt:XML = e.resource as XML;
-         var dtFileName:String = e.uri.fileName.split(".")[0];
-         var folder:Array = e.uri.path.split("/");
-         var folderName:String = folder[folder.length - 2];
-         if(dtFileName == folderName)
+         var _loc2_:XML = param1.resource as XML;
+         var _loc3_:String = param1.uri.fileName.split(".")[0];
+         var _loc4_:* = param1.uri.path.split("/");
+         var _loc5_:String = _loc4_[_loc4_.length - 2];
+         if(_loc3_ == _loc5_)
          {
-            thName = dt.name;
-            thDesc = dt.description;
-            th = new Theme(dtFileName,thName,thDesc,dt.previewUri);
-            this._themes[dtFileName] = th;
-            this._themeNames.push(dtFileName);
-            Berilia.getInstance().handler.process(new ThemeLoadedMessage(dtFileName));
+            _loc6_ = _loc2_.name;
+            _loc7_ = _loc2_.description;
+            _loc8_ = new Theme(_loc3_,_loc6_,_loc7_,_loc2_.previewUri);
+            this._themes[_loc3_] = _loc8_;
+            this._themeNames.push(_loc3_);
+            Berilia.getInstance().handler.process(new ThemeLoadedMessage(_loc3_));
             if(this._applyWaiting != "")
             {
                this.applyTheme(this._applyWaiting);
@@ -224,37 +224,37 @@ package com.ankamagames.berilia.managers
          }
          else
          {
-            Berilia.getInstance().handler.process(new ThemeLoadErrorMessage(dtFileName));
+            Berilia.getInstance().handler.process(new ThemeLoadErrorMessage(_loc3_));
          }
       }
       
-      function searchDtFile(rootPath:File) : File {
-         var file:File = null;
-         var dt:File = null;
-         if(rootPath.nativePath.indexOf(".svn") != -1)
+      private function searchDtFile(param1:File) : File {
+         var _loc3_:File = null;
+         var _loc4_:File = null;
+         if(param1.nativePath.indexOf(".svn") != -1)
          {
             return null;
          }
-         var files:Array = rootPath.getDirectoryListing();
-         for each (file in files)
+         var _loc2_:Array = param1.getDirectoryListing();
+         for each (_loc3_ in _loc2_)
          {
-            if((!file.isDirectory) && (file.extension.toLowerCase() == "dt"))
+            if(!_loc3_.isDirectory && _loc3_.extension.toLowerCase() == "dt")
             {
-               return file;
+               return _loc3_;
             }
          }
-         for each (file in files)
+         for each (_loc3_ in _loc2_)
          {
-            if(file.isDirectory)
+            if(_loc3_.isDirectory)
             {
-               dt = this.searchDtFile(file);
-               if(dt)
+               _loc4_ = this.searchDtFile(_loc3_);
+               if(_loc4_)
                {
                   break;
                }
             }
          }
-         return dt;
+         return _loc4_;
       }
    }
 }

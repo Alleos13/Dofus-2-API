@@ -15,20 +15,20 @@ package com.ankamagames.dofus.datacenter.mounts
       private static var _ids:Array;
       
       public static function getMountBonesIds() : Array {
-         var b:MountBone = null;
+         var _loc1_:MountBone = null;
          if(!_ids)
          {
             _ids = new Array();
-            for each (b in getMountBones())
+            for each (_loc1_ in getMountBones())
             {
-               _ids.push(b.id);
+               _ids.push(_loc1_.id);
             }
          }
          return _ids;
       }
       
-      public static function getMountBoneById(id:uint) : MountBone {
-         return GameData.getObject(MODULE,id) as MountBone;
+      public static function getMountBoneById(param1:uint) : MountBone {
+         return GameData.getObject(MODULE,param1) as MountBone;
       }
       
       public static function getMountBones() : Array {

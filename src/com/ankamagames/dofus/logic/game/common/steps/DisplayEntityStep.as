@@ -11,12 +11,12 @@ package com.ankamagames.dofus.logic.game.common.steps
    public class DisplayEntityStep extends AbstractSequencable
    {
       
-      public function DisplayEntityStep(pEntityId:int, pLook:String, pCellId:uint, pDirection:int) {
+      public function DisplayEntityStep(param1:int, param2:String, param3:uint, param4:int) {
          super();
-         this._id = pEntityId;
-         this._look = pLook;
-         this._cellId = pCellId;
-         this._direction = pDirection;
+         this._id = param1;
+         this._look = param2;
+         this._cellId = param3;
+         this._direction = param4;
       }
       
       private var _id:int;
@@ -28,12 +28,12 @@ package com.ankamagames.dofus.logic.game.common.steps
       private var _direction:int;
       
       override public function start() : void {
-         var rpef:RoleplayEntitiesFrame = Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame;
-         var gci:GameContextActorInformations = new GameContextActorInformations();
-         var disposition:EntityDispositionInformations = new EntityDispositionInformations();
-         disposition.initEntityDispositionInformations(this._cellId,this._direction);
-         gci.initGameContextActorInformations(this._id,EntityLookAdapter.toNetwork(EntityLookParser.fromString(this._look)),disposition);
-         rpef.addOrUpdateActor(gci);
+         var _loc1_:RoleplayEntitiesFrame = Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame;
+         var _loc2_:GameContextActorInformations = new GameContextActorInformations();
+         var _loc3_:EntityDispositionInformations = new EntityDispositionInformations();
+         _loc3_.initEntityDispositionInformations(this._cellId,this._direction);
+         _loc2_.initGameContextActorInformations(this._id,EntityLookAdapter.toNetwork(EntityLookParser.fromString(this._look)),_loc3_);
+         _loc1_.addOrUpdateActor(_loc2_);
          executeCallbacks();
       }
    }

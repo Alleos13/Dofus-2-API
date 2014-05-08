@@ -29,9 +29,9 @@ package com.ankamagames.dofus.network.messages.game.interactive
          return 6384;
       }
       
-      public function initInteractiveUseErrorMessage(elemId:uint=0, skillInstanceUid:uint=0) : InteractiveUseErrorMessage {
-         this.elemId = elemId;
-         this.skillInstanceUid = skillInstanceUid;
+      public function initInteractiveUseErrorMessage(param1:uint=0, param2:uint=0) : InteractiveUseErrorMessage {
+         this.elemId = param1;
+         this.skillInstanceUid = param2;
          this._isInitialized = true;
          return this;
       }
@@ -42,53 +42,53 @@ package com.ankamagames.dofus.network.messages.game.interactive
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_InteractiveUseErrorMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_InteractiveUseErrorMessage(param1);
       }
       
-      public function serializeAs_InteractiveUseErrorMessage(output:IDataOutput) : void {
+      public function serializeAs_InteractiveUseErrorMessage(param1:IDataOutput) : void {
          if(this.elemId < 0)
          {
             throw new Error("Forbidden value (" + this.elemId + ") on element elemId.");
          }
          else
          {
-            output.writeInt(this.elemId);
+            param1.writeInt(this.elemId);
             if(this.skillInstanceUid < 0)
             {
                throw new Error("Forbidden value (" + this.skillInstanceUid + ") on element skillInstanceUid.");
             }
             else
             {
-               output.writeInt(this.skillInstanceUid);
+               param1.writeInt(this.skillInstanceUid);
                return;
             }
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_InteractiveUseErrorMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_InteractiveUseErrorMessage(param1);
       }
       
-      public function deserializeAs_InteractiveUseErrorMessage(input:IDataInput) : void {
-         this.elemId = input.readInt();
+      public function deserializeAs_InteractiveUseErrorMessage(param1:IDataInput) : void {
+         this.elemId = param1.readInt();
          if(this.elemId < 0)
          {
             throw new Error("Forbidden value (" + this.elemId + ") on element of InteractiveUseErrorMessage.elemId.");
          }
          else
          {
-            this.skillInstanceUid = input.readInt();
+            this.skillInstanceUid = param1.readInt();
             if(this.skillInstanceUid < 0)
             {
                throw new Error("Forbidden value (" + this.skillInstanceUid + ") on element of InteractiveUseErrorMessage.skillInstanceUid.");

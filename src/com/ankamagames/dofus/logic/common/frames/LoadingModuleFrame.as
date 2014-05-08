@@ -35,11 +35,11 @@ package com.ankamagames.dofus.logic.common.frames
    public class LoadingModuleFrame extends Object implements Frame
    {
       
-      public function LoadingModuleFrame(manageAuthentificationFrame:Boolean=false) {
+      public function LoadingModuleFrame(param1:Boolean=false) {
          this._tips = [];
          this._tipsTimer = new Timer(20 * 1000);
          super();
-         this._manageAuthentificationFrame = manageAuthentificationFrame;
+         this._manageAuthentificationFrame = param1;
       }
       
       protected static const _log:Logger = Log.getLogger(getQualifiedClassName(LoadingModuleFrame));
@@ -67,14 +67,14 @@ package com.ankamagames.dofus.logic.common.frames
       }
       
       public function pushed() : Boolean {
-         var tip:Tips = null;
+         var _loc1_:Tips = null;
          this._waitDone = false;
          this._startTime = getTimer();
          this._loadingScreen = new LoadingScreen(true);
          Dofus.getInstance().addChild(this._loadingScreen);
-         for each (tip in Tips.getAllTips())
+         for each (_loc1_ in Tips.getAllTips())
          {
-            this._tips.push(tip);
+            this._tips.push(_loc1_);
          }
          this._tipsTimer.addEventListener(TimerEvent.TIMER,this.changeTip);
          this._tipsTimer.start();
@@ -90,55 +90,55 @@ package com.ankamagames.dofus.logic.common.frames
          return true;
       }
       
-      function changeTip(e:Event) : void {
-         var tip:Tips = this._tips[Math.floor(this._tips.length * Math.random())] as Tips;
-         if(tip)
+      private function changeTip(param1:Event) : void {
+         var _loc2_:Tips = this._tips[Math.floor(this._tips.length * Math.random())] as Tips;
+         if(_loc2_)
          {
-            this._loadingScreen.tip = tip.description;
+            this._loadingScreen.tip = _loc2_.description;
          }
       }
       
-      public function process(msg:Message) : Boolean {
-         var ankamaModule:* = false;
-         var mrlfm:ModuleRessourceLoadFailedMessage = null;
-         var modLog:String = null;
-         var modList:Array = null;
-         var newPrc:* = NaN;
-         var mod:UiModule = null;
+      public function process(param1:Message) : Boolean {
+         var _loc2_:* = false;
+         var _loc3_:ModuleRessourceLoadFailedMessage = null;
+         var _loc4_:String = null;
+         var _loc5_:Array = null;
+         var _loc6_:* = NaN;
+         var _loc7_:UiModule = null;
          switch(true)
          {
-            case msg is ModuleLoadedMessage:
+            case param1 is ModuleLoadedMessage:
                this._loadingScreen.value = this._loadingScreen.value + 100 / UiModuleManager.getInstance().moduleCount * this._progressRation;
-               ankamaModule = UiModuleManager.getInstance().getModule(ModuleLoadedMessage(msg).moduleName).trusted;
-               this._loadingScreen.log(ModuleLoadedMessage(msg).moduleName + " script loaded " + (ankamaModule?"":"UNTRUSTED module"),ankamaModule?LoadingScreen.IMPORTANT:LoadingScreen.WARNING);
+               _loc2_ = UiModuleManager.getInstance().getModule(ModuleLoadedMessage(param1).moduleName).trusted;
+               this._loadingScreen.log(ModuleLoadedMessage(param1).moduleName + " script loaded " + (_loc2_?"":"UNTRUSTED module"),_loc2_?LoadingScreen.IMPORTANT:LoadingScreen.WARNING);
                return true;
-            case msg is ModuleExecErrorMessage:
+            case param1 is ModuleExecErrorMessage:
                this._loadingScreen.value = this._loadingScreen.value + 100 / UiModuleManager.getInstance().moduleCount * this._progressRation;
-               this._loadingScreen.log("Error while executing " + ModuleExecErrorMessage(msg).moduleName + "\'s main script :\n" + ModuleExecErrorMessage(msg).stackTrace,LoadingScreen.ERROR);
+               this._loadingScreen.log("Error while executing " + ModuleExecErrorMessage(param1).moduleName + "\'s main script :\n" + ModuleExecErrorMessage(param1).stackTrace,LoadingScreen.ERROR);
                this._showContinueButton = true;
                return true;
-            case msg is ModuleRessourceLoadFailedMessage:
-               mrlfm = msg as ModuleRessourceLoadFailedMessage;
-               this._loadingScreen.log("Module " + mrlfm.moduleName + " : Cannot load " + mrlfm.uri,mrlfm.isImportant?LoadingScreen.ERROR:LoadingScreen.WARNING);
-               if(mrlfm.isImportant)
+            case param1 is ModuleRessourceLoadFailedMessage:
+               _loc3_ = param1 as ModuleRessourceLoadFailedMessage;
+               this._loadingScreen.log("Module " + _loc3_.moduleName + " : Cannot load " + _loc3_.uri,_loc3_.isImportant?LoadingScreen.ERROR:LoadingScreen.WARNING);
+               if(_loc3_.isImportant)
                {
                   this._showContinueButton = true;
                }
                return true;
-            case msg is AllModulesLoadedMessage:
-               modLog = "";
-               modList = UiModuleManager.getInstance().getModules();
-               for each (mod in modList)
+            case param1 is AllModulesLoadedMessage:
+               _loc4_ = "";
+               _loc5_ = UiModuleManager.getInstance().getModules();
+               for each (_loc7_ in _loc5_)
                {
-                  if(!mod.trusted)
+                  if(!_loc7_.trusted)
                   {
-                     modLog = modLog + (mod.toString() + "\n");
+                     _loc4_ = _loc4_ + (_loc7_.toString() + "\n");
                   }
                }
-               if(modLog.length)
+               if(_loc4_.length)
                {
-                  modLog = "PID:" + PlayerManager.getInstance().accountId + "\n" + modLog;
-                  StatisticReportingManager.getInstance().report("customMod",modLog);
+                  _loc4_ = "PID:" + PlayerManager.getInstance().accountId + "\n" + _loc4_;
+                  StatisticReportingManager.getInstance().report("customMod",_loc4_);
                }
                if(this._manageAuthentificationFrame)
                {
@@ -160,27 +160,27 @@ package com.ankamagames.dofus.logic.common.frames
                   return true;
                }
                break;
-            case msg is UiXmlParsedMessage:
-               newPrc = 1 - UiModuleManager.getInstance().unparsedXmlCount / UiModuleManager.getInstance().unparsedXmlTotalCount;
-               if(newPrc < this._lastXmlParsedPrc)
+            case param1 is UiXmlParsedMessage:
+               _loc6_ = 1 - UiModuleManager.getInstance().unparsedXmlCount / UiModuleManager.getInstance().unparsedXmlTotalCount;
+               if(_loc6_ < this._lastXmlParsedPrc)
                {
                   break;
                }
-               this._loadingScreen.log("Preparsing " + UiXmlParsedMessage(msg).url,LoadingScreen.INFO);
-               this._loadingScreen.value = this._loadingScreen.value + (newPrc - this._lastXmlParsedPrc) * 100 * this._progressRation;
-               this._lastXmlParsedPrc = newPrc;
+               this._loadingScreen.log("Preparsing " + UiXmlParsedMessage(param1).url,LoadingScreen.INFO);
+               this._loadingScreen.value = this._loadingScreen.value + (_loc6_ - this._lastXmlParsedPrc) * 100 * this._progressRation;
+               this._lastXmlParsedPrc = _loc6_;
                return true;
-            case msg is UiXmlParsedErrorMessage:
-               this._loadingScreen.log("Error while parsing  " + UiXmlParsedErrorMessage(msg).url + " : " + UiXmlParsedErrorMessage(msg).msg,LoadingScreen.ERROR);
+            case param1 is UiXmlParsedErrorMessage:
+               this._loadingScreen.log("Error while parsing  " + UiXmlParsedErrorMessage(param1).url + " : " + UiXmlParsedErrorMessage(param1).msg,LoadingScreen.ERROR);
                return true;
-            case msg is MapRenderProgressMessage:
-               this._loadingScreen.value = this._loadingScreen.value + MapRenderProgressMessage(msg).percent * this._progressRation;
+            case param1 is MapRenderProgressMessage:
+               this._loadingScreen.value = this._loadingScreen.value + MapRenderProgressMessage(param1).percent * this._progressRation;
                return true;
-            case msg is GameStartingMessage:
+            case param1 is GameStartingMessage:
                Kernel.getWorker().removeFrame(this);
                return true;
-            case msg is ServersListMessage:
-            case msg is MapComplementaryInformationsDataMessage:
+            case param1 is ServersListMessage:
+            case param1 is MapComplementaryInformationsDataMessage:
                Kernel.getWorker().removeFrame(this);
                return false;
          }
@@ -201,12 +201,12 @@ package com.ankamagames.dofus.logic.common.frames
          return true;
       }
       
-      function dispatchEnd() : void {
+      private function dispatchEnd() : void {
          Kernel.getWorker().process(new AllModulesLoadedMessage());
       }
       
-      function launchGame() : void {
-         if((getTimer() - this._startTime < 2000) && (!this._waitDone))
+      private function launchGame() : void {
+         if(getTimer() - this._startTime < 2000 && !this._waitDone)
          {
             setTimeout(this.launchGame,2000 - (getTimer() - this._startTime));
             this._waitDone = true;
@@ -216,12 +216,12 @@ package com.ankamagames.dofus.logic.common.frames
          Kernel.getWorker().addFrame(new AuthentificationFrame(AuthentificationManager.getInstance().loginValidationAction == null));
          Kernel.getWorker().addFrame(new QueueFrame());
          Kernel.getWorker().addFrame(new GameStartingFrame());
-         var nb:int = DisconnectionHandlerFrame.messagesAfterReset.length;
-         var i:int = 0;
-         while(i < nb)
+         var _loc1_:int = DisconnectionHandlerFrame.messagesAfterReset.length;
+         var _loc2_:* = 0;
+         while(_loc2_ < _loc1_)
          {
             Kernel.getWorker().process(DisconnectionHandlerFrame.messagesAfterReset.shift());
-            i++;
+            _loc2_++;
          }
          if(AuthentificationManager.getInstance().loginValidationAction)
          {

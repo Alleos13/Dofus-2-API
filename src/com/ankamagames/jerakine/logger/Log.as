@@ -36,65 +36,65 @@ package com.ankamagames.jerakine.logger
       
       public static var exitIfNoConfigFile:Boolean = true;
       
-      public static function initFromString(xml:String) : void {
+      public static function initFromString(param1:String) : void {
          _manualInit = true;
          _initializing = true;
-         parseConfiguration(new XML(xml));
+         parseConfiguration(new XML(param1));
          LogLogger.activeLog(true);
       }
       
-      public static function getLogger(category:String) : Logger {
-         var xmlLoader:URLLoader = null;
-         var logger:LogLogger = null;
+      public static function getLogger(param1:String) : Logger {
+         var _loc2_:URLLoader = null;
+         var _loc3_:LogLogger = null;
          if(!_initializing)
          {
             _initializing = true;
             _tempTarget = new TemporaryBufferTarget();
             addTarget(_tempTarget);
-            xmlLoader = new URLLoader();
-            xmlLoader.addEventListener(Event.COMPLETE,completeHandler);
-            xmlLoader.addEventListener(IOErrorEvent.IO_ERROR,ioErrorHandler);
-            xmlLoader.addEventListener(SecurityErrorEvent.SECURITY_ERROR,securityErrorHandler);
+            _loc2_ = new URLLoader();
+            _loc2_.addEventListener(Event.COMPLETE,completeHandler);
+            _loc2_.addEventListener(IOErrorEvent.IO_ERROR,ioErrorHandler);
+            _loc2_.addEventListener(SecurityErrorEvent.SECURITY_ERROR,securityErrorHandler);
             try
             {
-               xmlLoader.load(new URLRequest("log4as.xml"));
+               _loc2_.load(new URLRequest("log4as.xml"));
             }
             catch(e:Error)
             {
             }
          }
-         if(_loggers[category] != null)
+         if(_loggers[param1] != null)
          {
-            return _loggers[category];
+            return _loggers[param1];
          }
-         logger = new LogLogger(category);
-         _loggers[category] = logger;
-         return logger;
+         _loc3_ = new LogLogger(param1);
+         _loggers[param1] = _loc3_;
+         return _loc3_;
       }
       
-      public static function addTarget(target:LoggingTarget) : void {
-         if(containsTarget(target))
+      public static function addTarget(param1:LoggingTarget) : void {
+         if(containsTarget(param1))
          {
             return;
          }
-         _dispatcher.addEventListener(LogEvent.LOG_EVENT,target.onLog);
-         _targets.push(target);
+         _dispatcher.addEventListener(LogEvent.LOG_EVENT,param1.onLog);
+         _targets.push(param1);
       }
       
-      private static function removeTarget(target:LoggingTarget) : void {
-         var index:int = _targets.indexOf(target);
-         if(index > -1)
+      private static function removeTarget(param1:LoggingTarget) : void {
+         var _loc2_:int = _targets.indexOf(param1);
+         if(_loc2_ > -1)
          {
-            _dispatcher.removeEventListener(LogEvent.LOG_EVENT,target.onLog);
-            _targets.splice(index,1);
+            _dispatcher.removeEventListener(LogEvent.LOG_EVENT,param1.onLog);
+            _targets.splice(_loc2_,1);
          }
       }
       
-      private static function containsTarget(target:LoggingTarget) : Boolean {
-         return _targets.indexOf(target) > -1;
+      private static function containsTarget(param1:LoggingTarget) : Boolean {
+         return _targets.indexOf(param1) > -1;
       }
       
-      private static function parseConfiguration(config:XML) : void {
+      private static function parseConfiguration(param1:XML) : void {
          var filter:XML = null;
          var target:XML = null;
          var allow:Boolean = false;
@@ -102,6 +102,7 @@ package com.ankamagames.jerakine.logger
          var x:XMLList = null;
          var moduleClass:Object = null;
          var targetInstance:LoggingTarget = null;
+         var config:XML = param1;
          var filters:Array = new Array();
          for each (filter in config..filter)
          {
@@ -128,7 +129,7 @@ package com.ankamagames.jerakine.logger
                moduleClass = getDefinitionByName(target.@module);
                targetInstance = new moduleClass as Class();
                targetInstance.filters = filters;
-               if((target.hasComplexContent()) && (targetInstance is ConfigurableLoggingTarget))
+               if((target.hasComplexContent()) && targetInstance is ConfigurableLoggingTarget)
                {
                   ConfigurableLoggingTarget(targetInstance).configure(target);
                }
@@ -147,7 +148,7 @@ package com.ankamagames.jerakine.logger
                continue;
             }
             continue;
-            if((target.hasComplexContent()) && (targetInstance is ConfigurableLoggingTarget))
+            if((target.hasComplexContent()) && targetInstance is ConfigurableLoggingTarget)
             {
                ConfigurableLoggingTarget(targetInstance).configure(target);
             }
@@ -164,22 +165,23 @@ package com.ankamagames.jerakine.logger
       }
       
       private static function flushBuffer() : void {
-         var bufferedEvent:LogEvent = null;
-         var bufferedEvents:Array = _tempTarget.getBuffer();
+         var _loc2_:LogEvent = null;
+         var _loc1_:Array = _tempTarget.getBuffer();
          removeTarget(_tempTarget);
-         for each (bufferedEvent in bufferedEvents)
+         for each (_loc2_ in _loc1_)
          {
-            _dispatcher.dispatchEvent(bufferedEvent.clone());
+            _dispatcher.dispatchEvent(_loc2_.clone());
          }
          _tempTarget.clearBuffer();
          _tempTarget = null;
       }
       
-      static function broadcastToTargets(event:LogEvent) : void {
-         _dispatcher.dispatchEvent(event);
+      static function broadcastToTargets(param1:LogEvent) : void {
+         _dispatcher.dispatchEvent(param1);
       }
       
-      private static function completeHandler(e:Event) : void {
+      private static function completeHandler(param1:Event) : void {
+         var e:Event = param1;
          try
          {
             parseConfiguration(new XML(URLLoader(e.target).data));
@@ -191,7 +193,7 @@ package com.ankamagames.jerakine.logger
          flushBuffer();
       }
       
-      private static function ioErrorHandler(ioe:IOErrorEvent) : void {
+      private static function ioErrorHandler(param1:IOErrorEvent) : void {
          if(_manualInit)
          {
             return;
@@ -200,7 +202,7 @@ package com.ankamagames.jerakine.logger
          configurationFileMissing();
       }
       
-      private static function securityErrorHandler(se:SecurityErrorEvent) : void {
+      private static function securityErrorHandler(param1:SecurityErrorEvent) : void {
          if(_manualInit)
          {
             return;

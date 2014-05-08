@@ -6,10 +6,10 @@ package com.ankamagames.berilia.types.event
    public class ParsorEvent extends Event
    {
       
-      public function ParsorEvent(uiDef:UiDefinition, error:Boolean) {
+      public function ParsorEvent(param1:UiDefinition, param2:Boolean) {
          super(Event.COMPLETE,false,false);
-         this._uiDef = uiDef;
-         this._error = error;
+         this._uiDef = param1;
+         this._error = param2;
       }
       
       private var _uiDef:UiDefinition;

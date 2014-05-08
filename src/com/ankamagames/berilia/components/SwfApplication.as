@@ -25,14 +25,14 @@ package com.ankamagames.berilia.components
       
       private var _app:DisplayObject;
       
-      public function set uri(v:Uri) : void {
-         if((!getUi()) || (!getUi().uiModule.trusted))
+      public function set uri(param1:Uri) : void {
+         if(!getUi() || !getUi().uiModule.trusted)
          {
             return;
          }
-         this._uri = v;
+         this._uri = param1;
          this.initLoader();
-         this._ldr.load(new URLRequest(v.normalizedUri));
+         this._ldr.load(new URLRequest(param1.normalizedUri));
       }
       
       public function get uri() : Uri {
@@ -45,19 +45,19 @@ package com.ankamagames.berilia.components
       
       public var loadProgressHandler:Function;
       
-      override public function set width(nW:Number) : void {
-         super.width = nW;
+      override public function set width(param1:Number) : void {
+         super.width = param1;
          if(this._app)
          {
-            this._app.width = nW;
+            this._app.width = param1;
          }
       }
       
-      override public function set height(nH:Number) : void {
-         super.height = nH;
+      override public function set height(param1:Number) : void {
+         super.height = param1;
          if(this._app)
          {
-            this._app.height = nH;
+            this._app.height = param1;
          }
       }
       
@@ -77,8 +77,10 @@ package com.ankamagames.berilia.components
          this.loadErrorHandler = null;
       }
       
-      public function bindApi(propertyName:String, value:*) : Boolean {
-         if((!getUi()) || (!getUi().uiModule.trusted))
+      public function bindApi(param1:String, param2:*) : Boolean {
+         var propertyName:String = param1;
+         var value:* = param2;
+         if(!getUi() || !getUi().uiModule.trusted)
          {
             return false;
          }
@@ -97,7 +99,7 @@ package com.ankamagames.berilia.components
          return true;
       }
       
-      function initLoader() : void {
+      private function initLoader() : void {
          if(!this._ldr)
          {
             this._ldr = new Loader();
@@ -111,7 +113,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function clearLoader() : void {
+      private function clearLoader() : void {
          if(this._ldr)
          {
             this._ldr.unloadAndStop();
@@ -122,7 +124,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function onInit(e:Event) : void {
+      private function onInit(param1:Event) : void {
          this._app = this._ldr.content;
          this._app.width = width;
          this._app.height = height;
@@ -134,22 +136,22 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function onMouseMouse(e:MouseEvent) : void {
-         stage.dispatchEvent(e);
+      private function onMouseMouse(param1:MouseEvent) : void {
+         stage.dispatchEvent(param1);
       }
       
-      function onProgress(e:ProgressEvent) : void {
+      private function onProgress(param1:ProgressEvent) : void {
          if(this.loadProgressHandler != null)
          {
-            this.loadProgressHandler(this,e);
+            this.loadProgressHandler(this,param1);
          }
       }
       
-      function onError(e:Event) : void {
+      private function onError(param1:Event) : void {
          this.clearLoader();
          if(this.loadErrorHandler != null)
          {
-            this.loadErrorHandler(this,e);
+            this.loadErrorHandler(this,param1);
          }
       }
    }

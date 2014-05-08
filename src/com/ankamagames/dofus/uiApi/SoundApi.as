@@ -26,16 +26,16 @@ package com.ankamagames.dofus.uiApi
       
       private var _module:UiModule;
       
-      public function set module(value:UiModule) : void {
-         this._module = value;
+      public function set module(param1:UiModule) : void {
+         this._module = param1;
       }
       
       public function destroy() : void {
          this._module = null;
       }
       
-      public function activateSounds(pActivate:Boolean) : void {
-         if(pActivate)
+      public function activateSounds(param1:Boolean) : void {
+         if(param1)
          {
             SoundManager.getInstance().setSoundOptions();
          }
@@ -55,30 +55,30 @@ package com.ankamagames.dofus.uiApi
          return RegConnectionManager.getInstance().socketAvailable;
       }
       
-      public function setBusVolume(pAudioBusId:uint, pVolume:uint) : void {
+      public function setBusVolume(param1:uint, param2:uint) : void {
       }
       
-      public function playSoundById(pSoundId:String) : void {
-         var loadingFrame:LoadingModuleFrame = Kernel.getWorker().getFrame(LoadingModuleFrame) as LoadingModuleFrame;
-         if(!loadingFrame)
+      public function playSoundById(param1:String) : void {
+         var _loc2_:LoadingModuleFrame = Kernel.getWorker().getFrame(LoadingModuleFrame) as LoadingModuleFrame;
+         if(!_loc2_)
          {
-            SoundManager.getInstance().manager.playUISound(pSoundId);
+            SoundManager.getInstance().manager.playUISound(param1);
          }
       }
       
-      public function fadeBusVolume(pBusId:uint, pFade:Number, pFadeTime:uint) : void {
+      public function fadeBusVolume(param1:uint, param2:Number, param3:uint) : void {
       }
       
-      public function playSound(pSound:uint) : void {
-         var possibleClothIds:Array = null;
-         var randomClothId:String = null;
-         var possibleBagIds:Array = null;
-         var randomBagId:String = null;
-         var possibleDropIds:Array = null;
-         var randomDropId:String = null;
-         var possibleTurnIds:Array = null;
-         var randomTurnId:String = null;
-         switch(pSound)
+      public function playSound(param1:uint) : void {
+         var _loc2_:Array = null;
+         var _loc3_:String = null;
+         var _loc4_:Array = null;
+         var _loc5_:String = null;
+         var _loc6_:Array = null;
+         var _loc7_:String = null;
+         var _loc8_:Array = null;
+         var _loc9_:String = null;
+         switch(param1)
          {
             case SoundTypeEnum.OK_BUTTON:
                this.playSoundById(UISoundEnum.OK_BUTTON);
@@ -153,9 +153,9 @@ package com.ankamagames.dofus.uiApi
                this.playSoundById(UISoundEnum.EQUIP_WRISTBAND);
                break;
             case SoundTypeEnum.EQUIPMENT_CLOTHES:
-               possibleClothIds = new Array(UISoundEnum.EQUIP_CLOTH_1,UISoundEnum.EQUIP_CLOTH_2,UISoundEnum.EQUIP_CLOTH_3,UISoundEnum.EQUIP_CLOTH_4,UISoundEnum.EQUIP_CLOTH_5);
-               randomClothId = possibleClothIds[Math.round(Math.random() * (possibleClothIds.length - 1))];
-               this.playSoundById(randomClothId);
+               _loc2_ = new Array(UISoundEnum.EQUIP_CLOTH_1,UISoundEnum.EQUIP_CLOTH_2,UISoundEnum.EQUIP_CLOTH_3,UISoundEnum.EQUIP_CLOTH_4,UISoundEnum.EQUIP_CLOTH_5);
+               _loc3_ = _loc2_[Math.round(Math.random() * (_loc2_.length-1))];
+               this.playSoundById(_loc3_);
                break;
             case SoundTypeEnum.EQUIPMENT_NECKLACE:
                this.playSoundById(UISoundEnum.EQUIP_NECKLACE);
@@ -170,14 +170,14 @@ package com.ankamagames.dofus.uiApi
                this.playSoundById(UISoundEnum.EQUIP_HAND);
                break;
             case SoundTypeEnum.MOVE_ITEM_TO_BAG:
-               possibleBagIds = new Array(UISoundEnum.ITEM_IN_INVENTORY_1,UISoundEnum.ITEM_IN_INVENTORY_2,UISoundEnum.ITEM_IN_INVENTORY_3);
-               randomBagId = possibleBagIds[Math.round(Math.random() * (possibleBagIds.length - 1))];
-               this.playSoundById(randomBagId);
+               _loc4_ = new Array(UISoundEnum.ITEM_IN_INVENTORY_1,UISoundEnum.ITEM_IN_INVENTORY_2,UISoundEnum.ITEM_IN_INVENTORY_3);
+               _loc5_ = _loc4_[Math.round(Math.random() * (_loc4_.length-1))];
+               this.playSoundById(_loc5_);
                break;
             case SoundTypeEnum.DROP_ITEM:
-               possibleDropIds = new Array(UISoundEnum.DROP_ITEM_1,UISoundEnum.DROP_ITEM_2);
-               randomDropId = possibleDropIds[Math.round(Math.random() * (possibleDropIds.length - 1))];
-               this.playSoundById(randomDropId);
+               _loc6_ = new Array(UISoundEnum.DROP_ITEM_1,UISoundEnum.DROP_ITEM_2);
+               _loc7_ = _loc6_[Math.round(Math.random() * (_loc6_.length-1))];
+               this.playSoundById(_loc7_);
                break;
             case SoundTypeEnum.GRIMOIRE_OPEN:
                this.playSoundById(UISoundEnum.OPEN_GRIMOIRE);
@@ -252,9 +252,9 @@ package com.ankamagames.dofus.uiApi
                this.playSoundById(UISoundEnum.CLOSE_DOCUMENT);
                break;
             case SoundTypeEnum.DOCUMENT_TURN_PAGE:
-               possibleTurnIds = new Array(UISoundEnum.TURN_PAGE_DOCUMENT_1,UISoundEnum.TURN_PAGE_DOCUMENT_2,UISoundEnum.TURN_PAGE_DOCUMENT_3,UISoundEnum.TURN_PAGE_DOCUMENT_4);
-               randomTurnId = possibleTurnIds[Math.round(Math.random() * (possibleTurnIds.length - 1))];
-               this.playSoundById(randomTurnId);
+               _loc8_ = new Array(UISoundEnum.TURN_PAGE_DOCUMENT_1,UISoundEnum.TURN_PAGE_DOCUMENT_2,UISoundEnum.TURN_PAGE_DOCUMENT_3,UISoundEnum.TURN_PAGE_DOCUMENT_4);
+               _loc9_ = _loc8_[Math.round(Math.random() * (_loc8_.length-1))];
+               this.playSoundById(_loc9_);
                break;
             case SoundTypeEnum.DOCUMENT_BACK_FIRST_PAGE:
                this.playSoundById(UISoundEnum.BACK_TO_BEGINNING_DOCUMENT);
@@ -286,8 +286,10 @@ package com.ankamagames.dofus.uiApi
          }
       }
       
-      public function playLookSound(pLook:String, pSoundType:uint) : void {
+      public function playLookSound(param1:String, param2:uint) : void {
          var look:String = null;
+         var pLook:String = param1;
+         var pSoundType:uint = param2;
          try
          {
             look = pLook.split("||")[0];
@@ -366,8 +368,8 @@ package com.ankamagames.dofus.uiApi
          SoundManager.getInstance().manager.playIntroMusic();
       }
       
-      public function switchIntroMusic(pFirstHarmonic:Boolean=true) : void {
-         SoundManager.getInstance().manager.switchIntroMusic(pFirstHarmonic);
+      public function switchIntroMusic(param1:Boolean=true) : void {
+         SoundManager.getInstance().manager.switchIntroMusic(param1);
       }
       
       public function stopIntroMusic() : void {

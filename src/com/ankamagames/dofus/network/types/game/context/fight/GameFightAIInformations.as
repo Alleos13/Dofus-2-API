@@ -19,8 +19,8 @@ package com.ankamagames.dofus.network.types.game.context.fight
          return 151;
       }
       
-      public function initGameFightAIInformations(contextualId:int=0, look:EntityLook=null, disposition:EntityDispositionInformations=null, teamId:uint=2, wave:uint=0, alive:Boolean=false, stats:GameFightMinimalStats=null) : GameFightAIInformations {
-         super.initGameFightFighterInformations(contextualId,look,disposition,teamId,wave,alive,stats);
+      public function initGameFightAIInformations(param1:int=0, param2:EntityLook=null, param3:EntityDispositionInformations=null, param4:uint=2, param5:Boolean=false, param6:GameFightMinimalStats=null) : GameFightAIInformations {
+         super.initGameFightFighterInformations(param1,param2,param3,param4,param5,param6);
          return this;
       }
       
@@ -28,20 +28,20 @@ package com.ankamagames.dofus.network.types.game.context.fight
          super.reset();
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameFightAIInformations(output);
+      override public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_GameFightAIInformations(param1);
       }
       
-      public function serializeAs_GameFightAIInformations(output:IDataOutput) : void {
-         super.serializeAs_GameFightFighterInformations(output);
+      public function serializeAs_GameFightAIInformations(param1:IDataOutput) : void {
+         super.serializeAs_GameFightFighterInformations(param1);
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameFightAIInformations(input);
+      override public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_GameFightAIInformations(param1);
       }
       
-      public function deserializeAs_GameFightAIInformations(input:IDataInput) : void {
-         super.deserialize(input);
+      public function deserializeAs_GameFightAIInformations(param1:IDataInput) : void {
+         super.deserialize(param1);
       }
    }
 }

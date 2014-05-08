@@ -27,8 +27,8 @@ package com.ankamagames.dofus.network.messages.game.tinsel
          return 6371;
       }
       
-      public function initTitleLostMessage(titleId:uint=0) : TitleLostMessage {
-         this.titleId = titleId;
+      public function initTitleLostMessage(param1:uint=0) : TitleLostMessage {
+         this.titleId = param1;
          this._isInitialized = true;
          return this;
       }
@@ -38,38 +38,38 @@ package com.ankamagames.dofus.network.messages.game.tinsel
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TitleLostMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_TitleLostMessage(param1);
       }
       
-      public function serializeAs_TitleLostMessage(output:IDataOutput) : void {
+      public function serializeAs_TitleLostMessage(param1:IDataOutput) : void {
          if(this.titleId < 0)
          {
             throw new Error("Forbidden value (" + this.titleId + ") on element titleId.");
          }
          else
          {
-            output.writeShort(this.titleId);
+            param1.writeShort(this.titleId);
             return;
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TitleLostMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_TitleLostMessage(param1);
       }
       
-      public function deserializeAs_TitleLostMessage(input:IDataInput) : void {
-         this.titleId = input.readShort();
+      public function deserializeAs_TitleLostMessage(param1:IDataInput) : void {
+         this.titleId = param1.readShort();
          if(this.titleId < 0)
          {
             throw new Error("Forbidden value (" + this.titleId + ") on element of TitleLostMessage.titleId.");

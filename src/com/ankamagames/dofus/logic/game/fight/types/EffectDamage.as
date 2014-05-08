@@ -3,11 +3,11 @@ package com.ankamagames.dofus.logic.game.fight.types
    public class EffectDamage extends Object
    {
       
-      public function EffectDamage(pEffectId:int, pElementId:int, pRandom:int) {
+      public function EffectDamage(param1:int, param2:int, param3:int) {
          super();
-         this._effectId = pEffectId;
-         this._element = pElementId;
-         this._random = pRandom;
+         this._effectId = param1;
+         this._element = param2;
+         this._random = param3;
       }
       
       private var _effectId:int;
@@ -23,14 +23,6 @@ package com.ankamagames.dofus.logic.game.fight.types
       public var minCriticalDamage:int;
       
       public var maxCriticalDamage:int;
-      
-      public var minErosionPercent:int;
-      
-      public var maxErosionPercent:int;
-      
-      public var minCriticalErosionPercent:int;
-      
-      public var maxCriticalErosionPercent:int;
       
       public var minErosionDamage:int;
       
@@ -72,38 +64,34 @@ package com.ankamagames.dofus.logic.game.fight.types
          return this._element;
       }
       
-      public function set element(pElement:int) : void {
-         this._element = pElement;
-      }
-      
       public function get random() : int {
          return this._random;
       }
       
-      public function applyDamageMultiplier(pMultiplier:Number) : void {
-         this.minDamage = this.minDamage * pMultiplier;
-         this.maxDamage = this.maxDamage * pMultiplier;
-         this.minCriticalDamage = this.minCriticalDamage * pMultiplier;
-         this.maxCriticalDamage = this.maxCriticalDamage * pMultiplier;
+      public function applyDamageMultiplier(param1:Number) : void {
+         this.minDamage = this.minDamage * param1;
+         this.maxDamage = this.maxDamage * param1;
+         this.minCriticalDamage = this.minCriticalDamage * param1;
+         this.maxCriticalDamage = this.maxCriticalDamage * param1;
       }
       
-      public function applyDamageModification(pModification:int) : void {
-         this.minDamage = this.minDamage + pModification;
+      public function applyDamageModification(param1:int) : void {
+         this.minDamage = this.minDamage + param1;
          if(this.minDamage < 0)
          {
             this.minDamage = 0;
          }
-         this.maxDamage = this.maxDamage + pModification;
+         this.maxDamage = this.maxDamage + param1;
          if(this.maxDamage < 0)
          {
             this.maxDamage = 0;
          }
-         this.minCriticalDamage = this.minCriticalDamage + pModification;
+         this.minCriticalDamage = this.minCriticalDamage + param1;
          if(this.minCriticalDamage < 0)
          {
             this.minCriticalDamage = 0;
          }
-         this.maxCriticalDamage = this.maxCriticalDamage + pModification;
+         this.maxCriticalDamage = this.maxCriticalDamage + param1;
          if(this.maxCriticalDamage < 0)
          {
             this.maxCriticalDamage = 0;

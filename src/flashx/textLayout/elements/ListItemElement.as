@@ -14,7 +14,7 @@ package flashx.textLayout.elements
       
       tlf_internal var _listNumberHint:int = 2.147483647E9;
       
-      override function get abstract() : Boolean {
+      override protected function get abstract() : Boolean {
          return false;
       }
       

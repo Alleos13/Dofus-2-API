@@ -29,131 +29,131 @@ package com.ankamagames.dofus.console.debug
       
       private var _chCurrent:ConsoleHandler;
       
-      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void {
-         var constants:XML = null;
-         var sBuffer:String = null;
-         var sClassName:String = null;
-         var aElement:Array = null;
-         var xmlKernelEvents:XML = null;
-         var sLang:String = null;
-         var urlRequest:URLRequest = null;
-         var ulLoader:URLLoader = null;
-         var xmlCpt:XML = null;
-         var aElements:Array = null;
-         var aCommonElements:Array = null;
-         var sClass:String = null;
-         var sSubBuffer:String = null;
-         var i:uint = 0;
-         var sIter:String = null;
-         var sSubIter:String = null;
-         var j:uint = 0;
-         var className:String = null;
-         var xmlDef:XML = null;
-         var bDontIgnore:* = false;
-         var accessor:XML = null;
-         this._chCurrent = console;
-         switch(cmd)
+      public function handle(param1:ConsoleHandler, param2:String, param3:Array) : void {
+         var _loc4_:XML = null;
+         var _loc5_:String = null;
+         var _loc6_:String = null;
+         var _loc7_:Array = null;
+         var _loc8_:XML = null;
+         var _loc9_:String = null;
+         var _loc10_:URLRequest = null;
+         var _loc11_:URLLoader = null;
+         var _loc12_:XML = null;
+         var _loc13_:Array = null;
+         var _loc14_:Array = null;
+         var _loc15_:String = null;
+         var _loc16_:String = null;
+         var _loc17_:uint = 0;
+         var _loc18_:String = null;
+         var _loc19_:String = null;
+         var _loc20_:uint = 0;
+         var _loc21_:String = null;
+         var _loc22_:XML = null;
+         var _loc23_:* = false;
+         var _loc24_:XML = null;
+         this._chCurrent = param1;
+         switch(param2)
          {
             case "kerneleventdtd":
-               xmlKernelEvents = describeType(getDefinitionByName("com.ankamagames.dofus.utils.KernelEventList"));
-               sBuffer = "";
-               aElement = new Array();
-               for each (constants in xmlKernelEvents..constant)
+               _loc8_ = describeType(getDefinitionByName("com.ankamagames.dofus.utils.KernelEventList"));
+               _loc5_ = "";
+               _loc7_ = new Array();
+               for each (_loc4_ in _loc8_..constant)
                {
-                  sClassName = "on" + constants..@type.split("::")[constants..@type.split("::").length - 1];
-                  sBuffer = sBuffer + ("&lt;!ELEMENT " + sClassName + " EMPTY &gt;\n");
-                  aElement.push(sClassName);
+                  _loc6_ = "on" + _loc4_..@type.split("::")[_loc4_..@type.split("::").length-1];
+                  _loc5_ = _loc5_ + ("&lt;!ELEMENT " + _loc6_ + " EMPTY &gt;\n");
+                  _loc7_.push(_loc6_);
                }
-               sBuffer = sBuffer + ("&lt;!ELEMENT SystemEvents (" + aElement.join(" | ") + ")* &gt;");
-               console.output(sBuffer);
+               _loc5_ = _loc5_ + ("&lt;!ELEMENT SystemEvents (" + _loc7_.join(" | ") + ")* &gt;");
+               param1.output(_loc5_);
                break;
             case "shortcutsdtd":
-               if(args[0] != null)
+               if(param3[0] != null)
                {
-                  sLang = args[0];
+                  _loc9_ = param3[0];
                }
-               if(!sLang)
+               if(!_loc9_)
                {
-                  urlRequest = new URLRequest(LangManager.getInstance().getEntry("config.binds.file"));
+                  _loc10_ = new URLRequest(LangManager.getInstance().getEntry("config.binds.file"));
                }
                else
                {
-                  urlRequest = new URLRequest(LangManager.getInstance().getEntry("config.binds.path.root") + "bind_" + sLang + ".xml");
+                  _loc10_ = new URLRequest(LangManager.getInstance().getEntry("config.binds.path.root") + "bind_" + _loc9_ + ".xml");
                }
-               _log.error(urlRequest.url);
-               ulLoader = new URLLoader();
-               ulLoader.addEventListener(Event.COMPLETE,this.onXmlLoadComplete);
-               ulLoader.addEventListener(IOErrorEvent.IO_ERROR,this.onXmlLoadError);
-               ulLoader.load(urlRequest);
+               _log.error(_loc10_.url);
+               _loc11_ = new URLLoader();
+               _loc11_.addEventListener(Event.COMPLETE,this.onXmlLoadComplete);
+               _loc11_.addEventListener(IOErrorEvent.IO_ERROR,this.onXmlLoadError);
+               _loc11_.load(_loc10_);
                break;
             case "componentdtd":
-               xmlCpt = describeType(getDefinitionByName("com.ankamagames.berilia.utils.ComponentList"));
-               args = new Array();
-               for each (constants in xmlCpt..constant)
+               _loc12_ = describeType(getDefinitionByName("com.ankamagames.berilia.utils.ComponentList"));
+               param3 = new Array();
+               for each (_loc4_ in _loc12_..constant)
                {
-                  args.push(constants..@type.split("::").join("."));
+                  param3.push(_loc4_..@type.split("::").join("."));
                }
             case "dtd":
-               aElements = new Array();
-               aCommonElements = new Array();
-               sBuffer = "";
-               sSubBuffer = "";
-               j = 0;
-               while(j < args.length)
+               _loc13_ = new Array();
+               _loc14_ = new Array();
+               _loc5_ = "";
+               _loc16_ = "";
+               _loc20_ = 0;
+               while(_loc20_ < param3.length)
                {
-                  if(args[j].indexOf(".") == -1)
+                  if(param3[_loc20_].indexOf(".") == -1)
                   {
-                     sClass = "com.ankamagames.berilia.components." + args[j];
+                     _loc15_ = "com.ankamagames.berilia.components." + param3[_loc20_];
                   }
                   else
                   {
-                     sClass = args[j];
+                     _loc15_ = param3[_loc20_];
                   }
-                  if(ApplicationDomain.currentDomain.hasDefinition(sClass))
+                  if(ApplicationDomain.currentDomain.hasDefinition(_loc15_))
                   {
-                     className = sClass.split(".")[sClass.split(".").length - 1];
-                     xmlDef = describeType(getDefinitionByName(sClass));
-                     aElement = new Array();
-                     for each (accessor in xmlDef..accessor)
+                     _loc21_ = _loc15_.split(".")[_loc15_.split(".").length-1];
+                     _loc22_ = describeType(getDefinitionByName(_loc15_));
+                     _loc7_ = new Array();
+                     for each (_loc24_ in _loc22_..accessor)
                      {
-                        bDontIgnore = !(accessor..@declaredBy.indexOf("ankamagames") == -1);
-                        i = 0;
-                        while(i < DONT_IGNORE.length)
+                        _loc23_ = !(_loc24_..@declaredBy.indexOf("ankamagames") == -1);
+                        _loc17_ = 0;
+                        while(_loc17_ < DONT_IGNORE.length)
                         {
-                           if(DONT_IGNORE[i] == accessor..@name)
+                           if(DONT_IGNORE[_loc17_] == _loc24_..@name)
                            {
-                              bDontIgnore = true;
+                              _loc23_ = true;
                               break;
                            }
-                           i++;
+                           _loc17_++;
                         }
-                        i = 0;
-                        while(i < IGNORE.length)
+                        _loc17_ = 0;
+                        while(_loc17_ < IGNORE.length)
                         {
-                           if(IGNORE[i] == accessor..@name)
+                           if(IGNORE[_loc17_] == _loc24_..@name)
                            {
-                              bDontIgnore = false;
+                              _loc23_ = false;
                               break;
                            }
-                           i++;
+                           _loc17_++;
                         }
-                        if((bDontIgnore) && ((accessor..@type == "String") || (accessor..@type == "Boolean") || (accessor..@type == "Number") || (accessor..@type == "uint") || (accessor..@type == "int")))
+                        if((_loc23_) && (_loc24_..@type == "String" || _loc24_..@type == "Boolean" || _loc24_..@type == "Number" || _loc24_..@type == "uint" || _loc24_..@type == "int"))
                         {
                            try
                            {
-                              if(aCommonElements[accessor..@name] == null)
+                              if(_loc14_[_loc24_..@name] == null)
                               {
-                                 aCommonElements[accessor..@name] = 
+                                 _loc14_[_loc24_..@name] = 
                                     {
-                                       "type":accessor..@type,
-                                       "ref":[className]
+                                       "type":_loc24_..@type,
+                                       "ref":[_loc21_]
                                     };
                               }
                               else
                               {
-                                 aCommonElements[accessor..@name].ref.push(className);
+                                 _loc14_[_loc24_..@name].ref.push(_loc21_);
                               }
-                              aElement[accessor..@name] = accessor..@type;
+                              _loc7_[_loc24_..@name] = _loc24_..@type;
                            }
                            catch(e:Error)
                            {
@@ -161,54 +161,54 @@ package com.ankamagames.dofus.console.debug
                            }
                         }
                      }
-                     aElements[className] = aElement;
+                     _loc13_[_loc21_] = _loc7_;
                   }
                   else
                   {
-                     console.output(sClass + " cannot be found.");
+                     param1.output(_loc15_ + " cannot be found.");
                   }
-                  j++;
+                  _loc20_++;
                }
-               sSubBuffer = "";
-               for (sIter in aCommonElements)
+               _loc16_ = "";
+               for (_loc18_ in _loc14_)
                {
-                  if(aCommonElements[sIter].ref.length > 1)
+                  if(_loc14_[_loc18_].ref.length > 1)
                   {
-                     sSubBuffer = sSubBuffer + ("&lt;!ELEMENT " + sIter + " (#PCDATA) &gt;&lt;!-- " + aCommonElements[sIter].type + ", used by " + aCommonElements[sIter].ref.join(", ") + " --&gt;\n");
+                     _loc16_ = _loc16_ + ("&lt;!ELEMENT " + _loc18_ + " (#PCDATA) &gt;&lt;!-- " + _loc14_[_loc18_].type + ", used by " + _loc14_[_loc18_].ref.join(", ") + " --&gt;\n");
                   }
                }
-               if(sSubBuffer.length)
+               if(_loc16_.length)
                {
-                  sBuffer = sBuffer + ("\n\n&lt;!--======================= Common Elements =======================--&gt;\n\n" + sSubBuffer);
+                  _loc5_ = _loc5_ + ("\n\n&lt;!--======================= Common Elements =======================--&gt;\n\n" + _loc16_);
                }
-               for (sIter in aElements)
+               for (_loc18_ in _loc13_)
                {
-                  sBuffer = sBuffer + ("\n\n&lt;!--======================= " + sIter + " Elements =======================--&gt;\n\n");
-                  aElement = new Array();
-                  for (sSubIter in aElements[sIter])
+                  _loc5_ = _loc5_ + ("\n\n&lt;!--======================= " + _loc18_ + " Elements =======================--&gt;\n\n");
+                  _loc7_ = new Array();
+                  for (_loc19_ in _loc13_[_loc18_])
                   {
-                     if(isNaN(Number(sSubIter)))
+                     if(isNaN(Number(_loc19_)))
                      {
-                        aElement.push(sSubIter + "?");
+                        _loc7_.push(_loc19_ + "?");
                      }
-                     if((!(aCommonElements[sSubIter] == null)) && (aCommonElements[sSubIter].ref.length == 1))
+                     if(!(_loc14_[_loc19_] == null) && _loc14_[_loc19_].ref.length == 1)
                      {
-                        sBuffer = sBuffer + ("&lt;!ELEMENT " + sSubIter + " (#PCDATA) &gt;&lt;!-- " + aElements[sIter][sSubIter] + " --&gt;\n");
+                        _loc5_ = _loc5_ + ("&lt;!ELEMENT " + _loc19_ + " (#PCDATA) &gt;&lt;!-- " + _loc13_[_loc18_][_loc19_] + " --&gt;\n");
                      }
                   }
-                  aElement.push("Size?");
-                  aElement.push("Anchors?");
-                  aElement.push("Events?");
-                  sBuffer = sBuffer + ("&lt;!ELEMENT " + sIter + " (" + aElement.join(" | ") + ")* &gt;\n");
-                  sBuffer = sBuffer + ("&lt;!ATTLIST " + sIter + "\n" + "\t\tname CDATA #IMPLIED\n" + "\t\tstrata (LOW | MEDIUM | HIGH | TOP | TOOLTIP) #IMPLIED &gt;");
+                  _loc7_.push("Size?");
+                  _loc7_.push("Anchors?");
+                  _loc7_.push("Events?");
+                  _loc5_ = _loc5_ + ("&lt;!ELEMENT " + _loc18_ + " (" + _loc7_.join(" | ") + ")* &gt;\n");
+                  _loc5_ = _loc5_ + ("&lt;!ATTLIST " + _loc18_ + "\n" + "\t\tname CDATA #IMPLIED\n" + "\t\tstrata (LOW | MEDIUM | HIGH | TOP | TOOLTIP) #IMPLIED &gt;");
                }
-               console.output(sBuffer);
+               param1.output(_loc5_);
                break;
          }
       }
       
-      public function getHelp(cmd:String) : String {
-         switch(cmd)
+      public function getHelp(param1:String) : String {
+         switch(param1)
          {
             case "kernelEventdtd":
                return "Generate the Kernel Events DTD.";
@@ -218,36 +218,38 @@ package com.ankamagames.dofus.console.debug
                return "Generate the Shortcuts DTD.";
             case "dtd":
                return "Generate a DTD for a given class or component.";
+            default:
+               return "No help for command \'" + param1 + "\'";
          }
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint=0, currentParams:Array=null) : Array {
+      public function getParamPossibilities(param1:String, param2:uint=0, param3:Array=null) : Array {
          return [];
       }
       
-      function parseShortcutXml(sXml:String) : void {
-         var shortcut:XML = null;
-         var xmlShortcuts:XML = XML(sXml);
-         var sBuffer:String = "";
-         var aElement:Array = new Array();
-         for each (shortcut in xmlShortcuts..bind)
+      private function parseShortcutXml(param1:String) : void {
+         var _loc5_:XML = null;
+         var _loc2_:XML = XML(param1);
+         var _loc3_:* = "";
+         var _loc4_:Array = new Array();
+         for each (_loc5_ in _loc2_..bind)
          {
-            sBuffer = sBuffer + ("&lt;!ELEMENT " + shortcut..@name + " EMPTY &gt;\n");
-            aElement.push(shortcut..@name);
+            _loc3_ = _loc3_ + ("&lt;!ELEMENT " + _loc5_..@name + " EMPTY &gt;\n");
+            _loc4_.push(_loc5_..@name);
          }
-         sBuffer = sBuffer + ("&lt;!ELEMENT Shortcuts (" + aElement.join(" | ") + ")* &gt;");
+         _loc3_ = _loc3_ + ("&lt;!ELEMENT Shortcuts (" + _loc4_.join(" | ") + ")* &gt;");
          if(this._chCurrent != null)
          {
-            this._chCurrent.output(sBuffer);
+            this._chCurrent.output(_loc3_);
          }
       }
       
-      public function onXmlLoadComplete(event:Event) : void {
-         var loader:URLLoader = URLLoader(event.target);
-         this.parseShortcutXml(loader.data);
+      public function onXmlLoadComplete(param1:Event) : void {
+         var _loc2_:URLLoader = URLLoader(param1.target);
+         this.parseShortcutXml(_loc2_.data);
       }
       
-      public function onXmlLoadError(event:Event) : void {
+      public function onXmlLoadError(param1:Event) : void {
          if(this._chCurrent != null)
          {
             this._chCurrent.output("IO Error : KeyboardBind file cannot be found");

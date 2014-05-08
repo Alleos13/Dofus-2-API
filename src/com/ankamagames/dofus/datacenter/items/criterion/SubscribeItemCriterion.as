@@ -7,12 +7,12 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class SubscribeItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function SubscribeItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      public function SubscribeItemCriterion(param1:String) {
+         super(param1);
       }
       
       override public function get text() : String {
-         if((_criterionValue == 1) && (_operator.text == ItemCriterionOperator.EQUAL) || (_criterionValue == 0) && (_operator.text == ItemCriterionOperator.DIFFERENT))
+         if(_criterionValue == 1 && _operator.text == ItemCriterionOperator.EQUAL || _criterionValue == 0 && _operator.text == ItemCriterionOperator.DIFFERENT)
          {
             return I18n.getUiText("ui.tooltip.beSubscirber");
          }
@@ -20,13 +20,13 @@ package com.ankamagames.dofus.datacenter.items.criterion
       }
       
       override public function clone() : IItemCriterion {
-         var clonedCriterion:SubscribeItemCriterion = new SubscribeItemCriterion(this.basicText);
-         return clonedCriterion;
+         var _loc1_:SubscribeItemCriterion = new SubscribeItemCriterion(this.basicText);
+         return _loc1_;
       }
       
-      override function getCriterion() : int {
-         var timeRemaining:Number = PlayerManager.getInstance().subscriptionEndDate;
-         if((timeRemaining > 0) || (PlayerManager.getInstance().hasRights))
+      override protected function getCriterion() : int {
+         var _loc1_:Number = PlayerManager.getInstance().subscriptionEndDate;
+         if(_loc1_ > 0 || (PlayerManager.getInstance().hasRights))
          {
             return 1;
          }

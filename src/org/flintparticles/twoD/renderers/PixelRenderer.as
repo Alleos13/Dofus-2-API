@@ -10,7 +10,7 @@ package org.flintparticles.twoD.renderers
          super(param1);
       }
       
-      override function drawParticle(param1:Particle2D) : void {
+      override protected function drawParticle(param1:Particle2D) : void {
          _bitmapData.setPixel32(Math.round(param1.x - _canvas.x),Math.round(param1.y - _canvas.y),param1.color);
       }
    }

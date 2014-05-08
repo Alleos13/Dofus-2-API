@@ -20,24 +20,24 @@ package com.ankamagames.dofus.internalDatacenter.jobs
       
       private static var _cache:Array = new Array();
       
-      public static function create(jobID:uint, useCache:Boolean=true) : JobWrapper {
-         var job:JobWrapper = null;
-         if((!_cache[jobID]) || (!useCache))
+      public static function create(param1:uint, param2:Boolean=true) : JobWrapper {
+         var _loc3_:JobWrapper = null;
+         if(!_cache[param1] || !param2)
          {
-            job = new JobWrapper();
-            job.jobId = jobID;
-            if(useCache)
+            _loc3_ = new JobWrapper();
+            _loc3_.jobId = param1;
+            if(param2)
             {
-               _cache[jobID] = job;
+               _cache[param1] = _loc3_;
             }
          }
          else
          {
-            job = _cache[jobID];
+            _loc3_ = _cache[param1];
          }
-         job.jobId = jobID;
-         job.gfxId = jobID;
-         return job;
+         _loc3_.jobId = param1;
+         _loc3_.gfxId = param1;
+         return _loc3_;
       }
       
       private var _uri:Uri;
@@ -74,7 +74,7 @@ package com.ankamagames.dofus.internalDatacenter.jobs
          return 0;
       }
       
-      public function set endTime(t:int) : void {
+      public function set endTime(param1:int) : void {
       }
       
       public function get timer() : int {
@@ -85,13 +85,13 @@ package com.ankamagames.dofus.internalDatacenter.jobs
          return true;
       }
       
-      public function addHolder(h:ISlotDataHolder) : void {
+      public function addHolder(param1:ISlotDataHolder) : void {
       }
       
-      public function removeHolder(h:ISlotDataHolder) : void {
+      public function removeHolder(param1:ISlotDataHolder) : void {
       }
       
-      public function set jobId(val:uint) : void {
+      public function set jobId(param1:uint) : void {
          this._id = this.jobId;
       }
       
@@ -99,8 +99,8 @@ package com.ankamagames.dofus.internalDatacenter.jobs
          return this._id;
       }
       
-      public function set gfxId(val:uint) : void {
-         this._gfxId = val;
+      public function set gfxId(param1:uint) : void {
+         this._gfxId = param1;
       }
       
       public function get gfxId() : uint {
@@ -111,9 +111,10 @@ package com.ankamagames.dofus.internalDatacenter.jobs
          return Job.getJobById(this._id);
       }
       
-      override flash_proxy function getProperty(name:*) : * {
+      override flash_proxy function getProperty(param1:*) : * {
          var l:* = undefined;
          var r:* = undefined;
+         var name:* = param1;
          if(isAttribute(name))
          {
             return this[name];
@@ -133,8 +134,8 @@ package com.ankamagames.dofus.internalDatacenter.jobs
          }
       }
       
-      override flash_proxy function hasProperty(name:*) : Boolean {
-         return isAttribute(name);
+      override flash_proxy function hasProperty(param1:*) : Boolean {
+         return isAttribute(param1);
       }
    }
 }

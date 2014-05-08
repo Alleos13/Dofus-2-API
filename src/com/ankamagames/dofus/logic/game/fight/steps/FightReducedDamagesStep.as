@@ -7,10 +7,10 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightReducedDamagesStep extends AbstractSequencable implements IFightStep
    {
       
-      public function FightReducedDamagesStep(fighterId:int, amount:int) {
+      public function FightReducedDamagesStep(param1:int, param2:int) {
          super();
-         this._fighterId = fighterId;
-         this._amount = amount;
+         this._fighterId = param1;
+         this._amount = param2;
       }
       
       private var _fighterId:int;

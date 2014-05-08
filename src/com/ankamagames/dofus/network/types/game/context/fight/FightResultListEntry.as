@@ -16,68 +16,47 @@ package com.ankamagames.dofus.network.types.game.context.fight
       
       public var outcome:uint = 0;
       
-      public var wave:uint = 0;
-      
       public var rewards:FightLoot;
       
       public function getTypeId() : uint {
          return 16;
       }
       
-      public function initFightResultListEntry(outcome:uint=0, wave:uint=0, rewards:FightLoot=null) : FightResultListEntry {
-         this.outcome = outcome;
-         this.wave = wave;
-         this.rewards = rewards;
+      public function initFightResultListEntry(param1:uint=0, param2:FightLoot=null) : FightResultListEntry {
+         this.outcome = param1;
+         this.rewards = param2;
          return this;
       }
       
       public function reset() : void {
          this.outcome = 0;
-         this.wave = 0;
          this.rewards = new FightLoot();
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_FightResultListEntry(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_FightResultListEntry(param1);
       }
       
-      public function serializeAs_FightResultListEntry(output:IDataOutput) : void {
-         output.writeShort(this.outcome);
-         if((this.wave < 0) || (this.wave > 4.294967295E9))
-         {
-            throw new Error("Forbidden value (" + this.wave + ") on element wave.");
-         }
-         else
-         {
-            output.writeUnsignedInt(this.wave);
-            this.rewards.serializeAs_FightLoot(output);
-            return;
-         }
+      public function serializeAs_FightResultListEntry(param1:IDataOutput) : void {
+         param1.writeShort(this.outcome);
+         this.rewards.serializeAs_FightLoot(param1);
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_FightResultListEntry(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_FightResultListEntry(param1);
       }
       
-      public function deserializeAs_FightResultListEntry(input:IDataInput) : void {
-         this.outcome = input.readShort();
+      public function deserializeAs_FightResultListEntry(param1:IDataInput) : void {
+         this.outcome = param1.readShort();
          if(this.outcome < 0)
          {
             throw new Error("Forbidden value (" + this.outcome + ") on element of FightResultListEntry.outcome.");
          }
          else
          {
-            this.wave = input.readUnsignedInt();
-            if((this.wave < 0) || (this.wave > 4.294967295E9))
-            {
-               throw new Error("Forbidden value (" + this.wave + ") on element of FightResultListEntry.wave.");
-            }
-            else
-            {
-               this.rewards = new FightLoot();
-               this.rewards.deserialize(input);
-               return;
-            }
+            this.rewards = new FightLoot();
+            this.rewards.deserialize(param1);
+            return;
          }
       }
    }

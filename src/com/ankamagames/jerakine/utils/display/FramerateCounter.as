@@ -34,8 +34,8 @@ package com.ankamagames.jerakine.utils.display
          return _refreshRate;
       }
       
-      public static function set refreshRate(value:uint) : void {
-         _refreshRate = value;
+      public static function set refreshRate(param1:uint) : void {
+         _refreshRate = param1;
       }
       
       public static function get frameRate() : uint {
@@ -46,8 +46,8 @@ package com.ankamagames.jerakine.utils.display
          return _delayBetweenFrames;
       }
       
-      public static function addListener(listener:IFramerateListener) : void {
-         _listeners.push(listener);
+      public static function addListener(param1:IFramerateListener) : void {
+         _listeners.push(param1);
          if(!_enterFrameListened)
          {
             EnterFrameDispatcher.addEventListener(onEnterFrame,"FramerateCounter",0);
@@ -55,11 +55,11 @@ package com.ankamagames.jerakine.utils.display
          }
       }
       
-      public static function removeListener(listener:IFramerateListener) : void {
-         var index:int = _listeners.indexOf(listener);
-         if(index > -1)
+      public static function removeListener(param1:IFramerateListener) : void {
+         var _loc2_:int = _listeners.indexOf(param1);
+         if(_loc2_ > -1)
          {
-            _listeners.splice(index,1);
+            _listeners.splice(_loc2_,1);
          }
          if(_listeners.length <= 0)
          {
@@ -69,24 +69,24 @@ package com.ankamagames.jerakine.utils.display
       }
       
       private static function dispatchFps() : void {
-         var listener:IFramerateListener = null;
-         for each (listener in _listeners)
+         var _loc1_:IFramerateListener = null;
+         for each (_loc1_ in _listeners)
          {
-            listener.onFps(_frameRate);
+            _loc1_.onFps(_frameRate);
          }
       }
       
-      private static function onEnterFrame(e:Event) : void {
+      private static function onEnterFrame(param1:Event) : void {
          _framesCountSinceThreshold++;
-         var now:uint = getTimer();
-         _delayBetweenFrames = now - _lastFrame;
-         _lastFrame = now;
-         var delay:uint = now - _lastThreshold;
-         if(delay > _refreshRate)
+         var _loc2_:uint = getTimer();
+         _delayBetweenFrames = _loc2_ - _lastFrame;
+         _lastFrame = _loc2_;
+         var _loc3_:uint = _loc2_ - _lastThreshold;
+         if(_loc3_ > _refreshRate)
          {
-            _frameRate = 1000 * _framesCountSinceThreshold / delay;
+            _frameRate = 1000 * _framesCountSinceThreshold / _loc3_;
             _framesCountSinceThreshold = 0;
-            _lastThreshold = now;
+            _lastThreshold = _loc2_;
             dispatchFps();
          }
       }

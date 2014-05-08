@@ -9,9 +9,9 @@ package com.ankamagames.atouin.data.map
    public class Layer extends Object
    {
       
-      public function Layer(map:Map) {
+      public function Layer(param1:Map) {
          super();
-         this._map = map;
+         this._map = param1;
       }
       
       public static const LAYER_GROUND:uint = 0;
@@ -38,9 +38,11 @@ package com.ankamagames.atouin.data.map
          return this._map;
       }
       
-      public function fromRaw(raw:IDataInput, mapVersion:int) : void {
+      public function fromRaw(param1:IDataInput, param2:int) : void {
          var i:int = 0;
          var c:Cell = null;
+         var raw:IDataInput = param1;
+         var mapVersion:int = param2;
          try
          {
             this.layerId = raw.readInt();

@@ -36,26 +36,28 @@ package com.ankamagames.dofus.logic.game.common.frames
          return true;
       }
       
-      public function process(msg:Message) : Boolean {
-         var sepract:SetEnablePVPRequestAction = null;
-         var seprmsg:SetEnablePVPRequestMessage = null;
-         var arumsg:AlignmentRankUpdateMessage = null;
+      public function process(param1:Message) : Boolean {
+         var _loc2_:SetEnablePVPRequestAction = null;
+         var _loc3_:SetEnablePVPRequestMessage = null;
+         var _loc4_:AlignmentRankUpdateMessage = null;
          switch(true)
          {
-            case msg is SetEnablePVPRequestAction:
-               sepract = msg as SetEnablePVPRequestAction;
-               seprmsg = new SetEnablePVPRequestMessage();
-               seprmsg.initSetEnablePVPRequestMessage(sepract.enable);
-               ConnectionsHandler.getConnection().send(seprmsg);
+            case param1 is SetEnablePVPRequestAction:
+               _loc2_ = param1 as SetEnablePVPRequestAction;
+               _loc3_ = new SetEnablePVPRequestMessage();
+               _loc3_.initSetEnablePVPRequestMessage(_loc2_.enable);
+               ConnectionsHandler.getConnection().send(_loc3_);
                return true;
-            case msg is AlignmentRankUpdateMessage:
-               arumsg = msg as AlignmentRankUpdateMessage;
-               this._alignmentRank = arumsg.alignmentRank;
-               if(arumsg.verbose)
+            case param1 is AlignmentRankUpdateMessage:
+               _loc4_ = param1 as AlignmentRankUpdateMessage;
+               this._alignmentRank = _loc4_.alignmentRank;
+               if(_loc4_.verbose)
                {
-                  KernelEventsManager.getInstance().processCallback(AlignmentHookList.AlignmentRankUpdate,arumsg.alignmentRank);
+                  KernelEventsManager.getInstance().processCallback(AlignmentHookList.AlignmentRankUpdate,_loc4_.alignmentRank);
                }
                return true;
+            default:
+               return false;
          }
       }
       

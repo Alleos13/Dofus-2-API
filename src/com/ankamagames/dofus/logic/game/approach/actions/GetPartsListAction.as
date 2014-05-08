@@ -10,8 +10,8 @@ package com.ankamagames.dofus.logic.game.approach.actions
       }
       
       public static function create() : GetPartsListAction {
-         var a:GetPartsListAction = new GetPartsListAction();
-         return a;
+         var _loc1_:GetPartsListAction = new GetPartsListAction();
+         return _loc1_;
       }
    }
 }

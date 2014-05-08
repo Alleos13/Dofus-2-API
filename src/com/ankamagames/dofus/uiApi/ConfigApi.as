@@ -12,7 +12,6 @@ package com.ankamagames.dofus.uiApi
    import com.ankamagames.atouin.Atouin;
    import com.ankamagames.jerakine.types.events.PropertyChangeEvent;
    import com.ankamagames.tiphon.engine.Tiphon;
-   import flash.geom.Point;
    import flash.display.DisplayObject;
    import com.ankamagames.berilia.managers.SecureCenter;
    import flash.utils.getQualifiedClassName;
@@ -37,8 +36,8 @@ package com.ankamagames.dofus.uiApi
       
       private var _module:UiModule;
       
-      public function set module(value:UiModule) : void {
-         this._module = value;
+      public function set module(param1:UiModule) : void {
+         this._module = param1;
       }
       
       public function destroy() : void {
@@ -46,54 +45,54 @@ package com.ankamagames.dofus.uiApi
          _init = false;
       }
       
-      public function getConfigProperty(configModuleName:String, propertyName:String) : * {
-         var target:* = OptionManager.getOptionManager(configModuleName);
-         if(!target)
+      public function getConfigProperty(param1:String, param2:String) : * {
+         var _loc3_:* = OptionManager.getOptionManager(param1);
+         if(!_loc3_)
          {
-            throw new ApiError("Config module [" + configModuleName + "] does not exist.");
+            throw new ApiError("Config module [" + param1 + "] does not exist.");
          }
          else
          {
-            if((target) && (this.isSimpleConfigType(target[propertyName])))
+            if((_loc3_) && (this.isSimpleConfigType(_loc3_[param2])))
             {
-               return target[propertyName];
+               return _loc3_[param2];
             }
             return null;
          }
       }
       
-      public function setConfigProperty(configModuleName:String, propertyName:String, value:*) : void {
-         var target:OptionManager = OptionManager.getOptionManager(configModuleName);
-         if(!target)
+      public function setConfigProperty(param1:String, param2:String, param3:*) : void {
+         var _loc4_:OptionManager = OptionManager.getOptionManager(param1);
+         if(!_loc4_)
          {
-            throw new ApiError("Config module [" + configModuleName + "] does not exist.");
+            throw new ApiError("Config module [" + param1 + "] does not exist.");
          }
          else
          {
-            if(this.isSimpleConfigType(target.getDefaultValue(propertyName)))
+            if(this.isSimpleConfigType(_loc4_.getDefaultValue(param2)))
             {
-               target[propertyName] = value;
+               _loc4_[param2] = param3;
                return;
             }
-            throw new ApiError(propertyName + " cannot be set in config module " + configModuleName + ".");
+            throw new ApiError(param2 + " cannot be set in config module " + param1 + ".");
          }
       }
       
-      public function resetConfigProperty(configModuleName:String, propertyName:String) : void {
-         if(!OptionManager.getOptionManager(configModuleName))
+      public function resetConfigProperty(param1:String, param2:String) : void {
+         if(!OptionManager.getOptionManager(param1))
          {
-            throw ApiError("Config module [" + configModuleName + "] does not exist.");
+            throw ApiError("Config module [" + param1 + "] does not exist.");
          }
          else
          {
-            OptionManager.getOptionManager(configModuleName).restaureDefaultValue(propertyName);
+            OptionManager.getOptionManager(param1).restaureDefaultValue(param2);
             return;
          }
       }
       
-      public function createOptionManager(name:String) : OptionManager {
-         var om:OptionManager = new OptionManager(name);
-         return om;
+      public function createOptionManager(param1:String) : OptionManager {
+         var _loc2_:OptionManager = new OptionManager(param1);
+         return _loc2_;
       }
       
       public function getAllThemes() : Array {
@@ -104,26 +103,26 @@ package com.ankamagames.dofus.uiApi
          return ThemeManager.getInstance().currentTheme;
       }
       
-      public function isOptionalFeatureActive(id:int) : Boolean {
-         var miscFrame:MiscFrame = Kernel.getWorker().getFrame(MiscFrame) as MiscFrame;
-         return miscFrame.isOptionalFeatureActive(id);
+      public function isOptionalFeatureActive(param1:int) : Boolean {
+         var _loc2_:MiscFrame = Kernel.getWorker().getFrame(MiscFrame) as MiscFrame;
+         return _loc2_.isOptionalFeatureActive(param1);
       }
       
-      public function getServerConstant(id:int) : Object {
-         return MiscFrame.getInstance().getServerSessionConstant(id);
+      public function getServerConstant(param1:int) : Object {
+         return MiscFrame.getInstance().getServerSessionConstant(param1);
       }
       
-      public function getExternalNotificationOptions(pNotificationType:int) : Object {
-         return ExternalNotificationManager.getInstance().getNotificationOptions(pNotificationType);
+      public function getExternalNotificationOptions(param1:int) : Object {
+         return ExternalNotificationManager.getInstance().getNotificationOptions(param1);
       }
       
-      public function setExternalNotificationOptions(pNotificationType:int, pOptions:Object) : void {
-         ExternalNotificationManager.getInstance().setNotificationOptions(pNotificationType,pOptions);
+      public function setExternalNotificationOptions(param1:int, param2:Object) : void {
+         ExternalNotificationManager.getInstance().setNotificationOptions(param1,param2);
       }
       
-      public function setDebugMode(activate:Boolean) : void {
-         DofusErrorHandler.manualActivation = activate;
-         if(activate)
+      public function setDebugMode(param1:Boolean) : void {
+         DofusErrorHandler.manualActivation = param1;
+         if(param1)
          {
             DofusErrorHandler.activateDebugMode();
          }
@@ -148,53 +147,56 @@ package com.ankamagames.dofus.uiApi
          Tiphon.getInstance().options.addEventListener(PropertyChangeEvent.PROPERTY_CHANGED,this.onPropertyChanged);
       }
       
-      private function isSimpleConfigType(value:*) : Boolean {
+      private function isSimpleConfigType(param1:*) : Boolean {
          switch(true)
          {
-            case value is int:
-            case value is uint:
-            case value is Number:
-            case value is Boolean:
-            case value is String:
-            case value is Point:
+            case param1 is int:
+            case param1 is uint:
+            case param1 is Number:
+            case param1 is Boolean:
+            case param1 is String:
                return true;
+            default:
+               return false;
          }
       }
       
-      private function onPropertyChanged(e:PropertyChangeEvent) : void {
-         var className:String = null;
-         var newValue:* = e.propertyValue;
-         if(newValue is DisplayObject)
+      private function onPropertyChanged(param1:PropertyChangeEvent) : void {
+         var _loc4_:String = null;
+         var _loc2_:* = param1.propertyValue;
+         if(_loc2_ is DisplayObject)
          {
-            newValue = SecureCenter.secure(newValue,this._module.trusted);
+            _loc2_ = SecureCenter.secure(_loc2_,this._module.trusted);
          }
-         var oldValue:* = e.propertyOldValue;
-         if(oldValue is DisplayObject)
+         var _loc3_:* = param1.propertyOldValue;
+         if(_loc3_ is DisplayObject)
          {
-            newValue = SecureCenter.secure(newValue,this._module.trusted);
+            _loc2_ = SecureCenter.secure(_loc2_,this._module.trusted);
          }
          switch(true)
          {
-            case e.watchedClassInstance is AtouinOptions:
-               className = "atouin";
+            case param1.watchedClassInstance is AtouinOptions:
+               _loc4_ = "atouin";
                break;
-            case e.watchedClassInstance is DofusOptions:
-               className = "dofus";
+            case param1.watchedClassInstance is DofusOptions:
+               _loc4_ = "dofus";
                break;
-            case e.watchedClassInstance is BeriliaOptions:
-               className = "berilia";
+            case param1.watchedClassInstance is BeriliaOptions:
+               _loc4_ = "berilia";
                break;
-            case e.watchedClassInstance is TiphonOptions:
-               className = "tiphon";
+            case param1.watchedClassInstance is TiphonOptions:
+               _loc4_ = "tiphon";
                break;
-            case e.watchedClassInstance is TubulOptions:
-               className = "soundmanager";
+            case param1.watchedClassInstance is TubulOptions:
+               _loc4_ = "soundmanager";
                break;
-            case e.watchedClassInstance is ChatOptions:
-               className = "chat";
+            case param1.watchedClassInstance is ChatOptions:
+               _loc4_ = "chat";
                break;
+            default:
+               _loc4_ = getQualifiedClassName(param1.watchedClassInstance);
          }
-         KernelEventsManager.getInstance().processCallback(HookList.ConfigPropertyChange,className,e.propertyName,newValue,oldValue);
+         KernelEventsManager.getInstance().processCallback(HookList.ConfigPropertyChange,_loc4_,param1.propertyName,_loc2_,_loc3_);
       }
    }
 }

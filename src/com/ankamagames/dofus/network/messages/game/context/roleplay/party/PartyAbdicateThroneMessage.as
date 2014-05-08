@@ -26,9 +26,9 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          return 6080;
       }
       
-      public function initPartyAbdicateThroneMessage(partyId:uint=0, playerId:uint=0) : PartyAbdicateThroneMessage {
-         super.initAbstractPartyMessage(partyId);
-         this.playerId = playerId;
+      public function initPartyAbdicateThroneMessage(param1:uint=0, param2:uint=0) : PartyAbdicateThroneMessage {
+         super.initAbstractPartyMessage(param1);
+         this.playerId = param2;
          this._isInitialized = true;
          return this;
       }
@@ -39,40 +39,40 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PartyAbdicateThroneMessage(output);
+      override public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_PartyAbdicateThroneMessage(param1);
       }
       
-      public function serializeAs_PartyAbdicateThroneMessage(output:IDataOutput) : void {
-         super.serializeAs_AbstractPartyMessage(output);
+      public function serializeAs_PartyAbdicateThroneMessage(param1:IDataOutput) : void {
+         super.serializeAs_AbstractPartyMessage(param1);
          if(this.playerId < 0)
          {
             throw new Error("Forbidden value (" + this.playerId + ") on element playerId.");
          }
          else
          {
-            output.writeInt(this.playerId);
+            param1.writeInt(this.playerId);
             return;
          }
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PartyAbdicateThroneMessage(input);
+      override public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_PartyAbdicateThroneMessage(param1);
       }
       
-      public function deserializeAs_PartyAbdicateThroneMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.playerId = input.readInt();
+      public function deserializeAs_PartyAbdicateThroneMessage(param1:IDataInput) : void {
+         super.deserialize(param1);
+         this.playerId = param1.readInt();
          if(this.playerId < 0)
          {
             throw new Error("Forbidden value (" + this.playerId + ") on element of PartyAbdicateThroneMessage.playerId.");

@@ -6,10 +6,10 @@ package com.ankamagames.berilia.types.event
    public class UiRenderAskEvent extends Event
    {
       
-      public function UiRenderAskEvent(name:String, uiData:UiData) {
+      public function UiRenderAskEvent(param1:String, param2:UiData) {
          super(UI_RENDER_ASK,false,false);
-         this._uiData = uiData;
-         this._name = name;
+         this._uiData = param2;
+         this._name = param1;
       }
       
       public static const UI_RENDER_ASK:String = "UiRenderAsk";

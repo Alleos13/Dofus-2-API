@@ -14,11 +14,11 @@ package com.ankamagames.tubul.types
    public class VolumeFadeEffect extends EventDispatcher
    {
       
-      public function VolumeFadeEffect(pBeginningFadeValue:Number=0, pEndingFadeValue:Number=1, pFadeTime:Number=0) {
+      public function VolumeFadeEffect(param1:Number=0, param2:Number=1, param3:Number=0) {
          super();
-         this._beginningValue = pBeginningFadeValue;
-         this._endingValue = pEndingFadeValue;
-         this._timeFade = pFadeTime;
+         this._beginningValue = param1;
+         this._endingValue = param2;
+         this._timeFade = param3;
       }
       
       protected static const _log:Logger = Log.getLogger(getQualifiedClassName(VolumeFadeEffect));
@@ -55,33 +55,33 @@ package com.ankamagames.tubul.types
          return this._soundSource;
       }
       
-      public function attachToSoundSource(pISoundSource:ISoundController) : void {
-         this._soundSource = pISoundSource;
+      public function attachToSoundSource(param1:ISoundController) : void {
+         this._soundSource = param1;
       }
       
-      public function start(pUseBeginningValue:Boolean=true) : void {
-         var logInfo:String = null;
+      public function start(param1:Boolean=true) : void {
+         var _loc2_:String = null;
          if(this.soundSource == null)
          {
             _log.warn("L\'effet de fade ne peut être lancé car le son auquel il est attaché ne peut être trouvé");
             return;
          }
-         if((this._endingValue < 0) || (this._endingValue > 1))
+         if(this._endingValue < 0 || this._endingValue > 1)
          {
             _log.warn("Le paramètre \'endingValue\' n\'est pas valide !");
             return;
          }
          if(this.soundSource is AudioBus)
          {
-            logInfo = "Fade sur le bus " + (this.soundSource as AudioBus).name;
+            _loc2_ = "Fade sur le bus " + (this.soundSource as AudioBus).name;
          }
          if(this.soundSource is MP3SoundDofus)
          {
-            logInfo = "Fade sur le son " + (this.soundSource as MP3SoundDofus).id + "(" + (this.soundSource as MP3SoundDofus).uri.fileName + ")";
+            _loc2_ = "Fade sur le son " + (this.soundSource as MP3SoundDofus).id + "(" + (this.soundSource as MP3SoundDofus).uri.fileName + ")";
          }
-         _log.warn(logInfo + " / => " + this._endingValue + " en " + this._timeFade + " sec.");
+         _log.warn(_loc2_ + " / => " + this._endingValue + " en " + this._timeFade + " sec.");
          this.clearTween();
-         if((pUseBeginningValue) && (this._beginningValue >= 0))
+         if((param1) && this._beginningValue >= 0)
          {
             this.soundSource.currentFadeVolume = this._beginningValue;
          }
@@ -99,16 +99,16 @@ package com.ankamagames.tubul.types
          this.onFadeEnd();
       }
       
-      public function reset(pBeginningFadeValue:Number, pEndingFadeValue:Number, pFadeTime:Number) : void {
+      public function reset(param1:Number, param2:Number, param3:Number) : void {
          this.clearTween();
-         this._beginningValue = pBeginningFadeValue;
-         this._endingValue = pEndingFadeValue;
-         this._timeFade = pFadeTime;
+         this._beginningValue = param1;
+         this._endingValue = param2;
+         this._timeFade = param3;
       }
       
       public function clone() : VolumeFadeEffect {
-         var fade:VolumeFadeEffect = new VolumeFadeEffect(this._beginningValue,this._endingValue,this._timeFade);
-         return fade;
+         var _loc1_:VolumeFadeEffect = new VolumeFadeEffect(this._beginningValue,this._endingValue,this._timeFade);
+         return _loc1_;
       }
       
       private function clearTween() : void {
@@ -121,9 +121,9 @@ package com.ankamagames.tubul.types
       }
       
       private function onFadeEnd() : void {
-         var e:FadeEvent = new FadeEvent(FadeEvent.COMPLETE);
-         e.soundSource = this.soundSource;
-         dispatchEvent(e);
+         var _loc1_:FadeEvent = new FadeEvent(FadeEvent.COMPLETE);
+         _loc1_.soundSource = this.soundSource;
+         dispatchEvent(_loc1_);
          this.clearTween();
       }
    }

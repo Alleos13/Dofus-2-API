@@ -16,7 +16,6 @@ package com.ankamagames.dofus.logic.game.common.managers
    import flash.geom.Point;
    import com.ankamagames.dofus.internalDatacenter.mount.MountData;
    import com.ankamagames.dofus.datacenter.world.WorldMap;
-   import com.ankamagames.dofus.network.enums.CharacterInventoryPositionEnum;
    import com.ankamagames.dofus.datacenter.breeds.Breed;
    import com.ankamagames.dofus.misc.EntityLookAdapter;
    import com.ankamagames.tiphon.types.look.TiphonEntityLook;
@@ -63,10 +62,10 @@ package com.ankamagames.dofus.logic.game.common.managers
          return 0;
       }
       
-      public function set id(id:int) : void {
+      public function set id(param1:int) : void {
          if(this.infos)
          {
-            this.infos.id = id;
+            this.infos.id = param1;
          }
       }
       
@@ -228,34 +227,14 @@ package com.ankamagames.dofus.logic.game.common.managers
          return EntitiesLooksManager.getInstance().isIncarnation(this.id);
       }
       
-      public function get isMutated() : Boolean {
-         var l:* = 0;
-         var i:* = 0;
-         var rpBuffs:Vector.<ItemWrapper> = InventoryManager.getInstance().inventory.getView("roleplayBuff").content;
-         if(rpBuffs)
-         {
-            l = rpBuffs.length;
-            i = 0;
-            while(i < l)
-            {
-               if((rpBuffs[i]) && (rpBuffs[i].typeId == 27) && (rpBuffs[i].position == CharacterInventoryPositionEnum.INVENTORY_POSITION_MUTATION))
-               {
-                  return true;
-               }
-               i++;
-            }
-         }
-         return false;
-      }
-      
-      public function set isPartyLeader(b:Boolean) : void {
+      public function set isPartyLeader(param1:Boolean) : void {
          if(!this.isInParty)
          {
             this._isPartyLeader = false;
          }
          else
          {
-            this._isPartyLeader = b;
+            this._isPartyLeader = param1;
          }
       }
       
@@ -264,20 +243,20 @@ package com.ankamagames.dofus.logic.game.common.managers
       }
       
       public function get isGhost() : Boolean {
-         var isGhost:* = false;
-         var breed:Breed = null;
-         var look:TiphonEntityLook = EntityLookAdapter.fromNetwork(this.infos.entityLook);
-         var isCreature:Boolean = false;
-         var breeds:Array = Breed.getBreeds();
-         for each (breed in breeds)
+         var _loc1_:* = false;
+         var _loc5_:Breed = null;
+         var _loc2_:TiphonEntityLook = EntityLookAdapter.fromNetwork(this.infos.entityLook);
+         var _loc3_:* = false;
+         var _loc4_:Array = Breed.getBreeds();
+         for each (_loc5_ in _loc4_)
          {
-            if(breed.creatureBonesId == look.getBone())
+            if(_loc5_.creatureBonesId == _loc2_.getBone())
             {
-               isCreature = true;
+               _loc3_ = true;
                break;
             }
          }
-         return (!look.getSubEntity(SubEntityBindingPointCategoryEnum.HOOK_POINT_CATEGORY_MOUNT_DRIVER,0)) && (!isCreature) && (!(look.getBone() == 1)) && (!this.isIncarnation);
+         return !_loc2_.getSubEntity(SubEntityBindingPointCategoryEnum.HOOK_POINT_CATEGORY_MOUNT_DRIVER,0) && !_loc3_ && !(_loc2_.getBone() == 1) && !this.isIncarnation;
       }
       
       public function get artworkId() : uint {
@@ -288,8 +267,8 @@ package com.ankamagames.dofus.logic.game.common.managers
          return this._followingPlayerId;
       }
       
-      public function set followingPlayerId(pPlayerId:int) : void {
-         this._followingPlayerId = pPlayerId;
+      public function set followingPlayerId(param1:int) : void {
+         this._followingPlayerId = param1;
       }
       
       public function destroy() : void {
@@ -311,15 +290,15 @@ package com.ankamagames.dofus.logic.game.common.managers
       public function removeSummonedCreature() : void {
          if(this.currentSummonedCreature > 0)
          {
-            this.currentSummonedCreature = this.currentSummonedCreature - 1;
+            this.currentSummonedCreature = this.currentSummonedCreature-1;
          }
       }
       
-      function getMaxSummonedCreature() : uint {
+      private function getMaxSummonedCreature() : uint {
          return this.characteristics.summonableCreaturesBoost.base + this.characteristics.summonableCreaturesBoost.objectsAndMountBonus + this.characteristics.summonableCreaturesBoost.alignGiftBonus + this.characteristics.summonableCreaturesBoost.contextModif;
       }
       
-      function getCurrentSummonedCreature() : uint {
+      private function getCurrentSummonedCreature() : uint {
          return this.currentSummonedCreature;
       }
       
@@ -338,11 +317,11 @@ package com.ankamagames.dofus.logic.game.common.managers
       public function removeSummonedBomb() : void {
          if(this.currentSummonedBomb > 0)
          {
-            this.currentSummonedBomb = this.currentSummonedBomb - 1;
+            this.currentSummonedBomb = this.currentSummonedBomb-1;
          }
       }
       
-      function getMaxSummonedBomb() : uint {
+      private function getMaxSummonedBomb() : uint {
          return 3;
       }
       
@@ -350,44 +329,44 @@ package com.ankamagames.dofus.logic.game.common.managers
          return this.getMaxSummonedBomb() > this.currentSummonedBomb;
       }
       
-      public function levelDiff(targetLevel:uint) : int {
-         var diff:* = 0;
-         var playerLevel:int = this.infos.level;
-         var type:int = 1;
-         if(targetLevel < playerLevel)
+      public function levelDiff(param1:uint) : int {
+         var _loc3_:* = 0;
+         var _loc2_:int = this.infos.level;
+         var _loc4_:* = 1;
+         if(param1 < _loc2_)
          {
-            type = -1;
+            _loc4_ = -1;
          }
-         if(Math.abs(targetLevel - playerLevel) > 20)
+         if(Math.abs(param1 - _loc2_) > 20)
          {
-            diff = 1 * type;
+            _loc3_ = 1 * _loc4_;
          }
          else
          {
-            if(targetLevel < playerLevel)
+            if(param1 < _loc2_)
             {
-               if(targetLevel / playerLevel < 1.2)
+               if(param1 / _loc2_ < 1.2)
                {
-                  diff = 0;
+                  _loc3_ = 0;
                }
                else
                {
-                  diff = 1 * type;
+                  _loc3_ = 1 * _loc4_;
                }
             }
             else
             {
-               if(playerLevel / targetLevel < 1.2)
+               if(_loc2_ / param1 < 1.2)
                {
-                  diff = 0;
+                  _loc3_ = 0;
                }
                else
                {
-                  diff = 1 * type;
+                  _loc3_ = 1 * _loc4_;
                }
             }
          }
-         return diff;
+         return _loc3_;
       }
    }
 }

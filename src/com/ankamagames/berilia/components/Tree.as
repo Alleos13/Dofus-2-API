@@ -1,10 +1,10 @@
 package com.ankamagames.berilia.components
 {
    import com.ankamagames.berilia.UIComponent;
+   import __AS3__.vec.Vector;
    import com.ankamagames.berilia.types.data.TreeData;
    import flash.errors.IllegalOperationError;
    import com.ankamagames.berilia.managers.SecureCenter;
-   import __AS3__.vec.*;
    import flash.utils.getQualifiedClassName;
    import com.ankamagames.berilia.components.gridRenderer.TreeGridRenderer;
    
@@ -20,13 +20,13 @@ package com.ankamagames.berilia.components
       
       protected var _treeDataProvider:Vector.<TreeData>;
       
-      override public function set rendererName(value:String) : void {
+      override public function set rendererName(param1:String) : void {
          throw new IllegalOperationError("rendererName cannot be set");
       }
       
-      override public function set dataProvider(data:*) : void {
-         this._realDataProvider = data;
-         this._treeDataProvider = TreeData.fromArray(data);
+      override public function set dataProvider(param1:*) : void {
+         this._realDataProvider = param1;
+         this._treeDataProvider = TreeData.fromArray(param1);
          super.dataProvider = this.makeDataProvider(this._treeDataProvider);
       }
       
@@ -35,51 +35,51 @@ package com.ankamagames.berilia.components
       }
       
       public function get treeRoot() : TreeData {
-         var treeRoot:TreeData = null;
+         var _loc1_:TreeData = null;
          if(_dataProvider.length > 0)
          {
-            treeRoot = _dataProvider[0].parent;
+            _loc1_ = _dataProvider[0].parent;
          }
-         return treeRoot;
+         return _loc1_;
       }
       
       public function rerender() : void {
          super.dataProvider = this.makeDataProvider(this._treeDataProvider);
       }
       
-      public function expandItems(pItems:Array) : void {
-         var item:Object = null;
-         var treeData:TreeData = null;
-         if(!pItems)
+      public function expandItems(param1:Array) : void {
+         var _loc2_:Object = null;
+         var _loc3_:TreeData = null;
+         if(!param1)
          {
             return;
          }
-         for each (item in pItems)
+         for each (_loc2_ in param1)
          {
-            treeData = SecureCenter.unsecure(item) as TreeData;
-            if(treeData.children.length > 0)
+            _loc3_ = SecureCenter.unsecure(_loc2_) as TreeData;
+            if(_loc3_.children.length > 0)
             {
-               treeData.expend = true;
+               _loc3_.expend = true;
             }
          }
          this.rerender();
       }
       
-      function makeDataProvider(v:Vector.<TreeData>, result:Vector.<TreeData>=null) : Vector.<TreeData> {
-         var node:TreeData = null;
-         if(!result)
+      private function makeDataProvider(param1:Vector.<TreeData>, param2:Vector.<TreeData>=null) : Vector.<TreeData> {
+         var _loc3_:TreeData = null;
+         if(!param2)
          {
-            result = new Vector.<TreeData>();
+            param2 = new Vector.<TreeData>();
          }
-         for each (node in v)
+         for each (_loc3_ in param1)
          {
-            result.push(node);
-            if(node.expend)
+            param2.push(_loc3_);
+            if(_loc3_.expend)
             {
-               this.makeDataProvider(node.children,result);
+               this.makeDataProvider(_loc3_.children,param2);
             }
          }
-         return result;
+         return param2;
       }
    }
 }

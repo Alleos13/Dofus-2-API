@@ -28,16 +28,16 @@ package com.ankamagames.dofus.logic.game.fight.miscs
       
       private var _holdedEntities:Dictionary;
       
-      public function getEntity(entityId:int) : IEntity {
-         return this._holdedEntities[entityId];
+      public function getEntity(param1:int) : IEntity {
+         return this._holdedEntities[param1];
       }
       
-      public function holdEntity(entity:IEntity) : void {
-         this._holdedEntities[entity.id] = entity;
+      public function holdEntity(param1:IEntity) : void {
+         this._holdedEntities[param1.id] = param1;
       }
       
-      public function unholdEntity(entityId:int) : void {
-         delete this._holdedEntities[[entityId]];
+      public function unholdEntity(param1:int) : void {
+         delete this._holdedEntities[[param1]];
       }
       
       public function reset() : void {
@@ -49,16 +49,16 @@ package com.ankamagames.dofus.logic.game.fight.miscs
       }
       
       public function unregistered() : void {
-         var entity:IEntity = null;
-         for each (entity in this._holdedEntities)
+         var _loc1_:IEntity = null;
+         for each (_loc1_ in this._holdedEntities)
          {
-            if(entity is IDisplayable)
+            if(_loc1_ is IDisplayable)
             {
-               (entity as IDisplayable).remove();
+               (_loc1_ as IDisplayable).remove();
             }
-            if(entity is TiphonSprite)
+            if(_loc1_ is TiphonSprite)
             {
-               (entity as TiphonSprite).destroy();
+               (_loc1_ as TiphonSprite).destroy();
             }
          }
          this._holdedEntities = null;

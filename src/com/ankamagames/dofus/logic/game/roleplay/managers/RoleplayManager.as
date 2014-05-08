@@ -14,7 +14,6 @@ package com.ankamagames.dofus.logic.game.roleplay.managers
    import com.ankamagames.dofus.network.types.game.context.roleplay.GameRolePlayNpcInformations;
    import com.ankamagames.dofus.network.types.game.context.GameRolePlayTaxCollectorInformations;
    import com.ankamagames.dofus.network.types.game.context.roleplay.GameRolePlayPrismInformations;
-   import com.ankamagames.dofus.network.types.game.context.roleplay.GameRolePlayPortalInformations;
    import com.ankamagames.dofus.logic.game.roleplay.types.GameContextPaddockItemInformations;
    import com.ankamagames.dofus.network.types.game.context.roleplay.GameRolePlayMountInformations;
    import com.ankamagames.dofus.types.entities.AnimatedCharacter;
@@ -58,67 +57,64 @@ package com.ankamagames.dofus.logic.game.roleplay.managers
          _self = null;
       }
       
-      public function displayCharacterContextualMenu(pGameContextActorInformations:GameContextActorInformations) : Boolean {
-         var modContextMenu:Object = UiModuleManager.getInstance().getModule("Ankama_ContextMenu").mainClass;
-         var menu:ContextMenuData = MenusFactory.create(pGameContextActorInformations,null,[{"id":pGameContextActorInformations.contextualId}]);
-         if(menu)
+      public function displayCharacterContextualMenu(param1:GameContextActorInformations) : Boolean {
+         var _loc2_:Object = UiModuleManager.getInstance().getModule("Ankama_ContextMenu").mainClass;
+         var _loc3_:ContextMenuData = MenusFactory.create(param1,null,[{"id":param1.contextualId}]);
+         if(_loc3_)
          {
-            modContextMenu.createContextMenu(menu);
+            _loc2_.createContextMenu(_loc3_);
             return true;
          }
          return false;
       }
       
-      public function displayContextualMenu(pGameContextActorInformations:GameContextActorInformations, pEntity:IInteractive) : Boolean {
-         var menu:ContextMenuData = null;
-         var modContextMenu:Object = UiModuleManager.getInstance().getModule("Ankama_ContextMenu").mainClass;
+      public function displayContextualMenu(param1:GameContextActorInformations, param2:IInteractive) : Boolean {
+         var _loc3_:ContextMenuData = null;
+         var _loc4_:Object = UiModuleManager.getInstance().getModule("Ankama_ContextMenu").mainClass;
          switch(true)
          {
-            case pGameContextActorInformations is GameRolePlayMutantInformations:
-               if((pGameContextActorInformations as GameRolePlayMutantInformations).humanoidInfo.restrictions.cantAttack)
+            case param1 is GameRolePlayMutantInformations:
+               if((param1 as GameRolePlayMutantInformations).humanoidInfo.restrictions.cantAttack)
                {
-                  menu = MenusFactory.create(pGameContextActorInformations,null,[pEntity]);
+                  _loc3_ = MenusFactory.create(param1,null,[param2]);
                }
                break;
-            case pGameContextActorInformations is GameRolePlayCharacterInformations:
-               menu = MenusFactory.create(pGameContextActorInformations,null,[pEntity]);
+            case param1 is GameRolePlayCharacterInformations:
+               _loc3_ = MenusFactory.create(param1,null,[param2]);
                break;
-            case pGameContextActorInformations is GameRolePlayMerchantInformations:
-               menu = MenusFactory.create(pGameContextActorInformations,null,[pEntity]);
+            case param1 is GameRolePlayMerchantInformations:
+               _loc3_ = MenusFactory.create(param1,null,[param2]);
                break;
-            case pGameContextActorInformations is GameRolePlayNpcInformations:
-               menu = MenusFactory.create(pGameContextActorInformations,null,[pEntity]);
+            case param1 is GameRolePlayNpcInformations:
+               _loc3_ = MenusFactory.create(param1,null,[param2]);
                break;
-            case pGameContextActorInformations is GameRolePlayTaxCollectorInformations:
-               menu = MenusFactory.create(pGameContextActorInformations,null,[pEntity]);
+            case param1 is GameRolePlayTaxCollectorInformations:
+               _loc3_ = MenusFactory.create(param1,null,[param2]);
                break;
-            case pGameContextActorInformations is GameRolePlayPrismInformations:
-               menu = MenusFactory.create(pGameContextActorInformations,null,[pEntity]);
+            case param1 is GameRolePlayPrismInformations:
+               _loc3_ = MenusFactory.create(param1,null,[param2]);
                break;
-            case pGameContextActorInformations is GameRolePlayPortalInformations:
-               menu = MenusFactory.create(pGameContextActorInformations,null,[pEntity]);
-               break;
-            case pGameContextActorInformations is GameContextPaddockItemInformations:
+            case param1 is GameContextPaddockItemInformations:
                if(this.roleplayContextFrame.currentPaddock.guildIdentity)
                {
-                  menu = MenusFactory.create(pGameContextActorInformations,null,[pEntity]);
+                  _loc3_ = MenusFactory.create(param1,null,[param2]);
                }
                break;
-            case pGameContextActorInformations is GameRolePlayMountInformations:
-               menu = MenusFactory.create(pGameContextActorInformations,null,[pEntity]);
+            case param1 is GameRolePlayMountInformations:
+               _loc3_ = MenusFactory.create(param1,null,[param2]);
                break;
          }
-         if(menu)
+         if(_loc3_)
          {
-            modContextMenu.createContextMenu(menu);
+            _loc4_.createContextMenu(_loc3_);
             return true;
          }
          return false;
       }
       
-      public function putEntityOnTop(entity:AnimatedCharacter) : void {
-         var cellSprite:Sprite = InteractiveCellManager.getInstance().getCell(entity.position.cellId);
-         EntitiesDisplayManager.getInstance().orderEntity(entity,cellSprite);
+      public function putEntityOnTop(param1:AnimatedCharacter) : void {
+         var _loc2_:Sprite = InteractiveCellManager.getInstance().getCell(param1.position.cellId);
+         EntitiesDisplayManager.getInstance().orderEntity(param1,_loc2_);
       }
    }
 }

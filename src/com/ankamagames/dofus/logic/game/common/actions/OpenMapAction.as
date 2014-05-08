@@ -9,18 +9,12 @@ package com.ankamagames.dofus.logic.game.common.actions
          super();
       }
       
-      public static function create(ignoreSetting:Boolean=false, pocket:Boolean=true, conquest:Boolean=false) : OpenMapAction {
-         var a:OpenMapAction = new OpenMapAction();
-         a.ignoreSetting = ignoreSetting;
-         a.pocket = pocket;
-         a.conquest = conquest;
-         return a;
+      public static function create(param1:Boolean=false) : OpenMapAction {
+         var _loc2_:OpenMapAction = new OpenMapAction();
+         _loc2_.conquest = param1;
+         return _loc2_;
       }
       
       public var conquest:Boolean;
-      
-      public var pocket:Boolean;
-      
-      public var ignoreSetting:Boolean;
    }
 }

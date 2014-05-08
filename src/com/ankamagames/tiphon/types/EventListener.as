@@ -5,10 +5,10 @@ package com.ankamagames.tiphon.types
    public class EventListener extends Object
    {
       
-      public function EventListener(pListener:IFLAEventHandler, pTypesEvents:String) {
+      public function EventListener(param1:IFLAEventHandler, param2:String) {
          super();
-         this.listener = pListener;
-         this.typesEvents = pTypesEvents;
+         this.listener = param1;
+         this.typesEvents = param2;
       }
       
       public var listener:IFLAEventHandler;

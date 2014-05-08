@@ -10,8 +10,8 @@ package com.ankamagames.dofus.logic.game.common.actions.externalGame
       }
       
       public static function create() : KrosmasterTokenRequestAction {
-         var action:KrosmasterTokenRequestAction = new KrosmasterTokenRequestAction();
-         return action;
+         var _loc1_:KrosmasterTokenRequestAction = new KrosmasterTokenRequestAction();
+         return _loc1_;
       }
    }
 }

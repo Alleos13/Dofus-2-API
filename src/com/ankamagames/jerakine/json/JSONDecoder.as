@@ -3,13 +3,13 @@ package com.ankamagames.jerakine.json
    public class JSONDecoder extends Object
    {
       
-      public function JSONDecoder(s:String, strict:Boolean) {
+      public function JSONDecoder(param1:String, param2:Boolean) {
          super();
-         this.strict = strict;
-         this.tokenizer = new JSONTokenizer(s,strict);
+         this.strict = param2;
+         this.tokenizer = new JSONTokenizer(param1,param2);
          this.nextToken();
          this.value = this.parseValue();
-         if((strict) && (!(this.nextToken() == null)))
+         if((param2) && !(this.nextToken() == null))
          {
             this.tokenizer.parseError("Unexpected characters left in input stream");
          }
@@ -32,28 +32,28 @@ package com.ankamagames.jerakine.json
       }
       
       private function parseArray() : Array {
-         var a:Array = new Array();
+         var _loc1_:Array = new Array();
          this.nextToken();
          if(this.token.type == JSONTokenType.RIGHT_BRACKET)
          {
-            return a;
+            return _loc1_;
          }
-         if((!this.strict) && (this.token.type == JSONTokenType.COMMA))
+         if(!this.strict && this.token.type == JSONTokenType.COMMA)
          {
             this.nextToken();
             if(this.token.type == JSONTokenType.RIGHT_BRACKET)
             {
-               return a;
+               return _loc1_;
             }
             this.tokenizer.parseError("Leading commas are not supported.  Expecting \']\' but found " + this.token.value);
          }
          while(true)
          {
-            a.push(this.parseValue());
+            _loc1_.push(this.parseValue());
             this.nextToken();
             if(this.token.type == JSONTokenType.RIGHT_BRACKET)
             {
-               return a;
+               break;
             }
             if(this.token.type == JSONTokenType.COMMA)
             {
@@ -62,7 +62,7 @@ package com.ankamagames.jerakine.json
                {
                   if(this.token.type == JSONTokenType.RIGHT_BRACKET)
                   {
-                     return a;
+                     return _loc1_;
                   }
                }
             }
@@ -71,23 +71,23 @@ package com.ankamagames.jerakine.json
                this.tokenizer.parseError("Expecting ] or , but found " + this.token.value);
             }
          }
-         return null;
+         return _loc1_;
       }
       
       private function parseObject() : Object {
-         var key:String = null;
-         var o:Object = new Object();
+         var _loc2_:String = null;
+         var _loc1_:Object = new Object();
          this.nextToken();
          if(this.token.type == JSONTokenType.RIGHT_BRACE)
          {
-            return o;
+            return _loc1_;
          }
-         if((!this.strict) && (this.token.type == JSONTokenType.COMMA))
+         if(!this.strict && this.token.type == JSONTokenType.COMMA)
          {
             this.nextToken();
             if(this.token.type == JSONTokenType.RIGHT_BRACE)
             {
-               return o;
+               return _loc1_;
             }
             this.tokenizer.parseError("Leading commas are not supported.  Expecting \'}\' but found " + this.token.value);
          }
@@ -95,16 +95,16 @@ package com.ankamagames.jerakine.json
          {
             if(this.token.type == JSONTokenType.STRING)
             {
-               key = String(this.token.value);
+               _loc2_ = String(this.token.value);
                this.nextToken();
                if(this.token.type == JSONTokenType.COLON)
                {
                   this.nextToken();
-                  o[key] = this.parseValue();
+                  _loc1_[_loc2_] = this.parseValue();
                   this.nextToken();
                   if(this.token.type == JSONTokenType.RIGHT_BRACE)
                   {
-                     return o;
+                     break;
                   }
                   if(this.token.type == JSONTokenType.COMMA)
                   {
@@ -113,7 +113,7 @@ package com.ankamagames.jerakine.json
                      {
                         if(this.token.type == JSONTokenType.RIGHT_BRACE)
                         {
-                           return o;
+                           return _loc1_;
                         }
                      }
                   }
@@ -132,7 +132,7 @@ package com.ankamagames.jerakine.json
                this.tokenizer.parseError("Expecting string but found " + this.token.value);
             }
          }
-         return null;
+         return _loc1_;
       }
       
       private function parseValue() : Object {
@@ -158,6 +158,7 @@ package com.ankamagames.jerakine.json
                   return this.token.value;
                }
                this.tokenizer.parseError("Unexpected " + this.token.value);
+            default:
                this.tokenizer.parseError("Unexpected " + this.token.value);
                return null;
          }

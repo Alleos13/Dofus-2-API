@@ -39,22 +39,22 @@ package com.ankamagames.jerakine.utils.display
          return _realTimeListeners;
       }
       
-      public static function addEventListener(listener:Function, name:String, frameRate:uint=4.294967295E9) : void {
-         var s:Stage = null;
-         if((frameRate == uint.MAX_VALUE) || (frameRate >= StageShareManager.stage.frameRate))
+      public static function addEventListener(param1:Function, param2:String, param3:uint=4.294967295E9) : void {
+         var _loc4_:Stage = null;
+         if(param3 == uint.MAX_VALUE || param3 >= StageShareManager.stage.frameRate)
          {
-            _realTimeListeners[listener] = name;
-            StageShareManager.stage.addEventListener(Event.ENTER_FRAME,listener,false,0,true);
+            _realTimeListeners[param1] = param2;
+            StageShareManager.stage.addEventListener(Event.ENTER_FRAME,param1,false,0,true);
          }
          else
          {
-            if(!_controledListeners[listener])
+            if(!_controledListeners[param1])
             {
-               _controledListeners[listener] = new ControledEnterFrameListener(name,listener,frameRate > 0?1000 / frameRate:0,_listenerUp?_currentTime:getTimer());
+               _controledListeners[param1] = new ControledEnterFrameListener(param2,param1,param3 > 0?1000 / param3:0,_listenerUp?_currentTime:getTimer());
                if(!_listenerUp)
                {
                   StageShareManager.stage.addEventListener(Event.ENTER_FRAME,onEnterFrame);
-                  s = StageShareManager.stage;
+                  _loc4_ = StageShareManager.stage;
                   _listenerUp = true;
                }
             }
@@ -62,24 +62,24 @@ package com.ankamagames.jerakine.utils.display
          _listenersCount++;
       }
       
-      public static function hasEventListener(listener:Function) : Boolean {
-         return !(_controledListeners[listener] == null);
+      public static function hasEventListener(param1:Function) : Boolean {
+         return !(_controledListeners[param1] == null);
       }
       
-      public static function removeEventListener(listener:Function) : void {
-         var k:* = undefined;
-         if(_controledListeners[listener])
+      public static function removeEventListener(param1:Function) : void {
+         var _loc2_:* = undefined;
+         if(_controledListeners[param1])
          {
-            delete _controledListeners[[listener]];
+            delete _controledListeners[[param1]];
             _listenersCount--;
          }
-         if(_realTimeListeners[listener])
+         if(_realTimeListeners[param1])
          {
-            delete _realTimeListeners[[listener]];
-            StageShareManager.stage.removeEventListener(Event.ENTER_FRAME,listener,false);
+            delete _realTimeListeners[[param1]];
+            StageShareManager.stage.removeEventListener(Event.ENTER_FRAME,param1,false);
             _listenersCount--;
          }
-         for each (k in _controledListeners)
+         for each (_loc2_ in _controledListeners)
          {
          }
          if(StageShareManager.stage)
@@ -89,18 +89,18 @@ package com.ankamagames.jerakine.utils.display
          _listenerUp = false;
       }
       
-      private static function onEnterFrame(e:Event) : void {
-         var cefl:ControledEnterFrameListener = null;
-         var diff:uint = 0;
+      private static function onEnterFrame(param1:Event) : void {
+         var _loc2_:ControledEnterFrameListener = null;
+         var _loc3_:uint = 0;
          _currentTime = getTimer();
-         for each (cefl in _controledListeners)
+         for each (_loc2_ in _controledListeners)
          {
-            diff = _currentTime - cefl.latestChange;
-            if(diff > cefl.wantedGap - cefl.overhead)
+            _loc3_ = _currentTime - _loc2_.latestChange;
+            if(_loc3_ > _loc2_.wantedGap - _loc2_.overhead)
             {
-               cefl.listener(e);
-               cefl.latestChange = _currentTime;
-               cefl.overhead = diff - cefl.wantedGap + cefl.overhead;
+               _loc2_.listener(param1);
+               _loc2_.latestChange = _currentTime;
+               _loc2_.overhead = _loc3_ - _loc2_.wantedGap + _loc2_.overhead;
             }
          }
       }
@@ -109,12 +109,12 @@ package com.ankamagames.jerakine.utils.display
 class ControledEnterFrameListener extends Object
 {
    
-   function ControledEnterFrameListener(name:String, listener:Function, wantedGap:uint, latestChange:uint) {
+   function ControledEnterFrameListener(param1:String, param2:Function, param3:uint, param4:uint) {
       super();
-      this.name = name;
-      this.listener = listener;
-      this.wantedGap = wantedGap;
-      this.latestChange = latestChange;
+      this.name = param1;
+      this.listener = param2;
+      this.wantedGap = param3;
+      this.latestChange = param4;
    }
    
    public var name:String;

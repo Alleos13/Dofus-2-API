@@ -19,24 +19,24 @@ package com.ankamagames.berilia.components
       
       private var _lastMouseUpFrameId:int = -1;
       
-      override public function process(msg:Message) : Boolean {
-         var mmsg:MouseMessage = null;
-         var currentItem:* = undefined;
+      override public function process(param1:Message) : Boolean {
+         var _loc2_:MouseMessage = null;
+         var _loc3_:* = undefined;
          switch(true)
          {
-            case msg is MouseDoubleClickMessage:
-            case msg is MouseClickMessage:
+            case param1 is MouseDoubleClickMessage:
+            case param1 is MouseClickMessage:
                if(this._lastMouseUpFrameId == FrameIdManager.frameId)
                {
                   return false;
                }
-            case msg is MouseUpMessage:
+            case param1 is MouseUpMessage:
                this._lastMouseUpFrameId = FrameIdManager.frameId;
-               mmsg = MouseMessage(msg);
-               currentItem = super.getGridItem(mmsg.target);
-               if(currentItem)
+               _loc2_ = MouseMessage(param1);
+               _loc3_ = super.getGridItem(_loc2_.target);
+               if(_loc3_)
                {
-                  if(!currentItem.data)
+                  if(!_loc3_.data)
                   {
                      if(UIEventManager.getInstance().isRegisteredInstance(this,SelectEmptyItemMessage))
                      {
@@ -44,9 +44,12 @@ package com.ankamagames.berilia.components
                      }
                      setSelectedIndex(-1,SelectMethodEnum.CLICK);
                   }
-                  setSelectedIndex(currentItem.index,SelectMethodEnum.CLICK);
+                  setSelectedIndex(_loc3_.index,SelectMethodEnum.CLICK);
                }
                return true;
+            default:
+               super.process(param1);
+               return false;
          }
       }
    }

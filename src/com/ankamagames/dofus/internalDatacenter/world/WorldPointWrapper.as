@@ -2,86 +2,42 @@ package com.ankamagames.dofus.internalDatacenter.world
 {
    import com.ankamagames.jerakine.types.positions.WorldPoint;
    import com.ankamagames.jerakine.interfaces.IDataCenter;
-   import com.ankamagames.jerakine.logger.Logger;
-   import com.ankamagames.jerakine.logger.Log;
-   import avmplus.getQualifiedClassName;
    import com.ankamagames.dofus.datacenter.world.MapPosition;
-   import com.ankamagames.atouin.managers.MapDisplayManager;
-   import com.ankamagames.atouin.types.DataMapContainer;
-   import com.ankamagames.dofus.datacenter.world.MapScrollAction;
    
    public class WorldPointWrapper extends WorldPoint implements IDataCenter
    {
       
-      public function WorldPointWrapper(mapid:uint, fixedOutdoor:Boolean=false, outx:int=0, outy:int=0) {
-         var mapInfo:Object = null;
+      public function WorldPointWrapper(param1:uint, param2:Boolean=false, param3:int=0, param4:int=0) {
+         var _loc5_:Object = null;
          super();
-         mapId = mapid;
+         mapId = param1;
          setFromMapId();
-         if(fixedOutdoor)
+         if(param2)
          {
-            this._outdoorX = outx;
-            this._outdoorY = outy;
+            this._outdoorX = param3;
+            this._outdoorY = param4;
          }
          else
          {
-            mapInfo = MapPosition.getMapPositionById(mapid);
-            if(!mapInfo)
+            _loc5_ = MapPosition.getMapPositionById(param1);
+            if(!_loc5_)
             {
                this._outdoorX = x;
                this._outdoorY = y;
             }
             else
             {
-               this._outdoorX = mapInfo.posX;
-               this._outdoorY = mapInfo.posY;
-            }
-         }
-         var dmc:DataMapContainer = MapDisplayManager.getInstance().getDataMapContainer();
-         if((dmc) && (dmc.dataMap))
-         {
-            this._topNeighbourId = dmc.dataMap.topNeighbourId;
-            this._bottomNeighbourId = dmc.dataMap.bottomNeighbourId;
-            this._leftNeighbourId = dmc.dataMap.leftNeighbourId;
-            this._rightNeighbourId = dmc.dataMap.rightNeighbourId;
-         }
-         var mapScrollaction:MapScrollAction = MapScrollAction.getMapScrollActionById(mapid);
-         if(mapScrollaction)
-         {
-            if(mapScrollaction.topExists)
-            {
-               this._topNeighbourId = mapScrollaction.topMapId;
-            }
-            if(mapScrollaction.bottomExists)
-            {
-               this._bottomNeighbourId = mapScrollaction.bottomMapId;
-            }
-            if(mapScrollaction.leftExists)
-            {
-               this._leftNeighbourId = mapScrollaction.leftMapId;
-            }
-            if(mapScrollaction.rightExists)
-            {
-               this._rightNeighbourId = mapScrollaction.rightMapId;
+               this._outdoorX = _loc5_.posX;
+               this._outdoorY = _loc5_.posY;
             }
          }
       }
-      
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(WorldPointWrapper));
       
       public var outdoorMapId:uint;
       
       private var _outdoorX:int;
       
       private var _outdoorY:int;
-      
-      private var _topNeighbourId:int;
-      
-      private var _bottomNeighbourId:int;
-      
-      private var _leftNeighbourId:int;
-      
-      private var _rightNeighbourId:int;
       
       public function get outdoorX() : int {
          return this._outdoorX;
@@ -91,25 +47,9 @@ package com.ankamagames.dofus.internalDatacenter.world
          return this._outdoorY;
       }
       
-      public function get topNeighbourId() : int {
-         return this._topNeighbourId;
-      }
-      
-      public function get bottomNeighbourId() : int {
-         return this._bottomNeighbourId;
-      }
-      
-      public function get leftNeighbourId() : int {
-         return this._leftNeighbourId;
-      }
-      
-      public function get rightNeighbourId() : int {
-         return this._rightNeighbourId;
-      }
-      
-      public function setOutdoorCoords(x:int, y:int) : void {
-         this._outdoorX = x;
-         this._outdoorY = y;
+      public function setOutdoorCoords(param1:int, param2:int) : void {
+         this._outdoorX = param1;
+         this._outdoorY = param2;
       }
    }
 }

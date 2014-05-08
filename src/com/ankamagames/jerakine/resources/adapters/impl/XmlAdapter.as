@@ -12,8 +12,10 @@ package com.ankamagames.jerakine.resources.adapters.impl
          super();
       }
       
-       function getResource(dataFormat:String, data:*) : * {
+      override protected function getResource(param1:String, param2:*) : * {
          var str:String = null;
+         var dataFormat:String = param1;
+         var data:* = param2;
          var xml:XML = null;
          try
          {

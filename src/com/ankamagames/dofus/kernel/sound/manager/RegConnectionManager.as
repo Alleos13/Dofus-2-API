@@ -20,7 +20,7 @@ package com.ankamagames.dofus.kernel.sound.manager
    public class RegConnectionManager extends Object
    {
       
-      public function RegConnectionManager(pSingletonEnforcer:SingletonEnforcer) {
+      public function RegConnectionManager(param1:SingletonEnforcer) {
          super();
          if(_self)
          {
@@ -67,33 +67,33 @@ package com.ankamagames.dofus.kernel.sound.manager
          return this._isMain;
       }
       
-      public function send(pMethodName:String, ... params) : void {
+      public function send(param1:String, ... rest) : void {
          if(!this._socketAvaible)
          {
             this._buffer.push(
                {
-                  "method":pMethodName,
-                  "params":params
+                  "method":param1,
+                  "params":rest
                });
             return;
          }
-         if(pMethodName == ProtocolEnum.SAY_GOODBYE)
+         if(param1 == ProtocolEnum.SAY_GOODBYE)
          {
             this._sock.writeUTFBytes(String(0));
-            this._sock.writeUTFBytes("=>" + pMethodName + "();" + this._socketClientID + "=>" + ProtocolEnum.PLAY_SOUND + "(10,100)");
+            this._sock.writeUTFBytes("=>" + param1 + "();" + this._socketClientID + "=>" + ProtocolEnum.PLAY_SOUND + "(10,100)");
             this._sock.writeUTFBytes("|");
             this._sock.flush();
          }
          else
          {
             this._sock.writeUTFBytes(String(this._socketClientID));
-            this._sock.writeUTFBytes("=>" + pMethodName + "(" + params + ")");
+            this._sock.writeUTFBytes("=>" + param1 + "(" + rest + ")");
             this._sock.writeUTFBytes("|");
             this._sock.flush();
          }
       }
       
-      function init() : void {
+      private function init() : void {
          this._socketClientID = uint.MAX_VALUE * Math.random();
          if(AirScanner.isStreamingVersion())
          {
@@ -121,25 +121,25 @@ package com.ankamagames.dofus.kernel.sound.manager
          this._buffer = [];
       }
       
-      function showInformationPopup() : void {
-         var commonMod:Object = null;
+      private function showInformationPopup() : void {
+         var _loc1_:Object = null;
          if(UiModuleManager.getInstance().getModule("Ankama_Common"))
          {
-            commonMod = UiModuleManager.getInstance().getModule("Ankama_Common").mainClass;
-            if(commonMod)
+            _loc1_ = UiModuleManager.getInstance().getModule("Ankama_Common").mainClass;
+            if(_loc1_)
             {
-               commonMod.openPopup(I18n.getUiText("ui.popup.warning"),I18n.getUiText("ui.common.soundsDeactivated"),[I18n.getUiText("ui.common.ok")]);
+               _loc1_.openPopup(I18n.getUiText("ui.popup.warning"),I18n.getUiText("ui.common.soundsDeactivated"),[I18n.getUiText("ui.common.ok")]);
             }
          }
       }
       
-      function setAsMain(pMain:Boolean) : void {
-         if(pMain == this._isMain)
+      private function setAsMain(param1:Boolean) : void {
+         if(param1 == this._isMain)
          {
             return;
          }
-         this._isMain = pMain;
-         if(pMain == true)
+         this._isMain = param1;
+         if(param1 == true)
          {
             _log.warn("[" + this._socketClientID + "] Je passe en main");
             if(SoundManager.getInstance().manager is RegSoundManager)
@@ -157,7 +157,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      function onSocketClose(e:Event) : void {
+      private function onSocketClose(param1:Event) : void {
          this._socketAvaible = false;
          _log.error("The socket has been closed");
          try
@@ -169,20 +169,20 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      function onData(pEvent:ProgressEvent) : void {
-         var cmd:String = null;
-         var functionName:String = null;
-         var clientId:* = NaN;
-         var cmds:Array = this._sock.readUTFBytes(pEvent.bytesLoaded).split("|");
-         for each (cmd in cmds)
+      private function onData(param1:ProgressEvent) : void {
+         var _loc3_:String = null;
+         var _loc4_:String = null;
+         var _loc5_:* = NaN;
+         var _loc2_:Array = this._sock.readUTFBytes(param1.bytesLoaded).split("|");
+         for each (_loc3_ in _loc2_)
          {
-            if(cmd == "")
+            if(_loc3_ == "")
             {
                return;
             }
-            _log.info("[REG->DOFUS] " + cmd);
-            functionName = cmd.split("(")[0];
-            switch(functionName)
+            _log.info("[REG->DOFUS] " + _loc3_);
+            _loc4_ = _loc3_.split("(")[0];
+            switch(_loc4_)
             {
                case ProtocolEnum.REG_SHUT_DOWN:
                   this._socketAvaible = false;
@@ -198,8 +198,8 @@ package com.ankamagames.dofus.kernel.sound.manager
                   this.send(ProtocolEnum.PONG);
                   continue;
                case ProtocolEnum.MAIN_CLIENT_IS:
-                  clientId = Number(cmd.split(":")[1]);
-                  if(clientId == this._socketClientID)
+                  _loc5_ = Number(_loc3_.split(":")[1]);
+                  if(_loc5_ == this._socketClientID)
                   {
                      this.setAsMain(true);
                   }
@@ -208,27 +208,29 @@ package com.ankamagames.dofus.kernel.sound.manager
                      this.setAsMain(false);
                   }
                   continue;
+               default:
+                  continue;
             }
          }
       }
       
-      function onSocketError(e:Event) : void {
+      private function onSocketError(param1:Event) : void {
          this._socketAvaible = false;
          _log.error("Connection to Reg failed");
       }
       
-      function onSocketSecurityError(e:Event) : void {
+      private function onSocketSecurityError(param1:Event) : void {
       }
       
-      function onSocketConnect(e:Event) : void {
-         var cmd:Object = null;
+      private function onSocketConnect(param1:Event) : void {
+         var _loc2_:Object = null;
          this._socketAvaible = true;
          if(this._buffer.length)
          {
             while(this._buffer.length)
             {
-               cmd = this._buffer.shift();
-               CallWithParameters.call(this.send,([cmd.method] as Array).concat(cmd.params));
+               _loc2_ = this._buffer.shift();
+               CallWithParameters.call(this.send,([_loc2_.method] as Array).concat(_loc2_.params));
             }
          }
       }

@@ -134,22 +134,22 @@ package com.ankamagames.berilia.components
          return this._tText.text;
       }
       
-      public function set text(sValue:String) : void {
-         if(sValue == null)
+      public function set text(param1:String) : void {
+         if(param1 == null)
          {
-            sValue = "";
+            param1 = "";
          }
-         this._sText = sValue;
+         this._sText = param1;
          if(this._bHtmlAllowed)
          {
             if(this._useStyleSheet)
             {
                this._tText.styleSheet = null;
             }
-            this._tText.htmlText = sValue;
+            this._tText.htmlText = param1;
             if(!this._useCustomFormat)
             {
-               if((!(this._sCssUrl == null)) && (!this._cssApplied))
+               if(!(this._sCssUrl == null) && !this._cssApplied)
                {
                   this.applyCSS(this._sCssUrl);
                   this._cssApplied = true;
@@ -166,7 +166,7 @@ package com.ankamagames.berilia.components
          }
          else
          {
-            this._tText.text = sValue;
+            this._tText.text = param1;
          }
          if(!this._useCustomFormat)
          {
@@ -182,7 +182,7 @@ package com.ankamagames.berilia.components
          if(this._currentStyleSheet)
          {
             this._tText.styleSheet = this._currentStyleSheet;
-            this._tText.htmlText = sValue;
+            this._tText.htmlText = param1;
          }
          if((this._finalized) && (this._autoResize))
          {
@@ -194,67 +194,67 @@ package com.ankamagames.berilia.components
          return this._tText.htmlText;
       }
       
-      public function set htmlText(val:String) : void {
-         this._tText.htmlText = val;
+      public function set htmlText(param1:String) : void {
+         this._tText.htmlText = param1;
       }
       
       public function get hyperlinkEnabled() : Boolean {
          return this._hyperlinkEnabled;
       }
       
-      public function set hyperlinkEnabled(bValue:Boolean) : void {
-         this._hyperlinkEnabled = bValue;
-         mouseEnabled = bValue;
-         mouseChildren = bValue;
-         this._tText.mouseEnabled = bValue;
+      public function set hyperlinkEnabled(param1:Boolean) : void {
+         this._hyperlinkEnabled = param1;
+         mouseEnabled = param1;
+         mouseChildren = param1;
+         this._tText.mouseEnabled = param1;
       }
       
       public function get useStyleSheet() : Boolean {
          return this._useStyleSheet;
       }
       
-      public function set useStyleSheet(bValue:Boolean) : void {
-         this._useStyleSheet = bValue;
+      public function set useStyleSheet(param1:Boolean) : void {
+         this._useStyleSheet = param1;
       }
       
       public function get useCustomFormat() : Boolean {
          return this._useCustomFormat;
       }
       
-      public function set useCustomFormat(bValue:Boolean) : void {
-         this._useCustomFormat = bValue;
+      public function set useCustomFormat(param1:Boolean) : void {
+         this._useCustomFormat = param1;
       }
       
       public function get neverIndent() : Boolean {
          return this._neverIndent;
       }
       
-      public function set neverIndent(bValue:Boolean) : void {
-         this._neverIndent = bValue;
+      public function set neverIndent(param1:Boolean) : void {
+         this._neverIndent = param1;
       }
       
       public function get autoResize() : Boolean {
          return this._autoResize;
       }
       
-      public function set autoResize(bValue:Boolean) : void {
-         this._autoResize = bValue;
+      public function set autoResize(param1:Boolean) : void {
+         this._autoResize = param1;
       }
       
       public function get caretIndex() : int {
          return this._tText.caretIndex;
       }
       
-      public function set caretIndex(pos:int) : void {
-         var lastPos:* = 0;
-         if(pos == -1)
+      public function set caretIndex(param1:int) : void {
+         var _loc2_:* = 0;
+         if(param1 == -1)
          {
-            lastPos = this._tText.text.length;
-            this._tText.setSelection(lastPos,lastPos);
+            _loc2_ = this._tText.text.length;
+            this._tText.setSelection(_loc2_,_loc2_);
          }
          else
          {
-            this._tText.setSelection(pos,pos);
+            this._tText.setSelection(param1,param1);
          }
       }
       
@@ -266,21 +266,21 @@ package com.ankamagames.berilia.components
          return this._sType;
       }
       
-      public function set type(sValue:String) : void {
-         this._sType = sValue;
+      public function set type(param1:String) : void {
+         this._sType = param1;
       }
       
       public function get css() : Uri {
          return this._sCssUrl;
       }
       
-      public function set css(sFile:Uri) : void {
+      public function set css(param1:Uri) : void {
          this._cssApplied = false;
-         this.applyCSS(sFile);
+         this.applyCSS(param1);
       }
       
-      public function set cssClass(c:String) : void {
-         this._sCssClass = c == ""?"p":c;
+      public function set cssClass(param1:String) : void {
+         this._sCssClass = param1 == ""?"p":param1;
          this.bindCss();
       }
       
@@ -292,8 +292,8 @@ package com.ankamagames.berilia.components
          return this._sAntialiasType;
       }
       
-      public function set antialias(s:String) : void {
-         this._sAntialiasType = s;
+      public function set antialias(param1:String) : void {
+         this._sAntialiasType = param1;
          this._tText.antiAliasType = this._sAntialiasType;
       }
       
@@ -301,12 +301,12 @@ package com.ankamagames.berilia.components
          return this._tText.thickness;
       }
       
-      public function set thickness(value:int) : void {
-         this._tText.thickness = value;
+      public function set thickness(param1:int) : void {
+         this._tText.thickness = param1;
       }
       
-      public function set aStyleObj(value:Object) : void {
-         this._aStyleObj = value as Array;
+      public function set aStyleObj(param1:Object) : void {
+         this._aStyleObj = param1 as Array;
       }
       
       public function get aStyleObj() : Object {
@@ -314,11 +314,11 @@ package com.ankamagames.berilia.components
       }
       
       override public function get width() : Number {
-         return (this._useExtendWidth) && (this._tText.numLines < 2)?this._tText.textWidth + 7:this._nWidth;
+         return (this._useExtendWidth) && this._tText.numLines < 2?this._tText.textWidth + 7:this._nWidth;
       }
       
-      override public function set width(nValue:Number) : void {
-         this._nWidth = nValue;
+      override public function set width(param1:Number) : void {
+         this._nWidth = param1;
          this._tText.width = this._nWidth;
          if(_bgColor != -1)
          {
@@ -334,17 +334,17 @@ package com.ankamagames.berilia.components
          return this._nHeight;
       }
       
-      override public function set height(nValue:Number) : void {
-         var valMin:* = NaN;
+      override public function set height(param1:Number) : void {
+         var _loc2_:* = NaN;
          if(!this._tText.multiline)
          {
-            valMin = this._tText.textHeight;
-            if(nValue < valMin)
+            _loc2_ = this._tText.textHeight;
+            if(param1 < _loc2_)
             {
-               nValue = valMin;
+               param1 = _loc2_;
             }
          }
-         this._nHeight = nValue;
+         this._nHeight = param1;
          this._tText.height = this._nHeight;
          __height = this._nHeight;
          if(_bgColor != -1)
@@ -366,28 +366,28 @@ package com.ankamagames.berilia.components
          return this._finalized;
       }
       
-      public function set finalized(value:Boolean) : void {
-         this._finalized = value;
+      public function set finalized(param1:Boolean) : void {
+         this._finalized = param1;
       }
       
       public function get html() : Boolean {
          return this._bHtmlAllowed;
       }
       
-      public function set html(bValue:Boolean) : void {
-         this._bHtmlAllowed = bValue;
+      public function set html(param1:Boolean) : void {
+         this._bHtmlAllowed = param1;
       }
       
-      public function set wordWrap(bWordWrap:Boolean) : void {
-         this._tText.wordWrap = bWordWrap;
+      public function set wordWrap(param1:Boolean) : void {
+         this._tText.wordWrap = param1;
       }
       
       public function get wordWrap() : Boolean {
          return this._tText.wordWrap;
       }
       
-      public function set multiline(bMultiline:Boolean) : void {
-         this._tText.multiline = bMultiline;
+      public function set multiline(param1:Boolean) : void {
+         this._tText.multiline = param1;
       }
       
       public function get multiline() : Boolean {
@@ -398,16 +398,16 @@ package com.ankamagames.berilia.components
          return this._tText.border;
       }
       
-      public function set border(bValue:Boolean) : void {
-         this._tText.border = bValue;
+      public function set border(param1:Boolean) : void {
+         this._tText.border = param1;
       }
       
       public function get fixedWidth() : Boolean {
          return this._bFixedWidth;
       }
       
-      public function set fixedWidth(bValue:Boolean) : void {
-         this._bFixedWidth = bValue;
+      public function set fixedWidth(param1:Boolean) : void {
+         this._bFixedWidth = param1;
          if(this._bFixedWidth)
          {
             this._tText.autoSize = TextFieldAutoSize.NONE;
@@ -422,23 +422,23 @@ package com.ankamagames.berilia.components
          return this._useExtendWidth;
       }
       
-      public function set useExtendWidth(v:Boolean) : void {
-         this._useExtendWidth = v;
+      public function set useExtendWidth(param1:Boolean) : void {
+         this._useExtendWidth = param1;
       }
       
       public function get fixedHeight() : Boolean {
          return this._bFixedHeight;
       }
       
-      public function set fixedHeight(bValue:Boolean) : void {
-         this._bFixedHeight = bValue;
+      public function set fixedHeight(param1:Boolean) : void {
+         this._bFixedHeight = param1;
          this._tText.wordWrap = !this._bFixedHeight;
       }
       
-      override public function set bgColor(nColor:int) : void {
-         _bgColor = nColor;
+      override public function set bgColor(param1:int) : void {
+         _bgColor = param1;
          graphics.clear();
-         if((bgColor == -1) || (!this.width) || (!this.height))
+         if(bgColor == -1 || !this.width || !this.height)
          {
             return;
          }
@@ -446,7 +446,7 @@ package com.ankamagames.berilia.components
          {
             graphics.lineStyle(1,_borderColor);
          }
-         graphics.beginFill(nColor,_bgAlpha);
+         graphics.beginFill(param1,_bgAlpha);
          if(!_bgCornerRadius)
          {
             graphics.drawRect(x,y,this.width,this.height + 2);
@@ -458,28 +458,28 @@ package com.ankamagames.berilia.components
          graphics.endFill();
       }
       
-      override public function set borderColor(nColor:int) : void {
-         if(nColor == -1)
+      override public function set borderColor(param1:int) : void {
+         if(param1 == -1)
          {
             this._tText.border = false;
          }
          else
          {
             this._tText.border = true;
-            this._tText.borderColor = nColor;
+            this._tText.borderColor = param1;
          }
       }
       
-      public function set selectable(bValue:Boolean) : void {
-         this._tText.selectable = bValue;
+      public function set selectable(param1:Boolean) : void {
+         this._tText.selectable = param1;
       }
       
       public function get length() : uint {
          return this._tText.length;
       }
       
-      public function set scrollV(nVal:int) : void {
-         this._tText.scrollV = nVal;
+      public function set scrollV(param1:int) : void {
+         this._tText.scrollV = param1;
       }
       
       public function get scrollV() : int {
@@ -500,13 +500,13 @@ package com.ankamagames.berilia.components
          return this._useEmbedFonts;
       }
       
-      public function set useEmbedFonts(b:Boolean) : void {
-         this._useEmbedFonts = b;
-         this._tText.embedFonts = b;
+      public function set useEmbedFonts(param1:Boolean) : void {
+         this._useEmbedFonts = param1;
+         this._tText.embedFonts = param1;
       }
       
-      override public function set disabled(bool:Boolean) : void {
-         if(bool)
+      override public function set disabled(param1:Boolean) : void {
+         if(param1)
          {
             handCursor = false;
             mouseEnabled = false;
@@ -518,15 +518,15 @@ package com.ankamagames.berilia.components
             mouseEnabled = true;
             this._tText.mouseEnabled = true;
          }
-         this._bDisabled = bool;
+         this._bDisabled = param1;
       }
       
       public function get verticalAlign() : String {
          return this._sVerticalAlign;
       }
       
-      public function set verticalAlign(s:String) : void {
-         this._sVerticalAlign = s;
+      public function set verticalAlign(param1:String) : void {
+         this._sVerticalAlign = param1;
          this.updateAlign();
       }
       
@@ -534,66 +534,66 @@ package com.ankamagames.berilia.components
          return this._tfFormatter;
       }
       
-      public function set textFormat(tf:TextFormat) : void {
-         this._tfFormatter = tf;
+      public function set textFormat(param1:TextFormat) : void {
+         this._tfFormatter = param1;
          this._tText.setTextFormat(this._tfFormatter);
       }
       
-      public function set restrict(restrictTo:String) : void {
-         this._tText.restrict = restrictTo;
+      public function set restrict(param1:String) : void {
+         this._tText.restrict = param1;
       }
       
       public function get restrict() : String {
          return this._tText.restrict;
       }
       
-      public function set colorText(color:uint) : void {
+      public function set colorText(param1:uint) : void {
          if(!this._tfFormatter)
          {
             _log.error("Error. Try to change the size before formatter was initialized.");
             return;
          }
-         this._tfFormatter.color = color;
+         this._tfFormatter.color = param1;
          this._tText.setTextFormat(this._tfFormatter);
          this._tText.defaultTextFormat = this._tfFormatter;
       }
       
-      public function setCssColor(color:String, style:String=null) : void {
-         this.changeCssClassColor(color,style);
+      public function setCssColor(param1:String, param2:String=null) : void {
+         this.changeCssClassColor(param1,param2);
       }
       
-      public function setCssSize(size:uint, style:String=null) : void {
-         this.changeCssClassSize(size,style);
+      public function setCssSize(param1:uint, param2:String=null) : void {
+         this.changeCssClassSize(param1,param2);
       }
       
-      public function setStyleSheet(styles:StyleSheet) : void {
+      public function setStyleSheet(param1:StyleSheet) : void {
          this._useStyleSheet = true;
-         this._currentStyleSheet = styles;
+         this._currentStyleSheet = param1;
       }
       
-      public function applyCSS(sFile:Uri) : void {
-         if(sFile == null)
+      public function applyCSS(param1:Uri) : void {
+         if(param1 == null)
          {
             return;
          }
-         if((sFile == this._sCssUrl) && (this._tfFormatter))
+         if(param1 == this._sCssUrl && (this._tfFormatter))
          {
             this.updateCss();
          }
          else
          {
-            this._sCssUrl = sFile;
-            CssManager.getInstance().askCss(sFile.uri,new Callback(this.bindCss));
+            this._sCssUrl = param1;
+            CssManager.getInstance().askCss(param1.uri,new Callback(this.bindCss));
          }
       }
       
-      public function setBorderColor(nColor:int) : void {
-         this._tText.borderColor = nColor;
+      public function setBorderColor(param1:int) : void {
+         this._tText.borderColor = param1;
       }
       
-      public function allowTextMouse(bValue:Boolean) : void {
-         this.mouseChildren = bValue;
-         this._tText.mouseEnabled = bValue;
+      public function allowTextMouse(param1:Boolean) : void {
+         this.mouseChildren = param1;
+         this._tText.mouseEnabled = param1;
       }
       
       override public function remove() : void {
@@ -627,79 +627,79 @@ package com.ankamagames.berilia.components
          this._tText.selectable = false;
       }
       
-      function createTextField() : void {
+      private function createTextField() : void {
          this._tText = new TextField();
          this._tText.addEventListener(TextEvent.LINK,this.onTextClick);
          addChild(this._tText);
       }
       
-      function changeCssClassColor(color:String, style:String=null) : void {
-         var i:* = undefined;
-         if(style)
+      private function changeCssClassColor(param1:String, param2:String=null) : void {
+         var _loc3_:* = undefined;
+         if(param2)
          {
-            this.aStyleObj[style].color = color;
-            this._tfFormatter = this._ssSheet.transform(this.aStyleObj[style]);
+            this.aStyleObj[param2].color = param1;
+            this._tfFormatter = this._ssSheet.transform(this.aStyleObj[param2]);
             this._tText.setTextFormat(this._tfFormatter);
             this._tText.defaultTextFormat = this._tfFormatter;
          }
          else
          {
-            for each (i in this.aStyleObj)
+            for each (_loc3_ in this.aStyleObj)
             {
-               i.color = color;
+               _loc3_.color = param1;
             }
          }
       }
       
-      function changeCssClassSize(size:uint, style:String=null) : void {
-         var i:* = undefined;
-         if(style)
+      private function changeCssClassSize(param1:uint, param2:String=null) : void {
+         var _loc3_:* = undefined;
+         if(param2)
          {
-            if(this.aStyleObj[style] == null)
+            if(this.aStyleObj[param2] == null)
             {
-               this.aStyleObj[style] = new Object();
+               this.aStyleObj[param2] = new Object();
             }
-            this.aStyleObj[style].fontSize = size + "px";
+            this.aStyleObj[param2].fontSize = param1 + "px";
          }
          else
          {
-            for each (i in this.aStyleObj)
+            for each (_loc3_ in this.aStyleObj)
             {
-               i.fontSize = size + "px";
+               _loc3_.fontSize = param1 + "px";
             }
          }
       }
       
-      public function appendText(sTxt:String, style:String=null) : void {
-         var textFormat:TextFormat = null;
-         if((style) && (this.aStyleObj[style]))
+      public function appendText(param1:String, param2:String=null) : void {
+         var _loc3_:TextFormat = null;
+         if((param2) && (this.aStyleObj[param2]))
          {
             if(this._tText.filters.length)
             {
                this._tText.filters = new Array();
             }
-            textFormat = this._ssSheet.transform(this.aStyleObj[style]);
-            textFormat.bold = false;
-            this._tText.defaultTextFormat = textFormat;
+            _loc3_ = this._ssSheet.transform(this.aStyleObj[param2]);
+            _loc3_.bold = false;
+            this._tText.defaultTextFormat = _loc3_;
          }
          if(this._hyperlinkEnabled)
          {
-            sTxt = HyperlinkFactory.decode(sTxt);
+            param1 = HyperlinkFactory.decode(param1);
          }
-         this._tText.htmlText = this._tText.htmlText + sTxt;
+         this._tText.htmlText = this._tText.htmlText + param1;
       }
       
       public function activeSmallHyperlink() : void {
          HyperlinkFactory.activeSmallHyperlink(this._tText);
       }
       
-      function bindCss() : void {
-         var styleToDisplay:String = null;
-         var s:String = null;
-         var sc:uint = 0;
-         var ss:uint = 0;
-         var fontClass:String = null;
-         var font:String = null;
+      private function bindCss() : void {
+         var _loc3_:String = null;
+         var _loc4_:String = null;
+         var _loc5_:uint = 0;
+         var _loc6_:uint = 0;
+         var _loc7_:String = null;
+         var _loc8_:String = null;
          if(!this._sCssUrl)
          {
             if(this._needToFinalize)
@@ -708,7 +708,7 @@ package com.ankamagames.berilia.components
             }
             return;
          }
-         var oldCss:ExtendedStyleSheet = this._ssSheet;
+         var _loc1_:ExtendedStyleSheet = this._ssSheet;
          this._ssSheet = CssManager.getInstance().getCss(this._sCssUrl.uri);
          if(!this._ssSheet)
          {
@@ -718,64 +718,64 @@ package com.ankamagames.berilia.components
             }
             return;
          }
-         var currentStyleSheet:StyleSheet = this._tText.styleSheet;
+         var _loc2_:StyleSheet = this._tText.styleSheet;
          this._tText.styleSheet = null;
          this.aStyleObj = new Array();
-         for each (s in this._ssSheet.styleNames)
+         for each (_loc4_ in this._ssSheet.styleNames)
          {
-            if((!styleToDisplay) || (s == this._sCssClass) || (!(this._sCssClass == styleToDisplay)) && (s == "p"))
+            if(!_loc3_ || _loc4_ == this._sCssClass || !(this._sCssClass == _loc3_) && _loc4_ == "p")
             {
-               styleToDisplay = s;
+               _loc3_ = _loc4_;
             }
-            if((!(this._ssSheet == oldCss)) || (!this.aStyleObj[s]))
+            if(!(this._ssSheet == _loc1_) || !this.aStyleObj[_loc4_])
             {
-               this.aStyleObj[s] = this._ssSheet.getStyle(s);
+               this.aStyleObj[_loc4_] = this._ssSheet.getStyle(_loc4_);
             }
          }
-         if((this.aStyleObj[styleToDisplay]["shadowSize"]) || (this.aStyleObj[styleToDisplay]["shadowColor"]))
+         if((this.aStyleObj[_loc3_]["shadowSize"]) || (this.aStyleObj[_loc3_]["shadowColor"]))
          {
-            sc = this.aStyleObj[styleToDisplay]["shadowColor"]?parseInt(this.aStyleObj[styleToDisplay]["shadowColor"].substr(1)):0;
-            ss = this.aStyleObj[styleToDisplay]["shadowSize"]?parseInt(this.aStyleObj[styleToDisplay]["shadowSize"]):5;
-            this._tText.filters = [new DropShadowFilter(0,0,sc,0.5,ss,ss,3)];
+            _loc5_ = this.aStyleObj[_loc3_]["shadowColor"]?parseInt(this.aStyleObj[_loc3_]["shadowColor"].substr(1)):0;
+            _loc6_ = this.aStyleObj[_loc3_]["shadowSize"]?parseInt(this.aStyleObj[_loc3_]["shadowSize"]):5;
+            this._tText.filters = [new DropShadowFilter(0,0,_loc5_,0.5,_loc6_,_loc6_,3)];
          }
          else
          {
             this._tText.filters = [];
          }
-         if(this.aStyleObj[styleToDisplay]["useEmbedFonts"])
+         if(this.aStyleObj[_loc3_]["useEmbedFonts"])
          {
-            this._useEmbedFonts = this.aStyleObj[styleToDisplay]["useEmbedFonts"] == "true";
+            this._useEmbedFonts = this.aStyleObj[_loc3_]["useEmbedFonts"] == "true";
          }
-         if(this.aStyleObj[styleToDisplay]["paddingLeft"])
+         if(this.aStyleObj[_loc3_]["paddingLeft"])
          {
-            this._nPaddingLeft = parseInt(this.aStyleObj[styleToDisplay]["paddingLeft"]);
+            this._nPaddingLeft = parseInt(this.aStyleObj[_loc3_]["paddingLeft"]);
          }
-         if(this.aStyleObj[styleToDisplay]["verticalHeight"])
+         if(this.aStyleObj[_loc3_]["verticalHeight"])
          {
-            this._nTextHeight = parseInt(this.aStyleObj[styleToDisplay]["verticalHeight"]);
+            this._nTextHeight = parseInt(this.aStyleObj[_loc3_]["verticalHeight"]);
          }
-         if(this.aStyleObj[styleToDisplay]["verticalAlign"])
+         if(this.aStyleObj[_loc3_]["verticalAlign"])
          {
-            this.verticalAlign = this.aStyleObj[styleToDisplay]["verticalAlign"];
+            this.verticalAlign = this.aStyleObj[_loc3_]["verticalAlign"];
          }
-         if(this.aStyleObj[styleToDisplay]["thickness"])
+         if(this.aStyleObj[_loc3_]["thickness"])
          {
-            this._tText.thickness = this.aStyleObj[styleToDisplay]["thickness"];
+            this._tText.thickness = this.aStyleObj[_loc3_]["thickness"];
          }
          this._tText.gridFitType = GridFitType.PIXEL;
          this._tText.htmlText = this._sText?this._sText:this.text;
-         this._tfFormatter = this._ssSheet.transform(this.aStyleObj[styleToDisplay]);
-         if(this.aStyleObj[styleToDisplay]["leading"])
+         this._tfFormatter = this._ssSheet.transform(this.aStyleObj[_loc3_]);
+         if(this.aStyleObj[_loc3_]["leading"])
          {
-            this._tfFormatter.leading = this.aStyleObj[styleToDisplay]["leading"];
+            this._tfFormatter.leading = this.aStyleObj[_loc3_]["leading"];
          }
-         if(this.aStyleObj[styleToDisplay]["letterSpacing"])
+         if(this.aStyleObj[_loc3_]["letterSpacing"])
          {
-            this._tfFormatter.letterSpacing = parseFloat(this.aStyleObj[styleToDisplay]["letterSpacing"]);
+            this._tfFormatter.letterSpacing = parseFloat(this.aStyleObj[_loc3_]["letterSpacing"]);
          }
-         if(this.aStyleObj[styleToDisplay]["kerning"])
+         if(this.aStyleObj[_loc3_]["kerning"])
          {
-            this._tfFormatter.kerning = this.aStyleObj[styleToDisplay]["kerning"] == "true";
+            this._tfFormatter.kerning = this.aStyleObj[_loc3_]["kerning"] == "true";
          }
          if(!this._neverIndent)
          {
@@ -784,12 +784,12 @@ package com.ankamagames.berilia.components
          this._tfFormatter.leftMargin = this._nPaddingLeft;
          if(this._useEmbedFonts)
          {
-            fontClass = FontManager.getInstance().getFontClassName(this._tfFormatter.font);
-            if(fontClass)
+            _loc7_ = FontManager.getInstance().getFontClassName(this._tfFormatter.font);
+            if(_loc7_)
             {
                this._tfFormatter.size = Math.round(int(this._tfFormatter.size) * FontManager.getInstance().getSizeMultipicator(this._tfFormatter.font));
-               this._tfFormatter.font = fontClass;
-               this._tText.defaultTextFormat.font = fontClass;
+               this._tfFormatter.font = _loc7_;
+               this._tText.defaultTextFormat.font = _loc7_;
                this._tText.embedFonts = true;
                this._tText.antiAliasType = AntiAliasType.ADVANCED;
             }
@@ -807,8 +807,8 @@ package com.ankamagames.berilia.components
          }
          else
          {
-            font = FontManager.getInstance().getRealFontName(this._tfFormatter.font);
-            this._tfFormatter.font = !(font == "")?font:this._tfFormatter.font;
+            _loc8_ = FontManager.getInstance().getRealFontName(this._tfFormatter.font);
+            this._tfFormatter.font = _loc8_ != ""?_loc8_:this._tfFormatter.font;
             this._tText.embedFonts = false;
          }
          this._tText.setTextFormat(this._tfFormatter);
@@ -889,23 +889,23 @@ package com.ankamagames.berilia.components
          }
       }
       
-      public function fullSize(width:int) : void {
+      public function fullSize(param1:int) : void {
          this.removeTooltipExtension();
-         this._nWidth = width;
-         this._tText.width = width;
-         var tHeight:uint = this._tText.textHeight + 8;
-         this._tText.height = tHeight;
-         this._nHeight = tHeight;
+         this._nWidth = param1;
+         this._tText.width = param1;
+         var _loc2_:uint = this._tText.textHeight + 8;
+         this._tText.height = _loc2_;
+         this._nHeight = _loc2_;
       }
       
-      public function fullWidth(maxWidth:uint=0) : void {
+      public function fullWidth(param1:uint=0) : void {
          this._nWidth = int(this._tText.textWidth + 5);
          this._tText.width = this._nWidth;
-         if(maxWidth > 0)
+         if(param1 > 0)
          {
-            this._nWidth = maxWidth;
-            this._tText.width = maxWidth;
-            if(this._tText.textWidth < maxWidth)
+            this._nWidth = param1;
+            this._tText.width = param1;
+            if(this._tText.textWidth < param1)
             {
                this._tText.width = this._tText.textWidth + 10;
             }
@@ -914,41 +914,41 @@ package com.ankamagames.berilia.components
          this._tText.height = this._nHeight;
       }
       
-      public function resizeText(useSizeMin:Boolean=true) : void {
-         var currentSize:* = 0;
-         var sizeMin:* = 0;
-         var needTooltipExtension:* = false;
-         var currentTextFieldWidth:* = 0;
-         var textWidth:* = NaN;
+      public function resizeText(param1:Boolean=true) : void {
+         var _loc2_:* = 0;
+         var _loc3_:* = 0;
+         var _loc4_:* = false;
+         var _loc5_:* = 0;
+         var _loc6_:* = NaN;
          this.removeTooltipExtension();
-         if((this._bFixedHeight) && (!this._tText.multiline) && (this._tText.autoSize == "none") && (this._tfFormatter))
+         if((this._bFixedHeight) && !this._tText.multiline && this._tText.autoSize == "none" && (this._tfFormatter))
          {
-            currentSize = int(this._tfFormatter.size);
-            sizeMin = currentSize;
-            if(useSizeMin)
+            _loc2_ = int(this._tfFormatter.size);
+            _loc3_ = _loc2_;
+            if(param1)
             {
-               if(sizeMin < 12)
+               if(_loc3_ < 12)
                {
-                  sizeMin = 12;
+                  _loc3_ = 12;
                }
             }
             else
             {
-               sizeMin = 0;
+               _loc3_ = 0;
             }
-            needTooltipExtension = false;
-            currentTextFieldWidth = this._tText.width;
+            _loc4_ = false;
+            _loc5_ = this._tText.width;
             while(true)
             {
-               textWidth = this._tText.textWidth;
-               if((textWidth > currentTextFieldWidth) || (this._tText.textHeight > this._tText.height))
+               _loc6_ = this._tText.textWidth;
+               if(_loc6_ > _loc5_ || this._tText.textHeight > this._tText.height)
                {
-                  currentSize--;
-                  if(currentSize < sizeMin)
+                  _loc2_--;
+                  if(_loc2_ < _loc3_)
                   {
                      if(this._useTooltipExtension)
                      {
-                        needTooltipExtension = true;
+                        _loc4_ = true;
                      }
                      else
                      {
@@ -956,13 +956,13 @@ package com.ankamagames.berilia.components
                      }
                      break;
                   }
-                  this._tfFormatter.size = currentSize;
+                  this._tfFormatter.size = _loc2_;
                   this._tText.setTextFormat(this._tfFormatter);
                   continue;
                }
                break;
             }
-            if((needTooltipExtension) && (!this.multiline) && (this._bFixedHeight))
+            if((_loc4_) && !this.multiline && (this._bFixedHeight))
             {
                this.addTooltipExtension();
             }
@@ -989,7 +989,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function addTooltipExtension() : void {
+      private function addTooltipExtension() : void {
          this._textFieldTooltipExtension = new TextField();
          this._textFieldTooltipExtension.selectable = false;
          this._textFieldTooltipExtension.height = 1;
@@ -999,8 +999,8 @@ package com.ankamagames.berilia.components
          this._textFieldTooltipExtension.text = "...";
          this._textFieldTooltipExtension.name = "extension_" + name;
          addChild(this._textFieldTooltipExtension);
-         var w:int = this._textFieldTooltipExtension.width + 2;
-         this._tText.width = this._tText.width - w;
+         var _loc1_:int = this._textFieldTooltipExtension.width + 2;
+         this._tText.width = this._tText.width - _loc1_;
          __width = this._tText.width;
          this._textFieldTooltipExtension.x = this._tText.width;
          this._textFieldTooltipExtension.y = this._tText.y + this._tText.height - this._textFieldTooltipExtension.textHeight - 10;
@@ -1010,28 +1010,28 @@ package com.ankamagames.berilia.components
             this._tText.height = this._tText.textHeight + 3;
             __height = this._tText.height;
          }
-         var target:DisplayObjectContainer = this;
-         var i:int = 0;
-         while(i < 4)
+         var _loc2_:DisplayObjectContainer = this;
+         var _loc3_:* = 0;
+         while(_loc3_ < 4)
          {
-            if(target is ButtonContainer)
+            if(_loc2_ is ButtonContainer)
             {
-               (target as ButtonContainer).mouseChildren = true;
+               (_loc2_ as ButtonContainer).mouseChildren = true;
                break;
             }
-            target = target.parent;
-            if(!target)
+            _loc2_ = _loc2_.parent;
+            if(!_loc2_)
             {
                break;
             }
-            i++;
+            _loc3_++;
          }
          this._textFieldTooltipExtension.addEventListener(MouseEvent.ROLL_OVER,this.onTooltipExtensionOver,false,0,true);
          this._textFieldTooltipExtension.addEventListener(MouseEvent.ROLL_OUT,this.onTooltipExtensionOut,false,0,true);
          this._textFieldTooltipExtension.addEventListener(MouseEvent.MOUSE_WHEEL,this.onTooltipExtensionOut,false,0,true);
       }
       
-      function updateTooltipExtensionStyle() : void {
+      private function updateTooltipExtensionStyle() : void {
          if(!this._textFieldTooltipExtension)
          {
             return;
@@ -1043,46 +1043,46 @@ package com.ankamagames.berilia.components
          this._textFieldTooltipExtension.textColor = this._textTooltipExtensionColor;
       }
       
-      function onTextClick(e:TextEvent) : void {
-         e.stopPropagation();
-         Berilia.getInstance().handler.process(new TextClickMessage(this,e.text));
+      private function onTextClick(param1:TextEvent) : void {
+         param1.stopPropagation();
+         Berilia.getInstance().handler.process(new TextClickMessage(this,param1.text));
       }
       
-      function updateAlign() : void {
+      protected function updateAlign() : void {
          if(!this._tText.textHeight)
          {
             return;
          }
-         var h:int = 0;
-         var i:int = 0;
-         while(i < this._tText.numLines)
+         var _loc1_:* = 0;
+         var _loc2_:* = 0;
+         while(_loc2_ < this._tText.numLines)
          {
-            h = h + (TextLineMetrics(this._tText.getLineMetrics(i)).height + TextLineMetrics(this._tText.getLineMetrics(i)).leading + TextLineMetrics(this._tText.getLineMetrics(i)).descent);
-            i++;
+            _loc1_ = _loc1_ + (TextLineMetrics(this._tText.getLineMetrics(_loc2_)).height + TextLineMetrics(this._tText.getLineMetrics(_loc2_)).leading + TextLineMetrics(this._tText.getLineMetrics(_loc2_)).descent);
+            _loc2_++;
          }
          switch(this._sVerticalAlign.toUpperCase())
          {
             case VALIGN_CENTER:
-               this._tText.height = h;
+               this._tText.height = _loc1_;
                this._tText.y = (this.height - this._tText.height) / 2;
                break;
             case VALIGN_BOTTOM:
                this._tText.height = this.height;
-               this._tText.y = this.height - h;
+               this._tText.y = this.height - _loc1_;
                break;
             case VALIGN_TOP:
-               this._tText.height = h;
+               this._tText.height = _loc1_;
                this._tText.y = 0;
                break;
             case VALIGN_FIXEDHEIGHT:
-               if((!this._tText.wordWrap) || (this._tText.multiline))
+               if(!this._tText.wordWrap || (this._tText.multiline))
                {
                   this._tText.height = this._tText.textHeight + HEIGHT_OFFSET;
                }
                this._tText.y = 0;
                break;
             case VALIGN_NONE:
-               if((!this._tText.wordWrap) || (this._tText.multiline))
+               if(!this._tText.wordWrap || (this._tText.multiline))
                {
                   this._tText.height = this._tText.textHeight + 4 + HEIGHT_OFFSET;
                }
@@ -1091,19 +1091,19 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function onTooltipExtensionOver(e:MouseEvent) : void {
-         var docMain:Sprite = Berilia.getInstance().docMain;
+      private function onTooltipExtensionOver(param1:MouseEvent) : void {
+         var _loc2_:Sprite = Berilia.getInstance().docMain;
          TooltipManager.show(new TextTooltipInfo(this._tText.text),this,UiModuleManager.getInstance().getModule("Ankama_Tooltips"),false,"TextExtension",LocationEnum.POINT_TOP,LocationEnum.POINT_BOTTOM,20,true,null,TooltipManager.defaultTooltipUiScript,null,"TextInfo");
          this._textFieldTooltipExtension.textColor = 16765814;
       }
       
-      function onTooltipExtensionOut(e:MouseEvent=null) : void {
+      private function onTooltipExtensionOut(param1:MouseEvent=null) : void {
          TooltipManager.hide("TextExtension");
          this._textFieldTooltipExtension.textColor = this._textTooltipExtensionColor;
       }
       
       public function finalize() : void {
-         var ui:UiRootContainer = null;
+         var _loc1_:UiRootContainer = null;
          if(this._binded)
          {
             if(this._autoResize)
@@ -1115,10 +1115,10 @@ package com.ankamagames.berilia.components
                HyperlinkFactory.createTextClickHandler(this._tText);
             }
             this._finalized = true;
-            ui = getUi();
-            if(ui)
+            _loc1_ = getUi();
+            if(_loc1_)
             {
-               ui.iAmFinalized(this);
+               _loc1_.iAmFinalized(this);
             }
          }
          else
@@ -1128,10 +1128,10 @@ package com.ankamagames.berilia.components
       }
       
       public function get bmpText() : BitmapData {
-         var m:Matrix = new Matrix();
-         var bmpdt:BitmapData = new BitmapData(this.width,this.height,true,16711680);
-         bmpdt.draw(this._tText,m,null,null,null,true);
-         return bmpdt;
+         var _loc1_:Matrix = new Matrix();
+         var _loc2_:BitmapData = new BitmapData(this.width,this.height,true,16711680);
+         _loc2_.draw(this._tText,_loc1_,null,null,null,true);
+         return _loc2_;
       }
    }
 }

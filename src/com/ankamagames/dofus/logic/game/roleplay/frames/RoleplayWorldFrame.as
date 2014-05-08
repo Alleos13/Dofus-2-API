@@ -5,7 +5,6 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
    import flash.geom.Point;
    import com.ankamagames.jerakine.logger.Log;
    import flash.utils.getQualifiedClassName;
-   import com.ankamagames.berilia.components.Label;
    import com.ankamagames.berilia.components.Texture;
    import com.ankamagames.dofus.types.entities.AnimatedCharacter;
    import com.ankamagames.dofus.uiApi.SystemApi;
@@ -18,12 +17,10 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
    import com.ankamagames.jerakine.utils.display.StageShareManager;
    import flash.events.Event;
    import com.ankamagames.jerakine.types.Uri;
-   import com.ankamagames.jerakine.data.XmlConfig;
    import com.ankamagames.jerakine.messages.Message;
    import com.ankamagames.atouin.messages.AdjacentMapOverMessage;
    import com.ankamagames.atouin.types.GraphicCell;
    import com.ankamagames.berilia.types.data.LinkedCursorData;
-   import com.ankamagames.dofus.datacenter.world.SubArea;
    import com.ankamagames.jerakine.entities.messages.EntityMouseOverMessage;
    import com.ankamagames.jerakine.entities.interfaces.IInteractive;
    import com.ankamagames.jerakine.interfaces.IRectangle;
@@ -63,16 +60,11 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
    import com.ankamagames.dofus.network.types.game.interactive.InteractiveElementWithAgeBonus;
    import com.ankamagames.dofus.logic.game.common.misc.DofusEntities;
    import com.ankamagames.dofus.logic.game.common.managers.PlayedCharacterManager;
-   import com.ankamagames.berilia.managers.TooltipManager;
    import com.ankamagames.berilia.managers.LinkedCursorSpriteManager;
    import com.ankamagames.atouin.utils.CellIdConverter;
    import com.ankamagames.atouin.managers.InteractiveCellManager;
-   import com.ankamagames.jerakine.types.enums.DirectionsEnum;
-   import com.ankamagames.jerakine.data.I18n;
-   import flash.display.Sprite;
    import com.ankamagames.atouin.AtouinConstants;
-   import com.ankamagames.berilia.managers.UiModuleManager;
-   import com.ankamagames.berilia.enums.StrataEnum;
+   import com.ankamagames.jerakine.types.enums.DirectionsEnum;
    import com.ankamagames.jerakine.managers.OptionManager;
    import com.ankamagames.jerakine.enum.OptionEnum;
    import com.ankamagames.dofus.network.types.game.context.roleplay.GameRolePlayActorInformations;
@@ -88,15 +80,15 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
    import com.ankamagames.dofus.datacenter.npcs.TaxCollectorName;
    import com.ankamagames.dofus.datacenter.npcs.TaxCollectorFirstname;
    import com.ankamagames.berilia.types.data.TextTooltipInfo;
+   import com.ankamagames.jerakine.data.XmlConfig;
    import com.ankamagames.dofus.logic.game.roleplay.types.PrismTooltipInformation;
-   import com.ankamagames.dofus.logic.game.roleplay.types.PortalTooltipInformation;
-   import com.ankamagames.dofus.network.types.game.context.roleplay.GameRolePlayPortalInformations;
-   import com.ankamagames.dofus.network.types.game.context.roleplay.GameRolePlayMerchantInformations;
    import com.ankamagames.dofus.network.types.game.context.roleplay.GameRolePlayGroupMonsterInformations;
    import com.ankamagames.dofus.network.types.game.context.roleplay.GameRolePlayPrismInformations;
-   import com.ankamagames.dofus.logic.game.roleplay.types.GameContextPaddockItemInformations;
    import com.ankamagames.tiphon.events.TiphonEvent;
+   import com.ankamagames.berilia.managers.TooltipManager;
+   import com.ankamagames.berilia.managers.UiModuleManager;
    import com.ankamagames.berilia.types.LocationEnum;
+   import com.ankamagames.berilia.enums.StrataEnum;
    import com.ankamagames.dofus.network.types.game.context.roleplay.GameRolePlayNamedActorInformations;
    import com.ankamagames.berilia.factories.MenusFactory;
    import com.ankamagames.dofus.logic.game.roleplay.managers.RoleplayManager;
@@ -146,8 +138,6 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
       
       private const _common:String = XmlConfig.getInstance().getEntry("config.ui.skin");
       
-      private var _mouseLabel:Label;
-      
       private var _mouseTop:Texture;
       
       private var _mouseBottom:Texture;
@@ -155,14 +145,6 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
       private var _mouseRight:Texture;
       
       private var _mouseLeft:Texture;
-      
-      private var _mouseTopBlue:Texture;
-      
-      private var _mouseBottomBlue:Texture;
-      
-      private var _mouseRightBlue:Texture;
-      
-      private var _mouseLeftBlue:Texture;
       
       private var _texturesReady:Boolean;
       
@@ -190,8 +172,8 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          return this._mouseOverEntityId;
       }
       
-      public function set allowOnlyCharacterInteraction(pAllow:Boolean) : void {
-         this._allowOnlyCharacterInteraction = pAllow;
+      public function set allowOnlyCharacterInteraction(param1:Boolean) : void {
+         this._allowOnlyCharacterInteraction = param1;
       }
       
       public function get allowOnlyCharacterInteraction() : Boolean {
@@ -215,8 +197,8 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          this._allowOnlyCharacterInteraction = false;
          this.cellClickEnabled = true;
          this.pivotingCharacter = false;
-         var shortcutsFrame:ShortcutsFrame = Kernel.getWorker().getFrame(ShortcutsFrame) as ShortcutsFrame;
-         if((!(shortcutsFrame.heldShortcuts.indexOf("showMonstersInfo") == -1)) && (!Kernel.getWorker().contains(MonstersInfoFrame)))
+         var _loc1_:ShortcutsFrame = Kernel.getWorker().getFrame(ShortcutsFrame) as ShortcutsFrame;
+         if(!(_loc1_.heldShortcuts.indexOf("showMonstersInfo") == -1) && !Kernel.getWorker().contains(MonstersInfoFrame))
          {
             Kernel.getWorker().addFrame(_monstersInfoFrame);
          }
@@ -247,121 +229,97 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          this._mouseLeft = new Texture();
          this._mouseLeft.uri = new Uri(this._common + "assets.swf|cursorLeft");
          this._mouseLeft.finalize();
-         this._mouseBottomBlue = new Texture();
-         this._mouseBottomBlue.uri = new Uri(this._common + "assets.swf|cursorBottomBlue");
-         this._mouseBottomBlue.finalize();
-         this._mouseTopBlue = new Texture();
-         this._mouseTopBlue.uri = new Uri(this._common + "assets.swf|cursorTopBlue");
-         this._mouseTopBlue.finalize();
-         this._mouseRightBlue = new Texture();
-         this._mouseRightBlue.uri = new Uri(this._common + "assets.swf|cursorRightBlue");
-         this._mouseRightBlue.finalize();
-         this._mouseLeftBlue = new Texture();
-         this._mouseLeftBlue.uri = new Uri(this._common + "assets.swf|cursorLeftBlue");
-         this._mouseLeftBlue.finalize();
-         this._mouseLabel = new Label();
-         this._mouseLabel.css = new Uri(XmlConfig.getInstance().getEntry("config.ui.skin") + "css/normal.css");
          this._texturesReady = true;
          return true;
       }
       
-      public function process(msg:Message) : Boolean {
-         var amomsg:AdjacentMapOverMessage = null;
-         var targetCell:Point = null;
-         var cellSprite:GraphicCell = null;
-         var item:LinkedCursorData = null;
-         var neighborId:* = 0;
-         var neighborSubarea:SubArea = null;
-         var subareaChange:* = false;
-         var x:* = 0;
-         var y:* = 0;
-         var info:String = null;
-         var emomsg:EntityMouseOverMessage = null;
-         var tooltipName:String = null;
-         var entity:IInteractive = null;
-         var animatedCharacter:AnimatedCharacter = null;
-         var infos:* = undefined;
-         var targetBounds:IRectangle = null;
-         var tooltipMaker:String = null;
-         var cacheName:String = null;
-         var tooltipOffset:* = NaN;
-         var mrcmsg:MouseRightClickMessage = null;
-         var modContextMenu:Object = null;
-         var rightClickedEntity:IInteractive = null;
-         var emoutmsg:EntityMouseOutMessage = null;
-         var ecmsg:EntityClickMessage = null;
-         var entityc:IInteractive = null;
-         var EntityClickInfo:GameContextActorInformations = null;
-         var menuResult:* = false;
-         var ieamsg:InteractiveElementActivationMessage = null;
-         var interactiveFrame:RoleplayInteractivesFrame = null;
-         var iemovmsg:InteractiveElementMouseOverMessage = null;
-         var infosIe:Object = null;
-         var ttMaker:String = null;
-         var tooltipCacheName:String = null;
-         var interactiveElem:InteractiveElement = null;
-         var interactiveSkill:InteractiveElementSkill = null;
-         var interactive:Interactive = null;
-         var elementId:uint = 0;
-         var roleplayEntitiesFrame:RoleplayEntitiesFrame = null;
-         var houseWrapper:HouseWrapper = null;
-         var target:Rectangle = null;
-         var iemomsg:InteractiveElementMouseOutMessage = null;
-         var smia:ShowMonstersInfoAction = null;
-         var mum:MouseUpMessage = null;
-         var sf:ShortcutsFrame = null;
-         var climsg:CellClickMessage = null;
-         var amcmsg:AdjacentMapClickMessage = null;
-         var playedEntity:IEntity = null;
-         var text:String = null;
-         var text2:String = null;
-         var target2:Rectangle = null;
-         var param:Object = null;
-         var tooltipTarget:TiphonSprite = null;
-         var rider:TiphonSprite = null;
-         var isCreatureMode:* = false;
-         var head:DisplayObject = null;
-         var r1:Rectangle = null;
-         var r2:Rectangle2 = null;
-         var fight:FightTeam = null;
-         var allianceInfos:AllianceInformations = null;
-         var levelDiffInfo:* = 0;
-         var grtci:GameRolePlayTaxCollectorInformations = null;
-         var guildtcinfos:GuildInformations = null;
-         var gwtc:GuildWrapper = null;
-         var awtc:AllianceWrapper = null;
-         var npcInfos:GameRolePlayNpcInformations = null;
-         var npc:Npc = null;
-         var allianceFrame:AllianceFrame = null;
-         var targetLevel:uint = 0;
-         var playerLevel:uint = 0;
-         var rcf:RoleplayContextFrame = null;
-         var actorInfos:GameContextActorInformations = null;
-         var menu:Object = null;
-         var rightClickedinfos:GameContextActorInformations = null;
-         var fightId:uint = 0;
-         var fightTeamLeader:* = 0;
-         var teamType:uint = 0;
-         var gfjrmsg:GameFightJoinRequestMessage = null;
-         var playerEntity3:IEntity = null;
-         var guildId:* = 0;
-         var team:FightTeam = null;
-         var fighter:FightTeamMemberInformations = null;
-         var guild:GuildWrapper = null;
-         var playerEntity:IEntity = null;
-         var forbiddenCellsIds:Array = null;
-         var i:* = 0;
-         var nearestCell:MapPoint = null;
-         var mp:MapPoint = null;
-         var elem:Object = null;
-         var enabledSkills:String = null;
-         var disabledSkills:String = null;
-         var collectSkill:Skill = null;
-         var showBonus:* = false;
-         var iewab:InteractiveElementWithAgeBonus = null;
+      public function process(param1:Message) : Boolean {
+         var _loc2_:AdjacentMapOverMessage = null;
+         var _loc3_:Point = null;
+         var _loc4_:GraphicCell = null;
+         var _loc5_:LinkedCursorData = null;
+         var _loc6_:EntityMouseOverMessage = null;
+         var _loc7_:String = null;
+         var _loc8_:IInteractive = null;
+         var _loc9_:AnimatedCharacter = null;
+         var _loc10_:* = undefined;
+         var _loc11_:IRectangle = null;
+         var _loc12_:String = null;
+         var _loc13_:String = null;
+         var _loc14_:* = NaN;
+         var _loc15_:MouseRightClickMessage = null;
+         var _loc16_:Object = null;
+         var _loc17_:IInteractive = null;
+         var _loc18_:EntityMouseOutMessage = null;
+         var _loc19_:EntityClickMessage = null;
+         var _loc20_:IInteractive = null;
+         var _loc21_:GameContextActorInformations = null;
+         var _loc22_:* = false;
+         var _loc23_:InteractiveElementActivationMessage = null;
+         var _loc24_:RoleplayInteractivesFrame = null;
+         var _loc25_:InteractiveElementMouseOverMessage = null;
+         var _loc26_:Object = null;
+         var _loc27_:String = null;
+         var _loc28_:String = null;
+         var _loc29_:InteractiveElement = null;
+         var _loc30_:InteractiveElementSkill = null;
+         var _loc31_:Interactive = null;
+         var _loc32_:uint = 0;
+         var _loc33_:RoleplayEntitiesFrame = null;
+         var _loc34_:HouseWrapper = null;
+         var _loc35_:Rectangle = null;
+         var _loc36_:InteractiveElementMouseOutMessage = null;
+         var _loc37_:ShowMonstersInfoAction = null;
+         var _loc38_:MouseUpMessage = null;
+         var _loc39_:ShortcutsFrame = null;
+         var _loc40_:CellClickMessage = null;
+         var _loc41_:AdjacentMapClickMessage = null;
+         var _loc42_:IEntity = null;
+         var _loc43_:TiphonSprite = null;
+         var _loc44_:TiphonSprite = null;
+         var _loc45_:* = false;
+         var _loc46_:DisplayObject = null;
+         var _loc47_:Rectangle = null;
+         var _loc48_:Rectangle2 = null;
+         var _loc49_:FightTeam = null;
+         var _loc50_:AllianceInformations = null;
+         var _loc51_:* = 0;
+         var _loc52_:GameRolePlayTaxCollectorInformations = null;
+         var _loc53_:GuildInformations = null;
+         var _loc54_:GuildWrapper = null;
+         var _loc55_:AllianceWrapper = null;
+         var _loc56_:GameRolePlayNpcInformations = null;
+         var _loc57_:Npc = null;
+         var _loc58_:AllianceFrame = null;
+         var _loc59_:uint = 0;
+         var _loc60_:uint = 0;
+         var _loc61_:RoleplayContextFrame = null;
+         var _loc62_:GameContextActorInformations = null;
+         var _loc63_:Object = null;
+         var _loc64_:GameContextActorInformations = null;
+         var _loc65_:uint = 0;
+         var _loc66_:* = 0;
+         var _loc67_:uint = 0;
+         var _loc68_:GameFightJoinRequestMessage = null;
+         var _loc69_:IEntity = null;
+         var _loc70_:* = 0;
+         var _loc71_:FightTeam = null;
+         var _loc72_:FightTeamMemberInformations = null;
+         var _loc73_:GuildWrapper = null;
+         var _loc74_:IEntity = null;
+         var _loc75_:Array = null;
+         var _loc76_:* = 0;
+         var _loc77_:MapPoint = null;
+         var _loc78_:MapPoint = null;
+         var _loc79_:Object = null;
+         var _loc80_:String = null;
+         var _loc81_:String = null;
+         var _loc82_:Skill = null;
+         var _loc83_:* = false;
+         var _loc84_:InteractiveElementWithAgeBonus = null;
          switch(true)
          {
-            case msg is CellClickMessage:
+            case param1 is CellClickMessage:
                if(this.pivotingCharacter)
                {
                   return false;
@@ -372,32 +330,32 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
                }
                if(this.cellClickEnabled)
                {
-                  climsg = msg as CellClickMessage;
+                  _loc40_ = param1 as CellClickMessage;
                   (Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame).currentEmoticon = 0;
                   this.roleplayMovementFrame.resetNextMoveMapChange();
                   this.roleplayMovementFrame.setFollowingInteraction(null);
-                  this.roleplayMovementFrame.askMoveTo(MapPoint.fromCellId(climsg.cellId));
+                  this.roleplayMovementFrame.askMoveTo(MapPoint.fromCellId(_loc40_.cellId));
                }
                return true;
-            case msg is AdjacentMapClickMessage:
+            case param1 is AdjacentMapClickMessage:
                if(this.allowOnlyCharacterInteraction)
                {
                   return false;
                }
                if(this.cellClickEnabled)
                {
-                  amcmsg = msg as AdjacentMapClickMessage;
-                  playedEntity = DofusEntities.getEntity(PlayedCharacterManager.getInstance().id);
-                  if(!playedEntity)
+                  _loc41_ = param1 as AdjacentMapClickMessage;
+                  _loc42_ = DofusEntities.getEntity(PlayedCharacterManager.getInstance().id);
+                  if(!_loc42_)
                   {
                      _log.warn("The player tried to move before its character was added to the scene. Aborting.");
                      return false;
                   }
-                  this.roleplayMovementFrame.setNextMoveMapChange(amcmsg.adjacentMapId);
-                  if(!playedEntity.position.equals(MapPoint.fromCellId(amcmsg.cellId)))
+                  this.roleplayMovementFrame.setNextMoveMapChange(_loc41_.adjacentMapId);
+                  if(!_loc42_.position.equals(MapPoint.fromCellId(_loc41_.cellId)))
                   {
                      this.roleplayMovementFrame.setFollowingInteraction(null);
-                     this.roleplayMovementFrame.askMoveTo(MapPoint.fromCellId(amcmsg.cellId));
+                     this.roleplayMovementFrame.askMoveTo(MapPoint.fromCellId(_loc41_.cellId));
                   }
                   else
                   {
@@ -406,240 +364,172 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
                   }
                }
                return true;
-            case msg is AdjacentMapOutMessage:
+            case param1 is AdjacentMapOutMessage:
                if(this.allowOnlyCharacterInteraction)
                {
                   return false;
                }
-               TooltipManager.hide("subareaChange");
                LinkedCursorSpriteManager.getInstance().removeItem("changeMapCursor");
                return true;
-            case msg is AdjacentMapOverMessage:
+            case param1 is AdjacentMapOverMessage:
                if(this.allowOnlyCharacterInteraction)
                {
                   return false;
                }
-               amomsg = AdjacentMapOverMessage(msg);
-               targetCell = CellIdConverter.cellIdToCoord(amomsg.cellId);
-               cellSprite = InteractiveCellManager.getInstance().getCell(amomsg.cellId);
-               item = new LinkedCursorData();
-               if(amomsg.direction == DirectionsEnum.RIGHT)
-               {
-                  neighborId = PlayedCharacterManager.getInstance().currentMap.rightNeighbourId;
-               }
-               else
-               {
-                  if(amomsg.direction == DirectionsEnum.DOWN)
-                  {
-                     neighborId = PlayedCharacterManager.getInstance().currentMap.bottomNeighbourId;
-                  }
-                  else
-                  {
-                     if(amomsg.direction == DirectionsEnum.LEFT)
-                     {
-                        neighborId = PlayedCharacterManager.getInstance().currentMap.leftNeighbourId;
-                     }
-                     else
-                     {
-                        if(amomsg.direction == DirectionsEnum.UP)
-                        {
-                           neighborId = PlayedCharacterManager.getInstance().currentMap.topNeighbourId;
-                        }
-                     }
-                  }
-               }
-               neighborSubarea = SubArea.getSubAreaByMapId(neighborId);
-               subareaChange = false;
-               x = 0;
-               y = 0;
-               if((neighborSubarea) && (!(neighborSubarea.id == PlayedCharacterManager.getInstance().currentSubArea.id)))
-               {
-                  subareaChange = true;
-                  text = I18n.getUiText("ui.common.toward",[neighborSubarea.name]);
-                  text2 = I18n.getUiText("ui.common.level") + " " + neighborSubarea.level;
-                  this._mouseLabel.text = text.length > text2.length?text:text2;
-                  info = text + "\n" + text2;
-               }
-               switch(amomsg.direction)
+               _loc2_ = AdjacentMapOverMessage(param1);
+               _loc3_ = CellIdConverter.cellIdToCoord(_loc2_.cellId);
+               _loc4_ = InteractiveCellManager.getInstance().getCell(_loc2_.cellId);
+               _loc5_ = new LinkedCursorData();
+               switch(_loc2_.direction)
                {
                   case DirectionsEnum.LEFT:
-                     item.sprite = subareaChange?this._mouseLeftBlue:this._mouseLeft;
-                     item.lockX = true;
-                     item.sprite.x = amomsg.zone.x + amomsg.zone.width / 2;
-                     item.offset = new Point(0,0);
-                     item.lockY = true;
-                     item.sprite.y = cellSprite.y + AtouinConstants.CELL_HEIGHT / 2;
-                     if(subareaChange)
-                     {
-                        x = 0;
-                        y = item.sprite.height / 2;
-                     }
+                     _loc5_.sprite = this._mouseLeft;
+                     _loc5_.lockX = true;
+                     _loc5_.sprite.x = _loc2_.zone.x + _loc2_.zone.width / 2;
+                     _loc5_.offset = new Point(0,0);
+                     _loc5_.lockY = true;
+                     _loc5_.sprite.y = _loc4_.y + AtouinConstants.CELL_HEIGHT / 2;
                      break;
                   case DirectionsEnum.UP:
-                     item.sprite = subareaChange?this._mouseTopBlue:this._mouseTop;
-                     item.lockY = true;
-                     item.sprite.y = amomsg.zone.y + amomsg.zone.height / 2;
-                     item.offset = new Point(0,0);
-                     item.lockX = true;
-                     item.sprite.x = cellSprite.x + AtouinConstants.CELL_WIDTH / 2;
-                     if(subareaChange)
-                     {
-                        x = -this._mouseLabel.textWidth / 2;
-                        y = item.sprite.height + 5;
-                     }
+                     _loc5_.sprite = this._mouseTop;
+                     _loc5_.lockY = true;
+                     _loc5_.sprite.y = _loc2_.zone.y + _loc2_.zone.height / 2;
+                     _loc5_.offset = new Point(0,0);
+                     _loc5_.lockX = true;
+                     _loc5_.sprite.x = _loc4_.x + AtouinConstants.CELL_WIDTH / 2;
                      break;
                   case DirectionsEnum.DOWN:
-                     item.sprite = subareaChange?this._mouseBottomBlue:this._mouseBottom;
-                     item.lockY = true;
-                     item.sprite.y = amomsg.zone.getBounds(amomsg.zone).top;
-                     item.offset = new Point(0,0);
-                     item.lockX = true;
-                     item.sprite.x = cellSprite.x + AtouinConstants.CELL_WIDTH / 2;
-                     if(subareaChange)
-                     {
-                        x = -this._mouseLabel.textWidth / 2;
-                        y = -item.sprite.height - this._mouseLabel.textHeight - 34;
-                     }
+                     _loc5_.sprite = this._mouseBottom;
+                     _loc5_.lockY = true;
+                     _loc5_.sprite.y = _loc2_.zone.getBounds(_loc2_.zone).top;
+                     _loc5_.offset = new Point(0,0);
+                     _loc5_.lockX = true;
+                     _loc5_.sprite.x = _loc4_.x + AtouinConstants.CELL_WIDTH / 2;
                      break;
                   case DirectionsEnum.RIGHT:
-                     item.sprite = subareaChange?this._mouseRightBlue:this._mouseRight;
-                     item.lockX = true;
-                     item.sprite.x = amomsg.zone.getBounds(amomsg.zone).left + amomsg.zone.width / 2;
-                     item.offset = new Point(0,0);
-                     item.lockY = true;
-                     item.sprite.y = cellSprite.y + AtouinConstants.CELL_HEIGHT / 2;
-                     if(subareaChange)
-                     {
-                        x = -this._mouseLabel.textWidth;
-                        y = item.sprite.height / 2;
-                     }
+                     _loc5_.sprite = this._mouseRight;
+                     _loc5_.lockX = true;
+                     _loc5_.sprite.x = _loc2_.zone.getBounds(_loc2_.zone).left + _loc2_.zone.width / 2;
+                     _loc5_.offset = new Point(0,0);
+                     _loc5_.lockY = true;
+                     _loc5_.sprite.y = _loc4_.y + AtouinConstants.CELL_HEIGHT / 2;
                      break;
                }
-               if(subareaChange)
-               {
-                  target2 = new Rectangle(item.sprite.x + x,item.sprite.y + y,1,1);
-                  param = new Object();
-                  param.classCss = "center";
-                  TooltipManager.show(info,target2,UiModuleManager.getInstance().getModule("Ankama_GameUiCore"),false,"subareaChange",0,0,0,true,null,null,param,"Text" + neighborId,false,StrataEnum.STRATA_TOOLTIP,1);
-               }
-               LinkedCursorSpriteManager.getInstance().addItem("changeMapCursor",item);
+               LinkedCursorSpriteManager.getInstance().addItem("changeMapCursor",_loc5_);
                return true;
-            case msg is EntityMouseOverMessage:
-               emomsg = msg as EntityMouseOverMessage;
-               this._mouseOverEntityId = emomsg.entity.id;
-               tooltipName = "entity_" + emomsg.entity.id;
+            case param1 is EntityMouseOverMessage:
+               _loc6_ = param1 as EntityMouseOverMessage;
+               this._mouseOverEntityId = _loc6_.entity.id;
+               _loc7_ = "entity_" + _loc6_.entity.id;
                this.displayCursor(NO_CURSOR);
-               entity = emomsg.entity as IInteractive;
-               animatedCharacter = entity as AnimatedCharacter;
-               if(animatedCharacter)
+               _loc8_ = _loc6_.entity as IInteractive;
+               _loc9_ = _loc8_ as AnimatedCharacter;
+               if(_loc9_)
                {
-                  animatedCharacter = animatedCharacter.getRootEntity();
-                  animatedCharacter.highLightCharacterAndFollower(true);
-                  entity = animatedCharacter;
-                  if((OptionManager.getOptionManager("tiphon").auraMode == OptionEnum.AURA_ON_ROLLOVER) && (animatedCharacter.getDirection() == DirectionsEnum.DOWN))
+                  _loc9_ = _loc9_.getRootEntity();
+                  _loc9_.highLightCharacterAndFollower(true);
+                  _loc8_ = _loc9_;
+                  if(OptionManager.getOptionManager("tiphon").auraMode == OptionEnum.AURA_ON_ROLLOVER && _loc9_.getDirection() == DirectionsEnum.DOWN)
                   {
-                     animatedCharacter.visibleAura = true;
+                     _loc9_.visibleAura = true;
                   }
                }
-               infos = this.roleplayContextFrame.entitiesFrame.getEntityInfos(entity.id) as GameRolePlayActorInformations;
-               if(entity is TiphonSprite)
+               _loc10_ = this.roleplayContextFrame.entitiesFrame.getEntityInfos(_loc8_.id) as GameRolePlayActorInformations;
+               if(_loc8_ is TiphonSprite)
                {
-                  tooltipTarget = entity as TiphonSprite;
-                  rider = (entity as TiphonSprite).getSubEntitySlot(SubEntityBindingPointCategoryEnum.HOOK_POINT_CATEGORY_MOUNT_DRIVER,0) as TiphonSprite;
-                  isCreatureMode = (Kernel.getWorker().getFrame(RoleplayEntitiesFrame)) && (RoleplayEntitiesFrame(Kernel.getWorker().getFrame(RoleplayEntitiesFrame)).isCreatureMode);
-                  if((rider) && (!isCreatureMode))
+                  _loc43_ = _loc8_ as TiphonSprite;
+                  _loc44_ = (_loc8_ as TiphonSprite).getSubEntitySlot(SubEntityBindingPointCategoryEnum.HOOK_POINT_CATEGORY_MOUNT_DRIVER,0) as TiphonSprite;
+                  _loc45_ = (Kernel.getWorker().getFrame(RoleplayEntitiesFrame)) && (RoleplayEntitiesFrame(Kernel.getWorker().getFrame(RoleplayEntitiesFrame)).isCreatureMode);
+                  if((_loc44_) && !_loc45_)
                   {
-                     tooltipTarget = rider;
+                     _loc43_ = _loc44_;
                   }
-                  head = tooltipTarget.getSlot("Tete");
-                  if(head)
+                  _loc46_ = _loc43_.getSlot("Tete");
+                  if(_loc46_)
                   {
-                     r1 = head.getBounds(StageShareManager.stage);
-                     r2 = new Rectangle2(r1.x,r1.y,r1.width,r1.height);
-                     targetBounds = r2;
+                     _loc47_ = _loc46_.getBounds(StageShareManager.stage);
+                     _loc48_ = new Rectangle2(_loc47_.x,_loc47_.y,_loc47_.width,_loc47_.height);
+                     _loc11_ = _loc48_;
                   }
                }
-               if((!targetBounds) || (targetBounds.width == 0) && (targetBounds.height == 0))
+               if(!_loc11_ || _loc11_.width == 0 && _loc11_.height == 0)
                {
-                  targetBounds = (entity as IDisplayable).absoluteBounds;
+                  _loc11_ = (_loc8_ as IDisplayable).absoluteBounds;
                }
-               tooltipMaker = null;
-               tooltipOffset = 0;
-               if(this.roleplayContextFrame.entitiesFrame.isFight(entity.id))
+               _loc12_ = null;
+               _loc14_ = 0;
+               if(this.roleplayContextFrame.entitiesFrame.isFight(_loc8_.id))
                {
                   if(this.allowOnlyCharacterInteraction)
                   {
                      return false;
                   }
-                  fight = this.roleplayContextFrame.entitiesFrame.getFightTeam(entity.id);
-                  infos = new RoleplayTeamFightersTooltipInformation(fight);
-                  tooltipMaker = "roleplayFight";
+                  _loc49_ = this.roleplayContextFrame.entitiesFrame.getFightTeam(_loc8_.id);
+                  _loc10_ = new RoleplayTeamFightersTooltipInformation(_loc49_);
+                  _loc12_ = "roleplayFight";
                   this.displayCursor(FIGHT_CURSOR,!PlayedCharacterManager.getInstance().restrictions.cantAttackMonster);
-                  if((fight.hasOptions()) || (fight.hasGroupMember()))
+                  if((_loc49_.hasOptions()) || (_loc49_.hasGroupMember()))
                   {
-                     tooltipOffset = 35;
+                     _loc14_ = 35;
                   }
                }
                else
                {
                   switch(true)
                   {
-                     case infos is GameRolePlayCharacterInformations:
-                        if(infos.contextualId == PlayedCharacterManager.getInstance().id)
+                     case _loc10_ is GameRolePlayCharacterInformations:
+                        if(_loc10_.contextualId == PlayedCharacterManager.getInstance().id)
                         {
-                           levelDiffInfo = 0;
+                           _loc51_ = 0;
                         }
                         else
                         {
-                           targetLevel = infos.alignmentInfos.characterPower - infos.contextualId;
-                           playerLevel = PlayedCharacterManager.getInstance().infos.level;
-                           levelDiffInfo = PlayedCharacterManager.getInstance().levelDiff(targetLevel);
+                           _loc59_ = _loc10_.alignmentInfos.characterPower - _loc10_.contextualId;
+                           _loc60_ = PlayedCharacterManager.getInstance().infos.level;
+                           _loc51_ = PlayedCharacterManager.getInstance().levelDiff(_loc59_);
                         }
-                        infos = new CharacterTooltipInformation(infos as GameRolePlayCharacterInformations,levelDiffInfo);
-                        cacheName = "CharacterCache";
+                        _loc10_ = new CharacterTooltipInformation(_loc10_ as GameRolePlayCharacterInformations,_loc51_);
+                        _loc13_ = "CharacterCache";
                         break;
-                     case infos is GameRolePlayMerchantInformations:
-                        cacheName = "MerchantCharacterCache";
-                        break;
-                     case infos is GameRolePlayMutantInformations:
-                        if((infos as GameRolePlayMutantInformations).humanoidInfo.restrictions.cantAttack)
+                     case _loc10_ is GameRolePlayMutantInformations:
+                        if((_loc10_ as GameRolePlayMutantInformations).humanoidInfo.restrictions.cantAttack)
                         {
-                           infos = new CharacterTooltipInformation(infos,0);
+                           _loc10_ = new CharacterTooltipInformation(_loc10_,0);
                         }
                         else
                         {
-                           infos = new MutantTooltipInformation(infos as GameRolePlayMutantInformations);
+                           _loc10_ = new MutantTooltipInformation(_loc10_ as GameRolePlayMutantInformations);
                         }
                         break;
-                     case infos is GameRolePlayTaxCollectorInformations:
+                     case _loc10_ is GameRolePlayTaxCollectorInformations:
                         if(this.allowOnlyCharacterInteraction)
                         {
                            return false;
                         }
-                        grtci = infos as GameRolePlayTaxCollectorInformations;
-                        guildtcinfos = grtci.identification.guildIdentity;
-                        allianceInfos = grtci.identification is TaxCollectorStaticExtendedInformations?(grtci.identification as TaxCollectorStaticExtendedInformations).allianceIdentity:null;
-                        gwtc = GuildWrapper.create(guildtcinfos.guildId,guildtcinfos.guildName,guildtcinfos.guildEmblem,0,true);
-                        awtc = allianceInfos?AllianceWrapper.create(allianceInfos.allianceId,allianceInfos.allianceTag,allianceInfos.allianceName,allianceInfos.allianceEmblem):null;
-                        infos = new TaxCollectorTooltipInformation(TaxCollectorName.getTaxCollectorNameById((infos as GameRolePlayTaxCollectorInformations).identification.lastNameId).name,TaxCollectorFirstname.getTaxCollectorFirstnameById((infos as GameRolePlayTaxCollectorInformations).identification.firstNameId).firstname,gwtc,awtc,(infos as GameRolePlayTaxCollectorInformations).taxCollectorAttack);
+                        _loc52_ = _loc10_ as GameRolePlayTaxCollectorInformations;
+                        _loc53_ = _loc52_.identification.guildIdentity;
+                        _loc50_ = _loc52_.identification is TaxCollectorStaticExtendedInformations?(_loc52_.identification as TaxCollectorStaticExtendedInformations).allianceIdentity:null;
+                        _loc54_ = GuildWrapper.create(_loc53_.guildId,_loc53_.guildName,_loc53_.guildEmblem,0,true);
+                        _loc55_ = _loc50_?AllianceWrapper.create(_loc50_.allianceId,_loc50_.allianceTag,_loc50_.allianceName,_loc50_.allianceEmblem):null;
+                        _loc10_ = new TaxCollectorTooltipInformation(TaxCollectorName.getTaxCollectorNameById((_loc10_ as GameRolePlayTaxCollectorInformations).identification.lastNameId).name,TaxCollectorFirstname.getTaxCollectorFirstnameById((_loc10_ as GameRolePlayTaxCollectorInformations).identification.firstNameId).firstname,_loc54_,_loc55_,(_loc10_ as GameRolePlayTaxCollectorInformations).taxCollectorAttack);
                         break;
-                     case infos is GameRolePlayNpcInformations:
+                     case _loc10_ is GameRolePlayNpcInformations:
                         if(this.allowOnlyCharacterInteraction)
                         {
                            return false;
                         }
-                        npcInfos = infos as GameRolePlayNpcInformations;
-                        npc = Npc.getNpcById(npcInfos.npcId);
-                        infos = new TextTooltipInfo(npc.name,XmlConfig.getInstance().getEntry("config.ui.skin") + "css/tooltip_npc.css","green",0);
-                        infos.bgCornerRadius = 10;
-                        cacheName = "NPCCacheName";
-                        if(npc.actions.length == 0)
+                        _loc56_ = _loc10_ as GameRolePlayNpcInformations;
+                        _loc57_ = Npc.getNpcById(_loc56_.npcId);
+                        _loc10_ = new TextTooltipInfo(_loc57_.name,XmlConfig.getInstance().getEntry("config.ui.skin") + "css/tooltip_npc.css","green",0);
+                        _loc10_.bgCornerRadius = 10;
+                        _loc13_ = "NPCCacheName";
+                        if(_loc57_.actions.length == 0)
                         {
                            break;
                         }
                         this.displayCursor(NPC_CURSOR);
                         break;
-                     case infos is GameRolePlayGroupMonsterInformations:
+                     case _loc10_ is GameRolePlayGroupMonsterInformations:
                         if(this.allowOnlyCharacterInteraction)
                         {
                            return false;
@@ -647,296 +537,289 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
                         this.displayCursor(FIGHT_CURSOR,!PlayedCharacterManager.getInstance().restrictions.cantAttackMonster);
                         if(Kernel.getWorker().contains(MonstersInfoFrame))
                         {
-                           tooltipName = "MonstersInfo_" + infos.contextualId;
-                           cacheName = (Kernel.getWorker().getFrame(MonstersInfoFrame) as MonstersInfoFrame).getCacheName(infos.contextualId);
+                           _loc7_ = "MonstersInfo_" + _loc10_.contextualId;
+                           _loc13_ = (Kernel.getWorker().getFrame(MonstersInfoFrame) as MonstersInfoFrame).getCacheName(_loc10_.contextualId);
                         }
                         else
                         {
-                           cacheName = "GroupMonsterCache";
+                           _loc13_ = "GroupMonsterCache";
                         }
                         break;
-                     case infos is GameRolePlayPrismInformations:
-                        allianceFrame = Kernel.getWorker().getFrame(AllianceFrame) as AllianceFrame;
-                        infos = new PrismTooltipInformation(allianceFrame.getPrismSubAreaById(PlayedCharacterManager.getInstance().currentSubArea.id).alliance);
-                        break;
-                     case infos is GameRolePlayPortalInformations:
-                        infos = new PortalTooltipInformation((infos as GameRolePlayPortalInformations).portal.areaId);
-                        break;
-                     case infos is GameContextPaddockItemInformations:
-                        cacheName = "PaddockItemCache";
+                     case _loc10_ is GameRolePlayPrismInformations:
+                        _loc58_ = Kernel.getWorker().getFrame(AllianceFrame) as AllianceFrame;
+                        _loc10_ = new PrismTooltipInformation(_loc58_.getPrismSubAreaById(PlayedCharacterManager.getInstance().currentSubArea.id).alliance);
                         break;
                   }
                }
-               if(!infos)
+               if(!_loc10_)
                {
-                  _log.warn("Rolling over a unknown entity (" + emomsg.entity.id + ").");
+                  _log.warn("Rolling over a unknown entity (" + _loc6_.entity.id + ").");
                   return false;
                }
-               if(this.roleplayContextFrame.entitiesFrame.hasIcon(entity.id))
+               if(this.roleplayContextFrame.entitiesFrame.hasIcon(_loc8_.id))
                {
-                  tooltipOffset = 45;
+                  _loc14_ = 45;
                }
-               if((animatedCharacter) && (!animatedCharacter.rawAnimation) && (!this._entityTooltipData[animatedCharacter]))
+               if((_loc9_) && (!_loc9_.rawAnimation) && !this._entityTooltipData[_loc9_])
                {
-                  this._entityTooltipData[animatedCharacter] = 
+                  this._entityTooltipData[_loc9_] = 
                      {
-                        "data":infos,
-                        "name":tooltipName,
-                        "tooltipMaker":tooltipMaker,
-                        "tooltipOffset":tooltipOffset,
-                        "cacheName":cacheName
+                        "data":_loc10_,
+                        "name":_loc7_,
+                        "tooltipMaker":_loc12_,
+                        "tooltipOffset":_loc14_,
+                        "cacheName":_loc13_
                      };
-                  animatedCharacter.removeEventListener(TiphonEvent.RENDER_SUCCEED,this.onEntityAnimRendered);
-                  animatedCharacter.addEventListener(TiphonEvent.RENDER_SUCCEED,this.onEntityAnimRendered);
+                  _loc9_.addEventListener(TiphonEvent.RENDER_SUCCEED,this.onEntityAnimRendered);
                }
                else
                {
-                  TooltipManager.show(infos,targetBounds,UiModuleManager.getInstance().getModule("Ankama_Tooltips"),false,tooltipName,LocationEnum.POINT_BOTTOM,LocationEnum.POINT_TOP,tooltipOffset,true,tooltipMaker,null,null,cacheName,false,StrataEnum.STRATA_WORLD,this.sysApi.getCurrentZoom());
+                  TooltipManager.show(_loc10_,_loc11_,UiModuleManager.getInstance().getModule("Ankama_Tooltips"),false,_loc7_,LocationEnum.POINT_BOTTOM,LocationEnum.POINT_TOP,_loc14_,true,_loc12_,null,null,_loc13_,false,StrataEnum.STRATA_WORLD,this.sysApi.getCurrentZoom());
                }
                return true;
-            case msg is MouseRightClickMessage:
-               mrcmsg = msg as MouseRightClickMessage;
-               modContextMenu = UiModuleManager.getInstance().getModule("Ankama_ContextMenu").mainClass;
-               rightClickedEntity = mrcmsg.target as IInteractive;
-               if(rightClickedEntity)
+            case param1 is MouseRightClickMessage:
+               _loc15_ = param1 as MouseRightClickMessage;
+               _loc16_ = UiModuleManager.getInstance().getModule("Ankama_ContextMenu").mainClass;
+               _loc17_ = _loc15_.target as IInteractive;
+               if(_loc17_)
                {
-                  rcf = this.roleplayContextFrame;
-                  if((!(rightClickedEntity as AnimatedCharacter)) || ((rightClickedEntity as AnimatedCharacter).followed == null))
+                  _loc61_ = this.roleplayContextFrame;
+                  if(!(_loc17_ as AnimatedCharacter) || (_loc17_ as AnimatedCharacter).followed == null)
                   {
-                     actorInfos = rcf.entitiesFrame.getEntityInfos(rightClickedEntity.id);
+                     _loc62_ = _loc61_.entitiesFrame.getEntityInfos(_loc17_.id);
                   }
                   else
                   {
-                     actorInfos = rcf.entitiesFrame.getEntityInfos((rightClickedEntity as AnimatedCharacter).followed.id);
+                     _loc62_ = _loc61_.entitiesFrame.getEntityInfos((_loc17_ as AnimatedCharacter).followed.id);
                   }
-                  if(actorInfos is GameRolePlayNamedActorInformations)
+                  if(_loc62_ is GameRolePlayNamedActorInformations)
                   {
-                     if(!(rightClickedEntity is AnimatedCharacter))
+                     if(!(_loc17_ is AnimatedCharacter))
                      {
-                        _log.error("L\'entity " + rightClickedEntity.id + " est un GameRolePlayNamedActorInformations mais n\'est pas un AnimatedCharacter");
+                        _log.error("L\'entity " + _loc17_.id + " est un GameRolePlayNamedActorInformations mais n\'est pas un AnimatedCharacter");
                         return true;
                      }
-                     rightClickedEntity = (rightClickedEntity as AnimatedCharacter).getRootEntity();
-                     rightClickedinfos = this.roleplayContextFrame.entitiesFrame.getEntityInfos(rightClickedEntity.id);
-                     menu = MenusFactory.create(rightClickedinfos,"multiplayer",[rightClickedEntity]);
-                     if(menu)
+                     _loc17_ = (_loc17_ as AnimatedCharacter).getRootEntity();
+                     _loc64_ = this.roleplayContextFrame.entitiesFrame.getEntityInfos(_loc17_.id);
+                     _loc63_ = MenusFactory.create(_loc64_,"multiplayer",[_loc17_]);
+                     if(_loc63_)
                      {
-                        modContextMenu.createContextMenu(menu);
+                        _loc16_.createContextMenu(_loc63_);
                      }
                      return true;
                   }
-                  if(actorInfos is GameRolePlayGroupMonsterInformations)
+                  if(_loc62_ is GameRolePlayGroupMonsterInformations)
                   {
-                     menu = MenusFactory.create(actorInfos,"monsterGroup",[rightClickedEntity]);
-                     if(menu)
+                     _loc63_ = MenusFactory.create(_loc62_,"monsterGroup",[_loc17_]);
+                     if(_loc63_)
                      {
-                        modContextMenu.createContextMenu(menu);
+                        _loc16_.createContextMenu(_loc63_);
                      }
                      return true;
                   }
                }
                return false;
-            case msg is EntityMouseOutMessage:
-               emoutmsg = msg as EntityMouseOutMessage;
+            case param1 is EntityMouseOutMessage:
+               _loc18_ = param1 as EntityMouseOutMessage;
                this._mouseOverEntityId = 0;
                this.displayCursor(NO_CURSOR);
-               TooltipManager.hide("entity_" + emoutmsg.entity.id);
-               animatedCharacter = emoutmsg.entity as AnimatedCharacter;
-               if(animatedCharacter)
+               TooltipManager.hide("entity_" + _loc18_.entity.id);
+               _loc9_ = _loc18_.entity as AnimatedCharacter;
+               if(_loc9_)
                {
-                  animatedCharacter = animatedCharacter.getRootEntity();
-                  animatedCharacter.highLightCharacterAndFollower(false);
+                  _loc9_ = _loc9_.getRootEntity();
+                  _loc9_.highLightCharacterAndFollower(false);
                   if(!Kernel.getWorker().getFrame(MonstersInfoFrame))
                   {
-                     TooltipManager.hide("MonstersInfo_" + animatedCharacter.id);
+                     TooltipManager.hide("MonstersInfo_" + _loc9_.id);
                   }
                }
                if(OptionManager.getOptionManager("tiphon").auraMode == OptionEnum.AURA_ON_ROLLOVER)
                {
-                  animatedCharacter.visibleAura = false;
+                  _loc9_.visibleAura = false;
                }
                return true;
-            case msg is EntityClickMessage:
-               ecmsg = msg as EntityClickMessage;
-               entityc = ecmsg.entity as IInteractive;
-               if(entityc is AnimatedCharacter)
+            case param1 is EntityClickMessage:
+               _loc19_ = param1 as EntityClickMessage;
+               _loc20_ = _loc19_.entity as IInteractive;
+               if(_loc20_ is AnimatedCharacter)
                {
-                  entityc = (entityc as AnimatedCharacter).getRootEntity();
+                  _loc20_ = (_loc20_ as AnimatedCharacter).getRootEntity();
                }
-               EntityClickInfo = this.roleplayContextFrame.entitiesFrame.getEntityInfos(entityc.id);
-               menuResult = RoleplayManager.getInstance().displayContextualMenu(EntityClickInfo,entityc);
-               if(this.roleplayContextFrame.entitiesFrame.isFight(entityc.id))
+               _loc21_ = this.roleplayContextFrame.entitiesFrame.getEntityInfos(_loc20_.id);
+               _loc22_ = RoleplayManager.getInstance().displayContextualMenu(_loc21_,_loc20_);
+               if(this.roleplayContextFrame.entitiesFrame.isFight(_loc20_.id))
                {
-                  fightId = this.roleplayContextFrame.entitiesFrame.getFightId(entityc.id);
-                  fightTeamLeader = this.roleplayContextFrame.entitiesFrame.getFightLeaderId(entityc.id);
-                  teamType = this.roleplayContextFrame.entitiesFrame.getFightTeamType(entityc.id);
-                  if(teamType == TeamTypeEnum.TEAM_TYPE_TAXCOLLECTOR)
+                  _loc65_ = this.roleplayContextFrame.entitiesFrame.getFightId(_loc20_.id);
+                  _loc66_ = this.roleplayContextFrame.entitiesFrame.getFightLeaderId(_loc20_.id);
+                  _loc67_ = this.roleplayContextFrame.entitiesFrame.getFightTeamType(_loc20_.id);
+                  if(_loc67_ == TeamTypeEnum.TEAM_TYPE_TAXCOLLECTOR)
                   {
-                     team = this.roleplayContextFrame.entitiesFrame.getFightTeam(entityc.id) as FightTeam;
-                     for each (fighter in team.teamInfos.teamMembers)
+                     _loc71_ = this.roleplayContextFrame.entitiesFrame.getFightTeam(_loc20_.id) as FightTeam;
+                     for each (_loc72_ in _loc71_.teamInfos.teamMembers)
                      {
-                        if(fighter is FightTeamMemberTaxCollectorInformations)
+                        if(_loc72_ is FightTeamMemberTaxCollectorInformations)
                         {
-                           guildId = (fighter as FightTeamMemberTaxCollectorInformations).guildId;
+                           _loc70_ = (_loc72_ as FightTeamMemberTaxCollectorInformations).guildId;
                         }
                      }
-                     guild = (Kernel.getWorker().getFrame(SocialFrame) as SocialFrame).guild;
-                     if((guild) && (guildId == guild.guildId))
+                     _loc73_ = (Kernel.getWorker().getFrame(SocialFrame) as SocialFrame).guild;
+                     if((_loc73_) && _loc70_ == _loc73_.guildId)
                      {
                         KernelEventsManager.getInstance().processCallback(SocialHookList.OpenSocial,1,2);
                         Kernel.getWorker().process(GuildFightJoinRequestAction.create(PlayedCharacterManager.getInstance().currentMap.mapId));
                         return true;
                      }
                   }
-                  gfjrmsg = new GameFightJoinRequestMessage();
-                  gfjrmsg.initGameFightJoinRequestMessage(fightTeamLeader,fightId);
-                  playerEntity3 = DofusEntities.getEntity(PlayedCharacterManager.getInstance().id);
-                  if((playerEntity3 as IMovable).isMoving)
+                  _loc68_ = new GameFightJoinRequestMessage();
+                  _loc68_.initGameFightJoinRequestMessage(_loc66_,_loc65_);
+                  _loc69_ = DofusEntities.getEntity(PlayedCharacterManager.getInstance().id);
+                  if((_loc69_ as IMovable).isMoving)
                   {
-                     this.roleplayMovementFrame.setFollowingMessage(gfjrmsg);
-                     (playerEntity3 as IMovable).stop();
+                     this.roleplayMovementFrame.setFollowingMessage(_loc68_);
+                     (_loc69_ as IMovable).stop();
                   }
                   else
                   {
-                     ConnectionsHandler.getConnection().send(gfjrmsg);
+                     ConnectionsHandler.getConnection().send(_loc68_);
                   }
                }
                else
                {
-                  if((!(entityc.id == PlayedCharacterManager.getInstance().id)) && (!menuResult))
+                  if(!(_loc20_.id == PlayedCharacterManager.getInstance().id) && !_loc22_)
                   {
                      this.roleplayMovementFrame.setFollowingInteraction(null);
-                     this.roleplayMovementFrame.askMoveTo(entityc.position);
+                     this.roleplayMovementFrame.askMoveTo(_loc20_.position);
                   }
                }
                return true;
-            case msg is InteractiveElementActivationMessage:
+            case param1 is InteractiveElementActivationMessage:
                if(this.allowOnlyCharacterInteraction)
                {
                   return false;
                }
-               ieamsg = msg as InteractiveElementActivationMessage;
-               interactiveFrame = Kernel.getWorker().getFrame(RoleplayInteractivesFrame) as RoleplayInteractivesFrame;
-               if(!((interactiveFrame) && (interactiveFrame.usingInteractive)))
+               _loc23_ = param1 as InteractiveElementActivationMessage;
+               _loc24_ = Kernel.getWorker().getFrame(RoleplayInteractivesFrame) as RoleplayInteractivesFrame;
+               if(!((_loc24_) && (_loc24_.usingInteractive)))
                {
-                  playerEntity = DofusEntities.getEntity(PlayedCharacterManager.getInstance().id);
-                  if((!DataMapProvider.getInstance().farmCell(playerEntity.position.x,playerEntity.position.y)) && (ieamsg.interactiveElement.elementTypeId == 120))
+                  _loc74_ = DofusEntities.getEntity(PlayedCharacterManager.getInstance().id);
+                  if(!DataMapProvider.getInstance().farmCell(_loc74_.position.x,_loc74_.position.y) && _loc23_.interactiveElement.elementTypeId == 120)
                   {
-                     i = 0;
-                     while(i < 8)
+                     _loc76_ = 0;
+                     while(_loc76_ < 8)
                      {
-                        mp = ieamsg.position.getNearestCellInDirection(i);
-                        if((mp) && (DataMapProvider.getInstance().farmCell(mp.x,mp.y)))
+                        _loc78_ = _loc23_.position.getNearestCellInDirection(_loc76_);
+                        if((_loc78_) && (DataMapProvider.getInstance().farmCell(_loc78_.x,_loc78_.y)))
                         {
-                           if(!forbiddenCellsIds)
+                           if(!_loc75_)
                            {
-                              forbiddenCellsIds = [];
+                              _loc75_ = [];
                            }
-                           forbiddenCellsIds.push(mp.cellId);
+                           _loc75_.push(_loc78_.cellId);
                         }
-                        i++;
+                        _loc76_++;
                      }
                   }
-                  nearestCell = ieamsg.position.getNearestFreeCellInDirection(ieamsg.position.advancedOrientationTo(playerEntity.position),DataMapProvider.getInstance(),true,true,forbiddenCellsIds);
-                  if(!nearestCell)
+                  _loc77_ = _loc23_.position.getNearestFreeCellInDirection(_loc23_.position.advancedOrientationTo(_loc74_.position),DataMapProvider.getInstance(),true,true,_loc75_);
+                  if(!_loc77_)
                   {
-                     nearestCell = ieamsg.position;
+                     _loc77_ = _loc23_.position;
                   }
                   this.roleplayMovementFrame.setFollowingInteraction(
                      {
-                        "ie":ieamsg.interactiveElement,
-                        "skillInstanceId":ieamsg.skillInstanceId
+                        "ie":_loc23_.interactiveElement,
+                        "skillInstanceId":_loc23_.skillInstanceId
                      });
-                  this.roleplayMovementFrame.askMoveTo(nearestCell);
+                  this.roleplayMovementFrame.askMoveTo(_loc77_);
                }
                return true;
-            case msg is InteractiveElementMouseOverMessage:
+            case param1 is InteractiveElementMouseOverMessage:
                if(this.allowOnlyCharacterInteraction)
                {
                   return false;
                }
-               iemovmsg = msg as InteractiveElementMouseOverMessage;
-               interactiveElem = iemovmsg.interactiveElement;
-               for each (interactiveSkill in interactiveElem.enabledSkills)
+               _loc25_ = param1 as InteractiveElementMouseOverMessage;
+               _loc29_ = _loc25_.interactiveElement;
+               for each (_loc30_ in _loc29_.enabledSkills)
                {
-                  if(interactiveSkill.skillId == 175)
+                  if(_loc30_.skillId == 175)
                   {
-                     infosIe = this.roleplayContextFrame.currentPaddock;
+                     _loc26_ = this.roleplayContextFrame.currentPaddock;
                      break;
                   }
                }
-               interactive = Interactive.getInteractiveById(interactiveElem.elementTypeId);
-               elementId = iemovmsg.interactiveElement.elementId;
-               roleplayEntitiesFrame = Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame;
-               houseWrapper = roleplayEntitiesFrame.housesInformations[elementId];
-               target = iemovmsg.sprite.getRect(StageShareManager.stage);
-               if(houseWrapper)
+               _loc31_ = Interactive.getInteractiveById(_loc29_.elementTypeId);
+               _loc32_ = _loc25_.interactiveElement.elementId;
+               _loc33_ = Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame;
+               _loc34_ = _loc33_.housesInformations[_loc32_];
+               _loc35_ = _loc25_.sprite.getRect(StageShareManager.stage);
+               if(_loc34_)
                {
-                  infosIe = houseWrapper;
+                  _loc26_ = _loc34_;
                }
                else
                {
-                  if((infosIe == null) && (interactive))
+                  if(_loc26_ == null && (_loc31_))
                   {
-                     elem = new Object();
-                     elem.interactive = interactive.name;
-                     enabledSkills = "";
-                     for each (interactiveSkill in interactiveElem.enabledSkills)
+                     _loc79_ = new Object();
+                     _loc79_.interactive = _loc31_.name;
+                     _loc80_ = "";
+                     for each (_loc30_ in _loc29_.enabledSkills)
                      {
-                        enabledSkills = enabledSkills + (Skill.getSkillById(interactiveSkill.skillId).name + "\n");
+                        _loc80_ = _loc80_ + (Skill.getSkillById(_loc30_.skillId).name + "\n");
                      }
-                     elem.enabledSkills = enabledSkills;
-                     disabledSkills = "";
-                     for each (interactiveSkill in interactiveElem.disabledSkills)
+                     _loc79_.enabledSkills = _loc80_;
+                     _loc81_ = "";
+                     for each (_loc30_ in _loc29_.disabledSkills)
                      {
-                        disabledSkills = disabledSkills + (Skill.getSkillById(interactiveSkill.skillId).name + "\n");
+                        _loc81_ = _loc81_ + (Skill.getSkillById(_loc30_.skillId).name + "\n");
                      }
-                     elem.disabledSkills = disabledSkills;
-                     elem.isCollectable = interactive.actionId == COLLECTABLE_INTERACTIVE_ACTION_ID;
-                     if(elem.isCollectable)
+                     _loc79_.disabledSkills = _loc81_;
+                     _loc79_.isCollectable = _loc31_.actionId == COLLECTABLE_INTERACTIVE_ACTION_ID;
+                     if(_loc79_.isCollectable)
                      {
-                        showBonus = true;
-                        iewab = interactiveElem as InteractiveElementWithAgeBonus;
-                        if(interactiveElem.enabledSkills.length > 0)
+                        _loc83_ = true;
+                        _loc84_ = _loc29_ as InteractiveElementWithAgeBonus;
+                        if(_loc29_.enabledSkills.length > 0)
                         {
-                           collectSkill = Skill.getSkillById(interactiveElem.enabledSkills[0].skillId);
-                           if(collectSkill.parentJobId == 1)
+                           _loc82_ = Skill.getSkillById(_loc29_.enabledSkills[0].skillId);
+                           if(_loc82_.parentJobId == 1)
                            {
-                              showBonus = false;
+                              _loc83_ = false;
                            }
                         }
                         else
                         {
-                           if(!iewab)
+                           if(!_loc84_)
                            {
-                              showBonus = false;
+                              _loc83_ = false;
                            }
                         }
-                        if(showBonus)
+                        if(_loc83_)
                         {
-                           elem.collectSkill = collectSkill;
-                           elem.ageBonus = iewab?iewab.ageBonus:0;
+                           _loc79_.collectSkill = _loc82_;
+                           _loc79_.ageBonus = _loc84_?_loc84_.ageBonus:0;
                         }
                      }
-                     infosIe = elem;
-                     ttMaker = "interactiveElement";
-                     tooltipCacheName = "InteractiveElementCache";
+                     _loc26_ = _loc79_;
+                     _loc27_ = "interactiveElement";
+                     _loc28_ = "InteractiveElementCache";
                   }
                }
-               if(infosIe)
+               if(_loc26_)
                {
-                  TooltipManager.show(infosIe,new Rectangle(target.right,int(target.y + target.height - AtouinConstants.CELL_HEIGHT),0,0),UiModuleManager.getInstance().getModule("Ankama_Tooltips"),false,TooltipManager.TOOLTIP_STANDAR_NAME,LocationEnum.POINT_BOTTOMLEFT,LocationEnum.POINT_TOP,0,true,ttMaker,null,null,tooltipCacheName);
+                  TooltipManager.show(_loc26_,new Rectangle(_loc35_.right,int(_loc35_.y + _loc35_.height - AtouinConstants.CELL_HEIGHT),0,0),UiModuleManager.getInstance().getModule("Ankama_Tooltips"),false,TooltipManager.TOOLTIP_STANDAR_NAME,LocationEnum.POINT_BOTTOMLEFT,LocationEnum.POINT_TOP,0,true,_loc27_,null,null,_loc28_);
                }
                return true;
-            case msg is InteractiveElementMouseOutMessage:
+            case param1 is InteractiveElementMouseOutMessage:
                if(this.allowOnlyCharacterInteraction)
                {
                   return false;
                }
-               iemomsg = msg as InteractiveElementMouseOutMessage;
+               _loc36_ = param1 as InteractiveElementMouseOutMessage;
                TooltipManager.hide();
                return true;
-            case msg is ShowAllNamesAction:
+            case param1 is ShowAllNamesAction:
                if(Kernel.getWorker().contains(InfoEntitiesFrame))
                {
                   Kernel.getWorker().removeFrame(this._infoEntitiesFrame);
@@ -948,29 +831,29 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
                   KernelEventsManager.getInstance().processCallback(HookList.ShowPlayersNames,true);
                }
                break;
-            case msg is ShowMonstersInfoAction:
-               smia = msg as ShowMonstersInfoAction;
-               _monstersInfoFrame.triggeredByShortcut = smia.fromShortcut;
+            case param1 is ShowMonstersInfoAction:
+               _loc37_ = param1 as ShowMonstersInfoAction;
+               _monstersInfoFrame.triggeredByShortcut = _loc37_.fromShortcut;
                if(Kernel.getWorker().contains(MonstersInfoFrame))
                {
                   Kernel.getWorker().removeFrame(_monstersInfoFrame);
                }
                else
                {
-                  if((AirScanner.hasAir()) && (StageShareManager.stage.nativeWindow.active) && (!((!_monstersInfoFrame.triggeredByShortcut) && (!this._mouseDown))))
+                  if((AirScanner.hasAir()) && (StageShareManager.stage.nativeWindow.active) && !(!_monstersInfoFrame.triggeredByShortcut && !this._mouseDown))
                   {
                      Kernel.getWorker().addFrame(_monstersInfoFrame);
                   }
                }
                return true;
-            case msg is MouseDownMessage:
+            case param1 is MouseDownMessage:
                this._mouseDown = true;
                break;
-            case msg is MouseUpMessage:
+            case param1 is MouseUpMessage:
                this._mouseDown = false;
-               mum = msg as MouseUpMessage;
-               sf = Kernel.getWorker().getFrame(ShortcutsFrame) as ShortcutsFrame;
-               if((sf.heldShortcuts.indexOf("showMonstersInfo") == -1) && (Kernel.getWorker().contains(MonstersInfoFrame)))
+               _loc38_ = param1 as MouseUpMessage;
+               _loc39_ = Kernel.getWorker().getFrame(ShortcutsFrame) as ShortcutsFrame;
+               if(_loc39_.heldShortcuts.indexOf("showMonstersInfo") == -1 && (Kernel.getWorker().contains(MonstersInfoFrame)))
                {
                   Kernel.getWorker().removeFrame(_monstersInfoFrame);
                }
@@ -991,16 +874,16 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          return true;
       }
       
-      private function onEntityAnimRendered(pEvent:TiphonEvent) : void {
-         var ac:AnimatedCharacter = pEvent.currentTarget as AnimatedCharacter;
-         ac.removeEventListener(TiphonEvent.RENDER_SUCCEED,this.onEntityAnimRendered);
-         var tooltipData:Object = this._entityTooltipData[ac];
-         TooltipManager.show(tooltipData.data,ac.absoluteBounds,UiModuleManager.getInstance().getModule("Ankama_Tooltips"),false,tooltipData.name,LocationEnum.POINT_BOTTOM,LocationEnum.POINT_TOP,tooltipData.tooltipOffset,true,tooltipData.tooltipMaker,null,null,tooltipData.cacheName,false,StrataEnum.STRATA_WORLD,this.sysApi.getCurrentZoom());
-         delete this._entityTooltipData[[ac]];
+      private function onEntityAnimRendered(param1:TiphonEvent) : void {
+         var _loc2_:AnimatedCharacter = param1.currentTarget as AnimatedCharacter;
+         _loc2_.removeEventListener(TiphonEvent.RENDER_SUCCEED,this.onEntityAnimRendered);
+         var _loc3_:Object = this._entityTooltipData[_loc2_];
+         TooltipManager.show(_loc3_.data,_loc2_.absoluteBounds,UiModuleManager.getInstance().getModule("Ankama_Tooltips"),false,_loc3_.name,LocationEnum.POINT_BOTTOM,LocationEnum.POINT_TOP,_loc3_.tooltipOffset,true,_loc3_.tooltipMaker,null,null,_loc3_.cacheName,false,StrataEnum.STRATA_WORLD,this.sysApi.getCurrentZoom());
+         delete this._entityTooltipData[[_loc2_]];
       }
       
-      private function displayCursor(type:int, pEnable:Boolean=true) : void {
-         if(type == -1)
+      private function displayCursor(param1:int, param2:Boolean=true) : void {
+         if(param1 == -1)
          {
             Mouse.show();
             LinkedCursorSpriteManager.getInstance().removeItem("interactiveCursor");
@@ -1010,36 +893,36 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          {
             return;
          }
-         var lcd:LinkedCursorData = new LinkedCursorData();
-         lcd.sprite = RoleplayInteractivesFrame.getCursor(type,pEnable);
-         lcd.offset = INTERACTIVE_CURSOR_OFFSET;
+         var _loc3_:LinkedCursorData = new LinkedCursorData();
+         _loc3_.sprite = RoleplayInteractivesFrame.getCursor(param1,param2);
+         _loc3_.offset = INTERACTIVE_CURSOR_OFFSET;
          Mouse.hide();
-         LinkedCursorSpriteManager.getInstance().addItem("interactiveCursor",lcd);
+         LinkedCursorSpriteManager.getInstance().addItem("interactiveCursor",_loc3_);
       }
       
-      private function onWisperMessage(playerName:String) : void {
-         KernelEventsManager.getInstance().processCallback(ChatHookList.ChatFocus,playerName);
+      private function onWisperMessage(param1:String) : void {
+         KernelEventsManager.getInstance().processCallback(ChatHookList.ChatFocus,param1);
       }
       
-      private function onMerchantPlayerBuyClick(vendorId:int, vendorCellId:uint) : void {
-         var eohvrmsg:ExchangeOnHumanVendorRequestMessage = new ExchangeOnHumanVendorRequestMessage();
-         eohvrmsg.initExchangeOnHumanVendorRequestMessage(vendorId,vendorCellId);
-         ConnectionsHandler.getConnection().send(eohvrmsg);
+      private function onMerchantPlayerBuyClick(param1:int, param2:uint) : void {
+         var _loc3_:ExchangeOnHumanVendorRequestMessage = new ExchangeOnHumanVendorRequestMessage();
+         _loc3_.initExchangeOnHumanVendorRequestMessage(param1,param2);
+         ConnectionsHandler.getConnection().send(_loc3_);
       }
       
-      private function onInviteMenuClicked(playerName:String) : void {
-         var invitemsg:PartyInvitationRequestMessage = new PartyInvitationRequestMessage();
-         invitemsg.initPartyInvitationRequestMessage(playerName);
-         ConnectionsHandler.getConnection().send(invitemsg);
+      private function onInviteMenuClicked(param1:String) : void {
+         var _loc2_:PartyInvitationRequestMessage = new PartyInvitationRequestMessage();
+         _loc2_.initPartyInvitationRequestMessage(param1);
+         ConnectionsHandler.getConnection().send(_loc2_);
       }
       
-      private function onMerchantHouseKickOff(cellId:uint) : void {
-         var kickRequest:HouseKickIndoorMerchantRequestMessage = new HouseKickIndoorMerchantRequestMessage();
-         kickRequest.initHouseKickIndoorMerchantRequestMessage(cellId);
-         ConnectionsHandler.getConnection().send(kickRequest);
+      private function onMerchantHouseKickOff(param1:uint) : void {
+         var _loc2_:HouseKickIndoorMerchantRequestMessage = new HouseKickIndoorMerchantRequestMessage();
+         _loc2_.initHouseKickIndoorMerchantRequestMessage(param1);
+         ConnectionsHandler.getConnection().send(_loc2_);
       }
       
-      private function onWindowDeactivate(pEvent:Event) : void {
+      private function onWindowDeactivate(param1:Event) : void {
          if(Kernel.getWorker().contains(MonstersInfoFrame))
          {
             Kernel.getWorker().removeFrame(_monstersInfoFrame);

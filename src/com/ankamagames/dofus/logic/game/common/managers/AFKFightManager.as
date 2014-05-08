@@ -49,16 +49,16 @@ package com.ankamagames.dofus.logic.game.common.managers
          this.enabled = true;
       }
       
-      public function set enabled(e:Boolean) : void {
-         if(e == this._enabled)
+      public function set enabled(param1:Boolean) : void {
+         if(param1 == this._enabled)
          {
             return;
          }
-         if(!e)
+         if(!param1)
          {
             this.confirm = false;
          }
-         this._enabled = e;
+         this._enabled = param1;
          if(this._enabled)
          {
             _log.info("looking for mouse or keybord activity");
@@ -77,18 +77,18 @@ package com.ankamagames.dofus.logic.game.common.managers
          }
       }
       
-      public function set confirm(confirmed:Boolean) : void {
+      public function set confirm(param1:Boolean) : void {
          this._afkSecurity.stop();
-         if((this.enabled) || (!confirmed))
+         if((this.enabled) || !param1)
          {
-            if(this._confirm != confirmed)
+            if(this._confirm != param1)
             {
-               if((confirmed) && (!this._securityTimerUp))
+               if((param1) && !this._securityTimerUp)
                {
                   this.enabled = false;
                   return;
                }
-               if(confirmed)
+               if(param1)
                {
                   _log.info("AFK mode enabled");
                }
@@ -96,12 +96,12 @@ package com.ankamagames.dofus.logic.game.common.managers
                {
                   _log.info("AFK mode disabled");
                }
-               if(confirmed)
+               if(param1)
                {
                }
-               KernelEventsManager.getInstance().processCallback(FightHookList.AfkModeChanged,confirmed);
+               KernelEventsManager.getInstance().processCallback(FightHookList.AfkModeChanged,param1);
             }
-            this._confirm = confirmed;
+            this._confirm = param1;
          }
       }
       
@@ -113,13 +113,13 @@ package com.ankamagames.dofus.logic.game.common.managers
          return this._enabled;
       }
       
-      function onActivity(event:Event) : void {
+      private function onActivity(param1:Event) : void {
          _log.info("Activity detected. Player is not AFK");
          this.confirm = false;
          this.enabled = false;
       }
       
-      function onTimer(event:Event) : void {
+      private function onTimer(param1:Event) : void {
          this._securityTimerUp = true;
       }
    }

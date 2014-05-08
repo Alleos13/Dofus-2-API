@@ -21,10 +21,10 @@ package com.ankamagames.dofus.logic.game.fight.types
    public class SpellCastInFightManager extends Object
    {
       
-      public function SpellCastInFightManager(entityId:int) {
+      public function SpellCastInFightManager(param1:int) {
          this._spells = new Dictionary();
          super();
-         this.entityId = entityId;
+         this.entityId = param1;
       }
       
       protected static const _log:Logger = Log.getLogger(getQualifiedClassName(SpellCastInFightManager));
@@ -42,83 +42,85 @@ package com.ankamagames.dofus.logic.game.fight.types
       public var needCooldownUpdate:Boolean = false;
       
       public function nextTurn() : void {
-         var spell:SpellManager = null;
+         var _loc1_:SpellManager = null;
          this.currentTurn++;
-         for each (spell in this._spells)
+         for each (_loc1_ in this._spells)
          {
-            spell.newTurn();
+            _loc1_.newTurn();
          }
       }
       
-      public function resetInitialCooldown(hasBeenSummoned:Boolean=false) : void {
-         var sm:SpellManager = null;
-         var s:SpellWrapper = null;
-         var spim:SpellInventoryManagementFrame = Kernel.getWorker().getFrame(SpellInventoryManagementFrame) as SpellInventoryManagementFrame;
-         var spellList:Array = spim.getFullSpellListByOwnerId(this.entityId);
-         for each (s in spellList)
+      public function resetInitialCooldown(param1:Boolean=false) : void {
+         var _loc2_:SpellManager = null;
+         var _loc5_:SpellWrapper = null;
+         var _loc3_:SpellInventoryManagementFrame = Kernel.getWorker().getFrame(SpellInventoryManagementFrame) as SpellInventoryManagementFrame;
+         var _loc4_:Array = _loc3_.getFullSpellListByOwnerId(this.entityId);
+         for each (_loc5_ in _loc4_)
          {
-            if(s.spellLevelInfos.initialCooldown != 0)
+            if(_loc5_.spellLevelInfos.initialCooldown != 0)
             {
-               if(!((hasBeenSummoned) && (s.actualCooldown > s.spellLevelInfos.initialCooldown)))
+               if(!((param1) && _loc5_.actualCooldown > _loc5_.spellLevelInfos.initialCooldown))
                {
-                  if(this._spells[s.spellId] == null)
+                  if(this._spells[_loc5_.spellId] == null)
                   {
-                     this._spells[s.spellId] = new SpellManager(this,s.spellId,s.spellLevel);
+                     this._spells[_loc5_.spellId] = new SpellManager(this,_loc5_.spellId,_loc5_.spellLevel);
                   }
-                  sm = this._spells[s.spellId];
-                  sm.resetInitialCooldown(this.currentTurn);
+                  _loc2_ = this._spells[_loc5_.spellId];
+                  _loc2_.resetInitialCooldown(this.currentTurn);
                }
             }
          }
       }
       
-      public function updateCooldowns(spellCooldowns:Vector.<GameFightSpellCooldown>=null) : void {
-         var spellCooldown:GameFightSpellCooldown = null;
-         var spellW:SpellWrapper = null;
-         var spellLevel:SpellLevel = null;
-         var spellCastManager:SpellCastInFightManager = null;
-         var interval:* = 0;
-         var spellModifs:SpellModificator = null;
-         var characteristics:CharacterCharacteristicsInformations = null;
-         var spellModification:CharacterSpellModification = null;
-         if((this.needCooldownUpdate) && (!spellCooldowns))
+      public function updateCooldowns(param1:Vector.<GameFightSpellCooldown>=null) : void {
+         var _loc5_:GameFightSpellCooldown = null;
+         var _loc6_:SpellWrapper = null;
+         var _loc7_:SpellLevel = null;
+         var _loc8_:SpellCastInFightManager = null;
+         var _loc9_:* = 0;
+         var _loc10_:SpellModificator = null;
+         var _loc11_:CharacterCharacteristicsInformations = null;
+         var _loc12_:CharacterSpellModification = null;
+         if((this.needCooldownUpdate) && !param1)
          {
-            spellCooldowns = this._storedSpellCooldowns;
+            param1 = this._storedSpellCooldowns;
          }
-         var playedFighterManager:CurrentPlayedFighterManager = CurrentPlayedFighterManager.getInstance();
-         var numCoolDown:int = spellCooldowns.length;
-         var k:int = 0;
-         while(k < numCoolDown)
+         var _loc2_:CurrentPlayedFighterManager = CurrentPlayedFighterManager.getInstance();
+         var _loc3_:int = param1.length;
+         var _loc4_:* = 0;
+         while(_loc4_ < _loc3_)
          {
-            spellCooldown = spellCooldowns[k];
-            spellW = SpellWrapper.getFirstSpellWrapperById(spellCooldown.spellId,this.entityId);
-            if(!spellW)
+            _loc5_ = param1[_loc4_];
+            _loc6_ = SpellWrapper.getFirstSpellWrapperById(_loc5_.spellId,this.entityId);
+            if(!_loc6_)
             {
                this.needCooldownUpdate = true;
-               this._storedSpellCooldowns = spellCooldowns;
+               this._storedSpellCooldowns = param1;
                return;
             }
-            if((spellW) && (spellW.spellLevel > 0))
+            if((_loc6_) && _loc6_.spellLevel > 0)
             {
-               spellLevel = spellW.spell.getSpellLevel(spellW.spellLevel);
-               spellCastManager = playedFighterManager.getSpellCastManagerById(this.entityId);
-               spellCastManager.castSpell(spellW.id,spellW.spellLevel,[],false);
-               interval = spellLevel.minCastInterval;
-               if(spellCooldown.cooldown != 63)
+               _loc7_ = _loc6_.spell.getSpellLevel(_loc6_.spellLevel);
+               _loc8_ = _loc2_.getSpellCastManagerById(this.entityId);
+               _loc8_.castSpell(_loc6_.id,_loc6_.spellLevel,[],false);
+               _loc9_ = _loc7_.minCastInterval;
+               if(_loc5_.cooldown != 63)
                {
-                  spellModifs = new SpellModificator();
-                  characteristics = PlayedCharacterManager.getInstance().characteristics;
-                  for each (spellModification in characteristics.spellModifications)
+                  _loc10_ = new SpellModificator();
+                  _loc11_ = PlayedCharacterManager.getInstance().characteristics;
+                  for each (_loc12_ in _loc11_.spellModifications)
                   {
-                     if(spellModification.spellId == spellCooldown.spellId)
+                     if(_loc12_.spellId == _loc5_.spellId)
                      {
-                        switch(spellModification.modificationType)
+                        switch(_loc12_.modificationType)
                         {
                            case CharacterSpellModificationTypeEnum.CAST_INTERVAL:
-                              spellModifs.castInterval = spellModification.value;
+                              _loc10_.castInterval = _loc12_.value;
                               continue;
                            case CharacterSpellModificationTypeEnum.CAST_INTERVAL_SET:
-                              spellModifs.castIntervalSet = spellModification.value;
+                              _loc10_.castIntervalSet = _loc12_.value;
+                              continue;
+                           default:
                               continue;
                         }
                      }
@@ -127,32 +129,32 @@ package com.ankamagames.dofus.logic.game.fight.types
                         continue;
                      }
                   }
-                  if(spellModifs.getTotalBonus(spellModifs.castIntervalSet))
+                  if(_loc10_.getTotalBonus(_loc10_.castIntervalSet))
                   {
-                     interval = -spellModifs.getTotalBonus(spellModifs.castInterval) + spellModifs.getTotalBonus(spellModifs.castIntervalSet);
+                     _loc9_ = -_loc10_.getTotalBonus(_loc10_.castInterval) + _loc10_.getTotalBonus(_loc10_.castIntervalSet);
                   }
                   else
                   {
-                     interval = interval - spellModifs.getTotalBonus(spellModifs.castInterval);
+                     _loc9_ = _loc9_ - _loc10_.getTotalBonus(_loc10_.castInterval);
                   }
                }
-               spellCastManager.getSpellManagerBySpellId(spellW.id).forceLastCastTurn(this.currentTurn + spellCooldown.cooldown - interval);
+               _loc8_.getSpellManagerBySpellId(_loc6_.id).forceLastCastTurn(this.currentTurn + _loc5_.cooldown - _loc9_);
             }
-            k++;
+            _loc4_++;
          }
          this.needCooldownUpdate = false;
       }
       
-      public function castSpell(pSpellId:uint, pSpellLevel:uint, pTargets:Array, pCountForCooldown:Boolean=true) : void {
-         if(this._spells[pSpellId] == null)
+      public function castSpell(param1:uint, param2:uint, param3:Array, param4:Boolean=true) : void {
+         if(this._spells[param1] == null)
          {
-            this._spells[pSpellId] = new SpellManager(this,pSpellId,pSpellLevel);
+            this._spells[param1] = new SpellManager(this,param1,param2);
          }
-         (this._spells[pSpellId] as SpellManager).cast(this.currentTurn,pTargets,pCountForCooldown);
+         (this._spells[param1] as SpellManager).cast(this.currentTurn,param3,param4);
       }
       
-      public function getSpellManagerBySpellId(pSpellId:uint) : SpellManager {
-         return this._spells[pSpellId] as SpellManager;
+      public function getSpellManagerBySpellId(param1:uint) : SpellManager {
+         return this._spells[param1] as SpellManager;
       }
    }
 }

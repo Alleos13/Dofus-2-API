@@ -19,8 +19,8 @@ package com.ankamagames.dofus.network.types.game.interactive.skill
          return 102;
       }
       
-      public function initSkillActionDescription(skillId:uint=0) : SkillActionDescription {
-         this.skillId = skillId;
+      public function initSkillActionDescription(param1:uint=0) : SkillActionDescription {
+         this.skillId = param1;
          return this;
       }
       
@@ -28,28 +28,28 @@ package com.ankamagames.dofus.network.types.game.interactive.skill
          this.skillId = 0;
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_SkillActionDescription(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_SkillActionDescription(param1);
       }
       
-      public function serializeAs_SkillActionDescription(output:IDataOutput) : void {
+      public function serializeAs_SkillActionDescription(param1:IDataOutput) : void {
          if(this.skillId < 0)
          {
             throw new Error("Forbidden value (" + this.skillId + ") on element skillId.");
          }
          else
          {
-            output.writeShort(this.skillId);
+            param1.writeShort(this.skillId);
             return;
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_SkillActionDescription(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_SkillActionDescription(param1);
       }
       
-      public function deserializeAs_SkillActionDescription(input:IDataInput) : void {
-         this.skillId = input.readShort();
+      public function deserializeAs_SkillActionDescription(param1:IDataInput) : void {
+         this.skillId = param1.readShort();
          if(this.skillId < 0)
          {
             throw new Error("Forbidden value (" + this.skillId + ") on element of SkillActionDescription.skillId.");

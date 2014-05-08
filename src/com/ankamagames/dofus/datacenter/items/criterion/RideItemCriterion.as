@@ -8,31 +8,31 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class RideItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function RideItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      public function RideItemCriterion(param1:String) {
+         super(param1);
       }
       
       override public function get text() : String {
-         var readableCriterion:String = null;
-         if((_operator.text == ItemCriterionOperator.EQUAL) && (_criterionValue == 1) || (_operator.text == ItemCriterionOperator.DIFFERENT) && (_criterionValue == 0))
+         var _loc1_:String = null;
+         if(_operator.text == ItemCriterionOperator.EQUAL && _criterionValue == 1 || _operator.text == ItemCriterionOperator.DIFFERENT && _criterionValue == 0)
          {
-            readableCriterion = I18n.getUiText("ui.tooltip.mountEquiped");
+            _loc1_ = I18n.getUiText("ui.tooltip.mountEquiped");
          }
-         if((_operator.text == ItemCriterionOperator.EQUAL) && (_criterionValue == 0) || (_operator.text == ItemCriterionOperator.DIFFERENT) && (_criterionValue == 1))
+         if(_operator.text == ItemCriterionOperator.EQUAL && _criterionValue == 0 || _operator.text == ItemCriterionOperator.DIFFERENT && _criterionValue == 1)
          {
-            readableCriterion = I18n.getUiText("ui.tooltip.mountNonEquiped");
+            _loc1_ = I18n.getUiText("ui.tooltip.mountNonEquiped");
          }
-         return readableCriterion;
+         return _loc1_;
       }
       
       override public function clone() : IItemCriterion {
-         var clonedCriterion:RideItemCriterion = new RideItemCriterion(this.basicText);
-         return clonedCriterion;
+         var _loc1_:RideItemCriterion = new RideItemCriterion(this.basicText);
+         return _loc1_;
       }
       
-      override function getCriterion() : int {
-         var isOnRide:Boolean = (Kernel.getWorker().getFrame(AbstractEntitiesFrame) as AbstractEntitiesFrame).playerIsOnRide;
-         if(isOnRide)
+      override protected function getCriterion() : int {
+         var _loc1_:Boolean = (Kernel.getWorker().getFrame(AbstractEntitiesFrame) as AbstractEntitiesFrame).playerIsOnRide;
+         if(_loc1_)
          {
             return 1;
          }

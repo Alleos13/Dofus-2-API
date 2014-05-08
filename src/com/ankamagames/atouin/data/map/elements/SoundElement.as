@@ -8,8 +8,8 @@ package com.ankamagames.atouin.data.map.elements
    public class SoundElement extends BasicElement
    {
       
-      public function SoundElement(cell:Cell) {
-         super(cell);
+      public function SoundElement(param1:Cell) {
+         super(param1);
       }
       
       public var soundId:int;
@@ -28,7 +28,9 @@ package com.ankamagames.atouin.data.map.elements
          return ElementTypesEnum.SOUND;
       }
       
-      override public function fromRaw(raw:IDataInput, mapVersion:int) : void {
+      override public function fromRaw(param1:IDataInput, param2:int) : void {
+         var raw:IDataInput = param1;
+         var mapVersion:int = param2;
          try
          {
             this.soundId = raw.readInt();

@@ -10,7 +10,7 @@ package com.ankamagames.jerakine.types
          super();
       }
       
-      public function getObject(accessKey:Object) : * {
+      public function getObject(param1:Object) : * {
          return this;
       }
    }

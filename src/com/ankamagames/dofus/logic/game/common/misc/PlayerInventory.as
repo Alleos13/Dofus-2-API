@@ -9,12 +9,12 @@ package com.ankamagames.dofus.logic.game.common.misc
          super();
       }
       
-      override public function set kamas(value:int) : void {
+      override public function set kamas(param1:int) : void {
          if(PlayedCharacterManager.getInstance().characteristics)
          {
-            PlayedCharacterManager.getInstance().characteristics.kamas = value;
+            PlayedCharacterManager.getInstance().characteristics.kamas = param1;
          }
-         super.kamas = value;
+         super.kamas = param1;
       }
    }
 }

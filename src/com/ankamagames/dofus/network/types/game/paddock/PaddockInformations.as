@@ -21,9 +21,9 @@ package com.ankamagames.dofus.network.types.game.paddock
          return 132;
       }
       
-      public function initPaddockInformations(maxOutdoorMount:uint=0, maxItems:uint=0) : PaddockInformations {
-         this.maxOutdoorMount = maxOutdoorMount;
-         this.maxItems = maxItems;
+      public function initPaddockInformations(param1:uint=0, param2:uint=0) : PaddockInformations {
+         this.maxOutdoorMount = param1;
+         this.maxItems = param2;
          return this;
       }
       
@@ -32,43 +32,43 @@ package com.ankamagames.dofus.network.types.game.paddock
          this.maxItems = 0;
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PaddockInformations(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_PaddockInformations(param1);
       }
       
-      public function serializeAs_PaddockInformations(output:IDataOutput) : void {
+      public function serializeAs_PaddockInformations(param1:IDataOutput) : void {
          if(this.maxOutdoorMount < 0)
          {
             throw new Error("Forbidden value (" + this.maxOutdoorMount + ") on element maxOutdoorMount.");
          }
          else
          {
-            output.writeShort(this.maxOutdoorMount);
+            param1.writeShort(this.maxOutdoorMount);
             if(this.maxItems < 0)
             {
                throw new Error("Forbidden value (" + this.maxItems + ") on element maxItems.");
             }
             else
             {
-               output.writeShort(this.maxItems);
+               param1.writeShort(this.maxItems);
                return;
             }
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PaddockInformations(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_PaddockInformations(param1);
       }
       
-      public function deserializeAs_PaddockInformations(input:IDataInput) : void {
-         this.maxOutdoorMount = input.readShort();
+      public function deserializeAs_PaddockInformations(param1:IDataInput) : void {
+         this.maxOutdoorMount = param1.readShort();
          if(this.maxOutdoorMount < 0)
          {
             throw new Error("Forbidden value (" + this.maxOutdoorMount + ") on element of PaddockInformations.maxOutdoorMount.");
          }
          else
          {
-            this.maxItems = input.readShort();
+            this.maxItems = param1.readShort();
             if(this.maxItems < 0)
             {
                throw new Error("Forbidden value (" + this.maxItems + ") on element of PaddockInformations.maxItems.");

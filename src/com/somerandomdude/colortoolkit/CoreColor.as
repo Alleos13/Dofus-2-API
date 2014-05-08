@@ -19,51 +19,51 @@ package com.somerandomdude.colortoolkit
       protected var _color:int;
       
       public function toLab() : Lab {
-         var lab:Lab = new Lab();
-         lab.color = this._color;
-         return lab;
+         var _loc1_:Lab = new Lab();
+         _loc1_.color = this._color;
+         return _loc1_;
       }
       
       public function toGrayscale() : Gray {
-         var g:Gray = new Gray();
-         g.convertHexToGrayscale(this._color);
-         return g;
+         var _loc1_:Gray = new Gray();
+         _loc1_.convertHexToGrayscale(this._color);
+         return _loc1_;
       }
       
       public function toRGB() : RGB {
-         var rgb:RGB = new RGB();
-         rgb.color = this._color;
-         return rgb;
+         var _loc1_:RGB = new RGB();
+         _loc1_.color = this._color;
+         return _loc1_;
       }
       
       public function toHSB() : HSB {
-         var hsb:HSB = new HSB();
-         hsb.color = this._color;
-         return hsb;
+         var _loc1_:HSB = new HSB();
+         _loc1_.color = this._color;
+         return _loc1_;
       }
       
       public function toHSL() : HSL {
-         var h:HSL = new HSL();
-         h.color = this._color;
-         return h;
+         var _loc1_:HSL = new HSL();
+         _loc1_.color = this._color;
+         return _loc1_;
       }
       
       public function toCMYK() : CMYK {
-         var cmyk:CMYK = new CMYK();
-         cmyk.color = this._color;
-         return cmyk;
+         var _loc1_:CMYK = new CMYK();
+         _loc1_.color = this._color;
+         return _loc1_;
       }
       
       public function toXYZ() : XYZ {
-         var xyz:XYZ = new XYZ();
-         xyz.color = this._color;
-         return xyz;
+         var _loc1_:XYZ = new XYZ();
+         _loc1_.color = this._color;
+         return _loc1_;
       }
       
       public function toYUV() : YUV {
-         var yuv:YUV = new YUV();
-         yuv.color = this._color;
-         return yuv;
+         var _loc1_:YUV = new YUV();
+         _loc1_.color = this._color;
+         return _loc1_;
       }
    }
 }

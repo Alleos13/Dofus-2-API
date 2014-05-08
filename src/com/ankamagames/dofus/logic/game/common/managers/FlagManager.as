@@ -12,16 +12,16 @@ package com.ankamagames.dofus.logic.game.common.managers
       private static var _self:FlagManager;
       
       public static function getInstance() : FlagManager {
-         var phoenixes:Array = null;
-         var phoenix:Phoenix = null;
+         var _loc1_:Array = null;
+         var _loc2_:Phoenix = null;
          if(!_self)
          {
             _self = new FlagManager();
-            phoenixes = Phoenix.getAllPhoenixes();
+            _loc1_ = Phoenix.getAllPhoenixes();
             _self.phoenixs = new Array();
-            for each (phoenix in phoenixes)
+            for each (_loc2_ in _loc1_)
             {
-               _self.phoenixs.push(phoenix.mapId);
+               _self.phoenixs.push(_loc2_.mapId);
             }
          }
          return _self;
@@ -33,8 +33,8 @@ package com.ankamagames.dofus.logic.game.common.managers
          return this._phoenixs;
       }
       
-      public function set phoenixs(value:Array) : void {
-         this._phoenixs = value;
+      public function set phoenixs(param1:Array) : void {
+         this._phoenixs = param1;
       }
    }
 }

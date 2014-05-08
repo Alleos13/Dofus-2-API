@@ -24,12 +24,12 @@ package com.ankamagames.dofus.logic.game.common.misc
       
       public var maxCastPerTarget:CharacterBaseCharacteristic;
       
-      public function getTotalBonus(pCharac:CharacterBaseCharacteristic) : int {
-         if(!pCharac)
+      public function getTotalBonus(param1:CharacterBaseCharacteristic) : int {
+         if(!param1)
          {
             return 0;
          }
-         return pCharac.alignGiftBonus + pCharac.base + pCharac.contextModif + pCharac.objectsAndMountBonus;
+         return param1.alignGiftBonus + param1.base + param1.contextModif + param1.objectsAndMountBonus;
       }
    }
 }

@@ -31,10 +31,10 @@ package com.ankamagames.dofus.network.messages.game.chat.smiley
          return 801;
       }
       
-      public function initChatSmileyMessage(entityId:int=0, smileyId:uint=0, accountId:uint=0) : ChatSmileyMessage {
-         this.entityId = entityId;
-         this.smileyId = smileyId;
-         this.accountId = accountId;
+      public function initChatSmileyMessage(param1:int=0, param2:uint=0, param3:uint=0) : ChatSmileyMessage {
+         this.entityId = param1;
+         this.smileyId = param2;
+         this.accountId = param3;
          this._isInitialized = true;
          return this;
       }
@@ -46,55 +46,55 @@ package com.ankamagames.dofus.network.messages.game.chat.smiley
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ChatSmileyMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_ChatSmileyMessage(param1);
       }
       
-      public function serializeAs_ChatSmileyMessage(output:IDataOutput) : void {
-         output.writeInt(this.entityId);
+      public function serializeAs_ChatSmileyMessage(param1:IDataOutput) : void {
+         param1.writeInt(this.entityId);
          if(this.smileyId < 0)
          {
             throw new Error("Forbidden value (" + this.smileyId + ") on element smileyId.");
          }
          else
          {
-            output.writeByte(this.smileyId);
+            param1.writeByte(this.smileyId);
             if(this.accountId < 0)
             {
                throw new Error("Forbidden value (" + this.accountId + ") on element accountId.");
             }
             else
             {
-               output.writeInt(this.accountId);
+               param1.writeInt(this.accountId);
                return;
             }
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ChatSmileyMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_ChatSmileyMessage(param1);
       }
       
-      public function deserializeAs_ChatSmileyMessage(input:IDataInput) : void {
-         this.entityId = input.readInt();
-         this.smileyId = input.readByte();
+      public function deserializeAs_ChatSmileyMessage(param1:IDataInput) : void {
+         this.entityId = param1.readInt();
+         this.smileyId = param1.readByte();
          if(this.smileyId < 0)
          {
             throw new Error("Forbidden value (" + this.smileyId + ") on element of ChatSmileyMessage.smileyId.");
          }
          else
          {
-            this.accountId = input.readInt();
+            this.accountId = param1.readInt();
             if(this.accountId < 0)
             {
                throw new Error("Forbidden value (" + this.accountId + ") on element of ChatSmileyMessage.accountId.");

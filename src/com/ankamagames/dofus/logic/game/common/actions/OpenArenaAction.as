@@ -10,8 +10,8 @@ package com.ankamagames.dofus.logic.game.common.actions
       }
       
       public static function create() : OpenArenaAction {
-         var a:OpenArenaAction = new OpenArenaAction();
-         return a;
+         var _loc1_:OpenArenaAction = new OpenArenaAction();
+         return _loc1_;
       }
    }
 }

@@ -2,7 +2,7 @@ package com.ankamagames.dofus.network.messages.game.pvp
 {
    import com.ankamagames.jerakine.network.NetworkMessage;
    import com.ankamagames.jerakine.network.INetworkMessage;
-   import __AS3__.vec.*;
+   import __AS3__.vec.Vector;
    import flash.utils.IDataOutput;
    import flash.utils.ByteArray;
    import flash.utils.IDataInput;
@@ -32,9 +32,9 @@ package com.ankamagames.dofus.network.messages.game.pvp
          return 6454;
       }
       
-      public function initUpdateMapPlayersAgressableStatusMessage(playerIds:Vector.<uint>=null, enable:Vector.<uint>=null) : UpdateMapPlayersAgressableStatusMessage {
-         this.playerIds = playerIds;
-         this.enable = enable;
+      public function initUpdateMapPlayersAgressableStatusMessage(param1:Vector.<uint>=null, param2:Vector.<uint>=null) : UpdateMapPlayersAgressableStatusMessage {
+         this.playerIds = param1;
+         this.enable = param2;
          this._isInitialized = true;
          return this;
       }
@@ -45,81 +45,81 @@ package com.ankamagames.dofus.network.messages.game.pvp
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_UpdateMapPlayersAgressableStatusMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_UpdateMapPlayersAgressableStatusMessage(param1);
       }
       
-      public function serializeAs_UpdateMapPlayersAgressableStatusMessage(output:IDataOutput) : void {
-         output.writeShort(this.playerIds.length);
-         var _i1:uint = 0;
-         while(_i1 < this.playerIds.length)
+      public function serializeAs_UpdateMapPlayersAgressableStatusMessage(param1:IDataOutput) : void {
+         param1.writeShort(this.playerIds.length);
+         var _loc2_:uint = 0;
+         while(_loc2_ < this.playerIds.length)
          {
-            if(this.playerIds[_i1] < 0)
+            if(this.playerIds[_loc2_] < 0)
             {
-               throw new Error("Forbidden value (" + this.playerIds[_i1] + ") on element 1 (starting at 1) of playerIds.");
+               throw new Error("Forbidden value (" + this.playerIds[_loc2_] + ") on element 1 (starting at 1) of playerIds.");
             }
             else
             {
-               output.writeInt(this.playerIds[_i1]);
-               _i1++;
+               param1.writeInt(this.playerIds[_loc2_]);
+               _loc2_++;
                continue;
             }
          }
-         output.writeShort(this.enable.length);
-         var _i2:uint = 0;
-         while(_i2 < this.enable.length)
+         param1.writeShort(this.enable.length);
+         var _loc3_:uint = 0;
+         while(_loc3_ < this.enable.length)
          {
-            output.writeByte(this.enable[_i2]);
-            _i2++;
+            param1.writeByte(this.enable[_loc3_]);
+            _loc3_++;
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_UpdateMapPlayersAgressableStatusMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_UpdateMapPlayersAgressableStatusMessage(param1);
       }
       
-      public function deserializeAs_UpdateMapPlayersAgressableStatusMessage(input:IDataInput) : void {
-         var _val1:uint = 0;
-         var _val2:uint = 0;
-         var _playerIdsLen:uint = input.readUnsignedShort();
-         var _i1:uint = 0;
-         while(_i1 < _playerIdsLen)
+      public function deserializeAs_UpdateMapPlayersAgressableStatusMessage(param1:IDataInput) : void {
+         var _loc6_:uint = 0;
+         var _loc7_:uint = 0;
+         var _loc2_:uint = param1.readUnsignedShort();
+         var _loc3_:uint = 0;
+         while(_loc3_ < _loc2_)
          {
-            _val1 = input.readInt();
-            if(_val1 < 0)
+            _loc6_ = param1.readInt();
+            if(_loc6_ < 0)
             {
-               throw new Error("Forbidden value (" + _val1 + ") on elements of playerIds.");
+               throw new Error("Forbidden value (" + _loc6_ + ") on elements of playerIds.");
             }
             else
             {
-               this.playerIds.push(_val1);
-               _i1++;
+               this.playerIds.push(_loc6_);
+               _loc3_++;
                continue;
             }
          }
-         var _enableLen:uint = input.readUnsignedShort();
-         var _i2:uint = 0;
-         while(_i2 < _enableLen)
+         var _loc4_:uint = param1.readUnsignedShort();
+         var _loc5_:uint = 0;
+         while(_loc5_ < _loc4_)
          {
-            _val2 = input.readByte();
-            if(_val2 < 0)
+            _loc7_ = param1.readByte();
+            if(_loc7_ < 0)
             {
-               throw new Error("Forbidden value (" + _val2 + ") on elements of enable.");
+               throw new Error("Forbidden value (" + _loc7_ + ") on elements of enable.");
             }
             else
             {
-               this.enable.push(_val2);
-               _i2++;
+               this.enable.push(_loc7_);
+               _loc5_++;
                continue;
             }
          }

@@ -87,7 +87,7 @@ package flashx.textLayout.factory
          return this._contentBounds;
       }
       
-      function setContentBounds(param1:Rectangle) : void {
+      protected function setContentBounds(param1:Rectangle) : void {
          this._contentBounds = param1;
          this._contentBounds.offset(this.compositionBounds.left,this.compositionBounds.top);
       }
@@ -128,11 +128,11 @@ package flashx.textLayout.factory
          this._verticalScrollPolicy = param1;
       }
       
-      function get containerController() : ContainerController {
+      protected function get containerController() : ContainerController {
          return this._containerController;
       }
       
-      function callbackWithTextLines(param1:Function, param2:Number, param3:Number) : void {
+      protected function callbackWithTextLines(param1:Function, param2:Number, param3:Number) : void {
          var _loc4_:TextLine = null;
          var _loc5_:TextBlock = null;
          for each (_loc4_ in _factoryComposer._lines)
@@ -150,7 +150,7 @@ package flashx.textLayout.factory
          }
       }
       
-      function doesComposedTextFit(param1:int, param2:uint, param3:String) : Boolean {
+      protected function doesComposedTextFit(param1:int, param2:uint, param3:String) : Boolean {
          if(!(param1 == TruncationOptions.NO_LINE_COUNT_LIMIT) && _factoryComposer._lines.length > param1)
          {
             return false;
@@ -164,7 +164,7 @@ package flashx.textLayout.factory
          return _loc5_.userData + _loc5_.rawTextLength == param2;
       }
       
-      function getNextTruncationPosition(param1:int, param2:Boolean=false) : int {
+      protected function getNextTruncationPosition(param1:int, param2:Boolean=false) : int {
          param1--;
          var _loc3_:TextLine = _pass0Lines[_truncationLineIndex] as TextLine;
          while(!(param1 >= _loc3_.userData && param1 < _loc3_.userData + _loc3_.rawTextLength))

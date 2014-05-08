@@ -5,11 +5,11 @@ package com.ankamagames.berilia.types.shortcut
    public class LocalizedKeyboard extends Object
    {
       
-      public function LocalizedKeyboard(uri:Uri, locale:String, description:String) {
+      public function LocalizedKeyboard(param1:Uri, param2:String, param3:String) {
          super();
-         this._uri = uri;
-         this._locale = locale;
-         this._description = description;
+         this._uri = param1;
+         this._locale = param2;
+         this._description = param3;
       }
       
       private var _uri:Uri;

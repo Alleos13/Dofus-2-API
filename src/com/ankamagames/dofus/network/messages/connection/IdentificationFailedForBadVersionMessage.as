@@ -28,9 +28,9 @@ package com.ankamagames.dofus.network.messages.connection
          return 21;
       }
       
-      public function initIdentificationFailedForBadVersionMessage(reason:uint=99, requiredVersion:Version=null) : IdentificationFailedForBadVersionMessage {
-         super.initIdentificationFailedMessage(reason);
-         this.requiredVersion = requiredVersion;
+      public function initIdentificationFailedForBadVersionMessage(param1:uint=99, param2:Version=null) : IdentificationFailedForBadVersionMessage {
+         super.initIdentificationFailedMessage(param1);
+         this.requiredVersion = param2;
          this._isInitialized = true;
          return this;
       }
@@ -41,33 +41,33 @@ package com.ankamagames.dofus.network.messages.connection
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_IdentificationFailedForBadVersionMessage(output);
+      override public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_IdentificationFailedForBadVersionMessage(param1);
       }
       
-      public function serializeAs_IdentificationFailedForBadVersionMessage(output:IDataOutput) : void {
-         super.serializeAs_IdentificationFailedMessage(output);
-         this.requiredVersion.serializeAs_Version(output);
+      public function serializeAs_IdentificationFailedForBadVersionMessage(param1:IDataOutput) : void {
+         super.serializeAs_IdentificationFailedMessage(param1);
+         this.requiredVersion.serializeAs_Version(param1);
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_IdentificationFailedForBadVersionMessage(input);
+      override public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_IdentificationFailedForBadVersionMessage(param1);
       }
       
-      public function deserializeAs_IdentificationFailedForBadVersionMessage(input:IDataInput) : void {
-         super.deserialize(input);
+      public function deserializeAs_IdentificationFailedForBadVersionMessage(param1:IDataInput) : void {
+         super.deserialize(param1);
          this.requiredVersion = new Version();
-         this.requiredVersion.deserialize(input);
+         this.requiredVersion.deserialize(param1);
       }
    }
 }

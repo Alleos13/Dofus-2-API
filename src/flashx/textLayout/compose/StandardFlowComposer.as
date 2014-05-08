@@ -395,7 +395,7 @@ package flashx.textLayout.compose
          return true;
       }
       
-      function preCompose() : Boolean {
+      protected function preCompose() : Boolean {
          this.rootElement.preCompose();
          if(numLines == 0)
          {

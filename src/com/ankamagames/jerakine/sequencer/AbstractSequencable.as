@@ -41,11 +41,11 @@ package com.ankamagames.jerakine.sequencer
          return this._timeoutMax;
       }
       
-      public function set timeout(value:int) : void {
-         this._timeoutMax = value;
-         if((this._timeOut) && (!(value == -1)))
+      public function set timeout(param1:int) : void {
+         this._timeoutMax = param1;
+         if((this._timeOut) && !(param1 == -1))
          {
-            this._timeOut.delay = value;
+            this._timeOut.delay = param1;
          }
       }
       
@@ -72,8 +72,8 @@ package com.ankamagames.jerakine.sequencer
       public function start() : void {
       }
       
-      public function addListener(listener:ISequencableListener) : void {
-         if((!this._timeOut) && (!(this._timeoutMax == -1)))
+      public function addListener(param1:ISequencableListener) : void {
+         if(!this._timeOut && !(this._timeoutMax == -1))
          {
             this._timeOut = new Timer(this._timeoutMax,1);
             this._timeOut.addEventListener(TimerEvent.TIMER,this.onTimeOut);
@@ -83,11 +83,11 @@ package com.ankamagames.jerakine.sequencer
          {
             this._listeners = new Dictionary();
          }
-         this._listeners[listener] = listener;
+         this._listeners[param1] = param1;
       }
       
-      function executeCallbacks() : void {
-         var listener:ISequencableListener = null;
+      protected function executeCallbacks() : void {
+         var _loc1_:ISequencableListener = null;
          FightProfiler.getInstance().stop();
          if(this._timeOut)
          {
@@ -95,21 +95,21 @@ package com.ankamagames.jerakine.sequencer
             this._timeOut.reset();
             this._timeOut = null;
          }
-         for each (listener in this._listeners)
+         for each (_loc1_ in this._listeners)
          {
-            if(listener)
+            if(_loc1_)
             {
-               listener.stepFinished(this,this._withTimeOut);
+               _loc1_.stepFinished(this,this._withTimeOut);
             }
          }
       }
       
-      public function removeListener(listener:ISequencableListener) : void {
+      public function removeListener(param1:ISequencableListener) : void {
          if(!this._listeners)
          {
             return;
          }
-         delete this._listeners[[listener]];
+         delete this._listeners[[param1]];
       }
       
       override public function toString() : String {
@@ -129,15 +129,15 @@ package com.ankamagames.jerakine.sequencer
          return this._castingSpellId;
       }
       
-      public function set castingSpellId(val:int) : void {
-         this._castingSpellId = val;
+      public function set castingSpellId(param1:int) : void {
+         this._castingSpellId = param1;
       }
       
       public function get isTimeout() : Boolean {
          return this._withTimeOut;
       }
       
-      function onTimeOut(e:TimerEvent) : void {
+      protected function onTimeOut(param1:TimerEvent) : void {
          _log.error("Time out sur la step " + this + " (" + this._timeOut.delay + ")");
          this._withTimeOut = true;
          if(this._timeOut)

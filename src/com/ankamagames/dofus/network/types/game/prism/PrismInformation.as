@@ -27,12 +27,12 @@ package com.ankamagames.dofus.network.types.game.prism
          return 428;
       }
       
-      public function initPrismInformation(typeId:uint=0, state:uint=1, nextVulnerabilityDate:uint=0, placementDate:uint=0, rewardTokenCount:uint=0) : PrismInformation {
-         this.typeId = typeId;
-         this.state = state;
-         this.nextVulnerabilityDate = nextVulnerabilityDate;
-         this.placementDate = placementDate;
-         this.rewardTokenCount = rewardTokenCount;
+      public function initPrismInformation(param1:uint=0, param2:uint=1, param3:uint=0, param4:uint=0, param5:uint=0) : PrismInformation {
+         this.typeId = param1;
+         this.state = param2;
+         this.nextVulnerabilityDate = param3;
+         this.placementDate = param4;
+         this.rewardTokenCount = param5;
          return this;
       }
       
@@ -44,40 +44,40 @@ package com.ankamagames.dofus.network.types.game.prism
          this.rewardTokenCount = 0;
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PrismInformation(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_PrismInformation(param1);
       }
       
-      public function serializeAs_PrismInformation(output:IDataOutput) : void {
+      public function serializeAs_PrismInformation(param1:IDataOutput) : void {
          if(this.typeId < 0)
          {
             throw new Error("Forbidden value (" + this.typeId + ") on element typeId.");
          }
          else
          {
-            output.writeByte(this.typeId);
-            output.writeByte(this.state);
+            param1.writeByte(this.typeId);
+            param1.writeByte(this.state);
             if(this.nextVulnerabilityDate < 0)
             {
                throw new Error("Forbidden value (" + this.nextVulnerabilityDate + ") on element nextVulnerabilityDate.");
             }
             else
             {
-               output.writeInt(this.nextVulnerabilityDate);
+               param1.writeInt(this.nextVulnerabilityDate);
                if(this.placementDate < 0)
                {
                   throw new Error("Forbidden value (" + this.placementDate + ") on element placementDate.");
                }
                else
                {
-                  output.writeInt(this.placementDate);
+                  param1.writeInt(this.placementDate);
                   if(this.rewardTokenCount < 0)
                   {
                      throw new Error("Forbidden value (" + this.rewardTokenCount + ") on element rewardTokenCount.");
                   }
                   else
                   {
-                     output.writeInt(this.rewardTokenCount);
+                     param1.writeInt(this.rewardTokenCount);
                      return;
                   }
                }
@@ -85,40 +85,40 @@ package com.ankamagames.dofus.network.types.game.prism
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PrismInformation(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_PrismInformation(param1);
       }
       
-      public function deserializeAs_PrismInformation(input:IDataInput) : void {
-         this.typeId = input.readByte();
+      public function deserializeAs_PrismInformation(param1:IDataInput) : void {
+         this.typeId = param1.readByte();
          if(this.typeId < 0)
          {
             throw new Error("Forbidden value (" + this.typeId + ") on element of PrismInformation.typeId.");
          }
          else
          {
-            this.state = input.readByte();
+            this.state = param1.readByte();
             if(this.state < 0)
             {
                throw new Error("Forbidden value (" + this.state + ") on element of PrismInformation.state.");
             }
             else
             {
-               this.nextVulnerabilityDate = input.readInt();
+               this.nextVulnerabilityDate = param1.readInt();
                if(this.nextVulnerabilityDate < 0)
                {
                   throw new Error("Forbidden value (" + this.nextVulnerabilityDate + ") on element of PrismInformation.nextVulnerabilityDate.");
                }
                else
                {
-                  this.placementDate = input.readInt();
+                  this.placementDate = param1.readInt();
                   if(this.placementDate < 0)
                   {
                      throw new Error("Forbidden value (" + this.placementDate + ") on element of PrismInformation.placementDate.");
                   }
                   else
                   {
-                     this.rewardTokenCount = input.readInt();
+                     this.rewardTokenCount = param1.readInt();
                      if(this.rewardTokenCount < 0)
                      {
                         throw new Error("Forbidden value (" + this.rewardTokenCount + ") on element of PrismInformation.rewardTokenCount.");

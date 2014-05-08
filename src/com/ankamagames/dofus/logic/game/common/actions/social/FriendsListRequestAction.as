@@ -10,8 +10,8 @@ package com.ankamagames.dofus.logic.game.common.actions.social
       }
       
       public static function create() : FriendsListRequestAction {
-         var a:FriendsListRequestAction = new FriendsListRequestAction();
-         return a;
+         var _loc1_:FriendsListRequestAction = new FriendsListRequestAction();
+         return _loc1_;
       }
    }
 }

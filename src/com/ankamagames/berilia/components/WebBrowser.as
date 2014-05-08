@@ -44,8 +44,8 @@ package com.ankamagames.berilia.components
          else
          {
             this._resizeTimer.addEventListener(TimerEvent.TIMER,this.onResizeEnd);
-            mainWindow = StageShareManager.stage.nativeWindow;
-            mainWindow.addEventListener(Event.RESIZE,this.onResize);
+            _loc1_ = StageShareManager.stage.nativeWindow;
+            _loc1_.addEventListener(Event.RESIZE,this.onResize);
             this._vScrollBar = new ScrollBar();
             this._vScrollBar.min = 1;
             this._vScrollBar.max = 1;
@@ -85,11 +85,11 @@ package com.ankamagames.berilia.components
          return this._cacheLife;
       }
       
-      public function set cacheLife(value:Number) : void {
-         this._cacheLife = Math.max(1,value);
+      public function set cacheLife(param1:Number) : void {
+         this._cacheLife = Math.max(1,param1);
          if(this._htmlLoader)
          {
-            this._htmlLoader.life = value;
+            this._htmlLoader.life = param1;
          }
       }
       
@@ -97,20 +97,20 @@ package com.ankamagames.berilia.components
          return this._cacheId;
       }
       
-      public function set cacheId(value:String) : void {
-         this._cacheId = value;
+      public function set cacheId(param1:String) : void {
+         this._cacheId = param1;
       }
       
-      public function set scrollCss(sUrl:Uri) : void {
-         this._vScrollBar.css = sUrl;
+      public function set scrollCss(param1:Uri) : void {
+         this._vScrollBar.css = param1;
       }
       
       public function get scrollCss() : Uri {
          return this._vScrollBar.css;
       }
       
-      public function set displayScrollBar(b:Boolean) : void {
-         this._vScrollBar.width = b?16:0;
+      public function set displayScrollBar(param1:Boolean) : void {
+         this._vScrollBar.width = param1?16:0;
          this.onResizeEnd(null);
       }
       
@@ -118,9 +118,9 @@ package com.ankamagames.berilia.components
          return this._displayScrollBar;
       }
       
-      public function set scrollTopOffset(v:int) : void {
-         this._scrollTopOffset = v;
-         this._vScrollBar.y = v;
+      public function set scrollTopOffset(param1:int) : void {
+         this._scrollTopOffset = param1;
+         this._vScrollBar.y = param1;
          if(height)
          {
             this._vScrollBar.height = height - this._scrollTopOffset;
@@ -131,24 +131,24 @@ package com.ankamagames.berilia.components
          return this._finalized;
       }
       
-      public function set finalized(b:Boolean) : void {
-         this._finalized = b;
+      public function set finalized(param1:Boolean) : void {
+         this._finalized = param1;
       }
       
-      override public function set width(nW:Number) : void {
-         super.width = nW;
+      override public function set width(param1:Number) : void {
+         super.width = param1;
          if(this._htmlLoader)
          {
-            this._htmlLoader.width = nW - this._vScrollBar.width;
+            this._htmlLoader.width = param1 - this._vScrollBar.width;
             this._vScrollBar.x = this._htmlLoader.x + this._htmlLoader.width;
          }
       }
       
-      override public function set height(nH:Number) : void {
-         super.height = nH;
+      override public function set height(param1:Number) : void {
+         super.height = param1;
          if(this._htmlLoader)
          {
-            this._htmlLoader.height = nH;
+            this._htmlLoader.height = param1;
          }
          this.scrollTopOffset = this._scrollTopOffset;
       }
@@ -189,40 +189,40 @@ package com.ankamagames.berilia.components
          this._finalized = true;
       }
       
-      public function setBlankLink(linkPattern:String, blank:Boolean) : void {
-         if(blank)
+      public function setBlankLink(param1:String, param2:Boolean) : void {
+         if(param2)
          {
-            this._manualExternalLink[linkPattern] = new RegExp(linkPattern);
+            this._manualExternalLink[param1] = new RegExp(param1);
          }
          else
          {
-            delete this._manualExternalLink[[linkPattern]];
+            delete this._manualExternalLink[[param1]];
          }
          this.modifyDOM(this._htmlLoader.window.document);
       }
       
-      override public function process(msg:Message) : Boolean {
-         var currentDo:DisplayObject = null;
-         if(msg is MouseWheelMessage)
+      override public function process(param1:Message) : Boolean {
+         var _loc2_:DisplayObject = null;
+         if(param1 is MouseWheelMessage)
          {
-            currentDo = MouseWheelMessage(msg).target;
-            while((!(currentDo == this._htmlLoader)) && (currentDo) && (currentDo.parent))
+            _loc2_ = MouseWheelMessage(param1).target;
+            while((!(_loc2_ == this._htmlLoader)) && (_loc2_) && (_loc2_.parent))
             {
-               currentDo = currentDo.parent;
+               _loc2_ = _loc2_.parent;
             }
-            if(currentDo == this._htmlLoader)
+            if(_loc2_ == this._htmlLoader)
             {
                this._vScrollBar.value = this._htmlLoader.scrollV;
             }
          }
-         if(((msg is KeyboardKeyDownMessage) || (msg is KeyboardKeyUpMessage)) && (!(KeyboardMessage(msg).keyboardEvent.keyCode == Keyboard.ESCAPE)))
+         if((param1 is KeyboardKeyDownMessage || param1 is KeyboardKeyUpMessage) && !(KeyboardMessage(param1).keyboardEvent.keyCode == Keyboard.ESCAPE))
          {
-            currentDo = FocusHandler.getInstance().getFocus();
-            while((!(currentDo == this._htmlLoader)) && (currentDo) && (currentDo.parent))
+            _loc2_ = FocusHandler.getInstance().getFocus();
+            while((!(_loc2_ == this._htmlLoader)) && (_loc2_) && (_loc2_.parent))
             {
-               currentDo = currentDo.parent;
+               _loc2_ = _loc2_.parent;
             }
-            return currentDo == this._htmlLoader;
+            return _loc2_ == this._htmlLoader;
          }
          return false;
       }
@@ -244,69 +244,69 @@ package com.ankamagames.berilia.components
       }
       
       public function hasContent() : Boolean {
-         var a:Object = this._htmlLoader.window.document.getElementsByTagName("body");
-         if((!a[0]) || (a[0].firstChild == null))
+         var _loc1_:Object = this._htmlLoader.window.document.getElementsByTagName("body");
+         if(!_loc1_[0] || _loc1_[0].firstChild == null)
          {
             return false;
          }
-         if((a[0].getElementsByTagName("h1")) && (a[0].getElementsByTagName("h1").length > 0))
+         if((_loc1_[0].getElementsByTagName("h1")) && _loc1_[0].getElementsByTagName("h1").length > 0)
          {
             return true;
          }
          return false;
       }
       
-      public function load(urlRequest:URLRequest) : void {
+      public function load(param1:URLRequest) : void {
          if(getUi().uiModule.trusted)
          {
-            this._htmlLoader.load(urlRequest);
+            this._htmlLoader.load(param1);
             return;
          }
          throw new SecurityError("Only trusted module can use WebBroswer");
       }
       
-      public function javascriptSetVar(varName:String, value:*) : void {
+      public function javascriptSetVar(param1:String, param2:*) : void {
          try
          {
-            this._htmlLoader.window.document.body[varName] = value;
+            this._htmlLoader.window.document.body[param1] = param2;
          }
          catch(e:Error)
          {
          }
       }
       
-      public function javascriptCall(fctName:String, ... params) : void {
-         var f:Function = null;
+      public function javascriptCall(param1:String, ... rest) : void {
+         var _loc3_:Function = null;
          try
          {
-            f = this._htmlLoader.window[fctName];
-            f.apply(null,params);
+            _loc3_ = this._htmlLoader.window[param1];
+            _loc3_.apply(null,rest);
          }
          catch(e:Error)
          {
          }
       }
       
-      function removeHtmlEvent() : void {
-         var link:Object = null;
-         var input:Object = null;
-         for each (link in this._linkList)
+      private function removeHtmlEvent() : void {
+         var _loc1_:Object = null;
+         var _loc2_:Object = null;
+         for each (_loc1_ in this._linkList)
          {
             try
             {
-               link.removeEventListener("click",this.onLinkClick);
+               _loc1_.removeEventListener("click",this.onLinkClick);
             }
             catch(e:Error)
             {
                continue;
             }
          }
-         for each (input in this._inputList)
+         for each (_loc2_ in this._inputList)
          {
             try
             {
-               input.removeEventListener("focus",this.onInputFocus);
-               input.removeEventListener("blur",this.onInputBlur);
+               _loc2_.removeEventListener("focus",this.onInputFocus);
+               _loc2_.removeEventListener("blur",this.onInputBlur);
             }
             catch(e:Error)
             {
@@ -315,20 +315,20 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function onResize(e:Event) : void {
+      private function onResize(param1:Event) : void {
          this._resizeTimer.reset();
          this._resizeTimer.start();
       }
       
-      function onResizeEnd(e:Event) : void {
+      private function onResizeEnd(param1:Event) : void {
          this._resizeTimer.stop();
-         var scale:Number = StageShareManager.windowScale;
+         var _loc2_:Number = StageShareManager.windowScale;
          if(this._htmlLoader)
          {
-            this._htmlLoader.width = width * scale - this._vScrollBar.width;
-            this._htmlLoader.height = height * scale;
-            this._htmlLoader.scaleX = 1 / scale;
-            this._htmlLoader.scaleY = 1 / scale;
+            this._htmlLoader.width = width * _loc2_ - this._vScrollBar.width;
+            this._htmlLoader.height = height * _loc2_;
+            this._htmlLoader.scaleX = 1 / _loc2_;
+            this._htmlLoader.scaleY = 1 / _loc2_;
          }
       }
       
@@ -336,7 +336,7 @@ package com.ankamagames.berilia.components
       
       private var _domInit:Boolean;
       
-      function onDomReady(e:Event) : void {
+      private function onDomReady(param1:Event) : void {
          if(!this._htmlLoader.window.document.body)
          {
             this._domInit = false;
@@ -362,11 +362,11 @@ package com.ankamagames.berilia.components
          Berilia.getInstance().handler.process(new BrowserDomReady(InteractiveObject(this)));
       }
       
-      function isManualExternalLink(link:String) : Boolean {
-         var pattern:RegExp = null;
-         for each (pattern in this._manualExternalLink)
+      private function isManualExternalLink(param1:String) : Boolean {
+         var _loc2_:RegExp = null;
+         for each (_loc2_ in this._manualExternalLink)
          {
-            if(link.match(pattern).length)
+            if(param1.match(_loc2_).length)
             {
                return true;
             }
@@ -374,16 +374,17 @@ package com.ankamagames.berilia.components
          return false;
       }
       
-      function modifyDOM(target:Object) : void {
+      private function modifyDOM(param1:Object) : void {
          var i:uint = 0;
          var a:Object = null;
+         var target:Object = param1;
          try
          {
             a = target.getElementsByTagName("a");
             i = 0;
             while(i < a.length)
             {
-               if((a[i].target == "_blank") || (this.isManualExternalLink(a[i].href)))
+               if(a[i].target == "_blank" || (this.isManualExternalLink(a[i].href)))
                {
                   a[i].addEventListener("click",this.onLinkClick,false);
                   if(this._linkList.indexOf(a[i]) == -1)
@@ -400,36 +401,36 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function onLinkClick(e:*) : void {
-         var target:Object = e.target;
-         if(target.tagName == "IMG")
+      private function onLinkClick(param1:*) : void {
+         var _loc2_:Object = param1.target;
+         if(_loc2_.tagName == "IMG")
          {
-            target = target.parentElement;
+            _loc2_ = _loc2_.parentElement;
          }
-         if((target.target == "_blank") || (this.isManualExternalLink(target.href)))
+         if(_loc2_.target == "_blank" || (this.isManualExternalLink(_loc2_.href)))
          {
-            e.preventDefault();
-            navigateToURL(new URLRequest(target.href));
+            param1.preventDefault();
+            navigateToURL(new URLRequest(_loc2_.href));
          }
       }
       
-      function onInputFocus(e:*) : void {
+      private function onInputFocus(param1:*) : void {
          this._inputFocus = true;
       }
       
-      function onInputBlur(e:*) : void {
+      private function onInputBlur(param1:*) : void {
          this._inputFocus = false;
       }
       
-      function onScroll(e:Event) : void {
+      private function onScroll(param1:Event) : void {
          this._htmlLoader.scrollV = this._vScrollBar.value;
       }
       
-      function onBoundsChange(e:Event) : void {
+      private function onBoundsChange(param1:Event) : void {
          this.updateScrollbar();
       }
       
-      function updateScrollbar() : void {
+      private function updateScrollbar() : void {
          if(this._vScrollBar.max != this._htmlLoader.contentHeight - this._htmlLoader.height)
          {
             this._vScrollBar.min = 0;
@@ -437,11 +438,11 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function onSessionTimeout(e:Event) : void {
+      private function onSessionTimeout(param1:Event) : void {
          Berilia.getInstance().handler.process(new BrowserSessionTimeout(InteractiveObject(this)));
       }
       
-      function onLocationChange(e:Event) : void {
+      private function onLocationChange(param1:Event) : void {
          _log.trace("Load " + this._htmlLoader.location);
          this.removeHtmlEvent();
          this._inputFocus = false;

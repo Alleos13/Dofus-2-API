@@ -40,22 +40,22 @@ package com.ankamagames.jerakine.network
       
       public var handler:MessageHandler;
       
-      public function resetTime(uri:Uri) : void {
-         delete this._requestTimestamp[[uri.toString()]];
+      public function resetTime(param1:Uri) : void {
+         delete this._requestTimestamp[[param1.toString()]];
       }
       
-      public function request(uri:Uri, errorCallback:Function=null, cacheLife:uint=0) : Boolean {
-         var lastRequestTime:Number = this._requestTimestamp[uri.toString()];
-         if((lastRequestTime) && (getTimer() - lastRequestTime < cacheLife))
+      public function request(param1:Uri, param2:Function=null, param3:uint=0) : Boolean {
+         var _loc4_:Number = this._requestTimestamp[param1.toString()];
+         if((_loc4_) && getTimer() - _loc4_ < param3)
          {
             return false;
          }
-         if(errorCallback == null)
+         if(param2 == null)
          {
-            this._errorCallback[uri] = errorCallback;
+            this._errorCallback[param1] = param2;
          }
-         this._requestTimestamp[uri.toString()] = getTimer();
-         this._loader.load(uri,null,BinaryAdapter);
+         this._requestTimestamp[param1.toString()] = getTimer();
+         this._loader.load(param1,null,BinaryAdapter);
          return true;
       }
       
@@ -63,18 +63,18 @@ package com.ankamagames.jerakine.network
          this._loader.cancel();
       }
       
-      public function addToWhiteList(classRef:Class) : void {
-         if(!this._whiteList[classRef])
+      public function addToWhiteList(param1:Class) : void {
+         if(!this._whiteList[param1])
          {
-            this._whiteList[classRef] = true;
+            this._whiteList[param1] = true;
             this._whiteListCount++;
          }
       }
       
-      public function removeFromWhiteList(classRef:Class) : void {
-         if(this._whiteList[classRef])
+      public function removeFromWhiteList(param1:Class) : void {
+         if(this._whiteList[param1])
          {
-            delete this._whiteList[[classRef]];
+            delete this._whiteList[[param1]];
             this._whiteListCount--;
          }
       }
@@ -92,102 +92,102 @@ package com.ankamagames.jerakine.network
          this._loader.addEventListener(ResourceLoadedEvent.LOADED,this.onReceive);
       }
       
-      private function getMessageId(firstOctet:uint) : uint {
-         return firstOctet >> NetworkMessage.BIT_RIGHT_SHIFT_LEN_PACKET_ID;
+      private function getMessageId(param1:uint) : uint {
+         return param1 >> NetworkMessage.BIT_RIGHT_SHIFT_LEN_PACKET_ID;
       }
       
-      private function readMessageLength(staticHeader:uint, src:IDataInput) : uint {
-         var byteLenDynamicHeader:uint = staticHeader & NetworkMessage.BIT_MASK;
-         var messageLength:uint = 0;
-         switch(byteLenDynamicHeader)
+      private function readMessageLength(param1:uint, param2:IDataInput) : uint {
+         var _loc3_:uint = param1 & NetworkMessage.BIT_MASK;
+         var _loc4_:uint = 0;
+         switch(_loc3_)
          {
             case 0:
                break;
             case 1:
-               messageLength = src.readUnsignedByte();
+               _loc4_ = param2.readUnsignedByte();
                break;
             case 2:
-               messageLength = src.readUnsignedShort();
+               _loc4_ = param2.readUnsignedShort();
                break;
             case 3:
-               messageLength = ((src.readByte() & 255) << 16) + ((src.readByte() & 255) << 8) + (src.readByte() & 255);
+               _loc4_ = ((param2.readByte() & 255) << 16) + ((param2.readByte() & 255) << 8) + (param2.readByte() & 255);
                break;
          }
-         return messageLength;
+         return _loc4_;
       }
       
-      function lowReceive(src:IDataInput) : INetworkMessage {
-         var messageLength:uint = 0;
-         if(src.bytesAvailable < 2)
+      protected function lowReceive(param1:IDataInput) : INetworkMessage {
+         var _loc4_:uint = 0;
+         if(param1.bytesAvailable < 2)
          {
             return null;
          }
-         var staticHeader:uint = src.readUnsignedShort();
-         var messageId:uint = this.getMessageId(staticHeader);
-         if(src.bytesAvailable >= (staticHeader & NetworkMessage.BIT_MASK))
+         var _loc2_:uint = param1.readUnsignedShort();
+         var _loc3_:uint = this.getMessageId(_loc2_);
+         if(param1.bytesAvailable >= (_loc2_ & NetworkMessage.BIT_MASK))
          {
-            messageLength = this.readMessageLength(staticHeader,src);
-            if(src.bytesAvailable >= messageLength)
+            _loc4_ = this.readMessageLength(_loc2_,param1);
+            if(param1.bytesAvailable >= _loc4_)
             {
-               return this.rawParser.parse(src,messageId,messageLength);
+               return this.rawParser.parse(param1,_loc3_,_loc4_);
             }
          }
          return null;
       }
       
-      function receive(src:IDataInput, uri:Uri) : void {
-         var msg:INetworkMessage = null;
-         var byteAvaible:uint = src.bytesAvailable;
-         while(src.bytesAvailable > 0)
+      protected function receive(param1:IDataInput, param2:Uri) : void {
+         var _loc4_:INetworkMessage = null;
+         var _loc3_:uint = param1.bytesAvailable;
+         while(param1.bytesAvailable > 0)
          {
-            msg = this.lowReceive(src);
-            if(!msg)
+            _loc4_ = this.lowReceive(param1);
+            if(!_loc4_)
             {
-               if(byteAvaible == src.bytesAvailable)
+               if(_loc3_ == param1.bytesAvailable)
                {
-                  _log.error("Error while reading " + uri + " : malformated data");
+                  _log.error("Error while reading " + param2 + " : malformated data");
                   return;
                }
-               _log.error("Unknow message from " + uri);
+               _log.error("Unknow message from " + param2);
                return;
             }
-            byteAvaible = src.bytesAvailable;
-            if(msg is INetworkDataContainerMessage)
+            _loc3_ = param1.bytesAvailable;
+            if(_loc4_ is INetworkDataContainerMessage)
             {
-               while(INetworkDataContainerMessage(msg).content.bytesAvailable)
+               while(INetworkDataContainerMessage(_loc4_).content.bytesAvailable)
                {
-                  this.receive(INetworkDataContainerMessage(msg).content,uri);
+                  this.receive(INetworkDataContainerMessage(_loc4_).content,param2);
                }
             }
             else
             {
-               if((!this._whiteListCount) || (this._whiteList[Object(msg).constructor]))
+               if(!this._whiteListCount || (this._whiteList[Object(_loc4_).constructor]))
                {
-                  _log.info("Dispatch " + msg + " from " + uri);
-                  this.handler.process(msg);
+                  _log.info("Dispatch " + _loc4_ + " from " + param2);
+                  this.handler.process(_loc4_);
                }
                else
                {
-                  _log.error("Packet " + msg + " cannot be used from a web server (uri: " + uri.toString() + ")");
+                  _log.error("Packet " + _loc4_ + " cannot be used from a web server (uri: " + param2.toString() + ")");
                }
             }
          }
       }
       
-      private function onReceive(e:ResourceLoadedEvent) : void {
-         delete this._errorCallback[[e.uri]];
-         var ts:Number = getTimer();
-         this.receive(e.resource as ByteArray,e.uri);
-         _log.info("Network packet parsed in " + (getTimer() - ts) + " ms");
+      private function onReceive(param1:ResourceLoadedEvent) : void {
+         delete this._errorCallback[[param1.uri]];
+         var _loc2_:Number = getTimer();
+         this.receive(param1.resource as ByteArray,param1.uri);
+         _log.info("Network packet parsed in " + (getTimer() - _loc2_) + " ms");
       }
       
-      private function onError(e:ResourceErrorEvent) : void {
-         _log.error("Cannot load " + e.uri + " : " + e.errorMsg);
-         if(this._errorCallback[e.uri] != null)
+      private function onError(param1:ResourceErrorEvent) : void {
+         _log.error("Cannot load " + param1.uri + " : " + param1.errorMsg);
+         if(this._errorCallback[param1.uri] != null)
          {
-            this._errorCallback[e.uri](e.uri);
+            this._errorCallback[param1.uri](param1.uri);
          }
-         delete this._errorCallback[[e.uri]];
+         delete this._errorCallback[[param1.uri]];
       }
    }
 }

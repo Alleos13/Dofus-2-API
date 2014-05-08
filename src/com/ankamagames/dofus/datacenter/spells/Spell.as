@@ -20,8 +20,8 @@ package com.ankamagames.dofus.datacenter.spells
       
       public static const MODULE:String = "Spells";
       
-      public static function getSpellById(id:int) : Spell {
-         return GameData.getObject(MODULE,id) as Spell;
+      public static function getSpellById(param1:int) : Spell {
+         return GameData.getObject(MODULE,param1) as Spell;
       }
       
       public static function getSpells() : Array {
@@ -54,8 +54,6 @@ package com.ankamagames.dofus.datacenter.spells
       
       public var useParamCache:Boolean = true;
       
-      public var verbose_cast:Boolean;
-      
       private var _name:String;
       
       private var _description:String;
@@ -82,75 +80,75 @@ package com.ankamagames.dofus.datacenter.spells
          return SpellType.getSpellTypeById(this.typeId);
       }
       
-      public function getSpellLevel(level:int) : SpellLevel {
-         if(!this._spellLevels[level])
+      public function getSpellLevel(param1:int) : SpellLevel {
+         if(!this._spellLevels[param1])
          {
-            if((this.spellLevels.length >= level) && (level > 0))
+            if(this.spellLevels.length >= param1 && param1 > 0)
             {
-               this._spellLevels[level] = SpellLevel.getLevelById(this.spellLevels[level - 1]);
+               this._spellLevels[param1] = SpellLevel.getLevelById(this.spellLevels[param1-1]);
             }
             else
             {
-               this._spellLevels[level] = SpellLevel.getLevelById(this.spellLevels[0]);
+               this._spellLevels[param1] = SpellLevel.getLevelById(this.spellLevels[0]);
             }
          }
-         return this._spellLevels[level];
+         return this._spellLevels[param1];
       }
       
-      public function getScriptId(critical:Boolean=false) : int {
-         if((critical) && (this.scriptIdCritical))
+      public function getScriptId(param1:Boolean=false) : int {
+         if((param1) && (this.scriptIdCritical))
          {
             return this.scriptIdCritical;
          }
          return this.scriptId;
       }
       
-      public function getParamByName(name:String, critical:Boolean=false) : * {
-         var tmp:Array = null;
-         var tmp2:Array = null;
-         var param:String = null;
-         if((critical) && (this.scriptParamsCritical) && (!(this.scriptParamsCritical == "null")))
+      public function getParamByName(param1:String, param2:Boolean=false) : * {
+         var _loc3_:Array = null;
+         var _loc4_:Array = null;
+         var _loc5_:String = null;
+         if((param2) && (this.scriptParamsCritical) && !(this.scriptParamsCritical == "null"))
          {
-            if((!this._indexedCriticalParam) || (!this.useParamCache))
+            if(!this._indexedCriticalParam || !this.useParamCache)
             {
                this._indexedCriticalParam = new Array();
                if(this.scriptParamsCritical)
                {
-                  tmp = this.scriptParamsCritical.split(",");
-                  for each (param in tmp)
+                  _loc3_ = this.scriptParamsCritical.split(",");
+                  for each (_loc5_ in _loc3_)
                   {
-                     tmp2 = param.split(":");
-                     this._indexedCriticalParam[tmp2[0]] = this.getValue(tmp2[1]);
+                     _loc4_ = _loc5_.split(":");
+                     this._indexedCriticalParam[_loc4_[0]] = this.getValue(_loc4_[1]);
                   }
                }
             }
-            return this._indexedCriticalParam[name];
+            return this._indexedCriticalParam[param1];
          }
-         if((!this._indexedParam) || (!this.useParamCache))
+         if(!this._indexedParam || !this.useParamCache)
          {
             this._indexedParam = new Array();
             if(this.scriptParams)
             {
-               tmp = this.scriptParams.split(",");
-               for each (param in tmp)
+               _loc3_ = this.scriptParams.split(",");
+               for each (_loc5_ in _loc3_)
                {
-                  tmp2 = param.split(":");
-                  this._indexedParam[tmp2[0]] = this.getValue(tmp2[1]);
+                  _loc4_ = _loc5_.split(":");
+                  this._indexedParam[_loc4_[0]] = this.getValue(_loc4_[1]);
                }
             }
          }
-         return this._indexedParam[name];
+         return this._indexedParam[param1];
       }
       
-      function getValue(str:String) : * {
-         var num:* = NaN;
-         var regNum:RegExp = new RegExp("^[+-]?[0-9.]*$");
-         if(str.search(regNum) != -1)
+      private function getValue(param1:String) : * {
+         var _loc3_:* = NaN;
+         var _loc2_:RegExp = new RegExp("^[+-]?[0-9.]*$");
+         if(param1.search(_loc2_) != -1)
          {
-            num = parseFloat(str);
-            return isNaN(num)?0:num;
+            _loc3_ = parseFloat(param1);
+            return isNaN(_loc3_)?0:_loc3_;
          }
-         return str;
+         return param1;
       }
       
       public function toString() : String {

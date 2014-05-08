@@ -32,9 +32,9 @@ package com.ankamagames.dofus.network.messages.game.atlas.compass
          return 5591;
       }
       
-      public function initCompassUpdateMessage(type:uint=0, coords:MapCoordinates=null) : CompassUpdateMessage {
-         this.type = type;
-         this.coords = coords;
+      public function initCompassUpdateMessage(param1:uint=0, param2:MapCoordinates=null) : CompassUpdateMessage {
+         this.type = param1;
+         this.coords = param2;
          this._isInitialized = true;
          return this;
       }
@@ -45,41 +45,41 @@ package com.ankamagames.dofus.network.messages.game.atlas.compass
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CompassUpdateMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_CompassUpdateMessage(param1);
       }
       
-      public function serializeAs_CompassUpdateMessage(output:IDataOutput) : void {
-         output.writeByte(this.type);
-         output.writeShort(this.coords.getTypeId());
-         this.coords.serialize(output);
+      public function serializeAs_CompassUpdateMessage(param1:IDataOutput) : void {
+         param1.writeByte(this.type);
+         param1.writeShort(this.coords.getTypeId());
+         this.coords.serialize(param1);
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CompassUpdateMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_CompassUpdateMessage(param1);
       }
       
-      public function deserializeAs_CompassUpdateMessage(input:IDataInput) : void {
-         this.type = input.readByte();
+      public function deserializeAs_CompassUpdateMessage(param1:IDataInput) : void {
+         this.type = param1.readByte();
          if(this.type < 0)
          {
             throw new Error("Forbidden value (" + this.type + ") on element of CompassUpdateMessage.type.");
          }
          else
          {
-            _id2 = input.readUnsignedShort();
-            this.coords = ProtocolTypeManager.getInstance(MapCoordinates,_id2);
-            this.coords.deserialize(input);
+            _loc2_ = param1.readUnsignedShort();
+            this.coords = ProtocolTypeManager.getInstance(MapCoordinates,_loc2_);
+            this.coords.deserialize(param1);
             return;
          }
       }

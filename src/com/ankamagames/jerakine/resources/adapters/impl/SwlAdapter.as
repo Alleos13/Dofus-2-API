@@ -32,7 +32,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
       
       private var _swl:Swl;
       
-       function getResource(dataFormat:String, data:*) : * {
+      override protected function getResource(param1:String, param2:*) : * {
          return this._swl;
       }
       
@@ -40,7 +40,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          return ResourceType.RESOURCE_SWL;
       }
       
-       function process(dataFormat:String, data:*) : void {
+      override protected function process(param1:String, param2:*) : void {
          var file:uint = 0;
          var version:uint = 0;
          var frameRate:uint = 0;
@@ -48,6 +48,8 @@ package com.ankamagames.jerakine.resources.adapters.impl
          var classesList:Array = null;
          var i:uint = 0;
          var swfData:ByteArray = null;
+         var dataFormat:String = param1;
+         var data:* = param2;
          try
          {
             file = (data as ByteArray).readByte();
@@ -86,12 +88,12 @@ package com.ankamagames.jerakine.resources.adapters.impl
          this._ldr.loadBytes(swfData,loaderContext);
       }
       
-       function getDataFormat() : String {
+      override protected function getDataFormat() : String {
          return URLLoaderDataFormat.BINARY;
       }
       
-      private function createResource(frameRate:uint, classesList:Array, appDomain:ApplicationDomain) : void {
-         this._swl = new Swl(frameRate,classesList,appDomain);
+      private function createResource(param1:uint, param2:Array, param3:ApplicationDomain) : void {
+         this._swl = new Swl(param1,param2,param3);
          dispatchSuccess(null,null);
       }
       
@@ -103,30 +105,32 @@ package com.ankamagames.jerakine.resources.adapters.impl
          this._onInit = null;
       }
       
-      private function onLibraryInit(frameRate:uint, classesList:Array) : Function {
-         return function(e:Event):void
+      private function onLibraryInit(param1:uint, param2:Array) : Function {
+         var frameRate:uint = param1;
+         var classesList:Array = param2;
+         return function(param1:Event):void
          {
-            var numClip:* = undefined;
-            var i:* = undefined;
-            var loaderInfo:* = e.target as LoaderInfo;
-            var ap:* = loaderInfo.applicationDomain;
-            var clip:* = loaderInfo.content as MovieClip;
-            if(clip)
+            var _loc5_:* = undefined;
+            var _loc6_:* = undefined;
+            var _loc2_:* = param1.target as LoaderInfo;
+            var _loc3_:* = _loc2_.applicationDomain;
+            var _loc4_:* = _loc2_.content as MovieClip;
+            if(_loc4_)
             {
-               numClip = clip.numChildren;
-               i = -1;
-               while(++i < numClip)
+               _loc5_ = _loc4_.numChildren;
+               _loc6_ = -1;
+               while(++_loc6_ < _loc5_)
                {
-                  clip.removeChildAt(0);
+                  _loc4_.removeChildAt(0);
                }
             }
-            createResource(frameRate,classesList,ap);
+            createResource(frameRate,classesList,_loc3_);
             releaseLoader();
          };
       }
       
-      private function onLibraryError(ee:ErrorEvent) : void {
-         dispatchFailure("Library loading from binaries failed: " + ee.text,ResourceErrorCode.SWL_MALFORMED_BINARY);
+      private function onLibraryError(param1:ErrorEvent) : void {
+         dispatchFailure("Library loading from binaries failed: " + param1.text,ResourceErrorCode.SWL_MALFORMED_BINARY);
          this.releaseLoader();
       }
    }

@@ -34,8 +34,8 @@ package com.ankamagames.atouin.types
       
       public var visible:Boolean;
       
-      public function set mapId(id:uint) : void {
-         this._mapId = id;
+      public function set mapId(param1:uint) : void {
+         this._mapId = param1;
       }
       
       public function get mapId() : uint {
@@ -46,42 +46,42 @@ package com.ankamagames.atouin.types
          return this._mapId;
       }
       
-      public function update(pUpdateStrata:Boolean=false) : void {
+      public function update(param1:Boolean=false) : void {
          if(this.renderer)
          {
-            this.renderer.render(this.cells,this.color,MapDisplayManager.getInstance().getDataMapContainer(),this.alpha,pUpdateStrata);
+            this.renderer.render(this.cells,this.color,MapDisplayManager.getInstance().getDataMapContainer(),this.alpha,param1);
          }
          this.visible = true;
       }
       
-      public function remove(aCells:Vector.<uint>=null) : void {
+      public function remove(param1:Vector.<uint>=null) : void {
          if(this.renderer)
          {
-            if(!aCells)
+            if(!param1)
             {
                this.renderer.remove(this.cells,MapDisplayManager.getInstance().getDataMapContainer());
             }
             else
             {
-               this.renderer.remove(aCells,MapDisplayManager.getInstance().getDataMapContainer());
+               this.renderer.remove(param1,MapDisplayManager.getInstance().getDataMapContainer());
             }
          }
          this.visible = false;
       }
       
-      public function isInside(cellId:uint) : Boolean {
+      public function isInside(param1:uint) : Boolean {
          if(!this.cells)
          {
             return false;
          }
-         var i:uint = 0;
-         while(i < this.cells.length)
+         var _loc2_:uint = 0;
+         while(_loc2_ < this.cells.length)
          {
-            if(this.cells[i] == cellId)
+            if(this.cells[_loc2_] == param1)
             {
                return true;
             }
-            i++;
+            _loc2_++;
          }
          return false;
       }

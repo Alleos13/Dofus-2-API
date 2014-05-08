@@ -6,9 +6,9 @@ package com.ankamagames.berilia.types.event
    public class PreProcessEndEvent extends Event
    {
       
-      public function PreProcessEndEvent(preprocessor:XmlPreProcessor) {
+      public function PreProcessEndEvent(param1:XmlPreProcessor) {
          super(PRE_PROCESS_END,false,false);
-         this._preprocessor = preprocessor;
+         this._preprocessor = param1;
       }
       
       public static const PRE_PROCESS_END:String = "pre_process_end";

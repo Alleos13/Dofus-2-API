@@ -21,10 +21,10 @@ package com.ankamagames.dofus.network.types.game.data.items.effects
          return 82;
       }
       
-      public function initObjectEffectMinMax(actionId:uint=0, min:uint=0, max:uint=0) : ObjectEffectMinMax {
-         super.initObjectEffect(actionId);
-         this.min = min;
-         this.max = max;
+      public function initObjectEffectMinMax(param1:uint=0, param2:uint=0, param3:uint=0) : ObjectEffectMinMax {
+         super.initObjectEffect(param1);
+         this.min = param2;
+         this.max = param3;
          return this;
       }
       
@@ -34,45 +34,45 @@ package com.ankamagames.dofus.network.types.game.data.items.effects
          this.max = 0;
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ObjectEffectMinMax(output);
+      override public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_ObjectEffectMinMax(param1);
       }
       
-      public function serializeAs_ObjectEffectMinMax(output:IDataOutput) : void {
-         super.serializeAs_ObjectEffect(output);
+      public function serializeAs_ObjectEffectMinMax(param1:IDataOutput) : void {
+         super.serializeAs_ObjectEffect(param1);
          if(this.min < 0)
          {
             throw new Error("Forbidden value (" + this.min + ") on element min.");
          }
          else
          {
-            output.writeShort(this.min);
+            param1.writeShort(this.min);
             if(this.max < 0)
             {
                throw new Error("Forbidden value (" + this.max + ") on element max.");
             }
             else
             {
-               output.writeShort(this.max);
+               param1.writeShort(this.max);
                return;
             }
          }
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ObjectEffectMinMax(input);
+      override public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_ObjectEffectMinMax(param1);
       }
       
-      public function deserializeAs_ObjectEffectMinMax(input:IDataInput) : void {
-         super.deserialize(input);
-         this.min = input.readShort();
+      public function deserializeAs_ObjectEffectMinMax(param1:IDataInput) : void {
+         super.deserialize(param1);
+         this.min = param1.readShort();
          if(this.min < 0)
          {
             throw new Error("Forbidden value (" + this.min + ") on element of ObjectEffectMinMax.min.");
          }
          else
          {
-            this.max = input.readShort();
+            this.max = param1.readShort();
             if(this.max < 0)
             {
                throw new Error("Forbidden value (" + this.max + ") on element of ObjectEffectMinMax.max.");

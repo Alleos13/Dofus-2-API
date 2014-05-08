@@ -27,8 +27,8 @@ package com.ankamagames.dofus.network.messages.game.alliance
          return 6395;
       }
       
-      public function initAllianceInvitationMessage(targetId:uint=0) : AllianceInvitationMessage {
-         this.targetId = targetId;
+      public function initAllianceInvitationMessage(param1:uint=0) : AllianceInvitationMessage {
+         this.targetId = param1;
          this._isInitialized = true;
          return this;
       }
@@ -38,38 +38,38 @@ package com.ankamagames.dofus.network.messages.game.alliance
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AllianceInvitationMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_AllianceInvitationMessage(param1);
       }
       
-      public function serializeAs_AllianceInvitationMessage(output:IDataOutput) : void {
+      public function serializeAs_AllianceInvitationMessage(param1:IDataOutput) : void {
          if(this.targetId < 0)
          {
             throw new Error("Forbidden value (" + this.targetId + ") on element targetId.");
          }
          else
          {
-            output.writeInt(this.targetId);
+            param1.writeInt(this.targetId);
             return;
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AllianceInvitationMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_AllianceInvitationMessage(param1);
       }
       
-      public function deserializeAs_AllianceInvitationMessage(input:IDataInput) : void {
-         this.targetId = input.readInt();
+      public function deserializeAs_AllianceInvitationMessage(param1:IDataInput) : void {
+         this.targetId = param1.readInt();
          if(this.targetId < 0)
          {
             throw new Error("Forbidden value (" + this.targetId + ") on element of AllianceInvitationMessage.targetId.");

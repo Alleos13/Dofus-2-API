@@ -12,23 +12,23 @@ package com.ankamagames.jerakine.sound
    public class FlashSoundSender extends AbstractFlashSound
    {
       
-      public function FlashSoundSender(lcid:uint=0) {
-         super(lcid);
+      public function FlashSoundSender(param1:uint=0) {
+         super(param1);
          _conn.addEventListener(StatusEvent.STATUS,this.onStatus);
          _conn.addEventListener(SecurityErrorEvent.SECURITY_ERROR,this.dispatchError);
       }
       
       private static const _log:Logger = Log.getLogger(getQualifiedClassName(FlashSoundSender));
       
-      private function dispatchError(pEvt:ErrorEvent) : void {
-         dispatchEvent(pEvt);
+      private function dispatchError(param1:ErrorEvent) : void {
+         dispatchEvent(param1);
       }
       
-      private function onStatus(pEvt:StatusEvent) : void {
-         switch(pEvt.level)
+      private function onStatus(param1:StatusEvent) : void {
+         switch(param1.level)
          {
             case "status":
-               pEvt.currentTarget.removeEventListener(StatusEvent.STATUS,this.onStatus);
+               param1.currentTarget.removeEventListener(StatusEvent.STATUS,this.onStatus);
                dispatchEvent(new Event(Event.CONNECT));
                removePingTimer();
                break;
@@ -36,7 +36,7 @@ package com.ankamagames.jerakine.sound
                if(_currentNbPing >= LIMIT_PING_TRY)
                {
                   _log.fatal("nb try reached");
-                  pEvt.currentTarget.removeEventListener(StatusEvent.STATUS,this.onStatus);
+                  param1.currentTarget.removeEventListener(StatusEvent.STATUS,this.onStatus);
                   dispatchEvent(new IOErrorEvent(IOErrorEvent.IO_ERROR));
                   removePingTimer();
                }
@@ -45,10 +45,12 @@ package com.ankamagames.jerakine.sound
                   _pingTimer.start();
                }
                break;
+            default:
+               _log.fatal("status level: " + param1.level);
          }
       }
       
-      override public function connect(host:String, port:int) : void {
+      override public function connect(param1:String, param2:int) : void {
          _currentNbPing++;
          _log.debug("try to ping");
          _conn.send(CONNECTION_NAME,"ping");

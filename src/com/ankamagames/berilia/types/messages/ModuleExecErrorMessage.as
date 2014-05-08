@@ -5,10 +5,10 @@ package com.ankamagames.berilia.types.messages
    public class ModuleExecErrorMessage extends Object implements Message
    {
       
-      public function ModuleExecErrorMessage(moduleName:String, stackTrace:String) {
+      public function ModuleExecErrorMessage(param1:String, param2:String) {
          super();
-         this._moduleName = moduleName;
-         this._stackTrace = stackTrace;
+         this._moduleName = param1;
+         this._stackTrace = param2;
       }
       
       private var _moduleName:String;

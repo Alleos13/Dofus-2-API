@@ -7,9 +7,9 @@ package com.ankamagames.dofus.logic.game.common.steps
    public class WaitStep extends AbstractSequencable
    {
       
-      public function WaitStep(pMilliseconds:int) {
+      public function WaitStep(param1:int) {
          super();
-         this._ms = pMilliseconds;
+         this._ms = param1;
          timeout = this._ms + 1000;
       }
       
@@ -38,8 +38,8 @@ package com.ankamagames.dofus.logic.game.common.steps
          }
       }
       
-      private function onTimer(pEvent:TimerEvent) : void {
-         pEvent.currentTarget.removeEventListener(TimerEvent.TIMER,this.onTimer);
+      private function onTimer(param1:TimerEvent) : void {
+         param1.currentTarget.removeEventListener(TimerEvent.TIMER,this.onTimer);
          executeCallbacks();
       }
       

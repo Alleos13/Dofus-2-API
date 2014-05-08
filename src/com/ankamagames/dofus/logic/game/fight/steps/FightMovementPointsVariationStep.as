@@ -1,10 +1,10 @@
 package com.ankamagames.dofus.logic.game.fight.steps
 {
    import com.ankamagames.dofus.logic.game.fight.steps.abstract.AbstractStatContextualStep;
-   import com.ankamagames.dofus.network.types.game.character.characteristic.CharacterCharacteristicsInformations;
    import com.ankamagames.dofus.logic.game.fight.frames.FightEntitiesFrame;
    import com.ankamagames.dofus.network.types.game.context.fight.GameFightFighterInformations;
    import com.ankamagames.dofus.logic.game.fight.managers.CurrentPlayedFighterManager;
+   import com.ankamagames.dofus.logic.game.common.managers.PlayedCharacterManager;
    import com.ankamagames.dofus.logic.game.fight.fightEvents.FightEventsHelper;
    import com.ankamagames.dofus.logic.game.fight.types.FightEventEnum;
    import com.ankamagames.jerakine.managers.OptionManager;
@@ -12,13 +12,13 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightMovementPointsVariationStep extends AbstractStatContextualStep implements IFightStep
    {
       
-      public function FightMovementPointsVariationStep(entityId:int, value:int, voluntarlyUsed:Boolean, updateCharacteristicManager:Boolean=true, showChatMessage:Boolean=true) {
-         super(COLOR,value > 0?"+" + value:value.toString(),entityId,BLOCKING);
-         this._showChatmessage = showChatMessage;
-         this._intValue = value;
-         this._voluntarlyUsed = voluntarlyUsed;
-         _virtual = (this._voluntarlyUsed) && (!OptionManager.getOptionManager("dofus").showUsedPaPm);
-         this._updateCharacteristicManager = updateCharacteristicManager;
+      public function FightMovementPointsVariationStep(param1:int, param2:int, param3:Boolean, param4:Boolean=true, param5:Boolean=true) {
+         super(COLOR,param2 > 0?"+" + param2:param2.toString(),param1,BLOCKING);
+         this._showChatmessage = param5;
+         this._intValue = param2;
+         this._voluntarlyUsed = param3;
+         _virtual = (this._voluntarlyUsed) && !OptionManager.getOptionManager("dofus").showUsedPaPm;
+         this._updateCharacteristicManager = param4;
       }
       
       public static const COLOR:uint = 26112;
@@ -42,19 +42,24 @@ package com.ankamagames.dofus.logic.game.fight.steps
       }
       
       override public function start() : void {
-         var characteristics:CharacterCharacteristicsInformations = null;
-         var fighterInfos:GameFightFighterInformations = FightEntitiesFrame.getCurrentInstance().getEntityInfos(_targetId) as GameFightFighterInformations;
+         var _loc1_:GameFightFighterInformations = FightEntitiesFrame.getCurrentInstance().getEntityInfos(_targetId) as GameFightFighterInformations;
          if(this._updateCharacteristicManager)
          {
-            fighterInfos.stats.movementPoints = fighterInfos.stats.movementPoints + this._intValue;
-            characteristics = CurrentPlayedFighterManager.getInstance().getCharacteristicsInformations(_targetId);
-            if(characteristics)
+            _loc1_.stats.movementPoints = _loc1_.stats.movementPoints + this._intValue;
+            if(CurrentPlayedFighterManager.getInstance().currentFighterId == _targetId)
             {
-               characteristics.movementPointsCurrent = fighterInfos.stats.movementPoints;
+               CurrentPlayedFighterManager.getInstance().getCharacteristicsInformations().movementPointsCurrent = _loc1_.stats.movementPoints;
+            }
+            else
+            {
+               if(PlayedCharacterManager.getInstance().id == _targetId)
+               {
+                  PlayedCharacterManager.getInstance().characteristics.movementPointsCurrent = _loc1_.stats.movementPoints;
+               }
             }
             FightEntitiesFrame.getCurrentInstance().setLastKnownEntityMovementPoint(_targetId,-this._intValue,true);
          }
-         if(fighterInfos.disposition.cellId == -1)
+         if(_loc1_.disposition.cellId == -1)
          {
             super.executeCallbacks();
          }
@@ -79,7 +84,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
                }
             }
          }
-         if(fighterInfos.disposition.cellId != -1)
+         if(_loc1_.disposition.cellId != -1)
          {
             super.start();
          }

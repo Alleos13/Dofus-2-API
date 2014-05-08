@@ -26,9 +26,9 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          return 5577;
       }
       
-      public function initPartyFollowMemberRequestMessage(partyId:uint=0, playerId:uint=0) : PartyFollowMemberRequestMessage {
-         super.initAbstractPartyMessage(partyId);
-         this.playerId = playerId;
+      public function initPartyFollowMemberRequestMessage(param1:uint=0, param2:uint=0) : PartyFollowMemberRequestMessage {
+         super.initAbstractPartyMessage(param1);
+         this.playerId = param2;
          this._isInitialized = true;
          return this;
       }
@@ -39,40 +39,40 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PartyFollowMemberRequestMessage(output);
+      override public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_PartyFollowMemberRequestMessage(param1);
       }
       
-      public function serializeAs_PartyFollowMemberRequestMessage(output:IDataOutput) : void {
-         super.serializeAs_AbstractPartyMessage(output);
+      public function serializeAs_PartyFollowMemberRequestMessage(param1:IDataOutput) : void {
+         super.serializeAs_AbstractPartyMessage(param1);
          if(this.playerId < 0)
          {
             throw new Error("Forbidden value (" + this.playerId + ") on element playerId.");
          }
          else
          {
-            output.writeInt(this.playerId);
+            param1.writeInt(this.playerId);
             return;
          }
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PartyFollowMemberRequestMessage(input);
+      override public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_PartyFollowMemberRequestMessage(param1);
       }
       
-      public function deserializeAs_PartyFollowMemberRequestMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.playerId = input.readInt();
+      public function deserializeAs_PartyFollowMemberRequestMessage(param1:IDataInput) : void {
+         super.deserialize(param1);
+         this.playerId = param1.readInt();
          if(this.playerId < 0)
          {
             throw new Error("Forbidden value (" + this.playerId + ") on element of PartyFollowMemberRequestMessage.playerId.");

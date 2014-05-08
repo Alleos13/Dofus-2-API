@@ -20,14 +20,14 @@ package com.ankamagames.berilia.types.graphic
       
       private var _nYUnit:uint;
       
-      public function setX(nX:Number, nType:uint) : void {
-         x = nX;
-         this._nXUnit = nType;
+      public function setX(param1:Number, param2:uint) : void {
+         x = param1;
+         this._nXUnit = param2;
       }
       
-      public function setY(nY:Number, nType:uint) : void {
-         y = nY;
-         this._nYUnit = nType;
+      public function setY(param1:Number, param2:uint) : void {
+         y = param1;
+         this._nYUnit = param2;
       }
       
       public function get xUnit() : uint {
@@ -39,18 +39,18 @@ package com.ankamagames.berilia.types.graphic
       }
       
       public function toSizeElement() : SizeElement {
-         var se:SizeElement = new SizeElement();
+         var _loc1_:SizeElement = new SizeElement();
          if(!isNaN(x))
          {
-            se.x = x;
-            se.xUnit = this._nXUnit;
+            _loc1_.x = x;
+            _loc1_.xUnit = this._nXUnit;
          }
          if(!isNaN(y))
          {
-            se.y = y;
-            se.yUnit = this._nYUnit;
+            _loc1_.y = y;
+            _loc1_.yUnit = this._nYUnit;
          }
-         return se;
+         return _loc1_;
       }
    }
 }

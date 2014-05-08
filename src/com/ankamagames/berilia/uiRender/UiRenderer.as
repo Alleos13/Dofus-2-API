@@ -96,84 +96,84 @@ package com.ankamagames.berilia.uiRender
       
       public var scriptTime:uint = 0;
       
-      public function set script(scriptClass:Class) : void {
-         this._scriptClass = scriptClass;
+      public function set script(param1:Class) : void {
+         this._scriptClass = param1;
       }
       
       public function get script() : Class {
          return this._scriptClass;
       }
       
-      public function fileRender(sUrl:String, sName:String, scUi:UiRootContainer, oProperties:*=null) : void {
+      public function fileRender(param1:String, param2:String, param3:UiRootContainer, param4:*=null) : void {
          this._nTimeStamp = getTimer();
-         this._oProperties = oProperties;
-         this._sName = sName;
-         this._scUi = scUi;
+         this._oProperties = param4;
+         this._sName = param2;
+         this._scUi = param3;
          this._isXmlRender = true;
          this._xpParser = PoolsManager.getInstance().getXmlParsorPool().checkOut() as PoolableXmlParsor;
          this._xpParser.rootPath = this._scUi.uiModule.rootPath;
          this._xpParser.addEventListener(Event.COMPLETE,this.onParseComplete);
-         this._xpParser.processFile(sUrl);
+         this._xpParser.processFile(param1);
       }
       
-      public function xmlRender(sXml:String, sName:String, scUi:UiRootContainer, oProperties:*=null) : void {
+      public function xmlRender(param1:String, param2:String, param3:UiRootContainer, param4:*=null) : void {
          this._nTimeStamp = getTimer();
-         this._oProperties = oProperties;
-         this._sName = sName;
-         this._scUi = scUi;
+         this._oProperties = param4;
+         this._sName = param2;
+         this._scUi = param3;
          this._isXmlRender = true;
          this._xpParser = PoolsManager.getInstance().getXmlParsorPool().checkOut() as PoolableXmlParsor;
          this._xpParser.rootPath = this._scUi.uiModule.rootPath;
          this._xpParser.addEventListener(Event.COMPLETE,this.onParseComplete);
-         this._xpParser.processXml(sXml);
+         this._xpParser.processXml(param1);
       }
       
-      public function uiRender(uiDef:UiDefinition, sName:String, scUi:UiRootContainer, oProperties:*=null) : void {
-         var constKey:String = null;
-         MEMORY_LOG_2[oProperties] = 1;
+      public function uiRender(param1:UiDefinition, param2:String, param3:UiRootContainer, param4:*=null) : void {
+         var _loc6_:String = null;
+         MEMORY_LOG_2[param4] = 1;
          if(!this._nTimeStamp)
          {
             this._nTimeStamp = getTimer();
          }
-         if(scUi.parent)
+         if(param3.parent)
          {
-            scUi.tempHolder = new Sprite();
-            scUi.parent.addChildAt(scUi.tempHolder,scUi.parent.getChildIndex(scUi));
-            scUi.parent.removeChild(scUi);
+            param3.tempHolder = new Sprite();
+            param3.parent.addChildAt(param3.tempHolder,param3.parent.getChildIndex(param3));
+            param3.parent.removeChild(param3);
          }
-         if(!uiDef)
+         if(!param1)
          {
-            _log.error("Cannot render " + sName + " : no UI definition");
+            _log.error("Cannot render " + param2 + " : no UI definition");
             dispatchEvent(new UiRenderEvent(Event.COMPLETE,false,false,this._scUi,this));
             return;
          }
-         this._oProperties = oProperties;
-         this._sName = sName;
-         this._scUi = scUi;
-         this._uiDef = uiDef;
-         this._uiDef.name = sName;
+         this._oProperties = param4;
+         this._sName = param2;
+         this._scUi = param3;
+         this._uiDef = param1;
+         this._uiDef.name = param2;
          this._aFilnalizedLater = new Array();
          if(this._uiDef.scalable)
          {
-            scUi.scaleX = Berilia.getInstance().scale;
-            scUi.scaleY = Berilia.getInstance().scale;
+            param3.scaleX = Berilia.getInstance().scale;
+            param3.scaleY = Berilia.getInstance().scale;
          }
          this._scUi.scalable = this._uiDef.scalable;
-         var constants:Array = [];
-         for (constKey in this._uiDef.constants)
+         var _loc5_:Array = [];
+         for (_loc6_ in this._uiDef.constants)
          {
-            constants[constKey] = LangManager.getInstance().replaceKey(this._uiDef.constants[constKey]);
+            _loc5_[_loc6_] = LangManager.getInstance().replaceKey(this._uiDef.constants[_loc6_]);
          }
-         this._scUi.constants = constants;
+         this._scUi.constants = _loc5_;
          this._scUi.disableRender = true;
          this.makeScript();
          if(this._uiDef.modal)
          {
             this.makeModalContainer();
          }
-         scUi.giveFocus = this._uiDef.giveFocus;
-         scUi.transmitFocus = this._uiDef.transmitFocus;
-         this.makeChilds(uiDef.graphicTree,scUi);
+         param3.giveFocus = this._uiDef.giveFocus;
+         param3.transmitFocus = this._uiDef.transmitFocus;
+         this.makeChilds(param1.graphicTree,param3);
          this.makeShortcuts();
          this.fillUiScriptVar();
          if(this._scUi.uiClass)
@@ -181,16 +181,16 @@ package com.ankamagames.berilia.uiRender
             this._scUi.properties = this._oProperties;
          }
          this._scUi.disableRender = false;
-         scUi.render();
-         if((scUi.strata == StrataEnum.STRATA_MEDIUM) && (scUi.giveFocus))
+         param3.render();
+         if(param3.strata == StrataEnum.STRATA_MEDIUM && (param3.giveFocus))
          {
-            Berilia.getInstance().giveFocus(scUi);
+            Berilia.getInstance().giveFocus(param3);
          }
          this.finalizeContainer();
          this.buildTime = getTimer() - this._nTimeStamp;
          this.scriptTime = getTimer();
          this.scriptTime = getTimer() - this.scriptTime;
-         scUi.iAmFinalized(null);
+         param3.iAmFinalized(null);
          if(!this._isXmlRender)
          {
             this.parsingTime = 0;
@@ -202,11 +202,11 @@ package com.ankamagames.berilia.uiRender
          this._uiDef = null;
       }
       
-      public function postInit(ui:UiRootContainer) : void {
-         this._scUi = ui;
+      public function postInit(param1:UiRootContainer) : void {
+         this._scUi = param1;
       }
       
-      public function makeChilds(aChild:Array, gcContainer:GraphicContainer, preprocessLocation:Boolean=false) : void {
+      public function makeChilds(param1:Array, param2:GraphicContainer, param3:Boolean=false) : void {
          var ie:InstanceEvent = null;
          var ge:GraphicElement = null;
          var gc:GraphicContainer = null;
@@ -225,6 +225,9 @@ package com.ankamagames.berilia.uiRender
          var component:ComponentElement = null;
          var num:int = 0;
          var anc:GraphicLocation = null;
+         var aChild:Array = param1;
+         var gcContainer:GraphicContainer = param2;
+         var preprocessLocation:Boolean = param3;
          var aChildLength:int = aChild.length;
          i = 0;
          while(i < aChildLength)
@@ -239,7 +242,7 @@ package com.ankamagames.berilia.uiRender
                i++;
                continue;
             }
-            if((be is StateContainerElement) || (be is ButtonElement))
+            if(be is StateContainerElement || be is ButtonElement)
             {
                if(be is ButtonElement)
                {
@@ -339,16 +342,16 @@ package com.ankamagames.berilia.uiRender
             lastChild = be.name;
             if(be.size)
             {
-               if((be.size.xUnit == GraphicSize.SIZE_PRC) && (!isNaN(be.size.x)) || (be.size.yUnit == GraphicSize.SIZE_PRC) && (!isNaN(be.size.y)))
+               if(be.size.xUnit == GraphicSize.SIZE_PRC && !isNaN(be.size.x) || be.size.yUnit == GraphicSize.SIZE_PRC && !isNaN(be.size.y))
                {
                   ge.size = be.size.toGraphicSize();
                   this._scUi.addDynamicSizeElement(ge);
                }
-               if((be.size.xUnit == GraphicSize.SIZE_PIXEL) && (!isNaN(be.size.x)))
+               if(be.size.xUnit == GraphicSize.SIZE_PIXEL && !isNaN(be.size.x))
                {
                   gc.width = be.size.x;
                }
-               if((be.size.yUnit == GraphicSize.SIZE_PIXEL) && (!isNaN(be.size.y)))
+               if(be.size.yUnit == GraphicSize.SIZE_PIXEL && !isNaN(be.size.y))
                {
                   gc.height = be.size.y;
                }
@@ -384,7 +387,7 @@ package com.ankamagames.berilia.uiRender
                   gc.bgColor = Math.round(Math.random() * 16777215);
                }
             }
-            if((gc is Grid) || (gc is ComboBox))
+            if(gc is Grid || gc is ComboBox)
             {
                this.makeChilds(Object(gc).renderModificator(Object(be).childs,SecureCenter.ACCESS_KEY),gc,preprocessLocation);
             }
@@ -408,64 +411,64 @@ package com.ankamagames.berilia.uiRender
          }
       }
       
-      function makeContainer(ce:ContainerElement) : Sprite {
-         var container:GraphicContainer = null;
-         var sProperty:String = null;
+      private function makeContainer(param1:ContainerElement) : Sprite {
+         var _loc2_:GraphicContainer = null;
+         var _loc3_:String = null;
          switch(true)
          {
-            case ce is ButtonElement:
-               container = new ButtonContainer();
+            case param1 is ButtonElement:
+               _loc2_ = new ButtonContainer();
                break;
-            case ce is StateContainerElement:
-               container = new StateContainer();
+            case param1 is StateContainerElement:
+               _loc2_ = new StateContainer();
                break;
-            case ce is ScrollContainerElement:
-               container = new ScrollContainer();
-               this._scUi.addPostFinalizeComponent(container as FinalizableUIComponent);
+            case param1 is ScrollContainerElement:
+               _loc2_ = new ScrollContainer();
+               this._scUi.addPostFinalizeComponent(_loc2_ as FinalizableUIComponent);
                break;
-            case ce is GridElement:
-               container = new getDefinitionByName(ce.className) as Class();
+            case param1 is GridElement:
+               _loc2_ = new getDefinitionByName(param1.className) as Class();
                break;
-            case ce is ContainerElement:
-               container = new GraphicContainer();
+            case param1 is ContainerElement:
+               _loc2_ = new GraphicContainer();
                break;
          }
-         for (sProperty in ce.properties)
+         for (_loc3_ in param1.properties)
          {
-            if(ce.properties[sProperty] is String)
+            if(param1.properties[_loc3_] is String)
             {
-               container[sProperty] = LangManager.getInstance().replaceKey(ce.properties[sProperty]);
+               _loc2_[_loc3_] = LangManager.getInstance().replaceKey(param1.properties[_loc3_]);
             }
             else
             {
-               container[sProperty] = ce.properties[sProperty];
+               _loc2_[_loc3_] = param1.properties[_loc3_];
             }
          }
-         InternalComponentAccess.setProperty(container,"_uiRootContainer",this._scUi);
-         return container as Sprite;
+         InternalComponentAccess.setProperty(_loc2_,"_uiRootContainer",this._scUi);
+         return _loc2_ as Sprite;
       }
       
-      function makeComponent(ce:ComponentElement) : Sprite {
-         var uiComponent:UIComponent = null;
-         var sProperty:String = null;
-         var cComponent:Class = getDefinitionByName(ce.className) as Class;
-         uiComponent = new cComponent() as UIComponent;
-         InternalComponentAccess.setProperty(uiComponent,"_uiRootContainer",this._scUi);
-         for (sProperty in ce.properties)
+      private function makeComponent(param1:ComponentElement) : Sprite {
+         var _loc3_:UIComponent = null;
+         var _loc4_:String = null;
+         var _loc2_:Class = getDefinitionByName(param1.className) as Class;
+         _loc3_ = new _loc2_() as UIComponent;
+         InternalComponentAccess.setProperty(_loc3_,"_uiRootContainer",this._scUi);
+         for (_loc4_ in param1.properties)
          {
-            if(ce.properties[sProperty] is String)
+            if(param1.properties[_loc4_] is String)
             {
-               uiComponent[sProperty] = LangManager.getInstance().replaceKey(ce.properties[sProperty]);
+               _loc3_[_loc4_] = LangManager.getInstance().replaceKey(param1.properties[_loc4_]);
             }
             else
             {
-               uiComponent[sProperty] = ce.properties[sProperty];
+               _loc3_[_loc4_] = param1.properties[_loc4_];
             }
          }
-         return uiComponent as Sprite;
+         return _loc3_ as Sprite;
       }
       
-      function makeScript() : void {
+      private function makeScript() : void {
          if(this._scriptClass)
          {
             this._scUi.uiClass = new this._scriptClass();
@@ -479,7 +482,7 @@ package com.ankamagames.berilia.uiRender
          }
       }
       
-      function fillUiScriptVar() : void {
+      private function fillUiScriptVar() : void {
          var sVariable:String = null;
          var xmlVar:XMLList = null;
          var variable:XML = null;
@@ -521,22 +524,22 @@ package com.ankamagames.berilia.uiRender
          }
       }
       
-      function makeShortcuts() : void {
-         var sShortcutName:String = null;
-         var listener:GenericListener = null;
+      private function makeShortcuts() : void {
+         var _loc1_:String = null;
+         var _loc2_:GenericListener = null;
       }
       
-      function finalizeContainer() : void {
-         var i:uint = 0;
-         while(i < this._aFilnalizedLater.length)
+      private function finalizeContainer() : void {
+         var _loc1_:uint = 0;
+         while(_loc1_ < this._aFilnalizedLater.length)
          {
-            this._aFilnalizedLater[i].finalize();
-            i++;
+            this._aFilnalizedLater[_loc1_].finalize();
+            _loc1_++;
          }
          this._aFilnalizedLater = new Array();
       }
       
-      function makeModalContainer() : void {
+      private function makeModalContainer() : void {
          var fct:Function = null;
          var listener:GenericListener = null;
          if(this._scUi.uiClass != null)
@@ -547,7 +550,7 @@ package com.ankamagames.berilia.uiRender
             }
             else
             {
-               fct = function(... args):Boolean
+               fct = function(... rest):Boolean
                {
                   return true;
                };
@@ -556,7 +559,7 @@ package com.ankamagames.berilia.uiRender
             BindsManager.getInstance().registerEvent(listener);
          }
          this._scUi.modal = true;
-         if((this._uiDef.graphicTree) && (this._uiDef.graphicTree[0].name == "__modalContainer"))
+         if((this._uiDef.graphicTree) && this._uiDef.graphicTree[0].name == "__modalContainer")
          {
             return;
          }
@@ -573,12 +576,12 @@ package com.ankamagames.berilia.uiRender
          this._uiDef.graphicTree.unshift(modalContainer);
       }
       
-      function onParseComplete(e:ParsorEvent) : void {
+      private function onParseComplete(param1:ParsorEvent) : void {
          this.parsingTime = getTimer() - this._nTimeStamp;
          this._nTimeStamp = this.parsingTime + this._nTimeStamp;
          this._xpParser.removeEventListener(Event.COMPLETE,this.onParseComplete);
          PoolsManager.getInstance().getXmlParsorPool().checkIn(this._xpParser);
-         this.uiRender(e.uiDefinition,this._sName,this._scUi,this._oProperties);
+         this.uiRender(param1.uiDefinition,this._sName,this._scUi,this._oProperties);
          this._isXmlRender = false;
       }
    }

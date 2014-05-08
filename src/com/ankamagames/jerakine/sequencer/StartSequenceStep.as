@@ -3,9 +3,9 @@ package com.ankamagames.jerakine.sequencer
    public class StartSequenceStep extends AbstractSequencable
    {
       
-      public function StartSequenceStep(sequence:ISequencer) {
+      public function StartSequenceStep(param1:ISequencer) {
          super();
-         this._sequence = sequence;
+         this._sequence = param1;
       }
       
       private var _sequence:ISequencer;

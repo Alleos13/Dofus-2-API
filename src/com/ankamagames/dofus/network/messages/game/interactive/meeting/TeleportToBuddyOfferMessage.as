@@ -31,10 +31,10 @@ package com.ankamagames.dofus.network.messages.game.interactive.meeting
          return 6287;
       }
       
-      public function initTeleportToBuddyOfferMessage(dungeonId:uint=0, buddyId:uint=0, timeLeft:uint=0) : TeleportToBuddyOfferMessage {
-         this.dungeonId = dungeonId;
-         this.buddyId = buddyId;
-         this.timeLeft = timeLeft;
+      public function initTeleportToBuddyOfferMessage(param1:uint=0, param2:uint=0, param3:uint=0) : TeleportToBuddyOfferMessage {
+         this.dungeonId = param1;
+         this.buddyId = param2;
+         this.timeLeft = param3;
          this._isInitialized = true;
          return this;
       }
@@ -46,68 +46,68 @@ package com.ankamagames.dofus.network.messages.game.interactive.meeting
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TeleportToBuddyOfferMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_TeleportToBuddyOfferMessage(param1);
       }
       
-      public function serializeAs_TeleportToBuddyOfferMessage(output:IDataOutput) : void {
+      public function serializeAs_TeleportToBuddyOfferMessage(param1:IDataOutput) : void {
          if(this.dungeonId < 0)
          {
             throw new Error("Forbidden value (" + this.dungeonId + ") on element dungeonId.");
          }
          else
          {
-            output.writeShort(this.dungeonId);
+            param1.writeShort(this.dungeonId);
             if(this.buddyId < 0)
             {
                throw new Error("Forbidden value (" + this.buddyId + ") on element buddyId.");
             }
             else
             {
-               output.writeInt(this.buddyId);
+               param1.writeInt(this.buddyId);
                if(this.timeLeft < 0)
                {
                   throw new Error("Forbidden value (" + this.timeLeft + ") on element timeLeft.");
                }
                else
                {
-                  output.writeInt(this.timeLeft);
+                  param1.writeInt(this.timeLeft);
                   return;
                }
             }
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TeleportToBuddyOfferMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_TeleportToBuddyOfferMessage(param1);
       }
       
-      public function deserializeAs_TeleportToBuddyOfferMessage(input:IDataInput) : void {
-         this.dungeonId = input.readShort();
+      public function deserializeAs_TeleportToBuddyOfferMessage(param1:IDataInput) : void {
+         this.dungeonId = param1.readShort();
          if(this.dungeonId < 0)
          {
             throw new Error("Forbidden value (" + this.dungeonId + ") on element of TeleportToBuddyOfferMessage.dungeonId.");
          }
          else
          {
-            this.buddyId = input.readInt();
+            this.buddyId = param1.readInt();
             if(this.buddyId < 0)
             {
                throw new Error("Forbidden value (" + this.buddyId + ") on element of TeleportToBuddyOfferMessage.buddyId.");
             }
             else
             {
-               this.timeLeft = input.readInt();
+               this.timeLeft = param1.readInt();
                if(this.timeLeft < 0)
                {
                   throw new Error("Forbidden value (" + this.timeLeft + ") on element of TeleportToBuddyOfferMessage.timeLeft.");

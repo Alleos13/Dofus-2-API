@@ -17,16 +17,16 @@ package com.ankamagames.dofus.types.sequences
    public class AddGfxEntityStep extends AbstractSequencable
    {
       
-      public function AddGfxEntityStep(gfxId:uint, cellId:uint, angle:Number=0, yOffset:int=0, mode:uint=0, startCell:MapPoint=null, endCell:MapPoint=null, popUnderPlayer:Boolean=false) {
+      public function AddGfxEntityStep(param1:uint, param2:uint, param3:Number=0, param4:int=0, param5:uint=0, param6:MapPoint=null, param7:MapPoint=null, param8:Boolean=false) {
          super();
-         this._mode = mode;
-         this._gfxId = gfxId;
-         this._cellId = cellId;
-         this._angle = angle;
-         this._yOffset = yOffset;
-         this._startCell = startCell;
-         this._endCell = endCell;
-         this._popUnderPlayer = popUnderPlayer;
+         this._mode = param5;
+         this._gfxId = param1;
+         this._cellId = param2;
+         this._angle = param3;
+         this._yOffset = param4;
+         this._startCell = param6;
+         this._endCell = param7;
+         this._popUnderPlayer = param8;
       }
       
       protected static const _log:Logger = Log.getLogger(getQualifiedClassName(AddGfxEntityStep));
@@ -52,11 +52,11 @@ package com.ankamagames.dofus.types.sequences
       private var _popUnderPlayer:Boolean;
       
       override public function start() : void {
-         var dir:Array = null;
-         var ad:Array = null;
-         var i:uint = 0;
-         var id:int = EntitiesManager.getInstance().getFreeEntityId();
-         this._entity = new Projectile(id,TiphonEntityLook.fromString("{" + this._gfxId + "}"),true);
+         var _loc2_:Array = null;
+         var _loc3_:Array = null;
+         var _loc4_:uint = 0;
+         var _loc1_:int = EntitiesManager.getInstance().getFreeEntityId();
+         this._entity = new Projectile(_loc1_,TiphonEntityLook.fromString("{" + this._gfxId + "}"),true);
          this._entity.addEventListener(TiphonEvent.ANIMATION_SHOT,this.shot);
          this._entity.addEventListener(TiphonEvent.ANIMATION_END,this.remove);
          this._entity.addEventListener(TiphonEvent.RENDER_FAILED,this.remove);
@@ -70,18 +70,18 @@ package com.ankamagames.dofus.types.sequences
                this._entity.init();
                break;
             case AddGfxModeEnum.RANDOM:
-               dir = this._entity.getAvaibleDirection();
-               ad = new Array();
-               i = 0;
-               while(i < 8)
+               _loc2_ = this._entity.getAvaibleDirection();
+               _loc3_ = new Array();
+               _loc4_ = 0;
+               while(_loc4_ < 8)
                {
-                  if(dir[i])
+                  if(_loc2_[_loc4_])
                   {
-                     ad.push(i);
+                     _loc3_.push(_loc4_);
                   }
-                  i++;
+                  _loc4_++;
                }
-               this._entity.init(ad[Math.floor(Math.random() * ad.length)]);
+               this._entity.init(_loc3_[Math.floor(Math.random() * _loc3_.length)]);
                break;
             case AddGfxModeEnum.ORIENTED:
                this._entity.init(this._startCell.advancedOrientationTo(this._endCell,true));
@@ -99,7 +99,7 @@ package com.ankamagames.dofus.types.sequences
          this._entity.y = this._entity.y + this._yOffset;
       }
       
-      private function remove(e:Event) : void {
+      private function remove(param1:Event) : void {
          this._entity.removeEventListener(TiphonEvent.ANIMATION_END,this.remove);
          this._entity.removeEventListener(TiphonEvent.ANIMATION_SHOT,this.shot);
          this._entity.removeEventListener(TiphonEvent.RENDER_FAILED,this.remove);
@@ -111,19 +111,19 @@ package com.ankamagames.dofus.types.sequences
          }
       }
       
-      private function shot(e:Event) : void {
+      private function shot(param1:Event) : void {
          this._shot = true;
          this._entity.removeEventListener(TiphonEvent.ANIMATION_SHOT,this.shot);
          executeCallbacks();
       }
       
-       function onTimeOut(e:TimerEvent) : void {
+      override protected function onTimeOut(param1:TimerEvent) : void {
          _log.error("Timeout en attendant le SHOT du bone du projectile " + this._gfxId);
          if(this._entity)
          {
             this._entity.destroy();
          }
-         super.onTimeOut(e);
+         super.onTimeOut(param1);
       }
    }
 }

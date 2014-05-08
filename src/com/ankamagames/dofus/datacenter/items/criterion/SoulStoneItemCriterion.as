@@ -9,19 +9,15 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class SoulStoneItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function SoulStoneItemCriterion(pCriterion:String) {
-         super(pCriterion);
-         var arrayParams:Array = String(_criterionValueText).split(",");
-         if((arrayParams) && (arrayParams.length > 0))
+      public function SoulStoneItemCriterion(param1:String) {
+         super(param1);
+         var _loc2_:Array = String(_criterionValueText).split(",");
+         if((_loc2_) && _loc2_.length > 0)
          {
-            if(arrayParams.length > 2)
+            if(_loc2_.length <= 2)
             {
-               trace("Les paramètres pour le critère de pierre d\'ame sont mauvais ! (" + _serverCriterionForm + ")");
-            }
-            else
-            {
-               this._monsterId = uint(arrayParams[0]);
-               this._quantityMonster = int(arrayParams[1]);
+               this._monsterId = uint(_loc2_[0]);
+               this._quantityMonster = int(_loc2_[1]);
             }
          }
          else
@@ -40,13 +36,13 @@ package com.ankamagames.dofus.datacenter.items.criterion
       private var _monsterName:String;
       
       override public function get isRespected() : Boolean {
-         var iw:ItemWrapper = null;
-         var soulStoneId:uint = 0;
-         for each (iw in InventoryManager.getInstance().realInventory)
+         var _loc1_:ItemWrapper = null;
+         var _loc2_:uint = 0;
+         for each (_loc1_ in InventoryManager.getInstance().realInventory)
          {
-            for each (soulStoneId in ID_SOUL_STONE)
+            for each (_loc2_ in ID_SOUL_STONE)
             {
-               if(iw.objectGID == soulStoneId)
+               if(_loc1_.objectGID == _loc2_)
                {
                   return true;
                }
@@ -56,13 +52,13 @@ package com.ankamagames.dofus.datacenter.items.criterion
       }
       
       override public function get text() : String {
-         var readableCriterion:String = I18n.getUiText("ui.tooltip.possessSoulStone",[this._quantityMonster,this._monsterName]);
-         return readableCriterion;
+         var _loc1_:String = I18n.getUiText("ui.tooltip.possessSoulStone",[this._quantityMonster,this._monsterName]);
+         return _loc1_;
       }
       
       override public function clone() : IItemCriterion {
-         var clonedCriterion:SoulStoneItemCriterion = new SoulStoneItemCriterion(this.basicText);
-         return clonedCriterion;
+         var _loc1_:SoulStoneItemCriterion = new SoulStoneItemCriterion(this.basicText);
+         return _loc1_;
       }
    }
 }

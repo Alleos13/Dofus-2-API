@@ -9,16 +9,16 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class EmoteItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function EmoteItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      public function EmoteItemCriterion(param1:String) {
+         super(param1);
       }
       
       override public function get isRespected() : Boolean {
-         var id:* = 0;
-         var emoticonList:Array = (Kernel.getWorker().getFrame(EmoticonFrame) as EmoticonFrame).emotes;
-         for each (id in emoticonList)
+         var _loc2_:* = 0;
+         var _loc1_:Array = (Kernel.getWorker().getFrame(EmoticonFrame) as EmoticonFrame).emotes;
+         for each (_loc2_ in _loc1_)
          {
-            if(id == _criterionValue)
+            if(_loc2_ == _criterionValue)
             {
                return true;
             }
@@ -27,25 +27,25 @@ package com.ankamagames.dofus.datacenter.items.criterion
       }
       
       override public function get text() : String {
-         var readableCriterion:String = I18n.getUiText("ui.tooltip.possessEmote");
+         var _loc1_:String = I18n.getUiText("ui.tooltip.possessEmote");
          if(_operator.text == ItemCriterionOperator.DIFFERENT)
          {
-            readableCriterion = I18n.getUiText("ui.tooltip.dontPossessEmote");
+            _loc1_ = I18n.getUiText("ui.tooltip.dontPossessEmote");
          }
-         return readableCriterion + " \'" + Emoticon.getEmoticonById(_criterionValue).name + "\'";
+         return _loc1_ + " \'" + Emoticon.getEmoticonById(_criterionValue).name + "\'";
       }
       
       override public function clone() : IItemCriterion {
-         var clonedCriterion:EmoteItemCriterion = new EmoteItemCriterion(this.basicText);
-         return clonedCriterion;
+         var _loc1_:EmoteItemCriterion = new EmoteItemCriterion(this.basicText);
+         return _loc1_;
       }
       
-      override function getCriterion() : int {
-         var id:* = 0;
-         var emoticonList:Array = (Kernel.getWorker().getFrame(EmoticonFrame) as EmoticonFrame).emotes;
-         for each (id in emoticonList)
+      override protected function getCriterion() : int {
+         var _loc2_:* = 0;
+         var _loc1_:Array = (Kernel.getWorker().getFrame(EmoticonFrame) as EmoticonFrame).emotes;
+         for each (_loc2_ in _loc1_)
          {
-            if(id == _criterionValue)
+            if(_loc2_ == _criterionValue)
             {
                return 1;
             }

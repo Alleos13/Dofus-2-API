@@ -22,16 +22,16 @@ package com.ankamagames.jerakine.messages
          return this._priority;
       }
       
-      public function process(msg:Message) : Boolean {
-         var handler:Function = this._registeredTypes[msg["constructor"]];
-         if(handler != null)
+      public function process(param1:Message) : Boolean {
+         var _loc2_:Function = this._registeredTypes[param1["constructor"]];
+         if(_loc2_ != null)
          {
-            return handler(msg);
+            return _loc2_(param1);
          }
          return false;
       }
       
-      function registerMessages() : void {
+      protected function registerMessages() : void {
          throw new AbstractMethodCallError();
       }
       
@@ -43,14 +43,14 @@ package com.ankamagames.jerakine.messages
          return true;
       }
       
-      function register(type:Class, handler:Function) : void {
-         if((!this._allowsRegistration) || (!type) || (this._registeredTypes[type]))
+      protected function register(param1:Class, param2:Function) : void {
+         if(!this._allowsRegistration || !param1 || (this._registeredTypes[param1]))
          {
             throw new IllegalOperationError();
          }
          else
          {
-            this._registeredTypes[type] = handler;
+            this._registeredTypes[param1] = param2;
             return;
          }
       }

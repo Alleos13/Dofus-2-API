@@ -60,21 +60,22 @@ package com.ankamagames.atouin.data.elements
          return this._failed;
       }
       
-      public function getElementData(elementId:int) : GraphicalElementData {
-         return this._elementsMap[elementId]?GraphicalElementData(this._elementsMap[elementId]):this.readElement(elementId);
+      public function getElementData(param1:int) : GraphicalElementData {
+         return this._elementsMap[param1]?GraphicalElementData(this._elementsMap[param1]):this.readElement(param1);
       }
       
-      public function isJpg(gfxId:uint) : Boolean {
-         return this._jpgMap[gfxId] == true;
+      public function isJpg(param1:uint) : Boolean {
+         return this._jpgMap[param1] == true;
       }
       
-      public function fromRaw(raw:IDataInput) : void {
+      public function fromRaw(param1:IDataInput) : void {
          var header:int = 0;
          var skypLen:uint = 0;
          var i:int = 0;
          var edId:int = 0;
          var gfxCount:int = 0;
          var gfxId:int = 0;
+         var raw:IDataInput = param1;
          try
          {
             header = raw.readByte();
@@ -140,13 +141,13 @@ package com.ankamagames.atouin.data.elements
          }
       }
       
-      function readElement(edId:uint) : GraphicalElementData {
-         this._rawData["position"] = this._elementsIndex[edId];
-         var edType:int = this._rawData.readByte();
-         var ed:GraphicalElementData = GraphicalElementFactory.getGraphicalElementData(edId,edType);
-         ed.fromRaw(this._rawData,this.fileVersion);
-         this._elementsMap[edId] = ed;
-         return ed;
+      private function readElement(param1:uint) : GraphicalElementData {
+         this._rawData["position"] = this._elementsIndex[param1];
+         var _loc2_:int = this._rawData.readByte();
+         var _loc3_:GraphicalElementData = GraphicalElementFactory.getGraphicalElementData(param1,_loc2_);
+         _loc3_.fromRaw(this._rawData,this.fileVersion);
+         this._elementsMap[param1] = _loc3_;
+         return _loc3_;
       }
    }
 }

@@ -35,23 +35,23 @@ package com.ankamagames.atouin.entities.behaviours.movements
          return _self;
       }
       
-      override function getLinearVelocity() : Number {
+      override protected function getLinearVelocity() : Number {
          return RUN_LINEAR_VELOCITY;
       }
       
-      override function getHorizontalDiagonalVelocity() : Number {
+      override protected function getHorizontalDiagonalVelocity() : Number {
          return RUN_HORIZONTAL_DIAGONAL_VELOCITY;
       }
       
-      override function getVerticalDiagonalVelocity() : Number {
+      override protected function getVerticalDiagonalVelocity() : Number {
          return RUN_VERTICAL_DIAGONAL_VELOCITY;
       }
       
-      override function getAnimation() : String {
+      override protected function getAnimation() : String {
          return null;
       }
       
-      override function mustChangeOrientation() : Boolean {
+      override protected function mustChangeOrientation() : Boolean {
          return false;
       }
    }

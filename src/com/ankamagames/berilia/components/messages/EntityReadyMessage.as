@@ -5,8 +5,8 @@ package com.ankamagames.berilia.components.messages
    public class EntityReadyMessage extends ComponentMessage
    {
       
-      public function EntityReadyMessage(target:InteractiveObject) {
-         super(target);
+      public function EntityReadyMessage(param1:InteractiveObject) {
+         super(param1);
       }
    }
 }

@@ -57,128 +57,138 @@ package com.ankamagames.dofus.factories
       
       private static const TEAM_DEFENDER_AVA_DEFENDERS:String = "{2255}";
       
-      public static function createFightEntity(fightInfos:FightCommonInformations, teamInfos:FightTeamInformations, position:MapPoint) : IEntity {
-         var teamLook:String = null;
-         var allianceFrame:AllianceFrame = null;
-         var playerAllianceId:* = 0;
-         var teamAllianceId:* = 0;
-         var prismSubAreaInfo:PrismSubAreaWrapper = null;
-         var prismAllianceId:* = 0;
-         var entityId:int = EntitiesManager.getInstance().getFreeEntityId();
-         switch(fightInfos.fightType)
+      public static function createFightEntity(param1:FightCommonInformations, param2:FightTeamInformations, param3:MapPoint) : IEntity {
+         var _loc5_:String = null;
+         var _loc7_:AllianceFrame = null;
+         var _loc8_:* = 0;
+         var _loc9_:* = 0;
+         var _loc10_:PrismSubAreaWrapper = null;
+         var _loc11_:* = 0;
+         var _loc4_:int = EntitiesManager.getInstance().getFreeEntityId();
+         switch(param1.fightType)
          {
             case FightTypeEnum.FIGHT_TYPE_AGRESSION:
-               switch(teamInfos.teamSide)
+               switch(param2.teamSide)
                {
                   case AlignmentSideEnum.ALIGNMENT_ANGEL:
-                     if(teamInfos.teamTypeId == TeamTypeEnum.TEAM_TYPE_BAD_PLAYER)
+                     if(param2.teamTypeId == TeamTypeEnum.TEAM_TYPE_BAD_PLAYER)
                      {
-                        teamLook = TEAM_BAD_ANGEL_LOOK;
+                        _loc5_ = TEAM_BAD_ANGEL_LOOK;
                      }
                      else
                      {
-                        teamLook = TEAM_ANGEL_LOOK;
+                        _loc5_ = TEAM_ANGEL_LOOK;
                      }
                      break;
                   case AlignmentSideEnum.ALIGNMENT_EVIL:
-                     if(teamInfos.teamTypeId == TeamTypeEnum.TEAM_TYPE_BAD_PLAYER)
+                     if(param2.teamTypeId == TeamTypeEnum.TEAM_TYPE_BAD_PLAYER)
                      {
-                        teamLook = TEAM_BAD_DEMON_LOOK;
+                        _loc5_ = TEAM_BAD_DEMON_LOOK;
                      }
                      else
                      {
-                        teamLook = TEAM_DEMON_LOOK;
+                        _loc5_ = TEAM_DEMON_LOOK;
                      }
                      break;
                   case AlignmentSideEnum.ALIGNMENT_NEUTRAL:
                   case AlignmentSideEnum.ALIGNMENT_MERCENARY:
-                     teamLook = TEAM_NEUTRAL_LOOK;
+                     _loc5_ = TEAM_NEUTRAL_LOOK;
                      break;
                   case AlignmentSideEnum.ALIGNMENT_WITHOUT:
-                     teamLook = TEAM_CHALLENGER_LOOK;
+                     _loc5_ = TEAM_CHALLENGER_LOOK;
                      break;
                }
                break;
             case FightTypeEnum.FIGHT_TYPE_Koh:
-               allianceFrame = Kernel.getWorker().getFrame(AllianceFrame) as AllianceFrame;
-               playerAllianceId = allianceFrame.hasAlliance?allianceFrame.alliance.allianceId:-1;
-               if(teamInfos.teamMembers[0] is FightTeamMemberWithAllianceCharacterInformations)
+               _loc7_ = Kernel.getWorker().getFrame(AllianceFrame) as AllianceFrame;
+               _loc8_ = _loc7_.hasAlliance?_loc7_.alliance.allianceId:-1;
+               if(param2.teamMembers[0] is FightTeamMemberWithAllianceCharacterInformations)
                {
-                  teamAllianceId = (teamInfos.teamMembers[0] as FightTeamMemberWithAllianceCharacterInformations).allianceInfos.allianceId;
+                  _loc9_ = (param2.teamMembers[0] as FightTeamMemberWithAllianceCharacterInformations).allianceInfos.allianceId;
                }
-               prismSubAreaInfo = allianceFrame.getPrismSubAreaById(PlayedCharacterManager.getInstance().currentSubArea.id);
-               prismAllianceId = prismSubAreaInfo?prismSubAreaInfo.alliance?prismSubAreaInfo.alliance.allianceId:playerAllianceId:-1;
-               switch(teamInfos.teamId)
+               _loc10_ = _loc7_.getPrismSubAreaById(PlayedCharacterManager.getInstance().currentSubArea.id);
+               _loc11_ = _loc10_?_loc10_.alliance?_loc10_.alliance.allianceId:_loc8_:-1;
+               switch(param2.teamId)
                {
                   case TeamEnum.TEAM_DEFENDER:
-                     if((!(playerAllianceId == -1)) && (playerAllianceId == teamAllianceId))
+                     if(!(_loc8_ == -1) && _loc8_ == _loc9_)
                      {
-                        teamLook = TEAM_DEFENDER_AVA_ALLY;
+                        _loc5_ = TEAM_DEFENDER_AVA_ALLY;
                      }
                      else
                      {
-                        if(prismAllianceId != -1)
+                        if(_loc11_ != -1)
                         {
-                           if(teamAllianceId == prismAllianceId)
+                           if(_loc9_ == _loc11_)
                            {
-                              teamLook = TEAM_DEFENDER_AVA_DEFENDERS;
+                              _loc5_ = TEAM_DEFENDER_AVA_DEFENDERS;
                            }
                            else
                            {
-                              teamLook = TEAM_DEFENDER_AVA_ATTACKERS;
+                              _loc5_ = TEAM_DEFENDER_AVA_ATTACKERS;
                            }
                         }
                         else
                         {
-                           teamLook = TEAM_DEFENDER_AVA_ATTACKERS;
+                           _loc5_ = TEAM_DEFENDER_AVA_ATTACKERS;
                         }
                      }
                      break;
                   case TeamEnum.TEAM_CHALLENGER:
-                     if((!(playerAllianceId == -1)) && (playerAllianceId == teamAllianceId))
+                     if(!(_loc8_ == -1) && _loc8_ == _loc9_)
                      {
-                        teamLook = TEAM_CHALLENGER_AVA_ALLY;
+                        _loc5_ = TEAM_CHALLENGER_AVA_ALLY;
                      }
                      else
                      {
-                        if(prismAllianceId != -1)
+                        if(_loc11_ != -1)
                         {
-                           if(teamAllianceId == prismAllianceId)
+                           if(_loc9_ == _loc11_)
                            {
-                              teamLook = TEAM_CHALLENGER_AVA_DEFENDERS;
+                              _loc5_ = TEAM_CHALLENGER_AVA_DEFENDERS;
                            }
                            else
                            {
-                              teamLook = TEAM_CHALLENGER_AVA_ATTACKERS;
+                              _loc5_ = TEAM_CHALLENGER_AVA_ATTACKERS;
                            }
                         }
                         else
                         {
-                           teamLook = TEAM_CHALLENGER_AVA_ATTACKERS;
+                           _loc5_ = TEAM_CHALLENGER_AVA_ATTACKERS;
                         }
                      }
                      break;
                }
                break;
             case FightTypeEnum.FIGHT_TYPE_PvT:
-               switch(teamInfos.teamId)
+               switch(param2.teamId)
                {
                   case TeamEnum.TEAM_DEFENDER:
-                     teamLook = TEAM_TAX_COLLECTOR_LOOK;
+                     _loc5_ = TEAM_TAX_COLLECTOR_LOOK;
                      break;
                   case TeamEnum.TEAM_CHALLENGER:
-                     teamLook = TEAM_CHALLENGER_LOOK;
+                     _loc5_ = TEAM_CHALLENGER_LOOK;
                      break;
                }
                break;
             case FightTypeEnum.FIGHT_TYPE_CHALLENGE:
-               teamLook = TEAM_CHALLENGER_LOOK;
+               _loc5_ = TEAM_CHALLENGER_LOOK;
                break;
+            default:
+               switch(param2.teamId)
+               {
+                  case TeamEnum.TEAM_CHALLENGER:
+                     _loc5_ = TEAM_CHALLENGER_LOOK;
+                     break;
+                  case TeamEnum.TEAM_DEFENDER:
+                     _loc5_ = TEAM_DEFENDER_LOOK;
+                     break;
+               }
          }
-         var challenger:IEntity = new AnimatedCharacter(entityId,TiphonEntityLook.fromString(teamLook));
-         challenger.position = position;
-         IAnimated(challenger).setDirection(0);
-         return challenger;
+         var _loc6_:IEntity = new AnimatedCharacter(_loc4_,TiphonEntityLook.fromString(_loc5_));
+         _loc6_.position = param3;
+         IAnimated(_loc6_).setDirection(0);
+         return _loc6_;
       }
    }
 }

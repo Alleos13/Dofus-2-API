@@ -12,23 +12,23 @@ package com.ankamagames.jerakine.cache
    public class Cache extends Object
    {
       
-      public function Cache(checkSystem:uint, max:uint, warn:uint) {
+      public function Cache(param1:uint, param2:uint, param3:uint) {
          super();
          this._dicCache = new Dictionary(true);
          this._dicIndexObject = new Dictionary(true);
          this._nObjectCount = 0;
-         this._nCheckMemorySystem = checkSystem;
+         this._nCheckMemorySystem = param1;
          if(this._nCheckMemorySystem == CHECK_SYSTEM_MEMORY)
          {
-            this._nWarnMemory = warn;
-            this._nMaxMemory = max;
+            this._nWarnMemory = param3;
+            this._nMaxMemory = param2;
          }
          else
          {
             if(this._nCheckMemorySystem == CHECK_OBJECT_COUNT)
             {
-               this._nWarnCount = warn;
-               this._nMaxCount = max;
+               this._nWarnCount = param3;
+               this._nMaxCount = param2;
             }
             else
             {
@@ -70,66 +70,66 @@ package com.ankamagames.jerakine.cache
          return this._nWarnMemory;
       }
       
-      public function set warnMemory(nValue:int) : void {
-         this._nWarnMemory = nValue;
+      public function set warnMemory(param1:int) : void {
+         this._nWarnMemory = param1;
       }
       
       public function get maxMemory() : int {
          return this._nMaxMemory;
       }
       
-      public function set maxMemory(nValue:int) : void {
-         this._nMaxMemory = nValue;
+      public function set maxMemory(param1:int) : void {
+         this._nMaxMemory = param1;
       }
       
       public function get warnCount() : int {
          return this._nWarnCount;
       }
       
-      public function set warnCount(nValue:int) : void {
-         this._nWarnCount = nValue;
+      public function set warnCount(param1:int) : void {
+         this._nWarnCount = param1;
       }
       
       public function get maxCount() : int {
          return this._nMaxCount;
       }
       
-      public function set maxCount(nValue:int) : void {
-         this._nMaxCount = nValue;
+      public function set maxCount(param1:int) : void {
+         this._nMaxCount = param1;
       }
       
       public function get objectCount() : int {
          return this._nObjectCount;
       }
       
-      public function cacheObject(obj:ICachable) : void {
+      public function cacheObject(param1:ICachable) : void {
          this.cleanMemoryCache();
-         this.registerObject(obj);
+         this.registerObject(param1);
       }
       
       public function cleanMemoryCache() : void {
-         var existsUnusedObject:Boolean = true;
-         var limitAntiBoucle:uint = 0;
+         var _loc1_:* = true;
+         var _loc2_:uint = 0;
          if(this._nCheckMemorySystem == CHECK_OBJECT_COUNT)
          {
             while(this._nObjectCount >= this._nMaxCount)
             {
-               if(existsUnusedObject)
+               if(_loc1_)
                {
-                  existsUnusedObject = this.cleanCache();
+                  _loc1_ = this.cleanCache();
                }
                else
                {
                   this.onCleanFailed();
                }
-               limitAntiBoucle++;
-               if(limitAntiBoucle >= 20)
+               _loc2_++;
+               if(_loc2_ >= 20)
                {
                   _log.error("the clean memory task seems to be in an infinite loop, we stop it now.");
                   break;
                }
             }
-            if((this._nObjectCount >= this._nWarnCount) && (this._nObjectCount < this._nMaxCount))
+            if(this._nObjectCount >= this._nWarnCount && this._nObjectCount < this._nMaxCount)
             {
                _log.trace("WARNING ! The limit of cache memory will soon be reached");
             }
@@ -138,22 +138,22 @@ package com.ankamagames.jerakine.cache
          {
             while(System.totalMemory >= this._nMaxMemory)
             {
-               if(existsUnusedObject)
+               if(_loc1_)
                {
-                  existsUnusedObject = this.cleanCache();
+                  _loc1_ = this.cleanCache();
                }
                else
                {
                   this.onCleanFailed();
                }
-               limitAntiBoucle++;
-               if(limitAntiBoucle >= 20)
+               _loc2_++;
+               if(_loc2_ >= 20)
                {
                   _log.error("the clean memory task seems to be in an infinite loop, we stop it now.");
                   break;
                }
             }
-            if((System.totalMemory >= this._nWarnMemory) && (System.totalMemory < this._nMaxMemory))
+            if(System.totalMemory >= this._nWarnMemory && System.totalMemory < this._nMaxMemory)
             {
                _log.trace("WARNING ! The limit of cache memory will soon be reached");
             }
@@ -161,98 +161,98 @@ package com.ankamagames.jerakine.cache
       }
       
       public function clear() : void {
-         var o:ICachable = null;
-         var s:String = null;
-         for (s in this._dicIndexObject)
+         var _loc1_:ICachable = null;
+         var _loc2_:String = null;
+         for (_loc2_ in this._dicIndexObject)
          {
-            o = this._dicIndexObject[s];
-            if(o)
+            _loc1_ = this._dicIndexObject[_loc2_];
+            if(_loc1_)
             {
-               delete this._dicCache[[o]];
-               delete this._dicIndexObject[[this.getIndex(o)]];
+               delete this._dicCache[[_loc1_]];
+               delete this._dicIndexObject[[this.getIndex(_loc1_)]];
                this._nObjectCount--;
-               o.destroy();
+               _loc1_.destroy();
             }
          }
       }
       
-      public function containsCachable(type:Class, name:String) : Boolean {
-         var nIndex:* = NaN;
-         var bContains:Boolean = false;
-         if(name != "")
+      public function containsCachable(param1:Class, param2:String) : Boolean {
+         var _loc4_:* = NaN;
+         var _loc3_:* = false;
+         if(param2 != "")
          {
-            nIndex = this.getIndexFromString(this.getStringFromClassAndName(type,name));
-            bContains = (!(this._dicIndexObject[nIndex] == null)) || (!(this._dicIndexObject[nIndex] == undefined));
-            if(bContains)
+            _loc4_ = this.getIndexFromString(this.getStringFromClassAndName(param1,param2));
+            _loc3_ = !(this._dicIndexObject[_loc4_] == null) || !(this._dicIndexObject[_loc4_] == undefined);
+            if(_loc3_)
             {
-               this._dicCache[this._dicIndexObject[nIndex]] = getTimer();
+               this._dicCache[this._dicIndexObject[_loc4_]] = getTimer();
             }
          }
          else
          {
             _log.error("[Cache] Error, invalid object name.");
          }
-         return bContains;
+         return _loc3_;
       }
       
-      public function getFromCache(type:Class, name:String) : * {
-         var o:* = undefined;
-         var nIndex:Number = this.getIndexFromString(this.getStringFromClassAndName(type,name));
-         o = this._dicIndexObject[nIndex];
-         return o;
+      public function getFromCache(param1:Class, param2:String) : * {
+         var _loc3_:* = undefined;
+         var _loc4_:Number = this.getIndexFromString(this.getStringFromClassAndName(param1,param2));
+         _loc3_ = this._dicIndexObject[_loc4_];
+         return _loc3_;
       }
       
-      private function getStringFromClassAndName(type:Class, name:String) : String {
-         var str:String = null;
-         var arr:Array = getQualifiedClassName(type).split("::");
-         str = arr[1] + "" + name;
-         return str;
+      private function getStringFromClassAndName(param1:Class, param2:String) : String {
+         var _loc3_:String = null;
+         var _loc4_:Array = getQualifiedClassName(param1).split("::");
+         _loc3_ = _loc4_[1] + "" + param2;
+         return _loc3_;
       }
       
-      private function getIndex(obj:ICachable) : Number {
-         var sIndex:String = getQualifiedClassName(obj) + "" + obj.name;
-         var arr:Array = sIndex.split("::");
-         sIndex = arr[1];
-         return this.getIndexFromString(sIndex);
+      private function getIndex(param1:ICachable) : Number {
+         var _loc2_:String = getQualifiedClassName(param1) + "" + param1.name;
+         var _loc3_:Array = _loc2_.split("::");
+         _loc2_ = _loc3_[1];
+         return this.getIndexFromString(_loc2_);
       }
       
-      private function getIndexFromString(str:String) : Number {
-         var crc:CRC32 = new CRC32();
-         var bt:ByteArray = new ByteArray();
-         bt.writeMultiByte(str,"utf-8");
-         crc.update(bt);
-         var nCryptedIndex:uint = crc.getValue();
-         crc.reset();
-         return nCryptedIndex;
+      private function getIndexFromString(param1:String) : Number {
+         var _loc2_:CRC32 = new CRC32();
+         var _loc3_:ByteArray = new ByteArray();
+         _loc3_.writeMultiByte(param1,"utf-8");
+         _loc2_.update(_loc3_);
+         var _loc4_:uint = _loc2_.getValue();
+         _loc2_.reset();
+         return _loc4_;
       }
       
-      private function registerObject(obj:ICachable) : void {
-         this._dicCache[obj] = getTimer();
-         this._dicIndexObject[this.getIndex(obj)] = obj;
+      private function registerObject(param1:ICachable) : void {
+         this._dicCache[param1] = getTimer();
+         this._dicIndexObject[this.getIndex(param1)] = param1;
          this._nObjectCount++;
       }
       
       private function cleanCache() : Boolean {
-         var s:String = null;
-         var _oldestObj:* = undefined;
-         var minDate:int = getTimer();
-         for (s in this._dicIndexObject)
+         var _loc2_:String = null;
+         var _loc3_:* = undefined;
+         var _loc1_:int = getTimer();
+         for (_loc2_ in this._dicIndexObject)
          {
-            if(!ICachable(this._dicIndexObject[s]).inUse)
+            if(!ICachable(this._dicIndexObject[_loc2_]).inUse)
             {
-               if(this._dicCache[this._dicIndexObject[s]] < minDate)
+               if(this._dicCache[this._dicIndexObject[_loc2_]] < _loc1_)
                {
-                  minDate = this._dicCache[this._dicIndexObject[s]];
-                  _oldestObj = this._dicIndexObject[s];
+                  _loc1_ = this._dicCache[this._dicIndexObject[_loc2_]];
+                  _loc3_ = this._dicIndexObject[_loc2_];
                }
             }
          }
-         if((!(_oldestObj == null)) && (!(_oldestObj["name"] == null)))
+         if(!(_loc3_ == null) && !(_loc3_["name"] == null))
          {
-            _log.error("Objet " + _oldestObj["name"] + " supprimé du cache.");
-            delete this._dicCache[[_oldestObj]];
-            delete this._dicIndexObject[[this.getIndex(_oldestObj)]];
-            _oldestObj["destroy"]();
+            _log.error("Objet " + _loc3_["name"] + " supprimé du cache.");
+            delete this._dicCache[[_loc3_]];
+            delete this._dicIndexObject[[this.getIndex(_loc3_)]];
+            _loc3_["destroy"]();
             this._nObjectCount--;
             return true;
          }

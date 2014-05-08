@@ -7,12 +7,12 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class BonesItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function BonesItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      public function BonesItemCriterion(param1:String) {
+         super(param1);
       }
       
       override public function get text() : String {
-         if((_criterionValue == 0) && (_criterionValueText == "B"))
+         if(_criterionValue == 0 && _criterionValueText == "B")
          {
             return I18n.getUiText("ui.criterion.initialBones");
          }
@@ -20,7 +20,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       }
       
       override public function get isRespected() : Boolean {
-         if((_criterionValue == 0) && (_criterionValueText == "B"))
+         if(_criterionValue == 0 && _criterionValueText == "B")
          {
             return PlayedCharacterManager.getInstance().infos.entityLook.bonesId == 1;
          }
@@ -28,11 +28,11 @@ package com.ankamagames.dofus.datacenter.items.criterion
       }
       
       override public function clone() : IItemCriterion {
-         var clonedCriterion:BonesItemCriterion = new BonesItemCriterion(this.basicText);
-         return clonedCriterion;
+         var _loc1_:BonesItemCriterion = new BonesItemCriterion(this.basicText);
+         return _loc1_;
       }
       
-      override function getCriterion() : int {
+      override protected function getCriterion() : int {
          return PlayedCharacterManager.getInstance().infos.entityLook.bonesId;
       }
    }

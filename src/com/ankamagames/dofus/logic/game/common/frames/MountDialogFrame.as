@@ -42,19 +42,21 @@ package com.ankamagames.dofus.logic.game.common.frames
          return true;
       }
       
-      public function process(msg:Message) : Boolean {
-         var elm:ExchangeLeaveMessage = null;
+      public function process(param1:Message) : Boolean {
+         var _loc2_:ExchangeLeaveMessage = null;
          switch(true)
          {
-            case msg is ExchangeMountStableErrorMessage:
+            case param1 is ExchangeMountStableErrorMessage:
                return true;
-            case msg is ExchangeLeaveMessage:
-               elm = msg as ExchangeLeaveMessage;
-               if(elm.dialogType == DialogTypeEnum.DIALOG_EXCHANGE)
+            case param1 is ExchangeLeaveMessage:
+               _loc2_ = param1 as ExchangeLeaveMessage;
+               if(_loc2_.dialogType == DialogTypeEnum.DIALOG_EXCHANGE)
                {
                   Kernel.getWorker().removeFrame(this);
                }
                return true;
+            default:
+               return false;
          }
       }
       
@@ -64,7 +66,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return true;
       }
       
-      function sendStartOkMount() : void {
+      private function sendStartOkMount() : void {
          KernelEventsManager.getInstance().processCallback(MountHookList.ExchangeStartOkMount,mountFrame.stableList,mountFrame.paddockList);
       }
    }

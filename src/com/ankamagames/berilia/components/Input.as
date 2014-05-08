@@ -72,21 +72,21 @@ package com.ankamagames.berilia.components
          return this._nMaxChars;
       }
       
-      public function set maxChars(nValue:uint) : void {
-         this._nMaxChars = nValue;
+      public function set maxChars(param1:uint) : void {
+         this._nMaxChars = param1;
          _tText.maxChars = this._nMaxChars;
       }
       
-      public function set numberMax(nValue:uint) : void {
-         this._nNumberMax = nValue;
+      public function set numberMax(param1:uint) : void {
+         this._nNumberMax = param1;
       }
       
       public function get password() : Boolean {
          return this._bPassword;
       }
       
-      public function set password(bValue:Boolean) : void {
-         this._bPassword = bValue;
+      public function set password(param1:Boolean) : void {
+         this._bPassword = param1;
          if(this._bPassword)
          {
             _tText.displayAsPassword = true;
@@ -97,9 +97,9 @@ package com.ankamagames.berilia.components
          return this._bNumberAutoFormat;
       }
       
-      public function set numberAutoFormat(bValue:Boolean) : void {
-         this._bNumberAutoFormat = bValue;
-         if(!bValue)
+      public function set numberAutoFormat(param1:Boolean) : void {
+         this._bNumberAutoFormat = param1;
+         if(!param1)
          {
             if(this._timerFormatDelay)
             {
@@ -118,16 +118,16 @@ package com.ankamagames.berilia.components
          return this._numberSeparator;
       }
       
-      public function set numberSeparator(bValue:String) : void {
-         this._numberSeparator = bValue;
+      public function set numberSeparator(param1:String) : void {
+         this._numberSeparator = param1;
       }
       
       public function get restrictChars() : String {
          return this._sRestrictChars;
       }
       
-      public function set restrictChars(sValue:String) : void {
-         this._sRestrictChars = sValue;
+      public function set restrictChars(param1:String) : void {
+         this._sRestrictChars = param1;
          _tText.restrict = this._sRestrictChars;
       }
       
@@ -135,8 +135,8 @@ package com.ankamagames.berilia.components
          return Berilia.getInstance().docMain.stage.focus == _tText;
       }
       
-      override public function set text(sValue:String) : void {
-         super.text = sValue;
+      override public function set text(param1:String) : void {
+         super.text = param1;
          this.onTextChange(null);
       }
       
@@ -166,52 +166,52 @@ package com.ankamagames.berilia.components
          FocusHandler.getInstance().setFocus(null);
       }
       
-      override public function process(msg:Message) : Boolean {
-         var delta:* = 0;
-         var inc:* = 0;
-         var newValue:* = 0;
-         if((msg is MouseClickMessage) && (MouseClickMessage(msg).target == this))
+      override public function process(param1:Message) : Boolean {
+         var _loc3_:* = 0;
+         var _loc4_:* = 0;
+         var _loc5_:* = 0;
+         if(param1 is MouseClickMessage && MouseClickMessage(param1).target == this)
          {
             this.focus();
          }
-         var tfIntValue:int = parseInt(text.split(" ").join("").split(" ").join("").split(this._numberSeparator).join(""));
-         if((msg is MouseWheelMessage) && (!disabled) && (tfIntValue.toString(10) == text.split(" ").join("").split(" ").join("").split(this._numberSeparator).join("")))
+         var _loc2_:int = parseInt(text.split(" ").join("").split(" ").join("").split(this._numberSeparator).join(""));
+         if(param1 is MouseWheelMessage && !disabled && _loc2_.toString(10) == text.split(" ").join("").split(" ").join("").split(this._numberSeparator).join(""))
          {
-            delta = (msg as MouseWheelMessage).mouseEvent.delta > 0?1:-1;
-            inc = Math.abs(tfIntValue) > 99?Math.pow(10,(tfIntValue + delta).toString(10).length - 2):1;
+            _loc3_ = (param1 as MouseWheelMessage).mouseEvent.delta > 0?1:-1;
+            _loc4_ = Math.abs(_loc2_) > 99?Math.pow(10,(_loc2_ + _loc3_).toString(10).length - 2):1;
             if(ShortcutsFrame.ctrlKey)
             {
-               inc = 1;
+               _loc4_ = 1;
             }
-            newValue = tfIntValue + delta * inc;
-            newValue = newValue < 0?0:newValue;
-            if((this._nNumberMax > 0) && (newValue > this._nNumberMax))
+            _loc5_ = _loc2_ + _loc3_ * _loc4_;
+            _loc5_ = _loc5_ < 0?0:_loc5_;
+            if(this._nNumberMax > 0 && _loc5_ > this._nNumberMax)
             {
-               newValue = this._nNumberMax;
+               _loc5_ = this._nNumberMax;
             }
-            this.text = newValue.toString();
+            this.text = _loc5_.toString();
          }
-         return super.process(msg);
+         return super.process(param1);
       }
       
-      public function setSelection(start:int, end:int) : void {
-         this._nSelectionStart = start;
-         this._nSelectionEnd = end;
+      public function setSelection(param1:int, param2:int) : void {
+         this._nSelectionStart = param1;
+         this._nSelectionEnd = param2;
          _tText.setSelection(this._nSelectionStart,this._nSelectionEnd);
       }
       
-      function onTextChange(e:Event) : void {
-         var pattern0:RegExp = null;
-         var tempString:String = null;
-         var toInt:* = NaN;
+      private function onTextChange(param1:Event) : void {
+         var _loc2_:RegExp = null;
+         var _loc3_:String = null;
+         var _loc4_:* = NaN;
          if(this._nNumberMax > 0)
          {
-            pattern0 = new RegExp("[0-9 ]+","g");
-            tempString = this.removeSpace(_tText.text);
-            toInt = parseFloat(tempString);
-            if((!isNaN(toInt)) && (pattern0.test(_tText.text)))
+            _loc2_ = new RegExp("[0-9 ]+","g");
+            _loc3_ = this.removeSpace(_tText.text);
+            _loc4_ = parseFloat(_loc3_);
+            if(!isNaN(_loc4_) && (_loc2_.test(_tText.text)))
             {
-               if(toInt > this._nNumberMax)
+               if(_loc4_ > this._nNumberMax)
                {
                   _tText.text = this._nNumberMax + "";
                }
@@ -232,80 +232,80 @@ package com.ankamagames.berilia.components
          Berilia.getInstance().handler.process(new ChangeMessage(InteractiveObject(this)));
       }
       
-      public function removeSpace(spaced:String) : String {
-         var str2:String = null;
-         var tmp:String = spaced;
-         var pattern1:RegExp = new RegExp(regSpace);
+      public function removeSpace(param1:String) : String {
+         var _loc2_:String = null;
+         var _loc3_:String = param1;
+         var _loc4_:RegExp = new RegExp(regSpace);
          do
          {
-               str2 = tmp;
-               tmp = str2.replace(pattern1,"");
-            }while(str2 != tmp);
+               _loc2_ = _loc3_;
+               _loc3_ = _loc2_.replace(_loc4_,"");
+            }while(_loc2_ != _loc3_);
             
             do
             {
-                  str2 = tmp;
-                  tmp = str2.replace(this._numberSeparator,"");
-               }while(str2 != tmp);
+                  _loc2_ = _loc3_;
+                  _loc3_ = _loc2_.replace(this._numberSeparator,"");
+               }while(_loc2_ != _loc3_);
                
-               return str2;
+               return _loc2_;
             }
             
-            function onTimerFormatDelay(e:TimerEvent) : void {
-               var newStringWithSpaces:String = null;
+            private function onTimerFormatDelay(param1:TimerEvent) : void {
+               var _loc7_:String = null;
                this._timerFormatDelay.removeEventListener(TimerEvent.TIMER,this.onTimerFormatDelay);
-               var caret:int = caretIndex;
-               var startText:String = _tText.text;
-               var i:int = 0;
+               var _loc2_:int = caretIndex;
+               var _loc3_:String = _tText.text;
+               var _loc4_:* = 0;
                this._nSelectionStart = _tText.selectionBeginIndex;
                this._nSelectionEnd = _tText.selectionEndIndex;
-               i = 0;
-               while(i < _tText.length - 1)
+               _loc4_ = 0;
+               while(_loc4_ < _tText.length-1)
                {
-                  if((startText.charAt(i) == this._numberSeparator) || (startText.charAt(i) == " "))
+                  if(_loc3_.charAt(_loc4_) == this._numberSeparator || _loc3_.charAt(_loc4_) == " ")
                   {
-                     if(i < caret)
+                     if(_loc4_ < _loc2_)
                      {
-                        caret--;
+                        _loc2_--;
                      }
-                     if(i < this._nSelectionStart)
+                     if(_loc4_ < this._nSelectionStart)
                      {
                         this._nSelectionStart--;
                      }
-                     if(i < this._nSelectionEnd)
+                     if(_loc4_ < this._nSelectionEnd)
                      {
                         this._nSelectionEnd--;
                      }
                   }
-                  i++;
+                  _loc4_++;
                }
-               var tempString:String = this.removeSpace(startText);
-               var toInt:Number = parseFloat(tempString);
-               if((toInt) && (!isNaN(toInt)))
+               var _loc5_:String = this.removeSpace(_loc3_);
+               var _loc6_:Number = parseFloat(_loc5_);
+               if((_loc6_) && !isNaN(_loc6_))
                {
-                  newStringWithSpaces = StringUtils.formateIntToString(toInt);
-                  i = 0;
-                  while(i < newStringWithSpaces.length - 1)
+                  _loc7_ = StringUtils.formateIntToString(_loc6_);
+                  _loc4_ = 0;
+                  while(_loc4_ < _loc7_.length-1)
                   {
-                     if(newStringWithSpaces.charAt(i) == this._numberSeparator)
+                     if(_loc7_.charAt(_loc4_) == this._numberSeparator)
                      {
-                        if(i < caret)
+                        if(_loc4_ < _loc2_)
                         {
-                           caret++;
+                           _loc2_++;
                         }
-                        if(i < this._nSelectionStart)
+                        if(_loc4_ < this._nSelectionStart)
                         {
                            this._nSelectionStart++;
                         }
-                        if(i < this._nSelectionEnd)
+                        if(_loc4_ < this._nSelectionEnd)
                         {
                            this._nSelectionEnd++;
                         }
                      }
-                     i++;
+                     _loc4_++;
                   }
-                  super.text = newStringWithSpaces;
-                  caretIndex = caret;
+                  super.text = _loc7_;
+                  caretIndex = _loc2_;
                }
                if(this._nSelectionStart != this._nSelectionEnd)
                {

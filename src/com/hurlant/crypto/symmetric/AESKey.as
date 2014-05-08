@@ -28,13 +28,13 @@ package com.hurlant.crypto.symmetric
          }
       }
       
-      public function AESKey(key:ByteArray) {
+      public function AESKey(param1:ByteArray) {
          super();
          this.tmp = new ByteArray();
          this.state = new ByteArray();
-         this.keyLength = key.length;
+         this.keyLength = param1.length;
          this.key = new ByteArray();
-         this.key.writeBytes(key);
+         this.key.writeBytes(param1);
          this.expandKey();
       }
       
@@ -93,44 +93,44 @@ package com.hurlant.crypto.symmetric
       private var tmp:ByteArray;
       
       private function expandKey() : void {
-         var tmp0:uint = 0;
-         var tmp1:uint = 0;
-         var tmp2:uint = 0;
-         var tmp3:uint = 0;
-         var tmp4:uint = 0;
-         var idx:uint = 0;
-         var Nk:uint = this.key.length / 4;
-         this.Nr = Nk + 6;
-         idx = Nk;
-         while(idx < Nb * (this.Nr + 1))
+         var _loc1_:uint = 0;
+         var _loc2_:uint = 0;
+         var _loc3_:uint = 0;
+         var _loc4_:uint = 0;
+         var _loc5_:uint = 0;
+         var _loc6_:uint = 0;
+         var _loc7_:uint = this.key.length / 4;
+         this.Nr = _loc7_ + 6;
+         _loc6_ = _loc7_;
+         while(_loc6_ < Nb * (this.Nr + 1))
          {
-            tmp0 = this.key[4 * idx - 4];
-            tmp1 = this.key[4 * idx - 3];
-            tmp2 = this.key[4 * idx - 2];
-            tmp3 = this.key[4 * idx - 1];
-            if(!(idx % Nk))
+            _loc1_ = this.key[4 * _loc6_ - 4];
+            _loc2_ = this.key[4 * _loc6_ - 3];
+            _loc3_ = this.key[4 * _loc6_ - 2];
+            _loc4_ = this.key[4 * _loc6_-1];
+            if(!(_loc6_ % _loc7_))
             {
-               tmp4 = tmp3;
-               tmp3 = Sbox[tmp0];
-               tmp0 = Sbox[tmp1] ^ Rcon[idx / Nk];
-               tmp1 = Sbox[tmp2];
-               tmp2 = Sbox[tmp4];
+               _loc5_ = _loc4_;
+               _loc4_ = Sbox[_loc1_];
+               _loc1_ = Sbox[_loc2_] ^ Rcon[_loc6_ / _loc7_];
+               _loc2_ = Sbox[_loc3_];
+               _loc3_ = Sbox[_loc5_];
             }
             else
             {
-               if((Nk > 6) && (idx % Nk == 4))
+               if(_loc7_ > 6 && _loc6_ % _loc7_ == 4)
                {
-                  tmp0 = Sbox[tmp0];
-                  tmp1 = Sbox[tmp1];
-                  tmp2 = Sbox[tmp2];
-                  tmp3 = Sbox[tmp3];
+                  _loc1_ = Sbox[_loc1_];
+                  _loc2_ = Sbox[_loc2_];
+                  _loc3_ = Sbox[_loc3_];
+                  _loc4_ = Sbox[_loc4_];
                }
             }
-            this.key[4 * idx + 0] = this.key[4 * idx - 4 * Nk + 0] ^ tmp0;
-            this.key[4 * idx + 1] = this.key[4 * idx - 4 * Nk + 1] ^ tmp1;
-            this.key[4 * idx + 2] = this.key[4 * idx - 4 * Nk + 2] ^ tmp2;
-            this.key[4 * idx + 3] = this.key[4 * idx - 4 * Nk + 3] ^ tmp3;
-            idx++;
+            this.key[4 * _loc6_ + 0] = this.key[4 * _loc6_ - 4 * _loc7_ + 0] ^ _loc1_;
+            this.key[4 * _loc6_ + 1] = this.key[4 * _loc6_ - 4 * _loc7_ + 1] ^ _loc2_;
+            this.key[4 * _loc6_ + 2] = this.key[4 * _loc6_ - 4 * _loc7_ + 2] ^ _loc3_;
+            this.key[4 * _loc6_ + 3] = this.key[4 * _loc6_ - 4 * _loc7_ + 3] ^ _loc4_;
+            _loc6_++;
          }
       }
       
@@ -138,15 +138,15 @@ package com.hurlant.crypto.symmetric
          return 16;
       }
       
-      public function encrypt(block:ByteArray, index:uint=0) : void {
-         var round:uint = 0;
+      public function encrypt(param1:ByteArray, param2:uint=0) : void {
+         var _loc3_:uint = 0;
          this.state.position = 0;
-         this.state.writeBytes(block,index,Nb * 4);
+         this.state.writeBytes(param1,param2,Nb * 4);
          this.addRoundKey(this.key,0);
-         round = 1;
-         while(round < this.Nr + 1)
+         _loc3_ = 1;
+         while(_loc3_ < this.Nr + 1)
          {
-            if(round < this.Nr)
+            if(_loc3_ < this.Nr)
             {
                this.mixSubColumns();
             }
@@ -154,53 +154,53 @@ package com.hurlant.crypto.symmetric
             {
                this.shiftRows();
             }
-            this.addRoundKey(this.key,round * Nb * 4);
-            round++;
+            this.addRoundKey(this.key,_loc3_ * Nb * 4);
+            _loc3_++;
          }
-         block.position = index;
-         block.writeBytes(this.state);
+         param1.position = param2;
+         param1.writeBytes(this.state);
       }
       
-      public function decrypt(block:ByteArray, index:uint=0) : void {
-         var round:uint = 0;
+      public function decrypt(param1:ByteArray, param2:uint=0) : void {
+         var _loc3_:uint = 0;
          this.state.position = 0;
-         this.state.writeBytes(block,index,Nb * 4);
+         this.state.writeBytes(param1,param2,Nb * 4);
          this.addRoundKey(this.key,this.Nr * Nb * 4);
          this.invShiftRows();
-         round = this.Nr;
-         while(round--)
+         _loc3_ = this.Nr;
+         while(_loc3_--)
          {
-            this.addRoundKey(this.key,round * Nb * 4);
-            if(round)
+            this.addRoundKey(this.key,_loc3_ * Nb * 4);
+            if(_loc3_)
             {
                this.invMixSubColumns();
             }
          }
-         block.position = index;
-         block.writeBytes(this.state);
+         param1.position = param2;
+         param1.writeBytes(this.state);
       }
       
       public function dispose() : void {
-         var i:uint = 0;
-         var r:Random = new Random();
-         i = 0;
-         while(i < this.key.length)
+         var _loc1_:uint = 0;
+         var _loc2_:Random = new Random();
+         _loc1_ = 0;
+         while(_loc1_ < this.key.length)
          {
-            this.key[i] = r.nextByte();
-            i++;
+            this.key[_loc1_] = _loc2_.nextByte();
+            _loc1_++;
          }
-         this.Nr = r.nextByte();
-         i = 0;
-         while(i < this.state.length)
+         this.Nr = _loc2_.nextByte();
+         _loc1_ = 0;
+         while(_loc1_ < this.state.length)
          {
-            this.state[i] = r.nextByte();
-            i++;
+            this.state[_loc1_] = _loc2_.nextByte();
+            _loc1_++;
          }
-         i = 0;
-         while(i < this.tmp.length)
+         _loc1_ = 0;
+         while(_loc1_ < this.tmp.length)
          {
-            this.tmp[i] = r.nextByte();
-            i++;
+            this.tmp[_loc1_] = _loc2_.nextByte();
+            _loc1_++;
          }
          this.key.length = 0;
          this.keyLength = 0;
@@ -213,55 +213,55 @@ package com.hurlant.crypto.symmetric
          Memory.gc();
       }
       
-      function shiftRows() : void {
-         var tmp:uint = 0;
+      protected function shiftRows() : void {
+         var _loc1_:uint = 0;
          this.state[0] = Sbox[this.state[0]];
          this.state[4] = Sbox[this.state[4]];
          this.state[8] = Sbox[this.state[8]];
          this.state[12] = Sbox[this.state[12]];
-         tmp = Sbox[this.state[1]];
+         _loc1_ = Sbox[this.state[1]];
          this.state[1] = Sbox[this.state[5]];
          this.state[5] = Sbox[this.state[9]];
          this.state[9] = Sbox[this.state[13]];
-         this.state[13] = tmp;
-         tmp = Sbox[this.state[2]];
+         this.state[13] = _loc1_;
+         _loc1_ = Sbox[this.state[2]];
          this.state[2] = Sbox[this.state[10]];
-         this.state[10] = tmp;
-         tmp = Sbox[this.state[6]];
+         this.state[10] = _loc1_;
+         _loc1_ = Sbox[this.state[6]];
          this.state[6] = Sbox[this.state[14]];
-         this.state[14] = tmp;
-         tmp = Sbox[this.state[15]];
+         this.state[14] = _loc1_;
+         _loc1_ = Sbox[this.state[15]];
          this.state[15] = Sbox[this.state[11]];
          this.state[11] = Sbox[this.state[7]];
          this.state[7] = Sbox[this.state[3]];
-         this.state[3] = tmp;
+         this.state[3] = _loc1_;
       }
       
-      function invShiftRows() : void {
-         var tmp:uint = 0;
+      protected function invShiftRows() : void {
+         var _loc1_:uint = 0;
          this.state[0] = InvSbox[this.state[0]];
          this.state[4] = InvSbox[this.state[4]];
          this.state[8] = InvSbox[this.state[8]];
          this.state[12] = InvSbox[this.state[12]];
-         tmp = InvSbox[this.state[13]];
+         _loc1_ = InvSbox[this.state[13]];
          this.state[13] = InvSbox[this.state[9]];
          this.state[9] = InvSbox[this.state[5]];
          this.state[5] = InvSbox[this.state[1]];
-         this.state[1] = tmp;
-         tmp = InvSbox[this.state[2]];
+         this.state[1] = _loc1_;
+         _loc1_ = InvSbox[this.state[2]];
          this.state[2] = InvSbox[this.state[10]];
-         this.state[10] = tmp;
-         tmp = InvSbox[this.state[6]];
+         this.state[10] = _loc1_;
+         _loc1_ = InvSbox[this.state[6]];
          this.state[6] = InvSbox[this.state[14]];
-         this.state[14] = tmp;
-         tmp = InvSbox[this.state[3]];
+         this.state[14] = _loc1_;
+         _loc1_ = InvSbox[this.state[3]];
          this.state[3] = InvSbox[this.state[7]];
          this.state[7] = InvSbox[this.state[11]];
          this.state[11] = InvSbox[this.state[15]];
-         this.state[15] = tmp;
+         this.state[15] = _loc1_;
       }
       
-      function mixSubColumns() : void {
+      protected function mixSubColumns() : void {
          this.tmp.length = 0;
          this.tmp[0] = Xtime2Sbox[this.state[0]] ^ Xtime3Sbox[this.state[5]] ^ Sbox[this.state[10]] ^ Sbox[this.state[15]];
          this.tmp[1] = Sbox[this.state[0]] ^ Xtime2Sbox[this.state[5]] ^ Xtime3Sbox[this.state[10]] ^ Sbox[this.state[15]];
@@ -283,8 +283,8 @@ package com.hurlant.crypto.symmetric
          this.state.writeBytes(this.tmp,0,Nb * 4);
       }
       
-      function invMixSubColumns() : void {
-         var i:uint = 0;
+      protected function invMixSubColumns() : void {
+         var _loc1_:uint = 0;
          this.tmp.length = 0;
          this.tmp[0] = XtimeE[this.state[0]] ^ XtimeB[this.state[1]] ^ XtimeD[this.state[2]] ^ Xtime9[this.state[3]];
          this.tmp[5] = Xtime9[this.state[0]] ^ XtimeE[this.state[1]] ^ XtimeB[this.state[2]] ^ XtimeD[this.state[3]];
@@ -302,21 +302,21 @@ package com.hurlant.crypto.symmetric
          this.tmp[1] = Xtime9[this.state[12]] ^ XtimeE[this.state[13]] ^ XtimeB[this.state[14]] ^ XtimeD[this.state[15]];
          this.tmp[6] = XtimeD[this.state[12]] ^ Xtime9[this.state[13]] ^ XtimeE[this.state[14]] ^ XtimeB[this.state[15]];
          this.tmp[11] = XtimeB[this.state[12]] ^ XtimeD[this.state[13]] ^ Xtime9[this.state[14]] ^ XtimeE[this.state[15]];
-         i = 0;
-         while(i < 4 * Nb)
+         _loc1_ = 0;
+         while(_loc1_ < 4 * Nb)
          {
-            this.state[i] = InvSbox[this.tmp[i]];
-            i++;
+            this.state[_loc1_] = InvSbox[this.tmp[_loc1_]];
+            _loc1_++;
          }
       }
       
-      function addRoundKey(key:ByteArray, offset:uint) : void {
-         var idx:uint = 0;
-         idx = 0;
-         while(idx < 16)
+      protected function addRoundKey(param1:ByteArray, param2:uint) : void {
+         var _loc3_:uint = 0;
+         _loc3_ = 0;
+         while(_loc3_ < 16)
          {
-            this.state[idx] = this.state[idx] ^ key[idx + offset];
-            idx++;
+            this.state[_loc3_] = this.state[_loc3_] ^ param1[_loc3_ + param2];
+            _loc3_++;
          }
       }
       

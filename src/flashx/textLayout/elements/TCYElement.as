@@ -20,7 +20,7 @@ package flashx.textLayout.elements
          this.updateTCYRotation();
       }
       
-      override function get abstract() : Boolean {
+      override protected function get abstract() : Boolean {
          return false;
       }
       

@@ -6,12 +6,12 @@ package com.ankamagames.atouin.messages
    public class EntityMovementStoppedMessage extends Object implements Message
    {
       
-      public function EntityMovementStoppedMessage(entity:IEntity) {
+      public function EntityMovementStoppedMessage(param1:IEntity) {
          super();
-         this._entity = entity;
+         this._entity = param1;
          if(this._entity)
          {
-            this.id = entity.id;
+            this.id = param1.id;
          }
       }
       

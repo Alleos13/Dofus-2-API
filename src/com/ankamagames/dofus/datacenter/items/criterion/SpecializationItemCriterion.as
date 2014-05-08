@@ -6,8 +6,8 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class SpecializationItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function SpecializationItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      public function SpecializationItemCriterion(param1:String) {
+         super(param1);
       }
       
       override public function get text() : String {
@@ -15,11 +15,11 @@ package com.ankamagames.dofus.datacenter.items.criterion
       }
       
       override public function clone() : IItemCriterion {
-         var clonedCriterion:SpecializationItemCriterion = new SpecializationItemCriterion(this.basicText);
-         return clonedCriterion;
+         var _loc1_:SpecializationItemCriterion = new SpecializationItemCriterion(this.basicText);
+         return _loc1_;
       }
       
-      override function getCriterion() : int {
+      override protected function getCriterion() : int {
          return PlayedCharacterManager.getInstance().characteristics.alignmentInfos.alignmentGrade;
       }
    }

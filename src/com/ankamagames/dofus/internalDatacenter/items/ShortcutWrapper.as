@@ -47,52 +47,52 @@ package com.ankamagames.dofus.internalDatacenter.items
       
       private static var _properties:Array;
       
-      public static function create(slot:uint, id:uint, type:uint=0, gid:uint=0) : ShortcutWrapper {
-         var itemWrapper:ItemWrapper = null;
-         var emoteWrapper:EmoteWrapper = null;
-         var rpEmoteFrame:EmoticonFrame = null;
-         var item:ShortcutWrapper = new ShortcutWrapper();
-         item.slot = slot;
-         item.id = id;
-         item.type = type;
-         item.gid = gid;
-         if(type == TYPE_ITEM_WRAPPER)
+      public static function create(param1:uint, param2:uint, param3:uint=0, param4:uint=0) : ShortcutWrapper {
+         var _loc6_:ItemWrapper = null;
+         var _loc7_:EmoteWrapper = null;
+         var _loc8_:EmoticonFrame = null;
+         var _loc5_:ShortcutWrapper = new ShortcutWrapper();
+         _loc5_.slot = param1;
+         _loc5_.id = param2;
+         _loc5_.type = param3;
+         _loc5_.gid = param4;
+         if(param3 == TYPE_ITEM_WRAPPER)
          {
-            if(id != 0)
+            if(param2 != 0)
             {
-               itemWrapper = InventoryManager.getInstance().inventory.getItem(id);
+               _loc6_ = InventoryManager.getInstance().inventory.getItem(param2);
             }
             else
             {
-               itemWrapper = ItemWrapper.create(0,0,gid,0,null,false);
+               _loc6_ = ItemWrapper.create(0,0,param4,0,null,false);
             }
-            if(itemWrapper)
+            if(_loc6_)
             {
-               item.quantity = itemWrapper.quantity;
+               _loc5_.quantity = _loc6_.quantity;
             }
-            if(item.quantity == 0)
+            if(_loc5_.quantity == 0)
             {
-               item.active = false;
+               _loc5_.active = false;
             }
             else
             {
-               item.active = true;
+               _loc5_.active = true;
             }
          }
-         if(type == TYPE_EMOTE_WRAPPER)
+         if(param3 == TYPE_EMOTE_WRAPPER)
          {
-            emoteWrapper = EmoteWrapper.create(item.id,item.slot);
-            rpEmoteFrame = Kernel.getWorker().getFrame(EmoticonFrame) as EmoticonFrame;
-            if(rpEmoteFrame.isKnownEmote(item.id))
+            _loc7_ = EmoteWrapper.create(_loc5_.id,_loc5_.slot);
+            _loc8_ = Kernel.getWorker().getFrame(EmoticonFrame) as EmoticonFrame;
+            if(_loc8_.isKnownEmote(_loc5_.id))
             {
-               item.active = true;
+               _loc5_.active = true;
             }
             else
             {
-               item.active = false;
+               _loc5_.active = false;
             }
          }
-         return item;
+         return _loc5_;
       }
       
       private var _uri:Uri;
@@ -131,8 +131,8 @@ package com.ankamagames.dofus.internalDatacenter.items
          return this._backGroundIconUri;
       }
       
-      public function set backGroundIconUri(bgUri:Uri) : void {
-         this._backGroundIconUri = bgUri;
+      public function set backGroundIconUri(param1:Uri) : void {
+         this._backGroundIconUri = param1;
       }
       
       public function get errorIconUri() : Uri {
@@ -144,94 +144,94 @@ package com.ankamagames.dofus.internalDatacenter.items
       }
       
       public function get info1() : String {
-         var spellWrapper:SpellWrapper = null;
+         var _loc1_:SpellWrapper = null;
          if(this.type == TYPE_ITEM_WRAPPER)
          {
             return this.quantity.toString();
          }
          if(this.type == TYPE_SPELL_WRAPPER)
          {
-            spellWrapper = SpellWrapper.getFirstSpellWrapperById(this.id,this.getCharaId());
-            return spellWrapper?spellWrapper.info1:"";
+            _loc1_ = SpellWrapper.getFirstSpellWrapperById(this.id,this.getCharaId());
+            return _loc1_?_loc1_.info1:"";
          }
          return "";
       }
       
       public function get startTime() : int {
-         var emoteWrapper:EmoteWrapper = null;
+         var _loc1_:EmoteWrapper = null;
          if(this.type == TYPE_EMOTE_WRAPPER)
          {
-            emoteWrapper = EmoteWrapper.getEmoteWrapperById(this.id);
-            return emoteWrapper?emoteWrapper.startTime:0;
+            _loc1_ = EmoteWrapper.getEmoteWrapperById(this.id);
+            return _loc1_?_loc1_.startTime:0;
          }
          return 0;
       }
       
       public function get endTime() : int {
-         var emoteWrapper:EmoteWrapper = null;
+         var _loc1_:EmoteWrapper = null;
          if(this.type == TYPE_EMOTE_WRAPPER)
          {
-            emoteWrapper = EmoteWrapper.getEmoteWrapperById(this.id);
-            return emoteWrapper?emoteWrapper.endTime:0;
+            _loc1_ = EmoteWrapper.getEmoteWrapperById(this.id);
+            return _loc1_?_loc1_.endTime:0;
          }
          return 0;
       }
       
-      public function set endTime(t:int) : void {
-         var emoteWrapper:EmoteWrapper = null;
+      public function set endTime(param1:int) : void {
+         var _loc2_:EmoteWrapper = null;
          if(this.type == TYPE_EMOTE_WRAPPER)
          {
-            emoteWrapper = EmoteWrapper.getEmoteWrapperById(this.id);
-            if(emoteWrapper)
+            _loc2_ = EmoteWrapper.getEmoteWrapperById(this.id);
+            if(_loc2_)
             {
-               emoteWrapper.endTime = t;
+               _loc2_.endTime = param1;
             }
          }
       }
       
       public function get timer() : int {
-         var emoteWrapper:EmoteWrapper = null;
+         var _loc1_:EmoteWrapper = null;
          if(this.type == TYPE_EMOTE_WRAPPER)
          {
-            emoteWrapper = EmoteWrapper.getEmoteWrapperById(this.id);
-            return emoteWrapper?emoteWrapper.timer:0;
+            _loc1_ = EmoteWrapper.getEmoteWrapperById(this.id);
+            return _loc1_?_loc1_.timer:0;
          }
          return 0;
       }
       
       public function get active() : Boolean {
-         var spellWrapper:SpellWrapper = null;
-         var rpEmoticonFrame:EmoticonFrame = null;
+         var _loc1_:SpellWrapper = null;
+         var _loc2_:EmoticonFrame = null;
          if(this.type == TYPE_SPELL_WRAPPER)
          {
-            spellWrapper = SpellWrapper.getFirstSpellWrapperById(this.id,this.getCharaId());
-            return spellWrapper?spellWrapper.active:false;
+            _loc1_ = SpellWrapper.getFirstSpellWrapperById(this.id,this.getCharaId());
+            return _loc1_?_loc1_.active:false;
          }
          if(this.type == TYPE_EMOTE_WRAPPER)
          {
-            rpEmoticonFrame = Kernel.getWorker().getFrame(EmoticonFrame) as EmoticonFrame;
-            return rpEmoticonFrame.isKnownEmote(this.id);
+            _loc2_ = Kernel.getWorker().getFrame(EmoticonFrame) as EmoticonFrame;
+            return _loc2_.isKnownEmote(this.id);
          }
          return this._active;
       }
       
-      public function set active(b:Boolean) : void {
-         this._active = b;
+      public function set active(param1:Boolean) : void {
+         this._active = param1;
       }
       
       public function get realItem() : ISlotData {
-         var itemWrapper:ItemWrapper = null;
+         var _loc1_:ItemWrapper = null;
          if(this.type == TYPE_ITEM_WRAPPER)
          {
             if(this.id != 0)
             {
-               itemWrapper = InventoryManager.getInstance().inventory.getItem(this.id);
+               _loc1_ = InventoryManager.getInstance().inventory.getItem(this.id);
             }
             else
             {
-               itemWrapper = ItemWrapper.create(0,0,this.gid,0,null,false);
+               _loc1_ = ItemWrapper.create(0,0,this.gid,0,null,false);
             }
-            return itemWrapper;
+            return _loc1_;
          }
          if(this.type == TYPE_PRESET_WRAPPER)
          {
@@ -252,11 +252,12 @@ package com.ankamagames.dofus.internalDatacenter.items
          return null;
       }
       
-      override flash_proxy function getProperty(name:*) : * {
+      override flash_proxy function getProperty(param1:*) : * {
          var itemWrapper:ItemWrapper = null;
          var presetWrapper:PresetWrapper = null;
          var emoteWrapper:EmoteWrapper = null;
          var spellWrapper:SpellWrapper = null;
+         var name:* = param1;
          if(isAttribute(name))
          {
             return this[name];
@@ -372,57 +373,57 @@ package com.ankamagames.dofus.internalDatacenter.items
          return "Error on getProperty " + name;
       }
       
-      override flash_proxy function callProperty(name:*, ... rest) : * {
-         var res:* = undefined;
-         switch(QName(name).localName)
+      override flash_proxy function callProperty(param1:*, ... rest) : * {
+         var _loc3_:* = undefined;
+         switch(QName(param1).localName)
          {
             case "toString":
-               res = "[ShortcutWrapper : type " + this.type + ", id " + this.id + ", slot " + this.slot + ", gid " + this.gid + ", quantity " + this.quantity + "]";
+               _loc3_ = "[ShortcutWrapper : type " + this.type + ", id " + this.id + ", slot " + this.slot + ", gid " + this.gid + ", quantity " + this.quantity + "]";
                break;
             case "hasOwnProperty":
-               res = this.hasProperty(name);
+               _loc3_ = this.hasProperty(param1);
                break;
          }
-         return res;
+         return _loc3_;
       }
       
-      override flash_proxy function nextNameIndex(index:int) : int {
+      override flash_proxy function nextNameIndex(param1:int) : int {
          return 0;
       }
       
-      override flash_proxy function nextName(index:int) : String {
+      override flash_proxy function nextName(param1:int) : String {
          return "nextName";
       }
       
-      override flash_proxy function hasProperty(name:*) : Boolean {
+      override flash_proxy function hasProperty(param1:*) : Boolean {
          return false;
       }
       
-      public function update(slot:uint, id:uint, type:uint=0, gid:uint=0) : void {
-         var itemWrapper:ItemWrapper = null;
-         var rpEmoteFrame:EmoticonFrame = null;
-         if((!(this.id == id)) || (!(this.type == type)))
+      public function update(param1:uint, param2:uint, param3:uint=0, param4:uint=0) : void {
+         var _loc5_:ItemWrapper = null;
+         var _loc6_:EmoticonFrame = null;
+         if(!(this.id == param2) || !(this.type == param3))
          {
             this._uri = this._uriFullsize = null;
          }
-         this.slot = slot;
-         this.id = id;
-         this.type = type;
-         this.gid = gid;
+         this.slot = param1;
+         this.id = param2;
+         this.type = param3;
+         this.gid = param4;
          this.active = true;
          if(this.type == TYPE_ITEM_WRAPPER)
          {
             if(this.id != 0)
             {
-               itemWrapper = InventoryManager.getInstance().inventory.getItem(this.id);
+               _loc5_ = InventoryManager.getInstance().inventory.getItem(this.id);
             }
             else
             {
-               itemWrapper = ItemWrapper.create(0,0,this.gid,0,null,false);
+               _loc5_ = ItemWrapper.create(0,0,this.gid,0,null,false);
             }
-            if(itemWrapper)
+            if(_loc5_)
             {
-               this.quantity = itemWrapper.quantity;
+               this.quantity = _loc5_.quantity;
             }
             if(this.quantity == 0)
             {
@@ -433,30 +434,30 @@ package com.ankamagames.dofus.internalDatacenter.items
          {
             this._uri = this._uriFullsize = null;
          }
-         if(type == TYPE_EMOTE_WRAPPER)
+         if(param3 == TYPE_EMOTE_WRAPPER)
          {
-            rpEmoteFrame = Kernel.getWorker().getFrame(EmoticonFrame) as EmoticonFrame;
-            if(!rpEmoteFrame.isKnownEmote(id))
+            _loc6_ = Kernel.getWorker().getFrame(EmoticonFrame) as EmoticonFrame;
+            if(!_loc6_.isKnownEmote(param2))
             {
                this.active = false;
             }
          }
       }
       
-      public function getIconUri(pngMode:Boolean=true) : Uri {
-         var itemWrapper:ItemWrapper = null;
-         var fakeItemWrapper:ItemWrapper = null;
-         var presetWrapper:PresetWrapper = null;
-         var spellWrapper:SpellWrapper = null;
-         var smileyWrapper:SmileyWrapper = null;
-         var emoteWrapper:EmoteWrapper = null;
-         if((!(this.type == TYPE_SPELL_WRAPPER)) || (!(this.id == 0)))
+      public function getIconUri(param1:Boolean=true) : Uri {
+         var _loc2_:ItemWrapper = null;
+         var _loc3_:ItemWrapper = null;
+         var _loc4_:PresetWrapper = null;
+         var _loc5_:SpellWrapper = null;
+         var _loc6_:SmileyWrapper = null;
+         var _loc7_:EmoteWrapper = null;
+         if(!(this.type == TYPE_SPELL_WRAPPER) || !(this.id == 0))
          {
-            if((pngMode) && (this._uri))
+            if((param1) && (this._uri))
             {
                return this._uri;
             }
-            if((!pngMode) && (this._uriFullsize))
+            if(!param1 && (this._uriFullsize))
             {
                return this._uriFullsize;
             }
@@ -465,11 +466,11 @@ package com.ankamagames.dofus.internalDatacenter.items
          {
             if(this.id != 0)
             {
-               itemWrapper = InventoryManager.getInstance().inventory.getItem(this.id);
-               if(itemWrapper)
+               _loc2_ = InventoryManager.getInstance().inventory.getItem(this.id);
+               if(_loc2_)
                {
-                  this._uri = itemWrapper.iconUri;
-                  this._uriFullsize = itemWrapper.fullSizeIconUri;
+                  this._uri = _loc2_.iconUri;
+                  this._uriFullsize = _loc2_.fullSizeIconUri;
                }
                else
                {
@@ -478,11 +479,11 @@ package com.ankamagames.dofus.internalDatacenter.items
             }
             else
             {
-               fakeItemWrapper = ItemWrapper.create(0,0,this.gid,0,null,false);
-               if(fakeItemWrapper)
+               _loc3_ = ItemWrapper.create(0,0,this.gid,0,null,false);
+               if(_loc3_)
                {
-                  this._uri = fakeItemWrapper.iconUri;
-                  this._uriFullsize = fakeItemWrapper.fullSizeIconUri;
+                  this._uri = _loc3_.iconUri;
+                  this._uriFullsize = _loc3_.fullSizeIconUri;
                }
                else
                {
@@ -494,11 +495,11 @@ package com.ankamagames.dofus.internalDatacenter.items
          {
             if(this.type == TYPE_PRESET_WRAPPER)
             {
-               presetWrapper = InventoryManager.getInstance().presets[this.id];
-               if(presetWrapper)
+               _loc4_ = InventoryManager.getInstance().presets[this.id];
+               if(_loc4_)
                {
-                  this._uri = presetWrapper.iconUri;
-                  this._uriFullsize = presetWrapper.fullSizeIconUri;
+                  this._uri = _loc4_.iconUri;
+                  this._uriFullsize = _loc4_.fullSizeIconUri;
                }
                else
                {
@@ -509,11 +510,11 @@ package com.ankamagames.dofus.internalDatacenter.items
             {
                if(this.type == TYPE_SPELL_WRAPPER)
                {
-                  spellWrapper = SpellWrapper.getFirstSpellWrapperById(this.id,this.getCharaId());
-                  if(spellWrapper)
+                  _loc5_ = SpellWrapper.getFirstSpellWrapperById(this.id,this.getCharaId());
+                  if(_loc5_)
                   {
-                     this._uri = spellWrapper.iconUri;
-                     this._uriFullsize = spellWrapper.fullSizeIconUri;
+                     this._uri = _loc5_.iconUri;
+                     this._uriFullsize = _loc5_.fullSizeIconUri;
                   }
                   else
                   {
@@ -524,11 +525,11 @@ package com.ankamagames.dofus.internalDatacenter.items
                {
                   if(this.type == TYPE_SMILEY_WRAPPER)
                   {
-                     smileyWrapper = SmileyWrapper.getSmileyWrapperById(this.id);
-                     if(smileyWrapper)
+                     _loc6_ = SmileyWrapper.getSmileyWrapperById(this.id);
+                     if(_loc6_)
                      {
-                        this._uri = smileyWrapper.iconUri;
-                        this._uriFullsize = smileyWrapper.fullSizeIconUri;
+                        this._uri = _loc6_.iconUri;
+                        this._uriFullsize = _loc6_.fullSizeIconUri;
                      }
                      else
                      {
@@ -539,11 +540,11 @@ package com.ankamagames.dofus.internalDatacenter.items
                   {
                      if(this.type == TYPE_EMOTE_WRAPPER)
                      {
-                        emoteWrapper = EmoteWrapper.getEmoteWrapperById(this.id);
-                        if(emoteWrapper)
+                        _loc7_ = EmoteWrapper.getEmoteWrapperById(this.id);
+                        if(_loc7_)
                         {
-                           this._uri = emoteWrapper.iconUri;
-                           this._uriFullsize = emoteWrapper.fullSizeIconUri;
+                           this._uri = _loc7_.iconUri;
+                           this._uriFullsize = _loc7_.fullSizeIconUri;
                         }
                         else
                         {
@@ -554,11 +555,11 @@ package com.ankamagames.dofus.internalDatacenter.items
                }
             }
          }
-         if((pngMode) && (this._uri))
+         if((param1) && (this._uri))
          {
             return this._uri;
          }
-         if((!pngMode) && (this._uriFullsize))
+         if(!param1 && (this._uriFullsize))
          {
             return this._uriFullsize;
          }
@@ -566,28 +567,28 @@ package com.ankamagames.dofus.internalDatacenter.items
       }
       
       public function clone() : ShortcutWrapper {
-         var shortcut:ShortcutWrapper = new ShortcutWrapper();
-         shortcut.slot = this.slot;
-         shortcut.id = this.id;
-         shortcut.type = this.type;
-         shortcut.gid = this.gid;
-         shortcut.quantity = this.quantity;
-         return shortcut;
+         var _loc1_:ShortcutWrapper = new ShortcutWrapper();
+         _loc1_.slot = this.slot;
+         _loc1_.id = this.id;
+         _loc1_.type = this.type;
+         _loc1_.gid = this.gid;
+         _loc1_.quantity = this.quantity;
+         return _loc1_;
       }
       
-      public function addHolder(h:ISlotDataHolder) : void {
-         var spellWrappers:Array = null;
-         var spellWrapper:SpellWrapper = null;
-         var emoteWrapper:EmoteWrapper = null;
+      public function addHolder(param1:ISlotDataHolder) : void {
+         var _loc2_:Array = null;
+         var _loc3_:SpellWrapper = null;
+         var _loc4_:EmoteWrapper = null;
          if(this.type == TYPE_SPELL_WRAPPER)
          {
-            spellWrappers = SpellWrapper.getSpellWrappersById(this.id,this.getCharaId());
-            for each (spellWrapper in spellWrappers)
+            _loc2_ = SpellWrapper.getSpellWrappersById(this.id,this.getCharaId());
+            for each (_loc3_ in _loc2_)
             {
-               if(spellWrapper)
+               if(_loc3_)
                {
-                  spellWrapper.addHolder(h);
-                  spellWrapper.setLinkedSlotData(this);
+                  _loc3_.addHolder(param1);
+                  _loc3_.setLinkedSlotData(this);
                }
             }
          }
@@ -595,20 +596,20 @@ package com.ankamagames.dofus.internalDatacenter.items
          {
             if(this.type == TYPE_EMOTE_WRAPPER)
             {
-               emoteWrapper = EmoteWrapper.getEmoteWrapperById(this.id);
-               if(emoteWrapper)
+               _loc4_ = EmoteWrapper.getEmoteWrapperById(this.id);
+               if(_loc4_)
                {
-                  emoteWrapper.addHolder(h);
-                  emoteWrapper.setLinkedSlotData(this);
+                  _loc4_.addHolder(param1);
+                  _loc4_.setLinkedSlotData(this);
                }
             }
          }
       }
       
-      public function removeHolder(h:ISlotDataHolder) : void {
+      public function removeHolder(param1:ISlotDataHolder) : void {
       }
       
-      function getCharaId() : int {
+      private function getCharaId() : int {
          if(CurrentPlayedFighterManager.getInstance().currentFighterId)
          {
             return CurrentPlayedFighterManager.getInstance().currentFighterId;

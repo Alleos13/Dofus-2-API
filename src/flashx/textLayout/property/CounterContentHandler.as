@@ -148,7 +148,7 @@ package flashx.textLayout.property
          }
          if(_counterContentPattern1.test(param1))
          {
-			 return null;
+            return {"counter":"ordered"};
          }
          if(_counterContentPattern2.test(param1))
          {

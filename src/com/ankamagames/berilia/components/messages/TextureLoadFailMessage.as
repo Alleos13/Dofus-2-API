@@ -5,9 +5,9 @@ package com.ankamagames.berilia.components.messages
    public class TextureLoadFailMessage extends ComponentMessage
    {
       
-      public function TextureLoadFailMessage(pTexture:Texture) {
-         super(pTexture);
-         this._texture = pTexture;
+      public function TextureLoadFailMessage(param1:Texture) {
+         super(param1);
+         this._texture = param1;
       }
       
       private var _texture:Texture;

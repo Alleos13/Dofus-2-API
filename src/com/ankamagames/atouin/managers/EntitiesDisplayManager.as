@@ -52,8 +52,11 @@ package com.ankamagames.atouin.managers
       
       public var _dStrataRef:Dictionary;
       
-      public function displayEntity(oEntity:IDisplayable, cellCoords:MapPoint, strata:uint=0) : void {
+      public function displayEntity(param1:IDisplayable, param2:MapPoint, param3:uint=0) : void {
          var displayObject:DisplayObject = null;
+         var oEntity:IDisplayable = param1;
+         var cellCoords:MapPoint = param2;
+         var strata:uint = param3;
          try
          {
             displayObject = oEntity as DisplayObject;
@@ -81,9 +84,9 @@ package com.ankamagames.atouin.managers
          {
             if(Atouin.getInstance().options.transparentOverlayMode)
             {
-               if((displayObject is ITransparency) && (ITransparency(displayObject).getIsTransparencyAllowed()))
+               if(displayObject is ITransparency && (ITransparency(displayObject).getIsTransparencyAllowed()))
                {
-                  displayObject.alpha = !(displayObject.alpha == 1)?displayObject.alpha:AtouinConstants.OVERLAY_MODE_ALPHA;
+                  displayObject.alpha = displayObject.alpha != 1?displayObject.alpha:AtouinConstants.OVERLAY_MODE_ALPHA;
                }
                else
                {
@@ -110,9 +113,12 @@ package com.ankamagames.atouin.managers
          }
       }
       
-      public function refreshAlphaEntity(oEntity:IDisplayable, cellCoords:MapPoint, strata:uint=0) : void {
+      public function refreshAlphaEntity(param1:IDisplayable, param2:MapPoint, param3:uint=0) : void {
          var displayObject:DisplayObject = null;
          var cellSprite:Sprite = null;
+         var oEntity:IDisplayable = param1;
+         var cellCoords:MapPoint = param2;
+         var strata:uint = param3;
          try
          {
             displayObject = oEntity as DisplayObject;
@@ -132,8 +138,9 @@ package com.ankamagames.atouin.managers
          }
       }
       
-      public function removeEntity(oEntity:IDisplayable) : void {
+      public function removeEntity(param1:IDisplayable) : void {
          var displayObject:DisplayObject = null;
+         var oEntity:IDisplayable = param1;
          try
          {
             displayObject = oEntity as DisplayObject;
@@ -148,91 +155,91 @@ package com.ankamagames.atouin.managers
          }
       }
       
-      public function orderEntity(entity:DisplayObject, cellSprite:Sprite) : void {
-         var currentElem:DisplayObject = null;
-         var container:DisplayObjectContainer = null;
-         var num:* = 0;
-         var skipZOrder:Boolean = false;
-         var sprite:TiphonSprite = entity as TiphonSprite;
-         if((sprite) && (sprite.parentSprite))
+      public function orderEntity(param1:DisplayObject, param2:Sprite) : void {
+         var _loc7_:DisplayObject = null;
+         var _loc10_:DisplayObjectContainer = null;
+         var _loc11_:* = 0;
+         var _loc3_:* = false;
+         var _loc4_:TiphonSprite = param1 as TiphonSprite;
+         if((_loc4_) && (_loc4_.parentSprite))
          {
-            skipZOrder = true;
+            _loc3_ = true;
          }
-         if((Atouin.getInstance().options.transparentOverlayMode) && (entity is ITransparency) && (ITransparency(entity).getIsTransparencyAllowed()))
+         if((Atouin.getInstance().options.transparentOverlayMode) && (param1 is ITransparency) && (ITransparency(param1).getIsTransparencyAllowed()))
          {
-            entity.alpha = !(entity.alpha == 1)?entity.alpha:AtouinConstants.OVERLAY_MODE_ALPHA;
-            if(skipZOrder)
+            param1.alpha = param1.alpha != 1?param1.alpha:AtouinConstants.OVERLAY_MODE_ALPHA;
+            if(_loc3_)
             {
                return;
             }
-            container = Atouin.getInstance().overlayContainer;
-            num = container.numChildren;
-            i = 0;
-            while(i < num)
+            _loc10_ = Atouin.getInstance().overlayContainer;
+            _loc11_ = _loc10_.numChildren;
+            _loc9_ = 0;
+            while(_loc9_ < _loc11_)
             {
-               currentElem = container.getChildAt(i);
-               if(entity.y < currentElem.y)
+               _loc7_ = _loc10_.getChildAt(_loc9_);
+               if(param1.y < _loc7_.y)
                {
                   break;
                }
-               i++;
+               _loc9_++;
             }
-            if((container.contains(entity)) && (i > 0))
+            if((_loc10_.contains(param1)) && _loc9_ > 0)
             {
-               container.addChildAt(entity,i - 1);
+               _loc10_.addChildAt(param1,_loc9_-1);
             }
             else
             {
-               container.addChildAt(entity,i);
+               _loc10_.addChildAt(param1,_loc9_);
             }
             return;
          }
-         if(Math.round(entity.alpha * 10) == AtouinConstants.OVERLAY_MODE_ALPHA * 10)
+         if(Math.round(param1.alpha * 10) == AtouinConstants.OVERLAY_MODE_ALPHA * 10)
          {
-            entity.alpha = 1;
+            param1.alpha = 1;
          }
-         if(skipZOrder)
+         if(_loc3_)
          {
             return;
          }
-         if((!cellSprite) || (!cellSprite.parent))
+         if(!param2 || !param2.parent)
          {
             return;
          }
-         var depth:uint = cellSprite.parent.getChildIndex(cellSprite);
-         var nb:int = cellSprite.parent.numChildren;
-         var firstLoop:Boolean = true;
-         var i:uint = depth + 1;
-         while(i < nb)
+         var _loc5_:uint = param2.parent.getChildIndex(param2);
+         var _loc6_:int = param2.parent.numChildren;
+         var _loc8_:* = true;
+         var _loc9_:uint = _loc5_ + 1;
+         while(_loc9_ < _loc6_)
          {
-            currentElem = cellSprite.parent.getChildAt(i);
-            if(currentElem is GraphicCell)
+            _loc7_ = param2.parent.getChildAt(_loc9_);
+            if(_loc7_ is GraphicCell)
             {
                break;
             }
-            if(this._dStrataRef[entity] < this._dStrataRef[currentElem])
+            if(this._dStrataRef[param1] < this._dStrataRef[_loc7_])
             {
                break;
             }
-            if((!(currentElem === cellSprite)) && (!(currentElem == entity)))
+            if(!(_loc7_ === param2) && !(_loc7_ == param1))
             {
-               depth++;
+               _loc5_++;
             }
-            firstLoop = false;
-            i++;
+            _loc8_ = false;
+            _loc9_++;
          }
-         cellSprite.parent.addChildAt(entity,depth + 1);
+         param2.parent.addChildAt(param1,_loc5_ + 1);
       }
       
-      public function getAbsoluteBounds(entity:IDisplayable) : IRectangle {
-         var d:DisplayObject = entity as DisplayObject;
-         var r:Rectangle2 = new Rectangle2();
-         var r2:Rectangle = d.getBounds(StageShareManager.stage);
-         r.x = r2.x;
-         r.width = r2.width;
-         r.height = r2.height;
-         r.y = r2.y;
-         return r;
+      public function getAbsoluteBounds(param1:IDisplayable) : IRectangle {
+         var _loc2_:DisplayObject = param1 as DisplayObject;
+         var _loc3_:Rectangle2 = new Rectangle2();
+         var _loc4_:Rectangle = _loc2_.getBounds(StageShareManager.stage);
+         _loc3_.x = _loc4_.x;
+         _loc3_.width = _loc4_.width;
+         _loc3_.height = _loc4_.height;
+         _loc3_.y = _loc4_.y;
+         return _loc3_;
       }
    }
 }

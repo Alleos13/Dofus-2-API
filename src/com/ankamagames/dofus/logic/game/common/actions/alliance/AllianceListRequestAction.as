@@ -10,8 +10,8 @@ package com.ankamagames.dofus.logic.game.common.actions.alliance
       }
       
       public static function create() : AllianceListRequestAction {
-         var action:AllianceListRequestAction = new AllianceListRequestAction();
-         return action;
+         var _loc1_:AllianceListRequestAction = new AllianceListRequestAction();
+         return _loc1_;
       }
    }
 }

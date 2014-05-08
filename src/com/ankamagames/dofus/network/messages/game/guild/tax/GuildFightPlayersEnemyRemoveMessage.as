@@ -29,9 +29,9 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
          return 5929;
       }
       
-      public function initGuildFightPlayersEnemyRemoveMessage(fightId:Number=0, playerId:uint=0) : GuildFightPlayersEnemyRemoveMessage {
-         this.fightId = fightId;
-         this.playerId = playerId;
+      public function initGuildFightPlayersEnemyRemoveMessage(param1:Number=0, param2:uint=0) : GuildFightPlayersEnemyRemoveMessage {
+         this.fightId = param1;
+         this.playerId = param2;
          this._isInitialized = true;
          return this;
       }
@@ -42,53 +42,53 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GuildFightPlayersEnemyRemoveMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_GuildFightPlayersEnemyRemoveMessage(param1);
       }
       
-      public function serializeAs_GuildFightPlayersEnemyRemoveMessage(output:IDataOutput) : void {
+      public function serializeAs_GuildFightPlayersEnemyRemoveMessage(param1:IDataOutput) : void {
          if(this.fightId < 0)
          {
             throw new Error("Forbidden value (" + this.fightId + ") on element fightId.");
          }
          else
          {
-            output.writeDouble(this.fightId);
+            param1.writeDouble(this.fightId);
             if(this.playerId < 0)
             {
                throw new Error("Forbidden value (" + this.playerId + ") on element playerId.");
             }
             else
             {
-               output.writeInt(this.playerId);
+               param1.writeInt(this.playerId);
                return;
             }
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GuildFightPlayersEnemyRemoveMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_GuildFightPlayersEnemyRemoveMessage(param1);
       }
       
-      public function deserializeAs_GuildFightPlayersEnemyRemoveMessage(input:IDataInput) : void {
-         this.fightId = input.readDouble();
+      public function deserializeAs_GuildFightPlayersEnemyRemoveMessage(param1:IDataInput) : void {
+         this.fightId = param1.readDouble();
          if(this.fightId < 0)
          {
             throw new Error("Forbidden value (" + this.fightId + ") on element of GuildFightPlayersEnemyRemoveMessage.fightId.");
          }
          else
          {
-            this.playerId = input.readInt();
+            this.playerId = param1.readInt();
             if(this.playerId < 0)
             {
                throw new Error("Forbidden value (" + this.playerId + ") on element of GuildFightPlayersEnemyRemoveMessage.playerId.");

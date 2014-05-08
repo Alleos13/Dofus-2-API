@@ -11,24 +11,24 @@ package com.ankamagames.berilia.types.graphic
    public class GraphicLocation extends Object
    {
       
-      public function GraphicLocation(nPoint:Number=NaN, nRelativePoint:Number=NaN, sRelativeTo:String=null) {
+      public function GraphicLocation(param1:Number=NaN, param2:Number=NaN, param3:String=null) {
          super();
          this._nOffsetX = 0;
          this._nOffsetY = 0;
          this._nPoint = LocationEnum.POINT_TOPLEFT;
          this._nRelativePoint = LocationEnum.POINT_TOPLEFT;
          this._sRelativeTo = REF_PARENT;
-         if(!isNaN(nPoint))
+         if(!isNaN(param1))
          {
-            this._nPoint = nPoint;
+            this._nPoint = param1;
          }
-         if(!isNaN(nRelativePoint))
+         if(!isNaN(param2))
          {
-            this._nRelativePoint = nRelativePoint;
+            this._nRelativePoint = param2;
          }
-         if(sRelativeTo != null)
+         if(param3 != null)
          {
-            this._sRelativeTo = sRelativeTo;
+            this._sRelativeTo = param3;
          }
       }
       
@@ -42,8 +42,8 @@ package com.ankamagames.berilia.types.graphic
       
       public static const REF_LAST:String = "$LAST";
       
-      public static function convertPointStringToInt(sPoint:String) : uint {
-         switch(sPoint)
+      public static function convertPointStringToInt(param1:String) : uint {
+         switch(param1)
          {
             case "TOPLEFT":
                return LocationEnum.POINT_TOPLEFT;
@@ -63,11 +63,13 @@ package com.ankamagames.berilia.types.graphic
                return LocationEnum.POINT_BOTTOM;
             case "BOTTOMRIGHT":
                return LocationEnum.POINT_BOTTOMRIGHT;
+            default:
+               throw new BeriliaXmlParsingError(param1 + " is not a valid value for a point location");
          }
       }
       
-      public static function convertPointIntToString(nPoint:uint) : String {
-         switch(nPoint)
+      public static function convertPointIntToString(param1:uint) : String {
+         switch(param1)
          {
             case LocationEnum.POINT_TOPLEFT:
                return "TOPLEFT";
@@ -87,6 +89,8 @@ package com.ankamagames.berilia.types.graphic
                return "BOTTOM";
             case LocationEnum.POINT_BOTTOMRIGHT:
                return "BOTTOMRIGHT";
+            default:
+               throw new BeriliaXmlParsingError(param1 + " is not a valid value for a point location");
          }
       }
       
@@ -104,38 +108,38 @@ package com.ankamagames.berilia.types.graphic
       
       public var offsetYType:uint;
       
-      public function setPoint(sPoint:String) : void {
-         this._nPoint = convertPointStringToInt(sPoint);
+      public function setPoint(param1:String) : void {
+         this._nPoint = convertPointStringToInt(param1);
       }
       
       public function getPoint() : uint {
          return this._nPoint;
       }
       
-      public function setRelativePoint(sPoint:String) : void {
-         this._nRelativePoint = convertPointStringToInt(sPoint);
+      public function setRelativePoint(param1:String) : void {
+         this._nRelativePoint = convertPointStringToInt(param1);
       }
       
       public function getRelativePoint() : uint {
          return this._nRelativePoint;
       }
       
-      public function setRelativeTo(sPoint:String) : void {
-         this._sRelativeTo = sPoint;
+      public function setRelativeTo(param1:String) : void {
+         this._sRelativeTo = param1;
       }
       
       public function getRelativeTo() : String {
          return this._sRelativeTo;
       }
       
-      public function setOffsetX(nOffset:Number) : void {
+      public function setOffsetX(param1:Number) : void {
          if(this.offsetXType == LocationTypeEnum.LOCATION_TYPE_ABSOLUTE)
          {
-            this._nOffsetX = Math.floor(nOffset);
+            this._nOffsetX = Math.floor(param1);
          }
          else
          {
-            this._nOffsetX = nOffset;
+            this._nOffsetX = param1;
          }
       }
       
@@ -143,14 +147,14 @@ package com.ankamagames.berilia.types.graphic
          return this._nOffsetX;
       }
       
-      public function setOffsetY(nOffset:Number) : void {
+      public function setOffsetY(param1:Number) : void {
          if(this.offsetYType == LocationTypeEnum.LOCATION_TYPE_ABSOLUTE)
          {
-            this._nOffsetY = Math.floor(nOffset);
+            this._nOffsetY = Math.floor(param1);
          }
          else
          {
-            this._nOffsetY = nOffset;
+            this._nOffsetY = param1;
          }
       }
       
@@ -163,24 +167,24 @@ package com.ankamagames.berilia.types.graphic
       }
       
       public function clone() : GraphicLocation {
-         var tmp:GraphicLocation = new GraphicLocation(this._nPoint,this._nRelativePoint,this._sRelativeTo);
-         tmp.offsetXType = this.offsetXType;
-         tmp.offsetYType = this.offsetYType;
-         tmp.setOffsetX(this.getOffsetX());
-         tmp.setOffsetY(this.getOffsetY());
-         return tmp;
+         var _loc1_:GraphicLocation = new GraphicLocation(this._nPoint,this._nRelativePoint,this._sRelativeTo);
+         _loc1_.offsetXType = this.offsetXType;
+         _loc1_.offsetYType = this.offsetYType;
+         _loc1_.setOffsetX(this.getOffsetX());
+         _loc1_.setOffsetY(this.getOffsetY());
+         return _loc1_;
       }
       
       public function toLocationElement() : LocationELement {
-         var le:LocationELement = new LocationELement();
-         le.offsetXType = this.offsetXType;
-         le.offsetYType = this.offsetYType;
-         le.offsetX = this.getOffsetX();
-         le.offsetY = this.getOffsetY();
-         le.point = this.getPoint();
-         le.relativePoint = this.getRelativePoint();
-         le.relativeTo = this.getRelativeTo();
-         return le;
+         var _loc1_:LocationELement = new LocationELement();
+         _loc1_.offsetXType = this.offsetXType;
+         _loc1_.offsetYType = this.offsetYType;
+         _loc1_.offsetX = this.getOffsetX();
+         _loc1_.offsetY = this.getOffsetY();
+         _loc1_.point = this.getPoint();
+         _loc1_.relativePoint = this.getRelativePoint();
+         _loc1_.relativeTo = this.getRelativeTo();
+         return _loc1_;
       }
    }
 }

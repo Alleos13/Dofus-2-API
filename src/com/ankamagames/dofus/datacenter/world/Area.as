@@ -21,13 +21,13 @@ package com.ankamagames.dofus.datacenter.world
       
       private static var _allAreas:Array;
       
-      public static function getAreaById(id:int) : Area {
-         var area:Area = GameData.getObject(MODULE,id) as Area;
-         if((!area) || (!area.superArea) || (!area.hasVisibleSubAreas))
+      public static function getAreaById(param1:int) : Area {
+         var _loc2_:Area = GameData.getObject(MODULE,param1) as Area;
+         if(!_loc2_ || !_loc2_.superArea || !_loc2_.hasVisibleSubAreas)
          {
             return null;
          }
-         return area;
+         return _loc2_;
       }
       
       public static function getAllArea() : Array {

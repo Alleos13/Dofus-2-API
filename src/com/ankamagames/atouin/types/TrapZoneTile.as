@@ -26,29 +26,29 @@ package com.ankamagames.atouin.types
       
       public var strata:uint = 10;
       
-      public function display(strata:uint=0) : void {
-         EntitiesDisplayManager.getInstance().displayEntity(this,MapPoint.fromCellId(this._cellId),strata);
+      public function display(param1:uint=0) : void {
+         EntitiesDisplayManager.getInstance().displayEntity(this,MapPoint.fromCellId(this._cellId),param1);
          this._displayed = true;
       }
       
-      public function drawStroke(t:Boolean, r:Boolean, b:Boolean, l:Boolean) : void {
+      public function drawStroke(param1:Boolean, param2:Boolean, param3:Boolean, param4:Boolean) : void {
          graphics.lineStyle(3,0);
-         if(!t)
+         if(!param1)
          {
             graphics.moveTo(-AtouinConstants.CELL_HALF_WIDTH,0);
             graphics.lineTo(0,AtouinConstants.CELL_HALF_HEIGHT);
          }
-         if(!b)
+         if(!param3)
          {
             graphics.moveTo(0,-AtouinConstants.CELL_HALF_HEIGHT);
             graphics.lineTo(AtouinConstants.CELL_HALF_WIDTH,0);
          }
-         if(!r)
+         if(!param2)
          {
             graphics.moveTo(-AtouinConstants.CELL_HALF_WIDTH,0);
             graphics.lineTo(0,-AtouinConstants.CELL_HALF_HEIGHT);
          }
-         if(!l)
+         if(!param4)
          {
             graphics.moveTo(AtouinConstants.CELL_HALF_WIDTH,0);
             graphics.lineTo(0,AtouinConstants.CELL_HALF_HEIGHT);
@@ -64,16 +64,16 @@ package com.ankamagames.atouin.types
          return this._displayBehaviors;
       }
       
-      public function set displayBehaviors(value:IDisplayBehavior) : void {
-         this._displayBehaviors = value;
+      public function set displayBehaviors(param1:IDisplayBehavior) : void {
+         this._displayBehaviors = param1;
       }
       
       public function get currentCell() : Point {
          return this._currentCell;
       }
       
-      public function set currentCell(value:Point) : void {
-         this._currentCell = value;
+      public function set currentCell(param1:Point) : void {
+         this._currentCell = param1;
       }
       
       public function get displayed() : Boolean {
@@ -88,8 +88,8 @@ package com.ankamagames.atouin.types
          return this._cellId;
       }
       
-      public function set cellId(value:uint) : void {
-         this._cellId = value;
+      public function set cellId(param1:uint) : void {
+         this._cellId = param1;
       }
    }
 }

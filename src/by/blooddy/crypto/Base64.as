@@ -18,7 +18,7 @@ package by.blooddy.crypto
          _loc5_.writeUTFBytes("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/");
          _loc5_.writeBytes(param1);
          var _loc6_:uint = _loc3_ % 3;
-         var _loc7_:uint = (64) + _loc3_ - _loc6_ - 1;
+         var _loc7_:uint = (64) + _loc3_ - _loc6_-1;
          var _loc8_:uint = ((_loc3_ / 3) << 2) + (_loc6_ > 0?4:0);
          _loc5_.length = _loc5_.length + (_loc8_ + (param2?_loc8_ / 76:0));
          if(_loc5_.length < ApplicationDomain.MIN_DOMAIN_MEMORY_LENGTH)
@@ -55,15 +55,14 @@ package by.blooddy.crypto
          var _loc2_:uint = param1.length * 0.75;
          var _loc3_:ByteArray = ApplicationDomain.currentDomain.domainMemory;
          var _loc4_:ByteArray = new ByteArray();
-         _loc4_.writeUTFBytes("");
          _loc4_.writeUTFBytes(param1);
-         var _loc5_:uint = _loc4_.length - 4 - 1;
+         var _loc5_:uint = _loc4_.length - 4-1;
          if(_loc4_.length < ApplicationDomain.MIN_DOMAIN_MEMORY_LENGTH)
          {
             _loc4_.length = ApplicationDomain.MIN_DOMAIN_MEMORY_LENGTH;
          }
          ApplicationDomain.currentDomain.domainMemory = _loc4_;
-         var _loc6_:Boolean = op_li8(204) /*Alchemy*/ == 10;
+         var _loc6_:* = op_li8(204) /*Alchemy*/ == 10;
          var _loc7_:uint = 127;
          var _loc8_:uint = 127;
          while(_loc7_ < _loc5_)

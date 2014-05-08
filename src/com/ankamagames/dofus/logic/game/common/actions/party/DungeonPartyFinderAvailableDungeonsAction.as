@@ -10,8 +10,8 @@ package com.ankamagames.dofus.logic.game.common.actions.party
       }
       
       public static function create() : DungeonPartyFinderAvailableDungeonsAction {
-         var a:DungeonPartyFinderAvailableDungeonsAction = new DungeonPartyFinderAvailableDungeonsAction();
-         return a;
+         var _loc1_:DungeonPartyFinderAvailableDungeonsAction = new DungeonPartyFinderAvailableDungeonsAction();
+         return _loc1_;
       }
    }
 }

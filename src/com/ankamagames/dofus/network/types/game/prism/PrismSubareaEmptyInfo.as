@@ -21,9 +21,9 @@ package com.ankamagames.dofus.network.types.game.prism
          return 438;
       }
       
-      public function initPrismSubareaEmptyInfo(subAreaId:uint=0, allianceId:uint=0) : PrismSubareaEmptyInfo {
-         this.subAreaId = subAreaId;
-         this.allianceId = allianceId;
+      public function initPrismSubareaEmptyInfo(param1:uint=0, param2:uint=0) : PrismSubareaEmptyInfo {
+         this.subAreaId = param1;
+         this.allianceId = param2;
          return this;
       }
       
@@ -32,43 +32,43 @@ package com.ankamagames.dofus.network.types.game.prism
          this.allianceId = 0;
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PrismSubareaEmptyInfo(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_PrismSubareaEmptyInfo(param1);
       }
       
-      public function serializeAs_PrismSubareaEmptyInfo(output:IDataOutput) : void {
+      public function serializeAs_PrismSubareaEmptyInfo(param1:IDataOutput) : void {
          if(this.subAreaId < 0)
          {
             throw new Error("Forbidden value (" + this.subAreaId + ") on element subAreaId.");
          }
          else
          {
-            output.writeShort(this.subAreaId);
+            param1.writeShort(this.subAreaId);
             if(this.allianceId < 0)
             {
                throw new Error("Forbidden value (" + this.allianceId + ") on element allianceId.");
             }
             else
             {
-               output.writeInt(this.allianceId);
+               param1.writeInt(this.allianceId);
                return;
             }
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PrismSubareaEmptyInfo(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_PrismSubareaEmptyInfo(param1);
       }
       
-      public function deserializeAs_PrismSubareaEmptyInfo(input:IDataInput) : void {
-         this.subAreaId = input.readShort();
+      public function deserializeAs_PrismSubareaEmptyInfo(param1:IDataInput) : void {
+         this.subAreaId = param1.readShort();
          if(this.subAreaId < 0)
          {
             throw new Error("Forbidden value (" + this.subAreaId + ") on element of PrismSubareaEmptyInfo.subAreaId.");
          }
          else
          {
-            this.allianceId = input.readInt();
+            this.allianceId = param1.readInt();
             if(this.allianceId < 0)
             {
                throw new Error("Forbidden value (" + this.allianceId + ") on element of PrismSubareaEmptyInfo.allianceId.");

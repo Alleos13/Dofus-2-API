@@ -21,18 +21,15 @@ package com.ankamagames.dofus.network.types.game.context.fight
       
       public var teamTypeId:uint = 0;
       
-      public var nbWaves:uint = 0;
-      
       public function getTypeId() : uint {
          return 116;
       }
       
-      public function initAbstractFightTeamInformations(teamId:uint=2, leaderId:int=0, teamSide:int=0, teamTypeId:uint=0, nbWaves:uint=0) : AbstractFightTeamInformations {
-         this.teamId = teamId;
-         this.leaderId = leaderId;
-         this.teamSide = teamSide;
-         this.teamTypeId = teamTypeId;
-         this.nbWaves = nbWaves;
+      public function initAbstractFightTeamInformations(param1:uint=2, param2:int=0, param3:int=0, param4:uint=0) : AbstractFightTeamInformations {
+         this.teamId = param1;
+         this.leaderId = param2;
+         this.teamSide = param3;
+         this.teamTypeId = param4;
          return this;
       }
       
@@ -41,59 +38,41 @@ package com.ankamagames.dofus.network.types.game.context.fight
          this.leaderId = 0;
          this.teamSide = 0;
          this.teamTypeId = 0;
-         this.nbWaves = 0;
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AbstractFightTeamInformations(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_AbstractFightTeamInformations(param1);
       }
       
-      public function serializeAs_AbstractFightTeamInformations(output:IDataOutput) : void {
-         output.writeByte(this.teamId);
-         output.writeInt(this.leaderId);
-         output.writeByte(this.teamSide);
-         output.writeByte(this.teamTypeId);
-         if((this.nbWaves < 0) || (this.nbWaves > 4.294967295E9))
-         {
-            throw new Error("Forbidden value (" + this.nbWaves + ") on element nbWaves.");
-         }
-         else
-         {
-            output.writeUnsignedInt(this.nbWaves);
-            return;
-         }
+      public function serializeAs_AbstractFightTeamInformations(param1:IDataOutput) : void {
+         param1.writeByte(this.teamId);
+         param1.writeInt(this.leaderId);
+         param1.writeByte(this.teamSide);
+         param1.writeByte(this.teamTypeId);
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AbstractFightTeamInformations(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_AbstractFightTeamInformations(param1);
       }
       
-      public function deserializeAs_AbstractFightTeamInformations(input:IDataInput) : void {
-         this.teamId = input.readByte();
+      public function deserializeAs_AbstractFightTeamInformations(param1:IDataInput) : void {
+         this.teamId = param1.readByte();
          if(this.teamId < 0)
          {
             throw new Error("Forbidden value (" + this.teamId + ") on element of AbstractFightTeamInformations.teamId.");
          }
          else
          {
-            this.leaderId = input.readInt();
-            this.teamSide = input.readByte();
-            this.teamTypeId = input.readByte();
+            this.leaderId = param1.readInt();
+            this.teamSide = param1.readByte();
+            this.teamTypeId = param1.readByte();
             if(this.teamTypeId < 0)
             {
                throw new Error("Forbidden value (" + this.teamTypeId + ") on element of AbstractFightTeamInformations.teamTypeId.");
             }
             else
             {
-               this.nbWaves = input.readUnsignedInt();
-               if((this.nbWaves < 0) || (this.nbWaves > 4.294967295E9))
-               {
-                  throw new Error("Forbidden value (" + this.nbWaves + ") on element of AbstractFightTeamInformations.nbWaves.");
-               }
-               else
-               {
-                  return;
-               }
+               return;
             }
          }
       }

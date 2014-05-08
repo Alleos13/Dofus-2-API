@@ -29,9 +29,9 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          return 6272;
       }
       
-      public function initExchangeBidHouseBuyResultMessage(uid:uint=0, bought:Boolean=false) : ExchangeBidHouseBuyResultMessage {
-         this.uid = uid;
-         this.bought = bought;
+      public function initExchangeBidHouseBuyResultMessage(param1:uint=0, param2:Boolean=false) : ExchangeBidHouseBuyResultMessage {
+         this.uid = param1;
+         this.bought = param2;
          this._isInitialized = true;
          return this;
       }
@@ -42,46 +42,46 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeBidHouseBuyResultMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_ExchangeBidHouseBuyResultMessage(param1);
       }
       
-      public function serializeAs_ExchangeBidHouseBuyResultMessage(output:IDataOutput) : void {
+      public function serializeAs_ExchangeBidHouseBuyResultMessage(param1:IDataOutput) : void {
          if(this.uid < 0)
          {
             throw new Error("Forbidden value (" + this.uid + ") on element uid.");
          }
          else
          {
-            output.writeInt(this.uid);
-            output.writeBoolean(this.bought);
+            param1.writeInt(this.uid);
+            param1.writeBoolean(this.bought);
             return;
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeBidHouseBuyResultMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_ExchangeBidHouseBuyResultMessage(param1);
       }
       
-      public function deserializeAs_ExchangeBidHouseBuyResultMessage(input:IDataInput) : void {
-         this.uid = input.readInt();
+      public function deserializeAs_ExchangeBidHouseBuyResultMessage(param1:IDataInput) : void {
+         this.uid = param1.readInt();
          if(this.uid < 0)
          {
             throw new Error("Forbidden value (" + this.uid + ") on element of ExchangeBidHouseBuyResultMessage.uid.");
          }
          else
          {
-            this.bought = input.readBoolean();
+            this.bought = param1.readBoolean();
             return;
          }
       }

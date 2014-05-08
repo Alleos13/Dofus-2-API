@@ -5,9 +5,9 @@ package com.ankamagames.berilia.types.event
    public class TemplateLoadedEvent extends Event
    {
       
-      public function TemplateLoadedEvent(templateUrl:String) {
+      public function TemplateLoadedEvent(param1:String) {
          super(EVENT_TEMPLATE_LOADED,false,false);
-         this._templateUrl = templateUrl;
+         this._templateUrl = param1;
       }
       
       public static const EVENT_TEMPLATE_LOADED:String = "onTemplateLoadedEvent";

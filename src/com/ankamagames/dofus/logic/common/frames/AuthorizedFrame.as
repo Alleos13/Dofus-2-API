@@ -63,9 +63,9 @@ package com.ankamagames.dofus.logic.common.frames
          return true;
       }
       
-      public function set hasRights(b:Boolean) : void {
-         this._hasRights = b;
-         if(b)
+      public function set hasRights(param1:Boolean) : void {
+         this._hasRights = param1;
+         if(param1)
          {
             HyperlinkFactory.registerProtocol("admin",HyperlinkAdminManager.addCmd);
             ConsolesManager.registerConsole("debug",new ConsoleHandler(Kernel.getWorker()),new DebugConsoleInstructionRegistar());
@@ -80,20 +80,21 @@ package com.ankamagames.dofus.logic.common.frames
          return this._isFantomas;
       }
       
-       function registerMessages() : void {
+      override protected function registerMessages() : void {
          register(ConsoleMessage,this.onConsoleMessage);
          register(AuthorizedCommandAction,this.onAuthorizedCommandAction);
          register(ConsoleOutputMessage,this.onConsoleOutputMessage);
          register(QuitGameAction,this.onQuitGameAction);
       }
       
-      function onConsoleMessage(cmsg:ConsoleMessage) : Boolean {
-         ConsolesManager.getConsole("debug").output(cmsg.content,cmsg.type);
+      private function onConsoleMessage(param1:ConsoleMessage) : Boolean {
+         ConsolesManager.getConsole("debug").output(param1.content,param1.type);
          return true;
       }
       
-      function onAuthorizedCommandAction(aca:AuthorizedCommandAction) : Boolean {
+      private function onAuthorizedCommandAction(param1:AuthorizedCommandAction) : Boolean {
          var acmsg:AdminCommandMessage = null;
+         var aca:AuthorizedCommandAction = param1;
          if(aca.command.substr(0,1) == "/")
          {
             try
@@ -111,7 +112,7 @@ package com.ankamagames.dofus.logic.common.frames
             {
                if(this._hasRights)
                {
-                  if((aca.command.length >= 1) && (aca.command.length <= ProtocolConstantsEnum.MAX_CHAT_LEN))
+                  if(aca.command.length >= 1 && aca.command.length <= ProtocolConstantsEnum.MAX_CHAT_LEN)
                   {
                      acmsg = new AdminCommandMessage();
                      acmsg.initAdminCommandMessage(aca.command);
@@ -135,23 +136,23 @@ package com.ankamagames.dofus.logic.common.frames
          return true;
       }
       
-      function onConsoleOutputMessage(comsg:ConsoleOutputMessage) : Boolean {
-         if(comsg.consoleId != "debug")
+      private function onConsoleOutputMessage(param1:ConsoleOutputMessage) : Boolean {
+         if(param1.consoleId != "debug")
          {
             return false;
          }
-         KernelEventsManager.getInstance().processCallback(HookList.ConsoleOutput,comsg.text,comsg.type);
+         KernelEventsManager.getInstance().processCallback(HookList.ConsoleOutput,param1.text,param1.type);
          return true;
       }
       
-      function onQuitGameAction(qga:QuitGameAction) : Boolean {
+      private function onQuitGameAction(param1:QuitGameAction) : Boolean {
          Dofus.getInstance().quit();
          return true;
       }
       
-      public function objectLoaded(e:ResourceLoadedEvent) : void {
-         var uplauncher:XML = new XML(e.resource);
-         if(uplauncher.Debug.fantomas.contains("1"))
+      public function objectLoaded(param1:ResourceLoadedEvent) : void {
+         var _loc2_:XML = new XML(param1.resource);
+         if(_loc2_.Debug.fantomas.contains("1"))
          {
             this._isFantomas = true;
          }
@@ -161,8 +162,8 @@ package com.ankamagames.dofus.logic.common.frames
          }
       }
       
-      public function objectLoadedFailed(e:ResourceErrorEvent) : void {
-         _log.debug("Uplauncher loading failed : " + e.uri + ", " + e.errorMsg);
+      public function objectLoadedFailed(param1:ResourceErrorEvent) : void {
+         _log.debug("Uplauncher loading failed : " + param1.uri + ", " + param1.errorMsg);
       }
    }
 }

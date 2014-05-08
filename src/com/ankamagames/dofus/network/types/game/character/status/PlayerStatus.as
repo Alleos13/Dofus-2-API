@@ -19,8 +19,8 @@ package com.ankamagames.dofus.network.types.game.character.status
          return 415;
       }
       
-      public function initPlayerStatus(statusId:uint=1) : PlayerStatus {
-         this.statusId = statusId;
+      public function initPlayerStatus(param1:uint=1) : PlayerStatus {
+         this.statusId = param1;
          return this;
       }
       
@@ -28,20 +28,20 @@ package com.ankamagames.dofus.network.types.game.character.status
          this.statusId = 1;
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PlayerStatus(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_PlayerStatus(param1);
       }
       
-      public function serializeAs_PlayerStatus(output:IDataOutput) : void {
-         output.writeByte(this.statusId);
+      public function serializeAs_PlayerStatus(param1:IDataOutput) : void {
+         param1.writeByte(this.statusId);
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PlayerStatus(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_PlayerStatus(param1);
       }
       
-      public function deserializeAs_PlayerStatus(input:IDataInput) : void {
-         this.statusId = input.readByte();
+      public function deserializeAs_PlayerStatus(param1:IDataInput) : void {
+         this.statusId = param1.readByte();
          if(this.statusId < 0)
          {
             throw new Error("Forbidden value (" + this.statusId + ") on element of PlayerStatus.statusId.");

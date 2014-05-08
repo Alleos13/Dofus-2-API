@@ -53,29 +53,29 @@ package com.ankamagames.dofus.datacenter.world
       
       private static var _mapPositions:Dictionary;
       
-      public static function getMapPositionById(id:int) : MapPosition {
-         var mapPositions:Array = null;
-         var mapPos:MapPosition = null;
+      public static function getMapPositionById(param1:int) : MapPosition {
+         var _loc2_:Array = null;
+         var _loc3_:MapPosition = null;
          if(!_mapPositions)
          {
             _mapPositions = new Dictionary();
-            mapPositions = getMapPositions();
-            for each (_mapPositions[mapPos.id] in mapPositions)
+            _loc2_ = getMapPositions();
+            for each (_mapPositions[_loc3_.id] in _loc2_)
             {
             }
          }
-         return _mapPositions[id];
+         return _mapPositions[param1];
       }
       
       public static function getMapPositions() : Array {
          return GameData.getObjects(MODULE);
       }
       
-      public static function getMapIdByCoord(x:int, y:int) : Vector.<int> {
-         var mc:MapCoordinates = MapCoordinates.getMapCoordinatesByCoords(x,y);
-         if(mc)
+      public static function getMapIdByCoord(param1:int, param2:int) : Vector.<int> {
+         var _loc3_:MapCoordinates = MapCoordinates.getMapCoordinatesByCoords(param1,param2);
+         if(_loc3_)
          {
-            return mc.mapIds;
+            return _loc3_.mapIds;
          }
          return null;
       }

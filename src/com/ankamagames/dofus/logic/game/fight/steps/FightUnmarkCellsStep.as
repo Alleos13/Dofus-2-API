@@ -10,9 +10,9 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightUnmarkCellsStep extends AbstractSequencable implements IFightStep
    {
       
-      public function FightUnmarkCellsStep(markId:int) {
+      public function FightUnmarkCellsStep(param1:int) {
          super();
-         this._markId = markId;
+         this._markId = param1;
       }
       
       private var _markId:int;
@@ -22,25 +22,27 @@ package com.ankamagames.dofus.logic.game.fight.steps
       }
       
       override public function start() : void {
-         var mi:MarkInstance = MarkedCellsManager.getInstance().getMarkDatas(this._markId);
-         if(!mi)
+         var _loc1_:MarkInstance = MarkedCellsManager.getInstance().getMarkDatas(this._markId);
+         if(!_loc1_)
          {
             _log.error("Trying to remove an unknown mark (" + this._markId + "). Aborting.");
             executeCallbacks();
             return;
          }
          MarkedCellsManager.getInstance().removeGlyph(this._markId);
-         var evt:String = FightEventEnum.UNKNOWN_FIGHT_EVENT;
-         switch(mi.markType)
+         var _loc2_:String = FightEventEnum.UNKNOWN_FIGHT_EVENT;
+         switch(_loc1_.markType)
          {
             case GameActionMarkTypeEnum.GLYPH:
-               evt = FightEventEnum.GLYPH_DISAPPEARED;
+               _loc2_ = FightEventEnum.GLYPH_DISAPPEARED;
                break;
             case GameActionMarkTypeEnum.TRAP:
-               evt = FightEventEnum.TRAP_DISAPPEARED;
+               _loc2_ = FightEventEnum.TRAP_DISAPPEARED;
                break;
+            default:
+               _log.warn("Unknown mark type (" + _loc1_.markType + ").");
          }
-         FightEventsHelper.sendFightEvent(evt,[mi.associatedSpell.id],0,castingSpellId);
+         FightEventsHelper.sendFightEvent(_loc2_,[_loc1_.associatedSpell.id],0,castingSpellId);
          MarkedCellsManager.getInstance().removeMark(this._markId);
          executeCallbacks();
       }

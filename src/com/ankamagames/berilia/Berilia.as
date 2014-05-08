@@ -126,8 +126,8 @@ package com.ankamagames.berilia
          return this._handler;
       }
       
-      public function set handler(value:MessageHandler) : void {
-         this._handler = value;
+      public function set handler(param1:MessageHandler) : void {
+         this._handler = param1;
       }
       
       public function get docMain() : Sprite {
@@ -178,8 +178,8 @@ package com.ankamagames.berilia
          return this._globalScale;
       }
       
-      public function set scale(nScale:Number) : void {
-         this._globalScale = nScale;
+      public function set scale(param1:Number) : void {
+         this._globalScale = param1;
          this.updateUiScale();
       }
       
@@ -191,8 +191,8 @@ package com.ankamagames.berilia
          return this._verboseException;
       }
       
-      public function set verboseException(v:Boolean) : void {
-         this._verboseException = v;
+      public function set verboseException(param1:Boolean) : void {
+         this._verboseException = param1;
       }
       
       public function get UISoundListeners() : Array {
@@ -211,35 +211,35 @@ package com.ankamagames.berilia
          return this._checkModuleAuthority;
       }
       
-      public function setDisplayOptions(bopt:BeriliaOptions) : void {
-         this._bOptions = bopt;
+      public function setDisplayOptions(param1:BeriliaOptions) : void {
+         this._bOptions = param1;
       }
       
-      public function addUIListener(pListener:IInterfaceListener) : void {
+      public function addUIListener(param1:IInterfaceListener) : void {
          FpsManager.getInstance().startTracking("ui",16525567);
-         var index:int = this._UISoundListeners.indexOf(pListener);
-         if(index == -1)
+         var _loc2_:int = this._UISoundListeners.indexOf(param1);
+         if(_loc2_ == -1)
          {
-            this._UISoundListeners.push(pListener);
+            this._UISoundListeners.push(param1);
          }
          FpsManager.getInstance().stopTracking("ui");
       }
       
-      public function removeUIListener(pListener:IInterfaceListener) : void {
+      public function removeUIListener(param1:IInterfaceListener) : void {
          FpsManager.getInstance().startTracking("ui",16525567);
-         var index:int = this._UISoundListeners.indexOf(pListener);
-         if(index >= 0)
+         var _loc2_:int = this._UISoundListeners.indexOf(param1);
+         if(_loc2_ >= 0)
          {
-            this._UISoundListeners.splice(index,1);
+            this._UISoundListeners.splice(_loc2_,1);
          }
          FpsManager.getInstance().stopTracking("ui");
       }
       
-      public function init(docContainer:Sprite, verboseException:Boolean, applicationVersion:uint, checkModuleAuthority:Boolean=true) : void {
-         this._docMain = docContainer;
+      public function init(param1:Sprite, param2:Boolean, param3:uint, param4:Boolean=true) : void {
+         this._docMain = param1;
          this._docMain.mouseEnabled = false;
-         this._applicationVersion = applicationVersion;
-         this._checkModuleAuthority = checkModuleAuthority;
+         this._applicationVersion = param3;
+         this._checkModuleAuthority = param4;
          this._docStrataWorld = new Sprite();
          this._docStrataWorld.name = "strataWorld";
          this._docStrataLow = new Sprite();
@@ -280,44 +280,52 @@ package com.ankamagames.berilia
       }
       
       public function reset() : void {
-         var uiName:String = null;
-         var tmpUiNameList:Array = null;
-         var n:String = null;
-         var m:UiModule = null;
-         var ui:UiRootContainer = null;
+         var _loc1_:String = null;
+         var _loc2_:Array = null;
+         var _loc3_:String = null;
+         var _loc4_:UiModule = null;
+         var _loc5_:UiRootContainer = null;
          TimeoutHTMLLoader.resetCache();
          FpsManager.getInstance().startTracking("ui",16525567);
-         for (uiName in _uiCache)
+         for (_loc1_ in _uiCache)
          {
-            ui = _uiCache[uiName];
-            this._aUiList[uiName] = ui;
-            ui.cached = false;
+            _loc5_ = _uiCache[_loc1_];
+            this._aUiList[_loc1_] = _loc5_;
+            _loc5_.cached = false;
          }
          _uiCache = new Dictionary();
-         tmpUiNameList = [];
-         for (n in this._aUiList)
+         _loc2_ = [];
+         for (_loc3_ in this._aUiList)
          {
-            tmpUiNameList.push(n);
+            _loc2_.push(_loc3_);
          }
-         for each (n in tmpUiNameList)
+         for each (_loc3_ in _loc2_)
          {
-            this.unloadUi(n);
+            this.unloadUi(_loc3_);
          }
-         for each (m in UiModuleManager.getInstance().getModules())
+         for each (_loc4_ in UiModuleManager.getInstance().getModules())
          {
-            KernelEventsManager.getInstance().removeEvent("__module_" + m.id);
-            BindsManager.getInstance().removeEvent("__module_" + m.id);
+            KernelEventsManager.getInstance().removeEvent("__module_" + _loc4_.id);
+            BindsManager.getInstance().removeEvent("__module_" + _loc4_.id);
          }
          UiGroupManager.getInstance().destroy();
          FpsManager.getInstance().stopTracking("ui");
       }
       
-      public function loadUi(uiModule:UiModule, uiData:UiData, sName:String, properties:*=null, bReplace:Boolean=false, nStrata:int=1, hide:Boolean=false, cacheName:String=null) : UiRootContainer {
+      public function loadUi(param1:UiModule, param2:UiData, param3:String, param4:*=null, param5:Boolean=false, param6:int=1, param7:Boolean=false, param8:String=null) : UiRootContainer {
          var container:UiRootContainer = null;
          var highestDepth:int = 0;
          var uiContainer:Sprite = null;
          var i:uint = 0;
          var t:int = 0;
+         var uiModule:UiModule = param1;
+         var uiData:UiData = param2;
+         var sName:String = param3;
+         var properties:* = param4;
+         var bReplace:Boolean = param5;
+         var nStrata:int = param6;
+         var hide:Boolean = param7;
+         var cacheName:String = param8;
          FpsManager.getInstance().startTracking("ui",16525567);
          if(cacheName)
          {
@@ -331,7 +339,7 @@ package com.ankamagames.berilia
                i = 0;
                while(i < uiContainer.numChildren)
                {
-                  if((uiContainer.getChildAt(i) is UiRootContainer) && (UiRootContainer(uiContainer.getChildAt(i)).depth > highestDepth))
+                  if(uiContainer.getChildAt(i) is UiRootContainer && UiRootContainer(uiContainer.getChildAt(i)).depth > highestDepth)
                   {
                      highestDepth = UiRootContainer(uiContainer.getChildAt(i)).depth;
                   }
@@ -371,7 +379,7 @@ package com.ankamagames.berilia
          i = 0;
          while(i < uiContainer.numChildren)
          {
-            if((uiContainer.getChildAt(i) is UiRootContainer) && (UiRootContainer(uiContainer.getChildAt(i)).depth > highestDepth))
+            if(uiContainer.getChildAt(i) is UiRootContainer && UiRootContainer(uiContainer.getChildAt(i)).depth > highestDepth)
             {
                highestDepth = UiRootContainer(uiContainer.getChildAt(i)).depth;
             }
@@ -388,7 +396,7 @@ package com.ankamagames.berilia
             container.cached = true;
             _uiCache[cacheName] = container;
          }
-         if((!container.parent) && (!hide))
+         if(!container.parent && !hide)
          {
             DisplayObjectContainer(this._docMain.getChildAt(nStrata + 1)).addChild(container);
          }
@@ -397,48 +405,48 @@ package com.ankamagames.berilia
          return container;
       }
       
-      public function giveFocus(container:UiRootContainer) : void {
-         var onTop:* = false;
-         var ui:Object = null;
-         if(container.strata == 1)
+      public function giveFocus(param1:UiRootContainer) : void {
+         var _loc2_:* = false;
+         var _loc3_:Object = null;
+         if(param1.strata == 1)
          {
-            onTop = true;
-            for each (ui in this._aUiList)
+            _loc2_ = true;
+            for each (_loc3_ in this._aUiList)
             {
-               if((ui.visible) && (ui.depth > container.depth) && (ui.strata == 1))
+               if((_loc3_.visible) && (_loc3_.depth > param1.depth) && _loc3_.strata == 1)
                {
-                  onTop = false;
+                  _loc2_ = false;
                }
             }
-            if((container.visible) && (onTop))
+            if((param1.visible) && (_loc2_))
             {
-               StageShareManager.stage.focus = container;
+               StageShareManager.stage.focus = param1;
             }
          }
       }
       
-      public function loadUiInside(uiData:UiData, sName:String, suiContainer:UiRootContainer, properties:*=null, bReplace:Boolean=false) : UiRootContainer {
-         if(bReplace)
+      public function loadUiInside(param1:UiData, param2:String, param3:UiRootContainer, param4:*=null, param5:Boolean=false) : UiRootContainer {
+         if(param5)
          {
-            this.unloadUi(sName);
+            this.unloadUi(param2);
          }
-         if(this.isRegisteredUiName(sName))
+         if(this.isRegisteredUiName(param2))
          {
-            throw new BeriliaError(sName + " is already used by an other UI");
+            throw new BeriliaError(param2 + " is already used by an other UI");
          }
          else
          {
-            dispatchEvent(new UiRenderAskEvent(sName,uiData));
-            suiContainer.name = sName;
-            this._aLoadingUi[sName] = true;
-            this._aUiList[sName] = suiContainer;
-            suiContainer.addEventListener(UiRenderEvent.UIRenderComplete,this.onUiLoaded);
-            UiRenderManager.getInstance().loadUi(uiData,suiContainer,properties);
-            return suiContainer;
+            dispatchEvent(new UiRenderAskEvent(param2,param1));
+            param3.name = param2;
+            this._aLoadingUi[param2] = true;
+            this._aUiList[param2] = param3;
+            param3.addEventListener(UiRenderEvent.UIRenderComplete,this.onUiLoaded);
+            UiRenderManager.getInstance().loadUi(param1,param3,param4);
+            return param3;
          }
       }
       
-      public function unloadUi(sName:String, forceUnload:Boolean=false) : Boolean {
+      public function unloadUi(param1:String, param2:Boolean=false) : Boolean {
          var ui:UiRootContainer = null;
          var j:Object = null;
          var linkCursor:LinkedCursorData = null;
@@ -450,6 +458,8 @@ package com.ankamagames.berilia
          var holder:Object = null;
          var rootContainer:UiRootContainer = null;
          var u:Object = null;
+         var sName:String = param1;
+         var forceUnload:Boolean = param2;
          var startTimer:int = getTimer();
          FpsManager.getInstance().startTracking("ui",16525567);
          dispatchEvent(new UiUnloadEvent(UiUnloadEvent.UNLOAD_UI_STARTED,sName));
@@ -461,7 +471,7 @@ package com.ankamagames.berilia
          var obj:DynamicSecureObject = new DynamicSecureObject();
          obj.cancel = false;
          KernelEventsManager.getInstance().processCallback(BeriliaHookList.UiUnloading,sName,obj);
-         if((!forceUnload) && (obj.cancel))
+         if(!forceUnload && (obj.cancel))
          {
             return false;
          }
@@ -485,7 +495,7 @@ package com.ankamagames.berilia
                   ErrorManager.addError("Une erreur est survenu dans la fonction unload() de l\'interface " + ui.name + " du module " + (ui.uiModule?ui.uiModule.id:"???"));
                }
             }
-            if((ui.transmitFocus) && ((!StageShareManager.stage.focus) || (!((StageShareManager.stage.focus is TextField) || (StageShareManager.stage.focus is ChatTextContainer)))))
+            if((ui.transmitFocus) && (!StageShareManager.stage.focus || !(StageShareManager.stage.focus is TextField || StageShareManager.stage.focus is ChatTextContainer)))
             {
                StageShareManager.stage.focus = topUi == null?StageShareManager.stage:InteractiveObject(topUi);
             }
@@ -497,7 +507,7 @@ package com.ankamagames.berilia
          var doIt:DisplayObject = StageShareManager.stage.focus;
          while(doIt)
          {
-            if((doIt is UiRootContainer) && (doIt == ui))
+            if(doIt is UiRootContainer && doIt == ui)
             {
                StageShareManager.stage.focus = null;
                break;
@@ -540,7 +550,7 @@ package com.ankamagames.berilia
          }
          for (j in UIEventManager.getInstance().instances)
          {
-            if((!(j == "null")) && (UIEventManager.getInstance().instances[j].instance.getUi() == ui))
+            if(!(j == "null") && UIEventManager.getInstance().instances[j].instance.getUi() == ui)
             {
                UIEventManager.getInstance().instances[j] = null;
                delete UIEventManager.getInstance().instances[[j]];
@@ -586,26 +596,26 @@ package com.ankamagames.berilia
          delete this._aUiList[[sName]];
          this.updateHighestModalDepth();
          topUi = null;
-         if((ui.strata > 0) && (ui.strata < 4))
+         if(ui.strata > 0 && ui.strata < 4)
          {
             for each (u in this._aUiList)
             {
                if(topUi == null)
                {
-                  if((u.strata == 1) && (u.visible))
+                  if(u.strata == 1 && (u.visible))
                   {
                      topUi = u;
                   }
                }
                else
                {
-                  if((u.depth > topUi.depth) && (u.strata == 1) && (u.visible))
+                  if(u.depth > topUi.depth && u.strata == 1 && (u.visible))
                   {
                      topUi = u;
                   }
                }
             }
-            if((!StageShareManager.stage.focus) || (ui.transmitFocus) && (!((StageShareManager.stage.focus is TextField) || (StageShareManager.stage.focus is ChatTextContainer))))
+            if(!StageShareManager.stage.focus || (ui.transmitFocus) && !(StageShareManager.stage.focus is TextField || StageShareManager.stage.focus is ChatTextContainer))
             {
                StageShareManager.stage.focus = topUi == null?StageShareManager.stage:InteractiveObject(topUi);
             }
@@ -618,109 +628,109 @@ package com.ankamagames.berilia
          return true;
       }
       
-      public function unloadUiEvents(sName:String, useCache:Boolean=false) : void {
-         var currObj:Object = null;
-         var i:Object = null;
-         var j:Object = null;
+      public function unloadUiEvents(param1:String, param2:Boolean=false) : void {
+         var _loc3_:Object = null;
+         var _loc4_:Object = null;
+         var _loc5_:Object = null;
          FpsManager.getInstance().startTracking("ui",16525567);
-         if(this._aUiList[sName] == null)
+         if(this._aUiList[param1] == null)
          {
             return;
          }
-         for (i in this._aUiList[sName].getElements())
+         for (_loc4_ in this._aUiList[param1].getElements())
          {
-            currObj = this._aUiList[sName].getElements()[i];
-            if(currObj is GraphicContainer)
+            _loc3_ = this._aUiList[param1].getElements()[_loc4_];
+            if(_loc3_ is GraphicContainer)
             {
-               this._aContainerList[currObj["name"]] = null;
-               delete this._aContainerList[[currObj["name"]]];
+               this._aContainerList[_loc3_["name"]] = null;
+               delete this._aContainerList[[_loc3_["name"]]];
             }
-            if(!useCache)
+            if(!param2)
             {
-               this._aUiList[sName].getElements()[i] = null;
-               delete this._aUiList[sName].getElements()[[i]];
+               this._aUiList[param1].getElements()[_loc4_] = null;
+               delete this._aUiList[param1].getElements()[[_loc4_]];
             }
          }
-         KernelEventsManager.getInstance().removeEvent(sName);
-         BindsManager.getInstance().removeEvent(sName);
-         for (j in UIEventManager.getInstance().instances)
+         KernelEventsManager.getInstance().removeEvent(param1);
+         BindsManager.getInstance().removeEvent(param1);
+         for (_loc5_ in UIEventManager.getInstance().instances)
          {
-            if((!(j == null) || !(j == "null")) && (UIEventManager.getInstance().instances[j]) && (UIEventManager.getInstance().instances[j].instance) && (UIEventManager.getInstance().instances[j].instance.topParent) && (UIEventManager.getInstance().instances[j].instance.topParent.name == sName))
+            if((!(_loc5_ == null) || !(_loc5_ == "null")) && (UIEventManager.getInstance().instances[_loc5_]) && (UIEventManager.getInstance().instances[_loc5_].instance) && (UIEventManager.getInstance().instances[_loc5_].instance.topParent) && UIEventManager.getInstance().instances[_loc5_].instance.topParent.name == param1)
             {
-               if(UIEventManager.getInstance().instances[j].instance.topParent.name == sName)
+               if(UIEventManager.getInstance().instances[_loc5_].instance.topParent.name == param1)
                {
-                  UIEventManager.getInstance().instances[j] = null;
-                  delete UIEventManager.getInstance().instances[[j]];
+                  UIEventManager.getInstance().instances[_loc5_] = null;
+                  delete UIEventManager.getInstance().instances[[_loc5_]];
                }
             }
          }
          FpsManager.getInstance().stopTracking("ui");
       }
       
-      public function getUi(sName:String) : UiRootContainer {
-         return this._aUiList[sName];
+      public function getUi(param1:String) : UiRootContainer {
+         return this._aUiList[param1];
       }
       
-      public function isUiDisplayed(sName:String) : Boolean {
-         return !(this._aUiList[sName] == null);
+      public function isUiDisplayed(param1:String) : Boolean {
+         return !(this._aUiList[param1] == null);
       }
       
       public function updateUiRender() : void {
-         var i:String = null;
-         for (i in this.uiList)
+         var _loc1_:String = null;
+         for (_loc1_ in this.uiList)
          {
-            UiRootContainer(this.uiList[i]).render();
+            UiRootContainer(this.uiList[_loc1_]).render();
          }
       }
       
       public function updateUiScale() : void {
-         var ui:UiRootContainer = null;
-         var i:String = null;
-         for (i in this.uiList)
+         var _loc1_:UiRootContainer = null;
+         var _loc2_:String = null;
+         for (_loc2_ in this.uiList)
          {
-            ui = UiRootContainer(this.uiList[i]);
-            if(ui.scalable)
+            _loc1_ = UiRootContainer(this.uiList[_loc2_]);
+            if(_loc1_.scalable)
             {
-               ui.scale = this.scale;
-               ui.render();
+               _loc1_.scale = this.scale;
+               _loc1_.render();
             }
          }
       }
       
-      public function isRegisteredContainerId(sName:String) : Boolean {
-         return !(this._aContainerList[sName] == null);
+      public function isRegisteredContainerId(param1:String) : Boolean {
+         return !(this._aContainerList[param1] == null);
       }
       
-      public function registerContainerId(sName:String, doc:DisplayObjectContainer) : Boolean {
-         if(this.isRegisteredContainerId(sName))
+      public function registerContainerId(param1:String, param2:DisplayObjectContainer) : Boolean {
+         if(this.isRegisteredContainerId(param1))
          {
             return false;
          }
-         this._aContainerList[sName] = doc;
+         this._aContainerList[param1] = param2;
          return true;
       }
       
-      function onUiLoaded(ure:UiRenderEvent) : void {
-         delete this._aLoadingUi[[ure.uiTarget.name]];
+      private function onUiLoaded(param1:UiRenderEvent) : void {
+         delete this._aLoadingUi[[param1.uiTarget.name]];
          this.updateHighestModalDepth();
-         dispatchEvent(ure);
-         KernelEventsManager.getInstance().processCallback(BeriliaHookList.UiLoaded,ure.uiTarget.name);
+         dispatchEvent(param1);
+         KernelEventsManager.getInstance().processCallback(BeriliaHookList.UiLoaded,param1.uiTarget.name);
       }
       
-      function updateHighestModalDepth() : void {
-         var uiContainer:UiRootContainer = null;
+      private function updateHighestModalDepth() : void {
+         var _loc1_:UiRootContainer = null;
          this._highestModalDepth = -1;
-         for each (uiContainer in this._aUiList)
+         for each (_loc1_ in this._aUiList)
          {
-            if((uiContainer.modal) && (this._highestModalDepth < uiContainer.depth))
+            if((_loc1_.modal) && this._highestModalDepth < _loc1_.depth)
             {
-               this._highestModalDepth = uiContainer.depth;
+               this._highestModalDepth = _loc1_.depth;
             }
          }
       }
       
-      function isRegisteredUiName(sName:String) : Boolean {
-         return !(this._aUiList[sName] == null);
+      private function isRegisteredUiName(param1:String) : Boolean {
+         return !(this._aUiList[param1] == null);
       }
    }
 }

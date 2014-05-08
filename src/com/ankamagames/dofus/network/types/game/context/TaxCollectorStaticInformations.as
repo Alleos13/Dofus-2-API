@@ -25,10 +25,10 @@ package com.ankamagames.dofus.network.types.game.context
          return 147;
       }
       
-      public function initTaxCollectorStaticInformations(firstNameId:uint=0, lastNameId:uint=0, guildIdentity:GuildInformations=null) : TaxCollectorStaticInformations {
-         this.firstNameId = firstNameId;
-         this.lastNameId = lastNameId;
-         this.guildIdentity = guildIdentity;
+      public function initTaxCollectorStaticInformations(param1:uint=0, param2:uint=0, param3:GuildInformations=null) : TaxCollectorStaticInformations {
+         this.firstNameId = param1;
+         this.lastNameId = param2;
+         this.guildIdentity = param3;
          return this;
       }
       
@@ -38,44 +38,44 @@ package com.ankamagames.dofus.network.types.game.context
          this.guildIdentity = new GuildInformations();
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TaxCollectorStaticInformations(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_TaxCollectorStaticInformations(param1);
       }
       
-      public function serializeAs_TaxCollectorStaticInformations(output:IDataOutput) : void {
+      public function serializeAs_TaxCollectorStaticInformations(param1:IDataOutput) : void {
          if(this.firstNameId < 0)
          {
             throw new Error("Forbidden value (" + this.firstNameId + ") on element firstNameId.");
          }
          else
          {
-            output.writeShort(this.firstNameId);
+            param1.writeShort(this.firstNameId);
             if(this.lastNameId < 0)
             {
                throw new Error("Forbidden value (" + this.lastNameId + ") on element lastNameId.");
             }
             else
             {
-               output.writeShort(this.lastNameId);
-               this.guildIdentity.serializeAs_GuildInformations(output);
+               param1.writeShort(this.lastNameId);
+               this.guildIdentity.serializeAs_GuildInformations(param1);
                return;
             }
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TaxCollectorStaticInformations(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_TaxCollectorStaticInformations(param1);
       }
       
-      public function deserializeAs_TaxCollectorStaticInformations(input:IDataInput) : void {
-         this.firstNameId = input.readShort();
+      public function deserializeAs_TaxCollectorStaticInformations(param1:IDataInput) : void {
+         this.firstNameId = param1.readShort();
          if(this.firstNameId < 0)
          {
             throw new Error("Forbidden value (" + this.firstNameId + ") on element of TaxCollectorStaticInformations.firstNameId.");
          }
          else
          {
-            this.lastNameId = input.readShort();
+            this.lastNameId = param1.readShort();
             if(this.lastNameId < 0)
             {
                throw new Error("Forbidden value (" + this.lastNameId + ") on element of TaxCollectorStaticInformations.lastNameId.");
@@ -83,7 +83,7 @@ package com.ankamagames.dofus.network.types.game.context
             else
             {
                this.guildIdentity = new GuildInformations();
-               this.guildIdentity.deserialize(input);
+               this.guildIdentity.deserialize(param1);
                return;
             }
          }

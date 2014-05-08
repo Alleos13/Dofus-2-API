@@ -13,16 +13,16 @@ package com.ankamagames.dofus.console.chat
          super();
       }
       
-      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void {
-         switch(cmd)
+      public function handle(param1:ConsoleHandler, param2:String, param3:Array) : void {
+         switch(param2)
          {
             case "tab":
-               if((!args[0]) || (args[0] < 1))
+               if(!param3[0] || param3[0] < 1)
                {
-                  console.output("Error : need a valid tab index.");
+                  param1.output("Error : need a valid tab index.");
                   return;
                }
-               KernelEventsManager.getInstance().processCallback(ChatHookList.TabNameChange,args[0],args[1]);
+               KernelEventsManager.getInstance().processCallback(ChatHookList.TabNameChange,param3[0],param3[1]);
                break;
             case "clear":
                KernelEventsManager.getInstance().processCallback(ChatHookList.ClearChat);
@@ -30,17 +30,19 @@ package com.ankamagames.dofus.console.chat
          }
       }
       
-      public function getHelp(cmd:String) : String {
-         switch(cmd)
+      public function getHelp(param1:String) : String {
+         switch(param1)
          {
             case "tab":
                return I18n.getUiText("ui.chat.console.help.tab");
             case "clear":
                return I18n.getUiText("ui.chat.console.help.clear");
+            default:
+               return I18n.getUiText("ui.chat.console.noHelp",[param1]);
          }
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint=0, currentParams:Array=null) : Array {
+      public function getParamPossibilities(param1:String, param2:uint=0, param3:Array=null) : Array {
          return [];
       }
    }

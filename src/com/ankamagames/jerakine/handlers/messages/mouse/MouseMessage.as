@@ -11,12 +11,12 @@ package com.ankamagames.jerakine.handlers.messages.mouse
          super();
       }
       
-      public static function create(target:InteractiveObject, mouseEvent:MouseEvent, instance:MouseMessage=null) : MouseMessage {
-         if(!instance)
+      public static function create(param1:InteractiveObject, param2:MouseEvent, param3:MouseMessage=null) : MouseMessage {
+         if(!param3)
          {
-            instance = new MouseMessage();
+            param3 = new MouseMessage();
          }
-         return HumanInputMessage.create(target,mouseEvent,instance) as MouseMessage;
+         return HumanInputMessage.create(param1,param2,param3) as MouseMessage;
       }
       
       public function get mouseEvent() : MouseEvent {

@@ -44,12 +44,12 @@ package com.ankamagames.dofus.logic.game.common.managers
       private static const INACTIVITY_DELAY:int = 20 * 60 * 1000;
       
       private static function serverNotification() : void {
-         var msg:BasicPingMessage = null;
+         var _loc1_:BasicPingMessage = null;
          if(ConnectionsHandler.getConnection().connected)
          {
-            msg = new BasicPingMessage();
-            msg.initBasicPingMessage(true);
-            ConnectionsHandler.getConnection().send(msg);
+            _loc1_ = new BasicPingMessage();
+            _loc1_.initBasicPingMessage(true);
+            ConnectionsHandler.getConnection().send(_loc1_);
          }
       }
       
@@ -65,8 +65,8 @@ package com.ankamagames.dofus.logic.game.common.managers
          return this._activityTimer.delay;
       }
       
-      public function set inactivityDelay(t:Number) : void {
-         this._activityTimer.delay = t;
+      public function set inactivityDelay(param1:Number) : void {
+         this._activityTimer.delay = param1;
          this._activityTimer.reset();
          this._activityTimer.start();
       }
@@ -108,16 +108,16 @@ package com.ankamagames.dofus.logic.game.common.managers
          }
       }
       
-      function onActivity(event:Event) : void {
+      private function onActivity(param1:Event) : void {
          this.activity();
       }
       
-      function onActivityTimerUp(event:Event) : void {
+      private function onActivityTimerUp(param1:Event) : void {
          this._isAfk = true;
          KernelEventsManager.getInstance().processCallback(HookList.InactivityNotification,true);
       }
       
-      function onServerActivityTimerUp(event:Event) : void {
+      private function onServerActivityTimerUp(param1:Event) : void {
          if(this._hasActivity)
          {
             this._hasActivity = false;

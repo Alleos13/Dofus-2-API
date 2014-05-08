@@ -13,31 +13,31 @@ package com.ankamagames.dofus.kernel.updaterv2.messages
          super();
       }
       
-      public static function getUpdaterMessage(msg:Object) : IUpdaterInputMessage {
-         var uim:IUpdaterInputMessage = null;
-         switch(msg["_msg_id"])
+      public static function getUpdaterMessage(param1:Object) : IUpdaterInputMessage {
+         var _loc2_:IUpdaterInputMessage = null;
+         switch(param1["_msg_id"])
          {
             case UpdaterMessageIDEnum.STEP:
-               uim = new StepMessage();
+               _loc2_ = new StepMessage();
                break;
             case UpdaterMessageIDEnum.PROGRESS:
-               uim = new ProgressMessage();
+               _loc2_ = new ProgressMessage();
                break;
             case UpdaterMessageIDEnum.FINISHED:
-               uim = new FinishedMessage();
+               _loc2_ = new FinishedMessage();
                break;
             case UpdaterMessageIDEnum.COMPONENTS_LIST:
-               uim = new ComponentListMessage();
+               _loc2_ = new ComponentListMessage();
                break;
             case UpdaterMessageIDEnum.ERROR_MESSAGE:
-               uim = new ErrorMessage();
+               _loc2_ = new ErrorMessage();
                break;
          }
-         if(uim)
+         if(_loc2_)
          {
-            uim.deserialize(msg);
+            _loc2_.deserialize(param1);
          }
-         return uim;
+         return _loc2_;
       }
    }
 }

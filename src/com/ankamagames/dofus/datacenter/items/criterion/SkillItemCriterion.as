@@ -5,8 +5,8 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class SkillItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function SkillItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      public function SkillItemCriterion(param1:String) {
+         super(param1);
       }
       
       override public function get text() : String {
@@ -14,11 +14,11 @@ package com.ankamagames.dofus.datacenter.items.criterion
       }
       
       override public function clone() : IItemCriterion {
-         var clonedCriterion:SkillItemCriterion = new SkillItemCriterion(this.basicText);
-         return clonedCriterion;
+         var _loc1_:SkillItemCriterion = new SkillItemCriterion(this.basicText);
+         return _loc1_;
       }
       
-      override function getCriterion() : int {
+      override protected function getCriterion() : int {
          return 0;
       }
    }

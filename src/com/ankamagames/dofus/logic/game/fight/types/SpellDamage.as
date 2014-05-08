@@ -1,11 +1,11 @@
 package com.ankamagames.dofus.logic.game.fight.types
 {
+   import __AS3__.vec.Vector;
    import com.ankamagames.jerakine.data.XmlConfig;
    import com.ankamagames.jerakine.managers.OptionManager;
    import com.ankamagames.dofus.network.enums.ChatActivableChannelsEnum;
    import com.ankamagames.berilia.managers.HtmlManager;
    import com.ankamagames.dofus.datacenter.spells.SpellState;
-   import __AS3__.vec.*;
    
    public class SpellDamage extends Object
    {
@@ -17,253 +17,247 @@ package com.ankamagames.dofus.logic.game.fight.types
       
       public var invulnerableState:Boolean;
       
-      public var unhealableState:Boolean;
-      
       public var hasCriticalDamage:Boolean;
       
       public var hasCriticalShieldPointsRemoved:Boolean;
       
       public var hasCriticalLifePointsAdded:Boolean;
       
-      public var isHealingSpell:Boolean;
-      
-      public var hasHeal:Boolean;
-      
       private var _effectDamages:Vector.<EffectDamage>;
       
       private var _minDamage:int;
       
       public function get minDamage() : int {
-         var ed:EffectDamage = null;
+         var _loc1_:EffectDamage = null;
          this._minDamage = 0;
-         for each (ed in this._effectDamages)
+         for each (_loc1_ in this._effectDamages)
          {
-            this._minDamage = this._minDamage + ed.minDamage;
+            this._minDamage = this._minDamage + _loc1_.minDamage;
          }
          return this._minDamage;
       }
       
-      public function set minDamage(pMinDamage:int) : void {
-         this._minDamage = pMinDamage;
+      public function set minDamage(param1:int) : void {
+         this._minDamage = param1;
       }
       
       private var _maxDamage:int;
       
       public function get maxDamage() : int {
-         var ed:EffectDamage = null;
+         var _loc1_:EffectDamage = null;
          this._maxDamage = 0;
-         for each (ed in this._effectDamages)
+         for each (_loc1_ in this._effectDamages)
          {
-            this._maxDamage = this._maxDamage + ed.maxDamage;
+            this._maxDamage = this._maxDamage + _loc1_.maxDamage;
          }
          return this._maxDamage;
       }
       
-      public function set maxDamage(pMaxDamage:int) : void {
-         this._maxDamage = pMaxDamage;
+      public function set maxDamage(param1:int) : void {
+         this._maxDamage = param1;
       }
       
       private var _minCriticalDamage:int;
       
       public function get minCriticalDamage() : int {
-         var ed:EffectDamage = null;
+         var _loc1_:EffectDamage = null;
          this._minCriticalDamage = 0;
-         for each (ed in this._effectDamages)
+         for each (_loc1_ in this._effectDamages)
          {
-            this._minCriticalDamage = this._minCriticalDamage + ed.minCriticalDamage;
+            this._minCriticalDamage = this._minCriticalDamage + _loc1_.minCriticalDamage;
          }
          return this._minCriticalDamage;
       }
       
-      public function set minCriticalDamage(pMinCriticalDamage:int) : void {
-         this._minCriticalDamage = pMinCriticalDamage;
+      public function set minCriticalDamage(param1:int) : void {
+         this._minCriticalDamage = param1;
       }
       
       private var _maxCriticalDamage:int;
       
       public function get maxCriticalDamage() : int {
-         var ed:EffectDamage = null;
+         var _loc1_:EffectDamage = null;
          this._maxCriticalDamage = 0;
-         for each (ed in this._effectDamages)
+         for each (_loc1_ in this._effectDamages)
          {
-            this._maxCriticalDamage = this._maxCriticalDamage + ed.maxCriticalDamage;
+            this._maxCriticalDamage = this._maxCriticalDamage + _loc1_.maxCriticalDamage;
          }
          return this._maxCriticalDamage;
       }
       
-      public function set maxCriticalDamage(pMaxCriticalDamage:int) : void {
-         this._maxCriticalDamage = pMaxCriticalDamage;
+      public function set maxCriticalDamage(param1:int) : void {
+         this._maxCriticalDamage = param1;
       }
       
       public function get minErosionDamage() : int {
-         var minErosion:* = 0;
-         var ed:EffectDamage = null;
-         for each (ed in this._effectDamages)
+         var _loc1_:* = 0;
+         var _loc2_:EffectDamage = null;
+         for each (_loc2_ in this._effectDamages)
          {
-            minErosion = minErosion + ed.minErosionDamage;
+            _loc1_ = _loc1_ + _loc2_.minErosionDamage;
          }
-         return minErosion;
+         return _loc1_;
       }
       
       public function get maxErosionDamage() : int {
-         var maxErosion:* = 0;
-         var ed:EffectDamage = null;
-         for each (ed in this._effectDamages)
+         var _loc1_:* = 0;
+         var _loc2_:EffectDamage = null;
+         for each (_loc2_ in this._effectDamages)
          {
-            maxErosion = maxErosion + ed.maxErosionDamage;
+            _loc1_ = _loc1_ + _loc2_.maxErosionDamage;
          }
-         return maxErosion;
+         return _loc1_;
       }
       
       public function get minCriticalErosionDamage() : int {
-         var minCriticalErosion:* = 0;
-         var ed:EffectDamage = null;
-         for each (ed in this._effectDamages)
+         var _loc1_:* = 0;
+         var _loc2_:EffectDamage = null;
+         for each (_loc2_ in this._effectDamages)
          {
-            minCriticalErosion = minCriticalErosion + ed.minCriticalErosionDamage;
+            _loc1_ = _loc1_ + _loc2_.minCriticalErosionDamage;
          }
-         return minCriticalErosion;
+         return _loc1_;
       }
       
       public function get maxCriticalErosionDamage() : int {
-         var maxCriticalErosion:* = 0;
-         var ed:EffectDamage = null;
-         for each (ed in this._effectDamages)
+         var _loc1_:* = 0;
+         var _loc2_:EffectDamage = null;
+         for each (_loc2_ in this._effectDamages)
          {
-            maxCriticalErosion = maxCriticalErosion + ed.maxCriticalErosionDamage;
+            _loc1_ = _loc1_ + _loc2_.maxCriticalErosionDamage;
          }
-         return maxCriticalErosion;
+         return _loc1_;
       }
       
       private var _minShieldPointsRemoved:int;
       
       public function get minShieldPointsRemoved() : int {
-         var ed:EffectDamage = null;
+         var _loc1_:EffectDamage = null;
          this._minShieldPointsRemoved = 0;
-         for each (ed in this._effectDamages)
+         for each (_loc1_ in this._effectDamages)
          {
-            this._minShieldPointsRemoved = this._minShieldPointsRemoved + ed.minShieldPointsRemoved;
+            this._minShieldPointsRemoved = this._minShieldPointsRemoved + _loc1_.minShieldPointsRemoved;
          }
          return this._minShieldPointsRemoved;
       }
       
-      public function set minShieldPointsRemoved(pMinShieldPointsRemoved:int) : void {
-         this._minShieldPointsRemoved = pMinShieldPointsRemoved;
+      public function set minShieldPointsRemoved(param1:int) : void {
+         this._minShieldPointsRemoved = param1;
       }
       
       private var _maxShieldPointsRemoved:int;
       
       public function get maxShieldPointsRemoved() : int {
-         var ed:EffectDamage = null;
+         var _loc1_:EffectDamage = null;
          this._maxShieldPointsRemoved = 0;
-         for each (ed in this._effectDamages)
+         for each (_loc1_ in this._effectDamages)
          {
-            this._maxShieldPointsRemoved = this._maxShieldPointsRemoved + ed.maxShieldPointsRemoved;
+            this._maxShieldPointsRemoved = this._maxShieldPointsRemoved + _loc1_.maxShieldPointsRemoved;
          }
          return this._maxShieldPointsRemoved;
       }
       
-      public function set maxShieldPointsRemoved(pMaxShieldPointsRemoved:int) : void {
-         this._maxShieldPointsRemoved = pMaxShieldPointsRemoved;
+      public function set maxShieldPointsRemoved(param1:int) : void {
+         this._maxShieldPointsRemoved = param1;
       }
       
       private var _minCriticalShieldPointsRemoved:int;
       
       public function get minCriticalShieldPointsRemoved() : int {
-         var ed:EffectDamage = null;
+         var _loc1_:EffectDamage = null;
          this._minCriticalShieldPointsRemoved = 0;
-         for each (ed in this._effectDamages)
+         for each (_loc1_ in this._effectDamages)
          {
-            this._minCriticalShieldPointsRemoved = this._minCriticalShieldPointsRemoved + ed.minCriticalShieldPointsRemoved;
+            this._minCriticalShieldPointsRemoved = this._minCriticalShieldPointsRemoved + _loc1_.minCriticalShieldPointsRemoved;
          }
          return this._minCriticalShieldPointsRemoved;
       }
       
-      public function set minCriticalShieldPointsRemoved(pMinCriticalShieldPointsRemoved:int) : void {
-         this._minCriticalShieldPointsRemoved = pMinCriticalShieldPointsRemoved;
+      public function set minCriticalShieldPointsRemoved(param1:int) : void {
+         this._minCriticalShieldPointsRemoved = param1;
       }
       
       private var _maxCriticalShieldPointsRemoved:int;
       
       public function get maxCriticalShieldPointsRemoved() : int {
-         var ed:EffectDamage = null;
+         var _loc1_:EffectDamage = null;
          this._maxCriticalShieldPointsRemoved = 0;
-         for each (ed in this._effectDamages)
+         for each (_loc1_ in this._effectDamages)
          {
-            this._maxCriticalShieldPointsRemoved = this._maxCriticalShieldPointsRemoved + ed.maxCriticalShieldPointsRemoved;
+            this._maxCriticalShieldPointsRemoved = this._maxCriticalShieldPointsRemoved + _loc1_.maxCriticalShieldPointsRemoved;
          }
          return this._maxCriticalShieldPointsRemoved;
       }
       
-      public function set maxCriticalShieldPointsRemoved(pMaxCriticalShieldPointsRemoved:int) : void {
-         this._maxCriticalShieldPointsRemoved = pMaxCriticalShieldPointsRemoved;
+      public function set maxCriticalShieldPointsRemoved(param1:int) : void {
+         this._maxCriticalShieldPointsRemoved = param1;
       }
       
       public function get minLifePointsAdded() : int {
-         var minLife:* = 0;
-         var ed:EffectDamage = null;
-         for each (ed in this._effectDamages)
+         var _loc1_:* = 0;
+         var _loc2_:EffectDamage = null;
+         for each (_loc2_ in this._effectDamages)
          {
-            minLife = minLife + ed.minLifePointsAdded;
+            _loc1_ = _loc1_ + _loc2_.minLifePointsAdded;
          }
-         return minLife;
+         return _loc1_;
       }
       
       public function get maxLifePointsAdded() : int {
-         var maxLife:* = 0;
-         var ed:EffectDamage = null;
-         for each (ed in this._effectDamages)
+         var _loc1_:* = 0;
+         var _loc2_:EffectDamage = null;
+         for each (_loc2_ in this._effectDamages)
          {
-            maxLife = maxLife + ed.maxLifePointsAdded;
+            _loc1_ = _loc1_ + _loc2_.maxLifePointsAdded;
          }
-         return maxLife;
+         return _loc1_;
       }
       
       public function get minCriticalLifePointsAdded() : int {
-         var minCriticalLife:* = 0;
-         var ed:EffectDamage = null;
-         for each (ed in this._effectDamages)
+         var _loc1_:* = 0;
+         var _loc2_:EffectDamage = null;
+         for each (_loc2_ in this._effectDamages)
          {
-            minCriticalLife = minCriticalLife + ed.minCriticalLifePointsAdded;
+            _loc1_ = _loc1_ + _loc2_.minCriticalLifePointsAdded;
          }
-         return minCriticalLife;
+         return _loc1_;
       }
       
       public function get maxCriticalLifePointsAdded() : int {
-         var maxCriticalLife:* = 0;
-         var ed:EffectDamage = null;
-         for each (ed in this._effectDamages)
+         var _loc1_:* = 0;
+         var _loc2_:EffectDamage = null;
+         for each (_loc2_ in this._effectDamages)
          {
-            maxCriticalLife = maxCriticalLife + ed.maxCriticalLifePointsAdded;
+            _loc1_ = _loc1_ + _loc2_.maxCriticalLifePointsAdded;
          }
-         return maxCriticalLife;
+         return _loc1_;
       }
       
       public function get lifePointsAddedBasedOnLifePercent() : int {
-         var lifePointsFromPercent:* = 0;
-         var ed:EffectDamage = null;
-         for each (ed in this._effectDamages)
+         var _loc1_:* = 0;
+         var _loc2_:EffectDamage = null;
+         for each (_loc2_ in this._effectDamages)
          {
-            lifePointsFromPercent = lifePointsFromPercent + ed.lifePointsAddedBasedOnLifePercent;
+            _loc1_ = _loc1_ + _loc2_.lifePointsAddedBasedOnLifePercent;
          }
-         return lifePointsFromPercent;
+         return _loc1_;
       }
       
       public function get criticalLifePointsAddedBasedOnLifePercent() : int {
-         var criticalLifePointsFromPercent:* = 0;
-         var ed:EffectDamage = null;
-         for each (ed in this._effectDamages)
+         var _loc1_:* = 0;
+         var _loc2_:EffectDamage = null;
+         for each (_loc2_ in this._effectDamages)
          {
-            criticalLifePointsFromPercent = criticalLifePointsFromPercent + ed.criticalLifePointsAddedBasedOnLifePercent;
+            _loc1_ = _loc1_ + _loc2_.criticalLifePointsAddedBasedOnLifePercent;
          }
-         return criticalLifePointsFromPercent;
+         return _loc1_;
       }
       
       public function updateDamage() : void {
       }
       
-      public function addEffectDamage(pEffectDamage:EffectDamage) : void {
-         this._effectDamages.push(pEffectDamage);
+      public function addEffectDamage(param1:EffectDamage) : void {
+         this._effectDamages.push(param1);
       }
       
       public function get effectDamages() : Vector.<EffectDamage> {
@@ -271,10 +265,10 @@ package com.ankamagames.dofus.logic.game.fight.types
       }
       
       public function get hasRandomEffects() : Boolean {
-         var ed:EffectDamage = null;
-         for each (ed in this._effectDamages)
+         var _loc1_:EffectDamage = null;
+         for each (_loc1_ in this._effectDamages)
          {
-            if(ed.random > 0)
+            if(_loc1_.random > 0)
             {
                return true;
             }
@@ -283,69 +277,50 @@ package com.ankamagames.dofus.logic.game.fight.types
       }
       
       public function get random() : int {
-         var ed:EffectDamage = null;
-         var r:int = -1;
-         var first:Boolean = true;
-         for each (ed in this._effectDamages)
+         var _loc2_:EffectDamage = null;
+         var _loc1_:* = -1;
+         var _loc3_:* = true;
+         for each (_loc2_ in this._effectDamages)
          {
-            if(ed.random > 0)
+            if(_loc2_.random > 0)
             {
-               if(first)
+               if(_loc3_)
                {
-                  r = ed.random;
-                  first = false;
+                  _loc1_ = _loc2_.random;
+                  _loc3_ = false;
+                  continue;
                }
-               else
-               {
-                  if(ed.random != r)
-                  {
-                     return -1;
-                  }
-               }
+               return -1;
             }
          }
-         return r;
+         return _loc1_;
       }
       
       public function get element() : int {
-         var ed:EffectDamage = null;
-         var hasPushDamages:* = false;
-         var element:int = -1;
-         var first:Boolean = true;
-         for each (ed in this._effectDamages)
+         var _loc2_:EffectDamage = null;
+         var _loc1_:* = -1;
+         var _loc3_:* = true;
+         for each (_loc2_ in this._effectDamages)
          {
-            if(ed.element != -1)
+            if(_loc2_.element != -1)
             {
-               if(first)
+               if(_loc3_)
                {
-                  element = ed.element;
-                  first = false;
+                  _loc1_ = _loc2_.element;
+                  _loc3_ = false;
+                  continue;
                }
-               else
-               {
-                  if(ed.element != element)
-                  {
-                     return -1;
-                  }
-               }
-            }
-            if(ed.effectId == 5)
-            {
-               hasPushDamages = true;
+               return -1;
             }
          }
-         if((!(element == -1)) && (hasPushDamages))
-         {
-            element = -1;
-         }
-         return element;
+         return _loc1_;
       }
       
       private function get damageConvertedToHeal() : Boolean {
-         var ed:EffectDamage = null;
-         for each (ed in this._effectDamages)
+         var _loc1_:EffectDamage = null;
+         for each (_loc1_ in this._effectDamages)
          {
-            if(ed.damageConvertedToHeal)
+            if(_loc1_.damageConvertedToHeal)
             {
                return true;
             }
@@ -353,143 +328,121 @@ package com.ankamagames.dofus.logic.game.fight.types
          return false;
       }
       
-      private function getElementTextColor(pElementId:int) : String {
-         var color:String = null;
-         if(pElementId == -1)
+      private function getElementTextColor(param1:int) : String {
+         var _loc2_:String = null;
+         if(param1 == -1)
          {
-            color = "fight.text.multi";
+            _loc2_ = "fight.text.multi";
          }
          else
          {
-            switch(pElementId)
+            switch(param1)
             {
                case 0:
-                  color = "fight.text.neutral";
+                  _loc2_ = "fight.text.neutral";
                   break;
                case 1:
-                  color = "fight.text.earth";
+                  _loc2_ = "fight.text.earth";
                   break;
                case 2:
-                  color = "fight.text.fire";
+                  _loc2_ = "fight.text.fire";
                   break;
                case 3:
-                  color = "fight.text.water";
+                  _loc2_ = "fight.text.water";
                   break;
                case 4:
-                  color = "fight.text.air";
+                  _loc2_ = "fight.text.air";
                   break;
             }
          }
-         return XmlConfig.getInstance().getEntry("colors." + color);
+         return XmlConfig.getInstance().getEntry("colors." + _loc2_);
       }
       
-      private function getEffectString(pMin:int, pMax:int, pMinCritical:int, pMaxCritical:int, pHasCritical:Boolean, pRandom:int=0) : String {
-         var normal:String = null;
-         var critical:String = null;
-         var effectStr:String = "";
-         if(pMin == pMax)
+      private function getEffectString(param1:int, param2:int, param3:int, param4:int, param5:Boolean, param6:int=0) : String {
+         var _loc8_:String = null;
+         var _loc9_:String = null;
+         var _loc7_:* = "";
+         if(param1 == param2)
          {
-            normal = String(pMax);
+            _loc8_ = String(param2);
          }
          else
          {
-            normal = pMin + (!(pMax == 0)?" - " + pMax:"");
+            _loc8_ = param1 + (param2 != 0?" - " + param2:"");
          }
-         if(pHasCritical)
+         if(param5)
          {
-            if(pMinCritical == pMaxCritical)
+            if(param3 == param4)
             {
-               critical = String(pMaxCritical);
+               _loc9_ = String(param4);
             }
             else
             {
-               critical = pMinCritical + (!(pMaxCritical == 0)?" - " + pMaxCritical:"");
+               _loc9_ = param3 + (param4 != 0?" - " + param4:"");
             }
          }
-         if(normal)
+         if(_loc8_)
          {
-            effectStr = normal;
+            _loc7_ = _loc8_;
          }
-         if(critical)
+         if(_loc9_)
          {
-            if(normal)
+            if(_loc8_)
             {
-               effectStr = effectStr + (" (<b>" + critical + "</b>)");
+               _loc7_ = _loc7_ + (" (<b>" + _loc9_ + "</b>)");
             }
          }
-         return pRandom > 0?pRandom + "% " + effectStr:effectStr;
+         return param6 > 0?param6 + "% " + _loc7_:_loc7_;
       }
       
-      public var effectIcons:Array;
-      
       public function toString() : String {
-         var ed:EffectDamage = null;
-         var effText:String = null;
-         var shieldStr:String = null;
-         var dmgStr:String = null;
-         var healStr:String = null;
-         var finalStr:String = "";
-         var damageColor:String = this.getElementTextColor(this.element);
-         var shieldColor:String = "0x9966CC";
-         var healColor:int = OptionManager.getOptionManager("chat")["channelColor" + ChatActivableChannelsEnum.PSEUDO_CHANNEL_FIGHT_LOG];
-         this.effectIcons = new Array();
-         if((this.hasRandomEffects) && (!this.invulnerableState))
+         var _loc5_:EffectDamage = null;
+         var _loc6_:String = null;
+         var _loc7_:String = null;
+         var _loc8_:String = null;
+         var _loc1_:* = "";
+         var _loc2_:String = this.getElementTextColor(this.element);
+         var _loc3_:* = "0x9966CC";
+         var _loc4_:int = OptionManager.getOptionManager("chat")["channelColor" + ChatActivableChannelsEnum.PSEUDO_CHANNEL_FIGHT_LOG];
+         if(this.hasRandomEffects)
          {
-            for each (ed in this._effectDamages)
+            for each (_loc5_ in this._effectDamages)
             {
-               if(ed.element != -1)
+               if(_loc5_.element != -1)
                {
-                  if(this.damageConvertedToHeal)
-                  {
-                     this.effectIcons.push("lifePoints");
-                     effText = this.getEffectString(ed.minLifePointsAdded,ed.maxLifePointsAdded,ed.minCriticalLifePointsAdded,ed.maxCriticalLifePointsAdded,ed.hasCritical,ed.random);
-                  }
-                  else
-                  {
-                     this.effectIcons.push(null);
-                     effText = this.getEffectString(ed.minDamage,ed.maxDamage,ed.minCriticalDamage,ed.maxCriticalDamage,ed.hasCritical,ed.random);
-                  }
-                  finalStr = finalStr + (HtmlManager.addTag(effText,HtmlManager.SPAN,{"color":(!this.damageConvertedToHeal?this.getElementTextColor(ed.element):healColor)}) + "\n");
+                  _loc1_ = _loc1_ + (HtmlManager.addTag(!this.damageConvertedToHeal?this.getEffectString(_loc5_.minDamage,_loc5_.maxDamage,_loc5_.minCriticalDamage,_loc5_.maxCriticalDamage,_loc5_.hasCritical,_loc5_.random):this.getEffectString(_loc5_.minLifePointsAdded,_loc5_.maxLifePointsAdded,_loc5_.minCriticalLifePointsAdded,_loc5_.maxCriticalLifePointsAdded,_loc5_.hasCritical,_loc5_.random),HtmlManager.SPAN,{"color":(!this.damageConvertedToHeal?this.getElementTextColor(_loc5_.element):_loc4_)}) + "\n");
                }
             }
          }
          else
          {
-            if((!this.isHealingSpell) && (!this.damageConvertedToHeal))
+            if(!this.damageConvertedToHeal)
             {
-               dmgStr = this.getEffectString(this._minDamage,this._maxDamage,this._minCriticalDamage,this._maxCriticalDamage,this.hasCriticalDamage);
-               dmgStr = !this.invulnerableState?dmgStr:SpellState.getSpellStateById(56).name;
-               this.effectIcons.push(null);
-               finalStr = finalStr + (HtmlManager.addTag(dmgStr,HtmlManager.SPAN,{"color":damageColor}) + "\n");
+               _loc8_ = this.getEffectString(this._minDamage,this._maxDamage,this._minCriticalDamage,this._maxCriticalDamage,this.hasCriticalDamage);
+               _loc8_ = !this.invulnerableState?_loc8_:SpellState.getSpellStateById(56).name;
+               _loc1_ = _loc1_ + (HtmlManager.addTag(_loc8_,HtmlManager.SPAN,{"color":_loc2_}) + "\n");
             }
-            if((!this.isHealingSpell) && (!this.invulnerableState))
+            if(!this.invulnerableState)
             {
-               if((!(this._minShieldPointsRemoved == 0)) && (!(this._maxShieldPointsRemoved == 0)))
+               if(!(this._minShieldPointsRemoved == 0) && !(this._maxShieldPointsRemoved == 0) && !(this._minCriticalShieldPointsRemoved == 0) && !(this._maxCriticalShieldPointsRemoved == 0))
                {
-                  shieldStr = this.getEffectString(this._minShieldPointsRemoved,this._maxShieldPointsRemoved,this._minCriticalShieldPointsRemoved,this._maxCriticalShieldPointsRemoved,this.hasCriticalShieldPointsRemoved);
+                  _loc6_ = this.getEffectString(this._minShieldPointsRemoved,this._maxShieldPointsRemoved,this._minCriticalShieldPointsRemoved,this._maxCriticalShieldPointsRemoved,this.hasCriticalShieldPointsRemoved);
                }
-               if(shieldStr)
+               if(_loc6_)
                {
-                  this.effectIcons.push(null);
-                  finalStr = finalStr + (HtmlManager.addTag(shieldStr,HtmlManager.SPAN,{"color":shieldColor}) + "\n");
+                  _loc1_ = _loc1_ + (HtmlManager.addTag(_loc6_,HtmlManager.SPAN,{"color":_loc3_}) + "\n");
                }
             }
-            if((this.hasHeal) || (this.damageConvertedToHeal))
+            if(!(this.minLifePointsAdded == 0) && !(this.maxLifePointsAdded == 0) && !(this.minCriticalLifePointsAdded == 0) && !(this.maxCriticalLifePointsAdded == 0))
             {
-               healStr = this.getEffectString(this.minLifePointsAdded,this.maxLifePointsAdded,this.minCriticalLifePointsAdded,this.maxCriticalLifePointsAdded,this.hasCriticalLifePointsAdded);
-               if(this.unhealableState)
-               {
-                  this.effectIcons.push(null);
-                  healStr = SpellState.getSpellStateById(76).name;
-               }
-               else
-               {
-                  this.effectIcons.push("lifePoints");
-               }
-               finalStr = finalStr + HtmlManager.addTag(healStr,HtmlManager.SPAN,{"color":healColor});
+               _loc7_ = this.getEffectString(this.minLifePointsAdded,this.maxLifePointsAdded,this.minCriticalLifePointsAdded,this.maxCriticalLifePointsAdded,this.hasCriticalLifePointsAdded);
+            }
+            if(_loc7_)
+            {
+               _loc1_ = _loc1_ + HtmlManager.addTag(_loc7_,HtmlManager.SPAN,{"color":_loc4_});
             }
          }
-         return finalStr;
+         return _loc1_;
       }
    }
 }

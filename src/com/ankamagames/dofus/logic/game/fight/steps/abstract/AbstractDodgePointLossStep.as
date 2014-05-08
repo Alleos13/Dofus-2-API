@@ -5,10 +5,10 @@ package com.ankamagames.dofus.logic.game.fight.steps.abstract
    public class AbstractDodgePointLossStep extends AbstractSequencable
    {
       
-      public function AbstractDodgePointLossStep(fighterId:int, amount:int) {
+      public function AbstractDodgePointLossStep(param1:int, param2:int) {
          super();
-         this._fighterId = fighterId;
-         this._amount = amount;
+         this._fighterId = param1;
+         this._amount = param2;
       }
       
       protected var _fighterId:int;

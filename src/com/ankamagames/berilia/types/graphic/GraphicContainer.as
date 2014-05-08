@@ -152,24 +152,24 @@ package com.ankamagames.berilia.types.graphic
          return this._customName;
       }
       
-      public function set dropValidator(dv:Function) : void {
-         this._dropValidatorFunction = dv;
+      public function set dropValidator(param1:Function) : void {
+         this._dropValidatorFunction = param1;
       }
       
       public function get dropValidator() : Function {
          return this._dropValidatorFunction;
       }
       
-      public function set removeDropSource(rds:Function) : void {
-         this._removeDropSourceFunction = rds;
+      public function set removeDropSource(param1:Function) : void {
+         this._removeDropSourceFunction = param1;
       }
       
       public function get removeDropSource() : Function {
          return this._removeDropSourceFunction;
       }
       
-      public function set processDrop(pd:Function) : void {
-         this._processDropFunction = pd;
+      public function set processDrop(param1:Function) : void {
+         this._processDropFunction = param1;
       }
       
       public function get processDrop() : Function {
@@ -188,70 +188,70 @@ package com.ankamagames.berilia.types.graphic
          return this._scale;
       }
       
-      public function set scale(nScale:Number) : void {
-         this.__width = this.__widthReal * (1 - nScale);
-         this.__height = this.__heightReal * (1 - nScale);
-         scaleX = nScale;
-         scaleY = nScale;
-         this._scale = nScale;
+      public function set scale(param1:Number) : void {
+         this.__width = this.__widthReal * (1 - param1);
+         this.__height = this.__heightReal * (1 - param1);
+         scaleX = param1;
+         scaleY = param1;
+         this._scale = param1;
       }
       
-      override public function set width(nW:Number) : void {
-         var ge:GraphicElement = null;
-         if(nW < 1)
+      override public function set width(param1:Number) : void {
+         var _loc3_:GraphicElement = null;
+         if(param1 < 1)
          {
             this.__width = 1;
          }
          else
          {
-            this.__width = nW;
+            this.__width = param1;
          }
          if(this._bgColor != -1)
          {
             this.bgColor = this._bgColor;
          }
          this.__widthReal = this.__width;
-         var ui:UiRootContainer = this.getUi();
-         if(ui)
+         var _loc2_:UiRootContainer = this.getUi();
+         if(_loc2_)
          {
-            ge = ui.getElementById(name);
-            if((ge) && (ui.ready))
+            _loc3_ = _loc2_.getElementById(name);
+            if((_loc3_) && (_loc2_.ready))
             {
-               ge.size.setX(nW,ge.size.xUnit);
+               _loc3_.size.setX(param1,_loc3_.size.xUnit);
             }
-            ui.updateLinkedUi();
+            _loc2_.updateLinkedUi();
          }
       }
       
-      override public function set height(nH:Number) : void {
-         var ge:GraphicElement = null;
-         if(nH < 1)
+      override public function set height(param1:Number) : void {
+         var _loc3_:GraphicElement = null;
+         if(param1 < 1)
          {
             this.__height = 1;
          }
          else
          {
-            this.__height = nH;
+            this.__height = param1;
          }
          if(this._bgColor != -1)
          {
             this.bgColor = this._bgColor;
          }
          this.__heightReal = this.__height;
-         var ui:UiRootContainer = this.getUi();
-         if(ui)
+         var _loc2_:UiRootContainer = this.getUi();
+         if(_loc2_)
          {
-            ge = ui.getElementById(name);
-            if((ge) && (ui.ready))
+            _loc3_ = _loc2_.getElementById(name);
+            if((_loc3_) && (_loc2_.ready))
             {
-               ge.size.setY(nH,ge.size.yUnit);
+               _loc3_.size.setY(param1,_loc3_.size.yUnit);
             }
-            ui.updateLinkedUi();
+            _loc2_.updateLinkedUi();
          }
       }
       
       override public function get width() : Number {
-         if((isNaN(this.__width)) || (!this.__width))
+         if((isNaN(this.__width)) || !this.__width)
          {
             return this.getBounds(this).width * scaleX;
          }
@@ -259,7 +259,7 @@ package com.ankamagames.berilia.types.graphic
       }
       
       override public function get height() : Number {
-         if((isNaN(this.__height)) || (!this.__height))
+         if((isNaN(this.__height)) || !this.__height)
          {
             return this.getBounds(this).height * scaleY;
          }
@@ -274,68 +274,68 @@ package com.ankamagames.berilia.types.graphic
          return super.height;
       }
       
-      override public function set x(value:Number) : void {
-         var ge:GraphicElement = null;
-         super.x = value;
-         var ui:UiRootContainer = this.getUi();
-         if(ui)
+      override public function set x(param1:Number) : void {
+         var _loc3_:GraphicElement = null;
+         super.x = param1;
+         var _loc2_:UiRootContainer = this.getUi();
+         if(_loc2_)
          {
-            ge = ui.getElementById(name);
-            if((ge) && (ui.ready))
+            _loc3_ = _loc2_.getElementById(name);
+            if((_loc3_) && (_loc2_.ready))
             {
-               ge.location.setOffsetX(value);
+               _loc3_.location.setOffsetX(param1);
             }
-            ui.updateLinkedUi();
+            _loc2_.updateLinkedUi();
          }
       }
       
-      override public function set y(value:Number) : void {
-         var ge:GraphicElement = null;
-         super.y = value;
-         var ui:UiRootContainer = this.getUi();
-         if(ui)
+      override public function set y(param1:Number) : void {
+         var _loc3_:GraphicElement = null;
+         super.y = param1;
+         var _loc2_:UiRootContainer = this.getUi();
+         if(_loc2_)
          {
-            ge = ui.getElementById(name);
-            if((ge) && (ui.ready))
+            _loc3_ = _loc2_.getElementById(name);
+            if((_loc3_) && (_loc2_.ready))
             {
-               ge.location.setOffsetY(value);
+               _loc3_.location.setOffsetY(param1);
             }
-            ui.updateLinkedUi();
+            _loc2_.updateLinkedUi();
          }
       }
       
       public function get anchorY() : Number {
-         var ge:GraphicElement = null;
-         var ui:UiRootContainer = this.getUi();
-         if(ui)
+         var _loc2_:GraphicElement = null;
+         var _loc1_:UiRootContainer = this.getUi();
+         if(_loc1_)
          {
-            ge = ui.getElementById(name);
-            if((ge) && (ui.ready))
+            _loc2_ = _loc1_.getElementById(name);
+            if((_loc2_) && (_loc1_.ready))
             {
-               return ge.location.getOffsetY();
+               return _loc2_.location.getOffsetY();
             }
          }
          return NaN;
       }
       
       public function get anchorX() : Number {
-         var ge:GraphicElement = null;
-         var ui:UiRootContainer = this.getUi();
-         if(ui)
+         var _loc2_:GraphicElement = null;
+         var _loc1_:UiRootContainer = this.getUi();
+         if(_loc1_)
          {
-            ge = ui.getElementById(name);
-            if((ge) && (ui.ready))
+            _loc2_ = _loc1_.getElementById(name);
+            if((_loc2_) && (_loc1_.ready))
             {
-               return ge.location.getOffsetX();
+               return _loc2_.location.getOffsetX();
             }
          }
          return NaN;
       }
       
-      public function set bgColor(nColor:int) : void {
-         this._bgColor = nColor;
+      public function set bgColor(param1:int) : void {
+         this._bgColor = param1;
          graphics.clear();
-         if((this.bgColor == -1) || (!this.width) || (!this.height))
+         if(this.bgColor == -1 || !this.width || !this.height)
          {
             return;
          }
@@ -343,7 +343,7 @@ package com.ankamagames.berilia.types.graphic
          {
             graphics.lineStyle(1,this._borderColor);
          }
-         graphics.beginFill(nColor,this._bgAlpha);
+         graphics.beginFill(param1,this._bgAlpha);
          if(!this._bgCornerRadius)
          {
             graphics.drawRect(0,0,this.width,this.height);
@@ -359,8 +359,8 @@ package com.ankamagames.berilia.types.graphic
          return this._bgColor;
       }
       
-      public function set bgAlpha(nAlpha:Number) : void {
-         this._bgAlpha = nAlpha;
+      public function set bgAlpha(param1:Number) : void {
+         this._bgAlpha = param1;
          this.bgColor = this.bgColor;
       }
       
@@ -368,8 +368,8 @@ package com.ankamagames.berilia.types.graphic
          return this._bgAlpha;
       }
       
-      public function set borderColor(color:int) : void {
-         this._borderColor = color;
+      public function set borderColor(param1:int) : void {
+         this._borderColor = param1;
          this.bgColor = this.bgColor;
       }
       
@@ -377,8 +377,8 @@ package com.ankamagames.berilia.types.graphic
          return this._borderColor;
       }
       
-      public function set bgCornerRadius(value:uint) : void {
-         this._bgCornerRadius = value;
+      public function set bgCornerRadius(param1:uint) : void {
+         this._bgCornerRadius = param1;
          this.bgColor = this.bgColor;
       }
       
@@ -386,33 +386,33 @@ package com.ankamagames.berilia.types.graphic
          return this._bgCornerRadius;
       }
       
-      public function set luminosity(nColor:Number) : void {
-         this._luminosity = nColor;
+      public function set luminosity(param1:Number) : void {
+         this._luminosity = param1;
       }
       
       public function get luminosity() : Number {
          return this._luminosity;
       }
       
-      public function set linkedTo(sUiComponent:String) : void {
-         this._sLinkedTo = sUiComponent;
+      public function set linkedTo(param1:String) : void {
+         this._sLinkedTo = param1;
       }
       
       public function get linkedTo() : String {
          return this._sLinkedTo;
       }
       
-      public function set shadowColor(nColor:int) : void {
+      public function set shadowColor(param1:int) : void {
          if(Berilia.getInstance().options.uiShadows)
          {
-            if(nColor >= 0)
+            if(param1 >= 0)
             {
-               this._shadow = new DropShadowFilter(3,90,nColor,1,10,10,0.61,BitmapFilterQuality.HIGH);
+               this._shadow = new DropShadowFilter(3,90,param1,1,10,10,0.61,BitmapFilterQuality.HIGH);
                filters = [this._shadow];
             }
             else
             {
-               if((nColor == -1) && (this._shadow))
+               if(param1 == -1 && (this._shadow))
                {
                   this._shadow = null;
                   filters = [];
@@ -429,47 +429,47 @@ package com.ankamagames.berilia.types.graphic
          return this.getTopParent(this);
       }
       
-      public function setAdvancedGlow(nColor:uint, nAlpha:Number=1, nBlurX:Number=6.0, nBlurY:Number=6.0, nStrength:Number=2) : void {
+      public function setAdvancedGlow(param1:uint, param2:Number=1, param3:Number=6.0, param4:Number=6.0, param5:Number=2) : void {
       }
       
       public function clearFilters() : void {
          filters = [];
       }
       
-      public function getStrata(nStrata:uint) : Sprite {
-         var nIndex:uint = 0;
-         var i:uint = 0;
-         if(this._aStrata[nStrata] != null)
+      public function getStrata(param1:uint) : Sprite {
+         var _loc2_:uint = 0;
+         var _loc3_:uint = 0;
+         if(this._aStrata[param1] != null)
          {
-            return this._aStrata[nStrata];
+            return this._aStrata[param1];
          }
-         this._aStrata[nStrata] = new Sprite();
-         this._aStrata[nStrata].name = "strata_" + nStrata;
-         this._aStrata[nStrata].mouseEnabled = false;
-         this._aStrata[nStrata].doubleClickEnabled = true;
-         nIndex = 0;
-         i = 0;
-         while(i < this._aStrata.length)
+         this._aStrata[param1] = new Sprite();
+         this._aStrata[param1].name = "strata_" + param1;
+         this._aStrata[param1].mouseEnabled = false;
+         this._aStrata[param1].doubleClickEnabled = true;
+         _loc2_ = 0;
+         _loc3_ = 0;
+         while(_loc3_ < this._aStrata.length)
          {
-            if(this._aStrata[i] != null)
+            if(this._aStrata[_loc3_] != null)
             {
-               addChildAt(this._aStrata[i],nIndex++);
+               addChildAt(this._aStrata[_loc3_],_loc2_++);
             }
-            i++;
+            _loc3_++;
          }
-         return this._aStrata[nStrata];
+         return this._aStrata[param1];
       }
       
-      public function set dynamicPosition(bool:Boolean) : void {
-         this._bDynamicPosition = bool;
+      public function set dynamicPosition(param1:Boolean) : void {
+         this._bDynamicPosition = param1;
       }
       
       public function get dynamicPosition() : Boolean {
          return this._bDynamicPosition;
       }
       
-      public function set disabled(bool:Boolean) : void {
-         if(bool)
+      public function set disabled(param1:Boolean) : void {
+         if(param1)
          {
             transform.colorTransform = new ColorTransform(0.6,0.6,0.6,1);
             this.handCursor = false;
@@ -486,17 +486,17 @@ package com.ankamagames.berilia.types.graphic
             this.mouseEnabled = true;
             mouseChildren = true;
          }
-         this._bDisabled = bool;
+         this._bDisabled = param1;
       }
       
       public function get disabled() : Boolean {
          return this._bDisabled;
       }
       
-      public function set softDisabled(bool:Boolean) : void {
-         if(this._bSoftDisabled != bool)
+      public function set softDisabled(param1:Boolean) : void {
+         if(this._bSoftDisabled != param1)
          {
-            if(bool)
+            if(param1)
             {
                transform.colorTransform = new ColorTransform(0.6,0.6,0.6,1);
             }
@@ -505,17 +505,17 @@ package com.ankamagames.berilia.types.graphic
                transform.colorTransform = new ColorTransform(1,1,1,1);
             }
          }
-         this._bSoftDisabled = bool;
+         this._bSoftDisabled = param1;
       }
       
       public function get softDisabled() : Boolean {
          return this._bSoftDisabled;
       }
       
-      public function set greyedOut(bool:Boolean) : void {
-         if(this._bGreyedOut != bool)
+      public function set greyedOut(param1:Boolean) : void {
+         if(this._bGreyedOut != param1)
          {
-            if(bool)
+            if(param1)
             {
                transform.colorTransform = new ColorTransform(0.6,0.6,0.6,1);
             }
@@ -527,7 +527,7 @@ package com.ankamagames.berilia.types.graphic
                }
             }
          }
-         this._bGreyedOut = bool;
+         this._bGreyedOut = param1;
       }
       
       public function get greyedOut() : Boolean {
@@ -535,44 +535,44 @@ package com.ankamagames.berilia.types.graphic
       }
       
       public function get depths() : Array {
-         var aDepth:Array = new Array();
-         var doParent:GraphicContainer = this;
-         while(doParent.getParent() != null)
+         var _loc1_:Array = new Array();
+         var _loc2_:GraphicContainer = this;
+         while(_loc2_.getParent() != null)
          {
-            aDepth.unshift(doParent.getParent());
-            doParent = doParent.getParent();
+            _loc1_.unshift(_loc2_.getParent());
+            _loc2_ = _loc2_.getParent();
          }
-         return aDepth;
+         return _loc1_;
       }
       
-      public function set handCursor(bValue:Boolean) : void {
-         this.buttonMode = bValue;
-         this.mouseChildren = !bValue;
+      public function set handCursor(param1:Boolean) : void {
+         this.buttonMode = param1;
+         this.mouseChildren = !param1;
       }
       
-      override public function set mouseEnabled(v:Boolean) : void {
-         var ctr:DisplayObjectContainer = null;
-         super.mouseEnabled = v;
-         for each (ctr in this._aStrata)
+      override public function set mouseEnabled(param1:Boolean) : void {
+         var _loc2_:DisplayObjectContainer = null;
+         super.mouseEnabled = param1;
+         for each (_loc2_ in this._aStrata)
          {
-            ctr.mouseEnabled = v;
+            _loc2_.mouseEnabled = param1;
          }
       }
       
-      public function process(msg:Message) : Boolean {
-         var ui:UiRootContainer = null;
-         var newMsg:MouseClickMessage = null;
-         if(!this.canProcessMessage(msg))
+      public function process(param1:Message) : Boolean {
+         var _loc2_:UiRootContainer = null;
+         var _loc3_:MouseClickMessage = null;
+         if(!this.canProcessMessage(param1))
          {
             return true;
          }
-         if((msg is MouseClickMessage) && (this._sLinkedTo))
+         if(param1 is MouseClickMessage && (this._sLinkedTo))
          {
-            ui = this.getUi();
-            if(ui != null)
+            _loc2_ = this.getUi();
+            if(_loc2_ != null)
             {
-               newMsg = GenericPool.get(MouseClickMessage,ui.getElement(this._sLinkedTo),MouseClickMessage(msg).mouseEvent);
-               ui.getElement(this._sLinkedTo).process(newMsg);
+               _loc3_ = GenericPool.get(MouseClickMessage,_loc2_.getElement(this._sLinkedTo),MouseClickMessage(param1).mouseEvent);
+               _loc2_.getElement(this._sLinkedTo).process(_loc3_);
             }
          }
          return false;
@@ -589,10 +589,10 @@ package com.ankamagames.berilia.types.graphic
       }
       
       public function remove() : void {
-         var ui:UiRootContainer = this.getUi();
-         if(ui)
+         var _loc1_:UiRootContainer = this.getUi();
+         if(_loc1_)
          {
-            ui.deleteId(name);
+            _loc1_.deleteId(name);
          }
          this.destroy(this);
          SecureCenter.destroy(this);
@@ -603,16 +603,16 @@ package com.ankamagames.berilia.types.graphic
          this.__removed = true;
       }
       
-      public function addContent(child:GraphicContainer, index:int=-1) : GraphicContainer {
-         if(index == -1)
+      public function addContent(param1:GraphicContainer, param2:int=-1) : GraphicContainer {
+         if(param2 == -1)
          {
-            this.getStrata(0).addChild(child);
+            this.getStrata(0).addChild(param1);
          }
          else
          {
-            this.getStrata(0).addChildAt(child,index);
+            this.getStrata(0).addChildAt(param1,param2);
          }
-         return child;
+         return param1;
       }
       
       public function removeFromParent() : void {
@@ -623,16 +623,16 @@ package com.ankamagames.berilia.types.graphic
       }
       
       public function getParent() : GraphicContainer {
-         if((this.parent == null) || (this is UiRootContainer))
+         if(this.parent == null || this is UiRootContainer)
          {
             return null;
          }
-         var doCurrent:DisplayObjectContainer = DisplayObjectContainer(this.parent);
-         while(!(doCurrent is GraphicContainer))
+         var _loc1_:DisplayObjectContainer = DisplayObjectContainer(this.parent);
+         while(!(_loc1_ is GraphicContainer))
          {
-            doCurrent = DisplayObjectContainer(doCurrent.parent);
+            _loc1_ = DisplayObjectContainer(_loc1_.parent);
          }
-         return GraphicContainer(doCurrent);
+         return GraphicContainer(_loc1_);
       }
       
       public function getUi() : UiRootContainer {
@@ -644,51 +644,51 @@ package com.ankamagames.berilia.types.graphic
          {
             return null;
          }
-         var doCurrent:Sprite = Sprite(this.parent);
-         while((!(doCurrent is UiRootContainer)) && (!(doCurrent == null)))
+         var _loc1_:Sprite = Sprite(this.parent);
+         while(!(_loc1_ is UiRootContainer) && !(_loc1_ == null))
          {
-            if((doCurrent is GraphicContainer) && (GraphicContainer(doCurrent)._uiRootContainer))
+            if(_loc1_ is GraphicContainer && (GraphicContainer(_loc1_)._uiRootContainer))
             {
-               doCurrent = GraphicContainer(doCurrent)._uiRootContainer;
+               _loc1_ = GraphicContainer(_loc1_)._uiRootContainer;
             }
             else
             {
-               if(doCurrent.parent is Sprite)
+               if(_loc1_.parent is Sprite)
                {
-                  doCurrent = Sprite(doCurrent.parent);
+                  _loc1_ = Sprite(_loc1_.parent);
                }
                else
                {
-                  doCurrent = null;
+                  _loc1_ = null;
                }
             }
          }
-         if(doCurrent == null)
+         if(_loc1_ == null)
          {
             return null;
          }
-         this._uiRootContainer = UiRootContainer(doCurrent);
-         return UiRootContainer(doCurrent);
+         this._uiRootContainer = UiRootContainer(_loc1_);
+         return UiRootContainer(_loc1_);
       }
       
-      public function setUi(ui:UiRootContainer, key:Object) : void {
-         if(key != SecureCenter.ACCESS_KEY)
+      public function setUi(param1:UiRootContainer, param2:Object) : void {
+         if(param2 != SecureCenter.ACCESS_KEY)
          {
             throw new SecurityError();
          }
          else
          {
-            this._uiRootContainer = ui;
+            this._uiRootContainer = param1;
             return;
          }
       }
       
-      public function getTopParent(d:DisplayObject) : DisplayObject {
-         if(d.parent != null)
+      public function getTopParent(param1:DisplayObject) : DisplayObject {
+         if(param1.parent != null)
          {
-            return this.getTopParent(d.parent);
+            return this.getTopParent(param1.parent);
          }
-         return d;
+         return param1;
       }
       
       public function startResize() : void {
@@ -717,91 +717,91 @@ package com.ankamagames.berilia.types.graphic
          }
       }
       
-      public function slide(endX:int, endY:int, time:int) : void {
-         TweenLite.to(this,time / 1000,
+      public function slide(param1:int, param2:int, param3:int) : void {
+         TweenLite.to(this,param3 / 1000,
             {
-               "x":endX,
-               "y":endY,
+               "x":param1,
+               "y":param2,
                "ease":Strong.easeOut
             });
       }
       
-      function defaultDropValidatorFunction(target:*, data:*, source:*) : Boolean {
-         var parent:DisplayObject = this;
+      private function defaultDropValidatorFunction(param1:*, param2:*, param3:*) : Boolean {
+         var _loc4_:DisplayObject = this;
          do
          {
-               parent = parent.parent;
-            }while((!(parent is IDragAndDropHandler)) && (parent.parent));
+               _loc4_ = _loc4_.parent;
+            }while(!(_loc4_ is IDragAndDropHandler) && (_loc4_.parent));
             
-            if(parent is IDragAndDropHandler)
+            if(_loc4_ is IDragAndDropHandler)
             {
-               return (parent as IDragAndDropHandler).dropValidator(target,data,source);
+               return (_loc4_ as IDragAndDropHandler).dropValidator(param1,param2,param3);
             }
             return false;
          }
          
-         function defaultProcessDropFunction(target:*, data:*, source:*) : void {
-            var parent:DisplayObject = this;
+         private function defaultProcessDropFunction(param1:*, param2:*, param3:*) : void {
+            var _loc4_:DisplayObject = this;
             do
             {
-                  parent = parent.parent;
-               }while((!(parent is IDragAndDropHandler)) && (parent.parent));
+                  _loc4_ = _loc4_.parent;
+               }while(!(_loc4_ is IDragAndDropHandler) && (_loc4_.parent));
                
-               if(parent is IDragAndDropHandler)
+               if(_loc4_ is IDragAndDropHandler)
                {
-                  (parent as IDragAndDropHandler).processDrop(target,data,source);
+                  (_loc4_ as IDragAndDropHandler).processDrop(param1,param2,param3);
                }
             }
             
-            function defaultRemoveDropSourceFunction(target:*) : void {
-               var parent:DisplayObject = this;
+            private function defaultRemoveDropSourceFunction(param1:*) : void {
+               var _loc2_:DisplayObject = this;
                do
                {
-                     parent = parent.parent;
-                  }while((!(parent is IDragAndDropHandler)) && (parent.parent));
+                     _loc2_ = _loc2_.parent;
+                  }while(!(_loc2_ is IDragAndDropHandler) && (_loc2_.parent));
                   
-                  if(parent is IDragAndDropHandler)
+                  if(_loc2_ is IDragAndDropHandler)
                   {
-                     (parent as IDragAndDropHandler).removeDropSource(target);
+                     (_loc2_ as IDragAndDropHandler).removeDropSource(param1);
                   }
                }
                
-               override public function localToGlobal(point:Point) : Point {
-                  var target:DisplayObject = this;
-                  var coord:Point = point;
-                  while((target) && (target.parent))
+               override public function localToGlobal(param1:Point) : Point {
+                  var _loc2_:DisplayObject = this;
+                  var _loc3_:Point = param1;
+                  while((_loc2_) && (_loc2_.parent))
                   {
-                     coord.x = coord.x + target.parent.x;
-                     coord.y = coord.y + target.parent.y;
-                     target = target.parent;
+                     _loc3_.x = _loc3_.x + _loc2_.parent.x;
+                     _loc3_.y = _loc3_.y + _loc2_.parent.y;
+                     _loc2_ = _loc2_.parent;
                   }
-                  return coord;
+                  return _loc3_;
                }
                
-               function destroy(target:DisplayObjectContainer) : void {
-                  var item:DisplayObject = null;
-                  if((!target) || (target is MovieClip) && (MovieClip(target).totalFrames > 1))
+               protected function destroy(param1:DisplayObjectContainer) : void {
+                  var _loc2_:DisplayObject = null;
+                  if(!param1 || param1 is MovieClip && MovieClip(param1).totalFrames > 1)
                   {
                      return;
                   }
-                  var index:uint = 0;
-                  var num:int = target.numChildren;
-                  while(target.numChildren)
+                  var _loc3_:uint = 0;
+                  var _loc4_:int = param1.numChildren;
+                  while(param1.numChildren)
                   {
-                     item = target.removeChildAt(0);
-                     if(item is TiphonSprite)
+                     _loc2_ = param1.removeChildAt(0);
+                     if(_loc2_ is TiphonSprite)
                      {
-                        (item as TiphonSprite).destroy();
+                        (_loc2_ as TiphonSprite).destroy();
                      }
                      else
                      {
-                        if(item is GraphicContainer)
+                        if(_loc2_ is GraphicContainer)
                         {
-                           (item as GraphicContainer).remove();
+                           (_loc2_ as GraphicContainer).remove();
                         }
-                        if(item is DisplayObjectContainer)
+                        if(_loc2_ is DisplayObjectContainer)
                         {
-                           this.destroy(item as DisplayObjectContainer);
+                           this.destroy(_loc2_ as DisplayObjectContainer);
                         }
                      }
                   }
@@ -834,38 +834,38 @@ package com.ankamagames.berilia.types.graphic
                   this._uiRootContainer = null;
                }
                
-               override public function contains(child:DisplayObject) : Boolean {
-                  return super.contains(child);
+               override public function contains(param1:DisplayObject) : Boolean {
+                  return super.contains(param1);
                }
                
-               function onEnterFrame(e:Event) : void {
-                  var w:int = this._nStartWidth + StageShareManager.mouseX - this._nMouseX;
-                  var h:int = this._nStartHeight + StageShareManager.mouseY - this._nMouseY;
+               private function onEnterFrame(param1:Event) : void {
+                  var _loc2_:int = this._nStartWidth + StageShareManager.mouseX - this._nMouseX;
+                  var _loc3_:int = this._nStartHeight + StageShareManager.mouseY - this._nMouseY;
                   if(this.minSize != null)
                   {
-                     if((!isNaN(this.minSize.x)) && (w < this.minSize.x))
+                     if(!isNaN(this.minSize.x) && _loc2_ < this.minSize.x)
                      {
-                        w = this.minSize.x;
+                        _loc2_ = this.minSize.x;
                      }
-                     if((!isNaN(this.minSize.y)) && (h < this.minSize.y))
+                     if(!isNaN(this.minSize.y) && _loc3_ < this.minSize.y)
                      {
-                        h = this.minSize.y;
+                        _loc3_ = this.minSize.y;
                      }
                   }
                   if(this.maxSize != null)
                   {
-                     if((!isNaN(this.maxSize.x)) && (w > this.maxSize.x))
+                     if(!isNaN(this.maxSize.x) && _loc2_ > this.maxSize.x)
                      {
-                        w = this.maxSize.x;
+                        _loc2_ = this.maxSize.x;
                      }
-                     if((!isNaN(this.maxSize.y)) && (h > this.maxSize.y))
+                     if(!isNaN(this.maxSize.y) && _loc3_ > this.maxSize.y)
                      {
-                        h = this.maxSize.y;
+                        _loc3_ = this.maxSize.y;
                      }
                   }
-                  this.width = w;
-                  this.height = h;
-                  if((!(this._nLastWidth == this.width)) || (!(this._nLastHeight == this.height)))
+                  this.width = _loc2_;
+                  this.height = _loc3_;
+                  if(!(this._nLastWidth == this.width) || !(this._nLastHeight == this.height))
                   {
                      if(this._bUseSimpleResize)
                      {
@@ -890,10 +890,10 @@ package com.ankamagames.berilia.types.graphic
                   }
                }
                
-               function canProcessMessage(pMsg:Message) : Boolean {
+               protected function canProcessMessage(param1:Message) : Boolean {
                   if(this._bSoftDisabled)
                   {
-                     if(!((pMsg is ItemRollOutMessage) || (pMsg is ItemRollOverMessage) || (pMsg is MouseOverMessage) || (pMsg is MouseOutMessage)))
+                     if(!(param1 is ItemRollOutMessage || param1 is ItemRollOverMessage || param1 is MouseOverMessage || param1 is MouseOutMessage))
                      {
                         return false;
                      }

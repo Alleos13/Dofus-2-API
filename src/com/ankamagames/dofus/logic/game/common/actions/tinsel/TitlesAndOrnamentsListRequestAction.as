@@ -10,8 +10,8 @@ package com.ankamagames.dofus.logic.game.common.actions.tinsel
       }
       
       public static function create() : TitlesAndOrnamentsListRequestAction {
-         var action:TitlesAndOrnamentsListRequestAction = new TitlesAndOrnamentsListRequestAction();
-         return action;
+         var _loc1_:TitlesAndOrnamentsListRequestAction = new TitlesAndOrnamentsListRequestAction();
+         return _loc1_;
       }
    }
 }

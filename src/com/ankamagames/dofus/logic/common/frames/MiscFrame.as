@@ -73,8 +73,8 @@ package com.ankamagames.dofus.logic.common.frames
       
       private var _mouseOnStage:Boolean = true;
       
-      public function isOptionalFeatureActive(id:uint) : Boolean {
-         if((this._optionalAuthorizedFeatures) && (this._optionalAuthorizedFeatures.indexOf(id) > -1))
+      public function isOptionalFeatureActive(param1:uint) : Boolean {
+         if((this._optionalAuthorizedFeatures) && this._optionalAuthorizedFeatures.indexOf(param1) > -1)
          {
             return true;
          }
@@ -104,11 +104,11 @@ package com.ankamagames.dofus.logic.common.frames
          return true;
       }
       
-      public function getServerSessionConstant(id:int) : Object {
-         return this._serverSessionConstants[id];
+      public function getServerSessionConstant(param1:int) : Object {
+         return this._serverSessionConstants[param1];
       }
       
-      public function process(msg:Message) : Boolean {
+      public function process(param1:Message) : Boolean {
          var mrcMsg:MouseRightClickMessage = null;
          var current:DisplayObject = null;
          var beriliaContainer:DisplayObjectContainer = null;
@@ -130,13 +130,14 @@ package com.ankamagames.dofus.logic.common.frames
          var file:File = null;
          var featureId:int = 0;
          var constant:ServerSessionConstant = null;
+         var msg:Message = param1;
          switch(true)
          {
             case msg is MouseRightClickMessage:
                mrcMsg = msg as MouseRightClickMessage;
                current = mrcMsg.target;
                beriliaContainer = Berilia.getInstance().docMain;
-               while((!(current == stage)) && (current))
+               while(!(current == stage) && (current))
                {
                   if(beriliaContainer == current)
                   {
@@ -153,7 +154,7 @@ package com.ankamagames.dofus.logic.common.frames
                   currentW = mwMsg.target;
                   stage = StageShareManager.stage;
                   beriliaContainerW = Berilia.getInstance().docMain;
-                  while((!(currentW == stage)) && (currentW))
+                  while(!(currentW == stage) && (currentW))
                   {
                      if(beriliaContainerW == currentW)
                      {
@@ -179,7 +180,7 @@ package com.ankamagames.dofus.logic.common.frames
                try
                {
                   file = File.applicationDirectory;
-                  if((!file) || (!file.exists))
+                  if(!file || !file.exists)
                   {
                      value = "-1";
                   }
@@ -205,26 +206,25 @@ package com.ankamagames.dofus.logic.common.frames
                   {
                      fileStream.close();
                   }
-                  if(value == "")
+               }
+               if(value == "")
+               {
+                  if(cfrmsg.type == 0)
                   {
-                     if(cfrmsg.type == 0)
+                     value = fileByte.length.toString();
+                  }
+                  else
+                  {
+                     if(cfrmsg.type == 1)
                      {
-                        value = fileByte.length.toString();
-                     }
-                     else
-                     {
-                        if(cfrmsg.type == 1)
-                        {
-                           value = MD5.hash(fileByte.toString());
-                        }
+                        value = MD5.hash(fileByte.toString());
                      }
                   }
-                  cfmsg = new CheckFileMessage();
-                  cfmsg.initCheckFileMessage(filenameHash,cfrmsg.type,value);
-                  ConnectionsHandler.getConnection().send(cfmsg);
-                  return true;
                }
-               return false;
+               cfmsg = new CheckFileMessage();
+               cfmsg.initCheckFileMessage(filenameHash,cfrmsg.type,value);
+               ConnectionsHandler.getConnection().send(cfmsg);
+               return true;
             case msg is ServerOptionalFeaturesMessage:
                sofmsg = msg as ServerOptionalFeaturesMessage;
                this._optionalAuthorizedFeatures = new Array();
@@ -273,6 +273,8 @@ package com.ankamagames.dofus.logic.common.frames
                this._accountHouses = ahm.houses;
                KernelEventsManager.getInstance().processCallback(HookList.HouseInformations,ahm.houses);
                return true;
+            default:
+               return false;
          }
       }
       
@@ -280,12 +282,12 @@ package com.ankamagames.dofus.logic.common.frames
          return Priority.LOW;
       }
       
-      function onMouseLeave(e:Event) : void {
+      private function onMouseLeave(param1:Event) : void {
          this._mouseOnStage = false;
          this._stage.addEventListener(MouseEvent.MOUSE_MOVE,this.onMouseMove);
       }
       
-      function onMouseMove(e:Event) : void {
+      private function onMouseMove(param1:Event) : void {
          this._mouseOnStage = true;
          this._stage.removeEventListener(MouseEvent.MOUSE_MOVE,this.onMouseMove);
       }

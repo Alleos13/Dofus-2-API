@@ -5,9 +5,9 @@ package com.ankamagames.berilia.components.messages
    public class DeleteTabMessage extends ComponentMessage
    {
       
-      public function DeleteTabMessage(target:InteractiveObject, deletedIndex:int) {
-         super(target);
-         this._deletedIndex = deletedIndex;
+      public function DeleteTabMessage(param1:InteractiveObject, param2:int) {
+         super(param1);
+         this._deletedIndex = param2;
       }
       
       private var _deletedIndex:int;

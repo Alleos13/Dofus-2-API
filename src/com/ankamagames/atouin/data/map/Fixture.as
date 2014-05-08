@@ -10,9 +10,9 @@ package com.ankamagames.atouin.data.map
    public class Fixture extends Object
    {
       
-      public function Fixture(map:Map) {
+      public function Fixture(param1:Map) {
          super();
-         this._map = map;
+         this._map = param1;
       }
       
       protected static const _log:Logger = Log.getLogger(getQualifiedClassName(Fixture));
@@ -43,7 +43,8 @@ package com.ankamagames.atouin.data.map
          return this._map;
       }
       
-      public function fromRaw(raw:IDataInput) : void {
+      public function fromRaw(param1:IDataInput) : void {
+         var raw:IDataInput = param1;
          try
          {
             this.fixtureId = raw.readInt();

@@ -19,8 +19,8 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.quest
          return 381;
       }
       
-      public function initQuestActiveInformations(questId:uint=0) : QuestActiveInformations {
-         this.questId = questId;
+      public function initQuestActiveInformations(param1:uint=0) : QuestActiveInformations {
+         this.questId = param1;
          return this;
       }
       
@@ -28,28 +28,28 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.quest
          this.questId = 0;
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_QuestActiveInformations(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_QuestActiveInformations(param1);
       }
       
-      public function serializeAs_QuestActiveInformations(output:IDataOutput) : void {
+      public function serializeAs_QuestActiveInformations(param1:IDataOutput) : void {
          if(this.questId < 0)
          {
             throw new Error("Forbidden value (" + this.questId + ") on element questId.");
          }
          else
          {
-            output.writeShort(this.questId);
+            param1.writeShort(this.questId);
             return;
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_QuestActiveInformations(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_QuestActiveInformations(param1);
       }
       
-      public function deserializeAs_QuestActiveInformations(input:IDataInput) : void {
-         this.questId = input.readShort();
+      public function deserializeAs_QuestActiveInformations(param1:IDataInput) : void {
+         this.questId = param1.readShort();
          if(this.questId < 0)
          {
             throw new Error("Forbidden value (" + this.questId + ") on element of QuestActiveInformations.questId.");

@@ -49,7 +49,6 @@ package com.ankamagames.berilia.managers
    import com.ankamagames.berilia.types.data.PreCompiledUiModule;
    import com.ankamagames.jerakine.utils.misc.StringUtils;
    import flash.filesystem.FileMode;
-   import by.blooddy.crypto.MD5;
    import com.ankamagames.jerakine.resources.adapters.impl.SignedFileAdapter;
    import com.ankamagames.jerakine.resources.adapters.impl.BinaryAdapter;
    import com.ankamagames.jerakine.resources.adapters.impl.AdvancedSignedFileAdapter;
@@ -65,6 +64,7 @@ package com.ankamagames.berilia.managers
    import com.ankamagames.berilia.types.event.ParsorEvent;
    import com.ankamagames.berilia.types.messages.UiXmlParsedMessage;
    import com.ankamagames.berilia.types.messages.UiXmlParsedErrorMessage;
+   import by.blooddy.crypto.MD5;
    import com.ankamagames.jerakine.types.ASwf;
    import com.ankamagames.jerakine.utils.errors.SingletonError;
    import com.ankamagames.jerakine.resources.loaders.ResourceLoaderFactory;
@@ -73,7 +73,7 @@ package com.ankamagames.berilia.managers
    public class UiModuleManager extends Object
    {
       
-      public function UiModuleManager(dontUseLocalServer:Boolean=false) {
+      public function UiModuleManager(param1:Boolean=false) {
          this._regImport = new RegExp("<Import *url *= *\"([^\"]*)","g");
          this._modulesHashs = new Dictionary();
          this._moduleScriptLoadedRef = new Dictionary();
@@ -97,7 +97,7 @@ package com.ankamagames.berilia.managers
             this._cacheLoader = ResourceLoaderFactory.getLoader(ResourceLoaderType.PARALLEL_LOADER);
             this._moduleLoaders = new Dictionary();
             this._useHttpServer = false;
-            if((!dontUseLocalServer) && (ApplicationDomain.currentDomain.hasDefinition("flash.net.ServerSocket")))
+            if(!param1 && (ApplicationDomain.currentDomain.hasDefinition("flash.net.ServerSocket")))
             {
                this._useHttpServer = true;
             }
@@ -113,10 +113,10 @@ package com.ankamagames.berilia.managers
       
       private static var _self:UiModuleManager;
       
-      public static function getInstance(dontUseLocalServer:Boolean=false) : UiModuleManager {
+      public static function getInstance(param1:Boolean=false) : UiModuleManager {
          if(!_self)
          {
-            _self = new UiModuleManager(dontUseLocalServer);
+            _self = new UiModuleManager(param1);
          }
          return _self;
       }
@@ -169,11 +169,7 @@ package com.ankamagames.berilia.managers
       
       private var _moduleLaunchWaitForSharedDefinition:Boolean;
       
-      private var _unInitializedModules:Array;
-      
-      public function get unInitializedModules() : Array {
-         return this._unInitializedModules;
-      }
+      private var _unInitializedModule:Array;
       
       private var _useHttpServer:Boolean;
       
@@ -181,7 +177,7 @@ package com.ankamagames.berilia.managers
       
       private var _loadingModule:Dictionary;
       
-      private var _disabledModules:Array;
+      private var _disabledModule:Array;
       
       private var _sharedDefinitionInstance:Object;
       
@@ -207,25 +203,20 @@ package com.ankamagames.berilia.managers
          return this._unparsedXmlTotalCount;
       }
       
-      public function set sharedDefinitionContainer(path:Uri) : void {
-         var url:String = null;
-         var sharedDefinitionUri:Uri = null;
-         this._useSharedDefinition = !(path == null);
-         if(path)
+      public function set sharedDefinitionContainer(param1:Uri) : void {
+         this._useSharedDefinition = !(param1 == null);
+         if(param1)
          {
             if(this._useHttpServer)
             {
-               url = HttpServer.getInstance().getUrlTo(path.fileName);
-               sharedDefinitionUri = new Uri(url);
-               _log.debug("sharedDefinition.swf location: " + path.uri + " (" + url + ")");
-               this._sharedDefinitionLoader.load(sharedDefinitionUri,null,path.fileType == "swf"?AdvancedSwfAdapter:null);
+               this._sharedDefinitionLoader.load(new Uri(HttpServer.getInstance().getUrlTo(param1.fileName)),null,param1.fileType == "swf"?AdvancedSwfAdapter:null);
                _log.info("trying to load sharedDefinition.swf throught an httpServer");
-               this._timeOutFrameNumber = StageShareManager.stage.frameRate * 10;
+               this._timeOutFrameNumber = StageShareManager.stage.frameRate * 2;
                EnterFrameDispatcher.addEventListener(this.timeOutFrameCount,"frameCount");
             }
             else
             {
-               this._sharedDefinitionLoader.load(path,null,path.fileType == "swf"?AdvancedSwfAdapter:null);
+               this._sharedDefinitionLoader.load(param1,null,param1.fileType == "swf"?AdvancedSwfAdapter:null);
                _log.info("trying to load sharedDefinition.swf the good ol\' way");
             }
          }
@@ -243,15 +234,11 @@ package com.ankamagames.berilia.managers
          return this._sharedDefinitionInstance;
       }
       
-      public function get modulesHashs() : Dictionary {
-         return this._modulesHashs;
-      }
-      
-      public function init(filter:Array, filterInclude:Boolean) : void {
-         var uri:Uri = null;
-         var file:File = null;
-         this._filter = filter;
-         this._filterInclude = filterInclude;
+      public function init(param1:Array, param2:Boolean) : void {
+         var _loc4_:Uri = null;
+         var _loc5_:File = null;
+         this._filter = param1;
+         this._filterInclude = param2;
          if(!this._sharedDefinition)
          {
             this._waitingInit = true;
@@ -267,9 +254,9 @@ package com.ankamagames.berilia.managers
          this._clearUi = new Array();
          this._uiFiles = new Array();
          this._modulesPaths = new Dictionary();
-         this._unInitializedModules = new Array();
+         this._unInitializedModule = new Array();
          this._loadingModule = new Dictionary();
-         this._disabledModules = [];
+         this._disabledModule = [];
          if(AirScanner.hasAir())
          {
             ProtocolFactory.addProtocol("mod",ModProtocol);
@@ -278,27 +265,27 @@ package com.ankamagames.berilia.managers
          {
             ProtocolFactory.addProtocol("mod",ModFlashProtocol);
          }
-         var uiRoot:String = LangManager.getInstance().getEntry("config.mod.path");
-         if((!(uiRoot.substr(0,2) == "\\\\")) && (!(uiRoot.substr(1,2) == ":/")))
+         var _loc3_:String = LangManager.getInstance().getEntry("config.mod.path");
+         if(!(_loc3_.substr(0,2) == "\\\\") && !(_loc3_.substr(1,2) == ":/"))
          {
-            this._modulesRoot = new File(File.applicationDirectory.nativePath + File.separator + uiRoot);
+            this._modulesRoot = new File(File.applicationDirectory.nativePath + File.separator + _loc3_);
          }
          else
          {
-            this._modulesRoot = new File(uiRoot);
+            this._modulesRoot = new File(_loc3_);
          }
-         uri = new Uri(this._modulesRoot.nativePath + "/hash.metas");
-         this._loader.load(uri);
+         _loc4_ = new Uri(this._modulesRoot.nativePath + "/hash.metas");
+         this._loader.load(_loc4_);
          BindsManager.getInstance().initialize();
          if(this._modulesRoot.exists)
          {
-            for each (file in this._modulesRoot.getDirectoryListing())
+            for each (_loc5_ in this._modulesRoot.getDirectoryListing())
             {
-               if(!((!file.isDirectory) || (file.name.charAt(0) == ".")))
+               if(!(!_loc5_.isDirectory || _loc5_.name.charAt(0) == "."))
                {
-                  if(!(filter.indexOf(file.name) == -1) == filterInclude)
+                  if(!(param1.indexOf(_loc5_.name) == -1) == param2)
                   {
-                     this.loadModule(file.name);
+                     this.loadModule(_loc5_.name);
                   }
                }
             }
@@ -307,14 +294,14 @@ package com.ankamagames.berilia.managers
          ErrorManager.addError("Impossible de trouver le dossier contenant les modules (url: " + LangManager.getInstance().getEntry("config.mod.path") + ")");
       }
       
-      public function lightInit(moduleList:Vector.<UiModule>) : void {
-         var m:UiModule = null;
+      public function lightInit(param1:Vector.<UiModule>) : void {
+         var _loc2_:UiModule = null;
          this._resetState = false;
          this._modules = new Array();
          this._modulesPaths = new Dictionary();
-         for each (this._modules[m.id] in moduleList)
+         for each (this._modules[_loc2_.id] in param1)
          {
-            this._modulesPaths[m.id] = m.rootPath;
+            this._modulesPaths[_loc2_.id] = _loc2_.rootPath;
          }
       }
       
@@ -322,21 +309,16 @@ package com.ankamagames.berilia.managers
          return this._modules;
       }
       
-      public function getModule(name:String, includeUnInitialized:Boolean=false) : UiModule {
-         var module:UiModule = this._modules[name];
-         if((includeUnInitialized) && (!module))
-         {
-            module = this._unInitializedModules[name];
-         }
-         return module;
+      public function getModule(param1:String) : UiModule {
+         return this._modules[param1];
       }
       
-      public function get disabledModules() : Array {
-         return this._disabledModules;
+      public function get disabledModule() : Array {
+         return this._disabledModule;
       }
       
       public function reset() : void {
-         var module:UiModule = null;
+         var _loc1_:UiModule = null;
          _log.warn("Reset des modules");
          this._resetState = true;
          if(this._loader)
@@ -351,15 +333,15 @@ package com.ankamagames.berilia.managers
          {
             this._uiLoader.cancel();
          }
-         TooltipManager.clearCache();
-         for each (module in this._modules)
-         {
-            this.unloadModule(module.id);
-         }
          Shortcut.reset();
+         TooltipManager.clearCache();
          Berilia.getInstance().reset();
          ApiBinder.reset();
          KernelEventsManager.getInstance().initialize();
+         for each (_loc1_ in this._modules)
+         {
+            this.unloadModule(_loc1_.id);
+         }
          this._modules = [];
          this._uiFileToLoad = 0;
          this._scriptNum = 0;
@@ -368,49 +350,49 @@ package com.ankamagames.berilia.managers
          this._modulesPaths = new Dictionary();
       }
       
-      public function getModulePath(moduleName:String) : String {
-         return this._modulesPaths[moduleName];
+      public function getModulePath(param1:String) : String {
+         return this._modulesPaths[param1];
       }
       
-      public function loadModule(id:String) : void {
-         var dmFile:File = null;
-         var uri:Uri = null;
-         var modulePath:String = null;
-         var len:* = 0;
-         var substr:String = null;
-         this.unloadModule(id);
-         var targetedModuleFolder:File = this._modulesRoot.resolvePath(id);
-         if(targetedModuleFolder.exists)
+      public function loadModule(param1:String) : void {
+         var _loc3_:File = null;
+         var _loc4_:Uri = null;
+         var _loc5_:String = null;
+         var _loc6_:* = 0;
+         var _loc7_:String = null;
+         this.unloadModule(param1);
+         var _loc2_:File = this._modulesRoot.resolvePath(param1);
+         if(_loc2_.exists)
          {
-            dmFile = this.searchDmFile(targetedModuleFolder);
-            if(dmFile)
+            _loc3_ = this.searchDmFile(_loc2_);
+            if(_loc3_)
             {
                this._moduleCount++;
                this._scriptNum++;
-               if(dmFile.nativePath.indexOf("app:/") == 0)
+               if(_loc3_.nativePath.indexOf("app:/") == 0)
                {
-                  len = "app:/".length;
-                  substr = dmFile.nativePath.substring(len,dmFile.url.length);
-                  uri = new Uri(substr);
-                  modulePath = substr.substr(0,substr.lastIndexOf("/"));
+                  _loc6_ = "app:/".length;
+                  _loc7_ = _loc3_.nativePath.substring(_loc6_,_loc3_.url.length);
+                  _loc4_ = new Uri(_loc7_);
+                  _loc5_ = _loc7_.substr(0,_loc7_.lastIndexOf("/"));
                }
                else
                {
-                  uri = new Uri(dmFile.nativePath);
-                  modulePath = dmFile.parent.nativePath;
+                  _loc4_ = new Uri(_loc3_.nativePath);
+                  _loc5_ = _loc3_.parent.nativePath;
                }
-               uri.tag = dmFile;
-               this._modulesPaths[id] = modulePath;
-               this._loader.load(uri);
+               _loc4_.tag = _loc3_;
+               this._modulesPaths[param1] = _loc5_;
+               this._loader.load(_loc4_);
             }
             else
             {
-               _log.error("Cannot found .dm or .d2ui file in " + targetedModuleFolder.url);
+               _log.error("Cannot found .dm or .d2ui file in " + _loc2_.url);
             }
          }
       }
       
-      public function unloadModule(id:String) : void {
+      public function unloadModule(param1:String) : void {
          var uiCtr:UiRootContainer = null;
          var ui:String = null;
          var group:UiGroup = null;
@@ -418,6 +400,7 @@ package com.ankamagames.berilia.managers
          var varName:String = null;
          var apiList:Vector.<Object> = null;
          var api:Object = null;
+         var id:String = param1;
          if(this._modules == null)
          {
             return;
@@ -477,318 +460,57 @@ package com.ankamagames.berilia.managers
          BindsManager.getInstance().removeEventListenerByName("__module_" + m.id);
          KernelEventsManager.getInstance().removeEventListenerByName("__module_" + m.id);
          delete this._modules[[id]];
-         this._disabledModules[id] = m;
+         this._disabledModule[id] = m;
       }
       
-      public function checkSharedDefinitionHash(hashUrl:String) : void {
-         var hashUri:Uri = new Uri(hashUrl);
+      public function checkSharedDefinitionHash(param1:String) : void {
+         var _loc2_:Uri = new Uri(param1);
       }
       
-      function onTimeOut() : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
-      }
-      
-      function timeOutFrameCount(e:Event) : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
-      }
-      
-      function launchModule() : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: EmptyStackException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
-      }
-      
-      function launchUiCheck() : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
-      }
-      
-      function processCachedFiles(files:Array) : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: EmptyStackException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
-      }
-      
-      function onLoadError(e:ResourceErrorEvent) : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: EmptyStackException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
-      }
-      
-      function switchToNoHttpMode() : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
-      }
-      
-      function onUiLoadError(e:ResourceErrorEvent) : void {
-         if(_loc4_)
+      private function onTimeOut() : void {
+         var _loc1_:* = false;
+         if(!_loc1_)
          {
-            if(!_loc4_)
+            _log.error("SharedDefinition load Timeout");
+            if(!_loc1_)
             {
-               while(true)
+               if(_loc1_)
                {
-                  if(!_loc5_)
+                  while(true)
                   {
-                     if(_loc4_)
+                     EnterFrameDispatcher.removeEventListener(this.timeOutFrameCount);
+                     if(_loc2_)
                      {
-                        if(_loc4_)
+                        if(!_loc1_)
                         {
-                           if(!_loc5_)
-                           {
-                              if(_loc4_)
-                              {
-                              }
-                           }
+                           break;
                         }
-                        if(_loc4_)
-                        {
-                        }
-                     }
-                     if(_loc4_)
-                     {
-                     }
-                  }
-                  ErrorManager.addError("Impossible de charger le fichier d\'interface ");
-                  if(!_loc5_)
-                  {
-                     if(_loc4_)
-                     {
-                     }
-                     if(_loc5_)
-                     {
-                     }
-                     Berilia.getInstance().handler.process(new ModuleRessourceLoadFailedMessage(e.uri.tag,e.uri));
-                     if(!_loc5_)
-                     {
                         break;
                      }
                   }
-                  else
-                  {
-                     break;
-                  }
-                  break;
+                  return;
                }
-               if(_loc4_)
+               while(true)
                {
+                  this.switchToNoHttpMode();
                }
-               if(_loc4_)
-               {
-               }
-               if(!_loc5_)
-               {
-                  this._uiFileToLoad--;
-               }
-            }
-            while(true)
-            {
-               if(!_loc4_)
-               {
-                  if(_loc5_)
-                  {
-                  }
-                  Berilia.getInstance().handler.process(new ModuleRessourceLoadFailedMessage(e.uri.tag,e.uri));
-                  if(_loc5_)
-                  {
-                  }
-               }
-               else
-               {
-                  if(!_loc5_)
-                  {
-                     if(_loc4_)
-                     {
-                        if(_loc4_)
-                        {
-                           if(!_loc5_)
-                           {
-                              if(_loc4_)
-                              {
-                              }
-                           }
-                        }
-                        if(_loc4_)
-                        {
-                        }
-                     }
-                     if(_loc4_)
-                     {
-                     }
-                  }
-                  ErrorManager.addError("Impossible de charger le fichier d\'interface ");
-                  if(!_loc5_)
-                  {
-                     if(!_loc4_)
-                     {
-                        continue;
-                     }
-                     if(_loc5_)
-                     {
-                     }
-                     Berilia.getInstance().handler.process(new ModuleRessourceLoadFailedMessage(e.uri.tag,e.uri));
-                     if(_loc5_)
-                     {
-                     }
-                  }
-               }
-               if(_loc4_)
-               {
-               }
-               if(_loc4_)
-               {
-               }
-               if(!_loc5_)
-               {
-                  this._uiFileToLoad--;
-               }
-            }
-         }
-      }
-      
-      function onLoad(e:ResourceLoadedEvent) : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: EmptyStackException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
-      }
-      
-      function onDMLoad(e:ResourceLoadedEvent) : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
-      }
-      
-      function onScriptLoadFail(e:IOErrorEvent, uiModule:UiModule) : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: EmptyStackException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
-      }
-      
-      private var _moduleScriptLoadedRef:Dictionary;
-      
-      function onScriptLoad(e:ResourceLoadedEvent) : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
-      }
-      
-      function onModuleScriptLoaded(e:Event, uiModule:UiModule=null) : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: EmptyStackException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
-      }
-      
-      function onShortcutLoad(e:ResourceLoadedEvent) : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
-      }
-      
-      function onHashLoaded(e:ResourceLoadedEvent) : void {
-        
-      }
-      
-      function onAllUiChecked(e:ResourceLoaderProgressEvent) : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
-      }
-      
-      function parseNextXml() : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
-      }
-      
-      function onXmlParsed(e:ParsorEvent) : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
-      }
-      
-      function onXmlParsingError(e:ParsingErrorEvent) : void {
-         var _loc3_:* = false;
-         if(!_loc3_)
-         {
-            if(_loc3_)
-            {
-               while(_loc3_)
-               {
-                  break;
-               }
-               return;
-            }
-            while(true)
-            {
-               if(_loc2_)
-               {
-               }
-               Berilia.getInstance().handler.process(new UiXmlParsedErrorMessage(e.url,e.msg));
             }
          }
          while(true)
          {
             if(_loc2_)
             {
-               if(_loc3_)
+               EnterFrameDispatcher.removeEventListener(this.timeOutFrameCount);
+               if(_loc2_)
                {
-                  if(_loc2_)
+                  if(_loc1_)
                   {
+                     this.switchToNoHttpMode();
+                     continue;
                   }
-                  Berilia.getInstance().handler.process(new UiXmlParsedErrorMessage(e.url,e.msg));
+               }
+               else
+               {
                   continue;
                }
             }
@@ -796,7 +518,538 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      function onUiLoaded(e:ResourceLoadedEvent) : void {
+      private function timeOutFrameCount(param1:Event) : void {
+         var _loc4_:* = true;
+         var _loc5_:* = false;
+         if(!_loc5_)
+         {
+            if(_loc5_)
+            {
+            }
+            if(_loc4_)
+            {
+               _loc2_._timeOutFrameNumber = _loc3_;
+            }
+            if(!_loc5_)
+            {
+               if(_loc4_)
+               {
+               }
+               if(this._timeOutFrameNumber <= 0)
+               {
+                  if(_loc5_)
+                  {
+                  }
+               }
+            }
+            this.onTimeOut();
+         }
+      }
+      
+      private function launchModule() : void {
+         /*
+          * Decompilation error
+          * Code may be obfuscated
+          * Error type: EmptyStackException
+          */
+         throw new IllegalOperationError("Not decompiled due to error");
+      }
+      
+      private function launchUiCheck() : void {
+         var _loc1_:* = true;
+         var _loc2_:* = false;
+         if(!_loc2_)
+         {
+            this._uiFileToLoad = this._uiFiles.length;
+            if(_loc2_)
+            {
+            }
+            return;
+         }
+         if(this._uiFiles.length)
+         {
+            if(_loc1_)
+            {
+               this._uiLoader.load(this._uiFiles,null,TxtAdapter);
+               if(_loc2_)
+               {
+               }
+            }
+         }
+         else
+         {
+            this.onAllUiChecked(null);
+         }
+      }
+      
+      private function processCachedFiles(param1:Array) : void {
+         var _loc8_:* = false;
+         var _loc9_:* = true;
+         var _loc2_:Uri = null;
+         var _loc3_:Uri = null;
+         if(_loc9_)
+         {
+            if(_loc8_)
+            {
+            }
+            if(!_loc8_)
+            {
+               if(!_loc8_)
+               {
+                  for each (_loc3_ in param1)
+                  {
+                     if(!_loc8_)
+                     {
+                        if(_loc9_)
+                        {
+                           if(!_loc8_)
+                           {
+                              if("css" === _loc7_)
+                              {
+                                 if(_loc9_)
+                                 {
+                                 }
+                              }
+                              else
+                              {
+                                 if(_loc9_)
+                                 {
+                                 }
+                                 if("jpg" !== _loc7_)
+                                 {
+                                    if(_loc9_)
+                                    {
+                                    }
+                                 }
+                                 if("jpg" === _loc7_)
+                                 {
+                                 }
+                              }
+                              if(_loc9_)
+                              {
+                              }
+                           }
+                           if("css" === _loc7_)
+                           {
+                              if(_loc9_)
+                              {
+                                 if(_loc9_)
+                                 {
+                                 }
+                                 if(_loc9_)
+                                 {
+                                 }
+                              }
+                              if(_loc9_)
+                              {
+                              }
+                           }
+                           else
+                           {
+                              if("png" !== _loc7_)
+                              {
+                                 if(_loc9_)
+                                 {
+                                 }
+                              }
+                              if("png" === _loc7_)
+                              {
+                              }
+                           }
+                           if(_loc9_)
+                           {
+                           }
+                        }
+                        if(_loc9_)
+                        {
+                           if(_loc9_)
+                           {
+                           }
+                        }
+                        else
+                        {
+                           if(_loc9_)
+                           {
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+      
+      private function onLoadError(param1:ResourceErrorEvent) : void {
+         /*
+          * Decompilation error
+          * Code may be obfuscated
+          * Error type: EmptyStackException
+          */
+         throw new IllegalOperationError("Not decompiled due to error");
+      }
+      
+      private function switchToNoHttpMode() : void {
+         var _loc3_:* = true;
+         if(_loc3_)
+         {
+            this._useHttpServer = false;
+            if(_loc2_)
+            {
+            }
+            this._sharedDefinitionLoader.cancel();
+            _loc1_ = new Uri("SharedDefinitions.swf");
+            if(_loc3_)
+            {
+               _loc1_.loaderContext = new LoaderContext(false,new ApplicationDomain());
+               if(_loc3_)
+               {
+               }
+               return;
+            }
+            this.sharedDefinitionContainer = _loc1_;
+            return;
+         }
+         _log.fatal("Failed Loading SharedDefinitions, Going no HttpServer Style !");
+         if(!_loc2_)
+         {
+            this._sharedDefinitionLoader.cancel();
+         }
+         var _loc1_:Uri = new Uri("SharedDefinitions.swf");
+         if(_loc3_)
+         {
+            _loc1_.loaderContext = new LoaderContext(false,new ApplicationDomain());
+            if(_loc3_)
+            {
+            }
+            return;
+         }
+         this.sharedDefinitionContainer = _loc1_;
+      }
+      
+      private function onUiLoadError(param1:ResourceErrorEvent) : void {
+         /*
+          * Decompilation error
+          * Code may be obfuscated
+          * Error type: EmptyStackException
+          */
+         throw new IllegalOperationError("Not decompiled due to error");
+      }
+      
+      private function onLoad(param1:ResourceLoadedEvent) : void {
+         var _loc3_:* = false;
+         var _loc4_:* = true;
+         if(!_loc3_)
+         {
+            if(this._resetState)
+            {
+               if(_loc4_)
+               {
+               }
+            }
+            else
+            {
+               if(_loc4_)
+               {
+                  if("swf" === _loc2_)
+                  {
+                     if(_loc3_)
+                     {
+                     }
+                     if(_loc3_)
+                     {
+                     }
+                  }
+                  else
+                  {
+                     if(!_loc3_)
+                     {
+                        if("swfs" === _loc2_)
+                        {
+                           if(_loc3_)
+                           {
+                           }
+                        }
+                        else
+                        {
+                           if(_loc4_)
+                           {
+                              if("d2ui" === _loc2_)
+                              {
+                                 if(_loc4_)
+                                 {
+                                    if(_loc3_)
+                                    {
+                                    }
+                                 }
+                                 else
+                                 {
+                                    if(_loc3_)
+                                    {
+                                    }
+                                 }
+                              }
+                              else
+                              {
+                                 if(_loc4_)
+                                 {
+                                 }
+                              }
+                           }
+                           if("d2ui" === _loc2_)
+                           {
+                              if(_loc3_)
+                              {
+                              }
+                           }
+                           else
+                           {
+                              if(_loc4_)
+                              {
+                              }
+                           }
+                        }
+                     }
+                     if("swfs" === _loc2_)
+                     {
+                        if(_loc3_)
+                        {
+                        }
+                     }
+                     else
+                     {
+                        if(_loc4_)
+                        {
+                        }
+                        if("xml" === _loc2_)
+                        {
+                           if(_loc3_)
+                           {
+                           }
+                        }
+                        else
+                        {
+                           if(_loc4_)
+                           {
+                           }
+                        }
+                     }
+                  }
+               }
+               if("swf" === _loc2_)
+               {
+                  if(_loc4_)
+                  {
+                  }
+               }
+               else
+               {
+                  if("metas" === _loc2_)
+                  {
+                     if(_loc3_)
+                     {
+                     }
+                  }
+                  else
+                  {
+                     if(_loc4_)
+                     {
+                     }
+                  }
+               }
+            }
+            if(this._resetState)
+            {
+               return;
+            }
+            return;
+         }
+      }
+      
+      private function onDMLoad(param1:ResourceLoadedEvent) : void {
+         /*
+          * Decompilation error
+          * Code may be obfuscated
+          * Error type: EmptyStackException
+          */
+         throw new IllegalOperationError("Not decompiled due to error");
+      }
+      
+      private function onScriptLoadFail(param1:IOErrorEvent, param2:UiModule) : void {
+         var _loc5_:* = false;
+         var _loc6_:* = true;
+         if(!_loc5_)
+         {
+            if(_loc6_)
+            {
+               if(_loc6_)
+               {
+               }
+            }
+            _log.error("Le script du module ");
+            if(_loc6_)
+            {
+               if(_loc6_)
+               {
+                  if(_loc6_)
+                  {
+                     _loc3_._scriptNum = _loc4_;
+                  }
+               }
+               if(!(_loc3_._scriptNum-1))
+               {
+                  if(_loc6_)
+                  {
+                     this.launchUiCheck();
+                  }
+               }
+            }
+         }
+      }
+      
+      private var _moduleScriptLoadedRef:Dictionary;
+      
+      private function onScriptLoad(param1:ResourceLoadedEvent) : void {
+         var _loc6_:* = false;
+         var _loc2_:UiModule = this._unInitializedModule[param1.uri.tag];
+         if(!_loc6_)
+         {
+            this._moduleScriptLoadedRef[_loc3_] = _loc2_;
+         }
+         var _loc4_:LoaderContext = new LoaderContext(false,new ApplicationDomain(this._sharedDefinition));
+         if(_loc5_)
+         {
+            AirScanner.allowByteCodeExecution(_loc4_,true);
+            if(!_loc6_)
+            {
+               if(_loc6_)
+               {
+                  while(true)
+                  {
+                     _loc3_.loadBytes(param1.resource as ByteArray,_loc4_);
+                     if(_loc5_)
+                     {
+                        if(!_loc6_)
+                        {
+                           break;
+                        }
+                        break;
+                     }
+                  }
+                  return;
+               }
+               while(true)
+               {
+                  _loc3_.contentLoaderInfo.addEventListener(Event.COMPLETE,this.onModuleScriptLoaded);
+               }
+            }
+         }
+         while(true)
+         {
+            if(!_loc6_)
+            {
+               _loc3_.loadBytes(param1.resource as ByteArray,_loc4_);
+               if(_loc5_)
+               {
+                  if(_loc6_)
+                  {
+                     _loc3_.contentLoaderInfo.addEventListener(Event.COMPLETE,this.onModuleScriptLoaded);
+                     continue;
+                  }
+               }
+               else
+               {
+                  continue;
+               }
+            }
+            return;
+         }
+      }
+      
+      private function onModuleScriptLoaded(param1:Event, param2:UiModule=null) : void {
+         /*
+          * Decompilation error
+          * Code may be obfuscated
+          * Error type: EmptyStackException
+          */
+         throw new IllegalOperationError("Not decompiled due to error");
+      }
+      
+      private function onShortcutLoad(param1:ResourceLoadedEvent) : void {
+         /*
+          * Decompilation error
+          * Code may be obfuscated
+          * Error type: EmptyStackException
+          */
+         throw new IllegalOperationError("Not decompiled due to error");
+      }
+      
+      private function onHashLoaded(param1:ResourceLoadedEvent) : void {
+         var _loc6_:* = false;
+         var _loc2_:XML = null;
+         if(!_loc6_)
+         {
+            if(_loc5_)
+            {
+            }
+            if(!_loc6_)
+            {
+               if(_loc5_)
+               {
+                  for each (_loc2_ in param1.resource..file)
+                  {
+                     if(!_loc6_)
+                     {
+                        this._modulesHashs[_loc2_.@name.toString()] = _loc2_.toString();
+                     }
+                  }
+               }
+            }
+         }
+      }
+      
+      private function onAllUiChecked(param1:ResourceLoaderProgressEvent) : void {
+         /*
+          * Decompilation error
+          * Code may be obfuscated
+          * Error type: EmptyStackException
+          */
+         throw new IllegalOperationError("Not decompiled due to error");
+      }
+      
+      private function parseNextXml() : void {
+         /*
+          * Decompilation error
+          * Code may be obfuscated
+          * Error type: EmptyStackException
+          */
+         throw new IllegalOperationError("Not decompiled due to error");
+      }
+      
+      private function onXmlParsed(param1:ParsorEvent) : void {
+         var _loc4_:* = true;
+         var _loc5_:* = false;
+         if(param1.uiDefinition)
+         {
+            param1.uiDefinition.name = XmlParsor(param1.target).url;
+            UiRenderManager.getInstance().setUiDefinition(param1.uiDefinition);
+            Berilia.getInstance().handler.process(new UiXmlParsedMessage(param1.uiDefinition.name));
+         }
+         if(_loc4_)
+         {
+            _loc2_._parserAvaibleCount = _loc3_;
+         }
+         this.parseNextXml();
+      }
+      
+      private function onXmlParsingError(param1:ParsingErrorEvent) : void {
+         var _loc3_:* = false;
+         if(!_loc3_)
+         {
+            Berilia.getInstance().handler.process(new UiXmlParsedErrorMessage(param1.url,param1.msg));
+         }
+      }
+      
+      private function onUiLoaded(param1:ResourceLoadedEvent) : void {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -807,7 +1060,7 @@ package com.ankamagames.berilia.managers
       
       private var _uiLoaded:Dictionary;
       
-      function searchDmFile(rootPath:File) : File {
+      private function searchDmFile(param1:File) : File {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -816,13 +1069,44 @@ package com.ankamagames.berilia.managers
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      function onSharedDefinitionLoad(e:ResourceLoadedEvent) : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      private function onSharedDefinitionLoad(param1:ResourceLoadedEvent) : void {
+         var _loc6_:* = false;
+         var _loc7_:* = true;
+         if(_loc7_)
+         {
+            EnterFrameDispatcher.removeEventListener(this.timeOutFrameCount);
+         }
+         var _loc2_:ASwf = param1.resource as ASwf;
+         if(_loc7_)
+         {
+            this._sharedDefinition = _loc2_.applicationDomain;
+         }
+         var _loc3_:Object = this._sharedDefinition.getDefinition("d2components::SecureComponent");
+         if(!_loc6_)
+         {
+            _loc3_.init(SecureCenter.ACCESS_KEY,SecureCenter.unsecureContent,SecureCenter.secure,SecureCenter.unsecure,DescribeTypeCache.getVariables);
+         }
+         var _loc4_:* = this._sharedDefinition.getDefinition("utils::ReadOnlyData");
+         (this._sharedDefinition.getDefinition("utils::ReadOnlyData")).init(SecureCenter.ACCESS_KEY,SecureCenter.unsecureContent,SecureCenter.secure,SecureCenter.unsecure);
+         var _loc5_:Object = this._sharedDefinition.getDefinition("utils::DirectAccessObject");
+         _loc5_.init(SecureCenter.ACCESS_KEY);
+         if(_loc7_)
+         {
+            SecureCenter.init(_loc3_,_loc4_,_loc5_);
+            this._sharedDefinitionInstance = Object(_loc2_.content);
+         }
+         this._loadModuleFunction = Object(_loc2_.content).loadModule;
+         if(!_loc6_)
+         {
+            if(this._waitingInit)
+            {
+               this.init(this._filter,this._filterInclude);
+            }
+         }
+         if(this._waitingInit)
+         {
+            this.launchModule();
+         }
       }
       
       private var _loadModuleFunction:Function;

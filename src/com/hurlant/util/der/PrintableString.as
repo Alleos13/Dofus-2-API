@@ -5,10 +5,10 @@ package com.hurlant.util.der
    public class PrintableString extends Object implements IAsn1Type
    {
       
-      public function PrintableString(type:uint, length:uint) {
+      public function PrintableString(param1:uint, param2:uint) {
          super();
-         this.type = type;
-         this.len = length;
+         this.type = param1;
+         this.len = param2;
       }
       
       protected var type:uint;
@@ -25,8 +25,8 @@ package com.hurlant.util.der
          return this.type;
       }
       
-      public function setString(s:String) : void {
-         this.str = s;
+      public function setString(param1:String) : void {
+         this.str = param1;
       }
       
       public function getString() : String {

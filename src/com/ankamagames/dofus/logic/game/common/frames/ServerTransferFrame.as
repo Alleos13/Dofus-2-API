@@ -38,7 +38,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return true;
       }
       
-       function registerMessages() : void {
+      override protected function registerMessages() : void {
          register(SelectedServerDataMessage,this.onSelectedServerDataMessage);
          register(HelloGameMessage,this.onHelloGameMessage);
          register(AuthenticationTicketAcceptedMessage,this.onAuthenticationTicketAcceptedMessage);
@@ -46,19 +46,19 @@ package com.ankamagames.dofus.logic.game.common.frames
          register(CharacterLoadingCompleteMessage,this.onCharacterLoadingCompleteMessage);
       }
       
-      function getConnectionType(msg:Message) : String {
-         return ConnectionsHandler.getConnection().getConnectionId(msg);
+      protected function getConnectionType(param1:Message) : String {
+         return ConnectionsHandler.getConnection().getConnectionId(param1);
       }
       
-      function onCharacterSelectedSuccessMessage(msg:CharacterSelectedSuccessMessage) : void {
-         PlayedCharacterManager.getInstance().infos = msg.infos;
+      private function onCharacterSelectedSuccessMessage(param1:CharacterSelectedSuccessMessage) : void {
+         PlayedCharacterManager.getInstance().infos = param1.infos;
       }
       
-      function onHelloGameMessage(msg:HelloGameMessage) : Boolean {
-         var lang:String = XmlConfig.getInstance().getEntry("config.lang.current");
-         var authMsg:AuthenticationTicketMessage = new AuthenticationTicketMessage();
-         authMsg.initAuthenticationTicketMessage(lang,this._newServerLoginTicket);
-         switch(this.getConnectionType(msg))
+      private function onHelloGameMessage(param1:HelloGameMessage) : Boolean {
+         var _loc2_:String = XmlConfig.getInstance().getEntry("config.lang.current");
+         var _loc3_:AuthenticationTicketMessage = new AuthenticationTicketMessage();
+         _loc3_.initAuthenticationTicketMessage(_loc2_,this._newServerLoginTicket);
+         switch(this.getConnectionType(param1))
          {
             case ConnectionType.TO_KOLI_SERVER:
                ConnectionsHandler.getConnection().messageRouter = new KoliseumMessageRouter();
@@ -67,38 +67,42 @@ package com.ankamagames.dofus.logic.game.common.frames
                ConnectionsHandler.getConnection().messageRouter = null;
                break;
          }
-         ConnectionsHandler.getConnection().send(authMsg);
+         ConnectionsHandler.getConnection().send(_loc3_);
          return true;
       }
       
-      function onAuthenticationTicketAcceptedMessage(msg:AuthenticationTicketAcceptedMessage) : Boolean {
-         var clr:CharactersListRequestMessage = null;
-         switch(this.getConnectionType(msg))
+      private function onAuthenticationTicketAcceptedMessage(param1:AuthenticationTicketAcceptedMessage) : Boolean {
+         var _loc2_:CharactersListRequestMessage = null;
+         switch(this.getConnectionType(param1))
          {
             case ConnectionType.TO_KOLI_SERVER:
-               clr = new CharactersListRequestMessage();
-               clr.initCharactersListRequestMessage();
-               ConnectionsHandler.getConnection().send(clr);
+               _loc2_ = new CharactersListRequestMessage();
+               _loc2_.initCharactersListRequestMessage();
+               ConnectionsHandler.getConnection().send(_loc2_);
                return true;
+            default:
+               return false;
          }
       }
       
-      function onCharacterLoadingCompleteMessage(msg:CharacterLoadingCompleteMessage) : Boolean {
-         var gccrm:GameContextCreateRequestMessage = null;
-         switch(this.getConnectionType(msg))
+      private function onCharacterLoadingCompleteMessage(param1:CharacterLoadingCompleteMessage) : Boolean {
+         var _loc2_:GameContextCreateRequestMessage = null;
+         switch(this.getConnectionType(param1))
          {
             case ConnectionType.TO_KOLI_SERVER:
-               gccrm = new GameContextCreateRequestMessage();
-               gccrm.initGameContextCreateRequestMessage();
-               ConnectionsHandler.getConnection().send(gccrm);
+               _loc2_ = new GameContextCreateRequestMessage();
+               _loc2_.initGameContextCreateRequestMessage();
+               ConnectionsHandler.getConnection().send(_loc2_);
                return true;
+            default:
+               return false;
          }
       }
       
-      function onSelectedServerDataMessage(msg:SelectedServerDataMessage) : Boolean {
-         this._newServerLoginTicket = msg.ticket;
+      private function onSelectedServerDataMessage(param1:SelectedServerDataMessage) : Boolean {
+         this._newServerLoginTicket = param1.ticket;
          ConnectionsHandler.getConnection().mainConnection.close();
-         ConnectionsHandler.connectToKoliServer(msg.address,msg.port);
+         ConnectionsHandler.connectToKoliServer(param1.address,param1.port);
          return true;
       }
    }

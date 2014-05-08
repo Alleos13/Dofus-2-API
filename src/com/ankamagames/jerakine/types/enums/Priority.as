@@ -21,8 +21,8 @@ package com.ankamagames.jerakine.types.enums
       
       public static const LOWEST:int = -2;
       
-      public static function toString(priority:int) : String {
-         switch(priority)
+      public static function toString(param1:int) : String {
+         switch(param1)
          {
             case LOG:
                return "LOG";
@@ -38,11 +38,13 @@ package com.ankamagames.jerakine.types.enums
                return "LOW";
             case LOWEST:
                return "LOWEST";
+            default:
+               return "UNKNOW";
          }
       }
       
-      public static function fromString(priority:String) : int {
-         switch(priority)
+      public static function fromString(param1:String) : int {
+         switch(param1)
          {
             case "LOG":
                return LOG;
@@ -58,6 +60,8 @@ package com.ankamagames.jerakine.types.enums
                return LOW;
             case "LOWEST":
                return LOWEST;
+            default:
+               return 666;
          }
       }
    }

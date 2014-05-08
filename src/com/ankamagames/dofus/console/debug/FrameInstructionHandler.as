@@ -15,12 +15,15 @@ package com.ankamagames.dofus.console.debug
          super();
       }
       
-      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void {
+      public function handle(param1:ConsoleHandler, param2:String, param3:Array) : void {
          var fl:Array = null;
          var priority:int = 0;
          var f:Frame = null;
          var className:String = null;
          var split:Array = null;
+         var console:ConsoleHandler = param1;
+         var cmd:String = param2;
+         var args:Array = param3;
          switch(cmd)
          {
             case "framelist":
@@ -29,7 +32,7 @@ package com.ankamagames.dofus.console.debug
                {
                   className = getQualifiedClassName(f);
                   split = className.split("::");
-                  fl.push([split[split.length - 1],Priority.toString(f.priority)]);
+                  fl.push([split[split.length-1],Priority.toString(f.priority)]);
                }
                console.output(StringUtils.formatArray(fl,["Class","Priority"]));
                break;
@@ -45,40 +48,43 @@ package com.ankamagames.dofus.console.debug
                   console.output(args[1] + " : invalid priority (available priority are LOG, ULTIMATE_HIGHEST_DEPTH_OF_DOOM, HIGHEST, HIGH, NORMAL, LOW and LOWEST");
                   return;
                }
-               for each (f in Kernel.getWorker().framesList)
+               do
                {
-                  className = getQualifiedClassName(f);
-                  split = className.split("::");
-                  if(split[split.length - 1] == args[0])
-                  {
-                     try
+                     for each (f in Kernel.getWorker().framesList)
                      {
-                        f["priority"] = priority;
+                        className = getQualifiedClassName(f);
+                        split = className.split("::");
                      }
-                     catch(e:Error)
-                     {
-                        console.output("Priority set not available for frame " + args[0]);
-                     }
+                     console.output(args[0] + " : frame not found");
                      return;
+                  }while(split[split.length-1] != args[0]);
+                  
+                  try
+                  {
+                     f["priority"] = priority;
                   }
-               }
-               console.output(args[0] + " : frame not found");
-               return;
+                  catch(e:Error)
+                  {
+                     console.output("Priority set not available for frame " + args[0]);
+                  }
+                  return;
+            }
          }
-      }
-      
-      public function getHelp(cmd:String) : String {
-         switch(cmd)
-         {
-            case "framelist":
-               return "list all enabled frame";
-            case "framepriority":
-               return "overwrite a frame priority";
+         
+         public function getHelp(param1:String) : String {
+            switch(param1)
+            {
+               case "framelist":
+                  return "list all enabled frame";
+               case "framepriority":
+                  return "overwrite a frame priority";
+               default:
+                  return "Unknown command \'" + param1 + "\'.";
+            }
          }
-      }
-      
-      public function getParamPossibilities(cmd:String, paramIndex:uint=0, currentParams:Array=null) : Array {
-         return [];
+         
+         public function getParamPossibilities(param1:String, param2:uint=0, param3:Array=null) : Array {
+            return [];
+         }
       }
    }
-}

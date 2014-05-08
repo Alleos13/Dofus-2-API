@@ -10,8 +10,8 @@ package com.ankamagames.dofus.logic.game.common.actions.social
       }
       
       public static function create() : SpouseRequestAction {
-         var a:SpouseRequestAction = new SpouseRequestAction();
-         return a;
+         var _loc1_:SpouseRequestAction = new SpouseRequestAction();
+         return _loc1_;
       }
    }
 }

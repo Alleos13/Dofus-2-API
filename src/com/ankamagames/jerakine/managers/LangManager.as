@@ -93,248 +93,251 @@ package com.ankamagames.jerakine.managers
          return this._handler;
       }
       
-      public function set handler(value:MessageHandler) : void {
-         this._handler = value;
+      public function set handler(param1:MessageHandler) : void {
+         this._handler = param1;
       }
       
       public function get lang() : String {
          return this._sLang;
       }
       
-      public function set lang(sLang:String) : void {
-         this._sLang = sLang;
+      public function set lang(param1:String) : void {
+         this._sLang = param1;
       }
       
       public function get category() : Array {
          return this._aCategory;
       }
       
-      public function set replaceErrorCallback(fct:Function) : void {
-         this._replaceErrorCallback = fct;
+      public function set replaceErrorCallback(param1:Function) : void {
+         this._replaceErrorCallback = param1;
       }
       
-      public function loadFile(sUrl:String, parseReference:Boolean=true) : void {
-         if(parseReference)
+      public function loadFile(param1:String, param2:Boolean=true) : void {
+         if(param2)
          {
-            this._parseReference[new Uri(sUrl).uri] = parseReference;
+            this._parseReference[new Uri(param1).uri] = param2;
          }
-         this.loadMetaDataFile(sUrl);
+         this.loadMetaDataFile(param1);
       }
       
-      public function loadFromXml(xml:String, category:String, url:String, parseReference:Boolean=true) : void {
-         var uri:Uri = new Uri(url);
-         if(parseReference)
+      public function loadFromXml(param1:String, param2:String, param3:String, param4:Boolean=true) : void {
+         var _loc5_:Uri = new Uri(param3);
+         if(param4)
          {
-            this._parseReference[uri.uri] = parseReference;
+            this._parseReference[_loc5_.uri] = param4;
          }
-         var langFile:LangFile = new LangFile(xml,category,uri.uri);
-         this.startParsing([langFile],uri.uri);
+         var _loc6_:LangFile = new LangFile(param1,param2,_loc5_.uri);
+         this.startParsing([_loc6_],_loc5_.uri);
       }
       
-      public function getUntypedEntry(sKey:String) : * {
-         var sEntry:* = StoreDataManager.getInstance().getData(JerakineConstants.DATASTORE_LANG,KEY_LANG_INDEX)[sKey];
-         if(sEntry == null)
+      public function getUntypedEntry(param1:String) : * {
+         var _loc2_:* = StoreDataManager.getInstance().getData(JerakineConstants.DATASTORE_LANG,KEY_LANG_INDEX)[param1];
+         if(_loc2_ == null)
          {
-            _log.warn("[Warning] LangManager : " + sKey + " is unknow");
-            sEntry = "!" + sKey;
+            _log.warn("[Warning] LangManager : " + param1 + " is unknow");
+            _loc2_ = "!" + param1;
          }
-         if((!(sEntry == null)) && (sEntry is String) && (!(String(sEntry).indexOf("[") == -1)))
+         if(!(_loc2_ == null) && _loc2_ is String && !(String(_loc2_).indexOf("[") == -1))
          {
-            sEntry = this.replaceKey(sEntry,true);
+            _loc2_ = this.replaceKey(_loc2_,true);
          }
-         return sEntry;
+         return _loc2_;
       }
       
-      public function getEntry(sKey:String) : String {
-         return this.getUntypedEntry(sKey);
+      public function getEntry(param1:String) : String {
+         return this.getUntypedEntry(param1);
       }
       
-      public function getStringEntry(sKey:String) : String {
-         return this.getUntypedEntry(sKey);
+      public function getStringEntry(param1:String) : String {
+         return this.getUntypedEntry(param1);
       }
       
-      public function getBooleanEntry(sKey:String) : Boolean {
-         return this.getUntypedEntry(sKey);
+      public function getBooleanEntry(param1:String) : Boolean {
+         return this.getUntypedEntry(param1);
       }
       
-      public function getIntEntry(sKey:String) : int {
-         return this.getUntypedEntry(sKey);
+      public function getIntEntry(param1:String) : int {
+         return this.getUntypedEntry(param1);
       }
       
-      public function getFloatEntry(sKey:String) : Number {
-         return this.getUntypedEntry(sKey);
+      public function getFloatEntry(param1:String) : Number {
+         return this.getUntypedEntry(param1);
       }
       
-      public function setEntry(sKey:String, sValue:String, sType:String=null) : void {
-         var c:Class = null;
-         if(!sType)
+      public function setEntry(param1:String, param2:String, param3:String=null) : void {
+         var _loc4_:Class = null;
+         if(!param3)
          {
-            this._aLang[sKey] = sValue;
+            this._aLang[param1] = param2;
          }
          else
          {
-            switch(sType.toUpperCase())
+            switch(param3.toUpperCase())
             {
                case "STRING":
-                  this._aLang[sKey] = sValue;
+                  this._aLang[param1] = param2;
                   break;
                case "NUMBER":
-                  this._aLang[sKey] = parseFloat(sValue);
+                  this._aLang[param1] = parseFloat(param2);
                   break;
                case "UINT":
                case "INT":
-                  this._aLang[sKey] = parseInt(sValue,10);
+                  this._aLang[param1] = parseInt(param2,10);
                   break;
                case "BOOLEAN":
-                  this._aLang[sKey] = sValue.toLowerCase() == "true";
+                  this._aLang[param1] = param2.toLowerCase() == "true";
                   break;
                case "ARRAY":
-                  this._aLang[sKey] = sValue.split(",");
+                  this._aLang[param1] = param2.split(",");
                   break;
                case "BOOLEAN":
-                  this._aLang[sKey] = sValue.toLowerCase() == "true";
+                  this._aLang[param1] = param2.toLowerCase() == "true";
                   break;
+               default:
+                  _loc4_ = getDefinitionByName(param3) as Class;
+                  this._aLang[param1] = new _loc4_(param2);
             }
          }
       }
       
-      public function deleteEntry(sKey:String) : void {
-         delete this._aLang[[sKey]];
+      public function deleteEntry(param1:String) : void {
+         delete this._aLang[[param1]];
       }
       
-      public function replaceKey(sTxt:String, bReplaceDynamicReference:Boolean=false) : String {
-         var aKey:Array = null;
-         var reg:RegExp = null;
-         var i:uint = 0;
-         var sNewVal:String = null;
-         var aFind:Array = null;
-         var sKey:String = null;
-         if((!(sTxt == null)) && (!(sTxt.indexOf("[") == -1)))
+      public function replaceKey(param1:String, param2:Boolean=false) : String {
+         var _loc3_:Array = null;
+         var _loc4_:RegExp = null;
+         var _loc5_:uint = 0;
+         var _loc6_:String = null;
+         var _loc7_:Array = null;
+         var _loc8_:String = null;
+         if(!(param1 == null) && !(param1.indexOf("[") == -1))
          {
-            reg = new RegExp("(?<!\\\\)\\[([^\\]]*)\\]","g");
-            aKey = sTxt.match(reg);
-            if(sTxt.indexOf("\\["))
+            _loc4_ = new RegExp("(?<!\\\\)\\[([^\\]]*)\\]","g");
+            _loc3_ = param1.match(_loc4_);
+            if(param1.indexOf("\\["))
             {
-               sTxt = sTxt.split("\\[").join("[");
+               param1 = param1.split("\\[").join("[");
             }
-            i = 0;
-            for(;i < aKey.length;i++)
+            _loc5_ = 0;
+            for(;_loc5_ < _loc3_.length;_loc5_++)
             {
-               sKey = aKey[i].substr(1,aKey[i].length - 2);
-               if(sKey.charAt(0) == "#")
+               _loc8_ = _loc3_[_loc5_].substr(1,_loc3_[_loc5_].length - 2);
+               if(_loc8_.charAt(0) == "#")
                {
-                  if(!bReplaceDynamicReference)
+                  if(!param2)
                   {
                      continue;
                   }
-                  sKey = sKey.substr(1);
+                  _loc8_ = _loc8_.substr(1);
                }
-               sNewVal = this._aLang[sKey];
-               if(sNewVal == null)
+               _loc6_ = this._aLang[_loc8_];
+               if(_loc6_ == null)
                {
-                  if(!isNaN(parseInt(sKey,10)))
+                  if(!isNaN(parseInt(_loc8_,10)))
                   {
-                     sNewVal = I18n.getText(parseInt(sKey,10));
+                     _loc6_ = I18n.getText(parseInt(_loc8_,10));
                   }
-                  if(I18n.hasUiText(sKey))
+                  if(I18n.hasUiText(_loc8_))
                   {
-                     sNewVal = I18n.getUiText(sKey);
+                     _loc6_ = I18n.getUiText(_loc8_);
                   }
                   else
                   {
-                     if(sKey.charAt(0) == "~")
+                     if(_loc8_.charAt(0) == "~")
                      {
                         continue;
                      }
                      if(this._replaceErrorCallback != null)
                      {
-                        sNewVal = this._replaceErrorCallback(sKey);
+                        _loc6_ = this._replaceErrorCallback(_loc8_);
                      }
-                     if(sNewVal == null)
+                     if(_loc6_ == null)
                      {
-                        sNewVal = "!" + sKey;
-                        aFind = this.findCategory(sKey);
-                        if(aFind.length)
+                        _loc6_ = "!" + _loc8_;
+                        _loc7_ = this.findCategory(_loc8_);
+                        if(_loc7_.length)
                         {
-                           _log.warn("Référence incorrect vers la clef [" + sKey + "] dans : " + sTxt + " (pourrait être " + aFind.join(" ou ") + ")");
+                           _log.warn("Référence incorrect vers la clef [" + _loc8_ + "] dans : " + param1 + " (pourrait être " + _loc7_.join(" ou ") + ")");
                         }
                         else
                         {
-                           _log.warn("Référence inconue vers la clef [" + sKey + "] dans : " + sTxt);
+                           _log.warn("Référence inconue vers la clef [" + _loc8_ + "] dans : " + param1);
                         }
                      }
                   }
                }
-               sTxt = sTxt.split(aKey[i]).join(sNewVal);
+               param1 = param1.split(_loc3_[_loc5_]).join(_loc6_);
             }
          }
-         return sTxt;
+         return param1;
       }
       
-      public function getCategory(sCategory:String, matchSubCategories:Boolean=true) : Array {
-         var key:String = null;
-         var aResult:Array = new Array();
-         for (key in this._aLang)
+      public function getCategory(param1:String, param2:Boolean=true) : Array {
+         var _loc4_:String = null;
+         var _loc3_:Array = new Array();
+         for (_loc4_ in this._aLang)
          {
-            if(matchSubCategories)
+            if(param2)
             {
-               if(key == sCategory)
+               if(_loc4_ == param1)
                {
-                  aResult[key] = this._aLang[key];
+                  _loc3_[_loc4_] = this._aLang[_loc4_];
                }
                else
                {
-                  if(key.indexOf(sCategory) == 0)
+                  if(_loc4_.indexOf(param1) == 0)
                   {
-                     aResult[key] = this._aLang[key];
+                     _loc3_[_loc4_] = this._aLang[_loc4_];
                   }
                }
             }
          }
-         return aResult;
+         return _loc3_;
       }
       
-      public function findCategory(sKey:String) : Array {
-         var s:String = null;
-         var sK:String = sKey.split(".")[0];
-         var aCat:Array = new Array();
-         for (s in this._aCategory)
+      public function findCategory(param1:String) : Array {
+         var _loc4_:String = null;
+         var _loc2_:String = param1.split(".")[0];
+         var _loc3_:Array = new Array();
+         for (_loc4_ in this._aCategory)
          {
-            if(this._aLang[s + "." + sK] != null)
+            if(this._aLang[_loc4_ + "." + _loc2_] != null)
             {
-               aCat.push(s + "." + sK);
+               _loc3_.push(_loc4_ + "." + _loc2_);
             }
          }
-         for (s in this._aCategory)
+         for (_loc4_ in this._aCategory)
          {
-            if(this._aLang[s + "." + sKey] != null)
+            if(this._aLang[_loc4_ + "." + param1] != null)
             {
-               aCat.push(s + "." + sKey);
+               _loc3_.push(_loc4_ + "." + param1);
             }
          }
-         return aCat;
+         return _loc3_;
       }
       
-      public function setFileVersion(sFilename:String, sVersion:String) : void {
-         this._aVersion[sFilename] = sVersion;
+      public function setFileVersion(param1:String, param2:String) : void {
+         this._aVersion[param1] = param2;
          StoreDataManager.getInstance().setData(JerakineConstants.DATASTORE_LANG_VERSIONS,KEY_LANG_VERSION,this._aVersion);
       }
       
-      public function checkFileVersion(sFileName:String, sVersion:String) : Boolean {
-         return this._aVersion[sFileName] == sVersion;
+      public function checkFileVersion(param1:String, param2:String) : Boolean {
+         return this._aVersion[param1] == param2;
       }
       
-      public function clear(sCategory:String=null) : void {
-         var sCat:String = null;
-         var s:String = null;
-         if(sCategory)
+      public function clear(param1:String=null) : void {
+         var _loc2_:String = null;
+         var _loc3_:String = null;
+         if(param1)
          {
-            sCat = sCategory + ".";
-            for (s in this._aLang)
+            _loc2_ = param1 + ".";
+            for (_loc3_ in this._aLang)
             {
-               if(s.indexOf(sCat) == 0)
+               if(_loc3_.indexOf(_loc2_) == 0)
                {
-                  delete this._aLang[[s]];
+                  delete this._aLang[[_loc3_]];
                }
             }
          }
@@ -345,28 +348,29 @@ package com.ankamagames.jerakine.managers
          StoreDataManager.getInstance().setData(JerakineConstants.DATASTORE_LANG,KEY_LANG_INDEX,this._aLang);
       }
       
-      public function resolve(targetKey:String) : void {
+      public function resolve(param1:String) : void {
          StoreDataManager.getInstance().startStoreSequence();
-         this.resolveImp("[" + targetKey + "]",targetKey);
-         this.resolveImp("[#" + targetKey + "]",targetKey);
+         this.resolveImp("[" + param1 + "]",param1);
+         this.resolveImp("[#" + param1 + "]",param1);
          StoreDataManager.getInstance().stopStoreSequence();
       }
       
-      private function resolveImp(targetKey:String, configKey:String) : void {
-         var key:String = null;
-         var keyValue:* = this.getUntypedEntry(configKey);
-         for (key in this._aLang)
+      private function resolveImp(param1:String, param2:String) : void {
+         var _loc4_:String = null;
+         var _loc3_:* = this.getUntypedEntry(param2);
+         for (_loc4_ in this._aLang)
          {
-            if(String(this._aLang[key]).indexOf(targetKey) != -1)
+            if(String(this._aLang[_loc4_]).indexOf(param1) != -1)
             {
-               this._aLang[key] = String(this._aLang[key]).replace(targetKey,keyValue);
+               this._aLang[_loc4_] = String(this._aLang[_loc4_]).replace(param1,_loc3_);
             }
          }
       }
       
-      private function loadMetaDataFile(sUrl:String) : void {
+      private function loadMetaDataFile(param1:String) : void {
          var sMetDataUrl:String = null;
          var uri:Uri = null;
+         var sUrl:String = param1;
          try
          {
             sMetDataUrl = FileUtils.getFilePathStartName(sUrl) + ".meta";
@@ -388,170 +392,172 @@ package com.ankamagames.jerakine.managers
          }
       }
       
-      private function loadLangFile(sUrl:String, oMeta:LangMetaData) : void {
-         var uri:Uri = null;
-         var sExtension:String = FileUtils.getExtension(sUrl);
-         if(sExtension == null)
+      private function loadLangFile(param1:String, param2:LangMetaData) : void {
+         var _loc4_:Uri = null;
+         var _loc3_:String = FileUtils.getExtension(param1);
+         if(_loc3_ == null)
          {
-            throw new FileTypeError(sUrl + " have no type (no extension found).");
+            throw new FileTypeError(param1 + " have no type (no extension found).");
          }
          else
          {
-            if((!oMeta.clearAllFile) && (!oMeta.clearFileCount) && (!oMeta.loadAllFile))
+            if(!param2.clearAllFile && !param2.clearFileCount && !param2.loadAllFile)
             {
-               this._handler.process(new LangAllFilesLoadedMessage(sUrl,true));
+               this._handler.process(new LangAllFilesLoadedMessage(param1,true));
                return;
             }
-            uri = new Uri(sUrl);
-            uri.tag = oMeta;
-            switch(sExtension.toUpperCase())
+            _loc4_ = new Uri(param1);
+            _loc4_.tag = param2;
+            switch(_loc3_.toUpperCase())
             {
                case "ZIP":
                   Chrono.start("Chargement zip");
                case "XML":
-                  this._loader.load(uri);
+                  this._loader.load(_loc4_);
                   return;
+               default:
+                  throw new FileTypeError(param1 + " is not expected type (bad extension found (" + _loc3_ + "), support only .zip and .xml).");
             }
          }
       }
       
-      private function startParsing(aLangData:Array, sUrlProvider:String) : void {
+      private function startParsing(param1:Array, param2:String) : void {
          StoreDataManager.getInstance().startStoreSequence();
-         var parseReference:Boolean = this._parseReference[sUrlProvider];
-         var stParsing:LangXmlParsingTask = new LangXmlParsingTask(aLangData,sUrlProvider,parseReference);
+         var _loc3_:Boolean = this._parseReference[param2];
+         var _loc4_:LangXmlParsingTask = new LangXmlParsingTask(param1,param2,_loc3_);
          if(StageShareManager.rootContainer == null)
          {
-            stParsing.parseForReg();
+            _loc4_.parseForReg();
          }
          else
          {
-            stParsing.addEventListener(LangFileEvent.ALL_COMPLETE,this.onTaskEnd);
-            stParsing.addEventListener(LangFileEvent.COMPLETE,this.onTaskStep);
-            TaskingManager.getInstance().addTask(stParsing);
+            _loc4_.addEventListener(LangFileEvent.ALL_COMPLETE,this.onTaskEnd);
+            _loc4_.addEventListener(LangFileEvent.COMPLETE,this.onTaskStep);
+            TaskingManager.getInstance().addTask(_loc4_);
          }
       }
       
-      private function onFileLoaded(e:ResourceLoadedEvent) : void {
-         switch(e.uri.fileType.toUpperCase())
+      private function onFileLoaded(param1:ResourceLoadedEvent) : void {
+         switch(param1.uri.fileType.toUpperCase())
          {
             case "XML":
-               this.onXmlLoadComplete(e);
+               this.onXmlLoadComplete(param1);
                break;
             case "META":
-               this.onMetaLoad(e);
+               this.onMetaLoad(param1);
                break;
             case "ZIP":
                Chrono.stop();
-               this.onZipFileComplete(e);
+               this.onZipFileComplete(param1);
                break;
          }
       }
       
-      private function onFileError(e:ResourceErrorEvent) : void {
-         switch(e.uri.fileType.toUpperCase())
+      private function onFileError(param1:ResourceErrorEvent) : void {
+         switch(param1.uri.fileType.toUpperCase())
          {
             case "XML":
-               this.onXmlLoadError(e);
+               this.onXmlLoadError(param1);
                break;
             case "META":
-               this.onMetaLoadError(e);
+               this.onMetaLoadError(param1);
                break;
             case "ZIP":
-               this.onZipFileLoadError(e);
+               this.onZipFileLoadError(param1);
                break;
          }
       }
       
-      private function onXmlLoadComplete(e:ResourceLoadedEvent) : void {
-         var metaData:LangMetaData = LangMetaData(e.uri.tag);
-         var sCat:String = FileUtils.getFileStartName(e.uri.uri);
-         if((metaData.clearFile[e.uri.fileName]) || (metaData.clearAllFile) || (metaData.loadAllFile))
+      private function onXmlLoadComplete(param1:ResourceLoadedEvent) : void {
+         var _loc2_:LangMetaData = LangMetaData(param1.uri.tag);
+         var _loc3_:String = FileUtils.getFileStartName(param1.uri.uri);
+         if((_loc2_.clearFile[param1.uri.fileName]) || (_loc2_.clearAllFile) || (_loc2_.loadAllFile))
          {
-            if((metaData.clearFile[e.uri.fileName]) || (metaData.clearAllFile))
+            if((_loc2_.clearFile[param1.uri.fileName]) || (_loc2_.clearAllFile))
             {
-               this.clear(sCat);
+               this.clear(_loc3_);
             }
-            this.startParsing(new Array(new LangFile(e.resource,FileUtils.getFileStartName(e.uri.uri),e.uri.uri)),e.uri.uri);
+            this.startParsing(new Array(new LangFile(param1.resource,FileUtils.getFileStartName(param1.uri.uri),param1.uri.uri)),param1.uri.uri);
          }
       }
       
-      private function onZipFileComplete(e:ResourceLoadedEvent) : void {
-         var sCat:String = null;
-         var s:String = null;
-         var entry:ZipEntry = null;
-         var i:uint = 0;
-         var zipFile:ZipFile = e.resource;
-         var aFileList:Array = new Array();
-         var aLangData:Array = new Array();
-         var metaData:LangMetaData = LangMetaData(e.uri.tag);
-         var fileIndex:uint = 0;
-         while(fileIndex < zipFile.entries.length)
+      private function onZipFileComplete(param1:ResourceLoadedEvent) : void {
+         var _loc5_:String = null;
+         var _loc8_:String = null;
+         var _loc9_:ZipEntry = null;
+         var _loc10_:uint = 0;
+         var _loc2_:ZipFile = param1.resource;
+         var _loc3_:Array = new Array();
+         var _loc4_:Array = new Array();
+         var _loc6_:LangMetaData = LangMetaData(param1.uri.tag);
+         var _loc7_:uint = 0;
+         while(_loc7_ < _loc2_.entries.length)
          {
-            aFileList.push(zipFile.getEntry(zipFile.entries[fileIndex]));
-            fileIndex++;
+            _loc3_.push(_loc2_.getEntry(_loc2_.entries[_loc7_]));
+            _loc7_++;
          }
-         for (s in metaData.clearFile)
+         for (_loc8_ in _loc6_.clearFile)
          {
-            if(!zipFile.getEntry(s))
+            if(!_loc2_.getEntry(_loc8_))
             {
-               _log.warn("File \'" + s + "\' was not found in " + e.uri.uri + " (specified by metadata file)");
+               _log.warn("File \'" + _loc8_ + "\' was not found in " + param1.uri.uri + " (specified by metadata file)");
             }
          }
-         i = 0;
-         while(i < aFileList.length)
+         _loc10_ = 0;
+         while(_loc10_ < _loc3_.length)
          {
-            entry = aFileList[i];
-            sCat = FileUtils.getFileStartName(entry.name);
-            if((metaData.clearFile[entry.name]) || (metaData.clearAllFile) || (metaData.loadAllFile))
+            _loc9_ = _loc3_[_loc10_];
+            _loc5_ = FileUtils.getFileStartName(_loc9_.name);
+            if((_loc6_.clearFile[_loc9_.name]) || (_loc6_.clearAllFile) || (_loc6_.loadAllFile))
             {
-               if((metaData.clearFile[entry.name]) || (metaData.clearAllFile))
+               if((_loc6_.clearFile[_loc9_.name]) || (_loc6_.clearAllFile))
                {
-                  this.clear(sCat);
+                  this.clear(_loc5_);
                }
-               if((metaData.clearFile[entry.name]) || (metaData.loadAllFile))
+               if((_loc6_.clearFile[_loc9_.name]) || (_loc6_.loadAllFile))
                {
-                  aLangData.push(new LangFile(zipFile.getInput(aFileList[i]).toString(),sCat,entry.name,metaData));
+                  _loc4_.push(new LangFile(_loc2_.getInput(_loc3_[_loc10_]).toString(),_loc5_,_loc9_.name,_loc6_));
                }
             }
-            i++;
+            _loc10_++;
          }
-         this.startParsing(aLangData,e.uri.uri);
+         this.startParsing(_loc4_,param1.uri.uri);
       }
       
-      private function onMetaLoad(e:ResourceLoadedEvent) : void {
-         this.loadLangFile(e.uri.tag as String,LangMetaData.fromXml(e.resource,e.uri.tag as String,this.checkFileVersion));
+      private function onMetaLoad(param1:ResourceLoadedEvent) : void {
+         this.loadLangFile(param1.uri.tag as String,LangMetaData.fromXml(param1.resource,param1.uri.tag as String,this.checkFileVersion));
       }
       
-      private function onXmlLoadError(e:ResourceErrorEvent) : void {
-         _log.warn("[Warning] can\'t load " + e.uri.uri);
-         this._handler.process(new LangFileLoadedMessage(e.uri.uri,false,e.uri.uri));
+      private function onXmlLoadError(param1:ResourceErrorEvent) : void {
+         _log.warn("[Warning] can\'t load " + param1.uri.uri);
+         this._handler.process(new LangFileLoadedMessage(param1.uri.uri,false,param1.uri.uri));
       }
       
-      private function onZipFileLoadError(e:ResourceErrorEvent) : void {
-         _log.warn("Can\'t load " + e.uri.uri);
-         this._handler.process(new LangFileLoadedMessage(e.uri.uri,false,e.uri.uri));
+      private function onZipFileLoadError(param1:ResourceErrorEvent) : void {
+         _log.warn("Can\'t load " + param1.uri.uri);
+         this._handler.process(new LangFileLoadedMessage(param1.uri.uri,false,param1.uri.uri));
       }
       
-      private function onTaskStep(e:LangFileEvent) : void {
+      private function onTaskStep(param1:LangFileEvent) : void {
          if(this._handler)
          {
-            this._handler.process(new LangFileLoadedMessage(e.url,true,e.urlProvider));
+            this._handler.process(new LangFileLoadedMessage(param1.url,true,param1.urlProvider));
          }
       }
       
-      private function onTaskEnd(e:LangFileEvent) : void {
+      private function onTaskEnd(param1:LangFileEvent) : void {
          StoreDataManager.getInstance().setData(JerakineConstants.DATASTORE_LANG,KEY_LANG_INDEX,this._aLang);
          StoreDataManager.getInstance().stopStoreSequence();
          if(this._handler)
          {
-            this._handler.process(new LangAllFilesLoadedMessage(e.urlProvider,true));
+            this._handler.process(new LangAllFilesLoadedMessage(param1.urlProvider,true));
          }
       }
       
-      private function onMetaLoadError(e:ResourceErrorEvent) : void {
-         var meta:LangMetaData = new LangMetaData();
-         meta.loadAllFile = true;
-         this.loadLangFile(e.uri.tag as String,meta);
+      private function onMetaLoadError(param1:ResourceErrorEvent) : void {
+         var _loc2_:LangMetaData = new LangMetaData();
+         _loc2_.loadAllFile = true;
+         this.loadLangFile(param1.uri.tag as String,_loc2_);
       }
    }
 }

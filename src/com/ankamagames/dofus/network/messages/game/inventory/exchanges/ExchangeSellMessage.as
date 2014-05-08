@@ -29,9 +29,9 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          return 5778;
       }
       
-      public function initExchangeSellMessage(objectToSellId:uint=0, quantity:uint=0) : ExchangeSellMessage {
-         this.objectToSellId = objectToSellId;
-         this.quantity = quantity;
+      public function initExchangeSellMessage(param1:uint=0, param2:uint=0) : ExchangeSellMessage {
+         this.objectToSellId = param1;
+         this.quantity = param2;
          this._isInitialized = true;
          return this;
       }
@@ -42,53 +42,53 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeSellMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_ExchangeSellMessage(param1);
       }
       
-      public function serializeAs_ExchangeSellMessage(output:IDataOutput) : void {
+      public function serializeAs_ExchangeSellMessage(param1:IDataOutput) : void {
          if(this.objectToSellId < 0)
          {
             throw new Error("Forbidden value (" + this.objectToSellId + ") on element objectToSellId.");
          }
          else
          {
-            output.writeInt(this.objectToSellId);
+            param1.writeInt(this.objectToSellId);
             if(this.quantity < 0)
             {
                throw new Error("Forbidden value (" + this.quantity + ") on element quantity.");
             }
             else
             {
-               output.writeInt(this.quantity);
+               param1.writeInt(this.quantity);
                return;
             }
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeSellMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_ExchangeSellMessage(param1);
       }
       
-      public function deserializeAs_ExchangeSellMessage(input:IDataInput) : void {
-         this.objectToSellId = input.readInt();
+      public function deserializeAs_ExchangeSellMessage(param1:IDataInput) : void {
+         this.objectToSellId = param1.readInt();
          if(this.objectToSellId < 0)
          {
             throw new Error("Forbidden value (" + this.objectToSellId + ") on element of ExchangeSellMessage.objectToSellId.");
          }
          else
          {
-            this.quantity = input.readInt();
+            this.quantity = param1.readInt();
             if(this.quantity < 0)
             {
                throw new Error("Forbidden value (" + this.quantity + ") on element of ExchangeSellMessage.quantity.");

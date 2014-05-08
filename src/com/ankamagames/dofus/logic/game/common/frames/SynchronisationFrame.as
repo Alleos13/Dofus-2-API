@@ -53,33 +53,35 @@ package com.ankamagames.dofus.logic.game.common.frames
          return true;
       }
       
-      public function process(msg:Message) : Boolean {
-         var snMsg:SequenceNumberMessage = null;
+      public function process(param1:Message) : Boolean {
+         var _loc2_:SequenceNumberMessage = null;
          switch(true)
          {
-            case msg is SequenceNumberRequestMessage:
-               snMsg = new SequenceNumberMessage();
+            case param1 is SequenceNumberRequestMessage:
+               _loc2_ = new SequenceNumberMessage();
                this._synchroStep = this._synchroStep + 1;
-               snMsg.initSequenceNumberMessage(this._synchroStep);
-               ConnectionsHandler.getConnection().send(snMsg);
+               _loc2_.initSequenceNumberMessage(this._synchroStep);
+               ConnectionsHandler.getConnection().send(_loc2_);
                return true;
+            default:
+               return false;
          }
       }
       
-      function checkSpeedHack(pEvt:TimerEvent) : void {
+      private function checkSpeedHack(param1:TimerEvent) : void {
          this._timeToTest.stop();
          this._creationTimeFlash = getTimer();
          this._creationTimeOs = new Date().time;
          this._timerSpeedHack.start();
       }
       
-      function onTimerComplete(pEvt:TimerEvent) : void {
+      private function onTimerComplete(param1:TimerEvent) : void {
          this._timerSpeedHack.stop();
-         var flashValue:uint = getTimer() - this._creationTimeFlash;
-         var osValue:uint = new Date().time - this._creationTimeOs;
-         if(flashValue > osValue + STEP_TIME)
+         var _loc2_:uint = getTimer() - this._creationTimeFlash;
+         var _loc3_:uint = new Date().time - this._creationTimeOs;
+         if(_loc2_ > _loc3_ + STEP_TIME)
          {
-            _log.error("This account is cheating : flash=" + flashValue + ", os=" + osValue + ", diff= flash:" + flashValue + " / os:" + osValue);
+            _log.error("This account is cheating : flash=" + _loc2_ + ", os=" + _loc3_ + ", diff= flash:" + _loc2_ + " / os:" + _loc3_);
             if(BuildInfos.BUILD_TYPE != BuildTypeEnum.DEBUG)
             {
                Kernel.getWorker().process(ResetGameAction.create(I18n.getUiText("ui.error.speedHack")));

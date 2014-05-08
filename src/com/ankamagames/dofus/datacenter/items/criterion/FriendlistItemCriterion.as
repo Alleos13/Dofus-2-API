@@ -8,26 +8,26 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class FriendlistItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function FriendlistItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      public function FriendlistItemCriterion(param1:String) {
+         super(param1);
       }
       
       override public function get text() : String {
-         var readableCriterionRef:String = I18n.getUiText("ui.tooltip.playerInFriendlist");
-         var readableOperator:String = _operator.text;
-         if(readableOperator == ItemCriterionOperator.EQUAL)
+         var _loc1_:String = I18n.getUiText("ui.tooltip.playerInFriendlist");
+         var _loc2_:String = _operator.text;
+         if(_loc2_ == ItemCriterionOperator.EQUAL)
          {
-            readableOperator = ":";
+            _loc2_ = ":";
          }
-         return readableCriterionRef + " " + readableOperator + " " + _criterionValue;
+         return _loc1_ + " " + _loc2_ + " " + _criterionValue;
       }
       
       override public function clone() : IItemCriterion {
-         var clonedCriterion:FriendlistItemCriterion = new FriendlistItemCriterion(this.basicText);
-         return clonedCriterion;
+         var _loc1_:FriendlistItemCriterion = new FriendlistItemCriterion(this.basicText);
+         return _loc1_;
       }
       
-      override function getCriterion() : int {
+      override protected function getCriterion() : int {
          return (Kernel.getWorker().getFrame(SocialFrame) as SocialFrame).friendsList.length;
       }
    }

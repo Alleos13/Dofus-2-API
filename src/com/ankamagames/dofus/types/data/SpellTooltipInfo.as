@@ -5,10 +5,10 @@ package com.ankamagames.dofus.types.data
    public class SpellTooltipInfo extends Object
    {
       
-      public function SpellTooltipInfo(spellWrapper:SpellWrapper, shortcutKey:String=null) {
+      public function SpellTooltipInfo(param1:SpellWrapper, param2:String=null) {
          super();
-         this.spellWrapper = spellWrapper;
-         this.shortcutKey = shortcutKey;
+         this.spellWrapper = param1;
+         this.shortcutKey = param2;
       }
       
       public var spellWrapper:SpellWrapper;

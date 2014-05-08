@@ -9,21 +9,21 @@ package com.ankamagames.dofus.misc.utils
          super();
       }
       
-      public static function cleanBones1AnimName(bones:uint, anim:String=null) : String {
-         var name:String = null;
-         switch(bones)
+      public static function cleanBones1AnimName(param1:uint, param2:String=null) : String {
+         var _loc3_:String = null;
+         switch(param1)
          {
             case 1:
-               if(anim)
+               if(param2)
                {
-                  if((anim.length > 12) && (anim.slice(0,12) == AnimationEnum.ANIM_STATIQUE) && ((anim.length < 15) || (!(anim.slice(12,15) == "_to"))))
+                  if(param2.length > 12 && param2.slice(0,12) == AnimationEnum.ANIM_STATIQUE && (param2.length < 15 || !(param2.slice(12,15) == "_to")))
                   {
                      return AnimationEnum.ANIM_STATIQUE;
                   }
                }
                break;
          }
-         return anim;
+         return param2;
       }
    }
 }

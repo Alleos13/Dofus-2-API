@@ -2,7 +2,7 @@ package com.ankamagames.dofus.network.messages.game.character.creation
 {
    import com.ankamagames.jerakine.network.NetworkMessage;
    import com.ankamagames.jerakine.network.INetworkMessage;
-   import __AS3__.vec.*;
+   import __AS3__.vec.Vector;
    import flash.utils.IDataOutput;
    import flash.utils.ByteArray;
    import flash.utils.IDataInput;
@@ -38,12 +38,12 @@ package com.ankamagames.dofus.network.messages.game.character.creation
          return 160;
       }
       
-      public function initCharacterCreationRequestMessage(name:String="", breed:int=0, sex:Boolean=false, colors:Vector.<int>=null, cosmeticId:uint=0) : CharacterCreationRequestMessage {
-         this.name = name;
-         this.breed = breed;
-         this.sex = sex;
-         this.colors = colors;
-         this.cosmeticId = cosmeticId;
+      public function initCharacterCreationRequestMessage(param1:String="", param2:int=0, param3:Boolean=false, param4:Vector.<int>=null, param5:uint=0) : CharacterCreationRequestMessage {
+         this.name = param1;
+         this.breed = param2;
+         this.sex = param3;
+         this.colors = param4;
+         this.cosmeticId = param5;
          this._isInitialized = true;
          return this;
       }
@@ -57,29 +57,29 @@ package com.ankamagames.dofus.network.messages.game.character.creation
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharacterCreationRequestMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_CharacterCreationRequestMessage(param1);
       }
       
-      public function serializeAs_CharacterCreationRequestMessage(output:IDataOutput) : void {
-         output.writeUTF(this.name);
-         output.writeByte(this.breed);
-         output.writeBoolean(this.sex);
-         var _i4:uint = 0;
-         while(_i4 < 5)
+      public function serializeAs_CharacterCreationRequestMessage(param1:IDataOutput) : void {
+         param1.writeUTF(this.name);
+         param1.writeByte(this.breed);
+         param1.writeBoolean(this.sex);
+         var _loc2_:uint = 0;
+         while(_loc2_ < 5)
          {
-            output.writeInt(this.colors[_i4]);
-            _i4++;
+            param1.writeInt(this.colors[_loc2_]);
+            _loc2_++;
          }
          if(this.cosmeticId < 0)
          {
@@ -87,32 +87,32 @@ package com.ankamagames.dofus.network.messages.game.character.creation
          }
          else
          {
-            output.writeInt(this.cosmeticId);
+            param1.writeInt(this.cosmeticId);
             return;
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharacterCreationRequestMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_CharacterCreationRequestMessage(param1);
       }
       
-      public function deserializeAs_CharacterCreationRequestMessage(input:IDataInput) : void {
-         this.name = input.readUTF();
-         this.breed = input.readByte();
-         if((this.breed < PlayableBreedEnum.Feca) || (this.breed > PlayableBreedEnum.Steamer))
+      public function deserializeAs_CharacterCreationRequestMessage(param1:IDataInput) : void {
+         this.name = param1.readUTF();
+         this.breed = param1.readByte();
+         if(this.breed < PlayableBreedEnum.Feca || this.breed > PlayableBreedEnum.Steamer)
          {
             throw new Error("Forbidden value (" + this.breed + ") on element of CharacterCreationRequestMessage.breed.");
          }
          else
          {
-            this.sex = input.readBoolean();
-            _i4 = 0;
-            while(_i4 < 5)
+            this.sex = param1.readBoolean();
+            _loc2_ = 0;
+            while(_loc2_ < 5)
             {
-               this.colors[_i4] = input.readInt();
-               _i4++;
+               this.colors[_loc2_] = param1.readInt();
+               _loc2_++;
             }
-            this.cosmeticId = input.readInt();
+            this.cosmeticId = param1.readInt();
             if(this.cosmeticId < 0)
             {
                throw new Error("Forbidden value (" + this.cosmeticId + ") on element of CharacterCreationRequestMessage.cosmeticId.");

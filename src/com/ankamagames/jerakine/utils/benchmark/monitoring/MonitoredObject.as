@@ -1,19 +1,19 @@
 package com.ankamagames.jerakine.utils.benchmark.monitoring
 {
    import flash.utils.Dictionary;
-   import __AS3__.vec.*;
+   import __AS3__.vec.Vector;
    
    public class MonitoredObject extends Object
    {
       
-      public function MonitoredObject(pName:String, pColor:uint, pParentList:List=null) {
+      public function MonitoredObject(param1:String, param2:uint, param3:List=null) {
          super();
-         this.name = pName;
+         this.name = param1;
          this.list = new Dictionary(true);
          this.data = new Vector.<Number>();
          this.limits = new Vector.<Number>();
-         this.color = pColor;
-         this._extendsClass = pParentList;
+         this.color = param2;
+         this._extendsClass = param3;
       }
       
       public var name:String;
@@ -30,8 +30,8 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring
       
       private var _extendsClass:List;
       
-      public function addNewValue(o:Object) : void {
-         this.list[o] = null;
+      public function addNewValue(param1:Object) : void {
+         this.list[param1] = null;
       }
       
       public function update() : void {

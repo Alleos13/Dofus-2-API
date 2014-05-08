@@ -12,15 +12,15 @@ package com.ankamagames.jerakine.resources.adapters.impl
          super();
       }
       
-       function getResource(dataFormat:String, data:*) : * {
-         return data;
+      override protected function getResource(param1:String, param2:*) : * {
+         return param2;
       }
       
       override public function getResourceType() : uint {
          return ResourceType.RESOURCE_BINARY;
       }
       
-       function getDataFormat() : String {
+      override protected function getDataFormat() : String {
          return URLLoaderDataFormat.BINARY;
       }
    }

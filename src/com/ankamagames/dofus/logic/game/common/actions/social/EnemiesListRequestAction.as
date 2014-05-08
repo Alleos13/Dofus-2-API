@@ -10,8 +10,8 @@ package com.ankamagames.dofus.logic.game.common.actions.social
       }
       
       public static function create() : EnemiesListRequestAction {
-         var a:EnemiesListRequestAction = new EnemiesListRequestAction();
-         return a;
+         var _loc1_:EnemiesListRequestAction = new EnemiesListRequestAction();
+         return _loc1_;
       }
    }
 }

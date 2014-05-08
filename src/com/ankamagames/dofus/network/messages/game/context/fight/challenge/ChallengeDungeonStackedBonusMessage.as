@@ -31,10 +31,10 @@ package com.ankamagames.dofus.network.messages.game.context.fight.challenge
          return 6151;
       }
       
-      public function initChallengeDungeonStackedBonusMessage(dungeonId:uint=0, xpBonus:uint=0, dropBonus:uint=0) : ChallengeDungeonStackedBonusMessage {
-         this.dungeonId = dungeonId;
-         this.xpBonus = xpBonus;
-         this.dropBonus = dropBonus;
+      public function initChallengeDungeonStackedBonusMessage(param1:uint=0, param2:uint=0, param3:uint=0) : ChallengeDungeonStackedBonusMessage {
+         this.dungeonId = param1;
+         this.xpBonus = param2;
+         this.dropBonus = param3;
          this._isInitialized = true;
          return this;
       }
@@ -46,68 +46,68 @@ package com.ankamagames.dofus.network.messages.game.context.fight.challenge
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ChallengeDungeonStackedBonusMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_ChallengeDungeonStackedBonusMessage(param1);
       }
       
-      public function serializeAs_ChallengeDungeonStackedBonusMessage(output:IDataOutput) : void {
+      public function serializeAs_ChallengeDungeonStackedBonusMessage(param1:IDataOutput) : void {
          if(this.dungeonId < 0)
          {
             throw new Error("Forbidden value (" + this.dungeonId + ") on element dungeonId.");
          }
          else
          {
-            output.writeInt(this.dungeonId);
+            param1.writeInt(this.dungeonId);
             if(this.xpBonus < 0)
             {
                throw new Error("Forbidden value (" + this.xpBonus + ") on element xpBonus.");
             }
             else
             {
-               output.writeInt(this.xpBonus);
+               param1.writeInt(this.xpBonus);
                if(this.dropBonus < 0)
                {
                   throw new Error("Forbidden value (" + this.dropBonus + ") on element dropBonus.");
                }
                else
                {
-                  output.writeInt(this.dropBonus);
+                  param1.writeInt(this.dropBonus);
                   return;
                }
             }
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ChallengeDungeonStackedBonusMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_ChallengeDungeonStackedBonusMessage(param1);
       }
       
-      public function deserializeAs_ChallengeDungeonStackedBonusMessage(input:IDataInput) : void {
-         this.dungeonId = input.readInt();
+      public function deserializeAs_ChallengeDungeonStackedBonusMessage(param1:IDataInput) : void {
+         this.dungeonId = param1.readInt();
          if(this.dungeonId < 0)
          {
             throw new Error("Forbidden value (" + this.dungeonId + ") on element of ChallengeDungeonStackedBonusMessage.dungeonId.");
          }
          else
          {
-            this.xpBonus = input.readInt();
+            this.xpBonus = param1.readInt();
             if(this.xpBonus < 0)
             {
                throw new Error("Forbidden value (" + this.xpBonus + ") on element of ChallengeDungeonStackedBonusMessage.xpBonus.");
             }
             else
             {
-               this.dropBonus = input.readInt();
+               this.dropBonus = param1.readInt();
                if(this.dropBonus < 0)
                {
                   throw new Error("Forbidden value (" + this.dropBonus + ") on element of ChallengeDungeonStackedBonusMessage.dropBonus.");

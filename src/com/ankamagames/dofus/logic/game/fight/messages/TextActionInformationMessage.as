@@ -5,10 +5,10 @@ package com.ankamagames.dofus.logic.game.fight.messages
    public class TextActionInformationMessage extends Object implements Message
    {
       
-      public function TextActionInformationMessage(textKey:uint, params:Array=null) {
+      public function TextActionInformationMessage(param1:uint, param2:Array=null) {
          super();
-         this._textKey = textKey;
-         this._params = params;
+         this._textKey = param1;
+         this._params = param2;
       }
       
       private var _textKey:uint;

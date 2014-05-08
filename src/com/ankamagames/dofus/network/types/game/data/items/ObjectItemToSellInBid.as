@@ -21,9 +21,9 @@ package com.ankamagames.dofus.network.types.game.data.items
          return 164;
       }
       
-      public function initObjectItemToSellInBid(objectGID:uint=0, effects:Vector.<ObjectEffect>=null, objectUID:uint=0, quantity:uint=0, objectPrice:uint=0, unsoldDelay:uint=0) : ObjectItemToSellInBid {
-         super.initObjectItemToSell(objectGID,effects,objectUID,quantity,objectPrice);
-         this.unsoldDelay = unsoldDelay;
+      public function initObjectItemToSellInBid(param1:uint=0, param2:Vector.<ObjectEffect>=null, param3:uint=0, param4:uint=0, param5:uint=0, param6:uint=0) : ObjectItemToSellInBid {
+         super.initObjectItemToSell(param1,param2,param3,param4,param5);
+         this.unsoldDelay = param6;
          return this;
       }
       
@@ -32,30 +32,30 @@ package com.ankamagames.dofus.network.types.game.data.items
          this.unsoldDelay = 0;
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ObjectItemToSellInBid(output);
+      override public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_ObjectItemToSellInBid(param1);
       }
       
-      public function serializeAs_ObjectItemToSellInBid(output:IDataOutput) : void {
-         super.serializeAs_ObjectItemToSell(output);
+      public function serializeAs_ObjectItemToSellInBid(param1:IDataOutput) : void {
+         super.serializeAs_ObjectItemToSell(param1);
          if(this.unsoldDelay < 0)
          {
             throw new Error("Forbidden value (" + this.unsoldDelay + ") on element unsoldDelay.");
          }
          else
          {
-            output.writeInt(this.unsoldDelay);
+            param1.writeInt(this.unsoldDelay);
             return;
          }
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ObjectItemToSellInBid(input);
+      override public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_ObjectItemToSellInBid(param1);
       }
       
-      public function deserializeAs_ObjectItemToSellInBid(input:IDataInput) : void {
-         super.deserialize(input);
-         this.unsoldDelay = input.readInt();
+      public function deserializeAs_ObjectItemToSellInBid(param1:IDataInput) : void {
+         super.deserialize(param1);
+         this.unsoldDelay = param1.readInt();
          if(this.unsoldDelay < 0)
          {
             throw new Error("Forbidden value (" + this.unsoldDelay + ") on element of ObjectItemToSellInBid.unsoldDelay.");

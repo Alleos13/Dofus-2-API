@@ -19,23 +19,23 @@ package com.ankamagames.jerakine.newCache.impl
          return this._size;
       }
       
-      public function contains(ref:*) : Boolean {
-         return !(this._cache[ref] == null);
+      public function contains(param1:*) : Boolean {
+         return !(this._cache[param1] == null);
       }
       
-      public function extract(ref:*) : * {
-         var obj:* = this._cache[ref];
-         delete this._cache[[ref]];
+      public function extract(param1:*) : * {
+         var _loc2_:* = this._cache[param1];
+         delete this._cache[[param1]];
          this._size--;
-         return obj;
+         return _loc2_;
       }
       
-      public function peek(ref:*) : * {
-         return this._cache[ref];
+      public function peek(param1:*) : * {
+         return this._cache[param1];
       }
       
-      public function store(ref:*, obj:*) : Boolean {
-         this._cache[ref] = obj;
+      public function store(param1:*, param2:*) : Boolean {
+         this._cache[param1] = param2;
          this._size++;
          return true;
       }

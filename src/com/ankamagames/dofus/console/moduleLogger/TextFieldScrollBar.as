@@ -10,13 +10,13 @@ package com.ankamagames.dofus.console.moduleLogger
    public final class TextFieldScrollBar extends Sprite
    {
       
-      public function TextFieldScrollBar(textField:TextField, lines:Vector.<String>, power:int, backgroundColor:uint, color:uint) {
+      public function TextFieldScrollBar(param1:TextField, param2:Vector.<String>, param3:int, param4:uint, param5:uint) {
          super();
-         this._textField = textField;
-         this._lines = lines;
-         this._power = power;
-         this._backgroundColor = backgroundColor;
-         this._color = color;
+         this._textField = param1;
+         this._lines = param2;
+         this._power = param3;
+         this._backgroundColor = param4;
+         this._color = param5;
          this._textField.mouseEnabled = true;
          this._textField.addEventListener(MouseEvent.MOUSE_WHEEL,this.onMouseWheel);
          this.createUI();
@@ -46,15 +46,15 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private var _scrollBar:Sprite;
       
-      public function reset(lines:Vector.<String>) : void {
+      public function reset(param1:Vector.<String>) : void {
          this._textField.text = "";
-         this._lines = lines;
+         this._lines = param1;
       }
       
-      public function resize(numLines:int=0) : void {
-         if(numLines)
+      public function resize(param1:int=0) : void {
+         if(param1)
          {
-            this._numLines = numLines;
+            this._numLines = param1;
          }
          this._background.graphics.clear();
          this._background.graphics.beginFill(this._backgroundColor);
@@ -78,39 +78,39 @@ package com.ankamagames.dofus.console.moduleLogger
          }
       }
       
-      public function scrollText(value:int) : void {
-         if(value == -1)
+      public function scrollText(param1:int) : void {
+         if(param1 == -1)
          {
-            value = this._scroll;
+            param1 = this._scroll;
          }
          this._scrollAtEnd = false;
-         if(value < 0)
+         if(param1 < 0)
          {
-            value = 0;
+            param1 = 0;
          }
          else
          {
-            if(value >= this._lines.length - this._numLines)
+            if(param1 >= this._lines.length - this._numLines)
             {
                this._scrollAtEnd = true;
-               value = this._lines.length - this._numLines;
+               param1 = this._lines.length - this._numLines;
             }
          }
-         this._textField.htmlText = this._lines.slice(value,value + this._numLines).join("\n");
-         this._scroll = value;
+         this._textField.htmlText = this._lines.slice(param1,param1 + this._numLines).join("\n");
+         this._scroll = param1;
          this._maxScroll = this._lines.length - this._numLines;
          this.resize();
          dispatchEvent(new Event(Event.CHANGE));
       }
       
       public function scrollAtEnd() : void {
-         var num:int = this._lines.length;
-         var value:int = num - this._numLines;
-         if(value < 0)
+         var _loc1_:int = this._lines.length;
+         var _loc2_:int = _loc1_ - this._numLines;
+         if(_loc2_ < 0)
          {
-            value = 0;
+            _loc2_ = 0;
          }
-         this._textField.htmlText = this._lines.slice(value).join("\n");
+         this._textField.htmlText = this._lines.slice(_loc2_).join("\n");
          this._scroll = this._lines.length;
          this._maxScroll = this._scroll;
          this._scrollAtEnd = true;
@@ -118,12 +118,12 @@ package com.ankamagames.dofus.console.moduleLogger
          dispatchEvent(new Event(Event.CHANGE));
       }
       
-      function updateTextPosition() : void {
-         var p:Number = this._scrollBar.y / (this._textField.height - this._scrollBar.height);
-         this.scrollText(this._maxScroll * p);
+      private function updateTextPosition() : void {
+         var _loc1_:Number = this._scrollBar.y / (this._textField.height - this._scrollBar.height);
+         this.scrollText(this._maxScroll * _loc1_);
       }
       
-      function drawScrollBar() : void {
+      private function drawScrollBar() : void {
          if(this._lines.length <= this._numLines)
          {
             visible = false;
@@ -131,20 +131,20 @@ package com.ankamagames.dofus.console.moduleLogger
             return;
          }
          visible = true;
-         var pHeight:Number = this._numLines / this._lines.length;
-         var vHeight:int = int(this._textField.height * pHeight);
-         if(vHeight < 40)
+         var _loc1_:Number = this._numLines / this._lines.length;
+         var _loc2_:int = int(this._textField.height * _loc1_);
+         if(_loc2_ < 40)
          {
-            vHeight = 40;
+            _loc2_ = 40;
          }
          this._scrollBar.graphics.clear();
          this._scrollBar.graphics.beginFill(this._color);
-         this._scrollBar.graphics.drawRoundRect(0,0,WIDTH,vHeight,5);
+         this._scrollBar.graphics.drawRoundRect(0,0,WIDTH,_loc2_,5);
          this._scrollBar.graphics.endFill();
          this._scrollBar.y = this._scroll * (this._textField.height - this._scrollBar.height) / this._maxScroll;
       }
       
-      function createUI() : void {
+      private function createUI() : void {
          if(this._background)
          {
             throw new Error();
@@ -164,48 +164,48 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private var offsetY:int;
       
-      function onScrollBarMouseDown(mouseEvent:MouseEvent) : void {
+      private function onScrollBarMouseDown(param1:MouseEvent) : void {
          this.offsetY = this._scrollBar.mouseY;
          stage.addEventListener(MouseEvent.MOUSE_MOVE,this.onMouseMove);
          stage.addEventListener(MouseEvent.MOUSE_UP,this.onMouseUp);
       }
       
-      function onMouseWheel(mouseEvent:MouseEvent) : void {
+      private function onMouseWheel(param1:MouseEvent) : void {
          if(!visible)
          {
             return;
          }
-         var scroll:int = this._scroll + (mouseEvent.delta < 0?1:-1) * this._power;
-         if(scroll < 0)
+         var _loc2_:int = this._scroll + (param1.delta < 0?1:-1) * this._power;
+         if(_loc2_ < 0)
          {
-            scroll = 0;
+            _loc2_ = 0;
          }
-         this.scrollText(scroll);
+         this.scrollText(_loc2_);
          this.resize();
       }
       
-      function onMouseUp(mouseEvent:MouseEvent) : void {
+      private function onMouseUp(param1:MouseEvent) : void {
          stage.removeEventListener(MouseEvent.MOUSE_MOVE,this.onMouseMove);
          stage.removeEventListener(MouseEvent.MOUSE_UP,this.onMouseUp);
       }
       
-      function onMouseMove(mouseEvent:MouseEvent) : void {
-         var value:int = mouseY - this.offsetY;
-         var maxValue:int = this._textField.height - this._scrollBar.height;
-         if(value < 0)
+      private function onMouseMove(param1:MouseEvent) : void {
+         var _loc2_:int = mouseY - this.offsetY;
+         var _loc3_:int = this._textField.height - this._scrollBar.height;
+         if(_loc2_ < 0)
          {
-            value = 0;
+            _loc2_ = 0;
          }
          else
          {
-            if(value > maxValue)
+            if(_loc2_ > _loc3_)
             {
-               value = maxValue;
+               _loc2_ = _loc3_;
             }
          }
-         this._scrollBar.y = value;
+         this._scrollBar.y = _loc2_;
          this.updateTextPosition();
-         mouseEvent.updateAfterEvent();
+         param1.updateAfterEvent();
       }
    }
 }

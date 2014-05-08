@@ -7,9 +7,9 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightReflectedSpellStep extends AbstractSequencable implements IFightStep
    {
       
-      public function FightReflectedSpellStep(fighterId:int) {
+      public function FightReflectedSpellStep(param1:int) {
          super();
-         this._fighterId = fighterId;
+         this._fighterId = param1;
       }
       
       private var _fighterId:int;

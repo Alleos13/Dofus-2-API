@@ -11,12 +11,12 @@ package com.ankamagames.jerakine.handlers.messages.keyboard
          super();
       }
       
-      public static function create(target:InteractiveObject, keyboardEvent:KeyboardEvent, instance:KeyboardMessage=null) : KeyboardMessage {
-         if(!instance)
+      public static function create(param1:InteractiveObject, param2:KeyboardEvent, param3:KeyboardMessage=null) : KeyboardMessage {
+         if(!param3)
          {
-            instance = new KeyboardMessage();
+            param3 = new KeyboardMessage();
          }
-         return HumanInputMessage.create(target,keyboardEvent,instance) as KeyboardMessage;
+         return HumanInputMessage.create(param1,param2,param3) as KeyboardMessage;
       }
       
       public function get keyboardEvent() : KeyboardEvent {

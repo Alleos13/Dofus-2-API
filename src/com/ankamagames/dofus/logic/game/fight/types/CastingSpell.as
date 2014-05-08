@@ -7,9 +7,9 @@ package com.ankamagames.dofus.logic.game.fight.types
    public class CastingSpell extends Object
    {
       
-      public function CastingSpell(updateCastingId:Boolean=true) {
+      public function CastingSpell(param1:Boolean=true) {
          super();
-         if(updateCastingId)
+         if(param1)
          {
             this.castingSpellId = _unicID++;
          }

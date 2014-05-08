@@ -28,38 +28,38 @@ package com.ankamagames.jerakine.script
       
       private var _apis:Dictionary;
       
-      public function addPlayer(pPlayerType:String, pPlayer:IScriptsPlayer) : void {
-         this._players[pPlayerType] = pPlayer;
+      public function addPlayer(param1:String, param2:IScriptsPlayer) : void {
+         this._players[param1] = param2;
       }
       
-      public function getPlayer(pPlayerType:String) : IScriptsPlayer {
-         return this._players[pPlayerType];
+      public function getPlayer(param1:String) : IScriptsPlayer {
+         return this._players[param1];
       }
       
-      public function addPlayerApi(pPlayer:IScriptsPlayer, pApiId:String, pApi:*) : void {
-         if(!this._apis[pPlayer])
+      public function addPlayerApi(param1:IScriptsPlayer, param2:String, param3:*) : void {
+         if(!this._apis[param1])
          {
-            this._apis[pPlayer] = new Dictionary();
+            this._apis[param1] = new Dictionary();
          }
-         this._apis[pPlayer][pApiId] = pApi;
-         pPlayer.addApi(pApiId,pApi);
+         this._apis[param1][param2] = param3;
+         param1.addApi(param2,param3);
       }
       
-      public function getPlayerApi(pPlayer:IScriptsPlayer, pApiId:String) : * {
-         var api:* = undefined;
-         if(this._apis[pPlayer])
+      public function getPlayerApi(param1:IScriptsPlayer, param2:String) : * {
+         var _loc3_:* = undefined;
+         if(this._apis[param1])
          {
-            api = this._apis[pPlayer][pApiId];
+            _loc3_ = this._apis[param1][param2];
          }
-         return api;
+         return _loc3_;
       }
       
-      public function playScript(pPlayerType:String, pScript:String) : void {
-         this._players[pPlayerType].playScript(pScript);
+      public function playScript(param1:String, param2:String) : void {
+         this._players[param1].playScript(param2);
       }
       
-      public function playFile(pPlayerType:String, pScriptUri:String) : void {
-         this._players[pPlayerType].playFile(pScriptUri);
+      public function playFile(param1:String, param2:String) : void {
+         this._players[param1].playFile(param2);
       }
    }
 }

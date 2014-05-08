@@ -5,6 +5,7 @@ package com.ankamagames.dofus.internalDatacenter.fight
    import com.ankamagames.jerakine.logger.Log;
    import flash.utils.getQualifiedClassName;
    import com.ankamagames.tiphon.types.look.TiphonEntityLook;
+   import com.ankamagames.dofus.network.types.game.character.characteristic.CharacterCharacteristicsInformations;
    import com.ankamagames.dofus.kernel.Kernel;
    import com.ankamagames.dofus.logic.game.fight.frames.FightContextFrame;
    import com.ankamagames.jerakine.messages.Frame;
@@ -14,37 +15,39 @@ package com.ankamagames.dofus.internalDatacenter.fight
    import com.ankamagames.dofus.logic.game.common.misc.DofusEntities;
    import com.ankamagames.jerakine.entities.interfaces.IEntity;
    import com.ankamagames.dofus.network.enums.TeamEnum;
+   import com.ankamagames.dofus.logic.game.common.managers.PlayedCharacterManager;
    
    public class FighterInformations extends Object implements IDataCenter
    {
       
-      public function FighterInformations(fighterId:int) {
+      public function FighterInformations(param1:int) {
+         var _loc5_:CharacterCharacteristicsInformations = null;
          super();
-         var fightFrame:Frame = Kernel.getWorker().getFrame(FightContextFrame);
-         if((!fightFrame) || (!(fightFrame as FightContextFrame).entitiesFrame))
+         var _loc2_:Frame = Kernel.getWorker().getFrame(FightContextFrame);
+         if(!_loc2_ || !(_loc2_ as FightContextFrame).entitiesFrame)
          {
             return;
          }
-         var fighterInfos:GameFightFighterInformations = (fightFrame as FightContextFrame).entitiesFrame.getEntityInfos(fighterId) as GameFightFighterInformations;
-         if(!fighterInfos)
+         var _loc3_:GameFightFighterInformations = (_loc2_ as FightContextFrame).entitiesFrame.getEntityInfos(param1) as GameFightFighterInformations;
+         if(!_loc3_)
          {
             return;
          }
-         this._fighterId = fighterId;
-         this._look = EntityLookAdapter.fromNetwork(fighterInfos.look);
+         this._fighterId = param1;
+         this._look = EntityLookAdapter.fromNetwork(_loc3_.look);
          this._look = TiphonUtility.getLookWithoutMount(this._look);
-         var entity:IEntity = DofusEntities.getEntity(fighterId);
-         if((entity) && (entity.position))
+         var _loc4_:IEntity = DofusEntities.getEntity(param1);
+         if((_loc4_) && (_loc4_.position))
          {
-            this._currentCell = entity.position.cellId;
+            this._currentCell = _loc4_.position.cellId;
          }
          else
          {
-            this._currentCell = fighterInfos.disposition.cellId;
+            this._currentCell = _loc3_.disposition.cellId;
          }
-         this._currentOrientation = fighterInfos.disposition.direction;
-         this._isAlive = fighterInfos.alive;
-         switch(fighterInfos.teamId)
+         this._currentOrientation = _loc3_.disposition.direction;
+         this._isAlive = _loc3_.alive;
+         switch(_loc3_.teamId)
          {
             case TeamEnum.TEAM_CHALLENGER:
                this._team = "challenger";
@@ -55,30 +58,38 @@ package com.ankamagames.dofus.internalDatacenter.fight
             case TeamEnum.TEAM_SPECTATOR:
                this._team = "spectator";
                break;
+            default:
+               _log.warn("Unknown teamId " + _loc3_.teamId + " ?!");
+               this._team = "unknown";
          }
-         this._wave = fighterInfos.wave;
-         this._lifePoints = fighterInfos.stats.lifePoints;
-         this._maxLifePoints = fighterInfos.stats.maxLifePoints;
-         this._actionPoints = fighterInfos.stats.actionPoints;
-         this._movementPoints = fighterInfos.stats.movementPoints;
-         this._paDodge = fighterInfos.stats.dodgePALostProbability;
-         this._pmDodge = fighterInfos.stats.dodgePMLostProbability;
-         this._shieldPoints = fighterInfos.stats.shieldPoints;
-         this._summoner = fighterInfos.stats.summoner;
-         this._summoned = fighterInfos.stats.summoned;
-         this._invisibility = fighterInfos.stats.invisibilityState;
-         this._permanentDamagePercent = fighterInfos.stats.permanentDamagePercent;
-         this._tackleBlock = fighterInfos.stats.tackleBlock;
-         this._airResist = fighterInfos.stats.airElementResistPercent;
-         this._earthResist = fighterInfos.stats.earthElementResistPercent;
-         this._fireResist = fighterInfos.stats.fireElementResistPercent;
-         this._neutralResist = fighterInfos.stats.neutralElementResistPercent;
-         this._waterResist = fighterInfos.stats.waterElementResistPercent;
-         this._airFixedResist = fighterInfos.stats.airElementReduction;
-         this._earthFixedResist = fighterInfos.stats.earthElementReduction;
-         this._fireFixedResist = fighterInfos.stats.fireElementReduction;
-         this._neutralFixedResist = fighterInfos.stats.neutralElementReduction;
-         this._waterFixedResist = fighterInfos.stats.waterElementReduction;
+         if(param1 == PlayedCharacterManager.getInstance().id)
+         {
+            _loc5_ = PlayedCharacterManager.getInstance().characteristics;
+            _loc3_.stats.actionPoints = _loc5_.actionPointsCurrent;
+            _loc3_.stats.movementPoints = _loc5_.movementPointsCurrent;
+         }
+         this._lifePoints = _loc3_.stats.lifePoints;
+         this._maxLifePoints = _loc3_.stats.maxLifePoints;
+         this._actionPoints = _loc3_.stats.actionPoints;
+         this._movementPoints = _loc3_.stats.movementPoints;
+         this._paDodge = _loc3_.stats.dodgePALostProbability;
+         this._pmDodge = _loc3_.stats.dodgePMLostProbability;
+         this._shieldPoints = _loc3_.stats.shieldPoints;
+         this._summoner = _loc3_.stats.summoner;
+         this._summoned = _loc3_.stats.summoned;
+         this._invisibility = _loc3_.stats.invisibilityState;
+         this._permanentDamagePercent = _loc3_.stats.permanentDamagePercent;
+         this._tackleBlock = _loc3_.stats.tackleBlock;
+         this._airResist = _loc3_.stats.airElementResistPercent;
+         this._earthResist = _loc3_.stats.earthElementResistPercent;
+         this._fireResist = _loc3_.stats.fireElementResistPercent;
+         this._neutralResist = _loc3_.stats.neutralElementResistPercent;
+         this._waterResist = _loc3_.stats.waterElementResistPercent;
+         this._airFixedResist = _loc3_.stats.airElementReduction;
+         this._earthFixedResist = _loc3_.stats.earthElementReduction;
+         this._fireFixedResist = _loc3_.stats.fireElementReduction;
+         this._neutralFixedResist = _loc3_.stats.neutralElementReduction;
+         this._waterFixedResist = _loc3_.stats.waterElementReduction;
       }
       
       protected static const _log:Logger = Log.getLogger(getQualifiedClassName(FighterInformations));
@@ -94,8 +105,6 @@ package com.ankamagames.dofus.internalDatacenter.fight
       private var _isAlive:Boolean;
       
       private var _team:String;
-      
-      private var _wave:int;
       
       private var _lifePoints:int;
       
@@ -163,10 +172,6 @@ package com.ankamagames.dofus.internalDatacenter.fight
       
       public function get team() : String {
          return this._team;
-      }
-      
-      public function get wave() : int {
-         return this._wave;
       }
       
       public function get lifePoints() : int {

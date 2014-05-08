@@ -27,8 +27,8 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          return 5512;
       }
       
-      public function initExchangeStartedMessage(exchangeType:int=0) : ExchangeStartedMessage {
-         this.exchangeType = exchangeType;
+      public function initExchangeStartedMessage(param1:int=0) : ExchangeStartedMessage {
+         this.exchangeType = param1;
          this._isInitialized = true;
          return this;
       }
@@ -38,30 +38,30 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeStartedMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_ExchangeStartedMessage(param1);
       }
       
-      public function serializeAs_ExchangeStartedMessage(output:IDataOutput) : void {
-         output.writeByte(this.exchangeType);
+      public function serializeAs_ExchangeStartedMessage(param1:IDataOutput) : void {
+         param1.writeByte(this.exchangeType);
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeStartedMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_ExchangeStartedMessage(param1);
       }
       
-      public function deserializeAs_ExchangeStartedMessage(input:IDataInput) : void {
-         this.exchangeType = input.readByte();
+      public function deserializeAs_ExchangeStartedMessage(param1:IDataInput) : void {
+         this.exchangeType = param1.readByte();
       }
    }
 }

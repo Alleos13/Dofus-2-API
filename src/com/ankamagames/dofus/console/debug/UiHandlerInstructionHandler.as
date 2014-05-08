@@ -35,123 +35,123 @@ package com.ankamagames.dofus.console.debug
       
       private var _uiInspector:Inspector;
       
-      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void {
-         var currentUiList:Dictionary = null;
-         var uiOutput:Array = null;
-         var ml:Array = null;
-         var mod:UiModule = null;
-         var m:Array = null;
-         var um:UiModule = null;
-         var toggleChat:* = false;
-         var value:* = false;
-         var uiTarget:UiRootContainer = null;
-         var elemTarget:GraphicContainer = null;
-         var count:uint = 0;
-         var uiList:Array = null;
-         var i:String = null;
-         var uiName:String = null;
-         var ui:UiData = null;
-         var ma:ModuleScriptAnalyzer = null;
-         switch(cmd)
+      public function handle(param1:ConsoleHandler, param2:String, param3:Array) : void {
+         var _loc4_:Dictionary = null;
+         var _loc5_:Array = null;
+         var _loc6_:Array = null;
+         var _loc7_:UiModule = null;
+         var _loc8_:Array = null;
+         var _loc9_:UiModule = null;
+         var _loc10_:* = false;
+         var _loc11_:* = false;
+         var _loc12_:UiRootContainer = null;
+         var _loc13_:GraphicContainer = null;
+         var _loc14_:uint = 0;
+         var _loc15_:Array = null;
+         var _loc16_:String = null;
+         var _loc17_:String = null;
+         var _loc18_:UiData = null;
+         var _loc19_:ModuleScriptAnalyzer = null;
+         switch(param2)
          {
             case "loadui":
                break;
             case "unloadui":
-               if(args.length == 0)
+               if(param3.length == 0)
                {
-                  count = 0;
-                  uiList = [];
-                  for (i in Berilia.getInstance().uiList)
+                  _loc14_ = 0;
+                  _loc15_ = [];
+                  for (_loc16_ in Berilia.getInstance().uiList)
                   {
-                     if(Berilia.getInstance().uiList[i].name != "Console")
+                     if(Berilia.getInstance().uiList[_loc16_].name != "Console")
                      {
-                        uiList.push(Berilia.getInstance().uiList[i].name);
+                        _loc15_.push(Berilia.getInstance().uiList[_loc16_].name);
                      }
                   }
-                  for each (i in uiList)
+                  for each (_loc16_ in _loc15_)
                   {
-                     Berilia.getInstance().unloadUi(i);
+                     Berilia.getInstance().unloadUi(_loc16_);
                   }
-                  console.output(uiList.length + " UI were unload");
+                  param1.output(_loc15_.length + " UI were unload");
                   break;
                }
-               if(Berilia.getInstance().unloadUi(args[0]))
+               if(Berilia.getInstance().unloadUi(param3[0]))
                {
-                  console.output("RIP " + args[0]);
+                  param1.output("RIP " + param3[0]);
                }
                else
                {
-                  console.output(args[0] + " does not exist or an error occured while unloading UI");
+                  param1.output(param3[0] + " does not exist or an error occured while unloading UI");
                }
                break;
             case "clearuicache":
                UiRenderManager.getInstance().clearCache();
                break;
             case "setuiscale":
-               Berilia.getInstance().scale = Number(args[0]);
+               Berilia.getInstance().scale = Number(param3[0]);
                break;
             case "useuicache":
-               StoreDataManager.getInstance().setData(BeriliaConstants.DATASTORE_UI_DEFINITION,"useCache",args[0] == "true");
-               BeriliaConstants.USE_UI_CACHE = args[0] == "true";
+               StoreDataManager.getInstance().setData(BeriliaConstants.DATASTORE_UI_DEFINITION,"useCache",param3[0] == "true");
+               BeriliaConstants.USE_UI_CACHE = param3[0] == "true";
                break;
             case "uilist":
-               currentUiList = Berilia.getInstance().uiList;
-               uiOutput = [];
-               for (uiName in currentUiList)
+               _loc4_ = Berilia.getInstance().uiList;
+               _loc5_ = [];
+               for (_loc17_ in _loc4_)
                {
-                  ui = UiRootContainer(currentUiList[uiName]).uiData;
-                  uiOutput.push([uiName,ui.name,ui.uiClassName,ui.module.id,ui.module.trusted]);
+                  _loc18_ = UiRootContainer(_loc4_[_loc17_]).uiData;
+                  _loc5_.push([_loc17_,_loc18_.name,_loc18_.uiClassName,_loc18_.module.id,_loc18_.module.trusted]);
                }
-               console.output(StringUtils.formatArray(uiOutput,["Instance ID","Ui name","Class","Module","Trusted"]));
+               param1.output(StringUtils.formatArray(_loc5_,["Instance ID","Ui name","Class","Module","Trusted"]));
                break;
             case "reloadui":
-               UiModuleManager.getInstance().loadModule(args[0]);
+               UiModuleManager.getInstance().loadModule(param3[0]);
                break;
             case "fps":
                Dofus.getInstance().toggleFPS();
                break;
             case "modulelist":
-               ml = [];
-               m = UiModuleManager.getInstance().getModules();
-               for each (mod in m)
+               _loc6_ = [];
+               _loc8_ = UiModuleManager.getInstance().getModules();
+               for each (_loc7_ in _loc8_)
                {
-                  ml.push([mod.id,mod.author,mod.trusted,true]);
+                  _loc6_.push([_loc7_.id,_loc7_.author,_loc7_.trusted,true]);
                }
-               m = UiModuleManager.getInstance().disabledModules;
-               if(m.length)
+               _loc8_ = UiModuleManager.getInstance().disabledModule;
+               if(_loc8_.length)
                {
-                  for each (mod in m)
+                  for each (_loc7_ in _loc8_)
                   {
-                     ml.push([mod.id,mod.author,mod.trusted,false]);
+                     _loc6_.push([_loc7_.id,_loc7_.author,_loc7_.trusted,false]);
                   }
                }
-               console.output(StringUtils.formatArray(ml,["ID","Author","Trusted","Active"]));
+               param1.output(StringUtils.formatArray(_loc6_,["ID","Author","Trusted","Active"]));
                break;
             case "getmoduleinfo":
-               um = UiModuleManager.getInstance().getModule(args[0]);
-               if(um)
+               _loc9_ = UiModuleManager.getInstance().getModule(param3[0]);
+               if(_loc9_)
                {
-                  ma = new ModuleScriptAnalyzer(um,null);
+                  _loc19_ = new ModuleScriptAnalyzer(_loc9_,null);
                }
                else
                {
-                  console.output("Module " + args[0] + " does not exists");
+                  param1.output("Module " + param3[0] + " does not exists");
                }
                break;
             case "chatoutput":
-               toggleChat = (!args.length) || (String(args[0]).toLowerCase() == "true") || (String(args[0]).toLowerCase() == "on");
+               _loc10_ = !param3.length || String(param3[0]).toLowerCase() == "true" || String(param3[0]).toLowerCase() == "on";
                Console.getInstance().display();
                Console.getInstance().disableLogEvent();
-               KernelEventsManager.getInstance().processCallback(ChatHookList.ToggleChatLog,toggleChat);
-               value = OptionManager.getOptionManager("chat")["chatoutput"];
-               OptionManager.getOptionManager("chat")["chatoutput"] = toggleChat;
-               if(toggleChat)
+               KernelEventsManager.getInstance().processCallback(ChatHookList.ToggleChatLog,_loc10_);
+               _loc11_ = OptionManager.getOptionManager("chat")["chatoutput"];
+               OptionManager.getOptionManager("chat")["chatoutput"] = _loc10_;
+               if(_loc10_)
                {
-                  console.output("Chatoutput is on.");
+                  param1.output("Chatoutput is on.");
                }
                else
                {
-                  console.output("Chatoutput is off.");
+                  param1.output("Chatoutput is off.");
                }
                break;
             case "uiinspector":
@@ -163,53 +163,55 @@ package com.ankamagames.dofus.console.debug
                this._uiInspector.enable = !this._uiInspector.enable;
                if(this._uiInspector.enable)
                {
-                  console.output("Inspector is ON.\n Use Ctrl-C to save the last hovered element informations.");
+                  param1.output("Inspector is ON.\n Use Ctrl-C to save the last hovered element informations.");
                }
                else
                {
-                  console.output("Inspector is OFF.");
+                  param1.output("Inspector is OFF.");
                }
                break;
             case "inspectuielementsos":
             case "inspectuielement":
-               if(args.length == 0)
+               if(param3.length == 0)
                {
-                  console.output(cmd + " need at least one argument (" + cmd + " uiName [uiElementName])");
+                  param1.output(param2 + " need at least one argument (" + param2 + " uiName [uiElementName])");
                   break;
                }
-               uiTarget = Berilia.getInstance().getUi(args[0]);
-               if(!uiTarget)
+               _loc12_ = Berilia.getInstance().getUi(param3[0]);
+               if(!_loc12_)
                {
-                  console.output("UI " + args[0] + " not found (use /uilist to grab current displayed UI list)");
+                  param1.output("UI " + param3[0] + " not found (use /uilist to grab current displayed UI list)");
                   break;
                }
-               if(args.length == 1)
+               if(param3.length == 1)
                {
-                  this.inspectUiElement(uiTarget,cmd == "inspectuielementsos"?null:console);
+                  this.inspectUiElement(_loc12_,param2 == "inspectuielementsos"?null:param1);
                   break;
                }
-               elemTarget = uiTarget.getElement(args[1]);
-               if(!elemTarget)
+               _loc13_ = _loc12_.getElement(param3[1]);
+               if(!_loc13_)
                {
-                  console.output("UI Element " + args[0] + " not found on UI " + args[0] + "(use /uiinspector to view elements names)");
+                  param1.output("UI Element " + param3[0] + " not found on UI " + param3[0] + "(use /uiinspector to view elements names)");
                   break;
                }
-               this.inspectUiElement(elemTarget,cmd == "inspectuielementsos"?null:console);
+               this.inspectUiElement(_loc13_,param2 == "inspectuielementsos"?null:param1);
                break;
          }
       }
       
-      function inspectUiElement(target:GraphicContainer, console:ConsoleHandler) : void {
+      private function inspectUiElement(param1:GraphicContainer, param2:ConsoleHandler) : void {
          var txt:String = null;
          var property:String = null;
          var type:String = null;
+         var target:GraphicContainer = param1;
+         var console:ConsoleHandler = param2;
          var properties:Array = DescribeTypeCache.getVariables(target).concat();
          properties.sort();
          for each (property in properties)
          {
             try
             {
-               type = !(target[property] == null)?getQualifiedClassName(target[property]).split("::").pop():"?";
+               type = target[property] != null?getQualifiedClassName(target[property]).split("::").pop():"?";
                if(type == "Array")
                {
                   type = type + (", len: " + target[property].length);
@@ -231,8 +233,8 @@ package com.ankamagames.dofus.console.debug
          }
       }
       
-      public function getHelp(cmd:String) : String {
-         switch(cmd)
+      public function getHelp(param1:String) : String {
+         switch(param1)
          {
             case "loadui":
                return "Load an UI. Usage: loadUi <uiId> <uiInstanceName>(optional)";
@@ -261,25 +263,27 @@ package com.ankamagames.dofus.console.debug
                return "Display the property list of an UI element (UI or Component), usage /inspectuielement uiName (elementName)";
             case "inspectuielementsos":
                return "Display the property list of an UI element (UI or Component) to SOS, usage /inspectuielement uiName (elementName)";
+            default:
+               return "No help for command \'" + param1 + "\'";
          }
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint=0, currentParams:Array=null) : Array {
-         var i:String = null;
-         var possibilities:Array = [];
-         switch(cmd)
+      public function getParamPossibilities(param1:String, param2:uint=0, param3:Array=null) : Array {
+         var _loc5_:String = null;
+         var _loc4_:Array = [];
+         switch(param1)
          {
             case "unloadui":
-               if(paramIndex == 0)
+               if(param2 == 0)
                {
-                  for (i in Berilia.getInstance().uiList)
+                  for (_loc5_ in Berilia.getInstance().uiList)
                   {
-                     possibilities.push(Berilia.getInstance().uiList[i].name);
+                     _loc4_.push(Berilia.getInstance().uiList[_loc5_].name);
                   }
                }
                break;
          }
-         return possibilities;
+         return _loc4_;
       }
    }
 }

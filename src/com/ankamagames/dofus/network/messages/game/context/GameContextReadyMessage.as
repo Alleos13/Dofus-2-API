@@ -27,8 +27,8 @@ package com.ankamagames.dofus.network.messages.game.context
          return 6071;
       }
       
-      public function initGameContextReadyMessage(mapId:uint=0) : GameContextReadyMessage {
-         this.mapId = mapId;
+      public function initGameContextReadyMessage(param1:uint=0) : GameContextReadyMessage {
+         this.mapId = param1;
          this._isInitialized = true;
          return this;
       }
@@ -38,38 +38,38 @@ package com.ankamagames.dofus.network.messages.game.context
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameContextReadyMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_GameContextReadyMessage(param1);
       }
       
-      public function serializeAs_GameContextReadyMessage(output:IDataOutput) : void {
+      public function serializeAs_GameContextReadyMessage(param1:IDataOutput) : void {
          if(this.mapId < 0)
          {
             throw new Error("Forbidden value (" + this.mapId + ") on element mapId.");
          }
          else
          {
-            output.writeInt(this.mapId);
+            param1.writeInt(this.mapId);
             return;
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameContextReadyMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_GameContextReadyMessage(param1);
       }
       
-      public function deserializeAs_GameContextReadyMessage(input:IDataInput) : void {
-         this.mapId = input.readInt();
+      public function deserializeAs_GameContextReadyMessage(param1:IDataInput) : void {
+         this.mapId = param1.readInt();
          if(this.mapId < 0)
          {
             throw new Error("Forbidden value (" + this.mapId + ") on element of GameContextReadyMessage.mapId.");

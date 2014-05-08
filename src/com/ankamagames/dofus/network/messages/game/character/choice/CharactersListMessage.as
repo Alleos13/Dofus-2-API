@@ -28,9 +28,9 @@ package com.ankamagames.dofus.network.messages.game.character.choice
          return 151;
       }
       
-      public function initCharactersListMessage(characters:Vector.<CharacterBaseInformations>=null, hasStartupActions:Boolean=false) : CharactersListMessage {
-         super.initBasicCharactersListMessage(characters);
-         this.hasStartupActions = hasStartupActions;
+      public function initCharactersListMessage(param1:Vector.<CharacterBaseInformations>=null, param2:Boolean=false) : CharactersListMessage {
+         super.initBasicCharactersListMessage(param1);
+         this.hasStartupActions = param2;
          this._isInitialized = true;
          return this;
       }
@@ -41,32 +41,32 @@ package com.ankamagames.dofus.network.messages.game.character.choice
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharactersListMessage(output);
+      override public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_CharactersListMessage(param1);
       }
       
-      public function serializeAs_CharactersListMessage(output:IDataOutput) : void {
-         super.serializeAs_BasicCharactersListMessage(output);
-         output.writeBoolean(this.hasStartupActions);
+      public function serializeAs_CharactersListMessage(param1:IDataOutput) : void {
+         super.serializeAs_BasicCharactersListMessage(param1);
+         param1.writeBoolean(this.hasStartupActions);
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharactersListMessage(input);
+      override public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_CharactersListMessage(param1);
       }
       
-      public function deserializeAs_CharactersListMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.hasStartupActions = input.readBoolean();
+      public function deserializeAs_CharactersListMessage(param1:IDataInput) : void {
+         super.deserialize(param1);
+         this.hasStartupActions = param1.readBoolean();
       }
    }
 }

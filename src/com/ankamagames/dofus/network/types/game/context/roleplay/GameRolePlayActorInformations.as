@@ -20,8 +20,8 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          return 141;
       }
       
-      public function initGameRolePlayActorInformations(contextualId:int=0, look:EntityLook=null, disposition:EntityDispositionInformations=null) : GameRolePlayActorInformations {
-         super.initGameContextActorInformations(contextualId,look,disposition);
+      public function initGameRolePlayActorInformations(param1:int=0, param2:EntityLook=null, param3:EntityDispositionInformations=null) : GameRolePlayActorInformations {
+         super.initGameContextActorInformations(param1,param2,param3);
          return this;
       }
       
@@ -29,20 +29,20 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          super.reset();
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameRolePlayActorInformations(output);
+      override public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_GameRolePlayActorInformations(param1);
       }
       
-      public function serializeAs_GameRolePlayActorInformations(output:IDataOutput) : void {
-         super.serializeAs_GameContextActorInformations(output);
+      public function serializeAs_GameRolePlayActorInformations(param1:IDataOutput) : void {
+         super.serializeAs_GameContextActorInformations(param1);
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameRolePlayActorInformations(input);
+      override public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_GameRolePlayActorInformations(param1);
       }
       
-      public function deserializeAs_GameRolePlayActorInformations(input:IDataInput) : void {
-         super.deserialize(input);
+      public function deserializeAs_GameRolePlayActorInformations(param1:IDataInput) : void {
+         super.deserialize(param1);
       }
    }
 }

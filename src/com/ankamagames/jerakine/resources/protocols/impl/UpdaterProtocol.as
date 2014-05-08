@@ -13,11 +13,11 @@ package com.ankamagames.jerakine.resources.protocols.impl
          super();
       }
       
-      public function load(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, cache:ICache, forcedAdapter:Class, uniqueFile:Boolean) : void {
+      public function load(param1:Uri, param2:IResourceObserver, param3:Boolean, param4:ICache, param5:Class, param6:Boolean) : void {
          throw new Error("Unimplemented stub.");
       }
       
-       function release() : void {
+      override protected function release() : void {
          throw new Error("Unimplemented stub.");
       }
    }

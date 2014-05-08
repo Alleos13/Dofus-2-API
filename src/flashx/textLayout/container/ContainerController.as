@@ -1184,7 +1184,7 @@ package flashx.textLayout.container
          this._container.contextMenu = null;
       }
       
-      function createContextMenu() : ContextMenu {
+      protected function createContextMenu() : ContextMenu {
          return createDefaultContextMenu();
       }
       
@@ -1814,7 +1814,7 @@ package flashx.textLayout.container
          this.blinkTimer.start();
       }
       
-      function stopBlinkingCursor() : void {
+      protected function stopBlinkingCursor() : void {
          if(this.blinkTimer)
          {
             this.blinkTimer.stop();
@@ -1826,7 +1826,7 @@ package flashx.textLayout.container
          this.blinkObject.alpha = this.blinkObject.alpha == 1?0.0:1;
       }
       
-      function setBlinkInterval(param1:int) : void {
+      protected function setBlinkInterval(param1:int) : void {
          var _loc2_:int = param1;
          if(_loc2_ == 0)
          {
@@ -2066,7 +2066,7 @@ package flashx.textLayout.container
          return this._selectionSprite;
       }
       
-      function get attachTransparentBackground() : Boolean {
+      protected function get attachTransparentBackground() : Boolean {
          return true;
       }
       
@@ -2490,7 +2490,7 @@ package flashx.textLayout.container
          }
       }
       
-      function getFirstTextLineChildIndex() : int {
+      protected function getFirstTextLineChildIndex() : int {
          var _loc1_:* = 0;
          _loc1_ = 0;
          while(_loc1_ < this._container.numChildren)
@@ -2504,29 +2504,29 @@ package flashx.textLayout.container
          return _loc1_;
       }
       
-      function addTextLine(param1:TextLine, param2:int) : void {
+      protected function addTextLine(param1:TextLine, param2:int) : void {
          this._container.addChildAt(param1,param2);
       }
       
-      function removeTextLine(param1:TextLine) : void {
+      protected function removeTextLine(param1:TextLine) : void {
          if(this._container.contains(param1))
          {
             this._container.removeChild(param1);
          }
       }
       
-      function addBackgroundShape(param1:Shape) : void {
+      protected function addBackgroundShape(param1:Shape) : void {
          this._container.addChildAt(this._backgroundShape,this.getFirstTextLineChildIndex());
       }
       
-      function removeBackgroundShape(param1:Shape) : void {
+      protected function removeBackgroundShape(param1:Shape) : void {
          if(param1.parent)
          {
             param1.parent.removeChild(param1);
          }
       }
       
-      function addSelectionContainer(param1:DisplayObjectContainer) : void {
+      protected function addSelectionContainer(param1:DisplayObjectContainer) : void {
          if(param1.blendMode == BlendMode.NORMAL && param1.alpha == 1)
          {
             this._container.addChildAt(param1,this.getFirstTextLineChildIndex());
@@ -2537,15 +2537,15 @@ package flashx.textLayout.container
          }
       }
       
-      function removeSelectionContainer(param1:DisplayObjectContainer) : void {
+      protected function removeSelectionContainer(param1:DisplayObjectContainer) : void {
          param1.parent.removeChild(param1);
       }
       
-      function addInlineGraphicElement(param1:DisplayObjectContainer, param2:DisplayObject, param3:int) : void {
+      protected function addInlineGraphicElement(param1:DisplayObjectContainer, param2:DisplayObject, param3:int) : void {
          param1.addChildAt(param2,param3);
       }
       
-      function removeInlineGraphicElement(param1:DisplayObjectContainer, param2:DisplayObject) : void {
+      protected function removeInlineGraphicElement(param1:DisplayObjectContainer, param2:DisplayObject) : void {
          if(param2.parent == param1)
          {
             param1.removeChild(param2);
@@ -2556,7 +2556,7 @@ package flashx.textLayout.container
          return this._shapeChildren;
       }
       
-      function updateVisibleRectangle() : void {
+      protected function updateVisibleRectangle() : void {
          var _loc1_:* = NaN;
          var _loc2_:* = NaN;
          var _loc3_:* = NaN;

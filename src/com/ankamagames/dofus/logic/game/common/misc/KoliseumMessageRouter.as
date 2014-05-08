@@ -11,7 +11,7 @@ package com.ankamagames.dofus.logic.game.common.misc
          super();
       }
       
-      public function getConnectionId(msg:INetworkMessage) : String {
+      public function getConnectionId(param1:INetworkMessage) : String {
          return ConnectionType.TO_KOLI_SERVER;
       }
    }

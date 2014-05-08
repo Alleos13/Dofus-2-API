@@ -7,12 +7,12 @@ package com.ankamagames.atouin.messages
    public class EntityMovementStartMessage extends Object implements Message, ILogableMessage
    {
       
-      public function EntityMovementStartMessage(entity:IEntity=null) {
+      public function EntityMovementStartMessage(param1:IEntity=null) {
          super();
-         this._entity = entity;
+         this._entity = param1;
          if(this._entity)
          {
-            this.id = entity.id;
+            this.id = param1.id;
          }
       }
       

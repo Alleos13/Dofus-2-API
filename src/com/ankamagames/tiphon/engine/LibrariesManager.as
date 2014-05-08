@@ -25,11 +25,11 @@ package com.ankamagames.tiphon.engine
    public class LibrariesManager extends EventDispatcher
    {
       
-      public function LibrariesManager(n:String, type:uint) {
+      public function LibrariesManager(param1:String, param2:uint) {
          this._waitingResources = new Vector.<Uri>();
          this._libCurrentlyUsed = new Dictionary(true);
          super();
-         this.name = n;
+         this.name = param1;
          this._aResources = new Dictionary();
          this._aResourceLoadFail = new Dictionary();
          this._aResourceStates = new Array();
@@ -38,7 +38,7 @@ package com.ankamagames.tiphon.engine
          this._loader = ResourceLoaderFactory.getLoader(ResourceLoaderType.SERIAL_LOADER);
          this._loader.addEventListener(ResourceLoadedEvent.LOADED,this.onLoadResource);
          this._loader.addEventListener(ResourceErrorEvent.ERROR,this.onLoadFailedResource);
-         this._type = type;
+         this._type = param2;
          numLM++;
       }
       
@@ -80,106 +80,106 @@ package com.ankamagames.tiphon.engine
       
       public var name:String;
       
-      public function addResource(id:uint, uri:Uri) : void {
-         var gl:GraphicLibrary = null;
-         if(uri == null)
+      public function addResource(param1:uint, param2:Uri) : void {
+         var _loc3_:GraphicLibrary = null;
+         if(param2 == null)
          {
-            uri = new Uri(TiphonConstants.SWF_SKULL_PATH + "666.swl");
+            param2 = new Uri(TiphonConstants.SWF_SKULL_PATH + "666.swl");
          }
-         if(!this._aResources[id])
+         if(!this._aResources[param1])
          {
             if(this._type == TYPE_BONE)
             {
-               gl = new AnimLibrary(id,true);
+               _loc3_ = new AnimLibrary(param1,true);
             }
             else
             {
-               gl = new GraphicLibrary(id,false);
+               _loc3_ = new GraphicLibrary(param1,false);
             }
-            this._aResources[id] = gl;
+            this._aResources[param1] = _loc3_;
          }
          else
          {
-            gl = this._aResources[id];
+            _loc3_ = this._aResources[param1];
          }
-         if(!gl.hasSwl(uri))
+         if(!_loc3_.hasSwl(param2))
          {
-            if(uri.tag == null)
+            if(param2.tag == null)
             {
-               uri.tag = new Object();
+               param2.tag = new Object();
             }
-            uri.tag.id = id;
-            gl.updateSwfState(uri);
-            this._waitingResources.push(uri);
+            param2.tag.id = param1;
+            _loc3_.updateSwfState(param2);
+            this._waitingResources.push(param2);
          }
       }
       
-      public function askResource(id:uint, className:String=null, callback:Callback=null, errorCallback:Callback=null) : void {
-         var gl:GraphicLibrary = null;
-         var callbackUri:String = null;
-         var waitCallback:Array = null;
-         var ok:* = false;
-         var c:Callback = null;
-         var allMatch:* = false;
-         var index:uint = 0;
-         if(!this.hasResource(id,className))
+      public function askResource(param1:uint, param2:String=null, param3:Callback=null, param4:Callback=null) : void {
+         var _loc5_:GraphicLibrary = null;
+         var _loc6_:String = null;
+         var _loc7_:Array = null;
+         var _loc8_:* = false;
+         var _loc9_:Callback = null;
+         var _loc10_:* = false;
+         var _loc11_:uint = 0;
+         if(!this.hasResource(param1,param2))
          {
             return;
          }
-         gl = this._aResources[id];
-         if(gl.hasClassAvaible(className))
+         _loc5_ = this._aResources[param1];
+         if(_loc5_.hasClassAvaible(param2))
          {
-            if(callback != null)
+            if(param3 != null)
             {
-               callback.exec();
+               param3.exec();
             }
          }
          else
          {
-            if(!this._aWaiting[id])
+            if(!this._aWaiting[param1])
             {
-               this._aWaiting[id] = new Object();
-               this._aWaiting[id]["ok"] = new Array();
-               this._aWaiting[id]["ko"] = new Array();
+               this._aWaiting[param1] = new Object();
+               this._aWaiting[param1]["ok"] = new Array();
+               this._aWaiting[param1]["ko"] = new Array();
             }
-            if((this._type == TYPE_BONE) && (BoneIndexManager.getInstance().hasCustomBone(id)))
+            if(this._type == TYPE_BONE && (BoneIndexManager.getInstance().hasCustomBone(param1)))
             {
-               callbackUri = BoneIndexManager.getInstance().getBoneFile(id,className).uri;
+               _loc6_ = BoneIndexManager.getInstance().getBoneFile(param1,param2).uri;
             }
-            waitCallback = this._aWaiting[id]["ok"];
-            ok = true;
-            for each (c in waitCallback)
+            _loc7_ = this._aWaiting[param1]["ok"];
+            _loc8_ = true;
+            for each (_loc9_ in _loc7_)
             {
-               if((c.method == callback.method) && (callback.args.length == c.args.length))
+               if(_loc9_.method == param3.method && param3.args.length == _loc9_.args.length)
                {
-                  allMatch = true;
-                  while(index < c.args.length)
+                  _loc10_ = true;
+                  while(_loc11_ < _loc9_.args.length)
                   {
-                     if(c.args[index] != callback.args[index])
+                     if(_loc9_.args[_loc11_] != param3.args[_loc11_])
                      {
-                        allMatch = false;
+                        _loc10_ = false;
                         break;
                      }
-                     index++;
+                     _loc11_++;
                   }
-                  if((allMatch) && ((!callbackUri) || (this._aWaitingResourceUri[c] == callbackUri)))
+                  if((_loc10_) && (!_loc6_ || this._aWaitingResourceUri[_loc9_] == _loc6_))
                   {
-                     ok = false;
+                     _loc8_ = false;
                      break;
                   }
                }
             }
-            if(ok)
+            if(_loc8_)
             {
-               if(callbackUri)
+               if(_loc6_)
                {
-                  this._aWaitingResourceUri[callback] = callbackUri;
+                  this._aWaitingResourceUri[param3] = _loc6_;
                }
-               this._aWaiting[id]["ok"].push(callback);
+               this._aWaiting[param1]["ok"].push(param3);
             }
-            if(errorCallback)
+            if(param4)
             {
-               this._aWaiting[id]["ko"].push(errorCallback);
+               this._aWaiting[param1]["ko"].push(param4);
             }
             while(this._waitingResources.length)
             {
@@ -188,137 +188,137 @@ package com.ankamagames.tiphon.engine
          }
       }
       
-      public function removeResource(id:uint) : void {
-         if(this._aWaiting[id])
+      public function removeResource(param1:uint) : void {
+         if(this._aWaiting[param1])
          {
-            delete this._aWaiting[[id]];
+            delete this._aWaiting[[param1]];
          }
-         delete this._aResources[[id]];
+         delete this._aResources[[param1]];
       }
       
-      public function isLoaded(id:uint, animClass:String=null) : Boolean {
-         if(this._aResources[id] == false)
+      public function isLoaded(param1:uint, param2:String=null) : Boolean {
+         if(this._aResources[param1] == false)
          {
             return false;
          }
-         var lib:GraphicLibrary = this._aResources[id];
-         if(animClass)
+         var _loc3_:GraphicLibrary = this._aResources[param1];
+         if(param2)
          {
-            return (!(lib == null)) && (lib.hasClassAvaible(animClass));
+            return !(_loc3_ == null) && (_loc3_.hasClassAvaible(param2));
          }
-         return (lib) && (!(lib.getSwl() == null));
+         return (_loc3_) && !(_loc3_.getSwl() == null);
       }
       
-      public function hasError(id:uint) : Boolean {
-         return this._aResourceLoadFail[id];
+      public function hasError(param1:uint) : Boolean {
+         return this._aResourceLoadFail[param1];
       }
       
-      public function hasResource(id:uint, animClass:String=null) : Boolean {
-         var lib:GraphicLibrary = this._aResources[id];
-         return (lib) && (lib.hasClass(animClass));
+      public function hasResource(param1:uint, param2:String=null) : Boolean {
+         var _loc3_:GraphicLibrary = this._aResources[param1];
+         return (_loc3_) && (_loc3_.hasClass(param2));
       }
       
-      public function getResourceById(resName:uint, animClass:String=null, waitForIt:Boolean=false) : Swl {
-         var swl:Swl = null;
-         var lib:GraphicLibrary = this._aResources[resName];
-         if((lib.isSingleFile) && (!waitForIt))
+      public function getResourceById(param1:uint, param2:String=null, param3:Boolean=false) : Swl {
+         var _loc5_:Swl = null;
+         var _loc4_:GraphicLibrary = this._aResources[param1];
+         if((_loc4_.isSingleFile) && !param3)
          {
-            swl = lib.getSwl(null);
+            _loc5_ = _loc4_.getSwl(null);
          }
-         swl = lib.getSwl(animClass,waitForIt);
-         if((swl == null) && (waitForIt))
+         _loc5_ = _loc4_.getSwl(param2,param3);
+         if(_loc5_ == null && (param3))
          {
-            lib.addEventListener(SwlEvent.SWL_LOADED,this.onSwfLoaded);
+            _loc4_.addEventListener(SwlEvent.SWL_LOADED,this.onSwfLoaded);
          }
-         return swl;
+         return _loc5_;
       }
       
-      private function onSwfLoaded(pEvt:Event) : void {
-         pEvt.currentTarget.removeEventListener(SwlEvent.SWL_LOADED,this.onSwfLoaded);
-         dispatchEvent(pEvt);
+      private function onSwfLoaded(param1:Event) : void {
+         param1.currentTarget.removeEventListener(SwlEvent.SWL_LOADED,this.onSwfLoaded);
+         dispatchEvent(param1);
       }
       
-      public function hasAnim(bonesId:int, animName:String, direction:int=-1) : Boolean {
-         var animIzHere:* = false;
-         var swldefanim:String = null;
-         var lib:GraphicLibrary = this._aResources[bonesId];
-         if((lib) && (lib.isSingleFile))
+      public function hasAnim(param1:int, param2:String, param3:int=-1) : Boolean {
+         var _loc5_:* = false;
+         var _loc6_:String = null;
+         var _loc4_:GraphicLibrary = this._aResources[param1];
+         if((_loc4_) && (_loc4_.isSingleFile))
          {
-            animIzHere = false;
-            if(!lib.getSwl())
+            _loc5_ = false;
+            if(!_loc4_.getSwl())
             {
-               _log.info("On test si une librairie contient une anim sans l\'avoir en mémoire. (bones: " + bonesId + ", anim:" + animName + ")");
+               _log.info("On test si une librairie contient une anim sans l\'avoir en mémoire. (bones: " + param1 + ", anim:" + param2 + ")");
                return false;
             }
-            for each (swldefanim in lib.getSwl().getDefinitions())
+            for each (_loc6_ in _loc4_.getSwl().getDefinitions())
             {
-               if(swldefanim.indexOf(animName + (!(direction == -1)?"_" + direction:"")) == 0)
+               if(_loc6_.indexOf(param2 + (param3 != -1?"_" + param3:"")) == 0)
                {
-                  animIzHere = true;
+                  _loc5_ = true;
                }
             }
-            return animIzHere;
+            return _loc5_;
          }
-         return BoneIndexManager.getInstance().hasAnim(bonesId,animName,direction);
+         return BoneIndexManager.getInstance().hasAnim(param1,param2,param3);
       }
       
-      private function onLoadResource(re:ResourceLoadedEvent) : void {
-         var size:uint = 0;
-         var i:uint = 0;
-         var c:Callback = null;
-         var callbacksToRemove:Vector.<Callback> = null;
-         var tagId:int = re.uri.tag.id == null?re.uri.tag:re.uri.tag.id;
-         _log.info("Loaded " + re.uri);
-         GraphicLibrary(this._aResources[tagId]).addSwl(re.resource,re.uri.uri);
-         if((this._aWaiting[tagId]) && (this._aWaiting[tagId]["ok"]))
+      private function onLoadResource(param1:ResourceLoadedEvent) : void {
+         var _loc3_:uint = 0;
+         var _loc4_:uint = 0;
+         var _loc5_:Callback = null;
+         var _loc6_:Vector.<Callback> = null;
+         var _loc2_:int = param1.uri.tag.id == null?param1.uri.tag:param1.uri.tag.id;
+         _log.info("Loaded " + param1.uri);
+         GraphicLibrary(this._aResources[_loc2_]).addSwl(param1.resource,param1.uri.uri);
+         if((this._aWaiting[_loc2_]) && (this._aWaiting[_loc2_]["ok"]))
          {
-            size = this._aWaiting[tagId]["ok"].length;
-            callbacksToRemove = new Vector.<Callback>(0);
-            i = 0;
-            while(i < size)
+            _loc3_ = this._aWaiting[_loc2_]["ok"].length;
+            _loc6_ = new Vector.<Callback>(0);
+            _loc4_ = 0;
+            while(_loc4_ < _loc3_)
             {
-               c = Callback(this._aWaiting[tagId]["ok"][i]);
-               if((c) && ((!this._aWaitingResourceUri[c]) || (this._aWaitingResourceUri[c] == re.uri.uri)))
+               _loc5_ = Callback(this._aWaiting[_loc2_]["ok"][_loc4_]);
+               if((_loc5_) && (!this._aWaitingResourceUri[_loc5_] || this._aWaitingResourceUri[_loc5_] == param1.uri.uri))
                {
-                  c.exec();
-                  callbacksToRemove.push(c);
+                  _loc5_.exec();
+                  _loc6_.push(_loc5_);
                }
-               i++;
+               _loc4_++;
             }
-            for each (c in callbacksToRemove)
+            for each (_loc5_ in _loc6_)
             {
-               this._aWaiting[tagId]["ok"].splice(this._aWaiting[tagId]["ok"].indexOf(c),1);
-               delete this._aWaitingResourceUri[[c]];
+               this._aWaiting[_loc2_]["ok"].splice(this._aWaiting[_loc2_]["ok"].indexOf(_loc5_),1);
+               delete this._aWaitingResourceUri[[_loc5_]];
             }
-            if(this._aWaiting[tagId]["ok"].length == 0)
+            if(this._aWaiting[_loc2_]["ok"].length == 0)
             {
-               delete this._aWaiting[[tagId]];
+               delete this._aWaiting[[_loc2_]];
             }
          }
       }
       
-      private function onLoadFailedResource(re:ResourceErrorEvent) : void {
-         var callBackList:Array = null;
-         var num:* = 0;
-         var i:* = 0;
-         var tagId:int = isNaN(re.uri.tag)?re.uri.tag.id:re.uri.tag;
-         _log.error("Unable to load " + re.uri + " (" + re.errorMsg + ")");
-         delete this._aResources[[tagId]];
-         this._aResourceLoadFail[tagId] = true;
-         this.addResource(tagId,_uri);
-         if(this._aWaiting[tagId])
+      private function onLoadFailedResource(param1:ResourceErrorEvent) : void {
+         var _loc3_:Array = null;
+         var _loc4_:* = 0;
+         var _loc5_:* = 0;
+         var _loc2_:int = isNaN(param1.uri.tag)?param1.uri.tag.id:param1.uri.tag;
+         _log.error("Unable to load " + param1.uri + " (" + param1.errorMsg + ")");
+         delete this._aResources[[_loc2_]];
+         this._aResourceLoadFail[_loc2_] = true;
+         this.addResource(_loc2_,_uri);
+         if(this._aWaiting[_loc2_])
          {
-            callBackList = this._aWaiting[tagId]["ko"];
-            if(callBackList)
+            _loc3_ = this._aWaiting[_loc2_]["ko"];
+            if(_loc3_)
             {
-               num = callBackList.length;
-               i = 0;
-               while(i < num)
+               _loc4_ = _loc3_.length;
+               _loc5_ = 0;
+               while(_loc5_ < _loc4_)
                {
-                  (callBackList[i] as Callback).exec();
-                  i++;
+                  (_loc3_[_loc5_] as Callback).exec();
+                  _loc5_++;
                }
-               delete this._aWaiting[[tagId]];
+               delete this._aWaiting[[_loc2_]];
             }
          }
       }

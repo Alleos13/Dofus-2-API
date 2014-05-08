@@ -27,20 +27,20 @@ package com.ankamagames.dofus.misc.utils
       
       public static var logLevels:Array = [];
       
-      override public function logEvent(event:LogEvent) : void {
-         if((event is TextLogEvent) && (logLevels[event.level]))
+      override public function logEvent(param1:LogEvent) : void {
+         if(param1 is TextLogEvent && (logLevels[param1.level]))
          {
-            LogFrame.log(LogTypeEnum.TEXT,event);
+            LogFrame.log(LogTypeEnum.TEXT,param1);
          }
       }
       
-      public function configure(config:XML) : void {
-         var level:XML = null;
-         for each (level in config..level)
+      public function configure(param1:XML) : void {
+         var _loc2_:XML = null;
+         for each (_loc2_ in param1..level)
          {
-            if(LogLevel[level.@name.toString().toUpperCase()])
+            if(LogLevel[_loc2_.@name.toString().toUpperCase()])
             {
-               logLevels[LogLevel[level.@name.toString().toUpperCase()]] = level.@log.toString() == "true";
+               logLevels[LogLevel[_loc2_.@name.toString().toUpperCase()]] = _loc2_.@log.toString() == "true";
             }
          }
       }

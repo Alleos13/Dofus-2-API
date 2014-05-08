@@ -10,8 +10,8 @@ package com.ankamagames.dofus.logic.game.common.actions.externalGame
       }
       
       public static function create() : KrosmasterInventoryRequestAction {
-         var action:KrosmasterInventoryRequestAction = new KrosmasterInventoryRequestAction();
-         return action;
+         var _loc1_:KrosmasterInventoryRequestAction = new KrosmasterInventoryRequestAction();
+         return _loc1_;
       }
    }
 }

@@ -6,6 +6,7 @@ package com.ankamagames.berilia.types.data
    import com.ankamagames.jerakine.logger.Log;
    import flash.utils.getQualifiedClassName;
    import com.ankamagames.jerakine.types.Uri;
+   import __AS3__.vec.Vector;
    import flash.display.Loader;
    import flash.system.ApplicationDomain;
    import com.ankamagames.berilia.utils.ModuleScriptAnalyzer;
@@ -14,32 +15,31 @@ package com.ankamagames.berilia.types.data
    import com.ankamagames.berilia.managers.UiModuleManager;
    import com.ankamagames.berilia.managers.UiGroupManager;
    import com.ankamagames.berilia.utils.errors.BeriliaError;
-   import __AS3__.vec.*;
    
    public class UiModule extends Object implements IModuleUtil
    {
       
-      public function UiModule(id:String=null, name:String=null, version:String=null, gameVersion:String=null, author:String=null, shortDescription:String=null, description:String=null, iconUri:String=null, script:String=null, shortcuts:String=null, uis:Array=null, cachedFiles:Array=null, activated:Boolean=false) {
-         var ui:UiData = null;
+      public function UiModule(param1:String=null, param2:String=null, param3:String=null, param4:String=null, param5:String=null, param6:String=null, param7:String=null, param8:String=null, param9:String=null, param10:String=null, param11:Array=null, param12:Array=null, param13:Boolean=false) {
+         var _loc14_:UiData = null;
          this._instanceId = ++ID_COUNT;
          this._apiScriptAnalyserCallback = new Dictionary();
          this._hookScriptAnalyserCallback = new Dictionary();
          this._actionScriptAnalyserCallback = new Dictionary();
          super();
          MEMORY_LOG[this] = 1;
-         this._name = name;
-         this._version = version;
-         this._gameVersion = gameVersion;
-         this._author = author;
-         this._shortDescription = shortDescription;
-         this._description = description;
-         this._iconUri = new Uri(iconUri);
-         this._script = script;
-         this._shortcuts = shortcuts;
-         this._id = id;
+         this._name = param2;
+         this._version = param3;
+         this._gameVersion = param4;
+         this._author = param5;
+         this._shortDescription = param6;
+         this._description = param7;
+         this._iconUri = new Uri(param8);
+         this._script = param9;
+         this._shortcuts = param10;
+         this._id = param1;
          this._uis = new Array();
-         this._cachedFiles = cachedFiles?cachedFiles:new Array();
-         for each (this._uis[ui.name] in uis)
+         this._cachedFiles = param12?param12:new Array();
+         for each (this._uis[_loc14_.name] in param11)
          {
          }
          this._apiList = new Vector.<Object>();
@@ -51,10 +51,10 @@ package com.ankamagames.berilia.types.data
       
       protected static const _log:Logger = Log.getLogger(getQualifiedClassName(UiModule));
       
-      public static function createFromXml(xml:XML, nativePath:String, id:String) : UiModule {
-         var um:UiModule = new UiModule();
-         um.fillFromXml(xml,nativePath,id);
-         return um;
+      public static function createFromXml(param1:XML, param2:String, param3:String) : UiModule {
+         var _loc4_:UiModule = new UiModule();
+         _loc4_.fillFromXml(param1,param2,param3);
+         return _loc4_;
       }
       
       private var _instanceId:uint;
@@ -115,10 +115,10 @@ package com.ankamagames.berilia.types.data
       
       private var _actionScriptAnalyserCallback:Dictionary;
       
-      public function set loader(l:Loader) : void {
+      public function set loader(param1:Loader) : void {
          if(!this._loader)
          {
-            this._loader = l;
+            this._loader = param1;
          }
       }
       
@@ -174,20 +174,20 @@ package com.ankamagames.berilia.types.data
          return this._trusted;
       }
       
-      public function set trusted(v:Boolean) : void {
-         var state:* = undefined;
+      public function set trusted(param1:Boolean) : void {
+         var _loc2_:* = undefined;
          if(!this._trustedInit)
          {
-            this._trusted = v;
+            this._trusted = param1;
             this._trustedInit = true;
-            state = StoreDataManager.getInstance().getData(BeriliaConstants.DATASTORE_MOD,this.id);
-            if(state == null)
+            _loc2_ = StoreDataManager.getInstance().getData(BeriliaConstants.DATASTORE_MOD,this.id);
+            if(_loc2_ == null)
             {
                this._enable = this._trusted;
             }
             else
             {
-               this._enable = (state) || (this._trusted);
+               this._enable = (_loc2_) || (this._trusted);
             }
             if(!this._enable)
             {
@@ -200,10 +200,10 @@ package com.ankamagames.berilia.types.data
          return this._enable;
       }
       
-      public function set enable(v:Boolean) : void {
-         var uiGroup:UiGroup = null;
-         StoreDataManager.getInstance().setData(BeriliaConstants.DATASTORE_MOD,this.id,v);
-         if((!this._enable) && (v))
+      public function set enable(param1:Boolean) : void {
+         var _loc2_:UiGroup = null;
+         StoreDataManager.getInstance().setData(BeriliaConstants.DATASTORE_MOD,this.id,param1);
+         if(!this._enable && (param1))
          {
             this._enable = true;
             UiModuleManager.getInstance().loadModule(this.id);
@@ -211,9 +211,9 @@ package com.ankamagames.berilia.types.data
          else
          {
             this._enable = false;
-            for each (uiGroup in this._groups)
+            for each (_loc2_ in this._groups)
             {
-               UiGroupManager.getInstance().removeGroup(uiGroup.name);
+               UiGroupManager.getInstance().removeGroup(_loc2_.name);
             }
             UiModuleManager.getInstance().unloadModule(this.id);
          }
@@ -235,26 +235,26 @@ package com.ankamagames.berilia.types.data
          return this._apiList;
       }
       
-      public function set applicationDomain(appDomain:ApplicationDomain) : void {
-         var ui:UiData = null;
+      public function set applicationDomain(param1:ApplicationDomain) : void {
+         var _loc2_:UiData = null;
          if(this._moduleAppDomain)
          {
             throw new BeriliaError("ApplicationDomain cannot be set twice.");
          }
          else
          {
-            for each (ui in this.uis)
+            for each (_loc2_ in this.uis)
             {
-               if((appDomain) && (appDomain.hasDefinition(ui.uiClassName)))
+               if((param1) && (param1.hasDefinition(_loc2_.uiClassName)))
                {
-                  ui.uiClass = appDomain.getDefinition(ui.uiClassName) as Class;
+                  _loc2_.uiClass = param1.getDefinition(_loc2_.uiClassName) as Class;
                }
                else
                {
-                  _log.error(ui.uiClassName + " cannot be found");
+                  _log.error(_loc2_.uiClassName + " cannot be found");
                }
             }
-            this._moduleAppDomain = appDomain;
+            this._moduleAppDomain = param1;
             return;
          }
       }
@@ -267,14 +267,14 @@ package com.ankamagames.berilia.types.data
          return this._mainClass;
       }
       
-      public function set mainClass(instance:Object) : void {
+      public function set mainClass(param1:Object) : void {
          if(this._mainClass)
          {
             throw new BeriliaError("mainClass cannot be set twice.");
          }
          else
          {
-            this._mainClass = instance;
+            this._mainClass = param1;
             return;
          }
       }
@@ -287,37 +287,37 @@ package com.ankamagames.berilia.types.data
          return this._rawXml;
       }
       
-      public function addUiGroup(groupName:String, exclusive:Boolean, permanent:Boolean) : void {
+      public function addUiGroup(param1:String, param2:Boolean, param3:Boolean) : void {
          if(!this._groups)
          {
             this._groups = new Vector.<UiGroup>();
          }
-         this._groups.push(new UiGroup(groupName,exclusive,permanent));
+         this._groups.push(new UiGroup(param1,param2,param3));
       }
       
-      public function getUi(name:String) : UiData {
-         return this._uis[name];
+      public function getUi(param1:String) : UiData {
+         return this._uis[param1];
       }
       
       public function toString() : String {
-         var result:String = "ID:" + this._id;
+         var _loc1_:String = "ID:" + this._id;
          if(this._name)
          {
-            result = result + ("\nName:" + this._name);
+            _loc1_ = _loc1_ + ("\nName:" + this._name);
          }
          if(this._trusted)
          {
-            result = result + ("\nTrusted:" + this._trusted);
+            _loc1_ = _loc1_ + ("\nTrusted:" + this._trusted);
          }
          if(this._author)
          {
-            result = result + ("\nAuthor:" + this._author);
+            _loc1_ = _loc1_ + ("\nAuthor:" + this._author);
          }
          if(this._description)
          {
-            result = result + ("\nDescription:" + this._description);
+            _loc1_ = _loc1_ + ("\nDescription:" + this._description);
          }
-         return result;
+         return _loc1_;
       }
       
       public function destroy() : void {
@@ -327,89 +327,168 @@ package com.ankamagames.berilia.types.data
          }
       }
       
-      public function usedApiList(callBack:Function) : void {
+      public function usedApiList(param1:Function) : void {
          if(this._apiScriptAnalyserCallback)
          {
             if(!this._scriptAnalyser)
             {
                this._scriptAnalyser = new ModuleScriptAnalyzer(this,this.onScriptAnalyserReady,null);
             }
-            this._apiScriptAnalyserCallback[callBack] = callBack;
+            this._apiScriptAnalyserCallback[param1] = param1;
          }
          else
          {
-            callBack(this._scriptAnalyser.apis);
+            param1(this._scriptAnalyser.apis);
          }
       }
       
-      public function usedHookList(callBack:Function) : void {
+      public function usedHookList(param1:Function) : void {
          if(this._hookScriptAnalyserCallback)
          {
             if(!this._scriptAnalyser)
             {
                this._scriptAnalyser = new ModuleScriptAnalyzer(this,this.onScriptAnalyserReady,null);
             }
-            this._hookScriptAnalyserCallback[callBack] = callBack;
+            this._hookScriptAnalyserCallback[param1] = param1;
          }
          else
          {
-            callBack(this._scriptAnalyser.hooks);
+            param1(this._scriptAnalyser.hooks);
          }
       }
       
-      public function usedActionList(callBack:Function) : void {
+      public function usedActionList(param1:Function) : void {
          if(this._actionScriptAnalyserCallback)
          {
             if(!this._scriptAnalyser)
             {
                this._scriptAnalyser = new ModuleScriptAnalyzer(this,this.onScriptAnalyserReady,null);
             }
-            this._actionScriptAnalyserCallback[callBack] = callBack;
+            this._actionScriptAnalyserCallback[param1] = param1;
          }
          else
          {
-            callBack(this._scriptAnalyser.actions);
+            param1(this._scriptAnalyser.actions);
          }
       }
       
-      function initScriptAnalyser() : void {
+      private function initScriptAnalyser() : void {
          if(!this._scriptAnalyser)
          {
             this._scriptAnalyser = new ModuleScriptAnalyzer(this,this.onScriptAnalyserReady,this._moduleAppDomain);
          }
       }
       
-      function onScriptAnalyserReady() : void {
-         var f:Function = null;
-         for each (f in this._actionScriptAnalyserCallback)
+      private function onScriptAnalyserReady() : void {
+         var _loc1_:Function = null;
+         for each (_loc1_ in this._actionScriptAnalyserCallback)
          {
-            f(this._scriptAnalyser.actions);
+            _loc1_(this._scriptAnalyser.actions);
          }
-         for each (f in this._hookScriptAnalyserCallback)
+         for each (_loc1_ in this._hookScriptAnalyserCallback)
          {
-            f(this._scriptAnalyser.hooks);
+            _loc1_(this._scriptAnalyser.hooks);
          }
-         for each (f in this._apiScriptAnalyserCallback)
+         for each (_loc1_ in this._apiScriptAnalyserCallback)
          {
-            f(this._scriptAnalyser.apis);
+            _loc1_(this._scriptAnalyser.apis);
          }
          this._actionScriptAnalyserCallback = null;
          this._hookScriptAnalyserCallback = null;
          this._apiScriptAnalyserCallback = null;
       }
       
-      function fillFromXml(xml:XML, nativePath:String, id:String) : void {
-        
+      protected function fillFromXml(param1:XML, param2:String, param3:String) : void {
+         var uiGroup:UiGroup = null;
+         var group:XML = null;
+         var uiData:UiData = null;
+         var uis:XML = null;
+         var path:XML = null;
+         var uiNames:Array = null;
+         var groupName:String = null;
+         var uisXML:XMLList = null;
+         var uiName:XML = null;
+         var uisGroup:String = null;
+         var ui:XML = null;
+         var file:String = null;
+         var mod:String = null;
+         var fileuri:String = null;
+         var xml:XML = param1;
+         var nativePath:String = param2;
+         var id:String = param3;
+         this.setProperty("name",xml..header..name);
+         this.setProperty("version",xml..header..version);
+         this.setProperty("gameVersion",xml..header..gameVersion);
+         this.setProperty("author",xml..header..author);
+         this.setProperty("description",xml..header..description);
+         this.setProperty("shortDescription",xml..header..shortDescription);
+         this.setProperty("script",xml..script);
+         this.setProperty("shortcuts",xml..shortcuts);
+         this._rawXml = xml;
+         nativePath = nativePath.split("app:/").join("");
+         if(nativePath.indexOf("file://") == -1 && !(nativePath.substr(0,2) == "\\\\"))
+         {
+            nativePath = "file://" + nativePath;
+         }
+         this._id = id;
+         if(this.script)
+         {
+            this._script = nativePath + "/" + this.script;
+         }
+         if(this.shortcuts)
+         {
+            this._shortcuts = nativePath + "/" + this.shortcuts;
+         }
+         this._rootPath = nativePath + "/";
+         this._storagePath = unescape(this._rootPath + "storage/").replace("file://","");
+         var iconPath:String = xml..header..icon;
+         if((iconPath) && (iconPath.length))
+         {
+            this._iconUri = new Uri(this._rootPath + iconPath);
+         }
+         this._groups = new Vector.<UiGroup>();
+         for each (uis in xml.uis)
+         {
+            uisGroup = uis.@group.toString();
+            for each (ui in uis..ui)
+            {
+               if(ui.@group.toString().length)
+               {
+                  uisGroup = ui.@group.toString();
+               }
+               file = null;
+               if(ui.@file.toString().length)
+               {
+                  if(ui.@file.indexOf("::") != -1)
+                  {
+                     mod = nativePath.split("Ankama")[0];
+                     fileuri = ui.@file;
+                     fileuri = fileuri.replace("::","/");
+                     file = mod + fileuri;
+                  }
+                  else
+                  {
+                     file = nativePath + "/" + ui.@file;
+                  }
+               }
+               uiData = new UiData(this,ui.@name,file,ui["class"],uisGroup);
+               this._uis[uiData.name] = uiData;
+            }
+         }
+         for each (path in xml.cachedFiles..path)
+         {
+            this.cachedFiles.push(path.children().toString());
+         }
       }
       
-      function setProperty(key:String, value:String) : void {
-         if((value) && (value.length))
+      private function setProperty(param1:String, param2:String) : void {
+         if((param2) && (param2.length))
          {
-            this["_" + key] = value;
+            this["_" + param1] = param2;
          }
          else
          {
-            this["_" + key] = null;
+            this["_" + param1] = null;
          }
       }
    }

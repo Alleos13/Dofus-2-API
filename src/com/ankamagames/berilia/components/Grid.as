@@ -24,7 +24,6 @@ package com.ankamagames.berilia.components
    import com.ankamagames.berilia.types.data.GridItem;
    import flash.display.DisplayObject;
    import com.ankamagames.berilia.components.messages.SelectItemMessage;
-   import __AS3__.vec.*;
    import flash.events.MouseEvent;
    import com.ankamagames.jerakine.messages.Message;
    import com.ankamagames.jerakine.handlers.messages.mouse.MouseRightClickMessage;
@@ -153,34 +152,34 @@ package com.ankamagames.berilia.components
       
       protected var _mask:Shape;
       
-      override public function set width(nW:Number) : void {
-         super.width = nW;
-         this._eventCatcher.width = nW;
+      override public function set width(param1:Number) : void {
+         super.width = param1;
+         this._eventCatcher.width = param1;
       }
       
-      override public function set height(nH:Number) : void {
-         super.height = nH;
-         this._eventCatcher.height = nH;
+      override public function set height(param1:Number) : void {
+         super.height = param1;
+         this._eventCatcher.height = param1;
          if(this._scrollBarV)
          {
-            this._scrollBarV.height = nH;
+            this._scrollBarV.height = param1;
          }
       }
       
-      public function set rendererName(value:String) : void {
-         if(value.indexOf(".") == -1)
+      public function set rendererName(param1:String) : void {
+         if(param1.indexOf(".") == -1)
          {
-            value = "com.ankamagames.berilia.components.gridRenderer." + value;
+            param1 = "com.ankamagames.berilia.components.gridRenderer." + param1;
          }
-         this._sRendererName = value;
+         this._sRendererName = param1;
       }
       
       public function get rendererName() : String {
          return this._sRendererName;
       }
       
-      public function set rendererArgs(value:String) : void {
-         this._sRendererArgs = value;
+      public function set rendererArgs(param1:String) : void {
+         this._sRendererArgs = param1;
          if(this.finalized)
          {
             this.finalize();
@@ -195,18 +194,18 @@ package com.ankamagames.berilia.components
          return this._renderer;
       }
       
-      public function set dataProvider(data:*) : void {
-         if(!data)
+      public function set dataProvider(param1:*) : void {
+         if(!param1)
          {
             return;
          }
-         if(!this.isIterable(data))
+         if(!this.isIterable(param1))
          {
             throw new ArgumentError("dataProvider must be either Array or Vector.");
          }
          else
          {
-            this._dataProvider = data;
+            this._dataProvider = param1;
             this.finalize();
             this.initSlot();
             return;
@@ -228,16 +227,16 @@ package com.ankamagames.berilia.components
          }
       }
       
-      public function set horizontalScrollbarCss(sValue:Uri) : void {
-         this._sHScrollCss = sValue;
+      public function set horizontalScrollbarCss(param1:Uri) : void {
+         this._sHScrollCss = param1;
       }
       
       public function get horizontalScrollbarCss() : Uri {
          return this._sHScrollCss;
       }
       
-      public function set verticalScrollbarCss(sValue:Uri) : void {
-         this._sVScrollCss = sValue;
+      public function set verticalScrollbarCss(param1:Uri) : void {
+         this._sVScrollCss = param1;
       }
       
       public function get verticalScrollbarCss() : Uri {
@@ -248,14 +247,14 @@ package com.ankamagames.berilia.components
          return this._nSelectedIndex;
       }
       
-      public function set selectedIndex(i:int) : void {
-         this.setSelectedIndex(i,SelectMethodEnum.MANUAL);
+      public function set selectedIndex(param1:int) : void {
+         this.setSelectedIndex(param1,SelectMethodEnum.MANUAL);
       }
       
-      public function set vertical(b:Boolean) : void {
-         if(this._verticalScroll != b)
+      public function set vertical(param1:Boolean) : void {
+         if(this._verticalScroll != param1)
          {
-            this._verticalScroll = b;
+            this._verticalScroll = param1;
             if(this._finalized)
             {
                this.finalize();
@@ -267,11 +266,11 @@ package com.ankamagames.berilia.components
          return this._verticalScroll;
       }
       
-      public function set autoSelect(b:Boolean) : void {
+      public function set autoSelect(param1:Boolean) : void {
          this._autoSelect = AUTOSELECT_BY_INDEX;
-         if((this._dataProvider.length) && (this._autoSelect == AUTOSELECT_BY_INDEX))
+         if((this._dataProvider.length) && this._autoSelect == AUTOSELECT_BY_INDEX)
          {
-            this.setSelectedIndex(Math.min(this._nSelectedIndex,this._dataProvider.length - 1),SelectMethodEnum.AUTO);
+            this.setSelectedIndex(Math.min(this._nSelectedIndex,this._dataProvider.length-1),SelectMethodEnum.AUTO);
          }
       }
       
@@ -279,13 +278,13 @@ package com.ankamagames.berilia.components
          return this._autoSelect == AUTOSELECT_BY_INDEX;
       }
       
-      public function set autoSelectMode(mode:int) : void {
-         this._autoSelect = mode;
+      public function set autoSelectMode(param1:int) : void {
+         this._autoSelect = param1;
          if(this._dataProvider.length)
          {
             if(this._autoSelect == AUTOSELECT_BY_INDEX)
             {
-               this.setSelectedIndex(Math.min(this._nSelectedIndex,this._dataProvider.length - 1),SelectMethodEnum.AUTO);
+               this.setSelectedIndex(Math.min(this._nSelectedIndex,this._dataProvider.length-1),SelectMethodEnum.AUTO);
             }
             else
             {
@@ -312,25 +311,25 @@ package com.ankamagames.berilia.components
          return this._displayScrollbar;
       }
       
-      public function set scrollDisplay(sValue:String) : void {
-         this._displayScrollbar = sValue;
+      public function set scrollDisplay(param1:String) : void {
+         this._displayScrollbar = param1;
       }
       
       public function get pagesCount() : uint {
-         var count:* = 0;
+         var _loc1_:* = 0;
          if(this._verticalScroll)
          {
-            count = this._totalSlotByCol - this._slotByCol;
+            _loc1_ = this._totalSlotByCol - this._slotByCol;
          }
          else
          {
-            count = this._totalSlotByRow - this._slotByRow;
+            _loc1_ = this._totalSlotByRow - this._slotByRow;
          }
-         if(count < 0)
+         if(_loc1_ < 0)
          {
-            count = 0;
+            _loc1_ = 0;
          }
-         return count;
+         return _loc1_;
       }
       
       public function get selectedItem() : * {
@@ -349,24 +348,24 @@ package com.ankamagames.berilia.components
          return this._dataProvider[this._nSelectedIndex];
       }
       
-      public function set selectedItem(o:*) : void {
-         var isSet:* = false;
-         var i:uint = 0;
-         var data:* = undefined;
+      public function set selectedItem(param1:*) : void {
+         var _loc2_:* = false;
+         var _loc3_:uint = 0;
+         var _loc4_:* = undefined;
          if(this._dataProvider)
          {
-            isSet = false;
-            i = 0;
-            while(i < this._dataProvider.length)
+            _loc2_ = false;
+            _loc3_ = 0;
+            while(_loc3_ < this._dataProvider.length)
             {
-               data = SecureCenter.unsecure(this._dataProvider[i]);
-               if(data === SecureCenter.unsecure(o))
+               _loc4_ = SecureCenter.unsecure(this._dataProvider[_loc3_]);
+               if(_loc4_ === SecureCenter.unsecure(param1))
                {
-                  this.setSelectedIndex(i,SelectMethodEnum.MANUAL);
-                  isSet = true;
+                  this.setSelectedIndex(_loc3_,SelectMethodEnum.MANUAL);
+                  _loc2_ = true;
                   break;
                }
-               i++;
+               _loc3_++;
             }
          }
       }
@@ -375,8 +374,8 @@ package com.ankamagames.berilia.components
          return this._slotWidth;
       }
       
-      public function set slotWidth(value:uint) : void {
-         this._slotWidth = value;
+      public function set slotWidth(param1:uint) : void {
+         this._slotWidth = param1;
          if(this.finalized)
          {
             this.finalize();
@@ -387,16 +386,16 @@ package com.ankamagames.berilia.components
          return this._slotHeight;
       }
       
-      public function set slotHeight(value:uint) : void {
-         this._slotHeight = value;
+      public function set slotHeight(param1:uint) : void {
+         this._slotHeight = param1;
          if(this.finalized)
          {
             this.finalize();
          }
       }
       
-      public function set finalized(b:Boolean) : void {
-         this._finalized = b;
+      public function set finalized(param1:Boolean) : void {
+         this._finalized = param1;
       }
       
       public function get finalized() : Boolean {
@@ -419,17 +418,17 @@ package com.ankamagames.berilia.components
          return 0;
       }
       
-      public function set verticalScrollValue(value:int) : void {
+      public function set verticalScrollValue(param1:int) : void {
          if(this._scrollBarV)
          {
-            this._scrollBarV.value = value;
+            this._scrollBarV.value = param1;
             if(this._scrollBarV.value < 0)
             {
                this.updateFromIndex(0);
             }
             else
             {
-               this.updateFromIndex(value);
+               this.updateFromIndex(param1);
             }
          }
       }
@@ -442,19 +441,19 @@ package com.ankamagames.berilia.components
          return this._horizontalScrollSpeed;
       }
       
-      public function set verticalScrollSpeed(speed:Number) : void {
-         this._verticalScrollSpeed = speed;
+      public function set verticalScrollSpeed(param1:Number) : void {
+         this._verticalScrollSpeed = param1;
          if(this._scrollBarV)
          {
-            this._scrollBarV.scrollSpeed = speed;
+            this._scrollBarV.scrollSpeed = param1;
          }
       }
       
-      public function set horizontalScrollSpeed(speed:Number) : void {
-         this._horizontalScrollSpeed = speed;
+      public function set horizontalScrollSpeed(param1:Number) : void {
+         this._horizontalScrollSpeed = param1;
          if(this._scrollBarH)
          {
-            this._scrollBarH.scrollSpeed = speed;
+            this._scrollBarH.scrollSpeed = param1;
          }
       }
       
@@ -466,16 +465,16 @@ package com.ankamagames.berilia.components
          return this._hiddenCol;
       }
       
-      public function set hiddenRow(v:uint) : void {
-         this._hiddenRow = v;
+      public function set hiddenRow(param1:uint) : void {
+         this._hiddenRow = param1;
          if(this.finalized)
          {
             this.finalize();
          }
       }
       
-      public function set hiddenCol(v:uint) : void {
-         this._hiddenCol = v;
+      public function set hiddenCol(param1:uint) : void {
+         this._hiddenCol = param1;
          if(this.finalized)
          {
             this.finalize();
@@ -486,9 +485,9 @@ package com.ankamagames.berilia.components
       
       public var silent:Boolean;
       
-      public function renderModificator(childs:Array, accessKey:Object) : Array {
-         var cRenderer:Class = null;
-         if(accessKey != SecureCenter.ACCESS_KEY)
+      public function renderModificator(param1:Array, param2:Object) : Array {
+         var _loc3_:Class = null;
+         if(param2 != SecureCenter.ACCESS_KEY)
          {
             throw new IllegalOperationError();
          }
@@ -498,30 +497,30 @@ package com.ankamagames.berilia.components
             {
                if(!this._renderer)
                {
-                  cRenderer = getDefinitionByName(this._sRendererName) as Class;
-                  if(cRenderer)
+                  _loc3_ = getDefinitionByName(this._sRendererName) as Class;
+                  if(_loc3_)
                   {
-                     this._renderer = new cRenderer(this._sRendererArgs);
+                     this._renderer = new _loc3_(this._sRendererArgs);
                      this._renderer.grid = this;
                   }
                   else
                   {
                      _log.error("Invalid renderer specified for this grid.");
-                     return childs;
+                     return param1;
                   }
                }
                this.configVar();
-               return this._renderer.renderModificator(childs);
+               return this._renderer.renderModificator(param1);
             }
             _log.error("No renderer specified for grid " + name + " " + parent + " son.");
-            return childs;
+            return param1;
          }
       }
       
       public function finalize() : void {
-         var maxValue:* = 0;
+         var _loc1_:* = 0;
          this.configVar();
-         if((this._slotByRow < this._totalSlotByRow) && (!(this._displayScrollbar == "never")))
+         if(this._slotByRow < this._totalSlotByRow && !(this._displayScrollbar == "never"))
          {
             if(!this._scrollBarH)
             {
@@ -547,7 +546,7 @@ package com.ankamagames.berilia.components
          }
          else
          {
-            if((this._slotByCol < this._totalSlotByCol) && (!(this._displayScrollbar == "never")) || (this._displayScrollbar == "always"))
+            if(this._slotByCol < this._totalSlotByCol && !(this._displayScrollbar == "never") || this._displayScrollbar == "always")
             {
                if(!this._scrollBarV)
                {
@@ -556,14 +555,14 @@ package com.ankamagames.berilia.components
                   this._scrollBarV.addEventListener(Event.CHANGE,this.onScroll,false,0,true);
                   this._scrollBarV.css = this._sVScrollCss;
                   this._scrollBarV.min = 0;
-                  maxValue = this._totalSlotByCol - this._slotByCol;
-                  if(maxValue < 0)
+                  _loc1_ = this._totalSlotByCol - this._slotByCol;
+                  if(_loc1_ < 0)
                   {
                      this._scrollBarV.max = 0;
                   }
                   else
                   {
-                     this._scrollBarV.max = maxValue;
+                     this._scrollBarV.max = _loc1_;
                   }
                   this._scrollBarV.total = this._totalSlotByCol;
                   this._scrollBarV.width = this._scrollBarSize;
@@ -575,14 +574,14 @@ package com.ankamagames.berilia.components
                }
                else
                {
-                  maxValue = this._totalSlotByCol - this._slotByCol;
-                  if(maxValue < 0)
+                  _loc1_ = this._totalSlotByCol - this._slotByCol;
+                  if(_loc1_ < 0)
                   {
                      this._scrollBarV.max = 0;
                   }
                   else
                   {
-                     this._scrollBarV.max = maxValue;
+                     this._scrollBarV.max = _loc1_;
                   }
                   this._scrollBarV.total = this._totalSlotByCol;
                   addChild(this._scrollBarV);
@@ -611,7 +610,7 @@ package com.ankamagames.berilia.components
             {
                this._mask = new Shape();
             }
-            if((!(this._mask.width == width)) || (!(this._mask.height == height)))
+            if(!(this._mask.width == width) || !(this._mask.height == height))
             {
                this._mask.graphics.clear();
                this._mask.graphics.beginFill(16776960);
@@ -627,106 +626,106 @@ package com.ankamagames.berilia.components
          }
       }
       
-      public function moveToPage(page:uint) : void {
-         if(page > this.pagesCount)
+      public function moveToPage(param1:uint) : void {
+         if(param1 > this.pagesCount)
          {
-            page = this.pagesCount;
+            param1 = this.pagesCount;
          }
-         this.updateFromIndex(page);
+         this.updateFromIndex(param1);
       }
       
-      public function updateItem(index:uint) : void {
-         var currenItem:GridItem = null;
-         currenItem = this._items[index];
-         if(!currenItem)
+      public function updateItem(param1:uint) : void {
+         var _loc2_:GridItem = null;
+         _loc2_ = this._items[param1];
+         if(!_loc2_)
          {
             return;
          }
-         if(currenItem.index == this._nSelectedIndex)
+         if(_loc2_.index == this._nSelectedIndex)
          {
-            this._renderer.update(this._dataProvider[currenItem.index],index,currenItem.container,true);
+            this._renderer.update(this._dataProvider[_loc2_.index],param1,_loc2_.container,true);
          }
          else
          {
-            this._renderer.update(this._dataProvider[currenItem.index],index,currenItem.container,false);
+            this._renderer.update(this._dataProvider[_loc2_.index],param1,_loc2_.container,false);
          }
-         currenItem.data = this._dataProvider[currenItem.index];
+         _loc2_.data = this._dataProvider[_loc2_.index];
          this.finalize();
       }
       
       public function updateItems() : void {
-         var currenItem:GridItem = null;
-         var index:uint = 0;
-         while(index < this._items.length)
+         var _loc1_:GridItem = null;
+         var _loc2_:uint = 0;
+         while(_loc2_ < this._items.length)
          {
-            currenItem = this._items[index];
-            if(!((!currenItem) || (this._nSelectedIndex < 0)))
+            _loc1_ = this._items[_loc2_];
+            if(!(!_loc1_ || this._nSelectedIndex < 0))
             {
-               if(currenItem.index == this._nSelectedIndex)
+               if(_loc1_.index == this._nSelectedIndex)
                {
-                  this._renderer.update(this._dataProvider[currenItem.index],index,currenItem.container,true);
+                  this._renderer.update(this._dataProvider[_loc1_.index],_loc2_,_loc1_.container,true);
                }
                else
                {
-                  this._renderer.update(this._dataProvider[currenItem.index],index,currenItem.container,false);
+                  this._renderer.update(this._dataProvider[_loc1_.index],_loc2_,_loc1_.container,false);
                }
-               currenItem.data = this._dataProvider[currenItem.index];
+               _loc1_.data = this._dataProvider[_loc1_.index];
             }
-            index++;
+            _loc2_++;
          }
          this.finalize();
       }
       
       public function get selectedSlot() : DisplayObject {
-         var currentItem:GridItem = null;
-         if((this._items == null) || (this._nSelectedIndex < 0) || (this._nSelectedIndex >= this.dataProvider.length))
+         var _loc1_:GridItem = null;
+         if(this._items == null || this._nSelectedIndex < 0 || this._nSelectedIndex >= this.dataProvider.length)
          {
             return null;
          }
-         var i:uint = 0;
-         while(i < this._items.length)
+         var _loc2_:uint = 0;
+         while(_loc2_ < this._items.length)
          {
-            currentItem = this._items[i];
-            if(currentItem.data == this.selectedItem)
+            _loc1_ = this._items[_loc2_];
+            if(_loc1_.data == this.selectedItem)
             {
-               return currentItem.container;
+               return _loc1_.container;
             }
-            i++;
+            _loc2_++;
          }
          return null;
       }
       
       public function get slots() : Array {
-         if((this._items == null) || (this.dataProvider.length == 0))
+         if(this._items == null || this.dataProvider.length == 0)
          {
             return new Array();
          }
-         var slots:Array = new Array();
-         var i:uint = 0;
-         while(i < this._items.length)
+         var _loc1_:Array = new Array();
+         var _loc2_:uint = 0;
+         while(_loc2_ < this._items.length)
          {
-            if(this._items[i])
+            if(this._items[_loc2_])
             {
-               slots.push(this._items[i].container);
+               _loc1_.push(this._items[_loc2_].container);
             }
-            i++;
+            _loc2_++;
          }
-         return slots;
+         return _loc1_;
       }
       
       override public function remove() : void {
-         var currentItem:GridItem = null;
-         var i:uint = 0;
+         var _loc1_:GridItem = null;
+         var _loc2_:uint = 0;
          if(!__removed)
          {
             if(this._renderer)
             {
-               i = 0;
-               while(i < this._items.length)
+               _loc2_ = 0;
+               while(_loc2_ < this._items.length)
                {
-                  currentItem = this._items[i];
-                  this._renderer.remove(currentItem.container);
-                  i++;
+                  _loc1_ = this._items[_loc2_];
+                  this._renderer.remove(_loc1_.container);
+                  _loc2_++;
                }
                this._renderer.destroy();
             }
@@ -743,20 +742,20 @@ package com.ankamagames.berilia.components
          super.remove();
       }
       
-      public function indexIsInvisibleSlot(index:uint) : Boolean {
+      public function indexIsInvisibleSlot(param1:uint) : Boolean {
          if(this._verticalScroll)
          {
-            return (index / this._totalSlotByRow - this._pageYOffset >= this._slotByCol) || (index / this._totalSlotByRow - this._pageYOffset < 0);
+            return param1 / this._totalSlotByRow - this._pageYOffset >= this._slotByCol || param1 / this._totalSlotByRow - this._pageYOffset < 0;
          }
-         return (index % this._totalSlotByRow - this._pageXOffset >= this._slotByRow) || (index % this._totalSlotByRow - this._pageXOffset < 0);
+         return param1 % this._totalSlotByRow - this._pageXOffset >= this._slotByRow || param1 % this._totalSlotByRow - this._pageXOffset < 0;
       }
       
-      public function moveTo(index:uint, force:Boolean=false) : void {
-         if((this.indexIsInvisibleSlot(index)) || (force))
+      public function moveTo(param1:uint, param2:Boolean=false) : void {
+         if((this.indexIsInvisibleSlot(param1)) || (param2))
          {
             if(this._scrollBarV)
             {
-               this._scrollBarV.value = Math.floor(index / this._totalSlotByRow);
+               this._scrollBarV.value = Math.floor(param1 / this._totalSlotByRow);
                if(this._scrollBarV.value < 0)
                {
                   this.updateFromIndex(0);
@@ -770,7 +769,7 @@ package com.ankamagames.berilia.components
             {
                if(this._scrollBarH)
                {
-                  this._scrollBarH.value = index % this._totalSlotByRow;
+                  this._scrollBarH.value = param1 % this._totalSlotByRow;
                   if(this._scrollBarH.value < 0)
                   {
                      this.updateFromIndex(0);
@@ -792,79 +791,58 @@ package com.ankamagames.berilia.components
          return 0;
       }
       
-      public function sortOn(col:String, options:int=0) : void {
-         this._sortProperty = col;
-         this._dataProvider.sortOn(col,options);
+      public function sortOn(param1:String, param2:int=0) : void {
+         this._sortProperty = param1;
+         this._dataProvider.sortOn(param1,param2);
          this.finalize();
          this.initSlot();
       }
       
-      public function getItemIndex(item:*) : int {
-         var realItem:DisplayObject = null;
-         realItem = SecureCenter.unsecure(item);
-         var res:GridItem = this.getGridItem(realItem);
-         if(res)
+      public function getItemIndex(param1:*) : int {
+         var _loc2_:DisplayObject = null;
+         _loc2_ = SecureCenter.unsecure(param1);
+         var _loc3_:GridItem = this.getGridItem(_loc2_);
+         if(_loc3_)
          {
-            return res.index;
+            return _loc3_.index;
          }
          return -1;
       }
       
-      function sortFunction(a:*, b:*) : Number {
-         if(a[this._sortProperty] < b[this._sortProperty])
+      private function sortFunction(param1:*, param2:*) : Number {
+         if(param1[this._sortProperty] < param2[this._sortProperty])
          {
             return -1;
          }
-         if(a[this._sortProperty] == b[this._sortProperty])
+         if(param1[this._sortProperty] == param2[this._sortProperty])
          {
             return 0;
          }
          return 1;
       }
       
-      function itemExists(o:*) : Boolean {
-         var i:* = 0;
-         var len:* = 0;
-         var data:* = undefined;
-         if(this._dataProvider)
+      private function initSlot() : void {
+         var _loc1_:DisplayObject = null;
+         var _loc4_:GridItem = null;
+         var _loc6_:uint = 0;
+         var _loc7_:* = 0;
+         var _loc8_:* = false;
+         var _loc2_:* = 0;
+         if((this._dataProvider.length) && !this._autoPosition)
          {
-            len = this._dataProvider.length;
-            i = 0;
-            while(i < len)
-            {
-               data = SecureCenter.unsecure(this._dataProvider[i]);
-               if(data === SecureCenter.unsecure(o))
-               {
-                  return true;
-               }
-               i++;
-            }
-         }
-         return false;
-      }
-      
-      function initSlot() : void {
-         var slot:DisplayObject = null;
-         var item:GridItem = null;
-         var totalSlot:uint = 0;
-         var i:* = 0;
-         var isSelected:* = false;
-         var dataPos:int = 0;
-         if((this._dataProvider.length) && (!this._autoPosition))
-         {
-            totalSlot = this._slotByCol * this._slotByRow;
+            _loc6_ = this._slotByCol * this._slotByRow;
             while(this._pageYOffset >= 0)
             {
                while(this._pageXOffset >= 0)
                {
-                  dataPos = this._pageXOffset * this._slotByCol + this._pageYOffset * this._slotByRow;
-                  if(dataPos <= this._dataProvider.length - totalSlot)
+                  _loc2_ = this._pageXOffset * this._slotByCol + this._pageYOffset * this._slotByRow;
+                  if(_loc2_ <= this._dataProvider.length - _loc6_)
                   {
                      break;
                   }
                   this._pageXOffset--;
                }
-               if(dataPos <= this._dataProvider.length - totalSlot)
+               if(_loc2_ <= this._dataProvider.length - _loc6_)
                {
                   break;
                }
@@ -888,72 +866,65 @@ package com.ankamagames.berilia.components
                this._scrollBarV.value = this._pageYOffset;
             }
          }
-         var slotIndex:uint = 0;
-         var j:int = -this._hiddenRow;
-         while(j < this._slotByCol + this._hiddenRow)
+         var _loc3_:uint = 0;
+         var _loc5_:int = -this._hiddenRow;
+         while(_loc5_ < this._slotByCol + this._hiddenRow)
          {
-            i = -this._hiddenCol;
-            while(i < this._slotByRow + this._hiddenCol)
+            _loc7_ = -this._hiddenCol;
+            while(_loc7_ < this._slotByRow + this._hiddenCol)
             {
-               dataPos = i + this._pageXOffset * this._slotByCol + j * this._totalSlotByRow + this._pageYOffset * this._slotByRow;
-               item = this._items[slotIndex];
-               isSelected = (this._nSelectedIndex == dataPos) && (this._autoSelect > 0) && (this._dataProvider.length > 0) && (dataPos < this._dataProvider.length) && (!(this._dataProvider[dataPos] == null));
-               if(item)
+               _loc2_ = _loc7_ + this._pageXOffset * this._slotByCol + _loc5_ * this._totalSlotByRow + this._pageYOffset * this._slotByRow;
+               _loc4_ = this._items[_loc3_];
+               _loc8_ = this._nSelectedIndex == _loc2_ && this._autoSelect > 0 && this._dataProvider.length > 0 && _loc2_ < this._dataProvider.length && !(this._dataProvider[_loc2_] == null);
+               if(_loc4_)
                {
-                  item.index = dataPos;
-                  slot = item.container;
-                  if(this._dataProvider.length > dataPos)
+                  _loc4_.index = _loc2_;
+                  _loc1_ = _loc4_.container;
+                  if(this._dataProvider.length > _loc2_)
                   {
-                     item.data = this._dataProvider[dataPos];
-                     this._renderer.update(this._dataProvider[dataPos],dataPos,item.container,isSelected);
+                     _loc4_.data = this._dataProvider[_loc2_];
+                     this._renderer.update(this._dataProvider[_loc2_],_loc2_,_loc4_.container,_loc8_);
                   }
                   else
                   {
-                     item.data = null;
-                     this._renderer.update(null,dataPos,item.container,isSelected);
+                     _loc4_.data = null;
+                     this._renderer.update(null,_loc2_,_loc4_.container,_loc8_);
                   }
                }
                else
                {
-                  if(this._dataProvider.length > dataPos)
+                  if(this._dataProvider.length > _loc2_)
                   {
-                     slot = this._renderer.render(this._dataProvider[dataPos],dataPos,isSelected);
+                     _loc1_ = this._renderer.render(this._dataProvider[_loc2_],_loc2_,_loc8_);
                   }
                   else
                   {
-                     slot = this._renderer.render(null,dataPos,isSelected);
+                     _loc1_ = this._renderer.render(null,_loc2_,_loc8_);
                   }
-                  if(dataPos < this._dataProvider.length)
+                  if(_loc2_ < this._dataProvider.length)
                   {
-                     this._items.push(new GridItem(dataPos,slot,this._dataProvider[dataPos]));
+                     this._items.push(new GridItem(_loc2_,_loc1_,this._dataProvider[_loc2_]));
                   }
                   else
                   {
-                     this._items.push(new GridItem(dataPos,slot,null));
+                     this._items.push(new GridItem(_loc2_,_loc1_,null));
                   }
                }
-               slot.x = i * this._slotWidth + i * (this._avaibleSpaceX - this._slotByRow * this._slotWidth) / this._slotByRow;
-               slot.y = j * this._slotHeight + j * (this._avaibleSpaceY - this._slotByCol * this._slotHeight) / this._slotByCol;
-               addChild(slot);
-               slotIndex++;
-               i++;
+               _loc1_.x = _loc7_ * this._slotWidth + _loc7_ * (this._avaibleSpaceX - this._slotByRow * this._slotWidth) / this._slotByRow;
+               _loc1_.y = _loc5_ * this._slotHeight + _loc5_ * (this._avaibleSpaceY - this._slotByCol * this._slotHeight) / this._slotByCol;
+               addChild(_loc1_);
+               _loc3_++;
+               _loc7_++;
             }
-            j++;
+            _loc5_++;
          }
-         while(this._items[slotIndex])
+         while(this._items[_loc3_])
          {
             this._renderer.remove(GridItem(this._items.pop()).container);
          }
          if(this._autoSelect == AUTOSELECT_BY_INDEX)
          {
-            if((((this._nSelectedItem) && (this.itemExists(this._nSelectedItem.object))) && (this._verticalScroll)) && (this._scrollBarV) && (this._scrollBarV.value >= 0))
-            {
-               this.updateFromIndex(this._scrollBarV.value);
-            }
-            else
-            {
-               this.setSelectedIndex(Math.min(this._nSelectedIndex,this._dataProvider.length - 1),SelectMethodEnum.AUTO);
-            }
+            this.setSelectedIndex(Math.min(this._nSelectedIndex,this._dataProvider.length-1),SelectMethodEnum.AUTO);
          }
          else
          {
@@ -971,165 +942,165 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function updateFromIndex(newIndex:uint) : void {
-         var i:* = 0;
-         var j:* = 0;
-         var currentItem:GridItem = null;
-         var currIndex:uint = 0;
-         var pos:* = 0;
-         var diff:int = newIndex - (this._verticalScroll?this._pageYOffset:this._pageXOffset);
-         if(!diff)
+      private function updateFromIndex(param1:uint) : void {
+         var _loc3_:* = 0;
+         var _loc4_:* = 0;
+         var _loc5_:GridItem = null;
+         var _loc9_:uint = 0;
+         var _loc10_:* = 0;
+         var _loc2_:int = param1 - (this._verticalScroll?this._pageYOffset:this._pageXOffset);
+         if(!_loc2_)
          {
             return;
          }
          if(this._verticalScroll)
          {
-            this._pageYOffset = newIndex;
+            this._pageYOffset = param1;
          }
          else
          {
-            this._pageXOffset = newIndex;
+            this._pageXOffset = param1;
          }
-         var aAvaibleSlot:Array = new Array();
-         var aOkSlot:Array = new Array();
-         var nAvaible:uint = 0;
-         i = 0;
-         while(i < this._items.length)
+         var _loc6_:Array = new Array();
+         var _loc7_:Array = new Array();
+         var _loc8_:uint = 0;
+         _loc3_ = 0;
+         while(_loc3_ < this._items.length)
          {
-            currentItem = this._items[i];
-            if(this.indexIsInvisibleSlot(currentItem.index))
+            _loc5_ = this._items[_loc3_];
+            if(this.indexIsInvisibleSlot(_loc5_.index))
             {
-               aAvaibleSlot.push(currentItem);
-               nAvaible++;
+               _loc6_.push(_loc5_);
+               _loc8_++;
             }
             else
             {
-               aOkSlot[currentItem.index] = currentItem;
+               _loc7_[_loc5_.index] = _loc5_;
             }
-            i++;
+            _loc3_++;
          }
-         j = -this._hiddenRow;
-         while(j < this._slotByCol + this._hiddenRow)
+         _loc4_ = -this._hiddenRow;
+         while(_loc4_ < this._slotByCol + this._hiddenRow)
          {
-            i = -this._hiddenCol;
-            while(i < this._slotByRow + this._hiddenCol)
+            _loc3_ = -this._hiddenCol;
+            while(_loc3_ < this._slotByRow + this._hiddenCol)
             {
-               pos = this._totalSlotByRow * j + i + this._pageXOffset;
-               currIndex = pos + this._pageYOffset * this._totalSlotByRow;
-               currentItem = aOkSlot[currIndex];
-               if(!currentItem)
+               _loc10_ = this._totalSlotByRow * _loc4_ + _loc3_ + this._pageXOffset;
+               _loc9_ = _loc10_ + this._pageYOffset * this._totalSlotByRow;
+               _loc5_ = _loc7_[_loc9_];
+               if(!_loc5_)
                {
-                  currentItem = aAvaibleSlot.shift();
-                  currentItem.index = currIndex;
-                  if(currIndex < this._dataProvider.length)
+                  _loc5_ = _loc6_.shift();
+                  _loc5_.index = _loc9_;
+                  if(_loc9_ < this._dataProvider.length)
                   {
-                     currentItem.data = this._dataProvider[currIndex];
+                     _loc5_.data = this._dataProvider[_loc9_];
                   }
                   else
                   {
-                     currentItem.data = null;
+                     _loc5_.data = null;
                   }
-                  if(this._dataProvider.length > currIndex)
+                  if(this._dataProvider.length > _loc9_)
                   {
-                     this._renderer.update(this._dataProvider[currIndex],currIndex,currentItem.container,currIndex == this._nSelectedIndex);
+                     this._renderer.update(this._dataProvider[_loc9_],_loc9_,_loc5_.container,_loc9_ == this._nSelectedIndex);
                   }
                   else
                   {
-                     this._renderer.update(null,currIndex,currentItem.container,currIndex == this._nSelectedIndex);
+                     this._renderer.update(null,_loc9_,_loc5_.container,_loc9_ == this._nSelectedIndex);
                   }
                }
                if(this._verticalScroll)
                {
-                  currentItem.container.y = Math.floor(currentItem.index / this._totalSlotByRow - newIndex) * (this._slotHeight + (this._avaibleSpaceY - this._slotByCol * this._slotHeight) / this._slotByCol);
+                  _loc5_.container.y = Math.floor(_loc5_.index / this._totalSlotByRow - param1) * (this._slotHeight + (this._avaibleSpaceY - this._slotByCol * this._slotHeight) / this._slotByCol);
                }
                else
                {
-                  currentItem.container.x = Math.floor(currentItem.index % this._totalSlotByRow - newIndex) * (this._slotWidth + (this._avaibleSpaceX - this._slotByRow * this._slotWidth) / this._slotByRow);
+                  _loc5_.container.x = Math.floor(_loc5_.index % this._totalSlotByRow - param1) * (this._slotWidth + (this._avaibleSpaceX - this._slotByRow * this._slotWidth) / this._slotByRow);
                }
-               i++;
+               _loc3_++;
             }
-            j++;
+            _loc4_++;
          }
       }
       
-      function setSelectedIndex(index:int, method:uint) : void {
-         var lastIndex:* = 0;
-         var currenItem:GridItem = null;
-         var iDes:* = undefined;
-         if((!(method == SelectMethodEnum.MANUAL)) && (index < 0) || (index >= this._dataProvider.length))
+      function setSelectedIndex(param1:int, param2:uint) : void {
+         var _loc3_:* = 0;
+         var _loc4_:GridItem = null;
+         var _loc5_:* = undefined;
+         if(!(param2 == SelectMethodEnum.MANUAL) && param1 < 0 || param1 >= this._dataProvider.length)
          {
             return;
          }
-         if(index < 0)
+         if(param1 < 0)
          {
-            lastIndex = this._nSelectedIndex;
-            this._nSelectedIndex = index;
-            if(index >= 0)
+            _loc3_ = this._nSelectedIndex;
+            this._nSelectedIndex = param1;
+            if(param1 >= 0)
             {
-               this._nSelectedItem = new WeakReference(this._dataProvider[index]);
+               this._nSelectedItem = new WeakReference(this._dataProvider[param1]);
             }
-            for each (iDes in this._items)
+            for each (_loc5_ in this._items)
             {
-               if((iDes.index == lastIndex) && (lastIndex < this._dataProvider.length))
+               if(_loc5_.index == _loc3_ && _loc3_ < this._dataProvider.length)
                {
-                  this._renderer.update(this._dataProvider[lastIndex],lastIndex,iDes.container,false);
+                  this._renderer.update(this._dataProvider[_loc3_],_loc3_,_loc5_.container,false);
                }
             }
-            this.dispatchMessage(new SelectItemMessage(this,method,!(lastIndex == this._nSelectedIndex)));
+            this.dispatchMessage(new SelectItemMessage(this,param2,!(_loc3_ == this._nSelectedIndex)));
          }
          else
          {
             if(this._nSelectedIndex > 0)
             {
-               lastIndex = this._nSelectedIndex;
+               _loc3_ = this._nSelectedIndex;
             }
-            this._nSelectedIndex = index;
-            if(index >= 0)
+            this._nSelectedIndex = param1;
+            if(param1 >= 0)
             {
-               this._nSelectedItem = new WeakReference(this._dataProvider[index]);
+               this._nSelectedItem = new WeakReference(this._dataProvider[param1]);
             }
-            index = 0;
-            while(index < this._items.length)
+            param1 = 0;
+            while(param1 < this._items.length)
             {
-               currenItem = this._items[index];
-               if(currenItem.index == this._nSelectedIndex)
+               _loc4_ = this._items[param1];
+               if(_loc4_.index == this._nSelectedIndex)
                {
-                  this._renderer.update(this._dataProvider[this._nSelectedIndex],this._nSelectedIndex,currenItem.container,true);
+                  this._renderer.update(this._dataProvider[this._nSelectedIndex],this._nSelectedIndex,_loc4_.container,true);
                }
                else
                {
-                  if(currenItem.index == lastIndex)
+                  if(_loc4_.index == _loc3_)
                   {
-                     if(lastIndex < this._dataProvider.length)
+                     if(_loc3_ < this._dataProvider.length)
                      {
-                        this._renderer.update(this._dataProvider[lastIndex],lastIndex,currenItem.container,false);
+                        this._renderer.update(this._dataProvider[_loc3_],_loc3_,_loc4_.container,false);
                      }
                      else
                      {
-                        this._renderer.update(null,lastIndex,currenItem.container,false);
+                        this._renderer.update(null,_loc3_,_loc4_.container,false);
                      }
                   }
                }
-               index++;
+               param1++;
             }
             this.moveTo(this._nSelectedIndex);
-            this.dispatchMessage(new SelectItemMessage(this,method,!(lastIndex == this._nSelectedIndex)));
+            this.dispatchMessage(new SelectItemMessage(this,param2,!(_loc3_ == this._nSelectedIndex)));
          }
       }
       
-      function configVar() : void {
-         var useScrollBar:* = false;
+      private function configVar() : void {
+         var _loc2_:* = false;
          if(this._autoPosition)
          {
             this._pageXOffset = 0;
             this._pageYOffset = 0;
          }
-         var i:uint = 0;
-         while(i < 2)
+         var _loc1_:uint = 0;
+         while(_loc1_ < 2)
          {
-            useScrollBar = ((i) && (this._displayScrollbar == "auto")) && (this._totalSlotByCol * this._slotHeight > height || this._totalSlotByRow * this._slotWidth > width) || (this._displayScrollbar == "always");
-            this._avaibleSpaceX = width - ((this._verticalScroll) && (useScrollBar)?this._scrollBarSize:0);
-            this._avaibleSpaceY = height - ((!this._verticalScroll) && (useScrollBar)?this._scrollBarSize:0);
+            _loc2_ = ((_loc1_) && (this._displayScrollbar == "auto")) && (this._totalSlotByCol * this._slotHeight > height || this._totalSlotByRow * this._slotWidth > width) || this._displayScrollbar == "always";
+            this._avaibleSpaceX = width - ((this._verticalScroll) && (_loc2_)?this._scrollBarSize:0);
+            this._avaibleSpaceY = height - (!this._verticalScroll && (_loc2_)?this._scrollBarSize:0);
             this._slotByRow = Math.floor(this._avaibleSpaceX / this._slotWidth);
             if(this._slotByRow == 0)
             {
@@ -1146,232 +1117,232 @@ package com.ankamagames.berilia.components
                this._totalSlotByCol = this._slotByCol;
                this._totalSlotByRow = Math.ceil(this._dataProvider.length / this._slotByCol);
             }
-            i++;
+            _loc1_++;
          }
       }
       
-      function isIterable(obj:*) : Boolean {
-         if(obj is Array)
+      private function isIterable(param1:*) : Boolean {
+         if(param1 is Array)
          {
             return true;
          }
-         if(obj is Vector.<*>)
+         if(param1 is Vector.<*>)
          {
             return true;
          }
-         if(!obj)
+         if(!param1)
          {
             return false;
          }
-         if((!(obj["length"] == null)) && (!(obj["length"] == 0)) && (!isNaN(obj["length"])) && (!(obj[0] == null)) && (!(obj is String)))
+         if(!(param1["length"] == null) && !(param1["length"] == 0) && !isNaN(param1["length"]) && !(param1[0] == null) && !(param1 is String))
          {
             return true;
          }
          return false;
       }
       
-      function getGridItem(item:DisplayObject) : GridItem {
-         var currentItem:GridItem = null;
+      protected function getGridItem(param1:DisplayObject) : GridItem {
+         var _loc2_:GridItem = null;
          if(!this._items)
          {
             return null;
          }
-         var currentDo:DisplayObject = item;
-         while((currentDo) && (!(currentDo.parent == this)))
+         var _loc3_:DisplayObject = param1;
+         while((_loc3_) && !(_loc3_.parent == this))
          {
-            currentDo = currentDo.parent;
+            _loc3_ = _loc3_.parent;
          }
-         var i:uint = 0;
-         while(i < this._items.length)
+         var _loc4_:uint = 0;
+         while(_loc4_ < this._items.length)
          {
-            currentItem = this._items[i];
-            if(currentItem.container === currentDo)
+            _loc2_ = this._items[_loc4_];
+            if(_loc2_.container === _loc3_)
             {
-               return currentItem;
+               return _loc2_;
             }
-            i++;
+            _loc4_++;
          }
          return null;
       }
       
-      function getNearestSlot(mouseEvent:MouseEvent) : Slot {
-         var nextSlotIndexX:* = 0;
-         var nextSlot:Slot = null;
-         var nextDiffX:* = NaN;
-         var nextDiffY:* = NaN;
-         var index:* = 0;
-         var mouseEventX:Number = mouseEvent.localX;
-         var mouseEventY:Number = mouseEvent.localY;
-         var currentSlotIndexX:int = 0;
-         var currentSlot:Slot = Slot(GridItem(this._items[0]).container);
-         var currentDiffX:Number = Math.abs(mouseEventX - (currentSlot.x + this.slotWidth));
-         var currentDiffY:Number = Math.abs(mouseEventY - (currentSlot.y + this.slotHeight));
-         var xLimit:int = Math.max(1,this.slotByRow - 1);
-         var yLimit:int = Math.max(1,this.slotByCol - 1);
-         var x:int = 1;
-         while(x <= xLimit)
+      private function getNearestSlot(param1:MouseEvent) : Slot {
+         var _loc5_:* = 0;
+         var _loc7_:Slot = null;
+         var _loc9_:* = NaN;
+         var _loc11_:* = NaN;
+         var _loc15_:* = 0;
+         var _loc2_:Number = param1.localX;
+         var _loc3_:Number = param1.localY;
+         var _loc4_:* = 0;
+         var _loc6_:Slot = Slot(GridItem(this._items[0]).container);
+         var _loc8_:Number = Math.abs(_loc2_ - (_loc6_.x + this.slotWidth));
+         var _loc10_:Number = Math.abs(_loc3_ - (_loc6_.y + this.slotHeight));
+         var _loc12_:int = Math.max(1,this.slotByRow-1);
+         var _loc13_:int = Math.max(1,this.slotByCol-1);
+         var _loc14_:* = 1;
+         while(_loc14_ <= _loc12_)
          {
-            nextSlotIndexX = GridItem(this._items[x]).index;
-            nextSlot = Slot(GridItem(this._items[x]).container);
-            nextDiffX = Math.abs(mouseEventX - nextSlot.x);
-            if(nextDiffX < currentDiffX)
+            _loc5_ = GridItem(this._items[_loc14_]).index;
+            _loc7_ = Slot(GridItem(this._items[_loc14_]).container);
+            _loc9_ = Math.abs(_loc2_ - _loc7_.x);
+            if(_loc9_ < _loc8_)
             {
-               currentSlotIndexX = nextSlotIndexX;
-               currentSlot = nextSlot;
-               currentDiffX = Math.abs(mouseEventX - (currentSlot.x + this.slotWidth));
-               x = x + 1;
+               _loc4_ = _loc5_;
+               _loc6_ = _loc7_;
+               _loc8_ = Math.abs(_loc2_ - (_loc6_.x + this.slotWidth));
+               _loc14_ = _loc14_ + 1;
                continue;
             }
             break;
          }
-         var y:int = 1;
-         while(y <= yLimit)
+         var _loc16_:* = 1;
+         while(_loc16_ <= _loc13_)
          {
-            index = currentSlotIndexX + y * this.slotByRow;
-            if(index >= this._items.length)
+            _loc15_ = _loc4_ + _loc16_ * this.slotByRow;
+            if(_loc15_ >= this._items.length)
             {
                break;
             }
-            nextSlot = Slot(GridItem(this._items[index]).container);
-            nextDiffY = Math.abs(mouseEventY - nextSlot.y);
-            if(nextDiffY < currentDiffY)
+            _loc7_ = Slot(GridItem(this._items[_loc15_]).container);
+            _loc11_ = Math.abs(_loc3_ - _loc7_.y);
+            if(_loc11_ < _loc10_)
             {
-               currentSlot = nextSlot;
-               currentDiffY = Math.abs(mouseEventY - (currentSlot.y + this.slotHeight));
-               y = y + 1;
+               _loc6_ = _loc7_;
+               _loc10_ = Math.abs(_loc3_ - (_loc6_.y + this.slotHeight));
+               _loc16_ = _loc16_ + 1;
                continue;
             }
             break;
          }
-         return currentSlot;
+         return _loc6_;
       }
       
-      function onScroll(e:Event) : void {
-         var i:* = 0;
+      private function onScroll(param1:Event) : void {
+         var _loc2_:* = 0;
          if((this._scrollBarV) && (this._scrollBarV.visible))
          {
-            i = this._scrollBarV.value;
+            _loc2_ = this._scrollBarV.value;
          }
          if((this._scrollBarH) && (this._scrollBarH.visible))
          {
-            i = this._scrollBarH.value;
+            _loc2_ = this._scrollBarH.value;
          }
-         if(!isNaN(i))
+         if(!isNaN(_loc2_))
          {
-            this.updateFromIndex(i);
+            this.updateFromIndex(_loc2_);
          }
       }
       
-      function onListWheel(e:MouseEvent) : void {
+      private function onListWheel(param1:MouseEvent) : void {
          if(this._verticalScroll)
          {
             if((this._scrollBarV) && (this._scrollBarV.visible))
             {
-               this._scrollBarV.onWheel(e);
+               this._scrollBarV.onWheel(param1);
             }
             else
             {
-               this.moveTo(this._pageYOffset + e.delta);
+               this.moveTo(this._pageYOffset + param1.delta);
             }
          }
          else
          {
             if((this._scrollBarH) && (this._scrollBarH.visible))
             {
-               this._scrollBarH.onWheel(e);
+               this._scrollBarH.onWheel(param1);
             }
             else
             {
-               this.moveTo(this._pageXOffset + e.delta);
+               this.moveTo(this._pageXOffset + param1.delta);
             }
          }
       }
       
-      override public function process(msg:Message) : Boolean {
-         var currentItem:GridItem = null;
-         var mrcm:MouseRightClickMessage = null;
-         var mom:MouseOverMessage = null;
-         var mom2:MouseOutMessage = null;
-         var scrollIndex:* = 0;
-         var mmsg:MouseMessage = null;
-         var mummsg:MouseUpMessage = null;
-         var kdmsg:KeyboardKeyDownMessage = null;
-         var newIndex:* = 0;
-         var method:* = 0;
+      override public function process(param1:Message) : Boolean {
+         var _loc2_:GridItem = null;
+         var _loc3_:MouseRightClickMessage = null;
+         var _loc4_:MouseOverMessage = null;
+         var _loc5_:MouseOutMessage = null;
+         var _loc6_:* = 0;
+         var _loc7_:MouseMessage = null;
+         var _loc8_:MouseUpMessage = null;
+         var _loc9_:KeyboardKeyDownMessage = null;
+         var _loc10_:* = 0;
+         var _loc11_:* = 0;
          switch(true)
          {
-            case msg is MouseRightClickMessage:
-               mrcm = msg as MouseRightClickMessage;
-               currentItem = this.getGridItem(mrcm.target);
-               if(currentItem)
+            case param1 is MouseRightClickMessage:
+               _loc3_ = param1 as MouseRightClickMessage;
+               _loc2_ = this.getGridItem(_loc3_.target);
+               if(_loc2_)
                {
                   if(UIEventManager.getInstance().isRegisteredInstance(this,ItemRightClickMessage))
                   {
-                     this.dispatchMessage(new ItemRightClickMessage(this,currentItem));
+                     this.dispatchMessage(new ItemRightClickMessage(this,_loc2_));
                   }
                }
                break;
-            case msg is MouseOverMessage:
-               mom = msg as MouseOverMessage;
-               currentItem = this.getGridItem(mom.target);
-               if(currentItem)
+            case param1 is MouseOverMessage:
+               _loc4_ = param1 as MouseOverMessage;
+               _loc2_ = this.getGridItem(_loc4_.target);
+               if(_loc2_)
                {
                   if((UIEventManager.getInstance().isRegisteredInstance(this,ItemRollOverMessage)) || (parent) && (parent is ComboBox))
                   {
-                     if((parent) && (parent is ComboBox))
+                     if((parent) && parent is ComboBox)
                      {
-                        this.dispatchMessage(new ItemRollOverMessage(parent as ComboBox,currentItem));
+                        this.dispatchMessage(new ItemRollOverMessage(parent as ComboBox,_loc2_));
                      }
                      else
                      {
-                        this.dispatchMessage(new ItemRollOverMessage(this,currentItem));
+                        this.dispatchMessage(new ItemRollOverMessage(this,_loc2_));
                      }
                   }
                }
                break;
-            case msg is MouseOutMessage:
-               mom2 = msg as MouseOutMessage;
-               currentItem = this.getGridItem(mom2.target);
-               if(currentItem)
+            case param1 is MouseOutMessage:
+               _loc5_ = param1 as MouseOutMessage;
+               _loc2_ = this.getGridItem(_loc5_.target);
+               if(_loc2_)
                {
                   if((UIEventManager.getInstance().isRegisteredInstance(this,ItemRollOverMessage)) || (parent) && (parent is ComboBox))
                   {
-                     if((parent) && (parent is ComboBox))
+                     if((parent) && parent is ComboBox)
                      {
-                        this.dispatchMessage(new ItemRollOutMessage(parent as ComboBox,currentItem));
+                        this.dispatchMessage(new ItemRollOutMessage(parent as ComboBox,_loc2_));
                      }
                      else
                      {
-                        this.dispatchMessage(new ItemRollOutMessage(this,currentItem));
+                        this.dispatchMessage(new ItemRollOutMessage(this,_loc2_));
                      }
                   }
                }
                break;
-            case msg is MouseWheelMessage:
+            case param1 is MouseWheelMessage:
                if(this._scrollBarH)
                {
-                  scrollIndex = this._scrollBarH.value;
+                  _loc6_ = this._scrollBarH.value;
                }
                if(this._scrollBarV)
                {
-                  scrollIndex = this._scrollBarV.value;
+                  _loc6_ = this._scrollBarV.value;
                }
-               this.onListWheel(MouseWheelMessage(msg).mouseEvent);
-               if((this._scrollBarH) && (!(this._scrollBarH.value == scrollIndex)) || (this._scrollBarV) && (!(this._scrollBarV.value == scrollIndex)))
+               this.onListWheel(MouseWheelMessage(param1).mouseEvent);
+               if((this._scrollBarH) && (!(this._scrollBarH.value == _loc6_)) || (this._scrollBarV) && (!(this._scrollBarV.value == _loc6_)))
                {
-                  MouseWheelMessage(msg).canceled = true;
+                  MouseWheelMessage(param1).canceled = true;
                   return true;
                }
                break;
-            case msg is MouseDoubleClickMessage:
-            case msg is MouseClickMessage:
-               mmsg = MouseMessage(msg);
-               currentItem = this.getGridItem(mmsg.target);
-               if(currentItem)
+            case param1 is MouseDoubleClickMessage:
+            case param1 is MouseClickMessage:
+               _loc7_ = MouseMessage(param1);
+               _loc2_ = this.getGridItem(_loc7_.target);
+               if(_loc2_)
                {
-                  if(msg is MouseClickMessage)
+                  if(param1 is MouseClickMessage)
                   {
-                     if(!currentItem.data)
+                     if(!_loc2_.data)
                      {
                         if(UIEventManager.getInstance().isRegisteredInstance(this,SelectEmptyItemMessage))
                         {
@@ -1379,66 +1350,66 @@ package com.ankamagames.berilia.components
                         }
                         this.setSelectedIndex(-1,SelectMethodEnum.CLICK);
                      }
-                     this.setSelectedIndex(currentItem.index,SelectMethodEnum.CLICK);
+                     this.setSelectedIndex(_loc2_.index,SelectMethodEnum.CLICK);
                   }
                   else
                   {
-                     if((KeyPoll.getInstance().isDown(Keyboard.CONTROL) == true) || (KeyPoll.getInstance().isDown(15) == true))
+                     if(KeyPoll.getInstance().isDown(Keyboard.CONTROL) == true || KeyPoll.getInstance().isDown(15) == true)
                      {
-                        this.setSelectedIndex(currentItem.index,SelectMethodEnum.CTRL_DOUBLE_CLICK);
+                        this.setSelectedIndex(_loc2_.index,SelectMethodEnum.CTRL_DOUBLE_CLICK);
                      }
                      else
                      {
-                        if((AirScanner.hasAir()) && (KeyPoll.getInstance().isDown(Keyboard["ALTERNATE"]) == true))
+                        if((AirScanner.hasAir()) && KeyPoll.getInstance().isDown(Keyboard["ALTERNATE"]) == true)
                         {
-                           this.setSelectedIndex(currentItem.index,SelectMethodEnum.ALT_DOUBLE_CLICK);
+                           this.setSelectedIndex(_loc2_.index,SelectMethodEnum.ALT_DOUBLE_CLICK);
                         }
                         else
                         {
-                           this.setSelectedIndex(currentItem.index,SelectMethodEnum.DOUBLE_CLICK);
+                           this.setSelectedIndex(_loc2_.index,SelectMethodEnum.DOUBLE_CLICK);
                         }
                      }
                      return true;
                   }
                }
                break;
-            case msg is MouseUpMessage:
-               mummsg = MouseUpMessage(msg);
-               currentItem = this.getGridItem(mummsg.target);
-               if(((this._items) && (this._items[0] is GridItem)) && (GridItem(this._items[0]).container is Slot) && (!currentItem))
+            case param1 is MouseUpMessage:
+               _loc8_ = MouseUpMessage(param1);
+               _loc2_ = this.getGridItem(_loc8_.target);
+               if(((this._items) && (this._items[0] is GridItem)) && (GridItem(this._items[0]).container is Slot) && !_loc2_)
                {
-                  this.dispatchMessage(mummsg,this.getNearestSlot(mummsg.mouseEvent));
+                  this.dispatchMessage(_loc8_,this.getNearestSlot(_loc8_.mouseEvent));
                }
                break;
-            case msg is KeyboardKeyDownMessage:
-               kdmsg = msg as KeyboardKeyDownMessage;
-               method = -1;
-               switch(kdmsg.keyboardEvent.keyCode)
+            case param1 is KeyboardKeyDownMessage:
+               _loc9_ = param1 as KeyboardKeyDownMessage;
+               _loc11_ = -1;
+               switch(_loc9_.keyboardEvent.keyCode)
                {
                   case Keyboard.UP:
-                     newIndex = this.selectedIndex - this._totalSlotByRow;
-                     method = SelectMethodEnum.UP_ARROW;
+                     _loc10_ = this.selectedIndex - this._totalSlotByRow;
+                     _loc11_ = SelectMethodEnum.UP_ARROW;
                      break;
                   case Keyboard.DOWN:
-                     newIndex = this.selectedIndex + this._totalSlotByRow;
-                     method = SelectMethodEnum.DOWN_ARROW;
+                     _loc10_ = this.selectedIndex + this._totalSlotByRow;
+                     _loc11_ = SelectMethodEnum.DOWN_ARROW;
                      break;
                   case Keyboard.RIGHT:
-                     newIndex = this.selectedIndex + 1;
-                     method = SelectMethodEnum.RIGHT_ARROW;
+                     _loc10_ = this.selectedIndex + 1;
+                     _loc11_ = SelectMethodEnum.RIGHT_ARROW;
                      break;
                   case Keyboard.LEFT:
-                     newIndex = this.selectedIndex - 1;
-                     method = SelectMethodEnum.LEFT_ARROW;
+                     _loc10_ = this.selectedIndex-1;
+                     _loc11_ = SelectMethodEnum.LEFT_ARROW;
                      break;
                }
-               if(method != -1)
+               if(_loc11_ != -1)
                {
                   if(this.keyboardIndexHandler != null)
                   {
-                     newIndex = this.keyboardIndexHandler(this.selectedIndex,newIndex);
+                     _loc10_ = this.keyboardIndexHandler(this.selectedIndex,_loc10_);
                   }
-                  this.setSelectedIndex(newIndex,method);
+                  this.setSelectedIndex(_loc10_,_loc11_);
                   this.moveTo(this.selectedIndex);
                   return true;
                }
@@ -1447,14 +1418,14 @@ package com.ankamagames.berilia.components
          return false;
       }
       
-      function dispatchMessage(msg:Message, handler:MessageHandler=null) : void {
+      protected function dispatchMessage(param1:Message, param2:MessageHandler=null) : void {
          if(!this.silent)
          {
-            if(!handler)
+            if(!param2)
             {
-               handler = Berilia.getInstance().handler;
+               param2 = Berilia.getInstance().handler;
             }
-            handler.process(msg);
+            param2.process(param1);
          }
       }
    }

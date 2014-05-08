@@ -6,10 +6,10 @@ package com.ankamagames.tiphon.sequence
    public class SetAnimationStep extends AbstractSequencable
    {
       
-      public function SetAnimationStep(target:TiphonSprite, animation:String) {
+      public function SetAnimationStep(param1:TiphonSprite, param2:String) {
          super();
-         this._target = target;
-         this._animation = animation;
+         this._target = param1;
+         this._animation = param2;
       }
       
       private var _animation:String;

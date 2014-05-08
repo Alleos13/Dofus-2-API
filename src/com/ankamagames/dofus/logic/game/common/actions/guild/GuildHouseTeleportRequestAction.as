@@ -9,10 +9,10 @@ package com.ankamagames.dofus.logic.game.common.actions.guild
          super();
       }
       
-      public static function create(pHouseId:uint) : GuildHouseTeleportRequestAction {
-         var action:GuildHouseTeleportRequestAction = new GuildHouseTeleportRequestAction();
-         action.houseId = pHouseId;
-         return action;
+      public static function create(param1:uint) : GuildHouseTeleportRequestAction {
+         var _loc2_:GuildHouseTeleportRequestAction = new GuildHouseTeleportRequestAction();
+         _loc2_.houseId = param1;
+         return _loc2_;
       }
       
       public var houseId:uint;

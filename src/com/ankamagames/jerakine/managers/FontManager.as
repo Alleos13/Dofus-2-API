@@ -61,70 +61,71 @@ package com.ankamagames.jerakine.managers
       
       private var _fonts:Dictionary;
       
-      public function set handler(value:MessageHandler) : void {
-         this._handler = value;
+      public function set handler(param1:MessageHandler) : void {
+         this._handler = param1;
       }
       
-      public function loadFile(sUrl:String) : void {
-         var sExtension:String = FileUtils.getExtension(sUrl);
+      public function loadFile(param1:String) : void {
+         var _loc2_:String = FileUtils.getExtension(param1);
          this._lang = LangManager.getInstance().getEntry("config.lang.current");
-         if(sExtension == null)
+         if(_loc2_ == null)
          {
-            throw new FileTypeError(sUrl + " have no type (no extension found).");
+            throw new FileTypeError(param1 + " have no type (no extension found).");
          }
          else
          {
-            uri = new Uri(sUrl);
-            uri.tag = sUrl;
-            this._loader.load(uri);
+            _loc3_ = new Uri(param1);
+            _loc3_.tag = param1;
+            this._loader.load(_loc3_);
             return;
          }
       }
       
-      public function getRealFontName(font:String) : String {
-         if(this._fonts[font])
+      public function getRealFontName(param1:String) : String {
+         if(this._fonts[param1])
          {
-            return this._fonts[font].realname;
+            return this._fonts[param1].realname;
          }
          return "";
       }
       
       public function getFontsList() : Array {
-         var o:Object = null;
-         var fontList:Array = new Array();
-         for each (o in this._fonts)
+         var _loc2_:Object = null;
+         var _loc1_:Array = new Array();
+         for each (_loc2_ in this._fonts)
          {
-            fontList.push(o.url);
+            _loc1_.push(_loc2_.url);
          }
-         return fontList;
+         return _loc1_;
       }
       
-      public function getSizeMultipicator(fontName:String) : Number {
-         if(this._fonts[fontName])
+      public function getSizeMultipicator(param1:String) : Number {
+         if(this._fonts[param1])
          {
-            return Number(this._fonts[fontName].sizemultiplicator);
+            return Number(this._fonts[param1].sizemultiplicator);
          }
          return 1;
       }
       
-      public function getFontClassName(cssName:String) : String {
-         return this._fonts[cssName].classname;
+      public function getFontClassName(param1:String) : String {
+         return this._fonts[param1].classname;
       }
       
-      public function getFontClassRenderingMode(fontName:String) : String {
-         if(this._fonts[fontName].embedAsCff)
+      public function getFontClassRenderingMode(param1:String) : String {
+         if(this._fonts[param1].embedAsCff)
          {
             return AntiAliasType.ADVANCED;
          }
          return AntiAliasType.NORMAL;
       }
       
-      private function onFileLoaded(e:ResourceLoadedEvent) : void {
+      private function onFileLoaded(param1:ResourceLoadedEvent) : void {
          var xml:XMLList = null;
          var length:int = 0;
          var i:int = 0;
          var name:String = null;
          var o:Object = null;
+         var e:ResourceLoadedEvent = param1;
          this._data = new XML(e.resource);
          this._fonts = new Dictionary();
          xml = this._data.Fonts.(@lang == _lang);
@@ -156,9 +157,9 @@ package com.ankamagames.jerakine.managers
          initialized = true;
       }
       
-      private function onLoadError(e:ResourceErrorEvent) : void {
-         this._handler.process(new LangFileLoadedMessage(e.uri.uri,false,e.uri.uri));
-         this._log.warn("can\'t load " + e.uri.uri);
+      private function onLoadError(param1:ResourceErrorEvent) : void {
+         this._handler.process(new LangFileLoadedMessage(param1.uri.uri,false,param1.uri.uri));
+         this._log.warn("can\'t load " + param1.uri.uri);
       }
    }
 }

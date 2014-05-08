@@ -21,8 +21,8 @@ package com.ankamagames.jerakine.logger
       
       public static const COMMANDS:uint = 1 << 6;
       
-      public static function getString(level:uint) : String {
-         switch(level)
+      public static function getString(param1:uint) : String {
+         switch(param1)
          {
             case TRACE:
                return "TRACE";
@@ -36,6 +36,8 @@ package com.ankamagames.jerakine.logger
                return "ERROR";
             case FATAL:
                return "FATAL";
+            default:
+               return "UNKNOWN";
          }
       }
    }

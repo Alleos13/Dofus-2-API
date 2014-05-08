@@ -3,11 +3,11 @@ package com.ankamagames.jerakine.resources.protocols.impl
    import com.ankamagames.jerakine.resources.protocols.IProtocol;
    import com.ankamagames.jerakine.logger.Logger;
    import flash.utils.Dictionary;
+   import __AS3__.vec.Vector;
    import com.ankamagames.jerakine.utils.crypto.CRC32;
    import flash.utils.ByteArray;
    import com.ankamagames.jerakine.logger.Log;
    import flash.utils.getQualifiedClassName;
-   import __AS3__.vec.*;
    import com.ankamagames.jerakine.resources.protocols.AbstractFileProtocol;
    import com.ankamagames.jerakine.types.Uri;
    import com.ankamagames.jerakine.resources.IResourceObserver;
@@ -65,31 +65,20 @@ package com.ankamagames.jerakine.resources.protocols.impl
       
       private static var _buff_crc:ByteArray = new ByteArray();
       
-      private static var _urlRewritePattern;
-      
-      private static var _urlRewriteReplace;
-      
-      public static function init(replacePattern:*, replaceNeedle:*) : void {
-         _urlRewritePattern = replacePattern;
-         _urlRewriteReplace = replaceNeedle;
-      }
-      
       private var _parent:AbstractFileProtocol;
       
       private var _serverRootDir:String;
-      
-      private var _serverRootUnversionedDir:String;
       
       private var _isLoadingFilelist:Boolean = false;
       
       private var _dataLoading:Dictionary;
       
-      public function load(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, cache:ICache, forcedAdapter:Class, singleFile:Boolean) : void {
+      public function load(param1:Uri, param2:IResourceObserver, param3:Boolean, param4:ICache, param5:Class, param6:Boolean) : void {
          if(this._serverRootDir == null)
          {
-            this.serverRootDir = XmlConfig.getInstance().getEntry("config.root.path");
+            this._serverRootDir = XmlConfig.getInstance().getEntry("config.root.path");
          }
-         if((_cacheFilesDirectory == "") || (!_cacheFilesDirectory))
+         if(_cacheFilesDirectory == "" || !_cacheFilesDirectory)
          {
             _cacheFilesDirectory = XmlConfig.getInstance().getEntry("config.streaming.filelists.directory");
          }
@@ -99,51 +88,51 @@ package com.ankamagames.jerakine.resources.protocols.impl
          }
          if(!this._isLoadingFilelist)
          {
-            if(this._dataLoading[uri] != null)
+            if(this._dataLoading[param1] != null)
             {
                _fileDataToLoad.push(
                   {
-                     "uri":uri,
-                     "observer":observer,
-                     "dispatchProgress":dispatchProgress,
-                     "adapter":forcedAdapter
+                     "uri":param1,
+                     "observer":param2,
+                     "dispatchProgress":param3,
+                     "adapter":param5
                   });
             }
             else
             {
-               this.loadFile(uri,observer,dispatchProgress,forcedAdapter);
+               this.loadFile(param1,param2,param3,param5);
             }
          }
          else
          {
-            if(this.uriIsAlreadyWaitingForHttpDownload(uri))
+            if(this.uriIsAlreadyWaitingForHttpDownload(param1))
             {
                _fileDataToLoad.push(
                   {
-                     "uri":uri,
-                     "observer":observer,
-                     "dispatchProgress":dispatchProgress,
-                     "adapter":forcedAdapter
+                     "uri":param1,
+                     "observer":param2,
+                     "dispatchProgress":param3,
+                     "adapter":param5
                   });
             }
             else
             {
                _httpDataToLoad.push(
                   {
-                     "uri":uri,
-                     "observer":observer,
-                     "dispatchProgress":dispatchProgress,
-                     "adapter":forcedAdapter
+                     "uri":param1,
+                     "observer":param2,
+                     "dispatchProgress":param3,
+                     "adapter":param5
                   });
             }
          }
       }
       
-      private function uriIsAlreadyWaitingForHttpDownload(uri:Uri) : Boolean {
-         var data:Object = null;
-         for each (data in _httpDataToLoad)
+      private function uriIsAlreadyWaitingForHttpDownload(param1:Uri) : Boolean {
+         var _loc2_:Object = null;
+         for each (_loc2_ in _httpDataToLoad)
          {
-            if(data.uri.path == uri.path)
+            if(_loc2_.uri.path == param1.path)
             {
                return true;
             }
@@ -152,48 +141,48 @@ package com.ankamagames.jerakine.resources.protocols.impl
       }
       
       private function loadCacheFile() : void {
-         var data:ByteArray = null;
-         var fs:FileStream = null;
-         var index:* = 0;
-         var value:* = 0;
-         var streamingFile:File = null;
-         var dirListing:Array = null;
+         var _loc2_:ByteArray = null;
+         var _loc3_:FileStream = null;
+         var _loc4_:* = 0;
+         var _loc5_:* = 0;
+         var _loc6_:File = null;
+         var _loc7_:Array = null;
          this._isLoadingFilelist = true;
-         var streamingFilelists:File = new File(File.applicationDirectory + File.separator + _cacheFilesDirectory);
-         if((streamingFilelists.exists) && (streamingFilelists.isDirectory))
+         var _loc1_:File = new File(File.applicationDirectory + File.separator + _cacheFilesDirectory);
+         if((_loc1_.exists) && (_loc1_.isDirectory))
          {
             _cachedFileData = new Dictionary();
-            data = new ByteArray();
-            dirListing = streamingFilelists.getDirectoryListing();
-            for each (streamingFile in dirListing)
+            _loc2_ = new ByteArray();
+            _loc7_ = _loc1_.getDirectoryListing();
+            for each (_loc6_ in _loc7_)
             {
-               data.clear();
-               fs = new FileStream();
-               fs.open(streamingFile,FileMode.READ);
-               fs.readBytes(data,0,4);
-               data.readByte();
-               if(data.readMultiByte(3,"utf-8") != CACHE_FORMAT_TYPE)
+               _loc2_.clear();
+               _loc3_ = new FileStream();
+               _loc3_.open(_loc6_,FileMode.READ);
+               _loc3_.readBytes(_loc2_,0,4);
+               _loc2_.readByte();
+               if(_loc2_.readMultiByte(3,"utf-8") != CACHE_FORMAT_TYPE)
                {
                   throw new Error("Format du fichier incorrect !!");
                }
                else
                {
-                  data.clear();
-                  fs.readBytes(data,0,4);
-                  data.readByte();
-                  if(data.readMultiByte(3,"utf-8") != CACHE_FORMAT_VERSION)
+                  _loc2_.clear();
+                  _loc3_.readBytes(_loc2_,0,4);
+                  _loc2_.readByte();
+                  if(_loc2_.readMultiByte(3,"utf-8") != CACHE_FORMAT_VERSION)
                   {
                      throw new Error("Version du format de fichier incorrect !!");
                   }
                   else
                   {
-                     while(fs.bytesAvailable)
+                     while(_loc3_.bytesAvailable)
                      {
-                        index = fs.readInt();
-                        value = fs.readInt();
-                        _cachedFileData[index] = value;
+                        _loc4_ = _loc3_.readInt();
+                        _loc5_ = _loc3_.readInt();
+                        _cachedFileData[_loc4_] = _loc5_;
                      }
-                     fs.close();
+                     _loc3_.close();
                      continue;
                   }
                }
@@ -211,213 +200,207 @@ package com.ankamagames.jerakine.resources.protocols.impl
       }
       
       private function loadQueueData() : void {
-         var file:Object = null;
-         for each (file in _httpDataToLoad)
+         var _loc1_:Object = null;
+         for each (_loc1_ in _httpDataToLoad)
          {
-            this.loadFile(file.uri,file.observer,file.dispatchProgress,file.adapter);
+            this.loadFile(_loc1_.uri,_loc1_.observer,_loc1_.dispatchProgress,_loc1_.adapter);
          }
          _httpDataToLoad = new Vector.<Object>();
       }
       
-      private function loadFile(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, adapter:Class) : void {
-         var data:ByteArray = null;
-         var pathForCrc:String = null;
-         var arrayIndex:* = 0;
-         var cachedCrcFile:* = 0;
-         var stream:FileStream = null;
-         if(this._dataLoading[uri] != null)
+      private function loadFile(param1:Uri, param2:IResourceObserver, param3:Boolean, param4:Class) : void {
+         var _loc7_:ByteArray = null;
+         var _loc8_:String = null;
+         var _loc9_:* = 0;
+         var _loc10_:* = 0;
+         var _loc11_:FileStream = null;
+         if(this._dataLoading[param1] != null)
          {
             _fileDataToLoad.push(
                {
-                  "uri":uri,
-                  "observer":observer,
-                  "dispatchProgress":dispatchProgress,
-                  "adapter":adapter
+                  "uri":param1,
+                  "observer":param2,
+                  "dispatchProgress":param3,
+                  "adapter":param4
                });
             return;
          }
-         var path:String = this.getLocalPath(uri);
-         trace("load file " + path);
-         var file:File = new File(path);
-         if(file.exists)
+         var _loc5_:String = this.getLocalPath(param1);
+         trace("load file " + _loc5_);
+         var _loc6_:File = new File(_loc5_);
+         if(_loc6_.exists)
          {
-            data = new ByteArray();
-            pathForCrc = this.getPathForCrc(uri);
-            if(_pathCrcList[pathForCrc] == null)
+            _loc7_ = new ByteArray();
+            _loc8_ = this.getPathForCrc(param1);
+            if(_pathCrcList[_loc8_] == null)
             {
-               _pathCrcList[pathForCrc] = this.getPathIntSum(pathForCrc);
+               _pathCrcList[_loc8_] = this.getPathIntSum(_loc8_);
             }
-            arrayIndex = _pathCrcList[pathForCrc];
-            if(_calcCachedFileData[arrayIndex] == null)
+            _loc9_ = _pathCrcList[_loc8_];
+            if(_calcCachedFileData[_loc9_] == null)
             {
-               stream = new FileStream();
-               stream.open(file,FileMode.READ);
-               stream.readBytes(data,0,file.size);
-               stream.close();
-               _calcCachedFileData[arrayIndex] = this.getFileIntSum(data);
+               _loc11_ = new FileStream();
+               _loc11_.open(_loc6_,FileMode.READ);
+               _loc11_.readBytes(_loc7_,0,_loc6_.size);
+               _loc11_.close();
+               _calcCachedFileData[_loc9_] = this.getFileIntSum(_loc7_);
             }
-            cachedCrcFile = 0;
-            if((!(_calcCachedFileData == null)) && (!(_calcCachedFileData[arrayIndex] == null)))
+            _loc10_ = 0;
+            if(!(_calcCachedFileData == null) && !(_calcCachedFileData[_loc9_] == null))
             {
-               cachedCrcFile = _calcCachedFileData[arrayIndex];
+               _loc10_ = _calcCachedFileData[_loc9_];
             }
-            if((!(_cachedFileData == null)) && (cachedCrcFile == _cachedFileData[arrayIndex]) && (!(cachedCrcFile == 0)))
+            if(!(_cachedFileData == null) && _loc10_ == _cachedFileData[_loc9_] && !(_loc10_ == 0))
             {
-               _log.debug(uri + " a jour: ");
-               this.loadFromParent(uri,observer,dispatchProgress,adapter);
+               _log.debug(param1 + " a jour: ");
+               this.loadFromParent(param1,param2,param3,param4);
             }
             else
             {
-               _log.debug(uri.path + " mise a jour necessaire");
-               this._dataLoading[uri] = 
+               _log.debug(param1.path + " mise a jour necessaire");
+               this._dataLoading[param1] = 
                   {
-                     "uri":uri,
-                     "observer":observer,
-                     "dispatchProgress":dispatchProgress,
-                     "adapter":adapter
+                     "uri":param1,
+                     "observer":param2,
+                     "dispatchProgress":param3,
+                     "adapter":param4
                   };
-               this.loadDirectlyUri(uri,dispatchProgress);
+               this.loadDirectlyUri(param1,param3);
             }
          }
          else
          {
-            _log.debug(uri + " inexistant");
-            this._dataLoading[uri] = 
+            _log.debug(param1 + " inexistant");
+            this._dataLoading[param1] = 
                {
-                  "uri":uri,
-                  "observer":observer,
-                  "dispatchProgress":dispatchProgress,
-                  "adapter":adapter
+                  "uri":param1,
+                  "observer":param2,
+                  "dispatchProgress":param3,
+                  "adapter":param4
                };
-            this.loadDirectlyUri(uri,dispatchProgress);
+            this.loadDirectlyUri(param1,param3);
          }
       }
       
-      private function loadDirectlyUri(uri:Uri, dispatchProgress:Boolean) : void {
-         _attemptToDownloadFile[uri] = _attemptToDownloadFile[uri] == null?1:_attemptToDownloadFile[uri] + 1;
-         var realPath:String = "http://" + uri.path;
-         if(_urlRewritePattern)
-         {
-            realPath = realPath.replace(_urlRewritePattern,_urlRewriteReplace);
-         }
-         this._parent.initAdapter(uri,BinaryAdapter);
-         this._parent.adapter.loadDirectly(uri,realPath,new ResourceObserverWrapper(this.onRemoteFileLoaded,this.onRemoteFileFailed,this.onRemoteFileProgress),dispatchProgress);
+      private function loadDirectlyUri(param1:Uri, param2:Boolean) : void {
+         _attemptToDownloadFile[param1] = _attemptToDownloadFile[param1] == null?1:_attemptToDownloadFile[param1] + 1;
+         this._parent.initAdapter(param1,BinaryAdapter);
+         this._parent.adapter.loadDirectly(param1,"http://" + param1.path,new ResourceObserverWrapper(this.onRemoteFileLoaded,this.onRemoteFileFailed,this.onRemoteFileProgress),param2);
       }
       
-      private function onRemoteFileLoaded(uri:Uri, resourceType:uint, resource:*) : void {
-         var path:String = null;
+      private function onRemoteFileLoaded(param1:Uri, param2:uint, param3:*) : void {
+         var _loc4_:String = null;
          if(!AirScanner.isStreamingVersion())
          {
-            path = this.getLocalPath(uri);
+            _loc4_ = this.getLocalPath(param1);
          }
          else
          {
-            path = this.getPathWithoutAkamaiHack(this.getLocalPath(uri));
+            _loc4_ = this.getPathWithoutAkamaiHack(this.getLocalPath(param1));
          }
-         var f:File = new File(path);
-         var fileStream:FileStream = new FileStream();
-         fileStream.open(f,FileMode.WRITE);
-         fileStream.position = 0;
-         fileStream.writeBytes(resource);
-         fileStream.close();
-         if(this._dataLoading[uri] != null)
+         var _loc5_:File = new File(_loc4_);
+         var _loc6_:FileStream = new FileStream();
+         _loc6_.open(_loc5_,FileMode.WRITE);
+         _loc6_.position = 0;
+         _loc6_.writeBytes(param3);
+         _loc6_.close();
+         if(this._dataLoading[param1] != null)
          {
-            this.loadFromParent(this._dataLoading[uri].uri,this._dataLoading[uri].observer,this._dataLoading[uri].dispatchProgress,this._dataLoading[uri].adapter);
-            this._dataLoading[uri] = null;
+            this.loadFromParent(this._dataLoading[param1].uri,this._dataLoading[param1].observer,this._dataLoading[param1].dispatchProgress,this._dataLoading[param1].adapter);
+            this._dataLoading[param1] = null;
          }
       }
       
-      private function removeNullValue(item:Object, index:int, vector:Vector.<Object>) : Boolean {
-         return !(item == null);
+      private function removeNullValue(param1:Object, param2:int, param3:Vector.<Object>) : Boolean {
+         return !(param1 == null);
       }
       
-      public function getLocalPath(uri:Uri) : String {
-         var newuri:String = uri.normalizedUri.split("|")[0];
-         newuri = newuri.replace(this._serverRootDir,"");
-         newuri = newuri.replace(this._serverRootUnversionedDir,"");
-         return File.applicationDirectory.nativePath + File.separator + newuri;
+      public function getLocalPath(param1:Uri) : String {
+         var _loc2_:String = param1.normalizedUri.split("|")[0];
+         _loc2_ = _loc2_.replace(this._serverRootDir,"");
+         return File.applicationDirectory.nativePath + File.separator + _loc2_;
       }
       
-      public function getPathWithoutAkamaiHack(inStr:String) : String {
-         var pattern:RegExp = new RegExp("\\/(_[0-9]*_\\/)","i");
-         return inStr.replace(pattern,"/");
+      public function getPathWithoutAkamaiHack(param1:String) : String {
+         var _loc2_:RegExp = new RegExp("\\/(_[0-9]*_\\/)","i");
+         return param1.replace(_loc2_,"/");
       }
       
-      private function onRemoteFileFailed(uri:Uri, errorMsg:String, errorCode:uint) : void {
-         var data:* = undefined;
-         _log.warn(uri.path + ": download failed (" + errorMsg + ")");
-         if((!(_attemptToDownloadFile[uri] == null)) && (_attemptToDownloadFile[uri] <= LIMITE_ATTEMPT_FOR_DOWNLOAD))
+      private function onRemoteFileFailed(param1:Uri, param2:String, param3:uint) : void {
+         var _loc4_:* = undefined;
+         _log.warn(param1.path + ": download failed (" + param2 + ")");
+         if(!(_attemptToDownloadFile[param1] == null) && _attemptToDownloadFile[param1] <= LIMITE_ATTEMPT_FOR_DOWNLOAD)
          {
-            _log.warn(uri.path + ": try again");
-            this.loadDirectlyUri(uri,this._dataLoading[uri].dispatchProgress);
+            _log.warn(param1.path + ": try again");
+            this.loadDirectlyUri(param1,this._dataLoading[param1].dispatchProgress);
          }
          else
          {
-            _log.warn(uri.path + ": download definitively failed (" + errorMsg + ")");
-            data = this._dataLoading[uri];
-            if((data) && (data.observer))
+            _log.warn(param1.path + ": download definitively failed (" + param2 + ")");
+            _loc4_ = this._dataLoading[param1];
+            if((_loc4_) && (_loc4_.observer))
             {
-               IResourceObserver(data.observer).onFailed(uri,errorMsg,errorCode);
+               IResourceObserver(_loc4_.observer).onFailed(param1,param2,param3);
             }
          }
       }
       
-      private function onRemoteFileProgress(uri:Uri, bytesLoaded:uint, bytesTotal:uint) : void {
+      private function onRemoteFileProgress(param1:Uri, param2:uint, param3:uint) : void {
       }
       
-      private function loadFromParent(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, adapter:Class) : void {
-         var d:Object = null;
-         var oldUri:Uri = uri;
-         if(uri.fileType == "swf")
+      private function loadFromParent(param1:Uri, param2:IResourceObserver, param3:Boolean, param4:Class) : void {
+         var _loc6_:Object = null;
+         var _loc5_:Uri = param1;
+         if(param1.fileType == "swf")
          {
-            uri = new Uri(this.getLocalPath(uri));
-            uri.tag = oldUri;
-            adapter = AdvancedSwfAdapter;
+            param1 = new Uri(this.getLocalPath(param1));
+            param1.tag = _loc5_;
+            param4 = AdvancedSwfAdapter;
          }
          else
          {
-            if(uri.fileType == "swl")
+            if(param1.fileType == "swl")
             {
-               uri = new Uri(this.getLocalPath(uri));
-               if(uri.tag == null)
+               param1 = new Uri(this.getLocalPath(param1));
+               if(param1.tag == null)
                {
-                  uri.tag = new Object();
+                  param1.tag = new Object();
                }
-               uri.tag.oldUri = oldUri;
+               param1.tag.oldUri = _loc5_;
             }
             else
             {
-               uri = new Uri(this.getLocalPath(uri));
-               uri.tag = oldUri;
+               param1 = new Uri(this.getLocalPath(param1));
+               param1.tag = _loc5_;
             }
          }
-         this._parent.load(uri,observer,dispatchProgress,null,adapter,false);
-         for each (d in _fileDataToLoad)
+         this._parent.load(param1,param2,param3,null,param4,false);
+         for each (_loc6_ in _fileDataToLoad)
          {
-            if((!(d == null)) && (d.uri.path == uri.path))
+            if(!(_loc6_ == null) && _loc6_.uri.path == param1.path)
             {
-               this._parent.load(d.uri,d.observer,d.dispatchProgress,null,d.adapter,false);
-               d = null;
+               this._parent.load(_loc6_.uri,_loc6_.observer,_loc6_.dispatchProgress,null,_loc6_.adapter,false);
+               _loc6_ = null;
             }
          }
          _fileDataToLoad = _fileDataToLoad.filter(this.removeNullValue);
       }
       
-      private function getPathIntSum(path:String) : int {
+      private function getPathIntSum(param1:String) : int {
          _buff_crc.clear();
-         _buff_crc.writeUTFBytes(path);
+         _buff_crc.writeUTFBytes(param1);
          _crc.reset();
          _crc.update(_buff_crc);
          return _crc.getValue();
       }
       
-      private function getPathForCrc(uri:Uri) : String {
-         return uri.normalizedUri.replace(this._serverRootDir,"").replace(this._serverRootUnversionedDir,"");
+      private function getPathForCrc(param1:Uri) : String {
+         return param1.normalizedUri.replace(this._serverRootDir,"");
       }
       
-      private function getFileIntSum(data:ByteArray) : int {
+      private function getFileIntSum(param1:ByteArray) : int {
          _crc.reset();
-         _crc.update(data);
+         _crc.update(param1);
          return _crc.getValue();
       }
       
@@ -429,9 +412,8 @@ package com.ankamagames.jerakine.resources.protocols.impl
          this._parent.free();
       }
       
-      public function set serverRootDir(value:String) : void {
-         this._serverRootDir = value;
-         this._serverRootUnversionedDir = value.replace(new RegExp("\\/_[0-9]*_"),"");
+      public function set serverRootDir(param1:String) : void {
+         this._serverRootDir = param1;
       }
    }
 }

@@ -10,24 +10,25 @@ package com.ankamagames.berilia.api
          super();
       }
       
-      public static function throwUntrustedCallError(... args) : void {
+      public static function throwUntrustedCallError(... rest) : void {
          throw new UntrustedApiCallError("Unstrusted script called a trusted method");
       }
       
-      public static function getRestrictedFunctionAccess(target:Function) : Function {
-         return function(... args):*
+      public static function getRestrictedFunctionAccess(param1:Function) : Function {
+         var target:Function = param1;
+         return function(... rest):*
          {
-            var arg:* = undefined;
-            var accessKey:* = SecureCenter.ACCESS_KEY;
-            var i:* = 0;
-            for each (arg in args)
+            var _loc4_:* = undefined;
+            var _loc2_:* = SecureCenter.ACCESS_KEY;
+            var _loc3_:* = 0;
+            for each (_loc4_ in rest)
             {
-               if(arg == accessKey)
+               if(_loc4_ == _loc2_)
                {
-                  args.splice(i,1);
-                  return target.apply(null,args);
+                  rest.splice(_loc3_,1);
+                  return target.apply(null,rest);
                }
-               i++;
+               _loc3_++;
             }
             throw new UntrustedApiCallError("Unstrusted script called a trusted method");
          };

@@ -22,9 +22,9 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          return 365;
       }
       
-      public function initBasicGuildInformations(guildId:uint=0, guildName:String="") : BasicGuildInformations {
-         this.guildId = guildId;
-         this.guildName = guildName;
+      public function initBasicGuildInformations(param1:uint=0, param2:String="") : BasicGuildInformations {
+         this.guildId = param1;
+         this.guildName = param2;
          return this;
       }
       
@@ -33,38 +33,38 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          this.guildName = "";
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_BasicGuildInformations(output);
+      override public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_BasicGuildInformations(param1);
       }
       
-      public function serializeAs_BasicGuildInformations(output:IDataOutput) : void {
-         super.serializeAs_AbstractSocialGroupInfos(output);
+      public function serializeAs_BasicGuildInformations(param1:IDataOutput) : void {
+         super.serializeAs_AbstractSocialGroupInfos(param1);
          if(this.guildId < 0)
          {
             throw new Error("Forbidden value (" + this.guildId + ") on element guildId.");
          }
          else
          {
-            output.writeInt(this.guildId);
-            output.writeUTF(this.guildName);
+            param1.writeInt(this.guildId);
+            param1.writeUTF(this.guildName);
             return;
          }
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_BasicGuildInformations(input);
+      override public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_BasicGuildInformations(param1);
       }
       
-      public function deserializeAs_BasicGuildInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.guildId = input.readInt();
+      public function deserializeAs_BasicGuildInformations(param1:IDataInput) : void {
+         super.deserialize(param1);
+         this.guildId = param1.readInt();
          if(this.guildId < 0)
          {
             throw new Error("Forbidden value (" + this.guildId + ") on element of BasicGuildInformations.guildId.");
          }
          else
          {
-            this.guildName = input.readUTF();
+            this.guildName = param1.readUTF();
             return;
          }
       }

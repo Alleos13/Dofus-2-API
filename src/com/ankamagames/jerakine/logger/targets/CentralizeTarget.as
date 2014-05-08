@@ -22,15 +22,15 @@ package com.ankamagames.jerakine.logger.targets
       
       public static var serverPort:int = 6666;
       
-      override public function logEvent(event:LogEvent) : void {
-         this.send(event.level,event.message);
+      override public function logEvent(param1:LogEvent) : void {
+         this.send(param1.level,param1.message);
       }
       
-      private function send(level:uint, message:String) : void {
-         var he:LoggerHistoryElement = null;
+      private function send(param1:uint, param2:String) : void {
+         var _loc3_:LoggerHistoryElement = null;
          if(_socket.connected)
          {
-            _socket.writeUTF("(" + LogLevel.getString(level) + ") " + message);
+            _socket.writeUTF("(" + LogLevel.getString(param1) + ") " + param2);
          }
          else
          {
@@ -45,22 +45,22 @@ package com.ankamagames.jerakine.logger.targets
                _socket.connect(serverHost,serverPort);
                _connecting = true;
             }
-            he = new LoggerHistoryElement(level,message);
-            _history.push(he);
+            _loc3_ = new LoggerHistoryElement(param1,param2);
+            _history.push(_loc3_);
          }
       }
       
-      private function onSocket(e:Event) : void {
-         var o:LoggerHistoryElement = null;
+      private function onSocket(param1:Event) : void {
+         var _loc2_:LoggerHistoryElement = null;
          _connecting = false;
-         for each (o in _history)
+         for each (_loc2_ in _history)
          {
-            this.send(o.level,o.message);
+            this.send(_loc2_.level,_loc2_.message);
          }
          _history = new Array();
       }
       
-      private function onSocketError(e:Event) : void {
+      private function onSocketError(param1:Event) : void {
          _connecting = false;
       }
    }

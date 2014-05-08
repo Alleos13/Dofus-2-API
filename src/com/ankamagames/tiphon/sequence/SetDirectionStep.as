@@ -6,10 +6,10 @@ package com.ankamagames.tiphon.sequence
    public class SetDirectionStep extends AbstractSequencable
    {
       
-      public function SetDirectionStep(target:TiphonSprite, nDirection:uint) {
+      public function SetDirectionStep(param1:TiphonSprite, param2:uint) {
          super();
-         this._target = target;
-         this._nDirection = nDirection;
+         this._target = param1;
+         this._nDirection = param2;
       }
       
       private var _nDirection:uint;
@@ -17,7 +17,7 @@ package com.ankamagames.tiphon.sequence
       private var _target:TiphonSprite;
       
       override public function start() : void {
-         if((!this._target.getAnimation()) || (this._target.hasAnimation(this._target.getAnimation(),this._nDirection)))
+         if(!this._target.getAnimation() || (this._target.hasAnimation(this._target.getAnimation(),this._nDirection)))
          {
             this._target.setDirection(this._nDirection);
          }

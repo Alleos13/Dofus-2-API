@@ -7,28 +7,28 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class AccountRightsItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function AccountRightsItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      public function AccountRightsItemCriterion(param1:String) {
+         super(param1);
       }
       
       override public function get text() : String {
-         var readableCriterionValue:String = null;
-         var readableCriterionRef:String = null;
+         var _loc1_:String = null;
+         var _loc2_:String = null;
          if(PlayerManager.getInstance().hasRights)
          {
-            readableCriterionValue = _criterionValue.toString();
-            readableCriterionRef = I18n.getUiText("ui.social.guildHouseRights");
-            return readableCriterionRef + " " + _operator.text + " " + readableCriterionValue;
+            _loc1_ = _criterionValue.toString();
+            _loc2_ = I18n.getUiText("ui.social.guildHouseRights");
+            return _loc2_ + " " + _operator.text + " " + _loc1_;
          }
          return "";
       }
       
       override public function clone() : IItemCriterion {
-         var clonedCriterion:AccountRightsItemCriterion = new AccountRightsItemCriterion(this.basicText);
-         return clonedCriterion;
+         var _loc1_:AccountRightsItemCriterion = new AccountRightsItemCriterion(this.basicText);
+         return _loc1_;
       }
       
-      override function getCriterion() : int {
+      override protected function getCriterion() : int {
          return 0;
       }
    }

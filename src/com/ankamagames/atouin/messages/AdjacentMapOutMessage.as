@@ -6,10 +6,10 @@ package com.ankamagames.atouin.messages
    public class AdjacentMapOutMessage extends Object implements Message
    {
       
-      public function AdjacentMapOutMessage(nDirection:uint, zone:DisplayObject) {
+      public function AdjacentMapOutMessage(param1:uint, param2:DisplayObject) {
          super();
-         this._nDirection = nDirection;
-         this._spZone = zone;
+         this._nDirection = param1;
+         this._spZone = param2;
       }
       
       private var _nDirection:uint;

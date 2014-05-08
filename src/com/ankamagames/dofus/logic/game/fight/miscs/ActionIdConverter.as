@@ -547,8 +547,6 @@ package com.ankamagames.dofus.logic.game.fight.miscs
       
       public static const ACTION_FIGHT_KILL_AND_SUMMON:int = 405;
       
-      public static const ACTION_BOOST_PUSH_DMG:int = 414;
-      
       public static const ACTION_INTERACTIVE_ELEMENT:int = 500;
       
       public static const ACTION_SKILL_ANIMATION:int = 501;
@@ -910,25 +908,24 @@ package com.ankamagames.dofus.logic.game.fight.miscs
             _actionInfos[ACTION_CHARACTER_BOOST_PERMANENT_DAMAGE_PERCENT] = ["permanentDamagePercent",true];
             _actionInfos[ACTION_BOOST_GLOBAL_RESISTS_BONUS] = ["globalResistPercentBonus",true];
             _actionInfos[ACTION_BOOST_GLOBAL_RESISTS_MALUS] = ["globalResistPercentMalus",true];
-            _actionInfos[ACTION_BOOST_PUSH_DMG] = ["pushDamageBonus",true];
             _initialized = true;
          }
       }
       
-      public static function getActionStatName(actionId:int) : String {
+      public static function getActionStatName(param1:int) : String {
          initialize();
-         if(_actionInfos[actionId])
+         if(_actionInfos[param1])
          {
-            return _actionInfos[actionId][0];
+            return _actionInfos[param1][0];
          }
          return null;
       }
       
-      public static function getIsABoost(actionId:int) : Boolean {
+      public static function getIsABoost(param1:int) : Boolean {
          initialize();
-         if(_actionInfos[actionId])
+         if(_actionInfos[param1])
          {
-            return _actionInfos[actionId][1];
+            return _actionInfos[param1][1];
          }
          return false;
       }

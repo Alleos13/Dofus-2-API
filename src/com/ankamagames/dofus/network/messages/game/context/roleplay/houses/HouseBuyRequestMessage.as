@@ -27,8 +27,8 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.houses
          return 5738;
       }
       
-      public function initHouseBuyRequestMessage(proposedPrice:uint=0) : HouseBuyRequestMessage {
-         this.proposedPrice = proposedPrice;
+      public function initHouseBuyRequestMessage(param1:uint=0) : HouseBuyRequestMessage {
+         this.proposedPrice = param1;
          this._isInitialized = true;
          return this;
       }
@@ -38,38 +38,38 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.houses
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_HouseBuyRequestMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_HouseBuyRequestMessage(param1);
       }
       
-      public function serializeAs_HouseBuyRequestMessage(output:IDataOutput) : void {
+      public function serializeAs_HouseBuyRequestMessage(param1:IDataOutput) : void {
          if(this.proposedPrice < 0)
          {
             throw new Error("Forbidden value (" + this.proposedPrice + ") on element proposedPrice.");
          }
          else
          {
-            output.writeInt(this.proposedPrice);
+            param1.writeInt(this.proposedPrice);
             return;
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_HouseBuyRequestMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_HouseBuyRequestMessage(param1);
       }
       
-      public function deserializeAs_HouseBuyRequestMessage(input:IDataInput) : void {
-         this.proposedPrice = input.readInt();
+      public function deserializeAs_HouseBuyRequestMessage(param1:IDataInput) : void {
+         this.proposedPrice = param1.readInt();
          if(this.proposedPrice < 0)
          {
             throw new Error("Forbidden value (" + this.proposedPrice + ") on element of HouseBuyRequestMessage.proposedPrice.");

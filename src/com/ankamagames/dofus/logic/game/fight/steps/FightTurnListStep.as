@@ -12,10 +12,10 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightTurnListStep extends AbstractSequencable implements IFightStep
    {
       
-      public function FightTurnListStep(turnsList:Vector.<int>, deadTurnsList:Vector.<int>) {
+      public function FightTurnListStep(param1:Vector.<int>, param2:Vector.<int>) {
          super();
-         this._turnsList = turnsList;
-         this._deadTurnsList = deadTurnsList;
+         this._turnsList = param1;
+         this._deadTurnsList = param2;
       }
       
       private var _throwSubSequence:ISequencer;
@@ -33,11 +33,11 @@ package com.ankamagames.dofus.logic.game.fight.steps
       }
       
       override public function start() : void {
-         var fbf:FightBattleFrame = Kernel.getWorker().getFrame(FightBattleFrame) as FightBattleFrame;
-         if(fbf)
+         var _loc1_:FightBattleFrame = Kernel.getWorker().getFrame(FightBattleFrame) as FightBattleFrame;
+         if(_loc1_)
          {
-            fbf.fightersList = this._turnsList;
-            fbf.deadFightersList = this._deadTurnsList;
+            _loc1_.fightersList = this._turnsList;
+            _loc1_.deadFightersList = this._deadTurnsList;
          }
          KernelEventsManager.getInstance().processCallback(HookList.FightersListUpdated);
          if((Dofus.getInstance().options.orderFighters) && (Kernel.getWorker().getFrame(FightEntitiesFrame)))

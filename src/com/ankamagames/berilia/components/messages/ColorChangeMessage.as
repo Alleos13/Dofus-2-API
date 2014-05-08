@@ -5,8 +5,8 @@ package com.ankamagames.berilia.components.messages
    public class ColorChangeMessage extends ComponentMessage
    {
       
-      public function ColorChangeMessage(target:InteractiveObject) {
-         super(target);
+      public function ColorChangeMessage(param1:InteractiveObject) {
+         super(param1);
       }
    }
 }

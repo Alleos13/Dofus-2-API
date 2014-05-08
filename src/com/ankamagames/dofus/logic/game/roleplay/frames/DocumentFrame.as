@@ -33,21 +33,23 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          return true;
       }
       
-      public function process(msg:Message) : Boolean {
-         var ldm:LeaveDialogMessage = null;
+      public function process(param1:Message) : Boolean {
+         var _loc2_:LeaveDialogMessage = null;
          switch(true)
          {
-            case msg is LeaveDialogRequestAction:
+            case param1 is LeaveDialogRequestAction:
                ConnectionsHandler.getConnection().send(new LeaveDialogRequestMessage());
                return true;
-            case msg is LeaveDialogMessage:
-               ldm = msg as LeaveDialogMessage;
-               if(ldm.dialogType == DialogTypeEnum.DIALOG_BOOK)
+            case param1 is LeaveDialogMessage:
+               _loc2_ = param1 as LeaveDialogMessage;
+               if(_loc2_.dialogType == DialogTypeEnum.DIALOG_BOOK)
                {
                   Kernel.getWorker().process(ChangeWorldInteractionAction.create(true));
                   Kernel.getWorker().removeFrame(this);
                }
                return true;
+            default:
+               return false;
          }
       }
       

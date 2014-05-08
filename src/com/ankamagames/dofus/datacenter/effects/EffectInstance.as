@@ -64,17 +64,15 @@ package com.ankamagames.dofus.datacenter.effects
       
       public var hidden:Boolean;
       
-      public var order:int;
-      
-      public var zoneSize:Object;
+      public var zoneSize:uint;
       
       public var zoneShape:uint;
       
-      public var zoneMinSize:Object;
+      public var zoneMinSize:uint;
       
-      public var zoneEfficiencyPercent:Object;
+      public var zoneEfficiencyPercent:int;
       
-      public var zoneMaxEfficiency:Object;
+      public var zoneMaxEfficiency:int;
       
       private var _durationStringValue:int;
       
@@ -94,8 +92,8 @@ package com.ankamagames.dofus.datacenter.effects
       
       private var _rawZone:String;
       
-      public function set rawZone(data:String) : void {
-         this._rawZone = data;
+      public function set rawZone(param1:String) : void {
+         this._rawZone = param1;
          this.parseZone();
       }
       
@@ -104,7 +102,7 @@ package com.ankamagames.dofus.datacenter.effects
       }
       
       public function get durationString() : String {
-         if((!this._durationString) || (!(this._durationStringValue == this.duration)) || (!(this._delayStringValue == this.delay)))
+         if(!this._durationString || !(this._durationStringValue == this.duration) || !(this._delayStringValue == this.delay))
          {
             this._durationStringValue = this.duration;
             this._delayStringValue = this.delay;
@@ -114,21 +112,21 @@ package com.ankamagames.dofus.datacenter.effects
       }
       
       public function get category() : int {
-         var e:Effect = null;
+         var _loc1_:Effect = null;
          if(this._category == UNDEFINED_CATEGORY)
          {
-            e = Effect.getEffectById(this.effectId);
-            this._category = e?e.category:-1;
+            _loc1_ = Effect.getEffectById(this.effectId);
+            this._category = _loc1_?_loc1_.category:-1;
          }
          return this._category;
       }
       
       public function get showInSet() : int {
-         var e:Effect = null;
+         var _loc1_:Effect = null;
          if(this._showSet == UNDEFINED_SHOW)
          {
-            e = Effect.getEffectById(this.effectId);
-            this._showSet = e?e.showInSet?1:0:0;
+            _loc1_ = Effect.getEffectById(this.effectId);
+            this._showSet = _loc1_?_loc1_.showInSet?1:0:0;
          }
          return this._showSet;
       }
@@ -154,74 +152,69 @@ package com.ankamagames.dofus.datacenter.effects
       }
       
       public function get description() : String {
-         var effect:Effect = null;
+         var _loc1_:Effect = null;
          if(this._description == UNDEFINED_DESCRIPTION)
          {
-            effect = Effect.getEffectById(this.effectId);
-            if(!effect)
+            _loc1_ = Effect.getEffectById(this.effectId);
+            if(!_loc1_)
             {
                this._description = null;
                return null;
             }
-            this._description = this.prepareDescription(effect.description,this.effectId);
+            this._description = this.prepareDescription(_loc1_.description,this.effectId);
          }
          return this._description;
       }
       
       public function get theoreticalDescription() : String {
-         var effect:Effect = null;
-         var sSourceDesc:String = null;
+         var _loc1_:Effect = null;
+         var _loc2_:String = null;
          if(this._theoricDescription == UNDEFINED_DESCRIPTION)
          {
-            effect = Effect.getEffectById(this.effectId);
-            if(!effect)
+            _loc1_ = Effect.getEffectById(this.effectId);
+            if(!_loc1_)
             {
                this._theoricDescription = null;
                return null;
             }
-            if(effect.theoreticalPattern == 0)
+            if(_loc1_.theoreticalPattern == 0)
             {
                this._theoricDescription = null;
                return null;
             }
-            if(effect.theoreticalPattern == 1)
+            if(_loc1_.theoreticalPattern == 1)
             {
-               sSourceDesc = effect.description;
+               _loc2_ = _loc1_.description;
             }
             else
             {
-               sSourceDesc = effect.theoreticalDescription;
+               _loc2_ = _loc1_.theoreticalDescription;
             }
-            this._theoricDescription = this.prepareDescription(sSourceDesc,this.effectId);
+            this._theoricDescription = this.prepareDescription(_loc2_,this.effectId);
          }
          return this._theoricDescription;
       }
       
       public function clone() : EffectInstance {
-         var o:EffectInstance = new EffectInstance();
-         o.zoneShape = this.zoneShape;
-         o.zoneSize = this.zoneSize;
-         o.zoneMinSize = this.zoneMinSize;
-         o.zoneEfficiencyPercent = this.zoneEfficiencyPercent;
-         o.zoneMaxEfficiency = this.zoneMaxEfficiency;
-         o.effectId = this.effectId;
-         o.duration = this.duration;
-         o.delay = this.delay;
-         o.random = this.random;
-         o.group = this.group;
-         o.targetId = this.targetId;
-         o.targetMask = this.targetMask;
-         o.delay = this.delay;
-         o.triggers = this.triggers;
-         o.order = this.order;
-         return o;
+         var _loc1_:EffectInstance = new EffectInstance();
+         _loc1_.zoneShape = this.zoneShape;
+         _loc1_.zoneSize = this.zoneSize;
+         _loc1_.zoneMinSize = this.zoneMinSize;
+         _loc1_.effectId = this.effectId;
+         _loc1_.duration = this.duration;
+         _loc1_.delay = this.delay;
+         _loc1_.random = this.random;
+         _loc1_.group = this.group;
+         _loc1_.targetId = this.targetId;
+         _loc1_.targetMask = this.targetMask;
+         return _loc1_;
       }
       
-      public function add(effect:*) : EffectInstance {
+      public function add(param1:*) : EffectInstance {
          return new EffectInstance();
       }
       
-      public function setParameter(paramIndex:uint, value:*) : void {
+      public function setParameter(param1:uint, param2:*) : void {
       }
       
       public function forceDescriptionRefresh() : void {
@@ -229,155 +222,155 @@ package com.ankamagames.dofus.datacenter.effects
          this._theoricDescription = UNDEFINED_DESCRIPTION;
       }
       
-      function getTurnCountStr(bShowLast:Boolean) : String {
-         var sTmp:String = new String();
+      private function getTurnCountStr(param1:Boolean) : String {
+         var _loc2_:String = new String();
          if(this.delay > 0)
          {
             return PatternDecoder.combine(I18n.getUiText("ui.common.delayTurn",[this.delay]),"n",this.delay <= 1);
          }
-         var d:int = this.duration;
-         if(isNaN(d))
+         var _loc3_:int = this.duration;
+         if(isNaN(_loc3_))
          {
             return "";
          }
-         if(d > -1)
+         if(_loc3_ > -1)
          {
-            if(d > 1)
+            if(_loc3_ > 1)
             {
-               return PatternDecoder.combine(I18n.getUiText("ui.common.turn",[d]),"n",false);
+               return PatternDecoder.combine(I18n.getUiText("ui.common.turn",[_loc3_]),"n",false);
             }
-            if(d == 0)
+            if(_loc3_ == 0)
             {
                return "";
             }
-            if(bShowLast)
+            if(param1)
             {
                return I18n.getUiText("ui.common.lastTurn");
             }
-            return PatternDecoder.combine(I18n.getUiText("ui.common.turn",[d]),"n",true);
+            return PatternDecoder.combine(I18n.getUiText("ui.common.turn",[_loc3_]),"n",true);
          }
          return I18n.getUiText("ui.common.infinit");
       }
       
-      function getEmoticonName(id:int) : String {
-         var o:Emoticon = Emoticon.getEmoticonById(id);
-         return o?o.name:UNKNOWN_NAME;
+      private function getEmoticonName(param1:int) : String {
+         var _loc2_:Emoticon = Emoticon.getEmoticonById(param1);
+         return _loc2_?_loc2_.name:UNKNOWN_NAME;
       }
       
-      function getItemTypeName(id:int) : String {
-         var o:ItemType = ItemType.getItemTypeById(id);
-         return o?o.name:UNKNOWN_NAME;
+      private function getItemTypeName(param1:int) : String {
+         var _loc2_:ItemType = ItemType.getItemTypeById(param1);
+         return _loc2_?_loc2_.name:UNKNOWN_NAME;
       }
       
-      function getMonsterName(id:int) : String {
-         var o:Monster = Monster.getMonsterById(id);
-         return o?o.name:UNKNOWN_NAME;
+      private function getMonsterName(param1:int) : String {
+         var _loc2_:Monster = Monster.getMonsterById(param1);
+         return _loc2_?_loc2_.name:UNKNOWN_NAME;
       }
       
-      function getCompanionName(id:int) : String {
-         var o:Companion = Companion.getCompanionById(id);
-         return o?o.name:UNKNOWN_NAME;
+      private function getCompanionName(param1:int) : String {
+         var _loc2_:Companion = Companion.getCompanionById(param1);
+         return _loc2_?_loc2_.name:UNKNOWN_NAME;
       }
       
-      function getMonsterGrade(pId:int, pGrade:int) : String {
-         var m:Monster = Monster.getMonsterById(pId);
-         return m?m.getMonsterGrade(pGrade).level.toString():UNKNOWN_NAME;
+      private function getMonsterGrade(param1:int, param2:int) : String {
+         var _loc3_:Monster = Monster.getMonsterById(param1);
+         return _loc3_?_loc3_.getMonsterGrade(param2).level.toString():UNKNOWN_NAME;
       }
       
-      function getSpellName(id:int) : String {
-         var o:Spell = Spell.getSpellById(id);
-         return o?o.name:UNKNOWN_NAME;
+      private function getSpellName(param1:int) : String {
+         var _loc2_:Spell = Spell.getSpellById(param1);
+         return _loc2_?_loc2_.name:UNKNOWN_NAME;
       }
       
-      function getSpellLevelName(id:int) : String {
-         var o:SpellLevel = SpellLevel.getLevelById(id);
-         var name:String = o?this.getSpellName(o.spellId):UNKNOWN_NAME;
-         trace(name);
-         return o?this.getSpellName(o.spellId):UNKNOWN_NAME;
+      private function getSpellLevelName(param1:int) : String {
+         var _loc2_:SpellLevel = SpellLevel.getLevelById(param1);
+         var _loc3_:String = _loc2_?this.getSpellName(_loc2_.spellId):UNKNOWN_NAME;
+         return _loc2_?this.getSpellName(_loc2_.spellId):UNKNOWN_NAME;
       }
       
-      function getJobName(id:int) : String {
-         var o:Job = Job.getJobById(id);
-         return o?o.name:UNKNOWN_NAME;
+      private function getJobName(param1:int) : String {
+         var _loc2_:Job = Job.getJobById(param1);
+         return _loc2_?_loc2_.name:UNKNOWN_NAME;
       }
       
-      function getDocumentTitle(id:int) : String {
-         var o:Document = Document.getDocumentById(id);
-         return o?o.title:UNKNOWN_NAME;
+      private function getDocumentTitle(param1:int) : String {
+         var _loc2_:Document = Document.getDocumentById(param1);
+         return _loc2_?_loc2_.title:UNKNOWN_NAME;
       }
       
-      function getAlignmentSideName(id:int) : String {
-         var o:AlignmentSide = AlignmentSide.getAlignmentSideById(id);
-         return o?o.name:UNKNOWN_NAME;
+      private function getAlignmentSideName(param1:int) : String {
+         var _loc2_:AlignmentSide = AlignmentSide.getAlignmentSideById(param1);
+         return _loc2_?_loc2_.name:UNKNOWN_NAME;
       }
       
-      function getItemName(id:int) : String {
-         var o:Item = Item.getItemById(id);
-         return o?o.name:UNKNOWN_NAME;
+      private function getItemName(param1:int) : String {
+         var _loc2_:Item = Item.getItemById(param1);
+         return _loc2_?_loc2_.name:UNKNOWN_NAME;
       }
       
-      function getMonsterSuperRaceName(id:int) : String {
-         var o:MonsterSuperRace = MonsterSuperRace.getMonsterSuperRaceById(id);
-         return o?o.name:UNKNOWN_NAME;
+      private function getMonsterSuperRaceName(param1:int) : String {
+         var _loc2_:MonsterSuperRace = MonsterSuperRace.getMonsterSuperRaceById(param1);
+         return _loc2_?_loc2_.name:UNKNOWN_NAME;
       }
       
-      function getMonsterRaceName(id:int) : String {
-         var o:MonsterRace = MonsterRace.getMonsterRaceById(id);
-         return o?o.name:UNKNOWN_NAME;
+      private function getMonsterRaceName(param1:int) : String {
+         var _loc2_:MonsterRace = MonsterRace.getMonsterRaceById(param1);
+         return _loc2_?_loc2_.name:UNKNOWN_NAME;
       }
       
-      function getTitleName(id:int) : String {
-         var o:Title = Title.getTitleById(id);
-         return o?o.name:UNKNOWN_NAME;
+      private function getTitleName(param1:int) : String {
+         var _loc2_:Title = Title.getTitleById(param1);
+         return _loc2_?_loc2_.name:UNKNOWN_NAME;
       }
       
-      function getSpellStateName(id:int) : String {
-         var o:SpellState = SpellState.getSpellStateById(id);
-         return o?o.name:UNKNOWN_NAME;
+      private function getSpellStateName(param1:int) : String {
+         var _loc2_:SpellState = SpellState.getSpellStateById(param1);
+         return _loc2_?_loc2_.name:UNKNOWN_NAME;
       }
       
-      function parseZone() : void {
-         var params:Array = null;
-         var hasMinSize:* = false;
+      private function parseZone() : void {
+         var _loc1_:Array = null;
+         var _loc2_:* = false;
          if((this.rawZone) && (this.rawZone.length))
          {
             this.zoneShape = this.rawZone.charCodeAt(0);
-            params = this.rawZone.substr(1).split(",");
-            hasMinSize = (this.zoneShape == SpellShapeEnum.C) || (this.zoneShape == SpellShapeEnum.X) || (this.zoneShape == SpellShapeEnum.Q) || (this.zoneShape == SpellShapeEnum.plus) || (this.zoneShape == SpellShapeEnum.sharp);
-            switch(params.length)
+            _loc1_ = this.rawZone.substr(1).split(",");
+            _loc2_ = this.zoneShape == SpellShapeEnum.C || this.zoneShape == SpellShapeEnum.X || this.zoneShape == SpellShapeEnum.Q || this.zoneShape == SpellShapeEnum.plus || this.zoneShape == SpellShapeEnum.sharp;
+            this.zoneSize = this.zoneMinSize = this.zoneEfficiencyPercent = this.zoneMaxEfficiency = 0;
+            switch(_loc1_.length)
             {
                case 1:
-                  this.zoneSize = parseInt(params[0]);
+                  this.zoneSize = parseInt(_loc1_[0]);
                   break;
                case 2:
-                  this.zoneSize = parseInt(params[0]);
-                  if(hasMinSize)
+                  this.zoneSize = parseInt(_loc1_[0]);
+                  if(_loc2_)
                   {
-                     this.zoneMinSize = parseInt(params[1]);
+                     this.zoneMinSize = parseInt(_loc1_[1]);
                   }
                   else
                   {
-                     this.zoneEfficiencyPercent = parseInt(params[1]);
+                     this.zoneEfficiencyPercent = parseInt(_loc1_[1]);
                   }
                   break;
                case 3:
-                  this.zoneSize = parseInt(params[0]);
-                  if(hasMinSize)
+                  this.zoneSize = parseInt(_loc1_[0]);
+                  if(_loc2_)
                   {
-                     this.zoneMinSize = parseInt(params[1]);
-                     this.zoneEfficiencyPercent = parseInt(params[2]);
+                     this.zoneMinSize = parseInt(_loc1_[1]);
+                     this.zoneEfficiencyPercent = parseInt(_loc1_[2]);
                   }
                   else
                   {
-                     this.zoneEfficiencyPercent = parseInt(params[1]);
-                     this.zoneMaxEfficiency = parseInt(params[2]);
+                     this.zoneEfficiencyPercent = parseInt(_loc1_[1]);
+                     this.zoneMaxEfficiency = parseInt(_loc1_[2]);
                   }
                   break;
                case 4:
-                  this.zoneSize = parseInt(params[0]);
-                  this.zoneMinSize = parseInt(params[1]);
-                  this.zoneEfficiencyPercent = parseInt(params[2]);
-                  this.zoneMaxEfficiency = parseInt(params[3]);
+                  this.zoneSize = parseInt(_loc1_[0]);
+                  this.zoneMinSize = parseInt(_loc1_[1]);
+                  this.zoneEfficiencyPercent = parseInt(_loc1_[2]);
+                  this.zoneMaxEfficiency = parseInt(_loc1_[3]);
                   break;
             }
             this._rawZoneInit = true;
@@ -388,35 +381,35 @@ package com.ankamagames.dofus.datacenter.effects
          }
       }
       
-      function prepareDescription(desc:String, effectId:uint) : String {
-         var aTmp:Array = null;
-         var nYear:String = null;
-         var nMonth:String = null;
-         var nDay:String = null;
-         var nHours:String = null;
-         var nMinutes:String = null;
-         var lang:String = null;
-         if(desc == null)
+      private function prepareDescription(param1:String, param2:uint) : String {
+         var _loc4_:Array = null;
+         var _loc5_:String = null;
+         var _loc6_:String = null;
+         var _loc7_:String = null;
+         var _loc8_:String = null;
+         var _loc9_:String = null;
+         var _loc10_:String = null;
+         if(param1 == null)
          {
             return "";
          }
-         var sEffect:String = "";
-         if(desc.indexOf("#") != -1)
+         var _loc3_:* = "";
+         if(param1.indexOf("#") != -1)
          {
-            aTmp = [this.parameter0,this.parameter1,this.parameter2,this.parameter3,this.parameter4];
-            switch(effectId)
+            _loc4_ = [this.parameter0,this.parameter1,this.parameter2,this.parameter3,this.parameter4];
+            switch(param2)
             {
                case 10:
-                  aTmp[2] = this.getEmoticonName(aTmp[0]);
+                  _loc4_[2] = this.getEmoticonName(_loc4_[0]);
                   break;
                case 165:
                case 1084:
-                  aTmp[0] = this.getItemTypeName(aTmp[0]);
+                  _loc4_[0] = this.getItemTypeName(_loc4_[0]);
                   break;
                case 197:
                case 181:
                case 185:
-                  aTmp[0] = this.getMonsterName(aTmp[0]);
+                  _loc4_[0] = this.getMonsterName(_loc4_[0]);
                   break;
                case 281:
                case 282:
@@ -433,66 +426,66 @@ package com.ankamagames.dofus.datacenter.effects
                case 293:
                case 294:
                case 1160:
-                  aTmp[0] = this.getSpellName(aTmp[0]);
+                  _loc4_[0] = this.getSpellName(_loc4_[0]);
                   break;
                case 406:
-                  aTmp[2] = this.getSpellName(aTmp[2]);
+                  _loc4_[2] = this.getSpellName(_loc4_[2]);
                   break;
                case 603:
                case 615:
-                  aTmp[2] = this.getJobName(aTmp[0]);
+                  _loc4_[2] = this.getJobName(_loc4_[0]);
                   break;
                case 604:
-                  if(aTmp[2] == null)
+                  if(_loc4_[2] == null)
                   {
-                     aTmp[2] = aTmp[0];
+                     _loc4_[2] = _loc4_[0];
                   }
-                  aTmp[2] = this.getSpellLevelName(aTmp[2]);
+                  _loc4_[2] = this.getSpellLevelName(_loc4_[2]);
                   break;
                case 614:
                case 1050:
-                  aTmp[0] = aTmp[2];
-                  aTmp[1] = this.getJobName(aTmp[1]);
+                  _loc4_[0] = _loc4_[2];
+                  _loc4_[1] = this.getJobName(_loc4_[1]);
                   break;
                case 616:
                case 624:
-                  aTmp[2] = this.getSpellName(aTmp[0]);
+                  _loc4_[2] = this.getSpellName(_loc4_[0]);
                   break;
                case 620:
-                  aTmp[2] = this.getDocumentTitle(aTmp[0]);
+                  _loc4_[2] = this.getDocumentTitle(_loc4_[0]);
                   break;
                case 621:
-                  aTmp[2] = this.getMonsterName(aTmp[1]);
+                  _loc4_[2] = this.getMonsterName(_loc4_[1]);
                   break;
                case 623:
                case 628:
-                  aTmp[1] = this.getMonsterGrade(aTmp[2],aTmp[0]);
-                  aTmp[2] = this.getMonsterName(aTmp[2]);
+                  _loc4_[1] = this.getMonsterGrade(_loc4_[2],_loc4_[0]);
+                  _loc4_[2] = this.getMonsterName(_loc4_[2]);
                   break;
                case 649:
                case 960:
-                  aTmp[2] = this.getAlignmentSideName(aTmp[0]);
+                  _loc4_[2] = this.getAlignmentSideName(_loc4_[0]);
                   break;
                case 669:
                   break;
                case 699:
-                  aTmp[0] = this.getJobName(aTmp[0]);
+                  _loc4_[0] = this.getJobName(_loc4_[0]);
                   break;
                case 706:
                   break;
                case 715:
-                  aTmp[0] = this.getMonsterSuperRaceName(aTmp[0]);
+                  _loc4_[0] = this.getMonsterSuperRaceName(_loc4_[0]);
                   break;
                case 716:
-                  aTmp[0] = this.getMonsterRaceName(aTmp[0]);
+                  _loc4_[0] = this.getMonsterRaceName(_loc4_[0]);
                   break;
                case 717:
                case 1008:
                case 1011:
-                  aTmp[0] = this.getMonsterName(aTmp[0]);
+                  _loc4_[0] = this.getMonsterName(_loc4_[0]);
                   break;
                case 724:
-                  aTmp[2] = this.getTitleName(aTmp[0]);
+                  _loc4_[2] = this.getTitleName(_loc4_[0]);
                   break;
                case 787:
                case 792:
@@ -504,72 +497,71 @@ package com.ankamagames.dofus.datacenter.effects
                case 1036:
                case 1044:
                case 1045:
-                  aTmp[0] = this.getSpellName(aTmp[0]);
-                  trace("nom du sort " + aTmp[0]);
+                  _loc4_[0] = this.getSpellName(_loc4_[0]);
                   break;
                case 800:
-                  aTmp[2] = aTmp[0];
+                  _loc4_[2] = _loc4_[0];
                   break;
                case 806:
-                  if(aTmp[1] > 6)
+                  if(_loc4_[1] > 6)
                   {
-                     aTmp[0] = I18n.getUiText("ui.petWeight.fat",[aTmp[1]]);
+                     _loc4_[0] = I18n.getUiText("ui.petWeight.fat",[_loc4_[1]]);
                   }
                   else
                   {
-                     if(aTmp[2] > 6)
+                     if(_loc4_[2] > 6)
                      {
-                        aTmp[0] = I18n.getUiText("ui.petWeight.lean",[aTmp[2]]);
+                        _loc4_[0] = I18n.getUiText("ui.petWeight.lean",[_loc4_[2]]);
                      }
                      else
                      {
-                        if((this is EffectInstanceInteger) && (aTmp[0] > 6))
+                        if(this is EffectInstanceInteger && _loc4_[0] > 6)
                         {
-                           aTmp[0] = I18n.getUiText("ui.petWeight.lean",[aTmp[0]]);
+                           _loc4_[0] = I18n.getUiText("ui.petWeight.lean",[_loc4_[0]]);
                         }
                         else
                         {
-                           aTmp[0] = I18n.getUiText("ui.petWeight.nominal");
+                           _loc4_[0] = I18n.getUiText("ui.petWeight.nominal");
                         }
                      }
                   }
                   break;
                case 807:
-                  if(aTmp[0])
+                  if(_loc4_[0])
                   {
-                     aTmp[0] = this.getItemName(aTmp[0]);
+                     _loc4_[0] = this.getItemName(_loc4_[0]);
                   }
                   else
                   {
-                     aTmp[0] = I18n.getUiText("ui.common.none");
+                     _loc4_[0] = I18n.getUiText("ui.common.none");
                   }
                   break;
                case 814:
                case 1151:
-                  aTmp[0] = this.getItemName(aTmp[0]);
+                  _loc4_[0] = this.getItemName(_loc4_[0]);
                   break;
                case 905:
-                  aTmp[1] = this.getMonsterName(aTmp[1]);
+                  _loc4_[1] = this.getMonsterName(_loc4_[1]);
                   break;
                case 939:
                case 940:
-                  aTmp[2] = this.getItemName(aTmp[0]);
+                  _loc4_[2] = this.getItemName(_loc4_[0]);
                   break;
                case 950:
                case 951:
                case 952:
-                  if(aTmp[2])
+                  if(_loc4_[2])
                   {
-                     aTmp[2] = this.getSpellStateName(aTmp[2]);
+                     _loc4_[2] = this.getSpellStateName(_loc4_[2]);
                   }
                   else
                   {
-                     aTmp[2] = this.getSpellStateName(aTmp[0]);
+                     _loc4_[2] = this.getSpellStateName(_loc4_[0]);
                   }
                   break;
                case 961:
                case 962:
-                  aTmp[2] = aTmp[0];
+                  _loc4_[2] = _loc4_[0];
                   break;
                case 982:
                   break;
@@ -577,61 +569,63 @@ package com.ankamagames.dofus.datacenter.effects
                case 987:
                case 985:
                case 996:
-                  aTmp[3] = "{player," + aTmp[3] + "}";
+                  _loc4_[3] = "{player," + _loc4_[3] + "}";
                   break;
                case 1111:
-                  aTmp[2] = aTmp[0];
+                  _loc4_[2] = _loc4_[0];
                   break;
                case 1161:
-                  aTmp[0] = this.getCompanionName(aTmp[0]);
+                  _loc4_[0] = this.getCompanionName(_loc4_[0]);
                   break;
                case 805:
                case 808:
                case 983:
-                  aTmp[2] = aTmp[2] == undefined?0:aTmp[2];
-                  nYear = aTmp[0];
-                  nMonth = aTmp[1].substr(0,2);
-                  nDay = aTmp[1].substr(2,2);
-                  nHours = aTmp[2].substr(0,2);
-                  nMinutes = aTmp[2].substr(2,2);
-                  lang = XmlConfig.getInstance().getEntry("config.lang.current");
-                  switch(lang)
+                  _loc4_[2] = _loc4_[2] == undefined?0:_loc4_[2];
+                  _loc5_ = _loc4_[0];
+                  _loc6_ = _loc4_[1].substr(0,2);
+                  _loc7_ = _loc4_[1].substr(2,2);
+                  _loc8_ = _loc4_[2].substr(0,2);
+                  _loc9_ = _loc4_[2].substr(2,2);
+                  _loc10_ = XmlConfig.getInstance().getEntry("config.lang.current");
+                  switch(_loc10_)
                   {
                      case LanguageEnum.LANG_FR:
-                        aTmp[0] = nDay + "/" + nMonth + "/" + nYear + " " + nHours + ":" + nMinutes;
+                        _loc4_[0] = _loc7_ + "/" + _loc6_ + "/" + _loc5_ + " " + _loc8_ + ":" + _loc9_;
                         break;
                      case LanguageEnum.LANG_EN:
-                        aTmp[0] = nMonth + "/" + nDay + "/" + nYear + " " + nHours + ":" + nMinutes;
+                        _loc4_[0] = _loc6_ + "/" + _loc7_ + "/" + _loc5_ + " " + _loc8_ + ":" + _loc9_;
                         break;
+                     default:
+                        _loc4_[0] = _loc6_ + "/" + _loc7_ + "/" + _loc5_ + " " + _loc8_ + ":" + _loc9_;
                   }
                   break;
             }
-            sEffect = PatternDecoder.getDescription(desc,aTmp);
-            if((sEffect == null) || (sEffect == ""))
+            _loc3_ = PatternDecoder.getDescription(param1,_loc4_);
+            if(_loc3_ == null || _loc3_ == "")
             {
                return "";
             }
          }
          else
          {
-            sEffect = desc;
+            _loc3_ = param1;
          }
          if(this.modificator != 0)
          {
-            sEffect = sEffect + (" " + I18n.getUiText("ui.effect.boosted.spell.complement",[this.modificator],"%"));
+            _loc3_ = _loc3_ + (" " + I18n.getUiText("ui.effect.boosted.spell.complement",[this.modificator],"%"));
          }
          if(this.random > 0)
          {
             if(this.group > 0)
             {
-               sEffect = sEffect + (" (" + I18n.getUiText("ui.common.random") + ")");
+               _loc3_ = _loc3_ + (" (" + I18n.getUiText("ui.common.random") + ")");
             }
             else
             {
-               sEffect = sEffect + (" " + I18n.getUiText("ui.effect.randomProbability",[this.random],"%"));
+               _loc3_ = _loc3_ + (" " + I18n.getUiText("ui.effect.randomProbability",[this.random],"%"));
             }
          }
-         return sEffect;
+         return _loc3_;
       }
    }
 }

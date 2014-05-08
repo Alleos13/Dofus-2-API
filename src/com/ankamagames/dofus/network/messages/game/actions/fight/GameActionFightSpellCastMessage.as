@@ -28,10 +28,10 @@ package com.ankamagames.dofus.network.messages.game.actions.fight
          return 1010;
       }
       
-      public function initGameActionFightSpellCastMessage(actionId:uint=0, sourceId:int=0, targetId:int=0, destinationCellId:int=0, critical:uint=1, silentCast:Boolean=false, spellId:uint=0, spellLevel:uint=0) : GameActionFightSpellCastMessage {
-         super.initAbstractGameActionFightTargetedAbilityMessage(actionId,sourceId,targetId,destinationCellId,critical,silentCast);
-         this.spellId = spellId;
-         this.spellLevel = spellLevel;
+      public function initGameActionFightSpellCastMessage(param1:uint=0, param2:int=0, param3:int=0, param4:int=0, param5:uint=1, param6:Boolean=false, param7:uint=0, param8:uint=0) : GameActionFightSpellCastMessage {
+         super.initAbstractGameActionFightTargetedAbilityMessage(param1,param2,param3,param4,param5,param6);
+         this.spellId = param7;
+         this.spellLevel = param8;
          this._isInitialized = true;
          return this;
       }
@@ -43,56 +43,56 @@ package com.ankamagames.dofus.network.messages.game.actions.fight
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameActionFightSpellCastMessage(output);
+      override public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_GameActionFightSpellCastMessage(param1);
       }
       
-      public function serializeAs_GameActionFightSpellCastMessage(output:IDataOutput) : void {
-         super.serializeAs_AbstractGameActionFightTargetedAbilityMessage(output);
+      public function serializeAs_GameActionFightSpellCastMessage(param1:IDataOutput) : void {
+         super.serializeAs_AbstractGameActionFightTargetedAbilityMessage(param1);
          if(this.spellId < 0)
          {
             throw new Error("Forbidden value (" + this.spellId + ") on element spellId.");
          }
          else
          {
-            output.writeShort(this.spellId);
-            if((this.spellLevel < 1) || (this.spellLevel > 6))
+            param1.writeShort(this.spellId);
+            if(this.spellLevel < 1 || this.spellLevel > 6)
             {
                throw new Error("Forbidden value (" + this.spellLevel + ") on element spellLevel.");
             }
             else
             {
-               output.writeByte(this.spellLevel);
+               param1.writeByte(this.spellLevel);
                return;
             }
          }
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameActionFightSpellCastMessage(input);
+      override public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_GameActionFightSpellCastMessage(param1);
       }
       
-      public function deserializeAs_GameActionFightSpellCastMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.spellId = input.readShort();
+      public function deserializeAs_GameActionFightSpellCastMessage(param1:IDataInput) : void {
+         super.deserialize(param1);
+         this.spellId = param1.readShort();
          if(this.spellId < 0)
          {
             throw new Error("Forbidden value (" + this.spellId + ") on element of GameActionFightSpellCastMessage.spellId.");
          }
          else
          {
-            this.spellLevel = input.readByte();
-            if((this.spellLevel < 1) || (this.spellLevel > 6))
+            this.spellLevel = param1.readByte();
+            if(this.spellLevel < 1 || this.spellLevel > 6)
             {
                throw new Error("Forbidden value (" + this.spellLevel + ") on element of GameActionFightSpellCastMessage.spellLevel.");
             }

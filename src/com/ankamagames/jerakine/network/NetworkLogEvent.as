@@ -6,10 +6,10 @@ package com.ankamagames.jerakine.network
    public class NetworkLogEvent extends LogEvent
    {
       
-      public function NetworkLogEvent(msg:INetworkMessage, isServerMsg:Boolean) {
+      public function NetworkLogEvent(param1:INetworkMessage, param2:Boolean) {
          super(null,null,0);
-         this._msg = msg;
-         this._isServerMsg = isServerMsg;
+         this._msg = param1;
+         this._isServerMsg = param2;
       }
       
       private var _msg:INetworkMessage;

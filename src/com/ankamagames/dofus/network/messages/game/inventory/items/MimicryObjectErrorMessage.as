@@ -28,10 +28,10 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
          return 6461;
       }
       
-      public function initMimicryObjectErrorMessage(reason:int=0, preview:Boolean=false, errorCode:int=0) : MimicryObjectErrorMessage {
-         super.initObjectErrorMessage(reason);
-         this.preview = preview;
-         this.errorCode = errorCode;
+      public function initMimicryObjectErrorMessage(param1:int=0, param2:Boolean=false, param3:int=0) : MimicryObjectErrorMessage {
+         super.initObjectErrorMessage(param1);
+         this.preview = param2;
+         this.errorCode = param3;
          this._isInitialized = true;
          return this;
       }
@@ -43,34 +43,34 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_MimicryObjectErrorMessage(output);
+      override public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_MimicryObjectErrorMessage(param1);
       }
       
-      public function serializeAs_MimicryObjectErrorMessage(output:IDataOutput) : void {
-         super.serializeAs_ObjectErrorMessage(output);
-         output.writeBoolean(this.preview);
-         output.writeByte(this.errorCode);
+      public function serializeAs_MimicryObjectErrorMessage(param1:IDataOutput) : void {
+         super.serializeAs_ObjectErrorMessage(param1);
+         param1.writeBoolean(this.preview);
+         param1.writeByte(this.errorCode);
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_MimicryObjectErrorMessage(input);
+      override public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_MimicryObjectErrorMessage(param1);
       }
       
-      public function deserializeAs_MimicryObjectErrorMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.preview = input.readBoolean();
-         this.errorCode = input.readByte();
+      public function deserializeAs_MimicryObjectErrorMessage(param1:IDataInput) : void {
+         super.deserialize(param1);
+         this.preview = param1.readBoolean();
+         this.errorCode = param1.readByte();
       }
    }
 }

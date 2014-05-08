@@ -10,19 +10,15 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class GiftItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function GiftItemCriterion(pCriterion:String) {
-         super(pCriterion);
-         var arrayParams:Array = String(_criterionValueText).split(",");
-         if((arrayParams) && (arrayParams.length > 0))
+      public function GiftItemCriterion(param1:String) {
+         super(param1);
+         var _loc2_:Array = String(_criterionValueText).split(",");
+         if((_loc2_) && _loc2_.length > 0)
          {
-            if(arrayParams.length > 2)
+            if(_loc2_.length <= 2)
             {
-               trace("Les paramètres pour le don sont mauvais ! (" + _serverCriterionForm + ")");
-            }
-            else
-            {
-               this._aliGiftId = uint(arrayParams[0]);
-               this._aliGiftLevel = int(arrayParams[1]);
+               this._aliGiftId = uint(_loc2_[0]);
+               this._aliGiftLevel = int(_loc2_[1]);
             }
          }
          else
@@ -37,19 +33,19 @@ package com.ankamagames.dofus.datacenter.items.criterion
       private var _aliGiftLevel:int = -1;
       
       override public function get isRespected() : Boolean {
-         var rgI:* = 0;
-         var rank:int = (Kernel.getWorker().getFrame(AlignmentFrame) as AlignmentFrame).playerRank;
-         var rankGift:AlignmentRankJntGift = AlignmentRankJntGift.getAlignmentRankJntGiftById(rank);
-         if((rankGift) && (rankGift.gifts))
+         var _loc3_:* = 0;
+         var _loc1_:int = (Kernel.getWorker().getFrame(AlignmentFrame) as AlignmentFrame).playerRank;
+         var _loc2_:AlignmentRankJntGift = AlignmentRankJntGift.getAlignmentRankJntGiftById(_loc1_);
+         if((_loc2_) && (_loc2_.gifts))
          {
-            rgI = 0;
-            while(rgI < rankGift.gifts.length)
+            _loc3_ = 0;
+            while(_loc3_ < _loc2_.gifts.length)
             {
-               if(rankGift.gifts[rgI] == this._aliGiftId)
+               if(_loc2_.gifts[_loc3_] == this._aliGiftId)
                {
                   if(this._aliGiftLevel != 0)
                   {
-                     if(rankGift.levels[rgI] > this._aliGiftLevel)
+                     if(_loc2_.levels[_loc3_] > this._aliGiftLevel)
                      {
                         return true;
                      }
@@ -57,25 +53,25 @@ package com.ankamagames.dofus.datacenter.items.criterion
                   }
                   return true;
                }
-               rgI++;
+               _loc3_++;
             }
          }
          return false;
       }
       
       override public function get text() : String {
-         var criterionInfo:Array = null;
+         var _loc1_:Array = null;
          if(_operator.text == ">")
          {
-            criterionInfo = _criterionValueText.split(",");
+            _loc1_ = _criterionValueText.split(",");
             return I18n.getUiText("ui.pvp.giftRequired",[AlignmentGift.getAlignmentGiftById(this._aliGiftId).name + " > " + this._aliGiftLevel]);
          }
          return I18n.getUiText("ui.pvp.giftRequired",[AlignmentGift.getAlignmentGiftById(this._aliGiftId).name]);
       }
       
       override public function clone() : IItemCriterion {
-         var clonedCriterion:GiftItemCriterion = new GiftItemCriterion(this.basicText);
-         return clonedCriterion;
+         var _loc1_:GiftItemCriterion = new GiftItemCriterion(this.basicText);
+         return _loc1_;
       }
    }
 }

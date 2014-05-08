@@ -113,8 +113,8 @@ package com.ankamagames.berilia.components
          return this._nWidth;
       }
       
-      override public function set width(nValue:Number) : void {
-         this._nWidth = nValue;
+      override public function set width(param1:Number) : void {
+         this._nWidth = param1;
          if(this.finalized)
          {
             this.scrollBarProcess();
@@ -125,8 +125,8 @@ package com.ankamagames.berilia.components
          return this._nHeight;
       }
       
-      override public function set height(nValue:Number) : void {
-         this._nHeight = nValue;
+      override public function set height(param1:Number) : void {
+         this._nHeight = param1;
          if(this.finalized)
          {
             this.scrollBarProcess();
@@ -137,15 +137,15 @@ package com.ankamagames.berilia.components
          return this._sCss;
       }
       
-      public function set css(sValue:Uri) : void {
-         if(sValue == null)
+      public function set css(param1:Uri) : void {
+         if(param1 == null)
          {
             return;
          }
-         if(sValue != this._sCss)
+         if(param1 != this._sCss)
          {
-            this._sCss = sValue;
-            CssManager.getInstance().askCss(sValue.uri,new Callback(this.fakeCssLoaded));
+            this._sCss = param1;
+            CssManager.getInstance().askCss(param1.uri,new Callback(this.fakeCssLoaded));
          }
       }
       
@@ -153,8 +153,8 @@ package com.ankamagames.berilia.components
          return this._nMin;
       }
       
-      public function set min(nValue:int) : void {
-         this._nMin = nValue;
+      public function set min(param1:int) : void {
+         this._nMin = param1;
          if(this.finalized)
          {
             this.scrollBarProcess();
@@ -165,8 +165,8 @@ package com.ankamagames.berilia.components
          return this._nMax;
       }
       
-      public function set max(nValue:int) : void {
-         this._nMax = nValue;
+      public function set max(param1:int) : void {
+         this._nMax = param1;
          if(this.finalized)
          {
             this.scrollBarProcess();
@@ -177,8 +177,8 @@ package com.ankamagames.berilia.components
          return this._nTotal;
       }
       
-      public function set total(nValue:int) : void {
-         this._nTotal = nValue;
+      public function set total(param1:int) : void {
+         this._nTotal = param1;
          if(this.finalized)
          {
             this.scrollBarProcess();
@@ -189,8 +189,8 @@ package com.ankamagames.berilia.components
          return this._nStep;
       }
       
-      public function set step(nValue:uint) : void {
-         this._nStep = nValue;
+      public function set step(param1:uint) : void {
+         this._nStep = param1;
          if(this.finalized)
          {
             this.scrollBarProcess();
@@ -201,16 +201,16 @@ package com.ankamagames.berilia.components
          return Math.min(Math.round((this._nCurrentPos - this._nBoxPosMin) / this._nScrollStep) * this._nStep + this._nMin,this._nMax);
       }
       
-      public function set value(nValue:int) : void {
-         if(nValue > this._nMax)
+      public function set value(param1:int) : void {
+         if(param1 > this._nMax)
          {
-            nValue = this._nMax;
+            param1 = this._nMax;
          }
-         if(nValue < this._nMin)
+         if(param1 < this._nMin)
          {
-            nValue = this._nMin;
+            param1 = this._nMin;
          }
-         this._nCurrentValue = nValue;
+         this._nCurrentValue = param1;
          if(this.finalized)
          {
             this._nCurrentPos = (this._nCurrentValue - this._nMin) * this._nStep * this._nScrollStep + this._nBoxPosMin;
@@ -218,8 +218,8 @@ package com.ankamagames.berilia.components
          }
       }
       
-      public function set scrollSpeed(nValue:Number) : void {
-         this._nScrollSpeed = nValue;
+      public function set scrollSpeed(param1:Number) : void {
+         this._nScrollSpeed = param1;
       }
       
       public function get scrollSpeed() : Number {
@@ -230,16 +230,16 @@ package com.ankamagames.berilia.components
          return this._bFinalized;
       }
       
-      public function set finalized(bValue:Boolean) : void {
-         this._bFinalized = bValue;
+      public function set finalized(param1:Boolean) : void {
+         this._bFinalized = param1;
       }
       
       public function get boxSize() : Number {
          return this._nBoxSize;
       }
       
-      public function set vertical(b:Boolean) : void {
-         this._bVertical = b;
+      public function set vertical(param1:Boolean) : void {
+         this._bVertical = param1;
          if(this.finalized)
          {
             this.scrollBarProcess();
@@ -250,12 +250,12 @@ package com.ankamagames.berilia.components
          return this._bVertical;
       }
       
-      override public function set disabled(bool:Boolean) : void {
-         if(bool == this._bDisabled)
+      override public function set disabled(param1:Boolean) : void {
+         if(param1 == this._bDisabled)
          {
             return;
          }
-         if(bool)
+         if(param1)
          {
             if((this._texBox) && (this._texMin) && (this._texMax))
             {
@@ -277,7 +277,7 @@ package com.ankamagames.berilia.components
             mouseEnabled = true;
             mouseChildren = true;
          }
-         this._bDisabled = bool;
+         this._bDisabled = param1;
       }
       
       public function finalize() : void {
@@ -295,10 +295,10 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function scrollBarInit() : void {
-         var stateChangingProperties1:Array = null;
-         var stateChangingProperties2:Array = null;
-         var stateChangingProperties3:Array = null;
+      private function scrollBarInit() : void {
+         var _loc1_:Array = null;
+         var _loc2_:Array = null;
+         var _loc3_:Array = null;
          if(!this._gcMin)
          {
             this._gcMin = new ButtonContainer();
@@ -317,51 +317,51 @@ package com.ankamagames.berilia.components
             this._gcMin.addChild(this._texMin);
             this._gcMax.addChild(this._texMax);
             this._gcBox.addChild(this._texBox);
-            stateChangingProperties1 = new Array();
-            stateChangingProperties1[StatesEnum.STATE_OVER] = new Array();
-            stateChangingProperties1[StatesEnum.STATE_OVER][this._texBox.name] = new Array();
-            stateChangingProperties1[StatesEnum.STATE_OVER][this._texBox.name]["gotoAndStop"] = StatesEnum.STATE_OVER_STRING.toLocaleLowerCase();
-            stateChangingProperties1[StatesEnum.STATE_CLICKED] = new Array();
-            stateChangingProperties1[StatesEnum.STATE_CLICKED][this._texBox.name] = new Array();
-            stateChangingProperties1[StatesEnum.STATE_CLICKED][this._texBox.name]["gotoAndStop"] = StatesEnum.STATE_CLICKED_STRING.toLocaleLowerCase();
-            stateChangingProperties2 = new Array();
-            stateChangingProperties2[StatesEnum.STATE_OVER] = new Array();
-            stateChangingProperties2[StatesEnum.STATE_OVER][this._texMin.name] = new Array();
-            stateChangingProperties2[StatesEnum.STATE_OVER][this._texMin.name]["gotoAndStop"] = StatesEnum.STATE_OVER_STRING.toLocaleLowerCase();
-            stateChangingProperties2[StatesEnum.STATE_CLICKED] = new Array();
-            stateChangingProperties2[StatesEnum.STATE_CLICKED][this._texMin.name] = new Array();
-            stateChangingProperties2[StatesEnum.STATE_CLICKED][this._texMin.name]["gotoAndStop"] = StatesEnum.STATE_CLICKED_STRING.toLocaleLowerCase();
-            stateChangingProperties3 = new Array();
-            stateChangingProperties3[StatesEnum.STATE_OVER] = new Array();
-            stateChangingProperties3[StatesEnum.STATE_OVER][this._texMax.name] = new Array();
-            stateChangingProperties3[StatesEnum.STATE_OVER][this._texMax.name]["gotoAndStop"] = StatesEnum.STATE_OVER_STRING.toLocaleLowerCase();
-            stateChangingProperties3[StatesEnum.STATE_CLICKED] = new Array();
-            stateChangingProperties3[StatesEnum.STATE_CLICKED][this._texMax.name] = new Array();
-            stateChangingProperties3[StatesEnum.STATE_CLICKED][this._texMax.name]["gotoAndStop"] = StatesEnum.STATE_CLICKED_STRING.toLocaleLowerCase();
-            ButtonContainer(this._gcBox).changingStateData = stateChangingProperties1;
-            ButtonContainer(this._gcMin).changingStateData = stateChangingProperties2;
-            ButtonContainer(this._gcMax).changingStateData = stateChangingProperties3;
+            _loc1_ = new Array();
+            _loc1_[StatesEnum.STATE_OVER] = new Array();
+            _loc1_[StatesEnum.STATE_OVER][this._texBox.name] = new Array();
+            _loc1_[StatesEnum.STATE_OVER][this._texBox.name]["gotoAndStop"] = StatesEnum.STATE_OVER_STRING.toLocaleLowerCase();
+            _loc1_[StatesEnum.STATE_CLICKED] = new Array();
+            _loc1_[StatesEnum.STATE_CLICKED][this._texBox.name] = new Array();
+            _loc1_[StatesEnum.STATE_CLICKED][this._texBox.name]["gotoAndStop"] = StatesEnum.STATE_CLICKED_STRING.toLocaleLowerCase();
+            _loc2_ = new Array();
+            _loc2_[StatesEnum.STATE_OVER] = new Array();
+            _loc2_[StatesEnum.STATE_OVER][this._texMin.name] = new Array();
+            _loc2_[StatesEnum.STATE_OVER][this._texMin.name]["gotoAndStop"] = StatesEnum.STATE_OVER_STRING.toLocaleLowerCase();
+            _loc2_[StatesEnum.STATE_CLICKED] = new Array();
+            _loc2_[StatesEnum.STATE_CLICKED][this._texMin.name] = new Array();
+            _loc2_[StatesEnum.STATE_CLICKED][this._texMin.name]["gotoAndStop"] = StatesEnum.STATE_CLICKED_STRING.toLocaleLowerCase();
+            _loc3_ = new Array();
+            _loc3_[StatesEnum.STATE_OVER] = new Array();
+            _loc3_[StatesEnum.STATE_OVER][this._texMax.name] = new Array();
+            _loc3_[StatesEnum.STATE_OVER][this._texMax.name]["gotoAndStop"] = StatesEnum.STATE_OVER_STRING.toLocaleLowerCase();
+            _loc3_[StatesEnum.STATE_CLICKED] = new Array();
+            _loc3_[StatesEnum.STATE_CLICKED][this._texMax.name] = new Array();
+            _loc3_[StatesEnum.STATE_CLICKED][this._texMax.name]["gotoAndStop"] = StatesEnum.STATE_CLICKED_STRING.toLocaleLowerCase();
+            ButtonContainer(this._gcBox).changingStateData = _loc1_;
+            ButtonContainer(this._gcMin).changingStateData = _loc2_;
+            ButtonContainer(this._gcMax).changingStateData = _loc3_;
          }
          this.finalized = true;
          this.scrollBarProcess();
          getUi().iAmFinalized(this);
       }
       
-      function scrollBarProcess() : void {
-         var maxWL:int = Math.max(this._nWidth,this._nHeight);
+      private function scrollBarProcess() : void {
+         var _loc1_:int = Math.max(this._nWidth,this._nHeight);
          this._squareEdge = Math.min(this._nWidth,this._nHeight);
-         this._nBoxSize = (maxWL - 2 * this._squareEdge) * (this._nTotal - this._nMax) / this._nTotal;
+         this._nBoxSize = (_loc1_ - 2 * this._squareEdge) * (this._nTotal - this._nMax) / this._nTotal;
          if(this._nBoxSize < 10)
          {
-            this._nBoxSize = (maxWL - 2 * this._squareEdge - (this._nMax - this._nMin + 1)) * this._nStep;
+            this._nBoxSize = (_loc1_ - 2 * this._squareEdge - (this._nMax - this._nMin + 1)) * this._nStep;
          }
          if(this._nBoxSize < this._squareEdge)
          {
             this._nBoxSize = this._squareEdge;
          }
          this._nBoxPosMin = this._squareEdge - 6;
-         this._nBoxPosMax = int(maxWL - this._squareEdge - this._nBoxSize);
-         this._nScrollStep = (maxWL - 2 * this._squareEdge + 6 - this._nBoxSize) / (this._nMax - this._nMin);
+         this._nBoxPosMax = int(_loc1_ - this._squareEdge - this._nBoxSize);
+         this._nScrollStep = (_loc1_ - 2 * this._squareEdge + 6 - this._nBoxSize) / (this._nMax - this._nMin);
          this._nLastPos = this._nCurrentPos;
          if(this._nCurrentValue > this._nMax)
          {
@@ -490,7 +490,7 @@ package com.ankamagames.berilia.components
          this._texBack.mouseEnabled = true;
       }
       
-      function updateDisplayFromCurrentPos() : void {
+      private function updateDisplayFromCurrentPos() : void {
          if((this._texMin) && (this._texMax))
          {
             if(this._bVertical)
@@ -523,12 +523,12 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function approximate(nValue:Number) : Number {
-         return nValue + this._nMin;
+      private function approximate(param1:Number) : Number {
+         return param1 + this._nMin;
       }
       
-      function valueOfPos(nPos:Number) : int {
-         return Math.min(Math.ceil((nPos - this._nBoxPosMin) / this._nScrollStep) * this._nStep + this._nMin,this._nBoxPosMax);
+      private function valueOfPos(param1:Number) : int {
+         return Math.min(Math.ceil((param1 - this._nBoxPosMin) / this._nScrollStep) * this._nStep + this._nMin,this._nBoxPosMax);
       }
       
       override public function remove() : void {
@@ -551,20 +551,20 @@ package com.ankamagames.berilia.components
          super.remove();
       }
       
-      function clear() : void {
-         if((!(this._gcBox == null)) && (contains(this._gcBox)))
+      private function clear() : void {
+         if(!(this._gcBox == null) && (contains(this._gcBox)))
          {
             this._texBox.remove();
             getUi().removeFromRenderList(this._texBox.name);
             this._gcBox.remove();
          }
-         if((!(this._gcMax == null)) && (contains(this._gcMax)))
+         if(!(this._gcMax == null) && (contains(this._gcMax)))
          {
             this._texMax.remove();
             getUi().removeFromRenderList(this._texMax.name);
             this._gcMax.remove();
          }
-         if((!(this._gcMin == null)) && (contains(this._gcMin)))
+         if(!(this._gcMin == null) && (contains(this._gcMin)))
          {
             this._texMin.remove();
             getUi().removeFromRenderList(this._texMin.name);
@@ -576,21 +576,21 @@ package com.ankamagames.berilia.components
          }
       }
       
-      override public function process(msg:Message) : Boolean {
-         var ncp:* = NaN;
-         var listener:IInterfaceListener = null;
-         var listener2:IInterfaceListener = null;
-         var curr:int = this.value;
-         var pr:PoolableRectangle = PoolsManager.getInstance().getRectanglePool().checkOut() as PoolableRectangle;
+      override public function process(param1:Message) : Boolean {
+         var _loc4_:* = NaN;
+         var _loc5_:IInterfaceListener = null;
+         var _loc6_:IInterfaceListener = null;
+         var _loc2_:int = this.value;
+         var _loc3_:PoolableRectangle = PoolsManager.getInstance().getRectanglePool().checkOut() as PoolableRectangle;
          switch(true)
          {
-            case msg is MouseDownMessage:
-               switch(MouseDownMessage(msg).target)
+            case param1 is MouseDownMessage:
+               switch(MouseDownMessage(param1).target)
                {
                   case this._gcMax:
-                     for each (listener in Berilia.getInstance().UISoundListeners)
+                     for each (_loc5_ in Berilia.getInstance().UISoundListeners)
                      {
-                        listener.playUISound("16015");
+                        _loc5_.playUISound("16015");
                      }
                      if(this._nCurrentPos + this._nScrollStep <= this._nBoxPosMax)
                      {
@@ -600,7 +600,7 @@ package com.ankamagames.berilia.components
                      {
                         this._nCurrentPos = this._nBoxPosMax;
                      }
-                     if(curr != this.valueOfPos(this._nCurrentPos))
+                     if(_loc2_ != this.valueOfPos(this._nCurrentPos))
                      {
                         this.updateDisplayFromCurrentPos();
                         dispatchEvent(new Event(Event.CHANGE));
@@ -610,9 +610,9 @@ package com.ankamagames.berilia.components
                      EnterFrameDispatcher.addEventListener(this.onBottomArrowDown,"ScrollBarBottomArrow");
                      break;
                   case this._gcMin:
-                     for each (listener2 in Berilia.getInstance().UISoundListeners)
+                     for each (_loc6_ in Berilia.getInstance().UISoundListeners)
                      {
-                        listener2.playUISound("16014");
+                        _loc6_.playUISound("16014");
                      }
                      if(this._nCurrentPos - this._nScrollStep >= this._nBoxPosMin)
                      {
@@ -637,9 +637,9 @@ package com.ankamagames.berilia.components
                      {
                         this._nCurrentPos = this.approximate(int(this._texBack.mouseX));
                      }
-                     ncp = this._nCurrentPos - this._nCurrentPos % this._nScrollStep;
-                     this._nCurrentPos = ncp - this._squareEdge / 2;
-                     if((this._nCurrentPos > this._nBoxPosMax) || (this._nCurrentPos > this._nBoxPosMax - this._nScrollStep))
+                     _loc4_ = this._nCurrentPos - this._nCurrentPos % this._nScrollStep;
+                     this._nCurrentPos = _loc4_ - this._squareEdge / 2;
+                     if(this._nCurrentPos > this._nBoxPosMax || this._nCurrentPos > this._nBoxPosMax - this._nScrollStep)
                      {
                         this._nCurrentPos = this._nBoxPosMax;
                      }
@@ -654,20 +654,20 @@ package com.ankamagames.berilia.components
                      if(this._bVertical)
                      {
                         this._bOnDrag = true;
-                        this._gcBox.startDrag(false,pr.renew(this._texBack.x,this._texBack.y + this._nBoxPosMin,0,Math.ceil(this._nBoxPosMax - this._nBoxPosMin)));
+                        this._gcBox.startDrag(false,_loc3_.renew(this._texBack.x,this._texBack.y + this._nBoxPosMin,0,Math.ceil(this._nBoxPosMax - this._nBoxPosMin)));
                      }
                      else
                      {
                         this._bOnDrag = true;
-                        this._gcBox.startDrag(false,pr.renew(this._texBack.x + this._nBoxPosMin,this._texBack.y,this._nBoxPosMax - this._nBoxPosMin,0));
+                        this._gcBox.startDrag(false,_loc3_.renew(this._texBack.x + this._nBoxPosMin,this._texBack.y,this._nBoxPosMax - this._nBoxPosMin,0));
                      }
                      EnterFrameDispatcher.addEventListener(this.onDragRunning,"ScrollBarDragRunning");
                      break;
                }
-               PoolsManager.getInstance().getRectanglePool().checkIn(pr);
+               PoolsManager.getInstance().getRectanglePool().checkIn(_loc3_);
                return true;
-            case msg is MouseUpMessage:
-               switch(MouseUpMessage(msg).target)
+            case param1 is MouseUpMessage:
+               switch(MouseUpMessage(param1).target)
                {
                   case this._gcMax:
                      EnterFrameDispatcher.removeEventListener(this.onBottomArrowDown);
@@ -685,9 +685,9 @@ package com.ankamagames.berilia.components
                      }
                      break;
                }
-               PoolsManager.getInstance().getRectanglePool().checkIn(pr);
+               PoolsManager.getInstance().getRectanglePool().checkIn(_loc3_);
                return true;
-            case msg is MouseReleaseOutsideMessage:
+            case param1 is MouseReleaseOutsideMessage:
                if(this._bOnDrag)
                {
                   this._gcBox.stopDrag();
@@ -698,51 +698,54 @@ package com.ankamagames.berilia.components
                }
                EnterFrameDispatcher.removeEventListener(this.onBottomArrowDown);
                EnterFrameDispatcher.removeEventListener(this.onTopArrowDown);
-               PoolsManager.getInstance().getRectanglePool().checkIn(pr);
+               PoolsManager.getInstance().getRectanglePool().checkIn(_loc3_);
                return true;
-            case msg is MouseWheelMessage:
+            case param1 is MouseWheelMessage:
                addEventListener(MouseEvent.MOUSE_WHEEL,this.onWheel);
                return true;
+            default:
+               PoolsManager.getInstance().getRectanglePool().checkIn(_loc3_);
+               return false;
          }
       }
       
-      function onDragRunning(e:Event) : void {
-         var newCoord:* = 0;
-         var max:* = 0;
-         var curr:int = this.value;
+      private function onDragRunning(param1:Event) : void {
+         var _loc2_:* = 0;
+         var _loc4_:* = 0;
+         var _loc3_:int = this.value;
          if(this._bVertical)
          {
-            newCoord = int(this._gcBox.y);
-            if(curr != this.valueOfPos(newCoord))
+            _loc2_ = int(this._gcBox.y);
+            if(_loc3_ != this.valueOfPos(_loc2_))
             {
-               this._nCurrentPos = newCoord;
-               max = this._nHeight - this._nBoxSize;
-               if(this._nCurrentPos > max)
+               this._nCurrentPos = _loc2_;
+               _loc4_ = this._nHeight - this._nBoxSize;
+               if(this._nCurrentPos > _loc4_)
                {
-                  this._nCurrentPos = max;
+                  this._nCurrentPos = _loc4_;
                }
                dispatchEvent(new Event(Event.CHANGE));
             }
          }
          else
          {
-            newCoord = this.approximate(int(this._gcBox.x));
-            if(curr != this.valueOfPos(newCoord))
+            _loc2_ = this.approximate(int(this._gcBox.x));
+            if(_loc3_ != this.valueOfPos(_loc2_))
             {
-               this._nCurrentPos = newCoord;
-               max = this._nWidth - this._nBoxSize;
-               if(this._nCurrentPos > max)
+               this._nCurrentPos = _loc2_;
+               _loc4_ = this._nWidth - this._nBoxSize;
+               if(this._nCurrentPos > _loc4_)
                {
-                  this._nCurrentPos = max;
+                  this._nCurrentPos = _loc4_;
                }
                dispatchEvent(new Event(Event.CHANGE));
             }
          }
       }
       
-      function onTopArrowDown(e:Event) : void {
-         var framePerSecond:Number = Berilia.getInstance().docMain.stage.frameRate;
-         var currValue:int = this.value;
+      private function onTopArrowDown(param1:Event) : void {
+         var _loc2_:Number = Berilia.getInstance().docMain.stage.frameRate;
+         var _loc3_:int = this.value;
          if(this._nDecelerateScroll >= this._nMaxDecelerateFactor)
          {
             if(this._nCurrentPos - this._nScrollStep >= this._nBoxPosMin)
@@ -753,8 +756,8 @@ package com.ankamagames.berilia.components
             {
                this._nCurrentPos = this._nBoxPosMin;
             }
-            this._nDecelerateScroll = this._nAcelerateScroll < this._nMaxDecelerateFactor?this._nAcelerateScroll++:this._nMaxDecelerateFactor - 1;
-            if(currValue != this.valueOfPos(this._nCurrentPos))
+            this._nDecelerateScroll = this._nAcelerateScroll < this._nMaxDecelerateFactor?this._nAcelerateScroll++:this._nMaxDecelerateFactor-1;
+            if(_loc3_ != this.valueOfPos(this._nCurrentPos))
             {
                this.updateDisplayFromCurrentPos();
                dispatchEvent(new Event(Event.CHANGE));
@@ -763,10 +766,10 @@ package com.ankamagames.berilia.components
          this._nDecelerateScroll++;
       }
       
-      function onBottomArrowDown(e:Event) : void {
-         var framePerSecond:Number = Berilia.getInstance().docMain.stage.frameRate;
-         var currValue:int = this.value;
-         var oldPos:Number = this._nCurrentPos;
+      private function onBottomArrowDown(param1:Event) : void {
+         var _loc2_:Number = Berilia.getInstance().docMain.stage.frameRate;
+         var _loc3_:int = this.value;
+         var _loc4_:Number = this._nCurrentPos;
          if(this._nDecelerateScroll >= this._nMaxDecelerateFactor)
          {
             if(this._nCurrentPos + this._nScrollStep <= this._nBoxPosMax)
@@ -777,8 +780,8 @@ package com.ankamagames.berilia.components
             {
                this._nCurrentPos = this._nBoxPosMax;
             }
-            this._nDecelerateScroll = this._nAcelerateScroll < this._nMaxDecelerateFactor?this._nAcelerateScroll++:this._nMaxDecelerateFactor - 1;
-            if(oldPos != this._nCurrentPos)
+            this._nDecelerateScroll = this._nAcelerateScroll < this._nMaxDecelerateFactor?this._nAcelerateScroll++:this._nMaxDecelerateFactor-1;
+            if(_loc4_ != this._nCurrentPos)
             {
                this.updateDisplayFromCurrentPos();
                dispatchEvent(new Event(Event.CHANGE));
@@ -787,8 +790,8 @@ package com.ankamagames.berilia.components
          this._nDecelerateScroll++;
       }
       
-      public function onWheel(e:Object, dispatchEvt:Boolean=true) : void {
-         this._nCurrentPos = this._nCurrentPos - this._nScrollStep * e.delta * this._nScrollSpeed;
+      public function onWheel(param1:Object, param2:Boolean=true) : void {
+         this._nCurrentPos = this._nCurrentPos - this._nScrollStep * param1.delta * this._nScrollSpeed;
          if(this._nCurrentPos > this._nBoxPosMax)
          {
             this._nCurrentPos = Math.floor(this._nBoxPosMax);
@@ -798,26 +801,26 @@ package com.ankamagames.berilia.components
             this._nCurrentPos = this._nBoxPosMin;
          }
          this.updateDisplayFromCurrentPos();
-         if(dispatchEvt)
+         if(param2)
          {
             dispatchEvent(new Event(Event.CHANGE));
          }
       }
       
-      function fakeCssLoaded() : void {
+      private function fakeCssLoaded() : void {
       }
       
-      function onCssLoaded() : void {
-         var _ssSheet:ExtendedStyleSheet = null;
-         var styleObj:Object = null;
+      private function onCssLoaded() : void {
+         var _loc1_:ExtendedStyleSheet = null;
+         var _loc2_:Object = null;
          if(!this._gcMin)
          {
-            _ssSheet = CssManager.getInstance().getCss(this._sCss.uri);
-            styleObj = _ssSheet.getStyle(".skin");
-            this._uriTexBack = new Uri(this._common + styleObj["textureBack"]);
-            this._uriTexBox = new Uri(this._common + styleObj["textureBox"]);
-            this._uriTexMax = new Uri(this._common + styleObj["textureMax"]);
-            this._uriTexMin = new Uri(this._common + styleObj["textureMin"]);
+            _loc1_ = CssManager.getInstance().getCss(this._sCss.uri);
+            _loc2_ = _loc1_.getStyle(".skin");
+            this._uriTexBack = new Uri(this._common + _loc2_["textureBack"]);
+            this._uriTexBox = new Uri(this._common + _loc2_["textureBox"]);
+            this._uriTexMax = new Uri(this._common + _loc2_["textureMax"]);
+            this._uriTexMin = new Uri(this._common + _loc2_["textureMin"]);
             this._texBack = new Texture();
             this._texBack.uri = this._uriTexBack;
             this._texBox = new Texture();
@@ -830,14 +833,14 @@ package com.ankamagames.berilia.components
          this.scrollBarInit();
       }
       
-      public function eventOnTextureReady(e:Event) : void {
-         if(e.target == this._texMin)
+      public function eventOnTextureReady(param1:Event) : void {
+         if(param1.target == this._texMin)
          {
             this._texMin.gotoAndStop = this._bDisabled?StatesEnum.STATE_DISABLED_STRING.toLowerCase():StatesEnum.STATE_NORMAL_STRING.toLowerCase();
          }
          else
          {
-            if(e.target == this._texMax)
+            if(param1.target == this._texMax)
             {
                this._texMax.gotoAndStop = this._bDisabled?StatesEnum.STATE_DISABLED_STRING.toLowerCase():StatesEnum.STATE_NORMAL_STRING.toLowerCase();
             }

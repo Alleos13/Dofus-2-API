@@ -9,10 +9,10 @@ package com.ankamagames.dofus.logic.game.common.actions.mount
          super();
       }
       
-      public static function create(cellId:uint) : PaddockRemoveItemRequestAction {
-         var o:PaddockRemoveItemRequestAction = new PaddockRemoveItemRequestAction();
-         o.cellId = cellId;
-         return o;
+      public static function create(param1:uint) : PaddockRemoveItemRequestAction {
+         var _loc2_:PaddockRemoveItemRequestAction = new PaddockRemoveItemRequestAction();
+         _loc2_.cellId = param1;
+         return _loc2_;
       }
       
       public var cellId:uint;

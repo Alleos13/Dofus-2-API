@@ -8,8 +8,8 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
    public class StorageView extends StorageGenericView
    {
       
-      public function StorageView(hookLock:HookLock) {
-         super(hookLock);
+      public function StorageView(param1:HookLock) {
+         super(param1);
       }
       
       override public function get name() : String {

@@ -9,11 +9,10 @@ package com.ankamagames.dofus.misc
          super();
       }
       
-      public static function getTypeName(type:uint) : String {
-         switch(type)
+      public static function getTypeName(param1:uint) : String {
+         switch(param1)
          {
             case BuildTypeEnum.RELEASE:
-			default:
                return "RELEASE";
             case BuildTypeEnum.BETA:
                return "BETA";
@@ -25,14 +24,15 @@ package com.ankamagames.dofus.misc
                return "INTERNAL";
             case BuildTypeEnum.DEBUG:
                return "DEBUG";
+            default:
+               return "UNKNOWN";
          }
       }
       
-      public static function getTypeColor(type:uint) : uint {
-         switch(type)
+      public static function getTypeColor(param1:uint) : uint {
+         switch(param1)
          {
             case BuildTypeEnum.RELEASE:
-			default:
                return 10079232;
             case BuildTypeEnum.BETA:
                return 16763904;
@@ -44,6 +44,8 @@ package com.ankamagames.dofus.misc
                return 6724095;
             case BuildTypeEnum.DEBUG:
                return 10053375;
+            default:
+               return 16777215;
          }
       }
    }

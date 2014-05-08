@@ -12,11 +12,11 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightCloseCombatStep extends AbstractSequencable implements IFightStep
    {
       
-      public function FightCloseCombatStep(fighterId:int, weaponId:uint, critical:uint) {
+      public function FightCloseCombatStep(param1:int, param2:uint, param3:uint) {
          super();
-         this._fighterId = fighterId;
-         this._weaponId = weaponId;
-         this._critical = critical;
+         this._fighterId = param1;
+         this._weaponId = param2;
+         this._critical = param3;
       }
       
       private var _fighterId:int;
@@ -30,17 +30,17 @@ package com.ankamagames.dofus.logic.game.fight.steps
       }
       
       override public function start() : void {
-         var fighterInfos:GameFightFighterInformations = null;
-         var seq:SerialSequencer = null;
+         var _loc1_:GameFightFighterInformations = null;
+         var _loc2_:SerialSequencer = null;
          FightEventsHelper.sendFightEvent(FightEventEnum.FIGHTER_CLOSE_COMBAT,[this._fighterId,this._weaponId,this._critical],this._fighterId,castingSpellId,true);
          if(this._critical == FightSpellCastCriticalEnum.CRITICAL_HIT)
          {
-            fighterInfos = FightEntitiesFrame.getCurrentInstance().getEntityInfos(this._fighterId) as GameFightFighterInformations;
-            if(fighterInfos)
+            _loc1_ = FightEntitiesFrame.getCurrentInstance().getEntityInfos(this._fighterId) as GameFightFighterInformations;
+            if(_loc1_)
             {
-               seq = new SerialSequencer();
-               seq.addStep(new AddGfxEntityStep(1062,fighterInfos.disposition.cellId));
-               seq.start();
+               _loc2_ = new SerialSequencer();
+               _loc2_.addStep(new AddGfxEntityStep(1062,_loc1_.disposition.cellId));
+               _loc2_.start();
             }
          }
          executeCallbacks();

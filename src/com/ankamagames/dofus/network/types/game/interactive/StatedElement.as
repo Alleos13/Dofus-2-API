@@ -23,10 +23,10 @@ package com.ankamagames.dofus.network.types.game.interactive
          return 108;
       }
       
-      public function initStatedElement(elementId:uint=0, elementCellId:uint=0, elementState:uint=0) : StatedElement {
-         this.elementId = elementId;
-         this.elementCellId = elementCellId;
-         this.elementState = elementState;
+      public function initStatedElement(param1:uint=0, param2:uint=0, param3:uint=0) : StatedElement {
+         this.elementId = param1;
+         this.elementCellId = param2;
+         this.elementState = param3;
          return this;
       }
       
@@ -36,58 +36,58 @@ package com.ankamagames.dofus.network.types.game.interactive
          this.elementState = 0;
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_StatedElement(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_StatedElement(param1);
       }
       
-      public function serializeAs_StatedElement(output:IDataOutput) : void {
+      public function serializeAs_StatedElement(param1:IDataOutput) : void {
          if(this.elementId < 0)
          {
             throw new Error("Forbidden value (" + this.elementId + ") on element elementId.");
          }
          else
          {
-            output.writeInt(this.elementId);
-            if((this.elementCellId < 0) || (this.elementCellId > 559))
+            param1.writeInt(this.elementId);
+            if(this.elementCellId < 0 || this.elementCellId > 559)
             {
                throw new Error("Forbidden value (" + this.elementCellId + ") on element elementCellId.");
             }
             else
             {
-               output.writeShort(this.elementCellId);
+               param1.writeShort(this.elementCellId);
                if(this.elementState < 0)
                {
                   throw new Error("Forbidden value (" + this.elementState + ") on element elementState.");
                }
                else
                {
-                  output.writeInt(this.elementState);
+                  param1.writeInt(this.elementState);
                   return;
                }
             }
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_StatedElement(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_StatedElement(param1);
       }
       
-      public function deserializeAs_StatedElement(input:IDataInput) : void {
-         this.elementId = input.readInt();
+      public function deserializeAs_StatedElement(param1:IDataInput) : void {
+         this.elementId = param1.readInt();
          if(this.elementId < 0)
          {
             throw new Error("Forbidden value (" + this.elementId + ") on element of StatedElement.elementId.");
          }
          else
          {
-            this.elementCellId = input.readShort();
-            if((this.elementCellId < 0) || (this.elementCellId > 559))
+            this.elementCellId = param1.readShort();
+            if(this.elementCellId < 0 || this.elementCellId > 559)
             {
                throw new Error("Forbidden value (" + this.elementCellId + ") on element of StatedElement.elementCellId.");
             }
             else
             {
-               this.elementState = input.readInt();
+               this.elementState = param1.readInt();
                if(this.elementState < 0)
                {
                   throw new Error("Forbidden value (" + this.elementState + ") on element of StatedElement.elementState.");

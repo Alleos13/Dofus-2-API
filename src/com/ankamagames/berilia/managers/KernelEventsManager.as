@@ -1,6 +1,7 @@
 package com.ankamagames.berilia.managers
 {
    import flash.utils.Timer;
+   import __AS3__.vec.Vector;
    import flash.events.EventDispatcher;
    import com.ankamagames.berilia.types.data.Hook;
    import com.ankamagames.berilia.types.listener.GenericListener;
@@ -14,7 +15,6 @@ package com.ankamagames.berilia.managers
    import com.ankamagames.berilia.types.event.UiRenderEvent;
    import flash.events.TimerEvent;
    import com.ankamagames.jerakine.utils.errors.SingletonError;
-   import __AS3__.vec.*;
    
    public class KernelEventsManager extends GenericEventsManager
    {
@@ -66,108 +66,108 @@ package com.ankamagames.berilia.managers
          this._debugMode = true;
       }
       
-      public function isRegisteredEvent(name:String) : Boolean {
-         return !(_aEvent[name] == null);
+      public function isRegisteredEvent(param1:String) : Boolean {
+         return !(_aEvent[param1] == null);
       }
       
-      public function processCallback(hook:Hook, ... args) : void {
-         var s:String = null;
-         var e:GenericListener = null;
+      public function processCallback(param1:Hook, ... rest) : void {
+         var _loc6_:String = null;
+         var _loc7_:GenericListener = null;
          FpsManager.getInstance().startTracking("hook",7108545);
          if(!UiModuleManager.getInstance().ready)
          {
-            _log.warn("Hook " + hook.name + " discarded");
+            _log.warn("Hook " + param1.name + " discarded");
             return;
          }
-         var boxedParam:Array = SecureCenter.secureContent(args);
-         var num:int = 0;
-         var loadingUi:Array = Berilia.getInstance().loadingUi;
-         for (s in loadingUi)
+         var _loc3_:Array = SecureCenter.secureContent(rest);
+         var _loc4_:* = 0;
+         var _loc5_:Array = Berilia.getInstance().loadingUi;
+         for (_loc6_ in _loc5_)
          {
-            num++;
-            if(Berilia.getInstance().loadingUi[s])
+            _loc4_++;
+            if(Berilia.getInstance().loadingUi[_loc6_])
             {
-               if(this._aLoadingUi[s] == null)
+               if(this._aLoadingUi[_loc6_] == null)
                {
-                  this._aLoadingUi[s] = new Array();
+                  this._aLoadingUi[_loc6_] = new Array();
                }
-               this._aLoadingUi[s].push(new OldMessage(hook,boxedParam));
+               this._aLoadingUi[_loc6_].push(new OldMessage(param1,_loc3_));
             }
          }
-         _log.logDirectly(new HookLogEvent(hook.name,[]));
-         if(!_aEvent[hook.name])
+         _log.logDirectly(new HookLogEvent(param1.name,[]));
+         if(!_aEvent[param1.name])
          {
             return;
          }
-         ModuleLogger.log(hook,args);
-         var tmpListner:Array = [];
-         for each (e in _aEvent[hook.name])
+         ModuleLogger.log(param1,rest);
+         var _loc8_:Array = [];
+         for each (_loc7_ in _aEvent[param1.name])
          {
-            tmpListner.push(e);
+            _loc8_.push(_loc7_);
          }
-         for each (e in tmpListner)
+         for each (_loc7_ in _loc8_)
          {
-            if(e)
+            if(_loc7_)
             {
-               if((e.listenerType == GenericListener.LISTENER_TYPE_UI) && (!Berilia.getInstance().getUi(e.listener)))
+               if(_loc7_.listenerType == GenericListener.LISTENER_TYPE_UI && !Berilia.getInstance().getUi(_loc7_.listener))
                {
-                  _log.info("L\'UI " + e.listener + " n\'existe plus pour recevoir le hook " + e.event);
+                  _log.info("L\'UI " + _loc7_.listener + " n\'existe plus pour recevoir le hook " + _loc7_.event);
                }
                else
                {
-                  ErrorManager.tryFunction(e.getCallback(),boxedParam,"Une erreur est survenue lors du traitement du hook " + hook.name);
+                  ErrorManager.tryFunction(_loc7_.getCallback(),_loc3_,"Une erreur est survenue lors du traitement du hook " + param1.name);
                }
             }
          }
          if(this._eventDispatcher.hasEventListener(HookEvent.DISPATCHED))
          {
-            this._eventDispatcher.dispatchEvent(new HookEvent(HookEvent.DISPATCHED,hook));
+            this._eventDispatcher.dispatchEvent(new HookEvent(HookEvent.DISPATCHED,param1));
          }
          FpsManager.getInstance().stopTracking("hook");
       }
       
-      function processOldMessage(e:UiRenderEvent) : void {
-         var hook:Hook = null;
-         var args:Array = null;
-         var s:String = null;
-         var eGl:GenericListener = null;
-         if(!this._aLoadingUi[e.uiTarget.name])
+      private function processOldMessage(param1:UiRenderEvent) : void {
+         var _loc2_:Hook = null;
+         var _loc3_:Array = null;
+         var _loc5_:String = null;
+         var _loc6_:GenericListener = null;
+         if(!this._aLoadingUi[param1.uiTarget.name])
          {
             return;
          }
-         if(e.type == UiRenderEvent.UIRenderFailed)
+         if(param1.type == UiRenderEvent.UIRenderFailed)
          {
-            this._aLoadingUi[e.uiTarget.name] = null;
+            this._aLoadingUi[param1.uiTarget.name] = null;
             return;
          }
-         var i:uint = 0;
-         while(i < this._aLoadingUi[e.uiTarget.name].length)
+         var _loc4_:uint = 0;
+         while(_loc4_ < this._aLoadingUi[param1.uiTarget.name].length)
          {
-            hook = this._aLoadingUi[e.uiTarget.name][i].hook;
-            args = this._aLoadingUi[e.uiTarget.name][i].args;
-            for (s in _aEvent[hook.name])
+            _loc2_ = this._aLoadingUi[param1.uiTarget.name][_loc4_].hook;
+            _loc3_ = this._aLoadingUi[param1.uiTarget.name][_loc4_].args;
+            for (_loc5_ in _aEvent[_loc2_.name])
             {
-               if(_aEvent[hook.name][s])
+               if(_aEvent[_loc2_.name][_loc5_])
                {
-                  eGl = _aEvent[hook.name][s];
-                  if(eGl.listener == e.uiTarget.name)
+                  _loc6_ = _aEvent[_loc2_.name][_loc5_];
+                  if(_loc6_.listener == param1.uiTarget.name)
                   {
-                     eGl.getCallback().apply(null,args);
+                     _loc6_.getCallback().apply(null,_loc3_);
                   }
-                  if(_aEvent[hook.name] == null)
+                  if(_aEvent[_loc2_.name] == null)
                   {
                      break;
                   }
                }
             }
-            i++;
+            _loc4_++;
          }
-         delete this._aLoadingUi[[e.uiTarget.name]];
+         delete this._aLoadingUi[[param1.uiTarget.name]];
       }
       
-      function throwAsyncError(e:TimerEvent) : void {
+      private function throwAsyncError(param1:TimerEvent) : void {
          this._asyncErrorTimer.reset();
-         if(!(this._asyncError.length))
+         if(!this._asyncError.length)
          {
             return;
          }

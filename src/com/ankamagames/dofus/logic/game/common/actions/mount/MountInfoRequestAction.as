@@ -16,21 +16,23 @@ package com.ankamagames.dofus.logic.game.common.actions.mount
       
       public static const EFFECT_ID_VALIDITY:int = 998;
       
-      public static function create(item:ItemWrapper) : MountInfoRequestAction {
-         var effect:EffectInstance = null;
-         var o:MountInfoRequestAction = new MountInfoRequestAction();
-         o.item = item;
-         for each (effect in item.effects)
+      public static function create(param1:ItemWrapper) : MountInfoRequestAction {
+         var _loc3_:EffectInstance = null;
+         var _loc2_:MountInfoRequestAction = new MountInfoRequestAction();
+         _loc2_.item = param1;
+         for each (_loc3_ in param1.effects)
          {
-            switch(effect.effectId)
+            switch(_loc3_.effectId)
             {
                case EFFECT_ID_MOUNT:
-                  o.time = (effect as EffectInstanceMount).date;
-                  o.mountId = (effect as EffectInstanceMount).mountId;
+                  _loc2_.time = (_loc3_ as EffectInstanceMount).date;
+                  _loc2_.mountId = (_loc3_ as EffectInstanceMount).mountId;
+                  continue;
+               default:
                   continue;
             }
          }
-         return o;
+         return _loc2_;
       }
       
       public var item:ItemWrapper;

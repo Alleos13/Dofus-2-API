@@ -52,47 +52,49 @@ package com.ankamagames.dofus.logic.game.fight.frames
          return true;
       }
       
-      public function process(msg:Message) : Boolean {
-         var kkumsg:KeyboardKeyUpMessage = null;
-         var conmsg:CellOverMessage = null;
-         var emomsg:EntityMouseOverMessage = null;
-         var ccmsg:CellClickMessage = null;
-         var ecmsg:EntityClickMessage = null;
+      public function process(param1:Message) : Boolean {
+         var _loc2_:KeyboardKeyUpMessage = null;
+         var _loc3_:CellOverMessage = null;
+         var _loc4_:EntityMouseOverMessage = null;
+         var _loc5_:CellClickMessage = null;
+         var _loc6_:EntityClickMessage = null;
          switch(true)
          {
-            case msg is KeyboardKeyUpMessage:
-               kkumsg = msg as KeyboardKeyUpMessage;
-               if(kkumsg.keyboardEvent.keyCode == 27)
+            case param1 is KeyboardKeyUpMessage:
+               _loc2_ = param1 as KeyboardKeyUpMessage;
+               if(_loc2_.keyboardEvent.keyCode == 27)
                {
                   this.cancelShow();
                   return true;
                }
                return false;
-            case msg is CellOverMessage:
-               conmsg = msg as CellOverMessage;
-               this.refreshTarget(conmsg.cellId);
+            case param1 is CellOverMessage:
+               _loc3_ = param1 as CellOverMessage;
+               this.refreshTarget(_loc3_.cellId);
                return true;
-            case msg is EntityMouseOverMessage:
-               emomsg = msg as EntityMouseOverMessage;
-               this.refreshTarget(emomsg.entity.position.cellId);
+            case param1 is EntityMouseOverMessage:
+               _loc4_ = param1 as EntityMouseOverMessage;
+               this.refreshTarget(_loc4_.entity.position.cellId);
                return true;
-            case msg is MouseClickMessage:
-               if((!(MouseClickMessage(msg).target is GraphicCell)) && (!(MouseClickMessage(msg).target is TiphonSprite)))
+            case param1 is MouseClickMessage:
+               if(!(MouseClickMessage(param1).target is GraphicCell) && !(MouseClickMessage(param1).target is TiphonSprite))
                {
                   this.cancelShow();
                }
                return true;
-            case msg is CellClickMessage:
-               ccmsg = msg as CellClickMessage;
-               this.showCell(ccmsg.cellId);
+            case param1 is CellClickMessage:
+               _loc5_ = param1 as CellClickMessage;
+               this.showCell(_loc5_.cellId);
                return true;
-            case msg is EntityClickMessage:
-               ecmsg = msg as EntityClickMessage;
-               this.showCell(ecmsg.entity.position.cellId);
+            case param1 is EntityClickMessage:
+               _loc6_ = param1 as EntityClickMessage;
+               this.showCell(_loc6_.entity.position.cellId);
                return true;
-            case msg is AdjacentMapClickMessage:
+            case param1 is AdjacentMapClickMessage:
                this.cancelShow();
                return true;
+            default:
+               return false;
          }
       }
       
@@ -100,8 +102,8 @@ package com.ankamagames.dofus.logic.game.fight.frames
          return true;
       }
       
-      private function refreshTarget(target:uint) : void {
-         if(this.isValidCell(target))
+      private function refreshTarget(param1:uint) : void {
+         if(this.isValidCell(param1))
          {
             if(!this._targetSelection)
             {
@@ -111,7 +113,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
                this._targetSelection.zone = new Cross(0,0,DataMapProvider.getInstance());
                SelectionManager.getInstance().addSelection(this._targetSelection,SELECTION_TARGET);
             }
-            SelectionManager.getInstance().update(SELECTION_TARGET,target);
+            SelectionManager.getInstance().update(SELECTION_TARGET,param1);
          }
          else
          {
@@ -120,21 +122,21 @@ package com.ankamagames.dofus.logic.game.fight.frames
       }
       
       private function removeTarget() : void {
-         var s:Selection = SelectionManager.getInstance().getSelection(SELECTION_TARGET);
-         if(s)
+         var _loc1_:Selection = SelectionManager.getInstance().getSelection(SELECTION_TARGET);
+         if(_loc1_)
          {
-            s.remove();
+            _loc1_.remove();
             this._targetSelection = null;
          }
       }
       
-      private function showCell(cell:uint) : void {
-         var scrmsg:ShowCellRequestMessage = null;
-         if(this.isValidCell(cell))
+      private function showCell(param1:uint) : void {
+         var _loc2_:ShowCellRequestMessage = null;
+         if(this.isValidCell(param1))
          {
-            scrmsg = new ShowCellRequestMessage();
-            scrmsg.initShowCellRequestMessage(cell);
-            ConnectionsHandler.getConnection().send(scrmsg);
+            _loc2_ = new ShowCellRequestMessage();
+            _loc2_.initShowCellRequestMessage(param1);
+            ConnectionsHandler.getConnection().send(_loc2_);
          }
          this.cancelShow();
       }
@@ -145,8 +147,8 @@ package com.ankamagames.dofus.logic.game.fight.frames
          Kernel.getWorker().removeFrame(this);
       }
       
-      private function isValidCell(cell:uint) : Boolean {
-         return DataMapProvider.getInstance().pointMov(MapPoint.fromCellId(cell).x,MapPoint.fromCellId(cell).y,true);
+      private function isValidCell(param1:uint) : Boolean {
+         return DataMapProvider.getInstance().pointMov(MapPoint.fromCellId(param1).x,MapPoint.fromCellId(param1).y,true);
       }
    }
 }

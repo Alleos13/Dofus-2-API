@@ -54,65 +54,82 @@ package com.ankamagames.atouin.managers
          Atouin.getInstance().options.addEventListener(PropertyChangeEvent.PROPERTY_CHANGED,this.onPropertyChanged);
       }
       
-      public function addAnimatedEntity(entityID:int, entity:IEntity, strata:uint) : void {
-         if(this._entities[entityID] != null)
+      public function addAnimatedEntity(param1:int, param2:IEntity, param3:uint) : void {
+         if(this._entities[param1] != null)
          {
-            _log.warn("Entity overwriting! Entity " + entityID + " has been replaced.");
+            _log.warn("Entity overwriting! Entity " + param1 + " has been replaced.");
          }
-         this._entities[entityID] = entity;
-         if(entity is IDisplayable)
+         this._entities[param1] = param2;
+         if(param2 is IDisplayable)
          {
-            EntitiesDisplayManager.getInstance().displayEntity(entity as IDisplayable,entity.position,strata);
+            EntitiesDisplayManager.getInstance().displayEntity(param2 as IDisplayable,param2.position,param3);
          }
-         if(entity is IInteractive)
+         if(param2 is IInteractive)
          {
-            this.registerInteractions(IInteractive(entity),true);
-            Sprite(entity).buttonMode = IInteractive(entity).useHandCursor;
+            this.registerInteractions(IInteractive(param2),true);
+            Sprite(param2).buttonMode = IInteractive(param2).useHandCursor;
          }
       }
       
-      public function getEntity(entityID:int) : IEntity {
-         return this._entities[entityID];
+      public function getEntity(param1:int) : IEntity {
+         return this._entities[param1];
       }
       
-      public function getEntityID(entity:IEntity) : int {
-         var i:String = null;
-         for (i in this._entities)
+      public function getEntityID(param1:IEntity) : int {
+         var _loc2_:String = null;
+         for (_loc2_ in this._entities)
          {
-            if(entity === this._entities[i])
+            if(param1 === this._entities[_loc2_])
             {
-               return parseInt(i);
+               return parseInt(_loc2_);
             }
          }
          return 0;
       }
       
-      public function removeEntity(entityID:int) : void {
-         if(this._entities[entityID])
+      public function removeEntity(param1:int) : void {
+         if(this._entities[param1])
          {
-            if(this._entities[entityID] is IDisplayable)
+            if(this._entities[param1] is IDisplayable)
             {
-               EntitiesDisplayManager.getInstance().removeEntity(this._entities[entityID] as IDisplayable);
+               EntitiesDisplayManager.getInstance().removeEntity(this._entities[param1] as IDisplayable);
             }
-            if(this._entities[entityID] is IInteractive)
+            if(this._entities[param1] is IInteractive)
             {
-               this.registerInteractions(IInteractive(this._entities[entityID]),false);
+               this.registerInteractions(IInteractive(this._entities[param1]),false);
             }
-            if((this._entities[entityID] is IMovable) && (IMovable(this._entities[entityID]).isMoving))
+            if(this._entities[param1] is IMovable && (IMovable(this._entities[param1]).isMoving))
             {
-               IMovable(this._entities[entityID]).stop(true);
+               IMovable(this._entities[param1]).stop(true);
             }
-            delete this._entities[[entityID]];
+            delete this._entities[[param1]];
          }
       }
       
       public function clearEntities() : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: ExecutionException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+         var _loc2_:String = null;
+         var _loc3_:* = 0;
+         var _loc4_:* = 0;
+         var _loc5_:* = 0;
+         var _loc6_:TiphonSprite = null;
+         var _loc1_:Array = new Array();
+         for (_loc2_ in this._entities)
+         {
+            _loc1_.push(_loc2_);
+         }
+         _loc3_ = -1;
+         _loc4_ = _loc1_.length;
+         while(++_loc3_ < _loc4_)
+         {
+            _loc5_ = _loc1_[_loc3_];
+            _loc6_ = this._entities[_loc5_] as TiphonSprite;
+            this.removeEntity(_loc5_);
+            if(_loc6_)
+            {
+               _loc6_.destroy();
+            }
+         }
+         this._entities = new Array();
       }
       
       public function get entities() : Array {
@@ -120,6 +137,47 @@ package com.ankamagames.atouin.managers
       }
       
       public function getFreeEntityId() : int {
+         while(true)
+         {
+            if(this._entities[++this._currentRandomEntity] == null)
+            {
+               break;
+            }
+            this._currentRandomEntity++;
+         }
+         return this._currentRandomEntity;
+      }
+      
+      private function registerInteractions(param1:IInteractive, param2:Boolean) : void {
+         var _loc3_:uint = 0;
+         var _loc4_:uint = param1.enabledInteractions;
+         while(_loc4_ > 0)
+         {
+            this.registerInteraction(param1,1 << _loc3_++,param2);
+            _loc4_ = _loc4_ >> 1;
+         }
+      }
+      
+      public function registerInteraction(param1:IInteractive, param2:uint, param3:Boolean) : void {
+         var _loc5_:String = null;
+         var _loc4_:Array = InteractionsEnum.getEvents(param2);
+         for each (_loc5_ in _loc4_)
+         {
+            if((param3) && !param1.hasEventListener(_loc5_))
+            {
+               param1.addEventListener(_loc5_,this.onInteraction,false,0,true);
+            }
+            else
+            {
+               if(!param3 && (param1.hasEventListener(_loc5_)))
+               {
+                  param1.removeEventListener(_loc5_,this.onInteraction,false);
+               }
+            }
+         }
+      }
+      
+      public function getEntityOnCell(param1:uint, param2:*=null) : IEntity {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -128,117 +186,30 @@ package com.ankamagames.atouin.managers
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      function registerInteractions(entity:IInteractive, register:Boolean) : void {
-         var index:uint = 0;
-         var interactions:uint = entity.enabledInteractions;
-         while(interactions > 0)
-         {
-            this.registerInteraction(entity,1 << index++,register);
-            interactions = interactions >> 1;
-         }
+      public function getEntitiesOnCell(param1:uint, param2:*=null) : Array {
+         /*
+          * Decompilation error
+          * Code may be obfuscated
+          * Error type: ExecutionException
+          */
+         throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      public function registerInteraction(entity:IInteractive, interactionType:uint, enabled:Boolean) : void {
-         var event:String = null;
-         var events:Array = InteractionsEnum.getEvents(interactionType);
-         for each (event in events)
-         {
-            if((enabled) && (!entity.hasEventListener(event)))
-            {
-               entity.addEventListener(event,this.onInteraction,false,0,true);
-            }
-            else
-            {
-               if((!enabled) && (entity.hasEventListener(event)))
-               {
-                  entity.removeEventListener(event,this.onInteraction,false);
-               }
-            }
-         }
+      private function onInteraction(param1:Event) : void {
+         var _loc2_:IInteractive = IInteractive(param1.target);
+         var _loc3_:Class = InteractionsEnum.getMessage(param1.type);
+         _loc2_.handler.process(new _loc3_(_loc2_));
       }
       
-      public function getEntityOnCell(cellId:uint, oClass:*=null) : IEntity {
-         var e:IEntity = null;
-         var i:uint = 0;
-         var useFilter:Boolean = !(oClass == null);
-         var isMultiFilter:Boolean = (useFilter) && (oClass is Array);
-         for each (e in this._entities)
+      private function onPropertyChanged(param1:PropertyChangeEvent) : void {
+         var _loc2_:IEntity = null;
+         if(param1.propertyName == "transparentOverlayMode")
          {
-            if((e) && (e.position) && (e.position.cellId == cellId))
+            for each (_loc2_ in this._entities)
             {
-               if(!isMultiFilter)
+               if(_loc2_ is IDisplayable)
                {
-                  if((!useFilter) || (!isMultiFilter) && (e is oClass))
-                  {
-                     return e;
-                  }
-               }
-               else
-               {
-                  i = 0;
-                  while(i < (oClass as Array).length)
-                  {
-                     if(e is oClass[i])
-                     {
-                        return e;
-                     }
-                     i++;
-                  }
-               }
-            }
-         }
-         return null;
-      }
-      
-      public function getEntitiesOnCell(cellId:uint, oClass:*=null) : Array {
-         var e:IEntity = null;
-         var i:uint = 0;
-         var useFilter:Boolean = !(oClass == null);
-         var isMultiFilter:Boolean = (useFilter) && (oClass is Array);
-         var result:Array = [];
-         for each (e in this._entities)
-         {
-            if((e) && (e.position) && (e.position.cellId == cellId))
-            {
-               if(!isMultiFilter)
-               {
-                  if((!useFilter) || (!isMultiFilter) && (e is oClass))
-                  {
-                     result.push(e);
-                  }
-               }
-               else
-               {
-                  i = 0;
-                  while(i < (oClass as Array).length)
-                  {
-                     if(e is oClass[i])
-                     {
-                        result.push(e);
-                     }
-                     i++;
-                  }
-               }
-            }
-         }
-         return result;
-      }
-      
-      function onInteraction(e:Event) : void {
-         var entity:IInteractive = IInteractive(e.target);
-         var clazz:Class = InteractionsEnum.getMessage(e.type);
-         entity.handler.process(new clazz(entity));
-      }
-      
-      function onPropertyChanged(e:PropertyChangeEvent) : void {
-         var ent:IEntity = null;
-         if(e.propertyName == "transparentOverlayMode")
-         {
-            for each (ent in this._entities)
-            {
-               if(ent is IDisplayable)
-               {
-                  EntitiesDisplayManager.getInstance().refreshAlphaEntity(ent as IDisplayable,ent.position);
+                  EntitiesDisplayManager.getInstance().refreshAlphaEntity(_loc2_ as IDisplayable,_loc2_.position);
                }
             }
          }

@@ -26,32 +26,32 @@ package com.ankamagames.berilia.managers
          this._aEvent = new Array();
       }
       
-      public function registerEvent(e:GenericListener) : void {
-         this._listenerRef[e] = true;
-         if(this._aEvent[e.event] == null)
+      public function registerEvent(param1:GenericListener) : void {
+         this._listenerRef[param1] = true;
+         if(this._aEvent[param1.event] == null)
          {
-            this._aEvent[e.event] = new Array();
+            this._aEvent[param1.event] = new Array();
          }
-         this._aEvent[e.event].push(e);
-         (this._aEvent[e.event] as Array).sortOn("sortIndex",Array.NUMERIC | Array.DESCENDING);
+         this._aEvent[param1.event].push(param1);
+         (this._aEvent[param1.event] as Array).sortOn("sortIndex",Array.NUMERIC | Array.DESCENDING);
       }
       
-      public function removeEventListener(ge:GenericListener) : void {
-         var i:String = null;
-         var j:Object = null;
-         for (i in this._aEvent)
+      public function removeEventListener(param1:GenericListener) : void {
+         var _loc2_:String = null;
+         var _loc3_:Object = null;
+         for (_loc2_ in this._aEvent)
          {
-            for (j in this._aEvent[i])
+            for (_loc3_ in this._aEvent[_loc2_])
             {
-               if(!((this._aEvent[i] == null) || (this._aEvent[i][j] == null)))
+               if(!(this._aEvent[_loc2_] == null || this._aEvent[_loc2_][_loc3_] == null))
                {
-                  if(this._aEvent[i][j] == ge)
+                  if(this._aEvent[_loc2_][_loc3_] == param1)
                   {
-                     delete this._aEvent[i][[j]];
-                     if(!this._aEvent[i].length)
+                     delete this._aEvent[_loc2_][[_loc3_]];
+                     if(!this._aEvent[_loc2_].length)
                      {
-                        this._aEvent[i] = null;
-                        delete this._aEvent[[i]];
+                        this._aEvent[_loc2_] = null;
+                        delete this._aEvent[[_loc2_]];
                      }
                   }
                }
@@ -59,24 +59,24 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      public function removeEventListenerByName(name:String) : void {
-         var i:String = null;
-         var j:Object = null;
-         var l:GenericListener = null;
-         for (i in this._aEvent)
+      public function removeEventListenerByName(param1:String) : void {
+         var _loc2_:String = null;
+         var _loc3_:Object = null;
+         var _loc4_:GenericListener = null;
+         for (_loc2_ in this._aEvent)
          {
-            for (j in this._aEvent[i])
+            for (_loc3_ in this._aEvent[_loc2_])
             {
-               if(!((this._aEvent[i] == null) || (this._aEvent[i][j] == null)))
+               if(!(this._aEvent[_loc2_] == null || this._aEvent[_loc2_][_loc3_] == null))
                {
-                  l = this._aEvent[i][j];
-                  if(l.listener == name)
+                  _loc4_ = this._aEvent[_loc2_][_loc3_];
+                  if(_loc4_.listener == param1)
                   {
-                     delete this._aEvent[i][[j]];
-                     if(!this._aEvent[i].length)
+                     delete this._aEvent[_loc2_][[_loc3_]];
+                     if(!this._aEvent[_loc2_].length)
                      {
-                        this._aEvent[i] = null;
-                        delete this._aEvent[[i]];
+                        this._aEvent[_loc2_] = null;
+                        delete this._aEvent[[_loc2_]];
                      }
                   }
                }
@@ -84,33 +84,33 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      public function removeEvent(sListener:*) : void {
-         var e:GenericListener = null;
-         var deleteIndex:Array = null;
-         var i:* = undefined;
-         var j:* = undefined;
-         var index:* = undefined;
-         for (i in this._aEvent)
+      public function removeEvent(param1:*) : void {
+         var _loc2_:GenericListener = null;
+         var _loc3_:Array = null;
+         var _loc4_:* = undefined;
+         var _loc5_:* = undefined;
+         var _loc6_:* = undefined;
+         for (_loc4_ in this._aEvent)
          {
-            deleteIndex = null;
-            for (j in this._aEvent[i])
+            _loc3_ = null;
+            for (_loc5_ in this._aEvent[_loc4_])
             {
-               if(!((this._aEvent[i] == null) || (this._aEvent[i][j] == null)))
+               if(!(this._aEvent[_loc4_] == null || this._aEvent[_loc4_][_loc5_] == null))
                {
-                  e = this._aEvent[i][j];
-                  if(e.listener == sListener)
+                  _loc2_ = this._aEvent[_loc4_][_loc5_];
+                  if(_loc2_.listener == param1)
                   {
-                     if(!deleteIndex)
+                     if(!_loc3_)
                      {
-                        deleteIndex = [];
+                        _loc3_ = [];
                      }
-                     deleteIndex.push(j);
+                     _loc3_.push(_loc5_);
                   }
                }
             }
-            for each (index in deleteIndex)
+            for each (_loc6_ in _loc3_)
             {
-               delete this._aEvent[i][[index]];
+               delete this._aEvent[_loc4_][[_loc6_]];
             }
          }
       }

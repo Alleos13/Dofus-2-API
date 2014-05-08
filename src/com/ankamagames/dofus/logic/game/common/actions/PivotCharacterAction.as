@@ -10,8 +10,8 @@ package com.ankamagames.dofus.logic.game.common.actions
       }
       
       public static function create() : PivotCharacterAction {
-         var action:PivotCharacterAction = new PivotCharacterAction();
-         return action;
+         var _loc1_:PivotCharacterAction = new PivotCharacterAction();
+         return _loc1_;
       }
    }
 }

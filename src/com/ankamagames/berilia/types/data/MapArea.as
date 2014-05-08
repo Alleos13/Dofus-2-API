@@ -13,16 +13,17 @@ package com.ankamagames.berilia.types.data
    public class MapArea extends Rectangle
    {
       
-      public function MapArea(src:Uri, x:Number, y:Number, width:Number, height:Number, parent:Map) {
-         this.src = src;
-         this.parent = parent;
-         this._isLoaded = false;
-         super(x,y,width,height);
+      public function MapArea(param1:Uri, param2:Number, param3:Number, param4:Number, param5:Number, param6:Map) {
+         this.src = param1;
+         this.parent = param6;
+         super(param2,param3,param4,param5);
       }
       
       private static var _mapLoader:ParallelRessourceLoader = new ParallelRessourceLoader(10);
       
       private static var _freeBitmap:Array = [];
+      
+      public static var currentScale:Number;
       
       public var src:Uri;
       
@@ -34,14 +35,8 @@ package com.ankamagames.berilia.types.data
       
       private var _freeTimer:Timer;
       
-      private var _isLoaded:Boolean;
-      
       public function get isUsed() : Boolean {
          return this._active;
-      }
-      
-      public function get isLoaded() : Boolean {
-         return this._isLoaded;
       }
       
       public function getBitmap() : DisplayObject {
@@ -52,7 +47,7 @@ package com.ankamagames.berilia.types.data
             this._freeTimer.stop();
             this._freeTimer = null;
          }
-         if((!this._bitmap) || (!this._bitmap.bitmapData))
+         if(!this._bitmap || !this._bitmap.bitmapData)
          {
             if(_freeBitmap.length)
             {
@@ -70,9 +65,9 @@ package com.ankamagames.berilia.types.data
          return this._bitmap;
       }
       
-      public function free(force:Boolean=false) : void {
+      public function free(param1:Boolean=false) : void {
          this._active = false;
-         if(force)
+         if(param1)
          {
             this.onDeathCountDown(null);
             return;
@@ -85,7 +80,7 @@ package com.ankamagames.berilia.types.data
          this._freeTimer.start();
       }
       
-      function onDeathCountDown(e:Event) : void {
+      private function onDeathCountDown(param1:Event) : void {
          if(this._freeTimer)
          {
             this._freeTimer.removeEventListener(TimerEvent.TIMER,this.onDeathCountDown);
@@ -102,32 +97,28 @@ package com.ankamagames.berilia.types.data
             {
                this._bitmap.parent.removeChild(this._bitmap);
             }
+            this._bitmap.bitmapData = null;
             if(this._bitmap.bitmapData)
             {
                this._bitmap.bitmapData.dispose();
             }
-            this._bitmap.bitmapData = null;
             _freeBitmap.push(this._bitmap);
             this._bitmap = null;
-            this._isLoaded = false;
          }
       }
       
-      function onLoad(e:ResourceLoadedEvent) : void {
-         var checkScale:* = false;
-         var currentScale:* = NaN;
-         if((this._active) && (e.uri == this.src))
+      private function onLoad(param1:ResourceLoadedEvent) : void {
+         var _loc2_:* = false;
+         if((this._active) && param1.uri == this.src)
          {
-            this._isLoaded = true;
-            this._bitmap.bitmapData = e.resource;
-            checkScale = !(this._bitmap.width == this._bitmap.height);
+            this._bitmap.bitmapData = param1.resource;
+            _loc2_ = !(this._bitmap.width == this._bitmap.height);
             this._bitmap.width = width + 1;
             this._bitmap.height = height + 1;
-            if(!checkScale)
+            if(!_loc2_)
             {
                return;
             }
-            currentScale = this.parent.currentScale;
             if(isNaN(currentScale))
             {
                if(this._bitmap.scaleX == this._bitmap.scaleY)
@@ -149,7 +140,7 @@ package com.ankamagames.berilia.types.data
                   }
                }
             }
-            if((!(this._bitmap.scaleX == this._bitmap.scaleY)) && (currentScale))
+            if(!(this._bitmap.scaleX == this._bitmap.scaleY) && (currentScale))
             {
                this._bitmap.scaleX = this._bitmap.scaleY = currentScale;
             }

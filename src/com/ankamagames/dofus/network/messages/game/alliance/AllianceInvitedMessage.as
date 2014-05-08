@@ -33,10 +33,10 @@ package com.ankamagames.dofus.network.messages.game.alliance
          return 6397;
       }
       
-      public function initAllianceInvitedMessage(recruterId:uint=0, recruterName:String="", allianceInfo:BasicNamedAllianceInformations=null) : AllianceInvitedMessage {
-         this.recruterId = recruterId;
-         this.recruterName = recruterName;
-         this.allianceInfo = allianceInfo;
+      public function initAllianceInvitedMessage(param1:uint=0, param2:String="", param3:BasicNamedAllianceInformations=null) : AllianceInvitedMessage {
+         this.recruterId = param1;
+         this.recruterName = param2;
+         this.allianceInfo = param3;
          this._isInitialized = true;
          return this;
       }
@@ -48,49 +48,49 @@ package com.ankamagames.dofus.network.messages.game.alliance
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AllianceInvitedMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_AllianceInvitedMessage(param1);
       }
       
-      public function serializeAs_AllianceInvitedMessage(output:IDataOutput) : void {
+      public function serializeAs_AllianceInvitedMessage(param1:IDataOutput) : void {
          if(this.recruterId < 0)
          {
             throw new Error("Forbidden value (" + this.recruterId + ") on element recruterId.");
          }
          else
          {
-            output.writeInt(this.recruterId);
-            output.writeUTF(this.recruterName);
-            this.allianceInfo.serializeAs_BasicNamedAllianceInformations(output);
+            param1.writeInt(this.recruterId);
+            param1.writeUTF(this.recruterName);
+            this.allianceInfo.serializeAs_BasicNamedAllianceInformations(param1);
             return;
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AllianceInvitedMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_AllianceInvitedMessage(param1);
       }
       
-      public function deserializeAs_AllianceInvitedMessage(input:IDataInput) : void {
-         this.recruterId = input.readInt();
+      public function deserializeAs_AllianceInvitedMessage(param1:IDataInput) : void {
+         this.recruterId = param1.readInt();
          if(this.recruterId < 0)
          {
             throw new Error("Forbidden value (" + this.recruterId + ") on element of AllianceInvitedMessage.recruterId.");
          }
          else
          {
-            this.recruterName = input.readUTF();
+            this.recruterName = param1.readUTF();
             this.allianceInfo = new BasicNamedAllianceInformations();
-            this.allianceInfo.deserialize(input);
+            this.allianceInfo.deserialize(param1);
             return;
          }
       }

@@ -4,6 +4,7 @@ package com.ankamagames.dofus.logic.game.common.frames
    import com.ankamagames.jerakine.logger.Logger;
    import com.ankamagames.jerakine.logger.Log;
    import flash.utils.getQualifiedClassName;
+   import __AS3__.vec.Vector;
    import com.ankamagames.dofus.internalDatacenter.people.PartyMemberWrapper;
    import flash.utils.Timer;
    import flash.utils.Dictionary;
@@ -119,7 +120,6 @@ package com.ankamagames.dofus.logic.game.common.frames
    import com.ankamagames.berilia.managers.KernelEventsManager;
    import com.ankamagames.dofus.misc.lists.HookList;
    import com.ankamagames.dofus.network.enums.PartyJoinErrorEnum;
-   import __AS3__.vec.*;
    import com.ankamagames.dofus.network.messages.game.context.roleplay.party.PartyInvitationDungeonDetailsMessage;
    import com.ankamagames.dofus.network.types.game.context.roleplay.party.PartyMemberArenaInformations;
    import com.ankamagames.dofus.logic.game.common.managers.PlayedCharacterManager;
@@ -211,8 +211,6 @@ package com.ankamagames.dofus.logic.game.common.frames
       
       private var _lastFightType:int = -1;
       
-      private var _wasSpectatorInLastFight:Boolean = false;
-      
       public var allMemberFollowPlayerId:uint = 0;
       
       private var _partyFightsInformations:Dictionary;
@@ -279,16 +277,16 @@ package com.ankamagames.dofus.logic.game.common.frames
          return this._todaysWonFights;
       }
       
-      function get roleplayContextFrame() : RoleplayContextFrame {
+      private function get roleplayContextFrame() : RoleplayContextFrame {
          return Kernel.getWorker().getFrame(RoleplayContextFrame) as RoleplayContextFrame;
       }
       
-      function get roleplayEntitiesFrame() : RoleplayEntitiesFrame {
+      private function get roleplayEntitiesFrame() : RoleplayEntitiesFrame {
          return Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame;
       }
       
-      public function set lastFightType(n:int) : void {
-         this._lastFightType = n;
+      public function set lastFightType(param1:int) : void {
+         this._lastFightType = param1;
       }
       
       public function pushed() : Boolean {
@@ -297,7 +295,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return true;
       }
       
-      public function process(msg:Message) : Boolean {
+      public function process(param1:Message) : Boolean {
          var partyMemberWrapper:PartyMemberWrapper = null;
          var partyCompanionWrapper:PartyCompanionWrapper = null;
          var partyCompanionBaseInfo:PartyCompanionBaseInformations = null;
@@ -477,6 +475,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          var teamMember:FightTeamMemberInformations = null;
          var leaderId:int = 0;
          var fightTeams:Vector.<FightTeamInformations> = null;
+         var msg:Message = param1;
          switch(true)
          {
             case msg is PartyInvitationAction:
@@ -529,7 +528,7 @@ package com.ankamagames.dofus.logic.game.common.frames
                      extNotifType = ExternalNotificationTypeEnum.GROUP_INVITATION;
                   }
                }
-               if((AirScanner.hasAir()) && (extNotifType > 0) && (ExternalNotificationManager.getInstance().canAddExternalNotification(extNotifType)))
+               if((AirScanner.hasAir()) && extNotifType > 0 && (ExternalNotificationManager.getInstance().canAddExternalNotification(extNotifType)))
                {
                   KernelEventsManager.getInstance().processCallback(HookList.ExternalNotification,extNotifType,[pimsg.fromName]);
                }
@@ -575,8 +574,8 @@ package com.ankamagames.dofus.logic.game.common.frames
                      reasonText = "La composition du groupe a changé, il n\'y a désormais plus assez de place pour effectuer cette action. (ted)";
                      break;
                   case PartyJoinErrorEnum.PARTY_JOIN_ERROR_UNKNOWN:
+                  default:
                      reasonText = I18n.getUiText("ui.party.cantInvit");
-                     break;
                }
                if(reasonText != "")
                {
@@ -698,7 +697,7 @@ package com.ankamagames.dofus.logic.game.common.frames
                      }
                   }
                }
-               if((!(pngmsg.partyId == this._arenaPartyId)) && (!(pngmsg.partyId == this._partyId)))
+               if(!(pngmsg.partyId == this._arenaPartyId) && !(pngmsg.partyId == this._partyId))
                {
                   KernelEventsManager.getInstance().processCallback(HookList.PartyMemberUpdateDetails,pngmsg.partyId,partyMemberWrapper,false);
                }
@@ -879,7 +878,7 @@ package com.ankamagames.dofus.logic.game.common.frames
                      this._partyMembers.push(newMember);
                   }
                }
-               if((!(pumsg.partyId == this._arenaPartyId)) && (!(pumsg.partyId == this._partyId)))
+               if(!(pumsg.partyId == this._arenaPartyId) && !(pumsg.partyId == this._partyId))
                {
                   KernelEventsManager.getInstance().processCallback(HookList.PartyMemberUpdateDetails,pumsg.partyId,newMember,true);
                }
@@ -1463,7 +1462,7 @@ package com.ankamagames.dofus.logic.game.common.frames
             case msg is DungeonPartyFinderRoomContentUpdateMessage:
                dpfrcumsg = msg as DungeonPartyFinderRoomContentUpdateMessage;
                tempDjFighters = this._dungeonFighters.concat();
-               iFD = tempDjFighters.length - 1;
+               iFD = tempDjFighters.length-1;
                while(iFD >= 0)
                {
                   currentfighterDungeon = tempDjFighters[iFD];
@@ -1607,24 +1606,23 @@ package com.ankamagames.dofus.logic.game.common.frames
                return true;
             case msg is GameFightJoinMessage:
                gfjmsg = msg as GameFightJoinMessage;
-               if((gfjmsg.fightType == FightTypeEnum.FIGHT_TYPE_PVP_ARENA) && (!gfjmsg.isSpectator))
+               if(gfjmsg.fightType == FightTypeEnum.FIGHT_TYPE_PVP_ARENA && !gfjmsg.isSpectator)
                {
                   this._arenaCurrentStatus = PvpArenaStepEnum.ARENA_STEP_STARTING_FIGHT;
                   this._isArenaRegistered = false;
                   KernelEventsManager.getInstance().processCallback(RoleplayHookList.ArenaRegistrationStatusUpdate,this._isArenaRegistered,this._arenaCurrentStatus);
                }
-               this._wasSpectatorInLastFight = gfjmsg.isSpectator;
                this.cleanPartyFightNotifications();
                return false;
             case msg is FightEndingMessage:
                femsg = msg as FightEndingMessage;
-               if((this._lastFightType == FightTypeEnum.FIGHT_TYPE_PVP_ARENA) && (!this._wasSpectatorInLastFight))
+               if(this._lastFightType == FightTypeEnum.FIGHT_TYPE_PVP_ARENA)
                {
                   this._arenaCurrentStatus = PvpArenaStepEnum.ARENA_STEP_UNREGISTER;
                   this._isArenaRegistered = false;
                   this._arenaReadyPartyMemberIds = new Array();
                   KernelEventsManager.getInstance().processCallback(RoleplayHookList.ArenaRegistrationStatusUpdate,this._isArenaRegistered,this._arenaCurrentStatus);
-                  if((this._arenaLeader) && (PlayedCharacterManager.getInstance().id == this._arenaLeader.id))
+                  if((this._arenaLeader) && PlayedCharacterManager.getInstance().id == this._arenaLeader.id)
                   {
                      commonMod = UiModuleManager.getInstance().getModule("Ankama_Common").mainClass;
                      commonMod.openPopup(I18n.getUiText("ui.common.confirm"),I18n.getUiText("ui.party.arenaPopupReinscription"),[I18n.getUiText("ui.common.yes"),I18n.getUiText("ui.common.no")],[this.reinscriptionWantedFunction,null],this.reinscriptionWantedFunction,function():void
@@ -1648,6 +1646,8 @@ package com.ankamagames.dofus.logic.game.common.frames
                      case 3:
                         fightCause = I18n.getUiText("ui.party.memberStartFight.attackPlayer");
                         break;
+                     default:
+                        fightCause = I18n.getUiText("ui.party.memberStartFight.unknownReason");
                   }
                   fightId = pemifmmsg.fightId;
                   memberName = pemifmmsg.memberName;
@@ -1752,34 +1752,36 @@ package com.ankamagames.dofus.logic.game.common.frames
                   NotificationManager.getInstance().closeNotification(this._partyFightNotification[fightNotificationIndex],false);
                }
                return false;
+            default:
+               return false;
          }
       }
       
-      function cleanPartyFightNotifications() : void {
-         var notifName:String = null;
+      private function cleanPartyFightNotifications() : void {
+         var _loc1_:String = null;
          if(this._partyFightNotification.length > 0)
          {
-            for each (notifName in this._partyFightNotification)
+            for each (_loc1_ in this._partyFightNotification)
             {
-               NotificationManager.getInstance().closeNotification(notifName,false);
+               NotificationManager.getInstance().closeNotification(_loc1_,false);
             }
             this._partyFightNotification = new Array();
          }
       }
       
-      function createPartyFightNotification(mapId:uint, currentFight:PartyFightInformationsData, fightTeamLeaderId:int) : void {
-         var notifBaseText:String = I18n.getUiText("ui.party.joinTeamFightQuestion");
-         var params:Array = new Array();
-         params.push(currentFight.memberName);
-         params.push(currentFight.memberId);
-         var notifText:String = ParamsDecoder.applyParams(notifBaseText,params);
-         var pfimsgNid:uint = NotificationManager.getInstance().prepareNotification(I18n.getUiText("ui.party.teamFightTitle"),notifText,NotificationTypeEnum.PRIORITY_INVITATION,"partyFight" + currentFight.fightId);
-         var currentDate:Date = new Date();
-         var timeTillHiding:int = (currentFight.fightStartDate - currentDate.getTime()) / 1000;
-         NotificationManager.getInstance().addTimerToNotification(pfimsgNid,timeTillHiding,false);
-         NotificationManager.getInstance().addButtonToNotification(pfimsgNid,I18n.getUiText("ui.common.join"),"JoinFightRequest",[currentFight.fightId,fightTeamLeaderId],true,130);
-         this._partyFightNotification.push("partyFight" + currentFight.fightId);
-         NotificationManager.getInstance().sendNotification(pfimsgNid);
+      private function createPartyFightNotification(param1:uint, param2:PartyFightInformationsData, param3:int) : void {
+         var _loc4_:String = I18n.getUiText("ui.party.joinTeamFightQuestion");
+         var _loc5_:Array = new Array();
+         _loc5_.push(param2.memberName);
+         _loc5_.push(param2.memberId);
+         var _loc6_:String = ParamsDecoder.applyParams(_loc4_,_loc5_);
+         var _loc7_:uint = NotificationManager.getInstance().prepareNotification(I18n.getUiText("ui.party.teamFightTitle"),_loc6_,NotificationTypeEnum.PRIORITY_INVITATION,"partyFight" + param2.fightId);
+         var _loc8_:Date = new Date();
+         var _loc9_:int = (param2.fightStartDate - _loc8_.getTime()) / 1000;
+         NotificationManager.getInstance().addTimerToNotification(_loc7_,_loc9_,false);
+         NotificationManager.getInstance().addButtonToNotification(_loc7_,I18n.getUiText("ui.common.join"),"JoinFightRequest",[param2.fightId,param3],true,130);
+         this._partyFightNotification.push("partyFight" + param2.fightId);
+         NotificationManager.getInstance().sendNotification(_loc7_);
       }
       
       public function pulled() : Boolean {
@@ -1790,204 +1792,204 @@ package com.ankamagames.dofus.logic.game.common.frames
       }
       
       public function reinscriptionWantedFunction() : void {
-         var action:ArenaRegisterAction = new ArenaRegisterAction();
-         action.fightTypeId = PvpArenaTypeEnum.ARENA_TYPE_3VS3;
-         this.process(action);
+         var _loc1_:ArenaRegisterAction = new ArenaRegisterAction();
+         _loc1_.fightTypeId = PvpArenaTypeEnum.ARENA_TYPE_3VS3;
+         this.process(_loc1_);
       }
       
-      public function getGroupMemberById(id:int) : PartyMemberWrapper {
-         var m:PartyMemberWrapper = null;
-         for each (m in this._partyMembers)
+      public function getGroupMemberById(param1:int) : PartyMemberWrapper {
+         var _loc2_:PartyMemberWrapper = null;
+         for each (_loc2_ in this._partyMembers)
          {
-            if(m.id == id)
+            if(_loc2_.id == param1)
             {
-               return m;
+               return _loc2_;
             }
          }
          return null;
       }
       
-      function deleteParty(partyId:int) : void {
-         var isArena:Boolean = false;
-         if(partyId == this._arenaPartyId)
+      private function deleteParty(param1:int) : void {
+         var _loc2_:* = false;
+         if(param1 == this._arenaPartyId)
          {
-            isArena = true;
+            _loc2_ = true;
             this._arenaPartyMembers = new Vector.<PartyMemberWrapper>();
             this._arenaPartyId = 0;
             this._arenaLeader = null;
          }
          else
          {
-            if(partyId == this._partyId)
+            if(param1 == this._partyId)
             {
                this._partyMembers = new Vector.<PartyMemberWrapper>();
                this._partyId = 0;
             }
          }
-         if((this._arenaPartyId == 0) && (this._partyId == 0))
+         if(this._arenaPartyId == 0 && this._partyId == 0)
          {
             this._timerRegen.stop();
             PlayedCharacterManager.getInstance().isInParty = false;
             PlayedCharacterManager.getInstance().isPartyLeader = false;
          }
-         KernelEventsManager.getInstance().processCallback(HookList.PartyLeave,partyId,isArena);
+         KernelEventsManager.getInstance().processCallback(HookList.PartyLeave,param1,_loc2_);
       }
       
-      function createPartyPlayerContextMenu(pPlayerId:uint, pPartyId:int) : Object {
-         var playerAlignmentInfos:ActorAlignmentInformations = null;
-         var member:PartyMemberWrapper = null;
-         var entityId:* = 0;
-         var playerName:String = "";
-         var socialApi:SocialApi = new SocialApi();
-         var playerIsOnSameMap:Boolean = false;
-         if(pPartyId == this._arenaPartyId)
+      private function createPartyPlayerContextMenu(param1:uint, param2:int) : Object {
+         var _loc6_:ActorAlignmentInformations = null;
+         var _loc7_:PartyMemberWrapper = null;
+         var _loc8_:* = 0;
+         var _loc3_:* = "";
+         var _loc4_:SocialApi = new SocialApi();
+         var _loc5_:* = false;
+         if(param2 == this._arenaPartyId)
          {
-            for each (member in this._arenaPartyMembers)
+            for each (_loc7_ in this._arenaPartyMembers)
             {
-               if(member.id == pPlayerId)
+               if(_loc7_.id == param1)
                {
-                  playerName = member.name;
+                  _loc3_ = _loc7_.name;
                }
             }
          }
          else
          {
-            if(pPartyId == this._partyId)
+            if(param2 == this._partyId)
             {
-               for each (member in this._partyMembers)
+               for each (_loc7_ in this._partyMembers)
                {
-                  if(member.id == pPlayerId)
+                  if(_loc7_.id == param1)
                   {
-                     playerName = member.name;
+                     _loc3_ = _loc7_.name;
                   }
                }
             }
          }
-         if(playerName == "")
+         if(_loc3_ == "")
          {
             return null;
          }
          if(this.roleplayEntitiesFrame)
          {
-            for each (entityId in this.roleplayEntitiesFrame.playersId)
+            for each (_loc8_ in this.roleplayEntitiesFrame.playersId)
             {
-               if(entityId == pPlayerId)
+               if(_loc8_ == param1)
                {
-                  playerIsOnSameMap = true;
-                  if(this.roleplayEntitiesFrame.getEntityInfos(entityId) is GameRolePlayCharacterInformations)
+                  _loc5_ = true;
+                  if(this.roleplayEntitiesFrame.getEntityInfos(_loc8_) is GameRolePlayCharacterInformations)
                   {
-                     playerAlignmentInfos = (this.roleplayEntitiesFrame.getEntityInfos(entityId) as GameRolePlayCharacterInformations).alignmentInfos;
+                     _loc6_ = (this.roleplayEntitiesFrame.getEntityInfos(_loc8_) as GameRolePlayCharacterInformations).alignmentInfos;
                   }
                }
             }
          }
          return MenusFactory.create(
             {
-               "id":pPlayerId,
-               "name":playerName,
-               "onSameMap":playerIsOnSameMap,
-               "alignmentInfos":playerAlignmentInfos
-            },"partyMember",pPartyId);
+               "id":param1,
+               "name":_loc3_,
+               "onSameMap":_loc5_,
+               "alignmentInfos":_loc6_
+            },"partyMember",param2);
       }
       
-      function onTimerTick(pEvent:TimerEvent) : void {
-         var member:PartyMemberWrapper = null;
-         var playerLPTM:LifePointTickManager = null;
-         var additionalLifePoint:uint = 0;
-         var newLifePoints:uint = 0;
-         var lptm:LifePointTickManager = null;
-         var playerLPTM2:LifePointTickManager = null;
-         var additionalLifePoint2:uint = 0;
-         var newLifePoints2:uint = 0;
-         var lptm2:LifePointTickManager = null;
-         for each (member in this._partyMembers)
+      private function onTimerTick(param1:TimerEvent) : void {
+         var _loc2_:PartyMemberWrapper = null;
+         var _loc3_:LifePointTickManager = null;
+         var _loc4_:uint = 0;
+         var _loc5_:uint = 0;
+         var _loc6_:LifePointTickManager = null;
+         var _loc7_:LifePointTickManager = null;
+         var _loc8_:uint = 0;
+         var _loc9_:uint = 0;
+         var _loc10_:LifePointTickManager = null;
+         for each (_loc2_ in this._partyMembers)
          {
-            if((member.lifePoints < member.maxLifePoints) && (member.regenRate > 0))
+            if(_loc2_.lifePoints < _loc2_.maxLifePoints && _loc2_.regenRate > 0)
             {
-               if(this._dicRegen[member.id] == null)
+               if(this._dicRegen[_loc2_.id] == null)
                {
-                  lptm = new LifePointTickManager();
-                  lptm.originalLifePoint = member.lifePoints;
-                  lptm.regenRate = member.regenRate;
-                  lptm.tickNumber = 1;
-                  this._dicRegen[member.id] = lptm;
+                  _loc6_ = new LifePointTickManager();
+                  _loc6_.originalLifePoint = _loc2_.lifePoints;
+                  _loc6_.regenRate = _loc2_.regenRate;
+                  _loc6_.tickNumber = 1;
+                  this._dicRegen[_loc2_.id] = _loc6_;
                }
-               playerLPTM = this._dicRegen[member.id] as LifePointTickManager;
-               additionalLifePoint = Math.floor(playerLPTM.tickNumber * 10 / playerLPTM.regenRate);
-               newLifePoints = playerLPTM.originalLifePoint + additionalLifePoint;
-               if(newLifePoints >= member.maxLifePoints)
+               _loc3_ = this._dicRegen[_loc2_.id] as LifePointTickManager;
+               _loc4_ = Math.floor(_loc3_.tickNumber * 10 / _loc3_.regenRate);
+               _loc5_ = _loc3_.originalLifePoint + _loc4_;
+               if(_loc5_ >= _loc2_.maxLifePoints)
                {
-                  newLifePoints = member.maxLifePoints;
+                  _loc5_ = _loc2_.maxLifePoints;
                }
-               member.lifePoints = newLifePoints;
-               playerLPTM.tickNumber++;
-               KernelEventsManager.getInstance().processCallback(HookList.PartyMemberLifeUpdate,this._partyId,member.id,member.lifePoints,member.initiative);
+               _loc2_.lifePoints = _loc5_;
+               _loc3_.tickNumber++;
+               KernelEventsManager.getInstance().processCallback(HookList.PartyMemberLifeUpdate,this._partyId,_loc2_.id,_loc2_.lifePoints,_loc2_.initiative);
             }
          }
-         for each (member in this._arenaPartyMembers)
+         for each (_loc2_ in this._arenaPartyMembers)
          {
-            if((member.lifePoints < member.maxLifePoints) && (member.regenRate > 0))
+            if(_loc2_.lifePoints < _loc2_.maxLifePoints && _loc2_.regenRate > 0)
             {
-               if(this._dicRegenArena[member.id] == null)
+               if(this._dicRegenArena[_loc2_.id] == null)
                {
-                  lptm2 = new LifePointTickManager();
-                  lptm2.originalLifePoint = member.lifePoints;
-                  lptm2.regenRate = member.regenRate;
-                  lptm2.tickNumber = 1;
-                  this._dicRegenArena[member.id] = lptm2;
+                  _loc10_ = new LifePointTickManager();
+                  _loc10_.originalLifePoint = _loc2_.lifePoints;
+                  _loc10_.regenRate = _loc2_.regenRate;
+                  _loc10_.tickNumber = 1;
+                  this._dicRegenArena[_loc2_.id] = _loc10_;
                }
-               playerLPTM2 = this._dicRegenArena[member.id] as LifePointTickManager;
-               additionalLifePoint2 = Math.floor(playerLPTM2.tickNumber * 10 / playerLPTM2.regenRate);
-               newLifePoints2 = playerLPTM2.originalLifePoint + additionalLifePoint2;
-               if(newLifePoints2 >= member.maxLifePoints)
+               _loc7_ = this._dicRegenArena[_loc2_.id] as LifePointTickManager;
+               _loc8_ = Math.floor(_loc7_.tickNumber * 10 / _loc7_.regenRate);
+               _loc9_ = _loc7_.originalLifePoint + _loc8_;
+               if(_loc9_ >= _loc2_.maxLifePoints)
                {
-                  newLifePoints2 = member.maxLifePoints;
+                  _loc9_ = _loc2_.maxLifePoints;
                }
-               member.lifePoints = newLifePoints2;
-               playerLPTM2.tickNumber++;
-               KernelEventsManager.getInstance().processCallback(HookList.PartyMemberLifeUpdate,this._arenaPartyId,member.id,member.lifePoints,member.initiative);
+               _loc2_.lifePoints = _loc9_;
+               _loc7_.tickNumber++;
+               KernelEventsManager.getInstance().processCallback(HookList.PartyMemberLifeUpdate,this._arenaPartyId,_loc2_.id,_loc2_.lifePoints,_loc2_.initiative);
             }
          }
       }
       
-      function onFightStartTimerComplete(pEvent:TimerEvent) : void {
-         var key:Object = null;
-         var fight:PartyFightInformationsData = null;
-         for (key in this._partyFightsInformations)
+      private function onFightStartTimerComplete(param1:TimerEvent) : void {
+         var _loc2_:Object = null;
+         var _loc3_:PartyFightInformationsData = null;
+         for (_loc2_ in this._partyFightsInformations)
          {
-            for each (fight in this._partyFightsInformations[key])
+            for each (_loc3_ in this._partyFightsInformations[_loc2_])
             {
-               if(fight.timeUntilFightbegin == pEvent.currentTarget)
+               if(_loc3_.timeUntilFightbegin == param1.currentTarget)
                {
-                  this.deletePartyFightInformation(key,fight);
+                  this.deletePartyFightInformation(_loc2_,_loc3_);
                   return;
                }
             }
          }
       }
       
-      function deletePartyFightInformation(key:Object, fight:PartyFightInformationsData) : void {
-         fight.timeUntilFightbegin.removeEventListener(TimerEvent.TIMER_COMPLETE,this.onFightStartTimerComplete);
-         if(this._partyFightsInformations[key].length > 1)
+      private function deletePartyFightInformation(param1:Object, param2:PartyFightInformationsData) : void {
+         param2.timeUntilFightbegin.removeEventListener(TimerEvent.TIMER_COMPLETE,this.onFightStartTimerComplete);
+         if(this._partyFightsInformations[param1].length > 1)
          {
-            this._partyFightsInformations[key].splice(this._partyFightsInformations[key].indexOf(fight));
+            this._partyFightsInformations[param1].splice(this._partyFightsInformations[param1].indexOf(param2));
          }
          else
          {
-            delete this._partyFightsInformations[[key]];
+            delete this._partyFightsInformations[[param1]];
          }
       }
       
       public function teleportWantedFunction() : void {
-         var action:TeleportBuddiesAnswerAction = new TeleportBuddiesAnswerAction();
-         action.accept = true;
-         this._teleportBuddiesDialogFrame.process(action);
+         var _loc1_:TeleportBuddiesAnswerAction = new TeleportBuddiesAnswerAction();
+         _loc1_.accept = true;
+         this._teleportBuddiesDialogFrame.process(_loc1_);
       }
       
       public function teleportUnwantedFunction() : void {
-         var action:TeleportBuddiesAnswerAction = new TeleportBuddiesAnswerAction();
-         action.accept = false;
-         this._teleportBuddiesDialogFrame.process(action);
+         var _loc1_:TeleportBuddiesAnswerAction = new TeleportBuddiesAnswerAction();
+         _loc1_.accept = false;
+         this._teleportBuddiesDialogFrame.process(_loc1_);
       }
    }
 }

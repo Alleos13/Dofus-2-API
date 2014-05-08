@@ -5,18 +5,18 @@ package com.ankamagames.jerakine.types
    public class DataStoreType extends Object
    {
       
-      public function DataStoreType(sCategory:String, bPersistant:Boolean, nLocation:Number=NaN, nBind:Number=NaN) {
+      public function DataStoreType(param1:String, param2:Boolean, param3:Number=NaN, param4:Number=NaN) {
          super();
-         this._sCategory = sCategory;
-         this._bPersistant = bPersistant;
-         if(bPersistant)
+         this._sCategory = param1;
+         this._bPersistant = param2;
+         if(param2)
          {
-            if(!isNaN(nLocation))
+            if(!isNaN(param3))
             {
-               this._nLocation = nLocation;
-               if(!isNaN(nBind))
+               this._nLocation = param3;
+               if(!isNaN(param4))
                {
-                  this._nBind = nBind;
+                  this._nBind = param4;
                }
                else
                {
@@ -40,8 +40,8 @@ package com.ankamagames.jerakine.types
          return _CHARACTER_ID;
       }
       
-      public static function set CHARACTER_ID(value:String) : void {
-         _CHARACTER_ID = value;
+      public static function set CHARACTER_ID(param1:String) : void {
+         _CHARACTER_ID = param1;
          _lastIdInitId++;
       }
       
@@ -49,8 +49,8 @@ package com.ankamagames.jerakine.types
          return _ACCOUNT_ID;
       }
       
-      public static function set ACCOUNT_ID(value:String) : void {
-         _ACCOUNT_ID = value;
+      public static function set ACCOUNT_ID(param1:String) : void {
+         _ACCOUNT_ID = param1;
          _lastIdInitId++;
       }
       

@@ -35,11 +35,11 @@ package com.ankamagames.dofus.network.messages.game.social
          return 5934;
       }
       
-      public function initContactLookMessage(requestId:uint=0, playerName:String="", playerId:uint=0, look:EntityLook=null) : ContactLookMessage {
-         this.requestId = requestId;
-         this.playerName = playerName;
-         this.playerId = playerId;
-         this.look = look;
+      public function initContactLookMessage(param1:uint=0, param2:String="", param3:uint=0, param4:EntityLook=null) : ContactLookMessage {
+         this.requestId = param1;
+         this.playerName = param2;
+         this.playerId = param3;
+         this.look = param4;
          this._isInitialized = true;
          return this;
       }
@@ -52,56 +52,56 @@ package com.ankamagames.dofus.network.messages.game.social
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ContactLookMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_ContactLookMessage(param1);
       }
       
-      public function serializeAs_ContactLookMessage(output:IDataOutput) : void {
+      public function serializeAs_ContactLookMessage(param1:IDataOutput) : void {
          if(this.requestId < 0)
          {
             throw new Error("Forbidden value (" + this.requestId + ") on element requestId.");
          }
          else
          {
-            output.writeInt(this.requestId);
-            output.writeUTF(this.playerName);
+            param1.writeInt(this.requestId);
+            param1.writeUTF(this.playerName);
             if(this.playerId < 0)
             {
                throw new Error("Forbidden value (" + this.playerId + ") on element playerId.");
             }
             else
             {
-               output.writeInt(this.playerId);
-               this.look.serializeAs_EntityLook(output);
+               param1.writeInt(this.playerId);
+               this.look.serializeAs_EntityLook(param1);
                return;
             }
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ContactLookMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_ContactLookMessage(param1);
       }
       
-      public function deserializeAs_ContactLookMessage(input:IDataInput) : void {
-         this.requestId = input.readInt();
+      public function deserializeAs_ContactLookMessage(param1:IDataInput) : void {
+         this.requestId = param1.readInt();
          if(this.requestId < 0)
          {
             throw new Error("Forbidden value (" + this.requestId + ") on element of ContactLookMessage.requestId.");
          }
          else
          {
-            this.playerName = input.readUTF();
-            this.playerId = input.readInt();
+            this.playerName = param1.readUTF();
+            this.playerId = param1.readInt();
             if(this.playerId < 0)
             {
                throw new Error("Forbidden value (" + this.playerId + ") on element of ContactLookMessage.playerId.");
@@ -109,7 +109,7 @@ package com.ankamagames.dofus.network.messages.game.social
             else
             {
                this.look = new EntityLook();
-               this.look.deserialize(input);
+               this.look.deserialize(param1);
                return;
             }
          }

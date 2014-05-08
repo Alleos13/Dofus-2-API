@@ -29,11 +29,11 @@ package com.ankamagames.dofus.scripts
    public class ScriptEntity extends Object implements LuaPackage
    {
       
-      public function ScriptEntity(pId:int, pLook:String, pEntity:TiphonSprite=null) {
+      public function ScriptEntity(param1:int, param2:String, param3:TiphonSprite=null) {
          super();
-         this._id = pId;
-         this._look = pLook;
-         this._entity = pEntity;
+         this._id = param1;
+         this._look = param2;
+         this._entity = param3;
       }
       
       private var _id:int;
@@ -68,16 +68,16 @@ package com.ankamagames.dofus.scripts
          return this._y;
       }
       
-      public function set x(pX:int) : void {
-         this._x = pX;
+      public function set x(param1:int) : void {
+         this._x = param1;
          if(this.getEntitySprite())
          {
             this.teleport(this._x,this._y).start();
          }
       }
       
-      public function set y(pY:int) : void {
-         this._y = pY;
+      public function set y(param1:int) : void {
+         this._y = param1;
          if(this.getEntitySprite())
          {
             this.teleport(this._x,this._y).start();
@@ -88,10 +88,10 @@ package com.ankamagames.dofus.scripts
          return MapPoint.fromCoords(this._x,this._y).cellId;
       }
       
-      public function set cellId(pCellId:uint) : void {
+      public function set cellId(param1:uint) : void {
          if(this.getEntitySprite())
          {
-            this.teleport(pCellId).start();
+            this.teleport(param1).start();
          }
       }
       
@@ -103,11 +103,11 @@ package com.ankamagames.dofus.scripts
          return this._look;
       }
       
-      public function set look(pLook:String) : void {
+      public function set look(param1:String) : void {
          if(this.getEntitySprite())
          {
-            this._look = pLook;
-            this._entity.look.updateFrom(EntityLookParser.fromString(pLook));
+            this._look = param1;
+            this._entity.look.updateFrom(EntityLookParser.fromString(param1));
          }
       }
       
@@ -115,11 +115,11 @@ package com.ankamagames.dofus.scripts
          return this._direction;
       }
       
-      public function set direction(pDirection:int) : void {
-         this._direction = pDirection;
+      public function set direction(param1:int) : void {
+         this._direction = param1;
          if(this.getEntitySprite())
          {
-            this._entity.setDirection(pDirection);
+            this._entity.setDirection(param1);
          }
       }
       
@@ -127,10 +127,10 @@ package com.ankamagames.dofus.scripts
          return this.getEntitySprite()?this._entity.scaleX:NaN;
       }
       
-      public function set scaleX(pScaleX:Number) : void {
+      public function set scaleX(param1:Number) : void {
          if(this.getEntitySprite())
          {
-            this._entity.scaleX = pScaleX;
+            this._entity.scaleX = param1;
          }
       }
       
@@ -138,141 +138,141 @@ package com.ankamagames.dofus.scripts
          return this.getEntitySprite()?this._entity.scaleY:NaN;
       }
       
-      public function set scaleY(pScaleY:Number) : void {
+      public function set scaleY(param1:Number) : void {
          if(this.getEntitySprite())
          {
-            this._entity.scaleY = pScaleY;
+            this._entity.scaleY = param1;
          }
       }
       
-      public function move(... pArgs) : ISequencable {
-         var step:ISequencable = null;
+      public function move(... rest) : ISequencable {
+         var _loc2_:ISequencable = null;
          if(this.getEntitySprite())
          {
-            step = new MoveStep(AnimatedCharacter(this._entity),pArgs);
+            _loc2_ = new MoveStep(AnimatedCharacter(this._entity),rest);
          }
-         return step;
+         return _loc2_;
       }
       
-      public function walk(... pArgs) : ISequencable {
-         var step:ISequencable = null;
+      public function walk(... rest) : ISequencable {
+         var _loc2_:ISequencable = null;
          if(this.getEntitySprite())
          {
-            step = new MoveStep(AnimatedCharacter(this._entity),pArgs,WalkingMovementBehavior.getInstance());
+            _loc2_ = new MoveStep(AnimatedCharacter(this._entity),rest,WalkingMovementBehavior.getInstance());
          }
-         return step;
+         return _loc2_;
       }
       
-      public function run(... pArgs) : ISequencable {
-         var step:ISequencable = null;
+      public function run(... rest) : ISequencable {
+         var _loc2_:ISequencable = null;
          if(this.getEntitySprite())
          {
-            step = new MoveStep(AnimatedCharacter(this._entity),pArgs,RunningMovementBehavior.getInstance());
+            _loc2_ = new MoveStep(AnimatedCharacter(this._entity),rest,RunningMovementBehavior.getInstance());
          }
-         return step;
+         return _loc2_;
       }
       
-      public function slide(... pArgs) : ISequencable {
-         var step:ISequencable = null;
+      public function slide(... rest) : ISequencable {
+         var _loc2_:ISequencable = null;
          if(this.getEntitySprite())
          {
-            step = new MoveStep(AnimatedCharacter(this._entity),pArgs,SlideMovementBehavior.getInstance());
+            _loc2_ = new MoveStep(AnimatedCharacter(this._entity),rest,SlideMovementBehavior.getInstance());
          }
-         return step;
+         return _loc2_;
       }
       
-      public function teleport(... pArgs) : ISequencable {
-         var step:ISequencable = null;
+      public function teleport(... rest) : ISequencable {
+         var _loc2_:ISequencable = null;
          if(this.getEntitySprite())
          {
-            step = new TeleportStep(AnimatedCharacter(this._entity),pArgs);
+            _loc2_ = new TeleportStep(AnimatedCharacter(this._entity),rest);
          }
-         return step;
+         return _loc2_;
       }
       
-      public function lookAt(... pArgs) : ISequencable {
-         var step:ISequencable = null;
+      public function lookAt(... rest) : ISequencable {
+         var _loc2_:ISequencable = null;
          if(this.getEntitySprite())
          {
-            step = new LookAtStep(AnimatedCharacter(this._entity),pArgs);
+            _loc2_ = new LookAtStep(AnimatedCharacter(this._entity),rest);
          }
-         return step;
+         return _loc2_;
       }
       
-      public function wait(pMilliseconds:int) : ISequencable {
-         return new WaitStep(pMilliseconds);
+      public function wait(param1:int) : ISequencable {
+         return new WaitStep(param1);
       }
       
       public function stop() : ISequencable {
-         var step:ISequencable = null;
+         var _loc1_:ISequencable = null;
          if(this.getEntitySprite())
          {
-            step = new CallbackStep(new Callback(AnimatedCharacter(this._entity).stop));
+            _loc1_ = new CallbackStep(new Callback(AnimatedCharacter(this._entity).stop));
          }
-         return step;
+         return _loc1_;
       }
       
-      public function setDirection(pDirection:int) : ISequencable {
-         var step:ISequencable = null;
+      public function setDirection(param1:int) : ISequencable {
+         var _loc2_:ISequencable = null;
          if(this.getEntitySprite())
          {
-            step = new SetDirectionStep(this._entity,pDirection);
+            _loc2_ = new SetDirectionStep(this._entity,param1);
          }
-         return step;
+         return _loc2_;
       }
       
-      public function setAnimation(pAnimation:String, pLoop:int=1, pEndAnimation:String="") : ISequencable {
-         var step:ISequencable = null;
+      public function setAnimation(param1:String, param2:int=1, param3:String="") : ISequencable {
+         var _loc4_:ISequencable = null;
          if(this.getEntitySprite())
          {
-            step = new PlayAnimationStep(this._entity,pAnimation,true,true,"animation_event_end",pLoop,pEndAnimation);
+            _loc4_ = new PlayAnimationStep(this._entity,param1,true,true,"animation_event_end",param2,param3);
          }
-         return step;
+         return _loc4_;
       }
       
-      public function playEmote(pEmoteId:int, pWaitForEnd:Boolean=true) : ISequencable {
-         var step:ISequencable = null;
+      public function playEmote(param1:int, param2:Boolean=true) : ISequencable {
+         var _loc3_:ISequencable = null;
          if(this.getEntitySprite())
          {
-            step = new PlayEmoteStep(this._entity as AnimatedCharacter,pEmoteId,pWaitForEnd);
+            _loc3_ = new PlayEmoteStep(this._entity as AnimatedCharacter,param1,param2);
          }
-         return step;
+         return _loc3_;
       }
       
-      public function playSmiley(pSmileyId:int, pWaitForEnd:Boolean=true) : ISequencable {
-         var step:ISequencable = null;
+      public function playSmiley(param1:int, param2:Boolean=true) : ISequencable {
+         var _loc3_:ISequencable = null;
          if(this.getEntitySprite())
          {
-            step = new PlaySmileyStep(this._entity as AnimatedCharacter,pSmileyId,pWaitForEnd);
+            _loc3_ = new PlaySmileyStep(this._entity as AnimatedCharacter,param1,param2);
          }
-         return step;
+         return _loc3_;
       }
       
-      public function think(pText:String, pWaitForEnd:Boolean=true) : ISequencable {
-         var step:ISequencable = null;
+      public function think(param1:String, param2:Boolean=true) : ISequencable {
+         var _loc3_:ISequencable = null;
          if(this.getEntitySprite())
          {
-            step = new TextBubbleStep(this._entity as AnimatedCharacter,new ThinkBubble(pText),pWaitForEnd);
+            _loc3_ = new TextBubbleStep(this._entity as AnimatedCharacter,new ThinkBubble(param1),param2);
          }
-         return step;
+         return _loc3_;
       }
       
-      public function speak(pText:String, pWaitForEnd:Boolean=true) : ISequencable {
-         var step:ISequencable = null;
+      public function speak(param1:String, param2:Boolean=true) : ISequencable {
+         var _loc3_:ISequencable = null;
          if(this.getEntitySprite())
          {
-            step = new TextBubbleStep(this._entity as AnimatedCharacter,new ChatBubble(pText),pWaitForEnd);
+            _loc3_ = new TextBubbleStep(this._entity as AnimatedCharacter,new ChatBubble(param1),param2);
          }
-         return step;
+         return _loc3_;
       }
       
-      public function setLook(pLook:String) : ISequencable {
-         var step:ISequencable = null;
+      public function setLook(param1:String) : ISequencable {
+         var _loc2_:ISequencable = null;
          if(this.getEntitySprite())
          {
-            step = CallbackStep(new Callback(this._entity.look.updateFrom,EntityLookParser.fromString(pLook)));
+            _loc2_ = CallbackStep(new Callback(this._entity.look.updateFrom,EntityLookParser.fromString(param1)));
          }
-         return step;
+         return _loc2_;
       }
       
       public function display() : ISequencable {

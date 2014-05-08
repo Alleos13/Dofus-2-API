@@ -6,6 +6,7 @@ package com.ankamagames.dofus.logic.game.common.frames
    import flash.utils.getQualifiedClassName;
    import com.ankamagames.dofus.internalDatacenter.people.SpouseWrapper;
    import com.ankamagames.dofus.internalDatacenter.guild.GuildWrapper;
+   import __AS3__.vec.Vector;
    import com.ankamagames.dofus.network.types.game.guild.GuildMember;
    import com.ankamagames.dofus.internalDatacenter.guild.GuildHouseWrapper;
    import com.ankamagames.dofus.network.types.game.paddock.PaddockContentInformations;
@@ -155,7 +156,6 @@ package com.ankamagames.dofus.logic.game.common.frames
    import com.ankamagames.dofus.logic.common.managers.AccountManager;
    import com.ankamagames.dofus.logic.game.common.managers.ChatAutocompleteNameManager;
    import com.ankamagames.dofus.internalDatacenter.people.IgnoredWrapper;
-   import __AS3__.vec.*;
    
    public class SocialFrame extends Object implements Frame
    {
@@ -289,12 +289,12 @@ package com.ankamagames.dofus.logic.game.common.frames
          return this._guildHousesListUpdate;
       }
       
-      public function getGuildById(id:int) : GuildFactSheetWrapper {
-         return this._allGuilds[id];
+      public function getGuildById(param1:int) : GuildFactSheetWrapper {
+         return this._allGuilds[param1];
       }
       
-      public function updateGuildById(id:int, guild:GuildFactSheetWrapper) : void {
-         this._allGuilds[id] = guild;
+      public function updateGuildById(param1:int, param2:GuildFactSheetWrapper) : void {
+         this._allGuilds[param1] = param2;
       }
       
       public function pushed() : Boolean {
@@ -316,7 +316,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return true;
       }
       
-      public function process(msg:Message) : Boolean {
+      public function process(param1:Message) : Boolean {
          /*
           * Decompilation error
           * Code may be obfuscated
@@ -325,12 +325,12 @@ package com.ankamagames.dofus.logic.game.common.frames
          throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      public function isIgnored(name:String, accountId:int=0) : Boolean {
-         var loser:IgnoredWrapper = null;
-         var accountName:String = AccountManager.getInstance().getAccountName(name);
-         for each (loser in this._ignoredList)
+      public function isIgnored(param1:String, param2:int=0) : Boolean {
+         var _loc4_:IgnoredWrapper = null;
+         var _loc3_:String = AccountManager.getInstance().getAccountName(param1);
+         for each (_loc4_ in this._ignoredList)
          {
-            if((!(accountId == 0)) && (loser.accountId == accountId) || (accountName) && (loser.name.toLowerCase() == accountName.toLowerCase()))
+            if(!(param2 == 0) && _loc4_.accountId == param2 || (_loc3_) && (_loc4_.name.toLowerCase() == _loc3_.toLowerCase()))
             {
                return true;
             }
@@ -338,34 +338,34 @@ package com.ankamagames.dofus.logic.game.common.frames
          return false;
       }
       
-      public function isFriend(playerName:String) : Boolean {
-         var fw:FriendWrapper = null;
-         var n:int = this._friendsList.length;
-         var i:int = 0;
-         while(i < n)
+      public function isFriend(param1:String) : Boolean {
+         var _loc4_:FriendWrapper = null;
+         var _loc2_:int = this._friendsList.length;
+         var _loc3_:* = 0;
+         while(_loc3_ < _loc2_)
          {
-            fw = this._friendsList[i];
-            if(fw.playerName == playerName)
+            _loc4_ = this._friendsList[_loc3_];
+            if(_loc4_.playerName == param1)
             {
                return true;
             }
-            i++;
+            _loc3_++;
          }
          return false;
       }
       
-      public function isEnemy(playerName:String) : Boolean {
-         var ew:EnemyWrapper = null;
-         var n:int = this._enemiesList.length;
-         var i:int = 0;
-         while(i < n)
+      public function isEnemy(param1:String) : Boolean {
+         var _loc4_:EnemyWrapper = null;
+         var _loc2_:int = this._enemiesList.length;
+         var _loc3_:* = 0;
+         while(_loc3_ < _loc2_)
          {
-            ew = this._enemiesList[i];
-            if(ew.playerName == playerName)
+            _loc4_ = this._enemiesList[_loc3_];
+            if(_loc4_.playerName == param1)
             {
                return true;
             }
-            i++;
+            _loc3_++;
          }
          return false;
       }

@@ -11,15 +11,15 @@ package com.ankamagames.jerakine.logger
       
       private static var _callBack:Function;
       
-      public static function log(... args) : void {
-         if((active) && (!(_callBack == null)))
+      public static function log(... rest) : void {
+         if((active) && !(_callBack == null))
          {
-            _callBack.apply(_callBack,args);
+            _callBack.apply(_callBack,rest);
          }
       }
       
-      public static function init(callBack:Function) : void {
-         _callBack = callBack;
+      public static function init(param1:Function) : void {
+         _callBack = param1;
       }
    }
 }

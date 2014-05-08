@@ -8,9 +8,9 @@ package com.ankamagames.atouin.types.sequences
    public class AddWorldEntityStep extends AbstractSequencable
    {
       
-      public function AddWorldEntityStep(entity:IEntity) {
+      public function AddWorldEntityStep(param1:IEntity) {
          super();
-         this._entity = entity;
+         this._entity = param1;
       }
       
       private var _entity:IEntity;

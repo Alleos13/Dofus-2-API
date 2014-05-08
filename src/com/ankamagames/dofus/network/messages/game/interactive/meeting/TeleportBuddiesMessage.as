@@ -27,8 +27,8 @@ package com.ankamagames.dofus.network.messages.game.interactive.meeting
          return 6289;
       }
       
-      public function initTeleportBuddiesMessage(dungeonId:uint=0) : TeleportBuddiesMessage {
-         this.dungeonId = dungeonId;
+      public function initTeleportBuddiesMessage(param1:uint=0) : TeleportBuddiesMessage {
+         this.dungeonId = param1;
          this._isInitialized = true;
          return this;
       }
@@ -38,38 +38,38 @@ package com.ankamagames.dofus.network.messages.game.interactive.meeting
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TeleportBuddiesMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_TeleportBuddiesMessage(param1);
       }
       
-      public function serializeAs_TeleportBuddiesMessage(output:IDataOutput) : void {
+      public function serializeAs_TeleportBuddiesMessage(param1:IDataOutput) : void {
          if(this.dungeonId < 0)
          {
             throw new Error("Forbidden value (" + this.dungeonId + ") on element dungeonId.");
          }
          else
          {
-            output.writeShort(this.dungeonId);
+            param1.writeShort(this.dungeonId);
             return;
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TeleportBuddiesMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_TeleportBuddiesMessage(param1);
       }
       
-      public function deserializeAs_TeleportBuddiesMessage(input:IDataInput) : void {
-         this.dungeonId = input.readShort();
+      public function deserializeAs_TeleportBuddiesMessage(param1:IDataInput) : void {
+         this.dungeonId = param1.readShort();
          if(this.dungeonId < 0)
          {
             throw new Error("Forbidden value (" + this.dungeonId + ") on element of TeleportBuddiesMessage.dungeonId.");

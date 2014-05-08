@@ -25,11 +25,11 @@ package com.ankamagames.dofus.network.types.game.character.alignment
          return 201;
       }
       
-      public function initActorAlignmentInformations(alignmentSide:int=0, alignmentValue:uint=0, alignmentGrade:uint=0, characterPower:uint=0) : ActorAlignmentInformations {
-         this.alignmentSide = alignmentSide;
-         this.alignmentValue = alignmentValue;
-         this.alignmentGrade = alignmentGrade;
-         this.characterPower = characterPower;
+      public function initActorAlignmentInformations(param1:int=0, param2:uint=0, param3:uint=0, param4:uint=0) : ActorAlignmentInformations {
+         this.alignmentSide = param1;
+         this.alignmentValue = param2;
+         this.alignmentGrade = param3;
+         this.characterPower = param4;
          return this;
       }
       
@@ -40,60 +40,60 @@ package com.ankamagames.dofus.network.types.game.character.alignment
          this.characterPower = 0;
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ActorAlignmentInformations(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_ActorAlignmentInformations(param1);
       }
       
-      public function serializeAs_ActorAlignmentInformations(output:IDataOutput) : void {
-         output.writeByte(this.alignmentSide);
+      public function serializeAs_ActorAlignmentInformations(param1:IDataOutput) : void {
+         param1.writeByte(this.alignmentSide);
          if(this.alignmentValue < 0)
          {
             throw new Error("Forbidden value (" + this.alignmentValue + ") on element alignmentValue.");
          }
          else
          {
-            output.writeByte(this.alignmentValue);
+            param1.writeByte(this.alignmentValue);
             if(this.alignmentGrade < 0)
             {
                throw new Error("Forbidden value (" + this.alignmentGrade + ") on element alignmentGrade.");
             }
             else
             {
-               output.writeByte(this.alignmentGrade);
+               param1.writeByte(this.alignmentGrade);
                if(this.characterPower < 0)
                {
                   throw new Error("Forbidden value (" + this.characterPower + ") on element characterPower.");
                }
                else
                {
-                  output.writeInt(this.characterPower);
+                  param1.writeInt(this.characterPower);
                   return;
                }
             }
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ActorAlignmentInformations(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_ActorAlignmentInformations(param1);
       }
       
-      public function deserializeAs_ActorAlignmentInformations(input:IDataInput) : void {
-         this.alignmentSide = input.readByte();
-         this.alignmentValue = input.readByte();
+      public function deserializeAs_ActorAlignmentInformations(param1:IDataInput) : void {
+         this.alignmentSide = param1.readByte();
+         this.alignmentValue = param1.readByte();
          if(this.alignmentValue < 0)
          {
             throw new Error("Forbidden value (" + this.alignmentValue + ") on element of ActorAlignmentInformations.alignmentValue.");
          }
          else
          {
-            this.alignmentGrade = input.readByte();
+            this.alignmentGrade = param1.readByte();
             if(this.alignmentGrade < 0)
             {
                throw new Error("Forbidden value (" + this.alignmentGrade + ") on element of ActorAlignmentInformations.alignmentGrade.");
             }
             else
             {
-               this.characterPower = input.readInt();
+               this.characterPower = param1.readInt();
                if(this.characterPower < 0)
                {
                   throw new Error("Forbidden value (" + this.characterPower + ") on element of ActorAlignmentInformations.characterPower.");

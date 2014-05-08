@@ -11,9 +11,9 @@ package com.ankamagames.tubul.types
    public class SoundSilence extends EventDispatcher
    {
       
-      public function SoundSilence(pSilenceMin:Number, pSilenceMax:Number) {
+      public function SoundSilence(param1:Number, param2:Number) {
          super();
-         this.setSilence(pSilenceMin,pSilenceMax);
+         this.setSilence(param1,param2);
       }
       
       protected static const _log:Logger = Log.getLogger(getQualifiedClassName(SoundSilence));
@@ -45,15 +45,15 @@ package com.ankamagames.tubul.types
          {
             return;
          }
-         var silenceRandom:uint = (Math.random() * (this._silenceMax - this._silenceMin) + this._silenceMin) * 1000 * 60;
-         this._timer = new Timer(silenceRandom,1);
+         var _loc1_:uint = (Math.random() * (this._silenceMax - this._silenceMin) + this._silenceMin) * 1000 * 60;
+         this._timer = new Timer(_loc1_,1);
          if(!this._timer.hasEventListener(TimerEvent.TIMER))
          {
             this._timer.addEventListener(TimerEvent.TIMER,this.onTimerEnd);
          }
          this._timer.start();
-         var e:SoundSilenceEvent = new SoundSilenceEvent(SoundSilenceEvent.START);
-         dispatchEvent(e);
+         var _loc2_:SoundSilenceEvent = new SoundSilenceEvent(SoundSilenceEvent.START);
+         dispatchEvent(_loc2_);
       }
       
       public function stop() : void {
@@ -74,15 +74,15 @@ package com.ankamagames.tubul.types
          this._timer = null;
       }
       
-      public function setSilence(pSilenceMin:Number, pSilenceMax:Number) : void {
-         this._silenceMin = Math.min(pSilenceMin,pSilenceMax);
-         this._silenceMax = Math.max(pSilenceMin,pSilenceMax);
+      public function setSilence(param1:Number, param2:Number) : void {
+         this._silenceMin = Math.min(param1,param2);
+         this._silenceMax = Math.max(param1,param2);
       }
       
-      private function onTimerEnd(pEvent:TimerEvent) : void {
+      private function onTimerEnd(param1:TimerEvent) : void {
          this.clean();
-         var e:SoundSilenceEvent = new SoundSilenceEvent(SoundSilenceEvent.COMPLETE);
-         dispatchEvent(e);
+         var _loc2_:SoundSilenceEvent = new SoundSilenceEvent(SoundSilenceEvent.COMPLETE);
+         dispatchEvent(_loc2_);
       }
    }
 }

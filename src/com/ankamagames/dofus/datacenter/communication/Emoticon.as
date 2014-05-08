@@ -20,8 +20,8 @@ package com.ankamagames.dofus.datacenter.communication
       
       protected static const _log:Logger = Log.getLogger(getQualifiedClassName(Emoticon));
       
-      public static function getEmoticonById(id:int) : Emoticon {
-         return GameData.getObject(MODULE,id) as Emoticon;
+      public static function getEmoticonById(param1:int) : Emoticon {
+         return GameData.getObject(MODULE,param1) as Emoticon;
       }
       
       public static function getEmoticons() : Array {
@@ -69,56 +69,56 @@ package com.ankamagames.dofus.datacenter.communication
          {
             this._shortcut = I18n.getText(this.shortcutId);
          }
-         if((!this._shortcut) || (this._shortcut == ""))
+         if(!this._shortcut || this._shortcut == "")
          {
             return this.defaultAnim;
          }
          return this._shortcut;
       }
       
-      public function getAnimName(look:TiphonEntityLook) : String {
-         var animName:String = null;
-         var anim:String = null;
-         var animCase:Array = null;
-         var caseBoneId:uint = 0;
-         var caseSkins:Array = null;
-         var matchingSkin:uint = 0;
-         var skin:String = null;
-         var skinId:uint = 0;
-         var lookSkin:* = undefined;
-         if(look)
+      public function getAnimName(param1:TiphonEntityLook) : String {
+         var _loc2_:String = null;
+         var _loc3_:String = null;
+         var _loc4_:Array = null;
+         var _loc5_:uint = 0;
+         var _loc6_:Array = null;
+         var _loc7_:uint = 0;
+         var _loc8_:String = null;
+         var _loc9_:uint = 0;
+         var _loc10_:* = undefined;
+         if(param1)
          {
-            for each (anim in this.anims)
+            for each (_loc3_ in this.anims)
             {
-               animCase = anim.split(";");
-               caseBoneId = parseInt(animCase[0]);
-               if((look) && (caseBoneId == look.getBone()))
+               _loc4_ = _loc3_.split(";");
+               _loc5_ = parseInt(_loc4_[0]);
+               if((param1) && _loc5_ == param1.getBone())
                {
-                  caseSkins = animCase[1].split(",");
-                  matchingSkin = 0;
-                  for each (skin in caseSkins)
+                  _loc6_ = _loc4_[1].split(",");
+                  _loc7_ = 0;
+                  for each (_loc8_ in _loc6_)
                   {
-                     skinId = parseInt(skin);
-                     for each (lookSkin in look.skins)
+                     _loc9_ = parseInt(_loc8_);
+                     for each (_loc10_ in param1.skins)
                      {
-                        if(skinId == lookSkin)
+                        if(_loc9_ == _loc10_)
                         {
-                           matchingSkin++;
+                           _loc7_++;
                         }
                      }
                   }
-                  if(matchingSkin > 0)
+                  if(_loc7_ > 0)
                   {
-                     animName = "AnimEmote" + animCase[2];
+                     _loc2_ = "AnimEmote" + _loc4_[2];
                   }
                }
             }
          }
-         if(!animName)
+         if(!_loc2_)
          {
-            animName = "AnimEmote" + this.defaultAnim.charAt(0).toUpperCase() + this.defaultAnim.substr(1).toLowerCase() + "_0";
+            _loc2_ = "AnimEmote" + this.defaultAnim.charAt(0).toUpperCase() + this.defaultAnim.substr(1).toLowerCase() + "_0";
          }
-         return animName;
+         return _loc2_;
       }
    }
 }

@@ -33,10 +33,10 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.houses.guil
          return 5703;
       }
       
-      public function initHouseGuildRightsMessage(houseId:uint=0, guildInfo:GuildInformations=null, rights:uint=0) : HouseGuildRightsMessage {
-         this.houseId = houseId;
-         this.guildInfo = guildInfo;
-         this.rights = rights;
+      public function initHouseGuildRightsMessage(param1:uint=0, param2:GuildInformations=null, param3:uint=0) : HouseGuildRightsMessage {
+         this.houseId = param1;
+         this.guildInfo = param2;
+         this.rights = param3;
          this._isInitialized = true;
          return this;
       }
@@ -47,47 +47,47 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.houses.guil
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_HouseGuildRightsMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_HouseGuildRightsMessage(param1);
       }
       
-      public function serializeAs_HouseGuildRightsMessage(output:IDataOutput) : void {
+      public function serializeAs_HouseGuildRightsMessage(param1:IDataOutput) : void {
          if(this.houseId < 0)
          {
             throw new Error("Forbidden value (" + this.houseId + ") on element houseId.");
          }
          else
          {
-            output.writeShort(this.houseId);
-            this.guildInfo.serializeAs_GuildInformations(output);
-            if((this.rights < 0) || (this.rights > 4.294967295E9))
+            param1.writeShort(this.houseId);
+            this.guildInfo.serializeAs_GuildInformations(param1);
+            if(this.rights < 0 || this.rights > 4.294967295E9)
             {
                throw new Error("Forbidden value (" + this.rights + ") on element rights.");
             }
             else
             {
-               output.writeUnsignedInt(this.rights);
+               param1.writeUnsignedInt(this.rights);
                return;
             }
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_HouseGuildRightsMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_HouseGuildRightsMessage(param1);
       }
       
-      public function deserializeAs_HouseGuildRightsMessage(input:IDataInput) : void {
-         this.houseId = input.readShort();
+      public function deserializeAs_HouseGuildRightsMessage(param1:IDataInput) : void {
+         this.houseId = param1.readShort();
          if(this.houseId < 0)
          {
             throw new Error("Forbidden value (" + this.houseId + ") on element of HouseGuildRightsMessage.houseId.");
@@ -95,9 +95,9 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.houses.guil
          else
          {
             this.guildInfo = new GuildInformations();
-            this.guildInfo.deserialize(input);
-            this.rights = input.readUnsignedInt();
-            if((this.rights < 0) || (this.rights > 4.294967295E9))
+            this.guildInfo.deserialize(param1);
+            this.rights = param1.readUnsignedInt();
+            if(this.rights < 0 || this.rights > 4.294967295E9)
             {
                throw new Error("Forbidden value (" + this.rights + ") on element of HouseGuildRightsMessage.rights.");
             }

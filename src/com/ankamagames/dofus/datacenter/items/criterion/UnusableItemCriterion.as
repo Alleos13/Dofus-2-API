@@ -6,13 +6,13 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class UnusableItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function UnusableItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      public function UnusableItemCriterion(param1:String) {
+         super(param1);
       }
       
       override public function get text() : String {
-         var readableCriterionRef:String = I18n.getUiText("ui.criterion.unusableItem");
-         return readableCriterionRef;
+         var _loc1_:String = I18n.getUiText("ui.criterion.unusableItem");
+         return _loc1_;
       }
       
       override public function get isRespected() : Boolean {
@@ -20,11 +20,11 @@ package com.ankamagames.dofus.datacenter.items.criterion
       }
       
       override public function clone() : IItemCriterion {
-         var clonedCriterion:UnusableItemCriterion = new UnusableItemCriterion(this.basicText);
-         return clonedCriterion;
+         var _loc1_:UnusableItemCriterion = new UnusableItemCriterion(this.basicText);
+         return _loc1_;
       }
       
-      override function getCriterion() : int {
+      override protected function getCriterion() : int {
          return 0;
       }
    }

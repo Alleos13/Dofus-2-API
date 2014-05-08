@@ -25,10 +25,10 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.party.companio
          return 453;
       }
       
-      public function initPartyCompanionBaseInformations(indexId:uint=0, companionGenericId:uint=0, entityLook:EntityLook=null) : PartyCompanionBaseInformations {
-         this.indexId = indexId;
-         this.companionGenericId = companionGenericId;
-         this.entityLook = entityLook;
+      public function initPartyCompanionBaseInformations(param1:uint=0, param2:uint=0, param3:EntityLook=null) : PartyCompanionBaseInformations {
+         this.indexId = param1;
+         this.companionGenericId = param2;
+         this.entityLook = param3;
          return this;
       }
       
@@ -38,44 +38,44 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.party.companio
          this.entityLook = new EntityLook();
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PartyCompanionBaseInformations(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_PartyCompanionBaseInformations(param1);
       }
       
-      public function serializeAs_PartyCompanionBaseInformations(output:IDataOutput) : void {
+      public function serializeAs_PartyCompanionBaseInformations(param1:IDataOutput) : void {
          if(this.indexId < 0)
          {
             throw new Error("Forbidden value (" + this.indexId + ") on element indexId.");
          }
          else
          {
-            output.writeByte(this.indexId);
+            param1.writeByte(this.indexId);
             if(this.companionGenericId < 0)
             {
                throw new Error("Forbidden value (" + this.companionGenericId + ") on element companionGenericId.");
             }
             else
             {
-               output.writeShort(this.companionGenericId);
-               this.entityLook.serializeAs_EntityLook(output);
+               param1.writeShort(this.companionGenericId);
+               this.entityLook.serializeAs_EntityLook(param1);
                return;
             }
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PartyCompanionBaseInformations(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_PartyCompanionBaseInformations(param1);
       }
       
-      public function deserializeAs_PartyCompanionBaseInformations(input:IDataInput) : void {
-         this.indexId = input.readByte();
+      public function deserializeAs_PartyCompanionBaseInformations(param1:IDataInput) : void {
+         this.indexId = param1.readByte();
          if(this.indexId < 0)
          {
             throw new Error("Forbidden value (" + this.indexId + ") on element of PartyCompanionBaseInformations.indexId.");
          }
          else
          {
-            this.companionGenericId = input.readShort();
+            this.companionGenericId = param1.readShort();
             if(this.companionGenericId < 0)
             {
                throw new Error("Forbidden value (" + this.companionGenericId + ") on element of PartyCompanionBaseInformations.companionGenericId.");
@@ -83,7 +83,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.party.companio
             else
             {
                this.entityLook = new EntityLook();
-               this.entityLook.deserialize(input);
+               this.entityLook.deserialize(param1);
                return;
             }
          }

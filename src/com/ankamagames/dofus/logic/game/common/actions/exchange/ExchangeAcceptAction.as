@@ -10,8 +10,8 @@ package com.ankamagames.dofus.logic.game.common.actions.exchange
       }
       
       public static function create() : ExchangeAcceptAction {
-         var a:ExchangeAcceptAction = new ExchangeAcceptAction();
-         return a;
+         var _loc1_:ExchangeAcceptAction = new ExchangeAcceptAction();
+         return _loc1_;
       }
    }
 }

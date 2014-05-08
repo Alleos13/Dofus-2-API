@@ -7,10 +7,10 @@ package com.ankamagames.dofus.internalDatacenter.jobs
    public class RecipeWithSkill extends Object implements IDataCenter
    {
       
-      public function RecipeWithSkill(recipe:Recipe, skill:Skill) {
+      public function RecipeWithSkill(param1:Recipe, param2:Skill) {
          super();
-         this._recipe = recipe;
-         this._skill = skill;
+         this._recipe = param1;
+         this._skill = param2;
       }
       
       private var _recipe:Recipe;

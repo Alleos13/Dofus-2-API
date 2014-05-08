@@ -38,14 +38,14 @@ package com.ankamagames.jerakine.network
          return this._mainConnection;
       }
       
-      public function set mainConnection(conn:IServerConnection) : void {
-         if(!this._idByConnection[conn])
+      public function set mainConnection(param1:IServerConnection) : void {
+         if(!this._idByConnection[param1])
          {
             throw new ArgumentError("Connection must be added before setted to be the main connection");
          }
          else
          {
-            this._mainConnection = conn;
+            this._mainConnection = param1;
             return;
          }
       }
@@ -54,8 +54,8 @@ package com.ankamagames.jerakine.network
          return this._messageRouter;
       }
       
-      public function set messageRouter(mr:IMessageRouter) : void {
-         this._messageRouter = mr;
+      public function set messageRouter(param1:IMessageRouter) : void {
+         this._messageRouter = param1;
       }
       
       public function get connected() : Boolean {
@@ -66,8 +66,10 @@ package com.ankamagames.jerakine.network
          return this._connectionCount;
       }
       
-      public function addConnection(conn:IServerConnection, id:String) : void {
+      public function addConnection(param1:IServerConnection, param2:String) : void {
          var e:* = undefined;
+         var conn:IServerConnection = param1;
+         var id:String = param2;
          if(this._connectionById[id])
          {
             this.removeConnection(id);
@@ -90,10 +92,11 @@ package com.ankamagames.jerakine.network
          }
       }
       
-      public function removeConnection(idOrConnection:*) : Boolean {
+      public function removeConnection(param1:*) : Boolean {
          var id:String = null;
          var conn:IServerConnection = null;
          var e:* = undefined;
+         var idOrConnection:* = param1;
          if(idOrConnection is String)
          {
             id = idOrConnection;
@@ -130,118 +133,118 @@ package com.ankamagames.jerakine.network
          return true;
       }
       
-      public function getSubConnection(idOrMessageOrEvent:*=null) : IServerConnection {
-         if(idOrMessageOrEvent is String)
+      public function getSubConnection(param1:*=null) : IServerConnection {
+         if(param1 is String)
          {
-            return this._connectionById[idOrMessageOrEvent];
+            return this._connectionById[param1];
          }
-         if(idOrMessageOrEvent is Message)
+         if(param1 is Message)
          {
-            return this._connectionByMsg[idOrMessageOrEvent];
+            return this._connectionByMsg[param1];
          }
-         if(idOrMessageOrEvent is Event)
+         if(param1 is Event)
          {
-            return this._connectionByEvent[idOrMessageOrEvent];
+            return this._connectionByEvent[param1];
          }
-         throw new TypeError("Can\'t handle " + idOrMessageOrEvent + " class");
+         throw new TypeError("Can\'t handle " + param1 + " class");
       }
       
-      public function getConnectionId(idOrMessageOrEvent:*=null) : String {
-         var conn:IServerConnection = this.getSubConnection(idOrMessageOrEvent);
-         return this._idByConnection[conn];
+      public function getConnectionId(param1:*=null) : String {
+         var _loc2_:IServerConnection = this.getSubConnection(param1);
+         return this._idByConnection[_loc2_];
       }
       
-      public function getPauseBuffer(id:String=null) : Array {
-         var mergedPauseBuffer:Array = null;
-         var conn:IServerConnection = null;
-         if((id) && (this._connectionById[id]))
+      public function getPauseBuffer(param1:String=null) : Array {
+         var _loc2_:Array = null;
+         var _loc3_:IServerConnection = null;
+         if((param1) && (this._connectionById[param1]))
          {
-            return IServerConnection(this._connectionById[id]).pauseBuffer;
+            return IServerConnection(this._connectionById[param1]).pauseBuffer;
          }
-         if(!id)
+         if(!param1)
          {
-            mergedPauseBuffer = [];
-            for each (conn in this._connectionById)
+            _loc2_ = [];
+            for each (_loc3_ in this._connectionById)
             {
-               mergedPauseBuffer = mergedPauseBuffer.concat(conn.pauseBuffer);
+               _loc2_ = _loc2_.concat(_loc3_.pauseBuffer);
             }
-            return mergedPauseBuffer;
+            return _loc2_;
          }
          return null;
       }
       
-      public function close(id:String=null) : void {
-         var connection:IServerConnection = null;
-         if(id)
+      public function close(param1:String=null) : void {
+         var _loc2_:IServerConnection = null;
+         if(param1)
          {
-            if(this._connectionById[id])
+            if(this._connectionById[param1])
             {
-               IServerConnection(this._connectionById[id]).close();
+               IServerConnection(this._connectionById[param1]).close();
             }
             return;
          }
-         for each (connection in this._connectionById)
+         for each (_loc2_ in this._connectionById)
          {
-            connection.close();
+            _loc2_.close();
          }
       }
       
-      public function pause(id:String=null) : void {
-         var connection:IServerConnection = null;
-         if(id)
+      public function pause(param1:String=null) : void {
+         var _loc2_:IServerConnection = null;
+         if(param1)
          {
-            if(this._connectionById[id])
+            if(this._connectionById[param1])
             {
-               IServerConnection(this._connectionById[id]).pause();
+               IServerConnection(this._connectionById[param1]).pause();
             }
             return;
          }
-         for each (connection in this._connectionById)
+         for each (_loc2_ in this._connectionById)
          {
-            connection.pause();
+            _loc2_.pause();
          }
       }
       
-      public function resume(id:String=null) : void {
-         var connection:IServerConnection = null;
-         if(id)
+      public function resume(param1:String=null) : void {
+         var _loc2_:IServerConnection = null;
+         if(param1)
          {
-            if(this._connectionById[id])
+            if(this._connectionById[param1])
             {
-               IServerConnection(this._connectionById[id]).resume();
+               IServerConnection(this._connectionById[param1]).resume();
             }
             return;
          }
-         for each (connection in this._connectionById)
+         for each (_loc2_ in this._connectionById)
          {
-            connection.resume();
+            _loc2_.resume();
          }
       }
       
-      public function send(msg:INetworkMessage) : void {
+      public function send(param1:INetworkMessage) : void {
          if(this._messageRouter)
          {
-            this.getSubConnection(this._messageRouter.getConnectionId(msg)).send(msg);
+            this.getSubConnection(this._messageRouter.getConnectionId(param1)).send(param1);
          }
          else
          {
             if(this._mainConnection)
             {
-               this._mainConnection.send(msg);
+               this._mainConnection.send(param1);
             }
          }
          if(hasEventListener(NetworkSentEvent.EVENT_SENT))
          {
-            dispatchEvent(new NetworkSentEvent(NetworkSentEvent.EVENT_SENT,msg));
+            dispatchEvent(new NetworkSentEvent(NetworkSentEvent.EVENT_SENT,param1));
          }
       }
       
-      private function proccessMsg(msg:Message, conn:IServerConnection) : void {
-         this._connectionByMsg[msg] = conn;
+      private function proccessMsg(param1:Message, param2:IServerConnection) : void {
+         this._connectionByMsg[param1] = param2;
       }
       
-      private function onSubConnectionEvent(e:Event) : void {
-         switch(e.type)
+      private function onSubConnectionEvent(param1:Event) : void {
+         switch(param1.type)
          {
             case Event.CONNECT:
                this._connectionConnectedCount++;
@@ -250,8 +253,8 @@ package com.ankamagames.jerakine.network
                this._connectionConnectedCount--;
                break;
          }
-         this._connectionByEvent[e] = e.target as IServerConnection;
-         dispatchEvent(e);
+         this._connectionByEvent[param1] = param1.target as IServerConnection;
+         dispatchEvent(param1);
       }
    }
 }
@@ -262,11 +265,11 @@ import com.ankamagames.jerakine.messages.Message;
 class MessageWatcher extends Object implements MessageHandler
 {
    
-   function MessageWatcher(watchFunction:Function, handler:MessageHandler, conn:IServerConnection) {
+   function MessageWatcher(param1:Function, param2:MessageHandler, param3:IServerConnection) {
       super();
-      this.watchFunction = watchFunction;
-      this.handler = handler;
-      this.conn = conn;
+      this.watchFunction = param1;
+      this.handler = param2;
+      this.conn = param3;
    }
    
    public var watchFunction:Function;
@@ -275,8 +278,8 @@ class MessageWatcher extends Object implements MessageHandler
    
    public var conn:IServerConnection;
    
-   public function process(msg:Message) : Boolean {
-      this.watchFunction(msg,this.conn);
-      return this.handler.process(msg);
+   public function process(param1:Message) : Boolean {
+      this.watchFunction(param1,this.conn);
+      return this.handler.process(param1);
    }
 }

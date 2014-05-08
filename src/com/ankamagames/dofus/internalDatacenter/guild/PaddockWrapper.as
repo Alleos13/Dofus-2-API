@@ -13,31 +13,31 @@ package com.ankamagames.dofus.internalDatacenter.guild
          super();
       }
       
-      public static function create(paddockInformations:PaddockInformations) : PaddockWrapper {
-         var pbi:PaddockBuyableInformations = null;
-         var pai:PaddockAbandonnedInformations = null;
-         var ppi:PaddockPrivateInformations = null;
-         var paddock:PaddockWrapper = new PaddockWrapper();
-         paddock.maxOutdoorMount = paddockInformations.maxOutdoorMount;
-         paddock.maxItems = paddockInformations.maxItems;
-         if(paddockInformations is PaddockBuyableInformations)
+      public static function create(param1:PaddockInformations) : PaddockWrapper {
+         var _loc3_:PaddockBuyableInformations = null;
+         var _loc4_:PaddockAbandonnedInformations = null;
+         var _loc5_:PaddockPrivateInformations = null;
+         var _loc2_:PaddockWrapper = new PaddockWrapper();
+         _loc2_.maxOutdoorMount = param1.maxOutdoorMount;
+         _loc2_.maxItems = param1.maxItems;
+         if(param1 is PaddockBuyableInformations)
          {
-            pbi = paddockInformations as PaddockBuyableInformations;
-            paddock.price = pbi.price;
-            paddock.isSaleLocked = pbi.locked;
+            _loc3_ = param1 as PaddockBuyableInformations;
+            _loc2_.price = _loc3_.price;
+            _loc2_.isSaleLocked = _loc3_.locked;
          }
-         if(paddockInformations is PaddockAbandonnedInformations)
+         if(param1 is PaddockAbandonnedInformations)
          {
-            pai = paddockInformations as PaddockAbandonnedInformations;
-            paddock.guildId = pai.guildId;
-            paddock.isAbandonned = true;
+            _loc4_ = param1 as PaddockAbandonnedInformations;
+            _loc2_.guildId = _loc4_.guildId;
+            _loc2_.isAbandonned = true;
          }
-         if(paddockInformations is PaddockPrivateInformations)
+         if(param1 is PaddockPrivateInformations)
          {
-            ppi = paddockInformations as PaddockPrivateInformations;
-            paddock.guildIdentity = GuildWrapper.create(ppi.guildInfo.guildId,ppi.guildInfo.guildName,ppi.guildInfo.guildEmblem,0,true);
+            _loc5_ = param1 as PaddockPrivateInformations;
+            _loc2_.guildIdentity = GuildWrapper.create(_loc5_.guildInfo.guildId,_loc5_.guildInfo.guildName,_loc5_.guildInfo.guildEmblem,0,true);
          }
-         return paddock;
+         return _loc2_;
       }
       
       public var maxOutdoorMount:uint;

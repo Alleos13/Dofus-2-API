@@ -16,19 +16,19 @@ package com.ankamagames.dofus.kernel.updaterv2.messages.impl
          return this._components;
       }
       
-      public function deserialize(data:Object) : void {
-         var i:* = 0;
-         var o:Object = null;
-         var components:Array = data["components"];
+      public function deserialize(param1:Object) : void {
+         var _loc3_:* = 0;
+         var _loc4_:Object = null;
+         var _loc2_:Array = param1["components"];
          this._components = new Dictionary();
-         if(components)
+         if(_loc2_)
          {
-            i = 0;
-            while(i < components.length)
+            _loc3_ = 0;
+            while(_loc3_ < _loc2_.length)
             {
-               o = components[i];
-               this._components[o.name] = o;
-               i++;
+               _loc4_ = _loc2_[_loc3_];
+               this._components[_loc4_.name] = _loc4_;
+               _loc3_++;
             }
          }
       }

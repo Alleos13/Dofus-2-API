@@ -111,9 +111,9 @@ package com.ankamagames.dofus.logic.common.frames
          this._actionTimer.start();
          this._rollOverTimer.start();
          this._mapPos = MapPosition.getMapPositions();
-         var mfcMsg:MapFightCountMessage = new MapFightCountMessage();
-         mfcMsg.initMapFightCountMessage(1);
-         this.process(mfcMsg);
+         var _loc1_:MapFightCountMessage = new MapFightCountMessage();
+         _loc1_.initMapFightCountMessage(1);
+         this.process(_loc1_);
          return true;
       }
       
@@ -132,37 +132,37 @@ package com.ankamagames.dofus.logic.common.frames
          return this._fightCount;
       }
       
-      public function process(msg:Message) : Boolean {
-         var startFightMsg:GameFightReadyMessage = null;
-         var turnStartMsg:GameFightTurnStartMessage = null;
+      public function process(param1:Message) : Boolean {
+         var _loc2_:GameFightReadyMessage = null;
+         var _loc3_:GameFightTurnStartMessage = null;
          switch(true)
          {
-            case msg is GameFightJoinMessage:
+            case param1 is GameFightJoinMessage:
                this._fightCount++;
                this._inFight = true;
                break;
-            case msg is GameFightEndMessage:
+            case param1 is GameFightEndMessage:
                this._inFight = false;
                break;
-            case msg is MapComplementaryInformationsDataMessage:
+            case param1 is MapComplementaryInformationsDataMessage:
                this._wait = false;
                break;
-            case msg is MapsLoadingStartedMessage:
+            case param1 is MapsLoadingStartedMessage:
                this._wait = true;
                break;
-            case msg is GameFightShowFighterMessage:
+            case param1 is GameFightShowFighterMessage:
                this.sendAdminCmd("givelife *");
                this.sendAdminCmd("giveenergy *");
                this._turnPlayed = 0;
                this._myTurn = false;
-               startFightMsg = new GameFightReadyMessage();
-               startFightMsg.initGameFightReadyMessage(true);
-               ConnectionsHandler.getConnection().send(startFightMsg);
+               _loc2_ = new GameFightReadyMessage();
+               _loc2_.initGameFightReadyMessage(true);
+               ConnectionsHandler.getConnection().send(_loc2_);
                break;
-            case msg is GameFightTurnStartMessage:
-               turnStartMsg = msg as GameFightTurnStartMessage;
+            case param1 is GameFightTurnStartMessage:
+               _loc3_ = param1 as GameFightTurnStartMessage;
                this._turnAction = [];
-               if(turnStartMsg.id == PlayedCharacterManager.getInstance().id)
+               if(_loc3_.id == PlayedCharacterManager.getInstance().id)
                {
                   this._myTurn = true;
                   this._turnPlayed++;
@@ -185,14 +185,14 @@ package com.ankamagames.dofus.logic.common.frames
                   this._myTurn = false;
                }
                break;
-            case msg is SequenceEndMessage:
+            case param1 is SequenceEndMessage:
                this.nextTurnAction();
                break;
          }
          return false;
       }
       
-      function initRight() : void {
+      private function initRight() : void {
          this.sendAdminCmd("adminaway");
          this.sendAdminCmd("givelevel * 200");
          this.sendAdminCmd("givespell * 173 6");
@@ -200,13 +200,13 @@ package com.ankamagames.dofus.logic.common.frames
          this.sendAdminCmd("dring po=63,vita=8000,pa=100,agi=150 true");
       }
       
-      function sendAdminCmd(cmd:String) : void {
-         var aqcmsg:AdminQuietCommandMessage = new AdminQuietCommandMessage();
-         aqcmsg.initAdminQuietCommandMessage(cmd);
-         ConnectionsHandler.getConnection().send(aqcmsg);
+      private function sendAdminCmd(param1:String) : void {
+         var _loc2_:AdminQuietCommandMessage = new AdminQuietCommandMessage();
+         _loc2_.initAdminQuietCommandMessage(param1);
+         ConnectionsHandler.getConnection().send(_loc2_);
       }
       
-      function onAction(e:Event) : void {
+      private function onAction(param1:Event) : void {
          if(Math.random() < 0.9)
          {
             this.randomWalk();
@@ -219,197 +219,197 @@ package com.ankamagames.dofus.logic.common.frames
       
       private var _turnAction:Array;
       
-      function nextTurnAction() : void {
-         var action:Object = null;
+      private function nextTurnAction() : void {
+         var _loc1_:Object = null;
          if(this._turnAction.length)
          {
-            action = this._turnAction.shift();
-            action.fct.apply(this,action.args);
+            _loc1_ = this._turnAction.shift();
+            _loc1_.fct.apply(this,_loc1_.args);
          }
       }
       
-      function addTurnAction(fct:Function, args:Array) : void {
+      private function addTurnAction(param1:Function, param2:Array) : void {
          this._turnAction.push(
             {
-               "fct":fct,
-               "args":args
+               "fct":param1,
+               "args":param2
             });
       }
       
-      function turnEnd() : void {
-         var finDeTourMsg:GameFightTurnFinishMessage = new GameFightTurnFinishMessage();
-         finDeTourMsg.initGameFightTurnFinishMessage();
-         ConnectionsHandler.getConnection().send(finDeTourMsg);
+      private function turnEnd() : void {
+         var _loc1_:GameFightTurnFinishMessage = new GameFightTurnFinishMessage();
+         _loc1_.initGameFightTurnFinishMessage();
+         ConnectionsHandler.getConnection().send(_loc1_);
       }
       
-      function join(name:String) : void {
+      private function join(param1:String) : void {
          if((this._inFight) || (this._wait))
          {
             return;
          }
-         var aqcmsg:AdminQuietCommandMessage = new AdminQuietCommandMessage();
-         aqcmsg.initAdminQuietCommandMessage("join " + name);
-         ConnectionsHandler.getConnection().send(aqcmsg);
+         var _loc2_:AdminQuietCommandMessage = new AdminQuietCommandMessage();
+         _loc2_.initAdminQuietCommandMessage("join " + param1);
+         ConnectionsHandler.getConnection().send(_loc2_);
          this._actionTimer.reset();
          this._actionTimer.start();
       }
       
-      function randomMove() : void {
+      private function randomMove() : void {
          if((this._inFight) || (this._wait))
          {
             return;
          }
-         var mapPos:MapPosition = this._mapPos[int(Math.random() * this._mapPos.length)];
-         var aqcmsg:AdminQuietCommandMessage = new AdminQuietCommandMessage();
-         aqcmsg.initAdminQuietCommandMessage("moveto " + mapPos.id);
-         ConnectionsHandler.getConnection().send(aqcmsg);
+         var _loc1_:MapPosition = this._mapPos[int(Math.random() * this._mapPos.length)];
+         var _loc2_:AdminQuietCommandMessage = new AdminQuietCommandMessage();
+         _loc2_.initAdminQuietCommandMessage("moveto " + _loc1_.id);
+         ConnectionsHandler.getConnection().send(_loc2_);
          this._actionTimer.reset();
          this._actionTimer.start();
       }
       
-      function fakeActivity() : void {
+      private function fakeActivity() : void {
          if(!this._enabled)
          {
             return;
          }
          setTimeout(this.fakeActivity,1000 * 60 * 5);
-         var bpmgs:BasicPingMessage = new BasicPingMessage();
-         bpmgs.initBasicPingMessage(false);
-         ConnectionsHandler.getConnection().send(bpmgs);
+         var _loc1_:BasicPingMessage = new BasicPingMessage();
+         _loc1_.initBasicPingMessage(false);
+         ConnectionsHandler.getConnection().send(_loc1_);
       }
       
-      function randomWalk() : void {
-         var entity:* = undefined;
-         var groupEntity:IEntity = null;
+      private function randomWalk() : void {
+         var _loc3_:* = undefined;
+         var _loc5_:IEntity = null;
          if((this._inFight) || (this._wait))
          {
             return;
          }
-         var rpEF:RoleplayEntitiesFrame = Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame;
-         if(!rpEF)
+         var _loc1_:RoleplayEntitiesFrame = Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame;
+         if(!_loc1_)
          {
             return;
          }
-         var avaibleCells:Array = [];
-         for each (entity in rpEF.getEntitiesDictionnary())
+         var _loc2_:Array = [];
+         for each (_loc3_ in _loc1_.getEntitiesDictionnary())
          {
-            if(entity is GameRolePlayGroupMonsterInformations)
+            if(_loc3_ is GameRolePlayGroupMonsterInformations)
             {
-               groupEntity = DofusEntities.getEntity(GameRolePlayGroupMonsterInformations(entity).contextualId);
-               avaibleCells.push(MapPoint.fromCellId(groupEntity.position.cellId));
+               _loc5_ = DofusEntities.getEntity(GameRolePlayGroupMonsterInformations(_loc3_).contextualId);
+               _loc2_.push(MapPoint.fromCellId(_loc5_.position.cellId));
             }
          }
-         if((!avaibleCells) || (!avaibleCells.length))
+         if(!_loc2_ || !_loc2_.length)
          {
             return;
          }
-         var ccmsg:CellClickMessage = new CellClickMessage();
-         ccmsg.cell = avaibleCells[Math.floor(avaibleCells.length * Math.random())];
-         ccmsg.cellId = ccmsg.cell.cellId;
-         ccmsg.id = MapDisplayManager.getInstance().currentMapPoint.mapId;
-         Kernel.getWorker().process(ccmsg);
+         var _loc4_:CellClickMessage = new CellClickMessage();
+         _loc4_.cell = _loc2_[Math.floor(_loc2_.length * Math.random())];
+         _loc4_.cellId = _loc4_.cell.cellId;
+         _loc4_.id = MapDisplayManager.getInstance().currentMapPoint.mapId;
+         Kernel.getWorker().process(_loc4_);
       }
       
-      function fightRandomMove() : void {
-         var reachableCells:FightReachableCellsMaker = new FightReachableCellsMaker(FightEntitiesFrame.getCurrentInstance().getEntityInfos(PlayedCharacterManager.getInstance().id) as GameFightFighterInformations);
-         if(!reachableCells.reachableCells.length)
+      private function fightRandomMove() : void {
+         var _loc1_:FightReachableCellsMaker = new FightReachableCellsMaker(FightEntitiesFrame.getCurrentInstance().getEntityInfos(PlayedCharacterManager.getInstance().id) as GameFightFighterInformations);
+         if(!_loc1_.reachableCells.length)
          {
             this.nextTurnAction();
             return;
          }
-         var ccmsg:CellClickMessage = new CellClickMessage();
-         ccmsg.cell = MapPoint.fromCellId(reachableCells.reachableCells[Math.floor(reachableCells.reachableCells.length * Math.random())]);
-         ccmsg.cellId = ccmsg.cell.cellId;
-         ccmsg.id = MapDisplayManager.getInstance().currentMapPoint.mapId;
-         Kernel.getWorker().process(ccmsg);
+         var _loc2_:CellClickMessage = new CellClickMessage();
+         _loc2_.cell = MapPoint.fromCellId(_loc1_.reachableCells[Math.floor(_loc1_.reachableCells.length * Math.random())]);
+         _loc2_.cellId = _loc2_.cell.cellId;
+         _loc2_.id = MapDisplayManager.getInstance().currentMapPoint.mapId;
+         Kernel.getWorker().process(_loc2_);
       }
       
-      function randomOver(... foo) : void {
-         var e:IEntity = null;
-         var entity:IInteractive = null;
-         var ui:UiRootContainer = null;
-         var emomsg2:EntityMouseOutMessage = null;
-         var elem:GraphicContainer = null;
-         var momsg2:MouseOutMessage = null;
+      private function randomOver(... rest) : void {
+         var _loc3_:IEntity = null;
+         var _loc4_:IInteractive = null;
+         var _loc7_:UiRootContainer = null;
+         var _loc10_:EntityMouseOutMessage = null;
+         var _loc11_:GraphicContainer = null;
+         var _loc12_:MouseOutMessage = null;
          if(this._wait)
          {
             return;
          }
-         var avaibleEntities:Array = [];
-         for each (e in EntitiesManager.getInstance().entities)
+         var _loc2_:Array = [];
+         for each (_loc3_ in EntitiesManager.getInstance().entities)
          {
-            if(e is IInteractive)
+            if(_loc3_ is IInteractive)
             {
-               avaibleEntities.push(e);
+               _loc2_.push(_loc3_);
             }
          }
-         entity = avaibleEntities[Math.floor(avaibleEntities.length * Math.random())];
-         if(!entity)
+         _loc4_ = _loc2_[Math.floor(_loc2_.length * Math.random())];
+         if(!_loc4_)
          {
             return;
          }
          if(this._lastEntityOver)
          {
-            emomsg2 = new EntityMouseOutMessage(this._lastEntityOver);
-            Kernel.getWorker().process(emomsg2);
+            _loc10_ = new EntityMouseOutMessage(this._lastEntityOver);
+            Kernel.getWorker().process(_loc10_);
          }
-         this._lastEntityOver = entity;
-         var emomsg:EntityMouseOverMessage = new EntityMouseOverMessage(entity);
-         Kernel.getWorker().process(emomsg);
-         var avaibleElem:Array = [];
-         for each (ui in Berilia.getInstance().uiList)
+         this._lastEntityOver = _loc4_;
+         var _loc5_:EntityMouseOverMessage = new EntityMouseOverMessage(_loc4_);
+         Kernel.getWorker().process(_loc5_);
+         var _loc6_:Array = [];
+         for each (_loc7_ in Berilia.getInstance().uiList)
          {
-            for each (elem in ui.getElements())
+            for each (_loc11_ in _loc7_.getElements())
             {
-               if((elem.mouseChildren) || (elem.mouseEnabled))
+               if((_loc11_.mouseChildren) || (_loc11_.mouseEnabled))
                {
-                  avaibleElem.push(elem);
+                  _loc6_.push(_loc11_);
                }
             }
          }
-         if(!avaibleElem.length)
+         if(!_loc6_.length)
          {
             return;
          }
          if(this._lastElemOver)
          {
-            momsg2 = GenericPool.get(MouseOutMessage,this._lastElemOver,new MouseEvent(MouseEvent.MOUSE_OUT));
-            Kernel.getWorker().process(momsg2);
+            _loc12_ = GenericPool.get(MouseOutMessage,this._lastElemOver,new MouseEvent(MouseEvent.MOUSE_OUT));
+            Kernel.getWorker().process(_loc12_);
          }
-         var target:GraphicContainer = avaibleElem[Math.floor(avaibleElem.length * Math.random())];
-         var momsg:MouseOverMessage = GenericPool.get(MouseOverMessage,target,new MouseEvent(MouseEvent.MOUSE_OVER));
-         Kernel.getWorker().process(momsg);
-         this._lastElemOver = target;
+         var _loc8_:GraphicContainer = _loc6_[Math.floor(_loc6_.length * Math.random())];
+         var _loc9_:MouseOverMessage = GenericPool.get(MouseOverMessage,_loc8_,new MouseEvent(MouseEvent.MOUSE_OVER));
+         Kernel.getWorker().process(_loc9_);
+         this._lastElemOver = _loc8_;
       }
       
-      function castSpell(spellId:uint, onMySelf:Boolean) : void {
-         var cellId:uint = 0;
-         var avaibleCells:Array = null;
-         var entity:* = undefined;
-         var monster:GameFightMonsterInformations = null;
-         var gafcrmsg:GameActionFightCastRequestMessage = new GameActionFightCastRequestMessage();
-         if(onMySelf)
+      private function castSpell(param1:uint, param2:Boolean) : void {
+         var _loc4_:uint = 0;
+         var _loc5_:Array = null;
+         var _loc6_:* = undefined;
+         var _loc7_:GameFightMonsterInformations = null;
+         var _loc3_:GameActionFightCastRequestMessage = new GameActionFightCastRequestMessage();
+         if(param2)
          {
-            cellId = FightEntitiesFrame.getCurrentInstance().getEntityInfos(PlayedCharacterManager.getInstance().id).disposition.cellId;
+            _loc4_ = FightEntitiesFrame.getCurrentInstance().getEntityInfos(PlayedCharacterManager.getInstance().id).disposition.cellId;
          }
          else
          {
-            avaibleCells = [];
-            for each (entity in FightEntitiesFrame.getCurrentInstance().getEntitiesDictionnary())
+            _loc5_ = [];
+            for each (_loc6_ in FightEntitiesFrame.getCurrentInstance().getEntitiesDictionnary())
             {
-               if((entity.contextualId < 0) && (entity is GameFightMonsterInformations))
+               if(_loc6_.contextualId < 0 && _loc6_ is GameFightMonsterInformations)
                {
-                  monster = entity as GameFightMonsterInformations;
-                  if(monster.alive)
+                  _loc7_ = _loc6_ as GameFightMonsterInformations;
+                  if(_loc7_.alive)
                   {
-                     avaibleCells.push(entity.disposition.cellId);
+                     _loc5_.push(_loc6_.disposition.cellId);
                   }
                }
             }
-            cellId = avaibleCells[Math.floor(avaibleCells.length * Math.random())];
+            _loc4_ = _loc5_[Math.floor(_loc5_.length * Math.random())];
          }
-         gafcrmsg.initGameActionFightCastRequestMessage(spellId,cellId);
-         ConnectionsHandler.getConnection().send(gafcrmsg);
+         _loc3_.initGameActionFightCastRequestMessage(param1,_loc4_);
+         ConnectionsHandler.getConnection().send(_loc3_);
       }
    }
 }

@@ -9,54 +9,54 @@ package com.ankamagames.jerakine.utils.memory
    public dynamic class WeakProxyReference extends Proxy
    {
       
-      public function WeakProxyReference(p_object:Object) {
+      public function WeakProxyReference(param1:Object) {
          super();
          this.dictionary = new Dictionary(true);
-         this.dictionary[p_object] = null;
+         this.dictionary[param1] = null;
       }
       
       protected var dictionary:Dictionary;
       
       public function get object() : Object {
-         var n:Object = null;
-         for (n in this.dictionary)
+         var _loc1_:Object = null;
+         for (_loc1_ in this.dictionary)
          {
-            return n;
+            return _loc1_;
          }
          return null;
       }
       
       private function getObject() : Object {
-         var n:Object = null;
-         for (n in this.dictionary)
+         var _loc1_:Object = null;
+         for (_loc1_ in this.dictionary)
          {
-            return n;
+            return _loc1_;
          }
          throw new ReferenceError("Reference Error: Object is no longer available through WeakProxyReference, it may have been removed from memory.");
       }
       
-      override flash_proxy function callProperty(p_methodName:*, ... p_args) : * {
-         var funct:* = this.getObject()[p_methodName];
-         if(!(funct is Function))
+      override flash_proxy function callProperty(param1:*, ... rest) : * {
+         var _loc3_:* = this.getObject()[param1];
+         if(!(_loc3_ is Function))
          {
-            throw new TypeError("TypeError: Cannot call " + p_methodName.toString() + " through WeakProxyReference, it is not a function.");
+            throw new TypeError("TypeError: Cannot call " + param1.toString() + " through WeakProxyReference, it is not a function.");
          }
          else
          {
-            return funct.apply(null,p_args);
+            return _loc3_.apply(null,rest);
          }
       }
       
-      override flash_proxy function getProperty(p_propertyName:*) : * {
-         return this.getObject()[p_propertyName];
+      override flash_proxy function getProperty(param1:*) : * {
+         return this.getObject()[param1];
       }
       
-      override flash_proxy function setProperty(p_propertyName:*, p_value:*) : void {
-         this.getObject()[p_propertyName] = p_value;
+      override flash_proxy function setProperty(param1:*, param2:*) : void {
+         this.getObject()[param1] = param2;
       }
       
-      override flash_proxy function deleteProperty(p_propertyName:*) : Boolean {
-         delete this.getObject()[[p_propertyName]];
+      override flash_proxy function deleteProperty(param1:*) : Boolean {
+         delete this.getObject()[[param1]];
          return true;
       }
    }

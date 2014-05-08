@@ -1,4 +1,4 @@
-package  
+package 
 {
    import flash.display.Sprite;
    import com.ankamagames.jerakine.utils.display.IFramerateListener;
@@ -128,14 +128,14 @@ package
             clientDimentionSo = CustomSharedObject.getLocal("clientData");
             osId = Capabilities.os.substr(0,3);
             sizeInitialised = false;
-            if((!(clientDimentionSo.data == null)) && (clientDimentionSo.data.width > 0) && (clientDimentionSo.data.height > 0))
+            if(!(clientDimentionSo.data == null) && clientDimentionSo.data.width > 0 && clientDimentionSo.data.height > 0)
             {
-               if((clientDimentionSo.data.displayState == NativeWindowDisplayState.MAXIMIZED) && (osId == "Win") && (!(stage.displayState == StageDisplayState["FULL_SCREEN_INTERACTIVE"])))
+               if(clientDimentionSo.data.displayState == NativeWindowDisplayState.MAXIMIZED && osId == "Win" && !(stage.displayState == StageDisplayState["FULL_SCREEN_INTERACTIVE"]))
                {
                   stage.nativeWindow.maximize();
                   this._displayState = NativeWindowDisplayState.MAXIMIZED;
                }
-               if((clientDimentionSo.data.width > 0) && (clientDimentionSo.data.height > 0))
+               if(clientDimentionSo.data.width > 0 && clientDimentionSo.data.height > 0)
                {
                   mainWindow.width = clientDimentionSo.data.width;
                   mainWindow.height = clientDimentionSo.data.height;
@@ -197,7 +197,6 @@ package
             }
             catch(e:Error)
             {
-               trace("Erreur sur la gestion du multicompte :\n" + e.getStackTrace());
             }
          }
          if(AirScanner.hasAir())
@@ -244,7 +243,7 @@ package
       
       public var REG_LOCAL_CONNECTION_ID:uint = 0;
       
-      private function onCall(e:InvokeEvent) : void {
+      private function onCall(param1:InvokeEvent) : void {
          var file:File = null;
          var stream:FileStream = null;
          var content:String = null;
@@ -255,6 +254,7 @@ package
          var versionSplitted:Array = null;
          var version:String = null;
          var part:ContentPart = null;
+         var e:InvokeEvent = param1;
          if(!this._initialized)
          {
             CommandLineArguments.getInstance().setArguments(e.arguments);
@@ -279,7 +279,7 @@ package
                      part.id = configNode.attributes["name"];
                      part.state = version?PartStateEnum.PART_UP_TO_DATE:PartStateEnum.PART_NOT_INSTALLED;
                      PartManager.getInstance().updatePart(part);
-                     if((version) && (upperVersion == null) || (version > upperVersion))
+                     if((version) && (upperVersion == null) || version > upperVersion)
                      {
                         upperVersion = version;
                      }
@@ -333,11 +333,9 @@ package
             }
             catch(e:Error)
             {
-               trace(e.toString());
                BuildInfos.BUILD_VERSION.revision = BuildInfos.BUILD_REVISION;
                BuildInfos.BUILD_VERSION.patch = BuildInfos.BUILD_PATCH;
             }
-            trace("Version : " + BuildInfos.BUILD_VERSION.major + "." + BuildInfos.BUILD_VERSION.minor + "." + BuildInfos.BUILD_VERSION.release + "." + BuildInfos.BUILD_REVISION + "." + BuildInfos.BUILD_PATCH);
             if(BuildInfos.BUILD_TYPE < BuildTypeEnum.INTERNAL)
             {
                Uri.enableSecureURI();
@@ -369,7 +367,7 @@ package
          }
       }
       
-      private function onResize(e:NativeWindowBoundsEvent) : void {
+      private function onResize(param1:NativeWindowBoundsEvent) : void {
          this._displayState = stage.nativeWindow.displayState;
          if(this._displayState != NativeWindowDisplayState.MAXIMIZED)
          {
@@ -398,37 +396,37 @@ package
          return this._forcedLang;
       }
       
-      public function setDisplayOptions(opt:DofusOptions) : void {
-         this._doOptions = opt;
+      public function setDisplayOptions(param1:DofusOptions) : void {
+         this._doOptions = param1;
          this._doOptions.addEventListener(PropertyChangeEvent.PROPERTY_CHANGED,this.onOptionChange);
          this._doOptions.flashQuality = this._doOptions.flashQuality;
          this._doOptions.fullScreen = this._doOptions.fullScreen;
       }
       
-      public function init(rootClip:DisplayObject, instanceId:uint=0, forcedLang:String=null, args:Array=null) : void {
-         if(args)
+      public function init(param1:DisplayObject, param2:uint=0, param3:String=null, param4:Array=null) : void {
+         if(param4)
          {
-            CommandLineArguments.getInstance().setArguments(args);
+            CommandLineArguments.getInstance().setArguments(param4);
          }
-         this._instanceId = instanceId;
-         this._forcedLang = forcedLang;
-         var catchMouseEventCtr:Sprite = new Sprite();
-         catchMouseEventCtr.name = "catchMouseEventCtr";
-         catchMouseEventCtr.graphics.beginFill(0);
-         catchMouseEventCtr.graphics.drawRect(0,0,StageShareManager.startWidth,StageShareManager.startHeight);
-         catchMouseEventCtr.graphics.endFill();
-         addChild(catchMouseEventCtr);
-         var so:CustomSharedObject = CustomSharedObject.getLocal("appVersion");
-         if((!so.data.lastBuildVersion) || (!(so.data.lastBuildVersion == BuildInfos.BUILD_REVISION)) && (BuildInfos.BUILD_TYPE < BuildTypeEnum.INTERNAL))
+         this._instanceId = param2;
+         this._forcedLang = param3;
+         var _loc5_:Sprite = new Sprite();
+         _loc5_.name = "catchMouseEventCtr";
+         _loc5_.graphics.beginFill(0);
+         _loc5_.graphics.drawRect(0,0,StageShareManager.startWidth,StageShareManager.startHeight);
+         _loc5_.graphics.endFill();
+         addChild(_loc5_);
+         var _loc6_:CustomSharedObject = CustomSharedObject.getLocal("appVersion");
+         if(!_loc6_.data.lastBuildVersion || !(_loc6_.data.lastBuildVersion == BuildInfos.BUILD_REVISION) && BuildInfos.BUILD_TYPE < BuildTypeEnum.INTERNAL)
          {
             this.clearCache(true);
          }
-         so = CustomSharedObject.getLocal("appVersion");
-         so.data.lastBuildVersion = BuildInfos.BUILD_REVISION;
-         so.flush();
-         so.close();
+         _loc6_ = CustomSharedObject.getLocal("appVersion");
+         _loc6_.data.lastBuildVersion = BuildInfos.BUILD_REVISION;
+         _loc6_.flush();
+         _loc6_.close();
          SignedFileAdapter.defaultSignatureKey = SignatureKey.fromByte(new Constants.SIGNATURE_KEY_DATA() as ByteArray);
-         this.initKernel(this.stage,rootClip);
+         this.initKernel(this.stage,param1);
          this.initWorld();
          this.initUi();
          if(BuildInfos.BUILD_TYPE > BuildTypeEnum.ALPHA)
@@ -445,18 +443,18 @@ package
          Atouin.getInstance().addListener(SoundManager.getInstance().manager);
       }
       
-      private function onExiting(pEvt:Event) : void {
+      private function onExiting(param1:Event) : void {
          this.saveClientSize();
          if(WebServiceDataHandler.getInstance().quit())
          {
-            pEvt.preventDefault();
-            pEvt.stopPropagation();
+            param1.preventDefault();
+            param1.stopPropagation();
             WebServiceDataHandler.getInstance().addEventListener(WebServiceDataHandler.ALL_DATA_SENT,this.quitHandler);
          }
       }
       
-      public function quit(returnCode:int=0) : void {
-         this._returnCode = returnCode;
+      public function quit(param1:int=0) : void {
+         this._returnCode = param1;
          if(!WebServiceDataHandler.getInstance().quit())
          {
             this.quitHandler();
@@ -469,10 +467,10 @@ package
          }
       }
       
-      private function quitHandler(pEvt:Event=null) : void {
-         if(pEvt != null)
+      private function quitHandler(param1:Event=null) : void {
+         if(param1 != null)
          {
-            pEvt.currentTarget.removeEventListener(WebServiceDataHandler.ALL_DATA_SENT,this.quitHandler);
+            param1.currentTarget.removeEventListener(WebServiceDataHandler.ALL_DATA_SENT,this.quitHandler);
             _log.trace("Data sent. Good to go. Bye bye");
          }
          if(Constants.EVENT_MODE)
@@ -497,10 +495,12 @@ package
          InterClientManager.destroy();
       }
       
-      public function clearCache(selective:Boolean=false, reboot:Boolean=false) : void {
+      public function clearCache(param1:Boolean=false, param2:Boolean=false) : void {
          var soList:Array = null;
          var file:File = null;
          var fileName:String = null;
+         var selective:Boolean = param1;
+         var reboot:Boolean = param2;
          StoreDataManager.getInstance().reset();
          var soFolder:File = new File(CustomSharedObject.getCustomSharedObjectDirectory());
          if((soFolder) && (soFolder.exists))
@@ -545,7 +545,6 @@ package
                }
                catch(e:Error)
                {
-                  trace("ClearCache method cannot delete " + file.nativePath);
                   continue;
                }
             }
@@ -553,17 +552,16 @@ package
          if(reboot)
          {
             AppIdModifier.getInstance().invalideCache();
-            trace("REBOOT");
             this.reboot();
          }
       }
       
       public function reboot() : void {
          this.saveClientSize();
-         var w:Worker = Kernel.getWorker();
-         if(w)
+         var _loc1_:Worker = Kernel.getWorker();
+         if(_loc1_)
          {
-            w.clear();
+            _loc1_.clear();
          }
          _log.fatal("REBOOT");
          if(AirScanner.hasAir())
@@ -574,15 +572,15 @@ package
          throw new Error("Reboot not implemented with flash");
       }
       
-      public function renameApp(name:String) : void {
+      public function renameApp(param1:String) : void {
          if(AirScanner.hasAir())
          {
-            stage["nativeWindow"].title = name;
+            stage["nativeWindow"].title = param1;
          }
       }
       
-      private function initKernel(stage:Stage, rootClip:DisplayObject) : void {
-         Kernel.getInstance().init(stage,rootClip);
+      private function initKernel(param1:Stage, param2:DisplayObject) : void {
+         Kernel.getInstance().init(param1,param2);
          LangManager.getInstance().handler = Kernel.getWorker();
          FontManager.getInstance().handler = Kernel.getWorker();
          Berilia.getInstance().handler = Kernel.getWorker();
@@ -607,16 +605,16 @@ package
          this._uiContainer = new Sprite();
          addChild(this._uiContainer);
          this._uiContainer.mouseEnabled = false;
-         var isDebugMode:Boolean = BuildInfos.BUILD_TYPE == BuildTypeEnum.DEBUG;
-         Berilia.getInstance().verboseException = isDebugMode;
-         Berilia.getInstance().init(this._uiContainer,isDebugMode,BuildInfos.BUILD_REVISION,!isDebugMode);
+         var _loc1_:* = BuildInfos.BUILD_TYPE == BuildTypeEnum.DEBUG;
+         Berilia.getInstance().verboseException = _loc1_;
+         Berilia.getInstance().init(this._uiContainer,_loc1_,BuildInfos.BUILD_REVISION,!_loc1_);
          if(AirScanner.isStreamingVersion())
          {
             Berilia.embedIcons.SLOT_DEFAULT_ICON = EmbedAssets.getBitmap("DefaultBeriliaSlotIcon",true).bitmapData;
          }
-         var sharedDefUri:Uri = new Uri("SharedDefinitions.swf");
-         sharedDefUri.loaderContext = new LoaderContext(false,new ApplicationDomain());
-         UiModuleManager.getInstance(BuildInfos.BUILD_TYPE == BuildTypeEnum.RELEASE).sharedDefinitionContainer = sharedDefUri;
+         var _loc2_:Uri = new Uri("SharedDefinitions.swf");
+         _loc2_.loaderContext = new LoaderContext(false,new ApplicationDomain());
+         UiModuleManager.getInstance(BuildInfos.BUILD_TYPE == BuildTypeEnum.RELEASE).sharedDefinitionContainer = _loc2_;
          EntityDisplayer.setAnimationModifier(1,new CustomAnimStatiqueAnimationModifier());
          EntityDisplayer.setAnimationModifier(2,new CustomAnimStatiqueAnimationModifier());
          EntityDisplayer.setSkinModifier(1,new BreedSkinModifier());
@@ -656,56 +654,56 @@ package
          this._fpsDisplay.visible = !this._fpsDisplay.visible;
       }
       
-      private function onClosed(e:Event) : void {
+      private function onClosed(param1:Event) : void {
          Console.getInstance().close();
          ConsoleLUA.getInstance().close();
          HttpServer.getInstance().close();
       }
       
-      private function onOptionChange(e:PropertyChangeEvent) : void {
-         if(e.propertyName == "flashQuality")
+      private function onOptionChange(param1:PropertyChangeEvent) : void {
+         if(param1.propertyName == "flashQuality")
          {
-            if(e.propertyValue == 0)
+            if(param1.propertyValue == 0)
             {
                StageShareManager.stage.quality = StageQuality.LOW;
             }
             else
             {
-               if(e.propertyValue == 1)
+               if(param1.propertyValue == 1)
                {
                   StageShareManager.stage.quality = StageQuality.MEDIUM;
                }
                else
                {
-                  if(e.propertyValue == 2)
+                  if(param1.propertyValue == 2)
                   {
                      StageShareManager.stage.quality = StageQuality.HIGH;
                   }
                }
             }
          }
-         if(e.propertyName == "fullScreen")
+         if(param1.propertyName == "fullScreen")
          {
-            StageShareManager.setFullScreen(e.propertyValue,false);
+            StageShareManager.setFullScreen(param1.propertyValue,false);
          }
       }
       
-      public function onFps(fps:uint) : void {
-         var framesInfo:Object = null;
+      public function onFps(param1:uint) : void {
+         var _loc2_:Object = null;
          if(this._fpsDisplay.visible)
          {
-            framesInfo = RasterizedAnimation.countFrames();
-            this._fpsDisplay.htmlText = "<font color=\'#FFFFFF\'>" + fps + " fps - " + this._buildType + "\n<font color=\'#B9B6ED\'>" + Memory.humanReadableUsage() + " - r" + BuildInfos.BUILD_REVISION + "\n<font color=\'#92D5D8\'> Anim/Img en cache - " + framesInfo.animations + "/" + framesInfo.frames;
+            _loc2_ = RasterizedAnimation.countFrames();
+            this._fpsDisplay.htmlText = "<font color=\'#FFFFFF\'>" + param1 + " fps - " + this._buildType + "\n<font color=\'#B9B6ED\'>" + Memory.humanReadableUsage() + " - r" + BuildInfos.BUILD_REVISION + "\n<font color=\'#92D5D8\'> Anim/Img en cache - " + _loc2_.animations + "/" + _loc2_.frames;
          }
       }
       
       private function saveClientSize() : void {
-         var clientDimentionSo:CustomSharedObject = CustomSharedObject.getLocal("clientData");
-         clientDimentionSo.data.height = this._stageHeight;
-         clientDimentionSo.data.width = this._stageWidth;
-         clientDimentionSo.data.displayState = this._displayState;
-         clientDimentionSo.flush();
-         clientDimentionSo.close();
+         var _loc1_:CustomSharedObject = CustomSharedObject.getLocal("clientData");
+         _loc1_.data.height = this._stageHeight;
+         _loc1_.data.width = this._stageWidth;
+         _loc1_.data.displayState = this._displayState;
+         _loc1_.flush();
+         _loc1_.close();
       }
       
       public var strProgress:Number = 0;

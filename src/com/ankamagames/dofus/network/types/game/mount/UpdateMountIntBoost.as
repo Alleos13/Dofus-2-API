@@ -19,9 +19,9 @@ package com.ankamagames.dofus.network.types.game.mount
          return 357;
       }
       
-      public function initUpdateMountIntBoost(type:int=0, value:int=0) : UpdateMountIntBoost {
-         super.initUpdateMountBoost(type);
-         this.value = value;
+      public function initUpdateMountIntBoost(param1:int=0, param2:int=0) : UpdateMountIntBoost {
+         super.initUpdateMountBoost(param1);
+         this.value = param2;
          return this;
       }
       
@@ -30,22 +30,22 @@ package com.ankamagames.dofus.network.types.game.mount
          this.value = 0;
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_UpdateMountIntBoost(output);
+      override public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_UpdateMountIntBoost(param1);
       }
       
-      public function serializeAs_UpdateMountIntBoost(output:IDataOutput) : void {
-         super.serializeAs_UpdateMountBoost(output);
-         output.writeInt(this.value);
+      public function serializeAs_UpdateMountIntBoost(param1:IDataOutput) : void {
+         super.serializeAs_UpdateMountBoost(param1);
+         param1.writeInt(this.value);
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_UpdateMountIntBoost(input);
+      override public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_UpdateMountIntBoost(param1);
       }
       
-      public function deserializeAs_UpdateMountIntBoost(input:IDataInput) : void {
-         super.deserialize(input);
-         this.value = input.readInt();
+      public function deserializeAs_UpdateMountIntBoost(param1:IDataInput) : void {
+         super.deserialize(param1);
+         this.value = param1.readInt();
       }
    }
 }

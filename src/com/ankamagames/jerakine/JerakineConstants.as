@@ -8,13 +8,6 @@ package com.ankamagames.jerakine
    import by.blooddy.crypto.serialization.JSON;
    import com.somerandomdude.colortoolkit.ColorUtil;
    import com.somerandomdude.colortoolkit.spaces.HSL;
-   import org.as3commons.bytecode.io.AbcDeserializer;
-   import org.as3commons.bytecode.abc.AbcFile;
-   import org.as3commons.bytecode.swf.SWFFileIO;
-   import org.as3commons.bytecode.swf.SWFFile;
-   import org.as3commons.bytecode.tags.DoABCTag;
-   import org.as3commons.bytecode.tags.FileAttributesTag;
-   import org.as3commons.bytecode.abc.ClassInfo;
    import com.ankamagames.jerakine.types.DataStoreType;
    import com.ankamagames.jerakine.types.enums.DataStoreEnum;
    import com.ankamagames.jerakine.data.IDataContainer;
@@ -42,7 +35,6 @@ package com.ankamagames.jerakine
       private static var _include_colorUtil:ColorUtil = null;
       
       private static var _include_HSL:HSL = null;
-      
       
       public static const LOADERS_POOL_INITIAL_SIZE:int = 5;
       

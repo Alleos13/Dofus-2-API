@@ -33,11 +33,11 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.paddock
          return 6161;
       }
       
-      public function initPaddockToSellFilterMessage(areaId:int=0, atLeastNbMount:int=0, atLeastNbMachine:int=0, maxPrice:uint=0) : PaddockToSellFilterMessage {
-         this.areaId = areaId;
-         this.atLeastNbMount = atLeastNbMount;
-         this.atLeastNbMachine = atLeastNbMachine;
-         this.maxPrice = maxPrice;
+      public function initPaddockToSellFilterMessage(param1:int=0, param2:int=0, param3:int=0, param4:uint=0) : PaddockToSellFilterMessage {
+         this.areaId = param1;
+         this.atLeastNbMount = param2;
+         this.atLeastNbMachine = param3;
+         this.maxPrice = param4;
          this._isInitialized = true;
          return this;
       }
@@ -50,44 +50,44 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.paddock
          this._isInitialized = false;
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(param1:IDataOutput) : void {
+         var _loc2_:ByteArray = new ByteArray();
+         this.serialize(_loc2_);
+         writePacket(param1,this.getMessageId(),_loc2_);
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(param1:IDataInput, param2:uint) : void {
+         this.deserialize(param1);
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PaddockToSellFilterMessage(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_PaddockToSellFilterMessage(param1);
       }
       
-      public function serializeAs_PaddockToSellFilterMessage(output:IDataOutput) : void {
-         output.writeInt(this.areaId);
-         output.writeByte(this.atLeastNbMount);
-         output.writeByte(this.atLeastNbMachine);
+      public function serializeAs_PaddockToSellFilterMessage(param1:IDataOutput) : void {
+         param1.writeInt(this.areaId);
+         param1.writeByte(this.atLeastNbMount);
+         param1.writeByte(this.atLeastNbMachine);
          if(this.maxPrice < 0)
          {
             throw new Error("Forbidden value (" + this.maxPrice + ") on element maxPrice.");
          }
          else
          {
-            output.writeInt(this.maxPrice);
+            param1.writeInt(this.maxPrice);
             return;
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PaddockToSellFilterMessage(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_PaddockToSellFilterMessage(param1);
       }
       
-      public function deserializeAs_PaddockToSellFilterMessage(input:IDataInput) : void {
-         this.areaId = input.readInt();
-         this.atLeastNbMount = input.readByte();
-         this.atLeastNbMachine = input.readByte();
-         this.maxPrice = input.readInt();
+      public function deserializeAs_PaddockToSellFilterMessage(param1:IDataInput) : void {
+         this.areaId = param1.readInt();
+         this.atLeastNbMount = param1.readByte();
+         this.atLeastNbMachine = param1.readByte();
+         this.maxPrice = param1.readInt();
          if(this.maxPrice < 0)
          {
             throw new Error("Forbidden value (" + this.maxPrice + ") on element of PaddockToSellFilterMessage.maxPrice.");

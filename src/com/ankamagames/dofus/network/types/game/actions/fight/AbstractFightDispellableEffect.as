@@ -29,13 +29,13 @@ package com.ankamagames.dofus.network.types.game.actions.fight
          return 206;
       }
       
-      public function initAbstractFightDispellableEffect(uid:uint=0, targetId:int=0, turnDuration:int=0, dispelable:uint=1, spellId:uint=0, parentBoostUid:uint=0) : AbstractFightDispellableEffect {
-         this.uid = uid;
-         this.targetId = targetId;
-         this.turnDuration = turnDuration;
-         this.dispelable = dispelable;
-         this.spellId = spellId;
-         this.parentBoostUid = parentBoostUid;
+      public function initAbstractFightDispellableEffect(param1:uint=0, param2:int=0, param3:int=0, param4:uint=1, param5:uint=0, param6:uint=0) : AbstractFightDispellableEffect {
+         this.uid = param1;
+         this.targetId = param2;
+         this.turnDuration = param3;
+         this.dispelable = param4;
+         this.spellId = param5;
+         this.parentBoostUid = param6;
          return this;
       }
       
@@ -48,70 +48,70 @@ package com.ankamagames.dofus.network.types.game.actions.fight
          this.parentBoostUid = 0;
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AbstractFightDispellableEffect(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_AbstractFightDispellableEffect(param1);
       }
       
-      public function serializeAs_AbstractFightDispellableEffect(output:IDataOutput) : void {
+      public function serializeAs_AbstractFightDispellableEffect(param1:IDataOutput) : void {
          if(this.uid < 0)
          {
             throw new Error("Forbidden value (" + this.uid + ") on element uid.");
          }
          else
          {
-            output.writeInt(this.uid);
-            output.writeInt(this.targetId);
-            output.writeShort(this.turnDuration);
-            output.writeByte(this.dispelable);
+            param1.writeInt(this.uid);
+            param1.writeInt(this.targetId);
+            param1.writeShort(this.turnDuration);
+            param1.writeByte(this.dispelable);
             if(this.spellId < 0)
             {
                throw new Error("Forbidden value (" + this.spellId + ") on element spellId.");
             }
             else
             {
-               output.writeShort(this.spellId);
+               param1.writeShort(this.spellId);
                if(this.parentBoostUid < 0)
                {
                   throw new Error("Forbidden value (" + this.parentBoostUid + ") on element parentBoostUid.");
                }
                else
                {
-                  output.writeInt(this.parentBoostUid);
+                  param1.writeInt(this.parentBoostUid);
                   return;
                }
             }
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AbstractFightDispellableEffect(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_AbstractFightDispellableEffect(param1);
       }
       
-      public function deserializeAs_AbstractFightDispellableEffect(input:IDataInput) : void {
-         this.uid = input.readInt();
+      public function deserializeAs_AbstractFightDispellableEffect(param1:IDataInput) : void {
+         this.uid = param1.readInt();
          if(this.uid < 0)
          {
             throw new Error("Forbidden value (" + this.uid + ") on element of AbstractFightDispellableEffect.uid.");
          }
          else
          {
-            this.targetId = input.readInt();
-            this.turnDuration = input.readShort();
-            this.dispelable = input.readByte();
+            this.targetId = param1.readInt();
+            this.turnDuration = param1.readShort();
+            this.dispelable = param1.readByte();
             if(this.dispelable < 0)
             {
                throw new Error("Forbidden value (" + this.dispelable + ") on element of AbstractFightDispellableEffect.dispelable.");
             }
             else
             {
-               this.spellId = input.readShort();
+               this.spellId = param1.readShort();
                if(this.spellId < 0)
                {
                   throw new Error("Forbidden value (" + this.spellId + ") on element of AbstractFightDispellableEffect.spellId.");
                }
                else
                {
-                  this.parentBoostUid = input.readInt();
+                  this.parentBoostUid = param1.readInt();
                   if(this.parentBoostUid < 0)
                   {
                      throw new Error("Forbidden value (" + this.parentBoostUid + ") on element of AbstractFightDispellableEffect.parentBoostUid.");

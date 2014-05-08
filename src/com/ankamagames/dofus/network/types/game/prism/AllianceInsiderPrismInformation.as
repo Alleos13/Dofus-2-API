@@ -27,13 +27,13 @@ package com.ankamagames.dofus.network.types.game.prism
          return 431;
       }
       
-      public function initAllianceInsiderPrismInformation(typeId:uint=0, state:uint=1, nextVulnerabilityDate:uint=0, placementDate:uint=0, rewardTokenCount:uint=0, lastTimeSlotModificationDate:uint=0, lastTimeSlotModificationAuthorGuildId:uint=0, lastTimeSlotModificationAuthorId:uint=0, lastTimeSlotModificationAuthorName:String="", hasTeleporterModule:Boolean=false) : AllianceInsiderPrismInformation {
-         super.initPrismInformation(typeId,state,nextVulnerabilityDate,placementDate,rewardTokenCount);
-         this.lastTimeSlotModificationDate = lastTimeSlotModificationDate;
-         this.lastTimeSlotModificationAuthorGuildId = lastTimeSlotModificationAuthorGuildId;
-         this.lastTimeSlotModificationAuthorId = lastTimeSlotModificationAuthorId;
-         this.lastTimeSlotModificationAuthorName = lastTimeSlotModificationAuthorName;
-         this.hasTeleporterModule = hasTeleporterModule;
+      public function initAllianceInsiderPrismInformation(param1:uint=0, param2:uint=1, param3:uint=0, param4:uint=0, param5:uint=0, param6:uint=0, param7:uint=0, param8:uint=0, param9:String="", param10:Boolean=false) : AllianceInsiderPrismInformation {
+         super.initPrismInformation(param1,param2,param3,param4,param5);
+         this.lastTimeSlotModificationDate = param6;
+         this.lastTimeSlotModificationAuthorGuildId = param7;
+         this.lastTimeSlotModificationAuthorId = param8;
+         this.lastTimeSlotModificationAuthorName = param9;
+         this.hasTeleporterModule = param10;
          return this;
       }
       
@@ -46,70 +46,70 @@ package com.ankamagames.dofus.network.types.game.prism
          this.hasTeleporterModule = false;
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AllianceInsiderPrismInformation(output);
+      override public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_AllianceInsiderPrismInformation(param1);
       }
       
-      public function serializeAs_AllianceInsiderPrismInformation(output:IDataOutput) : void {
-         super.serializeAs_PrismInformation(output);
+      public function serializeAs_AllianceInsiderPrismInformation(param1:IDataOutput) : void {
+         super.serializeAs_PrismInformation(param1);
          if(this.lastTimeSlotModificationDate < 0)
          {
             throw new Error("Forbidden value (" + this.lastTimeSlotModificationDate + ") on element lastTimeSlotModificationDate.");
          }
          else
          {
-            output.writeInt(this.lastTimeSlotModificationDate);
+            param1.writeInt(this.lastTimeSlotModificationDate);
             if(this.lastTimeSlotModificationAuthorGuildId < 0)
             {
                throw new Error("Forbidden value (" + this.lastTimeSlotModificationAuthorGuildId + ") on element lastTimeSlotModificationAuthorGuildId.");
             }
             else
             {
-               output.writeInt(this.lastTimeSlotModificationAuthorGuildId);
+               param1.writeInt(this.lastTimeSlotModificationAuthorGuildId);
                if(this.lastTimeSlotModificationAuthorId < 0)
                {
                   throw new Error("Forbidden value (" + this.lastTimeSlotModificationAuthorId + ") on element lastTimeSlotModificationAuthorId.");
                }
                else
                {
-                  output.writeInt(this.lastTimeSlotModificationAuthorId);
-                  output.writeUTF(this.lastTimeSlotModificationAuthorName);
-                  output.writeBoolean(this.hasTeleporterModule);
+                  param1.writeInt(this.lastTimeSlotModificationAuthorId);
+                  param1.writeUTF(this.lastTimeSlotModificationAuthorName);
+                  param1.writeBoolean(this.hasTeleporterModule);
                   return;
                }
             }
          }
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AllianceInsiderPrismInformation(input);
+      override public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_AllianceInsiderPrismInformation(param1);
       }
       
-      public function deserializeAs_AllianceInsiderPrismInformation(input:IDataInput) : void {
-         super.deserialize(input);
-         this.lastTimeSlotModificationDate = input.readInt();
+      public function deserializeAs_AllianceInsiderPrismInformation(param1:IDataInput) : void {
+         super.deserialize(param1);
+         this.lastTimeSlotModificationDate = param1.readInt();
          if(this.lastTimeSlotModificationDate < 0)
          {
             throw new Error("Forbidden value (" + this.lastTimeSlotModificationDate + ") on element of AllianceInsiderPrismInformation.lastTimeSlotModificationDate.");
          }
          else
          {
-            this.lastTimeSlotModificationAuthorGuildId = input.readInt();
+            this.lastTimeSlotModificationAuthorGuildId = param1.readInt();
             if(this.lastTimeSlotModificationAuthorGuildId < 0)
             {
                throw new Error("Forbidden value (" + this.lastTimeSlotModificationAuthorGuildId + ") on element of AllianceInsiderPrismInformation.lastTimeSlotModificationAuthorGuildId.");
             }
             else
             {
-               this.lastTimeSlotModificationAuthorId = input.readInt();
+               this.lastTimeSlotModificationAuthorId = param1.readInt();
                if(this.lastTimeSlotModificationAuthorId < 0)
                {
                   throw new Error("Forbidden value (" + this.lastTimeSlotModificationAuthorId + ") on element of AllianceInsiderPrismInformation.lastTimeSlotModificationAuthorId.");
                }
                else
                {
-                  this.lastTimeSlotModificationAuthorName = input.readUTF();
-                  this.hasTeleporterModule = input.readBoolean();
+                  this.lastTimeSlotModificationAuthorName = param1.readUTF();
+                  this.hasTeleporterModule = param1.readBoolean();
                   return;
                }
             }

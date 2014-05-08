@@ -53,16 +53,16 @@ package com.ankamagames.dofus.logic.game.approach.utils
          return this._downloadSpeed;
       }
       
-      public function set downloadSpeed(speed:uint) : void {
-         this._downloadSpeed = speed;
+      public function set downloadSpeed(param1:uint) : void {
+         this._downloadSpeed = param1;
       }
       
       public function get mode() : uint {
          return this._mode;
       }
       
-      public function set mode(value:uint) : void {
-         this._mode = value;
+      public function set mode(param1:uint) : void {
+         this._mode = param1;
       }
       
       public function get firstAping() : uint {
@@ -70,7 +70,7 @@ package com.ankamagames.dofus.logic.game.approach.utils
       }
       
       public function initialize() : void {
-         var dcsrmsg:DownloadGetCurrentSpeedRequestMessage = null;
+         var _loc1_:DownloadGetCurrentSpeedRequestMessage = null;
          if(InterClientManager.isMaster())
          {
             if(!this._initialized)
@@ -83,9 +83,9 @@ package com.ankamagames.dofus.logic.game.approach.utils
                this._apingCount = 0;
                if(UpdaterConnexionHandler.getConnection())
                {
-                  dcsrmsg = new DownloadGetCurrentSpeedRequestMessage();
-                  dcsrmsg.initDownloadGetCurrentSpeedRequestMessage();
-                  UpdaterConnexionHandler.getConnection().send(dcsrmsg);
+                  _loc1_ = new DownloadGetCurrentSpeedRequestMessage();
+                  _loc1_.initDownloadGetCurrentSpeedRequestMessage();
+                  UpdaterConnexionHandler.getConnection().send(_loc1_);
                }
             }
          }
@@ -106,9 +106,9 @@ package com.ankamagames.dofus.logic.game.approach.utils
          }
       }
       
-      function onTimerEvent(te:TimerEvent) : void {
-         var aping:uint = 0;
-         var dssrmsg:DownloadSetSpeedRequestMessage = null;
+      private function onTimerEvent(param1:TimerEvent) : void {
+         var _loc2_:uint = 0;
+         var _loc3_:DownloadSetSpeedRequestMessage = null;
          if(this._connection == null)
          {
             this._connection = ConnectionsHandler.getConnection().mainConnection;
@@ -125,29 +125,29 @@ package com.ankamagames.dofus.logic.game.approach.utils
          {
             if(this._mode == MODE_WATCH)
             {
-               aping = this._connection.latencyAvg;
-               if(aping >= this.firstAping * 2)
+               _loc2_ = this._connection.latencyAvg;
+               if(_loc2_ >= this.firstAping * 2)
                {
                   if(this._downloadSpeed > 1)
                   {
                      this._downloadSpeed--;
                      _log.info("Decrease download speed to " + this._downloadSpeed);
-                     dssrmsg = new DownloadSetSpeedRequestMessage();
-                     dssrmsg.initDownloadSetSpeedRequestMessage(this._downloadSpeed);
-                     UpdaterConnexionHandler.getConnection().send(dssrmsg);
+                     _loc3_ = new DownloadSetSpeedRequestMessage();
+                     _loc3_.initDownloadSetSpeedRequestMessage(this._downloadSpeed);
+                     UpdaterConnexionHandler.getConnection().send(_loc3_);
                   }
                }
                else
                {
-                  if(aping < this.firstAping * 1.5)
+                  if(_loc2_ < this.firstAping * 1.5)
                   {
                      if(this._downloadSpeed < 10)
                      {
                         this._downloadSpeed++;
                         _log.info("Increase download speed to " + this._downloadSpeed);
-                        dssrmsg = new DownloadSetSpeedRequestMessage();
-                        dssrmsg.initDownloadSetSpeedRequestMessage(this._downloadSpeed);
-                        UpdaterConnexionHandler.getConnection().send(dssrmsg);
+                        _loc3_ = new DownloadSetSpeedRequestMessage();
+                        _loc3_.initDownloadSetSpeedRequestMessage(this._downloadSpeed);
+                        UpdaterConnexionHandler.getConnection().send(_loc3_);
                      }
                   }
                }

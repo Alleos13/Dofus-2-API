@@ -15,23 +15,23 @@ package com.ankamagames.atouin.entities.behaviours.movements
       
       private static const RUN_ANIMATION:String = "AnimCourse";
       
-      public static function getInstance(speedAdjust:Number=0.0) : RunningMovementBehavior {
-         return getFromCache(speedAdjust,RunningMovementBehavior) as RunningMovementBehavior;
+      public static function getInstance(param1:Number=0.0) : RunningMovementBehavior {
+         return getFromCache(param1,RunningMovementBehavior) as RunningMovementBehavior;
       }
       
-      override function getLinearVelocity() : Number {
+      override protected function getLinearVelocity() : Number {
          return RUN_LINEAR_VELOCITY;
       }
       
-      override function getHorizontalDiagonalVelocity() : Number {
+      override protected function getHorizontalDiagonalVelocity() : Number {
          return RUN_HORIZONTAL_DIAGONAL_VELOCITY;
       }
       
-      override function getVerticalDiagonalVelocity() : Number {
+      override protected function getVerticalDiagonalVelocity() : Number {
          return RUN_VERTICAL_DIAGONAL_VELOCITY;
       }
       
-      override function getAnimation() : String {
+      override protected function getAnimation() : String {
          return RUN_ANIMATION;
       }
    }

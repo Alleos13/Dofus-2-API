@@ -27,12 +27,12 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.job
          return 98;
       }
       
-      public function initJobExperience(jobId:uint=0, jobLevel:uint=0, jobXP:Number=0, jobXpLevelFloor:Number=0, jobXpNextLevelFloor:Number=0) : JobExperience {
-         this.jobId = jobId;
-         this.jobLevel = jobLevel;
-         this.jobXP = jobXP;
-         this.jobXpLevelFloor = jobXpLevelFloor;
-         this.jobXpNextLevelFloor = jobXpNextLevelFloor;
+      public function initJobExperience(param1:uint=0, param2:uint=0, param3:Number=0, param4:Number=0, param5:Number=0) : JobExperience {
+         this.jobId = param1;
+         this.jobLevel = param2;
+         this.jobXP = param3;
+         this.jobXpLevelFloor = param4;
+         this.jobXpNextLevelFloor = param5;
          return this;
       }
       
@@ -44,46 +44,46 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.job
          this.jobXpNextLevelFloor = 0;
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_JobExperience(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_JobExperience(param1);
       }
       
-      public function serializeAs_JobExperience(output:IDataOutput) : void {
+      public function serializeAs_JobExperience(param1:IDataOutput) : void {
          if(this.jobId < 0)
          {
             throw new Error("Forbidden value (" + this.jobId + ") on element jobId.");
          }
          else
          {
-            output.writeByte(this.jobId);
+            param1.writeByte(this.jobId);
             if(this.jobLevel < 0)
             {
                throw new Error("Forbidden value (" + this.jobLevel + ") on element jobLevel.");
             }
             else
             {
-               output.writeByte(this.jobLevel);
+               param1.writeByte(this.jobLevel);
                if(this.jobXP < 0)
                {
                   throw new Error("Forbidden value (" + this.jobXP + ") on element jobXP.");
                }
                else
                {
-                  output.writeDouble(this.jobXP);
+                  param1.writeDouble(this.jobXP);
                   if(this.jobXpLevelFloor < 0)
                   {
                      throw new Error("Forbidden value (" + this.jobXpLevelFloor + ") on element jobXpLevelFloor.");
                   }
                   else
                   {
-                     output.writeDouble(this.jobXpLevelFloor);
+                     param1.writeDouble(this.jobXpLevelFloor);
                      if(this.jobXpNextLevelFloor < 0)
                      {
                         throw new Error("Forbidden value (" + this.jobXpNextLevelFloor + ") on element jobXpNextLevelFloor.");
                      }
                      else
                      {
-                        output.writeDouble(this.jobXpNextLevelFloor);
+                        param1.writeDouble(this.jobXpNextLevelFloor);
                         return;
                      }
                   }
@@ -92,40 +92,40 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.job
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_JobExperience(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_JobExperience(param1);
       }
       
-      public function deserializeAs_JobExperience(input:IDataInput) : void {
-         this.jobId = input.readByte();
+      public function deserializeAs_JobExperience(param1:IDataInput) : void {
+         this.jobId = param1.readByte();
          if(this.jobId < 0)
          {
             throw new Error("Forbidden value (" + this.jobId + ") on element of JobExperience.jobId.");
          }
          else
          {
-            this.jobLevel = input.readByte();
+            this.jobLevel = param1.readByte();
             if(this.jobLevel < 0)
             {
                throw new Error("Forbidden value (" + this.jobLevel + ") on element of JobExperience.jobLevel.");
             }
             else
             {
-               this.jobXP = input.readDouble();
+               this.jobXP = param1.readDouble();
                if(this.jobXP < 0)
                {
                   throw new Error("Forbidden value (" + this.jobXP + ") on element of JobExperience.jobXP.");
                }
                else
                {
-                  this.jobXpLevelFloor = input.readDouble();
+                  this.jobXpLevelFloor = param1.readDouble();
                   if(this.jobXpLevelFloor < 0)
                   {
                      throw new Error("Forbidden value (" + this.jobXpLevelFloor + ") on element of JobExperience.jobXpLevelFloor.");
                   }
                   else
                   {
-                     this.jobXpNextLevelFloor = input.readDouble();
+                     this.jobXpNextLevelFloor = param1.readDouble();
                      if(this.jobXpNextLevelFloor < 0)
                      {
                         throw new Error("Forbidden value (" + this.jobXpNextLevelFloor + ") on element of JobExperience.jobXpNextLevelFloor.");

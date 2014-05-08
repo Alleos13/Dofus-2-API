@@ -19,9 +19,9 @@ package com.ankamagames.dofus.network.types.game.context
          return 107;
       }
       
-      public function initIdentifiedEntityDispositionInformations(cellId:int=0, direction:uint=1, id:int=0) : IdentifiedEntityDispositionInformations {
-         super.initEntityDispositionInformations(cellId,direction);
-         this.id = id;
+      public function initIdentifiedEntityDispositionInformations(param1:int=0, param2:uint=1, param3:int=0) : IdentifiedEntityDispositionInformations {
+         super.initEntityDispositionInformations(param1,param2);
+         this.id = param3;
          return this;
       }
       
@@ -30,22 +30,22 @@ package com.ankamagames.dofus.network.types.game.context
          this.id = 0;
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_IdentifiedEntityDispositionInformations(output);
+      override public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_IdentifiedEntityDispositionInformations(param1);
       }
       
-      public function serializeAs_IdentifiedEntityDispositionInformations(output:IDataOutput) : void {
-         super.serializeAs_EntityDispositionInformations(output);
-         output.writeInt(this.id);
+      public function serializeAs_IdentifiedEntityDispositionInformations(param1:IDataOutput) : void {
+         super.serializeAs_EntityDispositionInformations(param1);
+         param1.writeInt(this.id);
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_IdentifiedEntityDispositionInformations(input);
+      override public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_IdentifiedEntityDispositionInformations(param1);
       }
       
-      public function deserializeAs_IdentifiedEntityDispositionInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.id = input.readInt();
+      public function deserializeAs_IdentifiedEntityDispositionInformations(param1:IDataInput) : void {
+         super.deserialize(param1);
+         this.id = param1.readInt();
       }
    }
 }

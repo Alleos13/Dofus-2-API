@@ -10,7 +10,19 @@ package by.blooddy.crypto.image
       }
       
       public static function createQuantTable(param1:uint) : ByteArray {
-         return null;
+		  	return null;
       }
+                  
+      public static function createZigZagTable() : ByteArray {
+      		return null;
+      }
+                  
+      public static function createHuffmanTable() : ByteArray {
+		  return null;
+      }
+                                    
+      public static function createCategoryTable() : ByteArray {
+		  
+	  }     
    }
 }

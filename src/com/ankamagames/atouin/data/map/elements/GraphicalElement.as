@@ -10,8 +10,8 @@ package com.ankamagames.atouin.data.map.elements
    public class GraphicalElement extends BasicElement
    {
       
-      public function GraphicalElement(cell:Cell) {
-         super(cell);
+      public function GraphicalElement(param1:Cell) {
+         super(param1);
       }
       
       public var elementId:int;
@@ -38,17 +38,19 @@ package com.ankamagames.atouin.data.map.elements
          return this.finalTeint;
       }
       
-      function calculateFinalTeint() : void {
-         var r:Number = this.hue.red + this.shadow.red;
-         var g:Number = this.hue.green + this.shadow.green;
-         var b:Number = this.hue.blue + this.shadow.blue;
-         r = ColorMultiplicator.clamp((r + 128) * 2,0,512);
-         g = ColorMultiplicator.clamp((g + 128) * 2,0,512);
-         b = ColorMultiplicator.clamp((b + 128) * 2,0,512);
-         this.finalTeint = new ColorMultiplicator(r,g,b,true);
+      private function calculateFinalTeint() : void {
+         var _loc1_:Number = this.hue.red + this.shadow.red;
+         var _loc2_:Number = this.hue.green + this.shadow.green;
+         var _loc3_:Number = this.hue.blue + this.shadow.blue;
+         _loc1_ = ColorMultiplicator.clamp((_loc1_ + 128) * 2,0,512);
+         _loc2_ = ColorMultiplicator.clamp((_loc2_ + 128) * 2,0,512);
+         _loc3_ = ColorMultiplicator.clamp((_loc3_ + 128) * 2,0,512);
+         this.finalTeint = new ColorMultiplicator(_loc1_,_loc2_,_loc3_,true);
       }
       
-      override public function fromRaw(raw:IDataInput, mapVersion:int) : void {
+      override public function fromRaw(param1:IDataInput, param2:int) : void {
+         var raw:IDataInput = param1;
+         var mapVersion:int = param2;
          try
          {
             this.elementId = raw.readUnsignedInt();

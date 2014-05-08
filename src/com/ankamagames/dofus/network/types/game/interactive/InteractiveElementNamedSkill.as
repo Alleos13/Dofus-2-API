@@ -19,9 +19,9 @@ package com.ankamagames.dofus.network.types.game.interactive
          return 220;
       }
       
-      public function initInteractiveElementNamedSkill(skillId:uint=0, skillInstanceUid:uint=0, nameId:uint=0) : InteractiveElementNamedSkill {
-         super.initInteractiveElementSkill(skillId,skillInstanceUid);
-         this.nameId = nameId;
+      public function initInteractiveElementNamedSkill(param1:uint=0, param2:uint=0, param3:uint=0) : InteractiveElementNamedSkill {
+         super.initInteractiveElementSkill(param1,param2);
+         this.nameId = param3;
          return this;
       }
       
@@ -30,30 +30,30 @@ package com.ankamagames.dofus.network.types.game.interactive
          this.nameId = 0;
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_InteractiveElementNamedSkill(output);
+      override public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_InteractiveElementNamedSkill(param1);
       }
       
-      public function serializeAs_InteractiveElementNamedSkill(output:IDataOutput) : void {
-         super.serializeAs_InteractiveElementSkill(output);
+      public function serializeAs_InteractiveElementNamedSkill(param1:IDataOutput) : void {
+         super.serializeAs_InteractiveElementSkill(param1);
          if(this.nameId < 0)
          {
             throw new Error("Forbidden value (" + this.nameId + ") on element nameId.");
          }
          else
          {
-            output.writeInt(this.nameId);
+            param1.writeInt(this.nameId);
             return;
          }
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_InteractiveElementNamedSkill(input);
+      override public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_InteractiveElementNamedSkill(param1);
       }
       
-      public function deserializeAs_InteractiveElementNamedSkill(input:IDataInput) : void {
-         super.deserialize(input);
-         this.nameId = input.readInt();
+      public function deserializeAs_InteractiveElementNamedSkill(param1:IDataInput) : void {
+         super.deserialize(param1);
+         this.nameId = param1.readInt();
          if(this.nameId < 0)
          {
             throw new Error("Forbidden value (" + this.nameId + ") on element of InteractiveElementNamedSkill.nameId.");

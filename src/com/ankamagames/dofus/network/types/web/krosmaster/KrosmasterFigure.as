@@ -25,11 +25,11 @@ package com.ankamagames.dofus.network.types.web.krosmaster
          return 397;
       }
       
-      public function initKrosmasterFigure(uid:String="", figure:uint=0, pedestal:uint=0, bound:Boolean=false) : KrosmasterFigure {
-         this.uid = uid;
-         this.figure = figure;
-         this.pedestal = pedestal;
-         this.bound = bound;
+      public function initKrosmasterFigure(param1:String="", param2:uint=0, param3:uint=0, param4:Boolean=false) : KrosmasterFigure {
+         this.uid = param1;
+         this.figure = param2;
+         this.pedestal = param3;
+         this.bound = param4;
          return this;
       }
       
@@ -40,53 +40,53 @@ package com.ankamagames.dofus.network.types.web.krosmaster
          this.bound = false;
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_KrosmasterFigure(output);
+      public function serialize(param1:IDataOutput) : void {
+         this.serializeAs_KrosmasterFigure(param1);
       }
       
-      public function serializeAs_KrosmasterFigure(output:IDataOutput) : void {
-         output.writeUTF(this.uid);
+      public function serializeAs_KrosmasterFigure(param1:IDataOutput) : void {
+         param1.writeUTF(this.uid);
          if(this.figure < 0)
          {
             throw new Error("Forbidden value (" + this.figure + ") on element figure.");
          }
          else
          {
-            output.writeShort(this.figure);
+            param1.writeShort(this.figure);
             if(this.pedestal < 0)
             {
                throw new Error("Forbidden value (" + this.pedestal + ") on element pedestal.");
             }
             else
             {
-               output.writeShort(this.pedestal);
-               output.writeBoolean(this.bound);
+               param1.writeShort(this.pedestal);
+               param1.writeBoolean(this.bound);
                return;
             }
          }
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_KrosmasterFigure(input);
+      public function deserialize(param1:IDataInput) : void {
+         this.deserializeAs_KrosmasterFigure(param1);
       }
       
-      public function deserializeAs_KrosmasterFigure(input:IDataInput) : void {
-         this.uid = input.readUTF();
-         this.figure = input.readShort();
+      public function deserializeAs_KrosmasterFigure(param1:IDataInput) : void {
+         this.uid = param1.readUTF();
+         this.figure = param1.readShort();
          if(this.figure < 0)
          {
             throw new Error("Forbidden value (" + this.figure + ") on element of KrosmasterFigure.figure.");
          }
          else
          {
-            this.pedestal = input.readShort();
+            this.pedestal = param1.readShort();
             if(this.pedestal < 0)
             {
                throw new Error("Forbidden value (" + this.pedestal + ") on element of KrosmasterFigure.pedestal.");
             }
             else
             {
-               this.bound = input.readBoolean();
+               this.bound = param1.readBoolean();
                return;
             }
          }

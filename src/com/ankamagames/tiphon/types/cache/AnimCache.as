@@ -1,7 +1,7 @@
 package com.ankamagames.tiphon.types.cache
 {
+   import __AS3__.vec.Vector;
    import com.ankamagames.tiphon.types.ScriptedAnimation;
-   import __AS3__.vec.*;
    
    public class AnimCache extends Object
    {
@@ -18,63 +18,63 @@ package com.ankamagames.tiphon.types.cache
       
       private var _directions:Vector.<Vector.<ScriptedAnimation>>;
       
-      public function getAnimation(direction:int) : ScriptedAnimation {
-         var directionModified:* = 0;
-         if(direction == 3)
+      public function getAnimation(param1:int) : ScriptedAnimation {
+         var _loc2_:* = 0;
+         if(param1 == 3)
          {
-            directionModified = 1;
+            _loc2_ = 1;
          }
          else
          {
-            if(direction == 4)
+            if(param1 == 4)
             {
-               directionModified = 0;
+               _loc2_ = 0;
             }
             else
             {
-               if(direction == 5)
+               if(param1 == 5)
                {
-                  directionModified = 7;
+                  _loc2_ = 7;
                }
                else
                {
-                  directionModified = direction;
+                  _loc2_ = param1;
                }
             }
          }
-         var animList:Vector.<ScriptedAnimation> = this._directions[directionModified];
-         if(animList.length)
+         var _loc3_:Vector.<ScriptedAnimation> = this._directions[_loc2_];
+         if(_loc3_.length)
          {
-            return animList.shift();
+            return _loc3_.shift();
          }
          return null;
       }
       
-      public function pushAnimation(scriptedAnimation:ScriptedAnimation, direction:int) : void {
-         var directionModified:* = 0;
-         if(direction == 3)
+      public function pushAnimation(param1:ScriptedAnimation, param2:int) : void {
+         var _loc3_:* = 0;
+         if(param2 == 3)
          {
-            directionModified = 1;
+            _loc3_ = 1;
          }
          else
          {
-            if(direction == 4)
+            if(param2 == 4)
             {
-               directionModified = 0;
+               _loc3_ = 0;
             }
             else
             {
-               if(direction == 5)
+               if(param2 == 5)
                {
-                  directionModified = 7;
+                  _loc3_ = 7;
                }
                else
                {
-                  directionModified = direction;
+                  _loc3_ = param2;
                }
             }
          }
-         this._directions[directionModified].push(scriptedAnimation);
+         this._directions[_loc3_].push(param1);
       }
    }
 }

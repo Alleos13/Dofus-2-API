@@ -8,7 +8,7 @@ package com.ankamagames.atouin.types
    public dynamic class AtouinOptions extends OptionManager
    {
       
-      public function AtouinOptions(docContainer:DisplayObjectContainer, mhHandler:MessageHandler) {
+      public function AtouinOptions(param1:DisplayObjectContainer, param2:MessageHandler) {
          super("atouin");
          add("groundCacheMode",1);
          add("useInsideAutoZoom",AirScanner.isStreamingVersion());
@@ -19,7 +19,7 @@ package com.ankamagames.atouin.types
          add("debugLayer",false);
          add("showCellIdOnOver",false);
          add("tweentInterMap",false);
-         add("hideInterMap",false);
+         add("hideInterMap",AirScanner.isStreamingVersion());
          add("virtualPlayerJump",false);
          add("reloadLoadedMap",false);
          add("hideForeground",false);
@@ -37,8 +37,8 @@ package com.ankamagames.atouin.types
          add("useLowDefSkin",true);
          add("showProgressBar",AirScanner.isStreamingVersion());
          add("mapPictoExtension","png");
-         this._container = docContainer;
-         this._handler = mhHandler;
+         this._container = param1;
+         this._handler = param2;
       }
       
       private var _container:DisplayObjectContainer;
