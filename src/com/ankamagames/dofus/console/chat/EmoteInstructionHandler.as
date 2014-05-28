@@ -34,9 +34,9 @@ package com.ankamagames.dofus.console.chat
          return null;
       }
       
-      function getEmoteId(cmd:String) : uint {
+      private function getEmoteId(cmd:String) : uint {
          var emote:Emoticon = null;
-         for each (emote in Emoticon.getEmoticons())
+         for each(emote in Emoticon.getEmoticons())
          {
             if(emote.shortcut == cmd)
             {
@@ -50,7 +50,7 @@ package com.ankamagames.dofus.console.chat
          return 0;
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint=0, currentParams:Array=null) : Array {
+      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array {
          return [];
       }
    }

@@ -22,11 +22,11 @@ package com.ankamagames.jerakine.resources.protocols.impl
          super();
       }
       
-      private static var _indexes:Dictionary = new Dictionary();
+      private static var _indexes:Dictionary;
       
-      private static var _properties:Dictionary = new Dictionary();
+      private static var _properties:Dictionary;
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(PakProtocol2));
+      protected static const _log:Logger;
       
       public function getFilesIndex(uri:Uri) : Dictionary {
          var fileStream:* = _indexes[uri.path];
@@ -80,7 +80,7 @@ package com.ankamagames.jerakine.resources.protocols.impl
          }
       }
       
-       function release() : void {
+      override protected function release() : void {
       }
       
       override public function cancel() : void {

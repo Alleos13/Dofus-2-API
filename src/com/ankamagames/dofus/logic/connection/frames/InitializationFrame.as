@@ -137,7 +137,6 @@ package com.ankamagames.dofus.logic.connection.frames
    import com.ankamagames.dofus.network.types.game.context.fight.GameFightTaxCollectorInformations;
    import com.ankamagames.dofus.internalDatacenter.spells.EffectsWrapper;
    import com.ankamagames.dofus.internalDatacenter.spells.EffectsListWrapper;
-   import __AS3__.vec.*;
    import com.ankamagames.dofus.internalDatacenter.communication.CraftSmileyItem;
    import com.ankamagames.dofus.internalDatacenter.communication.DelayedActionItem;
    import com.ankamagames.dofus.logic.game.roleplay.types.PrismTooltipInformation;
@@ -201,7 +200,7 @@ package com.ankamagames.dofus.logic.connection.frames
          super();
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(InitializationFrame));
+      protected static const _log:Logger;
       
       private var _aFiles:Array;
       
@@ -244,7 +243,7 @@ package com.ankamagames.dofus.logic.connection.frames
          this._aModuleInit["gameData"] = false;
          this._aModuleInit["modules"] = false;
          this._aModuleInit["uiXmlParsing"] = false;
-         for each (foo in this._aModuleInit)
+         for each(foo in this._aModuleInit)
          {
             this._percentPerModule++;
          }
@@ -288,27 +287,23 @@ package com.ankamagames.dofus.logic.connection.frames
                      this._loadingScreen.log("Unabled to load i18n file " + langMsg.file,LoadingScreen.ERROR);
                      Kernel.panic(PanicMessages.I18N_LOADING_FAILED,[LangManager.getInstance().getEntry("config.lang.current")]);
                   }
+                  else if(langMsg.file.indexOf("config.xml") > -1)
+                  {
+                     this._loadingScreen.log("Unabled to load main config file : " + langMsg.file,LoadingScreen.ERROR);
+                     Kernel.panic(PanicMessages.CONFIG_LOADING_FAILED);
+                  }
+                  else if(langMsg.file.indexOf("config-") > -1)
+                  {
+                     this._loadingScreen.log("Unabled to load secondary config file : " + langMsg.file,LoadingScreen.INFO);
+                     this._aModuleInit["config"] = true;
+                     this.setModulePercent("config",100);
+                  }
                   else
                   {
-                     if(langMsg.file.indexOf("config.xml") > -1)
-                     {
-                        this._loadingScreen.log("Unabled to load main config file : " + langMsg.file,LoadingScreen.ERROR);
-                        Kernel.panic(PanicMessages.CONFIG_LOADING_FAILED);
-                     }
-                     else
-                     {
-                        if(langMsg.file.indexOf("config-") > -1)
-                        {
-                           this._loadingScreen.log("Unabled to load secondary config file : " + langMsg.file,LoadingScreen.INFO);
-                           this._aModuleInit["config"] = true;
-                           this.setModulePercent("config",100);
-                        }
-                        else
-                        {
-                           this._loadingScreen.log("Unabled to load  " + langMsg.file,LoadingScreen.ERROR);
-                        }
-                     }
+                     this._loadingScreen.log("Unabled to load  " + langMsg.file,LoadingScreen.ERROR);
                   }
+                  
+                  
                }
                if(this._loadingScreen)
                {
@@ -365,6 +360,85 @@ package com.ankamagames.dofus.logic.connection.frames
                         }
                         break;
                      }
+                  default:
+                     if(langAllMsg.file.indexOf("colors.xml") != -1)
+                     {
+                        if(!langAllMsg.success)
+                        {
+                           throw new BeriliaError("Impossible de charger " + langAllMsg.file);
+                        }
+                        else
+                        {
+                           XmlConfig.getInstance().addCategory(LangManager.getInstance().getCategory("colors"));
+                           this._aModuleInit["colors"] = true;
+                           this.setModulePercent("colors",100);
+                           this._loadingScreen.value = this._loadingScreen.value + this._percentPerModule;
+                           break;
+                        }
+                     }
+                     else
+                     {
+                        if(langAllMsg.file.indexOf("config-") != -1)
+                        {
+                           try
+                           {
+                              xmlPos = langAllMsg.file.lastIndexOf(".xml");
+                              fileNamePos = langAllMsg.file.lastIndexOf("config-");
+                              catName = langAllMsg.file.substring(fileNamePos,xmlPos);
+                              newValues = LangManager.getInstance().getCategory(catName);
+                              for(key in newValues)
+                              {
+                                 keyInfo = key.split(".");
+                                 keyInfo[0] = "config";
+                                 oldKey = keyInfo.join(".");
+                                 XmlConfig.getInstance().setEntry(oldKey,newValues[key]);
+                                 LangManager.getInstance().setEntry(oldKey,newValues[key]);
+                              }
+                           }
+                           catch(e:Error)
+                           {
+                              throw e;
+                           }
+                           if(!--this._subConfigCount)
+                           {
+                              this.setModulePercent("config",100);
+                              this._aModuleInit["config"] = true;
+                              this.initAfterLoadConfig();
+                              this.checkInit();
+                           }
+                        }
+                        else
+                        {
+                           this._aLoadedFiles.push(langAllMsg.file);
+                        }
+                        this._aModuleInit["langFiles"] = this._aLoadedFiles.length == this._aFiles.length;
+                        if(this._aModuleInit["langFiles"])
+                        {
+                           this.setModulePercent("langFiles",100);
+                           this.initFonts();
+                           I18nUpdater.getInstance().addEventListener(Event.COMPLETE,this.onI18nReady);
+                           I18nUpdater.getInstance().addEventListener(FileEvent.ERROR,this.onDataFileError);
+                           I18nUpdater.getInstance().addEventListener(LangFileEvent.COMPLETE,this.onI18nPartialDataReady);
+                           GameDataUpdater.getInstance().addEventListener(Event.COMPLETE,this.onGameDataReady);
+                           GameDataUpdater.getInstance().addEventListener(FileEvent.ERROR,this.onDataFileError);
+                           GameDataUpdater.getInstance().addEventListener(LangFileEvent.COMPLETE,this.onGameDataPartialDataReady);
+                           lastLang = StoreDataManager.getInstance().getData(Constants.DATASTORE_LANG_VERSION,"lastLang");
+                           resetLang = !(lastLang == XmlConfig.getInstance().getEntry("config.lang.current"));
+                           if(resetLang)
+                           {
+                              UiRenderManager.getInstance().clearCache();
+                           }
+                           currentCommunity = XmlConfig.getInstance().getEntry("config.community.current");
+                           if((currentCommunity) && (!(currentCommunity.charAt(0) == "!")))
+                           {
+                              overrideFile = new Uri(XmlConfig.getInstance().getEntry("config.data.path.root") + "com/" + currentCommunity + ".xml");
+                           }
+                           I18nUpdater.getInstance().initI18n(XmlConfig.getInstance().getEntry("config.lang.current"),new Uri(XmlConfig.getInstance().getEntry("config.data.path.i18n.list")),resetLang,overrideFile);
+                           GameDataUpdater.getInstance().init(new Uri(XmlConfig.getInstance().getEntry("config.data.path.common.list")));
+                        }
+                        this.checkInit();
+                        break;
+                     }
                }
                return true;
             case msg is AllModulesLoadedMessage:
@@ -407,6 +481,8 @@ package com.ankamagames.dofus.logic.connection.frames
             case msg is NoThemeErrorMessage:
                this._loadingScreen.log(I18n.getUiText("ui.popup.noTheme"),LoadingScreen.ERROR);
                return true;
+            default:
+               return false;
          }
       }
       
@@ -422,7 +498,7 @@ package com.ankamagames.dofus.logic.connection.frames
          return true;
       }
       
-      function initAfterLoadConfig() : void {
+      private function initAfterLoadConfig() : void {
          Kernel.getInstance().postInit();
          this._aFiles.push(LangManager.getInstance().getEntry("config.ui.asset.fontsList"));
          var i:uint = 0;
@@ -448,15 +524,15 @@ package com.ankamagames.dofus.logic.connection.frames
          }
       }
       
-      function initPerformancesWatcher() : void {
+      private function initPerformancesWatcher() : void {
          DofusFpsManager.init();
          FpsControler.Init(ScriptedAnimation);
       }
       
-      function initStaticConstants() : void {
+      private function initStaticConstants() : void {
       }
       
-      function initModulesBindings() : void {
+      private function initModulesBindings() : void {
          ApiBinder.addApi("Ui",UiApi);
          ApiBinder.addApi("System",SystemApi);
          ApiBinder.addApi("Data",DataApi);
@@ -575,89 +651,31 @@ package com.ankamagames.dofus.logic.connection.frames
          HyperlinkFactory.registerProtocol("subArea",HyperlinkShowSubArea.showSubArea,HyperlinkShowSubArea.getSubAreaName);
       }
       
-      function displayLoadingScreen() : void {
+      private function displayLoadingScreen() : void {
          this._loadingScreen = new LoadingScreen(false,true);
          Dofus.getInstance().addChild(this._loadingScreen);
       }
       
-      function initTubul() : void {
+      private function initTubul() : void {
          SoundManager.getInstance().checkSoundDirectory();
       }
       
-      function checkInit() : void {
-         var reste:uint = 0;
-         var key:String = null;
-         var d:XML = null;
-         var testSequence:Array = null;
-         var type:XML = null;
-         var i:uint = 0;
-         var lowdefMappings:Array = null;
-         var skin:SkinMapping = null;
-         var dataClassDesc:XML = null;
-         var fct:XML = null;
-         var start:Boolean = true;
-         for (key in this._aModuleInit)
-         {
-            start = (start) && (this._aModuleInit[key]);
-            if(!this._aModuleInit[key])
-            {
-               reste++;
-            }
-         }
-         if(reste == 2)
-         {
-            UiModuleManager.getInstance().init(Constants.COMMON_GAME_MODULE.concat(Constants.PRE_GAME_MODULE),true);
-         }
-         if(start)
-         {
-            d = describeType(GameDataList);
-            testSequence = [];
-            for each (type in d..constant)
-            {
-               dataClassDesc = describeType(getDefinitionByName(type.@type));
-               for each (fct in dataClassDesc..method)
-               {
-                  if((fct.@returnType.toString() == type.@type.toString()) && (fct.@name.toString().indexOf("get") == 0) && (!(fct.@name.toString().indexOf("ById") == -1)))
-                  {
-                     testSequence.push(
-                        {
-                           "fct":getDefinitionByName(type.@type)[fct.@name.toString()],
-                           "returnClass":getDefinitionByName(type.@type),
-                           "testIndex":[0,1,2,3,4,100,1000,2000,10000,100000]
-                        });
-                  }
-               }
-            }
-            DofusApiAction.updateInfo();
-            CensoredContentManager.getInstance().init(CensoredContent.getCensoredContents(),XmlConfig.getInstance().getEntry("config.lang.current"));
-            lowdefMappings = SkinMapping.getSkinMappings();
-            for each (skin in lowdefMappings)
-            {
-               Skin.addAlternativeSkin(skin.id,skin.lowDefId);
-            }
-            _log.info("Initialization frame end");
-            Constants.EVENT_MODE = LangManager.getInstance().getEntry("config.eventMode") == "true";
-            Constants.EVENT_MODE_PARAM = LangManager.getInstance().getEntry("config.eventModeParams");
-            Constants.CHARACTER_CREATION_ALLOWED = LangManager.getInstance().getEntry("config.characterCreationAllowed") == "true";
-            Constants.FORCE_MAXIMIZED_WINDOW = LangManager.getInstance().getEntry("config.autoMaximize") == "true";
-            if((Constants.FORCE_MAXIMIZED_WINDOW) && (AirScanner.hasAir()))
-            {
-               StageShareManager.stage["nativeWindow"].maximize();
-            }
-            Kernel.getWorker().removeFrame(this);
-            Kernel.getWorker().addFrame(new AuthentificationFrame());
-            Kernel.getWorker().addFrame(new QueueFrame());
-            Kernel.getWorker().addFrame(new GameStartingFrame());
-         }
+      private function checkInit() : void {
+         /*
+          * Decompilation error
+          * Code may be obfuscated
+          * Error type: TranslateException
+          */
+         throw new IllegalOperationError("Not decompiled due to error");
       }
       
-      function initFonts() : void {
+      private function initFonts() : void {
          EmbedFontManager.getInstance().addEventListener(Event.COMPLETE,this.onFontsManagerInit);
          var fontList:Array = FontManager.getInstance().getFontsList();
          EmbedFontManager.getInstance().initialize(fontList);
       }
       
-      function setModulePercent(moduleName:String, prc:Number, add:Boolean=false) : void {
+      private function setModulePercent(moduleName:String, prc:Number, add:Boolean = false) : void {
          var p:* = NaN;
          var id:uint = 0;
          if(!this._modPercents[moduleName])
@@ -673,7 +691,7 @@ package com.ankamagames.dofus.logic.connection.frames
             this._modPercents[moduleName] = prc;
          }
          var totalPrc:Number = 0;
-         for each (p in this._modPercents)
+         for each(p in this._modPercents)
          {
             totalPrc = totalPrc + p / 100 * this._percentPerModule;
          }
@@ -685,13 +703,13 @@ package com.ankamagames.dofus.logic.connection.frames
          this._loadingScreen.value = totalPrc;
       }
       
-      function onFontsManagerInit(e:Event) : void {
+      private function onFontsManagerInit(e:Event) : void {
          this._aModuleInit["font"] = true;
          this.setModulePercent("font",100);
          this.checkInit();
       }
       
-      function onI18nReady(e:Event) : void {
+      private function onI18nReady(e:Event) : void {
          this._aModuleInit["i18n"] = true;
          this.setModulePercent("i18n",100);
          StoreDataManager.getInstance().setData(Constants.DATASTORE_LANG_VERSION,"lastLang",LangManager.getInstance().getEntry("config.lang.current"));
@@ -699,13 +717,13 @@ package com.ankamagames.dofus.logic.connection.frames
          Input.numberStrSeparator = I18n.getUiText("ui.common.numberSeparator");
       }
       
-      function onGameDataReady(e:Event) : void {
+      private function onGameDataReady(e:Event) : void {
          this._aModuleInit["gameData"] = true;
          this.setModulePercent("gameData",100);
          this.checkInit();
       }
       
-      function onGameDataPartialDataReady(e:LangFileEvent) : void {
+      private function onGameDataPartialDataReady(e:LangFileEvent) : void {
          if(!this._loadingScreen)
          {
             this._loadingScreen = new LoadingScreen();
@@ -716,13 +734,13 @@ package com.ankamagames.dofus.logic.connection.frames
          KernelEventsManager.getInstance().processCallback(HookList.LangFileLoaded,e.url,true);
       }
       
-      function onI18nPartialDataReady(e:LangFileEvent) : void {
+      private function onI18nPartialDataReady(e:LangFileEvent) : void {
          this._loadingScreen.log("[i18n] " + FileUtils.getFileName(e.url) + " parsed",LoadingScreen.INFO);
          this.setModulePercent("i18n",this._percentPerModule * 1 / I18nUpdater.getInstance().files.length,true);
          KernelEventsManager.getInstance().processCallback(HookList.LangFileLoaded,e.url,true);
       }
       
-      function onDataFileError(e:FileEvent) : void {
+      private function onDataFileError(e:FileEvent) : void {
          this._loadingScreen.log("Unabled to load  " + e.file,LoadingScreen.ERROR);
       }
    }

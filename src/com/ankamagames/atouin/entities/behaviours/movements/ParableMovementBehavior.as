@@ -27,11 +27,11 @@ package com.ankamagames.atouin.entities.behaviours.movements
          }
       }
       
-      private static const LINEAR_VELOCITY:Number = 1 / 400;
+      private static const LINEAR_VELOCITY:Number = 0.0025;
       
-      private static const HORIZONTAL_DIAGONAL_VELOCITY:Number = 1 / 500;
+      private static const HORIZONTAL_DIAGONAL_VELOCITY:Number = 0.002;
       
-      private static const VERTICAL_DIAGONAL_VELOCITY:Number = 1 / 450;
+      private static const VERTICAL_DIAGONAL_VELOCITY:Number = 0.0022222222222222222;
       
       private static const ANIMATION:String = "FX";
       
@@ -51,23 +51,23 @@ package com.ankamagames.atouin.entities.behaviours.movements
          return _self;
       }
       
-      override function getLinearVelocity() : Number {
+      override protected function getLinearVelocity() : Number {
          return LINEAR_VELOCITY;
       }
       
-      override function getHorizontalDiagonalVelocity() : Number {
+      override protected function getHorizontalDiagonalVelocity() : Number {
          return HORIZONTAL_DIAGONAL_VELOCITY;
       }
       
-      override function getVerticalDiagonalVelocity() : Number {
+      override protected function getVerticalDiagonalVelocity() : Number {
          return VERTICAL_DIAGONAL_VELOCITY;
       }
       
-      override function getAnimation() : String {
+      override protected function getAnimation() : String {
          return ANIMATION;
       }
       
-      override public function move(entity:IMovable, path:MovementPath, callback:Function=null) : void {
+      override public function move(entity:IMovable, path:MovementPath, callback:Function = null) : void {
          var tweenData:TweenEntityData = new TweenEntityData();
          tweenData.path = path;
          tweenData.entity = entity;
@@ -85,7 +85,7 @@ package com.ankamagames.atouin.entities.behaviours.movements
          initMovement(entity,tweenData);
       }
       
-      override function processMovement(tweenData:TweenEntityData, currentTime:uint) : void {
+      override protected function processMovement(tweenData:TweenEntityData, currentTime:uint) : void {
          var gravity2:* = NaN;
          tweenData.barycentre = _velocity * (currentTime - tweenData.start);
          if(tweenData.barycentre > 1)
@@ -118,7 +118,7 @@ package com.ankamagames.atouin.entities.behaviours.movements
          }
       }
       
-      function checkAngle(initPoint:Point, finalPoint:Point) : Number {
+      private function checkAngle(initPoint:Point, finalPoint:Point) : Number {
          var A:Number = Point.distance(initPoint,new Point(finalPoint.x,initPoint.y));
          var B:Number = Point.distance(initPoint,finalPoint);
          var angle:Number = Math.acos(A / B) * 180 / Math.PI;

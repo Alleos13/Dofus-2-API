@@ -12,7 +12,7 @@ package org.flintparticles.twoD.renderers
          super();
       }
       
-       function renderParticles(param1:Array) : void {
+      override protected function renderParticles(param1:Array) : void {
          var _loc2_:Particle2D = null;
          var _loc3_:DisplayObject = null;
          var _loc4_:int = param1.length;
@@ -27,11 +27,11 @@ package org.flintparticles.twoD.renderers
          }
       }
       
-       function addParticle(param1:Particle) : void {
+      override protected function addParticle(param1:Particle) : void {
          addChildAt(param1.image,0);
       }
       
-       function removeParticle(param1:Particle) : void {
+      override protected function removeParticle(param1:Particle) : void {
          if(contains(param1.image))
          {
             removeChild(param1.image);

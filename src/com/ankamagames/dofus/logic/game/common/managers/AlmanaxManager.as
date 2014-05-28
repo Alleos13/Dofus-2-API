@@ -60,7 +60,7 @@ package com.ankamagames.dofus.logic.game.common.managers
       
       private static var _self:AlmanaxManager;
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(AlmanaxManager));
+      protected static const _log:Logger;
       
       public static function getInstance() : AlmanaxManager {
          if(!_self)
@@ -92,7 +92,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          return this._currentZodiac;
       }
       
-      function setDefaultData(pAlmanaxElement:Object) : void {
+      private function setDefaultData(pAlmanaxElement:Object) : void {
          if(pAlmanaxElement is AlmanaxEvent)
          {
             if(!pAlmanaxElement.bossText)
@@ -107,31 +107,27 @@ package com.ankamagames.dofus.logic.game.common.managers
             pAlmanaxElement.name = "";
             pAlmanaxElement.webImageUrl = XmlConfig.getInstance().getEntry("config.gfx.path").concat("almanax/jour.jpg");
          }
-         else
+         else if(pAlmanaxElement is AlmanaxMonth)
          {
-            if(pAlmanaxElement is AlmanaxMonth)
+            if(!pAlmanaxElement.protectorDescription)
             {
-               if(!pAlmanaxElement.protectorDescription)
-               {
-                  pAlmanaxElement.protectorDescription = "ui.almanax.default.protector";
-               }
-               pAlmanaxElement.webImageUrl = XmlConfig.getInstance().getEntry("config.gfx.path").concat("almanax/protecteur.jpg");
+               pAlmanaxElement.protectorDescription = "ui.almanax.default.protector";
             }
-            else
+            pAlmanaxElement.webImageUrl = XmlConfig.getInstance().getEntry("config.gfx.path").concat("almanax/protecteur.jpg");
+         }
+         else if(pAlmanaxElement is AlmanaxZodiac)
+         {
+            pAlmanaxElement.webImageUrl = XmlConfig.getInstance().getEntry("config.gfx.path").concat("almanax/constellation.jpg");
+            if(!pAlmanaxElement.description)
             {
-               if(pAlmanaxElement is AlmanaxZodiac)
-               {
-                  pAlmanaxElement.webImageUrl = XmlConfig.getInstance().getEntry("config.gfx.path").concat("almanax/constellation.jpg");
-                  if(!pAlmanaxElement.description)
-                  {
-                     pAlmanaxElement.description = "ui.almanax.default.zodiac";
-                  }
-               }
+               pAlmanaxElement.description = "ui.almanax.default.zodiac";
             }
          }
+         
+         
       }
       
-      function checkData() : void {
+      private function checkData() : void {
          if(!this.isValidImageUrl(this._currentEvent.webImageUrl))
          {
             this.setDefaultData(this._currentEvent);
@@ -146,11 +142,11 @@ package com.ankamagames.dofus.logic.game.common.managers
          }
       }
       
-      function isValidImageUrl(pUrl:String) : Boolean {
+      private function isValidImageUrl(pUrl:String) : Boolean {
          return (pUrl) && (!(pUrl == "false"));
       }
       
-      function onData(e:Event) : void {
+      private function onData(e:Event) : void {
          var eventRawData:Object = this._rpcService.getResultData("event");
          var monthRawData:Object = this._rpcService.getResultData("month");
          var zodiacRawData:Object = this._rpcService.getResultData("zodiac");
@@ -180,7 +176,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          StoreDataManager.getInstance().setData(this._ds,"cacheDate",new Date());
       }
       
-      function onError(e:Event) : void {
+      private function onError(e:Event) : void {
          this._currentEvent = new AlmanaxEvent();
          this.setDefaultData(this._currentEvent);
          this._currentMonth = new AlmanaxMonth();

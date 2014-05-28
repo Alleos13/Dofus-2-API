@@ -16,7 +16,7 @@ package com.ankamagames.dofus.datacenter.items
       
       public static const MODULE:String = "ItemTypes";
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(ItemType));
+      protected static const _log:Logger;
       
       public static function getItemTypeById(id:uint) : ItemType {
          return GameData.getObject(MODULE,id) as ItemType;
@@ -80,7 +80,7 @@ package com.ankamagames.dofus.datacenter.items
          return this._zoneMinSize;
       }
       
-      function parseZone() : void {
+      private function parseZone() : void {
          var params:Array = null;
          if((this.rawZone) && (this.rawZone.length))
          {

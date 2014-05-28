@@ -6,7 +6,7 @@ package com.ankamagames.atouin.renderers
    public class MovementZoneRenderer extends ZoneDARenderer
    {
       
-      public function MovementZoneRenderer(showText:Boolean, startAt:int=1) {
+      public function MovementZoneRenderer(showText:Boolean, startAt:int = 1) {
          super();
          this._showText = showText;
          this._startAt = startAt;
@@ -18,7 +18,7 @@ package com.ankamagames.atouin.renderers
       
       private var _startAt:int;
       
-      override function getText(count:int) : String {
+      override protected function getText(count:int) : String {
          if(this._showText)
          {
             return String(count + this._startAt);

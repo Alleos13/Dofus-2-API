@@ -46,9 +46,9 @@ package com.ankamagames.berilia.components
       
       public static var HEIGHT_OFFSET:int = 0;
       
-      public static var MEMORY_LOG:Dictionary = new Dictionary(true);
+      public static var MEMORY_LOG:Dictionary;
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(Label));
+      protected static const _log:Logger;
       
       private static const VALIGN_NONE:String = "NONE";
       
@@ -558,11 +558,11 @@ package com.ankamagames.berilia.components
          this._tText.defaultTextFormat = this._tfFormatter;
       }
       
-      public function setCssColor(color:String, style:String=null) : void {
+      public function setCssColor(color:String, style:String = null) : void {
          this.changeCssClassColor(color,style);
       }
       
-      public function setCssSize(size:uint, style:String=null) : void {
+      public function setCssSize(size:uint, style:String = null) : void {
          this.changeCssClassSize(size,style);
       }
       
@@ -627,13 +627,13 @@ package com.ankamagames.berilia.components
          this._tText.selectable = false;
       }
       
-      function createTextField() : void {
+      private function createTextField() : void {
          this._tText = new TextField();
          this._tText.addEventListener(TextEvent.LINK,this.onTextClick);
          addChild(this._tText);
       }
       
-      function changeCssClassColor(color:String, style:String=null) : void {
+      private function changeCssClassColor(color:String, style:String = null) : void {
          var i:* = undefined;
          if(style)
          {
@@ -644,14 +644,14 @@ package com.ankamagames.berilia.components
          }
          else
          {
-            for each (i in this.aStyleObj)
+            for each(i in this.aStyleObj)
             {
                i.color = color;
             }
          }
       }
       
-      function changeCssClassSize(size:uint, style:String=null) : void {
+      private function changeCssClassSize(size:uint, style:String = null) : void {
          var i:* = undefined;
          if(style)
          {
@@ -663,14 +663,14 @@ package com.ankamagames.berilia.components
          }
          else
          {
-            for each (i in this.aStyleObj)
+            for each(i in this.aStyleObj)
             {
                i.fontSize = size + "px";
             }
          }
       }
       
-      public function appendText(sTxt:String, style:String=null) : void {
+      public function appendText(sTxt:String, style:String = null) : void {
          var textFormat:TextFormat = null;
          if((style) && (this.aStyleObj[style]))
          {
@@ -693,7 +693,7 @@ package com.ankamagames.berilia.components
          HyperlinkFactory.activeSmallHyperlink(this._tText);
       }
       
-      function bindCss() : void {
+      private function bindCss() : void {
          var styleToDisplay:String = null;
          var s:String = null;
          var sc:uint = 0;
@@ -721,7 +721,7 @@ package com.ankamagames.berilia.components
          var currentStyleSheet:StyleSheet = this._tText.styleSheet;
          this._tText.styleSheet = null;
          this.aStyleObj = new Array();
-         for each (s in this._ssSheet.styleNames)
+         for each(s in this._ssSheet.styleNames)
          {
             if((!styleToDisplay) || (s == this._sCssClass) || (!(this._sCssClass == styleToDisplay)) && (s == "p"))
             {
@@ -793,17 +793,15 @@ package com.ankamagames.berilia.components
                this._tText.embedFonts = true;
                this._tText.antiAliasType = AntiAliasType.ADVANCED;
             }
+            else if(this._tfFormatter)
+            {
+               _log.warn("System font [" + this._tfFormatter.font + "] used (in " + (getUi()?getUi().name:"unknow") + ", from " + this._sCssUrl.uri + ")");
+            }
             else
             {
-               if(this._tfFormatter)
-               {
-                  _log.warn("System font [" + this._tfFormatter.font + "] used (in " + (getUi()?getUi().name:"unknow") + ", from " + this._sCssUrl.uri + ")");
-               }
-               else
-               {
-                  _log.fatal("Erreur de formattage.");
-               }
+               _log.fatal("Erreur de formattage.");
             }
+            
          }
          else
          {
@@ -822,18 +820,16 @@ package com.ankamagames.berilia.components
             this._tText.height = this._nTextHeight;
             this._tText.y = this._tText.y + (this._nHeight / 2 - this._tText.height / 2);
          }
+         else if(!this._bFixedHeight)
+         {
+            this._tText.height = this._tText.textHeight + 5;
+            this._nHeight = this._tText.height;
+         }
          else
          {
-            if(!this._bFixedHeight)
-            {
-               this._tText.height = this._tText.textHeight + 5;
-               this._nHeight = this._tText.height;
-            }
-            else
-            {
-               this._tText.height = this._nHeight;
-            }
+            this._tText.height = this._nHeight;
          }
+         
          if(this._useExtendWidth)
          {
             this._tText.width = this._tText.textWidth + 7;
@@ -898,7 +894,7 @@ package com.ankamagames.berilia.components
          this._nHeight = tHeight;
       }
       
-      public function fullWidth(maxWidth:uint=0) : void {
+      public function fullWidth(maxWidth:uint = 0) : void {
          this._nWidth = int(this._tText.textWidth + 5);
          this._tText.width = this._nWidth;
          if(maxWidth > 0)
@@ -914,7 +910,7 @@ package com.ankamagames.berilia.components
          this._tText.height = this._nHeight;
       }
       
-      public function resizeText(useSizeMin:Boolean=true) : void {
+      public function resizeText(useSizeMin:Boolean = true) : void {
          var currentSize:* = 0;
          var sizeMin:* = 0;
          var needTooltipExtension:* = false;
@@ -966,14 +962,12 @@ package com.ankamagames.berilia.components
             {
                this.addTooltipExtension();
             }
-            else
+            else if(this._lastWidth != this._tText.width)
             {
-               if(this._lastWidth != this._tText.width)
-               {
-                  this._lastWidth = this._tText.width + 4;
-                  this._tText.width = this._lastWidth;
-               }
+               this._lastWidth = this._tText.width + 4;
+               this._tText.width = this._lastWidth;
             }
+            
          }
       }
       
@@ -989,7 +983,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function addTooltipExtension() : void {
+      private function addTooltipExtension() : void {
          this._textFieldTooltipExtension = new TextField();
          this._textFieldTooltipExtension.selectable = false;
          this._textFieldTooltipExtension.height = 1;
@@ -1031,7 +1025,7 @@ package com.ankamagames.berilia.components
          this._textFieldTooltipExtension.addEventListener(MouseEvent.MOUSE_WHEEL,this.onTooltipExtensionOut,false,0,true);
       }
       
-      function updateTooltipExtensionStyle() : void {
+      private function updateTooltipExtensionStyle() : void {
          if(!this._textFieldTooltipExtension)
          {
             return;
@@ -1043,12 +1037,12 @@ package com.ankamagames.berilia.components
          this._textFieldTooltipExtension.textColor = this._textTooltipExtensionColor;
       }
       
-      function onTextClick(e:TextEvent) : void {
+      private function onTextClick(e:TextEvent) : void {
          e.stopPropagation();
          Berilia.getInstance().handler.process(new TextClickMessage(this,e.text));
       }
       
-      function updateAlign() : void {
+      protected function updateAlign() : void {
          if(!this._tText.textHeight)
          {
             return;
@@ -1091,13 +1085,13 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function onTooltipExtensionOver(e:MouseEvent) : void {
+      private function onTooltipExtensionOver(e:MouseEvent) : void {
          var docMain:Sprite = Berilia.getInstance().docMain;
          TooltipManager.show(new TextTooltipInfo(this._tText.text),this,UiModuleManager.getInstance().getModule("Ankama_Tooltips"),false,"TextExtension",LocationEnum.POINT_TOP,LocationEnum.POINT_BOTTOM,20,true,null,TooltipManager.defaultTooltipUiScript,null,"TextInfo");
          this._textFieldTooltipExtension.textColor = 16765814;
       }
       
-      function onTooltipExtensionOut(e:MouseEvent=null) : void {
+      private function onTooltipExtensionOut(e:MouseEvent = null) : void {
          TooltipManager.hide("TextExtension");
          this._textFieldTooltipExtension.textColor = this._textTooltipExtensionColor;
       }

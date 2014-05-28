@@ -32,7 +32,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          super();
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(GuildDialogFrame));
+      protected static const _log:Logger;
       
       private var guildEmblem:GuildEmblem;
       
@@ -111,6 +111,8 @@ package com.ankamagames.dofus.logic.game.common.frames
                   this.leaveDialog();
                }
                return true;
+            default:
+               return false;
          }
       }
       
@@ -119,7 +121,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return true;
       }
       
-      function leaveDialog() : void {
+      private function leaveDialog() : void {
          Kernel.getWorker().process(ChangeWorldInteractionAction.create(true));
          Kernel.getWorker().removeFrame(this);
       }

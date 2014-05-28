@@ -152,7 +152,7 @@ package com.ankamagames.berilia.types.graphic
          return child;
       }
       
-      override public function addContent(child:GraphicContainer, index:int=-1) : GraphicContainer {
+      override public function addContent(child:GraphicContainer, index:int = -1) : GraphicContainer {
          child.addEventListener(Event.REMOVED,this.onChildRemoved);
          this.getStrata(0).addChild(child);
          this.finalize();
@@ -191,13 +191,11 @@ package com.ankamagames.berilia.types.graphic
             this._hScrollbar.width = width - (vScroll?this._scrollBarSize:0);
             this._hScrollbar.max = this._content.width - width + (vScroll?this._scrollBarSize:0);
          }
-         else
+         else if((this._hScrollbar) && (contains(this._hScrollbar)))
          {
-            if((this._hScrollbar) && (contains(this._hScrollbar)))
-            {
-               removeChild(this._hScrollbar);
-            }
+            removeChild(this._hScrollbar);
          }
+         
          if(vScroll)
          {
             if(!this._vScrollbar)
@@ -222,13 +220,11 @@ package com.ankamagames.berilia.types.graphic
             this._vScrollbar.height = height - (hScroll?this._scrollBarSize:0);
             this._vScrollbar.max = this._content.height - height + (vScroll?this._scrollBarSize:0);
          }
-         else
+         else if((this._vScrollbar) && (contains(this._vScrollbar)))
          {
-            if((this._vScrollbar) && (contains(this._vScrollbar)))
-            {
-               removeChild(this._vScrollbar);
-            }
+            removeChild(this._vScrollbar);
          }
+         
          this._finalized = true;
          var mouseEventCatcher:Shape = new Shape();
          mouseEventCatcher.graphics.beginFill(0,0);
@@ -245,14 +241,14 @@ package com.ankamagames.berilia.types.graphic
                {
                   this._vScrollbar.onWheel(MouseWheelMessage(msg).mouseEvent);
                }
-               else
+               else if((this._hScrollbar) && (!(this._hScrollbar.parent == null)))
                {
-                  if((this._hScrollbar) && (!(this._hScrollbar.parent == null)))
-                  {
-                     this._hScrollbar.onWheel(MouseWheelMessage(msg).mouseEvent);
-                  }
+                  this._hScrollbar.onWheel(MouseWheelMessage(msg).mouseEvent);
                }
+               
                return true;
+            default:
+               return false;
          }
       }
       
@@ -279,20 +275,20 @@ package com.ankamagames.berilia.types.graphic
          return _aStrata[nStrata];
       }
       
-      function onVerticalScroll(e:Event) : void {
+      private function onVerticalScroll(e:Event) : void {
          this._content.y = -this._vScrollbar.value;
       }
       
-      function onHorizontalScroll(e:Event) : void {
+      private function onHorizontalScroll(e:Event) : void {
          this._content.x = -this._hScrollbar.value;
       }
       
-      function onChildFinalized(e:Event) : void {
+      private function onChildFinalized(e:Event) : void {
          e.target.removeEventListener(UiRenderEvent.UIRenderComplete,this.onChildFinalized);
          this.finalize();
       }
       
-      function onChildRemoved(e:Event) : void {
+      private function onChildRemoved(e:Event) : void {
       }
    }
 }

@@ -119,7 +119,7 @@ package flashx.textLayout.accessibility
             }
          }
          
-         function eventHandler(param1:Event) : void {
+         protected function eventHandler(param1:Event) : void {
             var event:Event = param1;
             switch(event.type)
             {

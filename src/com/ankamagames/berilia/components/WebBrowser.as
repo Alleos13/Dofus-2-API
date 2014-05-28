@@ -196,7 +196,7 @@ package com.ankamagames.berilia.components
          }
          else
          {
-            delete this._manualExternalLink[[linkPattern]];
+            delete this._manualExternalLink[linkPattern];
          }
          this.modifyDOM(this._htmlLoader.window.document);
       }
@@ -287,10 +287,10 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function removeHtmlEvent() : void {
+      private function removeHtmlEvent() : void {
          var link:Object = null;
          var input:Object = null;
-         for each (link in this._linkList)
+         for each(link in this._linkList)
          {
             try
             {
@@ -301,7 +301,7 @@ package com.ankamagames.berilia.components
                continue;
             }
          }
-         for each (input in this._inputList)
+         for each(input in this._inputList)
          {
             try
             {
@@ -315,12 +315,12 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function onResize(e:Event) : void {
+      private function onResize(e:Event) : void {
          this._resizeTimer.reset();
          this._resizeTimer.start();
       }
       
-      function onResizeEnd(e:Event) : void {
+      private function onResizeEnd(e:Event) : void {
          this._resizeTimer.stop();
          var scale:Number = StageShareManager.windowScale;
          if(this._htmlLoader)
@@ -336,7 +336,7 @@ package com.ankamagames.berilia.components
       
       private var _domInit:Boolean;
       
-      function onDomReady(e:Event) : void {
+      private function onDomReady(e:Event) : void {
          if(!this._htmlLoader.window.document.body)
          {
             this._domInit = false;
@@ -362,9 +362,9 @@ package com.ankamagames.berilia.components
          Berilia.getInstance().handler.process(new BrowserDomReady(InteractiveObject(this)));
       }
       
-      function isManualExternalLink(link:String) : Boolean {
+      private function isManualExternalLink(link:String) : Boolean {
          var pattern:RegExp = null;
-         for each (pattern in this._manualExternalLink)
+         for each(pattern in this._manualExternalLink)
          {
             if(link.match(pattern).length)
             {
@@ -374,7 +374,7 @@ package com.ankamagames.berilia.components
          return false;
       }
       
-      function modifyDOM(target:Object) : void {
+      private function modifyDOM(target:Object) : void {
          var i:uint = 0;
          var a:Object = null;
          try
@@ -400,7 +400,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function onLinkClick(e:*) : void {
+      private function onLinkClick(e:*) : void {
          var target:Object = e.target;
          if(target.tagName == "IMG")
          {
@@ -413,23 +413,23 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function onInputFocus(e:*) : void {
+      private function onInputFocus(e:*) : void {
          this._inputFocus = true;
       }
       
-      function onInputBlur(e:*) : void {
+      private function onInputBlur(e:*) : void {
          this._inputFocus = false;
       }
       
-      function onScroll(e:Event) : void {
+      private function onScroll(e:Event) : void {
          this._htmlLoader.scrollV = this._vScrollBar.value;
       }
       
-      function onBoundsChange(e:Event) : void {
+      private function onBoundsChange(e:Event) : void {
          this.updateScrollbar();
       }
       
-      function updateScrollbar() : void {
+      private function updateScrollbar() : void {
          if(this._vScrollBar.max != this._htmlLoader.contentHeight - this._htmlLoader.height)
          {
             this._vScrollBar.min = 0;
@@ -437,11 +437,11 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function onSessionTimeout(e:Event) : void {
+      private function onSessionTimeout(e:Event) : void {
          Berilia.getInstance().handler.process(new BrowserSessionTimeout(InteractiveObject(this)));
       }
       
-      function onLocationChange(e:Event) : void {
+      private function onLocationChange(e:Event) : void {
          _log.trace("Load " + this._htmlLoader.location);
          this.removeHtmlEvent();
          this._inputFocus = false;

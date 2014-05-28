@@ -7,31 +7,31 @@ package com.ankamagames.atouin.entities.behaviours.movements
          super();
       }
       
-      private static const RUN_LINEAR_VELOCITY:Number = 1 / 170;
+      private static const RUN_LINEAR_VELOCITY:Number = 0.0058823529411764705;
       
-      private static const RUN_HORIZONTAL_DIAGONAL_VELOCITY:Number = 1 / 255;
+      private static const RUN_HORIZONTAL_DIAGONAL_VELOCITY:Number = 0.00392156862745098;
       
-      private static const RUN_VERTICAL_DIAGONAL_VELOCITY:Number = 1 / 150;
+      private static const RUN_VERTICAL_DIAGONAL_VELOCITY:Number = 0.006666666666666667;
       
       private static const RUN_ANIMATION:String = "AnimCourse";
       
-      public static function getInstance(speedAdjust:Number=0.0) : RunningMovementBehavior {
+      public static function getInstance(speedAdjust:Number = 0.0) : RunningMovementBehavior {
          return getFromCache(speedAdjust,RunningMovementBehavior) as RunningMovementBehavior;
       }
       
-      override function getLinearVelocity() : Number {
+      override protected function getLinearVelocity() : Number {
          return RUN_LINEAR_VELOCITY;
       }
       
-      override function getHorizontalDiagonalVelocity() : Number {
+      override protected function getHorizontalDiagonalVelocity() : Number {
          return RUN_HORIZONTAL_DIAGONAL_VELOCITY;
       }
       
-      override function getVerticalDiagonalVelocity() : Number {
+      override protected function getVerticalDiagonalVelocity() : Number {
          return RUN_VERTICAL_DIAGONAL_VELOCITY;
       }
       
-      override function getAnimation() : String {
+      override protected function getAnimation() : String {
          return RUN_ANIMATION;
       }
    }

@@ -14,11 +14,11 @@ package com.ankamagames.berilia.types.graphic
          addEventListener(Event["LOCATION_CHANGE"],this.onLocationChange);
       }
       
-      private static var INSTANCE_CACHE:Dictionary = new Dictionary();
+      private static var INSTANCE_CACHE:Dictionary;
       
       public static const TIMEOUT:String = "TimeoutHTMLLoader_timeout";
       
-      public static function getLoader(uid:String=null) : TimeoutHTMLLoader {
+      public static function getLoader(uid:String = null) : TimeoutHTMLLoader {
          var instance:TimeoutHTMLLoader = null;
          if((!(uid == null)) && (INSTANCE_CACHE[uid]))
          {
@@ -56,7 +56,7 @@ package com.ankamagames.berilia.types.graphic
          return this._fromCache;
       }
       
-      function onLocationChange(e:Event) : void {
+      private function onLocationChange(e:Event) : void {
          if(this._timer)
          {
             this._timer.reset();
@@ -64,12 +64,12 @@ package com.ankamagames.berilia.types.graphic
          }
       }
       
-      function onTimeOut(e:Event) : void {
+      private function onTimeOut(e:Event) : void {
          this._timer.stop();
          dispatchEvent(new Event(TIMEOUT));
          if((!this._timer.running) && (this._uid))
          {
-            delete INSTANCE_CACHE[[this._uid]];
+            delete INSTANCE_CACHE[this._uid];
             this._timer.removeEventListener(TimerEvent.TIMER,this.onTimeOut);
          }
       }

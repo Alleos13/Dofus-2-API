@@ -38,15 +38,15 @@ package flashx.textLayout.compose
       
       private var _totalLength:Number;
       
-      override function createParcelList() : ParcelList {
+      override protected function createParcelList() : ParcelList {
          return ParcelList.getParcelList();
       }
       
-      override function releaseParcelList(param1:ParcelList) : void {
+      override protected function releaseParcelList(param1:ParcelList) : void {
          ParcelList.releaseParcelList(param1);
       }
       
-      override function initializeForComposer(param1:IFlowComposer, param2:int, param3:int, param4:int) : void {
+      override protected function initializeForComposer(param1:IFlowComposer, param2:int, param3:int, param4:int) : void {
          _startController = param1.getControllerAt(0);
          _startComposePosition = 0;
          super.initializeForComposer(param1,param2,0,param4);
@@ -64,7 +64,7 @@ package flashx.textLayout.compose
          return super.composeTextFlow(param1,param2,param3);
       }
       
-      override function doVerticalAlignment(param1:Boolean, param2:Parcel) : void {
+      override protected function doVerticalAlignment(param1:Boolean, param2:Parcel) : void {
          var _loc4_:ContainerController = null;
          var _loc5_:* = 0;
          var _loc6_:* = 0;
@@ -90,11 +90,11 @@ package flashx.textLayout.compose
          }
       }
       
-      override function isLineVisible(param1:TextLine) : Boolean {
+      override protected function isLineVisible(param1:TextLine) : Boolean {
          return !(param1 == null);
       }
       
-      override function endLine(param1:TextLine) : void {
+      override protected function endLine(param1:TextLine) : void {
          super.endLine(param1);
          _curLine.createShape(_blockProgression,param1);
          if(this.textFlow.backgroundManager)
@@ -125,7 +125,7 @@ package flashx.textLayout.compose
          this._resetLineHandler = param1;
       }
       
-      override function resetLine(param1:TextLine) : void {
+      override protected function resetLine(param1:TextLine) : void {
          super.resetLine(param1);
          if(this._resetLineHandler != null)
          {
@@ -133,7 +133,7 @@ package flashx.textLayout.compose
          }
       }
       
-      override function composeNextLine() : TextLine {
+      override protected function composeNextLine() : TextLine {
          var _loc1_:TextLine = null;
          var _loc2_:TextLine = null;
          var _loc3_:* = false;
@@ -202,7 +202,7 @@ package flashx.textLayout.compose
          return _loc2_;
       }
       
-      override function finalParcelAdjustment(param1:ContainerController) : void {
+      override protected function finalParcelAdjustment(param1:ContainerController) : void {
          var _loc6_:TextLine = null;
          var _loc7_:* = 0;
          var _loc8_:* = NaN;

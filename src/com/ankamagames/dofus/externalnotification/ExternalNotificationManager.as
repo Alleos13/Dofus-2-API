@@ -18,7 +18,6 @@ package com.ankamagames.dofus.externalnotification
    import com.ankamagames.dofus.logic.common.managers.PlayerManager;
    import com.ankamagames.jerakine.types.enums.DataStoreEnum;
    import flash.events.TimerEvent;
-   import __AS3__.vec.*;
    import flash.display.NativeWindowSystemChrome;
    import flash.display.NativeWindowType;
    import flash.utils.describeType;
@@ -58,7 +57,7 @@ package com.ankamagames.dofus.externalnotification
       
       private static const DEBUG:Boolean = false;
       
-      private static const _log:Logger = Log.getLogger(getQualifiedClassName(ExternalNotificationManager));
+      private static const _log:Logger;
       
       private static var _instance:ExternalNotificationManager;
       
@@ -136,7 +135,7 @@ package com.ankamagames.dofus.externalnotification
       
       private var _broadCasting:Boolean = false;
       
-      function log(pMsg:Object) : void {
+      private function log(pMsg:Object) : void {
          var from:String = null;
          if(DEBUG)
          {
@@ -154,14 +153,14 @@ package com.ankamagames.dofus.externalnotification
          var extNotif:ExternalNotification = null;
          var notifData:Object = StoreDataManager.getInstance().getData(this._dataStoreType,"notificationsEvent" + pNotificationType);
          var hasOptions:Boolean = this.hasNotificationData(pNotificationType);
-         var invalidData:Boolean = ((((notifData) && (hasOptions)) && (!notifData.hasOwnProperty("active"))) && (!notifData.hasOwnProperty("sound"))) && (!notifData.hasOwnProperty("multi")) && (!notifData.hasOwnProperty("notify"));
+         var invalidData:Boolean = (notifData && hasOptions && !notifData.hasOwnProperty("active") && !notifData.hasOwnProperty("sound")) && (!notifData.hasOwnProperty("multi")) && (!notifData.hasOwnProperty("notify"));
          if((!notifData) || (invalidData))
          {
             extNotifs = ExternalNotification.getExternalNotifications();
             notifData = new Object();
             if(hasOptions)
             {
-               for each (extNotif in extNotifs)
+               for each(extNotif in extNotifs)
                {
                   if(ExternalNotificationTypeEnum[extNotif.name] == pNotificationType)
                   {
@@ -207,24 +206,24 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      function getOptionValue(pOptionName:String) : * {
+      private function getOptionValue(pOptionName:String) : * {
          return OptionManager.getOptionManager("dofus")[pOptionName];
       }
       
-      function setOptionValue(pOptionName:String, pOptionValue:*) : void {
+      private function setOptionValue(pOptionName:String, pOptionValue:*) : void {
          OptionManager.getOptionManager("dofus")[pOptionName] = pOptionValue;
       }
       
-      function isTopPosition(pPosition:int) : Boolean {
+      private function isTopPosition(pPosition:int) : Boolean {
          return (pPosition == ExternalNotificationPositionEnum.TOP_LEFT) || (pPosition == ExternalNotificationPositionEnum.TOP_RIGHT);
       }
       
-      function isNotificationDuplicated(pClientId:String, pNotificationType:int) : Boolean {
+      private function isNotificationDuplicated(pClientId:String, pNotificationType:int) : Boolean {
          var typeVisible:* = false;
          var enWin:ExternalNotificationWindow = null;
-         for each (enWin in this._notificationsList)
+         for each(enWin in this._notificationsList)
          {
-            if((!typeVisible) && (!(enWin.clientId == pClientId)) && (enWin.notificationType == pNotificationType))
+            if((!(enWin.clientId == pClientId)) && (enWin.notificationType == pNotificationType))
             {
                typeVisible = true;
                break;
@@ -233,7 +232,7 @@ package com.ankamagames.dofus.externalnotification
          return typeVisible;
       }
       
-      function initDataStoreType() : void {
+      private function initDataStoreType() : void {
          var storeKey:String = "externalNotifications_" + MD5.hash(PlayerManager.getInstance().nickname);
          if((!this._dataStoreType) || (!(this._dataStoreType.category == storeKey)))
          {
@@ -264,7 +263,7 @@ package com.ankamagames.dofus.externalnotification
          this._nbGeneralEvents = ExternalNotification.getExternalNotifications().length;
          var x:XML = describeType(ExternalNotificationTypeEnum);
          var events:XMLList = x..constant;
-         for each (notificationEvent in events)
+         for each(notificationEvent in events)
          {
             notificationType = ExternalNotificationTypeEnum[notificationEvent.@name];
             this.updateNotificationOptions(notificationType,this.getNotificationOptions(notificationType));
@@ -320,7 +319,7 @@ package com.ankamagames.dofus.externalnotification
          this._initialized = false;
       }
       
-      function removeAllListeners() : void {
+      private function removeAllListeners() : void {
          this._timeOut.removeEventListener(TimerEvent.TIMER,this.processRequests);
          OptionManager.getOptionManager("dofus").removeEventListener(PropertyChangeEvent.PROPERTY_CHANGED,this.onPropertyChanged);
          this._clientWindow.removeEventListener(Event.ACTIVATE,this.onWindowActivate);
@@ -330,7 +329,7 @@ package com.ankamagames.dofus.externalnotification
          StageShareManager.stage.removeEventListener(KeyboardEvent.KEY_DOWN,this.onKeyDown);
       }
       
-      function closeAllNotifications() : void {
+      private function closeAllNotifications() : void {
          var len:int = this._notificationsList.length;
          var i:int = 0;
          while(i < len)
@@ -342,7 +341,7 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      function onWindowActivate(pEvent:Event) : void {
+      private function onWindowActivate(pEvent:Event) : void {
          if(this._windowsStartMenuOpened)
          {
             this._windowsStartMenuOpened = false;
@@ -356,7 +355,7 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      function onWindowDeactivate(pEvent:Event) : void {
+      private function onWindowDeactivate(pEvent:Event) : void {
          if((this._showMode == ExternalNotificationModeEnum.FOCUS_LOST_DOFUS) || (this._showMode == ExternalNotificationModeEnum.FOCUS_LOST_OTHER))
          {
             this._notificationsEnabled = true;
@@ -367,7 +366,7 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      function checkBeforeActivate() : void {
+      private function checkBeforeActivate() : void {
          clearTimeout(this._checkBeforeActivateTimeoutId);
          StageShareManager.stage.removeEventListener(MouseEvent.CLICK,this.onClick);
          if(this._clientWasClicked)
@@ -383,7 +382,7 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      function onDisplayStateChange(pEvent:NativeWindowDisplayStateEvent) : void {
+      private function onDisplayStateChange(pEvent:NativeWindowDisplayStateEvent) : void {
          if(pEvent.afterDisplayState == NativeWindowDisplayState.MINIMIZED)
          {
             if(this._showMode == ExternalNotificationModeEnum.FOCUS_LOST_MINIMIZE)
@@ -397,7 +396,7 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      function onClientClosing(pEvent:Event) : void {
+      private function onClientClosing(pEvent:Event) : void {
          this.removeAllListeners();
          this._showMode = ExternalNotificationModeEnum.DISABLED;
          if(this._isMaster)
@@ -414,7 +413,7 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      function onClientClose(pEvent:Event) : void {
+      private function onClientClose(pEvent:Event) : void {
          this._clientWindow.removeEventListener(Event.CLOSE,this.onClientClose);
          if(this._isMaster)
          {
@@ -422,7 +421,7 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      function onKeyDown(pEvent:KeyboardEvent) : void {
+      private function onKeyDown(pEvent:KeyboardEvent) : void {
          if(pEvent.keyCode == this.WINDOWS_KEY)
          {
             this._windowsStartMenuOpened = true;
@@ -431,11 +430,11 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      function onClick(pEvent:MouseEvent) : void {
+      private function onClick(pEvent:MouseEvent) : void {
          this._clientWasClicked = true;
       }
       
-      function onMouseOver(pEvent:MouseEvent) : void {
+      private function onMouseOver(pEvent:MouseEvent) : void {
          StageShareManager.stage.removeEventListener(MouseEvent.MOUSE_OVER,this.onMouseOver);
          StageShareManager.stage.dispatchEvent(new Event(Event.ACTIVATE));
          this.onWindowActivate(null);
@@ -454,18 +453,18 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      function takeFocus() : void {
+      private function takeFocus() : void {
          NativeApplication.nativeApplication.activate();
          this._clientWindow.activate();
       }
       
-      function toFront() : void {
+      private function toFront() : void {
          this._clientWindow.alwaysInFront = true;
          this._clientWindow.orderToFront();
          this._clientWindow.alwaysInFront = false;
       }
       
-      public function notifyUser(pAlways:Boolean=true) : void {
+      public function notifyUser(pAlways:Boolean = true) : void {
          SystemManager.getSingleton().notifyUser(pAlways);
       }
       
@@ -489,12 +488,12 @@ package com.ankamagames.dofus.externalnotification
          return this._showMode == ExternalNotificationModeEnum.DISABLED?false:this._notificationsEnabled;
       }
       
-      function getExternalNotification(pClientId:String, pExternalNotificationId:String) : ExternalNotificationWindow {
+      private function getExternalNotification(pClientId:String, pExternalNotificationId:String) : ExternalNotificationWindow {
          var enWin:ExternalNotificationWindow = null;
          var foundNotification:ExternalNotificationWindow = null;
          if(this._notificationsList.length > 0)
          {
-            for each (enWin in this._notificationsList)
+            for each(enWin in this._notificationsList)
             {
                if((enWin.clientId == pClientId) && (enWin.id == pExternalNotificationId))
                {
@@ -506,13 +505,13 @@ package com.ankamagames.dofus.externalnotification
          return foundNotification;
       }
       
-      function getExternalNotifications(pClientId:String) : Vector.<ExternalNotificationWindow> {
+      private function getExternalNotifications(pClientId:String) : Vector.<ExternalNotificationWindow> {
          var foundNotifications:Vector.<ExternalNotificationWindow> = null;
          var enWin:ExternalNotificationWindow = null;
          if(this._notificationsList.length > 0)
          {
             foundNotifications = new Vector.<ExternalNotificationWindow>(0);
-            for each (enWin in this._notificationsList)
+            for each(enWin in this._notificationsList)
             {
                if(enWin.clientId == pClientId)
                {
@@ -524,10 +523,10 @@ package com.ankamagames.dofus.externalnotification
          return foundNotifications;
       }
       
-      function hasNotificationData(pNotificationType:int) : Boolean {
+      private function hasNotificationData(pNotificationType:int) : Boolean {
          var extNotif:ExternalNotification = null;
          var extNotifs:Array = ExternalNotification.getExternalNotifications();
-         for each (extNotif in extNotifs)
+         for each(extNotif in extNotifs)
          {
             if(ExternalNotificationTypeEnum[extNotif.name] == pNotificationType)
             {
@@ -543,7 +542,7 @@ package com.ankamagames.dofus.externalnotification
          this._optionChangedFromOtherClient = false;
       }
       
-      function onPropertyChanged(pEvent:PropertyChangeEvent) : void {
+      private function onPropertyChanged(pEvent:PropertyChangeEvent) : void {
          if(pEvent.propertyValue == pEvent.propertyOldValue)
          {
             return;
@@ -562,6 +561,8 @@ package com.ankamagames.dofus.externalnotification
             case "notificationsPosition":
                this.setNotificationsPosition(pEvent.propertyValue as int);
                break;
+            default:
+               return;
          }
          if(!this._isMaster)
          {
@@ -586,7 +587,7 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      function synchronizeMultiAccountOptions() : void {
+      private function synchronizeMultiAccountOptions() : void {
          var values:Array = new Array();
          var i:int = 1;
          while(i <= this._nbGeneralEvents)
@@ -617,7 +618,7 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      function updateMultiAccountOption(pNotificationType:int, pEnabled:Boolean) : void {
+      private function updateMultiAccountOption(pNotificationType:int, pEnabled:Boolean) : void {
          this._notificationsOptions[pNotificationType].multi = pEnabled;
          StoreDataManager.getInstance().setData(this._dataStoreType,"notificationsEvent" + pNotificationType,this._notificationsOptions[pNotificationType]);
       }
@@ -667,7 +668,7 @@ package com.ankamagames.dofus.externalnotification
          return !opts.active;
       }
       
-      function ignoreExternalNotificationType(pNotificationType:int) : void {
+      private function ignoreExternalNotificationType(pNotificationType:int) : void {
          var opts:Object = this._notificationsOptions[pNotificationType];
          opts.active = false;
       }
@@ -680,7 +681,7 @@ package com.ankamagames.dofus.externalnotification
          return this.hasNotificationData(pNotificationType)?this._notificationsOptions[pNotificationType].notify:false;
       }
       
-      function initLocalConnection(pLc:LocalConnection) : void {
+      private function initLocalConnection(pLc:LocalConnection) : void {
          pLc.allowDomain("*");
          pLc.allowInsecureDomain("*");
          pLc.addEventListener(AsyncErrorEvent.ASYNC_ERROR,this.onConnectionError);
@@ -688,22 +689,22 @@ package com.ankamagames.dofus.externalnotification
          pLc.addEventListener(SecurityErrorEvent.SECURITY_ERROR,this.onConnectionSecurityError);
       }
       
-      function destroyLocalConnection(pLc:LocalConnection) : void {
+      private function destroyLocalConnection(pLc:LocalConnection) : void {
          pLc.removeEventListener(AsyncErrorEvent.ASYNC_ERROR,this.onConnectionError);
          pLc.removeEventListener(StatusEvent.STATUS,this.onConnectionStatus);
          pLc.removeEventListener(SecurityErrorEvent.SECURITY_ERROR,this.onConnectionSecurityError);
       }
       
-      function onConnectionError(pEvent:AsyncErrorEvent) : void {
+      private function onConnectionError(pEvent:AsyncErrorEvent) : void {
       }
       
-      function onConnectionStatus(pEvent:StatusEvent) : void {
+      private function onConnectionStatus(pEvent:StatusEvent) : void {
       }
       
-      function onConnectionSecurityError(pEvent:SecurityErrorEvent) : void {
+      private function onConnectionSecurityError(pEvent:SecurityErrorEvent) : void {
       }
       
-      function closeMasterConnection() : void {
+      private function closeMasterConnection() : void {
          try
          {
             this._masterConnection.close();
@@ -713,7 +714,7 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      function closeSlaveConnection() : void {
+      private function closeSlaveConnection() : void {
          try
          {
             this._slaveConnection.close();
@@ -723,7 +724,7 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      function sendToMaster(pMethodName:String, ... pArgs) : void {
+      private function sendToMaster(pMethodName:String, ... pArgs) : void {
          var argArray:Array = null;
          try
          {
@@ -735,7 +736,7 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      function sendToSlave(pSlaveId:String, pMethodName:String, ... pArgs) : void {
+      private function sendToSlave(pSlaveId:String, pMethodName:String, ... pArgs) : void {
          var argArray:Array = null;
          var params:Array = null;
          var param:* = undefined;
@@ -749,7 +750,7 @@ package com.ankamagames.dofus.externalnotification
             else
             {
                params = pArgs[0];
-               for each (param in params)
+               for each(param in params)
                {
                   argArray.push(param);
                }
@@ -761,17 +762,17 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      function sendToSlaves(pMethodName:String, ... pArgs) : void {
+      private function sendToSlaves(pMethodName:String, ... pArgs) : void {
          var slaveId:String = null;
          this._broadCasting = true;
-         for each (slaveId in this._slavesIds)
+         for each(slaveId in this._slavesIds)
          {
             this.sendToSlave(slaveId,pMethodName,pArgs);
          }
          this._broadCasting = false;
       }
       
-      function becomeMaster(pSlavesIds:Array=null) : void {
+      private function becomeMaster(pSlavesIds:Array = null) : void {
          var id:String = null;
          this._masterConnection.client = getInstance();
          this._masterConnection.connect(this.CONNECTION_ID);
@@ -781,7 +782,7 @@ package com.ankamagames.dofus.externalnotification
             if(pSlavesIds != this._slavesIds)
             {
                this._slavesIds = new Array();
-               for each (id in pSlavesIds)
+               for each(id in pSlavesIds)
                {
                   this._slavesIds.push(id);
                }
@@ -792,7 +793,7 @@ package com.ankamagames.dofus.externalnotification
          this._isMaster = true;
       }
       
-      function becomeSlave() : void {
+      private function becomeSlave() : void {
          this._clientId = "slave" + Math.floor(Math.random() * 100000000);
          this._slaveConnection.client = getInstance();
          this._slaveConnection.connect(this.CONNECTION_ID + "." + this._clientId);
@@ -808,7 +809,7 @@ package com.ankamagames.dofus.externalnotification
          var extNotifs:Vector.<ExternalNotificationWindow> = this.getExternalNotifications(pSlaveId);
          if(extNotifs)
          {
-            for each (extNotif in extNotifs)
+            for each(extNotif in extNotifs)
             {
                this.destroyExternalNotification(extNotif);
             }
@@ -818,7 +819,7 @@ package com.ankamagames.dofus.externalnotification
       public function updateClientsIds(pClientsIds:Array) : void {
          var id:String = null;
          this._slavesIds = new Array();
-         for each (id in pClientsIds)
+         for each(id in pClientsIds)
          {
             if(this._slavesIds.indexOf(id) == -1)
             {
@@ -890,7 +891,7 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      function processRequests(pEvent:TimerEvent) : void {
+      private function processRequests(pEvent:TimerEvent) : void {
          var bufferLen:int = 0;
          var i:int = 0;
          bufferLen = this._buffer.length;
@@ -929,7 +930,7 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      public function handleFocusRequest(pClientId:String, pHookName:String=null, pHookParams:Array=null) : void {
+      public function handleFocusRequest(pClientId:String, pHookName:String = null, pHookParams:Array = null) : void {
          var hook:Hook = null;
          if(pClientId != this._clientId)
          {
@@ -957,7 +958,7 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      function showExternalNotification(pExtNotifWin:ExternalNotificationWindow) : void {
+      private function showExternalNotification(pExtNotifWin:ExternalNotificationWindow) : void {
          pExtNotifWin.show();
          pExtNotifWin.timeoutId = setTimeout(this.destroyExternalNotification,this._timeoutDuration,pExtNotifWin);
          var offScreen:Boolean = this.isTopPosition(this._notificationsPosition)?pExtNotifWin.y > Capabilities.screenResolutionY - pExtNotifWin.contentHeight:pExtNotifWin.y < 0;
@@ -967,7 +968,7 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      public function closeExternalNotification(pClientId:String, pExternalNotificationId:String, pSendFocusRequestOnClose:Boolean=false) : void {
+      public function closeExternalNotification(pClientId:String, pExternalNotificationId:String, pSendFocusRequestOnClose:Boolean = false) : void {
          var enWin:ExternalNotificationWindow = this.getExternalNotification(pClientId,pExternalNotificationId);
          if(pSendFocusRequestOnClose)
          {
@@ -977,7 +978,7 @@ package com.ankamagames.dofus.externalnotification
          this.destroyExternalNotification(enWin);
       }
       
-      function onExternalNotificationWindowClose(pEvent:Event) : void {
+      private function onExternalNotificationWindowClose(pEvent:Event) : void {
          var enWin:ExternalNotificationWindow = pEvent.currentTarget as ExternalNotificationWindow;
          enWin.removeEventListener(Event.CLOSE,this.onExternalNotificationWindowClose);
          this.handleFocusRequest(enWin.clientId,enWin.hookName,enWin.hookParams);
@@ -990,7 +991,7 @@ package com.ankamagames.dofus.externalnotification
          enWin.timeoutId = setTimeout(this.destroyExternalNotification,this._timeoutDuration,enWin);
       }
       
-      function setNotificationCoordinates(pExtNotifWin:ExternalNotificationWindow) : void {
+      private function setNotificationCoordinates(pExtNotifWin:ExternalNotificationWindow) : void {
          var notificationX:* = NaN;
          var notificationY:* = NaN;
          var index:int = this._notificationsList.indexOf(pExtNotifWin);
@@ -1039,7 +1040,7 @@ package com.ankamagames.dofus.externalnotification
          pExtNotifWin.bounds = new Rectangle(notificationX,notificationY,pExtNotifWin.contentWidth,pExtNotifWin.contentHeight);
       }
       
-      function changeNotificationsPosition(pNewPosition:int) : void {
+      private function changeNotificationsPosition(pNewPosition:int) : void {
          var len:uint = this._notificationsList.length;
          this._notificationsPosition = pNewPosition;
          var i:int = 0;
@@ -1050,7 +1051,7 @@ package com.ankamagames.dofus.externalnotification
          }
       }
       
-      function destroyExternalNotification(pExtNotifWin:ExternalNotificationWindow, pReplaceOthers:Boolean=true) : void {
+      private function destroyExternalNotification(pExtNotifWin:ExternalNotificationWindow, pReplaceOthers:Boolean = true) : void {
          var i:* = 0;
          var diff:* = NaN;
          clearTimeout(pExtNotifWin.timeoutId);

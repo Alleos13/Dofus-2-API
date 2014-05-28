@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.sound
    public class AbstractFlashSound extends Socket
    {
       
-      public function AbstractFlashSound(lcid:uint=0) {
+      public function AbstractFlashSound(lcid:uint = 0) {
          super();
          CONNECTION_NAME = CONNECTION_NAME + lcid.toString();
          this._data = new ByteArray();
@@ -30,7 +30,7 @@ package com.ankamagames.jerakine.sound
       
       protected var _pingTimer:Timer;
       
-      function removePingTimer() : void {
+      protected function removePingTimer() : void {
          this._pingTimer.stop();
          this._pingTimer.removeEventListener(TimerEvent.TIMER_COMPLETE,this.onPingTimerComplete);
          this._pingTimer = null;

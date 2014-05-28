@@ -356,7 +356,7 @@ package flashx.textLayout.elements
             "upperLatin":"."
          };
       
-      override function get abstract() : Boolean {
+      override protected function get abstract() : Boolean {
          return false;
       }
       

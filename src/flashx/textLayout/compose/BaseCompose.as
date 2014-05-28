@@ -239,11 +239,11 @@ package flashx.textLayout.compose
       
       protected var _listItemElement:ListItemElement;
       
-      function createParcelList() : ParcelList {
+      protected function createParcelList() : ParcelList {
          return null;
       }
       
-      function releaseParcelList(param1:ParcelList) : void {
+      protected function releaseParcelList(param1:ParcelList) : void {
       }
       
       public function get startController() : ContainerController {
@@ -263,7 +263,7 @@ package flashx.textLayout.compose
          this._curLine = null;
       }
       
-      function initializeForComposer(param1:IFlowComposer, param2:int, param3:int, param4:int) : void {
+      protected function initializeForComposer(param1:IFlowComposer, param2:int, param3:int, param4:int) : void {
          if(!_savedLineSlug)
          {
             this._lineSlug = new Slug();
@@ -479,15 +479,15 @@ package flashx.textLayout.compose
          this._controllerBottom = -TextLine.MAX_LINE_WIDTH;
       }
       
-      function get releaseLineCreationData() : Boolean {
+      protected function get releaseLineCreationData() : Boolean {
          return this._releaseLineCreationData;
       }
       
-      function composeInternal(param1:FlowGroupElement, param2:int) : void {
+      protected function composeInternal(param1:FlowGroupElement, param2:int) : void {
          this.composeBlockElement(param1,param2);
       }
       
-      function composeParagraphElement(param1:ParagraphElement, param2:int) : Boolean {
+      protected function composeParagraphElement(param1:ParagraphElement, param2:int) : Boolean {
          var _loc5_:TextBlock = null;
          var _loc6_:TextLine = null;
          this._curParaElement = param1;
@@ -532,7 +532,7 @@ package flashx.textLayout.compose
          return _loc3_;
       }
       
-      function getFirstIndentCharPos(param1:ParagraphElement) : int {
+      protected function getFirstIndentCharPos(param1:ParagraphElement) : int {
          var _loc2_:* = 0;
          var _loc3_:FlowLeafElement = param1.getFirstLeaf();
          while((_loc3_) && (_loc3_ is InlineGraphicElement) && !(InlineGraphicElement(_loc3_).effectiveFloat == Float.NONE))
@@ -543,7 +543,7 @@ package flashx.textLayout.compose
          return _loc2_;
       }
       
-      function composeParagraphElementIntoLines() : Boolean {
+      protected function composeParagraphElementIntoLines() : Boolean {
          var _loc2_:TextLine = null;
          var _loc3_:* = NaN;
          var _loc4_:* = NaN;
@@ -735,7 +735,7 @@ package flashx.textLayout.compose
             return _loc1_;
          }
          
-         function createTextLine(param1:Number, param2:Boolean) : TextLine {
+         protected function createTextLine(param1:Number, param2:Boolean) : TextLine {
             var _loc3_:Number = this._curParaFormat.direction == Direction.LTR?this._lineSlug.leftMargin:this._lineSlug.rightMargin;
             var _loc4_:TextLine = null;
             _loc4_ = TextLineRecycler.getLineForReuse();
@@ -760,7 +760,7 @@ package flashx.textLayout.compose
             return _loc4_;
          }
          
-         function startLine() : void {
+         protected function startLine() : void {
             this._workingContentExtent = 0;
             this._workingContentHeight = 0;
             this._workingContentLogicalExtent = 0;
@@ -769,11 +769,11 @@ package flashx.textLayout.compose
             this._workingParcelLogicalTop = NaN;
          }
          
-         function isLineVisible(param1:TextLine) : Boolean {
+         protected function isLineVisible(param1:TextLine) : Boolean {
             return !(this._curParcel.controller.isLineVisible(this._blockProgression,this._controllerVisibleBoundsXTW,this._controllerVisibleBoundsYTW,this._controllerVisibleBoundsWidthTW,this._controllerVisibleBoundsHeightTW,this._curLine,param1) == null);
          }
          
-         function endLine(param1:TextLine) : void {
+         protected function endLine(param1:TextLine) : void {
             this._contentCommittedExtent = Math.max(this._contentCommittedExtent,this._workingContentExtent);
             this._contentCommittedHeight = Math.max(this._contentCommittedHeight,this._workingContentHeight);
             this._contentLogicalExtent = Math.max(this._contentLogicalExtent,this._workingContentLogicalExtent);
@@ -793,7 +793,7 @@ package flashx.textLayout.compose
             }
          }
          
-         function resetLine(param1:TextLine) : void {
+         protected function resetLine(param1:TextLine) : void {
             if(this._textFlow.backgroundManager)
             {
                this._textFlow.backgroundManager.removeLineFromCache(param1);
@@ -814,7 +814,7 @@ package flashx.textLayout.compose
             this._workingTotalDepth = this.parcelList.totalDepth;
          }
          
-         function preProcessILGs(param1:int) : Boolean {
+         protected function preProcessILGs(param1:int) : Boolean {
             var _loc5_:InlineGraphicElement = null;
             if(!this._curParcel)
             {
@@ -837,7 +837,7 @@ package flashx.textLayout.compose
             return _loc2_;
          }
          
-         function processFloatsAtLineStart() : void {
+         protected function processFloatsAtLineStart() : void {
             var _loc1_:* = 0;
             var _loc2_:* = 0;
             var _loc3_:FlowLeafElement = null;
@@ -861,7 +861,7 @@ package flashx.textLayout.compose
             }
          }
          
-         function processFloatsAtLineEnd(param1:TextLine) : Boolean {
+         protected function processFloatsAtLineEnd(param1:TextLine) : Boolean {
             var _loc8_:* = 0;
             var _loc9_:* = 0;
             var _loc10_:InlineGraphicElement = null;
@@ -949,7 +949,7 @@ package flashx.textLayout.compose
             return _loc7_;
          }
          
-         function processInlinesAtLineEnd(param1:TextLine) : void {
+         protected function processInlinesAtLineEnd(param1:TextLine) : void {
             var _loc5_:InlineGraphicElement = null;
             var _loc2_:int = this._curElementStart;
             var _loc3_:FlowLeafElement = this._curElement;
@@ -969,7 +969,7 @@ package flashx.textLayout.compose
             }
          }
          
-         function composeInlineGraphicElement(param1:InlineGraphicElement, param2:TextLine) : Boolean {
+         protected function composeInlineGraphicElement(param1:InlineGraphicElement, param2:TextLine) : Boolean {
             var _loc3_:Number = this._blockProgression == BlockProgression.RL?-param1.getEffectivePaddingRight():param1.getEffectivePaddingLeft();
             var _loc4_:Number = param1.getEffectivePaddingTop();
             var _loc5_:DisplayObject = param1.placeholderGraphic.parent;
@@ -977,7 +977,7 @@ package flashx.textLayout.compose
             return true;
          }
          
-         function composeFloat(param1:InlineGraphicElement, param2:Boolean) : Boolean {
+         protected function composeFloat(param1:InlineGraphicElement, param2:Boolean) : Boolean {
             var _loc7_:* = NaN;
             var _loc8_:* = NaN;
             var _loc11_:String = null;
@@ -1268,11 +1268,11 @@ package flashx.textLayout.compose
                   return param3;
                }
                
-               function composeNextLine() : TextLine {
+               protected function composeNextLine() : TextLine {
                   return null;
                }
                
-               function fitLineToParcel(param1:TextLine, param2:Boolean, param3:TextLine) : Boolean {
+               protected function fitLineToParcel(param1:TextLine, param2:Boolean, param3:TextLine) : Boolean {
                   var _loc4_:Number = this._lineSlug.depth;
                   this._curLine.setController(this._curParcel.controller,this._curParcel.columnIndex);
                   var _loc5_:Number = Math.max(this._curLine.spaceBefore,this._paragraphSpaceCarried);
@@ -1324,7 +1324,7 @@ package flashx.textLayout.compose
                   return true;
                }
                
-               function calculateLeadingParameters(param1:FlowLeafElement, param2:int, param3:TextLine=null) : Number {
+               protected function calculateLeadingParameters(param1:FlowLeafElement, param2:int, param3:TextLine=null) : Number {
                   var _loc4_:ITextLayoutFormat = null;
                   var _loc5_:Rectangle = null;
                   if(param3)
@@ -1345,7 +1345,7 @@ package flashx.textLayout.compose
                   return 0;
                }
                
-               function finishComposeLine(param1:TextLine, param2:TextLine) : void {
+               protected function finishComposeLine(param1:TextLine, param2:TextLine) : void {
                   var _loc4_:* = NaN;
                   var _loc5_:* = NaN;
                   var _loc9_:ITextLayoutFormat = null;
@@ -1601,19 +1601,19 @@ package flashx.textLayout.compose
                   }
                }
                
-               function commitLastLineState(param1:TextFlowLine) : void {
+               protected function commitLastLineState(param1:TextFlowLine) : void {
                   this._lastLineDescent = this._curLineLeadingModel == LeadingModel.BOX?this._curLineLeading:param1.descent;
                   this._lastLineLeading = this._curLineLeading;
                   this._lastLineLeadingModel = this._curLineLeadingModel;
                }
                
-               function doVerticalAlignment(param1:Boolean, param2:Parcel) : void {
+               protected function doVerticalAlignment(param1:Boolean, param2:Parcel) : void {
                }
                
-               function finalParcelAdjustment(param1:ContainerController) : void {
+               protected function finalParcelAdjustment(param1:ContainerController) : void {
                }
                
-               function finishParcel(param1:ContainerController, param2:Parcel) : Boolean {
+               protected function finishParcel(param1:ContainerController, param2:Parcel) : Boolean {
                   if(this._curParcelStart == this._curElementStart + this._curElementOffset)
                   {
                      return false;
@@ -1668,7 +1668,7 @@ package flashx.textLayout.compose
                   return true;
                }
                
-               function applyVerticalAlignmentToColumn(param1:ContainerController, param2:String, param3:Array, param4:int, param5:int, param6:int, param7:int) : void {
+               protected function applyVerticalAlignmentToColumn(param1:ContainerController, param2:String, param3:Array, param4:int, param5:int, param6:int, param7:int) : void {
                   var _loc10_:* = NaN;
                   var _loc11_:* = NaN;
                   var _loc8_:IVerticalJustificationLine = param3[param4];
@@ -1700,7 +1700,7 @@ package flashx.textLayout.compose
                   }
                }
                
-               function finishController(param1:ContainerController) : void {
+               protected function finishController(param1:ContainerController) : void {
                   var _loc3_:* = NaN;
                   var _loc4_:* = NaN;
                   var _loc5_:* = NaN;
@@ -1825,12 +1825,12 @@ package flashx.textLayout.compose
                   }
                }
                
-               function advanceToNextParcel() : void {
+               protected function advanceToNextParcel() : void {
                   this.parcelHasChanged(this._parcelList.atLast()?null:this._parcelList.getParcelAt(this._parcelList.currentParcelIndex + 1));
                   this._parcelList.next();
                }
                
-               function parcelHasChanged(param1:Parcel) : void {
+               protected function parcelHasChanged(param1:Parcel) : void {
                   var _loc2_:ContainerController = this._curParcel?ContainerController(this._curParcel.controller):null;
                   var _loc3_:ContainerController = param1?ContainerController(param1.controller):null;
                   if(!(_loc2_ == null) && !(this._lastGoodStart == -1))
@@ -2003,7 +2003,7 @@ package flashx.textLayout.compose
                   return _loc6_;
                }
                
-               function pushInsideListItemMargins(param1:TextLine) : void {
+               protected function pushInsideListItemMargins(param1:TextLine) : void {
                   var _loc2_:* = NaN;
                   if((param1) && this._listItemElement.computedFormat.listStylePosition == ListStylePosition.INSIDE)
                   {
@@ -2012,7 +2012,7 @@ package flashx.textLayout.compose
                   }
                }
                
-               function popInsideListItemMargins(param1:TextLine) : void {
+               protected function popInsideListItemMargins(param1:TextLine) : void {
                   var _loc2_:* = NaN;
                   if((param1) && this._listItemElement.computedFormat.listStylePosition == ListStylePosition.INSIDE)
                   {

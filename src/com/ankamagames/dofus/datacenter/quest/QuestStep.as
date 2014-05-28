@@ -8,7 +8,6 @@ package com.ankamagames.dofus.datacenter.quest
    import com.ankamagames.dofus.logic.game.common.managers.PlayedCharacterManager;
    import com.ankamagames.jerakine.data.I18n;
    import com.ankamagames.dofus.datacenter.npcs.NpcMessage;
-   import __AS3__.vec.*;
    
    public class QuestStep extends Object implements IDataCenter
    {
@@ -17,7 +16,7 @@ package com.ankamagames.dofus.datacenter.quest
          super();
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(QuestStep));
+      protected static const _log:Logger;
       
       public static const MODULE:String = "QuestSteps";
       
@@ -138,14 +137,14 @@ package com.ankamagames.dofus.datacenter.quest
          return this._objectives;
       }
       
-      function initCurrentLevelRewards() : void {
+      private function initCurrentLevelRewards() : void {
          var rewardsId:uint = 0;
          var rewards:QuestStepRewards = null;
          var playerLvl:uint = PlayedCharacterManager.getInstance().infos.level;
          if((this._currentLevelRewards == null) || (playerLvl < this._currentLevelRewards.levelMin) && (!(this._currentLevelRewards.levelMin == -1)) || (playerLvl > this._currentLevelRewards.levelMax) && (!(this._currentLevelRewards.levelMax == -1)))
          {
             this._currentLevelRewards = null;
-            for each (rewardsId in this.rewardsIds)
+            for each(rewardsId in this.rewardsIds)
             {
                rewards = QuestStepRewards.getQuestStepRewardsById(rewardsId);
                if(((playerLvl >= rewards.levelMin) || (rewards.levelMin == -1)) && ((playerLvl <= rewards.levelMax) || (rewards.levelMax == -1)))
@@ -173,7 +172,7 @@ package com.ankamagames.dofus.datacenter.quest
          return this.getFixeExperienceReward(pPlayerLevel) * xpBonus;
       }
       
-      function getFixeExperienceReward(level:int) : int {
+      private function getFixeExperienceReward(level:int) : int {
          return level * Math.pow(100 + 2 * level,2) / 20 * this.duration * this.xpRatio;
       }
    }

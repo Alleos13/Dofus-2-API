@@ -12,7 +12,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          super();
       }
       
-       function getResource(dataFormat:String, data:*) : * {
+      override protected function getResource(dataFormat:String, data:*) : * {
          return data;
       }
       
@@ -20,7 +20,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          return ResourceType.RESOURCE_BINARY;
       }
       
-       function getDataFormat() : String {
+      override protected function getDataFormat() : String {
          return URLLoaderDataFormat.BINARY;
       }
    }

@@ -30,7 +30,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          return clonedCriterion;
       }
       
-      override function getCriterion() : int {
+      override protected function getCriterion() : int {
          var isOnRide:Boolean = (Kernel.getWorker().getFrame(AbstractEntitiesFrame) as AbstractEntitiesFrame).playerIsOnRide;
          if(isOnRide)
          {

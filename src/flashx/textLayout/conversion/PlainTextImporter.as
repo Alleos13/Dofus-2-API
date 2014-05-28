@@ -33,7 +33,7 @@ package flashx.textLayout.conversion
          this._config = param1;
       }
       
-      function importFromString(param1:String) : TextFlow {
+      protected function importFromString(param1:String) : TextFlow {
          var _loc4_:String = null;
          var _loc5_:ParagraphElement = null;
          var _loc6_:SpanElement = null;

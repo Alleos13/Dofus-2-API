@@ -14,7 +14,7 @@ package com.ankamagames.atouin.types.sequences
    public class ParableGfxMovementStep extends AbstractSequencable
    {
       
-      public function ParableGfxMovementStep(gfxEntity:IMovable, targetPoint:MapPoint, speed:uint, curvePrc:Number=0.5, yOffset:int=0, waitEnd:Boolean=true, yOffsetOnHit:int=0) {
+      public function ParableGfxMovementStep(gfxEntity:IMovable, targetPoint:MapPoint, speed:uint, curvePrc:Number = 0.5, yOffset:int = 0, waitEnd:Boolean = true, yOffsetOnHit:int = 0) {
          super();
          this._gfxEntity = gfxEntity;
          this._targetPoint = targetPoint;
@@ -76,7 +76,7 @@ package com.ankamagames.atouin.types.sequences
          }
       }
       
-      function onTweenEnd(e:TweenEvent) : void {
+      private function onTweenEnd(e:TweenEvent) : void {
          if(this._waitEnd)
          {
             executeCallbacks();

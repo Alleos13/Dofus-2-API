@@ -31,11 +31,11 @@ package com.somerandomdude.colortoolkit.schemes
          this.generate();
       }
       
-      function generate() : void {
+      protected function generate() : void {
          throw new Error("Method must be called by child class");
       }
       
-      function wrap(x:Number, min:Number, threshold:Number, plus:Number) : Number {
+      protected function wrap(x:Number, min:Number, threshold:Number, plus:Number) : Number {
          var result:Number = 0;
          if(x - min < threshold)
          {

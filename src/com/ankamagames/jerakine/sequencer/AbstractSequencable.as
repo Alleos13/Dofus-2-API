@@ -19,7 +19,7 @@ package com.ankamagames.jerakine.sequencer
       
       public static const DEFAULT_TIMEOUT:uint = 5000;
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(AbstractSequencable));
+      protected static const _log:Logger;
       
       private var _listeners:Dictionary;
       
@@ -86,7 +86,7 @@ package com.ankamagames.jerakine.sequencer
          this._listeners[listener] = listener;
       }
       
-      function executeCallbacks() : void {
+      protected function executeCallbacks() : void {
          var listener:ISequencableListener = null;
          FightProfiler.getInstance().stop();
          if(this._timeOut)
@@ -95,7 +95,7 @@ package com.ankamagames.jerakine.sequencer
             this._timeOut.reset();
             this._timeOut = null;
          }
-         for each (listener in this._listeners)
+         for each(listener in this._listeners)
          {
             if(listener)
             {
@@ -109,7 +109,7 @@ package com.ankamagames.jerakine.sequencer
          {
             return;
          }
-         delete this._listeners[[listener]];
+         delete this._listeners[listener];
       }
       
       override public function toString() : String {
@@ -137,7 +137,7 @@ package com.ankamagames.jerakine.sequencer
          return this._withTimeOut;
       }
       
-      function onTimeOut(e:TimerEvent) : void {
+      protected function onTimeOut(e:TimerEvent) : void {
          _log.error("Time out sur la step " + this + " (" + this._timeOut.delay + ")");
          this._withTimeOut = true;
          if(this._timeOut)

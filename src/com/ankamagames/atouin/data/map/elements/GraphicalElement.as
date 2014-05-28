@@ -38,7 +38,7 @@ package com.ankamagames.atouin.data.map.elements
          return this.finalTeint;
       }
       
-      function calculateFinalTeint() : void {
+      private function calculateFinalTeint() : void {
          var r:Number = this.hue.red + this.shadow.red;
          var g:Number = this.hue.green + this.shadow.green;
          var b:Number = this.hue.blue + this.shadow.blue;

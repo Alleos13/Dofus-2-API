@@ -8,8 +8,6 @@ package com.ankamagames.berilia.api
    import flash.utils.flash_proxy;
    import flash.utils.getQualifiedClassName;
    
-   use namespace flash_proxy;
-   
    public class ModuleReference extends Proxy implements Secure
    {
       
@@ -55,7 +53,7 @@ package com.ankamagames.berilia.api
          return this._object.object.hasOwnProperty(name);
       }
       
-      function verify(o:*) : void {
+      private function verify(o:*) : void {
          var pkg:String = getQualifiedClassName(o);
          if(pkg.indexOf("d2api") == 0)
          {

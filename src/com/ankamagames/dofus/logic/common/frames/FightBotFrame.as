@@ -192,7 +192,7 @@ package com.ankamagames.dofus.logic.common.frames
          return false;
       }
       
-      function initRight() : void {
+      private function initRight() : void {
          this.sendAdminCmd("adminaway");
          this.sendAdminCmd("givelevel * 200");
          this.sendAdminCmd("givespell * 173 6");
@@ -200,13 +200,13 @@ package com.ankamagames.dofus.logic.common.frames
          this.sendAdminCmd("dring po=63,vita=8000,pa=100,agi=150 true");
       }
       
-      function sendAdminCmd(cmd:String) : void {
+      private function sendAdminCmd(cmd:String) : void {
          var aqcmsg:AdminQuietCommandMessage = new AdminQuietCommandMessage();
          aqcmsg.initAdminQuietCommandMessage(cmd);
          ConnectionsHandler.getConnection().send(aqcmsg);
       }
       
-      function onAction(e:Event) : void {
+      private function onAction(e:Event) : void {
          if(Math.random() < 0.9)
          {
             this.randomWalk();
@@ -219,7 +219,7 @@ package com.ankamagames.dofus.logic.common.frames
       
       private var _turnAction:Array;
       
-      function nextTurnAction() : void {
+      private function nextTurnAction() : void {
          var action:Object = null;
          if(this._turnAction.length)
          {
@@ -228,7 +228,7 @@ package com.ankamagames.dofus.logic.common.frames
          }
       }
       
-      function addTurnAction(fct:Function, args:Array) : void {
+      private function addTurnAction(fct:Function, args:Array) : void {
          this._turnAction.push(
             {
                "fct":fct,
@@ -236,13 +236,13 @@ package com.ankamagames.dofus.logic.common.frames
             });
       }
       
-      function turnEnd() : void {
+      private function turnEnd() : void {
          var finDeTourMsg:GameFightTurnFinishMessage = new GameFightTurnFinishMessage();
          finDeTourMsg.initGameFightTurnFinishMessage();
          ConnectionsHandler.getConnection().send(finDeTourMsg);
       }
       
-      function join(name:String) : void {
+      private function join(name:String) : void {
          if((this._inFight) || (this._wait))
          {
             return;
@@ -254,7 +254,7 @@ package com.ankamagames.dofus.logic.common.frames
          this._actionTimer.start();
       }
       
-      function randomMove() : void {
+      private function randomMove() : void {
          if((this._inFight) || (this._wait))
          {
             return;
@@ -267,7 +267,7 @@ package com.ankamagames.dofus.logic.common.frames
          this._actionTimer.start();
       }
       
-      function fakeActivity() : void {
+      private function fakeActivity() : void {
          if(!this._enabled)
          {
             return;
@@ -278,7 +278,7 @@ package com.ankamagames.dofus.logic.common.frames
          ConnectionsHandler.getConnection().send(bpmgs);
       }
       
-      function randomWalk() : void {
+      private function randomWalk() : void {
          var entity:* = undefined;
          var groupEntity:IEntity = null;
          if((this._inFight) || (this._wait))
@@ -291,7 +291,7 @@ package com.ankamagames.dofus.logic.common.frames
             return;
          }
          var avaibleCells:Array = [];
-         for each (entity in rpEF.getEntitiesDictionnary())
+         for each(entity in rpEF.getEntitiesDictionnary())
          {
             if(entity is GameRolePlayGroupMonsterInformations)
             {
@@ -310,7 +310,7 @@ package com.ankamagames.dofus.logic.common.frames
          Kernel.getWorker().process(ccmsg);
       }
       
-      function fightRandomMove() : void {
+      private function fightRandomMove() : void {
          var reachableCells:FightReachableCellsMaker = new FightReachableCellsMaker(FightEntitiesFrame.getCurrentInstance().getEntityInfos(PlayedCharacterManager.getInstance().id) as GameFightFighterInformations);
          if(!reachableCells.reachableCells.length)
          {
@@ -324,7 +324,7 @@ package com.ankamagames.dofus.logic.common.frames
          Kernel.getWorker().process(ccmsg);
       }
       
-      function randomOver(... foo) : void {
+      private function randomOver(... foo) : void {
          var e:IEntity = null;
          var entity:IInteractive = null;
          var ui:UiRootContainer = null;
@@ -336,7 +336,7 @@ package com.ankamagames.dofus.logic.common.frames
             return;
          }
          var avaibleEntities:Array = [];
-         for each (e in EntitiesManager.getInstance().entities)
+         for each(e in EntitiesManager.getInstance().entities)
          {
             if(e is IInteractive)
             {
@@ -357,9 +357,9 @@ package com.ankamagames.dofus.logic.common.frames
          var emomsg:EntityMouseOverMessage = new EntityMouseOverMessage(entity);
          Kernel.getWorker().process(emomsg);
          var avaibleElem:Array = [];
-         for each (ui in Berilia.getInstance().uiList)
+         for each(ui in Berilia.getInstance().uiList)
          {
-            for each (elem in ui.getElements())
+            for each(elem in ui.getElements())
             {
                if((elem.mouseChildren) || (elem.mouseEnabled))
                {
@@ -382,7 +382,7 @@ package com.ankamagames.dofus.logic.common.frames
          this._lastElemOver = target;
       }
       
-      function castSpell(spellId:uint, onMySelf:Boolean) : void {
+      private function castSpell(spellId:uint, onMySelf:Boolean) : void {
          var cellId:uint = 0;
          var avaibleCells:Array = null;
          var entity:* = undefined;
@@ -395,7 +395,7 @@ package com.ankamagames.dofus.logic.common.frames
          else
          {
             avaibleCells = [];
-            for each (entity in FightEntitiesFrame.getCurrentInstance().getEntitiesDictionnary())
+            for each(entity in FightEntitiesFrame.getCurrentInstance().getEntitiesDictionnary())
             {
                if((entity.contextualId < 0) && (entity is GameFightMonsterInformations))
                {

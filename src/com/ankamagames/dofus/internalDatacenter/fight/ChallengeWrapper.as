@@ -9,8 +9,6 @@ package com.ankamagames.dofus.internalDatacenter.fight
    import com.ankamagames.dofus.logic.game.fight.frames.FightContextFrame;
    import com.ankamagames.dofus.kernel.Kernel;
    
-   use namespace flash_proxy;
-   
    public class ChallengeWrapper extends Proxy implements IDataCenter
    {
       
@@ -129,7 +127,7 @@ package com.ankamagames.dofus.internalDatacenter.fight
          }
       }
       
-      function getFightFrame() : FightContextFrame {
+      private function getFightFrame() : FightContextFrame {
          return Kernel.getWorker().getFrame(FightContextFrame) as FightContextFrame;
       }
    }

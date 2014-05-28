@@ -38,7 +38,7 @@ package com.ankamagames.berilia.components
          addChild(this._tabCtr);
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(TabSet));
+      protected static const _log:Logger;
       
       private var _nSelected:int = -1;
       
@@ -343,7 +343,7 @@ package com.ankamagames.berilia.components
          super.remove();
       }
       
-      public function highlight(tabId:uint, show:Boolean=true) : void {
+      public function highlight(tabId:uint, show:Boolean = true) : void {
          if(show)
          {
             this._aLbls[tabId].cssClass = "highlighted";
@@ -354,7 +354,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      public function renameTab(tabId:uint, name:String=null) : void {
+      public function renameTab(tabId:uint, name:String = null) : void {
          this._aInputs[this._nSelected].text = "";
          this._aLbls[tabId].caretIndex = 0;
          if(tabId >= this._nCurrentMaxIndex)
@@ -375,14 +375,14 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function tabsDisplay() : void {
+      private function tabsDisplay() : void {
          this.addPlusTab();
          this.addTab();
          this.length = this._nNbTabsRequired;
          this.selectedTab = 0;
       }
       
-      function addTab() : void {
+      private function addTab() : void {
          var btn:ButtonContainer = new ButtonContainer();
          btn.soundId = "16009";
          btn.width = this._nWidthTab;
@@ -467,7 +467,7 @@ package com.ankamagames.berilia.components
          this.replaceTab();
       }
       
-      function addPlusTab() : void {
+      private function addPlusTab() : void {
          this._btnPlus = new ButtonContainer();
          this._btnPlus.soundId = "16090";
          this._btnPlus.width = this._nWidthPlusTab;
@@ -508,7 +508,7 @@ package com.ankamagames.berilia.components
          this._nTotalWidth = this._nTotalWidth + this._nWidthPlusTab;
       }
       
-      function removeTab() : void {
+      private function removeTab() : void {
          var indexAlmostRemoved:* = 0;
          if(this._nNbTabs > 1)
          {
@@ -525,10 +525,10 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function replaceTab() : void {
+      private function replaceTab() : void {
          var index:* = undefined;
          var currentPos:int = 0;
-         for (index in this._aCtrs)
+         for(index in this._aCtrs)
          {
             this._aCtrs[index].state = 0;
             this._aCtrs[index].x = currentPos;
@@ -552,7 +552,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function isIterable(obj:*) : Boolean {
+      private function isIterable(obj:*) : Boolean {
          if(obj is Array)
          {
             return true;
@@ -564,11 +564,11 @@ package com.ankamagames.berilia.components
          return false;
       }
       
-      function removeContainerContent(target:GraphicContainer) : void {
+      private function removeContainerContent(target:GraphicContainer) : void {
          target.remove();
       }
       
-      function switchToEdition(value:Boolean) : void {
+      private function switchToEdition(value:Boolean) : void {
          this._bNameEdition = value;
          if(value)
          {
@@ -615,6 +615,25 @@ package com.ankamagames.berilia.components
                         }
                      }
                      break;
+                  default:
+                     for(i in this._aCtrs)
+                     {
+                        if(mcm.target == this._aCtrs[i])
+                        {
+                           this.selectedTab = i;
+                        }
+                     }
+                     if(mcm.target == this._aCloses[this._nSelected])
+                     {
+                        if(this._nNbTabs > 1)
+                        {
+                           if(UIEventManager.getInstance().isRegisteredInstance(this,DeleteTabMessage))
+                           {
+                              Berilia.getInstance().handler.process(new DeleteTabMessage(this,this._nSelected));
+                           }
+                           this.removeTab();
+                        }
+                     }
                }
                break;
             case msg is MouseRightClickMessage:
@@ -623,13 +642,11 @@ package com.ankamagames.berilia.components
                {
                   this.switchToEdition(true);
                }
-               else
+               else if(this._bNameEdition)
                {
-                  if(this._bNameEdition)
-                  {
-                     this.switchToEdition(false);
-                  }
+                  this.switchToEdition(false);
                }
+               
                break;
             case msg is KeyboardKeyUpMessage:
                kkum = msg as KeyboardKeyUpMessage;
@@ -645,13 +662,11 @@ package com.ankamagames.berilia.components
                         Berilia.getInstance().handler.process(new RenameTabMessage(this,this._nSelected,nameEdition));
                      }
                   }
-                  else
+                  else if(kkum.keyboardEvent.keyCode == Keyboard.ESCAPE)
                   {
-                     if(kkum.keyboardEvent.keyCode == Keyboard.ESCAPE)
-                     {
-                        this.switchToEdition(false);
-                     }
+                     this.switchToEdition(false);
                   }
+                  
                }
                break;
          }

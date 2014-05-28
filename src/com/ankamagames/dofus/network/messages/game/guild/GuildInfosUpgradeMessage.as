@@ -2,7 +2,6 @@ package com.ankamagames.dofus.network.messages.game.guild
 {
    import com.ankamagames.jerakine.network.NetworkMessage;
    import com.ankamagames.jerakine.network.INetworkMessage;
-   import __AS3__.vec.*;
    import flash.utils.IDataOutput;
    import flash.utils.ByteArray;
    import flash.utils.IDataInput;
@@ -48,7 +47,7 @@ package com.ankamagames.dofus.network.messages.game.guild
          return 5636;
       }
       
-      public function initGuildInfosUpgradeMessage(maxTaxCollectorsCount:uint=0, taxCollectorsCount:uint=0, taxCollectorLifePoints:uint=0, taxCollectorDamagesBonuses:uint=0, taxCollectorPods:uint=0, taxCollectorProspecting:uint=0, taxCollectorWisdom:uint=0, boostPoints:uint=0, spellId:Vector.<uint>=null, spellLevel:Vector.<uint>=null) : GuildInfosUpgradeMessage {
+      public function initGuildInfosUpgradeMessage(maxTaxCollectorsCount:uint = 0, taxCollectorsCount:uint = 0, taxCollectorLifePoints:uint = 0, taxCollectorDamagesBonuses:uint = 0, taxCollectorPods:uint = 0, taxCollectorProspecting:uint = 0, taxCollectorWisdom:uint = 0, boostPoints:uint = 0, spellId:Vector.<uint> = null, spellLevel:Vector.<uint> = null) : GuildInfosUpgradeMessage {
          this.maxTaxCollectorsCount = maxTaxCollectorsCount;
          this.taxCollectorsCount = taxCollectorsCount;
          this.taxCollectorLifePoints = taxCollectorLifePoints;
@@ -149,7 +148,7 @@ package com.ankamagames.dofus.network.messages.game.guild
                               {
                                  output.writeShort(this.boostPoints);
                                  output.writeShort(this.spellId.length);
-                                 var _i9 = 0;
+                                 _i9 = 0;
                                  while(_i9 < this.spellId.length)
                                  {
                                     if(this.spellId[_i9] < 0)
@@ -164,7 +163,7 @@ package com.ankamagames.dofus.network.messages.game.guild
                                     }
                                  }
                                  output.writeShort(this.spellLevel.length);
-                                 var _i10 = 0;
+                                 _i10 = 0;
                                  while(_i10 < this.spellLevel.length)
                                  {
                                     if(this.spellLevel[_i10] < 0)

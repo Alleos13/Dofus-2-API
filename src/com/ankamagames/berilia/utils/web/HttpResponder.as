@@ -111,7 +111,7 @@ package com.ankamagames.berilia.utils.web
       
       private const HEADER_END_SEPERATOR:String = "\n\n";
       
-      function onFileIoError(e:Event) : void {
+      private function onFileIoError(e:Event) : void {
          this._stream.removeEventListener(Event.COMPLETE,this.onFileReadDone);
          this._stream.removeEventListener(IOErrorEvent.IO_ERROR,this.onFileIoError);
          this._stream.close();
@@ -119,7 +119,7 @@ package com.ankamagames.berilia.utils.web
          this.throw404();
       }
       
-      function onFileReadDone(e:Event) : void {
+      private function onFileReadDone(e:Event) : void {
          this._stream.removeEventListener(Event.COMPLETE,this.onFileReadDone);
          this._stream.removeEventListener(IOErrorEvent.IO_ERROR,this.onFileIoError);
          this._contentBytes = new ByteArray();
@@ -131,12 +131,12 @@ package com.ankamagames.berilia.utils.web
          this.sendResponse();
       }
       
-      function getRelativePath(f:File) : String {
+      private function getRelativePath(f:File) : String {
          var rootPath:String = new File(HttpServer.getInstance().rootPath).nativePath;
          return f.nativePath.substring(rootPath.length + 1).split("\\").join("/");
       }
       
-      function getImg(f:File) : String {
+      private function getImg(f:File) : String {
          var img:String = "<img src=\"data:image/png;base64,";
          if(f.isDirectory)
          {
@@ -160,12 +160,14 @@ package com.ankamagames.berilia.utils.web
                case "metas":
                   img = img + "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAADoSURBVBgZBcExblNBGAbA2ceegTRBuIKOgiihSZNTcC5LUHAihNJR0kGKCDcYJY6D3/77MdOinTvzAgCw8ysThIvn/VojIyMjIyPP+bS1sUQIV2s95pBDDvmbP/mdkft83tpYguZq5Jh/OeaYh+yzy8hTHvNlaxNNczm+la9OTlar1UdA/+C2A4trRCnD3jS8BB1obq2Gk6GU6QbQAS4BUaYSQAf4bhhKKTFdAzrAOwAxEUAH+KEM01SY3gM6wBsEAQB0gJ+maZoC3gI6iPYaAIBJsiRmHU0AALOeFC3aK2cWAACUXe7+AwO0lc9eTHYTAAAAAElFTkSuQmCC";
                   break;
+               default:
+                  img = img + "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC4SURBVCjPdZFbDsIgEEWnrsMm7oGGfZrohxvU+Iq1TyjU60Bf1pac4Yc5YS4ZAtGWBMk/drQBOVwJlZrWYkLhsB8UV9K0BUrPGy9cWbng2CtEEUmLGppPjRwpbixUKHBiZRS0p+ZGhvs4irNEvWD8heHpbsyDXznPhYFOyTjJc13olIqzZCHBouE0FRMUjA+s1gTjaRgVFpqRwC8mfoXPPEVPS7LbRaJL2y7bOifRCTEli3U7BMWgLzKlW/CuebZPAAAAAElFTkSuQmCC";
             }
          }
          return img + "\" />";
       }
       
-      function onDirectoryList(e:FileListEvent) : void {
+      private function onDirectoryList(e:FileListEvent) : void {
          var f:File = null;
          var isDir:* = false;
          this._statusHeader = "HTTP/1.0 200 OK";
@@ -175,7 +177,7 @@ package com.ankamagames.berilia.utils.web
          {
             html = html + ("<tr><td>" + this.getImg(File(e.target).parent) + "</td><td><a href=\"" + HttpServer.getInstance().getUrlTo(this.getRelativePath(File(e.target).parent)) + "\">..</a></td><td>-</td><td>-</td></tr>");
          }
-         for each (f in e.files)
+         for each(f in e.files)
          {
             isDir = f.isDirectory;
             html = html + ("<tr>" + "<td>" + this.getImg(f) + "</td>" + "<td><a href=\"" + HttpServer.getInstance().getUrlTo(this.getRelativePath(f)) + "\">" + f.name + (isDir?"/":"") + "</a></td>" + "<td>" + this.toRFC802(f.modificationDate) + "</td>" + "<td>" + (isDir?"-":f.size) + "</td>" + "</tr>");
@@ -188,7 +190,7 @@ package com.ankamagames.berilia.utils.web
          this.sendResponse();
       }
       
-      function sendResponse() : void {
+      private function sendResponse() : void {
          this._responseBytes = new ByteArray();
          this._responseBytes.writeUTFBytes(this._statusHeader);
          this._responseBytes.writeUTFBytes(this.HEADER_SEPERATOR);
@@ -213,7 +215,7 @@ package com.ankamagames.berilia.utils.web
          this._socket.flush();
       }
       
-      function throw404() : void {
+      private function throw404() : void {
          this._statusHeader = "HTTP/1.0 404 Not Found";
          this._mimeHeader = "Content-Type: text/html";
          var four0FourString:String = "<HTML><HEAD><TITLE>404 Not Found</TITLE></HEAD><BODY>404 Not Found</BODY></HTML>";
@@ -224,7 +226,7 @@ package com.ankamagames.berilia.utils.web
          this.sendResponse();
       }
       
-      function throw403() : void {
+      private function throw403() : void {
          this._statusHeader = "HTTP/1.0 403 Forbidden";
          this._mimeHeader = "Content-Type: text/html";
          var four0FourString:String = "<HTML><HEAD><TITLE>403 Forbidden</TITLE></HEAD><BODY>403 Forbidden</BODY></HTML>";
@@ -235,7 +237,7 @@ package com.ankamagames.berilia.utils.web
          this.sendResponse();
       }
       
-      function throw501() : void {
+      private function throw501() : void {
          this._statusHeader = "HTTP/1.0 501 Not Implemented";
          this._responseBytes = new ByteArray();
          this._responseBytes.writeUTFBytes(this._statusHeader);
@@ -244,7 +246,7 @@ package com.ankamagames.berilia.utils.web
          this._socket.writeBytes(this._responseBytes,0,this._responseBytes.bytesAvailable);
       }
       
-      function throw500() : void {
+      private function throw500() : void {
          this._statusHeader = "HTTP/1.0 500 Internal Server Error";
          this._responseBytes = new ByteArray();
          this._responseBytes.writeUTFBytes(this._statusHeader);
@@ -253,12 +255,12 @@ package com.ankamagames.berilia.utils.web
          this._socket.writeBytes(this._responseBytes,0,this._responseBytes.bytesAvailable);
       }
       
-      function getMimeHeader(file:File) : String {
+      private function getMimeHeader(file:File) : String {
          var extn:String = file.extension;
          return "Content-Type: " + MimeTypeHelper.getMimeType(extn);
       }
       
-      function toRFC802(date:Date) : String {
+      private function toRFC802(date:Date) : String {
          var output:String = "";
          switch(date.dayUTC)
          {

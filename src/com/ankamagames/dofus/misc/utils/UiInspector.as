@@ -149,7 +149,8 @@ package com.ankamagames.dofus.misc.utils
       }
 
       private function getBeriliaElement(target:DisplayObject) : Array {
-		  return null;
+         var result:Array = [];
+         return result;
       }
 
       private var _uiRoot:UiRootContainer;

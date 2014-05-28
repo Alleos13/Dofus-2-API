@@ -35,14 +35,14 @@ package com.ankamagames.dofus.logic.common.frames
    public class LoadingModuleFrame extends Object implements Frame
    {
       
-      public function LoadingModuleFrame(manageAuthentificationFrame:Boolean=false) {
+      public function LoadingModuleFrame(manageAuthentificationFrame:Boolean = false) {
          this._tips = [];
          this._tipsTimer = new Timer(20 * 1000);
          super();
          this._manageAuthentificationFrame = manageAuthentificationFrame;
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(LoadingModuleFrame));
+      protected static const _log:Logger;
       
       private var _manageAuthentificationFrame:Boolean;
       
@@ -72,7 +72,7 @@ package com.ankamagames.dofus.logic.common.frames
          this._startTime = getTimer();
          this._loadingScreen = new LoadingScreen(true);
          Dofus.getInstance().addChild(this._loadingScreen);
-         for each (tip in Tips.getAllTips())
+         for each(tip in Tips.getAllTips())
          {
             this._tips.push(tip);
          }
@@ -90,7 +90,7 @@ package com.ankamagames.dofus.logic.common.frames
          return true;
       }
       
-      function changeTip(e:Event) : void {
+      private function changeTip(e:Event) : void {
          var tip:Tips = this._tips[Math.floor(this._tips.length * Math.random())] as Tips;
          if(tip)
          {
@@ -128,7 +128,7 @@ package com.ankamagames.dofus.logic.common.frames
             case msg is AllModulesLoadedMessage:
                modLog = "";
                modList = UiModuleManager.getInstance().getModules();
-               for each (mod in modList)
+               for each(mod in modList)
                {
                   if(!mod.trusted)
                   {
@@ -201,11 +201,11 @@ package com.ankamagames.dofus.logic.common.frames
          return true;
       }
       
-      function dispatchEnd() : void {
+      private function dispatchEnd() : void {
          Kernel.getWorker().process(new AllModulesLoadedMessage());
       }
       
-      function launchGame() : void {
+      private function launchGame() : void {
          if((getTimer() - this._startTime < 2000) && (!this._waitDone))
          {
             setTimeout(this.launchGame,2000 - (getTimer() - this._startTime));

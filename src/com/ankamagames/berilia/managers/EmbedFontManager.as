@@ -40,7 +40,7 @@ package com.ankamagames.berilia.managers
       
       private static var _self:EmbedFontManager;
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(EmbedFontManager));
+      protected static const _log:Logger;
       
       public static function getInstance() : EmbedFontManager {
          if(_self == null)
@@ -85,7 +85,7 @@ package com.ankamagames.berilia.managers
          return null;
       }
       
-      function loadFonts() : void {
+      private function loadFonts() : void {
          var font:String = null;
          if(this._currentlyLoading != null)
          {
@@ -97,7 +97,7 @@ package com.ankamagames.berilia.managers
             return;
          }
          var aQueue:Array = new Array();
-         for each (font in this._loadingFonts)
+         for each(font in this._loadingFonts)
          {
             aQueue.push(new Uri(font));
          }
@@ -105,7 +105,7 @@ package com.ankamagames.berilia.managers
          this._loader.load(aQueue);
       }
       
-      function onComplete(e:ResourceLoadedEvent) : void {
+      private function onComplete(e:ResourceLoadedEvent) : void {
          var fontsList:Array = null;
          var i:* = 0;
          var fontClass:Class = Swl(e.resource).getDefinition(FileUtils.getFileStartName(e.uri.uri)) as Class;
@@ -130,11 +130,11 @@ package com.ankamagames.berilia.managers
          this._currentlyLoading = null;
       }
       
-      function onAllFontLoaded(e:ResourceLoaderProgressEvent) : void {
+      private function onAllFontLoaded(e:ResourceLoaderProgressEvent) : void {
          dispatchEvent(new Event(Event.COMPLETE));
       }
       
-      function onError(e:ResourceErrorEvent) : void {
+      private function onError(e:ResourceErrorEvent) : void {
          _log.error("Unabled to load a font : " + e.uri);
       }
    }

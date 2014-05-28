@@ -32,11 +32,11 @@ package com.ankamagames.berilia.components.gridRenderer
          _defaultLineType = "default";
       }
       
-      override public function update(data:*, index:uint, target:DisplayObject, selected:Boolean, subIndex:uint=0) : void {
+      override public function update(data:*, index:uint, target:DisplayObject, selected:Boolean, subIndex:uint = 0) : void {
          super.update(data,index,target,selected,subIndex);
       }
       
-      override function uiUpdate(ui:UiRootContainer, target:DisplayObject, data:*, selected:Boolean, subIndex:uint) : void {
+      override protected function uiUpdate(ui:UiRootContainer, target:DisplayObject, data:*, selected:Boolean, subIndex:uint) : void {
          if(DisplayObjectContainer(target).numChildren)
          {
             ui.uiClass[_updateFunctionName](SecureCenter.secure(data),_cptNameReferences[DisplayObjectContainer(target).getChildAt(0)],selected);

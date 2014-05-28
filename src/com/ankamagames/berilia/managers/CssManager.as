@@ -40,7 +40,7 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(CssManager));
+      protected static const _log:Logger;
       
       private static const CSS_ARRAY_KEY:String = "cssFilesContents";
       
@@ -99,23 +99,21 @@ package com.ankamagames.berilia.managers
                this._aLoadingFile[uri.uri] = true;
             }
          }
-         else
+         else if(oFile is Array)
          {
-            if(oFile is Array)
+            i = 0;
+            while(i < (oFile as Array).length)
             {
-               i = 0;
-               while(i < (oFile as Array).length)
+               uri = new Uri(oFile[i]);
+               if((!this.exists(uri.uri)) && (!this.inQueue(uri.uri)))
                {
-                  uri = new Uri(oFile[i]);
-                  if((!this.exists(uri.uri)) && (!this.inQueue(uri.uri)))
-                  {
-                     this._aLoadingFile[uri.uri] = true;
-                     aQueue.push(uri);
-                  }
-                  i++;
+                  this._aLoadingFile[uri.uri] = true;
+                  aQueue.push(uri);
                }
+               i++;
             }
          }
+         
          if(aQueue.length)
          {
             this._loader.load(aQueue);
@@ -194,20 +192,20 @@ package com.ankamagames.berilia.managers
          return newEss;
       }
       
-      function init() : void {
+      protected function init() : void {
          var aSavedCss:Array = null;
          var file:String = null;
          if(_useCache)
          {
             aSavedCss = StoreDataManager.getInstance().getSetData(BeriliaConstants.DATASTORE_UI_CSS,CSS_ARRAY_KEY,new Array());
-            for (file in aSavedCss)
+            for(file in aSavedCss)
             {
                this.parseCss(file,aSavedCss[file]);
             }
          }
       }
       
-      function parseCss(sUrl:String, content:String) : void {
+      private function parseCss(sUrl:String, content:String) : void {
          var uri:Uri = new Uri(sUrl);
          var styleSheet:StyleSheet = new ExtendedStyleSheet(uri.uri);
          this._aCss[uri.uri] = styleSheet;
@@ -215,14 +213,14 @@ package com.ankamagames.berilia.managers
          styleSheet.parseCSS(content);
       }
       
-      function updateWaitingMultiUrl(loadedUrl:String) : void {
+      private function updateWaitingMultiUrl(loadedUrl:String) : void {
          var ok:* = false;
          var url:String = null;
          var i:uint = 0;
          var files:Array = null;
          var sse:Array = null;
          var k:uint = 0;
-         for (url in this._aMultiWaiting)
+         for(url in this._aMultiWaiting)
          {
             if(this._aMultiWaiting[url])
             {
@@ -239,7 +237,7 @@ package com.ankamagames.berilia.managers
                }
                if(ok)
                {
-                  delete this._aMultiWaiting[[url]];
+                  delete this._aMultiWaiting[url];
                   files = url.split(",");
                   sse = new Array();
                   k = 0;
@@ -255,7 +253,7 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      function dispatchWaitingCallbabk(url:String) : void {
+      private function dispatchWaitingCallbabk(url:String) : void {
          var i:uint = 0;
          if(this._aWaiting[url])
          {
@@ -265,11 +263,11 @@ package com.ankamagames.berilia.managers
                Callback(this._aWaiting[url][i]).exec();
                i++;
             }
-            delete this._aWaiting[[url]];
+            delete this._aWaiting[url];
          }
       }
       
-      function complete(e:ResourceLoadedEvent) : void {
+      protected function complete(e:ResourceLoadedEvent) : void {
          var aSavedCss:Array = null;
          if(_useCache)
          {
@@ -281,13 +279,13 @@ package com.ankamagames.berilia.managers
          this.parseCss(e.uri.uri,e.resource);
       }
       
-      function error(e:ResourceErrorEvent) : void {
+      protected function error(e:ResourceErrorEvent) : void {
          ErrorManager.addError("Impossible de trouver la feuille de style (url: " + e.uri + ")");
          this._aLoadingFile[e.uri.uri] = false;
-         delete this._aWaiting[[e.uri.uri]];
+         delete this._aWaiting[e.uri.uri];
       }
       
-      function onCssParsed(e:CssEvent) : void {
+      private function onCssParsed(e:CssEvent) : void {
          e.stylesheet.removeEventListener(CssEvent.CSS_PARSED,this.onCssParsed);
          var uri:Uri = new Uri(e.stylesheet.url);
          this.dispatchWaitingCallbabk(uri.uri);

@@ -27,7 +27,7 @@ package com.ankamagames.dofus.kernel.sound
          }
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(SoundManager));
+      protected static const _log:Logger;
       
       private static var _self:SoundManager;
       
@@ -132,7 +132,7 @@ package com.ankamagames.dofus.kernel.sound
          this.manager.setBusVolume(TubulSoundConfiguration.BUS_SFX_ID,pVolume);
       }
       
-      function onPropertyChanged(e:PropertyChangeEvent) : void {
+      private function onPropertyChanged(e:PropertyChangeEvent) : void {
          switch(e.propertyName)
          {
             case "muteMusic":

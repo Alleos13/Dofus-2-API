@@ -212,7 +212,7 @@ package org.flintparticles.common.emitters
          return this._particles;
       }
       
-      function createParticle() : Particle {
+      protected function createParticle() : Particle {
          var _loc1_:Particle = this._particleFactory.createParticle();
          var _loc2_:int = this._initializers.length;
          this.initParticle(_loc1_);
@@ -227,7 +227,7 @@ package org.flintparticles.common.emitters
          return _loc1_;
       }
       
-      function initParticle(param1:Particle) : void {
+      protected function initParticle(param1:Particle) : void {
       }
       
       public function addExistingParticles(param1:Array, param2:Boolean=false) : void {
@@ -366,7 +366,7 @@ package org.flintparticles.common.emitters
          dispatchEvent(new EmitterEvent(EmitterEvent.EMITTER_UPDATED));
       }
       
-      function sortParticles() : void {
+      protected function sortParticles() : void {
       }
       
       public function pause() : void {

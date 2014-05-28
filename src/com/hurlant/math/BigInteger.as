@@ -5,12 +5,10 @@ package com.hurlant.math
    import flash.utils.ByteArray;
    import com.hurlant.util.Hex;
    
-   use namespace bi_internal;
-   
    public class BigInteger extends Object
    {
       
-      public function BigInteger(value:*=null, radix:int=0, unsigned:Boolean=false) {
+      public function BigInteger(value:* = null, radix:int = 0, unsigned:Boolean = false) {
          var array:ByteArray = null;
          var length:* = 0;
          super();
@@ -37,21 +35,21 @@ package com.hurlant.math
       
       public static const DB:int = 30;
       
-      public static const DV:int = 1 << DB;
+      public static const DV:int;
       
-      public static const DM:int = DV - 1;
+      public static const DM:int;
       
       public static const BI_FP:int = 52;
       
-      public static const FV:Number = Math.pow(2,BI_FP);
+      public static const FV:Number;
       
-      public static const F1:int = BI_FP - DB;
+      public static const F1:int = 22.0;
       
-      public static const F2:int = 2 * DB - BI_FP;
+      public static const F2:int = 8.0;
       
-      public static const ZERO:BigInteger = nbv(0);
+      public static const ZERO:BigInteger;
       
-      public static const ONE:BigInteger = nbv(1);
+      public static const ONE:BigInteger;
       
       public static function nbv(value:int) : BigInteger {
          var bn:BigInteger = new BigInteger();
@@ -59,9 +57,9 @@ package com.hurlant.math
          return bn;
       }
       
-      public static const lowprimes:Array = [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97,101,103,107,109,113,127,131,137,139,149,151,157,163,167,173,179,181,191,193,197,199,211,223,227,229,233,239,241,251,257,263,269,271,277,281,283,293,307,311,313,317,331,337,347,349,353,359,367,373,379,383,389,397,401,409,419,421,431,433,439,443,449,457,461,463,467,479,487,491,499,503,509];
+      public static const lowprimes:Array;
       
-      public static const lplim:int = (1 << 26) / lowprimes[lowprimes.length - 1];
+      public static const lplim:int;
       
       public var t:int;
       
@@ -75,7 +73,7 @@ package com.hurlant.math
          while(i < this.a.length)
          {
             this.a[i] = r.nextByte();
-            delete this.a[[i]];
+            delete this.a[i];
             i++;
          }
          this.a = null;
@@ -84,7 +82,7 @@ package com.hurlant.math
          Memory.gc();
       }
       
-      public function toString(radix:Number=16) : String {
+      public function toString(radix:Number = 16) : String {
          var k:* = 0;
          if(this.s < 0)
          {
@@ -326,62 +324,24 @@ package com.hurlant.math
          {
             this.a[0] = value;
          }
+         else if(value < -1)
+         {
+            this.a[0] = value + DV;
+         }
          else
          {
-            if(value < -1)
-            {
-               this.a[0] = value + DV;
-            }
-            else
-            {
-               this.t = 0;
-            }
+            this.t = 0;
          }
+         
       }
       
-      bi_internal function fromArray(value:ByteArray, length:int, unsigned:Boolean=false) : void {
-         var x:* = 0;
-         var p:int = value.position;
-         var i:int = p + length;
-         var sh:int = 0;
-         var k:int = 8;
-         this.t = 0;
-         this.s = 0;
-         while(--i >= p)
-         {
-            x = i < value.length?value[i]:0;
-            if(sh == 0)
-            {
-               this.a[this.t++] = x;
-            }
-            else
-            {
-               if(sh + k > DB)
-               {
-                  this.a[this.t - 1] = this.a[this.t - 1] | (x & (1 << DB - sh) - 1) << sh;
-                  this.a[this.t++] = x >> DB - sh;
-               }
-               else
-               {
-                  this.a[this.t - 1] = this.a[this.t - 1] | x << sh;
-               }
-            }
-            sh = sh + k;
-            if(sh >= DB)
-            {
-               sh = sh - DB;
-            }
-         }
-         if((!unsigned) && ((value[0] & 128) == 128))
-         {
-            this.s = -1;
-            if(sh > 0)
-            {
-               this.a[this.t - 1] = this.a[this.t - 1] | (1 << DB - sh) - 1 << sh;
-            }
-         }
-         this.clamp();
-         value.position = Math.min(p + length,value.length);
+      bi_internal function fromArray(value:ByteArray, length:int, unsigned:Boolean = false) : void {
+         /*
+          * Decompilation error
+          * Code may be obfuscated
+          * Error type: TranslateException
+          */
+         throw new IllegalOperationError("Not decompiled due to error");
       }
       
       bi_internal function clamp() : void {
@@ -513,13 +473,11 @@ package com.hurlant.math
          {
             r.a[i++] = DV + c;
          }
-         else
+         else if(c > 0)
          {
-            if(c > 0)
-            {
-               r.a[i++] = c;
-            }
+            r.a[i++] = c;
          }
+         
          r.t = i;
          r.clamp();
       }
@@ -592,8 +550,13 @@ package com.hurlant.math
          r.clamp();
       }
       
-      bi_internal function divRemTo(m:BigInteger, q:BigInteger=null, r:BigInteger=null) : void {
-         
+      bi_internal function divRemTo(m:BigInteger, q:BigInteger = null, r:BigInteger = null) : void {
+         /*
+          * Decompilation error
+          * Code may be obfuscated
+          * Error type: TranslateException
+          */
+         throw new IllegalOperationError("Not decompiled due to error");
       }
       
       bi_internal function invDigit() : int {
@@ -650,7 +613,7 @@ package com.hurlant.math
          return parseInt(str.charAt(index),36);
       }
       
-      function nbi() : * {
+      protected function nbi() : * {
          return new BigInteger();
       }
       
@@ -694,7 +657,7 @@ package com.hurlant.math
          return this.t == 0?this.s:this.a[0] << 16 >> 16;
       }
       
-      function chunkSize(r:Number) : int {
+      protected function chunkSize(r:Number) : int {
          return Math.floor(Math.LN2 * DB / Math.log(r));
       }
       
@@ -710,7 +673,7 @@ package com.hurlant.math
          return 1;
       }
       
-      function toRadix(b:uint=10) : String {
+      protected function toRadix(b:uint = 10) : String {
          if((this.sigNum() == 0) || (b < 2) || (b > 32))
          {
             return "0";
@@ -730,7 +693,7 @@ package com.hurlant.math
          return z.intValue().toString(b) + r;
       }
       
-      function fromRadix(s:String, b:int=10) : void {
+      protected function fromRadix(s:String, b:int = 10) : void {
          var x:* = 0;
          this.fromInt(0);
          var cs:int = this.chunkSize(b);
@@ -831,7 +794,7 @@ package com.hurlant.math
          return this.compareTo(a) > 0?this:a;
       }
       
-      function bitwiseTo(a:BigInteger, op:Function, r:BigInteger) : void {
+      protected function bitwiseTo(a:BigInteger, op:Function, r:BigInteger) : void {
          var i:* = 0;
          var f:* = 0;
          var m:int = Math.min(a.t,this.t);
@@ -867,7 +830,7 @@ package com.hurlant.math
          r.clamp();
       }
       
-      function op_and(x:int, y:int) : int {
+      private function op_and(x:int, y:int) : int {
          return x & y;
       }
       
@@ -877,7 +840,7 @@ package com.hurlant.math
          return r;
       }
       
-      function op_or(x:int, y:int) : int {
+      private function op_or(x:int, y:int) : int {
          return x | y;
       }
       
@@ -887,7 +850,7 @@ package com.hurlant.math
          return r;
       }
       
-      function op_xor(x:int, y:int) : int {
+      private function op_xor(x:int, y:int) : int {
          return x ^ y;
       }
       
@@ -897,7 +860,7 @@ package com.hurlant.math
          return r;
       }
       
-      function op_andnot(x:int, y:int) : int {
+      private function op_andnot(x:int, y:int) : int {
          return x & ~y;
       }
       
@@ -946,7 +909,7 @@ package com.hurlant.math
          return r;
       }
       
-      function lbit(x:int) : int {
+      private function lbit(x:int) : int {
          if(x == 0)
          {
             return -1;
@@ -996,7 +959,7 @@ package com.hurlant.math
          return -1;
       }
       
-      function cbit(x:int) : int {
+      private function cbit(x:int) : int {
          var r:uint = 0;
          while(x != 0)
          {
@@ -1027,7 +990,7 @@ package com.hurlant.math
          return !((this.a[j] & 1 << n % DB) == 0);
       }
       
-      function changeBit(n:int, op:Function) : BigInteger {
+      protected function changeBit(n:int, op:Function) : BigInteger {
          var r:BigInteger = BigInteger.ONE.shiftLeft(n);
          this.bitwiseTo(r,op,r);
          return r;
@@ -1045,7 +1008,7 @@ package com.hurlant.math
          return this.changeBit(n,this.op_xor);
       }
       
-      function addTo(a:BigInteger, r:BigInteger) : void {
+      protected function addTo(a:BigInteger, r:BigInteger) : void {
          var i:int = 0;
          var c:int = 0;
          var m:int = Math.min(a.t,this.t);
@@ -1082,13 +1045,11 @@ package com.hurlant.math
          {
             r.a[i++] = c;
          }
-         else
+         else if(c < -1)
          {
-            if(c < -1)
-            {
-               r.a[i++] = DV + c;
-            }
+            r.a[i++] = DV + c;
          }
+         
          r.t = i;
          r.clamp();
       }
@@ -1158,27 +1119,12 @@ package com.hurlant.math
       }
       
       bi_internal function multiplyLowerTo(a:BigInteger, n:int, r:BigInteger) : void {
-         var j:* = 0;
-         var i:int = Math.min(this.t + a.t,n);
-         r.s = 0;
-         r.t = i;
-         while(i > 0)
-         {
-            r.a[--i] = 0;
-         }
-         j = r.t - this.t;
-         while(i < j)
-         {
-            r.a[i + this.t] = this.am(0,a.a[i],r,i,0,this.t);
-            i++;
-         }
-         j = Math.min(a.t,n);
-         while(i < j)
-         {
-            this.am(0,a.a[i],r,i,0,n - i);
-            i++;
-         }
-         r.clamp();
+         /*
+          * Decompilation error
+          * Code may be obfuscated
+          * Error type: TranslateException
+          */
+         throw new IllegalOperationError("Not decompiled due to error");
       }
       
       bi_internal function multiplyUpperTo(a:BigInteger, n:int, r:BigInteger) : void {
@@ -1200,145 +1146,12 @@ package com.hurlant.math
       }
       
       public function modPow(e:BigInteger, m:BigInteger) : BigInteger {
-         var k:* = 0;
-         var z:IReduction = null;
-         var w:* = 0;
-         var t:BigInteger = null;
-         var g2:BigInteger = null;
-         var i:int = e.bitLength();
-         var r:BigInteger = nbv(1);
-         if(i <= 0)
-         {
-            return r;
-         }
-         if(i < 18)
-         {
-            k = 1;
-         }
-         else
-         {
-            if(i < 48)
-            {
-               k = 3;
-            }
-            else
-            {
-               if(i < 144)
-               {
-                  k = 4;
-               }
-               else
-               {
-                  if(i < 768)
-                  {
-                     k = 5;
-                  }
-                  else
-                  {
-                     k = 6;
-                  }
-               }
-            }
-         }
-         if(i < 8)
-         {
-            z = new ClassicReduction(m);
-         }
-         else
-         {
-            if(m.isEven())
-            {
-               z = new BarrettReduction(m);
-            }
-            else
-            {
-               z = new MontgomeryReduction(m);
-            }
-         }
-         var g:Array = [];
-         var n:int = 3;
-         var k1:int = k - 1;
-         var km:int = (1 << k) - 1;
-         g[1] = z.convert(this);
-         if(k > 1)
-         {
-            g2 = new BigInteger();
-            z.sqrTo(g[1],g2);
-            while(n <= km)
-            {
-               g[n] = new BigInteger();
-               z.mulTo(g2,g[n - 2],g[n]);
-               n = n + 2;
-            }
-         }
-         var j:int = e.t - 1;
-         var is1:Boolean = true;
-         var r2:BigInteger = new BigInteger();
-         i = this.nbits(e.a[j]) - 1;
-         while(j >= 0)
-         {
-            if(i >= k1)
-            {
-               w = e.a[j] >> i - k1 & km;
-            }
-            else
-            {
-               w = (e.a[j] & (1 << i + 1) - 1) << k1 - i;
-               if(j > 0)
-               {
-                  w = w | e.a[j - 1] >> DB + i - k1;
-               }
-            }
-            n = k;
-            while((w & 1) == 0)
-            {
-               w = w >> 1;
-               n--;
-            }
-            if((i = i - n) < 0)
-            {
-               i = i + DB;
-               j--;
-            }
-            if(is1)
-            {
-               g[w].copyTo(r);
-               is1 = false;
-            }
-            else
-            {
-               while(n > 1)
-               {
-                  z.sqrTo(r,r2);
-                  z.sqrTo(r2,r);
-                  n = n - 2;
-               }
-               if(n > 0)
-               {
-                  z.sqrTo(r,r2);
-               }
-               else
-               {
-                  t = r;
-                  r = r2;
-                  r2 = t;
-               }
-               z.mulTo(r2,g[w],r);
-            }
-            while((j >= 0) && ((e.a[j] & 1 << i) == 0))
-            {
-               z.sqrTo(r,r2);
-               t = r;
-               r = r2;
-               r2 = t;
-               if(--i < 0)
-               {
-                  i = DB - 1;
-                  j--;
-               }
-            }
-         }
-         return z.revert(r);
+         /*
+          * Decompilation error
+          * Code may be obfuscated
+          * Error type: TranslateException
+          */
+         throw new IllegalOperationError("Not decompiled due to error");
       }
       
       public function gcd(a:BigInteger) : BigInteger {
@@ -1394,7 +1207,7 @@ package com.hurlant.math
          return y;
       }
       
-      function modInt(n:int) : int {
+      protected function modInt(n:int) : int {
          var i:* = 0;
          if(n <= 0)
          {
@@ -1447,13 +1260,11 @@ package com.hurlant.math
                   }
                   a.rShiftTo(1,a);
                }
-               else
+               else if(!b.isEven())
                {
-                  if(!b.isEven())
-                  {
-                     b.subTo(m,b);
-                  }
+                  b.subTo(m,b);
                }
+               
                b.rShiftTo(1,b);
             }
             while(v.isEven())
@@ -1468,13 +1279,11 @@ package com.hurlant.math
                   }
                   c.rShiftTo(1,c);
                }
-               else
+               else if(!d.isEven())
                {
-                  if(!d.isEven())
-                  {
-                     d.subTo(m,d);
-                  }
+                  d.subTo(m,d);
                }
+               
                d.rShiftTo(1,d);
             }
             if(u.compareTo(v) >= 0)
@@ -1559,7 +1368,7 @@ package com.hurlant.math
          return x.millerRabin(t);
       }
       
-      function millerRabin(t:int) : Boolean {
+      protected function millerRabin(t:int) : Boolean {
          var y:BigInteger = null;
          var j:* = 0;
          var n1:BigInteger = this.subtract(BigInteger.ONE);

@@ -20,9 +20,9 @@ package com.ankamagames.berilia.types.data
          super(x,y,width,height);
       }
       
-      private static var _mapLoader:ParallelRessourceLoader = new ParallelRessourceLoader(10);
+      private static var _mapLoader:ParallelRessourceLoader;
       
-      private static var _freeBitmap:Array = [];
+      private static var _freeBitmap:Array;
       
       public var src:Uri;
       
@@ -70,7 +70,7 @@ package com.ankamagames.berilia.types.data
          return this._bitmap;
       }
       
-      public function free(force:Boolean=false) : void {
+      public function free(force:Boolean = false) : void {
          this._active = false;
          if(force)
          {
@@ -85,7 +85,7 @@ package com.ankamagames.berilia.types.data
          this._freeTimer.start();
       }
       
-      function onDeathCountDown(e:Event) : void {
+      private function onDeathCountDown(e:Event) : void {
          if(this._freeTimer)
          {
             this._freeTimer.removeEventListener(TimerEvent.TIMER,this.onDeathCountDown);
@@ -113,7 +113,7 @@ package com.ankamagames.berilia.types.data
          }
       }
       
-      function onLoad(e:ResourceLoadedEvent) : void {
+      private function onLoad(e:ResourceLoadedEvent) : void {
          var checkScale:* = false;
          var currentScale:* = NaN;
          if((this._active) && (e.uri == this.src))
@@ -134,20 +134,16 @@ package com.ankamagames.berilia.types.data
                {
                   currentScale = this._bitmap.scaleX;
                }
-               else
+               else if(x + width > this.parent.initialWidth)
                {
-                  if(x + width > this.parent.initialWidth)
-                  {
-                     currentScale = this._bitmap.scaleY;
-                  }
-                  else
-                  {
-                     if(y + height > this.parent.initialHeight)
-                     {
-                        currentScale = this._bitmap.scaleX;
-                     }
-                  }
+                  currentScale = this._bitmap.scaleY;
                }
+               else if(y + height > this.parent.initialHeight)
+               {
+                  currentScale = this._bitmap.scaleX;
+               }
+               
+               
             }
             if((!(this._bitmap.scaleX == this._bitmap.scaleY)) && (currentScale))
             {

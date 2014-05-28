@@ -60,10 +60,12 @@ package com.ankamagames.dofus.console.debug
          {
             case "looklike":
                return "look a npc or monster, param is monser\'s or pnc\'s name, you can use autocompletion";
+            default:
+               return null;
          }
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint=0, currentParams:Array=null) : Array {
+      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array {
          var result:Array = null;
          var searchTerm:String = null;
          var name:String = null;
@@ -76,7 +78,7 @@ package com.ankamagames.dofus.console.debug
                }
                result = [];
                searchTerm = currentParams.join(" ").toLowerCase();
-               for each (name in _monsterNameList)
+               for each(name in _monsterNameList)
                {
                   if(name.indexOf(searchTerm) != -1)
                   {
@@ -84,22 +86,24 @@ package com.ankamagames.dofus.console.debug
                   }
                }
                return result;
+            default:
+               return [];
          }
       }
       
-      function parseMonster() : void {
+      private function parseMonster() : void {
          var monster:Monster = null;
          var npc:Npc = null;
          _monsters = new Dictionary();
          _monsterNameList = [];
          var monsters:Array = Monster.getMonsters();
-         for each (monster in monsters)
+         for each(monster in monsters)
          {
             _monsterNameList.push(monster.name.toLowerCase() + " {monster}");
             _monsters[monster.name.toLowerCase()] = monster.look;
          }
          monsters = Npc.getNpcs();
-         for each (npc in monsters)
+         for each(npc in monsters)
          {
             _monsterNameList.push(npc.name.toLowerCase() + " {npc}");
             _monsters[npc.name.toLowerCase()] = npc.look;

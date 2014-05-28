@@ -29,7 +29,7 @@ package com.ankamagames.berilia.components
          _tText.mouseWheelEnabled = false;
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(TextArea));
+      protected static const _log:Logger;
       
       private var _sbScrollBar:ScrollBar;
       
@@ -138,7 +138,7 @@ package com.ankamagames.berilia.components
          this._bHideScroll = hideScroll;
       }
       
-      override public function appendText(sTxt:String, style:String=null) : void {
+      override public function appendText(sTxt:String, style:String = null) : void {
          super.appendText(sTxt,style);
          if(this._bFinalized)
          {
@@ -185,7 +185,7 @@ package com.ankamagames.berilia.components
          return super.process(msg);
       }
       
-      function updateScrollBar(reset:Boolean=false) : void {
+      private function updateScrollBar(reset:Boolean = false) : void {
          if(_tText.numLines * _tText.getLineMetrics(0).height < height)
          {
             _tText.scrollV = 0;
@@ -213,7 +213,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function updateScrollBarPos() : void {
+      private function updateScrollBarPos() : void {
          if(this._nScrollPos >= 0)
          {
             this._sbScrollBar.x = this.width - this._sbScrollBar.width;
@@ -228,19 +228,19 @@ package com.ankamagames.berilia.components
          }
       }
       
-      override function updateAlign() : void {
+      override protected function updateAlign() : void {
          if(this._sbScrollBar.disabled)
          {
             super.updateAlign();
          }
       }
       
-      function onTextWheel(e:MouseEvent) : void {
+      private function onTextWheel(e:MouseEvent) : void {
          e.delta = e.delta * 3;
          this._sbScrollBar.onWheel(e);
       }
       
-      function onScroll(e:Event) : void {
+      private function onScroll(e:Event) : void {
          _tText.scrollV = this._sbScrollBar.value / this._sbScrollBar.max * _tText.maxScrollV;
       }
    }

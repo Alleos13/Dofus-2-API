@@ -31,15 +31,16 @@ package com.ankamagames.berilia.components
    {
       
       public function ScrollBar() {
+         this._common = XmlConfig.getInstance().getEntry("config.ui.skin");
          super();
          MEMORY_LOG[this] = 1;
       }
       
-      public static var MEMORY_LOG:Dictionary = new Dictionary(true);
+      public static var MEMORY_LOG:Dictionary;
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(ScrollBar));
+      protected static const _log:Logger;
       
-      private const _common:String = XmlConfig.getInstance().getEntry("config.ui.skin");
+      private const _common:String;
       
       private var _nWidth:uint = 16;
       
@@ -295,7 +296,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function scrollBarInit() : void {
+      private function scrollBarInit() : void {
          var stateChangingProperties1:Array = null;
          var stateChangingProperties2:Array = null;
          var stateChangingProperties3:Array = null;
@@ -347,7 +348,7 @@ package com.ankamagames.berilia.components
          getUi().iAmFinalized(this);
       }
       
-      function scrollBarProcess() : void {
+      private function scrollBarProcess() : void {
          var maxWL:int = Math.max(this._nWidth,this._nHeight);
          this._squareEdge = Math.min(this._nWidth,this._nHeight);
          this._nBoxSize = (maxWL - 2 * this._squareEdge) * (this._nTotal - this._nMax) / this._nTotal;
@@ -405,17 +406,15 @@ package com.ankamagames.berilia.components
             this._texMin.finalize();
             addChild(this._gcMin);
          }
+         else if(this._bVertical)
+         {
+            this._texMin.width = this._squareEdge;
+         }
          else
          {
-            if(this._bVertical)
-            {
-               this._texMin.width = this._squareEdge;
-            }
-            else
-            {
-               this._texMin.height = this._squareEdge;
-            }
+            this._texMin.height = this._squareEdge;
          }
+         
          if(!this._texMax.finalized)
          {
             if(this._bVertical)
@@ -490,7 +489,7 @@ package com.ankamagames.berilia.components
          this._texBack.mouseEnabled = true;
       }
       
-      function updateDisplayFromCurrentPos() : void {
+      private function updateDisplayFromCurrentPos() : void {
          if((this._texMin) && (this._texMax))
          {
             if(this._bVertical)
@@ -523,11 +522,11 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function approximate(nValue:Number) : Number {
+      private function approximate(nValue:Number) : Number {
          return nValue + this._nMin;
       }
       
-      function valueOfPos(nPos:Number) : int {
+      private function valueOfPos(nPos:Number) : int {
          return Math.min(Math.ceil((nPos - this._nBoxPosMin) / this._nScrollStep) * this._nStep + this._nMin,this._nBoxPosMax);
       }
       
@@ -551,7 +550,7 @@ package com.ankamagames.berilia.components
          super.remove();
       }
       
-      function clear() : void {
+      private function clear() : void {
          if((!(this._gcBox == null)) && (contains(this._gcBox)))
          {
             this._texBox.remove();
@@ -588,7 +587,7 @@ package com.ankamagames.berilia.components
                switch(MouseDownMessage(msg).target)
                {
                   case this._gcMax:
-                     for each (listener in Berilia.getInstance().UISoundListeners)
+                     for each(listener in Berilia.getInstance().UISoundListeners)
                      {
                         listener.playUISound("16015");
                      }
@@ -610,7 +609,7 @@ package com.ankamagames.berilia.components
                      EnterFrameDispatcher.addEventListener(this.onBottomArrowDown,"ScrollBarBottomArrow");
                      break;
                   case this._gcMin:
-                     for each (listener2 in Berilia.getInstance().UISoundListeners)
+                     for each(listener2 in Berilia.getInstance().UISoundListeners)
                      {
                         listener2.playUISound("16014");
                      }
@@ -703,10 +702,13 @@ package com.ankamagames.berilia.components
             case msg is MouseWheelMessage:
                addEventListener(MouseEvent.MOUSE_WHEEL,this.onWheel);
                return true;
+            default:
+               PoolsManager.getInstance().getRectanglePool().checkIn(pr);
+               return false;
          }
       }
       
-      function onDragRunning(e:Event) : void {
+      private function onDragRunning(e:Event) : void {
          var newCoord:* = 0;
          var max:* = 0;
          var curr:int = this.value;
@@ -740,7 +742,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function onTopArrowDown(e:Event) : void {
+      private function onTopArrowDown(e:Event) : void {
          var framePerSecond:Number = Berilia.getInstance().docMain.stage.frameRate;
          var currValue:int = this.value;
          if(this._nDecelerateScroll >= this._nMaxDecelerateFactor)
@@ -763,7 +765,7 @@ package com.ankamagames.berilia.components
          this._nDecelerateScroll++;
       }
       
-      function onBottomArrowDown(e:Event) : void {
+      private function onBottomArrowDown(e:Event) : void {
          var framePerSecond:Number = Berilia.getInstance().docMain.stage.frameRate;
          var currValue:int = this.value;
          var oldPos:Number = this._nCurrentPos;
@@ -787,7 +789,7 @@ package com.ankamagames.berilia.components
          this._nDecelerateScroll++;
       }
       
-      public function onWheel(e:Object, dispatchEvt:Boolean=true) : void {
+      public function onWheel(e:Object, dispatchEvt:Boolean = true) : void {
          this._nCurrentPos = this._nCurrentPos - this._nScrollStep * e.delta * this._nScrollSpeed;
          if(this._nCurrentPos > this._nBoxPosMax)
          {
@@ -804,10 +806,10 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function fakeCssLoaded() : void {
+      private function fakeCssLoaded() : void {
       }
       
-      function onCssLoaded() : void {
+      private function onCssLoaded() : void {
          var _ssSheet:ExtendedStyleSheet = null;
          var styleObj:Object = null;
          if(!this._gcMin)
@@ -835,13 +837,11 @@ package com.ankamagames.berilia.components
          {
             this._texMin.gotoAndStop = this._bDisabled?StatesEnum.STATE_DISABLED_STRING.toLowerCase():StatesEnum.STATE_NORMAL_STRING.toLowerCase();
          }
-         else
+         else if(e.target == this._texMax)
          {
-            if(e.target == this._texMax)
-            {
-               this._texMax.gotoAndStop = this._bDisabled?StatesEnum.STATE_DISABLED_STRING.toLowerCase():StatesEnum.STATE_NORMAL_STRING.toLowerCase();
-            }
+            this._texMax.gotoAndStop = this._bDisabled?StatesEnum.STATE_DISABLED_STRING.toLowerCase():StatesEnum.STATE_NORMAL_STRING.toLowerCase();
          }
+         
       }
    }
 }

@@ -34,7 +34,7 @@ package com.ankamagames.atouin.data.elements
          return _self;
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(Elements));
+      protected static const _log:Logger;
       
       public var fileVersion:uint;
       
@@ -140,7 +140,7 @@ package com.ankamagames.atouin.data.elements
          }
       }
       
-      function readElement(edId:uint) : GraphicalElementData {
+      private function readElement(edId:uint) : GraphicalElementData {
          this._rawData["position"] = this._elementsIndex[edId];
          var edType:int = this._rawData.readByte();
          var ed:GraphicalElementData = GraphicalElementFactory.getGraphicalElementData(edId,edType);

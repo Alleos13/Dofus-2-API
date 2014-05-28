@@ -113,13 +113,13 @@ package org.flintparticles.common.renderers
          this.renderParticles(_loc2_);
       }
       
-      function addParticle(param1:Particle) : void {
+      protected function addParticle(param1:Particle) : void {
       }
       
-      function removeParticle(param1:Particle) : void {
+      protected function removeParticle(param1:Particle) : void {
       }
       
-      function renderParticles(param1:Array) : void {
+      protected function renderParticles(param1:Array) : void {
       }
       
       public function get emitters() : Array {

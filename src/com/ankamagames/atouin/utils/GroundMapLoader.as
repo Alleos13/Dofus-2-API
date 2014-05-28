@@ -53,7 +53,7 @@ package com.ankamagames.atouin.utils
          }
       }
       
-      private static const _log:Logger = Log.getLogger(getQualifiedClassName(GroundMapLoader));
+      private static const _log:Logger;
       
       public static function loadGroundMap(map:Map, file:File, callBack:Function, errorCallBack:Function) : void {
       }
@@ -70,7 +70,7 @@ package com.ankamagames.atouin.utils
       
       private var _time:int = 0;
       
-      function onJPGReady(e:Event) : void {
+      private function onJPGReady(e:Event) : void {
          var bitmap:Bitmap = null;
          try
          {
@@ -94,19 +94,9 @@ package com.ankamagames.atouin.utils
             }
             onError(null);
          }
-         return;
-         if((this._map.groundCacheCurrentlyUsed == GroundCache.GROUND_CACHE_LOW_QUALITY) || (this._map.groundCacheCurrentlyUsed == GroundCache.GROUND_CACHE_MEDIUM_QUALITY))
-         {
-            bitmap.width = AtouinConstants.RESOLUTION_HIGH_QUALITY.x;
-            bitmap.height = AtouinConstants.RESOLUTION_HIGH_QUALITY.y;
-         }
-         this._loader.contentLoaderInfo.removeEventListener(Event.INIT,this.onJPGReady);
-         this._loader.contentLoaderInfo.removeEventListener(IOErrorEvent.IO_ERROR,this.onError);
-         this._loader.contentLoaderInfo.removeEventListener(ProgressEvent.PROGRESS,this.onProgress);
-         this._callBack(bitmap);
       }
       
-      function onError(e:Event) : void {
+      private function onError(e:Event) : void {
          _log.info("On a pas pu charger la map :/");
          this._errorCallBack(this._map.id);
          this._loader.contentLoaderInfo.removeEventListener(Event.INIT,this.onJPGReady);
@@ -114,14 +104,14 @@ package com.ankamagames.atouin.utils
          this._loader.contentLoaderInfo.removeEventListener(ProgressEvent.PROGRESS,this.onProgress);
       }
       
-      function onProgress(e:ProgressEvent) : void {
+      private function onProgress(e:ProgressEvent) : void {
          if(e.bytesLoaded == e.bytesTotal)
          {
             EnterFrameDispatcher.addEventListener(this.check,"GroundMapLoader");
          }
       }
       
-      function check(e:Event) : void {
+      private function check(e:Event) : void {
          if(this._time > 5)
          {
             if(!this._groundIsLoaded)

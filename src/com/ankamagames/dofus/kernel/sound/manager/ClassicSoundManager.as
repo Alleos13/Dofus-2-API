@@ -34,7 +34,6 @@ package com.ankamagames.dofus.kernel.sound.manager
    import com.ankamagames.jerakine.resources.events.ResourceLoadedEvent;
    import com.ankamagames.jerakine.resources.events.ResourceErrorEvent;
    import com.ankamagames.dofus.logic.game.common.managers.PlayedCharacterManager;
-   import __AS3__.vec.*;
    import com.ankamagames.dofus.logic.game.common.misc.DofusEntities;
    import com.ankamagames.jerakine.entities.interfaces.IEntity;
    import flash.filesystem.File;
@@ -64,7 +63,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(ClassicSoundManager));
+      protected static const _log:Logger;
       
       private static var _self:ISoundManager;
       
@@ -183,7 +182,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      public function setSubArea(pMap:Map=null) : void {
+      public function setSubArea(pMap:Map = null) : void {
          var busMusic1:IAudioBus = null;
          var busAmbiance1:IAudioBus = null;
          var busMusic2:IAudioBus = null;
@@ -199,17 +198,15 @@ package com.ankamagames.dofus.kernel.sound.manager
                busMusic1.removeEffect(this._lowPassFilter);
                busAmbiance1.removeEffect(this._lowPassFilter);
             }
-            else
+            else if((this._indoor == MapTypesEnum.OUTDOOR) && (pMap.mapType == MapTypesEnum.INDOOR))
             {
-               if((this._indoor == MapTypesEnum.OUTDOOR) && (pMap.mapType == MapTypesEnum.INDOOR))
-               {
-                  this._indoor = MapTypesEnum.INDOOR;
-                  busMusic2 = Tubul.getInstance().getBus(TubulSoundConfiguration.BUS_MUSIC_ID);
-                  busAmbiance2 = Tubul.getInstance().getBus(TubulSoundConfiguration.BUS_AMBIENT_2D_ID);
-                  busMusic2.addEffect(this._lowPassFilter);
-                  busAmbiance2.addEffect(this._lowPassFilter);
-               }
+               this._indoor = MapTypesEnum.INDOOR;
+               busMusic2 = Tubul.getInstance().getBus(TubulSoundConfiguration.BUS_MUSIC_ID);
+               busAmbiance2 = Tubul.getInstance().getBus(TubulSoundConfiguration.BUS_AMBIENT_2D_ID);
+               busMusic2.addEffect(this._lowPassFilter);
+               busAmbiance2.addEffect(this._lowPassFilter);
             }
+            
          }
          this._localizedSoundsManager.setMap(pMap);
          if(this.soundIsActivate)
@@ -228,7 +225,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          this._ambientManager.playMusicAndAmbient();
       }
       
-      public function playUISound(pSoundId:String, pLoop:Boolean=false) : void {
+      public function playUISound(pSoundId:String, pLoop:Boolean = false) : void {
          if(!this.checkIfAvailable())
          {
             return;
@@ -245,7 +242,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      public function playSound(pSound:ISound, pLoop:Boolean=false, pLoops:int=-1) : ISound {
+      public function playSound(pSound:ISound, pLoop:Boolean = false, pLoops:int = -1) : ISound {
          if(!this.checkIfAvailable())
          {
             return null;
@@ -274,7 +271,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          this._fightMusicManager.stopFightMusic();
       }
       
-      public function handleFLAEvent(pAnimationName:String, pType:String, pParams:String, pSprite:Object=null) : void {
+      public function handleFLAEvent(pAnimationName:String, pType:String, pParams:String, pSprite:Object = null) : void {
          var soundType:uint = 0;
          var busId:uint = 0;
          var rollOff:RollOffPreset = null;
@@ -369,7 +366,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          else
          {
             sounds = this.entitySounds[pEntityId];
-            for each (isound in sounds)
+            for each(isound in sounds)
             {
                if(isound is LocalizedSound)
                {
@@ -401,12 +398,12 @@ package com.ankamagames.dofus.kernel.sound.manager
             return;
          }
          var compt:uint = 0;
-         for each (isound in this._entitySounds[entityId])
+         for each(isound in this._entitySounds[entityId])
          {
             if(isound == pISound)
             {
                this._entitySounds[entityId].splice(compt,1);
-               delete this._reverseEntitySounds[[pISound]];
+               delete this._reverseEntitySounds[pISound];
                if(this._entitySounds[entityId].length == 0)
                {
                   this._entitySounds[entityId] = null;
@@ -424,7 +421,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          {
             return;
          }
-         for each (isound in this._entityDictionary[pEntityId])
+         for each(isound in this._entityDictionary[pEntityId])
          {
             fade = new VolumeFadeEffect(-1,0,0.1);
             isound.stop(fade);
@@ -442,7 +439,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          this._XMLSoundFilesResourceLoader.load(this._XMLSoundFilesToLoad);
       }
       
-      function playIntro() : void {
+      private function playIntro() : void {
          if(!this.checkIfAvailable())
          {
             return;
@@ -463,7 +460,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          fadeIntro.start();
       }
       
-      public function playIntroMusic(pFirstHarmonic:Boolean=true) : void {
+      public function playIntroMusic(pFirstHarmonic:Boolean = true) : void {
          var soundId:String = null;
          var busId:uint = 0;
          var soundPath:String = null;
@@ -524,7 +521,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      public function stopIntroMusic(pImmediatly:Boolean=false) : void {
+      public function stopIntroMusic(pImmediatly:Boolean = false) : void {
          var fadeOutOne:VolumeFadeEffect = null;
          var fadeOutTwo:VolumeFadeEffect = null;
          if(!this.checkIfAvailable())
@@ -561,7 +558,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          this._introHarmonicTwoLoaded = false;
       }
       
-      public function removeAllSounds(pFade:Number=0, pFadeTime:Number=0) : void {
+      public function removeAllSounds(pFade:Number = 0, pFadeTime:Number = 0) : void {
          var iBus:IAudioBus = null;
          if(this._introHarmonicOne)
          {
@@ -571,7 +568,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          {
             this._introHarmonicTwo.eventDispatcher.removeEventListener(LoadingSoundEvent.LOADED,this.onIntroMusicHarmonicTwoLoaded);
          }
-         for each (iBus in Tubul.getInstance().audioBusList)
+         for each(iBus in Tubul.getInstance().audioBusList)
          {
             iBus.clear();
          }
@@ -589,25 +586,23 @@ package com.ankamagames.dofus.kernel.sound.manager
          this.removeAllSounds();
       }
       
-      function findXmlSoundsInDirectory(pDirectory:File) : void {
+      private function findXmlSoundsInDirectory(pDirectory:File) : void {
          var filesAndDirectories:Array = null;
          var file:File = null;
          if(pDirectory.exists)
          {
             filesAndDirectories = pDirectory.getDirectoryListing();
-            for each (file in filesAndDirectories)
+            for each(file in filesAndDirectories)
             {
                if((file.isDirectory) && (!(file.name == ".svn")) && (!(file.name == "presets")))
                {
                   this.findXmlSoundsInDirectory(file);
                }
-               else
+               else if((file.extension) && (file.extension.toUpperCase() == "XML"))
                {
-                  if((file.extension) && (file.extension.toUpperCase() == "XML"))
-                  {
-                     this._XMLSoundFilesToLoad.push(new Uri(file.nativePath));
-                  }
+                  this._XMLSoundFilesToLoad.push(new Uri(file.nativePath));
                }
+               
             }
          }
          else
@@ -617,7 +612,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      function init() : void {
+      private function init() : void {
          this._previousSubareaId = -1;
          this._localizedSoundsManager = new LocalizedSoundsManager();
          this._ambientManager = new AmbientSoundsManager();
@@ -631,7 +626,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          this._lowPassFilter = new LowPassFilter();
       }
       
-      function initTubul() : void {
+      private function initTubul() : void {
          if(!this.soundIsActivate)
          {
             return;
@@ -666,7 +661,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          this.onTubulActivation(e);
       }
       
-      function desactivateTubul() : void {
+      private function desactivateTubul() : void {
          if(this.soundIsActivate)
          {
             return;
@@ -682,7 +677,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          Tubul.getInstance().clearBuses();
       }
       
-      function checkIfAvailable() : Boolean {
+      private function checkIfAvailable() : Boolean {
          return (this._forceSounds) && (this._soundDirectoryExist);
       }
       
@@ -765,23 +760,23 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      function onXMLPresetsRollOffLoaded(pEvent:ResourceLoadedEvent) : void {
+      private function onXMLPresetsRollOffLoaded(pEvent:ResourceLoadedEvent) : void {
          var preset:XML = null;
          var rollOffPreset:RollOffPreset = null;
          var presets:XMLList = (pEvent.resource as XML).elements();
-         for each (preset in presets)
+         for each(preset in presets)
          {
             rollOffPreset = new RollOffPreset(uint(preset.GainMax),uint(preset.DistMax),uint(preset.DistMaxSat));
             this._rollOffPresets[preset.@id] = rollOffPreset;
          }
       }
       
-      function onXMLPresetsRollOffFailed(pEvent:ResourceErrorEvent) : void {
+      private function onXMLPresetsRollOffFailed(pEvent:ResourceErrorEvent) : void {
          Tubul.getInstance().activate(false);
          _log.error("An XML sound file failed to load : " + pEvent.uri + " / [" + pEvent.errorCode + "] " + pEvent.errorMsg);
       }
       
-      function onXMLSoundFileLoaded(pEvent:ResourceLoadedEvent) : void {
+      private function onXMLSoundFileLoaded(pEvent:ResourceLoadedEvent) : void {
          var filename:String = pEvent.uri.fileName.split("." + pEvent.uri.fileType)[0];
          var splitedFilename:Array = filename.split("\\");
          filename = splitedFilename.pop();
@@ -799,22 +794,22 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      function onXMLSoundFileFailed(pEvent:ResourceErrorEvent) : void {
+      private function onXMLSoundFileFailed(pEvent:ResourceErrorEvent) : void {
          _log.warn("The xml sound file " + pEvent.uri + " failed to load !!");
       }
       
-      function onRemoveSoundInTubul(pEvent:AudioBusEvent) : void {
+      private function onRemoveSoundInTubul(pEvent:AudioBusEvent) : void {
          this.removeSoundEntity(pEvent.sound);
       }
       
-      function onSoundAdminComplete(pEvent:SoundCompleteEvent) : void {
+      private function onSoundAdminComplete(pEvent:SoundCompleteEvent) : void {
          pEvent.sound.eventDispatcher.removeEventListener(SoundCompleteEvent.SOUND_COMPLETE,this.onSoundAdminComplete);
          var soundId:String = pEvent.sound.uri.fileName.split(".mp3")[0];
          this._adminSounds[soundId] = null;
-         delete this._adminSounds[[soundId]];
+         delete this._adminSounds[soundId];
       }
       
-      function onIntroMusicHarmonicOneLoaded(pEvent:LoadingSoundEvent) : void {
+      private function onIntroMusicHarmonicOneLoaded(pEvent:LoadingSoundEvent) : void {
          this._introHarmonicOneLoaded = true;
          if(this._introHarmonicTwoLoaded)
          {
@@ -822,7 +817,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      function onIntroMusicHarmonicTwoLoaded(pEvent:LoadingSoundEvent) : void {
+      private function onIntroMusicHarmonicTwoLoaded(pEvent:LoadingSoundEvent) : void {
          this._introHarmonicTwoLoaded = true;
          if(this._introHarmonicOneLoaded)
          {
@@ -830,7 +825,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      function onTubulActivation(pEvent:TubulEvent) : void {
+      private function onTubulActivation(pEvent:TubulEvent) : void {
          switch(pEvent.activated)
          {
             case true:

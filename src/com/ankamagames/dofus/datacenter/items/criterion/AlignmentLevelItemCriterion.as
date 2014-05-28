@@ -21,7 +21,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          return clonedCriterion;
       }
       
-      override function getCriterion() : int {
+      override protected function getCriterion() : int {
          var alignmentLevel:uint = PlayedCharacterManager.getInstance().characteristics.alignmentInfos.characterPower - PlayedCharacterManager.getInstance().id;
          return alignmentLevel;
       }

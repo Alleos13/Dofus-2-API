@@ -22,7 +22,7 @@ package com.ankamagames.berilia.uiRender
          this._xDoc = xDoc;
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(XmlPreProcessor));
+      protected static const _log:Logger;
       
       private var _xDoc:XMLDocument;
       
@@ -52,7 +52,7 @@ package com.ankamagames.berilia.uiRender
          }
       }
       
-      function matchImport(node:XMLNode) : void {
+      private function matchImport(node:XMLNode) : void {
          var currNode:XMLNode = null;
          if(node == null)
          {
@@ -75,18 +75,16 @@ package com.ankamagames.berilia.uiRender
                currNode.removeNode();
                i--;
             }
-            else
+            else if(currNode != null)
             {
-               if(currNode != null)
-               {
-                  this.matchImport(currNode);
-               }
+               this.matchImport(currNode);
             }
+            
             i++;
          }
       }
       
-      function replaceTemplateCall(node:XMLNode) : Boolean {
+      private function replaceTemplateCall(node:XMLNode) : Boolean {
          var currNode:XMLNode = null;
          var currVarNode:XMLNode = null;
          var templateNode:XMLNode = null;
@@ -152,7 +150,7 @@ package com.ankamagames.berilia.uiRender
          return bRes;
       }
       
-      function onTemplateLoaded(e:TemplateLoadedEvent) : void {
+      private function onTemplateLoaded(e:TemplateLoadedEvent) : void {
          if((TemplateManager.getInstance().areLoaded(this._aImportFile)) && (this._bMustBeRendered))
          {
             this._bMustBeRendered = this.replaceTemplateCall(this._xDoc.firstChild);

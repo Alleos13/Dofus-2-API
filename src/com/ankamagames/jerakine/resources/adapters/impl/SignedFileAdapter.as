@@ -16,7 +16,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
    public class SignedFileAdapter extends AbstractUrlLoaderAdapter implements IAdapter
    {
       
-      public function SignedFileAdapter(signatureKey:SignatureKey=null, rawContent:Boolean=false) {
+      public function SignedFileAdapter(signatureKey:SignatureKey = null, rawContent:Boolean = false) {
          super();
          this._rawContent = rawContent;
          if(signatureKey)
@@ -74,7 +74,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          super.free();
       }
       
-       function getResource(dataFormat:String, data:*) : * {
+      override protected function getResource(dataFormat:String, data:*) : * {
          return this._resource;
       }
       
@@ -82,7 +82,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          return ResourceType.RESOURCE_SIGNED_FILE;
       }
       
-       function process(dataFormat:String, data:*) : void {
+      override protected function process(dataFormat:String, data:*) : void {
          var sig:Signature = new Signature(this._signatureKey);
          var content:ByteArray = new ByteArray();
          try
@@ -118,7 +118,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          }
       }
       
-       function getDataFormat() : String {
+      override protected function getDataFormat() : String {
          return URLLoaderDataFormat.BINARY;
       }
       

@@ -40,15 +40,15 @@ package com.ankamagames.jerakine.resources.adapters.impl
       
       private var _scriptClass:Class;
       
-       function getResource(dataFormat:String, data:*) : * {
+      override protected function getResource(dataFormat:String, data:*) : * {
          return this._scriptClass;
       }
       
-	   override public function getResourceType() : uint {
+      override public function getResourceType() : uint {
          return ResourceType.RESOURCE_DX;
       }
       
-       function process(dataFormat:String, data:*) : void {
+      override protected function process(dataFormat:String, data:*) : void {
          var file:uint = 0;
          var version:uint = 0;
          var keyLen:int = 0;
@@ -89,7 +89,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          ldr.loadBytes(swf,loaderContext);
       }
       
-       function getDataFormat() : String {
+      override protected function getDataFormat() : String {
          return URLLoaderDataFormat.BINARY;
       }
       
@@ -112,13 +112,11 @@ package com.ankamagames.jerakine.resources.adapters.impl
          {
             errCode = ResourceErrorCode.DX_MALFORMED_BINARY;
          }
-         else
+         else if(ee is SecurityErrorEvent)
          {
-            if(ee is SecurityErrorEvent)
-            {
-               errCode = ResourceErrorCode.DX_SECURITY_ERROR;
-            }
+            errCode = ResourceErrorCode.DX_SECURITY_ERROR;
          }
+         
          dispatchFailure("Script loading from binaries failed: " + ee.text,errCode);
       }
    }

@@ -12,7 +12,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          super();
       }
       
-       function getResource(ldr:LoaderInfo) : * {
+      override protected function getResource(ldr:LoaderInfo) : * {
          return ldr.loader.content;
       }
       

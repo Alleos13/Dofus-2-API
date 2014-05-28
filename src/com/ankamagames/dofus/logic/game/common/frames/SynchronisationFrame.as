@@ -25,7 +25,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          super();
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(SynchronisationFrame));
+      protected static const _log:Logger;
       
       private static const STEP_TIME:uint = 2000;
       
@@ -63,17 +63,19 @@ package com.ankamagames.dofus.logic.game.common.frames
                snMsg.initSequenceNumberMessage(this._synchroStep);
                ConnectionsHandler.getConnection().send(snMsg);
                return true;
+            default:
+               return false;
          }
       }
       
-      function checkSpeedHack(pEvt:TimerEvent) : void {
+      private function checkSpeedHack(pEvt:TimerEvent) : void {
          this._timeToTest.stop();
          this._creationTimeFlash = getTimer();
          this._creationTimeOs = new Date().time;
          this._timerSpeedHack.start();
       }
       
-      function onTimerComplete(pEvt:TimerEvent) : void {
+      private function onTimerComplete(pEvt:TimerEvent) : void {
          this._timerSpeedHack.stop();
          var flashValue:uint = getTimer() - this._creationTimeFlash;
          var osValue:uint = new Date().time - this._creationTimeOs;

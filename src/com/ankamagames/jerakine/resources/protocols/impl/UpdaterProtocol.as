@@ -17,7 +17,7 @@ package com.ankamagames.jerakine.resources.protocols.impl
          throw new Error("Unimplemented stub.");
       }
       
-       function release() : void {
+      override protected function release() : void {
          throw new Error("Unimplemented stub.");
       }
    }

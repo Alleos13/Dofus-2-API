@@ -106,13 +106,13 @@ package com.ankamagames.berilia.types.data
             output.writeBytes(this._output);
             this._output.position = this._output.length;
             listBuffer = new ByteArray();
-            for (uiId in this._uiListPosition)
+            for(uiId in this._uiListPosition)
             {
                listBuffer.writeUTF(uiId);
                listBuffer.writeInt(0);
             }
             listBuffer.position = 0;
-            for (uiId in this._uiListPosition)
+            for(uiId in this._uiListPosition)
             {
                listBuffer.readUTF();
                listBuffer.writeInt(this._uiListPosition[uiId] + this._output.length + listBuffer.length);
@@ -123,27 +123,27 @@ package com.ankamagames.berilia.types.data
          }
       }
       
-      function initWriteMode() : void {
+      private function initWriteMode() : void {
          this._output = new ByteArray();
          this._uiBuffer = new ByteArray();
          this._uiListPosition = new Dictionary();
          this._uiBuffer.objectEncoding = ObjectEncoding.AMF3;
       }
       
-      function makeHeader(uiModule:UiModule) : void {
+      private function makeHeader(uiModule:UiModule) : void {
          this._output.writeUTF("D2UI");
          this._output.writeUTF(uiModule.rawXml.toXMLString());
          this._uiListStartPosition = this._output.position;
          this._output.writeShort(0);
       }
       
-      function readUidefinition(id:String) : UiDefinition {
+      private function readUidefinition(id:String) : UiDefinition {
          this._input.objectEncoding = ObjectEncoding.AMF3;
          this._input.position = this._uiListPosition[id];
          return this._input.readObject();
       }
       
-      function writeUiDefinition(definition:UiDefinition, ui:UiData) : void {
+      private function writeUiDefinition(definition:UiDefinition, ui:UiData) : void {
          this._definitionCount++;
          this._uiListPosition[ui.name] = this._uiBuffer.position;
          this._uiBuffer.objectEncoding = ObjectEncoding.AMF3;

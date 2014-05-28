@@ -29,9 +29,9 @@ package com.ankamagames.jerakine.resources.adapters
          MEMORY_LOG[this] = 1;
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(AbstractLoaderAdapter));
+      protected static const _log:Logger;
       
-      public static var MEMORY_LOG:Dictionary = new Dictionary(true);
+      public static var MEMORY_LOG:Dictionary;
       
       private var _ldr:PoolableLoader;
       
@@ -95,7 +95,7 @@ package com.ankamagames.jerakine.resources.adapters
          this._uri = null;
       }
       
-      function getResource(ldr:LoaderInfo) : * {
+      protected function getResource(ldr:LoaderInfo) : * {
          throw new AbstractMethodCallError("This method should be overrided.");
       }
       
@@ -135,22 +135,22 @@ package com.ankamagames.jerakine.resources.adapters
          this._ldr = null;
       }
       
-      function init(ldr:LoaderInfo) : void {
+      protected function init(ldr:LoaderInfo) : void {
          var res:* = this.getResource(LoaderInfo(ldr));
          this.releaseLoader();
          this._observer.onLoaded(this._uri,this.getResourceType(),res);
       }
       
-      function onInit(e:Event) : void {
+      protected function onInit(e:Event) : void {
          this.init(LoaderInfo(e.target));
       }
       
-      function onError(ee:ErrorEvent) : void {
+      protected function onError(ee:ErrorEvent) : void {
          this.releaseLoader();
          this._observer.onFailed(this._uri,ee.text,ResourceErrorCode.RESOURCE_NOT_FOUND);
       }
       
-      function onProgress(pe:ProgressEvent) : void {
+      protected function onProgress(pe:ProgressEvent) : void {
          this._observer.onProgress(this._uri,pe.bytesLoaded,pe.bytesTotal);
       }
    }

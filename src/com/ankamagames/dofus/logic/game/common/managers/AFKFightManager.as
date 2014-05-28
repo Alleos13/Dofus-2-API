@@ -24,7 +24,7 @@ package com.ankamagames.dofus.logic.game.common.managers
       
       private static var _self:AFKFightManager;
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(AFKFightManager));
+      protected static const _log:Logger;
       
       public static function getInstance() : AFKFightManager {
          if(!_self)
@@ -113,13 +113,13 @@ package com.ankamagames.dofus.logic.game.common.managers
          return this._enabled;
       }
       
-      function onActivity(event:Event) : void {
+      private function onActivity(event:Event) : void {
          _log.info("Activity detected. Player is not AFK");
          this.confirm = false;
          this.enabled = false;
       }
       
-      function onTimer(event:Event) : void {
+      private function onTimer(event:Event) : void {
          this._securityTimerUp = true;
       }
    }

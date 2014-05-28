@@ -16,12 +16,11 @@ package com.ankamagames.dofus.kernel.updaterv2
    import flash.errors.IOError;
    import com.ankamagames.jerakine.json.JSONDecoder;
    import com.ankamagames.dofus.kernel.updaterv2.messages.UpdaterMessageFactory;
-   import __AS3__.vec.*;
    
    public class UpdaterConnexionHelper extends Object
    {
       
-      public function UpdaterConnexionHelper(autoConnect:Boolean=true) {
+      public function UpdaterConnexionHelper(autoConnect:Boolean = true) {
          super();
          this._buffer = new Vector.<IUpdaterOutputMessage>();
          this._socket = new Socket();
@@ -34,7 +33,7 @@ package com.ankamagames.dofus.kernel.updaterv2
          }
       }
       
-      private static const logger:Logger = Log.getLogger(getQualifiedClassName(UpdaterConnexionHelper));
+      private static const logger:Logger;
       
       private static const LOCALHOST:String = "127.0.0.1";
       
@@ -95,7 +94,7 @@ package com.ankamagames.dofus.kernel.updaterv2
          return true;
       }
       
-      function dispatchConnected() : void {
+      private function dispatchConnected() : void {
          var i:int = 0;
          while(i < this._handlers.length)
          {
@@ -104,7 +103,7 @@ package com.ankamagames.dofus.kernel.updaterv2
          }
       }
       
-      function dispatchRagquit() : void {
+      private function dispatchRagquit() : void {
          var i:int = 0;
          while(i < this._handlers.length)
          {
@@ -113,7 +112,7 @@ package com.ankamagames.dofus.kernel.updaterv2
          }
       }
       
-      function dispatchMessage(msg:IUpdaterInputMessage) : void {
+      private function dispatchMessage(msg:IUpdaterInputMessage) : void {
          var i:int = 0;
          while(i < this._handlers.length)
          {
@@ -122,7 +121,7 @@ package com.ankamagames.dofus.kernel.updaterv2
          }
       }
       
-      function onConnectionOpened(event:Event) : void {
+      private function onConnectionOpened(event:Event) : void {
          logger.info("Connected to the updater on port : " + this._port);
          this._socket.removeEventListener(Event.CONNECT,this.onConnectionOpened);
          StatisticReportingManager.getInstance().report("UpdaterConnexion - " + BuildInfos.BUILD_TYPE + " - " + BuildInfos.BUILD_VERSION,"success");
@@ -135,13 +134,13 @@ package com.ankamagames.dofus.kernel.updaterv2
          }
       }
       
-      function onConnectionClosed(event:Event) : void {
+      private function onConnectionClosed(event:Event) : void {
          logger.info("Updater connection has been closed");
          this.removeEventListeners();
          this.dispatchRagquit();
       }
       
-      function onIOError(event:IOErrorEvent) : void {
+      private function onIOError(event:IOErrorEvent) : void {
          logger.error("Error : [" + event.errorID + "] " + event.text);
          if(CommandLineArguments.getInstance().hasArgument("update-server-port"))
          {
@@ -153,7 +152,7 @@ package com.ankamagames.dofus.kernel.updaterv2
          }
       }
       
-      function onSocketData(event:ProgressEvent) : void {
+      private function onSocketData(event:ProgressEvent) : void {
          var content:String = null;
          var messages:Vector.<String> = null;
          var i:int = 0;
@@ -192,7 +191,7 @@ package com.ankamagames.dofus.kernel.updaterv2
          }
       }
       
-      function splitPacket(raw:String) : Vector.<String> {
+      private function splitPacket(raw:String) : Vector.<String> {
          var c:String = null;
          var depth:int = 0;
          var message:String = "";
@@ -205,13 +204,11 @@ package com.ankamagames.dofus.kernel.updaterv2
             {
                depth++;
             }
-            else
+            else if(c == "}")
             {
-               if(c == "}")
-               {
-                  depth--;
-               }
+               depth--;
             }
+            
             message = message + c;
             if(depth == 0)
             {
@@ -226,7 +223,7 @@ package com.ankamagames.dofus.kernel.updaterv2
          return messages;
       }
       
-      function setEventListeners() : void {
+      protected function setEventListeners() : void {
          if(this._socket)
          {
             this._socket.addEventListener(Event.CONNECT,this.onConnectionOpened);
@@ -236,7 +233,7 @@ package com.ankamagames.dofus.kernel.updaterv2
          }
       }
       
-      function removeEventListeners() : void {
+      protected function removeEventListeners() : void {
          if(this._socket)
          {
             this._socket.removeEventListener(Event.CONNECT,this.onConnectionOpened);

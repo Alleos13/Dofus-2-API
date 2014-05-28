@@ -34,7 +34,7 @@ package com.ankamagames.dofus.datacenter.effects
       
       private static const UNKNOWN_NAME:String = "???";
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(EffectInstance));
+      protected static const _log:Logger;
       
       private static const UNDEFINED_CATEGORY:int = -2;
       
@@ -229,7 +229,7 @@ package com.ankamagames.dofus.datacenter.effects
          this._theoricDescription = UNDEFINED_DESCRIPTION;
       }
       
-      function getTurnCountStr(bShowLast:Boolean) : String {
+      private function getTurnCountStr(bShowLast:Boolean) : String {
          var sTmp:String = new String();
          if(this.delay > 0)
          {
@@ -259,84 +259,84 @@ package com.ankamagames.dofus.datacenter.effects
          return I18n.getUiText("ui.common.infinit");
       }
       
-      function getEmoticonName(id:int) : String {
+      private function getEmoticonName(id:int) : String {
          var o:Emoticon = Emoticon.getEmoticonById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      function getItemTypeName(id:int) : String {
+      private function getItemTypeName(id:int) : String {
          var o:ItemType = ItemType.getItemTypeById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      function getMonsterName(id:int) : String {
+      private function getMonsterName(id:int) : String {
          var o:Monster = Monster.getMonsterById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      function getCompanionName(id:int) : String {
+      private function getCompanionName(id:int) : String {
          var o:Companion = Companion.getCompanionById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      function getMonsterGrade(pId:int, pGrade:int) : String {
+      private function getMonsterGrade(pId:int, pGrade:int) : String {
          var m:Monster = Monster.getMonsterById(pId);
          return m?m.getMonsterGrade(pGrade).level.toString():UNKNOWN_NAME;
       }
       
-      function getSpellName(id:int) : String {
+      private function getSpellName(id:int) : String {
          var o:Spell = Spell.getSpellById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      function getSpellLevelName(id:int) : String {
+      private function getSpellLevelName(id:int) : String {
          var o:SpellLevel = SpellLevel.getLevelById(id);
          var name:String = o?this.getSpellName(o.spellId):UNKNOWN_NAME;
          trace(name);
          return o?this.getSpellName(o.spellId):UNKNOWN_NAME;
       }
       
-      function getJobName(id:int) : String {
+      private function getJobName(id:int) : String {
          var o:Job = Job.getJobById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      function getDocumentTitle(id:int) : String {
+      private function getDocumentTitle(id:int) : String {
          var o:Document = Document.getDocumentById(id);
          return o?o.title:UNKNOWN_NAME;
       }
       
-      function getAlignmentSideName(id:int) : String {
+      private function getAlignmentSideName(id:int) : String {
          var o:AlignmentSide = AlignmentSide.getAlignmentSideById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      function getItemName(id:int) : String {
+      private function getItemName(id:int) : String {
          var o:Item = Item.getItemById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      function getMonsterSuperRaceName(id:int) : String {
+      private function getMonsterSuperRaceName(id:int) : String {
          var o:MonsterSuperRace = MonsterSuperRace.getMonsterSuperRaceById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      function getMonsterRaceName(id:int) : String {
+      private function getMonsterRaceName(id:int) : String {
          var o:MonsterRace = MonsterRace.getMonsterRaceById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      function getTitleName(id:int) : String {
+      private function getTitleName(id:int) : String {
          var o:Title = Title.getTitleById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      function getSpellStateName(id:int) : String {
+      private function getSpellStateName(id:int) : String {
          var o:SpellState = SpellState.getSpellStateById(id);
          return o?o.name:UNKNOWN_NAME;
       }
       
-      function parseZone() : void {
+      private function parseZone() : void {
          var params:Array = null;
          var hasMinSize:* = false;
          if((this.rawZone) && (this.rawZone.length))
@@ -388,7 +388,7 @@ package com.ankamagames.dofus.datacenter.effects
          }
       }
       
-      function prepareDescription(desc:String, effectId:uint) : String {
+      private function prepareDescription(desc:String, effectId:uint) : String {
          var aTmp:Array = null;
          var nYear:String = null;
          var nMonth:String = null;
@@ -515,24 +515,20 @@ package com.ankamagames.dofus.datacenter.effects
                   {
                      aTmp[0] = I18n.getUiText("ui.petWeight.fat",[aTmp[1]]);
                   }
+                  else if(aTmp[2] > 6)
+                  {
+                     aTmp[0] = I18n.getUiText("ui.petWeight.lean",[aTmp[2]]);
+                  }
+                  else if((this is EffectInstanceInteger) && (aTmp[0] > 6))
+                  {
+                     aTmp[0] = I18n.getUiText("ui.petWeight.lean",[aTmp[0]]);
+                  }
                   else
                   {
-                     if(aTmp[2] > 6)
-                     {
-                        aTmp[0] = I18n.getUiText("ui.petWeight.lean",[aTmp[2]]);
-                     }
-                     else
-                     {
-                        if((this is EffectInstanceInteger) && (aTmp[0] > 6))
-                        {
-                           aTmp[0] = I18n.getUiText("ui.petWeight.lean",[aTmp[0]]);
-                        }
-                        else
-                        {
-                           aTmp[0] = I18n.getUiText("ui.petWeight.nominal");
-                        }
-                     }
+                     aTmp[0] = I18n.getUiText("ui.petWeight.nominal");
                   }
+                  
+                  
                   break;
                case 807:
                   if(aTmp[0])
@@ -603,6 +599,8 @@ package com.ankamagames.dofus.datacenter.effects
                      case LanguageEnum.LANG_EN:
                         aTmp[0] = nMonth + "/" + nDay + "/" + nYear + " " + nHours + ":" + nMinutes;
                         break;
+                     default:
+                        aTmp[0] = nMonth + "/" + nDay + "/" + nYear + " " + nHours + ":" + nMinutes;
                   }
                   break;
             }

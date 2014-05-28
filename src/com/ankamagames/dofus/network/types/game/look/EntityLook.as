@@ -1,7 +1,6 @@
 package com.ankamagames.dofus.network.types.game.look
 {
    import com.ankamagames.jerakine.network.INetworkType;
-   import __AS3__.vec.*;
    import flash.utils.IDataOutput;
    import flash.utils.IDataInput;
    
@@ -32,7 +31,7 @@ package com.ankamagames.dofus.network.types.game.look
          return 55;
       }
       
-      public function initEntityLook(bonesId:uint=0, skins:Vector.<uint>=null, indexedColors:Vector.<int>=null, scales:Vector.<int>=null, subentities:Vector.<SubEntity>=null) : EntityLook {
+      public function initEntityLook(bonesId:uint = 0, skins:Vector.<uint> = null, indexedColors:Vector.<int> = null, scales:Vector.<int> = null, subentities:Vector.<SubEntity> = null) : EntityLook {
          this.bonesId = bonesId;
          this.skins = skins;
          this.indexedColors = indexedColors;
@@ -62,7 +61,7 @@ package com.ankamagames.dofus.network.types.game.look
          {
             output.writeShort(this.bonesId);
             output.writeShort(this.skins.length);
-            var _i2 = 0;
+            _i2 = 0;
             while(_i2 < this.skins.length)
             {
                if(this.skins[_i2] < 0)
@@ -77,21 +76,21 @@ package com.ankamagames.dofus.network.types.game.look
                }
             }
             output.writeShort(this.indexedColors.length);
-            var _i3 = 0;
+            _i3 = 0;
             while(_i3 < this.indexedColors.length)
             {
                output.writeInt(this.indexedColors[_i3]);
                _i3++;
             }
             output.writeShort(this.scales.length);
-            var _i4 = 0;
+            _i4 = 0;
             while(_i4 < this.scales.length)
             {
                output.writeShort(this.scales[_i4]);
                _i4++;
             }
             output.writeShort(this.subentities.length);
-            var _i5 = 0;
+            _i5 = 0;
             while(_i5 < this.subentities.length)
             {
                (this.subentities[_i5] as SubEntity).serializeAs_SubEntity(output);
@@ -117,8 +116,8 @@ package com.ankamagames.dofus.network.types.game.look
          }
          else
          {
-            var _skinsLen = input.readUnsignedShort();
-            var _i2 = 0;
+            _skinsLen = input.readUnsignedShort();
+            _i2 = 0;
             while(_i2 < _skinsLen)
             {
                _val2 = input.readShort();
@@ -133,24 +132,24 @@ package com.ankamagames.dofus.network.types.game.look
                   continue;
                }
             }
-            var _indexedColorsLen = input.readUnsignedShort();
-            var _i3 = 0;
+            _indexedColorsLen = input.readUnsignedShort();
+            _i3 = 0;
             while(_i3 < _indexedColorsLen)
             {
                _val3 = input.readInt();
                this.indexedColors.push(_val3);
                _i3++;
             }
-            var _scalesLen = input.readUnsignedShort();
-            var _i4 = 0;
+            _scalesLen = input.readUnsignedShort();
+            _i4 = 0;
             while(_i4 < _scalesLen)
             {
                _val4 = input.readShort();
                this.scales.push(_val4);
                _i4++;
             }
-            var _subentitiesLen = input.readUnsignedShort();
-            var _i5 = 0;
+            _subentitiesLen = input.readUnsignedShort();
+            _i5 = 0;
             while(_i5 < _subentitiesLen)
             {
                _item5 = new SubEntity();

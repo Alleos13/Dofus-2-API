@@ -97,7 +97,7 @@ package com.ankamagames.berilia.components.gridRenderer
          this._grid = g;
       }
       
-      public function render(data:*, index:uint, selected:Boolean, subIndex:uint=0) : DisplayObject {
+      public function render(data:*, index:uint, selected:Boolean, subIndex:uint = 0) : DisplayObject {
          var mainUi:UiRootContainer = this._grid.getUi();
          this._uiCtr = new UiRootContainer(StageShareManager.stage,mainUi.uiModule.uis[this._sUiName],this._ctr);
          this._uiCtr.uiModule = mainUi.uiModule;
@@ -115,7 +115,7 @@ package com.ankamagames.berilia.components.gridRenderer
          }
       }
       
-      public function update(data:*, index:uint, dispObj:DisplayObject, selected:Boolean, subIndex:uint=0) : void {
+      public function update(data:*, index:uint, dispObj:DisplayObject, selected:Boolean, subIndex:uint = 0) : void {
          if(dispObj is UiRootContainer)
          {
             if((UiRootContainer(dispObj).ready) && (Object(UiRootContainer(dispObj).uiClass)))
@@ -162,7 +162,7 @@ package com.ankamagames.berilia.components.gridRenderer
          return functionName;
       }
       
-      function onItemUiLoaded(e:UiRenderEvent) : void {
+      private function onItemUiLoaded(e:UiRenderEvent) : void {
          var data:WaitingUpdate = null;
          if(this._dWaitingUpdate[e.uiTarget])
          {
@@ -172,7 +172,7 @@ package com.ankamagames.berilia.components.gridRenderer
          }
       }
       
-      function updateBackground(uiContainer:UiRootContainer, index:uint) : void {
+      private function updateBackground(uiContainer:UiRootContainer, index:uint) : void {
          var t:ColorTransform = null;
          var shape:Shape = null;
          if((this._bgColor1) || (this._bgColor2))

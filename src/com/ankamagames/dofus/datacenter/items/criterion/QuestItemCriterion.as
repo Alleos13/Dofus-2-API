@@ -54,7 +54,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          switch(s)
          {
             case "Qa":
-               for each (questA in questFrame.getActiveQuests())
+               for each(questA in questFrame.getActiveQuests())
                {
                   if(questA.questId == this._questId)
                   {
@@ -75,7 +75,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          return clonedCriterion;
       }
       
-      override function getCriterion() : int {
+      override protected function getCriterion() : int {
          return PlayedCharacterManager.getInstance().infos.level;
       }
    }

@@ -78,7 +78,7 @@ package com.ankamagames.jerakine.resources.adapters
          this._uri = null;
       }
       
-      function getResource(ldr:LoaderInfo) : * {
+      protected function getResource(ldr:LoaderInfo) : * {
          return this._ldr;
       }
       
@@ -113,19 +113,19 @@ package com.ankamagames.jerakine.resources.adapters
          this._ldr = null;
       }
       
-      function onInit(e:Event) : void {
+      protected function onInit(e:Event) : void {
          var res:* = this.getResource(LoaderInfo(e.target));
          this._observer.onLoaded(this._uri,this.getResourceType(),res);
          this._uri = null;
       }
       
-      function onError(ee:ErrorEvent) : void {
+      protected function onError(ee:ErrorEvent) : void {
          this.releaseLoader();
          this._observer.onFailed(this._uri,ee.text,ResourceErrorCode.RESOURCE_NOT_FOUND);
          this._uri = null;
       }
       
-      function onProgress(pe:ProgressEvent) : void {
+      protected function onProgress(pe:ProgressEvent) : void {
          this._observer.onProgress(this._uri,pe.bytesLoaded,pe.bytesTotal);
       }
       

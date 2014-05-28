@@ -52,7 +52,7 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(ThemeManager));
+      protected static const _log:Logger;
       
       private static var _self:ThemeManager;
       
@@ -175,7 +175,7 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      function onLoadError(e:ResourceErrorEvent) : void {
+      private function onLoadError(e:ResourceErrorEvent) : void {
          var f:File = null;
          _log.error("Cannot load " + e.uri + "(" + e.errorMsg + ")");
          var path:String = e.uri.toString();
@@ -191,7 +191,7 @@ package com.ankamagames.berilia.managers
          Berilia.getInstance().handler.process(new ThemeLoadErrorMessage(e.uri.fileName));
       }
       
-      function onLoad(e:ResourceLoadedEvent) : void {
+      private function onLoad(e:ResourceLoadedEvent) : void {
          switch(e.uri.fileType.toLowerCase())
          {
             case "dt":
@@ -200,7 +200,7 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      function onDTLoad(e:ResourceLoadedEvent) : void {
+      private function onDTLoad(e:ResourceLoadedEvent) : void {
          var thName:String = null;
          var thDesc:String = null;
          var th:Theme = null;
@@ -228,7 +228,7 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      function searchDtFile(rootPath:File) : File {
+      private function searchDtFile(rootPath:File) : File {
          var file:File = null;
          var dt:File = null;
          if(rootPath.nativePath.indexOf(".svn") != -1)
@@ -236,14 +236,14 @@ package com.ankamagames.berilia.managers
             return null;
          }
          var files:Array = rootPath.getDirectoryListing();
-         for each (file in files)
+         for each(file in files)
          {
             if((!file.isDirectory) && (file.extension.toLowerCase() == "dt"))
             {
                return file;
             }
          }
-         for each (file in files)
+         for each(file in files)
          {
             if(file.isDirectory)
             {

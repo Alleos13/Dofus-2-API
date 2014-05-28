@@ -705,7 +705,7 @@ package gs
          }
       }
       
-      function adjustStartValues() : void {
+      protected function adjustStartValues() : void {
          var _loc2_:* = NaN;
          var _loc3_:* = NaN;
          var _loc4_:Object = null;
@@ -764,7 +764,7 @@ package gs
          super.complete(param1);
       }
       
-      function initDispatcher() : void {
+      protected function initDispatcher() : void {
          var _loc1_:Object = null;
          var _loc2_:String = null;
          if(this._dispatcher == null)
@@ -801,7 +801,7 @@ package gs
          }
       }
       
-      function onStartDispatcher(... rest) : void {
+      protected function onStartDispatcher(... rest) : void {
          if(this._callbacks.onStart != null)
          {
             this._callbacks.onStart.apply(null,this.vars.onStartParams);
@@ -809,7 +809,7 @@ package gs
          this._dispatcher.dispatchEvent(new TweenEvent(TweenEvent.START));
       }
       
-      function onUpdateDispatcher(... rest) : void {
+      protected function onUpdateDispatcher(... rest) : void {
          if(this._callbacks.onUpdate != null)
          {
             this._callbacks.onUpdate.apply(null,this.vars.onUpdateParams);
@@ -817,7 +817,7 @@ package gs
          this._dispatcher.dispatchEvent(new TweenEvent(TweenEvent.UPDATE));
       }
       
-      function onCompleteDispatcher(... rest) : void {
+      protected function onCompleteDispatcher(... rest) : void {
          if(this._callbacks.onComplete != null)
          {
             this._callbacks.onComplete.apply(null,this.vars.onCompleteParams);

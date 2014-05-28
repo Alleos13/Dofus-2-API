@@ -5,7 +5,6 @@ package com.ankamagames.dofus.logic.game.common.managers
    import flash.utils.getQualifiedClassName;
    import com.ankamagames.dofus.logic.game.common.misc.Inventory;
    import com.ankamagames.dofus.internalDatacenter.items.ItemWrapper;
-   import __AS3__.vec.*;
    import com.ankamagames.berilia.managers.KernelEventsManager;
    import com.ankamagames.dofus.misc.lists.InventoryHookList;
    import com.ankamagames.dofus.logic.game.common.misc.IStorageView;
@@ -27,7 +26,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          super();
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(StorageOptionManager));
+      protected static const _log:Logger;
       
       public static const ALL_CATEGORY:int = -1;
       
@@ -222,7 +221,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          {
             currentItems = this.currentBankView.content;
             itemsDisplayed = new Vector.<ItemWrapper>(0);
-            for each (iw in currentItems)
+            for each(iw in currentItems)
             {
                if(iw.typeId == this.bankFilter)
                {
@@ -275,7 +274,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          return this.getStorageViewOrFilter();
       }
       
-      function getStorageViewOrFilter() : IStorageView {
+      private function getStorageViewOrFilter() : IStorageView {
          if(this.hasFilter())
          {
             return this.inventory.getView("storageFiltered") as IStorageView;
@@ -375,6 +374,7 @@ package com.ankamagames.dofus.logic.game.common.managers
             case QUEST_CATEGORY:
                return this.inventory.getView("storageQuest") as IStorageView;
             case ALL_CATEGORY:
+            default:
                return this.inventory.getView("storage") as IStorageView;
          }
       }
@@ -391,6 +391,7 @@ package com.ankamagames.dofus.logic.game.common.managers
             case QUEST_CATEGORY:
                return InventoryManager.getInstance().bankInventory.getView("bankQuest") as IStorageView;
             case ALL_CATEGORY:
+            default:
                return InventoryManager.getInstance().bankInventory.getView("bank") as IStorageView;
          }
       }
@@ -414,7 +415,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          this.getBankView(this.bankCategory).updateView();
       }
       
-      function get inventory() : Inventory {
+      private function get inventory() : Inventory {
          if(!this._inventory)
          {
             this._inventory = InventoryManager.getInstance().inventory;
@@ -422,7 +423,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          return this._inventory;
       }
       
-      function refreshViews() : void {
+      private function refreshViews() : void {
          var bidHouseFilterView:StorageBidHouseFilterView = null;
          var smithMagicFilterView:StorageSmithMagicFilterView = null;
          var craftFilterView:StorageCraftFilterView = null;
@@ -447,7 +448,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          }
       }
       
-      function refreshView(viewName:String) : void {
+      private function refreshView(viewName:String) : void {
          var view:IInventoryView = this.inventory.getView(viewName);
          this.inventory.removeView(viewName);
          var name:String = this.currentStorageView.name;

@@ -23,6 +23,8 @@ package com.ankamagames.dofus.console.debug
                return "PART_NOT_INSTALLED";
             case PartStateEnum.PART_UP_TO_DATE:
                return "PART_UP_TO_DATE";
+            default:
+               return "(unknow state)";
          }
       }
       
@@ -67,17 +69,15 @@ package com.ankamagames.dofus.console.debug
                {
                   this.updaterDebugFrame.setUpdaterSpeedRequest(args[0],this.onGetUpdaterSpeed);
                }
+               else if(args.length == 0)
+               {
+                  this.updaterDebugFrame.getUpdaterSpeedRequest(this.onGetUpdaterSpeed);
+               }
                else
                {
-                  if(args.length == 0)
-                  {
-                     this.updaterDebugFrame.getUpdaterSpeedRequest(this.onGetUpdaterSpeed);
-                  }
-                  else
-                  {
-                     console.output("bad arguments");
-                  }
+                  console.output("bad arguments");
                }
+               
                break;
             case "downloadpart":
                if(args.length == 1)
@@ -105,22 +105,24 @@ package com.ankamagames.dofus.console.debug
                return "get or set updater download speed (1 : slower, 10 : faster)";
             case "downloadpart":
                return "ask for part download by part name";
+            default:
+               return "No help for command \'" + cmd + "\'";
          }
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint=0, currentParams:Array=null) : Array {
+      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array {
          var possibilities:Array = [];
-         if(false?0:0)
+         if(0)
          {
          }
          return possibilities;
       }
       
-      function onGetUpdaterSpeed(speed:int) : void {
+      private function onGetUpdaterSpeed(speed:int) : void {
          this._lastConsole.output("updater download speed : " + speed);
       }
       
-      function onPartInfo(part:ContentPart) : void {
+      private function onPartInfo(part:ContentPart) : void {
          if(part)
          {
             this._lastConsole.output(part.id + "\t\t\t" + stateToString(part.state));

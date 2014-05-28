@@ -555,7 +555,7 @@ package flashx.textLayout.edit
       
       private var _pointFormat:ITextLayoutFormat;
       
-      function get pointFormat() : ITextLayoutFormat {
+      protected function get pointFormat() : ITextLayoutFormat {
          return this._pointFormat;
       }
       
@@ -739,7 +739,7 @@ package flashx.textLayout.edit
          this.setSelectionFormatState(SelectionFormatState.FOCUSED);
       }
       
-      function setMouseCursor(param1:String) : void {
+      protected function setMouseCursor(param1:String) : void {
          Mouse.cursor = param1;
       }
       
@@ -1402,7 +1402,7 @@ package flashx.textLayout.edit
       public function softKeyboardActivatingHandler(param1:Event) : void {
       }
       
-      function enterFrameHandler(param1:Event) : void {
+      protected function enterFrameHandler(param1:Event) : void {
          this.flushPendingOperations();
       }
       

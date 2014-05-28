@@ -29,17 +29,17 @@ package com.ankamagames.dofus.misc
          }
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(BenchmarkMovementBehavior));
+      protected static const _log:Logger;
       
       private static var _self:BenchmarkMovementBehavior;
       
-      private static const RUN_LINEAR_VELOCITY:Number = 1 / 170;
+      private static const RUN_LINEAR_VELOCITY:Number = 0.0058823529411764705;
       
-      private static const RUN_HORIZONTAL_DIAGONAL_VELOCITY:Number = 1 / 255;
+      private static const RUN_HORIZONTAL_DIAGONAL_VELOCITY:Number = 0.00392156862745098;
       
-      private static const RUN_VERTICAL_DIAGONAL_VELOCITY:Number = 1 / 212.5;
+      private static const RUN_VERTICAL_DIAGONAL_VELOCITY:Number = 0.004705882352941176;
       
-      private static const RUN_ANIMATION:String = AnimationEnum.ANIM_COURSE;
+      private static const RUN_ANIMATION:String = "AnimCourse";
       
       public static function getInstance() : BenchmarkMovementBehavior {
          if(!_self)
@@ -70,7 +70,7 @@ package com.ankamagames.dofus.misc
             j = -1;
             while(j < 2)
             {
-               if((MapPoint.isInMap(movementPath.start.x + i,movementPath.start.y + j)) && ((!(i == 0)) || (!(j == 0))) && (DataMapProvider.getInstance().pointMov(movementPath.start.x + i,movementPath.start.y + j)))
+               if((MapPoint.isInMap(movementPath.start.x + i,movementPath.start.y + j)) && (!(i == 0)) && (DataMapProvider.getInstance().pointMov(movementPath.start.x + i,movementPath.start.y + j)))
                {
                   freeCells.push(MapPoint.fromCoords(movementPath.start.x + i,movementPath.start.y + j));
                }
@@ -86,23 +86,23 @@ package com.ankamagames.dofus.misc
          return movementPath;
       }
       
-      function getLinearVelocity() : Number {
+      override protected function getLinearVelocity() : Number {
          return RUN_LINEAR_VELOCITY;
       }
       
-      function getHorizontalDiagonalVelocity() : Number {
+      override protected function getHorizontalDiagonalVelocity() : Number {
          return RUN_HORIZONTAL_DIAGONAL_VELOCITY;
       }
       
-      function getVerticalDiagonalVelocity() : Number {
+      override protected function getVerticalDiagonalVelocity() : Number {
          return RUN_VERTICAL_DIAGONAL_VELOCITY;
       }
       
-      function getAnimation() : String {
+      override protected function getAnimation() : String {
          return RUN_ANIMATION;
       }
       
-      function stopMovement(entity:IMovable) : void {
+      override protected function stopMovement(entity:IMovable) : void {
          super.stopMovement(entity);
          var path:MovementPath = getRandomPath(entity);
          if(path.path.length > 0)

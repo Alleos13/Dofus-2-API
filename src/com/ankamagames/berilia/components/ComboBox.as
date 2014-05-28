@@ -49,7 +49,7 @@ package com.ankamagames.berilia.components
          MEMORY_LOG[this] = 1;
       }
       
-      public static var MEMORY_LOG:Dictionary = new Dictionary(true);
+      public static var MEMORY_LOG:Dictionary;
       
       protected static const SEARCH_DELAY:int = 1000;
       
@@ -362,6 +362,8 @@ package com.ankamagames.berilia.components
                   case SelectMethodEnum.AUTO:
                   case SelectMethodEnum.MANUAL:
                      break;
+                  default:
+                     this.showList(false);
                }
                break;
             case msg is MouseDownMessage:
@@ -373,13 +375,11 @@ package com.ankamagames.berilia.components
                      this._list.moveTo(this._list.selectedIndex);
                   }
                }
-               else
+               else if(MouseDownMessage(msg).target == this._button)
                {
-                  if(MouseDownMessage(msg).target == this._button)
-                  {
-                     this.showList(false);
-                  }
+                  this.showList(false);
                }
+               
                this._searchString = "";
                break;
             case msg is MouseWheelMessage:
@@ -454,21 +454,21 @@ package com.ankamagames.berilia.components
          super.remove();
       }
       
-      function showList(show:Boolean) : void {
+      protected function showList(show:Boolean) : void {
          var listener:IInterfaceListener = null;
          var listener2:IInterfaceListener = null;
          if(this._previousState != show)
          {
             if(show)
             {
-               for each (listener in Berilia.getInstance().UISoundListeners)
+               for each(listener in Berilia.getInstance().UISoundListeners)
                {
                   listener.playUISound("16012");
                }
             }
             else
             {
-               for each (listener2 in Berilia.getInstance().UISoundListeners)
+               for each(listener2 in Berilia.getInstance().UISoundListeners)
                {
                   listener2.playUISound("16013");
                }
@@ -479,7 +479,7 @@ package com.ankamagames.berilia.components
          this._previousState = show;
       }
       
-      function searchStringInCB(searchPhrase:String, startIndex:int=0) : void {
+      protected function searchStringInCB(searchPhrase:String, startIndex:int = 0) : void {
          var i:* = 0;
          this._searchTimer.reset();
          this._searchTimer.start();
@@ -508,7 +508,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function cleanString(spaced:String) : String {
+      protected function cleanString(spaced:String) : String {
          var regSpace:RegExp = new RegExp("\\s","g");
          var numberSeparator:String = " ";
          var pattern1:RegExp = new RegExp(regSpace);
@@ -517,7 +517,7 @@ package com.ankamagames.berilia.components
          return StringUtils.noAccent(tempString);
       }
       
-      function onClick(e:MouseEvent) : void {
+      private function onClick(e:MouseEvent) : void {
          var p:DisplayObject = DisplayObject(e.target);
          while(p.parent)
          {
@@ -530,12 +530,12 @@ package com.ankamagames.berilia.components
          this.showList(false);
       }
       
-      function onAddedToStage(e:Event) : void {
+      private function onAddedToStage(e:Event) : void {
          removeEventListener(Event.ADDED_TO_STAGE,this.onAddedToStage);
          StageShareManager.stage.addEventListener(MouseEvent.CLICK,this.onClick);
       }
       
-      function onSearchTimerComplete(e:TimerEvent) : void {
+      private function onSearchTimerComplete(e:TimerEvent) : void {
          this._searchStopped = true;
       }
    }

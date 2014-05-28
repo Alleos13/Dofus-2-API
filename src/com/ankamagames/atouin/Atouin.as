@@ -59,7 +59,7 @@ package com.ankamagames.atouin
          }
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(Atouin));
+      protected static const _log:Logger;
       
       private static var _self:Atouin;
       
@@ -223,7 +223,7 @@ package com.ankamagames.atouin
          Atouin.getInstance().handler.process(msg);
       }
       
-      function onRollOutMapContainer(event:Event) : void {
+      private function onRollOutMapContainer(event:Event) : void {
          var msg:MapContainerRollOutMessage = new MapContainerRollOutMessage();
          Atouin.getInstance().handler.process(msg);
       }
@@ -235,7 +235,7 @@ package com.ankamagames.atouin
          EnterFrameDispatcher.addEventListener(this.removeUpdateCursorSprite,"UpdateCursorSprite",50);
       }
       
-      public function showWorld(b:Boolean, resetAnimations:Boolean=false) : void {
+      public function showWorld(b:Boolean, resetAnimations:Boolean = false) : void {
          if(b)
          {
             this._worldContainer.addChild(this._spMapContainer);
@@ -291,14 +291,14 @@ package com.ankamagames.atouin
       }
       
       public function initPreDisplay(wp:WorldPoint) : void {
-         if(((wp) && (MapDisplayManager.getInstance())) && (MapDisplayManager.getInstance().currentMapPoint) && (MapDisplayManager.getInstance().currentMapPoint.mapId == wp.mapId))
+         if((wp && MapDisplayManager.getInstance()) && (MapDisplayManager.getInstance().currentMapPoint) && (MapDisplayManager.getInstance().currentMapPoint.mapId == wp.mapId))
          {
             return;
          }
          MapDisplayManager.getInstance().capture();
       }
       
-      public function display(wpMap:WorldPoint, decryptionKey:ByteArray=null) : uint {
+      public function display(wpMap:WorldPoint, decryptionKey:ByteArray = null) : uint {
          return MapDisplayManager.getInstance().display(wpMap,false,decryptionKey);
       }
       
@@ -306,7 +306,7 @@ package com.ankamagames.atouin
          return EntitiesManager.getInstance().getEntity(id);
       }
       
-      public function getEntityOnCell(cellId:uint, oClass:*=null) : IEntity {
+      public function getEntityOnCell(cellId:uint, oClass:* = null) : IEntity {
          return EntitiesManager.getInstance().getEntityOnCell(cellId,oClass);
       }
       
@@ -322,7 +322,7 @@ package com.ankamagames.atouin
          this.showWorld(false);
       }
       
-      public function displayGrid(b:Boolean, pIsInFight:Boolean=false) : void {
+      public function displayGrid(b:Boolean, pIsInFight:Boolean = false) : void {
          InteractiveCellManager.getInstance().show((b) || (this.options.alwaysShowGrid),pIsInFight);
       }
       
@@ -350,7 +350,7 @@ package com.ankamagames.atouin
          }
       }
       
-      public function zoom(value:Number, posX:int=0, posY:int=0) : void {
+      public function zoom(value:Number, posX:int = 0, posY:int = 0) : void {
          var lastZoom:* = NaN;
          if(value == 1)
          {
@@ -367,13 +367,11 @@ package com.ankamagames.atouin
             {
                value = 1;
             }
-            else
+            else if(value > AtouinConstants.MAX_ZOOM)
             {
-               if(value > AtouinConstants.MAX_ZOOM)
-               {
-                  value = AtouinConstants.MAX_ZOOM;
-               }
+               value = AtouinConstants.MAX_ZOOM;
             }
+            
             lastZoom = this._currentZoom;
             this._currentZoom = value;
             if(lastZoom == this._currentZoom)
@@ -408,24 +406,20 @@ package com.ankamagames.atouin
             {
                this._worldContainer.x = 0;
             }
-            else
+            else if(this._worldContainer.x < 1276 - 1276 * this._currentZoom)
             {
-               if(this._worldContainer.x < 1276 - 1276 * this._currentZoom)
-               {
-                  this._worldContainer.x = 1276 - 1276 * this._currentZoom;
-               }
+               this._worldContainer.x = 1276 - 1276 * this._currentZoom;
             }
+            
             if(this._worldContainer.y > 0)
             {
                this._worldContainer.y = 0;
             }
-            else
+            else if(this._worldContainer.y < 876 - 876 * this._currentZoom)
             {
-               if(this._worldContainer.y < 876 - 876 * this._currentZoom)
-               {
-                  this._worldContainer.y = 876 - 876 * this._currentZoom;
-               }
+               this._worldContainer.y = 876 - 876 * this._currentZoom;
             }
+            
          }
          var mzm:MapZoomMessage = new MapZoomMessage(this._currentZoom,posX,posY);
          Atouin.getInstance().handler.process(mzm);
@@ -438,7 +432,7 @@ package com.ankamagames.atouin
          }
       }
       
-      function removeUpdateCursorSprite(e:Event) : void {
+      private function removeUpdateCursorSprite(e:Event) : void {
          EnterFrameDispatcher.removeEventListener(this.removeUpdateCursorSprite);
          if(this._cursorUpdateSprite.parent)
          {
@@ -446,7 +440,7 @@ package com.ankamagames.atouin
          }
       }
       
-      function init() : void {
+      private function init() : void {
          var elementsLoader:IResourceLoader = null;
          this._aSprites = new Array();
          if(!Elements.getInstance().parsed)
@@ -458,7 +452,7 @@ package com.ankamagames.atouin
          Pathfinding.init(AtouinConstants.PATHFINDER_MIN_X,AtouinConstants.PATHFINDER_MAX_X,AtouinConstants.PATHFINDER_MIN_Y,AtouinConstants.PATHFINDER_MAX_Y);
       }
       
-      function onElementsError(ree:ResourceErrorEvent) : void {
+      private function onElementsError(ree:ResourceErrorEvent) : void {
       }
    }
 }

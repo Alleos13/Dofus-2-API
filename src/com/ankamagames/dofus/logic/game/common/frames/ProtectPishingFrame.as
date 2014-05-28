@@ -93,10 +93,10 @@ package com.ankamagames.dofus.logic.game.common.frames
          return Priority.ULTIMATE_HIGHEST_DEPTH_OF_DOOM;
       }
       
-      function onTextInput(te:TextEvent) : void {
+      private function onTextInput(te:TextEvent) : void {
          var len:uint = 0;
          this._globalBuffer = this._globalBuffer + te.text;
-         if(!(((te.target is TextField && TextField(te.target).parent is Input) && (Input(TextField(te.target).parent).getUi())) && (!Input(TextField(te.target).parent).getUi().uiModule.trusted)))
+         if(!((te.target is TextField && TextField(te.target).parent is Input) && (Input(TextField(te.target).parent).getUi()) && !Input(TextField(te.target).parent).getUi().uiModule.trusted))
          {
             return;
          }
@@ -145,7 +145,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          this._advancedInputBufferRef[te.target] = inputBuffer;
       }
       
-      function detectHash(input:String, hash:String, originalLength:uint) : Boolean {
+      private function detectHash(input:String, hash:String, originalLength:uint) : Boolean {
          var len:uint = input.length - originalLength + 1;
          var i:uint = 0;
          while(i < len)
@@ -159,7 +159,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return false;
       }
       
-      function onChange(e:Event) : void {
+      protected function onChange(e:Event) : void {
          var len:uint = 0;
          var upperBuffer:String = null;
          var i:uint = 0;
@@ -180,17 +180,15 @@ package com.ankamagames.dofus.logic.game.common.frames
             {
                inputBuffer = tf.text.substring(inputBuffer.length - _passwordLength);
             }
+            else if(inputBuffer.substring(0,tf.text.length) == tf.text)
+            {
+               inputBuffer = inputBuffer.substring(tf.text.length - _passwordLength);
+            }
             else
             {
-               if(inputBuffer.substring(0,tf.text.length) == tf.text)
-               {
-                  inputBuffer = inputBuffer.substring(tf.text.length - _passwordLength);
-               }
-               else
-               {
-                  inputBuffer = tf.text;
-               }
+               inputBuffer = tf.text;
             }
+            
          }
          else
          {

@@ -57,7 +57,7 @@ package com.ankamagames.dofus.console.debug.frames
          return false;
       }
       
-      function onFileSelected(e:Event) : void {
+      private function onFileSelected(e:Event) : void {
          File(e.target).removeEventListener(Event.CANCEL,this.onFileSelected);
          var fs:FileStream = new FileStream();
          fs.open(File(e.target),FileMode.WRITE);
@@ -66,7 +66,7 @@ package com.ankamagames.dofus.console.debug.frames
          this._buffer = null;
       }
       
-      function onFileSelectionCancel(e:Event) : void {
+      private function onFileSelectionCancel(e:Event) : void {
          File(e.target).removeEventListener(Event.CANCEL,this.onFileSelectionCancel);
          this._buffer = null;
       }

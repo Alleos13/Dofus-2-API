@@ -33,7 +33,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      private static var _log:Logger = Log.getLogger(getQualifiedClassName(RegConnectionManager));
+      private static var _log:Logger;
       
       private static var _self:RegConnectionManager;
       
@@ -93,7 +93,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      function init() : void {
+      private function init() : void {
          this._socketClientID = uint.MAX_VALUE * Math.random();
          if(AirScanner.isStreamingVersion())
          {
@@ -121,7 +121,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          this._buffer = [];
       }
       
-      function showInformationPopup() : void {
+      private function showInformationPopup() : void {
          var commonMod:Object = null;
          if(UiModuleManager.getInstance().getModule("Ankama_Common"))
          {
@@ -133,7 +133,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      function setAsMain(pMain:Boolean) : void {
+      private function setAsMain(pMain:Boolean) : void {
          if(pMain == this._isMain)
          {
             return;
@@ -157,7 +157,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      function onSocketClose(e:Event) : void {
+      private function onSocketClose(e:Event) : void {
          this._socketAvaible = false;
          _log.error("The socket has been closed");
          try
@@ -169,12 +169,12 @@ package com.ankamagames.dofus.kernel.sound.manager
          }
       }
       
-      function onData(pEvent:ProgressEvent) : void {
+      private function onData(pEvent:ProgressEvent) : void {
          var cmd:String = null;
          var functionName:String = null;
          var clientId:* = NaN;
          var cmds:Array = this._sock.readUTFBytes(pEvent.bytesLoaded).split("|");
-         for each (cmd in cmds)
+         for each(cmd in cmds)
          {
             if(cmd == "")
             {
@@ -208,19 +208,21 @@ package com.ankamagames.dofus.kernel.sound.manager
                      this.setAsMain(false);
                   }
                   continue;
+               default:
+                  continue;
             }
          }
       }
       
-      function onSocketError(e:Event) : void {
+      private function onSocketError(e:Event) : void {
          this._socketAvaible = false;
          _log.error("Connection to Reg failed");
       }
       
-      function onSocketSecurityError(e:Event) : void {
+      private function onSocketSecurityError(e:Event) : void {
       }
       
-      function onSocketConnect(e:Event) : void {
+      private function onSocketConnect(e:Event) : void {
          var cmd:Object = null;
          this._socketAvaible = true;
          if(this._buffer.length)

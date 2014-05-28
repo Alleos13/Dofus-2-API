@@ -101,8 +101,7 @@ package com.ankamagames.dofus.logic.game.common.types
          {
             return null;
          }
-		 return null;
-         ;
+         return null;
       }
 
 

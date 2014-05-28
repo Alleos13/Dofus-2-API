@@ -32,7 +32,7 @@ package com.ankamagames.dofus.console.debug
          }
       }
       
-      function testCharacter(event:TimerEvent) : void {
+      private function testCharacter(event:TimerEvent) : void {
          var char:String = this.characters.substr(10 * Timer(event.target).currentCount,10);
          var ccmm:ChatClientMultiMessage = new ChatClientMultiMessage();
          ccmm.initChatAbstractClientMessage(char);
@@ -44,10 +44,12 @@ package com.ankamagames.dofus.console.debug
          {
             case "jptest":
                return "test japanese characters set";
+            default:
+               return "Unknown command";
          }
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint=0, currentParams:Array=null) : Array {
+      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array {
          return [];
       }
    }

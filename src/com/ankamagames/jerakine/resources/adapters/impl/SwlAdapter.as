@@ -32,7 +32,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
       
       private var _swl:Swl;
       
-       function getResource(dataFormat:String, data:*) : * {
+      override protected function getResource(dataFormat:String, data:*) : * {
          return this._swl;
       }
       
@@ -40,7 +40,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          return ResourceType.RESOURCE_SWL;
       }
       
-       function process(dataFormat:String, data:*) : void {
+      override protected function process(dataFormat:String, data:*) : void {
          var file:uint = 0;
          var version:uint = 0;
          var frameRate:uint = 0;
@@ -86,7 +86,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          this._ldr.loadBytes(swfData,loaderContext);
       }
       
-       function getDataFormat() : String {
+      override protected function getDataFormat() : String {
          return URLLoaderDataFormat.BINARY;
       }
       

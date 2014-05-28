@@ -27,9 +27,9 @@ package com.ankamagames.berilia.types.tooltip
          this._loader.addEventListener(ResourceErrorEvent.ERROR,this.onLoadError);
       }
       
-      private static const _chunckCache:Dictionary = new Dictionary();
+      private static const _chunckCache:Dictionary;
       
-      private static const _cache:Cache = Cache.create(50,new LruGarbageCollector(),getQualifiedClassName(TooltipBlock));
+      private static const _cache:Cache;
       
       protected var _log:Logger;
       
@@ -113,7 +113,7 @@ package com.ankamagames.berilia.types.tooltip
          return "[Abstract tooltip]";
       }
       
-      function onAllChunkLoaded() : void {
+      protected function onAllChunkLoaded() : void {
          if(this.onAllChunkLoadedCallback != null)
          {
             this.onAllChunkLoadedCallback();
@@ -121,7 +121,7 @@ package com.ankamagames.berilia.types.tooltip
          dispatchEvent(new Event(Event.COMPLETE));
       }
       
-      function onLoaded(e:ResourceLoadedEvent) : void {
+      private function onLoaded(e:ResourceLoadedEvent) : void {
          this._loadedChunk++;
          _chunckCache[e.uri.path] = e.resource;
          this.chunks[e.uri.tag] = e.resource;
@@ -131,7 +131,7 @@ package com.ankamagames.berilia.types.tooltip
          }
       }
       
-      function onLoadError(e:ResourceErrorEvent) : void {
+      private function onLoadError(e:ResourceErrorEvent) : void {
          this._loadedChunk++;
          if(this._loadedChunk == this._totalChunk)
          {

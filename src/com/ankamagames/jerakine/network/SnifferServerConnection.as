@@ -5,7 +5,7 @@ package com.ankamagames.jerakine.network
    public class SnifferServerConnection extends ServerConnection implements IServerConnection
    {
       
-      public function SnifferServerConnection(host:String=null, port:int=0) {
+      public function SnifferServerConnection(host:String = null, port:int = 0) {
          super(null,0);
          if((!(host == null)) && (!(port == 0)))
          {
@@ -51,7 +51,7 @@ package com.ankamagames.jerakine.network
          }
       }
       
-      override function onConnect(e:Event) : void {
+      override protected function onConnect(e:Event) : void {
          writeUTF(this._targetHost);
          writeUnsignedInt(this._targetPort);
          super.onConnect(e);

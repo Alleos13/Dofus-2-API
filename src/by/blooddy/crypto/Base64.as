@@ -9,7 +9,7 @@ package by.blooddy.crypto
       public function Base64() {
       }
       
-      public static function encode(param1:ByteArray, param2:Boolean=false) : String {
+      public static function encode(param1:ByteArray, param2:Boolean = false) : String {
          var _loc11_:* = 0;
          var _loc12_:uint = 0;
          var _loc3_:uint = param1.length;
@@ -55,7 +55,7 @@ package by.blooddy.crypto
          var _loc2_:uint = param1.length * 0.75;
          var _loc3_:ByteArray = ApplicationDomain.currentDomain.domainMemory;
          var _loc4_:ByteArray = new ByteArray();
-         _loc4_.writeUTFBytes("");
+         
          _loc4_.writeUTFBytes(param1);
          var _loc5_:uint = _loc4_.length - 4 - 1;
          if(_loc4_.length < ApplicationDomain.MIN_DOMAIN_MEMORY_LENGTH)

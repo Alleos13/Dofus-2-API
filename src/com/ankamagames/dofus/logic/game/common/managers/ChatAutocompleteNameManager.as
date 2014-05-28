@@ -2,7 +2,6 @@ package com.ankamagames.dofus.logic.game.common.managers
 {
    import com.ankamagames.dofus.uiApi.PlayedCharacterApi;
    import flash.utils.Dictionary;
-   import __AS3__.vec.*;
    
    public class ChatAutocompleteNameManager extends Object
    {
@@ -67,11 +66,11 @@ package com.ankamagames.dofus.logic.game.common.managers
          return null;
       }
       
-      function emptyCache() : void {
+      private function emptyCache() : void {
          this._subStringCache = "";
       }
       
-      function generateNameList(subString:String) : Vector.<String> {
+      private function generateNameList(subString:String) : Vector.<String> {
          var entry:Object = null;
          var name:String = null;
          var lcName:String = null;
@@ -80,7 +79,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          var ret:Vector.<String> = new Vector.<String>();
          this._subStringCache = subString;
          this._cache = ret;
-         for each (entry in list)
+         for each(entry in list)
          {
             name = entry.name;
             lcName = name.toLowerCase();
@@ -92,7 +91,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          return ret;
       }
       
-      function getListByName(name:String) : Vector.<Object> {
+      private function getListByName(name:String) : Vector.<Object> {
          var key:String = name.charAt(0).toLowerCase();
          if(!this._dict.hasOwnProperty(key))
          {
@@ -101,7 +100,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          return this._dict[key];
       }
       
-      function indexOf(list:Vector.<Object>, name:String) : int {
+      private function indexOf(list:Vector.<Object>, name:String) : int {
          var i:uint = 0;
          while(i < list.length)
          {
@@ -114,7 +113,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          return -1;
       }
       
-      function insertEntry(entry:Object) : void {
+      private function insertEntry(entry:Object) : void {
          var list:Vector.<Object> = this.getListByName(entry.name);
          var i:uint = 0;
          while((i < list.length) && (list[i].priority > entry.priority))

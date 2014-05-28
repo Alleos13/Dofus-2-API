@@ -11,7 +11,6 @@ package com.ankamagames.berilia.components
    import com.ankamagames.berilia.components.messages.SelectItemMessage;
    import com.ankamagames.jerakine.handlers.messages.keyboard.KeyboardKeyUpMessage;
    import com.ankamagames.jerakine.handlers.FocusHandler;
-   import __AS3__.vec.*;
    
    public class InputComboBox extends ComboBox implements FinalizableUIComponent
    {
@@ -147,17 +146,15 @@ package com.ankamagames.berilia.components
                      return true;
                   }
                }
+               else if(keyCode == Keyboard.TAB)
+               {
+                  this.showList(false);
+               }
                else
                {
-                  if(keyCode == Keyboard.TAB)
-                  {
-                     this.showList(false);
-                  }
-                  else
-                  {
-                     this.searchStringInCB(Input(_mainContainer).text);
-                  }
+                  this.searchStringInCB(Input(_mainContainer).text);
                }
+               
                break;
             case msg is SelectItemMessage:
                switch(SelectItemMessage(msg).selectMethod)
@@ -182,18 +179,22 @@ package com.ankamagames.berilia.components
                   case SelectMethodEnum.AUTO:
                   case SelectMethodEnum.MANUAL:
                      break;
+                  default:
+                     this.showList(false);
                }
                break;
+            default:
+               super.process(msg);
          }
          return false;
       }
       
-      override function showList(show:Boolean) : void {
+      override protected function showList(show:Boolean) : void {
          super.dataProvider = this._origDataProvider;
          super.showList(show);
       }
       
-      override function searchStringInCB(searchPhrase:String, startIndex:int=0) : void {
+      override protected function searchStringInCB(searchPhrase:String, startIndex:int = 0) : void {
          var cleanphrase:String = null;
          var newDtp:Vector.<String> = null;
          var label:String = null;
@@ -203,7 +204,7 @@ package com.ankamagames.berilia.components
             if(cleanphrase != "")
             {
                newDtp = new Vector.<String>();
-               for each (label in this._origDataProvider)
+               for each(label in this._origDataProvider)
                {
                   if(label.indexOf(cleanphrase) == 0)
                   {
@@ -216,21 +217,19 @@ package com.ankamagames.berilia.components
                   this.showList(false);
                }
             }
-            else
+            else if((!(searchPhrase == "\b")) && (this._origDataProvider))
             {
-               if((!(searchPhrase == "\b")) && (this._origDataProvider))
+               super.dataProvider = this._origDataProvider;
+               if(this._origDataProvider.length > 0)
                {
-                  super.dataProvider = this._origDataProvider;
-                  if(this._origDataProvider.length > 0)
-                  {
-                     this.showList(true);
-                  }
+                  this.showList(true);
                }
             }
+            
          }
       }
       
-      override function cleanString(spaced:String) : String {
+      override protected function cleanString(spaced:String) : String {
          var unwantedChar:RegExp = new RegExp("\b","g");
          if(spaced.search(unwantedChar) != -1)
          {

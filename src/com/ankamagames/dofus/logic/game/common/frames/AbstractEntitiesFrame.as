@@ -19,7 +19,6 @@ package com.ankamagames.dofus.logic.game.common.frames
    import com.ankamagames.jerakine.messages.Message;
    import com.ankamagames.jerakine.utils.errors.AbstractMethodCallError;
    import com.ankamagames.atouin.Atouin;
-   import __AS3__.vec.*;
    import com.ankamagames.tiphon.types.look.TiphonEntityLook;
    import com.ankamagames.dofus.network.types.game.look.EntityLook;
    import com.ankamagames.dofus.network.types.game.context.roleplay.GameRolePlayHumanoidInformations;
@@ -67,7 +66,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          super();
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(AbstractEntitiesFrame));
+      protected static const _log:Logger;
       
       protected var _entities:Dictionary;
       
@@ -107,7 +106,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          var infos:GameContextActorInformations = null;
          var entity:AnimatedCharacter = null;
          this._untargetableEntities = enabled;
-         for each (infos in this._entities)
+         for each(infos in this._entities)
          {
             entity = DofusEntities.getEntity(infos.contextualId) as AnimatedCharacter;
             if(entity)
@@ -158,7 +157,7 @@ package com.ankamagames.dofus.logic.game.common.frames
       public function getEntitiesIdsList() : Vector.<int> {
          var gcai:GameContextActorInformations = null;
          var entitiesList:Vector.<int> = new Vector.<int>(0,false);
-         for each (gcai in this._entities)
+         for each(gcai in this._entities)
          {
             entitiesList.push(gcai.contextualId);
          }
@@ -177,7 +176,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          this._entities[infos.contextualId] = infos;
       }
       
-      public function addOrUpdateActor(infos:GameContextActorInformations, animationModifier:IAnimationModifier=null) : AnimatedCharacter {
+      public function addOrUpdateActor(infos:GameContextActorInformations, animationModifier:IAnimationModifier = null) : AnimatedCharacter {
          var newLook:TiphonEntityLook = null;
          var tel:TiphonEntityLook = null;
          var entitylookNew:EntityLook = null;
@@ -293,7 +292,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return characterEntity;
       }
       
-      function updateActorLook(actorId:int, newLook:EntityLook, smoke:Boolean=false) : AnimatedCharacter {
+      protected function updateActorLook(actorId:int, newLook:EntityLook, smoke:Boolean = false) : AnimatedCharacter {
          var tel:TiphonEntityLook = null;
          var entity:GameContextActorInformations = null;
          var oldBone:* = 0;
@@ -364,7 +363,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return ac;
       }
       
-      function updateActorDisposition(actorId:int, newDisposition:EntityDispositionInformations) : void {
+      protected function updateActorDisposition(actorId:int, newDisposition:EntityDispositionInformations) : void {
          if(this._entities[actorId])
          {
             (this._entities[actorId] as GameContextActorInformations).disposition = newDisposition;
@@ -398,7 +397,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      function updateActorOrientation(actorId:int, newOrientation:uint) : void {
+      protected function updateActorOrientation(actorId:int, newOrientation:uint) : void {
          var displayAura:* = false;
          if(this._entities[actorId])
          {
@@ -425,7 +424,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      function hideActor(actorId:int) : void {
+      protected function hideActor(actorId:int) : void {
          var disp:IDisplayable = DofusEntities.getEntity(actorId) as IDisplayable;
          if(disp)
          {
@@ -437,7 +436,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      function removeActor(actorId:int) : void {
+      protected function removeActor(actorId:int) : void {
          this.hideActor(actorId);
          var tiphonSprite:TiphonSprite = DofusEntities.getEntity(actorId) as TiphonSprite;
          if(tiphonSprite)
@@ -449,14 +448,14 @@ package com.ankamagames.dofus.logic.game.common.frames
          {
             this._humanNumber--;
          }
-         delete this._entities[[actorId]];
+         delete this._entities[actorId];
          if(this.switchPokemonMode())
          {
             _log.debug("switch pokemon/normal mode");
          }
       }
       
-      function switchPokemonMode() : Boolean {
+      protected function switchPokemonMode() : Boolean {
          var action:SwitchCreatureModeAction = null;
          if((this._creaturesLimit > -1) && (!(this._creaturesMode == (!Kernel.getWorker().getFrame(FightEntitiesFrame) && this._creaturesLimit < 50 && this._humanNumber >= this._creaturesLimit))))
          {
@@ -468,7 +467,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return false;
       }
       
-      function updateCreaturesLimit() : void {
+      protected function updateCreaturesLimit() : void {
          var vingtpourcent:* = NaN;
          this._creaturesLimit = OptionManager.getOptionManager("tiphon").creaturesMode;
          if((this._creaturesMode) && (this._creaturesLimit > 0))
@@ -485,13 +484,13 @@ package com.ankamagames.dofus.logic.game.common.frames
          e.sprite.setAnimation(animsRandom[int(animsRandom.length * Math.random())]);
       }
       
-      function onAtouinOptionChange(e:PropertyChangeEvent) : void {
+      private function onAtouinOptionChange(e:PropertyChangeEvent) : void {
          var entities:Array = null;
          var entitie:* = undefined;
          if(e.propertyName == "useLowDefSkin")
          {
             entities = EntitiesManager.getInstance().entities;
-            for each (entitie in entities)
+            for each(entitie in entities)
             {
                if(entitie is TiphonSprite)
                {
@@ -505,24 +504,24 @@ package com.ankamagames.dofus.logic.game.common.frames
          return this._creaturesFightMode;
       }
       
-      function onUpdateEntitySuccess(e:TiphonEvent) : void {
+      private function onUpdateEntitySuccess(e:TiphonEvent) : void {
          e.sprite.removeEventListener(TiphonEvent.RENDER_FAILED,this.onUpdateEntityFail);
          e.sprite.removeEventListener(TiphonEvent.RENDER_SUCCEED,this.onUpdateEntitySuccess);
       }
       
-      function onUpdateEntityFail(e:TiphonEvent) : void {
+      private function onUpdateEntityFail(e:TiphonEvent) : void {
          e.sprite.removeEventListener(TiphonEvent.RENDER_FAILED,this.onUpdateEntityFail);
          e.sprite.removeEventListener(TiphonEvent.RENDER_SUCCEED,this.onUpdateEntitySuccess);
          TiphonSprite(e.sprite).setAnimation("AnimStatique");
       }
       
-      function isIncarnation(entity:String) : Boolean {
+      private function isIncarnation(entity:String) : Boolean {
          var incarnation:Incarnation = null;
          var boneIdMale:String = null;
          var boneIdFemale:String = null;
          var incarnations:Array = Incarnation.getAllIncarnation();
          var boneId:String = entity.slice(1,entity.indexOf("|"));
-         for each (incarnation in incarnations)
+         for each(incarnation in incarnations)
          {
             boneIdMale = incarnation.lookMale.slice(1,incarnation.lookMale.indexOf("|"));
             boneIdFemale = incarnation.lookFemale.slice(1,incarnation.lookFemale.indexOf("|"));
@@ -534,7 +533,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return false;
       }
       
-      function onPropertyChanged(e:PropertyChangeEvent) : void {
+      protected function onPropertyChanged(e:PropertyChangeEvent) : void {
          if(e.propertyName == "mapCoordinates")
          {
             KernelEventsManager.getInstance().processCallback(HookList.MapComplementaryInformationsData,this._worldPoint,this._currentSubAreaId,e.propertyValue);

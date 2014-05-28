@@ -30,7 +30,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          return clonedCriterion;
       }
       
-      override function getCriterion() : int {
+      override protected function getCriterion() : int {
          var guild:GuildWrapper = (Kernel.getWorker().getFrame(SocialFrame) as SocialFrame).guild;
          if(guild)
          {

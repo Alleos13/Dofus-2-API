@@ -16,7 +16,7 @@ package com.ankamagames.jerakine.resources.protocols
          MEMORY_LOG[this] = 1;
       }
       
-      public static var MEMORY_LOG:Dictionary = new Dictionary(true);
+      public static var MEMORY_LOG:Dictionary;
       
       protected var _observer:IResourceObserver;
       
@@ -32,21 +32,21 @@ package com.ankamagames.jerakine.resources.protocols
       public function cancel() : void {
       }
       
-      function release() : void {
+      protected function release() : void {
          throw new AbstractMethodCallError("AbstractProtocol childs must override the release method in order to free their resources.");
       }
       
-      function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
+      protected function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
          this.getAdapter(uri,forcedAdapter);
          this._adapter.loadDirectly(uri,uri.path,observer,dispatchProgress);
       }
       
-      function loadFromData(uri:Uri, data:ByteArray, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
+      protected function loadFromData(uri:Uri, data:ByteArray, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
          this.getAdapter(uri,forcedAdapter);
          this._adapter.loadFromData(uri,data,observer,dispatchProgress);
       }
       
-      function getAdapter(uri:Uri, forcedAdapter:Class) : void {
+      protected function getAdapter(uri:Uri, forcedAdapter:Class) : void {
          if(forcedAdapter == null)
          {
             this._adapter = AdapterFactory.getAdapter(uri);

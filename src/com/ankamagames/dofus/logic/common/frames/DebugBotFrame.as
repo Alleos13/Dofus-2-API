@@ -41,7 +41,6 @@ package com.ankamagames.dofus.logic.common.frames
    import com.ankamagames.jerakine.pools.GenericPool;
    import flash.events.MouseEvent;
    import com.ankamagames.jerakine.handlers.messages.mouse.MouseOverMessage;
-   import __AS3__.vec.*;
    import com.ankamagames.berilia.managers.HtmlManager;
    import com.ankamagames.berilia.managers.KernelEventsManager;
    import com.ankamagames.dofus.misc.lists.ChatHookList;
@@ -102,7 +101,7 @@ package com.ankamagames.dofus.logic.common.frames
       
       private var _changeMap:Boolean = true;
       
-      public function enableChatMessagesBot(val:Boolean, time:int=500) : void {
+      public function enableChatMessagesBot(val:Boolean, time:int = 500) : void {
          if(val)
          {
             this._changeMap = false;
@@ -110,14 +109,12 @@ package com.ankamagames.dofus.logic.common.frames
             trace("start debug chat mode with a timer of: " + time);
             this._chatTimer.addEventListener(TimerEvent.TIMER,this.sendChatMessage);
          }
-         else
+         else if(this._chatTimer)
          {
-            if(this._chatTimer)
-            {
-               this._changeMap = true;
-               this._chatTimer.removeEventListener(TimerEvent.TIMER,this.sendChatMessage);
-            }
+            this._changeMap = true;
+            this._chatTimer.removeEventListener(TimerEvent.TIMER,this.sendChatMessage);
          }
+         
       }
       
       public function pushed() : Boolean {
@@ -183,7 +180,7 @@ package com.ankamagames.dofus.logic.common.frames
                }
                this._frameFightListRequest = false;
                mrflMsg = msg as MapRunningFightListMessage;
-               for each (fightInfos in mrflMsg.fights)
+               for each(fightInfos in mrflMsg.fights)
                {
                   if(fightInfos.fightTeams.length > maxFighter)
                   {
@@ -225,7 +222,7 @@ package com.ankamagames.dofus.logic.common.frames
          return false;
       }
       
-      function initRight() : void {
+      private function initRight() : void {
          var aqcmsg:AdminQuietCommandMessage = new AdminQuietCommandMessage();
          aqcmsg.initAdminQuietCommandMessage("adminaway");
          ConnectionsHandler.getConnection().send(aqcmsg);
@@ -233,7 +230,7 @@ package com.ankamagames.dofus.logic.common.frames
          ConnectionsHandler.getConnection().send(aqcmsg);
       }
       
-      function onAction(e:Event) : void {
+      private function onAction(e:Event) : void {
          if(Math.random() < 0.9)
          {
             this.randomWalk();
@@ -244,7 +241,7 @@ package com.ankamagames.dofus.logic.common.frames
          }
       }
       
-      function join(name:String) : void {
+      private function join(name:String) : void {
          if((this._inFight) || (this._wait))
          {
             return;
@@ -256,7 +253,7 @@ package com.ankamagames.dofus.logic.common.frames
          this._actionTimer.start();
       }
       
-      function randomMove() : void {
+      private function randomMove() : void {
          if((this._inFight) || (this._wait) || (!this._changeMap))
          {
             return;
@@ -269,7 +266,7 @@ package com.ankamagames.dofus.logic.common.frames
          this._actionTimer.start();
       }
       
-      function fakeActivity() : void {
+      private function fakeActivity() : void {
          if(!this._enabled)
          {
             return;
@@ -280,7 +277,7 @@ package com.ankamagames.dofus.logic.common.frames
          ConnectionsHandler.getConnection().send(bpmgs);
       }
       
-      function randomWalk() : void {
+      private function randomWalk() : void {
          var cell:CellReference = null;
          var mp:MapPoint = null;
          if((this._inFight) || (this._wait))
@@ -288,7 +285,7 @@ package com.ankamagames.dofus.logic.common.frames
             return;
          }
          var avaibleCells:Array = [];
-         for each (cell in MapDisplayManager.getInstance().getDataMapContainer().getCell())
+         for each(cell in MapDisplayManager.getInstance().getDataMapContainer().getCell())
          {
             mp = MapPoint.fromCellId(cell.id);
             if(DataMapProvider.getInstance().pointMov(mp.x,mp.y))
@@ -307,7 +304,7 @@ package com.ankamagames.dofus.logic.common.frames
          Kernel.getWorker().process(ccmsg);
       }
       
-      function randomOver(... foo) : void {
+      private function randomOver(... foo) : void {
          var e:IEntity = null;
          var entity:IInteractive = null;
          var ui:UiRootContainer = null;
@@ -319,7 +316,7 @@ package com.ankamagames.dofus.logic.common.frames
             return;
          }
          var avaibleEntities:Array = [];
-         for each (e in EntitiesManager.getInstance().entities)
+         for each(e in EntitiesManager.getInstance().entities)
          {
             if(e is IInteractive)
             {
@@ -340,9 +337,9 @@ package com.ankamagames.dofus.logic.common.frames
          var emomsg:EntityMouseOverMessage = new EntityMouseOverMessage(entity);
          Kernel.getWorker().process(emomsg);
          var avaibleElem:Array = [];
-         for each (ui in Berilia.getInstance().uiList)
+         for each(ui in Berilia.getInstance().uiList)
          {
-            for each (elem in ui.getElements())
+            for each(elem in ui.getElements())
             {
                if((elem.mouseChildren) || (elem.mouseEnabled))
                {
@@ -369,7 +366,7 @@ package com.ankamagames.dofus.logic.common.frames
       
       private var limit:int = 100;
       
-      function sendChatMessage(pEvt:TimerEvent) : void {
+      private function sendChatMessage(pEvt:TimerEvent) : void {
          var channel:* = 0;
          var removedSentences:* = 0;
          var color:uint = Math.random() * 16777215;

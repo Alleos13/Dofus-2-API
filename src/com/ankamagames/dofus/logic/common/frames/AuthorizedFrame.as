@@ -38,7 +38,7 @@ package com.ankamagames.dofus.logic.common.frames
          super();
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(AuthorizedFrame));
+      protected static const _log:Logger;
       
       private var _hasRights:Boolean;
       
@@ -80,19 +80,19 @@ package com.ankamagames.dofus.logic.common.frames
          return this._isFantomas;
       }
       
-       function registerMessages() : void {
+      override protected function registerMessages() : void {
          register(ConsoleMessage,this.onConsoleMessage);
          register(AuthorizedCommandAction,this.onAuthorizedCommandAction);
          register(ConsoleOutputMessage,this.onConsoleOutputMessage);
          register(QuitGameAction,this.onQuitGameAction);
       }
       
-      function onConsoleMessage(cmsg:ConsoleMessage) : Boolean {
+      private function onConsoleMessage(cmsg:ConsoleMessage) : Boolean {
          ConsolesManager.getConsole("debug").output(cmsg.content,cmsg.type);
          return true;
       }
       
-      function onAuthorizedCommandAction(aca:AuthorizedCommandAction) : Boolean {
+      private function onAuthorizedCommandAction(aca:AuthorizedCommandAction) : Boolean {
          var acmsg:AdminCommandMessage = null;
          if(aca.command.substr(0,1) == "/")
          {
@@ -105,37 +105,35 @@ package com.ankamagames.dofus.logic.common.frames
                ConsolesManager.getConsole("debug").output("Unknown command: " + aca.command + "\n");
             }
          }
-         else
+         else if(ConnectionsHandler.connectionType != ConnectionType.DISCONNECTED)
          {
-            if(ConnectionsHandler.connectionType != ConnectionType.DISCONNECTED)
+            if(this._hasRights)
             {
-               if(this._hasRights)
+               if((aca.command.length >= 1) && (aca.command.length <= ProtocolConstantsEnum.MAX_CHAT_LEN))
                {
-                  if((aca.command.length >= 1) && (aca.command.length <= ProtocolConstantsEnum.MAX_CHAT_LEN))
-                  {
-                     acmsg = new AdminCommandMessage();
-                     acmsg.initAdminCommandMessage(aca.command);
-                     ConnectionsHandler.getConnection().send(acmsg);
-                  }
-                  else
-                  {
-                     ConsolesManager.getConsole("debug").output("Too long command is too long, try again.");
-                  }
+                  acmsg = new AdminCommandMessage();
+                  acmsg.initAdminCommandMessage(aca.command);
+                  ConnectionsHandler.getConnection().send(acmsg);
                }
                else
                {
-                  ConsolesManager.getConsole("debug").output("You have no admin rights, please use only client side commands. (/help)");
+                  ConsolesManager.getConsole("debug").output("Too long command is too long, try again.");
                }
             }
             else
             {
-               ConsolesManager.getConsole("debug").output("You are disconnected, use only client side commands.");
+               ConsolesManager.getConsole("debug").output("You have no admin rights, please use only client side commands. (/help)");
             }
          }
+         else
+         {
+            ConsolesManager.getConsole("debug").output("You are disconnected, use only client side commands.");
+         }
+         
          return true;
       }
       
-      function onConsoleOutputMessage(comsg:ConsoleOutputMessage) : Boolean {
+      private function onConsoleOutputMessage(comsg:ConsoleOutputMessage) : Boolean {
          if(comsg.consoleId != "debug")
          {
             return false;
@@ -144,7 +142,7 @@ package com.ankamagames.dofus.logic.common.frames
          return true;
       }
       
-      function onQuitGameAction(qga:QuitGameAction) : Boolean {
+      private function onQuitGameAction(qga:QuitGameAction) : Boolean {
          Dofus.getInstance().quit();
          return true;
       }

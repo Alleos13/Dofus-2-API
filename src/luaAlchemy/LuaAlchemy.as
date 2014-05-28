@@ -10,7 +10,9 @@ package luaAlchemy
          this.init(param1,param2);
       }
       
-      private static const _luaAssetInit = LuaAssets.init(null);
+      public static const libInit:*;
+      
+      private static const _luaAssetInit = LuaAssets.init(libInit);
       
       private var luaState:uint = 0;
       

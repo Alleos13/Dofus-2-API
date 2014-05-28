@@ -18,9 +18,9 @@ package com.ankamagames.berilia.utils.web
          this._rootPath = rootPath;
       }
       
-      private static const SEPERATOR:RegExp = new RegExp(new RegExp("\\r?\\n\\r?\\n"));
+      private static const SEPERATOR:RegExp;
       
-      private static const NL:RegExp = new RegExp(new RegExp("\\r?\\n"));
+      private static const NL:RegExp;
       
       private var requestSocket:Socket;
       
@@ -32,7 +32,7 @@ package com.ankamagames.berilia.utils.web
          return this._rootPath;
       }
       
-      function onRequestSocketData(e:ProgressEvent) : void {
+      private function onRequestSocketData(e:ProgressEvent) : void {
          var headerString:String = null;
          var initialRequestSignature:String = null;
          var initialRequestSignatureComponents:Array = null;
@@ -56,17 +56,17 @@ package com.ankamagames.berilia.utils.web
          }
       }
       
-      function onRequestSocketClose(e:Event) : void {
+      private function onRequestSocketClose(e:Event) : void {
          this.done();
       }
       
-      function done() : void {
+      private function done() : void {
          this.tearDown();
          var completeEvent:Event = new Event(Event.COMPLETE);
          this.dispatchEvent(completeEvent);
       }
       
-      function testSocket(socket:Socket) : Boolean {
+      private function testSocket(socket:Socket) : Boolean {
          if(!socket.connected)
          {
             this.done();

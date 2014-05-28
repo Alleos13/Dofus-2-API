@@ -26,7 +26,7 @@ package com.ankamagames.berilia.managers
          }
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(UiGroupManager));
+      protected static const _log:Logger;
       
       private static var _self:UiGroupManager;
       
@@ -47,7 +47,7 @@ package com.ankamagames.berilia.managers
       }
       
       public function removeGroup(name:String) : void {
-         delete this._registeredGroup[[name]];
+         delete this._registeredGroup[name];
       }
       
       public function getGroup(name:String) : UiGroup {
@@ -59,7 +59,7 @@ package com.ankamagames.berilia.managers
          _self = null;
       }
       
-      function onUiRenderAsk(e:UiRenderAskEvent) : void {
+      private function onUiRenderAsk(e:UiRenderAskEvent) : void {
          var group:UiGroup = null;
          var actualGroupUis:Array = null;
          var uiName:String = null;

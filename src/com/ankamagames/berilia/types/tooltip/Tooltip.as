@@ -13,7 +13,7 @@ package com.ankamagames.berilia.types.tooltip
    public class Tooltip extends Object
    {
       
-      public function Tooltip(base:Uri, container:Uri, separator:Uri=null) {
+      public function Tooltip(base:Uri, container:Uri, separator:Uri = null) {
          this._log = Log.getLogger(getQualifiedClassName(Tooltip));
          this._callbacks = new Array();
          super();
@@ -37,7 +37,7 @@ package com.ankamagames.berilia.types.tooltip
          MEMORY_LOG[this] = 1;
       }
       
-      public static var MEMORY_LOG:Dictionary = new Dictionary(true);
+      public static var MEMORY_LOG:Dictionary;
       
       protected var _log:Logger;
       
@@ -90,12 +90,12 @@ package com.ankamagames.berilia.types.tooltip
          this.processCallback();
       }
       
-      function onMainChunkLoaded(e:Event) : void {
+      private function onMainChunkLoaded(e:Event) : void {
          this._mainblockLoaded = true;
          this.processCallback();
       }
       
-      function processCallback() : void {
+      private function processCallback() : void {
          if((this._mainblockLoaded) && (this._loadedblock == this._blocks.length))
          {
             this.makeTooltip();
@@ -106,10 +106,10 @@ package com.ankamagames.berilia.types.tooltip
          }
       }
       
-      function makeTooltip() : void {
+      private function makeTooltip() : void {
          var block:TooltipBlock = null;
          var result:Array = new Array();
-         for each (block in this._blocks)
+         for each(block in this._blocks)
          {
             if((block.content) && (block.content.length))
             {
@@ -126,7 +126,7 @@ package com.ankamagames.berilia.types.tooltip
          }
       }
       
-      function onChunkReady(e:Event) : void {
+      private function onChunkReady(e:Event) : void {
          this._loadedblock++;
          this.processCallback();
       }

@@ -74,7 +74,7 @@ package com.ankamagames.berilia.components.gridRenderer
          this._grid = g;
       }
       
-      public function render(data:*, index:uint, selected:Boolean, subIndex:uint=0) : DisplayObject {
+      public function render(data:*, index:uint, selected:Boolean, subIndex:uint = 0) : DisplayObject {
          var label:Label = new Label();
          label.mouseEnabled = true;
          label.useHandCursor = true;
@@ -102,7 +102,7 @@ package com.ankamagames.berilia.components.gridRenderer
          return label;
       }
       
-      public function update(data:*, index:uint, dispObj:DisplayObject, selected:Boolean, subIndex:uint=0) : void {
+      public function update(data:*, index:uint, dispObj:DisplayObject, selected:Boolean, subIndex:uint = 0) : void {
          var label:Label = null;
          if(dispObj is Label)
          {
@@ -154,7 +154,7 @@ package com.ankamagames.berilia.components.gridRenderer
          return functionName;
       }
       
-      function updateBackground(label:Label, index:uint, selected:Boolean) : void {
+      private function updateBackground(label:Label, index:uint, selected:Boolean) : void {
          var shape:Shape = null;
          if(!this._shapeIndex[label])
          {
@@ -181,7 +181,7 @@ package com.ankamagames.berilia.components.gridRenderer
          }
       }
       
-      function onRollOver(e:MouseEvent) : void {
+      private function onRollOver(e:MouseEvent) : void {
          var target:Object = null;
          var label:Label = e.currentTarget as Label;
          if((this._overColor) && (label.text.length > 0))
@@ -195,7 +195,7 @@ package com.ankamagames.berilia.components.gridRenderer
          }
       }
       
-      function onRollOut(e:MouseEvent) : void {
+      private function onRollOut(e:MouseEvent) : void {
          var target:Object = null;
          var label:Label = e.currentTarget as Label;
          if(label.text.length > 0)

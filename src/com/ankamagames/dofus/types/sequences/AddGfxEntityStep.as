@@ -17,7 +17,7 @@ package com.ankamagames.dofus.types.sequences
    public class AddGfxEntityStep extends AbstractSequencable
    {
       
-      public function AddGfxEntityStep(gfxId:uint, cellId:uint, angle:Number=0, yOffset:int=0, mode:uint=0, startCell:MapPoint=null, endCell:MapPoint=null, popUnderPlayer:Boolean=false) {
+      public function AddGfxEntityStep(gfxId:uint, cellId:uint, angle:Number = 0, yOffset:int = 0, mode:uint = 0, startCell:MapPoint = null, endCell:MapPoint = null, popUnderPlayer:Boolean = false) {
          super();
          this._mode = mode;
          this._gfxId = gfxId;
@@ -29,7 +29,7 @@ package com.ankamagames.dofus.types.sequences
          this._popUnderPlayer = popUnderPlayer;
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(AddGfxEntityStep));
+      protected static const _log:Logger;
       
       private var _gfxId:uint;
       
@@ -117,7 +117,7 @@ package com.ankamagames.dofus.types.sequences
          executeCallbacks();
       }
       
-       function onTimeOut(e:TimerEvent) : void {
+      override protected function onTimeOut(e:TimerEvent) : void {
          _log.error("Timeout en attendant le SHOT du bone du projectile " + this._gfxId);
          if(this._entity)
          {

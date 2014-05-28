@@ -1,4 +1,4 @@
-package  
+package 
 {
    import flash.display.Sprite;
    import com.ankamagames.jerakine.utils.display.IFramerateListener;

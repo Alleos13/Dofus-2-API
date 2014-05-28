@@ -28,7 +28,7 @@ package com.ankamagames.berilia.components
          super();
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(ColorPicker));
+      protected static const _log:Logger;
       
       private var _nWidth:uint;
       
@@ -291,7 +291,7 @@ package com.ankamagames.berilia.components
          this._sprSliderInf.graphics.endFill();
       }
       
-      function getCurrentPos() : void {
+      private function getCurrentPos() : void {
          var hsl:Object = ColorUtils.rgb2hsl(this._nColor);
          this._texCursorGradient.x = hsl.h * this._nGradientWidth - this._texCursorGradient.width / 2;
          this._texCursorGradient.y = hsl.s * this._nHeight - this._texCursorGradient.height / 2;
@@ -303,7 +303,7 @@ package com.ankamagames.berilia.components
          this.getCurrentColor();
       }
       
-      function getCurrentColor() : uint {
+      private function getCurrentColor() : uint {
          var colorPoint:* = NaN;
          var r1:* = NaN;
          var g1:* = NaN;
@@ -405,10 +405,12 @@ package com.ankamagames.berilia.components
                      break;
                }
                return true;
+            default:
+               return false;
          }
       }
       
-      function onMoveGradientCursor(e:Event) : void {
+      private function onMoveGradientCursor(e:Event) : void {
          if((!(this._nGradientX == mouseX)) || (!(this._nGradientY == mouseY)))
          {
             this._nGradientX = mouseX;
@@ -434,7 +436,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function onMoveSliderCursor(e:Event) : void {
+      private function onMoveSliderCursor(e:Event) : void {
          if(this._nSliderY != mouseY)
          {
             this._nSliderY = mouseY;
@@ -450,7 +452,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function onTextureSliderLoaded(e:Event) : void {
+      private function onTextureSliderLoaded(e:Event) : void {
          this._nLoadedSum++;
          this._texCursorSlider.removeEventListener(Event.COMPLETE,this.onTextureSliderLoaded);
          if(this._nLoadedSum >= 2)
@@ -459,7 +461,7 @@ package com.ankamagames.berilia.components
          }
       }
       
-      function onTextureGradientLoaded(e:Event) : void {
+      private function onTextureGradientLoaded(e:Event) : void {
          this._nLoadedSum++;
          this._texCursorGradient.removeEventListener(Event.COMPLETE,this.onTextureGradientLoaded);
          if(this._nLoadedSum >= 2)

@@ -14,9 +14,9 @@ package com.ankamagames.jerakine.resources.protocols
          super();
       }
       
-      private static var _loadingFile:Dictionary = new Dictionary(true);
+      private static var _loadingFile:Dictionary;
       
-      private static var _singleLoadingFile:Dictionary = new Dictionary(true);
+      private static var _singleLoadingFile:Dictionary;
       
       public function initAdapter(uri:Uri, forcedAdapter:Class) : void {
          getAdapter(uri,forcedAdapter);
@@ -30,7 +30,7 @@ package com.ankamagames.jerakine.resources.protocols
          return uri.normalizedUriWithoutSubPath;
       }
       
-      override function release() : void {
+      override protected function release() : void {
          if(_adapter)
          {
             _adapter.free();
@@ -75,7 +75,7 @@ package com.ankamagames.jerakine.resources.protocols
          throw new AbstractMethodCallError("AbstractProtocol childs must override the release method in order to free their resources.");
       }
       
-      function extractPath(path:String) : String {
+      protected function extractPath(path:String) : String {
          throw new AbstractMethodCallError("AbstractProtocol childs must override the release method in order to free their resources.");
       }
    }

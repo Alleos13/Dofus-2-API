@@ -47,11 +47,11 @@ package flashx.textLayout.compose
       
       protected var _useExistingLine:Boolean;
       
-      override function createParcelList() : ParcelList {
+      override protected function createParcelList() : ParcelList {
          return ParcelList.getParcelList();
       }
       
-      override function releaseParcelList(param1:ParcelList) : void {
+      override protected function releaseParcelList(param1:ParcelList) : void {
          ParcelList.releaseParcelList(param1);
       }
       
@@ -63,7 +63,7 @@ package flashx.textLayout.compose
          return super.composeTextFlow(param1,param2,param3);
       }
       
-      override function initializeForComposer(param1:IFlowComposer, param2:int, param3:int, param4:int) : void {
+      override protected function initializeForComposer(param1:IFlowComposer, param2:int, param3:int, param4:int) : void {
          var _loc5_:* = 0;
          _startComposePosition = param1.damageAbsoluteStart;
          if(param3 == -1)
@@ -86,7 +86,7 @@ package flashx.textLayout.compose
          super.initializeForComposer(param1,param2,_loc5_,param4);
       }
       
-      override function composeInternal(param1:FlowGroupElement, param2:int) : void {
+      override protected function composeInternal(param1:FlowGroupElement, param2:int) : void {
          var _loc3_:* = 0;
          super.composeInternal(param1,param2);
          if(_curElement)
@@ -99,7 +99,7 @@ package flashx.textLayout.compose
          }
       }
       
-      override function doVerticalAlignment(param1:Boolean, param2:Parcel) : void {
+      override protected function doVerticalAlignment(param1:Boolean, param2:Parcel) : void {
          var _loc3_:ContainerController = null;
          var _loc4_:String = null;
          var _loc5_:* = 0;
@@ -146,7 +146,7 @@ package flashx.textLayout.compose
          this.vjBeginLineIndex = this._curLineIndex;
       }
       
-      override function applyVerticalAlignmentToColumn(param1:ContainerController, param2:String, param3:Array, param4:int, param5:int, param6:int, param7:int) : void {
+      override protected function applyVerticalAlignmentToColumn(param1:ContainerController, param2:String, param3:Array, param4:int, param5:int, param6:int, param7:int) : void {
          var _loc8_:TextLine = null;
          var _loc9_:TextFlowLine = null;
          super.applyVerticalAlignmentToColumn(param1,param2,param3,param4,param5,param6,param7);
@@ -157,7 +157,7 @@ package flashx.textLayout.compose
          }
       }
       
-      override function finalParcelAdjustment(param1:ContainerController) : void {
+      override protected function finalParcelAdjustment(param1:ContainerController) : void {
          var _loc6_:* = NaN;
          var _loc7_:ParagraphElement = null;
          var _loc8_:ITextLayoutFormat = null;
@@ -244,7 +244,7 @@ package flashx.textLayout.compose
          }
       }
       
-      override function endLine(param1:TextLine) : void {
+      override protected function endLine(param1:TextLine) : void {
          super.endLine(param1);
          if(!this._useExistingLine)
          {
@@ -254,7 +254,7 @@ package flashx.textLayout.compose
          this._curLineIndex++;
       }
       
-      override function composeParagraphElement(param1:ParagraphElement, param2:int) : Boolean {
+      override protected function composeParagraphElement(param1:ParagraphElement, param2:int) : Boolean {
          if(this._curLineIndex < 0)
          {
             this._curLineIndex = _flowComposer.findLineIndexAtPosition(_curElementStart + _curElementOffset);
@@ -262,7 +262,7 @@ package flashx.textLayout.compose
          return super.composeParagraphElement(param1,param2);
       }
       
-      override function composeNextLine() : TextLine {
+      override protected function composeNextLine() : TextLine {
          var _loc4_:TextLine = null;
          var _loc5_:TextLine = null;
          var _loc6_:TextLine = null;
@@ -352,7 +352,7 @@ package flashx.textLayout.compose
          return _loc5_;
       }
       
-      override function createTextLine(param1:Number, param2:Boolean) : TextLine {
+      override protected function createTextLine(param1:Number, param2:Boolean) : TextLine {
          _curLine = new TextFlowLine(null,null);
          var _loc3_:TextLine = super.createTextLine(param1,param2);
          if(_loc3_)

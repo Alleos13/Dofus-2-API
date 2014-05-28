@@ -40,7 +40,7 @@ package com.ankamagames.dofus.logic.game.common.managers
       
       private static var _timer:Timer;
       
-      public static const MINUTE_DELAY:int = 1000 * 60;
+      public static const MINUTE_DELAY:int = 60000.0;
       
       public static const GREAT_DROP_LIMIT:int = 10;
       
@@ -130,7 +130,7 @@ package com.ankamagames.dofus.logic.game.common.managers
             return;
          }
          var items:Array = new Array();
-         for each (item in InventoryManager.getInstance().inventory.getView("equipment").content)
+         for each(item in InventoryManager.getInstance().inventory.getView("equipment").content)
          {
             if((item) && (item.isSpeakingObject))
             {
@@ -221,14 +221,14 @@ package com.ankamagames.dofus.logic.game.common.managers
          _timer.removeEventListener("timer",this.onTimer);
       }
       
-      function init() : void {
+      private function init() : void {
          _timer = new Timer(MINUTE_DELAY);
          _timer.addEventListener(TimerEvent.TIMER,this.onTimer);
          _timer.start();
          this.generateNextMsgCount(true);
       }
       
-      function generateNextMsgCount(noMin:Boolean) : void {
+      private function generateNextMsgCount(noMin:Boolean) : void {
          var msgCount:Number = SPEAKING_ITEMS_MSG_COUNT;
          var delta:Number = SPEAKING_ITEMS_MSG_COUNT_DELTA;
          if(noMin)
@@ -241,7 +241,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          }
       }
       
-      function onTimer(event:TimerEvent) : void {
+      private function onTimer(event:TimerEvent) : void {
          this.triggerEvent(SPEAK_TRIGGER_MINUTE);
       }
    }

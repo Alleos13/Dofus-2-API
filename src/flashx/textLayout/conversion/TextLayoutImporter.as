@@ -172,7 +172,7 @@ package flashx.textLayout.conversion
          this._imageSourceResolveFunction = param1;
       }
       
-      override function parseContent(param1:XML) : TextFlow {
+      override protected function parseContent(param1:XML) : TextFlow {
          var _loc2_:String = param1.name().localName;
          var _loc3_:XML = _loc2_ == "TextFlow"?param1:param1..TextFlow[0];
          if(!_loc3_)

@@ -68,25 +68,25 @@ package com.ankamagames.tubul.resources.adapters
          }
       }
       
-       function getResource(dataFormat:String, data:*) : * {
+      override protected function getResource(dataFormat:String, data:*) : * {
          return this._sound;
       }
       
-      public override function getResourceType() : uint {
+      override public function getResourceType() : uint {
          return TubulResourceType.RESOURCE_MP3_SOUND;
       }
       
-       function onComplete(e:Event) : void {
+      override protected function onComplete(e:Event) : void {
          this.releaseLoader();
          this._observer.onLoaded(this._uri,this.getResourceType(),this._sound);
       }
       
-       function onError(ee:ErrorEvent) : void {
+      override protected function onError(ee:ErrorEvent) : void {
          this.releaseLoader();
          this._observer.onFailed(this._uri,ee.text,ResourceErrorCode.RESOURCE_NOT_FOUND);
       }
       
-       function onProgress(pe:ProgressEvent) : void {
+      override protected function onProgress(pe:ProgressEvent) : void {
          this._observer.onProgress(this._uri,pe.bytesLoaded,pe.bytesTotal);
       }
    }

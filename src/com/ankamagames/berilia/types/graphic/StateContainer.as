@@ -20,7 +20,7 @@ package com.ankamagames.berilia.types.graphic
          this.lockedProperties = "x,y,width,height,selected,greyedOut";
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(StateContainer));
+      protected static const _log:Logger;
       
       protected var _state;
       
@@ -83,14 +83,14 @@ package com.ankamagames.berilia.types.graphic
          if(this._lockedPropertiesStr)
          {
             tmp = s.split(",");
-            for each (propName in tmp)
+            for each(propName in tmp)
             {
                this._lockedProperties[propName] = true;
             }
          }
       }
       
-      function changeState(newState:*) : void {
+      protected function changeState(newState:*) : void {
          var target:GraphicContainer = null;
          var properties:Array = null;
          var ui:UiRootContainer = null;
@@ -105,46 +105,44 @@ package com.ankamagames.berilia.types.graphic
             this._state = newState;
             this.restoreSnapshot(StatesEnum.STATE_NORMAL);
          }
-         else
+         else if((!(this.changingStateData == null)) && (this.changingStateData[newState]))
          {
-            if((!(this.changingStateData == null)) && (this.changingStateData[newState]))
+            this._snapshot[this._state] = new Array();
+            if(this._state != StatesEnum.STATE_NORMAL)
             {
-               this._snapshot[this._state] = new Array();
-               if(this._state != StatesEnum.STATE_NORMAL)
-               {
-                  this.restoreSnapshot(StatesEnum.STATE_NORMAL);
-               }
-               for (key in this.changingStateData[newState])
-               {
-                  ui = getUi();
-                  if(!ui)
-                  {
-                     break;
-                  }
-                  target = ui.getElement(key);
-                  if(target)
-                  {
-                     if(this._state == StatesEnum.STATE_NORMAL)
-                     {
-                        this.makeSnapshot(StatesEnum.STATE_NORMAL,target);
-                     }
-                     properties = this.changingStateData[newState][key];
-                     for (property in properties)
-                     {
-                        target[property] = properties[property];
-                     }
-                     this.makeSnapshot(this._state,target);
-                  }
-               }
+               this.restoreSnapshot(StatesEnum.STATE_NORMAL);
             }
-            else
+            for(key in this.changingStateData[newState])
             {
-               _log.warn(name + " : No data for state \'" + newState + "\' (" + this.changingStateData.length + " states)");
+               ui = getUi();
+               if(!ui)
+               {
+                  break;
+               }
+               target = ui.getElement(key);
+               if(target)
+               {
+                  if(this._state == StatesEnum.STATE_NORMAL)
+                  {
+                     this.makeSnapshot(StatesEnum.STATE_NORMAL,target);
+                  }
+                  properties = this.changingStateData[newState][key];
+                  for(property in properties)
+                  {
+                     target[property] = properties[property];
+                  }
+                  this.makeSnapshot(this._state,target);
+               }
             }
          }
+         else
+         {
+            _log.warn(name + " : No data for state \'" + newState + "\' (" + this.changingStateData.length + " states)");
+         }
+         
       }
       
-      function makeSnapshot(currentState:*, target:GraphicContainer) : void {
+      protected function makeSnapshot(currentState:*, target:GraphicContainer) : void {
          var property:String = null;
          var propertyXml:XML = null;
          if(!this._snapshot[currentState])
@@ -180,7 +178,7 @@ package com.ankamagames.berilia.types.graphic
          }
       }
       
-      function restoreSnapshot(currentState:*) : void {
+      protected function restoreSnapshot(currentState:*) : void {
          var component:GraphicContainer = null;
          var ui:UiRootContainer = null;
          var target:String = null;

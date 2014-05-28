@@ -74,7 +74,7 @@ package com.ankamagames.dofus.console.chat
          }
       }
       
-      function getVersion() : String {
+      private function getVersion() : String {
          return "----------------------------------------------\n" + "DOFUS CLIENT v " + BuildInfos.BUILD_VERSION + "\n" + "(c) ANKAMA GAMES (" + BuildInfos.BUILD_DATE + ") \n" + "Flash player " + Capabilities.version + "\n----------------------------------------------";
       }
       
@@ -97,10 +97,12 @@ package com.ankamagames.dofus.console.chat
                return I18n.getUiText("ui.chat.console.help.mapid");
             case "time":
                return I18n.getUiText("ui.chat.console.help.time");
+            default:
+               return I18n.getUiText("ui.chat.console.noHelp",[cmd]);
          }
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint=0, currentParams:Array=null) : Array {
+      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array {
          return [];
       }
    }

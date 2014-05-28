@@ -12,7 +12,6 @@ package com.ankamagames.dofus.logic.game.common.frames
    import com.ankamagames.dofus.network.messages.game.inventory.ObjectAveragePricesMessage;
    import com.ankamagames.dofus.network.messages.game.inventory.ObjectAveragePricesErrorMessage;
    import com.ankamagames.dofus.network.enums.GameContextEnum;
-   import __AS3__.vec.Vector;
    import com.ankamagames.dofus.kernel.Kernel;
    import com.ankamagames.dofus.logic.common.frames.MiscFrame;
    import com.ankamagames.dofus.datacenter.misc.OptionalFeature;
@@ -34,7 +33,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          }
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(AveragePricesFrame));
+      protected static const _log:Logger;
       
       private static var _dataStoreType:DataStoreType;
       
@@ -83,10 +82,12 @@ package com.ankamagames.dofus.logic.game.common.frames
             case pMsg is ObjectAveragePricesErrorMessage:
                oapem = pMsg as ObjectAveragePricesErrorMessage;
                return true;
+            default:
+               return false;
          }
       }
       
-      function updatePricesData(pItemsIds:Vector.<uint>, pItemsAvgPrices:Vector.<uint>) : void {
+      private function updatePricesData(pItemsIds:Vector.<uint>, pItemsAvgPrices:Vector.<uint>) : void {
          var nbItems:int = pItemsIds.length;
          this._pricesData = 
             {
@@ -102,7 +103,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          StoreDataManager.getInstance().setData(_dataStoreType,this._serverName,this._pricesData);
       }
       
-      function updateAllowed() : Boolean {
+      private function updateAllowed() : Boolean {
          var now:Date = null;
          var lastUpdateHour:String = null;
          var misc:MiscFrame = Kernel.getWorker().getFrame(MiscFrame) as MiscFrame;
@@ -123,7 +124,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          return true;
       }
       
-      function askPricesData() : void {
+      private function askPricesData() : void {
          var oapgm:ObjectAveragePricesGetMessage = new ObjectAveragePricesGetMessage();
          oapgm.initObjectAveragePricesGetMessage();
          ConnectionsHandler.getConnection().send(oapgm);

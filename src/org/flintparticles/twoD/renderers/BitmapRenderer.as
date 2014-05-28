@@ -86,7 +86,7 @@ package org.flintparticles.twoD.renderers
          this._colorMap = null;
       }
       
-      function createBitmap() : void {
+      protected function createBitmap() : void {
          if(!this._canvas)
          {
             return;
@@ -117,7 +117,7 @@ package org.flintparticles.twoD.renderers
          this.createBitmap();
       }
       
-       function renderParticles(param1:Array) : void {
+      override protected function renderParticles(param1:Array) : void {
          var _loc2_:* = 0;
          var _loc3_:* = 0;
          if(!this._bitmap)
@@ -159,7 +159,7 @@ package org.flintparticles.twoD.renderers
          this._bitmapData.unlock();
       }
       
-      function drawParticle(param1:Particle2D) : void {
+      protected function drawParticle(param1:Particle2D) : void {
          var _loc2_:Matrix = null;
          _loc2_ = param1.matrixTransform;
          _loc2_.translate(-this._canvas.x,-this._canvas.y);

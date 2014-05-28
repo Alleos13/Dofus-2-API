@@ -19,19 +19,19 @@ package com.ankamagames.dofus.logic.common.utils
          this._timer.addEventListener(TimerEvent.TIMER_COMPLETE,this.onTimerComplete);
       }
       
-      protected static const _log:Logger = Log.getLogger(getQualifiedClassName(Lagometer));
+      protected static const _log:Logger;
       
-      protected static const SHOW_LAG_DELAY:uint = 2 * 1000;
+      protected static const SHOW_LAG_DELAY:uint = 2000.0;
       
       protected var _timer:Timer;
       
       protected var _lagging:Boolean = false;
       
-      public function ping(msg:INetworkMessage=null) : void {
+      public function ping(msg:INetworkMessage = null) : void {
          this._timer.start();
       }
       
-      public function pong(msg:INetworkMessage=null) : void {
+      public function pong(msg:INetworkMessage = null) : void {
          if(this._lagging)
          {
             this.stopLag();
@@ -49,20 +49,20 @@ package com.ankamagames.dofus.logic.common.utils
          }
       }
       
-      function onTimerComplete(e:TimerEvent) : void {
+      protected function onTimerComplete(e:TimerEvent) : void {
          this.startLag();
       }
       
-      function startLag() : void {
+      protected function startLag() : void {
          this._lagging = true;
          this.updateUi();
       }
       
-      function updateUi() : void {
+      protected function updateUi() : void {
          KernelEventsManager.getInstance().processCallback(HookList.LaggingNotification,this._lagging);
       }
       
-      function stopLag() : void {
+      protected function stopLag() : void {
          this._lagging = false;
          this.updateUi();
       }

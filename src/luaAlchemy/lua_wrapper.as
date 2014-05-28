@@ -7,7 +7,9 @@ package luaAlchemy
          super();
       }
       
-      protected static const _lib = null;
+      protected static const _lib_init:*;
+      
+      protected static const _lib = _lib_init.init();
       
       public static function luaInitializeState() : uint {
          return _lib.luaInitializeState();
