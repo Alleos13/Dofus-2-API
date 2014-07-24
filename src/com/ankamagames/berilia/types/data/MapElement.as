@@ -13,29 +13,29 @@ package com.ankamagames.berilia.types.data
       //Décompilation abandonné
       }
       
-      public function MapElement(id:String, x:int, y:int, layer:String, owner:*)
+      public function MapElement(param1:String, param2:int, param3:int, param4:String, param5:*)
       {
          //Décompilation abandonné
       }
       
       public static var _elementRef:Dictionary;
       
-      public static function getElementById(id:String, owner:*) : MapElement
+      public static function getElementById(param1:String, param2:*) : MapElement
       {
          //Décompilation abandonné
       }
       
-      public static function removeElementById(id:String, owner:*) : void
+      public static function removeElementById(param1:String, param2:*) : void
       {
          //Décompilation abandonné
       }
       
-      public static function removeAllElements(owner:*) : void
+      public static function removeAllElements(param1:*) : void
       {
          //Décompilation abandonné
       }
       
-      public static function getOwnerElements(owner:*) : Dictionary
+      public static function getOwnerElements(param1:*) : Dictionary
       {
          //Décompilation abandonné
       }
@@ -50,7 +50,7 @@ package com.ankamagames.berilia.types.data
       
       public var layer:String;
       
-      public function getObject(accessKey:Object) : *
+      public function getObject(param1:Object) : *
       {
          //Décompilation abandonné
       }

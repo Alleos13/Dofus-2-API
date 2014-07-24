@@ -54,39 +54,39 @@ package com.ankamagames.atouin.entities.behaviours.movements
       
       protected static const _cache:Dictionary;
       
-      protected static function getFromCache(speedAdjust:Number, type:Class) : AnimatedMovementBehavior
+      protected static function getFromCache(param1:Number, param2:Class) : AnimatedMovementBehavior
       {
          //Décompilation abandonné
       }
       
       public var speedAdjust:Number = 0.0;
       
-      public function move(entity:IMovable, path:MovementPath, callback:Function = null) : void
+      public function move(param1:IMovable, param2:MovementPath, param3:Function = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function synchroniseSubEntitiesPosition(entityRef:IMovable, subEntityContainer:DisplayObject = null) : void
+      public function synchroniseSubEntitiesPosition(param1:IMovable, param2:DisplayObject = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function jump(entity:IMovable, newPosition:MapPoint) : void
+      public function jump(param1:IMovable, param2:MapPoint) : void
       {
          //Décompilation abandonné
       }
       
-      public function stop(entity:IMovable, forceStop:Boolean = false) : void
+      public function stop(param1:IMovable, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function isMoving(entity:IMovable) : Boolean
+      public function isMoving(param1:IMovable) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getNextCell(entity:IMovable) : MapPoint
+      public function getNextCell(param1:IMovable) : MapPoint
       {
          //Décompilation abandonné
       }
@@ -116,37 +116,37 @@ package com.ankamagames.atouin.entities.behaviours.movements
          //Décompilation abandonné
       }
       
-      protected function initMovement(oMobile:IMovable, tweenData:TweenEntityData, wasLinked:Boolean = false) : void
+      protected function initMovement(param1:IMovable, param2:TweenEntityData, param3:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      protected function goNextCell(entity:IMovable) : void
+      protected function goNextCell(param1:IMovable) : void
       {
          //Décompilation abandonné
       }
       
-      protected function stopMovement(entity:IMovable) : void
+      protected function stopMovement(param1:IMovable) : void
       {
          //Décompilation abandonné
       }
       
-      private function getVelocity(ted:TweenEntityData, orientation:uint) : Number
+      private function getVelocity(param1:TweenEntityData, param2:uint) : Number
       {
          //Décompilation abandonné
       }
       
-      protected function processMovement(tweenData:TweenEntityData, currentTime:uint) : void
+      protected function processMovement(param1:TweenEntityData, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      protected function processJump(entity:IMovable, newPosition:MapPoint) : void
+      protected function processJump(param1:IMovable, param2:MapPoint) : void
       {
          //Décompilation abandonné
       }
       
-      private function onEnterFrame(e:Event) : void
+      private function onEnterFrame(param1:Event) : void
       {
          //Décompilation abandonné
       }

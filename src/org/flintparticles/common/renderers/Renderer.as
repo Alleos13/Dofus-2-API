@@ -9,9 +9,9 @@ package org.flintparticles.common.renderers
       //Décompilation abandonné
       }
       
-      function addEmitter(emitter:Emitter) : void;
+      function addEmitter(param1:Emitter) : void;
       
-      function removeEmitter(emitter:Emitter) : void;
+      function removeEmitter(param1:Emitter) : void;
       
       function get emitters() : Array;
    }

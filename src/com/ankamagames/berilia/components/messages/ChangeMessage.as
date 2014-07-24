@@ -9,7 +9,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function ChangeMessage(target:InteractiveObject)
+      public function ChangeMessage(param1:InteractiveObject)
       {
          //Décompilation abandonné
       }

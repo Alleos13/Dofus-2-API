@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.mounts
       
       private static var MODULE:String = "Mounts";
       
-      public static function getMountById(id:uint) : Mount
+      public static function getMountById(param1:uint) : Mount
       {
          //Décompilation abandonné
       }

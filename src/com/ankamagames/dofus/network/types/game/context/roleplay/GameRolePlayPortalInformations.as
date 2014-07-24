@@ -29,7 +29,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initGameRolePlayPortalInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, portal:PortalInformation = null) : GameRolePlayPortalInformations
+      public function initGameRolePlayPortalInformations(param1:int = 0, param2:EntityLook = null, param3:EntityDispositionInformations = null, param4:PortalInformation = null) : GameRolePlayPortalInformations
       {
          //Décompilation abandonné
       }
@@ -39,22 +39,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayPortalInformations(output:IDataOutput) : void
+      public function serializeAs_GameRolePlayPortalInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayPortalInformations(input:IDataInput) : void
+      public function deserializeAs_GameRolePlayPortalInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

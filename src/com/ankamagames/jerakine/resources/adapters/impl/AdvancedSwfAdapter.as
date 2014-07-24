@@ -20,7 +20,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
       
       private var _aswf:ASwf;
       
-      override protected function getResource(ldr:LoaderInfo) : *
+      override protected function getResource(param1:LoaderInfo) : *
       {
          //Décompilation abandonné
       }
@@ -30,7 +30,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          //Décompilation abandonné
       }
       
-      override protected function init(ldr:LoaderInfo) : void
+      override protected function init(param1:LoaderInfo) : void
       {
          //Décompilation abandonné
       }

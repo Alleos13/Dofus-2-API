@@ -25,7 +25,7 @@ package com.ankamagames.jerakine.data
          //Décompilation abandonné
       }
       
-      override protected function checkFileVersion(sFileName:String, sVersion:String) : Boolean
+      override protected function checkFileVersion(param1:String, param2:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -35,7 +35,7 @@ package com.ankamagames.jerakine.data
          //Décompilation abandonné
       }
       
-      override protected function onLoaded(e:ResourceLoadedEvent) : void
+      override protected function onLoaded(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }

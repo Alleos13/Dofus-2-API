@@ -16,7 +16,7 @@ package com.ankamagames.berilia.types.template
       //Décompilation abandonné
       }
       
-      public function XmlTemplate(sXml:String = null, sFilename:String = null)
+      public function XmlTemplate(param1:String = null, param2:String = null)
       {
          //Décompilation abandonné
       }
@@ -38,7 +38,7 @@ package com.ankamagames.berilia.types.template
          //Décompilation abandonné
       }
       
-      public function set xml(sXml:String) : void
+      public function set xml(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -48,7 +48,7 @@ package com.ankamagames.berilia.types.template
          //Décompilation abandonné
       }
       
-      public function set filename(s:String) : void
+      public function set filename(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -63,7 +63,7 @@ package com.ankamagames.berilia.types.template
          //Décompilation abandonné
       }
       
-      public function makeTemplate(aVar:Array) : XMLNode
+      public function makeTemplate(param1:Array) : XMLNode
       {
          //Décompilation abandonné
       }
@@ -73,12 +73,12 @@ package com.ankamagames.berilia.types.template
          //Décompilation abandonné
       }
       
-      private function matchDynamicsParts(node:XMLNode) : void
+      private function matchDynamicsParts(param1:XMLNode) : void
       {
          //Décompilation abandonné
       }
       
-      private function replaceParam(txt:String, aVars:Array, prefix:String, recur:uint = 1) : String
+      private function replaceParam(param1:String, param2:Array, param3:String, param4:uint = 1) : String
       {
          //Décompilation abandonné
       }

@@ -9,7 +9,7 @@ package com.ankamagames.dofus.internalDatacenter.communication
       //Décompilation abandonné
       }
       
-      public function ThinkBubble(text:String)
+      public function ThinkBubble(param1:String)
       {
          //Décompilation abandonné
       }

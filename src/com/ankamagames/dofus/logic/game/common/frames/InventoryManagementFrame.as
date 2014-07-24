@@ -149,12 +149,12 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function set roleplayPointCellFrame(val:WeakReference) : void
+      public function set roleplayPointCellFrame(param1:WeakReference) : void
       {
          //Décompilation abandonné
       }
       
-      public function getWrappersFromShortcuts(shortcuts:Vector.<Shortcut>) : Array
+      public function getWrappersFromShortcuts(param1:Vector.<Shortcut>) : Array
       {
          //Décompilation abandonné
       }
@@ -164,7 +164,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -184,22 +184,22 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      private function onCellPointed(success:Boolean, cellId:uint, entityId:int) : void
+      private function onCellPointed(param1:Boolean, param2:uint, param3:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function useItem(oua:ObjectUseAction, iw:ItemWrapper) : void
+      private function useItem(param1:ObjectUseAction, param2:ItemWrapper) : void
       {
          //Décompilation abandonné
       }
       
-      private function addObject(objectItem:ObjectItem) : void
+      private function addObject(param1:ObjectItem) : void
       {
          //Décompilation abandonné
       }
       
-      private function getShortcutWrapperPropFromShortcut(shortcut:Shortcut) : Object
+      private function getShortcutWrapperPropFromShortcut(param1:Shortcut) : Object
       {
          //Décompilation abandonné
       }

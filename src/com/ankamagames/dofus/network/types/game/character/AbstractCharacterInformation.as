@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.character
          //Décompilation abandonné
       }
       
-      public function initAbstractCharacterInformation(id:uint = 0) : AbstractCharacterInformation
+      public function initAbstractCharacterInformation(param1:uint = 0) : AbstractCharacterInformation
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.character
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AbstractCharacterInformation(output:IDataOutput) : void
+      public function serializeAs_AbstractCharacterInformation(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AbstractCharacterInformation(input:IDataInput) : void
+      public function deserializeAs_AbstractCharacterInformation(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

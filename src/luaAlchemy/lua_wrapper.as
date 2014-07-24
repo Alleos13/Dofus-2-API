@@ -23,42 +23,42 @@ package luaAlchemy
          //Décompilation abandonné
       }
       
-      public static function luaClose(luaState:uint) : void
+      public static function luaClose(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public static function doFile(luaState:uint, strFileName:*) : Array
+      public static function doFile(param1:uint, param2:*) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function doFileAsync(gg_handle:Function, luaState:uint, strFileName:*) : void
+      public static function doFileAsync(param1:Function, param2:uint, param3:*) : void
       {
          //Décompilation abandonné
       }
       
-      public static function luaDoString(luaState:uint, strValue:*) : Array
+      public static function luaDoString(param1:uint, param2:*) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function luaDoStringAsync(gg_handle:Function, luaState:uint, strValue:*) : void
+      public static function luaDoStringAsync(param1:Function, param2:uint, param3:*) : void
       {
          //Décompilation abandonné
       }
       
-      public static function setGlobal(luaState:uint, key:String, value:*) : void
+      public static function setGlobal(param1:uint, param2:String, param3:*) : void
       {
          //Décompilation abandonné
       }
       
-      public static function setGlobalLuaValue(luaState:uint, key:String, value:*) : void
+      public static function setGlobalLuaValue(param1:uint, param2:String, param3:*) : void
       {
          //Décompilation abandonné
       }
       
-      public static function callGlobal(luaState:uint, key:*, args:Array) : Array
+      public static function callGlobal(param1:uint, param2:*, param3:Array) : Array
       {
          //Décompilation abandonné
       }

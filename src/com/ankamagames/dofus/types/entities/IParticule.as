@@ -17,6 +17,6 @@ package com.ankamagames.dofus.types.entities
       
       function get subExplosion() : Boolean;
       
-      function set subExplosion(v:Boolean) : void;
+      function set subExplosion(param1:Boolean) : void;
    }
 }

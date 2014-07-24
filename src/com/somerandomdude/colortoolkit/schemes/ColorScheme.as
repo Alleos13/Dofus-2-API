@@ -7,7 +7,7 @@ package com.somerandomdude.colortoolkit.schemes
       //Décompilation abandonné
       }
       
-      public function ColorScheme(... colors)
+      public function ColorScheme(... rest)
       {
          //Décompilation abandonné
       }
@@ -19,12 +19,12 @@ package com.somerandomdude.colortoolkit.schemes
          //Décompilation abandonné
       }
       
-      public function addColor(colortest:int) : void
+      public function addColor(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeColor(colortest:int) : void
+      public function removeColor(param1:int) : void
       {
          //Décompilation abandonné
       }

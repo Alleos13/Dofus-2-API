@@ -22,7 +22,7 @@ package com.ankamagames.dofus.datacenter.guild
       
       protected static const _log:Logger;
       
-      public static function getEmblemBackgroundById(id:int) : EmblemBackground
+      public static function getEmblemBackgroundById(param1:int) : EmblemBackground
       {
          //Décompilation abandonné
       }

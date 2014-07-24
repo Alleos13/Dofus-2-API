@@ -54,27 +54,27 @@ package com.ankamagames.dofus.logic.common.managers
          //Décompilation abandonné
       }
       
-      public static function updateFocusList(focusList:Array, clientId:String) : void
+      public static function updateFocusList(param1:Array, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onActivate(e:Event) : void
+      private static function onActivate(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onDesactivate(e:Event) : void
+      private static function onDesactivate(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onStageRollOver(e:Event) : void
+      private static function onStageRollOver(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onStateChange(e:NativeWindowDisplayStateEvent) : void
+      private static function onStateChange(param1:NativeWindowDisplayStateEvent) : void
       {
          //Décompilation abandonné
       }
@@ -89,7 +89,7 @@ package com.ankamagames.dofus.logic.common.managers
       
       private static var _logRamWrapped:FpsLogWrapper;
       
-      private static function onEnterFrame(e:Event) : void
+      private static function onEnterFrame(param1:Event) : void
       {
          //Décompilation abandonné
       }

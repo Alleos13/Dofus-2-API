@@ -19,7 +19,7 @@ package com.ankamagames.dofus.console.debug
          //Décompilation abandonné
       }
       
-      private static function stateToString(state:int) : String
+      private static function stateToString(param1:int) : String
       {
          //Décompilation abandonné
       }
@@ -33,27 +33,27 @@ package com.ankamagames.dofus.console.debug
          //Décompilation abandonné
       }
       
-      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void
+      public function handle(param1:ConsoleHandler, param2:String, param3:Array) : void
       {
          //Décompilation abandonné
       }
       
-      public function getHelp(cmd:String) : String
+      public function getHelp(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array
+      public function getParamPossibilities(param1:String, param2:uint = 0, param3:Array = null) : Array
       {
          //Décompilation abandonné
       }
       
-      private function onGetUpdaterSpeed(speed:int) : void
+      private function onGetUpdaterSpeed(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function onPartInfo(part:ContentPart) : void
+      private function onPartInfo(param1:ContentPart) : void
       {
          //Décompilation abandonné
       }

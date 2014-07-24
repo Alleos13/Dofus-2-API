@@ -16,7 +16,7 @@ package com.ankamagames.jerakine.cache
       //Décompilation abandonné
       }
       
-      public function Cache(checkSystem:uint, max:uint, warn:uint)
+      public function Cache(param1:uint, param2:uint, param3:uint)
       {
          //Décompilation abandonné
       }
@@ -53,7 +53,7 @@ package com.ankamagames.jerakine.cache
          //Décompilation abandonné
       }
       
-      public function set warnMemory(nValue:int) : void
+      public function set warnMemory(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -63,7 +63,7 @@ package com.ankamagames.jerakine.cache
          //Décompilation abandonné
       }
       
-      public function set maxMemory(nValue:int) : void
+      public function set maxMemory(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -73,7 +73,7 @@ package com.ankamagames.jerakine.cache
          //Décompilation abandonné
       }
       
-      public function set warnCount(nValue:int) : void
+      public function set warnCount(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -83,7 +83,7 @@ package com.ankamagames.jerakine.cache
          //Décompilation abandonné
       }
       
-      public function set maxCount(nValue:int) : void
+      public function set maxCount(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -93,7 +93,7 @@ package com.ankamagames.jerakine.cache
          //Décompilation abandonné
       }
       
-      public function cacheObject(obj:ICachable) : void
+      public function cacheObject(param1:ICachable) : void
       {
          //Décompilation abandonné
       }
@@ -108,32 +108,32 @@ package com.ankamagames.jerakine.cache
          //Décompilation abandonné
       }
       
-      public function containsCachable(type:Class, name:String) : Boolean
+      public function containsCachable(param1:Class, param2:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getFromCache(type:Class, name:String) : *
+      public function getFromCache(param1:Class, param2:String) : *
       {
          //Décompilation abandonné
       }
       
-      private function getStringFromClassAndName(type:Class, name:String) : String
+      private function getStringFromClassAndName(param1:Class, param2:String) : String
       {
          //Décompilation abandonné
       }
       
-      private function getIndex(obj:ICachable) : Number
+      private function getIndex(param1:ICachable) : Number
       {
          //Décompilation abandonné
       }
       
-      private function getIndexFromString(str:String) : Number
+      private function getIndexFromString(param1:String) : Number
       {
          //Décompilation abandonné
       }
       
-      private function registerObject(obj:ICachable) : void
+      private function registerObject(param1:ICachable) : void
       {
          //Décompilation abandonné
       }

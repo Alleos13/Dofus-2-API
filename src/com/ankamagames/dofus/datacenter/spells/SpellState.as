@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.spells
       
       public static const MODULE:String = "SpellStates";
       
-      public static function getSpellStateById(id:int) : SpellState
+      public static function getSpellStateById(param1:int) : SpellState
       {
          //Décompilation abandonné
       }

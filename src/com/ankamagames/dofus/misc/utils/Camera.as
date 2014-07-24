@@ -25,7 +25,7 @@ package com.ankamagames.dofus.misc.utils
       //Décompilation abandonné
       }
       
-      public function Camera(pZoom:Number = 1)
+      public function Camera(param1:Number = 1)
       {
          //Décompilation abandonné
       }
@@ -55,7 +55,7 @@ package com.ankamagames.dofus.misc.utils
          //Décompilation abandonné
       }
       
-      public function set currentZoom(pZoom:Number) : void
+      public function set currentZoom(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -70,22 +70,22 @@ package com.ankamagames.dofus.misc.utils
          //Décompilation abandonné
       }
       
-      public function setZoom(pZoom:Number) : ISequencable
+      public function setZoom(param1:Number) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public function zoom(pArgs:Array) : ISequencable
+      public function zoom(param1:Array) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public function moveTo(pArgs:Array) : ISequencable
+      public function moveTo(param1:Array) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public function follow(pEntity:ScriptEntity) : ISequencable
+      public function follow(param1:ScriptEntity) : ISequencable
       {
          //Décompilation abandonné
       }
@@ -100,17 +100,17 @@ package com.ankamagames.dofus.misc.utils
          //Décompilation abandonné
       }
       
-      public function followEntity(pEntity:AnimatedCharacter) : void
+      public function followEntity(param1:AnimatedCharacter) : void
       {
          //Décompilation abandonné
       }
       
-      public function zoomOnPos(pTargetZoom:Number, pTargetX:Number, pTargetY:Number) : void
+      public function zoomOnPos(param1:Number, param2:Number, param3:Number) : void
       {
          //Décompilation abandonné
       }
       
-      private function onEnterFrame(pEvent:Event) : void
+      private function onEnterFrame(param1:Event) : void
       {
          //Décompilation abandonné
       }

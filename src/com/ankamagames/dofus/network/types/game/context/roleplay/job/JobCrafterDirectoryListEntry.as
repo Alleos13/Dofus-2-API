@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.job
          //Décompilation abandonné
       }
       
-      public function initJobCrafterDirectoryListEntry(playerInfo:JobCrafterDirectoryEntryPlayerInfo = null, jobInfo:JobCrafterDirectoryEntryJobInfo = null) : JobCrafterDirectoryListEntry
+      public function initJobCrafterDirectoryListEntry(param1:JobCrafterDirectoryEntryPlayerInfo = null, param2:JobCrafterDirectoryEntryJobInfo = null) : JobCrafterDirectoryListEntry
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.job
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_JobCrafterDirectoryListEntry(output:IDataOutput) : void
+      public function serializeAs_JobCrafterDirectoryListEntry(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_JobCrafterDirectoryListEntry(input:IDataInput) : void
+      public function deserializeAs_JobCrafterDirectoryListEntry(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

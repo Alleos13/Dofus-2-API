@@ -11,7 +11,7 @@ package flashx.textLayout.utils
       //Décompilation abandonné
       }
       
-      public function HitTestArea(objects:Object)
+      public function HitTestArea(param1:Object)
       {
          //Décompilation abandonné
       }
@@ -32,17 +32,17 @@ package flashx.textLayout.utils
       
       private var _owner:FlowElement = null;
       
-      tlf_internal function initialize(objects:Object) : void
+      tlf_internal function initialize(param1:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function hitTest(x:Number, y:Number) : FlowElement
+      public function hitTest(param1:Number, param2:Number) : FlowElement
       {
          //Décompilation abandonné
       }
       
-      private function addQuadrant(objects:Object, propName:String, quadrant:Rectangle) : void
+      private function addQuadrant(param1:Object, param2:String, param3:Rectangle) : void
       {
          //Décompilation abandonné
       }

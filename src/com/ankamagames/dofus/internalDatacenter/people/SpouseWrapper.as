@@ -14,7 +14,7 @@ package com.ankamagames.dofus.internalDatacenter.people
       //Décompilation abandonné
       }
       
-      public function SpouseWrapper(o:FriendSpouseInformations)
+      public function SpouseWrapper(param1:FriendSpouseInformations)
       {
          //Décompilation abandonné
       }

@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.taxCollector
          //Décompilation abandonné
       }
       
-      public static function create(pTaxCollectorId:uint) : GameRolePlayTaxCollectorFightRequestAction
+      public static function create(param1:uint) : GameRolePlayTaxCollectorFightRequestAction
       {
          //Décompilation abandonné
       }

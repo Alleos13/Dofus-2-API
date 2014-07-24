@@ -41,37 +41,37 @@ package com.ankamagames.berilia.managers
       
       private static const _log:Logger;
       
-      public static function init(sharedSecureComponent:Object, sharedReadOnlyData:Object, directAccessObject:Object) : void
+      public static function init(param1:Object, param2:Object, param3:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public static function destroy(target:*) : void
+      public static function destroy(param1:*) : void
       {
          //Décompilation abandonné
       }
       
-      public static function secure(target:*, trusted:Boolean = false) : *
+      public static function secure(param1:*, param2:Boolean = false) : *
       {
          //Décompilation abandonné
       }
       
-      public static function secureContent(target:Array, trusted:Boolean = false) : Array
+      public static function secureContent(param1:Array, param2:Boolean = false) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function unsecure(target:*) : *
+      public static function unsecure(param1:*) : *
       {
          //Décompilation abandonné
       }
       
-      public static function unsecureContent(target:Array) : Array
+      public static function unsecureContent(param1:Array) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function checkAccessKey(accessKey:Object) : void
+      public static function checkAccessKey(param1:Object) : void
       {
          //Décompilation abandonné
       }

@@ -10,7 +10,7 @@ package com.ankamagames.jerakine.utils.display
       //Décompilation abandonné
       }
       
-      public function Rectangle2(x:Number = 0, y:Number = 0, width:Number = 0, height:Number = 0)
+      public function Rectangle2(param1:Number = 0, param2:Number = 0, param3:Number = 0, param4:Number = 0)
       {
          //Décompilation abandonné
       }
@@ -28,7 +28,7 @@ package com.ankamagames.jerakine.utils.display
          //Décompilation abandonné
       }
       
-      public function set x(nValue:Number) : void
+      public function set x(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -38,7 +38,7 @@ package com.ankamagames.jerakine.utils.display
          //Décompilation abandonné
       }
       
-      public function set y(nValue:Number) : void
+      public function set y(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -48,7 +48,7 @@ package com.ankamagames.jerakine.utils.display
          //Décompilation abandonné
       }
       
-      public function set width(nValue:Number) : void
+      public function set width(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -58,17 +58,17 @@ package com.ankamagames.jerakine.utils.display
          //Décompilation abandonné
       }
       
-      public function set height(nValue:Number) : void
+      public function set height(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function localToGlobal(point:Point) : Point
+      public function localToGlobal(param1:Point) : Point
       {
          //Décompilation abandonné
       }
       
-      public function globalToLocal(point:Point) : Point
+      public function globalToLocal(param1:Point) : Point
       {
          //Décompilation abandonné
       }

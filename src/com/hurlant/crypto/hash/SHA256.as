@@ -21,12 +21,12 @@ package com.hurlant.crypto.hash
          //Décompilation abandonné
       }
       
-      override protected function core(x:Array, len:uint) : Array
+      override protected function core(param1:Array, param2:uint) : Array
       {
          //Décompilation abandonné
       }
       
-      protected function rrol(num:uint, cnt:uint) : uint
+      protected function rrol(param1:uint, param2:uint) : uint
       {
          //Décompilation abandonné
       }

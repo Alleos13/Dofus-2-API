@@ -14,7 +14,7 @@ package com.ankamagames.dofus.datacenter.items
          //Décompilation abandonné
       }
       
-      public static function getWeaponById(weaponId:int) : Weapon
+      public static function getWeaponById(param1:int) : Weapon
       {
          //Décompilation abandonné
       }
@@ -49,7 +49,7 @@ package com.ankamagames.dofus.datacenter.items
          //Décompilation abandonné
       }
       
-      override public function copy(from:Item, to:Item) : void
+      override public function copy(param1:Item, param2:Item) : void
       {
          //Décompilation abandonné
       }

@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.messages.connection
          //Décompilation abandonné
       }
       
-      public function initServersListMessage(servers:Vector.<GameServerInformations> = null) : ServersListMessage
+      public function initServersListMessage(param1:Vector.<GameServerInformations> = null) : ServersListMessage
       {
          //Décompilation abandonné
       }
@@ -45,32 +45,32 @@ package com.ankamagames.dofus.network.messages.connection
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ServersListMessage(output:IDataOutput) : void
+      public function serializeAs_ServersListMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ServersListMessage(input:IDataInput) : void
+      public function deserializeAs_ServersListMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

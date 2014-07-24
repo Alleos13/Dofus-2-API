@@ -7,7 +7,7 @@ package com.ankamagames.dofus.logic.game.fight.types
       //Décompilation abandonné
       }
       
-      public function PushedEntity(pEntityId:int, pFirstIndex:uint, pForce:int)
+      public function PushedEntity(param1:int, param2:uint, param3:int)
       {
          //Décompilation abandonné
       }
@@ -29,7 +29,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function set id(value:int) : void
+      public function set id(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -39,7 +39,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function set pushedIndexes(value:Vector.<uint>) : void
+      public function set pushedIndexes(param1:Vector.<uint>) : void
       {
          //Décompilation abandonné
       }
@@ -49,7 +49,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function set force(value:int) : void
+      public function set force(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -59,7 +59,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function set pushingEntity(value:PushedEntity) : void
+      public function set pushingEntity(param1:PushedEntity) : void
       {
          //Décompilation abandonné
       }
@@ -69,7 +69,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function set damage(value:int) : void
+      public function set damage(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -79,7 +79,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function set criticalDamage(value:int) : void
+      public function set criticalDamage(param1:int) : void
       {
          //Décompilation abandonné
       }

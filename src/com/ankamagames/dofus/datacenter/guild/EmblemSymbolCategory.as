@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.guild
       
       protected static const _log:Logger;
       
-      public static function getEmblemSymbolCategoryById(id:int) : EmblemSymbolCategory
+      public static function getEmblemSymbolCategoryById(param1:int) : EmblemSymbolCategory
       {
          //Décompilation abandonné
       }

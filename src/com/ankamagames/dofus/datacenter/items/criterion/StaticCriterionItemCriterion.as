@@ -9,7 +9,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function StaticCriterionItemCriterion(pCriterion:String)
+      public function StaticCriterionItemCriterion(param1:String)
       {
          //Décompilation abandonné
       }

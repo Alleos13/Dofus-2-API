@@ -22,7 +22,7 @@ package com.ankamagames.dofus.datacenter.quest.treasureHunt
       
       public static const MODULE:String = "LegendaryTreasureHunts";
       
-      public static function getLegendaryTreasureHuntById(id:int) : LegendaryTreasureHunt
+      public static function getLegendaryTreasureHuntById(param1:int) : LegendaryTreasureHunt
       {
          //Décompilation abandonné
       }

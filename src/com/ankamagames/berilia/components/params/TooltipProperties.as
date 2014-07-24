@@ -11,7 +11,7 @@ package com.ankamagames.berilia.components.params
       //Décompilation abandonné
       }
       
-      public function TooltipProperties(tooltip:Tooltip, autoHide:Boolean, position:IRectangle, point:uint, relativePoint:uint, offset:int, data:*, makerParam:Object, zoom:Number = 1, alwaysDisplayed:Boolean = true, target:* = null)
+      public function TooltipProperties(param1:Tooltip, param2:Boolean, param3:IRectangle, param4:uint, param5:uint, param6:int, param7:*, param8:Object, param9:Number = 1, param10:Boolean = true, param11:* = null)
       {
          //Décompilation abandonné
       }

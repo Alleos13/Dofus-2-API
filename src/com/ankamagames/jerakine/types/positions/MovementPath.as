@@ -28,7 +28,7 @@ package com.ankamagames.jerakine.types.positions
          //Décompilation abandonné
       }
       
-      public function set start(nValue:MapPoint) : void
+      public function set start(param1:MapPoint) : void
       {
          //Décompilation abandonné
       }
@@ -38,7 +38,7 @@ package com.ankamagames.jerakine.types.positions
          //Décompilation abandonné
       }
       
-      public function set end(nValue:MapPoint) : void
+      public function set end(param1:MapPoint) : void
       {
          //Décompilation abandonné
       }
@@ -53,22 +53,22 @@ package com.ankamagames.jerakine.types.positions
          //Décompilation abandonné
       }
       
-      public function fillFromCellIds(cells:Vector.<uint>) : void
+      public function fillFromCellIds(param1:Vector.<uint>) : void
       {
          //Décompilation abandonné
       }
       
-      public function addPoint(pathElem:PathElement) : void
+      public function addPoint(param1:PathElement) : void
       {
          //Décompilation abandonné
       }
       
-      public function getPointAtIndex(index:uint) : PathElement
+      public function getPointAtIndex(param1:uint) : PathElement
       {
          //Décompilation abandonné
       }
       
-      public function deletePoint(index:uint, deleteCount:uint = 1) : void
+      public function deletePoint(param1:uint, param2:uint = 1) : void
       {
          //Décompilation abandonné
       }
@@ -93,7 +93,7 @@ package com.ankamagames.jerakine.types.positions
          //Décompilation abandonné
       }
       
-      public function replaceEnd(newEnd:MapPoint) : void
+      public function replaceEnd(param1:MapPoint) : void
       {
          //Décompilation abandonné
       }

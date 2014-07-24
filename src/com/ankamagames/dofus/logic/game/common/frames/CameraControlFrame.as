@@ -14,10 +14,16 @@ package com.ankamagames.dofus.logic.game.common.frames
    import com.ankamagames.atouin.managers.InteractiveCellManager;
    import com.ankamagames.berilia.Berilia;
    import flash.display.DisplayObject;
+   import com.ankamagames.dofus.logic.game.roleplay.frames.InfoEntitiesFrame;
+   import com.ankamagames.berilia.managers.TooltipManager;
+   import com.ankamagames.dofus.kernel.Kernel;
    import com.ankamagames.jerakine.messages.Message;
+   import com.ankamagames.atouin.managers.MapDisplayManager;
    import com.ankamagames.jerakine.entities.messages.EntityClickMessage;
    import com.ankamagames.dofus.logic.game.roleplay.messages.InteractiveElementActivationMessage;
    import com.ankamagames.atouin.messages.AdjacentMapClickMessage;
+   import com.ankamagames.atouin.messages.MapLoadedMessage;
+   import com.ankamagames.atouin.messages.MapZoomMessage;
    import com.ankamagames.jerakine.types.enums.Priority;
    
    public class CameraControlFrame extends Object implements Frame
@@ -39,6 +45,12 @@ package com.ankamagames.dofus.logic.game.common.frames
       private static const CENTER_Y:Number;
       
       private var _container:Sprite;
+      
+      private var _containerLastX:Number;
+      
+      private var _containerLastY:Number;
+      
+      private var _mapZoomed:Boolean;
       
       private var _dragging:Boolean;
       
@@ -63,27 +75,32 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      private function onMouseMove(pEvent:MouseEvent) : void
+      private function onMouseMove(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseDown(pEvent:Event) : void
+      private function onMouseDown(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseUp(pEvent:Event) : void
+      private function onMouseUp(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function isInWorld(pObj:DisplayObject) : Boolean
+      private function isInWorld(param1:DisplayObject) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      private function updateElementsPositions(param1:Event) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }

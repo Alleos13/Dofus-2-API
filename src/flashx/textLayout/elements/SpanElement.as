@@ -3,7 +3,7 @@ package flashx.textLayout.elements
    import flashx.textLayout.tlf_internal;
    import flash.text.engine.TextElement;
    import flashx.textLayout.utils.CharacterUtil;
-   import flash.utils.getQualifiedClassName; 
+   import flash.utils.getQualifiedClassName;
    import flashx.textLayout.formats.ITextLayoutFormat;
    import flashx.textLayout.formats.FormatValue;
    import flashx.textLayout.formats.WhiteSpaceCollapse;
@@ -12,7 +12,7 @@ package flashx.textLayout.elements
    import flash.text.engine.GroupElement;
    import flashx.textLayout.formats.TextLayoutFormat;
    
-   public class SpanElement extends FlowLeafElement 
+   public class SpanElement extends FlowLeafElement
    {
       
       {
@@ -24,8 +24,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      tlf_internal  static const kParagraphTerminator:String = "";
-      
+      tlf_internal  static const kParagraphTerminator:String = "";      
       private static const _dblSpacePattern:RegExp;
       
       private static const _newLineTabPattern:RegExp;
@@ -39,7 +38,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override public function shallowCopy(startPos:int = 0, endPos:int = -1) : FlowElement
+      override public function shallowCopy(param1:int = 0, param2:int = -1) : FlowElement
       {
          //Décompilation abandonné
       }
@@ -59,12 +58,12 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set text(textValue:String) : void
+      public function set text(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      override public function getText(relativeStart:int = 0, relativeEnd:int = -1, paragraphSeparator:String = "\n") : String
+      override public function getText(param1:int = 0, param2:int = -1, param3:String = "\n") : String
       {
          //Décompilation abandonné
       }
@@ -74,7 +73,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set mxmlChildren(array:Array) : void
+      public function set mxmlChildren(param1:Array) : void
       {
          //Décompilation abandonné
       }
@@ -84,17 +83,17 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override tlf_internal function applyWhiteSpaceCollapse(collapse:String) : void
+      override tlf_internal function applyWhiteSpaceCollapse(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function replaceText(relativeStartPosition:int, relativeEndPosition:int, textValue:String) : void
+      public function replaceText(param1:int, param2:int, param3:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function replaceTextInternal(startPos:int, endPos:int, textValue:String) : void
+      private function replaceTextInternal(param1:int, param2:int, param3:String) : void
       {
          //Décompilation abandonné
       }
@@ -109,12 +108,12 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override public function splitAtPosition(relativePosition:int) : FlowElement
+      override public function splitAtPosition(param1:int) : FlowElement
       {
          //Décompilation abandonné
       }
       
-      override tlf_internal function normalizeRange(normalizeStart:uint, normalizeEnd:uint) : void
+      override tlf_internal function normalizeRange(param1:uint, param2:uint) : void
       {
          //Décompilation abandonné
       }

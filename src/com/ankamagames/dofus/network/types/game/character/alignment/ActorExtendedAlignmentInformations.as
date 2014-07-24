@@ -31,7 +31,7 @@ package com.ankamagames.dofus.network.types.game.character.alignment
          //Décompilation abandonné
       }
       
-      public function initActorExtendedAlignmentInformations(alignmentSide:int = 0, alignmentValue:uint = 0, alignmentGrade:uint = 0, characterPower:uint = 0, honor:uint = 0, honorGradeFloor:uint = 0, honorNextGradeFloor:uint = 0, aggressable:uint = 0) : ActorExtendedAlignmentInformations
+      public function initActorExtendedAlignmentInformations(param1:int = 0, param2:uint = 0, param3:uint = 0, param4:uint = 0, param5:uint = 0, param6:uint = 0, param7:uint = 0, param8:uint = 0) : ActorExtendedAlignmentInformations
       {
          //Décompilation abandonné
       }
@@ -41,22 +41,22 @@ package com.ankamagames.dofus.network.types.game.character.alignment
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ActorExtendedAlignmentInformations(output:IDataOutput) : void
+      public function serializeAs_ActorExtendedAlignmentInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ActorExtendedAlignmentInformations(input:IDataInput) : void
+      public function deserializeAs_ActorExtendedAlignmentInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

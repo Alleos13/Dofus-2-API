@@ -28,7 +28,7 @@ package com.ankamagames.dofus.datacenter.breeds
       
       private static var _skinsForBreed:Array;
       
-      public static function getBreedById(id:int) : Breed
+      public static function getBreedById(param1:int) : Breed
       {
          //Décompilation abandonné
       }
@@ -38,7 +38,7 @@ package com.ankamagames.dofus.datacenter.breeds
          //Décompilation abandonné
       }
       
-      public static function getBreedFromSkin(skin:int) : Breed
+      public static function getBreedFromSkin(param1:int) : Breed
       {
          //Décompilation abandonné
       }
@@ -128,32 +128,32 @@ package com.ankamagames.dofus.datacenter.breeds
          //Décompilation abandonné
       }
       
-      public function getStatsPointsNeededForStrength(stat:uint) : uint
+      public function getStatsPointsNeededForStrength(param1:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      public function getStatsPointsNeededForIntelligence(stat:uint) : uint
+      public function getStatsPointsNeededForIntelligence(param1:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      public function getStatsPointsNeededForChance(stat:uint) : uint
+      public function getStatsPointsNeededForChance(param1:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      public function getStatsPointsNeededForAgility(stat:uint) : uint
+      public function getStatsPointsNeededForAgility(param1:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      public function getStatsPointsNeededForVitality(stat:uint) : uint
+      public function getStatsPointsNeededForVitality(param1:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      public function getStatsPointsNeededForWisdom(stat:uint) : uint
+      public function getStatsPointsNeededForWisdom(param1:uint) : uint
       {
          //Décompilation abandonné
       }

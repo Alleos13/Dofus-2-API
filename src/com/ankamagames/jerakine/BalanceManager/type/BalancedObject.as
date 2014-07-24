@@ -10,7 +10,7 @@ package com.ankamagames.jerakine.BalanceManager.type
       //Décompilation abandonné
       }
       
-      public function BalancedObject(pItem:Object)
+      public function BalancedObject(param1:Object)
       {
          //Décompilation abandonné
       }
@@ -28,7 +28,7 @@ package com.ankamagames.jerakine.BalanceManager.type
          //Décompilation abandonné
       }
       
-      public function set nbCall(pNbCall:uint) : void
+      public function set nbCall(param1:uint) : void
       {
          //Décompilation abandonné
       }

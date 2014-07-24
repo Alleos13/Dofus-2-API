@@ -21,7 +21,7 @@ package com.ankamagames.atouin.renderers
       //Décompilation abandonné
       }
       
-      public function ZoneDARenderer(nStrata:uint = 0, alpha:Number = 1, fixedStrata:Boolean = false)
+      public function ZoneDARenderer(param1:uint = 0, param2:Number = 1, param3:Boolean = false)
       {
          //Décompilation abandonné
       }
@@ -35,7 +35,7 @@ package com.ankamagames.atouin.renderers
          //Décompilation abandonné
       }
       
-      private static function destroyZoneTile(zt:ZoneTile) : void
+      private static function destroyZoneTile(param1:ZoneTile) : void
       {
          //Décompilation abandonné
       }
@@ -54,17 +54,19 @@ package com.ankamagames.atouin.renderers
       
       public var currentStrata:uint = 0;
       
-      public function render(cells:Vector.<uint>, oColor:Color, mapContainer:DataMapContainer, bAlpha:Boolean = false, updateStrata:Boolean = false) : void
+      public var showFarmCell:Boolean = true;
+      
+      public function render(param1:Vector.<uint>, param2:Color, param3:DataMapContainer, param4:Boolean = false, param5:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      protected function getText(count:int) : String
+      protected function getText(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      public function remove(cells:Vector.<uint>, mapContainer:DataMapContainer) : void
+      public function remove(param1:Vector.<uint>, param2:DataMapContainer) : void
       {
          //Décompilation abandonné
       }

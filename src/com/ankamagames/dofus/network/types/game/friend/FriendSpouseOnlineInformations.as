@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.types.game.friend
          //Décompilation abandonné
       }
       
-      public function initFriendSpouseOnlineInformations(spouseAccountId:uint = 0, spouseId:uint = 0, spouseName:String = "", spouseLevel:uint = 0, breed:int = 0, sex:int = 0, spouseEntityLook:EntityLook = null, guildInfo:BasicGuildInformations = null, alignmentSide:int = 0, mapId:uint = 0, subAreaId:uint = 0, inFight:Boolean = false, followSpouse:Boolean = false) : FriendSpouseOnlineInformations
+      public function initFriendSpouseOnlineInformations(param1:uint = 0, param2:uint = 0, param3:String = "", param4:uint = 0, param5:int = 0, param6:int = 0, param7:EntityLook = null, param8:BasicGuildInformations = null, param9:int = 0, param10:uint = 0, param11:uint = 0, param12:Boolean = false, param13:Boolean = false) : FriendSpouseOnlineInformations
       {
          //Décompilation abandonné
       }
@@ -44,22 +44,22 @@ package com.ankamagames.dofus.network.types.game.friend
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_FriendSpouseOnlineInformations(output:IDataOutput) : void
+      public function serializeAs_FriendSpouseOnlineInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_FriendSpouseOnlineInformations(input:IDataInput) : void
+      public function deserializeAs_FriendSpouseOnlineInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

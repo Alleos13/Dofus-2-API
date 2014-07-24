@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions
          //Décompilation abandonné
       }
       
-      public static function create(playerId:uint, value:Number) : StartZoomAction
+      public static function create(param1:uint, param2:Number) : StartZoomAction
       {
          //Décompilation abandonné
       }

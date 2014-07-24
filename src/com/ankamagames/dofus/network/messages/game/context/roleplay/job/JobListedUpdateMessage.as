@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.job
          //Décompilation abandonné
       }
       
-      public function initJobListedUpdateMessage(addedOrDeleted:Boolean = false, jobId:uint = 0) : JobListedUpdateMessage
+      public function initJobListedUpdateMessage(param1:Boolean = false, param2:uint = 0) : JobListedUpdateMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.job
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_JobListedUpdateMessage(output:IDataOutput) : void
+      public function serializeAs_JobListedUpdateMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_JobListedUpdateMessage(input:IDataInput) : void
+      public function deserializeAs_JobListedUpdateMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

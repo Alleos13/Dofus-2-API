@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions
          //Décompilation abandonné
       }
       
-      public static function create(playerName:String, verbose:Boolean) : BasicWhoIsRequestAction
+      public static function create(param1:String, param2:Boolean) : BasicWhoIsRequestAction
       {
          //Décompilation abandonné
       }

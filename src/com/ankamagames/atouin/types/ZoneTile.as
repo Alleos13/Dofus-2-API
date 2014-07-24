@@ -54,7 +54,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set displayBehaviors(oValue:IDisplayBehavior) : void
+      public function set displayBehaviors(param1:IDisplayBehavior) : void
       {
          //Décompilation abandonné
       }
@@ -64,7 +64,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set currentCellPosition(pValue:Point) : void
+      public function set currentCellPosition(param1:Point) : void
       {
          //Décompilation abandonné
       }
@@ -79,7 +79,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set color(c:uint) : void
+      public function set color(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -94,12 +94,12 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set cellId(nValue:uint) : void
+      public function set cellId(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function display(wishedStrata:uint = 0) : void
+      public function display(param1:uint = 0) : void
       {
          //Décompilation abandonné
       }

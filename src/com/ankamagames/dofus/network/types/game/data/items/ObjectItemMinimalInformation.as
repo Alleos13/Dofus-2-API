@@ -29,7 +29,7 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      public function initObjectItemMinimalInformation(objectGID:uint = 0, effects:Vector.<ObjectEffect> = null) : ObjectItemMinimalInformation
+      public function initObjectItemMinimalInformation(param1:uint = 0, param2:Vector.<ObjectEffect> = null) : ObjectItemMinimalInformation
       {
          //Décompilation abandonné
       }
@@ -39,22 +39,22 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectItemMinimalInformation(output:IDataOutput) : void
+      public function serializeAs_ObjectItemMinimalInformation(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectItemMinimalInformation(input:IDataInput) : void
+      public function deserializeAs_ObjectItemMinimalInformation(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

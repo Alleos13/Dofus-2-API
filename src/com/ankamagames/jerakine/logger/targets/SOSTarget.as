@@ -30,22 +30,22 @@ package com.ankamagames.jerakine.logger.targets
       
       public static var serverPort:int = 4444;
       
-      private static function send(level:int, message:String) : void
+      private static function send(param1:int, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      private static function getKeyName(level:int) : String
+      private static function getKeyName(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      private static function onSocket(e:Event) : void
+      private static function onSocket(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onSocketError(e:Event) : void
+      private static function onSocketError(param1:Event) : void
       {
          //Décompilation abandonné
       }
@@ -60,12 +60,12 @@ package com.ankamagames.jerakine.logger.targets
          //Décompilation abandonné
       }
       
-      override public function logEvent(event:LogEvent) : void
+      override public function logEvent(param1:LogEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function configure(config:XML) : void
+      public function configure(param1:XML) : void
       {
          //Décompilation abandonné
       }

@@ -12,7 +12,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public static function access(target:*, to:String) : *
+      public static function access(param1:*, param2:String) : *
       {
          //Décompilation abandonné
       }

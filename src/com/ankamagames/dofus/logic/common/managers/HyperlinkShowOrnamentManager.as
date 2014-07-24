@@ -31,17 +31,17 @@ package com.ankamagames.dofus.logic.common.managers
       
       private static var _ornId:uint = 0;
       
-      public static function showOrnament(ornId:uint) : void
+      public static function showOrnament(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public static function addOrnament(ornId:uint) : String
+      public static function addOrnament(param1:uint) : String
       {
          //Décompilation abandonné
       }
       
-      public static function rollOver(pX:int, pY:int, objectGID:uint, ornId:uint = 0) : void
+      public static function rollOver(param1:int, param2:int, param3:uint, param4:uint = 0) : void
       {
          //Décompilation abandonné
       }

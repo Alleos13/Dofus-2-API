@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.game.chat.channel
          //Décompilation abandonné
       }
       
-      public function initChannelEnablingChangeMessage(channel:uint = 0, enable:Boolean = false) : ChannelEnablingChangeMessage
+      public function initChannelEnablingChangeMessage(param1:uint = 0, param2:Boolean = false) : ChannelEnablingChangeMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.game.chat.channel
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ChannelEnablingChangeMessage(output:IDataOutput) : void
+      public function serializeAs_ChannelEnablingChangeMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ChannelEnablingChangeMessage(input:IDataInput) : void
+      public function deserializeAs_ChannelEnablingChangeMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -7,7 +7,7 @@ package com.ankamagames.atouin.data.map.elements
       //Décompilation abandonné
       }
       
-      public function UnknownElementError(message:String = "", id:uint = 0)
+      public function UnknownElementError(param1:String = "", param2:uint = 0)
       {
          //Décompilation abandonné
       }

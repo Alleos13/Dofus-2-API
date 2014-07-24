@@ -12,7 +12,7 @@ package com.ankamagames.tubul.types.sounds
       //Décompilation abandonné
       }
       
-      public function LocalizedSound(id:uint, uri:Uri, isStereo:Boolean)
+      public function LocalizedSound(param1:uint, param2:Uri, param3:Boolean)
       {
          //Décompilation abandonné
       }
@@ -34,7 +34,7 @@ package com.ankamagames.tubul.types.sounds
          //Décompilation abandonné
       }
       
-      public function set pan(pan:Number) : void
+      public function set pan(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -44,7 +44,7 @@ package com.ankamagames.tubul.types.sounds
          //Décompilation abandonné
       }
       
-      public function set range(range:Number) : void
+      public function set range(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -54,7 +54,7 @@ package com.ankamagames.tubul.types.sounds
          //Décompilation abandonné
       }
       
-      public function set saturationRange(saturationRange:Number) : void
+      public function set saturationRange(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -64,7 +64,7 @@ package com.ankamagames.tubul.types.sounds
          //Décompilation abandonné
       }
       
-      public function set position(position:Point) : void
+      public function set position(param1:Point) : void
       {
          //Décompilation abandonné
       }
@@ -74,7 +74,7 @@ package com.ankamagames.tubul.types.sounds
          //Décompilation abandonné
       }
       
-      public function set volumeMax(pVolumeMax:Number) : void
+      public function set volumeMax(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -84,7 +84,7 @@ package com.ankamagames.tubul.types.sounds
          //Décompilation abandonné
       }
       
-      public function updateObserverPosition(point:Point) : void
+      public function updateObserverPosition(param1:Point) : void
       {
          //Décompilation abandonné
       }

@@ -42,7 +42,7 @@ package com.ankamagames.dofus.network.messages.game.approach
          //Décompilation abandonné
       }
       
-      public function initAccountCapabilitiesMessage(accountId:int = 0, tutorialAvailable:Boolean = false, breedsVisible:uint = 0, breedsAvailable:uint = 0, status:int = -1) : AccountCapabilitiesMessage
+      public function initAccountCapabilitiesMessage(param1:int = 0, param2:Boolean = false, param3:uint = 0, param4:uint = 0, param5:int = -1) : AccountCapabilitiesMessage
       {
          //Décompilation abandonné
       }
@@ -52,32 +52,32 @@ package com.ankamagames.dofus.network.messages.game.approach
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AccountCapabilitiesMessage(output:IDataOutput) : void
+      public function serializeAs_AccountCapabilitiesMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AccountCapabilitiesMessage(input:IDataInput) : void
+      public function deserializeAs_AccountCapabilitiesMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

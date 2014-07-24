@@ -13,7 +13,7 @@ package com.ankamagames.dofus.console.moduleLogger
       //Décompilation abandonné
       }
       
-      public function TextFieldScrollBar(textField:TextField, lines:Vector.<String>, power:int, backgroundColor:uint, color:uint)
+      public function TextFieldScrollBar(param1:TextField, param2:Vector.<String>, param3:int, param4:uint, param5:uint)
       {
          //Décompilation abandonné
       }
@@ -42,12 +42,12 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private var _scrollBar:Sprite;
       
-      public function reset(lines:Vector.<String>) : void
+      public function reset(param1:Vector.<String>) : void
       {
          //Décompilation abandonné
       }
       
-      public function resize(numLines:int = 0) : void
+      public function resize(param1:int = 0) : void
       {
          //Décompilation abandonné
       }
@@ -57,7 +57,7 @@ package com.ankamagames.dofus.console.moduleLogger
          //Décompilation abandonné
       }
       
-      public function scrollText(value:int) : void
+      public function scrollText(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -84,22 +84,22 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private var offsetY:int;
       
-      private function onScrollBarMouseDown(mouseEvent:MouseEvent) : void
+      private function onScrollBarMouseDown(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseWheel(mouseEvent:MouseEvent) : void
+      private function onMouseWheel(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseUp(mouseEvent:MouseEvent) : void
+      private function onMouseUp(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseMove(mouseEvent:MouseEvent) : void
+      private function onMouseMove(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }

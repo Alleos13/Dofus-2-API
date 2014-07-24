@@ -38,7 +38,7 @@ package com.ankamagames.dofus.network.messages.updater.parts
          //Décompilation abandonné
       }
       
-      public function initDownloadErrorMessage(errorId:uint = 0, message:String = "", helpUrl:String = "") : DownloadErrorMessage
+      public function initDownloadErrorMessage(param1:uint = 0, param2:String = "", param3:String = "") : DownloadErrorMessage
       {
          //Décompilation abandonné
       }
@@ -48,32 +48,32 @@ package com.ankamagames.dofus.network.messages.updater.parts
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_DownloadErrorMessage(output:IDataOutput) : void
+      public function serializeAs_DownloadErrorMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_DownloadErrorMessage(input:IDataInput) : void
+      public function deserializeAs_DownloadErrorMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

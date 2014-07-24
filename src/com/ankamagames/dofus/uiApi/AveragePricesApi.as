@@ -26,7 +26,7 @@ package com.ankamagames.dofus.uiApi
       
       private var _module:UiModule;
       
-      public function set module(value:UiModule) : void
+      public function set module(param1:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -36,12 +36,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getItemAveragePrice(pItemId:uint) : int
+      public function getItemAveragePrice(param1:uint) : int
       {
          //Décompilation abandonné
       }
       
-      public function getItemAveragePriceString(pItem:*, pAddLineBreakBefore:Boolean = false) : String
+      public function getItemAveragePriceString(param1:*, param2:Boolean = false) : String
       {
          //Décompilation abandonné
       }

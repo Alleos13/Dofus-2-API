@@ -46,12 +46,12 @@ package com.ankamagames.dofus.misc.utils
       
       protected static const _log:Logger;
       
-      public static function applyParams(txt:String, params:Array, replace:String = "%") : String
+      public static function applyParams(param1:String, param2:Array, param3:String = "%") : String
       {
          //Décompilation abandonné
       }
       
-      private static function processReplace(type:String, id:String, params:Array) : String
+      private static function processReplace(param1:String, param2:String, param3:Array) : String
       {
          //Décompilation abandonné
       }

@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.types
       //Décompilation abandonné
       }
       
-      public function LangFile(sContent:String, sCategory:String, sUrl:String, oMeta:LangMetaData = null)
+      public function LangFile(param1:String, param2:String, param3:String, param4:LangMetaData = null)
       {
          //Décompilation abandonné
       }

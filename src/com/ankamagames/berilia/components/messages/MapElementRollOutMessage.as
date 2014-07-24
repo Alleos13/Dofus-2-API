@@ -10,7 +10,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function MapElementRollOutMessage(target:GraphicContainer, targetedElement:MapElement)
+      public function MapElementRollOutMessage(param1:GraphicContainer, param2:MapElement)
       {
          //Décompilation abandonné
       }

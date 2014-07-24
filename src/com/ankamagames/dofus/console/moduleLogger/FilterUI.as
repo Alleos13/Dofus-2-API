@@ -16,7 +16,7 @@ package com.ankamagames.dofus.console.moduleLogger
       //Décompilation abandonné
       }
       
-      public function FilterUI(backgroundColor:uint)
+      public function FilterUI(param1:uint)
       {
          //Décompilation abandonné
       }
@@ -41,12 +41,12 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private var _filterList:TextField;
       
-      public function isFiltered(text:String) : Boolean
+      public function isFiltered(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function addToFilter(text:String) : void
+      public function addToFilter(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -56,7 +56,7 @@ package com.ankamagames.dofus.console.moduleLogger
          //Décompilation abandonné
       }
       
-      public function setOptions(data:Object) : void
+      public function setOptions(param1:Object) : void
       {
          //Décompilation abandonné
       }
@@ -76,17 +76,17 @@ package com.ankamagames.dofus.console.moduleLogger
          //Décompilation abandonné
       }
       
-      private function onTitleClick(event:TextEvent) : void
+      private function onTitleClick(param1:TextEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTextClick(event:TextEvent) : void
+      private function onTextClick(param1:TextEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTextChange(event:Event = null) : void
+      private function onTextChange(param1:Event = null) : void
       {
          //Décompilation abandonné
       }
@@ -95,17 +95,17 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private var offsetY:int;
       
-      private function onMouseDown(e:Event) : void
+      private function onMouseDown(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseUp(e:Event) : void
+      private function onMouseUp(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseMove(e:MouseEvent) : void
+      private function onMouseMove(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }

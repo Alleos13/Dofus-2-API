@@ -44,7 +44,7 @@ package com.ankamagames.dofus.network.messages.game.chat.report
          //Décompilation abandonné
       }
       
-      public function initChatMessageReportMessage(senderName:String = "", content:String = "", timestamp:uint = 0, channel:uint = 0, fingerprint:String = "", reason:uint = 0) : ChatMessageReportMessage
+      public function initChatMessageReportMessage(param1:String = "", param2:String = "", param3:uint = 0, param4:uint = 0, param5:String = "", param6:uint = 0) : ChatMessageReportMessage
       {
          //Décompilation abandonné
       }
@@ -54,32 +54,32 @@ package com.ankamagames.dofus.network.messages.game.chat.report
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ChatMessageReportMessage(output:IDataOutput) : void
+      public function serializeAs_ChatMessageReportMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ChatMessageReportMessage(input:IDataInput) : void
+      public function deserializeAs_ChatMessageReportMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

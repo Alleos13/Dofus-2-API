@@ -157,12 +157,12 @@ package com.ankamagames.dofus.logic.game.approach.frames
       
       private static var _changeLogLoader:Loader;
       
-      private static function onChangeLogError(e:IOErrorEvent) : void
+      private static function onChangeLogError(param1:IOErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onChangeLogLoaded(e:Event) : void
+      private static function onChangeLogLoaded(param1:Event) : void
       {
          //Décompilation abandonné
       }
@@ -203,12 +203,12 @@ package com.ankamagames.dofus.logic.game.approach.frames
          //Décompilation abandonné
       }
       
-      public function set requestedCharaId(id:uint) : void
+      public function set requestedCharaId(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function isCharacterWaitingForChange(id:uint) : Boolean
+      public function isCharacterWaitingForChange(param1:uint) : Boolean
       {
          //Décompilation abandonné
       }
@@ -218,7 +218,7 @@ package com.ankamagames.dofus.logic.game.approach.frames
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }

@@ -44,42 +44,42 @@ package com.hurlant.crypto
          //Décompilation abandonné
       }
       
-      public static function getCipher(name:String, key:ByteArray, pad:IPad = null) : ICipher
+      public static function getCipher(param1:String, param2:ByteArray, param3:IPad = null) : ICipher
       {
          //Décompilation abandonné
       }
       
-      public static function getKeySize(name:String) : uint
+      public static function getKeySize(param1:String) : uint
       {
          //Décompilation abandonné
       }
       
-      private static function getMode(name:String, alg:ISymmetricKey, padding:IPad = null) : IMode
+      private static function getMode(param1:String, param2:ISymmetricKey, param3:IPad = null) : IMode
       {
          //Décompilation abandonné
       }
       
-      public static function getHash(name:String) : IHash
+      public static function getHash(param1:String) : IHash
       {
          //Décompilation abandonné
       }
       
-      public static function getHMAC(name:String) : HMAC
+      public static function getHMAC(param1:String) : HMAC
       {
          //Décompilation abandonné
       }
       
-      public static function getMAC(name:String) : MAC
+      public static function getMAC(param1:String) : MAC
       {
          //Décompilation abandonné
       }
       
-      public static function getPad(name:String) : IPad
+      public static function getPad(param1:String) : IPad
       {
          //Décompilation abandonné
       }
       
-      public static function getRSA(E:String, M:String) : RSAKey
+      public static function getRSA(param1:String, param2:String) : RSAKey
       {
          //Décompilation abandonné
       }

@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.houses
       
       protected static const _log:Logger;
       
-      public static function getGuildHouseById(id:int) : House
+      public static function getGuildHouseById(param1:int) : House
       {
          //Décompilation abandonné
       }

@@ -9,7 +9,7 @@ package org.flintparticles.common.events
       //Décompilation abandonné
       }
       
-      public function EmitterEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
+      public function EmitterEvent(param1:String, param2:Boolean = false, param3:Boolean = false)
       {
          //Décompilation abandonné
       }

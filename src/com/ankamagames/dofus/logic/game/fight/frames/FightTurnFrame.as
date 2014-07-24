@@ -32,9 +32,9 @@ package com.ankamagames.dofus.logic.game.fight.frames
    import com.ankamagames.dofus.network.types.game.character.characteristic.CharacterCharacteristicsInformations;
    import com.ankamagames.jerakine.pathfinding.Pathfinding;
    import com.ankamagames.atouin.utils.DataMapProvider;
-   import com.ankamagames.jerakine.entities.interfaces.*;
    import com.ankamagames.dofus.logic.game.fight.miscs.TackleUtil;
    import com.ankamagames.atouin.renderers.MovementZoneRenderer;
+   import com.ankamagames.jerakine.entities.interfaces.*;
    import com.ankamagames.atouin.managers.SelectionManager;
    import com.ankamagames.jerakine.types.zones.Custom;
    import com.ankamagames.jerakine.managers.FontManager;
@@ -120,12 +120,12 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      public function set myTurn(b:Boolean) : void
+      public function set myTurn(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function set turnDuration(v:uint) : void
+      public function set turnDuration(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -145,7 +145,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -155,7 +155,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      public function drawPath(cell:MapPoint = null) : void
+      public function drawPath(param1:MapPoint = null) : void
       {
          //Décompilation abandonné
       }
@@ -170,7 +170,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      private function askMoveTo(cell:MapPoint) : Boolean
+      private function askMoveTo(param1:MapPoint) : Boolean
       {
          //Décompilation abandonné
       }

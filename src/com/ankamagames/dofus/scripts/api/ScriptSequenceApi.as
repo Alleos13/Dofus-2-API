@@ -30,7 +30,7 @@ package com.ankamagames.dofus.scripts.api
          //Décompilation abandonné
       }
       
-      public function addCompleteCallback(pCallBack:Function) : void
+      public function addCompleteCallback(param1:Function) : void
       {
          //Décompilation abandonné
       }
@@ -40,7 +40,7 @@ package com.ankamagames.dofus.scripts.api
          //Décompilation abandonné
       }
       
-      private function onSequenceEnd(pEvent:SequencerEvent) : void
+      private function onSequenceEnd(param1:SequencerEvent) : void
       {
          //Décompilation abandonné
       }

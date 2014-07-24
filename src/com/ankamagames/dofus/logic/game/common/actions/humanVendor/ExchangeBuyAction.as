@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.humanVendor
          //Décompilation abandonné
       }
       
-      public static function create(pObjectUID:uint, pQuantity:uint) : ExchangeBuyAction
+      public static function create(param1:uint, param2:uint) : ExchangeBuyAction
       {
          //Décompilation abandonné
       }

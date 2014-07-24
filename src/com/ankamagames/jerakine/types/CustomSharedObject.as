@@ -32,7 +32,7 @@ package com.ankamagames.jerakine.types
       
       public static var throwException:Boolean;
       
-      public static function getLocal(name:String) : CustomSharedObject
+      public static function getLocal(param1:String) : CustomSharedObject
       {
          //Décompilation abandonné
       }
@@ -43,6 +43,11 @@ package com.ankamagames.jerakine.types
       }
       
       public static function closeAll() : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function clearCache(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -72,7 +77,7 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      private function writeData(data:*) : Boolean
+      private function writeData(param1:*) : Boolean
       {
          //Décompilation abandonné
       }

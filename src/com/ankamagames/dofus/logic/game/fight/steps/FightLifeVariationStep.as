@@ -17,7 +17,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightLifeVariationStep(entityId:int, delta:int, permanentDamages:int, actionId:int)
+      public function FightLifeVariationStep(param1:int, param2:int, param3:int, param4:int)
       {
          //Décompilation abandonné
       }

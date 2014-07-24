@@ -64,32 +64,32 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getSubArea(subAreaId:uint) : SubArea
+      public function getSubArea(param1:uint) : SubArea
       {
          //Décompilation abandonné
       }
       
-      public function getSubAreaMapIds(subAreaId:uint) : Vector.<uint>
+      public function getSubAreaMapIds(param1:uint) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public function getSubAreaCenter(subAreaId:uint) : Point
+      public function getSubAreaCenter(param1:uint) : Point
       {
          //Décompilation abandonné
       }
       
-      public function getWorldPoint(mapId:uint) : WorldPoint
+      public function getWorldPoint(param1:uint) : WorldPoint
       {
          //Décompilation abandonné
       }
       
-      public function getMapCoords(mapId:uint) : Point
+      public function getMapCoords(param1:uint) : Point
       {
          //Décompilation abandonné
       }
       
-      public function getSubAreaShape(subAreaId:uint) : Vector.<int>
+      public function getSubAreaShape(param1:uint) : Vector.<int>
       {
          //Décompilation abandonné
       }
@@ -99,37 +99,37 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function subAreaByMapId(mapId:uint) : SubArea
+      public function subAreaByMapId(param1:uint) : SubArea
       {
          //Décompilation abandonné
       }
       
-      public function getMapIdByCoord(x:int, y:int) : Vector.<int>
+      public function getMapIdByCoord(param1:int, param2:int) : Vector.<int>
       {
          //Décompilation abandonné
       }
       
-      public function getMapPositionById(mapId:uint) : MapPosition
+      public function getMapPositionById(param1:uint) : MapPosition
       {
          //Décompilation abandonné
       }
       
-      public function intersects(rect1:Object, rect2:Object) : Boolean
+      public function intersects(param1:Object, param2:Object) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function movePlayer(x:int, y:int, world:int = -1) : void
+      public function movePlayer(param1:int, param2:int, param3:int = -1) : void
       {
          //Décompilation abandonné
       }
       
-      public function movePlayerOnMapId(mapId:uint) : void
+      public function movePlayerOnMapId(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function getMapReference(refId:uint) : Object
+      public function getMapReference(param1:uint) : Object
       {
          //Décompilation abandonné
       }

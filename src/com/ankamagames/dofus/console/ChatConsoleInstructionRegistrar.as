@@ -28,7 +28,7 @@ package com.ankamagames.dofus.console
          //Décompilation abandonné
       }
       
-      public function registerInstructions(console:ConsoleHandler) : void
+      public function registerInstructions(param1:ConsoleHandler) : void
       {
          //Décompilation abandonné
       }

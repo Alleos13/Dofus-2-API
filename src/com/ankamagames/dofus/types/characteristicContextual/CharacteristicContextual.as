@@ -23,7 +23,7 @@ package com.ankamagames.dofus.types.characteristicContextual
          //Décompilation abandonné
       }
       
-      public function set referedEntity(oEntity:IEntity) : void
+      public function set referedEntity(param1:IEntity) : void
       {
          //Décompilation abandonné
       }

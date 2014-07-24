@@ -11,24 +11,24 @@ package com.ankamagames.tiphon.display
       //Décompilation abandonné
       }
       
-      public function RasterizedSyncAnimation(target:MovieClip, lookCode:String)
+      public function RasterizedSyncAnimation(param1:MovieClip, param2:String)
       {
          //Décompilation abandonné
       }
       
       private static var _events:Dictionary;
       
-      override public function gotoAndStop(frame:Object, scene:String = null) : void
+      override public function gotoAndStop(param1:Object, param2:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      override public function gotoAndPlay(frame:Object, scene:String = null) : void
+      override public function gotoAndPlay(param1:Object, param2:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function displayFrame(frameIndex:uint) : Boolean
+      override protected function displayFrame(param1:uint) : Boolean
       {
          //Décompilation abandonné
       }

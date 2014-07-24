@@ -17,7 +17,7 @@ package com.ankamagames.tubul.factory
          //Décompilation abandonné
       }
       
-      public static function getAudioBus(pType:uint, pId:uint, pName:String) : IAudioBus
+      public static function getAudioBus(param1:uint, param2:uint, param3:String) : IAudioBus
       {
          //Décompilation abandonné
       }

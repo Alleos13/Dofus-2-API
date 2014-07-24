@@ -47,7 +47,7 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
          //Décompilation abandonné
       }
       
-      public function initTaxCollectorAttackedMessage(firstNameId:uint = 0, lastNameId:uint = 0, worldX:int = 0, worldY:int = 0, mapId:int = 0, subAreaId:uint = 0, guild:BasicGuildInformations = null) : TaxCollectorAttackedMessage
+      public function initTaxCollectorAttackedMessage(param1:uint = 0, param2:uint = 0, param3:int = 0, param4:int = 0, param5:int = 0, param6:uint = 0, param7:BasicGuildInformations = null) : TaxCollectorAttackedMessage
       {
          //Décompilation abandonné
       }
@@ -57,32 +57,32 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_TaxCollectorAttackedMessage(output:IDataOutput) : void
+      public function serializeAs_TaxCollectorAttackedMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_TaxCollectorAttackedMessage(input:IDataInput) : void
+      public function deserializeAs_TaxCollectorAttackedMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

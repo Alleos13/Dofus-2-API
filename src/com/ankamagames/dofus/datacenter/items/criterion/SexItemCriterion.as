@@ -11,7 +11,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function SexItemCriterion(pCriterion:String)
+      public function SexItemCriterion(param1:String)
       {
          //Décompilation abandonné
       }

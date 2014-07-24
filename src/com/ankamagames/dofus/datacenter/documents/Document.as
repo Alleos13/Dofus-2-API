@@ -20,7 +20,7 @@ package com.ankamagames.dofus.datacenter.documents
       
       private static const PAGEFEED:String = "<pagefeed/>";
       
-      public static function getDocumentById(id:int) : Document
+      public static function getDocumentById(param1:int) : Document
       {
          //Décompilation abandonné
       }

@@ -31,17 +31,17 @@ package com.ankamagames.dofus.logic.common.managers
       
       private static var _titleId:uint = 0;
       
-      public static function showTitle(titleId:uint) : void
+      public static function showTitle(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public static function addTitle(titleId:uint) : String
+      public static function addTitle(param1:uint) : String
       {
          //Décompilation abandonné
       }
       
-      public static function rollOver(pX:int, pY:int, objectGID:uint, titleId:uint = 0) : void
+      public static function rollOver(param1:int, param2:int, param3:uint, param4:uint = 0) : void
       {
          //Décompilation abandonné
       }

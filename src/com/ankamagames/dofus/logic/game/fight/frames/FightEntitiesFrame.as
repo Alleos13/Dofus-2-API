@@ -133,47 +133,47 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      override public function addOrUpdateActor(infos:GameContextActorInformations, animationModifier:IAnimationModifier = null) : AnimatedCharacter
+      override public function addOrUpdateActor(param1:GameContextActorInformations, param2:IAnimationModifier = null) : AnimatedCharacter
       {
          //Décompilation abandonné
       }
       
-      override public function process(msg:Message) : Boolean
+      override public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function dropEntity(targetId:int) : void
+      private function dropEntity(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function showCreaturesInFight(activated:Boolean = false) : void
+      public function showCreaturesInFight(param1:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function entityIsIllusion(id:int) : Boolean
+      public function entityIsIllusion(param1:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getLastKnownEntityPosition(id:int) : int
+      public function getLastKnownEntityPosition(param1:int) : int
       {
          //Décompilation abandonné
       }
       
-      public function setLastKnownEntityPosition(id:int, value:int) : void
+      public function setLastKnownEntityPosition(param1:int, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function getLastKnownEntityMovementPoint(id:int) : int
+      public function getLastKnownEntityMovementPoint(param1:int) : int
       {
          //Décompilation abandonné
       }
       
-      public function setLastKnownEntityMovementPoint(id:int, value:int, add:Boolean = false) : void
+      public function setLastKnownEntityMovementPoint(param1:int, param2:int, param3:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -188,22 +188,22 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      private function registerInteractive(ie:InteractiveElement, firstSkill:int) : void
+      private function registerInteractive(param1:InteractiveElement, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateStatedElement(se:StatedElement) : void
+      private function updateStatedElement(param1:StatedElement) : void
       {
          //Décompilation abandonné
       }
       
-      private function findTiphonSprite(doc:DisplayObjectContainer) : TiphonSprite
+      private function findTiphonSprite(param1:DisplayObjectContainer) : TiphonSprite
       {
          //Décompilation abandonné
       }
       
-      private function removeInteractive(ie:InteractiveElement) : void
+      private function removeInteractive(param1:InteractiveElement) : void
       {
          //Décompilation abandonné
       }
@@ -218,52 +218,52 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      public function updateFighter(fighterInfos:GameFightFighterInformations, animationModifier:IAnimationModifier = null, finishingBuff:Array = null) : void
+      public function updateFighter(param1:GameFightFighterInformations, param2:IAnimationModifier = null, param3:Array = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateActor(actorInfos:GameContextActorInformations, alive:Boolean = true, animationModifier:IAnimationModifier = null) : void
+      public function updateActor(param1:GameContextActorInformations, param2:Boolean = true, param3:IAnimationModifier = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function addCircleToFighter(pAc:AnimatedCharacter, pColor:uint) : void
+      private function addCircleToFighter(param1:AnimatedCharacter, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateCarriedEntities(fighterInfos:GameContextActorInformations) : void
+      private function updateCarriedEntities(param1:GameContextActorInformations) : void
       {
          //Décompilation abandonné
       }
       
-      private function startCarryStep(fighterId:int, carriedId:int) : void
+      private function startCarryStep(param1:int, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateAllEntitiesNumber(ids:Vector.<int>) : void
+      public function updateAllEntitiesNumber(param1:Vector.<int>) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateEntityNumber(id:int, num:uint) : void
+      public function updateEntityNumber(param1:int, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateRemovedEntity(idEntity:int) : void
+      public function updateRemovedEntity(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function onPropertyChanged(e:PropertyChangeEvent) : void
+      override protected function onPropertyChanged(param1:PropertyChangeEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function set cellSelectionOnly(enabled:Boolean) : void
+      public function set cellSelectionOnly(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -278,17 +278,17 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      public function getRealFighterLook(pFighterId:int) : EntityLook
+      public function getRealFighterLook(param1:int) : EntityLook
       {
          //Décompilation abandonné
       }
       
-      override protected function updateActorDisposition(actorId:int, newDisposition:EntityDispositionInformations) : void
+      override protected function updateActorDisposition(param1:int, param2:EntityDispositionInformations) : void
       {
          //Décompilation abandonné
       }
       
-      private function getTmpFighterInfoIndex(pId:int) : int
+      private function getTmpFighterInfoIndex(param1:int) : int
       {
          //Décompilation abandonné
       }
@@ -301,7 +301,7 @@ class TmpFighterInfos extends Object
    //Décompilation abandonné
    }
    
-   function TmpFighterInfos(pId:int, pCarryindId:int)
+   function TmpFighterInfos(param1:int, param2:int)
    {
       //Décompilation abandonné
    }

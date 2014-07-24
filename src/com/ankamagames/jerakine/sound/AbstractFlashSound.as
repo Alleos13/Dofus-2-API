@@ -13,7 +13,7 @@ package com.ankamagames.jerakine.sound
       //Décompilation abandonné
       }
       
-      public function AbstractFlashSound(lcid:uint = 0)
+      public function AbstractFlashSound(param1:uint = 0)
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.jerakine.sound
          //Décompilation abandonné
       }
       
-      private function onPingTimerComplete(pEvt:TimerEvent) : void
+      private function onPingTimerComplete(param1:TimerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      override public function connect(host:String, port:int) : void
+      override public function connect(param1:String, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      override public function readUTFBytes(length:uint) : String
+      override public function readUTFBytes(param1:uint) : String
       {
          //Décompilation abandonné
       }
       
-      override public function writeUTFBytes(value:String) : void
+      override public function writeUTFBytes(param1:String) : void
       {
          //Décompilation abandonné
       }

@@ -27,32 +27,32 @@ package com.ankamagames.jerakine.resources.protocols.impl
       
       public static var localDirectory:String;
       
-      override public function load(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, cache:ICache, forcedAdapter:Class, singleFile:Boolean) : void
+      override public function load(param1:Uri, param2:IResourceObserver, param3:Boolean, param4:ICache, param5:Class, param6:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void
+      override protected function loadDirectly(param1:Uri, param2:IResourceObserver, param3:Boolean, param4:Class) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function extractPath(path:String) : String
+      override protected function extractPath(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      override public function onLoaded(uri:Uri, resourceType:uint, resource:*) : void
+      override public function onLoaded(param1:Uri, param2:uint, param3:*) : void
       {
          //Décompilation abandonné
       }
       
-      override public function onFailed(uri:Uri, errorMsg:String, errorCode:uint) : void
+      override public function onFailed(param1:Uri, param2:String, param3:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function onProgress(uri:Uri, bytesLoaded:uint, bytesTotal:uint) : void
+      override public function onProgress(param1:Uri, param2:uint, param3:uint) : void
       {
          //Décompilation abandonné
       }

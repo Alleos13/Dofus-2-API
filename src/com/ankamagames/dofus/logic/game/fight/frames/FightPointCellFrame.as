@@ -59,7 +59,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -69,7 +69,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      private function refreshTarget(target:uint) : void
+      private function refreshTarget(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -79,7 +79,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      private function showCell(cell:uint) : void
+      private function showCell(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -89,7 +89,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      private function isValidCell(cell:uint) : Boolean
+      private function isValidCell(param1:uint) : Boolean
       {
          //Décompilation abandonné
       }

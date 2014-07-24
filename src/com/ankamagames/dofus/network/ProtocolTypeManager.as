@@ -178,7 +178,7 @@ package com.ankamagames.dofus.network
       
       private static const _typesTypes:Dictionary;
       
-      public static function getInstance(base:Class, typeId:uint) : *
+      public static function getInstance(param1:Class, param2:uint) : *
       {
          //Décompilation abandonné
       }

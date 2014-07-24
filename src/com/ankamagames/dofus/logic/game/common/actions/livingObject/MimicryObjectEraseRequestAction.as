@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.livingObject
          //Décompilation abandonné
       }
       
-      public static function create(hostUID:uint, hostPos:uint) : MimicryObjectEraseRequestAction
+      public static function create(param1:uint, param2:uint) : MimicryObjectEraseRequestAction
       {
          //Décompilation abandonné
       }

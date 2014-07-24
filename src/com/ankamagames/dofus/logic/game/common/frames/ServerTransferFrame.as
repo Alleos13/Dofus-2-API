@@ -50,32 +50,32 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      protected function getConnectionType(msg:Message) : String
+      protected function getConnectionType(param1:Message) : String
       {
          //Décompilation abandonné
       }
       
-      private function onCharacterSelectedSuccessMessage(msg:CharacterSelectedSuccessMessage) : void
+      private function onCharacterSelectedSuccessMessage(param1:CharacterSelectedSuccessMessage) : void
       {
          //Décompilation abandonné
       }
       
-      private function onHelloGameMessage(msg:HelloGameMessage) : Boolean
+      private function onHelloGameMessage(param1:HelloGameMessage) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onAuthenticationTicketAcceptedMessage(msg:AuthenticationTicketAcceptedMessage) : Boolean
+      private function onAuthenticationTicketAcceptedMessage(param1:AuthenticationTicketAcceptedMessage) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onCharacterLoadingCompleteMessage(msg:CharacterLoadingCompleteMessage) : Boolean
+      private function onCharacterLoadingCompleteMessage(param1:CharacterLoadingCompleteMessage) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onSelectedServerDataMessage(msg:SelectedServerDataMessage) : Boolean
+      private function onSelectedServerDataMessage(param1:SelectedServerDataMessage) : Boolean
       {
          //Décompilation abandonné
       }

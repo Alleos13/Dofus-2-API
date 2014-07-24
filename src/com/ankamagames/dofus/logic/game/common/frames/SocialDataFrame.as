@@ -79,42 +79,42 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      private function onGuildListRequest(a:GuildListRequestAction) : Boolean
+      private function onGuildListRequest(param1:GuildListRequestAction) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onAllianceListRequest(a:AllianceListRequestAction) : Boolean
+      private function onAllianceListRequest(param1:AllianceListRequestAction) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onAllianceListMessage(m:AllianceListMessage) : Boolean
+      private function onAllianceListMessage(param1:AllianceListMessage) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onAllianceVersatileListMessage(m:AllianceVersatileInfoListMessage) : Boolean
+      private function onAllianceVersatileListMessage(param1:AllianceVersatileInfoListMessage) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onGuildListMessage(m:GuildListMessage) : Boolean
+      private function onGuildListMessage(param1:GuildListMessage) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onGuildVersatileListMessage(m:GuildVersatileInfoListMessage) : Boolean
+      private function onGuildVersatileListMessage(param1:GuildVersatileInfoListMessage) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function dispatchGuildList(isUpdate:Boolean = false, isError:Boolean = false) : void
+      private function dispatchGuildList(param1:Boolean = false, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private function dispatchAllianceList(isUpdate:Boolean = false, isError:Boolean = false) : void
+      private function dispatchAllianceList(param1:Boolean = false, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }

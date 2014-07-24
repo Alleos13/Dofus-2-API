@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.craft
          //Décompilation abandonné
       }
       
-      public static function create(recipeId:uint) : ExchangeSetCraftRecipeAction
+      public static function create(param1:uint) : ExchangeSetCraftRecipeAction
       {
          //Décompilation abandonné
       }

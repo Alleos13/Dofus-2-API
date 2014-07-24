@@ -20,17 +20,17 @@ package com.ankamagames.jerakine.resources.protocols
       
       private static var _customProtocols:Dictionary;
       
-      public static function getProtocol(uri:Uri) : IProtocol
+      public static function getProtocol(param1:Uri) : IProtocol
       {
          //Décompilation abandonné
       }
       
-      public static function addProtocol(protocolName:String, protocolClass:Class) : void
+      public static function addProtocol(param1:String, param2:Class) : void
       {
          //Décompilation abandonné
       }
       
-      public static function removeProtocol(protocolName:String) : void
+      public static function removeProtocol(param1:String) : void
       {
          //Décompilation abandonné
       }

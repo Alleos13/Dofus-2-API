@@ -646,7 +646,7 @@ package com.ankamagames.dofus.network
          //Décompilation abandonné
       }
       
-      public function parse(input:IDataInput, messageId:uint, messageLength:uint) : INetworkMessage
+      public function parse(param1:IDataInput, param2:uint, param3:uint) : INetworkMessage
       {
          //Décompilation abandonné
       }

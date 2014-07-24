@@ -54,17 +54,17 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function checkSpeedHack(pEvt:TimerEvent) : void
+      private function checkSpeedHack(param1:TimerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTimerComplete(pEvt:TimerEvent) : void
+      private function onTimerComplete(param1:TimerEvent) : void
       {
          //Décompilation abandonné
       }

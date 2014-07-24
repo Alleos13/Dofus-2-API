@@ -21,12 +21,12 @@ package com.ankamagames.dofus.logic.common.managers
          //Décompilation abandonné
       }
       
-      public static function openSocial(tab:int, subTab:int, ... args) : void
+      public static function openSocial(param1:int, param2:int, ... rest) : void
       {
          //Décompilation abandonné
       }
       
-      public static function rollOver(pX:int, pY:int, tab:int, subTab:int) : void
+      public static function rollOver(param1:int, param2:int, param3:int, param4:int) : void
       {
          //Décompilation abandonné
       }

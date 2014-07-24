@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.quest.treasureHunt
       
       public static const MODULE:String = "PointOfInterestCategory";
       
-      public static function getPointOfInterestCategoryById(id:int) : PointOfInterestCategory
+      public static function getPointOfInterestCategoryById(param1:int) : PointOfInterestCategory
       {
          //Décompilation abandonné
       }

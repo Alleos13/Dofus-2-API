@@ -13,7 +13,7 @@ package com.ankamagames.atouin.data.map
       //Décompilation abandonné
       }
       
-      public function CellData(map:Map, cellId:uint)
+      public function CellData(param1:Map, param2:uint)
       {
          //Décompilation abandonné
       }
@@ -122,7 +122,7 @@ package com.ankamagames.atouin.data.map
          //Décompilation abandonné
       }
       
-      public function fromRaw(raw:IDataInput) : void
+      public function fromRaw(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

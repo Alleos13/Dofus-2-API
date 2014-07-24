@@ -22,7 +22,7 @@ package com.ankamagames.dofus.types.sequences
       //Décompilation abandonné
       }
       
-      public function AddGfxEntityStep(gfxId:uint, cellId:uint, angle:Number = 0, yOffset:int = 0, mode:uint = 0, startCell:MapPoint = null, endCell:MapPoint = null, popUnderPlayer:Boolean = false)
+      public function AddGfxEntityStep(param1:uint, param2:uint, param3:Number = 0, param4:int = 0, param5:uint = 0, param6:MapPoint = null, param7:MapPoint = null, param8:Boolean = false)
       {
          //Décompilation abandonné
       }
@@ -54,17 +54,17 @@ package com.ankamagames.dofus.types.sequences
          //Décompilation abandonné
       }
       
-      private function remove(e:Event) : void
+      private function remove(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function shot(e:Event) : void
+      private function shot(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function onTimeOut(e:TimerEvent) : void
+      override protected function onTimeOut(param1:TimerEvent) : void
       {
          //Décompilation abandonné
       }

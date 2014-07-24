@@ -31,7 +31,7 @@ package com.ankamagames.dofus.network.types.game.actions.fight
          //Décompilation abandonné
       }
       
-      public function initGameActionMarkedCell(cellId:uint = 0, zoneSize:int = 0, cellColor:int = 0, cellsType:int = 0) : GameActionMarkedCell
+      public function initGameActionMarkedCell(param1:uint = 0, param2:int = 0, param3:int = 0, param4:int = 0) : GameActionMarkedCell
       {
          //Décompilation abandonné
       }
@@ -41,22 +41,22 @@ package com.ankamagames.dofus.network.types.game.actions.fight
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameActionMarkedCell(output:IDataOutput) : void
+      public function serializeAs_GameActionMarkedCell(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameActionMarkedCell(input:IDataInput) : void
+      public function deserializeAs_GameActionMarkedCell(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

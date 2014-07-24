@@ -29,7 +29,7 @@ package com.ankamagames.dofus.network.types.game.paddock
          //Décompilation abandonné
       }
       
-      public function initMountInformationsForPaddock(modelId:int = 0, name:String = "", ownerName:String = "") : MountInformationsForPaddock
+      public function initMountInformationsForPaddock(param1:int = 0, param2:String = "", param3:String = "") : MountInformationsForPaddock
       {
          //Décompilation abandonné
       }
@@ -39,22 +39,22 @@ package com.ankamagames.dofus.network.types.game.paddock
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_MountInformationsForPaddock(output:IDataOutput) : void
+      public function serializeAs_MountInformationsForPaddock(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_MountInformationsForPaddock(input:IDataInput) : void
+      public function deserializeAs_MountInformationsForPaddock(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

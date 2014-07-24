@@ -37,7 +37,7 @@ package com.ankamagames.dofus.network.messages.game.inventory.preset
          //Décompilation abandonné
       }
       
-      public function initInventoryPresetItemUpdateMessage(presetId:uint = 0, presetItem:PresetItem = null) : InventoryPresetItemUpdateMessage
+      public function initInventoryPresetItemUpdateMessage(param1:uint = 0, param2:PresetItem = null) : InventoryPresetItemUpdateMessage
       {
          //Décompilation abandonné
       }
@@ -47,32 +47,32 @@ package com.ankamagames.dofus.network.messages.game.inventory.preset
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_InventoryPresetItemUpdateMessage(output:IDataOutput) : void
+      public function serializeAs_InventoryPresetItemUpdateMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_InventoryPresetItemUpdateMessage(input:IDataInput) : void
+      public function deserializeAs_InventoryPresetItemUpdateMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

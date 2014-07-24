@@ -9,7 +9,7 @@ package com.ankamagames.atouin.types.events
       //Décompilation abandonné
       }
       
-      public function RenderMapEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, mapId:uint = 0, renderId:uint = 0)
+      public function RenderMapEvent(param1:String, param2:Boolean = false, param3:Boolean = false, param4:uint = 0, param5:uint = 0)
       {
          //Décompilation abandonné
       }

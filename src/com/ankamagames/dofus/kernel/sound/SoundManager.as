@@ -47,7 +47,7 @@ package com.ankamagames.dofus.kernel.sound
          //Décompilation abandonné
       }
       
-      public function setDisplayOptions(pOptions:TubulOptions) : void
+      public function setDisplayOptions(param1:TubulOptions) : void
       {
          //Décompilation abandonné
       }
@@ -57,22 +57,22 @@ package com.ankamagames.dofus.kernel.sound
          //Décompilation abandonné
       }
       
-      public function setMusicVolume(pVolume:Number) : void
+      public function setMusicVolume(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function setSoundVolume(pVolume:Number) : void
+      public function setSoundVolume(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function setAmbienceVolume(pVolume:Number) : void
+      public function setAmbienceVolume(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      private function onPropertyChanged(e:PropertyChangeEvent) : void
+      private function onPropertyChanged(param1:PropertyChangeEvent) : void
       {
          //Décompilation abandonné
       }

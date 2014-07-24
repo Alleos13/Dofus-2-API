@@ -91,12 +91,12 @@ package com.ankamagames.berilia.uiRender
          //Décompilation abandonné
       }
       
-      public function processFile(sUrl:String) : void
+      public function processFile(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function processXml(sXml:String) : void
+      public function processXml(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -111,87 +111,87 @@ package com.ankamagames.berilia.uiRender
          //Décompilation abandonné
       }
       
-      protected function parseMainNode(mainNodes:XMLNode) : UiDefinition
+      protected function parseMainNode(param1:XMLNode) : UiDefinition
       {
          //Décompilation abandonné
       }
       
-      private function cleanLocalConstants(constants:Array) : void
+      private function cleanLocalConstants(param1:Array) : void
       {
          //Décompilation abandonné
       }
       
-      protected function parseConstants(xnNode:XMLNode, constants:Array) : void
+      protected function parseConstants(param1:XMLNode, param2:Array) : void
       {
          //Décompilation abandonné
       }
       
-      protected function parseGraphicElement(xnNode:XMLNode, parentNode:XMLNode = null, be:BasicElement = null) : BasicElement
+      protected function parseGraphicElement(param1:XMLNode, param2:XMLNode = null, param3:BasicElement = null) : BasicElement
       {
          //Décompilation abandonné
       }
       
-      protected function parseStateContainer(xnNode:XMLNode, elementType:String) : *
+      protected function parseStateContainer(param1:XMLNode, param2:String) : *
       {
          //Décompilation abandonné
       }
       
-      protected function parseSetProperties(xnNode:XMLNode, item:Object) : void
+      protected function parseSetProperties(param1:XMLNode, param2:Object) : void
       {
          //Décompilation abandonné
       }
       
-      private function cleanComponentProperty(be:BasicElement, properties:Array = null) : Boolean
+      private function cleanComponentProperty(param1:BasicElement, param2:Array = null) : Boolean
       {
          //Décompilation abandonné
       }
       
-      protected function getClassDesc(o:Object) : Object
+      protected function getClassDesc(param1:Object) : Object
       {
          //Décompilation abandonné
       }
       
-      protected function parseSize(xnNode:XMLNode, bAllowRelativeSize:Boolean) : GraphicSize
+      protected function parseSize(param1:XMLNode, param2:Boolean) : GraphicSize
       {
          //Décompilation abandonné
       }
       
-      protected function parseAnchors(xnNode:XMLNode) : Array
+      protected function parseAnchors(param1:XMLNode) : Array
       {
          //Décompilation abandonné
       }
       
-      protected function parseShortcutsEvent(xnNode:XMLNode) : Array
+      protected function parseShortcutsEvent(param1:XMLNode) : Array
       {
          //Décompilation abandonné
       }
       
-      private function parseEvent(xnNode:XMLNode) : Array
+      private function parseEvent(param1:XMLNode) : Array
       {
          //Décompilation abandonné
       }
       
-      private function getStrataNum(sName:String) : uint
+      private function getStrataNum(param1:String) : uint
       {
          //Décompilation abandonné
       }
       
-      private function suggest(word:String, aPossibilities:Array, max:uint = 5, suggestCount:uint = 3) : String
+      private function suggest(param1:String, param2:Array, param3:uint = 5, param4:uint = 3) : String
       {
          //Décompilation abandonné
       }
       
-      private function onPreProcessCompleted(event:Event) : void
+      private function onPreProcessCompleted(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onXmlLoadComplete(e:ResourceLoadedEvent) : void
+      private function onXmlLoadComplete(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onXmlLoadError(e:ResourceErrorEvent) : void
+      private function onXmlLoadError(param1:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }

@@ -10,7 +10,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function MapElementRightClickMessage(target:GraphicContainer, targetedElement:MapElement)
+      public function MapElementRightClickMessage(param1:GraphicContainer, param2:MapElement)
       {
          //Décompilation abandonné
       }

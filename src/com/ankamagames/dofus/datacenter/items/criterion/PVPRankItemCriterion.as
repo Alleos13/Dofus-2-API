@@ -10,7 +10,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function PVPRankItemCriterion(pCriterion:String)
+      public function PVPRankItemCriterion(param1:String)
       {
          //Décompilation abandonné
       }

@@ -7,7 +7,7 @@ package com.ankamagames.dofus.logic.game.fight.fightEvents
       //Décompilation abandonné
       }
       
-      public function FightEvent(pName:String, pParams:Array, pTargetId:int, pCheckParams:int, pCastingSpellId:int, pOrder:int = -1, pFirstParamToCheck:int = 1)
+      public function FightEvent(param1:String, param2:Array, param3:int, param4:int, param5:int, param6:int = -1, param7:int = 1)
       {
          //Décompilation abandonné
       }

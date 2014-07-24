@@ -14,7 +14,7 @@ package com.ankamagames.jerakine.types.zones
       //Décompilation abandonné
       }
       
-      public function Cross(nMinRadius:uint, nMaxRadius:uint, dataMapProvider:IDataMapProvider)
+      public function Cross(param1:uint, param2:uint, param3:IDataMapProvider)
       {
          //Décompilation abandonné
       }
@@ -38,7 +38,7 @@ package com.ankamagames.jerakine.types.zones
          //Décompilation abandonné
       }
       
-      public function set radius(n:uint) : void
+      public function set radius(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -48,7 +48,7 @@ package com.ankamagames.jerakine.types.zones
          //Décompilation abandonné
       }
       
-      public function set minRadius(r:uint) : void
+      public function set minRadius(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -58,7 +58,7 @@ package com.ankamagames.jerakine.types.zones
          //Décompilation abandonné
       }
       
-      public function set direction(d:uint) : void
+      public function set direction(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -68,7 +68,7 @@ package com.ankamagames.jerakine.types.zones
          //Décompilation abandonné
       }
       
-      public function set diagonal(d:Boolean) : void
+      public function set diagonal(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -78,7 +78,7 @@ package com.ankamagames.jerakine.types.zones
          //Décompilation abandonné
       }
       
-      public function set allDirections(d:Boolean) : void
+      public function set allDirections(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -92,12 +92,12 @@ package com.ankamagames.jerakine.types.zones
       
       public var onlyPerpendicular:Boolean = false;
       
-      public function getCells(cellId:uint = 0) : Vector.<uint>
+      public function getCells(param1:uint = 0) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      private function addCell(x:int, y:int, cellMap:Vector.<uint>) : void
+      private function addCell(param1:int, param2:int, param3:Vector.<uint>) : void
       {
          //Décompilation abandonné
       }

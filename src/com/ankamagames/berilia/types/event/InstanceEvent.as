@@ -11,7 +11,7 @@ package com.ankamagames.berilia.types.event
       //Décompilation abandonné
       }
       
-      public function InstanceEvent(doInstance:DisplayObject, oCallback:Object)
+      public function InstanceEvent(param1:DisplayObject, param2:Object)
       {
          //Décompilation abandonné
       }
@@ -39,7 +39,7 @@ package com.ankamagames.berilia.types.event
          //Décompilation abandonné
       }
       
-      public function set callbackObject(o:Object) : void
+      public function set callbackObject(param1:Object) : void
       {
          //Décompilation abandonné
       }
@@ -49,7 +49,7 @@ package com.ankamagames.berilia.types.event
          //Décompilation abandonné
       }
       
-      public function push(sEventName:String) : void
+      public function push(param1:String) : void
       {
          //Décompilation abandonné
       }

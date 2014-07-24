@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
          //Décompilation abandonné
       }
       
-      public static function create(emoteId:uint) : EmotePlayRequestAction
+      public static function create(param1:uint) : EmotePlayRequestAction
       {
          //Décompilation abandonné
       }

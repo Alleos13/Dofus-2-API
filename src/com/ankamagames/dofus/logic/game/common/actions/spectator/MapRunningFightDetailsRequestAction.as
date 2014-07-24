@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.spectator
          //Décompilation abandonné
       }
       
-      public static function create(fightId:uint) : MapRunningFightDetailsRequestAction
+      public static function create(param1:uint) : MapRunningFightDetailsRequestAction
       {
          //Décompilation abandonné
       }

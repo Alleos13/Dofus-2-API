@@ -35,22 +35,22 @@ package com.ankamagames.atouin.managers
          //Décompilation abandonné
       }
       
-      public static function addAnimatedElement(tiphonSprite:TiphonSprite, min:int, max:int) : void
+      public static function addAnimatedElement(param1:TiphonSprite, param2:int, param3:int) : void
       {
          //Décompilation abandonné
       }
       
-      public static function removeAnimatedElement(tiphonSprite:TiphonSprite) : void
+      public static function removeAnimatedElement(param1:TiphonSprite) : void
       {
          //Décompilation abandonné
       }
       
-      public static function loop(e:Event) : void
+      public static function loop(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onSequenceEnd(sequence:SerialSequencer, ts:TiphonSprite) : void
+      private static function onSequenceEnd(param1:SerialSequencer, param2:TiphonSprite) : void
       {
          //Décompilation abandonné
       }

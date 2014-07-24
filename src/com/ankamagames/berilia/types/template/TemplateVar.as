@@ -7,7 +7,7 @@ package com.ankamagames.berilia.types.template
       //Décompilation abandonné
       }
       
-      public function TemplateVar(varName:String)
+      public function TemplateVar(param1:String)
       {
          //Décompilation abandonné
       }

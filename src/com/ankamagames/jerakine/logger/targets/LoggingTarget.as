@@ -10,14 +10,14 @@ package com.ankamagames.jerakine.logger.targets
       //Décompilation abandonné
       }
       
-      function set filters(value:Array) : void;
+      function set filters(param1:Array) : void;
       
       function get filters() : Array;
       
-      function addLogger(logger:Logger) : void;
+      function addLogger(param1:Logger) : void;
       
-      function removeLogger(logger:Logger) : void;
+      function removeLogger(param1:Logger) : void;
       
-      function onLog(e:LogEvent) : void;
+      function onLog(param1:LogEvent) : void;
    }
 }

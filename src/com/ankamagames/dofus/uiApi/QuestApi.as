@@ -32,7 +32,7 @@ package com.ankamagames.dofus.uiApi
       
       private var _module:UiModule;
       
-      public function set module(value:UiModule) : void
+      public function set module(param1:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -42,7 +42,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getQuestInformations(questId:int) : Object
+      public function getQuestInformations(param1:int) : Object
       {
          //Décompilation abandonné
       }
@@ -62,7 +62,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getAllQuestsOrderByCategory(withCompletedQuests:Boolean = false) : Array
+      public function getAllQuestsOrderByCategory(param1:Boolean = false) : Array
       {
          //Décompilation abandonné
       }
@@ -82,17 +82,17 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function isAchievementFinished(id:int) : Boolean
+      public function isAchievementFinished(param1:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getAchievementKamasReward(achievement:Achievement, level:int = 0) : Number
+      public function getAchievementKamasReward(param1:Achievement, param2:int = 0) : Number
       {
          //Décompilation abandonné
       }
       
-      public function getAchievementExperienceReward(achievement:Achievement, level:int = 0) : Number
+      public function getAchievementExperienceReward(param1:Achievement, param2:int = 0) : Number
       {
          //Décompilation abandonné
       }
@@ -102,12 +102,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getAchievementObjectivesNames(achId:int) : String
+      public function getAchievementObjectivesNames(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      public function getTreasureHunt(typeId:int) : Object
+      public function getTreasureHunt(param1:int) : Object
       {
          //Décompilation abandonné
       }

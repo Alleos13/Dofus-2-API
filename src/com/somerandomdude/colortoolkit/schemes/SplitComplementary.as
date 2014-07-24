@@ -10,7 +10,7 @@ package com.somerandomdude.colortoolkit.schemes
       //Décompilation abandonné
       }
       
-      public function SplitComplementary(primaryColor:int)
+      public function SplitComplementary(param1:int)
       {
          //Décompilation abandonné
       }

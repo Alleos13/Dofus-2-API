@@ -10,7 +10,7 @@ package com.hurlant.crypto.symmetric
       //Décompilation abandonné
       }
       
-      public function ECBMode(key:ISymmetricKey, padding:IPad = null)
+      public function ECBMode(param1:ISymmetricKey, param2:IPad = null)
       {
          //Décompilation abandonné
       }
@@ -24,12 +24,12 @@ package com.hurlant.crypto.symmetric
          //Décompilation abandonné
       }
       
-      public function encrypt(src:ByteArray) : void
+      public function encrypt(param1:ByteArray) : void
       {
          //Décompilation abandonné
       }
       
-      public function decrypt(src:ByteArray) : void
+      public function decrypt(param1:ByteArray) : void
       {
          //Décompilation abandonné
       }

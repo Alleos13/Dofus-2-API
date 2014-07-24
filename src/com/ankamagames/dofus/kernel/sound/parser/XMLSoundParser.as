@@ -16,12 +16,12 @@ package com.ankamagames.dofus.kernel.sound.parser
       
       private static const _IDS_UNLOCALIZED:Array;
       
-      public static function parseXMLSoundFile(pXMLFile:XML, pSkins:Vector.<uint>) : SoundEventParamWrapper
+      public static function parseXMLSoundFile(param1:XML, param2:Vector.<uint>) : SoundEventParamWrapper
       {
          //Décompilation abandonné
       }
       
-      public static function isLocalized(pSoundId:String) : Boolean
+      public static function isLocalized(param1:String) : Boolean
       {
          //Décompilation abandonné
       }

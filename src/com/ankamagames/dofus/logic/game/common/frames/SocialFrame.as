@@ -337,12 +337,12 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function getGuildById(id:int) : GuildFactSheetWrapper
+      public function getGuildById(param1:int) : GuildFactSheetWrapper
       {
          //Décompilation abandonné
       }
       
-      public function updateGuildById(id:int, guild:GuildFactSheetWrapper) : void
+      public function updateGuildById(param1:int, param2:GuildFactSheetWrapper) : void
       {
          //Décompilation abandonné
       }
@@ -357,22 +357,22 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function isIgnored(name:String, accountId:int = 0) : Boolean
+      public function isIgnored(param1:String, param2:int = 0) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function isFriend(playerName:String) : Boolean
+      public function isFriend(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function isEnemy(playerName:String) : Boolean
+      public function isEnemy(param1:String) : Boolean
       {
          //Décompilation abandonné
       }

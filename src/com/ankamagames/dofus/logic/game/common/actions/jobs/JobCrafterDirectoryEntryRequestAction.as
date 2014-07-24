@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.jobs
          //Décompilation abandonné
       }
       
-      public static function create(playerId:uint) : JobCrafterDirectoryEntryRequestAction
+      public static function create(param1:uint) : JobCrafterDirectoryEntryRequestAction
       {
          //Décompilation abandonné
       }

@@ -38,7 +38,7 @@ package com.ankamagames.dofus.network.messages.security
          //Décompilation abandonné
       }
       
-      public function initCheckFileMessage(filenameHash:String = "", type:uint = 0, value:String = "") : CheckFileMessage
+      public function initCheckFileMessage(param1:String = "", param2:uint = 0, param3:String = "") : CheckFileMessage
       {
          //Décompilation abandonné
       }
@@ -48,32 +48,32 @@ package com.ankamagames.dofus.network.messages.security
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_CheckFileMessage(output:IDataOutput) : void
+      public function serializeAs_CheckFileMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_CheckFileMessage(input:IDataInput) : void
+      public function deserializeAs_CheckFileMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

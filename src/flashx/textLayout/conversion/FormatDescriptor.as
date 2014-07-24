@@ -7,7 +7,7 @@ package flashx.textLayout.conversion
       //Décompilation abandonné
       }
       
-      public function FormatDescriptor(format:String, importerClass:Class, exporterClass:Class, clipboardFormat:String)
+      public function FormatDescriptor(param1:String, param2:Class, param3:Class, param4:String)
       {
          //Décompilation abandonné
       }

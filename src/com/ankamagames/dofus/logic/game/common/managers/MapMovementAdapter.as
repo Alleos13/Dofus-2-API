@@ -23,12 +23,12 @@ package com.ankamagames.dofus.logic.game.common.managers
       
       protected static const _log:Logger;
       
-      public static function getServerMovement(path:MovementPath) : Vector.<uint>
+      public static function getServerMovement(param1:MovementPath) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public static function getClientMovement(path:Vector.<uint>) : MovementPath
+      public static function getClientMovement(param1:Vector.<uint>) : MovementPath
       {
          //Décompilation abandonné
       }

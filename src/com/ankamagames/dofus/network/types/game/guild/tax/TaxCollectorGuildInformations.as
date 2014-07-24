@@ -26,7 +26,7 @@ package com.ankamagames.dofus.network.types.game.guild.tax
          //Décompilation abandonné
       }
       
-      public function initTaxCollectorGuildInformations(guild:BasicGuildInformations = null) : TaxCollectorGuildInformations
+      public function initTaxCollectorGuildInformations(param1:BasicGuildInformations = null) : TaxCollectorGuildInformations
       {
          //Décompilation abandonné
       }
@@ -36,22 +36,22 @@ package com.ankamagames.dofus.network.types.game.guild.tax
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_TaxCollectorGuildInformations(output:IDataOutput) : void
+      public function serializeAs_TaxCollectorGuildInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_TaxCollectorGuildInformations(input:IDataInput) : void
+      public function deserializeAs_TaxCollectorGuildInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

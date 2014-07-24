@@ -23,12 +23,12 @@ package com.ankamagames.dofus.datacenter.world
       
       private static var _allSubAreas:Array;
       
-      public static function getSubAreaById(id:int) : SubArea
+      public static function getSubAreaById(param1:int) : SubArea
       {
          //Décompilation abandonné
       }
       
-      public static function getSubAreaByMapId(mapId:uint) : SubArea
+      public static function getSubAreaByMapId(param1:uint) : SubArea
       {
          //Décompilation abandonné
       }

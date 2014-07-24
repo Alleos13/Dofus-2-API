@@ -10,14 +10,14 @@ package flashx.textLayout.elements
       //Décompilation abandonné
       }
       
-      public function FlowValueHolder(initialValues:FlowValueHolder = null)
+      public function FlowValueHolder(param1:FlowValueHolder = null)
       {
          //Décompilation abandonné
       }
       
       private var _privateData:Object;
       
-      private function initialize(initialValues:FlowValueHolder) : void
+      private function initialize(param1:FlowValueHolder) : void
       {
          //Décompilation abandonné
       }
@@ -27,17 +27,17 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set privateData(val:Object) : void
+      public function set privateData(param1:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function getPrivateData(styleProp:String) : *
+      public function getPrivateData(param1:String) : *
       {
          //Décompilation abandonné
       }
       
-      public function setPrivateData(styleProp:String, newValue:*) : void
+      public function setPrivateData(param1:String, param2:*) : void
       {
          //Décompilation abandonné
       }

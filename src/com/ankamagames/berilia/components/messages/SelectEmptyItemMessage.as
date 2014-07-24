@@ -9,7 +9,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function SelectEmptyItemMessage(target:InteractiveObject, selectMethod:uint = 7)
+      public function SelectEmptyItemMessage(param1:InteractiveObject, param2:uint = 7)
       {
          //Décompilation abandonné
       }

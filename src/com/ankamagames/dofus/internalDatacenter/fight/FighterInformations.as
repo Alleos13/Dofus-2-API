@@ -22,7 +22,7 @@ package com.ankamagames.dofus.internalDatacenter.fight
       //Décompilation abandonné
       }
       
-      public function FighterInformations(fighterId:int)
+      public function FighterInformations(param1:int)
       {
          //Décompilation abandonné
       }

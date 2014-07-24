@@ -46,17 +46,17 @@ package com.ankamagames.berilia.managers
       
       private var _loader:IResourceLoader;
       
-      public function initialize(fontList:Array) : void
+      public function initialize(param1:Array) : void
       {
          //Décompilation abandonné
       }
       
-      public function isEmbed(fontName:String) : Boolean
+      public function isEmbed(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getFont(fontName:String) : Font
+      public function getFont(param1:String) : Font
       {
          //Décompilation abandonné
       }
@@ -66,17 +66,17 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      private function onComplete(e:ResourceLoadedEvent) : void
+      private function onComplete(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAllFontLoaded(e:ResourceLoaderProgressEvent) : void
+      private function onAllFontLoaded(param1:ResourceLoaderProgressEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onError(e:ResourceErrorEvent) : void
+      private function onError(param1:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }

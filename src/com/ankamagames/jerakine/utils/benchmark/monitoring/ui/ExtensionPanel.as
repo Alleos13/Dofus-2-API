@@ -12,7 +12,7 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring.ui
       //Décompilation abandonné
       }
       
-      public function ExtensionPanel(pRoot:Sprite)
+      public function ExtensionPanel(param1:Sprite)
       {
          //Décompilation abandonné
       }
@@ -40,22 +40,22 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring.ui
          //Décompilation abandonné
       }
       
-      private function addGraphToMemory(pEvt:FpsManagerEvent) : void
+      private function addGraphToMemory(param1:FpsManagerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function set lastGc(val:int) : void
+      public function set lastGc(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function watchObject(o:Object, pColor:uint, pIncrementParents:Boolean = false) : void
+      public function watchObject(param1:Object, param2:uint, param3:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateGc(max_memory:Number = 0) : void
+      public function updateGc(param1:Number = 0) : void
       {
          //Décompilation abandonné
       }

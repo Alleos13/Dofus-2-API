@@ -10,7 +10,7 @@ package com.ankamagames.dofus.logic.game.common.types
       //Décompilation abandonné
       }
       
-      public function DofusShopHighlight(data:Object)
+      public function DofusShopHighlight(param1:Object)
       {
          //Décompilation abandonné
       }
@@ -25,7 +25,7 @@ package com.ankamagames.dofus.logic.game.common.types
       
       private var _external:Object;
       
-      override public function init(data:Object) : void
+      override public function init(param1:Object) : void
       {
          //Décompilation abandonné
       }

@@ -46,7 +46,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.treasureHun
          //Décompilation abandonné
       }
       
-      public function initTreasureHuntMessage(questType:uint = 0, startMapId:uint = 0, stepList:Vector.<TreasureHuntStep> = null, checkPointCurrent:uint = 0, checkPointTotal:uint = 0, availableRetryCount:int = 0) : TreasureHuntMessage
+      public function initTreasureHuntMessage(param1:uint = 0, param2:uint = 0, param3:Vector.<TreasureHuntStep> = null, param4:uint = 0, param5:uint = 0, param6:int = 0) : TreasureHuntMessage
       {
          //Décompilation abandonné
       }
@@ -56,32 +56,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.treasureHun
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_TreasureHuntMessage(output:IDataOutput) : void
+      public function serializeAs_TreasureHuntMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_TreasureHuntMessage(input:IDataInput) : void
+      public function deserializeAs_TreasureHuntMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

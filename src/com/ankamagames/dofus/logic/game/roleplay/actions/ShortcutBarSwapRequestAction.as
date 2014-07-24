@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
          //Décompilation abandonné
       }
       
-      public static function create(barType:uint, firstSlot:uint, secondSlot:uint) : ShortcutBarSwapRequestAction
+      public static function create(param1:uint, param2:uint, param3:uint) : ShortcutBarSwapRequestAction
       {
          //Décompilation abandonné
       }

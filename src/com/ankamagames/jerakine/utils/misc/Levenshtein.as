@@ -12,12 +12,12 @@ package com.ankamagames.jerakine.utils.misc
          //Décompilation abandonné
       }
       
-      public static function distance(a:String, b:String) : Number
+      public static function distance(param1:String, param2:String) : Number
       {
          //Décompilation abandonné
       }
       
-      public static function suggest(word:String, aPossibility:Array, max:uint = 5) : String
+      public static function suggest(param1:String, param2:Array, param3:uint = 5) : String
       {
          //Décompilation abandonné
       }

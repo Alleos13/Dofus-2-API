@@ -11,22 +11,22 @@ package com.ankamagames.jerakine.map
       
       function get height() : int;
       
-      function pointLos(x:int, y:int, bAllowTroughEntity:Boolean = true) : Boolean;
+      function pointLos(param1:int, param2:int, param3:Boolean = true) : Boolean;
       
-      function pointMov(x:int, y:int, bAllowTroughEntity:Boolean = true, previousCellId:int = -1) : Boolean;
+      function pointMov(param1:int, param2:int, param3:Boolean = true, param4:int = -1) : Boolean;
       
-      function farmCell(x:int, y:int) : Boolean;
+      function farmCell(param1:int, param2:int) : Boolean;
       
-      function pointSpecialEffects(x:int, y:int) : uint;
+      function pointSpecialEffects(param1:int, param2:int) : uint;
       
-      function pointWeight(x:int, y:int, bAllowTroughEntity:Boolean = true) : Number;
+      function pointWeight(param1:int, param2:int, param3:Boolean = true) : Number;
       
-      function hasEntity(x:int, y:int) : Boolean;
+      function hasEntity(param1:int, param2:int) : Boolean;
       
-      function updateCellMovLov(cellId:uint, canMove:Boolean) : void;
+      function updateCellMovLov(param1:uint, param2:Boolean) : void;
       
-      function isChangeZone(cell1:uint, cell2:uint) : Boolean;
+      function isChangeZone(param1:uint, param2:uint) : Boolean;
       
-      function getCellSpeed(cellId:uint) : int;
+      function getCellSpeed(param1:uint) : int;
    }
 }

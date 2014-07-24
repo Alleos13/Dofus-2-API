@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.guild
          //Décompilation abandonné
       }
       
-      public static function create(pInfoType:uint) : GuildGetInformationsAction
+      public static function create(param1:uint) : GuildGetInformationsAction
       {
          //Décompilation abandonné
       }

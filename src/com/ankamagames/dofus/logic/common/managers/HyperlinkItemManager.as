@@ -30,32 +30,32 @@ package com.ankamagames.dofus.logic.common.managers
       
       public static var lastItemTooltipId:int = -1;
       
-      public static function showItem(objectGID:uint, objectUID:uint = 0) : void
+      public static function showItem(param1:uint, param2:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public static function showChatItem(id:int) : void
+      public static function showChatItem(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public static function duplicateChatHyperlink(id:int) : void
+      public static function duplicateChatHyperlink(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public static function getItemName(objectGID:uint, objectUID:uint = 0) : String
+      public static function getItemName(param1:uint, param2:uint = 0) : String
       {
          //Décompilation abandonné
       }
       
-      public static function newChatItem(item:ItemWrapper) : String
+      public static function newChatItem(param1:ItemWrapper) : String
       {
          //Décompilation abandonné
       }
       
-      public static function rollOver(pX:int, pY:int, objectGID:uint, objectUID:uint = 0) : void
+      public static function rollOver(param1:int, param2:int, param3:uint, param4:uint = 0) : void
       {
          //Décompilation abandonné
       }

@@ -12,14 +12,14 @@ package com.ankamagames.jerakine.entities.behaviours
       //Décompilation abandonné
       }
       
-      function move(entity:IMovable, path:MovementPath, callback:Function = null) : void;
+      function move(param1:IMovable, param2:MovementPath, param3:Function = null) : void;
       
-      function jump(entity:IMovable, newPosition:MapPoint) : void;
+      function jump(param1:IMovable, param2:MapPoint) : void;
       
-      function stop(entity:IMovable, forceStop:Boolean = false) : void;
+      function stop(param1:IMovable, param2:Boolean = false) : void;
       
-      function isMoving(entity:IMovable) : Boolean;
+      function isMoving(param1:IMovable) : Boolean;
       
-      function synchroniseSubEntitiesPosition(entityRef:IMovable, subEntityContainer:DisplayObject = null) : void;
+      function synchroniseSubEntitiesPosition(param1:IMovable, param2:DisplayObject = null) : void;
    }
 }

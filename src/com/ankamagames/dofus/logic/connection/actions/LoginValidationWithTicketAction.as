@@ -12,7 +12,7 @@ package com.ankamagames.dofus.logic.connection.actions
          //Décompilation abandonné
       }
       
-      public static function create(ticket:String, autoSelectServer:Boolean, serverId:uint = 0) : LoginValidationWithTicketAction
+      public static function create(param1:String, param2:Boolean, param3:uint = 0) : LoginValidationWithTicketAction
       {
          //Décompilation abandonné
       }

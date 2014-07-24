@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.lockable
          //Décompilation abandonné
       }
       
-      public function initLockableCodeResultMessage(result:uint = 0) : LockableCodeResultMessage
+      public function initLockableCodeResultMessage(param1:uint = 0) : LockableCodeResultMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.lockable
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_LockableCodeResultMessage(output:IDataOutput) : void
+      public function serializeAs_LockableCodeResultMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_LockableCodeResultMessage(input:IDataInput) : void
+      public function deserializeAs_LockableCodeResultMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

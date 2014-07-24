@@ -19,7 +19,7 @@ package com.ankamagames.jerakine.lua
       //Décompilation abandonné
       }
       
-      public function LuaPlayer(pDispatchMessages:Boolean = true)
+      public function LuaPlayer(param1:Boolean = true)
       {
          //Décompilation abandonné
       }
@@ -43,27 +43,27 @@ package com.ankamagames.jerakine.lua
          //Décompilation abandonné
       }
       
-      public function set resetOnComplete(pValue:Boolean) : void
+      public function set resetOnComplete(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function addApi(pApiId:String, pApi:*) : void
+      public function addApi(param1:String, param2:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function playScript(pLuaScript:String) : void
+      public function playScript(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function setGlobal(pKey:String, pValue:*) : void
+      public function setGlobal(param1:String, param2:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function playFile(pUri:String) : void
+      public function playFile(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -78,17 +78,17 @@ package com.ankamagames.jerakine.lua
          //Décompilation abandonné
       }
       
-      private function onFileLoaded(pEvent:ResourceLoadedEvent) : void
+      private function onFileLoaded(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onFileLoadError(pEvent:ResourceErrorEvent) : void
+      private function onFileLoadError(param1:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function resultCallback(pStack:Array) : void
+      private function resultCallback(param1:Array) : void
       {
          //Décompilation abandonné
       }

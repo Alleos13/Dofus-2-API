@@ -14,7 +14,7 @@ package com.ankamagames.jerakine.utils.misc
       //Décompilation abandonné
       }
       
-      public function AsyncJPGEncoder(quality:int = 50)
+      public function AsyncJPGEncoder(param1:int = 50)
       {
          //Décompilation abandonné
       }
@@ -39,7 +39,7 @@ package com.ankamagames.jerakine.utils.misc
       
       private const UVQT:Vector.<int>;
       
-      private function initQuantTables(sf:int) : void
+      private function initQuantTables(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -52,7 +52,7 @@ package com.ankamagames.jerakine.utils.misc
       
       private var UVAC_HT:Vector.<BitString>;
       
-      private function computeHuffmanTbl(nrcodes:Vector.<int>, std_table:Vector.<int>) : Vector.<BitString>
+      private function computeHuffmanTbl(param1:Vector.<int>, param2:Vector.<int>) : Vector.<BitString>
       {
          //Décompilation abandonné
       }
@@ -93,12 +93,12 @@ package com.ankamagames.jerakine.utils.misc
       
       private var bytepos:int = 7;
       
-      private function writeBits(bs:BitString) : void
+      private function writeBits(param1:BitString) : void
       {
          //Décompilation abandonné
       }
       
-      private function fDCTQuant(data:Vector.<Number>, fdtbl:Vector.<Number>) : Vector.<int>
+      private function fDCTQuant(param1:Vector.<Number>, param2:Vector.<Number>) : Vector.<int>
       {
          //Décompilation abandonné
       }
@@ -108,7 +108,7 @@ package com.ankamagames.jerakine.utils.misc
          //Décompilation abandonné
       }
       
-      private function writeSOF0(width:int, height:int) : void
+      private function writeSOF0(param1:int, param2:int) : void
       {
          //Décompilation abandonné
       }
@@ -130,7 +130,7 @@ package com.ankamagames.jerakine.utils.misc
       
       var DU:Vector.<int>;
       
-      private function processDU(CDU:Vector.<Number>, fdtbl:Vector.<Number>, DC:Number, HTDC:Vector.<BitString>, HTAC:Vector.<BitString>) : Number
+      private function processDU(param1:Vector.<Number>, param2:Vector.<Number>, param3:Number, param4:Vector.<BitString>, param5:Vector.<BitString>) : Number
       {
          //Décompilation abandonné
       }
@@ -141,7 +141,7 @@ package com.ankamagames.jerakine.utils.misc
       
       private var VDU:Vector.<Number>;
       
-      private function RGB2YUV(img:BitmapData, xpos:int, ypos:int) : void
+      private function RGB2YUV(param1:BitmapData, param2:int, param3:int) : void
       {
          //Décompilation abandonné
       }
@@ -151,7 +151,7 @@ package com.ankamagames.jerakine.utils.misc
          //Décompilation abandonné
       }
       
-      private function process(e:Event) : void
+      private function process(param1:Event) : void
       {
          //Décompilation abandonné
       }
@@ -180,7 +180,7 @@ package com.ankamagames.jerakine.utils.misc
       
       private var _maxTime:int;
       
-      public function encode(image:BitmapData, callBack:Function, param:Object) : void
+      public function encode(param1:BitmapData, param2:Function, param3:Object) : void
       {
          //Décompilation abandonné
       }

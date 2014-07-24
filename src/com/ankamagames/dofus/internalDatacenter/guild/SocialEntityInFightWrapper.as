@@ -21,7 +21,7 @@ package com.ankamagames.dofus.internalDatacenter.guild
       
       private static const TYPE_PRISM:int = 1;
       
-      public static function create(pType:int, pId:int, pAllies:Array = null, pEnemies:Array = null, fightTime:int = 2147483647, waitTimeForPlacement:Number = 0, nbPositionPerTeam:uint = 5) : SocialEntityInFightWrapper
+      public static function create(param1:int, param2:int, param3:Array = null, param4:Array = null, param5:int = 2147483647, param6:Number = 0, param7:uint = 5) : SocialEntityInFightWrapper
       {
          //Décompilation abandonné
       }
@@ -40,12 +40,12 @@ package com.ankamagames.dofus.internalDatacenter.guild
       
       public var nbPositionPerTeam:uint;
       
-      public function update(pType:int, pId:int, pAllies:Array, pEnemies:Array, pFightTime:int = 2147483647, pWaitTimeForPlacement:Number = 0, pNbPositionPerTeam:uint = 5) : void
+      public function update(param1:int, param2:int, param3:Array, param4:Array, param5:int = 2147483647, param6:Number = 0, param7:uint = 5) : void
       {
          //Décompilation abandonné
       }
       
-      public function addPonyFighter(info:TaxCollectorWrapper) : void
+      public function addPonyFighter(param1:TaxCollectorWrapper) : void
       {
          //Décompilation abandonné
       }

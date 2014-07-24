@@ -12,17 +12,17 @@ package com.ankamagames.jerakine.utils.misc
          //Décompilation abandonné
       }
       
-      public static function call(method:Function, parameters:Array) : void
+      public static function call(param1:Function, param2:Array) : void
       {
          //Décompilation abandonné
       }
       
-      public static function callR(method:Function, parameters:Array) : *
+      public static function callR(param1:Function, param2:Array) : *
       {
          //Décompilation abandonné
       }
       
-      public static function callConstructor(callClass:Class, parameters:Array) : *
+      public static function callConstructor(param1:Class, param2:Array) : *
       {
          //Décompilation abandonné
       }

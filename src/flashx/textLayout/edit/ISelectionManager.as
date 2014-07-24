@@ -13,13 +13,13 @@ package flashx.textLayout.edit
       
       function get textFlow() : TextFlow;
       
-      function set textFlow(flow:TextFlow) : void;
+      function set textFlow(param1:TextFlow) : void;
       
       function get absoluteStart() : int;
       
       function get absoluteEnd() : int;
       
-      function selectRange(anchorPosition:int, activePosition:int) : void;
+      function selectRange(param1:int, param2:int) : void;
       
       function selectAll() : void;
       
@@ -33,7 +33,7 @@ package flashx.textLayout.edit
       
       function getSelectionState() : SelectionState;
       
-      function setSelectionState(state:SelectionState) : void;
+      function setSelectionState(param1:SelectionState) : void;
       
       function refreshSelection() : void;
       
@@ -45,28 +45,28 @@ package flashx.textLayout.edit
       
       function get currentSelectionFormat() : SelectionFormat;
       
-      function getCommonCharacterFormat(range:TextRange = null) : TextLayoutFormat;
+      function getCommonCharacterFormat(param1:TextRange = null) : TextLayoutFormat;
       
-      function getCommonParagraphFormat(range:TextRange = null) : TextLayoutFormat;
+      function getCommonParagraphFormat(param1:TextRange = null) : TextLayoutFormat;
       
-      function getCommonContainerFormat(range:TextRange = null) : TextLayoutFormat;
+      function getCommonContainerFormat(param1:TextRange = null) : TextLayoutFormat;
       
       function get editingMode() : String;
       
       function get focusedSelectionFormat() : SelectionFormat;
       
-      function set focusedSelectionFormat(val:SelectionFormat) : void;
+      function set focusedSelectionFormat(param1:SelectionFormat) : void;
       
       function get unfocusedSelectionFormat() : SelectionFormat;
       
-      function set unfocusedSelectionFormat(val:SelectionFormat) : void;
+      function set unfocusedSelectionFormat(param1:SelectionFormat) : void;
       
       function get inactiveSelectionFormat() : SelectionFormat;
       
-      function set inactiveSelectionFormat(val:SelectionFormat) : void;
+      function set inactiveSelectionFormat(param1:SelectionFormat) : void;
       
       function flushPendingOperations() : void;
       
-      function notifyInsertOrDelete(absolutePosition:int, length:int) : void;
+      function notifyInsertOrDelete(param1:int, param2:int) : void;
    }
 }

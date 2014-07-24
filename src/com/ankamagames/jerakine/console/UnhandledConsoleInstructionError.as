@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.console
       //Décompilation abandonné
       }
       
-      public function UnhandledConsoleInstructionError(message:String = "", id:uint = 0)
+      public function UnhandledConsoleInstructionError(param1:String = "", param2:uint = 0)
       {
          //Décompilation abandonné
       }

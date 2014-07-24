@@ -9,7 +9,7 @@ package com.somerandomdude.colortoolkit.spaces
       //Décompilation abandonné
       }
       
-      public function XYZ(x:Number = 0, y:Number = 0, z:Number = 0)
+      public function XYZ(param1:Number = 0, param2:Number = 0, param3:Number = 0)
       {
          //Décompilation abandonné
       }
@@ -25,7 +25,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set color(value:int) : void
+      public function set color(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -35,7 +35,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set x(value:Number) : void
+      public function set x(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -45,7 +45,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set y(value:Number) : void
+      public function set y(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -55,7 +55,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set z(value:Number) : void
+      public function set z(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -65,12 +65,12 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      private function generateColorFromXYZ(xval:Number, yval:Number, zval:Number) : int
+      private function generateColorFromXYZ(param1:Number, param2:Number, param3:Number) : int
       {
          //Décompilation abandonné
       }
       
-      private function generateXYZFromColor(color:int) : XYZ
+      private function generateXYZFromColor(param1:int) : XYZ
       {
          //Décompilation abandonné
       }

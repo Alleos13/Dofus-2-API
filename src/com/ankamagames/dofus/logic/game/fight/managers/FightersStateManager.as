@@ -28,22 +28,22 @@ package com.ankamagames.dofus.logic.game.fight.managers
       
       private var _entityStates:Dictionary;
       
-      public function addStateOnTarget(stateId:int, targetId:int) : void
+      public function addStateOnTarget(param1:int, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeStateOnTarget(stateId:int, targetId:int) : void
+      public function removeStateOnTarget(param1:int, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function hasState(targetId:int, stateId:int) : Boolean
+      public function hasState(param1:int, param2:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getStates(targetId:int) : Array
+      public function getStates(param1:int) : Array
       {
          //Décompilation abandonné
       }

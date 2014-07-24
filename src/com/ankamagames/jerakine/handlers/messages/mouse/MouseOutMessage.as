@@ -16,7 +16,7 @@ package com.ankamagames.jerakine.handlers.messages.mouse
          //Décompilation abandonné
       }
       
-      public static function create(target:InteractiveObject, mouseEvent:MouseEvent, instance:MouseMessage = null) : MouseOutMessage
+      public static function create(param1:InteractiveObject, param2:MouseEvent, param3:MouseMessage = null) : MouseOutMessage
       {
          //Décompilation abandonné
       }

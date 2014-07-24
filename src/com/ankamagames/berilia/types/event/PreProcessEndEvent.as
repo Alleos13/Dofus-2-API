@@ -10,7 +10,7 @@ package com.ankamagames.berilia.types.event
       //Décompilation abandonné
       }
       
-      public function PreProcessEndEvent(preprocessor:XmlPreProcessor)
+      public function PreProcessEndEvent(param1:XmlPreProcessor)
       {
          //Décompilation abandonné
       }

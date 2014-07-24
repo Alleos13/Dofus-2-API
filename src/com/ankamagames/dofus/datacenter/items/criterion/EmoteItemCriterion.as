@@ -13,7 +13,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function EmoteItemCriterion(pCriterion:String)
+      public function EmoteItemCriterion(param1:String)
       {
          //Décompilation abandonné
       }

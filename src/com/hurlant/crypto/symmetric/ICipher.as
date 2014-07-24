@@ -11,9 +11,9 @@ package com.hurlant.crypto.symmetric
       
       function getBlockSize() : uint;
       
-      function encrypt(src:ByteArray) : void;
+      function encrypt(param1:ByteArray) : void;
       
-      function decrypt(src:ByteArray) : void;
+      function decrypt(param1:ByteArray) : void;
       
       function dispose() : void;
       

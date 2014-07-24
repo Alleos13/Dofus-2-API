@@ -14,7 +14,7 @@ package com.ankamagames.berilia.managers
       //Décompilation abandonné
       }
       
-      public function SlotDataHolderManager(linkedSlotData:ISlotData)
+      public function SlotDataHolderManager(param1:ISlotData)
       {
          //Décompilation abandonné
       }
@@ -25,17 +25,17 @@ package com.ankamagames.berilia.managers
       
       private var _linkedSlotsData:Vector.<ISlotData>;
       
-      public function setLinkedSlotData(slotData:ISlotData) : void
+      public function setLinkedSlotData(param1:ISlotData) : void
       {
          //Décompilation abandonné
       }
       
-      public function addHolder(h:ISlotDataHolder) : void
+      public function addHolder(param1:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeHolder(h:ISlotDataHolder) : void
+      public function removeHolder(param1:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }

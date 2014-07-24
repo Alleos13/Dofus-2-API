@@ -10,7 +10,7 @@ package org.flintparticles.common.initializers
       //Décompilation abandonné
       }
       
-      public function Lifetime(minLifetime:Number, maxLifetime:Number = NaN)
+      public function Lifetime(param1:Number, param2:Number = NaN)
       {
          //Décompilation abandonné
       }
@@ -24,7 +24,7 @@ package org.flintparticles.common.initializers
          //Décompilation abandonné
       }
       
-      public function set minLifetime(value:Number) : void
+      public function set minLifetime(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -34,7 +34,7 @@ package org.flintparticles.common.initializers
          //Décompilation abandonné
       }
       
-      public function set maxLifetime(value:Number) : void
+      public function set maxLifetime(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -44,12 +44,12 @@ package org.flintparticles.common.initializers
          //Décompilation abandonné
       }
       
-      public function set lifetime(value:Number) : void
+      public function set lifetime(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      override public function initialize(emitter:Emitter, particle:Particle) : void
+      override public function initialize(param1:Emitter, param2:Particle) : void
       {
          //Décompilation abandonné
       }

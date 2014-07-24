@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.steps
       //Décompilation abandonné
       }
       
-      public function RemoveEntityStep(pEntityId:int)
+      public function RemoveEntityStep(param1:int)
       {
          //Décompilation abandonné
       }

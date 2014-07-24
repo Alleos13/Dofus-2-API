@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.approach.actions
          //Décompilation abandonné
       }
       
-      public static function create(name:String, breed:uint, sex:Boolean, colors:Array, head:int) : CharacterCreationAction
+      public static function create(param1:String, param2:uint, param3:Boolean, param4:Array, param5:int) : CharacterCreationAction
       {
          //Décompilation abandonné
       }

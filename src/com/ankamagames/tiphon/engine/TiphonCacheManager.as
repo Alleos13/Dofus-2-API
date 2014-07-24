@@ -46,27 +46,27 @@ package com.ankamagames.tiphon.engine
          //Décompilation abandonné
       }
       
-      public static function addSpriteToRender(sprite:TiphonSprite, look:TiphonEntityLook) : void
+      public static function addSpriteToRender(param1:TiphonSprite, param2:TiphonEntityLook) : void
       {
          //Décompilation abandonné
       }
       
-      public static function hasCache(bone:int, anim:String) : Boolean
+      public static function hasCache(param1:int, param2:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function pushScriptedAnimation(scriptedAnimation:ScriptedAnimation) : void
+      public static function pushScriptedAnimation(param1:ScriptedAnimation) : void
       {
          //Décompilation abandonné
       }
       
-      public static function getScriptedAnimation(bone:int, anim:String, direction:int) : ScriptedAnimation
+      public static function getScriptedAnimation(param1:int, param2:String, param3:int) : ScriptedAnimation
       {
          //Décompilation abandonné
       }
       
-      private static function onEnterFrame(e:Event) : void
+      private static function onEnterFrame(param1:Event) : void
       {
          //Décompilation abandonné
       }

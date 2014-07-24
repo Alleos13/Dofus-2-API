@@ -10,8 +10,8 @@ package com.ankamagames.atouin.utils
       //Décompilation abandonné
       }
       
-      function render(cells:Vector.<uint>, oColor:Color, mapContainer:DataMapContainer, alpha:Boolean = false, updateStrata:Boolean = false) : void;
+      function render(param1:Vector.<uint>, param2:Color, param3:DataMapContainer, param4:Boolean = false, param5:Boolean = false) : void;
       
-      function remove(cells:Vector.<uint>, mapContainer:DataMapContainer) : void;
+      function remove(param1:Vector.<uint>, param2:DataMapContainer) : void;
    }
 }

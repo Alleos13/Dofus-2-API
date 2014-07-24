@@ -15,7 +15,7 @@ package com.ankamagames.dofus.logic.common.managers
          //Décompilation abandonné
       }
       
-      public static function showAccountMenu(accountName:String, accountId:int) : void
+      public static function showAccountMenu(param1:String, param2:int) : void
       {
          //Décompilation abandonné
       }

@@ -11,10 +11,10 @@ package com.ankamagames.jerakine.entities.interfaces
       
       function get id() : int;
       
-      function set id(nValue:int) : void;
+      function set id(param1:int) : void;
       
       function get position() : MapPoint;
       
-      function set position(oValue:MapPoint) : void;
+      function set position(param1:MapPoint) : void;
    }
 }

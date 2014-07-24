@@ -18,7 +18,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          //Décompilation abandonné
       }
       
-      override protected function getResource(ldr:LoaderInfo) : *
+      override protected function getResource(param1:LoaderInfo) : *
       {
          //Décompilation abandonné
       }

@@ -9,7 +9,7 @@ package com.ankamagames.dofus.types.events
       //Décompilation abandonné
       }
       
-      public function RpcEvent(type:String, method:String, result:Object = null)
+      public function RpcEvent(param1:String, param2:String, param3:Object = null)
       {
          //Décompilation abandonné
       }

@@ -15,7 +15,7 @@ package com.ankamagames.jerakine.handlers.messages.keyboard
          //Décompilation abandonné
       }
       
-      public static function create(target:InteractiveObject, keyboardEvent:KeyboardEvent, instance:KeyboardMessage = null) : KeyboardKeyUpMessage
+      public static function create(param1:InteractiveObject, param2:KeyboardEvent, param3:KeyboardMessage = null) : KeyboardKeyUpMessage
       {
          //Décompilation abandonné
       }

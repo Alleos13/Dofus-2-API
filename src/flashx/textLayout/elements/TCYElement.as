@@ -48,17 +48,17 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override tlf_internal function setParentAndRelativeStart(newParent:FlowGroupElement, newStart:int) : void
+      override tlf_internal function setParentAndRelativeStart(param1:FlowGroupElement, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      override tlf_internal function formatChanged(notifyModelChanged:Boolean = true) : void
+      override tlf_internal function formatChanged(param1:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function calculateAdornmentBounds(spg:SubParagraphGroupElementBase, tLine:TextLine, blockProgression:String, spgRect:Rectangle) : void
+      tlf_internal function calculateAdornmentBounds(param1:SubParagraphGroupElementBase, param2:TextLine, param3:String, param4:Rectangle) : void
       {
          //Décompilation abandonné
       }

@@ -41,7 +41,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.npc
          //Décompilation abandonné
       }
       
-      public function initMapNpcsQuestStatusUpdateMessage(mapId:int = 0, npcsIdsWithQuest:Vector.<int> = null, questFlags:Vector.<GameRolePlayNpcQuestFlag> = null, npcsIdsWithoutQuest:Vector.<int> = null) : MapNpcsQuestStatusUpdateMessage
+      public function initMapNpcsQuestStatusUpdateMessage(param1:int = 0, param2:Vector.<int> = null, param3:Vector.<GameRolePlayNpcQuestFlag> = null, param4:Vector.<int> = null) : MapNpcsQuestStatusUpdateMessage
       {
          //Décompilation abandonné
       }
@@ -51,32 +51,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.npc
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_MapNpcsQuestStatusUpdateMessage(output:IDataOutput) : void
+      public function serializeAs_MapNpcsQuestStatusUpdateMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_MapNpcsQuestStatusUpdateMessage(input:IDataInput) : void
+      public function deserializeAs_MapNpcsQuestStatusUpdateMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

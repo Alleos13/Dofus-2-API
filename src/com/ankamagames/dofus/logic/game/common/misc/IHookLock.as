@@ -9,7 +9,7 @@ package com.ankamagames.dofus.logic.game.common.misc
       //Décompilation abandonné
       }
       
-      function addHook(hook:Hook, args:Array) : void;
+      function addHook(param1:Hook, param2:Array) : void;
       
       function release() : void;
    }

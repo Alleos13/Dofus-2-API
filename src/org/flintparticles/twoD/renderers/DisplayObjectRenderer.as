@@ -17,17 +17,17 @@ package org.flintparticles.twoD.renderers
          //Décompilation abandonné
       }
       
-      override protected function renderParticles(particles:Array) : void
+      override protected function renderParticles(param1:Array) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function addParticle(particle:Particle) : void
+      override protected function addParticle(param1:Particle) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function removeParticle(particle:Particle) : void
+      override protected function removeParticle(param1:Particle) : void
       {
          //Décompilation abandonné
       }

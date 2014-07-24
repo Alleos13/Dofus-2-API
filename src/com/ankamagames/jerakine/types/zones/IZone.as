@@ -9,18 +9,18 @@ package com.ankamagames.jerakine.types.zones
       
       function get surface() : uint;
       
-      function set minRadius(r:uint) : void;
+      function set minRadius(param1:uint) : void;
       
       function get minRadius() : uint;
       
-      function set direction(d:uint) : void;
+      function set direction(param1:uint) : void;
       
       function get direction() : uint;
       
       function get radius() : uint;
       
-      function set radius(n:uint) : void;
+      function set radius(param1:uint) : void;
       
-      function getCells(cellId:uint = 0) : Vector.<uint>;
+      function getCells(param1:uint = 0) : Vector.<uint>;
    }
 }

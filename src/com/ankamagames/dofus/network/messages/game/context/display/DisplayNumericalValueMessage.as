@@ -38,7 +38,7 @@ package com.ankamagames.dofus.network.messages.game.context.display
          //Décompilation abandonné
       }
       
-      public function initDisplayNumericalValueMessage(entityId:int = 0, value:int = 0, type:uint = 0) : DisplayNumericalValueMessage
+      public function initDisplayNumericalValueMessage(param1:int = 0, param2:int = 0, param3:uint = 0) : DisplayNumericalValueMessage
       {
          //Décompilation abandonné
       }
@@ -48,32 +48,32 @@ package com.ankamagames.dofus.network.messages.game.context.display
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_DisplayNumericalValueMessage(output:IDataOutput) : void
+      public function serializeAs_DisplayNumericalValueMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_DisplayNumericalValueMessage(input:IDataInput) : void
+      public function deserializeAs_DisplayNumericalValueMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

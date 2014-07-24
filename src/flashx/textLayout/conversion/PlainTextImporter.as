@@ -22,7 +22,7 @@ package flashx.textLayout.conversion
       
       protected var _config:IConfiguration = null;
       
-      public function importToFlow(source:Object) : TextFlow
+      public function importToFlow(param1:Object) : TextFlow
       {
          //Décompilation abandonné
       }
@@ -32,12 +32,12 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      public function set configuration(value:IConfiguration) : void
+      public function set configuration(param1:IConfiguration) : void
       {
          //Décompilation abandonné
       }
       
-      protected function importFromString(source:String) : TextFlow
+      protected function importFromString(param1:String) : TextFlow
       {
          //Décompilation abandonné
       }

@@ -21,59 +21,59 @@ package flashx.textLayout.conversion
       //Décompilation abandonné
       }
       
-      function BaseTextLayoutExporter(ns:Namespace, rootTag:XML, config:ImportExportConfiguration)
+      function BaseTextLayoutExporter(param1:Namespace, param2:XML, param3:ImportExportConfiguration)
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function convertXMLToString(xml:XML) : String
+      tlf_internal  static function convertXMLToString(param1:XML) : String
       {
          //Décompilation abandonné
       }
       
-      public static function exportFlowElement(exporter:BaseTextLayoutExporter, flowElement:FlowElement) : XMLList
+      public static function exportFlowElement(param1:BaseTextLayoutExporter, param2:FlowElement) : XMLList
       {
          //Décompilation abandonné
       }
       
-      public static function exportSpanText(destination:XML, span:SpanElement, replacementRegex:RegExp, replacementXMLCallback:Function) : void
+      public static function exportSpanText(param1:XML, param2:SpanElement, param3:RegExp, param4:Function) : void
       {
          //Décompilation abandonné
       }
       
-      public static function exportSpan(exporter:BaseTextLayoutExporter, span:SpanElement) : XMLList
+      public static function exportSpan(param1:BaseTextLayoutExporter, param2:SpanElement) : XMLList
       {
          //Décompilation abandonné
       }
       
       private static const brRegEx:RegExp;
       
-      public static function exportFlowGroupElement(exporter:BaseTextLayoutExporter, flowBlockElement:FlowGroupElement) : XMLList
+      public static function exportFlowGroupElement(param1:BaseTextLayoutExporter, param2:FlowGroupElement) : XMLList
       {
          //Décompilation abandonné
       }
       
-      public static function exportParagraphFormattedElement(exporter:BaseTextLayoutExporter, flowParagraph:ParagraphFormattedElement) : XMLList
+      public static function exportParagraphFormattedElement(param1:BaseTextLayoutExporter, param2:ParagraphFormattedElement) : XMLList
       {
          //Décompilation abandonné
       }
       
-      public static function exportList(exporter:BaseTextLayoutExporter, flowParagraph:ParagraphFormattedElement) : XMLList
+      public static function exportList(param1:BaseTextLayoutExporter, param2:ParagraphFormattedElement) : XMLList
       {
          //Décompilation abandonné
       }
       
-      public static function exportListItem(exporter:BaseTextLayoutExporter, flowParagraph:ParagraphFormattedElement) : XMLList
+      public static function exportListItem(param1:BaseTextLayoutExporter, param2:ParagraphFormattedElement) : XMLList
       {
          //Décompilation abandonné
       }
       
-      public static function exportContainerFormattedElement(exporter:BaseTextLayoutExporter, container:ContainerFormattedElement) : XMLList
+      public static function exportContainerFormattedElement(param1:BaseTextLayoutExporter, param2:ContainerFormattedElement) : XMLList
       {
          //Décompilation abandonné
       }
       
-      public static function exportTextFlow(exporter:BaseTextLayoutExporter, textFlow:TextFlow) : XMLList
+      public static function exportTextFlow(param1:BaseTextLayoutExporter, param2:TextFlow) : XMLList
       {
          //Décompilation abandonné
       }
@@ -84,17 +84,17 @@ package flashx.textLayout.conversion
       
       private var _ns:Namespace;
       
-      public function export(source:TextFlow, conversionType:String) : Object
+      public function export(param1:TextFlow, param2:String) : Object
       {
          //Décompilation abandonné
       }
       
-      protected function exportToXML(textFlow:TextFlow) : XML
+      protected function exportToXML(param1:TextFlow) : XML
       {
          //Décompilation abandonné
       }
       
-      protected function exportFlowElement(flowElement:FlowElement) : XMLList
+      protected function exportFlowElement(param1:FlowElement) : XMLList
       {
          //Décompilation abandonné
       }
@@ -104,37 +104,37 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      protected function getSpanTextReplacementXML(ch:String) : XML
+      protected function getSpanTextReplacementXML(param1:String) : XML
       {
          //Décompilation abandonné
       }
       
-      protected function exportParagraphFormattedElement(flowElement:FlowElement) : XMLList
+      protected function exportParagraphFormattedElement(param1:FlowElement) : XMLList
       {
          //Décompilation abandonné
       }
       
-      protected function exportList(flowElement:FlowElement) : XMLList
+      protected function exportList(param1:FlowElement) : XMLList
       {
          //Décompilation abandonné
       }
       
-      protected function exportListItem(flowElement:FlowElement) : XMLList
+      protected function exportListItem(param1:FlowElement) : XMLList
       {
          //Décompilation abandonné
       }
       
-      protected function exportContainerFormattedElement(flowElement:FlowElement) : XMLList
+      protected function exportContainerFormattedElement(param1:FlowElement) : XMLList
       {
          //Décompilation abandonné
       }
       
-      public function exportChild(flowElement:FlowElement) : XMLList
+      public function exportChild(param1:FlowElement) : XMLList
       {
          //Décompilation abandonné
       }
       
-      protected function exportStyles(xml:XMLList, sortableStyles:Array) : void
+      protected function exportStyles(param1:XMLList, param2:Array) : void
       {
          //Décompilation abandonné
       }

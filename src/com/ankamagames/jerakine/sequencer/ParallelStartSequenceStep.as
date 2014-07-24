@@ -12,7 +12,7 @@ package com.ankamagames.jerakine.sequencer
       //Décompilation abandonné
       }
       
-      public function ParallelStartSequenceStep(aSequence:Array, waitAllSequenceEnd:Boolean = true, waitFirstEndSequence:Boolean = false)
+      public function ParallelStartSequenceStep(param1:Array, param2:Boolean = true, param3:Boolean = false)
       {
          //Décompilation abandonné
       }
@@ -37,7 +37,7 @@ package com.ankamagames.jerakine.sequencer
          //Décompilation abandonné
       }
       
-      private function onSequenceEnd(e:SequencerEvent) : void
+      private function onSequenceEnd(param1:SequencerEvent) : void
       {
          //Décompilation abandonné
       }

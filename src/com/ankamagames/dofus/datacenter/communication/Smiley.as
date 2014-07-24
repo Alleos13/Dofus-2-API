@@ -22,7 +22,7 @@ package com.ankamagames.dofus.datacenter.communication
       
       protected static const _log:Logger;
       
-      public static function getSmileyById(id:int) : Smiley
+      public static function getSmileyById(param1:int) : Smiley
       {
          //Décompilation abandonné
       }

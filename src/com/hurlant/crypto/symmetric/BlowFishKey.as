@@ -10,7 +10,7 @@ package com.hurlant.crypto.symmetric
       //Décompilation abandonné
       }
       
-      public function BlowFishKey(key:ByteArray)
+      public function BlowFishKey(param1:ByteArray)
       {
          //Décompilation abandonné
       }
@@ -50,7 +50,7 @@ package com.hurlant.crypto.symmetric
          //Décompilation abandonné
       }
       
-      public function decrypt(block:ByteArray, index:uint = 0) : void
+      public function decrypt(param1:ByteArray, param2:uint = 0) : void
       {
          //Décompilation abandonné
       }
@@ -60,42 +60,42 @@ package com.hurlant.crypto.symmetric
          //Décompilation abandonné
       }
       
-      public function encrypt(block:ByteArray, index:uint = 0) : void
+      public function encrypt(param1:ByteArray, param2:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      private function F(x:uint) : uint
+      private function F(param1:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function processTable(xl:uint, xr:uint, table:Array) : void
+      private function processTable(param1:uint, param2:uint, param3:Array) : void
       {
          //Décompilation abandonné
       }
       
-      private function setKey(key:ByteArray) : void
+      private function setKey(param1:ByteArray) : void
       {
          //Décompilation abandonné
       }
       
-      private function encryptBlock(src:ByteArray, srcIndex:uint, dst:ByteArray, dstIndex:uint) : void
+      private function encryptBlock(param1:ByteArray, param2:uint, param3:ByteArray, param4:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function decryptBlock(src:ByteArray, srcIndex:uint, dst:ByteArray, dstIndex:uint) : void
+      private function decryptBlock(param1:ByteArray, param2:uint, param3:ByteArray, param4:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function BytesTo32bits(b:ByteArray, i:uint) : uint
+      private function BytesTo32bits(param1:ByteArray, param2:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function Bits32ToBytes(i:uint, b:ByteArray, offset:uint) : void
+      private function Bits32ToBytes(param1:uint, param2:ByteArray, param3:uint) : void
       {
          //Décompilation abandonné
       }

@@ -16,7 +16,7 @@ package flashx.textLayout.container
       //Décompilation abandonné
       }
       
-      public function ColumnState(blockProgression:String, columnDirection:String, controller:ContainerController, compositionWidth:Number, compositionHeight:Number)
+      public function ColumnState(param1:String, param2:String, param3:ContainerController, param4:Number, param5:Number)
       {
          //Décompilation abandonné
       }
@@ -74,12 +74,12 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function getColumnAt(index:int) : Rectangle
+      public function getColumnAt(param1:int) : Rectangle
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function updateInputs(newBlockProgression:String, newColumnDirection:String, controller:ContainerController, newCompositionWidth:Number, newCompositionHeight:Number) : void
+      tlf_internal function updateInputs(param1:String, param2:String, param3:ContainerController, param4:Number, param5:Number) : void
       {
          //Décompilation abandonné
       }

@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.types
       //Décompilation abandonné
       }
       
-      public function Point3D(_x:Number, _y:Number, _z:Number)
+      public function Point3D(param1:Number, param2:Number, param3:Number)
       {
          //Décompilation abandonné
       }

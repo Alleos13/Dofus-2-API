@@ -28,22 +28,22 @@ package com.hurlant.util.der
       
       private static const CERTIFICATE_FOOTER:String = "-----END CERTIFICATE-----";
       
-      public static function readRSAPrivateKey(str:String) : RSAKey
+      public static function readRSAPrivateKey(param1:String) : RSAKey
       {
          //Décompilation abandonné
       }
       
-      public static function readRSAPublicKey(str:String) : RSAKey
+      public static function readRSAPublicKey(param1:String) : RSAKey
       {
          //Décompilation abandonné
       }
       
-      public static function readCertIntoArray(str:String) : ByteArray
+      public static function readCertIntoArray(param1:String) : ByteArray
       {
          //Décompilation abandonné
       }
       
-      private static function extractBinary(header:String, footer:String, str:String) : ByteArray
+      private static function extractBinary(param1:String, param2:String, param3:String) : ByteArray
       {
          //Décompilation abandonné
       }

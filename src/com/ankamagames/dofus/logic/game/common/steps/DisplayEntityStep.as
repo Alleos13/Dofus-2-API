@@ -15,7 +15,7 @@ package com.ankamagames.dofus.logic.game.common.steps
       //Décompilation abandonné
       }
       
-      public function DisplayEntityStep(pEntityId:int, pLook:String, pCellId:uint, pDirection:int)
+      public function DisplayEntityStep(param1:int, param2:String, param3:uint, param4:int)
       {
          //Décompilation abandonné
       }

@@ -15,7 +15,7 @@ package com.ankamagames.jerakine.handlers.messages
          //Décompilation abandonné
       }
       
-      public static function create(target:InteractiveObject, instance:FocusChangeMessage = null) : FocusChangeMessage
+      public static function create(param1:InteractiveObject, param2:FocusChangeMessage = null) : FocusChangeMessage
       {
          //Décompilation abandonné
       }

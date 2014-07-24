@@ -10,7 +10,7 @@ package flashx.textLayout.events
       //Décompilation abandonné
       }
       
-      public function CompositionCompleteEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, textFlow:TextFlow = null, compositionStart:int = 0, compositionLength:int = 0)
+      public function CompositionCompleteEvent(param1:String, param2:Boolean = false, param3:Boolean = false, param4:TextFlow = null, param5:int = 0, param6:int = 0)
       {
          //Décompilation abandonné
       }
@@ -33,7 +33,7 @@ package flashx.textLayout.events
          //Décompilation abandonné
       }
       
-      public function set compositionStart(value:int) : void
+      public function set compositionStart(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -43,7 +43,7 @@ package flashx.textLayout.events
          //Décompilation abandonné
       }
       
-      public function set compositionLength(value:int) : void
+      public function set compositionLength(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -53,7 +53,7 @@ package flashx.textLayout.events
          //Décompilation abandonné
       }
       
-      public function set textFlow(value:TextFlow) : void
+      public function set textFlow(param1:TextFlow) : void
       {
          //Décompilation abandonné
       }

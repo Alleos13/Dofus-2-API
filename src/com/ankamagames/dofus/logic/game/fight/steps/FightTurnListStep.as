@@ -15,7 +15,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightTurnListStep(turnsList:Vector.<int>, deadTurnsList:Vector.<int>)
+      public function FightTurnListStep(param1:Vector.<int>, param2:Vector.<int>)
       {
          //Décompilation abandonné
       }

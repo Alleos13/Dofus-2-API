@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.treasureHun
          //Décompilation abandonné
       }
       
-      public function initTreasureHuntAvailableRetryCountUpdateMessage(questType:uint = 0, availableRetryCount:int = 0) : TreasureHuntAvailableRetryCountUpdateMessage
+      public function initTreasureHuntAvailableRetryCountUpdateMessage(param1:uint = 0, param2:int = 0) : TreasureHuntAvailableRetryCountUpdateMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.treasureHun
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_TreasureHuntAvailableRetryCountUpdateMessage(output:IDataOutput) : void
+      public function serializeAs_TreasureHuntAvailableRetryCountUpdateMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_TreasureHuntAvailableRetryCountUpdateMessage(input:IDataInput) : void
+      public function deserializeAs_TreasureHuntAvailableRetryCountUpdateMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

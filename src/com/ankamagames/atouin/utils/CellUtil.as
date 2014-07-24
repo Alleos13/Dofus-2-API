@@ -16,37 +16,37 @@ package com.ankamagames.atouin.utils
          //Décompilation abandonné
       }
       
-      public static function getPixelXFromMapPoint(p:MapPoint) : int
+      public static function getPixelXFromMapPoint(param1:MapPoint) : int
       {
          //Décompilation abandonné
       }
       
-      public static function getPixelYFromMapPoint(p:MapPoint) : int
+      public static function getPixelYFromMapPoint(param1:MapPoint) : int
       {
          //Décompilation abandonné
       }
       
-      public static function isLeftCol(cellId:int) : Boolean
+      public static function isLeftCol(param1:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function isRightCol(cellId:int) : Boolean
+      public static function isRightCol(param1:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function isTopRow(cellId:int) : Boolean
+      public static function isTopRow(param1:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function isBottomRow(cellId:int) : Boolean
+      public static function isBottomRow(param1:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function isEvenRow(cellId:int) : Boolean
+      public static function isEvenRow(param1:int) : Boolean
       {
          //Décompilation abandonné
       }

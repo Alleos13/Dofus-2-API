@@ -24,7 +24,7 @@ package com.ankamagames.berilia.components
       
       private var _lastMouseUpFrameId:int = -1;
       
-      override public function process(msg:Message) : Boolean
+      override public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }

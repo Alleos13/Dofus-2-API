@@ -32,7 +32,7 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      public function set throwOnError(value:Boolean) : void
+      public function set throwOnError(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -42,7 +42,7 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      tlf_internal function reportError(error:String) : void
+      tlf_internal function reportError(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -52,7 +52,7 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      public function set useClipboardAnnotations(value:Boolean) : void
+      public function set useClipboardAnnotations(param1:Boolean) : void
       {
          //Décompilation abandonné
       }

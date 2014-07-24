@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.servers
       
       private static var _log:Logger;
       
-      public static function getServerGameTypeById(id:int) : ServerGameType
+      public static function getServerGameTypeById(param1:int) : ServerGameType
       {
          //Décompilation abandonné
       }

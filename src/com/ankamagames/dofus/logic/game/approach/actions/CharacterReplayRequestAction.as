@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.approach.actions
          //Décompilation abandonné
       }
       
-      public static function create(characterId:uint) : CharacterReplayRequestAction
+      public static function create(param1:uint) : CharacterReplayRequestAction
       {
          //Décompilation abandonné
       }

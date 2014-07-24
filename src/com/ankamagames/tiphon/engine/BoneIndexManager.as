@@ -47,67 +47,67 @@ package com.ankamagames.tiphon.engine
       
       private var _animNameModifier:Function;
       
-      public function init(boneIndexPath:String) : void
+      public function init(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function setAnimNameModifier(fct:Function) : void
+      public function setAnimNameModifier(param1:Function) : void
       {
          //Décompilation abandonné
       }
       
-      public function addTransition(boneId:uint, startAnim:String, endAnim:String, direction:uint, transitionalAnim:String) : void
+      public function addTransition(param1:uint, param2:String, param3:String, param4:uint, param5:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function hasTransition(boneId:uint, startAnim:String, endAnim:String, direction:uint) : Boolean
+      public function hasTransition(param1:uint, param2:String, param3:String, param4:uint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getTransition(boneId:uint, startAnim:String, endAnim:String, direction:uint) : String
+      public function getTransition(param1:uint, param2:String, param3:String, param4:uint) : String
       {
          //Décompilation abandonné
       }
       
-      public function getBoneFile(boneId:uint, animName:String) : Uri
+      public function getBoneFile(param1:uint, param2:String) : Uri
       {
          //Décompilation abandonné
       }
       
-      public function hasAnim(boneId:uint, animName:String, direction:int) : Boolean
+      public function hasAnim(param1:uint, param2:String, param3:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function hasCustomBone(boneId:uint) : Boolean
+      public function hasCustomBone(param1:uint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getAllCustomAnimations(boneId:int) : Array
+      public function getAllCustomAnimations(param1:int) : Array
       {
          //Décompilation abandonné
       }
       
-      private function onXmlLoaded(e:ResourceLoadedEvent) : void
+      private function onXmlLoaded(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSubXmlLoaded(e:ResourceLoadedEvent) : void
+      private function onSubXmlLoaded(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onXmlFailed(e:ResourceErrorEvent) : void
+      private function onXmlFailed(param1:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAllSubXmlLoaded(e:ResourceLoaderProgressEvent) : void
+      private function onAllSubXmlLoaded(param1:ResourceLoaderProgressEvent) : void
       {
          //Décompilation abandonné
       }

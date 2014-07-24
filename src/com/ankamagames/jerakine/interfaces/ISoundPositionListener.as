@@ -9,6 +9,6 @@ package com.ankamagames.jerakine.interfaces
       //Décompilation abandonné
       }
       
-      function setSoundSourcePosition(pEntityId:int, pPosition:Point) : void;
+      function setSoundSourcePosition(param1:int, param2:Point) : void;
    }
 }

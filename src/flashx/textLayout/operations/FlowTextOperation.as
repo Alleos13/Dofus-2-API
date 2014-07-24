@@ -9,7 +9,7 @@ package flashx.textLayout.operations
       //Décompilation abandonné
       }
       
-      public function FlowTextOperation(operationState:SelectionState)
+      public function FlowTextOperation(param1:SelectionState)
       {
          //Décompilation abandonné
       }
@@ -25,7 +25,7 @@ package flashx.textLayout.operations
          //Décompilation abandonné
       }
       
-      public function set absoluteStart(value:int) : void
+      public function set absoluteStart(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -35,7 +35,7 @@ package flashx.textLayout.operations
          //Décompilation abandonné
       }
       
-      public function set absoluteEnd(value:int) : void
+      public function set absoluteEnd(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -45,7 +45,7 @@ package flashx.textLayout.operations
          //Décompilation abandonné
       }
       
-      public function set originalSelectionState(value:SelectionState) : void
+      public function set originalSelectionState(param1:SelectionState) : void
       {
          //Décompilation abandonné
       }

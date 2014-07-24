@@ -9,7 +9,7 @@ package com.ankamagames.berilia.types.messages
       //Décompilation abandonné
       }
       
-      public function ThemeLoadErrorMessage(themeName:String)
+      public function ThemeLoadErrorMessage(param1:String)
       {
          //Décompilation abandonné
       }

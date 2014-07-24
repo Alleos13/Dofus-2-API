@@ -78,7 +78,7 @@ package com.ankamagames.dofus.logic.common.frames
       
       private var _mouseOnStage:Boolean = true;
       
-      public function isOptionalFeatureActive(id:uint) : Boolean
+      public function isOptionalFeatureActive(param1:uint) : Boolean
       {
          //Décompilation abandonné
       }
@@ -98,12 +98,12 @@ package com.ankamagames.dofus.logic.common.frames
          //Décompilation abandonné
       }
       
-      public function getServerSessionConstant(id:int) : Object
+      public function getServerSessionConstant(param1:int) : Object
       {
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -113,12 +113,12 @@ package com.ankamagames.dofus.logic.common.frames
          //Décompilation abandonné
       }
       
-      private function onMouseLeave(e:Event) : void
+      private function onMouseLeave(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseMove(e:Event) : void
+      private function onMouseMove(param1:Event) : void
       {
          //Décompilation abandonné
       }

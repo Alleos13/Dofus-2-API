@@ -39,7 +39,7 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      public function initSellerBuyerDescriptor(quantities:Vector.<uint> = null, types:Vector.<uint> = null, taxPercentage:Number = 0, taxModificationPercentage:Number = 0, maxItemLevel:uint = 0, maxItemPerAccount:uint = 0, npcContextualId:int = 0, unsoldDelay:uint = 0) : SellerBuyerDescriptor
+      public function initSellerBuyerDescriptor(param1:Vector.<uint> = null, param2:Vector.<uint> = null, param3:Number = 0, param4:Number = 0, param5:uint = 0, param6:uint = 0, param7:int = 0, param8:uint = 0) : SellerBuyerDescriptor
       {
          //Décompilation abandonné
       }
@@ -49,22 +49,22 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_SellerBuyerDescriptor(output:IDataOutput) : void
+      public function serializeAs_SellerBuyerDescriptor(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_SellerBuyerDescriptor(input:IDataInput) : void
+      public function deserializeAs_SellerBuyerDescriptor(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

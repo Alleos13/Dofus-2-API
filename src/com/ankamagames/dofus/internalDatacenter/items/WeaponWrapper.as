@@ -42,7 +42,7 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      override public function clone(baseClass:Class = null) : ItemWrapper
+      override public function clone(param1:Class = null) : ItemWrapper
       {
          //Décompilation abandonné
       }

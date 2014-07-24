@@ -43,7 +43,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set scrollBottomMargin(value:int) : void
+      public function set scrollBottomMargin(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -53,12 +53,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set scrollTopMargin(value:int) : void
+      public function set scrollTopMargin(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function set scrollCss(sUrl:Uri) : void
+      public function set scrollCss(param1:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -68,7 +68,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function set width(nW:Number) : void
+      override public function set width(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -78,27 +78,27 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function set height(nH:Number) : void
+      override public function set height(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set text(sValue:String) : void
+      override public function set text(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function set scrollPos(nValue:int) : void
+      public function set scrollPos(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set css(sValue:Uri) : void
+      override public function set css(param1:Uri) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set scrollV(nVal:int) : void
+      override public function set scrollV(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -113,7 +113,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function set finalized(b:Boolean) : void
+      override public function set finalized(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -123,12 +123,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set hideScroll(hideScroll:Boolean) : void
+      public function set hideScroll(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override public function appendText(sTxt:String, style:String = null) : void
+      override public function appendText(param1:String, param2:String = null) : void
       {
          //Décompilation abandonné
       }
@@ -148,12 +148,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function process(msg:Message) : Boolean
+      override public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function updateScrollBar(reset:Boolean = false) : void
+      private function updateScrollBar(param1:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -168,12 +168,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function onTextWheel(e:MouseEvent) : void
+      private function onTextWheel(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onScroll(e:Event) : void
+      private function onScroll(param1:Event) : void
       {
          //Décompilation abandonné
       }

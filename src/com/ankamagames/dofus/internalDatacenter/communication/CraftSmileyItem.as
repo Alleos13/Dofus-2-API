@@ -9,7 +9,7 @@ package com.ankamagames.dofus.internalDatacenter.communication
       //Décompilation abandonné
       }
       
-      public function CraftSmileyItem(pPlayerId:uint, pIconId:int, pCraftResult:uint)
+      public function CraftSmileyItem(param1:uint, param2:int, param3:uint)
       {
          //Décompilation abandonné
       }

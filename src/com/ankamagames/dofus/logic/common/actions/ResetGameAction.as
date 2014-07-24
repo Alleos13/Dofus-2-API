@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.common.actions
          //Décompilation abandonné
       }
       
-      public static function create(pMsg:String = "") : ResetGameAction
+      public static function create(param1:String = "") : ResetGameAction
       {
          //Décompilation abandonné
       }

@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.messages.game.character.choice
          //Décompilation abandonné
       }
       
-      public function initCharacterSelectedSuccessMessage(infos:CharacterBaseInformations = null) : CharacterSelectedSuccessMessage
+      public function initCharacterSelectedSuccessMessage(param1:CharacterBaseInformations = null) : CharacterSelectedSuccessMessage
       {
          //Décompilation abandonné
       }
@@ -45,32 +45,32 @@ package com.ankamagames.dofus.network.messages.game.character.choice
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterSelectedSuccessMessage(output:IDataOutput) : void
+      public function serializeAs_CharacterSelectedSuccessMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterSelectedSuccessMessage(input:IDataInput) : void
+      public function deserializeAs_CharacterSelectedSuccessMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -32,7 +32,7 @@ package com.ankamagames.dofus.internalDatacenter.communication
       
       protected static const _log:Logger;
       
-      public static function create(emoteID:uint, position:int = -1, useCache:Boolean = true) : EmoteWrapper
+      public static function create(param1:uint, param2:int = -1, param3:Boolean = true) : EmoteWrapper
       {
          //Décompilation abandonné
       }
@@ -42,7 +42,7 @@ package com.ankamagames.dofus.internalDatacenter.communication
          //Décompilation abandonné
       }
       
-      public static function getEmoteWrapperById(id:uint) : EmoteWrapper
+      public static function getEmoteWrapperById(param1:uint) : EmoteWrapper
       {
          //Décompilation abandonné
       }
@@ -102,7 +102,7 @@ package com.ankamagames.dofus.internalDatacenter.communication
          //Décompilation abandonné
       }
       
-      public function set endTime(t:int) : void
+      public function set endTime(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -112,7 +112,7 @@ package com.ankamagames.dofus.internalDatacenter.communication
          //Décompilation abandonné
       }
       
-      public function set timerToStart(t:int) : void
+      public function set timerToStart(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -137,12 +137,12 @@ package com.ankamagames.dofus.internalDatacenter.communication
          //Décompilation abandonné
       }
       
-      override flash_proxy function getProperty(name:*) : *
+      override flash_proxy function getProperty(param1:*) : *
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function hasProperty(name:*) : Boolean
+      override flash_proxy function hasProperty(param1:*) : Boolean
       {
          //Décompilation abandonné
       }
@@ -152,22 +152,22 @@ package com.ankamagames.dofus.internalDatacenter.communication
          //Décompilation abandonné
       }
       
-      public function addHolder(h:ISlotDataHolder) : void
+      public function addHolder(param1:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeHolder(h:ISlotDataHolder) : void
+      public function removeHolder(param1:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      public function setLinkedSlotData(slotData:ISlotData) : void
+      public function setLinkedSlotData(param1:ISlotData) : void
       {
          //Décompilation abandonné
       }
       
-      public function getIconUri(pngMode:Boolean = true) : Uri
+      public function getIconUri(param1:Boolean = true) : Uri
       {
          //Décompilation abandonné
       }

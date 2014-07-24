@@ -17,7 +17,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightChangeLookStep(fighterId:int, newLook:TiphonEntityLook)
+      public function FightChangeLookStep(param1:int, param2:TiphonEntityLook)
       {
          //Décompilation abandonné
       }

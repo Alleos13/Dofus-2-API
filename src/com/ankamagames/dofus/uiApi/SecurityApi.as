@@ -15,12 +15,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public static function askSecureModeCode(callback:Function) : void
+      public static function askSecureModeCode(param1:Function) : void
       {
          //Décompilation abandonné
       }
       
-      public static function sendSecureModeCode(code:String, callback:Function, computerName:String = null) : void
+      public static function sendSecureModeCode(param1:String, param2:Function, param3:String = null) : void
       {
          //Décompilation abandonné
       }
@@ -30,7 +30,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public static function setShieldLevel(level:uint) : void
+      public static function setShieldLevel(param1:uint) : void
       {
          //Décompilation abandonné
       }

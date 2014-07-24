@@ -15,7 +15,7 @@ package com.ankamagames.dofus.logic.game.common.types
       //Décompilation abandonné
       }
       
-      public function SynchroTimer(pMaxValue:Number)
+      public function SynchroTimer(param1:Number)
       {
          //Décompilation abandonné
       }
@@ -35,7 +35,7 @@ package com.ankamagames.dofus.logic.game.common.types
          //Décompilation abandonné
       }
       
-      public function start(pCallback:Function) : void
+      public function start(param1:Function) : void
       {
          //Décompilation abandonné
       }
@@ -50,7 +50,7 @@ package com.ankamagames.dofus.logic.game.common.types
          //Décompilation abandonné
       }
       
-      private function tick(pEvent:Event) : void
+      private function tick(param1:Event) : void
       {
          //Décompilation abandonné
       }

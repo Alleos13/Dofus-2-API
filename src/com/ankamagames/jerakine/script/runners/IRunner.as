@@ -7,6 +7,6 @@ package com.ankamagames.jerakine.script.runners
       //Décompilation abandonné
       }
       
-      function run(script:Class) : uint;
+      function run(param1:Class) : uint;
    }
 }

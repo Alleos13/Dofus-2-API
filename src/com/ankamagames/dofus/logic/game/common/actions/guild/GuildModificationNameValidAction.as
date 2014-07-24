@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.guild
          //Décompilation abandonné
       }
       
-      public static function create(pGuildName:String) : GuildModificationNameValidAction
+      public static function create(param1:String) : GuildModificationNameValidAction
       {
          //Décompilation abandonné
       }

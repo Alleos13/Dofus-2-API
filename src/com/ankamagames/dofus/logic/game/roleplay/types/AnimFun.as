@@ -11,7 +11,7 @@ package com.ankamagames.dofus.logic.game.roleplay.types
       //Décompilation abandonné
       }
       
-      public function AnimFun(pActorId:int, pAnimName:String, pDelayTime:int, pFastAnim:Boolean)
+      public function AnimFun(param1:int, param2:String, param3:int, param4:Boolean)
       {
          //Décompilation abandonné
       }

@@ -9,7 +9,7 @@ package com.ankamagames.tubul.events
       //Décompilation abandonné
       }
       
-      public function TubulEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
+      public function TubulEvent(param1:String, param2:Boolean = false, param3:Boolean = false)
       {
          //Décompilation abandonné
       }

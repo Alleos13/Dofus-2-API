@@ -27,22 +27,22 @@ package com.ankamagames.jerakine.logger.targets
       
       public static var serverPort:int = 6666;
       
-      override public function logEvent(event:LogEvent) : void
+      override public function logEvent(param1:LogEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function send(level:uint, message:String) : void
+      private function send(param1:uint, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSocket(e:Event) : void
+      private function onSocket(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSocketError(e:Event) : void
+      private function onSocketError(param1:Event) : void
       {
          //Décompilation abandonné
       }

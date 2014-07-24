@@ -43,7 +43,7 @@ package com.ankamagames.jerakine.script
       
       private static var _runners:Dictionary;
       
-      public static function exec(script:*, runner:IRunner, useCache:Boolean = true, successCallback:Callback = null, errorCallback:Callback = null) : void
+      public static function exec(param1:*, param2:IRunner, param3:Boolean = true, param4:Callback = null, param5:Callback = null) : void
       {
          //Décompilation abandonné
       }
@@ -53,22 +53,22 @@ package com.ankamagames.jerakine.script
          //Décompilation abandonné
       }
       
-      private static function onLoaded(rle:ResourceLoadedEvent) : void
+      private static function onLoaded(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onError(ree:ResourceErrorEvent) : void
+      private static function onError(param1:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onLoadedWrapper(uri:Uri, resourceType:uint, resource:*) : void
+      private static function onLoadedWrapper(param1:Uri, param2:uint, param3:*) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onFailedWrapper(uri:Uri, errorMsg:String, errorCode:uint) : void
+      private static function onFailedWrapper(param1:Uri, param2:String, param3:uint) : void
       {
          //Décompilation abandonné
       }

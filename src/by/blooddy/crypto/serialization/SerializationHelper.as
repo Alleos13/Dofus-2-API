@@ -22,7 +22,7 @@ package by.blooddy.crypto.serialization
       
       private static const _HASH_INSTANCE:Dictionary;
       
-      public static function getPropertyNames(o:Object) : Array
+      public static function getPropertyNames(param1:Object) : Array
       {
          //Décompilation abandonné
       }

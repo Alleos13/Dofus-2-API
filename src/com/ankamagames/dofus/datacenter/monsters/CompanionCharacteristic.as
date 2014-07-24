@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.monsters
       
       public static const MODULE:String = "CompanionCharacteristics";
       
-      public static function getCompanionCharacteristicById(id:uint) : CompanionCharacteristic
+      public static function getCompanionCharacteristicById(param1:uint) : CompanionCharacteristic
       {
          //Décompilation abandonné
       }

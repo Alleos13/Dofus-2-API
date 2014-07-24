@@ -51,7 +51,7 @@ package com.ankamagames.dofus.datacenter.monsters
          //Décompilation abandonné
       }
       
-      public function get method_1() : Boolean
+      public function get static() : Boolean
       {
          //Décompilation abandonné
       }

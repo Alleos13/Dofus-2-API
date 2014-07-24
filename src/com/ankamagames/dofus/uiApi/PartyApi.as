@@ -29,7 +29,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function set module(value:UiModule) : void
+      public function set module(param1:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -39,17 +39,17 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getPartyMembers(typeId:int = 0) : Object
+      public function getPartyMembers(param1:int = 0) : Object
       {
          //Décompilation abandonné
       }
       
-      public function getPartyLeaderId(partyId:int) : int
+      public function getPartyLeaderId(param1:int) : int
       {
          //Décompilation abandonné
       }
       
-      public function isInParty(pPlayerId:uint) : Boolean
+      public function isInParty(param1:uint) : Boolean
       {
          //Décompilation abandonné
       }
@@ -104,12 +104,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getAllMemberFollowPlayerId(partyId:int) : uint
+      public function getAllMemberFollowPlayerId(param1:int) : uint
       {
          //Décompilation abandonné
       }
       
-      public function getPartyLoyalty(partyId:int) : Boolean
+      public function getPartyLoyalty(param1:int) : Boolean
       {
          //Décompilation abandonné
       }

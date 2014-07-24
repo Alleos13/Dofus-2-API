@@ -50,12 +50,12 @@ package com.ankamagames.jerakine.utils.display.spellZone
       
       private var _zoneDisplay:Sprite;
       
-      public function setDisplayZone(pWidth:uint, pHeight:uint) : void
+      public function setDisplayZone(param1:uint, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function set spellLevel(spellLevel:ICellZoneProvider) : void
+      public function set spellLevel(param1:ICellZoneProvider) : void
       {
          //Décompilation abandonné
       }
@@ -70,17 +70,17 @@ package com.ankamagames.jerakine.utils.display.spellZone
          //Décompilation abandonné
       }
       
-      private function onCellRollOver(e:SpellZoneEvent) : void
+      private function onCellRollOver(param1:SpellZoneEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onCellRollOut(e:SpellZoneEvent) : void
+      private function onCellRollOut(param1:SpellZoneEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function showSpellZone(cell:SpellZoneCell) : void
+      public function showSpellZone(param1:SpellZoneCell) : void
       {
          //Décompilation abandonné
       }
@@ -100,7 +100,7 @@ package com.ankamagames.jerakine.utils.display.spellZone
          //Décompilation abandonné
       }
       
-      private function isInSpellArea(cell:SpellZoneCell, lozenge:Lozenge) : Boolean
+      private function isInSpellArea(param1:SpellZoneCell, param2:Lozenge) : Boolean
       {
          //Décompilation abandonné
       }
@@ -110,22 +110,22 @@ package com.ankamagames.jerakine.utils.display.spellZone
          //Décompilation abandonné
       }
       
-      public function setRangedCells(cellsId:Vector.<uint>) : void
+      public function setRangedCells(param1:Vector.<uint>) : void
       {
          //Décompilation abandonné
       }
       
-      public function setSpellZone(cellsId:Vector.<uint>) : void
+      public function setSpellZone(param1:Vector.<uint>) : void
       {
          //Décompilation abandonné
       }
       
-      public function colorCell(cell:SpellZoneCell, color:uint, setDefault:Boolean = false) : void
+      public function colorCell(param1:SpellZoneCell, param2:uint, param3:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function colorCells(cellsId:Vector.<uint>, color:uint, setDefault:Boolean = false) : void
+      public function colorCells(param1:Vector.<uint>, param2:uint, param3:Boolean = false) : void
       {
          //Décompilation abandonné
       }

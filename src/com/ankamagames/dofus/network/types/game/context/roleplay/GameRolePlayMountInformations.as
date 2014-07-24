@@ -29,7 +29,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initGameRolePlayMountInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, name:String = "", ownerName:String = "", level:uint = 0) : GameRolePlayMountInformations
+      public function initGameRolePlayMountInformations(param1:int = 0, param2:EntityLook = null, param3:EntityDispositionInformations = null, param4:String = "", param5:String = "", param6:uint = 0) : GameRolePlayMountInformations
       {
          //Décompilation abandonné
       }
@@ -39,22 +39,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayMountInformations(output:IDataOutput) : void
+      public function serializeAs_GameRolePlayMountInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayMountInformations(input:IDataInput) : void
+      public function deserializeAs_GameRolePlayMountInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -26,7 +26,7 @@ package com.ankamagames.jerakine.logger
       
       public static const COMMANDS:uint;
       
-      public static function getString(level:uint) : String
+      public static function getString(param1:uint) : String
       {
          //Décompilation abandonné
       }

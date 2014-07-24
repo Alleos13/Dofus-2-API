@@ -38,12 +38,12 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set changingStateData(value:Array) : void
+      public function set changingStateData(param1:Array) : void
       {
          //Décompilation abandonné
       }
       
-      public function set state(newState:*) : void
+      public function set state(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -68,22 +68,22 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set lockedProperties(s:String) : void
+      public function set lockedProperties(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      protected function changeState(newState:*) : void
+      protected function changeState(param1:*) : void
       {
          //Décompilation abandonné
       }
       
-      protected function makeSnapshot(currentState:*, target:GraphicContainer) : void
+      protected function makeSnapshot(param1:*, param2:GraphicContainer) : void
       {
          //Décompilation abandonné
       }
       
-      protected function restoreSnapshot(currentState:*) : void
+      protected function restoreSnapshot(param1:*) : void
       {
          //Décompilation abandonné
       }

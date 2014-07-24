@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.replay
       //Décompilation abandonné
       }
       
-      public function KeyboardShortcut(targetedShortcut:String = null)
+      public function KeyboardShortcut(param1:String = null)
       {
          //Décompilation abandonné
       }

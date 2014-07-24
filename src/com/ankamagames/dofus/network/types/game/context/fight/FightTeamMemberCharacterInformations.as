@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      public function initFightTeamMemberCharacterInformations(id:int = 0, name:String = "", level:uint = 0) : FightTeamMemberCharacterInformations
+      public function initFightTeamMemberCharacterInformations(param1:int = 0, param2:String = "", param3:uint = 0) : FightTeamMemberCharacterInformations
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_FightTeamMemberCharacterInformations(output:IDataOutput) : void
+      public function serializeAs_FightTeamMemberCharacterInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_FightTeamMemberCharacterInformations(input:IDataInput) : void
+      public function deserializeAs_FightTeamMemberCharacterInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

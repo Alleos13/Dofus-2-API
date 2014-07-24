@@ -9,11 +9,11 @@ package flashx.textLayout.compose
       
       function get x() : Number;
       
-      function set x(val:Number) : void;
+      function set x(param1:Number) : void;
       
       function get y() : Number;
       
-      function set y(val:Number) : void;
+      function set y(param1:Number) : void;
       
       function get ascent() : Number;
       

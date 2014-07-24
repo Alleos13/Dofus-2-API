@@ -31,7 +31,7 @@ package com.ankamagames.dofus.network.messages.game.chat
          //Décompilation abandonné
       }
       
-      public function initChatAdminServerMessage(channel:uint = 0, content:String = "", timestamp:uint = 0, fingerprint:String = "", senderId:int = 0, senderName:String = "", senderAccountId:int = 0) : ChatAdminServerMessage
+      public function initChatAdminServerMessage(param1:uint = 0, param2:String = "", param3:uint = 0, param4:String = "", param5:int = 0, param6:String = "", param7:int = 0) : ChatAdminServerMessage
       {
          //Décompilation abandonné
       }
@@ -41,32 +41,32 @@ package com.ankamagames.dofus.network.messages.game.chat
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ChatAdminServerMessage(output:IDataOutput) : void
+      public function serializeAs_ChatAdminServerMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ChatAdminServerMessage(input:IDataInput) : void
+      public function deserializeAs_ChatAdminServerMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

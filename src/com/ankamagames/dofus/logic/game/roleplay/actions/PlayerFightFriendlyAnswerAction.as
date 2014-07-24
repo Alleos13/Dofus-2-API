@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
          //Décompilation abandonné
       }
       
-      public static function create(accept:Boolean = true) : PlayerFightFriendlyAnswerAction
+      public static function create(param1:Boolean = true) : PlayerFightFriendlyAnswerAction
       {
          //Décompilation abandonné
       }

@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.types.game.look
          //Décompilation abandonné
       }
       
-      public function initEntityLook(bonesId:uint = 0, skins:Vector.<uint> = null, indexedColors:Vector.<int> = null, scales:Vector.<int> = null, subentities:Vector.<SubEntity> = null) : EntityLook
+      public function initEntityLook(param1:uint = 0, param2:Vector.<uint> = null, param3:Vector.<int> = null, param4:Vector.<int> = null, param5:Vector.<SubEntity> = null) : EntityLook
       {
          //Décompilation abandonné
       }
@@ -43,22 +43,22 @@ package com.ankamagames.dofus.network.types.game.look
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_EntityLook(output:IDataOutput) : void
+      public function serializeAs_EntityLook(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_EntityLook(input:IDataInput) : void
+      public function deserializeAs_EntityLook(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

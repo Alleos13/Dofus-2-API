@@ -29,57 +29,57 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      public static function importToFlow(source:Object, format:String, config:IConfiguration = null) : TextFlow
+      public static function importToFlow(param1:Object, param2:String, param3:IConfiguration = null) : TextFlow
       {
          //Décompilation abandonné
       }
       
-      public static function export(source:TextFlow, format:String, conversionType:String) : Object
+      public static function export(param1:TextFlow, param2:String, param3:String) : Object
       {
          //Décompilation abandonné
       }
       
-      public static function getImporter(format:String, config:IConfiguration = null) : ITextImporter
+      public static function getImporter(param1:String, param2:IConfiguration = null) : ITextImporter
       {
          //Décompilation abandonné
       }
       
-      public static function getExporter(format:String) : ITextExporter
+      public static function getExporter(param1:String) : ITextExporter
       {
          //Décompilation abandonné
       }
       
-      public static function addFormatAt(index:int, format:String, importerClass:Class, exporterClass:Class = null, clipboardFormat:String = null) : void
+      public static function addFormatAt(param1:int, param2:String, param3:Class, param4:Class = null, param5:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      public static function addFormat(format:String, importerClass:Class, exporterClass:Class, clipboardFormat:String) : void
+      public static function addFormat(param1:String, param2:Class, param3:Class, param4:String) : void
       {
          //Décompilation abandonné
       }
       
-      public static function removeFormatAt(index:int) : void
+      public static function removeFormatAt(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      private static function findFormatIndex(format:String) : int
+      private static function findFormatIndex(param1:String) : int
       {
          //Décompilation abandonné
       }
       
-      public static function removeFormat(format:String) : void
+      public static function removeFormat(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public static function getFormatAt(index:int) : String
+      public static function getFormatAt(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      public static function getFormatDescriptorAt(index:int) : FormatDescriptor
+      public static function getFormatDescriptorAt(param1:int) : FormatDescriptor
       {
          //Décompilation abandonné
       }

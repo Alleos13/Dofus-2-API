@@ -9,7 +9,7 @@ package flashx.textLayout.conversion
       //Décompilation abandonné
       }
       
-      function FlowElementInfo(flowClass:Class, parser:Function, exporter:Function)
+      function FlowElementInfo(param1:Class, param2:Function, param3:Function)
       {
          //Décompilation abandonné
       }

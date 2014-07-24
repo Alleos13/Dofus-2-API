@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.treasureHunt
          //Décompilation abandonné
       }
       
-      public function initPortalInformation(portalId:uint = 0, areaId:int = 0) : PortalInformation
+      public function initPortalInformation(param1:uint = 0, param2:int = 0) : PortalInformation
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.treasureHunt
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PortalInformation(output:IDataOutput) : void
+      public function serializeAs_PortalInformation(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PortalInformation(input:IDataInput) : void
+      public function deserializeAs_PortalInformation(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

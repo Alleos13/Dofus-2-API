@@ -108,12 +108,12 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function updateCharacterStatsList(cslmsg:CharacterStatsListMessage) : void
+      public function updateCharacterStatsList(param1:CharacterStatsListMessage) : void
       {
          //Décompilation abandonné
       }
@@ -123,7 +123,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function getPlayerSet(objectGID:uint) : PlayerSetInfo
+      public function getPlayerSet(param1:uint) : PlayerSetInfo
       {
          //Décompilation abandonné
       }

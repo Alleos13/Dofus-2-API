@@ -28,42 +28,42 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      tlf_internal  static function importScrap(importFunctor:Function) : TextScrap
+      tlf_internal  static function importScrap(param1:Function) : TextScrap
       {
          //Décompilation abandonné
       }
       
-      public static function setContents(textScrap:TextScrap) : void
+      public static function setContents(param1:TextScrap) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function exportScrap(scrap:TextScrap, exportFunctor:Function) : void
+      tlf_internal  static function exportScrap(param1:TextScrap, param2:Function) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function importToScrap(textOnClipboard:String, format:String) : TextScrap
+      tlf_internal  static function importToScrap(param1:String, param2:String) : TextScrap
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function importOldTextLayoutFormatToScrap(textOnClipboard:String) : TextScrap
+      tlf_internal  static function importOldTextLayoutFormatToScrap(param1:String) : TextScrap
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function exportForClipboard(scrap:TextScrap, format:String) : String
+      tlf_internal  static function exportForClipboard(param1:TextScrap, param2:String) : String
       {
          //Décompilation abandonné
       }
       
-      private static function getBeginArray(beginArrayChild:XML, textFlow:TextFlow) : Array
+      private static function getBeginArray(param1:XML, param2:TextFlow) : Array
       {
          //Décompilation abandonné
       }
       
-      private static function getEndArray(endArrayChild:XML, textFlow:TextFlow) : Array
+      private static function getEndArray(param1:XML, param2:TextFlow) : Array
       {
          //Décompilation abandonné
       }

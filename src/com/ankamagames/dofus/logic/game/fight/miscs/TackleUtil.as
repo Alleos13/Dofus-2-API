@@ -30,32 +30,32 @@ package com.ankamagames.dofus.logic.game.fight.miscs
          //Décompilation abandonné
       }
       
-      public static function getTackle(playerInfos:GameFightFighterInformations, position:MapPoint) : Number
+      public static function getTackle(param1:GameFightFighterInformations, param2:MapPoint) : Number
       {
          //Décompilation abandonné
       }
       
-      public static function getTackleForFighter(tackler:GameFightFighterInformations, tackled:GameFightFighterInformations) : Number
+      public static function getTackleForFighter(param1:GameFightFighterInformations, param2:GameFightFighterInformations) : Number
       {
          //Décompilation abandonné
       }
       
-      public static function getTacklerOnCell(cellId:int) : AnimatedCharacter
+      public static function getTacklerOnCell(param1:int) : AnimatedCharacter
       {
          //Décompilation abandonné
       }
       
-      public static function canBeTackled(fighter:GameFightFighterInformations, position:MapPoint = null) : Boolean
+      public static function canBeTackled(param1:GameFightFighterInformations, param2:MapPoint = null) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function canBeTackler(fighter:GameFightFighterInformations, target:GameFightFighterInformations) : Boolean
+      public static function canBeTackler(param1:GameFightFighterInformations, param2:GameFightFighterInformations) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function isTackling(pPlayer:GameFightFighterInformations, pTackler:GameFightFighterInformations, pPlayerPath:MovementPath) : Boolean
+      public static function isTackling(param1:GameFightFighterInformations, param2:GameFightFighterInformations, param3:MovementPath) : Boolean
       {
          //Décompilation abandonné
       }

@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.items
       
       protected static const _log:Logger;
       
-      public static function getItemTypeById(id:uint) : ItemType
+      public static function getItemTypeById(param1:uint) : ItemType
       {
          //Décompilation abandonné
       }

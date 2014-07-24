@@ -12,7 +12,7 @@ package com.ankamagames.dofus.logic.game.common.steps
       //Décompilation abandonné
       }
       
-      public function CameraFollowStep(pCamera:Camera, pEntity:AnimatedCharacter)
+      public function CameraFollowStep(param1:Camera, param2:AnimatedCharacter)
       {
          //Décompilation abandonné
       }

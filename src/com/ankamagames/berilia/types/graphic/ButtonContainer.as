@@ -59,7 +59,7 @@ package com.ankamagames.berilia.types.graphic
       
       protected var _finalized:Boolean;
       
-      public function set checkBox(b:Boolean) : void
+      public function set checkBox(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -69,7 +69,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set radioMode(b:Boolean) : void
+      public function set radioMode(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -79,7 +79,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      override public function set linkedTo(sUiComponent:String) : void
+      override public function set linkedTo(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -89,7 +89,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set radioGroup(radioGroupName:String) : void
+      public function set radioGroup(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -104,7 +104,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set selected(b:Boolean) : void
+      public function set selected(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -114,7 +114,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      override public function set state(newState:*) : void
+      override public function set state(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -129,7 +129,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set value(v:*) : void
+      public function set value(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -144,7 +144,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set finalized(b:Boolean) : void
+      public function set finalized(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -154,7 +154,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set soundId(pSoundId:String) : void
+      public function set soundId(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -164,7 +164,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set isMute(pMute:Boolean) : void
+      public function set isMute(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -189,7 +189,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      override public function process(msg:Message) : Boolean
+      override public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }

@@ -14,14 +14,14 @@ package com.ankamagames.atouin.data.map.elements
       //Décompilation abandonné
       }
       
-      public function BasicElement(cell:Cell)
+      public function BasicElement(param1:Cell)
       {
          //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      public static function getElementFromType(type:int, cell:Cell) : BasicElement
+      public static function getElementFromType(param1:int, param2:Cell) : BasicElement
       {
          //Décompilation abandonné
       }
@@ -38,7 +38,7 @@ package com.ankamagames.atouin.data.map.elements
          //Décompilation abandonné
       }
       
-      public function fromRaw(raw:IDataInput, mapVersion:int) : void
+      public function fromRaw(param1:IDataInput, param2:int) : void
       {
          //Décompilation abandonné
       }

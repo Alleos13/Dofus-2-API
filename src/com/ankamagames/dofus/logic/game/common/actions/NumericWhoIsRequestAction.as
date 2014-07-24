@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions
          //Décompilation abandonné
       }
       
-      public static function create(playerId:uint) : NumericWhoIsRequestAction
+      public static function create(param1:uint) : NumericWhoIsRequestAction
       {
          //Décompilation abandonné
       }

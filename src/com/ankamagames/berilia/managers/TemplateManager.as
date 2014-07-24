@@ -48,37 +48,37 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      public function getTemplate(sName:String) : XmlTemplate
+      public function getTemplate(param1:String) : XmlTemplate
       {
          //Décompilation abandonné
       }
       
-      public function isRegistered(sPath:String) : Boolean
+      public function isRegistered(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function isLoaded(sPath:String) : Boolean
+      public function isLoaded(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function areLoaded(aPath:Array) : Boolean
+      public function areLoaded(param1:Array) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function register(sPath:String) : void
+      public function register(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function objectLoaded(e:ResourceLoadedEvent) : void
+      public function objectLoaded(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function objectLoadedFailed(e:ResourceErrorEvent) : void
+      public function objectLoadedFailed(param1:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }

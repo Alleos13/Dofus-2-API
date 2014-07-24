@@ -7,7 +7,7 @@ package com.ankamagames.berilia.utils.errors
       //Décompilation abandonné
       }
       
-      public function UntrustedApiCallError(message:String = "", id:int = 0)
+      public function UntrustedApiCallError(param1:String = "", param2:int = 0)
       {
          //Décompilation abandonné
       }

@@ -10,8 +10,8 @@ package com.ankamagames.jerakine.entities.interfaces
       //Décompilation abandonné
       }
       
-      function addSubEntity(entity:DisplayObject, category:uint, slot:uint) : void;
+      function addSubEntity(param1:DisplayObject, param2:uint, param3:uint) : void;
       
-      function getSubEntitySlot(category:uint, slot:uint) : DisplayObjectContainer;
+      function getSubEntitySlot(param1:uint, param2:uint) : DisplayObjectContainer;
    }
 }

@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.delay
          //Décompilation abandonné
       }
       
-      public function initGameRolePlayDelayedObjectUseMessage(delayedCharacterId:int = 0, delayTypeId:uint = 0, delayEndTime:Number = 0, objectGID:uint = 0) : GameRolePlayDelayedObjectUseMessage
+      public function initGameRolePlayDelayedObjectUseMessage(param1:int = 0, param2:uint = 0, param3:Number = 0, param4:uint = 0) : GameRolePlayDelayedObjectUseMessage
       {
          //Décompilation abandonné
       }
@@ -43,32 +43,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.delay
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayDelayedObjectUseMessage(output:IDataOutput) : void
+      public function serializeAs_GameRolePlayDelayedObjectUseMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayDelayedObjectUseMessage(input:IDataInput) : void
+      public function deserializeAs_GameRolePlayDelayedObjectUseMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

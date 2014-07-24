@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.chat
          //Décompilation abandonné
       }
       
-      public static function create(msg:String, channel:uint, timestamp:Number) : SaveMessageAction
+      public static function create(param1:String, param2:uint, param3:Number) : SaveMessageAction
       {
          //Décompilation abandonné
       }

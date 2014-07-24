@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.bid
          //Décompilation abandonné
       }
       
-      public static function create(pSearchString:String) : BidHouseStringSearchAction
+      public static function create(param1:String) : BidHouseStringSearchAction
       {
          //Décompilation abandonné
       }

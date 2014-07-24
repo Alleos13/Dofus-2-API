@@ -13,7 +13,7 @@ package mx.core
       //Décompilation abandonné
       }
       
-      public function BitmapAsset(bitmapData:BitmapData = null, pixelSnapping:String = "auto", smoothing:Boolean = false)
+      public function BitmapAsset(param1:BitmapData = null, param2:String = "auto", param3:Boolean = false)
       {
          //Décompilation abandonné
       }
@@ -33,7 +33,7 @@ package mx.core
          //Décompilation abandonné
       }
       
-      override public function set x(value:Number) : void
+      override public function set x(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -43,7 +43,7 @@ package mx.core
          //Décompilation abandonné
       }
       
-      override public function set y(value:Number) : void
+      override public function set y(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -53,7 +53,7 @@ package mx.core
          //Décompilation abandonné
       }
       
-      override public function set z(value:Number) : void
+      override public function set z(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -63,7 +63,7 @@ package mx.core
          //Décompilation abandonné
       }
       
-      override public function set width(value:Number) : void
+      override public function set width(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -75,7 +75,7 @@ package mx.core
          //Décompilation abandonné
       }
       
-      override public function set height(value:Number) : void
+      override public function set height(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -85,7 +85,7 @@ package mx.core
          //Décompilation abandonné
       }
       
-      override public function set rotationX(value:Number) : void
+      override public function set rotationX(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -95,7 +95,7 @@ package mx.core
          //Décompilation abandonné
       }
       
-      override public function set rotationY(value:Number) : void
+      override public function set rotationY(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -105,7 +105,7 @@ package mx.core
          //Décompilation abandonné
       }
       
-      override public function set rotationZ(value:Number) : void
+      override public function set rotationZ(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -115,7 +115,7 @@ package mx.core
          //Décompilation abandonné
       }
       
-      override public function set rotation(value:Number) : void
+      override public function set rotation(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -125,7 +125,7 @@ package mx.core
          //Décompilation abandonné
       }
       
-      override public function set scaleX(value:Number) : void
+      override public function set scaleX(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -135,7 +135,7 @@ package mx.core
          //Décompilation abandonné
       }
       
-      override public function set scaleY(value:Number) : void
+      override public function set scaleY(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -145,7 +145,7 @@ package mx.core
          //Décompilation abandonné
       }
       
-      override public function set scaleZ(value:Number) : void
+      override public function set scaleZ(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -157,7 +157,7 @@ package mx.core
          //Décompilation abandonné
       }
       
-      public function set layoutDirection(value:String) : void
+      public function set layoutDirection(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -177,17 +177,17 @@ package mx.core
          //Décompilation abandonné
       }
       
-      public function move(x:Number, y:Number) : void
+      public function move(param1:Number, param2:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function setActualSize(newWidth:Number, newHeight:Number) : void
+      public function setActualSize(param1:Number, param2:Number) : void
       {
          //Décompilation abandonné
       }
       
-      private function addedHandler(event:Event) : void
+      private function addedHandler(param1:Event) : void
       {
          //Décompilation abandonné
       }

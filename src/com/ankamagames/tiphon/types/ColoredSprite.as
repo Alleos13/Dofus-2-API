@@ -21,12 +21,12 @@ package com.ankamagames.tiphon.types
       
       private static const NEUTRAL_COLOR_TRANSFORM:ColorTransform;
       
-      override public function init(handler:IAnimationSpriteHandler) : void
+      override public function init(param1:IAnimationSpriteHandler) : void
       {
          //Décompilation abandonné
       }
       
-      public function colorize(colorT:ColorTransform) : void
+      public function colorize(param1:ColorTransform) : void
       {
          //Décompilation abandonné
       }

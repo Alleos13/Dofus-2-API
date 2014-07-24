@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightSpellCooldownVariationStep(fighterId:int, actionId:int, spellId:int, value:int)
+      public function FightSpellCooldownVariationStep(param1:int, param2:int, param3:int, param4:int)
       {
          //Décompilation abandonné
       }

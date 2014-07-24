@@ -22,7 +22,7 @@ package com.ankamagames.dofus.internalDatacenter.items
       
       private static const _log:Logger;
       
-      public static function create(uri:Uri) : SimpleTextureWrapper
+      public static function create(param1:Uri) : SimpleTextureWrapper
       {
          //Décompilation abandonné
       }
@@ -64,7 +64,7 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      public function set endTime(t:int) : void
+      public function set endTime(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -79,12 +79,12 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      public function addHolder(h:ISlotDataHolder) : void
+      public function addHolder(param1:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeHolder(h:ISlotDataHolder) : void
+      public function removeHolder(param1:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }

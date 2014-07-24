@@ -7,6 +7,6 @@ package com.ankamagames.jerakine.sequencer
       //Décompilation abandonné
       }
       
-      function stepFinished(step:ISequencable, withTimout:Boolean = false) : void;
+      function stepFinished(param1:ISequencable, param2:Boolean = false) : void;
    }
 }

@@ -23,7 +23,7 @@ package com.somerandomdude.colortoolkit
       //Décompilation abandonné
       }
       
-      public function Color(color:int)
+      public function Color(param1:int)
       {
          //Décompilation abandonné
       }
@@ -74,7 +74,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set analogousAngle(value:Number) : void
+      public function set analogousAngle(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -84,7 +84,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set analogousContrast(value:Number) : void
+      public function set analogousContrast(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -129,7 +129,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set tetradAngle(value:Number) : void
+      public function set tetradAngle(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -144,7 +144,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set triadAngle(value:Number) : void
+      public function set triadAngle(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -154,7 +154,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set red(value:Number) : void
+      public function set red(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -164,7 +164,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set green(value:Number) : void
+      public function set green(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -174,7 +174,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set blue(value:Number) : void
+      public function set blue(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -184,7 +184,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set cyan(value:Number) : void
+      public function set cyan(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -194,7 +194,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set magenta(value:Number) : void
+      public function set magenta(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -204,7 +204,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set yellow(value:Number) : void
+      public function set yellow(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -214,7 +214,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set black(value:Number) : void
+      public function set black(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -224,7 +224,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set hue(value:Number) : void
+      public function set hue(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -234,7 +234,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set saturation(value:Number) : void
+      public function set saturation(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -244,7 +244,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set brightness(value:Number) : void
+      public function set brightness(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -259,7 +259,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set lightness(value:Number) : void
+      public function set lightness(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -269,7 +269,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set a(value:Number) : void
+      public function set a(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -279,7 +279,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set b(value:Number) : void
+      public function set b(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -289,7 +289,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set x(value:Number) : void
+      public function set x(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -299,7 +299,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set y(value:Number) : void
+      public function set y(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -309,7 +309,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set z(value:Number) : void
+      public function set z(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -319,7 +319,7 @@ package com.somerandomdude.colortoolkit
          //Décompilation abandonné
       }
       
-      public function set color(value:int) : void
+      public function set color(param1:int) : void
       {
          //Décompilation abandonné
       }

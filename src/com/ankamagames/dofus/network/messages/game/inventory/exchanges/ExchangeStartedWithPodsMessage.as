@@ -43,7 +43,7 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      public function initExchangeStartedWithPodsMessage(exchangeType:int = 0, firstCharacterId:int = 0, firstCharacterCurrentWeight:uint = 0, firstCharacterMaxWeight:uint = 0, secondCharacterId:int = 0, secondCharacterCurrentWeight:uint = 0, secondCharacterMaxWeight:uint = 0) : ExchangeStartedWithPodsMessage
+      public function initExchangeStartedWithPodsMessage(param1:int = 0, param2:int = 0, param3:uint = 0, param4:uint = 0, param5:int = 0, param6:uint = 0, param7:uint = 0) : ExchangeStartedWithPodsMessage
       {
          //Décompilation abandonné
       }
@@ -53,32 +53,32 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeStartedWithPodsMessage(output:IDataOutput) : void
+      public function serializeAs_ExchangeStartedWithPodsMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeStartedWithPodsMessage(input:IDataInput) : void
+      public function deserializeAs_ExchangeStartedWithPodsMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

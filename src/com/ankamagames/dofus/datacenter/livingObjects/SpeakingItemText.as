@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.livingObjects
       
       protected static const _log:Logger;
       
-      public static function getSpeakingItemTextById(id:int) : SpeakingItemText
+      public static function getSpeakingItemTextById(param1:int) : SpeakingItemText
       {
          //Décompilation abandonné
       }

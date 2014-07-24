@@ -33,22 +33,22 @@ package com.ankamagames.dofus.network.types.game.guild.tax
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_TaxCollectorComplementaryInformations(output:IDataOutput) : void
+      public function serializeAs_TaxCollectorComplementaryInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_TaxCollectorComplementaryInformations(input:IDataInput) : void
+      public function deserializeAs_TaxCollectorComplementaryInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.npc
          //Décompilation abandonné
       }
       
-      public function initAllianceTaxCollectorDialogQuestionExtendedMessage(guildInfo:BasicGuildInformations = null, maxPods:uint = 0, prospecting:uint = 0, wisdom:uint = 0, taxCollectorsCount:uint = 0, taxCollectorAttack:int = 0, kamas:uint = 0, experience:Number = 0, pods:uint = 0, itemsValue:uint = 0, alliance:BasicNamedAllianceInformations = null) : AllianceTaxCollectorDialogQuestionExtendedMessage
+      public function initAllianceTaxCollectorDialogQuestionExtendedMessage(param1:BasicGuildInformations = null, param2:uint = 0, param3:uint = 0, param4:uint = 0, param5:uint = 0, param6:int = 0, param7:uint = 0, param8:Number = 0, param9:uint = 0, param10:uint = 0, param11:BasicNamedAllianceInformations = null) : AllianceTaxCollectorDialogQuestionExtendedMessage
       {
          //Décompilation abandonné
       }
@@ -45,32 +45,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.npc
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AllianceTaxCollectorDialogQuestionExtendedMessage(output:IDataOutput) : void
+      public function serializeAs_AllianceTaxCollectorDialogQuestionExtendedMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AllianceTaxCollectorDialogQuestionExtendedMessage(input:IDataInput) : void
+      public function deserializeAs_AllianceTaxCollectorDialogQuestionExtendedMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

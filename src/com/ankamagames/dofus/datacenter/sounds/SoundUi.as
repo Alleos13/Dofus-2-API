@@ -17,7 +17,7 @@ package com.ankamagames.dofus.datacenter.sounds
       
       public static var MODULE:String = "SoundUi";
       
-      public static function getSoundUiById(id:uint) : SoundUi
+      public static function getSoundUiById(param1:uint) : SoundUi
       {
          //Décompilation abandonné
       }

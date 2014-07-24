@@ -9,7 +9,7 @@ package com.ankamagames.berilia.types.data
       //Décompilation abandonné
       }
       
-      public function UiGroup(name:String, exclusive:Boolean, permanent:Boolean, uisName:Array = null)
+      public function UiGroup(param1:String, param2:Boolean, param3:Boolean, param4:Array = null)
       {
          //Décompilation abandonné
       }

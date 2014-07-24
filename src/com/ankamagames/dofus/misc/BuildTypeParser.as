@@ -14,12 +14,12 @@ package com.ankamagames.dofus.misc
          //Décompilation abandonné
       }
       
-      public static function getTypeName(type:uint) : String
+      public static function getTypeName(param1:uint) : String
       {
          //Décompilation abandonné
       }
       
-      public static function getTypeColor(type:uint) : uint
+      public static function getTypeColor(param1:uint) : uint
       {
          //Décompilation abandonné
       }

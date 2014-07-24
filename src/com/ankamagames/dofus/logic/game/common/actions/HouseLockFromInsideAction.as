@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions
          //Décompilation abandonné
       }
       
-      public static function create(code:String) : HouseLockFromInsideAction
+      public static function create(param1:String) : HouseLockFromInsideAction
       {
          //Décompilation abandonné
       }

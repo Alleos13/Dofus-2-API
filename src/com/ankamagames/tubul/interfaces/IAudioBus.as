@@ -15,21 +15,21 @@ package com.ankamagames.tubul.interfaces
       
       function get name() : String;
       
-      function set volumeMax(pVolMax:Number) : void;
+      function set volumeMax(param1:Number) : void;
       
       function get volumeMax() : Number;
       
       function get numberSoundsLimitation() : int;
       
-      function set numberSoundsLimitation(pLimit:int) : void;
+      function set numberSoundsLimitation(param1:int) : void;
       
-      function addISound(pSound:ISound) : void;
+      function addISound(param1:ISound) : void;
       
-      function playISound(pSound:ISound, pLoop:Boolean = false, pLoops:int = -1) : void;
+      function playISound(param1:ISound, param2:Boolean = false, param3:int = -1) : void;
       
-      function clear(pFade:VolumeFadeEffect = null) : void;
+      function clear(param1:VolumeFadeEffect = null) : void;
       
-      function contains(pISound:ISound) : Boolean;
+      function contains(param1:ISound) : Boolean;
       
       function clearCache() : void;
    }

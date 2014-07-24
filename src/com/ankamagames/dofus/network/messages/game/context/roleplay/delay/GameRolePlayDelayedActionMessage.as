@@ -38,7 +38,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.delay
          //Décompilation abandonné
       }
       
-      public function initGameRolePlayDelayedActionMessage(delayedCharacterId:int = 0, delayTypeId:uint = 0, delayEndTime:Number = 0) : GameRolePlayDelayedActionMessage
+      public function initGameRolePlayDelayedActionMessage(param1:int = 0, param2:uint = 0, param3:Number = 0) : GameRolePlayDelayedActionMessage
       {
          //Décompilation abandonné
       }
@@ -48,32 +48,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.delay
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayDelayedActionMessage(output:IDataOutput) : void
+      public function serializeAs_GameRolePlayDelayedActionMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayDelayedActionMessage(input:IDataInput) : void
+      public function deserializeAs_GameRolePlayDelayedActionMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

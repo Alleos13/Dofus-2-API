@@ -9,44 +9,44 @@ package com.ankamagames.atouin.types
       
       function get cellId() : uint;
       
-      function set cellId(val:uint) : void;
+      function set cellId(param1:uint) : void;
       
       function get layerId() : int;
       
-      function set layerId(val:int) : void;
+      function set layerId(param1:int) : void;
       
       function get cacheAsBitmap() : Boolean;
       
-      function set cacheAsBitmap(val:Boolean) : void;
+      function set cacheAsBitmap(param1:Boolean) : void;
       
       function get mouseChildren() : Boolean;
       
-      function set mouseChildren(val:Boolean) : void;
+      function set mouseChildren(param1:Boolean) : void;
       
       function get mouseEnabled() : Boolean;
       
-      function set mouseEnabled(val:Boolean) : void;
+      function set mouseEnabled(param1:Boolean) : void;
       
       function get startX() : int;
       
-      function set startX(val:int) : void;
+      function set startX(param1:int) : void;
       
       function get startY() : int;
       
-      function set startY(val:int) : void;
+      function set startY(param1:int) : void;
       
       function get depth() : int;
       
-      function set depth(val:int) : void;
+      function set depth(param1:int) : void;
       
       function get x() : Number;
       
-      function set x(val:Number) : void;
+      function set x(param1:Number) : void;
       
       function get y() : Number;
       
-      function set y(val:Number) : void;
+      function set y(param1:Number) : void;
       
-      function addFakeChild(child:Object, data:Object, colors:Object) : void;
+      function addFakeChild(param1:Object, param2:Object, param3:Object) : void;
    }
 }

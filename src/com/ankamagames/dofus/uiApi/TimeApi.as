@@ -23,7 +23,7 @@ package com.ankamagames.dofus.uiApi
       
       protected var _log:Logger;
       
-      public function set module(value:UiModule) : void
+      public function set module(param1:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -43,7 +43,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getClock(time:Number = 0, unchanged:Boolean = false, useTimezoneOffset:Boolean = false) : String
+      public function getClock(param1:Number = 0, param2:Boolean = false, param3:Boolean = false) : String
       {
          //Décompilation abandonné
       }
@@ -53,42 +53,42 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getDate(time:Number = 0, useTimezoneOffset:Boolean = false) : String
+      public function getDate(param1:Number = 0, param2:Boolean = false) : String
       {
          //Décompilation abandonné
       }
       
-      public function getDofusDate(time:Number = 0) : String
+      public function getDofusDate(param1:Number = 0) : String
       {
          //Décompilation abandonné
       }
       
-      public function getDofusDay(time:Number = 0) : int
+      public function getDofusDay(param1:Number = 0) : int
       {
          //Décompilation abandonné
       }
       
-      public function getDofusMonth(time:Number = 0) : String
+      public function getDofusMonth(param1:Number = 0) : String
       {
          //Décompilation abandonné
       }
       
-      public function getDofusYear(time:Number = 0) : String
+      public function getDofusYear(param1:Number = 0) : String
       {
          //Décompilation abandonné
       }
       
-      public function getDurationTimeSinceEpoch(pTime:Number = 0) : Number
+      public function getDurationTimeSinceEpoch(param1:Number = 0) : Number
       {
          //Décompilation abandonné
       }
       
-      public function getDuration(time:Number, second:Boolean = false) : String
+      public function getDuration(param1:Number, param2:Boolean = false) : String
       {
          //Décompilation abandonné
       }
       
-      public function getShortDuration(time:Number, second:Boolean = false) : String
+      public function getShortDuration(param1:Number, param2:Boolean = false) : String
       {
          //Décompilation abandonné
       }

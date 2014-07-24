@@ -48,7 +48,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.job
          //Décompilation abandonné
       }
       
-      public function initJobCrafterDirectoryEntryPlayerInfo(playerId:uint = 0, playerName:String = "", alignmentSide:int = 0, breed:int = 0, sex:Boolean = false, isInWorkshop:Boolean = false, worldX:int = 0, worldY:int = 0, mapId:int = 0, subAreaId:uint = 0, status:PlayerStatus = null) : JobCrafterDirectoryEntryPlayerInfo
+      public function initJobCrafterDirectoryEntryPlayerInfo(param1:uint = 0, param2:String = "", param3:int = 0, param4:int = 0, param5:Boolean = false, param6:Boolean = false, param7:int = 0, param8:int = 0, param9:int = 0, param10:uint = 0, param11:PlayerStatus = null) : JobCrafterDirectoryEntryPlayerInfo
       {
          //Décompilation abandonné
       }
@@ -58,22 +58,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.job
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_JobCrafterDirectoryEntryPlayerInfo(output:IDataOutput) : void
+      public function serializeAs_JobCrafterDirectoryEntryPlayerInfo(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_JobCrafterDirectoryEntryPlayerInfo(input:IDataInput) : void
+      public function deserializeAs_JobCrafterDirectoryEntryPlayerInfo(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

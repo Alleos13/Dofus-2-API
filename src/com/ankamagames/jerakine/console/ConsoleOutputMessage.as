@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.console
       //Décompilation abandonné
       }
       
-      public function ConsoleOutputMessage(consoleId:String, text:String, type:uint)
+      public function ConsoleOutputMessage(param1:String, param2:String, param3:uint)
       {
          //Décompilation abandonné
       }

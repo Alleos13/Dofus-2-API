@@ -9,7 +9,7 @@ package com.ankamagames.dofus.logic.game.common.types
       //Décompilation abandonné
       }
       
-      public function PartyFightInformationsData(fightMapId:int, fightId:int, memberName:String, memberId:int, timeBeforeStart:uint)
+      public function PartyFightInformationsData(param1:int, param2:int, param3:String, param4:int, param5:uint)
       {
          //Décompilation abandonné
       }
@@ -33,7 +33,7 @@ package com.ankamagames.dofus.logic.game.common.types
          //Décompilation abandonné
       }
       
-      public function set fightMapId(value:int) : void
+      public function set fightMapId(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -43,7 +43,7 @@ package com.ankamagames.dofus.logic.game.common.types
          //Décompilation abandonné
       }
       
-      public function set fightId(value:int) : void
+      public function set fightId(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -53,7 +53,7 @@ package com.ankamagames.dofus.logic.game.common.types
          //Décompilation abandonné
       }
       
-      public function set timeUntilFightbegin(value:Timer) : void
+      public function set timeUntilFightbegin(param1:Timer) : void
       {
          //Décompilation abandonné
       }
@@ -63,7 +63,7 @@ package com.ankamagames.dofus.logic.game.common.types
          //Décompilation abandonné
       }
       
-      public function set memberName(value:String) : void
+      public function set memberName(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -73,7 +73,7 @@ package com.ankamagames.dofus.logic.game.common.types
          //Décompilation abandonné
       }
       
-      public function set timeBeforeStart(value:uint) : void
+      public function set timeBeforeStart(param1:uint) : void
       {
          //Décompilation abandonné
       }

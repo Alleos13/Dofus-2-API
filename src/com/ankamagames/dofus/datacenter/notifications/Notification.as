@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.notifications
       
       protected static const _log:Logger;
       
-      public static function getNotificationById(id:int) : Notification
+      public static function getNotificationById(param1:int) : Notification
       {
          //Décompilation abandonné
       }

@@ -39,7 +39,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.paddock
          //Décompilation abandonné
       }
       
-      public function initPaddockToSellListMessage(pageIndex:uint = 0, totalPage:uint = 0, paddockList:Vector.<PaddockInformationsForSell> = null) : PaddockToSellListMessage
+      public function initPaddockToSellListMessage(param1:uint = 0, param2:uint = 0, param3:Vector.<PaddockInformationsForSell> = null) : PaddockToSellListMessage
       {
          //Décompilation abandonné
       }
@@ -49,32 +49,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.paddock
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PaddockToSellListMessage(output:IDataOutput) : void
+      public function serializeAs_PaddockToSellListMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PaddockToSellListMessage(input:IDataInput) : void
+      public function deserializeAs_PaddockToSellListMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

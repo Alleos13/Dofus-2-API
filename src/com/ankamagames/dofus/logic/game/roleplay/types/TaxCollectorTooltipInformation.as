@@ -10,7 +10,7 @@ package com.ankamagames.dofus.logic.game.roleplay.types
       //Décompilation abandonné
       }
       
-      public function TaxCollectorTooltipInformation(pFirstName:String, pLastName:String, pGuildIdentity:GuildWrapper, pAllianceIdentity:AllianceWrapper, pTaxCollectorAttack:int)
+      public function TaxCollectorTooltipInformation(param1:String, param2:String, param3:GuildWrapper, param4:AllianceWrapper, param5:int)
       {
          //Décompilation abandonné
       }

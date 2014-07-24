@@ -46,37 +46,37 @@ package com.ankamagames.jerakine.data
       
       private var _gameDataProcessor:Dictionary;
       
-      public function init(fileUri:Uri) : void
+      public function init(param1:Uri) : void
       {
          //Décompilation abandonné
       }
       
-      public function initFromIDataInput(stream:IDataInput, moduleName:String) : void
+      public function initFromIDataInput(param1:IDataInput, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function getDataProcessor(moduleName:String) : GameDataProcess
+      public function getDataProcessor(param1:String) : GameDataProcess
       {
          //Décompilation abandonné
       }
       
-      public function getClassDefinition(moduleName:String, classId:int) : GameDataClassDefinition
+      public function getClassDefinition(param1:String, param2:int) : GameDataClassDefinition
       {
          //Décompilation abandonné
       }
       
-      public function getCount(moduleName:String) : uint
+      public function getCount(param1:String) : uint
       {
          //Décompilation abandonné
       }
       
-      public function getObject(moduleName:String, objectId:int) : *
+      public function getObject(param1:String, param2:int) : *
       {
          //Décompilation abandonné
       }
       
-      public function getObjects(moduleName:String) : Array
+      public function getObjects(param1:String) : Array
       {
          //Décompilation abandonné
       }
@@ -86,7 +86,7 @@ package com.ankamagames.jerakine.data
          //Décompilation abandonné
       }
       
-      private function readClassDefinition(classId:int, stream:IDataInput, store:Dictionary) : void
+      private function readClassDefinition(param1:int, param2:IDataInput, param3:Dictionary) : void
       {
          //Décompilation abandonné
       }

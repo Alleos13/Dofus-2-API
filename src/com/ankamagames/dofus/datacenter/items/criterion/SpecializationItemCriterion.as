@@ -10,7 +10,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function SpecializationItemCriterion(pCriterion:String)
+      public function SpecializationItemCriterion(param1:String)
       {
          //Décompilation abandonné
       }

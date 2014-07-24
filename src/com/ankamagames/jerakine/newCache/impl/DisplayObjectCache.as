@@ -15,7 +15,7 @@ package com.ankamagames.jerakine.newCache.impl
       //Décompilation abandonné
       }
       
-      public function DisplayObjectCache(bound:uint)
+      public function DisplayObjectCache(param1:uint)
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.jerakine.newCache.impl
          //Décompilation abandonné
       }
       
-      public function contains(ref:*) : Boolean
+      public function contains(param1:*) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function extract(ref:*) : *
+      public function extract(param1:*) : *
       {
          //Décompilation abandonné
       }
       
-      public function peek(ref:*) : *
+      public function peek(param1:*) : *
       {
          //Décompilation abandonné
       }
       
-      public function store(ref:*, obj:*) : Boolean
+      public function store(param1:*, param2:*) : Boolean
       {
          //Décompilation abandonné
       }

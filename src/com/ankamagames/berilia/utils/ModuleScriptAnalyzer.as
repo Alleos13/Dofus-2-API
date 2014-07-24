@@ -23,7 +23,7 @@ package com.ankamagames.berilia.utils
       //Décompilation abandonné
       }
       
-      public function ModuleScriptAnalyzer(target:UiModule, readyFct:Function, appDomain:ApplicationDomain = null, targetScriptLocation:String = "")
+      public function ModuleScriptAnalyzer(param1:UiModule, param2:Function, param3:ApplicationDomain = null, param4:String = "")
       {
          //Décompilation abandonné
       }
@@ -59,17 +59,17 @@ package com.ankamagames.berilia.utils
          //Décompilation abandonné
       }
       
-      private function onSwfLoaded(e:ResourceLoadedEvent) : void
+      private function onSwfLoaded(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function process(appDomain:ApplicationDomain) : void
+      private function process(param1:ApplicationDomain) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSwfFailed(e:ResourceErrorEvent) : void
+      private function onSwfFailed(param1:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }

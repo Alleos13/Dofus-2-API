@@ -12,7 +12,7 @@ package org.flintparticles.twoD.actions
       //Décompilation abandonné
       }
       
-      public function RandomDrift(sizeX:Number, sizeY:Number)
+      public function RandomDrift(param1:Number, param2:Number)
       {
          //Décompilation abandonné
       }
@@ -26,7 +26,7 @@ package org.flintparticles.twoD.actions
          //Décompilation abandonné
       }
       
-      public function set driftX(value:Number) : void
+      public function set driftX(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -36,12 +36,12 @@ package org.flintparticles.twoD.actions
          //Décompilation abandonné
       }
       
-      public function set driftY(value:Number) : void
+      public function set driftY(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      override public function update(emitter:Emitter, particle:Particle, time:Number) : void
+      override public function update(param1:Emitter, param2:Particle, param3:Number) : void
       {
          //Décompilation abandonné
       }

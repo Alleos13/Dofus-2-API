@@ -10,7 +10,7 @@ package com.ankamagames.berilia.types.event
       //Décompilation abandonné
       }
       
-      public function HookEvent(type:String, hook:Hook)
+      public function HookEvent(param1:String, param2:Hook)
       {
          //Décompilation abandonné
       }

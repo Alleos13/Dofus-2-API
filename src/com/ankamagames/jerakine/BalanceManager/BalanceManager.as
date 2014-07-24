@@ -10,7 +10,7 @@ package com.ankamagames.jerakine.BalanceManager
       //Décompilation abandonné
       }
       
-      public function BalanceManager(pItems:Array = null)
+      public function BalanceManager(param1:Array = null)
       {
          //Décompilation abandonné
       }
@@ -24,22 +24,22 @@ package com.ankamagames.jerakine.BalanceManager
          //Décompilation abandonné
       }
       
-      public function getItemNbCall(pItem:Object) : int
+      public function getItemNbCall(param1:Object) : int
       {
          //Décompilation abandonné
       }
       
-      public function setItemBalance(pItem:Object, pNewBalance:uint) : void
+      public function setItemBalance(param1:Object, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function addItem(pItem:Object, pReset:Boolean = false) : void
+      public function addItem(param1:Object, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function addItemWithBalance(pItem:Object, pBalance:uint) : void
+      public function addItemWithBalance(param1:Object, param2:uint) : void
       {
          //Décompilation abandonné
       }
@@ -49,7 +49,7 @@ package com.ankamagames.jerakine.BalanceManager
          //Décompilation abandonné
       }
       
-      public function removeItem(pItem:Object) : void
+      public function removeItem(param1:Object) : void
       {
          //Décompilation abandonné
       }
@@ -74,7 +74,7 @@ package com.ankamagames.jerakine.BalanceManager
          //Décompilation abandonné
       }
       
-      private function onBalanceUpdate(pEvent:BalanceEvent) : void
+      private function onBalanceUpdate(param1:BalanceEvent) : void
       {
          //Décompilation abandonné
       }

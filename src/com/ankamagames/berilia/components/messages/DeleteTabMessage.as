@@ -9,7 +9,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function DeleteTabMessage(target:InteractiveObject, deletedIndex:int)
+      public function DeleteTabMessage(param1:InteractiveObject, param2:int)
       {
          //Décompilation abandonné
       }

@@ -12,7 +12,7 @@ package com.ankamagames.dofus.internalDatacenter.fight
       //Décompilation abandonné
       }
       
-      public function FightLootWrapper(loot:FightLoot)
+      public function FightLootWrapper(param1:FightLoot)
       {
          //Décompilation abandonné
       }

@@ -46,37 +46,37 @@ package com.ankamagames.jerakine.utils.misc
       
       private var _targetedFile:File;
       
-      public function askForUpload(targetFile:File) : void
+      public function askForUpload(param1:File) : void
       {
          //Décompilation abandonné
       }
       
-      public function hasBeenAlreadySend(fileName:String) : Boolean
+      public function hasBeenAlreadySend(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onSendLog(file:File) : void
+      private function onSendLog(param1:File) : void
       {
          //Décompilation abandonné
       }
       
-      private function onUploadError(e:IOErrorEvent) : void
+      private function onUploadError(param1:IOErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onUploadEnd(e:Event) : void
+      private function onUploadEnd(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onEncodeEnd(e:Event) : void
+      private function onEncodeEnd(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onEncodeProgress(e:ProgressEvent) : void
+      private function onEncodeProgress(param1:ProgressEvent) : void
       {
          //Décompilation abandonné
       }

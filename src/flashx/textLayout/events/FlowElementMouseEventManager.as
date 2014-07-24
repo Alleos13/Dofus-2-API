@@ -24,7 +24,7 @@ package flashx.textLayout.events
       //Décompilation abandonné
       }
       
-      public function FlowElementMouseEventManager(container:DisplayObjectContainer, eventNames:Array)
+      public function FlowElementMouseEventManager(param1:DisplayObjectContainer, param2:Array)
       {
          //Décompilation abandonné
       }
@@ -55,7 +55,7 @@ package flashx.textLayout.events
       
       private var _hitRects:Object = null;
       
-      public function mouseToContainer(evt:MouseEvent) : Point
+      public function mouseToContainer(param1:MouseEvent) : Point
       {
          //Décompilation abandonné
       }
@@ -65,12 +65,12 @@ package flashx.textLayout.events
          //Décompilation abandonné
       }
       
-      public function set needsCtrlKey(k:Boolean) : void
+      public function set needsCtrlKey(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateHitTests(xoffset:Number, clipRect:Rectangle, textFlow:TextFlow, startPos:int, endPos:int, needsCtrlKey:Boolean = false) : void
+      public function updateHitTests(param1:Number, param2:Rectangle, param3:TextFlow, param4:int, param5:int, param6:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -85,52 +85,52 @@ package flashx.textLayout.events
          //Décompilation abandonné
       }
       
-      private function addEventListener(name:String, kbdEvent:Boolean = false) : void
+      private function addEventListener(param1:String, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private function removeEventListener(name:String, kbdEvent:Boolean) : void
+      private function removeEventListener(param1:String, param2:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function collectElements(parent:FlowGroupElement, startPosition:int, endPosition:int, results:Array) : void
+      tlf_internal function collectElements(param1:FlowGroupElement, param2:int, param3:int, param4:Array) : void
       {
          //Décompilation abandonné
       }
       
-      public function dispatchEvent(evt:Event) : void
+      public function dispatchEvent(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function hitTestKeyEventHandler(evt:KeyboardEvent) : void
+      private function hitTestKeyEventHandler(param1:KeyboardEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function checkCtrlKeyState(curState:Boolean) : void
+      private function checkCtrlKeyState(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      private function hitTestMouseEventHandler(evt:MouseEvent) : void
+      private function hitTestMouseEventHandler(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function dispatchFlowElementMouseEvent(type:String, originalEvent:MouseEvent) : Boolean
+      tlf_internal function dispatchFlowElementMouseEvent(param1:String, param2:MouseEvent) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function localDispatchEvent(type:String, evt:MouseEvent) : void
+      private function localDispatchEvent(param1:String, param2:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function setHandCursor(state:Boolean = true) : void
+      tlf_internal function setHandCursor(param1:Boolean = true) : void
       {
          //Décompilation abandonné
       }

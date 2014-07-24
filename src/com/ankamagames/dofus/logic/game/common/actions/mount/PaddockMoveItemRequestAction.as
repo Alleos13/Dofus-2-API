@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.mount
          //Décompilation abandonné
       }
       
-      public static function create(object:Object) : PaddockMoveItemRequestAction
+      public static function create(param1:Object) : PaddockMoveItemRequestAction
       {
          //Décompilation abandonné
       }

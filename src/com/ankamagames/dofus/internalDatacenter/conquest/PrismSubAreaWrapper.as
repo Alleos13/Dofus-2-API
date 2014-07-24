@@ -41,7 +41,7 @@ package com.ankamagames.dofus.internalDatacenter.conquest
          //Décompilation abandonné
       }
       
-      public static function getFromNetwork(msg:PrismSubareaEmptyInfo, currentPlayerAlliance:AllianceWrapper = null) : PrismSubAreaWrapper
+      public static function getFromNetwork(param1:PrismSubareaEmptyInfo, param2:AllianceWrapper = null) : PrismSubAreaWrapper
       {
          //Décompilation abandonné
       }

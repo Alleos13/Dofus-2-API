@@ -10,7 +10,7 @@ package com.ankamagames.berilia.types.shortcut
       //Décompilation abandonné
       }
       
-      public function Bind(sKey:String = null, targetedShortcut:String = "", bAlt:Boolean = false, bCtrl:Boolean = false, bShift:Boolean = false)
+      public function Bind(param1:String = null, param2:String = "", param3:Boolean = false, param4:Boolean = false, param5:Boolean = false)
       {
          //Décompilation abandonné
       }
@@ -32,7 +32,7 @@ package com.ankamagames.berilia.types.shortcut
          //Décompilation abandonné
       }
       
-      public function equals(s:Bind) : Boolean
+      public function equals(param1:Bind) : Boolean
       {
          //Décompilation abandonné
       }

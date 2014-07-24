@@ -10,7 +10,7 @@ package flashx.textLayout.events
       //Décompilation abandonné
       }
       
-      public function FlowOperationEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, operation:FlowOperation = null, level:int = 0, error:Error = null)
+      public function FlowOperationEvent(param1:String, param2:Boolean = false, param3:Boolean = false, param4:FlowOperation = null, param5:int = 0, param6:Error = null)
       {
          //Décompilation abandonné
       }
@@ -32,7 +32,7 @@ package flashx.textLayout.events
          //Décompilation abandonné
       }
       
-      public function set operation(value:FlowOperation) : void
+      public function set operation(param1:FlowOperation) : void
       {
          //Décompilation abandonné
       }
@@ -42,7 +42,7 @@ package flashx.textLayout.events
          //Décompilation abandonné
       }
       
-      public function set error(value:Error) : void
+      public function set error(param1:Error) : void
       {
          //Décompilation abandonné
       }
@@ -52,7 +52,7 @@ package flashx.textLayout.events
          //Décompilation abandonné
       }
       
-      public function set level(value:int) : void
+      public function set level(param1:int) : void
       {
          //Décompilation abandonné
       }

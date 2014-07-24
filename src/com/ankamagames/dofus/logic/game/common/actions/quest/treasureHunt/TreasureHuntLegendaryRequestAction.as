@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.quest.treasureHunt
          //Décompilation abandonné
       }
       
-      public static function create(legendaryId:int) : TreasureHuntLegendaryRequestAction
+      public static function create(param1:int) : TreasureHuntLegendaryRequestAction
       {
          //Décompilation abandonné
       }

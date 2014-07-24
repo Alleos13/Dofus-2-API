@@ -40,7 +40,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.paddock
          //Décompilation abandonné
       }
       
-      public function initPaddockToSellFilterMessage(areaId:int = 0, atLeastNbMount:int = 0, atLeastNbMachine:int = 0, maxPrice:uint = 0) : PaddockToSellFilterMessage
+      public function initPaddockToSellFilterMessage(param1:int = 0, param2:int = 0, param3:int = 0, param4:uint = 0) : PaddockToSellFilterMessage
       {
          //Décompilation abandonné
       }
@@ -50,32 +50,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.paddock
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PaddockToSellFilterMessage(output:IDataOutput) : void
+      public function serializeAs_PaddockToSellFilterMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PaddockToSellFilterMessage(input:IDataInput) : void
+      public function deserializeAs_PaddockToSellFilterMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

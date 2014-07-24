@@ -15,7 +15,7 @@ package com.ankamagames.sweevo.runners
       //Décompilation abandonné
       }
       
-      public function EmitterRunner(renderer:Renderer, onRun:Callback = null)
+      public function EmitterRunner(param1:Renderer, param2:Callback = null)
       {
          //Décompilation abandonné
       }
@@ -33,7 +33,7 @@ package com.ankamagames.sweevo.runners
          //Décompilation abandonné
       }
       
-      public function run(script:Class) : uint
+      public function run(param1:Class) : uint
       {
          //Décompilation abandonné
       }

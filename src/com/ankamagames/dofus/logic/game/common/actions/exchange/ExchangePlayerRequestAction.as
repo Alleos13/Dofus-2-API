@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.exchange
          //Décompilation abandonné
       }
       
-      public static function create(exchangeType:int, target:uint) : ExchangePlayerRequestAction
+      public static function create(param1:int, param2:uint) : ExchangePlayerRequestAction
       {
          //Décompilation abandonné
       }

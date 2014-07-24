@@ -24,24 +24,24 @@ package org.audiofx.mp3
          //Décompilation abandonné
       }
       
-      public static function create(instance:MP3FileReferenceLoader = null) : MP3FileReferenceLoader
+      public static function create(param1:MP3FileReferenceLoader = null) : MP3FileReferenceLoader
       {
          //Décompilation abandonné
       }
       
       private var mp3Parser:MP3Parser;
       
-      public function loadMP3ByteArray(ba:ByteArray) : void
+      public function loadMP3ByteArray(param1:ByteArray) : void
       {
          //Décompilation abandonné
       }
       
-      public function parsingDone(parser:MP3Parser) : void
+      public function parsingDone(param1:MP3Parser) : void
       {
          //Décompilation abandonné
       }
       
-      public function getSound(fr:FileReference) : void
+      public function getSound(param1:FileReference) : void
       {
          //Décompilation abandonné
       }
@@ -51,17 +51,17 @@ package org.audiofx.mp3
          //Décompilation abandonné
       }
       
-      private function parserCompleteHandler(ev:Event) : void
+      private function parserCompleteHandler(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function generateSound(mp3Source:MP3Parser) : Boolean
+      private function generateSound(param1:MP3Parser) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function swfCreated(ev:Event) : void
+      private function swfCreated(param1:Event) : void
       {
          //Décompilation abandonné
       }

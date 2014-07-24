@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.guild
          //Décompilation abandonné
       }
       
-      public static function create(pCharaTypeTarget:uint) : GuildCharacsUpgradeRequestAction
+      public static function create(param1:uint) : GuildCharacsUpgradeRequestAction
       {
          //Décompilation abandonné
       }

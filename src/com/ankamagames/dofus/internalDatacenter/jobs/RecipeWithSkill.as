@@ -11,7 +11,7 @@ package com.ankamagames.dofus.internalDatacenter.jobs
       //Décompilation abandonné
       }
       
-      public function RecipeWithSkill(recipe:Recipe, skill:Skill)
+      public function RecipeWithSkill(param1:Recipe, param2:Skill)
       {
          //Décompilation abandonné
       }

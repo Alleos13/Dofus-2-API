@@ -16,7 +16,7 @@ package com.ankamagames.dofus.misc.utils
          //Décompilation abandonné
       }
       
-      public static function clean(look:TiphonEntityLook) : TiphonEntityLook
+      public static function clean(param1:TiphonEntityLook) : TiphonEntityLook
       {
          //Décompilation abandonné
       }

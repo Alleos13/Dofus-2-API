@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.chat
          //Décompilation abandonné
       }
       
-      public static function create(msgId:uint, livingObjectUID:uint) : LivingObjectMessageRequestAction
+      public static function create(param1:uint, param2:uint) : LivingObjectMessageRequestAction
       {
          //Décompilation abandonné
       }

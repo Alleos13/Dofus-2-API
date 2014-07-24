@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.utils.display.spellZone
       //Décompilation abandonné
       }
       
-      public function ZoneEffect(zsize:uint, zshape:uint)
+      public function ZoneEffect(param1:uint, param2:uint)
       {
          //Décompilation abandonné
       }
@@ -21,7 +21,7 @@ package com.ankamagames.jerakine.utils.display.spellZone
          //Décompilation abandonné
       }
       
-      public function set zoneSize(pZoneSize:uint) : void
+      public function set zoneSize(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -31,7 +31,7 @@ package com.ankamagames.jerakine.utils.display.spellZone
          //Décompilation abandonné
       }
       
-      public function set zoneShape(pZoneShape:uint) : void
+      public function set zoneShape(param1:uint) : void
       {
          //Décompilation abandonné
       }

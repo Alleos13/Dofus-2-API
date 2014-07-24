@@ -90,12 +90,12 @@ package com.ankamagames.berilia.components
       
       public static var LINE_HEIGHT:int = 20;
       
-      public static function supprSpace(val:String) : String
+      public static function supprSpace(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function isValidSmiley(sTxt:String, indexOfSmiley:int, triggerTxt:String) : Boolean
+      public static function isValidSmiley(param1:String, param2:int, param3:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -139,7 +139,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function initSmileyTab(uri:String, data:Object) : void
+      public function initSmileyTab(param1:String, param2:Object) : void
       {
          //Décompilation abandonné
       }
@@ -154,7 +154,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function removeLines(value:int) : void
+      public function removeLines(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -164,22 +164,22 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set smiliesActivated(value:Boolean) : void
+      public function set smiliesActivated(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set width(val:Number) : void
+      override public function set width(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set height(val:Number) : void
+      override public function set height(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function set scrollPos(nValue:int) : void
+      public function set scrollPos(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -189,7 +189,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set scrollBottomMargin(value:int) : void
+      public function set scrollBottomMargin(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -199,27 +199,27 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set scrollTopMargin(value:int) : void
+      public function set scrollTopMargin(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function appendText(sTxt:String, style:String = null, addToChat:Boolean = true) : ParagraphElement
+      public function appendText(param1:String, param2:String = null, param3:Boolean = true) : ParagraphElement
       {
          //Décompilation abandonné
       }
       
-      public function set css(sFile:Uri) : void
+      public function set css(param1:Uri) : void
       {
          //Décompilation abandonné
       }
       
-      public function applyCSS(sFile:Uri) : void
+      public function applyCSS(param1:Uri) : void
       {
          //Décompilation abandonné
       }
       
-      public function set cssClass(c:String) : void
+      public function set cssClass(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -229,22 +229,22 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function setCssColor(color:String, style:String = null) : void
+      public function setCssColor(param1:String, param2:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function setCssSize(size:uint, lineHeight:uint, style:String = null) : void
+      public function setCssSize(param1:uint, param2:uint, param3:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function changeCssClassSize(size:uint, lineHeight:uint, style:String = null) : void
+      private function changeCssClassSize(param1:uint, param2:uint, param3:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function changeCssClassColor(color:String, style:String = null) : void
+      private function changeCssClassColor(param1:String, param2:String = null) : void
       {
          //Décompilation abandonné
       }
@@ -254,7 +254,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set scrollV(val:int) : void
+      public function set scrollV(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -269,12 +269,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function getParagraphHeight(p:ParagraphElement) : Number
+      private function getParagraphHeight(param1:ParagraphElement) : Number
       {
          //Décompilation abandonné
       }
       
-      public function set scrollCss(sUrl:Uri) : void
+      public function set scrollCss(param1:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -291,51 +291,51 @@ package com.ankamagames.berilia.components
       
       private var _isDamaged:Boolean = false;
       
-      private function onEnterFrame(pEvt:Event) : void
+      private function onEnterFrame(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onRollOutChat(pEvt:MouseEvent) : void
+      private function onRollOutChat(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
       private var _currentSelection:String = "";
       
-      private function selectionChanged(pEvt:SelectionEvent) : void
+      private function selectionChanged(param1:SelectionEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseOverLink(pEvt:FlowElementMouseEvent) : void
+      private function onMouseOverLink(param1:FlowElementMouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseOutLink(pEvt:FlowElementMouseEvent) : void
+      private function onMouseOutLink(param1:FlowElementMouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTextClick(pEvt:FlowElementMouseEvent) : void
+      private function onTextClick(param1:FlowElementMouseEvent) : void
       {
          //Décompilation abandonné
       }
       
       private var _magicbool:Boolean = true;
       
-      private function onScroll(pEvt:Event) : void
+      private function onScroll(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function scrollTextFlow(pEvt:Event) : void
+      private function scrollTextFlow(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateScrollBar(reset:Boolean = false) : void
+      private function updateScrollBar(param1:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -350,7 +350,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set finalized(b:Boolean) : void
+      public function set finalized(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -360,49 +360,49 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function createParagraphe(text:String) : ParagraphElement
+      private function createParagraphe(param1:String) : ParagraphElement
       {
          //Décompilation abandonné
       }
       
-      private function onDamage(pEvt:DamageEvent) : void
+      private function onDamage(param1:DamageEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function createLinkElement(p:ParagraphElement, oText:Object) : void
+      private function createLinkElement(param1:ParagraphElement, param2:Object) : void
       {
          //Décompilation abandonné
       }
       
-      private function getAttributeValue(inText:String) : String
+      private function getAttributeValue(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      private function createSpan(p:ParagraphElement, sText:String, handleHtmlTags:Boolean, pStyle:String = "") : void
+      private function createSpan(param1:ParagraphElement, param2:String, param3:Boolean, param4:String = "") : void
       {
          //Décompilation abandonné
       }
       
-      private function createSpanElement(pText:String, pStyle:String) : SpanElement
+      private function createSpanElement(param1:String, param2:String) : SpanElement
       {
          //Décompilation abandonné
       }
       
-      private function createSpanElementsFromHtmlTags(p:ParagraphElement, pText:String, pStyle:String) : void
+      private function createSpanElementsFromHtmlTags(param1:ParagraphElement, param2:String, param3:String) : void
       {
          //Décompilation abandonné
       }
       
       private var _bmpdtList:Dictionary;
       
-      private function createImage(pUri:*, pTrigger:String) : InlineGraphicElement
+      private function createImage(param1:*, param2:String) : InlineGraphicElement
       {
          //Décompilation abandonné
       }
       
-      private function getFile(uri:String) : ByteArray
+      private function getFile(param1:String) : ByteArray
       {
          //Décompilation abandonné
       }
@@ -412,12 +412,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function insertParagraphes(data:Array) : void
+      public function insertParagraphes(param1:Array) : void
       {
          //Décompilation abandonné
       }
       
-      private function getSmileyFromText(sTxt:String) : Smiley
+      private function getSmileyFromText(param1:String) : Smiley
       {
          //Décompilation abandonné
       }
@@ -430,7 +430,7 @@ class Smiley extends Object
    //Décompilation abandonné
    }
    
-   function Smiley(pId:String)
+   function Smiley(param1:String)
    {
       //Décompilation abandonné
    }

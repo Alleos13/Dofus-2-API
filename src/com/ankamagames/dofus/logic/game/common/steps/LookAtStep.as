@@ -11,7 +11,7 @@ package com.ankamagames.dofus.logic.game.common.steps
       //Décompilation abandonné
       }
       
-      public function LookAtStep(pEntity:AnimatedCharacter, pArgs:Array)
+      public function LookAtStep(param1:AnimatedCharacter, param2:Array)
       {
          //Décompilation abandonné
       }

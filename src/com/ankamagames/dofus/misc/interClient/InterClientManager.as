@@ -53,7 +53,7 @@ package com.ankamagames.dofus.misc.interClient
          //Décompilation abandonné
       }
       
-      public function set flashKey(key:String) : void
+      public function set flashKey(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -93,7 +93,7 @@ package com.ankamagames.dofus.misc.interClient
          //Décompilation abandonné
       }
       
-      private function checksum(s:String) : String
+      private function checksum(param1:String) : String
       {
          //Décompilation abandonné
       }

@@ -97,17 +97,17 @@ package com.ankamagames.berilia.components
       
       private var _bFinalized:Boolean = false;
       
-      override public function set width(nW:Number) : void
+      override public function set width(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set height(nH:Number) : void
+      override public function set height(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function set sliderTexture(uri:Uri) : void
+      public function set sliderTexture(param1:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -117,7 +117,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set gradientTexture(uri:Uri) : void
+      public function set gradientTexture(param1:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -132,7 +132,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set color(nValue:uint) : void
+      public function set color(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -142,7 +142,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set finalized(b:Boolean) : void
+      public function set finalized(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -182,27 +182,27 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function process(msg:Message) : Boolean
+      override public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onMoveGradientCursor(e:Event) : void
+      private function onMoveGradientCursor(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMoveSliderCursor(e:Event) : void
+      private function onMoveSliderCursor(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTextureSliderLoaded(e:Event) : void
+      private function onTextureSliderLoaded(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTextureGradientLoaded(e:Event) : void
+      private function onTextureGradientLoaded(param1:Event) : void
       {
          //Décompilation abandonné
       }

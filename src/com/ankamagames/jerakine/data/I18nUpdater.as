@@ -33,12 +33,12 @@ package com.ankamagames.jerakine.data
       
       private var _overrideProvider:Uri;
       
-      public function initI18n(language:String, metaFileListe:Uri, clearAll:Boolean = false, overrideProvider:Uri = null) : void
+      public function initI18n(param1:String, param2:Uri, param3:Boolean = false, param4:Uri = null) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function checkFileVersion(sFileName:String, sVersion:String) : Boolean
+      override protected function checkFileVersion(param1:String, param2:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -48,7 +48,7 @@ package com.ankamagames.jerakine.data
          //Décompilation abandonné
       }
       
-      override protected function onLoaded(e:ResourceLoadedEvent) : void
+      override protected function onLoaded(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }

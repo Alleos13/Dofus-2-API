@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.quest
          //Décompilation abandonné
       }
       
-      public function initQuestObjectiveInformationsWithCompletion(objectiveId:uint = 0, objectiveStatus:Boolean = false, dialogParams:Vector.<String> = null, curCompletion:uint = 0, maxCompletion:uint = 0) : QuestObjectiveInformationsWithCompletion
+      public function initQuestObjectiveInformationsWithCompletion(param1:uint = 0, param2:Boolean = false, param3:Vector.<String> = null, param4:uint = 0, param5:uint = 0) : QuestObjectiveInformationsWithCompletion
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.quest
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_QuestObjectiveInformationsWithCompletion(output:IDataOutput) : void
+      public function serializeAs_QuestObjectiveInformationsWithCompletion(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_QuestObjectiveInformationsWithCompletion(input:IDataInput) : void
+      public function deserializeAs_QuestObjectiveInformationsWithCompletion(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
          //Décompilation abandonné
       }
       
-      public static function create(objectUID:uint, position:uint, quantity:uint = 1) : ObjectSetPositionAction
+      public static function create(param1:uint, param2:uint, param3:uint = 1) : ObjectSetPositionAction
       {
          //Décompilation abandonné
       }

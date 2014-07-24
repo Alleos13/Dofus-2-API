@@ -31,12 +31,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set maxChars(nValue:uint) : void
+      public function set maxChars(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function set restrictChars(sValue:String) : void
+      public function set restrictChars(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -46,7 +46,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set cssClass(c:String) : void
+      public function set cssClass(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -61,7 +61,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set css(sFile:Uri) : void
+      public function set css(param1:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -71,7 +71,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function set dataProvider(data:*) : void
+      override public function set dataProvider(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -81,22 +81,22 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function process(msg:Message) : Boolean
+      override public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      override protected function showList(show:Boolean) : void
+      override protected function showList(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function searchStringInCB(searchPhrase:String, startIndex:int = 0) : void
+      override protected function searchStringInCB(param1:String, param2:int = 0) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function cleanString(spaced:String) : String
+      override protected function cleanString(param1:String) : String
       {
          //Décompilation abandonné
       }

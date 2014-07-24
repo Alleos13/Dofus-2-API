@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.guild
          //Décompilation abandonné
       }
       
-      public function initGuildGetInformationsMessage(infoType:uint = 0) : GuildGetInformationsMessage
+      public function initGuildGetInformationsMessage(param1:uint = 0) : GuildGetInformationsMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.guild
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GuildGetInformationsMessage(output:IDataOutput) : void
+      public function serializeAs_GuildGetInformationsMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildGetInformationsMessage(input:IDataInput) : void
+      public function deserializeAs_GuildGetInformationsMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

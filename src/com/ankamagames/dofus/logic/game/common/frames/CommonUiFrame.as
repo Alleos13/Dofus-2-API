@@ -90,7 +90,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -105,22 +105,22 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      private function onAnimEnd(pTimerEvent:TimerEvent) : void
+      private function onAnimEnd(param1:TimerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function displayNumericalValue(pEntity:IEntity, pMsg:DisplayNumericalValueMessage, pColor:uint, pScrollSpeed:Number = 1, pScrollDuration:uint = 2500) : void
+      private function displayNumericalValue(param1:IEntity, param2:DisplayNumericalValueMessage, param3:uint, param4:Number = 1, param5:uint = 2500) : void
       {
          //Décompilation abandonné
       }
       
-      private function displayValue(pEntity:IEntity, pValue:String, pColor:uint, pScrollSpeed:Number, pScrollDuration:uint) : void
+      private function displayValue(param1:IEntity, param2:String, param3:uint, param4:Number, param5:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function systemMessageDisplay(msg:SystemMessageDisplayMessage) : void
+      private function systemMessageDisplay(param1:SystemMessageDisplayMessage) : void
       {
          //Décompilation abandonné
       }

@@ -18,7 +18,7 @@ package com.ankamagames.dofus.logic.game.common.steps
       //Décompilation abandonné
       }
       
-      public function CameraZoomStep(pCamera:Camera, pArgs:Array, pInstant:Boolean)
+      public function CameraZoomStep(param1:Camera, param2:Array, param3:Boolean)
       {
          //Décompilation abandonné
       }
@@ -38,7 +38,7 @@ package com.ankamagames.dofus.logic.game.common.steps
          //Décompilation abandonné
       }
       
-      private function updateZoom(pZoomObj:Object) : void
+      private function updateZoom(param1:Object) : void
       {
          //Décompilation abandonné
       }

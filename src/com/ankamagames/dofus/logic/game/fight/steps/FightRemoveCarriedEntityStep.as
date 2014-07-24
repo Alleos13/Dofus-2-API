@@ -10,7 +10,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightRemoveCarriedEntityStep(fighterId:int, carriedId:int, category:uint, slot:uint)
+      public function FightRemoveCarriedEntityStep(param1:int, param2:int, param3:uint, param4:uint)
       {
          //Décompilation abandonné
       }

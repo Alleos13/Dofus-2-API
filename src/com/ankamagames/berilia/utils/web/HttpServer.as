@@ -44,12 +44,12 @@ package com.ankamagames.berilia.utils.web
          //Décompilation abandonné
       }
       
-      public function init(rootPath:File) : Boolean
+      public function init(param1:File) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getUrlTo(target:String) : String
+      public function getUrlTo(param1:String) : String
       {
          //Décompilation abandonné
       }
@@ -59,12 +59,12 @@ package com.ankamagames.berilia.utils.web
          //Décompilation abandonné
       }
       
-      private function onConnect(event:Event) : void
+      private function onConnect(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onHttpSocketComplete(e:Event) : void
+      private function onHttpSocketComplete(param1:Event) : void
       {
          //Décompilation abandonné
       }

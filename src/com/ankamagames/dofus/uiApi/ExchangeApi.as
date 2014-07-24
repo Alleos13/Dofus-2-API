@@ -23,7 +23,7 @@ package com.ankamagames.dofus.uiApi
       
       private var _module:UiModule;
       
-      public function set module(value:UiModule) : void
+      public function set module(param1:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -33,7 +33,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getExchangeError(typeError:int) : String
+      public function getExchangeError(param1:int) : String
       {
          //Décompilation abandonné
       }

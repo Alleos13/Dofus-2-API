@@ -30,12 +30,12 @@ package com.ankamagames.jerakine.logger.targets
       
       public var consoleId:String = "defaultConsole";
       
-      override public function logEvent(event:LogEvent) : void
+      override public function logEvent(param1:LogEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function configure(config:XML) : void
+      public function configure(param1:XML) : void
       {
          //Décompilation abandonné
       }

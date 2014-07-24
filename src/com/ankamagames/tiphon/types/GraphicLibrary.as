@@ -15,7 +15,7 @@ package com.ankamagames.tiphon.types
       //Décompilation abandonné
       }
       
-      public function GraphicLibrary(pGfxId:uint, isBone:Boolean = false)
+      public function GraphicLibrary(param1:uint, param2:Boolean = false)
       {
          //Décompilation abandonné
       }
@@ -30,32 +30,32 @@ package com.ankamagames.tiphon.types
       
       private var _waitingSwl:Dictionary;
       
-      public function addSwl(swl:Swl, url:String) : void
+      public function addSwl(param1:Swl, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateSwfState(uri:Uri) : void
+      public function updateSwfState(param1:Uri) : void
       {
          //Décompilation abandonné
       }
       
-      public function hasClass(className:String) : Boolean
+      public function hasClass(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function hasClassAvaible(className:String = null) : Boolean
+      public function hasClassAvaible(param1:String = null) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function hasSwl(uri:Uri = null) : Boolean
+      public function hasSwl(param1:Uri = null) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getSwl(className:String = null, waitForIt:Boolean = false) : Swl
+      public function getSwl(param1:String = null, param2:Boolean = false) : Swl
       {
          //Décompilation abandonné
       }

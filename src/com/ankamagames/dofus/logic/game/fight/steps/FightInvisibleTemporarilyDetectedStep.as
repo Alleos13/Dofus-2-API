@@ -18,7 +18,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightInvisibleTemporarilyDetectedStep(target:AnimatedCharacter, cellId:int)
+      public function FightInvisibleTemporarilyDetectedStep(param1:AnimatedCharacter, param2:int)
       {
          //Décompilation abandonné
       }
@@ -44,7 +44,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
          //Décompilation abandonné
       }
       
-      private function onFade(e:Event) : void
+      private function onFade(param1:Event) : void
       {
          //Décompilation abandonné
       }

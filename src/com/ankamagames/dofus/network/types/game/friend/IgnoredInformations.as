@@ -23,7 +23,7 @@ package com.ankamagames.dofus.network.types.game.friend
          //Décompilation abandonné
       }
       
-      public function initIgnoredInformations(accountId:uint = 0, accountName:String = "") : IgnoredInformations
+      public function initIgnoredInformations(param1:uint = 0, param2:String = "") : IgnoredInformations
       {
          //Décompilation abandonné
       }
@@ -33,22 +33,22 @@ package com.ankamagames.dofus.network.types.game.friend
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_IgnoredInformations(output:IDataOutput) : void
+      public function serializeAs_IgnoredInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_IgnoredInformations(input:IDataInput) : void
+      public function deserializeAs_IgnoredInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

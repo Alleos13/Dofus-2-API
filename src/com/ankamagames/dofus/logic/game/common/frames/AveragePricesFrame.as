@@ -66,12 +66,12 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(pMsg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function updatePricesData(pItemsIds:Vector.<uint>, pItemsAvgPrices:Vector.<uint>) : void
+      private function updatePricesData(param1:Vector.<uint>, param2:Vector.<uint>) : void
       {
          //Décompilation abandonné
       }

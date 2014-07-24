@@ -26,7 +26,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initMonsterInGroupInformations(creatureGenericId:int = 0, grade:uint = 0, look:EntityLook = null) : MonsterInGroupInformations
+      public function initMonsterInGroupInformations(param1:int = 0, param2:uint = 0, param3:EntityLook = null) : MonsterInGroupInformations
       {
          //Décompilation abandonné
       }
@@ -36,22 +36,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_MonsterInGroupInformations(output:IDataOutput) : void
+      public function serializeAs_MonsterInGroupInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_MonsterInGroupInformations(input:IDataInput) : void
+      public function deserializeAs_MonsterInGroupInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

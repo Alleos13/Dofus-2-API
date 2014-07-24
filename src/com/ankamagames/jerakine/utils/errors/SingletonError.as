@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.utils.errors
       //Décompilation abandonné
       }
       
-      public function SingletonError(message:String = "", id:uint = 0)
+      public function SingletonError(param1:String = "", param2:uint = 0)
       {
          //Décompilation abandonné
       }

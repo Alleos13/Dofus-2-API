@@ -14,7 +14,7 @@ package com.ankamagames.atouin.types
       //Décompilation abandonné
       }
       
-      public function Frustum(marginRight:uint = 0, marginTop:uint = 0, marginLeft:uint = 0, marginBottom:uint = 0)
+      public function Frustum(param1:uint = 0, param2:uint = 0, param3:uint = 0, param4:uint = 0)
       {
          //Décompilation abandonné
       }

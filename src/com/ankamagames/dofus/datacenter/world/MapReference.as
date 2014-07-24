@@ -17,7 +17,7 @@ package com.ankamagames.dofus.datacenter.world
       
       public static const MODULE:String = "MapReferences";
       
-      public static function getMapReferenceById(id:int) : MapReference
+      public static function getMapReferenceById(param1:int) : MapReference
       {
          //Décompilation abandonné
       }

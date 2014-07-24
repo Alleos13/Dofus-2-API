@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.messages.game.character.replay
          //Décompilation abandonné
       }
       
-      public function initCharacterReplayWithRenameRequestMessage(characterId:uint = 0, name:String = "") : CharacterReplayWithRenameRequestMessage
+      public function initCharacterReplayWithRenameRequestMessage(param1:uint = 0, param2:String = "") : CharacterReplayWithRenameRequestMessage
       {
          //Décompilation abandonné
       }
@@ -43,32 +43,32 @@ package com.ankamagames.dofus.network.messages.game.character.replay
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterReplayWithRenameRequestMessage(output:IDataOutput) : void
+      public function serializeAs_CharacterReplayWithRenameRequestMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterReplayWithRenameRequestMessage(input:IDataInput) : void
+      public function deserializeAs_CharacterReplayWithRenameRequestMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

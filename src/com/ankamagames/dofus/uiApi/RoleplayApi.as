@@ -61,7 +61,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function set module(value:UiModule) : void
+      public function set module(param1:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -96,7 +96,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getEntitiesOnCell(cellId:int) : Array
+      public function getEntitiesOnCell(param1:int) : Array
       {
          //Décompilation abandonné
       }
@@ -106,7 +106,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getPlayerIsInCurrentMap(playerId:int) : Boolean
+      public function getPlayerIsInCurrentMap(param1:int) : Boolean
       {
          //Décompilation abandonné
       }
@@ -116,32 +116,32 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getFight(id:int) : Object
+      public function getFight(param1:int) : Object
       {
          //Décompilation abandonné
       }
       
-      public function putEntityOnTop(entity:AnimatedCharacter) : void
+      public function putEntityOnTop(param1:AnimatedCharacter) : void
       {
          //Décompilation abandonné
       }
       
-      public function getEntityInfos(entity:Object) : Object
+      public function getEntityInfos(param1:Object) : Object
       {
          //Décompilation abandonné
       }
       
-      public function getEntityByName(name:String) : Object
+      public function getEntityByName(param1:String) : Object
       {
          //Décompilation abandonné
       }
       
-      public function switchButtonWrappers(btnWrapper1:Object, btnWrapper2:Object) : void
+      public function switchButtonWrappers(param1:Object, param2:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function setButtonWrapperActivation(btnWrapper:Object, active:Boolean) : void
+      public function setButtonWrapperActivation(param1:Object, param2:Boolean) : void
       {
          //Décompilation abandonné
       }

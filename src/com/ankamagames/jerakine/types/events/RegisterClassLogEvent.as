@@ -10,7 +10,7 @@ package com.ankamagames.jerakine.types.events
       //Décompilation abandonné
       }
       
-      public function RegisterClassLogEvent(className:String)
+      public function RegisterClassLogEvent(param1:String)
       {
          //Décompilation abandonné
       }

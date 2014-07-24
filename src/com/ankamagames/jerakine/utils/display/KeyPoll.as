@@ -26,32 +26,32 @@ package com.ankamagames.jerakine.utils.display
       
       private var states:ByteArray;
       
-      private function keyDownListener(ev:KeyboardEvent) : void
+      private function keyDownListener(param1:KeyboardEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function keyUpListener(ev:KeyboardEvent) : void
+      private function keyUpListener(param1:KeyboardEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function activateListener(ev:Event) : void
+      private function activateListener(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function deactivateListener(ev:Event) : void
+      private function deactivateListener(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function isDown(keyCode:uint) : Boolean
+      public function isDown(param1:uint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function isUp(keyCode:uint) : Boolean
+      public function isUp(param1:uint) : Boolean
       {
          //Décompilation abandonné
       }

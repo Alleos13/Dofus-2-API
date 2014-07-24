@@ -51,7 +51,7 @@ package com.ankamagames.dofus.network.messages.game.guild
          //Décompilation abandonné
       }
       
-      public function initGuildInformationsGeneralMessage(enabled:Boolean = false, abandonnedPaddock:Boolean = false, level:uint = 0, expLevelFloor:Number = 0, experience:Number = 0, expNextLevelFloor:Number = 0, creationDate:uint = 0, nbTotalMembers:uint = 0, nbConnectedMembers:uint = 0) : GuildInformationsGeneralMessage
+      public function initGuildInformationsGeneralMessage(param1:Boolean = false, param2:Boolean = false, param3:uint = 0, param4:Number = 0, param5:Number = 0, param6:Number = 0, param7:uint = 0, param8:uint = 0, param9:uint = 0) : GuildInformationsGeneralMessage
       {
          //Décompilation abandonné
       }
@@ -61,32 +61,32 @@ package com.ankamagames.dofus.network.messages.game.guild
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GuildInformationsGeneralMessage(output:IDataOutput) : void
+      public function serializeAs_GuildInformationsGeneralMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildInformationsGeneralMessage(input:IDataInput) : void
+      public function deserializeAs_GuildInformationsGeneralMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

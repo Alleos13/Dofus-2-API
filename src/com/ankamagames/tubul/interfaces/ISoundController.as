@@ -13,18 +13,18 @@ package com.ankamagames.tubul.interfaces
       
       function get volume() : Number;
       
-      function set volume(pVolume:Number) : void;
+      function set volume(param1:Number) : void;
       
       function get currentFadeVolume() : Number;
       
-      function set currentFadeVolume(pFadeVolume:Number) : void;
+      function set currentFadeVolume(param1:Number) : void;
       
       function get effectiveVolume() : Number;
       
-      function addEffect(pEffect:IEffect) : void;
+      function addEffect(param1:IEffect) : void;
       
-      function removeEffect(pEffect:IEffect) : void;
+      function removeEffect(param1:IEffect) : void;
       
-      function applyDynamicMix(pFadeIn:VolumeFadeEffect, pWaitingTime:uint, pFadeOut:VolumeFadeEffect) : void;
+      function applyDynamicMix(param1:VolumeFadeEffect, param2:uint, param3:VolumeFadeEffect) : void;
    }
 }

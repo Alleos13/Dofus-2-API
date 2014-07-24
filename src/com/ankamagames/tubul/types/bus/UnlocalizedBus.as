@@ -7,7 +7,7 @@ package com.ankamagames.tubul.types.bus
       //Décompilation abandonné
       }
       
-      public function UnlocalizedBus(id:int, name:String)
+      public function UnlocalizedBus(param1:int, param2:String)
       {
          //Décompilation abandonné
       }

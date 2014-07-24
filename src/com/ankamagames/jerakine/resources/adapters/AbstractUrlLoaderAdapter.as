@@ -43,12 +43,12 @@ package com.ankamagames.jerakine.resources.adapters
       
       private var _dispatchProgress:Boolean;
       
-      public function loadDirectly(uri:Uri, path:String, observer:IResourceObserver, dispatchProgress:Boolean) : void
+      public function loadDirectly(param1:Uri, param2:String, param3:IResourceObserver, param4:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function loadFromData(uri:Uri, data:ByteArray, observer:IResourceObserver, dispatchProgress:Boolean) : void
+      public function loadFromData(param1:Uri, param2:ByteArray, param3:IResourceObserver, param4:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -58,17 +58,17 @@ package com.ankamagames.jerakine.resources.adapters
          //Décompilation abandonné
       }
       
-      protected function process(dataFormat:String, data:*) : void
+      protected function process(param1:String, param2:*) : void
       {
          //Décompilation abandonné
       }
       
-      protected function dispatchSuccess(dataFormat:String, data:*) : void
+      protected function dispatchSuccess(param1:String, param2:*) : void
       {
          //Décompilation abandonné
       }
       
-      protected function dispatchFailure(errorMsg:String, errorCode:uint) : void
+      protected function dispatchFailure(param1:String, param2:uint) : void
       {
          //Décompilation abandonné
       }
@@ -83,7 +83,7 @@ package com.ankamagames.jerakine.resources.adapters
          //Décompilation abandonné
       }
       
-      protected function getResource(dataFormat:String, data:*) : *
+      protected function getResource(param1:String, param2:*) : *
       {
          //Décompilation abandonné
       }
@@ -103,17 +103,17 @@ package com.ankamagames.jerakine.resources.adapters
          //Décompilation abandonné
       }
       
-      protected function onComplete(e:Event) : void
+      protected function onComplete(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      protected function onError(ee:ErrorEvent) : void
+      protected function onError(param1:ErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function onProgress(pe:ProgressEvent) : void
+      protected function onProgress(param1:ProgressEvent) : void
       {
          //Décompilation abandonné
       }

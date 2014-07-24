@@ -11,7 +11,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightTemporaryBoostStep(fighterId:int, statName:String, duration:int, durationText:String)
+      public function FightTemporaryBoostStep(param1:int, param2:String, param3:int, param4:String)
       {
          //Décompilation abandonné
       }

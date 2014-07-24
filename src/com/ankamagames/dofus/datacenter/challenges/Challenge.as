@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.challenges
       
       protected static const _log:Logger;
       
-      public static function getChallengeById(id:int) : Challenge
+      public static function getChallengeById(param1:int) : Challenge
       {
          //Décompilation abandonné
       }

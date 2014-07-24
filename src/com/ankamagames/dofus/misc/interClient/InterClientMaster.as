@@ -45,32 +45,32 @@ package com.ankamagames.dofus.misc.interClient
          //Décompilation abandonné
       }
       
-      public function clientGainFocus(baseInfo:String) : void
+      public function clientGainFocus(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function onError(e:AsyncErrorEvent) : void
+      private function onError(param1:AsyncErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onStatusEvent(e:StatusEvent) : void
+      private function onStatusEvent(param1:StatusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateFocusMessage(focusList:String) : void
+      public function updateFocusMessage(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function getUid(connId:String) : void
+      private function getUid(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function ping(connId:String) : void
+      private function ping(param1:String) : void
       {
          //Décompilation abandonné
       }

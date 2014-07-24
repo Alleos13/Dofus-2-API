@@ -20,7 +20,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override tlf_internal function formatChanged(notifyModelChanged:Boolean = true) : void
+      override tlf_internal function formatChanged(param1:Boolean = true) : void
       {
          //Décompilation abandonné
       }
@@ -30,7 +30,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override tlf_internal function normalizeRange(normalizeStart:uint, normalizeEnd:uint) : void
+      override tlf_internal function normalizeRange(param1:uint, param2:uint) : void
       {
          //Décompilation abandonné
       }

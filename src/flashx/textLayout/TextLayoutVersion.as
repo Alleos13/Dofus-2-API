@@ -26,7 +26,7 @@ package flashx.textLayout
       
       public static const AUDIT_ID:String = "<AdobeIP 0000486>";
       
-      tlf_internal  static function getVersionString(version:uint) : String
+      tlf_internal  static function getVersionString(param1:uint) : String
       {
          //Décompilation abandonné
       }

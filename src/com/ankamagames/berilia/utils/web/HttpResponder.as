@@ -17,7 +17,7 @@ package com.ankamagames.berilia.utils.web
       //Décompilation abandonné
       }
       
-      public function HttpResponder(socket:Socket, httpVerb:String, relativeFilePath:String, serverRoot:String)
+      public function HttpResponder(param1:Socket, param2:String, param3:String, param4:String)
       {
          //Décompilation abandonné
       }
@@ -50,27 +50,27 @@ package com.ankamagames.berilia.utils.web
       
       private const HEADER_END_SEPERATOR:String = "\n\n";
       
-      private function onFileIoError(e:Event) : void
+      private function onFileIoError(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onFileReadDone(e:Event) : void
+      private function onFileReadDone(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function getRelativePath(f:File) : String
+      private function getRelativePath(param1:File) : String
       {
          //Décompilation abandonné
       }
       
-      private function getImg(f:File) : String
+      private function getImg(param1:File) : String
       {
          //Décompilation abandonné
       }
       
-      private function onDirectoryList(e:FileListEvent) : void
+      private function onDirectoryList(param1:FileListEvent) : void
       {
          //Décompilation abandonné
       }
@@ -100,12 +100,12 @@ package com.ankamagames.berilia.utils.web
          //Décompilation abandonné
       }
       
-      private function getMimeHeader(file:File) : String
+      private function getMimeHeader(param1:File) : String
       {
          //Décompilation abandonné
       }
       
-      private function toRFC802(date:Date) : String
+      private function toRFC802(param1:Date) : String
       {
          //Décompilation abandonné
       }

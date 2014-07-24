@@ -28,12 +28,12 @@ package com.ankamagames.jerakine.resources.protocols.impl
       
       private static var _indexes:Dictionary;
       
-      public function getFilesIndex(uri:Uri) : Dictionary
+      public function getFilesIndex(param1:Uri) : Dictionary
       {
          //Décompilation abandonné
       }
       
-      public function load(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, cache:ICache, forcedAdapter:Class, uniqueFile:Boolean) : void
+      public function load(param1:Uri, param2:IResourceObserver, param3:Boolean, param4:ICache, param5:Class, param6:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -48,7 +48,7 @@ package com.ankamagames.jerakine.resources.protocols.impl
          //Décompilation abandonné
       }
       
-      private function initStream(uri:Uri) : FileStream
+      private function initStream(param1:Uri) : FileStream
       {
          //Décompilation abandonné
       }

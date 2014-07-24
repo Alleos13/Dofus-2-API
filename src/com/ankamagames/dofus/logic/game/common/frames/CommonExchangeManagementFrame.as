@@ -38,7 +38,7 @@ package com.ankamagames.dofus.logic.game.common.frames
       //Décompilation abandonné
       }
       
-      public function CommonExchangeManagementFrame(pExchangeType:uint)
+      public function CommonExchangeManagementFrame(param1:uint)
       {
          //Décompilation abandonné
       }
@@ -74,7 +74,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }

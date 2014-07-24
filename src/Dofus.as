@@ -14,8 +14,6 @@ package
    import flash.xml.XMLDocument;
    import flash.xml.XMLNode;
    import com.ankamagames.dofus.network.types.updater.ContentPart;
-   import com.ankamagames.jerakine.utils.system.SystemManager;
-   import com.ankamagames.jerakine.enum.OperatingSystem;
    import com.ankamagames.jerakine.utils.system.CommandLineArguments;
    import com.ankamagames.dofus.logic.game.approach.managers.PartManager;
    import flash.filesystem.FileMode;
@@ -138,12 +136,12 @@ package
       
       public var REG_LOCAL_CONNECTION_ID:uint = 0;
       
-      private function onCall(e:InvokeEvent) : void
+      private function onCall(param1:InvokeEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onResize(e:NativeWindowBoundsEvent) : void
+      private function onResize(param1:NativeWindowBoundsEvent) : void
       {
          //Décompilation abandonné
       }
@@ -173,27 +171,27 @@ package
          //Décompilation abandonné
       }
       
-      public function setDisplayOptions(opt:DofusOptions) : void
+      public function setDisplayOptions(param1:DofusOptions) : void
       {
          //Décompilation abandonné
       }
       
-      public function init(rootClip:DisplayObject, instanceId:uint = 0, forcedLang:String = null, args:Array = null) : void
+      public function init(param1:DisplayObject, param2:uint = 0, param3:String = null, param4:Array = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function onExiting(pEvt:Event) : void
+      private function onExiting(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function quit(returnCode:int = 0) : void
+      public function quit(param1:int = 0) : void
       {
          //Décompilation abandonné
       }
       
-      private function quitHandler(pEvt:Event = null) : void
+      private function quitHandler(param1:Event = null) : void
       {
          //Décompilation abandonné
       }
@@ -203,7 +201,7 @@ package
          //Décompilation abandonné
       }
       
-      public function clearCache(selective:Boolean = false, reboot:Boolean = false) : void
+      public function clearCache(param1:Boolean = false, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -213,12 +211,12 @@ package
          //Décompilation abandonné
       }
       
-      public function renameApp(name:String) : void
+      public function renameApp(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function initKernel(stage:Stage, rootClip:DisplayObject) : void
+      private function initKernel(param1:Stage, param2:DisplayObject) : void
       {
          //Décompilation abandonné
       }
@@ -243,17 +241,17 @@ package
          //Décompilation abandonné
       }
       
-      private function onClosed(e:Event) : void
+      private function onClosed(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onOptionChange(e:PropertyChangeEvent) : void
+      private function onOptionChange(param1:PropertyChangeEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function onFps(fps:uint) : void
+      public function onFps(param1:uint) : void
       {
          //Décompilation abandonné
       }

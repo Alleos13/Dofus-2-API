@@ -11,7 +11,7 @@ package com.ankamagames.jerakine.managers
       //Décompilation abandonné
       }
       
-      public function FiltersManager(pvt:PrivateClass)
+      public function FiltersManager(param1:PrivateClass)
       {
          //Décompilation abandonné
       }
@@ -25,17 +25,17 @@ package com.ankamagames.jerakine.managers
       
       private var dFilters:Dictionary;
       
-      public function addEffect(pTarget:DisplayObject, pFilter:BitmapFilter) : void
+      public function addEffect(param1:DisplayObject, param2:BitmapFilter) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeEffect(pTarget:DisplayObject, pFilter:BitmapFilter) : void
+      public function removeEffect(param1:DisplayObject, param2:BitmapFilter) : void
       {
          //Décompilation abandonné
       }
       
-      public function indexOf(pFilters:Array, pFilter:BitmapFilter) : int
+      public function indexOf(param1:Array, param2:BitmapFilter) : int
       {
          //Décompilation abandonné
       }

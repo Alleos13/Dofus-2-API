@@ -20,7 +20,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      tlf_internal  static function computeBaseSWFContext(context:ISWFContext) : ISWFContext
+      tlf_internal  static function computeBaseSWFContext(param1:ISWFContext) : ISWFContext
       {
          //Décompilation abandonné
       }
@@ -38,7 +38,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function getLineAt(index:int) : TextFlowLine
+      public function getLineAt(param1:int) : TextFlowLine
       {
          //Décompilation abandonné
       }
@@ -68,32 +68,32 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function updateLengths(startPosition:int, deltaLength:int) : void
+      public function updateLengths(param1:int, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function damage(startPosition:int, damageLength:int, damageType:String) : void
+      public function damage(param1:int, param2:int, param3:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function isDamaged(absolutePosition:int) : Boolean
+      public function isDamaged(param1:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function findLineIndexAtPosition(absolutePosition:int, preferPrevious:Boolean = false) : int
+      public function findLineIndexAtPosition(param1:int, param2:Boolean = false) : int
       {
          //Décompilation abandonné
       }
       
-      public function findLineAtPosition(absolutePosition:int, preferPrevious:Boolean = false) : TextFlowLine
+      public function findLineAtPosition(param1:int, param2:Boolean = false) : TextFlowLine
       {
          //Décompilation abandonné
       }
       
-      public function addLine(newLine:TextFlowLine, workIndex:int) : void
+      public function addLine(param1:TextFlowLine, param2:int) : void
       {
          //Décompilation abandonné
       }
@@ -103,7 +103,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function set swfContext(context:ISWFContext) : void
+      public function set swfContext(param1:ISWFContext) : void
       {
          //Décompilation abandonné
       }

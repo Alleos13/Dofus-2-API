@@ -9,24 +9,24 @@ package com.hurlant.crypto.symmetric
       //Décompilation abandonné
       }
       
-      public function PKCS5(blockSize:uint = 0)
+      public function PKCS5(param1:uint = 0)
       {
          //Décompilation abandonné
       }
       
       private var blockSize:uint;
       
-      public function pad(a:ByteArray) : void
+      public function pad(param1:ByteArray) : void
       {
          //Décompilation abandonné
       }
       
-      public function unpad(a:ByteArray) : void
+      public function unpad(param1:ByteArray) : void
       {
          //Décompilation abandonné
       }
       
-      public function setBlockSize(bs:uint) : void
+      public function setBlockSize(param1:uint) : void
       {
          //Décompilation abandonné
       }

@@ -26,17 +26,17 @@ package com.ankamagames.dofus.logic.common.managers
       
       private static var _questId:uint = 0;
       
-      public static function showQuest(questId:uint) : void
+      public static function showQuest(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public static function addQuest(questId:uint) : String
+      public static function addQuest(param1:uint) : String
       {
          //Décompilation abandonné
       }
       
-      public static function rollOver(pX:int, pY:int, objectGID:uint, questId:uint = 0) : void
+      public static function rollOver(param1:int, param2:int, param3:uint, param4:uint = 0) : void
       {
          //Décompilation abandonné
       }

@@ -11,7 +11,7 @@ package com.ankamagames.berilia.types.graphic
       //Décompilation abandonné
       }
       
-      public function GraphicElement(spSprite:GraphicContainer, aLocations:Array, sName:String)
+      public function GraphicElement(param1:GraphicContainer, param2:Array, param3:String)
       {
          //Décompilation abandonné
       }
@@ -20,7 +20,7 @@ package com.ankamagames.berilia.types.graphic
       
       protected static const _log:Logger;
       
-      public static function getGraphicElement(spSprite:GraphicContainer, aLocations:Array, sName:String = null) : GraphicElement
+      public static function getGraphicElement(param1:GraphicContainer, param2:Array, param3:String = null) : GraphicElement
       {
          //Décompilation abandonné
       }

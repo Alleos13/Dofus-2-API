@@ -18,7 +18,7 @@ package com.ankamagames.tubul.types
       //Décompilation abandonné
       }
       
-      public function VolumeFadeEffect(pBeginningFadeValue:Number = 0, pEndingFadeValue:Number = 1, pFadeTime:Number = 0)
+      public function VolumeFadeEffect(param1:Number = 0, param2:Number = 1, param3:Number = 0)
       {
          //Décompilation abandonné
       }
@@ -62,12 +62,12 @@ package com.ankamagames.tubul.types
          //Décompilation abandonné
       }
       
-      public function attachToSoundSource(pISoundSource:ISoundController) : void
+      public function attachToSoundSource(param1:ISoundController) : void
       {
          //Décompilation abandonné
       }
       
-      public function start(pUseBeginningValue:Boolean = true) : void
+      public function start(param1:Boolean = true) : void
       {
          //Décompilation abandonné
       }
@@ -77,7 +77,7 @@ package com.ankamagames.tubul.types
          //Décompilation abandonné
       }
       
-      public function reset(pBeginningFadeValue:Number, pEndingFadeValue:Number, pFadeTime:Number) : void
+      public function reset(param1:Number, param2:Number, param3:Number) : void
       {
          //Décompilation abandonné
       }

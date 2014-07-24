@@ -10,7 +10,7 @@ package flashx.textLayout.events
       //Décompilation abandonné
       }
       
-      public function SelectionEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, selectionState:SelectionState = null)
+      public function SelectionEvent(param1:String, param2:Boolean = false, param3:Boolean = false, param4:SelectionState = null)
       {
          //Décompilation abandonné
       }
@@ -24,7 +24,7 @@ package flashx.textLayout.events
          //Décompilation abandonné
       }
       
-      public function set selectionState(value:SelectionState) : void
+      public function set selectionState(param1:SelectionState) : void
       {
          //Décompilation abandonné
       }

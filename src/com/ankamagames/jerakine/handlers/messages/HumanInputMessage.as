@@ -20,7 +20,7 @@ package com.ankamagames.jerakine.handlers.messages
          //Décompilation abandonné
       }
       
-      public static function create(target:InteractiveObject, nativeEvent:Event, instance:HumanInputMessage = null) : HumanInputMessage
+      public static function create(param1:InteractiveObject, param2:Event, param3:HumanInputMessage = null) : HumanInputMessage
       {
          //Décompilation abandonné
       }
@@ -52,7 +52,7 @@ package com.ankamagames.jerakine.handlers.messages
          //Décompilation abandonné
       }
       
-      public function set canceled(value:Boolean) : void
+      public function set canceled(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -67,7 +67,7 @@ package com.ankamagames.jerakine.handlers.messages
          //Décompilation abandonné
       }
       
-      public function addAction(action:Action) : void
+      public function addAction(param1:Action) : void
       {
          //Décompilation abandonné
       }

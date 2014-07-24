@@ -17,7 +17,7 @@ package com.ankamagames.dofus.logic.game.common.steps
       //Décompilation abandonné
       }
       
-      public function MoveStep(pEntity:AnimatedCharacter, pArgs:Array, pMovementBehavior:IMovementBehavior = null)
+      public function MoveStep(param1:AnimatedCharacter, param2:Array, param3:IMovementBehavior = null)
       {
          //Décompilation abandonné
       }
@@ -35,7 +35,7 @@ package com.ankamagames.dofus.logic.game.common.steps
          //Décompilation abandonné
       }
       
-      private function onPath(pPath:MovementPath) : void
+      private function onPath(param1:MovementPath) : void
       {
          //Décompilation abandonné
       }

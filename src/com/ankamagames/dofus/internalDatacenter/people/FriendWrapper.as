@@ -13,7 +13,7 @@ package com.ankamagames.dofus.internalDatacenter.people
       //Décompilation abandonné
       }
       
-      public function FriendWrapper(o:FriendInformations)
+      public function FriendWrapper(param1:FriendInformations)
       {
          //Décompilation abandonné
       }

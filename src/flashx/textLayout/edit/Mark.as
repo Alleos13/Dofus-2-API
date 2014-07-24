@@ -7,7 +7,7 @@ package flashx.textLayout.edit
       //Décompilation abandonné
       }
       
-      public function Mark(value:int = 0)
+      public function Mark(param1:int = 0)
       {
          //Décompilation abandonné
       }
@@ -19,7 +19,7 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      public function set position(value:int) : void
+      public function set position(param1:int) : void
       {
          //Décompilation abandonné
       }

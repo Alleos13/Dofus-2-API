@@ -9,7 +9,7 @@ package flashx.textLayout.property
       //Décompilation abandonné
       }
       
-      public function SpacingLimitPropertyHandler(minPercentValue:String, maxPercentValue:String)
+      public function SpacingLimitPropertyHandler(param1:String, param2:String)
       {
          //Décompilation abandonné
       }
@@ -27,22 +27,22 @@ package flashx.textLayout.property
          //Décompilation abandonné
       }
       
-      override public function toXMLString(val:Object) : String
+      override public function toXMLString(param1:Object) : String
       {
          //Décompilation abandonné
       }
       
-      override public function owningHandlerCheck(newVal:*) : *
+      override public function owningHandlerCheck(param1:*) : *
       {
          //Décompilation abandonné
       }
       
-      private function checkValue(value:*) : Boolean
+      private function checkValue(param1:*) : Boolean
       {
          //Décompilation abandonné
       }
       
-      override public function setHelper(newVal:*) : *
+      override public function setHelper(param1:*) : *
       {
          //Décompilation abandonné
       }

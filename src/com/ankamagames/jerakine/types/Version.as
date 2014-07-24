@@ -11,12 +11,12 @@ package com.ankamagames.jerakine.types
       //Décompilation abandonné
       }
       
-      public function Version(... args)
+      public function Version(... rest)
       {
          //Décompilation abandonné
       }
       
-      public static function fromString(version:String) : Version
+      public static function fromString(param1:String) : Version
       {
          //Décompilation abandonné
       }
@@ -38,7 +38,7 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public function set major(value:uint) : void
+      public function set major(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -48,7 +48,7 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public function set minor(value:uint) : void
+      public function set minor(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -58,7 +58,7 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public function set release(value:uint) : void
+      public function set release(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -68,7 +68,7 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public function set revision(value:uint) : void
+      public function set revision(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -78,7 +78,7 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public function set patch(value:uint) : void
+      public function set patch(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -88,7 +88,7 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public function set buildType(value:uint) : void
+      public function set buildType(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -98,17 +98,17 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public function equals(otherVersion:Version) : Boolean
+      public function equals(param1:Version) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function writeExternal(output:IDataOutput) : void
+      public function writeExternal(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function readExternal(input:IDataInput) : void
+      public function readExternal(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

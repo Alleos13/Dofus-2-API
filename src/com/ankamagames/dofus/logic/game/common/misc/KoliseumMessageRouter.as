@@ -16,7 +16,7 @@ package com.ankamagames.dofus.logic.game.common.misc
          //Décompilation abandonné
       }
       
-      public function getConnectionId(msg:INetworkMessage) : String
+      public function getConnectionId(param1:INetworkMessage) : String
       {
          //Décompilation abandonné
       }

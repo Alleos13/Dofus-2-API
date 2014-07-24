@@ -10,7 +10,7 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring.ui
       //Décompilation abandonné
       }
       
-      public function RedrawRegionButton(pX:int, pY:int)
+      public function RedrawRegionButton(param1:int, param2:int)
       {
          //Décompilation abandonné
       }

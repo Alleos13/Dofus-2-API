@@ -40,7 +40,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initMapComplementaryInformationsDataInHouseMessage(subAreaId:uint = 0, mapId:uint = 0, houses:Vector.<HouseInformations> = null, actors:Vector.<GameRolePlayActorInformations> = null, interactiveElements:Vector.<InteractiveElement> = null, statedElements:Vector.<StatedElement> = null, obstacles:Vector.<MapObstacle> = null, fights:Vector.<FightCommonInformations> = null, currentHouse:HouseInformationsInside = null) : MapComplementaryInformationsDataInHouseMessage
+      public function initMapComplementaryInformationsDataInHouseMessage(param1:uint = 0, param2:uint = 0, param3:Vector.<HouseInformations> = null, param4:Vector.<GameRolePlayActorInformations> = null, param5:Vector.<InteractiveElement> = null, param6:Vector.<StatedElement> = null, param7:Vector.<MapObstacle> = null, param8:Vector.<FightCommonInformations> = null, param9:HouseInformationsInside = null) : MapComplementaryInformationsDataInHouseMessage
       {
          //Décompilation abandonné
       }
@@ -50,32 +50,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_MapComplementaryInformationsDataInHouseMessage(output:IDataOutput) : void
+      public function serializeAs_MapComplementaryInformationsDataInHouseMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_MapComplementaryInformationsDataInHouseMessage(input:IDataInput) : void
+      public function deserializeAs_MapComplementaryInformationsDataInHouseMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

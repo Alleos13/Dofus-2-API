@@ -33,12 +33,12 @@ package mx.core
          //Décompilation abandonné
       }
       
-      public function move(x:Number, y:Number) : void
+      public function move(param1:Number, param2:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function setActualSize(newWidth:Number, newHeight:Number) : void
+      public function setActualSize(param1:Number, param2:Number) : void
       {
          //Décompilation abandonné
       }

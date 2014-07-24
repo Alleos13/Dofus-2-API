@@ -13,7 +13,7 @@ package com.ankamagames.atouin.data.map
       //Décompilation abandonné
       }
       
-      public function Layer(map:Map)
+      public function Layer(param1:Map)
       {
          //Décompilation abandonné
       }
@@ -43,7 +43,7 @@ package com.ankamagames.atouin.data.map
          //Décompilation abandonné
       }
       
-      public function fromRaw(raw:IDataInput, mapVersion:int) : void
+      public function fromRaw(param1:IDataInput, param2:int) : void
       {
          //Décompilation abandonné
       }

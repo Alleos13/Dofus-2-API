@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.party
          //Décompilation abandonné
       }
       
-      public static function create(pPlayerId:uint, pPartyId:int) : PartyShowMenuAction
+      public static function create(param1:uint, param2:int) : PartyShowMenuAction
       {
          //Décompilation abandonné
       }

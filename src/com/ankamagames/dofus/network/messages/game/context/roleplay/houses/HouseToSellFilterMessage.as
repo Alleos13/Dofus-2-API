@@ -42,7 +42,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.houses
          //Décompilation abandonné
       }
       
-      public function initHouseToSellFilterMessage(areaId:int = 0, atLeastNbRoom:uint = 0, atLeastNbChest:uint = 0, skillRequested:uint = 0, maxPrice:uint = 0) : HouseToSellFilterMessage
+      public function initHouseToSellFilterMessage(param1:int = 0, param2:uint = 0, param3:uint = 0, param4:uint = 0, param5:uint = 0) : HouseToSellFilterMessage
       {
          //Décompilation abandonné
       }
@@ -52,32 +52,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.houses
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_HouseToSellFilterMessage(output:IDataOutput) : void
+      public function serializeAs_HouseToSellFilterMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_HouseToSellFilterMessage(input:IDataInput) : void
+      public function deserializeAs_HouseToSellFilterMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

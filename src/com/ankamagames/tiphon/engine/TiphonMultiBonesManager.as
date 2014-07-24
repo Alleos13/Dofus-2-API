@@ -33,17 +33,17 @@ package com.ankamagames.tiphon.engine
       
       private var _nbBonesLoaded:int;
       
-      public function getAllBonesFromLook(look:TiphonEntityLook, result:Array = null) : Array
+      public function getAllBonesFromLook(param1:TiphonEntityLook, param2:Array = null) : Array
       {
          //Décompilation abandonné
       }
       
-      public function onLoadedBone(bone:uint, callback:Callback = null) : void
+      public function onLoadedBone(param1:uint, param2:Callback = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function forceBonesLoading(bones:Array, callback:Callback = null) : void
+      public function forceBonesLoading(param1:Array, param2:Callback = null) : void
       {
          //Décompilation abandonné
       }

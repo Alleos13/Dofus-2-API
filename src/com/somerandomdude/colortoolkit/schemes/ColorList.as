@@ -11,7 +11,7 @@ package com.somerandomdude.colortoolkit.schemes
       //Décompilation abandonné
       }
       
-      public function ColorList(numElements:int = 0)
+      public function ColorList(param1:int = 0)
       {
          //Décompilation abandonné
       }

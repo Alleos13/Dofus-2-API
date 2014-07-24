@@ -9,7 +9,7 @@ package com.ankamagames.dofus.logic.game.common.types
       //Décompilation abandonné
       }
       
-      public function DofusShopCategory(data:Object)
+      public function DofusShopCategory(param1:Object)
       {
          //Décompilation abandonné
       }
@@ -22,7 +22,7 @@ package com.ankamagames.dofus.logic.game.common.types
       
       private var _child:Array;
       
-      override public function init(data:Object) : void
+      override public function init(param1:Object) : void
       {
          //Décompilation abandonné
       }

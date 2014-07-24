@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.quest
       
       public static const MODULE:String = "AchievementCategories";
       
-      public static function getAchievementCategoryById(id:int) : AchievementCategory
+      public static function getAchievementCategoryById(param1:int) : AchievementCategory
       {
          //Décompilation abandonné
       }

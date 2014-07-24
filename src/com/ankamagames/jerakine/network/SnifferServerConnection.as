@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.network
       //Décompilation abandonné
       }
       
-      public function SnifferServerConnection(host:String = null, port:int = 0)
+      public function SnifferServerConnection(param1:String = null, param2:int = 0)
       {
          //Décompilation abandonné
       }
@@ -23,7 +23,7 @@ package com.ankamagames.jerakine.network
          //Décompilation abandonné
       }
       
-      public static function set snifferHost(host:String) : void
+      public static function set snifferHost(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -33,7 +33,7 @@ package com.ankamagames.jerakine.network
          //Décompilation abandonné
       }
       
-      public static function set snifferPort(port:int) : void
+      public static function set snifferPort(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -42,12 +42,12 @@ package com.ankamagames.jerakine.network
       
       private var _targetPort:int;
       
-      override public function connect(host:String, port:int) : void
+      override public function connect(param1:String, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function onConnect(e:Event) : void
+      override protected function onConnect(param1:Event) : void
       {
          //Décompilation abandonné
       }

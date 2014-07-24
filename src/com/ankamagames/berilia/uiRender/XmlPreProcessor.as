@@ -21,7 +21,7 @@ package com.ankamagames.berilia.uiRender
       //Décompilation abandonné
       }
       
-      public function XmlPreProcessor(xDoc:XMLDocument)
+      public function XmlPreProcessor(param1:XMLDocument)
       {
          //Décompilation abandonné
       }
@@ -44,17 +44,17 @@ package com.ankamagames.berilia.uiRender
          //Décompilation abandonné
       }
       
-      private function matchImport(node:XMLNode) : void
+      private function matchImport(param1:XMLNode) : void
       {
          //Décompilation abandonné
       }
       
-      private function replaceTemplateCall(node:XMLNode) : Boolean
+      private function replaceTemplateCall(param1:XMLNode) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onTemplateLoaded(e:TemplateLoadedEvent) : void
+      private function onTemplateLoaded(param1:TemplateLoadedEvent) : void
       {
          //Décompilation abandonné
       }

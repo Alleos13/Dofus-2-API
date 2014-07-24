@@ -43,7 +43,7 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      public static function set useCache(b:Boolean) : void
+      public static function set useCache(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -73,37 +73,37 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      public function load(oFile:*) : void
+      public function load(param1:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function exists(sUrl:String) : Boolean
+      public function exists(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function inQueue(sUrl:String) : Boolean
+      public function inQueue(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function askCss(sUrl:String, callback:Callback) : void
+      public function askCss(param1:String, param2:Callback) : void
       {
          //Décompilation abandonné
       }
       
-      public function preloadCss(sUrl:String) : void
+      public function preloadCss(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function getCss(sUrl:String) : ExtendedStyleSheet
+      public function getCss(param1:String) : ExtendedStyleSheet
       {
          //Décompilation abandonné
       }
       
-      public function merge(aStyleSheet:Array) : ExtendedStyleSheet
+      public function merge(param1:Array) : ExtendedStyleSheet
       {
          //Décompilation abandonné
       }
@@ -113,32 +113,32 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      private function parseCss(sUrl:String, content:String) : void
+      private function parseCss(param1:String, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateWaitingMultiUrl(loadedUrl:String) : void
+      private function updateWaitingMultiUrl(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function dispatchWaitingCallbabk(url:String) : void
+      private function dispatchWaitingCallbabk(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      protected function complete(e:ResourceLoadedEvent) : void
+      protected function complete(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function error(e:ResourceErrorEvent) : void
+      protected function error(param1:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onCssParsed(e:CssEvent) : void
+      private function onCssParsed(param1:CssEvent) : void
       {
          //Décompilation abandonné
       }

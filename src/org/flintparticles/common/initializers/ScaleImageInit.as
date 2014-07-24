@@ -10,7 +10,7 @@ package org.flintparticles.common.initializers
       //Décompilation abandonné
       }
       
-      public function ScaleImageInit(minScale:Number, maxScale:Number = NaN)
+      public function ScaleImageInit(param1:Number, param2:Number = NaN)
       {
          //Décompilation abandonné
       }
@@ -24,7 +24,7 @@ package org.flintparticles.common.initializers
          //Décompilation abandonné
       }
       
-      public function set minScale(value:Number) : void
+      public function set minScale(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -34,7 +34,7 @@ package org.flintparticles.common.initializers
          //Décompilation abandonné
       }
       
-      public function set maxScale(value:Number) : void
+      public function set maxScale(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -44,12 +44,12 @@ package org.flintparticles.common.initializers
          //Décompilation abandonné
       }
       
-      public function set scale(value:Number) : void
+      public function set scale(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      override public function initialize(emitter:Emitter, particle:Particle) : void
+      override public function initialize(param1:Emitter, param2:Particle) : void
       {
          //Décompilation abandonné
       }

@@ -22,7 +22,7 @@ package com.ankamagames.dofus.datacenter.guild
       
       protected static const _log:Logger;
       
-      public static function getEmblemSymbolById(id:int) : EmblemSymbol
+      public static function getEmblemSymbolById(param1:int) : EmblemSymbol
       {
          //Décompilation abandonné
       }

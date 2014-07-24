@@ -32,7 +32,7 @@ package com.ankamagames.dofus.network.messages.game.guild
          //Décompilation abandonné
       }
       
-      public function initGuildMembershipMessage(guildInfo:GuildInformations = null, memberRights:uint = 0, enabled:Boolean = false) : GuildMembershipMessage
+      public function initGuildMembershipMessage(param1:GuildInformations = null, param2:uint = 0, param3:Boolean = false) : GuildMembershipMessage
       {
          //Décompilation abandonné
       }
@@ -42,32 +42,32 @@ package com.ankamagames.dofus.network.messages.game.guild
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GuildMembershipMessage(output:IDataOutput) : void
+      public function serializeAs_GuildMembershipMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildMembershipMessage(input:IDataInput) : void
+      public function deserializeAs_GuildMembershipMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

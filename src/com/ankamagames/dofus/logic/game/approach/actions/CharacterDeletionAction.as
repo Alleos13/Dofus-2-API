@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.approach.actions
          //Décompilation abandonné
       }
       
-      public static function create(id:int, answer:String) : CharacterDeletionAction
+      public static function create(param1:int, param2:String) : CharacterDeletionAction
       {
          //Décompilation abandonné
       }

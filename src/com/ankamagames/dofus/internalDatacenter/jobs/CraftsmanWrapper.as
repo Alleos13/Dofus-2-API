@@ -18,7 +18,7 @@ package com.ankamagames.dofus.internalDatacenter.jobs
          //Décompilation abandonné
       }
       
-      public static function create(informations:JobCrafterDirectoryListEntry) : CraftsmanWrapper
+      public static function create(param1:JobCrafterDirectoryListEntry) : CraftsmanWrapper
       {
          //Décompilation abandonné
       }

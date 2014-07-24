@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.world
       
       public static const MODULE:String = "HintCategory";
       
-      public static function getHintCategoryById(id:int) : HintCategory
+      public static function getHintCategoryById(param1:int) : HintCategory
       {
          //Décompilation abandonné
       }

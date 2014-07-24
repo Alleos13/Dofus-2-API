@@ -17,7 +17,7 @@ package com.ankamagames.dofus.internalDatacenter.conquest
          //Décompilation abandonné
       }
       
-      public static function create(pAllianceId:uint, pAllianceTag:String, pAllianceName:String, pAllianceEmblem:GuildEmblem, nbMembers:uint, roundWeigth:uint, matchScore:uint, side:uint) : AllianceOnTheHillWrapper
+      public static function create(param1:uint, param2:String, param3:String, param4:GuildEmblem, param5:uint, param6:uint, param7:uint, param8:uint) : AllianceOnTheHillWrapper
       {
          //Décompilation abandonné
       }
@@ -60,7 +60,7 @@ package com.ankamagames.dofus.internalDatacenter.conquest
          //Décompilation abandonné
       }
       
-      public function update(pAllianceId:uint, pAllianceTag:String, pAllianceName:String, pAllianceEmblem:GuildEmblem, nbMembers:uint, roundWeigth:uint, matchScore:uint, side:uint) : void
+      public function update(param1:uint, param2:String, param3:String, param4:GuildEmblem, param5:uint, param6:uint, param7:uint, param8:uint) : void
       {
          //Décompilation abandonné
       }

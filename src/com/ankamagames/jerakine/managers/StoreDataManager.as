@@ -54,27 +54,27 @@ package com.ankamagames.jerakine.managers
       
       private var _describeType:Function;
       
-      public function getData(dataType:DataStoreType, sKey:String) : *
+      public function getData(param1:DataStoreType, param2:String) : *
       {
          //Décompilation abandonné
       }
       
-      public function registerClass(oInstance:*, deepClassScan:Boolean = false, keepClassInSo:Boolean = true) : void
+      public function registerClass(param1:*, param2:Boolean = false, param3:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function getClass(item:Object) : void
+      public function getClass(param1:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function setData(dataType:DataStoreType, sKey:String, oValue:*, deepClassScan:Boolean = false) : Boolean
+      public function setData(param1:DataStoreType, param2:String, param3:*, param4:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getSetData(dataType:DataStoreType, sKey:String, oValue:*) : *
+      public function getSetData(param1:DataStoreType, param2:String, param3:*) : *
       {
          //Décompilation abandonné
       }
@@ -89,7 +89,7 @@ package com.ankamagames.jerakine.managers
          //Décompilation abandonné
       }
       
-      public function clear(dataType:DataStoreType) : void
+      public function clear(param1:DataStoreType) : void
       {
          //Décompilation abandonné
       }
@@ -99,27 +99,27 @@ package com.ankamagames.jerakine.managers
          //Décompilation abandonné
       }
       
-      public function close(dataType:DataStoreType) : void
+      public function close(param1:DataStoreType) : void
       {
          //Décompilation abandonné
       }
       
-      private function getSharedObject(sName:String) : CustomSharedObject
+      private function getSharedObject(param1:String) : CustomSharedObject
       {
          //Décompilation abandonné
       }
       
-      private function isComplexType(o:*) : Boolean
+      private function isComplexType(param1:*) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function isComplexTypeFromString(name:String) : Boolean
+      private function isComplexTypeFromString(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function scanType(obj:*) : Object
+      private function scanType(param1:*) : Object
       {
          //Décompilation abandonné
       }

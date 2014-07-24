@@ -14,7 +14,7 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public static function fromXml(sXml:String, sUrlProvider:String, checkFunction:Function) : LangMetaData
+      public static function fromXml(param1:String, param2:String, param3:Function) : LangMetaData
       {
          //Décompilation abandonné
       }
@@ -29,7 +29,7 @@ package com.ankamagames.jerakine.types
       
       public var clearFile:Array;
       
-      public function addFile(sFilename:String, sVersion:String) : void
+      public function addFile(param1:String, param2:String) : void
       {
          //Décompilation abandonné
       }

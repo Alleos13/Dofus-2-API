@@ -12,7 +12,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override public function shallowCopy(startPos:int = 0, endPos:int = -1) : FlowElement
+      override public function shallowCopy(param1:int = 0, param2:int = -1) : FlowElement
       {
          //Décompilation abandonné
       }

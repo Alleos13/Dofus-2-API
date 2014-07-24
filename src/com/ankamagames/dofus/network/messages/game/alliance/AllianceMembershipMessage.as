@@ -32,7 +32,7 @@ package com.ankamagames.dofus.network.messages.game.alliance
          //Décompilation abandonné
       }
       
-      public function initAllianceMembershipMessage(allianceInfo:AllianceInformations = null, enabled:Boolean = false) : AllianceMembershipMessage
+      public function initAllianceMembershipMessage(param1:AllianceInformations = null, param2:Boolean = false) : AllianceMembershipMessage
       {
          //Décompilation abandonné
       }
@@ -42,32 +42,32 @@ package com.ankamagames.dofus.network.messages.game.alliance
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AllianceMembershipMessage(output:IDataOutput) : void
+      public function serializeAs_AllianceMembershipMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AllianceMembershipMessage(input:IDataInput) : void
+      public function deserializeAs_AllianceMembershipMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

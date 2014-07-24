@@ -12,12 +12,12 @@ package flashx.textLayout.utils
          //Décompilation abandonné
       }
       
-      public static function isHighSurrogate(charCode:int) : Boolean
+      public static function isHighSurrogate(param1:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function isLowSurrogate(charCode:int) : Boolean
+      public static function isLowSurrogate(param1:int) : Boolean
       {
          //Décompilation abandonné
       }
@@ -29,7 +29,7 @@ package flashx.textLayout.utils
          //Décompilation abandonné
       }
       
-      public static function isWhitespace(charCode:int) : Boolean
+      public static function isWhitespace(param1:int) : Boolean
       {
          //Décompilation abandonné
       }

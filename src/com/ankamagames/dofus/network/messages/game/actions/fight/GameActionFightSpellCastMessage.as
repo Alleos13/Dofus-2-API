@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.messages.game.actions.fight
          //Décompilation abandonné
       }
       
-      public function initGameActionFightSpellCastMessage(actionId:uint = 0, sourceId:int = 0, targetId:int = 0, destinationCellId:int = 0, critical:uint = 1, silentCast:Boolean = false, spellId:uint = 0, spellLevel:uint = 0) : GameActionFightSpellCastMessage
+      public function initGameActionFightSpellCastMessage(param1:uint = 0, param2:int = 0, param3:int = 0, param4:int = 0, param5:uint = 1, param6:Boolean = false, param7:uint = 0, param8:uint = 0) : GameActionFightSpellCastMessage
       {
          //Décompilation abandonné
       }
@@ -45,32 +45,32 @@ package com.ankamagames.dofus.network.messages.game.actions.fight
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameActionFightSpellCastMessage(output:IDataOutput) : void
+      public function serializeAs_GameActionFightSpellCastMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameActionFightSpellCastMessage(input:IDataInput) : void
+      public function deserializeAs_GameActionFightSpellCastMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

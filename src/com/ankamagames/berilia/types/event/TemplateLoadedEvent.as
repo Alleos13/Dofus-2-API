@@ -9,7 +9,7 @@ package com.ankamagames.berilia.types.event
       //Décompilation abandonné
       }
       
-      public function TemplateLoadedEvent(templateUrl:String)
+      public function TemplateLoadedEvent(param1:String)
       {
          //Décompilation abandonné
       }

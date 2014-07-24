@@ -10,7 +10,7 @@ package com.ankamagames.jerakine.resources.events
       //Décompilation abandonné
       }
       
-      public function ResourceLoaderProgressEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
+      public function ResourceLoaderProgressEvent(param1:String, param2:Boolean = false, param3:Boolean = false)
       {
          //Décompilation abandonné
       }

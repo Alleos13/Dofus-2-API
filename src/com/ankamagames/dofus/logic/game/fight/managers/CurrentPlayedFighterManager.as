@@ -63,7 +63,7 @@ package com.ankamagames.dofus.logic.game.fight.managers
          //Décompilation abandonné
       }
       
-      public function set currentFighterId(id:int) : void
+      public function set currentFighterId(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -78,17 +78,17 @@ package com.ankamagames.dofus.logic.game.fight.managers
          //Décompilation abandonné
       }
       
-      public function setCharacteristicsInformations(id:int, characteristics:CharacterCharacteristicsInformations) : void
+      public function setCharacteristicsInformations(param1:int, param2:CharacterCharacteristicsInformations) : void
       {
          //Décompilation abandonné
       }
       
-      public function getCharacteristicsInformations(id:int = 0) : CharacterCharacteristicsInformations
+      public function getCharacteristicsInformations(param1:int = 0) : CharacterCharacteristicsInformations
       {
          //Décompilation abandonné
       }
       
-      public function getSpellById(spellId:uint) : SpellWrapper
+      public function getSpellById(param1:uint) : SpellWrapper
       {
          //Décompilation abandonné
       }
@@ -98,12 +98,12 @@ package com.ankamagames.dofus.logic.game.fight.managers
          //Décompilation abandonné
       }
       
-      public function getSpellCastManagerById(id:int) : SpellCastInFightManager
+      public function getSpellCastManagerById(param1:int) : SpellCastInFightManager
       {
          //Décompilation abandonné
       }
       
-      public function canCastThisSpell(spellId:uint, lvl:uint, pTargetId:int = 2147483647) : Boolean
+      public function canCastThisSpell(param1:uint, param2:uint, param3:int = 2147483647) : Boolean
       {
          //Décompilation abandonné
       }
@@ -113,7 +113,7 @@ package com.ankamagames.dofus.logic.game.fight.managers
          //Décompilation abandonné
       }
       
-      public function getSpellModifications(spellId:int, carac:int) : CharacterSpellModification
+      public function getSpellModifications(param1:int, param2:int) : CharacterSpellModification
       {
          //Décompilation abandonné
       }
@@ -123,7 +123,7 @@ package com.ankamagames.dofus.logic.game.fight.managers
          //Décompilation abandonné
       }
       
-      private function updatePortrait(currentFighterEntity:AnimatedCharacter) : void
+      private function updatePortrait(param1:AnimatedCharacter) : void
       {
          //Décompilation abandonné
       }

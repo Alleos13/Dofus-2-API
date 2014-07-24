@@ -123,22 +123,22 @@ package com.ankamagames.atouin.data.map
          //Décompilation abandonné
       }
       
-      public function getGfxList(skipBackground:Boolean = false) : Array
+      public function getGfxList(param1:Boolean = false) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getGfxCount(gfxId:uint) : uint
+      public function getGfxCount(param1:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      public function fromRaw(raw:IDataInput, decryptionKey:ByteArray = null) : void
+      public function fromRaw(param1:IDataInput, param2:ByteArray = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function computeGfxList(skipBackground:Boolean = false) : void
+      private function computeGfxList(param1:Boolean = false) : void
       {
          //Décompilation abandonné
       }

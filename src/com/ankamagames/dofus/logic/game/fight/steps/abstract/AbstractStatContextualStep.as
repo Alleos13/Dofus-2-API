@@ -17,7 +17,7 @@ package com.ankamagames.dofus.logic.game.fight.steps.abstract
       //Décompilation abandonné
       }
       
-      public function AbstractStatContextualStep(color:uint, value:String, targetId:int, blocking:Boolean = true)
+      public function AbstractStatContextualStep(param1:uint, param2:String, param3:int, param4:Boolean = true)
       {
          //Décompilation abandonné
       }
@@ -44,7 +44,7 @@ package com.ankamagames.dofus.logic.game.fight.steps.abstract
          //Décompilation abandonné
       }
       
-      private function remove(e:Event) : void
+      private function remove(param1:Event) : void
       {
          //Décompilation abandonné
       }

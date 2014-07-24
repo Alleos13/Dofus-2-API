@@ -25,12 +25,12 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      private static function clearContainerAccessibilityImplementation(cont:Sprite) : void
+      private static function clearContainerAccessibilityImplementation(param1:Sprite) : void
       {
          //Décompilation abandonné
       }
       
-      private static function getBPDirectionScrollPosition(bp:String, cont:ContainerController) : Number
+      private static function getBPDirectionScrollPosition(param1:String, param2:ContainerController) : Number
       {
          //Décompilation abandonné
       }
@@ -46,7 +46,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function getAbsoluteStart(controller:ContainerController) : int
+      public function getAbsoluteStart(param1:ContainerController) : int
       {
          //Décompilation abandonné
       }
@@ -56,7 +56,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function setRootElement(newRootElement:ContainerFormattedElement) : void
+      public function setRootElement(param1:ContainerFormattedElement) : void
       {
          //Décompilation abandonné
       }
@@ -76,27 +76,27 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function addController(controller:ContainerController) : void
+      public function addController(param1:ContainerController) : void
       {
          //Décompilation abandonné
       }
       
-      public function addControllerAt(controller:ContainerController, index:int) : void
+      public function addControllerAt(param1:ContainerController, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function fastRemoveController(index:int) : Boolean
+      private function fastRemoveController(param1:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function removeController(controller:ContainerController) : void
+      public function removeController(param1:ContainerController) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeControllerAt(index:int) : void
+      public function removeControllerAt(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -106,17 +106,17 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function getControllerAt(index:int) : ContainerController
+      public function getControllerAt(param1:int) : ContainerController
       {
          //Décompilation abandonné
       }
       
-      public function getControllerIndex(controller:ContainerController) : int
+      public function getControllerIndex(param1:ContainerController) : int
       {
          //Décompilation abandonné
       }
       
-      public function findControllerIndexAtPosition(absolutePosition:int, preferPrevious:Boolean = false) : int
+      public function findControllerIndexAtPosition(param1:int, param2:Boolean = false) : int
       {
          //Décompilation abandonné
       }
@@ -131,17 +131,17 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function updateToController(index:int = 2.147483647E9) : Boolean
+      public function updateToController(param1:int = 2.147483647E9) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function setFocus(absolutePosition:int, leanLeft:Boolean = false) : void
+      public function setFocus(param1:int, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function interactionManagerChanged(newInteractionManager:ISelectionManager) : void
+      public function interactionManagerChanged(param1:ISelectionManager) : void
       {
          //Décompilation abandonné
       }
@@ -151,7 +151,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      override public function isDamaged(absolutePosition:int) : Boolean
+      override public function isDamaged(param1:int) : Boolean
       {
          //Décompilation abandonné
       }
@@ -166,19 +166,19 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      tlf_internal function releaseComposeState(state:ComposeState) : void
+      tlf_internal function releaseComposeState(param1:ComposeState) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function callTheComposer(composeToPosition:int, controllerEndIndex:int) : ContainerController
+      tlf_internal function callTheComposer(param1:int, param2:int) : ContainerController
       {
          //Décompilation abandonné
       }
       
       private var lastBPDirectionScrollPosition:Number = -Infinity;
       
-      private function internalCompose(composeToPosition:int = -1, composeToControllerIndex:int = -1) : ContainerController
+      private function internalCompose(param1:int = -1, param2:int = -1) : ContainerController
       {
          //Décompilation abandonné
       }
@@ -193,12 +193,12 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function composeToPosition(absolutePosition:int = 2.147483647E9) : Boolean
+      public function composeToPosition(param1:int = 2.147483647E9) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function composeToController(index:int = 2.147483647E9) : Boolean
+      public function composeToController(param1:int = 2.147483647E9) : Boolean
       {
          //Décompilation abandonné
       }

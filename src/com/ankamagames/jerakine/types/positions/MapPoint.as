@@ -41,22 +41,22 @@ package com.ankamagames.jerakine.types.positions
       
       public static var CELLPOS:Array;
       
-      public static function fromCellId(cellId:uint) : MapPoint
+      public static function fromCellId(param1:uint) : MapPoint
       {
          //Décompilation abandonné
       }
       
-      public static function fromCoords(x:int, y:int) : MapPoint
+      public static function fromCoords(param1:int, param2:int) : MapPoint
       {
          //Décompilation abandonné
       }
       
-      public static function getOrientationsDistance(currentOrientation:int, defaultOrientation:int) : int
+      public static function getOrientationsDistance(param1:int, param2:int) : int
       {
          //Décompilation abandonné
       }
       
-      public static function isInMap(x:int, y:int) : Boolean
+      public static function isInMap(param1:int, param2:int) : Boolean
       {
          //Décompilation abandonné
       }
@@ -77,7 +77,7 @@ package com.ankamagames.jerakine.types.positions
          //Décompilation abandonné
       }
       
-      public function set cellId(nValue:uint) : void
+      public function set cellId(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -87,7 +87,7 @@ package com.ankamagames.jerakine.types.positions
          //Décompilation abandonné
       }
       
-      public function set x(nValue:int) : void
+      public function set x(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -97,47 +97,47 @@ package com.ankamagames.jerakine.types.positions
          //Décompilation abandonné
       }
       
-      public function set y(nValue:int) : void
+      public function set y(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function distanceTo(mp:MapPoint) : uint
+      public function distanceTo(param1:MapPoint) : uint
       {
          //Décompilation abandonné
       }
       
-      public function distanceToCell(cell:MapPoint) : int
+      public function distanceToCell(param1:MapPoint) : int
       {
          //Décompilation abandonné
       }
       
-      public function orientationTo(mp:MapPoint) : uint
+      public function orientationTo(param1:MapPoint) : uint
       {
          //Décompilation abandonné
       }
       
-      public function advancedOrientationTo(mp:MapPoint, fourDir:Boolean = true) : uint
+      public function advancedOrientationTo(param1:MapPoint, param2:Boolean = true) : uint
       {
          //Décompilation abandonné
       }
       
-      public function getNearestFreeCell(mapProvider:IDataMapProvider, allowThoughEntity:Boolean = true) : MapPoint
+      public function getNearestFreeCell(param1:IDataMapProvider, param2:Boolean = true) : MapPoint
       {
          //Décompilation abandonné
       }
       
-      public function getNearestCellInDirection(orientation:uint) : MapPoint
+      public function getNearestCellInDirection(param1:uint) : MapPoint
       {
          //Décompilation abandonné
       }
       
-      public function getNearestFreeCellInDirection(orientation:uint, mapProvider:IDataMapProvider, allowItself:Boolean = true, allowThoughEntity:Boolean = true, forbidenCellsId:Array = null) : MapPoint
+      public function getNearestFreeCellInDirection(param1:uint, param2:IDataMapProvider, param3:Boolean = true, param4:Boolean = true, param5:Array = null) : MapPoint
       {
          //Décompilation abandonné
       }
       
-      public function equals(mp:MapPoint) : Boolean
+      public function equals(param1:MapPoint) : Boolean
       {
          //Décompilation abandonné
       }

@@ -27,12 +27,12 @@ package com.ankamagames.dofus.datacenter.effects.instances
          //Décompilation abandonné
       }
       
-      override public function setParameter(paramIndex:uint, value:*) : void
+      override public function setParameter(param1:uint, param2:*) : void
       {
          //Décompilation abandonné
       }
       
-      override public function add(term:*) : EffectInstance
+      override public function add(param1:*) : EffectInstance
       {
          //Décompilation abandonné
       }

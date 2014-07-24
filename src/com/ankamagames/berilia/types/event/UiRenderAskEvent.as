@@ -10,7 +10,7 @@ package com.ankamagames.berilia.types.event
       //Décompilation abandonné
       }
       
-      public function UiRenderAskEvent(name:String, uiData:UiData)
+      public function UiRenderAskEvent(param1:String, param2:UiData)
       {
          //Décompilation abandonné
       }

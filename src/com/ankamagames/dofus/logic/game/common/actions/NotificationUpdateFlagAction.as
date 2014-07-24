@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions
          //Décompilation abandonné
       }
       
-      public static function create(index:uint) : NotificationUpdateFlagAction
+      public static function create(param1:uint) : NotificationUpdateFlagAction
       {
          //Décompilation abandonné
       }

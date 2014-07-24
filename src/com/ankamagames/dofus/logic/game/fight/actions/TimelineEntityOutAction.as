@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.fight.actions
          //Décompilation abandonné
       }
       
-      public static function create(target:int) : TimelineEntityOutAction
+      public static function create(param1:int) : TimelineEntityOutAction
       {
          //Décompilation abandonné
       }

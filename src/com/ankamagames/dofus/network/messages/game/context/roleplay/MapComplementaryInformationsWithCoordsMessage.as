@@ -41,7 +41,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initMapComplementaryInformationsWithCoordsMessage(subAreaId:uint = 0, mapId:uint = 0, houses:Vector.<HouseInformations> = null, actors:Vector.<GameRolePlayActorInformations> = null, interactiveElements:Vector.<InteractiveElement> = null, statedElements:Vector.<StatedElement> = null, obstacles:Vector.<MapObstacle> = null, fights:Vector.<FightCommonInformations> = null, worldX:int = 0, worldY:int = 0) : MapComplementaryInformationsWithCoordsMessage
+      public function initMapComplementaryInformationsWithCoordsMessage(param1:uint = 0, param2:uint = 0, param3:Vector.<HouseInformations> = null, param4:Vector.<GameRolePlayActorInformations> = null, param5:Vector.<InteractiveElement> = null, param6:Vector.<StatedElement> = null, param7:Vector.<MapObstacle> = null, param8:Vector.<FightCommonInformations> = null, param9:int = 0, param10:int = 0) : MapComplementaryInformationsWithCoordsMessage
       {
          //Décompilation abandonné
       }
@@ -51,32 +51,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_MapComplementaryInformationsWithCoordsMessage(output:IDataOutput) : void
+      public function serializeAs_MapComplementaryInformationsWithCoordsMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_MapComplementaryInformationsWithCoordsMessage(input:IDataInput) : void
+      public function deserializeAs_MapComplementaryInformationsWithCoordsMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

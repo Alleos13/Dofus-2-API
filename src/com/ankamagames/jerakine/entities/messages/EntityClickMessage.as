@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.entities.messages
       //Décompilation abandonné
       }
       
-      public function EntityClickMessage(entity:IInteractive)
+      public function EntityClickMessage(param1:IInteractive)
       {
          //Décompilation abandonné
       }

@@ -28,12 +28,12 @@ package com.ankamagames.dofus.internalDatacenter.appearance
       
       protected static const _log:Logger;
       
-      public static function create(ornId:uint, position:int = -1, useCache:Boolean = true) : OrnamentWrapper
+      public static function create(param1:uint, param2:int = -1, param3:Boolean = true) : OrnamentWrapper
       {
          //Décompilation abandonné
       }
       
-      public static function getOrnamentWrapperById(id:uint) : OrnamentWrapper
+      public static function getOrnamentWrapperById(param1:uint) : OrnamentWrapper
       {
          //Décompilation abandonné
       }
@@ -85,7 +85,7 @@ package com.ankamagames.dofus.internalDatacenter.appearance
          //Décompilation abandonné
       }
       
-      public function set endTime(t:int) : void
+      public function set endTime(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -95,7 +95,7 @@ package com.ankamagames.dofus.internalDatacenter.appearance
          //Décompilation abandonné
       }
       
-      public function set timerToStart(t:int) : void
+      public function set timerToStart(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -120,12 +120,12 @@ package com.ankamagames.dofus.internalDatacenter.appearance
          //Décompilation abandonné
       }
       
-      override flash_proxy function getProperty(name:*) : *
+      override flash_proxy function getProperty(param1:*) : *
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function hasProperty(name:*) : Boolean
+      override flash_proxy function hasProperty(param1:*) : Boolean
       {
          //Décompilation abandonné
       }
@@ -135,17 +135,17 @@ package com.ankamagames.dofus.internalDatacenter.appearance
          //Décompilation abandonné
       }
       
-      public function addHolder(h:ISlotDataHolder) : void
+      public function addHolder(param1:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeHolder(h:ISlotDataHolder) : void
+      public function removeHolder(param1:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      public function getIconUri(pngMode:Boolean = true) : Uri
+      public function getIconUri(param1:Boolean = true) : Uri
       {
          //Décompilation abandonné
       }

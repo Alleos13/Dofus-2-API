@@ -12,7 +12,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function MonthItemCriterion(pCriterion:String)
+      public function MonthItemCriterion(param1:String)
       {
          //Décompilation abandonné
       }

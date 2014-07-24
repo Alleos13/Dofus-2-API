@@ -43,32 +43,32 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      override protected function releaseParcelList(list:ParcelList) : void
+      override protected function releaseParcelList(param1:ParcelList) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function initializeForComposer(composer:IFlowComposer, composeToPosition:int, controllerStartIndex:int, controllerEndIndex:int) : void
+      override protected function initializeForComposer(param1:IFlowComposer, param2:int, param3:int, param4:int) : void
       {
          //Décompilation abandonné
       }
       
-      override public function composeTextFlow(textFlow:TextFlow, composeToPosition:int, controllerEndIndex:int) : int
+      override public function composeTextFlow(param1:TextFlow, param2:int, param3:int) : int
       {
          //Décompilation abandonné
       }
       
-      override protected function doVerticalAlignment(canVerticalAlign:Boolean, nextParcel:Parcel) : void
+      override protected function doVerticalAlignment(param1:Boolean, param2:Parcel) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function isLineVisible(textLine:TextLine) : Boolean
+      override protected function isLineVisible(param1:TextLine) : Boolean
       {
          //Décompilation abandonné
       }
       
-      override protected function endLine(textLine:TextLine) : void
+      override protected function endLine(param1:TextLine) : void
       {
          //Décompilation abandonné
       }
@@ -85,12 +85,12 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function set resetLineHandler(val:Function) : void
+      public function set resetLineHandler(param1:Function) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function resetLine(textLine:TextLine) : void
+      override protected function resetLine(param1:TextLine) : void
       {
          //Décompilation abandonné
       }
@@ -100,12 +100,12 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      tlf_internal function swapLines(lines:Array) : Array
+      tlf_internal function swapLines(param1:Array) : Array
       {
          //Décompilation abandonné
       }
       
-      override protected function finalParcelAdjustment(controller:ContainerController) : void
+      override protected function finalParcelAdjustment(param1:ContainerController) : void
       {
          //Décompilation abandonné
       }
@@ -126,7 +126,7 @@ class VJHelper extends Object implements IVerticalJustificationLine
    //Décompilation abandonné
    }
    
-   function VJHelper(line:TextLine, h:Number)
+   function VJHelper(param1:TextLine, param2:Number)
    {
       //Décompilation abandonné
    }
@@ -140,7 +140,7 @@ class VJHelper extends Object implements IVerticalJustificationLine
       //Décompilation abandonné
    }
    
-   public function set x(val:Number) : void
+   public function set x(param1:Number) : void
    {
       //Décompilation abandonné
    }
@@ -150,7 +150,7 @@ class VJHelper extends Object implements IVerticalJustificationLine
       //Décompilation abandonné
    }
    
-   public function set y(val:Number) : void
+   public function set y(param1:Number) : void
    {
       //Décompilation abandonné
    }

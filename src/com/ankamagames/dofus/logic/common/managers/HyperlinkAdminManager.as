@@ -16,7 +16,7 @@ package com.ankamagames.dofus.logic.common.managers
          //Décompilation abandonné
       }
       
-      public static function addCmd(auto:String, cmd:String) : void
+      public static function addCmd(param1:String, param2:String) : void
       {
          //Décompilation abandonné
       }

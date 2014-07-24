@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.replay
       //Décompilation abandonné
       }
       
-      public function KeyboardInput(target:String = null, content:String = null)
+      public function KeyboardInput(param1:String = null, param2:String = null)
       {
          //Décompilation abandonné
       }

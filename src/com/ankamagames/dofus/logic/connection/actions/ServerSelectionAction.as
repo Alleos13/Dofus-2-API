@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.connection.actions
          //Décompilation abandonné
       }
       
-      public static function create(serverId:int) : ServerSelectionAction
+      public static function create(param1:int) : ServerSelectionAction
       {
          //Décompilation abandonné
       }

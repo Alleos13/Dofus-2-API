@@ -42,12 +42,12 @@ package com.ankamagames.jerakine.tasking
          //Décompilation abandonné
       }
       
-      public function addTask(task:SplittedTask) : void
+      public function addTask(param1:SplittedTask) : void
       {
          //Décompilation abandonné
       }
       
-      private function onEnterFrame(e:Event) : void
+      private function onEnterFrame(param1:Event) : void
       {
          //Décompilation abandonné
       }

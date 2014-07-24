@@ -9,7 +9,7 @@ package com.ankamagames.dofus.types.data
       //Décompilation abandonné
       }
       
-      public function ItemTooltipInfo(itemWrapper:ItemWrapper, shortcutKey:String = null)
+      public function ItemTooltipInfo(param1:ItemWrapper, param2:String = null)
       {
          //Décompilation abandonné
       }

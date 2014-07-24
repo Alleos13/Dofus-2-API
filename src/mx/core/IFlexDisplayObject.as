@@ -24,33 +24,33 @@ package mx.core
       
       function get name() : String;
       
-      function set name(value:String) : void;
+      function set name(param1:String) : void;
       
       function get parent() : DisplayObjectContainer;
       
       function get mask() : DisplayObject;
       
-      function set mask(value:DisplayObject) : void;
+      function set mask(param1:DisplayObject) : void;
       
       function get visible() : Boolean;
       
-      function set visible(value:Boolean) : void;
+      function set visible(param1:Boolean) : void;
       
       function get x() : Number;
       
-      function set x(value:Number) : void;
+      function set x(param1:Number) : void;
       
       function get y() : Number;
       
-      function set y(value:Number) : void;
+      function set y(param1:Number) : void;
       
       function get scaleX() : Number;
       
-      function set scaleX(value:Number) : void;
+      function set scaleX(param1:Number) : void;
       
       function get scaleY() : Number;
       
-      function set scaleY(value:Number) : void;
+      function set scaleY(param1:Number) : void;
       
       function get mouseX() : Number;
       
@@ -58,72 +58,72 @@ package mx.core
       
       function get rotation() : Number;
       
-      function set rotation(value:Number) : void;
+      function set rotation(param1:Number) : void;
       
       function get alpha() : Number;
       
-      function set alpha(value:Number) : void;
+      function set alpha(param1:Number) : void;
       
       function get width() : Number;
       
-      function set width(value:Number) : void;
+      function set width(param1:Number) : void;
       
       function get height() : Number;
       
-      function set height(value:Number) : void;
+      function set height(param1:Number) : void;
       
       function get cacheAsBitmap() : Boolean;
       
-      function set cacheAsBitmap(value:Boolean) : void;
+      function set cacheAsBitmap(param1:Boolean) : void;
       
       function get opaqueBackground() : Object;
       
-      function set opaqueBackground(value:Object) : void;
+      function set opaqueBackground(param1:Object) : void;
       
       function get scrollRect() : Rectangle;
       
-      function set scrollRect(value:Rectangle) : void;
+      function set scrollRect(param1:Rectangle) : void;
       
       function get filters() : Array;
       
-      function set filters(value:Array) : void;
+      function set filters(param1:Array) : void;
       
       function get blendMode() : String;
       
-      function set blendMode(value:String) : void;
+      function set blendMode(param1:String) : void;
       
       function get transform() : Transform;
       
-      function set transform(value:Transform) : void;
+      function set transform(param1:Transform) : void;
       
       function get scale9Grid() : Rectangle;
       
-      function set scale9Grid(innerRectangle:Rectangle) : void;
+      function set scale9Grid(param1:Rectangle) : void;
       
-      function globalToLocal(point:Point) : Point;
+      function globalToLocal(param1:Point) : Point;
       
-      function localToGlobal(point:Point) : Point;
+      function localToGlobal(param1:Point) : Point;
       
-      function getBounds(targetCoordinateSpace:DisplayObject) : Rectangle;
+      function getBounds(param1:DisplayObject) : Rectangle;
       
-      function getRect(targetCoordinateSpace:DisplayObject) : Rectangle;
+      function getRect(param1:DisplayObject) : Rectangle;
       
       function get loaderInfo() : LoaderInfo;
       
-      function hitTestObject(obj:DisplayObject) : Boolean;
+      function hitTestObject(param1:DisplayObject) : Boolean;
       
-      function hitTestPoint(x:Number, y:Number, shapeFlag:Boolean = false) : Boolean;
+      function hitTestPoint(param1:Number, param2:Number, param3:Boolean = false) : Boolean;
       
       function get accessibilityProperties() : AccessibilityProperties;
       
-      function set accessibilityProperties(value:AccessibilityProperties) : void;
+      function set accessibilityProperties(param1:AccessibilityProperties) : void;
       
       function get measuredHeight() : Number;
       
       function get measuredWidth() : Number;
       
-      function move(x:Number, y:Number) : void;
+      function move(param1:Number, param2:Number) : void;
       
-      function setActualSize(newWidth:Number, newHeight:Number) : void;
+      function setActualSize(param1:Number, param2:Number) : void;
    }
 }

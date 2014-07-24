@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.handlers.messages
       //Décompilation abandonné
       }
       
-      public function InvalidCancelError(message:String = "", id:uint = 0)
+      public function InvalidCancelError(param1:String = "", param2:uint = 0)
       {
          //Décompilation abandonné
       }

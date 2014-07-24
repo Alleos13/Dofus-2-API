@@ -15,17 +15,17 @@ package com.ankamagames.atouin.data
       //Décompilation abandonné
       }
       
-      public function DefaultMap(id:uint = 0)
+      public function DefaultMap(param1:uint = 0)
       {
          //Décompilation abandonné
       }
       
-      override public function fromRaw(raw:IDataInput, decryptionKey:ByteArray = null) : void
+      override public function fromRaw(param1:IDataInput, param2:ByteArray = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function createLayer(id:uint) : Layer
+      private function createLayer(param1:uint) : Layer
       {
          //Décompilation abandonné
       }

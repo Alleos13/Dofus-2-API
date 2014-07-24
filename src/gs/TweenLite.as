@@ -14,7 +14,7 @@ package gs
       //Décompilation abandonné
       }
       
-      public function TweenLite($target:Object, $duration:Number, $vars:Object)
+      public function TweenLite(param1:Object, param2:Number, param3:Object)
       {
          //Décompilation abandonné
       }
@@ -37,62 +37,62 @@ package gs
       
       private static var _timer:Timer;
       
-      public static function to($target:Object, $duration:Number, $vars:Object) : TweenLite
+      public static function to(param1:Object, param2:Number, param3:Object) : TweenLite
       {
          //Décompilation abandonné
       }
       
-      public static function from($target:Object, $duration:Number, $vars:Object) : TweenLite
+      public static function from(param1:Object, param2:Number, param3:Object) : TweenLite
       {
          //Décompilation abandonné
       }
       
-      public static function delayedCall($delay:Number, $onComplete:Function, $onCompleteParams:Array = null) : TweenLite
+      public static function delayedCall(param1:Number, param2:Function, param3:Array = null) : TweenLite
       {
          //Décompilation abandonné
       }
       
-      public static function updateAll($e:Event = null) : void
+      public static function updateAll(param1:Event = null) : void
       {
          //Décompilation abandonné
       }
       
-      public static function removeTween($t:TweenLite, $clear:Boolean = true) : void
+      public static function removeTween(param1:TweenLite, param2:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public static function killTweensOf($target:Object = null, $complete:Boolean = false) : void
+      public static function killTweensOf(param1:Object = null, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      protected static function killGarbage($e:TimerEvent) : void
+      protected static function killGarbage(param1:TimerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public static function easeOut($t:Number, $b:Number, $c:Number, $d:Number) : Number
+      public static function easeOut(param1:Number, param2:Number, param3:Number, param4:Number) : Number
       {
          //Décompilation abandonné
       }
       
-      public static function tintProxy($o:Object, $time:Number = 0) : void
+      public static function tintProxy(param1:Object, param2:Number = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public static function frameProxy($o:Object, $time:Number = 0) : void
+      public static function frameProxy(param1:Object, param2:Number = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public static function volumeProxy($o:Object, $time:Number = 0) : void
+      public static function volumeProxy(param1:Object, param2:Number = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public static function visibleProxy($o:Object, $time:Number) : void
+      public static function visibleProxy(param1:Object, param2:Number) : void
       {
          //Décompilation abandonné
       }
@@ -133,17 +133,17 @@ package gs
       
       protected var _specialVars:Object;
       
-      public function initTweenVals($hrp:Boolean = false, $reservedProps:String = "") : void
+      public function initTweenVals(param1:Boolean = false, param2:String = "") : void
       {
          //Décompilation abandonné
       }
       
-      protected function addSubTween($name:String, $proxy:Function, $target:Object, $props:Object, $info:Object = null) : void
+      protected function addSubTween(param1:String, param2:Function, param3:Object, param4:Object, param5:Object = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function render($t:uint) : void
+      public function render(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -153,7 +153,7 @@ package gs
          //Décompilation abandonné
       }
       
-      public function complete($skipRender:Boolean = false) : void
+      public function complete(param1:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -163,12 +163,12 @@ package gs
          //Décompilation abandonné
       }
       
-      public function killVars($vars:Object) : void
+      public function killVars(param1:Object) : void
       {
          //Décompilation abandonné
       }
       
-      protected function easeProxy($t:Number, $b:Number, $c:Number, $d:Number) : Number
+      protected function easeProxy(param1:Number, param2:Number, param3:Number, param4:Number) : Number
       {
          //Décompilation abandonné
       }
@@ -178,7 +178,7 @@ package gs
          //Décompilation abandonné
       }
       
-      public function set enabled($b:Boolean) : void
+      public function set enabled(param1:Boolean) : void
       {
          //Décompilation abandonné
       }

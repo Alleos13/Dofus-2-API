@@ -9,7 +9,7 @@ package com.ankamagames.dofus.internalDatacenter.communication
       //Décompilation abandonné
       }
       
-      public function ChatBubble(text:String)
+      public function ChatBubble(param1:String)
       {
          //Décompilation abandonné
       }

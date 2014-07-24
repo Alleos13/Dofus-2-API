@@ -7,6 +7,6 @@ package com.ankamagames.jerakine.utils.display
       //Décompilation abandonné
       }
       
-      function onFps(framerate:uint) : void;
+      function onFps(param1:uint) : void;
    }
 }

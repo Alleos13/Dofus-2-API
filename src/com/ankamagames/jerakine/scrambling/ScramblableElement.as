@@ -14,12 +14,12 @@ package com.ankamagames.jerakine.scrambling
          //Décompilation abandonné
       }
       
-      public function scramble(data:ByteArray) : void
+      public function scramble(param1:ByteArray) : void
       {
          //Décompilation abandonné
       }
       
-      public function unscramble(data:ByteArray) : void
+      public function unscramble(param1:ByteArray) : void
       {
          //Décompilation abandonné
       }

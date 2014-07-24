@@ -15,7 +15,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightEntityMovementStep(entityId:int, path:MovementPath)
+      public function FightEntityMovementStep(param1:int, param2:MovementPath)
       {
          //Décompilation abandonné
       }

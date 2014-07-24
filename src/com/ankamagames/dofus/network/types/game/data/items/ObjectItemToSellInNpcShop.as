@@ -28,7 +28,7 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      public function initObjectItemToSellInNpcShop(objectGID:uint = 0, effects:Vector.<ObjectEffect> = null, objectPrice:uint = 0, buyCriterion:String = "") : ObjectItemToSellInNpcShop
+      public function initObjectItemToSellInNpcShop(param1:uint = 0, param2:Vector.<ObjectEffect> = null, param3:uint = 0, param4:String = "") : ObjectItemToSellInNpcShop
       {
          //Décompilation abandonné
       }
@@ -38,22 +38,22 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectItemToSellInNpcShop(output:IDataOutput) : void
+      public function serializeAs_ObjectItemToSellInNpcShop(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectItemToSellInNpcShop(input:IDataInput) : void
+      public function deserializeAs_ObjectItemToSellInNpcShop(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

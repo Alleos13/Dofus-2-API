@@ -33,7 +33,7 @@ package com.ankamagames.dofus.scripts
       //Décompilation abandonné
       }
       
-      public function ScriptEntity(pId:int, pLook:String, pEntity:TiphonSprite = null)
+      public function ScriptEntity(param1:int, param2:String, param3:TiphonSprite = null)
       {
          //Décompilation abandonné
       }
@@ -64,12 +64,12 @@ package com.ankamagames.dofus.scripts
          //Décompilation abandonné
       }
       
-      public function set x(pX:int) : void
+      public function set x(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function set y(pY:int) : void
+      public function set y(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -79,7 +79,7 @@ package com.ankamagames.dofus.scripts
          //Décompilation abandonné
       }
       
-      public function set cellId(pCellId:uint) : void
+      public function set cellId(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -94,7 +94,7 @@ package com.ankamagames.dofus.scripts
          //Décompilation abandonné
       }
       
-      public function set look(pLook:String) : void
+      public function set look(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -104,7 +104,7 @@ package com.ankamagames.dofus.scripts
          //Décompilation abandonné
       }
       
-      public function set direction(pDirection:int) : void
+      public function set direction(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -114,7 +114,7 @@ package com.ankamagames.dofus.scripts
          //Décompilation abandonné
       }
       
-      public function set scaleX(pScaleX:Number) : void
+      public function set scaleX(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -124,42 +124,42 @@ package com.ankamagames.dofus.scripts
          //Décompilation abandonné
       }
       
-      public function set scaleY(pScaleY:Number) : void
+      public function set scaleY(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function move(... pArgs) : ISequencable
+      public function move(... rest) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public function walk(... pArgs) : ISequencable
+      public function walk(... rest) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public function run(... pArgs) : ISequencable
+      public function run(... rest) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public function slide(... pArgs) : ISequencable
+      public function slide(... rest) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public function teleport(... pArgs) : ISequencable
+      public function teleport(... rest) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public function lookAt(... pArgs) : ISequencable
+      public function lookAt(... rest) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public function wait(pMilliseconds:int) : ISequencable
+      public function wait(param1:int) : ISequencable
       {
          //Décompilation abandonné
       }
@@ -169,37 +169,37 @@ package com.ankamagames.dofus.scripts
          //Décompilation abandonné
       }
       
-      public function setDirection(pDirection:int) : ISequencable
+      public function setDirection(param1:int) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public function setAnimation(pAnimation:String, pLoop:int = 1, pEndAnimation:String = "") : ISequencable
+      public function setAnimation(param1:String, param2:int = 1, param3:String = "") : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public function playEmote(pEmoteId:int, pWaitForEnd:Boolean = true) : ISequencable
+      public function playEmote(param1:int, param2:Boolean = true) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public function playSmiley(pSmileyId:int, pWaitForEnd:Boolean = true) : ISequencable
+      public function playSmiley(param1:int, param2:Boolean = true) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public function think(pText:String, pWaitForEnd:Boolean = true) : ISequencable
+      public function think(param1:String, param2:Boolean = true) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public function speak(pText:String, pWaitForEnd:Boolean = true) : ISequencable
+      public function speak(param1:String, param2:Boolean = true) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public function setLook(pLook:String) : ISequencable
+      public function setLook(param1:String) : ISequencable
       {
          //Décompilation abandonné
       }

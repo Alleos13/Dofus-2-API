@@ -17,7 +17,7 @@ package com.ankamagames.berilia.types.tooltip
       //Décompilation abandonné
       }
       
-      public function Tooltip(base:Uri, container:Uri, separator:Uri = null)
+      public function Tooltip(param1:Uri, param2:Uri, param3:Uri = null)
       {
          //Décompilation abandonné
       }
@@ -57,7 +57,7 @@ package com.ankamagames.berilia.types.tooltip
          //Décompilation abandonné
       }
       
-      public function addBlock(block:TooltipBlock) : void
+      public function addBlock(param1:TooltipBlock) : void
       {
          //Décompilation abandonné
       }
@@ -67,17 +67,17 @@ package com.ankamagames.berilia.types.tooltip
          //Décompilation abandonné
       }
       
-      public function askTooltip(callback:Callback) : void
+      public function askTooltip(param1:Callback) : void
       {
          //Décompilation abandonné
       }
       
-      public function update(txt:String) : void
+      public function update(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMainChunkLoaded(e:Event) : void
+      private function onMainChunkLoaded(param1:Event) : void
       {
          //Décompilation abandonné
       }
@@ -92,7 +92,7 @@ package com.ankamagames.berilia.types.tooltip
          //Décompilation abandonné
       }
       
-      private function onChunkReady(e:Event) : void
+      private function onChunkReady(param1:Event) : void
       {
          //Décompilation abandonné
       }

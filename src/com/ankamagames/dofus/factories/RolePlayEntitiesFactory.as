@@ -62,7 +62,7 @@ package com.ankamagames.dofus.factories
       
       private static const TEAM_DEFENDER_AVA_DEFENDERS:String = "{2255}";
       
-      public static function createFightEntity(fightInfos:FightCommonInformations, teamInfos:FightTeamInformations, position:MapPoint) : IEntity
+      public static function createFightEntity(param1:FightCommonInformations, param2:FightTeamInformations, param3:MapPoint) : IEntity
       {
          //Décompilation abandonné
       }

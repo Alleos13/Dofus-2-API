@@ -21,7 +21,7 @@ package com.ankamagames.dofus.logic.game.fight.types.castSpellManager
       //Décompilation abandonné
       }
       
-      public function SpellManager(spellCastManager:SpellCastInFightManager, pSpellId:uint, pSpellLevel:uint)
+      public function SpellManager(param1:SpellCastInFightManager, param2:uint, param3:uint)
       {
          //Décompilation abandonné
       }
@@ -52,7 +52,7 @@ package com.ankamagames.dofus.logic.game.fight.types.castSpellManager
          //Décompilation abandonné
       }
       
-      public function set spellLevel(pSpellLevel:uint) : void
+      public function set spellLevel(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -72,17 +72,17 @@ package com.ankamagames.dofus.logic.game.fight.types.castSpellManager
          //Décompilation abandonné
       }
       
-      public function cast(pTurn:int, pTarget:Array, pCountForCooldown:Boolean = true) : void
+      public function cast(param1:int, param2:Array, param3:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function resetInitialCooldown(pTurn:int) : void
+      public function resetInitialCooldown(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function getCastOnEntity(pEntityId:int) : uint
+      public function getCastOnEntity(param1:int) : uint
       {
          //Décompilation abandonné
       }
@@ -97,17 +97,17 @@ package com.ankamagames.dofus.logic.game.fight.types.castSpellManager
          //Décompilation abandonné
       }
       
-      public function forceCooldown(cooldown:int) : void
+      public function forceCooldown(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function forceLastCastTurn(pLastCastTurn:int, reallyForceNoKidding:Boolean = false) : void
+      public function forceLastCastTurn(param1:int, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateSpellWrapper(forceLastCastTurn:Boolean = false) : void
+      private function updateSpellWrapper(param1:Boolean = false) : void
       {
          //Décompilation abandonné
       }

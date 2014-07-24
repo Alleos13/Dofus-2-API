@@ -43,7 +43,7 @@ package com.ankamagames.dofus.uiApi
       
       private var _module:UiModule;
       
-      public function set module(value:UiModule) : void
+      public function set module(param1:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -68,7 +68,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function isFriend(playerName:String) : Boolean
+      public function isFriend(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -78,7 +78,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function isEnemy(playerName:String) : Boolean
+      public function isEnemy(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -88,12 +88,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function isIgnored(name:String, accountId:int = 0) : Boolean
+      public function isIgnored(param1:String, param2:int = 0) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getAccountName(name:String) : String
+      public function getAccountName(param1:String) : String
       {
          //Décompilation abandonné
       }
@@ -153,12 +153,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getGuildByid(id:int) : GuildFactSheetWrapper
+      public function getGuildByid(param1:int) : GuildFactSheetWrapper
       {
          //Décompilation abandonné
       }
       
-      public function hasGuildRight(pPlayerId:uint, pRightId:String) : Boolean
+      public function hasGuildRight(param1:uint, param2:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -198,7 +198,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getTaxCollector(id:int) : TaxCollectorWrapper
+      public function getTaxCollector(param1:int) : TaxCollectorWrapper
       {
          //Décompilation abandonné
       }
@@ -208,7 +208,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getGuildFightingTaxCollector(pFightId:uint) : SocialEntityInFightWrapper
+      public function getGuildFightingTaxCollector(param1:uint) : SocialEntityInFightWrapper
       {
          //Décompilation abandonné
       }
@@ -218,12 +218,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getAllFightingTaxCollector(pFightId:uint) : SocialEntityInFightWrapper
+      public function getAllFightingTaxCollector(param1:uint) : SocialEntityInFightWrapper
       {
          //Décompilation abandonné
       }
       
-      public function isPlayerDefender(pType:int, pPlayerId:uint, pSocialFightId:int) : Boolean
+      public function isPlayerDefender(param1:int, param2:uint, param3:int) : Boolean
       {
          //Décompilation abandonné
       }
@@ -238,7 +238,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getAllianceById(id:int) : AllianceWrapper
+      public function getAllianceById(param1:int) : AllianceWrapper
       {
          //Décompilation abandonné
       }
@@ -258,7 +258,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getPrismSubAreaById(id:int) : PrismSubAreaWrapper
+      public function getPrismSubAreaById(param1:int) : PrismSubAreaWrapper
       {
          //Décompilation abandonné
       }
@@ -268,17 +268,17 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getFightingPrism(pFightId:uint) : SocialEntityInFightWrapper
+      public function getFightingPrism(param1:uint) : SocialEntityInFightWrapper
       {
          //Décompilation abandonné
       }
       
-      public function isPlayerPrismDefender(pPlayerId:uint, pSubAreaId:int) : Boolean
+      public function isPlayerPrismDefender(param1:uint, param2:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getChatSentence(timestamp:Number, fingerprint:String) : BasicChatSentence
+      public function getChatSentence(param1:Number, param2:String) : BasicChatSentence
       {
          //Décompilation abandonné
       }

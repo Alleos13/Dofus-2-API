@@ -18,7 +18,7 @@ package com.ankamagames.dofus.logic.game.common.actions.jobs
          //Décompilation abandonné
       }
       
-      public static function create(jobId:uint, minSlot:uint, notFree:Boolean, notFreeExceptOnFail:Boolean, resourcesRequired:Boolean) : JobCrafterDirectoryDefineSettingsAction
+      public static function create(param1:uint, param2:uint, param3:Boolean, param4:Boolean, param5:Boolean) : JobCrafterDirectoryDefineSettingsAction
       {
          //Décompilation abandonné
       }

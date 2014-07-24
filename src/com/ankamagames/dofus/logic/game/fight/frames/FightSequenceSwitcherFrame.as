@@ -33,12 +33,12 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      public function set currentFrame(f:Frame) : void
+      public function set currentFrame(param1:Frame) : void
       {
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }

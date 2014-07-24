@@ -26,7 +26,7 @@ package com.ankamagames.dofus.network.types.game.paddock
          //Décompilation abandonné
       }
       
-      public function initPaddockPrivateInformations(maxOutdoorMount:uint = 0, maxItems:uint = 0, price:uint = 0, locked:Boolean = false, guildId:int = 0, guildInfo:GuildInformations = null) : PaddockPrivateInformations
+      public function initPaddockPrivateInformations(param1:uint = 0, param2:uint = 0, param3:uint = 0, param4:Boolean = false, param5:int = 0, param6:GuildInformations = null) : PaddockPrivateInformations
       {
          //Décompilation abandonné
       }
@@ -36,22 +36,22 @@ package com.ankamagames.dofus.network.types.game.paddock
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PaddockPrivateInformations(output:IDataOutput) : void
+      public function serializeAs_PaddockPrivateInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PaddockPrivateInformations(input:IDataInput) : void
+      public function deserializeAs_PaddockPrivateInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

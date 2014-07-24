@@ -11,7 +11,7 @@ package com.ankamagames.berilia.types.event
       //Décompilation abandonné
       }
       
-      public function TextureLoadFailedEvent(target:Texture, behavior:DynamicSecureObject)
+      public function TextureLoadFailedEvent(param1:Texture, param2:DynamicSecureObject)
       {
          //Décompilation abandonné
       }

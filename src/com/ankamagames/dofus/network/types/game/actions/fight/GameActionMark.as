@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.types.game.actions.fight
          //Décompilation abandonné
       }
       
-      public function initGameActionMark(markAuthorId:int = 0, markSpellId:uint = 0, markId:int = 0, markType:int = 0, cells:Vector.<GameActionMarkedCell> = null) : GameActionMark
+      public function initGameActionMark(param1:int = 0, param2:uint = 0, param3:int = 0, param4:int = 0, param5:Vector.<GameActionMarkedCell> = null) : GameActionMark
       {
          //Décompilation abandonné
       }
@@ -43,22 +43,22 @@ package com.ankamagames.dofus.network.types.game.actions.fight
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameActionMark(output:IDataOutput) : void
+      public function serializeAs_GameActionMark(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameActionMark(input:IDataInput) : void
+      public function deserializeAs_GameActionMark(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

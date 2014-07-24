@@ -13,7 +13,7 @@ package com.ankamagames.berilia.utils.web
       //Décompilation abandonné
       }
       
-      public function HttpSocket(socket:Socket, rootPath:String)
+      public function HttpSocket(param1:Socket, param2:String)
       {
          //Décompilation abandonné
       }
@@ -33,12 +33,12 @@ package com.ankamagames.berilia.utils.web
          //Décompilation abandonné
       }
       
-      private function onRequestSocketData(e:ProgressEvent) : void
+      private function onRequestSocketData(param1:ProgressEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onRequestSocketClose(e:Event) : void
+      private function onRequestSocketClose(param1:Event) : void
       {
          //Décompilation abandonné
       }
@@ -48,7 +48,7 @@ package com.ankamagames.berilia.utils.web
          //Décompilation abandonné
       }
       
-      private function testSocket(socket:Socket) : Boolean
+      private function testSocket(param1:Socket) : Boolean
       {
          //Décompilation abandonné
       }

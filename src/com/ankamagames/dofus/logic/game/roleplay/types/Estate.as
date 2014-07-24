@@ -17,7 +17,7 @@ package com.ankamagames.dofus.logic.game.roleplay.types
       //Décompilation abandonné
       }
       
-      public function Estate(estate:Object)
+      public function Estate(param1:Object)
       {
          //Décompilation abandonné
       }

@@ -10,7 +10,7 @@ package org.flintparticles.common.actions
       //Décompilation abandonné
       }
       
-      public function Fade(startAlpha:Number = 1, endAlpha:Number = 0)
+      public function Fade(param1:Number = 1, param2:Number = 0)
       {
          //Décompilation abandonné
       }
@@ -24,7 +24,7 @@ package org.flintparticles.common.actions
          //Décompilation abandonné
       }
       
-      public function set startAlpha(value:Number) : void
+      public function set startAlpha(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -34,7 +34,7 @@ package org.flintparticles.common.actions
          //Décompilation abandonné
       }
       
-      public function set endAlpha(value:Number) : void
+      public function set endAlpha(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -44,7 +44,7 @@ package org.flintparticles.common.actions
          //Décompilation abandonné
       }
       
-      override public function update(emitter:Emitter, particle:Particle, time:Number) : void
+      override public function update(param1:Emitter, param2:Particle, param3:Number) : void
       {
          //Décompilation abandonné
       }

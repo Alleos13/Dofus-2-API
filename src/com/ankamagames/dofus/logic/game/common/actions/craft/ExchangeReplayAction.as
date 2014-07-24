@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.craft
          //Décompilation abandonné
       }
       
-      public static function create(pCount:int) : ExchangeReplayAction
+      public static function create(param1:int) : ExchangeReplayAction
       {
          //Décompilation abandonné
       }

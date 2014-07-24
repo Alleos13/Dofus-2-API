@@ -38,7 +38,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.fight
          //Décompilation abandonné
       }
       
-      public function initGameRolePlayPlayerFightRequestMessage(targetId:uint = 0, targetCellId:int = 0, friendly:Boolean = false) : GameRolePlayPlayerFightRequestMessage
+      public function initGameRolePlayPlayerFightRequestMessage(param1:uint = 0, param2:int = 0, param3:Boolean = false) : GameRolePlayPlayerFightRequestMessage
       {
          //Décompilation abandonné
       }
@@ -48,32 +48,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.fight
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayPlayerFightRequestMessage(output:IDataOutput) : void
+      public function serializeAs_GameRolePlayPlayerFightRequestMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayPlayerFightRequestMessage(input:IDataInput) : void
+      public function deserializeAs_GameRolePlayPlayerFightRequestMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

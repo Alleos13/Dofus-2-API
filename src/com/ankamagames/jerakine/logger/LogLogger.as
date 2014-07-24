@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.logger
       //Décompilation abandonné
       }
       
-      public function LogLogger(category:String)
+      public function LogLogger(param1:String)
       {
          //Décompilation abandonné
       }
@@ -16,12 +16,12 @@ package com.ankamagames.jerakine.logger
       
       private static var _useModuleLoggerHasOutputLog:Boolean = false;
       
-      public static function useModuleLoggerHasOutputLog(value:Boolean) : void
+      public static function useModuleLoggerHasOutputLog(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public static function activeLog(active:Boolean) : void
+      public static function activeLog(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -38,47 +38,47 @@ package com.ankamagames.jerakine.logger
          //Décompilation abandonné
       }
       
-      public function trace(message:Object) : void
+      public function trace(param1:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function debug(message:Object) : void
+      public function debug(param1:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function info(message:Object) : void
+      public function info(param1:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function warn(message:Object) : void
+      public function warn(param1:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function error(message:Object) : void
+      public function error(param1:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function fatal(message:Object) : void
+      public function fatal(param1:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function logDirectly(logEvent:LogEvent) : void
+      public function logDirectly(param1:LogEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function log(level:uint, object:Object) : void
+      public function log(param1:uint, param2:Object) : void
       {
          //Décompilation abandonné
       }
       
-      private function getFormatedMessage(message:String) : String
+      private function getFormatedMessage(param1:String) : String
       {
          //Décompilation abandonné
       }

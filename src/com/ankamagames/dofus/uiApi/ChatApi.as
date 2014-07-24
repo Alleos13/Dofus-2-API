@@ -45,7 +45,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function set module(value:UiModule) : void
+      public function set module(param1:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -75,12 +75,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getMessagesByChannel(channel:uint) : Array
+      public function getMessagesByChannel(param1:uint) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getParagraphByChannel(channel:uint) : Array
+      public function getParagraphByChannel(param1:uint) : Array
       {
          //Décompilation abandonné
       }
@@ -90,17 +90,17 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function addParagraphToHistory(id:int, p:Object) : void
+      public function addParagraphToHistory(param1:int, param2:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeLinesFromHistory(value:int, channel:int) : void
+      public function removeLinesFromHistory(param1:int, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function setMaxMessagesStored(val:int) : void
+      public function setMaxMessagesStored(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -110,32 +110,32 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function newBasicChatSentence(id:uint, msg:String, channel:uint = 0, time:Number = 0, finger:String = "") : BasicChatSentence
+      public function newBasicChatSentence(param1:uint, param2:String, param3:uint = 0, param4:Number = 0, param5:String = "") : BasicChatSentence
       {
          //Décompilation abandonné
       }
       
-      public function newChatSentenceWithSource(id:uint, msg:String, channel:uint = 0, time:Number = 0, finger:String = "", senderId:uint = 0, senderName:String = "", objects:Vector.<ItemWrapper> = null) : ChatSentenceWithSource
+      public function newChatSentenceWithSource(param1:uint, param2:String, param3:uint = 0, param4:Number = 0, param5:String = "", param6:uint = 0, param7:String = "", param8:Vector.<ItemWrapper> = null) : ChatSentenceWithSource
       {
          //Décompilation abandonné
       }
       
-      public function newChatSentenceWithRecipient(id:uint, msg:String, channel:uint = 0, time:Number = 0, finger:String = "", senderId:uint = 0, senderName:String = "", receiverName:String = "", receiverId:uint = 0, objects:Vector.<ItemWrapper> = null) : ChatSentenceWithRecipient
+      public function newChatSentenceWithRecipient(param1:uint, param2:String, param3:uint = 0, param4:Number = 0, param5:String = "", param6:uint = 0, param7:String = "", param8:String = "", param9:uint = 0, param10:Vector.<ItemWrapper> = null) : ChatSentenceWithRecipient
       {
          //Décompilation abandonné
       }
       
-      public function getTypeOfChatSentence(msg:Object) : String
+      public function getTypeOfChatSentence(param1:Object) : String
       {
          //Décompilation abandonné
       }
       
-      public function searchChannel(chan:String) : int
+      public function searchChannel(param1:String) : int
       {
          //Décompilation abandonné
       }
       
-      public function getHistoryByIndex(name:String, index:uint) : String
+      public function getHistoryByIndex(param1:String, param2:uint) : String
       {
          //Décompilation abandonné
       }
@@ -145,42 +145,42 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getStaticHyperlink(string:String) : String
+      public function getStaticHyperlink(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function newChatItem(item:ItemWrapper) : String
+      public function newChatItem(param1:ItemWrapper) : String
       {
          //Décompilation abandonné
       }
       
-      public function addAutocompletionNameEntry(name:String, priority:int) : void
+      public function addAutocompletionNameEntry(param1:String, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function getAutocompletion(subString:String, count:int) : String
+      public function getAutocompletion(param1:String, param2:int) : String
       {
          //Décompilation abandonné
       }
       
-      public function getGuildLink(pGuild:*, pText:String = null) : String
+      public function getGuildLink(param1:*, param2:String = null) : String
       {
          //Décompilation abandonné
       }
       
-      public function getAllianceLink(pAlliance:*, pText:String = null, pLinkColor:String = null, pHoverColor:String = null) : String
+      public function getAllianceLink(param1:*, param2:String = null, param3:String = null, param4:String = null) : String
       {
          //Décompilation abandonné
       }
       
-      public function changeCssHandler(val:String) : void
+      public function changeCssHandler(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function logChat(text:String) : void
+      public function logChat(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -190,22 +190,22 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function addHtmlLink(pText:String, pHref:String) : String
+      public function addHtmlLink(param1:String, param2:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function addSpan(pText:String, pStyle:Object) : void
+      public function addSpan(param1:String, param2:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function escapeChatString(inStr:String) : String
+      public function escapeChatString(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function unEscapeChatString(inStr:String) : String
+      public function unEscapeChatString(param1:String) : String
       {
          //Décompilation abandonné
       }

@@ -10,7 +10,7 @@ package org.audiofx.mp3
       //Décompilation abandonné
       }
       
-      public function MP3SoundEvent(type:String, sound:Sound, channels:uint, bubbles:Boolean = false, cancelable:Boolean = false)
+      public function MP3SoundEvent(param1:String, param2:Sound, param3:uint, param4:Boolean = false, param5:Boolean = false)
       {
          //Décompilation abandonné
       }

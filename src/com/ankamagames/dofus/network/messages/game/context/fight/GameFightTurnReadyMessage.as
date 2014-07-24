@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.context.fight
          //Décompilation abandonné
       }
       
-      public function initGameFightTurnReadyMessage(isReady:Boolean = false) : GameFightTurnReadyMessage
+      public function initGameFightTurnReadyMessage(param1:Boolean = false) : GameFightTurnReadyMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.context.fight
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightTurnReadyMessage(output:IDataOutput) : void
+      public function serializeAs_GameFightTurnReadyMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightTurnReadyMessage(input:IDataInput) : void
+      public function deserializeAs_GameFightTurnReadyMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

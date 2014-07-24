@@ -16,7 +16,7 @@ package com.ankamagames.jerakine.console
       //Décompilation abandonné
       }
       
-      public function ConsoleHandler(outputHandler:MessageHandler, displayExecutionTime:Boolean = true, hideCommandsWithoutHelp:Boolean = false)
+      public function ConsoleHandler(param1:MessageHandler, param2:Boolean = true, param3:Boolean = false)
       {
          //Décompilation abandonné
       }
@@ -48,77 +48,77 @@ package com.ankamagames.jerakine.console
          //Décompilation abandonné
       }
       
-      public function set name(value:String) : void
+      public function set name(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function output(text:String, type:uint = 0) : void
+      public function output(param1:String, param2:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function addHandler(cmd:*, handler:ConsoleInstructionHandler) : void
+      public function addHandler(param1:*, param2:ConsoleInstructionHandler) : void
       {
          //Décompilation abandonné
       }
       
-      public function changeOutputHandler(outputHandler:MessageHandler) : void
+      public function changeOutputHandler(param1:MessageHandler) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeHandler(cmd:String) : void
+      public function removeHandler(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function isHandled(cmd:String) : Boolean
+      public function isHandled(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void
+      public function handle(param1:ConsoleHandler, param2:String, param3:Array) : void
       {
          //Décompilation abandonné
       }
       
-      public function getHelp(cmd:String) : String
+      public function getHelp(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function getCmdHelp(sCmd:String) : String
+      public function getCmdHelp(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array
+      public function getParamPossibilities(param1:String, param2:uint = 0, param3:Array = null) : Array
       {
          //Décompilation abandonné
       }
       
-      public function autoComplete(cmd:String) : String
+      public function autoComplete(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function getAutoCompletePossibilities(cmd:String) : Array
+      public function getAutoCompletePossibilities(param1:String) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getAutoCompletePossibilitiesOnParam(cmd:String, paramIndex:uint, currentParams:Array) : Array
+      public function getAutoCompletePossibilitiesOnParam(param1:String, param2:uint, param3:Array) : Array
       {
          //Décompilation abandonné
       }
       
-      private function dispatchMessage(msg:ConsoleInstructionMessage) : void
+      private function dispatchMessage(param1:ConsoleInstructionMessage) : void
       {
          //Décompilation abandonné
       }

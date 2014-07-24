@@ -37,7 +37,7 @@ package com.ankamagames.dofus.network.messages.game.guild
          //Décompilation abandonné
       }
       
-      public function initGuildCreationValidMessage(guildName:String = "", guildEmblem:GuildEmblem = null) : GuildCreationValidMessage
+      public function initGuildCreationValidMessage(param1:String = "", param2:GuildEmblem = null) : GuildCreationValidMessage
       {
          //Décompilation abandonné
       }
@@ -47,32 +47,32 @@ package com.ankamagames.dofus.network.messages.game.guild
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GuildCreationValidMessage(output:IDataOutput) : void
+      public function serializeAs_GuildCreationValidMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildCreationValidMessage(input:IDataInput) : void
+      public function deserializeAs_GuildCreationValidMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

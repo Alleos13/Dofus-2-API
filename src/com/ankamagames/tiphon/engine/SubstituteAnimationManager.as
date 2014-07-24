@@ -16,12 +16,12 @@ package com.ankamagames.tiphon.engine
       
       private static var _defaultAnimations:Vector.<String>;
       
-      public static function setDefaultAnimation(like:String, defaultAnim:String) : void
+      public static function setDefaultAnimation(param1:String, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      public static function getDefaultAnimation(currentAnimation:String) : String
+      public static function getDefaultAnimation(param1:String) : String
       {
          //Décompilation abandonné
       }

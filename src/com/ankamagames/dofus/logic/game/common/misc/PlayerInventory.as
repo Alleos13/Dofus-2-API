@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.misc
          //Décompilation abandonné
       }
       
-      override public function set kamas(value:int) : void
+      override public function set kamas(param1:int) : void
       {
          //Décompilation abandonné
       }

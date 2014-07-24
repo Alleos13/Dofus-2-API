@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.json
       //Décompilation abandonné
       }
       
-      public function JSONParseError(message:String = "", location:int = 0, text:String = "")
+      public function JSONParseError(param1:String = "", param2:int = 0, param3:String = "")
       {
          //Décompilation abandonné
       }

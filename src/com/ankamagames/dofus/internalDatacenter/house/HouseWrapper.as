@@ -18,12 +18,12 @@ package com.ankamagames.dofus.internalDatacenter.house
          //Décompilation abandonné
       }
       
-      public static function create(houseInformations:HouseInformations) : HouseWrapper
+      public static function create(param1:HouseInformations) : HouseWrapper
       {
          //Décompilation abandonné
       }
       
-      public static function manualCreate(typeId:int, houseId:int, ownerName:String, isOnSale:Boolean, isSaleLocked:Boolean = false) : HouseWrapper
+      public static function manualCreate(param1:int, param2:int, param3:String, param4:Boolean, param5:Boolean = false) : HouseWrapper
       {
          //Décompilation abandonné
       }

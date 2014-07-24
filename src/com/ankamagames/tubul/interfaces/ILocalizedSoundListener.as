@@ -13,8 +13,8 @@ package com.ankamagames.tubul.interfaces
       
       function get reverseEntitySounds() : Dictionary;
       
-      function addSoundEntity(pISound:ISound, pEntityId:int) : void;
+      function addSoundEntity(param1:ISound, param2:int) : void;
       
-      function removeSoundEntity(pISound:ISound) : void;
+      function removeSoundEntity(param1:ISound) : void;
    }
 }

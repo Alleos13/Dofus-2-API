@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.look
          //Décompilation abandonné
       }
       
-      public function initIndexedEntityLook(look:EntityLook = null, index:uint = 0) : IndexedEntityLook
+      public function initIndexedEntityLook(param1:EntityLook = null, param2:uint = 0) : IndexedEntityLook
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.look
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_IndexedEntityLook(output:IDataOutput) : void
+      public function serializeAs_IndexedEntityLook(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_IndexedEntityLook(input:IDataInput) : void
+      public function deserializeAs_IndexedEntityLook(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

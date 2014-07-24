@@ -35,62 +35,62 @@ package com.ankamagames.dofus.scripts.api
       
       public static const ANIMEVENT_SHOT:String = "SHOT";
       
-      public static function GetCurrentTargetedCell(runner:FxRunner) : MapPoint
+      public static function GetCurrentTargetedCell(param1:FxRunner) : MapPoint
       {
          //Décompilation abandonné
       }
       
-      public static function GetCurrentCaster(runner:SpellFxRunner) : IEntity
+      public static function GetCurrentCaster(param1:SpellFxRunner) : IEntity
       {
          //Décompilation abandonné
       }
       
-      public static function IsCasterPlayer(runner:SpellFxRunner) : Boolean
+      public static function IsCasterPlayer(param1:SpellFxRunner) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function GetOrientationTo(fromPoint:MapPoint, toPoint:MapPoint, use4Dir:Boolean = true) : uint
+      public static function GetOrientationTo(param1:MapPoint, param2:MapPoint, param3:Boolean = true) : uint
       {
          //Décompilation abandonné
       }
       
-      public static function GetAngleTo(fromPoint:MapPoint, toPoint:MapPoint) : Number
+      public static function GetAngleTo(param1:MapPoint, param2:MapPoint) : Number
       {
          //Décompilation abandonné
       }
       
-      public static function SetGfxRotation(gfx:DisplayObject, angle:Number) : void
+      public static function SetGfxRotation(param1:DisplayObject, param2:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public static function GetEntityCell(entity:IEntity) : MapPoint
+      public static function GetEntityCell(param1:IEntity) : MapPoint
       {
          //Décompilation abandonné
       }
       
-      public static function IsPositionsEquals(pointOne:MapPoint, pointTwo:MapPoint) : Boolean
+      public static function IsPositionsEquals(param1:MapPoint, param2:MapPoint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function GetEntityOnCell(point:MapPoint) : IEntity
+      public static function GetEntityOnCell(param1:MapPoint) : IEntity
       {
          //Décompilation abandonné
       }
       
-      public static function GetEntityId(entity:IEntity) : int
+      public static function GetEntityId(param1:IEntity) : int
       {
          //Décompilation abandonné
       }
       
-      public static function GetEntityPosition(entity:IEntity) : MapPoint
+      public static function GetEntityPosition(param1:IEntity) : MapPoint
       {
          //Décompilation abandonné
       }
       
-      public static function CreateGfxEntity(gfxId:uint, cell:MapPoint, randomRotationMin:Number = 0, randomRotationMax:Number = 0, randomFlip:Boolean = false, startPlayingOnlyWhenDisplayed:Boolean = true) : IEntity
+      public static function CreateGfxEntity(param1:uint, param2:MapPoint, param3:Number = 0, param4:Number = 0, param5:Boolean = false, param6:Boolean = true) : IEntity
       {
          //Décompilation abandonné
       }
@@ -100,17 +100,17 @@ package com.ankamagames.dofus.scripts.api
          //Décompilation abandonné
       }
       
-      public static function SetEntityAnimation(target:TiphonSprite, animName:String) : void
+      public static function SetEntityAnimation(param1:TiphonSprite, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      public static function SetSubEntity(target:TiphonSprite, subentity:DisplayObject, category:uint, slot:uint) : void
+      public static function SetSubEntity(param1:TiphonSprite, param2:DisplayObject, param3:uint, param4:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public static function CreateParticlesEntity(rendererType:uint) : ParticuleEmitterEntity
+      public static function CreateParticlesEntity(param1:uint) : ParticuleEmitterEntity
       {
          //Décompilation abandonné
       }

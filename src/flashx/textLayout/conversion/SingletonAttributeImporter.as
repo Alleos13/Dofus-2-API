@@ -7,7 +7,7 @@ package flashx.textLayout.conversion
       //Décompilation abandonné
       }
       
-      function SingletonAttributeImporter(key:String)
+      function SingletonAttributeImporter(param1:String)
       {
          //Décompilation abandonné
       }
@@ -26,7 +26,7 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      public function importOneFormat(key:String, val:String) : Boolean
+      public function importOneFormat(param1:String, param2:String) : Boolean
       {
          //Décompilation abandonné
       }

@@ -12,7 +12,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function BreedItemCriterion(pCriterion:String)
+      public function BreedItemCriterion(param1:String)
       {
          //Décompilation abandonné
       }

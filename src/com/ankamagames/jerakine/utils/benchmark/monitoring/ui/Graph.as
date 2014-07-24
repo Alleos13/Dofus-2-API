@@ -14,7 +14,7 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring.ui
       //Décompilation abandonné
       }
       
-      public function Graph(pName:String, pColor:uint = 16777215)
+      public function Graph(param1:String, param2:uint = 16777215)
       {
          //Décompilation abandonné
       }
@@ -37,32 +37,32 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring.ui
       
       private var grapheIsVisible:Boolean = true;
       
-      private function clickHandler(pEvt:MouseEvent) : void
+      private function clickHandler(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function mouseOverHandler(pEvt:MouseEvent) : void
+      private function mouseOverHandler(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function mouseOutHandler(pEvt:MouseEvent) : void
+      private function mouseOutHandler(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function insertNewValue(val:int) : void
+      public function insertNewValue(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function addValue(val:int) : void
+      private function addValue(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateLastValue(val:int) : void
+      private function updateLastValue(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -77,7 +77,7 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring.ui
          //Décompilation abandonné
       }
       
-      public function setMenuPosition(pX:Number, pY:Number) : void
+      public function setMenuPosition(param1:Number, param2:Number) : void
       {
          //Décompilation abandonné
       }

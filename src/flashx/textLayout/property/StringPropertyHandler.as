@@ -12,7 +12,7 @@ package flashx.textLayout.property
          //Décompilation abandonné
       }
       
-      override public function owningHandlerCheck(newVal:*) : *
+      override public function owningHandlerCheck(param1:*) : *
       {
          //Décompilation abandonné
       }

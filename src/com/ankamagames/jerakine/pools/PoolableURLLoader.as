@@ -14,7 +14,7 @@ package com.ankamagames.jerakine.pools
       //Décompilation abandonné
       }
       
-      public function PoolableURLLoader(request:URLRequest = null)
+      public function PoolableURLLoader(param1:URLRequest = null)
       {
          //Décompilation abandonné
       }

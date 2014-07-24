@@ -24,7 +24,7 @@ package com.ankamagames.dofus.logic.game.fight.types
       //Décompilation abandonné
       }
       
-      public function SpellCastInFightManager(entityId:int)
+      public function SpellCastInFightManager(param1:int)
       {
          //Décompilation abandonné
       }
@@ -48,22 +48,22 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function resetInitialCooldown(hasBeenSummoned:Boolean = false) : void
+      public function resetInitialCooldown(param1:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateCooldowns(spellCooldowns:Vector.<GameFightSpellCooldown> = null) : void
+      public function updateCooldowns(param1:Vector.<GameFightSpellCooldown> = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function castSpell(pSpellId:uint, pSpellLevel:uint, pTargets:Array, pCountForCooldown:Boolean = true) : void
+      public function castSpell(param1:uint, param2:uint, param3:Array, param4:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function getSpellManagerBySpellId(pSpellId:uint) : SpellManager
+      public function getSpellManagerBySpellId(param1:uint) : SpellManager
       {
          //Décompilation abandonné
       }

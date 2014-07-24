@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.alignments
       
       protected static const _log:Logger;
       
-      public static function getAlignmentBalanceById(id:int) : AlignmentBalance
+      public static function getAlignmentBalanceById(param1:int) : AlignmentBalance
       {
          //Décompilation abandonné
       }

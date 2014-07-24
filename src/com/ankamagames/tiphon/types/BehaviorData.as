@@ -9,7 +9,7 @@ package com.ankamagames.tiphon.types
       //Décompilation abandonné
       }
       
-      public function BehaviorData(animation:String, direction:int, parent:TiphonSprite)
+      public function BehaviorData(param1:String, param2:int, param3:TiphonSprite)
       {
          //Décompilation abandonné
       }
@@ -36,7 +36,7 @@ package com.ankamagames.tiphon.types
          //Décompilation abandonné
       }
       
-      public function set animation(v:String) : void
+      public function set animation(param1:String) : void
       {
          //Décompilation abandonné
       }

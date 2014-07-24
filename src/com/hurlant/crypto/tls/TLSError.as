@@ -7,7 +7,7 @@ package com.hurlant.crypto.tls
       //Décompilation abandonné
       }
       
-      public function TLSError(message:String, id:int)
+      public function TLSError(param1:String, param2:int)
       {
          //Décompilation abandonné
       }

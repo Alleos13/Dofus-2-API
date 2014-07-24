@@ -14,7 +14,7 @@ package com.ankamagames.jerakine.data
       //Décompilation abandonné
       }
       
-      public function GameDataField(fieldName:String)
+      public function GameDataField(param1:String)
       {
          //Décompilation abandonné
       }
@@ -31,52 +31,52 @@ package com.ankamagames.jerakine.data
       
       private var _innerTypeNames:Vector.<String>;
       
-      public function readType(stream:IDataInput) : void
+      public function readType(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      private function getReadMethod(type:int, stream:IDataInput) : Function
+      private function getReadMethod(param1:int, param2:IDataInput) : Function
       {
          //Décompilation abandonné
       }
       
-      private function readVector(moduleName:String, stream:IDataInput, innerIndex:uint = 0) : *
+      private function readVector(param1:String, param2:IDataInput, param3:uint = 0) : *
       {
          //Décompilation abandonné
       }
       
-      private function readObject(moduleName:String, stream:IDataInput, innerIndex:uint = 0) : *
+      private function readObject(param1:String, param2:IDataInput, param3:uint = 0) : *
       {
          //Décompilation abandonné
       }
       
-      private function readInteger(moduleName:String, stream:IDataInput, innerIndex:uint = 0) : *
+      private function readInteger(param1:String, param2:IDataInput, param3:uint = 0) : *
       {
          //Décompilation abandonné
       }
       
-      private function readBoolean(moduleName:String, stream:IDataInput, innerIndex:uint = 0) : *
+      private function readBoolean(param1:String, param2:IDataInput, param3:uint = 0) : *
       {
          //Décompilation abandonné
       }
       
-      private function readString(moduleName:String, stream:IDataInput, innerIndex:uint = 0) : *
+      private function readString(param1:String, param2:IDataInput, param3:uint = 0) : *
       {
          //Décompilation abandonné
       }
       
-      private function readNumber(moduleName:String, stream:IDataInput, innerIndex:uint = 0) : *
+      private function readNumber(param1:String, param2:IDataInput, param3:uint = 0) : *
       {
          //Décompilation abandonné
       }
       
-      private function readI18n(moduleName:String, stream:IDataInput, innerIndex:uint = 0) : *
+      private function readI18n(param1:String, param2:IDataInput, param3:uint = 0) : *
       {
          //Décompilation abandonné
       }
       
-      private function readUnsignedInteger(moduleName:String, stream:IDataInput, innerIndex:uint = 0) : *
+      private function readUnsignedInteger(param1:String, param2:IDataInput, param3:uint = 0) : *
       {
          //Décompilation abandonné
       }

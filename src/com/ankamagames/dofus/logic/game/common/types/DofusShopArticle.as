@@ -12,7 +12,7 @@ package com.ankamagames.dofus.logic.game.common.types
       //Décompilation abandonné
       }
       
-      public function DofusShopArticle(data:Object)
+      public function DofusShopArticle(param1:Object)
       {
          //Décompilation abandonné
       }
@@ -41,12 +41,12 @@ package com.ankamagames.dofus.logic.game.common.types
       
       private var _endTimer:Timer;
       
-      override public function init(data:Object) : void
+      override public function init(param1:Object) : void
       {
          //Décompilation abandonné
       }
       
-      protected function onEndDate(event:TimerEvent) : void
+      protected function onEndDate(param1:TimerEvent) : void
       {
          //Décompilation abandonné
       }

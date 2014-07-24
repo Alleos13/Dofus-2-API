@@ -16,7 +16,7 @@ package com.ankamagames.dofus.logic.common.actions
       
       public var behavior:String;
       
-      public function create(name:String) : RemoveBehaviorToStackAction
+      public function create(param1:String) : RemoveBehaviorToStackAction
       {
          //Décompilation abandonné
       }

@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.character.status
          //Décompilation abandonné
       }
       
-      public function initPlayerStatus(statusId:uint = 1) : PlayerStatus
+      public function initPlayerStatus(param1:uint = 1) : PlayerStatus
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.character.status
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PlayerStatus(output:IDataOutput) : void
+      public function serializeAs_PlayerStatus(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PlayerStatus(input:IDataInput) : void
+      public function deserializeAs_PlayerStatus(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

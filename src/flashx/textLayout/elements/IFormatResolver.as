@@ -9,14 +9,14 @@ package flashx.textLayout.elements
       //Décompilation abandonné
       }
       
-      function invalidateAll(textFlow:TextFlow) : void;
+      function invalidateAll(param1:TextFlow) : void;
       
-      function invalidate(target:Object) : void;
+      function invalidate(param1:Object) : void;
       
-      function resolveFormat(target:Object) : ITextLayoutFormat;
+      function resolveFormat(param1:Object) : ITextLayoutFormat;
       
-      function resolveUserFormat(target:Object, userFormat:String) : *;
+      function resolveUserFormat(param1:Object, param2:String) : *;
       
-      function getResolverForNewFlow(oldFlow:TextFlow, newFlow:TextFlow) : IFormatResolver;
+      function getResolverForNewFlow(param1:TextFlow, param2:TextFlow) : IFormatResolver;
    }
 }

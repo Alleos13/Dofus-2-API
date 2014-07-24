@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      public function initExchangeBidPriceForSellerMessage(genericId:uint = 0, averagePrice:int = 0, allIdentical:Boolean = false, minimalPrices:Vector.<uint> = null) : ExchangeBidPriceForSellerMessage
+      public function initExchangeBidPriceForSellerMessage(param1:uint = 0, param2:int = 0, param3:Boolean = false, param4:Vector.<uint> = null) : ExchangeBidPriceForSellerMessage
       {
          //Décompilation abandonné
       }
@@ -45,32 +45,32 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeBidPriceForSellerMessage(output:IDataOutput) : void
+      public function serializeAs_ExchangeBidPriceForSellerMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeBidPriceForSellerMessage(input:IDataInput) : void
+      public function deserializeAs_ExchangeBidPriceForSellerMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

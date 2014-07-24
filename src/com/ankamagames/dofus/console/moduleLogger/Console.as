@@ -102,7 +102,7 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private var _showShortcut:Boolean = true;
       
-      private function output(message:TypeMessage) : void
+      private function output(param1:TypeMessage) : void
       {
          //Décompilation abandonné
       }
@@ -117,7 +117,7 @@ package com.ankamagames.dofus.console.moduleLogger
          //Décompilation abandonné
       }
       
-      public function display(quietMode:Boolean = false) : void
+      public function display(param1:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -127,12 +127,12 @@ package com.ankamagames.dofus.console.moduleLogger
          //Décompilation abandonné
       }
       
-      private function log(... args) : void
+      private function log(... rest) : void
       {
          //Décompilation abandonné
       }
       
-      private function clearConsole(e:Event = null) : void
+      private function clearConsole(param1:Event = null) : void
       {
          //Décompilation abandonné
       }
@@ -142,7 +142,7 @@ package com.ankamagames.dofus.console.moduleLogger
          //Décompilation abandonné
       }
       
-      private function openFilterUI(open:Boolean) : void
+      private function openFilterUI(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -157,42 +157,42 @@ package com.ankamagames.dofus.console.moduleLogger
          //Décompilation abandonné
       }
       
-      private function loadData(data:Object) : void
+      private function loadData(param1:Object) : void
       {
          //Décompilation abandonné
       }
       
-      private function onIconFilterMouseDown(e:Event) : void
+      private function onIconFilterMouseDown(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onFilterChange(event:Event = null) : void
+      private function onFilterChange(param1:Event = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function onResize(event:Event = null) : void
+      private function onResize(param1:Event = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTextClick(textEvent:TextEvent) : void
+      private function onTextClick(param1:TextEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onBookClick(e:MouseEvent) : void
+      private function onBookClick(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function saveText(e:Event) : void
+      private function saveText(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onClose(e:Event) : void
+      private function onClose(param1:Event) : void
       {
          //Décompilation abandonné
       }
@@ -201,12 +201,12 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private var regExp2:RegExp;
       
-      private function onFileSelect(e:Event) : void
+      private function onFileSelect(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onScrollVChange(e:Event) : void
+      private function onScrollVChange(param1:Event) : void
       {
          //Décompilation abandonné
       }

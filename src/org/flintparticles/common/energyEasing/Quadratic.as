@@ -12,17 +12,17 @@ package org.flintparticles.common.energyEasing
          //Décompilation abandonné
       }
       
-      public static function easeIn(age:Number, lifetime:Number) : Number
+      public static function easeIn(param1:Number, param2:Number) : Number
       {
          //Décompilation abandonné
       }
       
-      public static function easeOut(age:Number, lifetime:Number) : Number
+      public static function easeOut(param1:Number, param2:Number) : Number
       {
          //Décompilation abandonné
       }
       
-      public static function easeInOut(age:Number, lifetime:Number) : Number
+      public static function easeInOut(param1:Number, param2:Number) : Number
       {
          //Décompilation abandonné
       }

@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.roleplay.actions.estate
          //Décompilation abandonné
       }
       
-      public static function create(areaId:int, atLeastNbRoom:uint, atLeastNbChest:uint, skillRequested:uint, maxPrice:uint) : HouseToSellFilterAction
+      public static function create(param1:int, param2:uint, param3:uint, param4:uint, param5:uint) : HouseToSellFilterAction
       {
          //Décompilation abandonné
       }

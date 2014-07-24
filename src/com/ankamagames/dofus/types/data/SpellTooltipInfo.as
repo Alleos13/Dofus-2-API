@@ -9,7 +9,7 @@ package com.ankamagames.dofus.types.data
       //Décompilation abandonné
       }
       
-      public function SpellTooltipInfo(spellWrapper:SpellWrapper, shortcutKey:String = null)
+      public function SpellTooltipInfo(param1:SpellWrapper, param2:String = null)
       {
          //Décompilation abandonné
       }

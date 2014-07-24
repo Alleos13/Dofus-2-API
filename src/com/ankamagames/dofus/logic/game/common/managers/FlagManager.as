@@ -28,7 +28,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function set phoenixs(value:Array) : void
+      public function set phoenixs(param1:Array) : void
       {
          //Décompilation abandonné
       }

@@ -9,7 +9,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function VideoBufferChangeMessage(target:InteractiveObject, state:uint)
+      public function VideoBufferChangeMessage(param1:InteractiveObject, param2:uint)
       {
          //Décompilation abandonné
       }

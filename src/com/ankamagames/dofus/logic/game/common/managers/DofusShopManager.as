@@ -67,7 +67,7 @@ package com.ankamagames.dofus.logic.game.common.managers
       
       private var _isOnHomePage:Boolean;
       
-      public function init(key:String) : void
+      public function init(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -87,72 +87,72 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function buyArticle(articleId:int, quantity:int = 1) : void
+      public function buyArticle(param1:int, param2:int = 1) : void
       {
          //Décompilation abandonné
       }
       
-      public function getArticlesList(category:int, page:int = 1, size:int = 12) : void
+      public function getArticlesList(param1:int, param2:int = 1, param3:int = 12) : void
       {
          //Décompilation abandonné
       }
       
-      public function searchForArticles(criteria:String, page:int = 1, size:int = 12) : void
+      public function searchForArticles(param1:String, param2:int = 1, param3:int = 12) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateAfterExpiredArticle(articleId:int) : void
+      public function updateAfterExpiredArticle(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAuthentification(success:Boolean, params:*, request:*) : void
+      private function onAuthentification(param1:Boolean, param2:*, param3:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMoney(success:Boolean, params:*, request:*) : void
+      private function onMoney(param1:Boolean, param2:*, param3:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function onHome(success:Boolean, params:*, request:*) : void
+      private function onHome(param1:Boolean, param2:*, param3:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function onArticlesList(success:Boolean, params:*, request:*) : void
+      private function onArticlesList(param1:Boolean, param2:*, param3:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function onPreloadArticlesList(success:Boolean, params:*, request:*) : void
+      private function onPreloadArticlesList(param1:Boolean, param2:*, param3:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSearchArticles(success:Boolean, params:*, request:*) : void
+      private function onSearchArticles(param1:Boolean, param2:*, param3:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function onBuyArticle(success:Boolean, params:*, request:*) : void
+      private function onBuyArticle(param1:Boolean, param2:*, param3:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function onClose(event:UiUnloadEvent) : void
+      private function onClose(param1:UiUnloadEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function checkPreviousAndNextArticlePages(category:int, page:int, totalPages:int) : void
+      private function checkPreviousAndNextArticlePages(param1:int, param2:int, param3:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function processCallError(error:*) : void
+      private function processCallError(param1:*) : void
       {
          //Décompilation abandonné
       }

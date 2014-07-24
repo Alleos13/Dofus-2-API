@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      public function initPartyInvitationDungeonRequestMessage(name:String = "", dungeonId:uint = 0) : PartyInvitationDungeonRequestMessage
+      public function initPartyInvitationDungeonRequestMessage(param1:String = "", param2:uint = 0) : PartyInvitationDungeonRequestMessage
       {
          //Décompilation abandonné
       }
@@ -43,32 +43,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PartyInvitationDungeonRequestMessage(output:IDataOutput) : void
+      public function serializeAs_PartyInvitationDungeonRequestMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PartyInvitationDungeonRequestMessage(input:IDataInput) : void
+      public function deserializeAs_PartyInvitationDungeonRequestMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

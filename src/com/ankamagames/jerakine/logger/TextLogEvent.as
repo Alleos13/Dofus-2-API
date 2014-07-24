@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.logger
       //Décompilation abandonné
       }
       
-      public function TextLogEvent(category:String = null, message:String = null, logLevel:uint = 0)
+      public function TextLogEvent(param1:String = null, param2:String = null, param3:uint = 0)
       {
          //Décompilation abandonné
       }

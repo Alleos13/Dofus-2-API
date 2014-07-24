@@ -15,7 +15,7 @@ package com.ankamagames.dofus.logic.connection.messages
          //Décompilation abandonné
       }
       
-      public function initDelayedSystemMessageDisplayMessage(hangUp:Boolean = false, msgId:uint = 0, parameters:Vector.<String> = null) : DelayedSystemMessageDisplayMessage
+      public function initDelayedSystemMessageDisplayMessage(param1:Boolean = false, param2:uint = 0, param3:Vector.<String> = null) : DelayedSystemMessageDisplayMessage
       {
          //Décompilation abandonné
       }

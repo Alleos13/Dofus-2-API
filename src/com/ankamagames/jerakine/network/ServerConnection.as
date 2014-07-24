@@ -31,7 +31,7 @@ package com.ankamagames.jerakine.network
       //Décompilation abandonné
       }
       
-      public function ServerConnection(host:String = null, port:int = 0)
+      public function ServerConnection(param1:String = null, param2:int = 0)
       {
          //Décompilation abandonné
       }
@@ -100,7 +100,7 @@ package com.ankamagames.jerakine.network
          //Décompilation abandonné
       }
       
-      public function set rawParser(value:RawDataParser) : void
+      public function set rawParser(param1:RawDataParser) : void
       {
          //Décompilation abandonné
       }
@@ -110,7 +110,7 @@ package com.ankamagames.jerakine.network
          //Décompilation abandonné
       }
       
-      public function set handler(value:MessageHandler) : void
+      public function set handler(param1:MessageHandler) : void
       {
          //Décompilation abandonné
       }
@@ -145,7 +145,7 @@ package com.ankamagames.jerakine.network
          //Décompilation abandonné
       }
       
-      public function set lagometer(l:ILagometer) : void
+      public function set lagometer(param1:ILagometer) : void
       {
          //Décompilation abandonné
       }
@@ -160,22 +160,22 @@ package com.ankamagames.jerakine.network
          //Décompilation abandonné
       }
       
-      override public function connect(host:String, port:int) : void
+      override public function connect(param1:String, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function getType(v:*) : String
+      private function getType(param1:*) : String
       {
          //Décompilation abandonné
       }
       
-      private function inspect(target:*, indent:String = "", isArray:Boolean = false) : String
+      private function inspect(param1:*, param2:String = "", param3:Boolean = false) : String
       {
          //Décompilation abandonné
       }
       
-      public function send(msg:INetworkMessage) : void
+      public function send(param1:INetworkMessage) : void
       {
          //Décompilation abandonné
       }
@@ -210,27 +210,27 @@ package com.ankamagames.jerakine.network
          //Décompilation abandonné
       }
       
-      private function receive(src:IDataInput) : void
+      private function receive(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      private function getMessageId(firstOctet:uint) : uint
+      private function getMessageId(param1:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function readMessageLength(staticHeader:uint, src:IDataInput) : uint
+      private function readMessageLength(param1:uint, param2:IDataInput) : uint
       {
          //Décompilation abandonné
       }
       
-      protected function lowSend(msg:INetworkMessage, autoFlush:Boolean = true) : void
+      protected function lowSend(param1:INetworkMessage, param2:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      protected function lowReceive(src:IDataInput) : INetworkMessage
+      protected function lowReceive(param1:IDataInput) : INetworkMessage
       {
          //Décompilation abandonné
       }
@@ -240,32 +240,32 @@ package com.ankamagames.jerakine.network
          //Décompilation abandonné
       }
       
-      protected function onConnect(e:Event) : void
+      protected function onConnect(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      protected function onClose(e:Event) : void
+      protected function onClose(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      protected function onSocketData(pe:ProgressEvent) : void
+      protected function onSocketData(param1:ProgressEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function onSocketError(e:IOErrorEvent) : void
+      protected function onSocketError(param1:IOErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function onSocketTimeOut(e:Event) : void
+      protected function onSocketTimeOut(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      protected function onSecurityError(see:SecurityErrorEvent) : void
+      protected function onSecurityError(param1:SecurityErrorEvent) : void
       {
          //Décompilation abandonné
       }

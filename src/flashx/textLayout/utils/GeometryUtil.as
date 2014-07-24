@@ -19,7 +19,7 @@ package flashx.textLayout.utils
          //Décompilation abandonné
       }
       
-      public static function getHighlightBounds(range:TextRange) : Array
+      public static function getHighlightBounds(param1:TextRange) : Array
       {
          //Décompilation abandonné
       }

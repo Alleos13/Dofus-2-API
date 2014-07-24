@@ -20,7 +20,7 @@ package com.ankamagames.atouin.data.elements
          //Décompilation abandonné
       }
       
-      public static function getGraphicalElementData(elementId:int, elementType:int) : GraphicalElementData
+      public static function getGraphicalElementData(param1:int, param2:int) : GraphicalElementData
       {
          //Décompilation abandonné
       }

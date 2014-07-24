@@ -24,27 +24,27 @@ package com.ankamagames.berilia.utils
       
       private var _observer2:IResourceObserver;
       
-      override public function load(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, cache:ICache, forcedAdapter:Class, singleFile:Boolean) : void
+      override public function load(param1:Uri, param2:IResourceObserver, param3:Boolean, param4:ICache, param5:Class, param6:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void
+      override protected function loadDirectly(param1:Uri, param2:IResourceObserver, param3:Boolean, param4:Class) : void
       {
          //Décompilation abandonné
       }
       
-      private function _onLoaded(uri:Uri, resourceType:uint, resource:*) : void
+      private function _onLoaded(param1:Uri, param2:uint, param3:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function _onFailed(uri:Uri, errorMsg:String, errorCode:uint) : void
+      private function _onFailed(param1:Uri, param2:String, param3:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function _onProgress(uri:Uri, bytesLoaded:uint, bytesTotal:uint) : void
+      private function _onProgress(param1:Uri, param2:uint, param3:uint) : void
       {
          //Décompilation abandonné
       }

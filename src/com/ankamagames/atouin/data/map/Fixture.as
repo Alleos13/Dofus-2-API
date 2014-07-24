@@ -14,7 +14,7 @@ package com.ankamagames.atouin.data.map
       //Décompilation abandonné
       }
       
-      public function Fixture(map:Map)
+      public function Fixture(param1:Map)
       {
          //Décompilation abandonné
       }
@@ -48,7 +48,7 @@ package com.ankamagames.atouin.data.map
          //Décompilation abandonné
       }
       
-      public function fromRaw(raw:IDataInput) : void
+      public function fromRaw(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

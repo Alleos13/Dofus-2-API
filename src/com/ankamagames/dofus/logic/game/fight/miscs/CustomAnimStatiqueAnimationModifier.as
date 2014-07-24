@@ -31,7 +31,7 @@ package com.ankamagames.dofus.logic.game.fight.miscs
          //Décompilation abandonné
       }
       
-      public function getModifiedAnimation(pAnimation:String, pLook:TiphonEntityLook) : String
+      public function getModifiedAnimation(param1:String, param2:TiphonEntityLook) : String
       {
          //Décompilation abandonné
       }

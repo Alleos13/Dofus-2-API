@@ -9,7 +9,7 @@ package com.somerandomdude.colortoolkit.schemes
       //Décompilation abandonné
       }
       
-      public function Monochrome(primaryColor:int)
+      public function Monochrome(param1:int)
       {
          //Décompilation abandonné
       }

@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.entities.messages
       //Décompilation abandonné
       }
       
-      public function EntityMouseOverMessage(entity:IInteractive, virtual:Boolean = false)
+      public function EntityMouseOverMessage(param1:IInteractive, param2:Boolean = false)
       {
          //Décompilation abandonné
       }

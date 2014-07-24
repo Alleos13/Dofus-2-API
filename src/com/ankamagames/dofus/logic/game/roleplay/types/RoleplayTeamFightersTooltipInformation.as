@@ -20,7 +20,7 @@ package com.ankamagames.dofus.logic.game.roleplay.types
       //Décompilation abandonné
       }
       
-      public function RoleplayTeamFightersTooltipInformation(pFightTeam:FightTeam)
+      public function RoleplayTeamFightersTooltipInformation(param1:FightTeam)
       {
          //Décompilation abandonné
       }
@@ -31,7 +31,7 @@ package com.ankamagames.dofus.logic.game.roleplay.types
       
       public var nbWaves:uint;
       
-      private function getCompanionFighter(pFighter:Fighter, pCompanionId:int, pCompanionGenericId:int) : Fighter
+      private function getCompanionFighter(param1:Fighter, param2:int, param3:int) : Fighter
       {
          //Décompilation abandonné
       }
@@ -44,7 +44,7 @@ class Fighter extends Object
    //Décompilation abandonné
    }
    
-   function Fighter(pId:int, pName:String, pLevel:uint, pAllianceTagName:String = null)
+   function Fighter(param1:int, param2:String, param3:uint, param4:String = null)
    {
       //Décompilation abandonné
    }

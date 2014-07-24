@@ -9,7 +9,7 @@ package com.ankamagames.tiphon.types
       //Décompilation abandonné
       }
       
-      public function EventListener(pListener:IFLAEventHandler, pTypesEvents:String)
+      public function EventListener(param1:IFLAEventHandler, param2:String)
       {
          //Décompilation abandonné
       }

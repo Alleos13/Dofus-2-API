@@ -22,12 +22,12 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      private static function getNestedArgCount(obj:Object) : uint
+      private static function getNestedArgCount(param1:Object) : uint
       {
          //Décompilation abandonné
       }
       
-      private static function getNestedArg(obj:Object, index:uint) : FlowElement
+      private static function getNestedArg(param1:Object, param2:uint) : FlowElement
       {
          //Décompilation abandonné
       }
@@ -38,17 +38,17 @@ package flashx.textLayout.elements
       
       private var _numChildren:int;
       
-      override public function deepCopy(startPos:int = 0, endPos:int = -1) : FlowElement
+      override public function deepCopy(param1:int = 0, param2:int = -1) : FlowElement
       {
          //Décompilation abandonné
       }
       
-      override public function getText(relativeStart:int = 0, relativeEnd:int = -1, paragraphSeparator:String = "\n") : String
+      override public function getText(param1:int = 0, param2:int = -1, param3:String = "\n") : String
       {
          //Décompilation abandonné
       }
       
-      override tlf_internal function formatChanged(notifyModelChanged:Boolean = true) : void
+      override tlf_internal function formatChanged(param1:Boolean = true) : void
       {
          //Décompilation abandonné
       }
@@ -63,7 +63,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set mxmlChildren(array:Array) : void
+      public function set mxmlChildren(param1:Array) : void
       {
          //Décompilation abandonné
       }
@@ -73,32 +73,32 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function getChildIndex(child:FlowElement) : int
+      public function getChildIndex(param1:FlowElement) : int
       {
          //Décompilation abandonné
       }
       
-      public function getChildAt(index:int) : FlowElement
+      public function getChildAt(param1:int) : FlowElement
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function getNextLeafHelper(limitElement:FlowGroupElement, child:FlowElement) : FlowLeafElement
+      tlf_internal function getNextLeafHelper(param1:FlowGroupElement, param2:FlowElement) : FlowLeafElement
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function getPreviousLeafHelper(limitElement:FlowGroupElement, child:FlowElement) : FlowLeafElement
+      tlf_internal function getPreviousLeafHelper(param1:FlowGroupElement, param2:FlowElement) : FlowLeafElement
       {
          //Décompilation abandonné
       }
       
-      public function findLeaf(relativePosition:int) : FlowLeafElement
+      public function findLeaf(param1:int) : FlowLeafElement
       {
          //Décompilation abandonné
       }
       
-      public function findChildIndexAtPosition(relativePosition:int) : int
+      public function findChildIndexAtPosition(param1:int) : int
       {
          //Décompilation abandonné
       }
@@ -113,22 +113,22 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override public function getCharAtPosition(relativePosition:int) : String
+      override public function getCharAtPosition(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      override tlf_internal function applyFunctionToElements(func:Function) : Boolean
+      override tlf_internal function applyFunctionToElements(param1:Function) : Boolean
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function removeBlockElement(child:FlowElement, block:ContentElement) : void
+      tlf_internal function removeBlockElement(param1:FlowElement, param2:ContentElement) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function insertBlockElement(child:FlowElement, block:ContentElement) : void
+      tlf_internal function insertBlockElement(param1:FlowElement, param2:ContentElement) : void
       {
          //Décompilation abandonné
       }
@@ -143,62 +143,62 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      tlf_internal function addChildAfterInternal(child:FlowElement, newChild:FlowElement) : void
+      tlf_internal function addChildAfterInternal(param1:FlowElement, param2:FlowElement) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function canOwnFlowElement(elem:FlowElement) : Boolean
+      tlf_internal function canOwnFlowElement(param1:FlowElement) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function replaceChildren(beginChildIndex:int, endChildIndex:int, ... rest) : void
+      public function replaceChildren(param1:int, param2:int, ... rest) : void
       {
          //Décompilation abandonné
       }
       
-      public function addChild(child:FlowElement) : FlowElement
+      public function addChild(param1:FlowElement) : FlowElement
       {
          //Décompilation abandonné
       }
       
-      public function addChildAt(index:uint, child:FlowElement) : FlowElement
+      public function addChildAt(param1:uint, param2:FlowElement) : FlowElement
       {
          //Décompilation abandonné
       }
       
-      public function removeChild(child:FlowElement) : FlowElement
+      public function removeChild(param1:FlowElement) : FlowElement
       {
          //Décompilation abandonné
       }
       
-      public function removeChildAt(index:uint) : FlowElement
+      public function removeChildAt(param1:uint) : FlowElement
       {
          //Décompilation abandonné
       }
       
-      public function splitAtIndex(childIndex:int) : FlowGroupElement
+      public function splitAtIndex(param1:int) : FlowGroupElement
       {
          //Décompilation abandonné
       }
       
-      override public function splitAtPosition(relativePosition:int) : FlowElement
+      override public function splitAtPosition(param1:int) : FlowElement
       {
          //Décompilation abandonné
       }
       
-      override tlf_internal function normalizeRange(normalizeStart:uint, normalizeEnd:uint) : void
+      override tlf_internal function normalizeRange(param1:uint, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override tlf_internal function applyWhiteSpaceCollapse(collapse:String) : void
+      override tlf_internal function applyWhiteSpaceCollapse(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      override tlf_internal function appendElementsForDelayedUpdate(tf:TextFlow, changeType:String) : void
+      override tlf_internal function appendElementsForDelayedUpdate(param1:TextFlow, param2:String) : void
       {
          //Décompilation abandonné
       }

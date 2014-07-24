@@ -35,7 +35,7 @@ package com.ankamagames.tiphon.types
       
       public static var skinPartTransformProvider:ISkinPartTransformProvider;
       
-      public static function addAlternativeSkin(gfxId:uint, alternativeGfxId:uint) : void
+      public static function addAlternativeSkin(param1:uint, param2:uint) : void
       {
          //Décompilation abandonné
       }
@@ -73,7 +73,7 @@ package com.ankamagames.tiphon.types
          //Décompilation abandonné
       }
       
-      public function set validate(b:Boolean) : void
+      public function set validate(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -83,22 +83,22 @@ package com.ankamagames.tiphon.types
          //Décompilation abandonné
       }
       
-      public function getSwlFromPart(clipName:String) : uint
+      public function getSwlFromPart(param1:String) : uint
       {
          //Décompilation abandonné
       }
       
-      public function add(gfxId:uint, alternativeSkinIndex:int = -1) : uint
+      public function add(param1:uint, param2:int = -1) : uint
       {
          //Décompilation abandonné
       }
       
-      public function getTransformData(clipName:String) : TransformData
+      public function getTransformData(param1:String) : TransformData
       {
          //Décompilation abandonné
       }
       
-      public function getPart(sName:String) : Sprite
+      public function getPart(param1:String) : Sprite
       {
          //Décompilation abandonné
       }
@@ -108,12 +108,12 @@ package com.ankamagames.tiphon.types
          //Décompilation abandonné
       }
       
-      public function addTransform(part:String, skinId:uint, data:TransformData) : void
+      public function addTransform(param1:String, param2:uint, param3:TransformData) : void
       {
          //Décompilation abandonné
       }
       
-      private function onResourceLoaded(gfxId:uint) : void
+      private function onResourceLoaded(param1:uint) : void
       {
          //Décompilation abandonné
       }

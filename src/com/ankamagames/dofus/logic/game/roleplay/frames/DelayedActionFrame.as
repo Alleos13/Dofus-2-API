@@ -57,17 +57,17 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function showItemUse(playerId:int, itemId:uint, endTime:Number) : void
+      public function showItemUse(param1:int, param2:uint, param3:Number) : void
       {
          //Décompilation abandonné
       }
       
-      private function removeEntity(id:int) : void
+      private function removeEntity(param1:int) : void
       {
          //Décompilation abandonné
       }

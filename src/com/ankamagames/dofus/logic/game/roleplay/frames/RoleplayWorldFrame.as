@@ -216,7 +216,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function set allowOnlyCharacterInteraction(pAllow:Boolean) : void
+      public function set allowOnlyCharacterInteraction(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -246,7 +246,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -256,7 +256,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      private function openFeedbackPopup(e:TimerEvent = null) : void
+      private function openFeedbackPopup(param1:TimerEvent = null) : void
       {
          //Décompilation abandonné
       }
@@ -271,37 +271,37 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      private function onEntityAnimRendered(pEvent:TiphonEvent) : void
+      private function onEntityAnimRendered(param1:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function displayCursor(type:int, pEnable:Boolean = true) : void
+      private function displayCursor(param1:int, param2:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      private function onWisperMessage(playerName:String) : void
+      private function onWisperMessage(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMerchantPlayerBuyClick(vendorId:int, vendorCellId:uint) : void
+      private function onMerchantPlayerBuyClick(param1:int, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function onInviteMenuClicked(playerName:String) : void
+      private function onInviteMenuClicked(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMerchantHouseKickOff(cellId:uint) : void
+      private function onMerchantHouseKickOff(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function onWindowDeactivate(pEvent:Event) : void
+      private function onWindowDeactivate(param1:Event) : void
       {
          //Décompilation abandonné
       }

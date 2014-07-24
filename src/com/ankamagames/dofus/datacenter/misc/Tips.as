@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.misc
       
       public static const MODULE:String = "Tips";
       
-      public static function getTipsById(id:int) : Tips
+      public static function getTipsById(param1:int) : Tips
       {
          //Décompilation abandonné
       }

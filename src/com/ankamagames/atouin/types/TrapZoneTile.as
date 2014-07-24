@@ -31,12 +31,12 @@ package com.ankamagames.atouin.types
       
       public var strata:uint = 10;
       
-      public function display(strata:uint = 0) : void
+      public function display(param1:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function drawStroke(t:Boolean, r:Boolean, b:Boolean, l:Boolean) : void
+      public function drawStroke(param1:Boolean, param2:Boolean, param3:Boolean, param4:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -51,7 +51,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set displayBehaviors(value:IDisplayBehavior) : void
+      public function set displayBehaviors(param1:IDisplayBehavior) : void
       {
          //Décompilation abandonné
       }
@@ -61,7 +61,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set currentCell(value:Point) : void
+      public function set currentCell(param1:Point) : void
       {
          //Décompilation abandonné
       }
@@ -81,7 +81,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set cellId(value:uint) : void
+      public function set cellId(param1:uint) : void
       {
          //Décompilation abandonné
       }

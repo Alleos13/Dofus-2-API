@@ -9,7 +9,7 @@ package com.ankamagames.tubul.interfaces
       
       function get name() : String;
       
-      function process(pInput:Number) : Number;
+      function process(param1:Number) : Number;
       
       function duplicate() : IEffect;
    }

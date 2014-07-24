@@ -11,7 +11,7 @@ package com.ankamagames.dofus.logic.game.common.steps
       //Décompilation abandonné
       }
       
-      public function TeleportStep(pEntity:AnimatedCharacter, pArgs:Array)
+      public function TeleportStep(param1:AnimatedCharacter, param2:Array)
       {
          //Décompilation abandonné
       }

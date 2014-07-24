@@ -18,7 +18,7 @@ package com.ankamagames.jerakine.task
       //Décompilation abandonné
       }
       
-      public function LangXmlParsingTask(aFiles:Array, sUrlProvider:String, parseReference:Boolean = true)
+      public function LangXmlParsingTask(param1:Array, param2:String, param3:Boolean = true)
       {
          //Décompilation abandonné
       }
@@ -48,7 +48,7 @@ package com.ankamagames.jerakine.task
          //Décompilation abandonné
       }
       
-      private function parseXml(sXml:String, sCategory:String) : void
+      private function parseXml(param1:String, param2:String) : void
       {
          //Décompilation abandonné
       }

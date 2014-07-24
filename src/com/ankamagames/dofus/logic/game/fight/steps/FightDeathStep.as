@@ -33,7 +33,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightDeathStep(entityId:int, naturalDeath:Boolean = true)
+      public function FightDeathStep(param1:int, param2:Boolean = true)
       {
          //Décompilation abandonné
       }
@@ -70,22 +70,22 @@ package com.ankamagames.dofus.logic.game.fight.steps
          //Décompilation abandonné
       }
       
-      private function manualRollOut(fighterId:int) : void
+      private function manualRollOut(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAnimEnd(dyingEntity:TiphonSprite) : void
+      private function onAnimEnd(param1:TiphonSprite) : void
       {
          //Décompilation abandonné
       }
       
-      private function deathTimeOut(e:Event = null) : void
+      private function deathTimeOut(param1:Event = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function deathFinished(e:Event = null) : void
+      private function deathFinished(param1:Event = null) : void
       {
          //Décompilation abandonné
       }

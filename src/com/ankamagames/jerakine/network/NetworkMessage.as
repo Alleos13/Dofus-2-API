@@ -25,17 +25,17 @@ package com.ankamagames.jerakine.network
       
       public static const BIT_MASK:uint = 3;
       
-      public static function writePacket(output:IDataOutput, id:int, data:ByteArray) : void
+      public static function writePacket(param1:IDataOutput, param2:int, param3:ByteArray) : void
       {
          //Décompilation abandonné
       }
       
-      private static function computeTypeLen(len:uint) : uint
+      private static function computeTypeLen(param1:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private static function subComputeStaticHeader(msgId:uint, typeLen:uint) : uint
+      private static function subComputeStaticHeader(param1:uint, param2:uint) : uint
       {
          //Décompilation abandonné
       }
@@ -59,22 +59,22 @@ package com.ankamagames.jerakine.network
          //Décompilation abandonné
       }
       
-      public function pack(output:IDataOutput) : void
+      public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function unpack(input:IDataInput, length:uint) : void
+      public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function readExternal(input:IDataInput) : void
+      public function readExternal(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function writeExternal(output:IDataOutput) : void
+      public function writeExternal(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }

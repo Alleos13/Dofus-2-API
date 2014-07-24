@@ -46,37 +46,37 @@ package com.ankamagames.dofus.logic.common.managers
       
       private static var _arrowPositions:Dictionary;
       
-      public static function showArrow(uiName:String, componentName:String, pos:int = 0, reverse:int = 0, strata:int = 5, loop:int = 0) : MovieClip
+      public static function showArrow(param1:String, param2:String, param3:int = 0, param4:int = 0, param5:int = 5, param6:int = 0) : MovieClip
       {
          //Décompilation abandonné
       }
       
-      public static function showAbsoluteArrow(targetRect:Rectangle, pos:int = 0, reverse:int = 0, strata:int = 5, loop:int = 0) : MovieClip
+      public static function showAbsoluteArrow(param1:Rectangle, param2:int = 0, param3:int = 0, param4:int = 5, param5:int = 0) : MovieClip
       {
          //Décompilation abandonné
       }
       
-      public static function setArrowPosition(pUiName:String, pComponentName:String, pPosition:Point) : void
+      public static function setArrowPosition(param1:String, param2:String, param3:Point) : void
       {
          //Décompilation abandonné
       }
       
-      public static function showMapTransition(mapId:int, shapeOrientation:int, position:int, reverse:int = 0, strata:int = 5, loop:int = 0) : MovieClip
+      public static function showMapTransition(param1:int, param2:int, param3:int, param4:int = 0, param5:int = 5, param6:int = 0) : MovieClip
       {
          //Décompilation abandonné
       }
       
-      public static function destroyArrow(E:Event = null) : void
+      public static function destroyArrow(param1:Event = null) : void
       {
          //Décompilation abandonné
       }
       
-      private static function getArrow(loop:Boolean = false) : MovieClip
+      private static function getArrow(param1:Boolean = false) : MovieClip
       {
          //Décompilation abandonné
       }
       
-      public static function place(arrow:MovieClip, rect:Rectangle, pos:int) : void
+      public static function place(param1:MovieClip, param2:Rectangle, param3:int) : void
       {
          //Décompilation abandonné
       }

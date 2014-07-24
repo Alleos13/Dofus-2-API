@@ -21,7 +21,7 @@ package com.ankamagames.tubul.factory
       
       private static var _id:uint = 0;
       
-      public static function getSound(pType:uint, pUri:Uri) : ISound
+      public static function getSound(param1:uint, param2:Uri) : ISound
       {
          //Décompilation abandonné
       }

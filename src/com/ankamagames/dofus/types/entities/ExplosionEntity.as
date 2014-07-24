@@ -28,7 +28,7 @@ package com.ankamagames.dofus.types.entities
       //Décompilation abandonné
       }
       
-      public function ExplosionEntity(fxUri:Uri, startColors:Array, particleCount:uint = 40, explode:Boolean = false, type:uint = 2)
+      public function ExplosionEntity(param1:Uri, param2:Array, param3:uint = 40, param4:Boolean = false, param5:uint = 2)
       {
          //Décompilation abandonné
       }
@@ -49,7 +49,7 @@ package com.ankamagames.dofus.types.entities
       
       private static var _particules:Dictionary;
       
-      private static function onFrame(e:Event) : void
+      private static function onFrame(param1:Event) : void
       {
          //Décompilation abandonné
       }
@@ -75,7 +75,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set id(nValue:int) : void
+      public function set id(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -85,32 +85,32 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set position(oValue:MapPoint) : void
+      public function set position(param1:MapPoint) : void
       {
          //Décompilation abandonné
       }
       
-      private function init(fxClass:Array) : void
+      private function init(param1:Array) : void
       {
          //Décompilation abandonné
       }
       
-      private function createParticle(container:DisplayObjectContainer, count:uint, transformColor:Array, type:uint, subExplosionRatio:Number, fxClass:Array, deathCallback:Function, xStart:Number = 0, yStart:Number = 0) : void
+      private function createParticle(param1:DisplayObjectContainer, param2:uint, param3:Array, param4:uint, param5:Number, param6:Array, param7:Function, param8:Number = 0, param9:Number = 0) : void
       {
          //Décompilation abandonné
       }
       
-      private function onResourceReady(e:ResourceLoadedEvent) : void
+      private function onResourceReady(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onParticuleDeath(particule:IParticule, mustExplose:Boolean) : void
+      private function onParticuleDeath(param1:IParticule, param2:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAdded(e:Event) : void
+      private function onAdded(param1:Event) : void
       {
          //Décompilation abandonné
       }

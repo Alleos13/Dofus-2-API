@@ -9,7 +9,7 @@ package nochump.util.zip
       //Décompilation abandonné
       }
       
-      public function ZipError(message:String = "", id:int = 0)
+      public function ZipError(param1:String = "", param2:int = 0)
       {
          //Décompilation abandonné
       }

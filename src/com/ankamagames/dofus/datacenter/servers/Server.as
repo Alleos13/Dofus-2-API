@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.servers
       
       public static const MODULE:String = "Servers";
       
-      public static function getServerById(id:int) : Server
+      public static function getServerById(param1:int) : Server
       {
          //Décompilation abandonné
       }

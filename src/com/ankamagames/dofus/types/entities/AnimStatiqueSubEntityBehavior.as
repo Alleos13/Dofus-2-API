@@ -24,7 +24,7 @@ package com.ankamagames.dofus.types.entities
       
       private var _animation:String;
       
-      public function updateFromParentEntity(target:TiphonSprite, parentData:BehaviorData) : void
+      public function updateFromParentEntity(param1:TiphonSprite, param2:BehaviorData) : void
       {
          //Décompilation abandonné
       }
@@ -34,7 +34,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      private function onFatherRendered(e:TiphonEvent) : void
+      private function onFatherRendered(param1:TiphonEvent) : void
       {
          //Décompilation abandonné
       }

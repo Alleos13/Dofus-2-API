@@ -7,7 +7,7 @@ package com.ankamagames.dofus.kernel.sound.type
       //Décompilation abandonné
       }
       
-      public function RollOffPreset(pMaxVolume:uint, pRange:uint, pMaxSaturationRange:uint)
+      public function RollOffPreset(param1:uint, param2:uint, param3:uint)
       {
          //Décompilation abandonné
       }

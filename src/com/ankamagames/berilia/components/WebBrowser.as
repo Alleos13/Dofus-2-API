@@ -71,7 +71,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set cacheLife(value:Number) : void
+      public function set cacheLife(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -81,12 +81,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set cacheId(value:String) : void
+      public function set cacheId(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function set scrollCss(sUrl:Uri) : void
+      public function set scrollCss(param1:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -96,7 +96,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set displayScrollBar(b:Boolean) : void
+      public function set displayScrollBar(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -106,7 +106,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set scrollTopOffset(v:int) : void
+      public function set scrollTopOffset(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -116,17 +116,17 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set finalized(b:Boolean) : void
+      public function set finalized(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set width(nW:Number) : void
+      override public function set width(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set height(nH:Number) : void
+      override public function set height(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -146,12 +146,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function setBlankLink(linkPattern:String, blank:Boolean) : void
+      public function setBlankLink(param1:String, param2:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override public function process(msg:Message) : Boolean
+      override public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -166,17 +166,17 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function load(urlRequest:URLRequest) : void
+      public function load(param1:URLRequest) : void
       {
          //Décompilation abandonné
       }
       
-      public function javascriptSetVar(varName:String, value:*) : void
+      public function javascriptSetVar(param1:String, param2:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function javascriptCall(fctName:String, ... params) : void
+      public function javascriptCall(param1:String, ... rest) : void
       {
          //Décompilation abandonné
       }
@@ -186,12 +186,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function onResize(e:Event) : void
+      private function onResize(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onResizeEnd(e:Event) : void
+      private function onResizeEnd(param1:Event) : void
       {
          //Décompilation abandonné
       }
@@ -200,42 +200,42 @@ package com.ankamagames.berilia.components
       
       private var _domInit:Boolean;
       
-      private function onDomReady(e:Event) : void
+      private function onDomReady(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function isManualExternalLink(link:String) : Boolean
+      private function isManualExternalLink(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function modifyDOM(target:Object) : void
+      private function modifyDOM(param1:Object) : void
       {
          //Décompilation abandonné
       }
       
-      private function onLinkClick(e:*) : void
+      private function onLinkClick(param1:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function onInputFocus(e:*) : void
+      private function onInputFocus(param1:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function onInputBlur(e:*) : void
+      private function onInputBlur(param1:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function onScroll(e:Event) : void
+      private function onScroll(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onBoundsChange(e:Event) : void
+      private function onBoundsChange(param1:Event) : void
       {
          //Décompilation abandonné
       }
@@ -245,12 +245,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function onSessionTimeout(e:Event) : void
+      private function onSessionTimeout(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onLocationChange(e:Event) : void
+      private function onLocationChange(param1:Event) : void
       {
          //Décompilation abandonné
       }

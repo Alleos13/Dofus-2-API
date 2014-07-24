@@ -22,7 +22,7 @@ package com.ankamagames.berilia.types.data
       //Décompilation abandonné
       }
       
-      public function ExtendedStyleSheet(url:String)
+      public function ExtendedStyleSheet(param1:String)
       {
          //Décompilation abandonné
       }
@@ -54,12 +54,12 @@ package com.ankamagames.berilia.types.data
          //Décompilation abandonné
       }
       
-      override public function parseCSS(content:String) : void
+      override public function parseCSS(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function merge(stylesheet:ExtendedStyleSheet, replace:Boolean = false) : void
+      public function merge(param1:ExtendedStyleSheet, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -69,12 +69,12 @@ package com.ankamagames.berilia.types.data
          //Décompilation abandonné
       }
       
-      public function TLFTransform(formatObject:Object) : TextLayoutFormat
+      public function TLFTransform(param1:Object) : TextLayoutFormat
       {
          //Décompilation abandonné
       }
       
-      private function makeMerge(sUrl:String) : void
+      private function makeMerge(param1:String) : void
       {
          //Décompilation abandonné
       }

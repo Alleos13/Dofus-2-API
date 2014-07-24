@@ -15,12 +15,12 @@ package by.blooddy.crypto
          //Décompilation abandonné
       }
       
-      public static function encode(bytes:ByteArray, insertNewLines:Boolean = false) : String
+      public static function encode(param1:ByteArray, param2:Boolean = false) : String
       {
          //Décompilation abandonné
       }
       
-      public static function decode(str:String) : ByteArray
+      public static function decode(param1:String) : ByteArray
       {
          //Décompilation abandonné
       }

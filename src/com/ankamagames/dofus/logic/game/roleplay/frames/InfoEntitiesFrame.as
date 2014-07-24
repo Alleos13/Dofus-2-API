@@ -107,7 +107,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -122,37 +122,37 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      private function movementHandler(actorId:int) : void
+      private function movementHandler(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function entityMovementCompleteHandler(entity:IEntity) : void
+      private function entityMovementCompleteHandler(param1:IEntity) : void
       {
          //Décompilation abandonné
       }
       
-      private function gameRolePlayShowActorHandler(grpsamsg:Object) : void
+      private function gameRolePlayShowActorHandler(param1:Object) : void
       {
          //Décompilation abandonné
       }
       
-      private function removeElementHandler(entityId:int) : void
+      private function removeElementHandler(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function mouseOverHandler(identityId:int) : void
+      private function mouseOverHandler(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function mouseOutHandler(identityId:int) : void
+      private function mouseOutHandler(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAnimationEnd(pEvt:TiphonEvent) : void
+      private function onAnimationEnd(param1:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
@@ -167,27 +167,27 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      private function getEntity(id:int) : DisplayedEntity
+      private function getEntity(param1:int) : DisplayedEntity
       {
          //Décompilation abandonné
       }
       
-      private function getEntityFromLabel(lbl:Label) : DisplayedEntity
+      private function getEntityFromLabel(param1:Label) : DisplayedEntity
       {
          //Décompilation abandonné
       }
       
-      private function updateDisplayedEntityPosition(de:DisplayedEntity) : void
+      private function updateDisplayedEntityPosition(param1:DisplayedEntity) : void
       {
          //Décompilation abandonné
       }
       
-      private function addEntity(entityId:int, pName:String, aTag:String = "") : void
+      private function addEntity(param1:int, param2:String, param3:String = "") : void
       {
          //Décompilation abandonné
       }
       
-      private function updateAllTooltips() : void
+      public function updateAllTooltips() : void
       {
          //Décompilation abandonné
       }
@@ -197,22 +197,22 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      private function onUpdateEntitySuccess(pEvt:TiphonEvent) : void
+      private function onUpdateEntitySuccess(param1:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onUpdateEntityFail(pEvt:TiphonEvent) : void
+      private function onUpdateEntityFail(param1:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTooltipClicked(pEvt:MouseEvent) : void
+      private function onTooltipClicked(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateTextsPosition(pEvt:Event) : void
+      private function updateTextsPosition(param1:Event) : void
       {
          //Décompilation abandonné
       }
@@ -227,12 +227,12 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      private function waitForEntity(pEvt:Event) : void
+      private function waitForEntity(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function getBounds(entityId:int) : IRectangle
+      private function getBounds(param1:int) : IRectangle
       {
          //Décompilation abandonné
       }
@@ -248,7 +248,7 @@ class DisplayedEntity extends Object
    //Décompilation abandonné
    }
    
-   function DisplayedEntity(pId:int = 0, pText:Label = null, pTarget:IRectangle = null, pAllianceName:String = "")
+   function DisplayedEntity(param1:int = 0, param2:Label = null, param3:IRectangle = null, param4:String = "")
    {
       //Décompilation abandonné
    }
@@ -266,7 +266,7 @@ class DisplayedEntity extends Object
       //Décompilation abandonné
    }
    
-   public function set visible(val:Boolean) : void
+   public function set visible(param1:Boolean) : void
    {
       //Décompilation abandonné
    }

@@ -14,12 +14,12 @@ package com.ankamagames.dofus.types.entities
       //Décompilation abandonné
       }
       
-      public function BenchmarkCharacter(nId:int, look:TiphonEntityLook)
+      public function BenchmarkCharacter(param1:int, param2:TiphonEntityLook)
       {
          //Décompilation abandonné
       }
       
-      override public function move(path:MovementPath, callback:Function = null) : void
+      override public function move(param1:MovementPath, param2:Function = null) : void
       {
          //Décompilation abandonné
       }

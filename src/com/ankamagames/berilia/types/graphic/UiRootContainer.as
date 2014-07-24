@@ -37,7 +37,7 @@ package com.ankamagames.berilia.types.graphic
       //Décompilation abandonné
       }
       
-      public function UiRootContainer(stage:Stage, uiData:UiData, root:Sprite = null)
+      public function UiRootContainer(param1:Stage, param2:UiData, param3:Sprite = null)
       {
          //Décompilation abandonné
       }
@@ -120,7 +120,7 @@ package com.ankamagames.berilia.types.graphic
       
       public var tempHolder:DisplayObjectContainer;
       
-      public function set properties(o:*) : void
+      public function set properties(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -130,7 +130,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      override public function set visible(value:Boolean) : void
+      override public function set visible(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -140,7 +140,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      override public function set width(nW:Number) : void
+      override public function set width(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -150,12 +150,12 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      override public function set height(nH:Number) : void
+      override public function set height(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function set useCustomSize(b:Boolean) : void
+      public function set useCustomSize(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -165,7 +165,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set disableRender(b:Boolean) : void
+      public function set disableRender(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -180,12 +180,12 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set modalContainer(val:GraphicContainer) : void
+      public function set modalContainer(param1:GraphicContainer) : void
       {
          //Décompilation abandonné
       }
       
-      public function set showModalContainer(val:Boolean) : void
+      public function set showModalContainer(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -195,17 +195,17 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function addElement(sName:String, oElement:Object) : void
+      public function addElement(param1:String, param2:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeElement(sName:String) : void
+      public function removeElement(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function getElement(sName:String) : GraphicContainer
+      public function getElement(param1:String) : GraphicContainer
       {
          //Décompilation abandonné
       }
@@ -215,12 +215,12 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function getConstant(name:String) : *
+      public function getConstant(param1:String) : *
       {
          //Décompilation abandonné
       }
       
-      public function iAmFinalized(target:FinalizableUIComponent) : void
+      public function iAmFinalized(param1:FinalizableUIComponent) : void
       {
          //Décompilation abandonné
       }
@@ -230,62 +230,62 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function registerId(sName:String, geReference:GraphicElement) : void
+      public function registerId(param1:String, param2:GraphicElement) : void
       {
          //Décompilation abandonné
       }
       
-      public function deleteId(sName:String) : void
+      public function deleteId(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function getElementById(sName:String) : GraphicElement
+      public function getElementById(param1:String) : GraphicElement
       {
          //Décompilation abandonné
       }
       
-      public function removeFromRenderList(sName:String) : void
+      public function removeFromRenderList(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function addDynamicSizeElement(geReference:GraphicElement) : void
+      public function addDynamicSizeElement(param1:GraphicElement) : void
       {
          //Décompilation abandonné
       }
       
-      public function addDynamicElement(ge:GraphicElement) : void
+      public function addDynamicElement(param1:GraphicElement) : void
       {
          //Décompilation abandonné
       }
       
-      public function addPostFinalizeComponent(fc:FinalizableUIComponent) : void
+      public function addPostFinalizeComponent(param1:FinalizableUIComponent) : void
       {
          //Décompilation abandonné
       }
       
-      public function addFinalizeElement(fc:FinalizableUIComponent) : void
+      public function addFinalizeElement(param1:FinalizableUIComponent) : void
       {
          //Décompilation abandonné
       }
       
-      public function addRadioGroup(groupName:String) : RadioGroup
+      public function addRadioGroup(param1:String) : RadioGroup
       {
          //Décompilation abandonné
       }
       
-      public function getRadioGroup(name:String) : RadioGroup
+      public function getRadioGroup(param1:String) : RadioGroup
       {
          //Décompilation abandonné
       }
       
-      public function addLinkedUi(uiName:String) : void
+      public function addLinkedUi(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeLinkedUi(uiName:String) : void
+      public function removeLinkedUi(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -295,17 +295,17 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function call(fct:Function, args:Array, accesKey:Object) : void
+      public function call(param1:Function, param2:Array, param3:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function destroyUi(accesKey:Object) : void
+      public function destroyUi(param1:Object) : void
       {
          //Décompilation abandonné
       }
       
-      private function isRegisteredId(sName:String) : Boolean
+      private function isRegisteredId(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -315,27 +315,27 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function processLocation(geElem:GraphicElement) : void
+      public function processLocation(param1:GraphicElement) : void
       {
          //Décompilation abandonné
       }
       
-      private function getLocation(ptStart:Point, glLocation:GraphicLocation, doTarget:DisplayObject) : Point
+      private function getLocation(param1:Point, param2:GraphicLocation, param3:DisplayObject) : Point
       {
          //Décompilation abandonné
       }
       
-      private function getOffsetModificator(nPoint:uint, doTarget:DisplayObject) : Point
+      private function getOffsetModificator(param1:uint, param2:DisplayObject) : Point
       {
          //Décompilation abandonné
       }
       
-      private function zSort(aSort:Array) : Boolean
+      private function zSort(param1:Array) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onDefinitionUpdateTimer(e:TimerEvent) : void
+      private function onDefinitionUpdateTimer(param1:TimerEvent) : void
       {
          //Décompilation abandonné
       }

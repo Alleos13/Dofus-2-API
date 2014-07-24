@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.roleplay.actions.preset
          //Décompilation abandonné
       }
       
-      public static function create(presetId:uint) : InventoryPresetUseAction
+      public static function create(param1:uint) : InventoryPresetUseAction
       {
          //Décompilation abandonné
       }

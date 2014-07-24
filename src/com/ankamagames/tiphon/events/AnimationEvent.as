@@ -9,7 +9,7 @@ package com.ankamagames.tiphon.events
       //Décompilation abandonné
       }
       
-      public function AnimationEvent(type:String, pId:String, bubbles:Boolean = false, cancelable:Boolean = false)
+      public function AnimationEvent(param1:String, param2:String, param3:Boolean = false, param4:Boolean = false)
       {
          //Décompilation abandonné
       }

@@ -22,7 +22,7 @@ package flashx.textLayout.factory
       //Décompilation abandonné
       }
       
-      public function StringTextLineFactory(configuration:IConfiguration = null)
+      public function StringTextLineFactory(param1:IConfiguration = null)
       {
          //Décompilation abandonné
       }
@@ -48,7 +48,7 @@ package flashx.textLayout.factory
          //Décompilation abandonné
       }
       
-      private static function noopfunction(o:Object) : void
+      private static function noopfunction(param1:Object) : void
       {
          //Décompilation abandonné
       }
@@ -68,7 +68,7 @@ package flashx.textLayout.factory
          //Décompilation abandonné
       }
       
-      private function initialize(config:IConfiguration) : void
+      private function initialize(param1:IConfiguration) : void
       {
          //Décompilation abandonné
       }
@@ -78,7 +78,7 @@ package flashx.textLayout.factory
          //Décompilation abandonné
       }
       
-      public function set spanFormat(format:ITextLayoutFormat) : void
+      public function set spanFormat(param1:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
@@ -88,7 +88,7 @@ package flashx.textLayout.factory
          //Décompilation abandonné
       }
       
-      public function set paragraphFormat(format:ITextLayoutFormat) : void
+      public function set paragraphFormat(param1:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
@@ -98,7 +98,7 @@ package flashx.textLayout.factory
          //Décompilation abandonné
       }
       
-      public function set textFlowFormat(format:ITextLayoutFormat) : void
+      public function set textFlowFormat(param1:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
@@ -108,22 +108,22 @@ package flashx.textLayout.factory
          //Décompilation abandonné
       }
       
-      public function set text(string:String) : void
+      public function set text(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function createTextLines(callback:Function) : void
+      public function createTextLines(param1:Function) : void
       {
          //Décompilation abandonné
       }
       
-      private function createTextLinesInternal(callback:Function) : void
+      private function createTextLinesInternal(param1:Function) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function doTruncation(bp:String, measureWidth:Boolean, measureHeight:Boolean) : void
+      tlf_internal function doTruncation(param1:String, param2:Boolean, param3:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -135,12 +135,12 @@ package flashx.textLayout.factory
       
       private var _truncatedText:String;
       
-      private function measureTruncationIndicator(compositionBounds:Rectangle, truncationIndicator:String) : void
+      private function measureTruncationIndicator(param1:Rectangle, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function getTruncationPosition(line:TextLine, allowedWidth:Number) : uint
+      private function getTruncationPosition(param1:TextLine, param2:Number) : uint
       {
          //Décompilation abandonné
       }

@@ -21,17 +21,17 @@ package com.ankamagames.dofus.logic.common.managers
          //Décompilation abandonné
       }
       
-      public static function showPosition(posX:int, posY:int, worldMapId:int) : void
+      public static function showPosition(param1:int, param2:int, param3:int) : void
       {
          //Décompilation abandonné
       }
       
-      public static function getText(posX:int, posY:int, worldMapId:int) : String
+      public static function getText(param1:int, param2:int, param3:int) : String
       {
          //Décompilation abandonné
       }
       
-      public static function rollOver(pX:int, pY:int, posX:int, posY:int) : void
+      public static function rollOver(param1:int, param2:int, param3:int, param4:int) : void
       {
          //Décompilation abandonné
       }

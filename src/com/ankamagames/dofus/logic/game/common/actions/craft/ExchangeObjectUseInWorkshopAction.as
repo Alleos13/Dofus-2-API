@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.craft
          //Décompilation abandonné
       }
       
-      public static function create(pObjectUID:uint, pQuantity:uint) : ExchangeObjectUseInWorkshopAction
+      public static function create(param1:uint, param2:uint) : ExchangeObjectUseInWorkshopAction
       {
          //Décompilation abandonné
       }

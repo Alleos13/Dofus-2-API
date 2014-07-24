@@ -12,7 +12,7 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
       //Décompilation abandonné
       }
       
-      public function RealView(hookLock:IHookLock)
+      public function RealView(param1:IHookLock)
       {
          //Décompilation abandonné
       }
@@ -22,22 +22,22 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
          //Décompilation abandonné
       }
       
-      override public function addItem(item:ItemWrapper, invisible:int) : void
+      override public function addItem(param1:ItemWrapper, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      override public function removeItem(item:ItemWrapper, invisible:int) : void
+      override public function removeItem(param1:ItemWrapper, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      override public function modifyItem(item:ItemWrapper, oldItem:ItemWrapper, invisible:int) : void
+      override public function modifyItem(param1:ItemWrapper, param2:ItemWrapper, param3:int) : void
       {
          //Décompilation abandonné
       }
       
-      override public function isListening(item:ItemWrapper) : Boolean
+      override public function isListening(param1:ItemWrapper) : Boolean
       {
          //Décompilation abandonné
       }

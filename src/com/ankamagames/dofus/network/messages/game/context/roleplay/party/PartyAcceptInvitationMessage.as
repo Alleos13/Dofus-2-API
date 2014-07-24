@@ -31,7 +31,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      public function initPartyAcceptInvitationMessage(partyId:uint = 0) : PartyAcceptInvitationMessage
+      public function initPartyAcceptInvitationMessage(param1:uint = 0) : PartyAcceptInvitationMessage
       {
          //Décompilation abandonné
       }
@@ -41,32 +41,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PartyAcceptInvitationMessage(output:IDataOutput) : void
+      public function serializeAs_PartyAcceptInvitationMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PartyAcceptInvitationMessage(input:IDataInput) : void
+      public function deserializeAs_PartyAcceptInvitationMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

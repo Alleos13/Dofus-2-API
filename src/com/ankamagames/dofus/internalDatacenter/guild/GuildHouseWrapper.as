@@ -23,7 +23,7 @@ package com.ankamagames.dofus.internalDatacenter.guild
       
       protected static const _log:Logger;
       
-      public static function create(pHouseInformationsForGuild:HouseInformationsForGuild) : GuildHouseWrapper
+      public static function create(param1:HouseInformationsForGuild) : GuildHouseWrapper
       {
          //Décompilation abandonné
       }
@@ -105,7 +105,7 @@ package com.ankamagames.dofus.internalDatacenter.guild
          //Décompilation abandonné
       }
       
-      public function update(pHouseInformationsForGuild:HouseInformationsForGuild) : void
+      public function update(param1:HouseInformationsForGuild) : void
       {
          //Décompilation abandonné
       }

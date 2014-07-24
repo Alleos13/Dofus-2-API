@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.craft
          //Décompilation abandonné
       }
       
-      public static function create(pOnlySuccess:Boolean, pKamas:uint) : ExchangeItemGoldAddAsPaymentAction
+      public static function create(param1:Boolean, param2:uint) : ExchangeItemGoldAddAsPaymentAction
       {
          //Décompilation abandonné
       }

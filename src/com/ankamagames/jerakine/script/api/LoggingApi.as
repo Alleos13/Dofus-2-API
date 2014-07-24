@@ -18,7 +18,7 @@ package com.ankamagames.jerakine.script.api
       
       protected static const _log:Logger;
       
-      public static function Trace(msg:*, level:uint = 0) : void
+      public static function Trace(param1:*, param2:uint = 0) : void
       {
          //Décompilation abandonné
       }

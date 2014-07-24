@@ -34,12 +34,12 @@ package com.ankamagames.berilia.api
       
       private static var _isComplexFctCache:Dictionary;
       
-      public static function addApi(name:String, apiClass:Class) : void
+      public static function addApi(param1:String, param2:Class) : void
       {
          //Décompilation abandonné
       }
       
-      public static function removeApi(name:String) : void
+      public static function removeApi(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -49,37 +49,37 @@ package com.ankamagames.berilia.api
          //Décompilation abandonné
       }
       
-      public static function addApiData(name:String, value:*) : void
+      public static function addApiData(param1:String, param2:*) : void
       {
          //Décompilation abandonné
       }
       
-      public static function getApiData(name:String) : *
+      public static function getApiData(param1:String) : *
       {
          //Décompilation abandonné
       }
       
-      public static function removeApiData(name:String) : void
+      public static function removeApiData(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public static function initApi(target:Object, module:UiModule, sharedDefinition:ApplicationDomain = null) : String
+      public static function initApi(param1:Object, param2:UiModule, param3:ApplicationDomain = null) : String
       {
          //Décompilation abandonné
       }
       
-      private static function getApiInstance(name:String, trusted:Boolean, sharedDefinition:ApplicationDomain) : Object
+      private static function getApiInstance(param1:String, param2:Boolean, param3:ApplicationDomain) : Object
       {
          //Décompilation abandonné
       }
       
-      private static function isComplexFct(methodDesc:XML) : Boolean
+      private static function isComplexFct(param1:XML) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private static function createDepreciatedMethod(fct:Function, fctName:String, help:String) : Function
+      private static function createDepreciatedMethod(param1:Function, param2:String, param3:String) : Function
       {
          //Décompilation abandonné
       }

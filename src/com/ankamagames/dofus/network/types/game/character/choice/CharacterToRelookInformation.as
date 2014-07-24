@@ -26,7 +26,7 @@ package com.ankamagames.dofus.network.types.game.character.choice
          //Décompilation abandonné
       }
       
-      public function initCharacterToRelookInformation(id:uint = 0, cosmeticId:uint = 0) : CharacterToRelookInformation
+      public function initCharacterToRelookInformation(param1:uint = 0, param2:uint = 0) : CharacterToRelookInformation
       {
          //Décompilation abandonné
       }
@@ -36,22 +36,22 @@ package com.ankamagames.dofus.network.types.game.character.choice
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterToRelookInformation(output:IDataOutput) : void
+      public function serializeAs_CharacterToRelookInformation(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterToRelookInformation(input:IDataInput) : void
+      public function deserializeAs_CharacterToRelookInformation(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

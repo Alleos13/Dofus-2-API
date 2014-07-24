@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.approach.actions
          //Décompilation abandonné
       }
       
-      public static function create(characterId:int, characterColors:Array) : CharacterRecolorSelectionAction
+      public static function create(param1:int, param2:Array) : CharacterRecolorSelectionAction
       {
          //Décompilation abandonné
       }

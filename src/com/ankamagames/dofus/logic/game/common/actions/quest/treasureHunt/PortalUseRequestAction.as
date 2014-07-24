@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.quest.treasureHunt
          //Décompilation abandonné
       }
       
-      public static function create(portalId:int) : PortalUseRequestAction
+      public static function create(param1:int) : PortalUseRequestAction
       {
          //Décompilation abandonné
       }

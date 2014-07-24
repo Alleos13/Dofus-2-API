@@ -11,6 +11,6 @@ package com.ankamagames.tiphon.types
       
       function get priority() : int;
       
-      function getModifiedAnimation(animation:String, look:TiphonEntityLook) : String;
+      function getModifiedAnimation(param1:String, param2:TiphonEntityLook) : String;
    }
 }

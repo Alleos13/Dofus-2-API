@@ -41,7 +41,7 @@ package com.ankamagames.dofus.network.types.game.house
          //Décompilation abandonné
       }
       
-      public function initHouseInformationsForGuild(houseId:uint = 0, modelId:uint = 0, ownerName:String = "", worldX:int = 0, worldY:int = 0, mapId:int = 0, subAreaId:uint = 0, skillListIds:Vector.<int> = null, guildshareParams:uint = 0) : HouseInformationsForGuild
+      public function initHouseInformationsForGuild(param1:uint = 0, param2:uint = 0, param3:String = "", param4:int = 0, param5:int = 0, param6:int = 0, param7:uint = 0, param8:Vector.<int> = null, param9:uint = 0) : HouseInformationsForGuild
       {
          //Décompilation abandonné
       }
@@ -51,22 +51,22 @@ package com.ankamagames.dofus.network.types.game.house
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_HouseInformationsForGuild(output:IDataOutput) : void
+      public function serializeAs_HouseInformationsForGuild(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_HouseInformationsForGuild(input:IDataInput) : void
+      public function deserializeAs_HouseInformationsForGuild(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

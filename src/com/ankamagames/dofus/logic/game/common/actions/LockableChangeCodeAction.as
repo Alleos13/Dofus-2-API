@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions
          //Décompilation abandonné
       }
       
-      public static function create(code:String) : LockableChangeCodeAction
+      public static function create(param1:String) : LockableChangeCodeAction
       {
          //Décompilation abandonné
       }

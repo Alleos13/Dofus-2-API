@@ -9,7 +9,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function TextClickMessage(target:InteractiveObject, textEvent:String)
+      public function TextClickMessage(param1:InteractiveObject, param2:String)
       {
          //Décompilation abandonné
       }

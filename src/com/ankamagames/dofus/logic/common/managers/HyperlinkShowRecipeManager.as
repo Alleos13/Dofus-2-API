@@ -24,17 +24,17 @@ package com.ankamagames.dofus.logic.common.managers
          //Décompilation abandonné
       }
       
-      public static function showRecipe(recipeId:uint) : void
+      public static function showRecipe(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public static function getRecipeName(recipeId:int) : String
+      public static function getRecipeName(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      public static function rollOver(pX:int, pY:int, recipeId:uint) : void
+      public static function rollOver(param1:int, param2:int, param3:uint) : void
       {
          //Décompilation abandonné
       }

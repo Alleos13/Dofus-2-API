@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.appearance
       
       private static const MODULE:String = "SkinPositions";
       
-      public static function getSkinPositionById(id:int) : SkinPosition
+      public static function getSkinPositionById(param1:int) : SkinPosition
       {
          //Décompilation abandonné
       }

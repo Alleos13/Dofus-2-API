@@ -124,22 +124,22 @@ package com.ankamagames.atouin.managers
          //Décompilation abandonné
       }
       
-      public function fromMap(map:Map, decryptionKey:ByteArray = null, renderFixture:Boolean = true) : uint
+      public function fromMap(param1:Map, param2:ByteArray = null, param3:Boolean = true) : uint
       {
          //Décompilation abandonné
       }
       
-      public function display(pMap:WorldPoint, forceReloadWithoutCache:Boolean = false, decryptionKey:ByteArray = null, renderFixture:Boolean = true) : uint
+      public function display(param1:WorldPoint, param2:Boolean = false, param3:ByteArray = null, param4:Boolean = true) : uint
       {
          //Décompilation abandonné
       }
       
-      public function isBoundingBox(pictoId:int) : Boolean
+      public function isBoundingBox(param1:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function cacheAsBitmapEnabled(yes:Boolean) : void
+      public function cacheAsBitmapEnabled(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -159,7 +159,7 @@ package com.ankamagames.atouin.managers
          //Décompilation abandonné
       }
       
-      public function activeIdentifiedElements(active:Boolean) : void
+      public function activeIdentifiedElements(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -176,17 +176,17 @@ package com.ankamagames.atouin.managers
          //Décompilation abandonné
       }
       
-      public function getIdentifiedEntityElement(id:uint) : TiphonSprite
+      public function getIdentifiedEntityElement(param1:uint) : TiphonSprite
       {
          //Décompilation abandonné
       }
       
-      public function getIdentifiedElement(id:uint) : InteractiveObject
+      public function getIdentifiedElement(param1:uint) : InteractiveObject
       {
          //Décompilation abandonné
       }
       
-      public function getIdentifiedElementPosition(id:uint) : MapPoint
+      public function getIdentifiedElementPosition(param1:uint) : MapPoint
       {
          //Décompilation abandonné
       }
@@ -196,7 +196,7 @@ package com.ankamagames.atouin.managers
          //Décompilation abandonné
       }
       
-      public function hideBackgroundForTacticMode(yes:Boolean) : void
+      public function hideBackgroundForTacticMode(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -216,37 +216,37 @@ package com.ankamagames.atouin.managers
          //Décompilation abandonné
       }
       
-      private function onMapLoaded(e:ResourceLoadedEvent) : void
+      private function onMapLoaded(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMapFailed(e:ResourceErrorEvent) : void
+      private function onMapFailed(param1:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function logGfxLoadTime(e:Event) : void
+      private function logGfxLoadTime(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function tweenInterMap(e:Event) : void
+      private function tweenInterMap(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function mapRenderProgress(e:ProgressEvent) : void
+      private function mapRenderProgress(param1:ProgressEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function signalMapLoadingFailure(errorReasonId:uint) : void
+      private function signalMapLoadingFailure(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function mapRendered(e:RenderMapEvent) : void
+      private function mapRendered(param1:RenderMapEvent) : void
       {
          //Décompilation abandonné
       }
@@ -267,7 +267,7 @@ class RenderRequest extends Object
    //Décompilation abandonné
    }
    
-   function RenderRequest(map:WorldPoint, forceReloadWithoutCache:Boolean, decryptionKey:ByteArray, renderFixture:Boolean = true)
+   function RenderRequest(param1:WorldPoint, param2:Boolean, param3:ByteArray, param4:Boolean = true)
    {
       //Décompilation abandonné
    }

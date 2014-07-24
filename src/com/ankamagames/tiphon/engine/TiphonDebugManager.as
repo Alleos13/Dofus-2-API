@@ -36,12 +36,12 @@ package com.ankamagames.tiphon.engine
          //Décompilation abandonné
       }
       
-      public static function displayDofusScriptError(text:String, tiphonSprite:TiphonSprite) : void
+      public static function displayDofusScriptError(param1:String, param2:TiphonSprite) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onTimer(e:TimerEvent) : void
+      private static function onTimer(param1:TimerEvent) : void
       {
          //Décompilation abandonné
       }

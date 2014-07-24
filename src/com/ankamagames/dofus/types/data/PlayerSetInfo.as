@@ -12,7 +12,7 @@ package com.ankamagames.dofus.types.data
       //Décompilation abandonné
       }
       
-      public function PlayerSetInfo(id:uint, items:Vector.<uint>, effects:Vector.<ObjectEffect>)
+      public function PlayerSetInfo(param1:uint, param2:Vector.<uint>, param3:Vector.<ObjectEffect>)
       {
          //Décompilation abandonné
       }

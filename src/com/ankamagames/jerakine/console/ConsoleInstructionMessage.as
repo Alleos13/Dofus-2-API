@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.console
       //Décompilation abandonné
       }
       
-      public function ConsoleInstructionMessage(cmd:String, args:Array)
+      public function ConsoleInstructionMessage(param1:String, param2:Array)
       {
          //Décompilation abandonné
       }
@@ -40,7 +40,7 @@ package com.ankamagames.jerakine.console
          //Décompilation abandonné
       }
       
-      public function equals(cim:ConsoleInstructionMessage) : Boolean
+      public function equals(param1:ConsoleInstructionMessage) : Boolean
       {
          //Décompilation abandonné
       }

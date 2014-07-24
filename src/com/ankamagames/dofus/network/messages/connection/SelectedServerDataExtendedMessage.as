@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.messages.connection
          //Décompilation abandonné
       }
       
-      public function initSelectedServerDataExtendedMessage(serverId:int = 0, address:String = "", port:uint = 0, canCreateNewCharacter:Boolean = false, ticket:String = "", serverIds:Vector.<uint> = null) : SelectedServerDataExtendedMessage
+      public function initSelectedServerDataExtendedMessage(param1:int = 0, param2:String = "", param3:uint = 0, param4:Boolean = false, param5:String = "", param6:Vector.<uint> = null) : SelectedServerDataExtendedMessage
       {
          //Décompilation abandonné
       }
@@ -43,32 +43,32 @@ package com.ankamagames.dofus.network.messages.connection
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_SelectedServerDataExtendedMessage(output:IDataOutput) : void
+      public function serializeAs_SelectedServerDataExtendedMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_SelectedServerDataExtendedMessage(input:IDataInput) : void
+      public function deserializeAs_SelectedServerDataExtendedMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

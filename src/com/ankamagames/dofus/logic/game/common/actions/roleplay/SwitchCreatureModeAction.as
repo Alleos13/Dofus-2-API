@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.roleplay
          //Décompilation abandonné
       }
       
-      public static function create(pActivated:Boolean = false) : SwitchCreatureModeAction
+      public static function create(param1:Boolean = false) : SwitchCreatureModeAction
       {
          //Décompilation abandonné
       }

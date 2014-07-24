@@ -10,7 +10,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function ItemRightClickMessage(grid:Grid, gridItem:GridItem)
+      public function ItemRightClickMessage(param1:Grid, param2:GridItem)
       {
          //Décompilation abandonné
       }

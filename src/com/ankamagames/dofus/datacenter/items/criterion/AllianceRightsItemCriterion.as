@@ -13,7 +13,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function AllianceRightsItemCriterion(pCriterion:String)
+      public function AllianceRightsItemCriterion(param1:String)
       {
          //Décompilation abandonné
       }

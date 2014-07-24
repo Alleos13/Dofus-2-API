@@ -20,7 +20,7 @@ package com.ankamagames.atouin.entities.behaviours.movements
       
       private static const WALK_ANIMATION:String = "AnimMarche";
       
-      public static function getInstance(speedAdjust:Number = 0.0) : WalkingMovementBehavior
+      public static function getInstance(param1:Number = 0.0) : WalkingMovementBehavior
       {
          //Décompilation abandonné
       }

@@ -41,12 +41,12 @@ package com.ankamagames.atouin.types
       
       private var _defautY:Number = 880;
       
-      public function setPosition(pX:Number, pY:Number) : void
+      public function setPosition(param1:Number, param2:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function set text(s:String) : void
+      public function set text(param1:String) : void
       {
          //Décompilation abandonné
       }

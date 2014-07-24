@@ -11,10 +11,10 @@ package com.ankamagames.jerakine.resources.loaders
       //Décompilation abandonné
       }
       
-      function load(uris:*, cache:ICache = null, forcedAdapter:Class = null, singleFile:Boolean = false) : void;
+      function load(param1:*, param2:ICache = null, param3:Class = null, param4:Boolean = false) : void;
       
       function cancel() : void;
       
-      function isInCache(uri:Uri) : Boolean;
+      function isInCache(param1:Uri) : Boolean;
    }
 }

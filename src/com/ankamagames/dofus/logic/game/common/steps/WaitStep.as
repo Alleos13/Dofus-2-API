@@ -11,7 +11,7 @@ package com.ankamagames.dofus.logic.game.common.steps
       //Décompilation abandonné
       }
       
-      public function WaitStep(pMilliseconds:int)
+      public function WaitStep(param1:int)
       {
          //Décompilation abandonné
       }
@@ -40,7 +40,7 @@ package com.ankamagames.dofus.logic.game.common.steps
          //Décompilation abandonné
       }
       
-      private function onTimer(pEvent:TimerEvent) : void
+      private function onTimer(param1:TimerEvent) : void
       {
          //Décompilation abandonné
       }

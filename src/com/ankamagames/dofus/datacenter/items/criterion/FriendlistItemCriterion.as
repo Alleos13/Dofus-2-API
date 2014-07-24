@@ -12,7 +12,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function FriendlistItemCriterion(pCriterion:String)
+      public function FriendlistItemCriterion(param1:String)
       {
          //Décompilation abandonné
       }

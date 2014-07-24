@@ -12,7 +12,7 @@ package com.ankamagames.berilia.utils.web
          //Décompilation abandonné
       }
       
-      public static function getMimeType(fileExtension:String) : String
+      public static function getMimeType(param1:String) : String
       {
          //Décompilation abandonné
       }

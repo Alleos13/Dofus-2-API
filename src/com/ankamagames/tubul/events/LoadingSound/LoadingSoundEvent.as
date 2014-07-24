@@ -9,7 +9,7 @@ package com.ankamagames.tubul.events.LoadingSound
       //Décompilation abandonné
       }
       
-      public function LoadingSoundEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
+      public function LoadingSoundEvent(param1:String, param2:Boolean = false, param3:Boolean = false)
       {
          //Décompilation abandonné
       }

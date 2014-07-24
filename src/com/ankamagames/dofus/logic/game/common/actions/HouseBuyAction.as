@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions
          //Décompilation abandonné
       }
       
-      public static function create(proposedPrice:uint) : HouseBuyAction
+      public static function create(param1:uint) : HouseBuyAction
       {
          //Décompilation abandonné
       }

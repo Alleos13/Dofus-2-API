@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.character.deletion
          //Décompilation abandonné
       }
       
-      public function initCharacterDeletionErrorMessage(reason:uint = 1) : CharacterDeletionErrorMessage
+      public function initCharacterDeletionErrorMessage(param1:uint = 1) : CharacterDeletionErrorMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.character.deletion
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterDeletionErrorMessage(output:IDataOutput) : void
+      public function serializeAs_CharacterDeletionErrorMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterDeletionErrorMessage(input:IDataInput) : void
+      public function deserializeAs_CharacterDeletionErrorMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.mount
          //Décompilation abandonné
       }
       
-      public function initUpdateMountIntBoost(type:int = 0, value:int = 0) : UpdateMountIntBoost
+      public function initUpdateMountIntBoost(param1:int = 0, param2:int = 0) : UpdateMountIntBoost
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.mount
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_UpdateMountIntBoost(output:IDataOutput) : void
+      public function serializeAs_UpdateMountIntBoost(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_UpdateMountIntBoost(input:IDataInput) : void
+      public function deserializeAs_UpdateMountIntBoost(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -15,7 +15,7 @@ package com.ankamagames.dofus.logic.game.fight.miscs
       //Décompilation abandonné
       }
       
-      public function FightReachableCellsMaker(infos:GameFightFighterInformations, fromCellId:int = -1, movementPoint:int = -1)
+      public function FightReachableCellsMaker(param1:GameFightFighterInformations, param2:int = -1, param3:int = -1)
       {
          //Décompilation abandonné
       }
@@ -51,7 +51,7 @@ package com.ankamagames.dofus.logic.game.fight.miscs
          //Décompilation abandonné
       }
       
-      private function markNode(x:int, y:int, mp:int, untackledMp:int) : void
+      private function markNode(param1:int, param2:int, param3:int, param4:int) : void
       {
          //Décompilation abandonné
       }
@@ -69,7 +69,7 @@ class _ReachableCellStore extends Object
    //Décompilation abandonné
    }
    
-   function _ReachableCellStore(mapPoint:MapPoint, gridX:int, gridY:int, cellGrid:Vector.<Vector.<_ReachableCellStore>>)
+   function _ReachableCellStore(param1:MapPoint, param2:int, param3:int, param4:Vector.<Vector.<_ReachableCellStore>>)
    {
       //Décompilation abandonné
    }
@@ -92,7 +92,7 @@ class _ReachableCellStore extends Object
    
    public var bestUntackledMp:int;
    
-   public var var_2:Boolean;
+   public var set:Boolean;
    
    public var gridX:int;
    
@@ -100,12 +100,12 @@ class _ReachableCellStore extends Object
    
    public var cellGrid:Vector.<Vector.<_ReachableCellStore>>;
    
-   public function findState(playerInfos:GameFightFighterInformations) : void
+   public function findState(param1:GameFightFighterInformations) : void
    {
       //Décompilation abandonné
    }
    
-   public function updateMp(bestMp:int, bestUntackledMp:int) : void
+   public function updateMp(param1:int, param2:int) : void
    {
       //Décompilation abandonné
    }

@@ -11,7 +11,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightSpellImmunityStep(fighterId:int)
+      public function FightSpellImmunityStep(param1:int)
       {
          //Décompilation abandonné
       }

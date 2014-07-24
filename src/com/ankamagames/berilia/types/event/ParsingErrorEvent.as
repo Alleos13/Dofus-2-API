@@ -9,7 +9,7 @@ package com.ankamagames.berilia.types.event
       //Décompilation abandonné
       }
       
-      public function ParsingErrorEvent(url:String, msg:String)
+      public function ParsingErrorEvent(param1:String, param2:String)
       {
          //Décompilation abandonné
       }

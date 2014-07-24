@@ -74,7 +74,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function set presets(aPresets:Array) : void
+      public function set presets(param1:Array) : void
       {
          //Décompilation abandonné
       }
@@ -89,7 +89,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function set shortcutBarItems(aItems:Array) : void
+      public function set shortcutBarItems(param1:Array) : void
       {
          //Décompilation abandonné
       }
@@ -99,7 +99,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function set shortcutBarSpells(aSpells:Array) : void
+      public function set shortcutBarSpells(param1:Array) : void
       {
          //Décompilation abandonné
       }

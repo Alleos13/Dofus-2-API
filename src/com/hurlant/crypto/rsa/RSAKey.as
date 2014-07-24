@@ -13,27 +13,27 @@ package com.hurlant.crypto.rsa
       //Décompilation abandonné
       }
       
-      public function RSAKey(N:BigInteger, E:int, D:BigInteger = null, P:BigInteger = null, Q:BigInteger = null, DP:BigInteger = null, DQ:BigInteger = null, C:BigInteger = null)
+      public function RSAKey(param1:BigInteger, param2:int, param3:BigInteger = null, param4:BigInteger = null, param5:BigInteger = null, param6:BigInteger = null, param7:BigInteger = null, param8:BigInteger = null)
       {
          //Décompilation abandonné
       }
       
-      public static function parsePublicKey(N:String, E:String) : RSAKey
+      public static function parsePublicKey(param1:String, param2:String) : RSAKey
       {
          //Décompilation abandonné
       }
       
-      public static function parsePrivateKey(N:String, E:String, D:String, P:String = null, Q:String = null, DMP1:String = null, DMQ1:String = null, IQMP:String = null) : RSAKey
+      public static function parsePrivateKey(param1:String, param2:String, param3:String, param4:String = null, param5:String = null, param6:String = null, param7:String = null, param8:String = null) : RSAKey
       {
          //Décompilation abandonné
       }
       
-      public static function generate(B:uint, E:String) : RSAKey
+      public static function generate(param1:uint, param2:String) : RSAKey
       {
          //Décompilation abandonné
       }
       
-      protected static function bigRandom(bits:int, rnd:Random) : BigInteger
+      protected static function bigRandom(param1:int, param2:Random) : BigInteger
       {
          //Décompilation abandonné
       }
@@ -68,52 +68,52 @@ package com.hurlant.crypto.rsa
          //Décompilation abandonné
       }
       
-      public function encrypt(src:ByteArray, dst:ByteArray, length:uint, pad:Function = null) : void
+      public function encrypt(param1:ByteArray, param2:ByteArray, param3:uint, param4:Function = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function decrypt(src:ByteArray, dst:ByteArray, length:uint, pad:Function = null) : void
+      public function decrypt(param1:ByteArray, param2:ByteArray, param3:uint, param4:Function = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function sign(src:ByteArray, dst:ByteArray, length:uint, pad:Function = null) : void
+      public function sign(param1:ByteArray, param2:ByteArray, param3:uint, param4:Function = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function verify(src:ByteArray, dst:ByteArray, length:uint, pad:Function = null) : void
+      public function verify(param1:ByteArray, param2:ByteArray, param3:uint, param4:Function = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function _encrypt(op:Function, src:ByteArray, dst:ByteArray, length:uint, pad:Function, padType:int) : void
+      private function _encrypt(param1:Function, param2:ByteArray, param3:ByteArray, param4:uint, param5:Function, param6:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function _decrypt(op:Function, src:ByteArray, dst:ByteArray, length:uint, pad:Function, padType:int) : void
+      private function _decrypt(param1:Function, param2:ByteArray, param3:ByteArray, param4:uint, param5:Function, param6:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pkcs1pad(src:ByteArray, end:int, n:uint, type:uint = 2) : ByteArray
+      private function pkcs1pad(param1:ByteArray, param2:int, param3:uint, param4:uint = 2) : ByteArray
       {
          //Décompilation abandonné
       }
       
-      private function pkcs1unpad(src:BigInteger, n:uint, type:uint = 2) : ByteArray
+      private function pkcs1unpad(param1:BigInteger, param2:uint, param3:uint = 2) : ByteArray
       {
          //Décompilation abandonné
       }
       
-      public function rawpad(src:ByteArray, end:int, n:uint, type:uint = 0) : ByteArray
+      public function rawpad(param1:ByteArray, param2:int, param3:uint, param4:uint = 0) : ByteArray
       {
          //Décompilation abandonné
       }
       
-      public function rawunpad(src:BigInteger, n:uint, type:uint = 0) : ByteArray
+      public function rawunpad(param1:BigInteger, param2:uint, param3:uint = 0) : ByteArray
       {
          //Décompilation abandonné
       }
@@ -128,17 +128,17 @@ package com.hurlant.crypto.rsa
          //Décompilation abandonné
       }
       
-      protected function doPublic(x:BigInteger) : BigInteger
+      protected function doPublic(param1:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      protected function doPrivate2(x:BigInteger) : BigInteger
+      protected function doPrivate2(param1:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      protected function doPrivate(x:BigInteger) : BigInteger
+      protected function doPrivate(param1:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }

@@ -40,7 +40,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.visual
          //Décompilation abandonné
       }
       
-      public function initGameRolePlaySpellAnimMessage(casterId:int = 0, targetCellId:uint = 0, spellId:uint = 0, spellLevel:uint = 0) : GameRolePlaySpellAnimMessage
+      public function initGameRolePlaySpellAnimMessage(param1:int = 0, param2:uint = 0, param3:uint = 0, param4:uint = 0) : GameRolePlaySpellAnimMessage
       {
          //Décompilation abandonné
       }
@@ -50,32 +50,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.visual
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlaySpellAnimMessage(output:IDataOutput) : void
+      public function serializeAs_GameRolePlaySpellAnimMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlaySpellAnimMessage(input:IDataInput) : void
+      public function deserializeAs_GameRolePlaySpellAnimMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -7,7 +7,7 @@ package flashx.textLayout.conversion
       //Décompilation abandonné
       }
       
-      public function TLFormatImporter(classType:Class, description:Object)
+      public function TLFormatImporter(param1:Class, param2:Object)
       {
          //Décompilation abandonné
       }
@@ -33,7 +33,7 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      public function importOneFormat(key:String, val:String) : Boolean
+      public function importOneFormat(param1:String, param2:String) : Boolean
       {
          //Décompilation abandonné
       }

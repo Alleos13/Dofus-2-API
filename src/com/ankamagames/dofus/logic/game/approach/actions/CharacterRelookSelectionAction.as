@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.approach.actions
          //Décompilation abandonné
       }
       
-      public static function create(characterId:int, characterHead:int) : CharacterRelookSelectionAction
+      public static function create(param1:int, param2:int) : CharacterRelookSelectionAction
       {
          //Décompilation abandonné
       }

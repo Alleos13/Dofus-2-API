@@ -25,7 +25,7 @@ package com.ankamagames.dofus.uiApi
       
       private var _module:UiModule;
       
-      public function set module(value:UiModule) : void
+      public function set module(param1:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -35,12 +35,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getTestInventory(len:uint) : Vector.<ItemWrapper>
+      public function getTestInventory(param1:uint) : Vector.<ItemWrapper>
       {
          //Décompilation abandonné
       }
       
-      public function showTrace(active:Boolean = true) : void
+      public function showTrace(param1:Boolean = true) : void
       {
          //Décompilation abandonné
       }

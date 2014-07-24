@@ -18,22 +18,22 @@ package com.ankamagames.jerakine.script.api
          //Décompilation abandonné
       }
       
-      public static function Timeout(delay:uint, fct:Function, ... parameters) : uint
+      public static function Timeout(param1:uint, param2:Function, ... rest) : uint
       {
          //Décompilation abandonné
       }
       
-      public static function CancelTimeout(timeoutID:uint) : void
+      public static function CancelTimeout(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public static function Repeat(delay:uint, fct:Function, ... parameters) : uint
+      public static function Repeat(param1:uint, param2:Function, ... rest) : uint
       {
          //Décompilation abandonné
       }
       
-      public static function CancelRepeat(intervalID:uint) : void
+      public static function CancelRepeat(param1:uint) : void
       {
          //Décompilation abandonné
       }

@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.interactives
       
       public static const MODULE:String = "SkillNames";
       
-      public static function getSkillNameById(id:int) : SkillName
+      public static function getSkillNameById(param1:int) : SkillName
       {
          //Décompilation abandonné
       }

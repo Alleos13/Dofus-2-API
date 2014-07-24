@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.alignments
       
       protected static const _log:Logger;
       
-      public static function getAlignmentTitlesById(id:int) : AlignmentTitle
+      public static function getAlignmentTitlesById(param1:int) : AlignmentTitle
       {
          //Décompilation abandonné
       }
@@ -39,12 +39,12 @@ package com.ankamagames.dofus.datacenter.alignments
       
       public var shortsId:Vector.<int>;
       
-      public function getNameFromGrade(grade:int) : String
+      public function getNameFromGrade(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      public function getShortNameFromGrade(grade:int) : String
+      public function getShortNameFromGrade(param1:int) : String
       {
          //Décompilation abandonné
       }

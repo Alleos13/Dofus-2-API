@@ -54,12 +54,12 @@ package com.ankamagames.dofus.uiApi
       
       private var _ttCallbacks:Dictionary;
       
-      public function set module(value:UiModule) : void
+      public function set module(param1:UiModule) : void
       {
          //Décompilation abandonné
       }
       
-      public function set currentUi(value:UiRootContainer) : void
+      public function set currentUi(param1:UiRootContainer) : void
       {
          //Décompilation abandonné
       }
@@ -69,57 +69,57 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function setDefaultTooltipUiScript(module:String, ui:String) : void
+      public function setDefaultTooltipUiScript(param1:String, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function createTooltip(baseUri:String, containerUri:String, separatorUri:String = null) : Tooltip
+      public function createTooltip(param1:String, param2:String, param3:String = null) : Tooltip
       {
          //Décompilation abandonné
       }
       
-      public function createTooltipBlock(onAllChunkLoadedCallback:Function, contentGetter:Function) : TooltipBlock
+      public function createTooltipBlock(param1:Function, param2:Function) : TooltipBlock
       {
          //Décompilation abandonné
       }
       
-      public function registerTooltipAssoc(targetClass:*, makerName:String) : void
+      public function registerTooltipAssoc(param1:*, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function registerTooltipMaker(makerName:String, makerClass:Class, scriptClass:Class = null) : void
+      public function registerTooltipMaker(param1:String, param2:Class, param3:Class = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function createChunkData(name:String, uri:String) : ChunkData
+      public function createChunkData(param1:String, param2:String) : ChunkData
       {
          //Décompilation abandonné
       }
       
-      public function place(target:*, point:uint = 6, relativePoint:uint = 0, offset:int = 3, checkSuperposition:Boolean = false, cellId:int = -1, alwaysDisplayed:Boolean = true) : void
+      public function place(param1:*, param2:uint = 6, param3:uint = 0, param4:int = 3, param5:Boolean = false, param6:int = -1, param7:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      private function placeTooltip(pTooltipUi:UiRootContainer, pTarget:*, pPoint:uint, pRelativePoint:uint, pOffset:int, pCheckSuperposition:Boolean, pCellId:int, pAlwaysDisplayed:Boolean) : void
+      private function placeTooltip(param1:UiRootContainer, param2:*, param3:uint, param4:uint, param5:int, param6:Boolean, param7:int, param8:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function placeArrow(target:*) : Object
+      public function placeArrow(param1:*) : Object
       {
          //Décompilation abandonné
       }
       
-      public function getSpellTooltipInfo(spellWrapper:SpellWrapper, shortcutKey:String = null) : Object
+      public function getSpellTooltipInfo(param1:SpellWrapper, param2:String = null) : Object
       {
          //Décompilation abandonné
       }
       
-      public function getItemTooltipInfo(itemWrapper:ItemWrapper, shortcutKey:String = null) : Object
+      public function getItemTooltipInfo(param1:ItemWrapper, param2:String = null) : Object
       {
          //Décompilation abandonné
       }
@@ -134,7 +134,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function createTooltipRectangle(x:Number = 0, y:Number = 0, width:Number = 0, height:Number = 0) : TooltipRectangle
+      public function createTooltipRectangle(param1:Number = 0, param2:Number = 0, param3:Number = 0, param4:Number = 0) : TooltipRectangle
       {
          //Décompilation abandonné
       }
@@ -149,12 +149,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function adjustTooltipPositions(tooltipNames:Array, sourceName:String, offset:int = 0) : void
+      public function adjustTooltipPositions(param1:Array, param2:String, param3:int = 0) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTooltipReady(pEvent:UiRenderEvent) : void
+      private function onTooltipReady(param1:UiRenderEvent) : void
       {
          //Décompilation abandonné
       }

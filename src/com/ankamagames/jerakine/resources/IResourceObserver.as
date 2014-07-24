@@ -9,10 +9,10 @@ package com.ankamagames.jerakine.resources
       //Décompilation abandonné
       }
       
-      function onLoaded(uri:Uri, resourceType:uint, resource:*) : void;
+      function onLoaded(param1:Uri, param2:uint, param3:*) : void;
       
-      function onFailed(uri:Uri, errorMsg:String, errorCode:uint) : void;
+      function onFailed(param1:Uri, param2:String, param3:uint) : void;
       
-      function onProgress(uri:Uri, bytesLoaded:uint, bytesTotal:uint) : void;
+      function onProgress(param1:Uri, param2:uint, param3:uint) : void;
    }
 }

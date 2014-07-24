@@ -28,32 +28,32 @@ package com.ankamagames.jerakine.script
       
       private var _apis:Dictionary;
       
-      public function addPlayer(pPlayerType:String, pPlayer:IScriptsPlayer) : void
+      public function addPlayer(param1:String, param2:IScriptsPlayer) : void
       {
          //Décompilation abandonné
       }
       
-      public function getPlayer(pPlayerType:String) : IScriptsPlayer
+      public function getPlayer(param1:String) : IScriptsPlayer
       {
          //Décompilation abandonné
       }
       
-      public function addPlayerApi(pPlayer:IScriptsPlayer, pApiId:String, pApi:*) : void
+      public function addPlayerApi(param1:IScriptsPlayer, param2:String, param3:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function getPlayerApi(pPlayer:IScriptsPlayer, pApiId:String) : *
+      public function getPlayerApi(param1:IScriptsPlayer, param2:String) : *
       {
          //Décompilation abandonné
       }
       
-      public function playScript(pPlayerType:String, pScript:String) : void
+      public function playScript(param1:String, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function playFile(pPlayerType:String, pScriptUri:String) : void
+      public function playFile(param1:String, param2:String) : void
       {
          //Décompilation abandonné
       }

@@ -16,12 +16,12 @@ package com.ankamagames.tiphon.types.cache
       
       private var _directions:Vector.<Vector.<ScriptedAnimation>>;
       
-      public function getAnimation(direction:int) : ScriptedAnimation
+      public function getAnimation(param1:int) : ScriptedAnimation
       {
          //Décompilation abandonné
       }
       
-      public function pushAnimation(scriptedAnimation:ScriptedAnimation, direction:int) : void
+      public function pushAnimation(param1:ScriptedAnimation, param2:int) : void
       {
          //Décompilation abandonné
       }

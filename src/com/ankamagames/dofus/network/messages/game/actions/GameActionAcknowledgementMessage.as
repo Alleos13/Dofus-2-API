@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.game.actions
          //Décompilation abandonné
       }
       
-      public function initGameActionAcknowledgementMessage(valid:Boolean = false, actionId:int = 0) : GameActionAcknowledgementMessage
+      public function initGameActionAcknowledgementMessage(param1:Boolean = false, param2:int = 0) : GameActionAcknowledgementMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.game.actions
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameActionAcknowledgementMessage(output:IDataOutput) : void
+      public function serializeAs_GameActionAcknowledgementMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameActionAcknowledgementMessage(input:IDataInput) : void
+      public function deserializeAs_GameActionAcknowledgementMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

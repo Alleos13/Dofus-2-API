@@ -7,34 +7,34 @@ package com.hurlant.math
       //Décompilation abandonné
       }
       
-      function ClassicReduction(m:BigInteger)
+      function ClassicReduction(param1:BigInteger)
       {
          //Décompilation abandonné
       }
       
       private var m:BigInteger;
       
-      public function convert(x:BigInteger) : BigInteger
+      public function convert(param1:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      public function revert(x:BigInteger) : BigInteger
+      public function revert(param1:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      public function reduce(x:BigInteger) : void
+      public function reduce(param1:BigInteger) : void
       {
          //Décompilation abandonné
       }
       
-      public function mulTo(x:BigInteger, y:BigInteger, r:BigInteger) : void
+      public function mulTo(param1:BigInteger, param2:BigInteger, param3:BigInteger) : void
       {
          //Décompilation abandonné
       }
       
-      public function sqrTo(x:BigInteger, r:BigInteger) : void
+      public function sqrTo(param1:BigInteger, param2:BigInteger) : void
       {
          //Décompilation abandonné
       }

@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.secure
          //Décompilation abandonné
       }
       
-      public function initTrustCertificate(id:uint = 0, hash:String = "") : TrustCertificate
+      public function initTrustCertificate(param1:uint = 0, param2:String = "") : TrustCertificate
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.secure
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_TrustCertificate(output:IDataOutput) : void
+      public function serializeAs_TrustCertificate(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_TrustCertificate(input:IDataInput) : void
+      public function deserializeAs_TrustCertificate(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

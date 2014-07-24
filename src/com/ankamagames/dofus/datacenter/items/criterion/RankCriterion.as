@@ -12,7 +12,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function RankCriterion(pCriterion:String)
+      public function RankCriterion(param1:String)
       {
          //Décompilation abandonné
       }

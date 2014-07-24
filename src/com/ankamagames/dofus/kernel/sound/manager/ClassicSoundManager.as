@@ -118,7 +118,7 @@ package com.ankamagames.dofus.kernel.sound.manager
       
       private var _adminPlaylist:PlayList;
       
-      public function set soundDirectoryExist(pExists:Boolean) : void
+      public function set soundDirectoryExist(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -143,7 +143,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          //Décompilation abandonné
       }
       
-      public function set forceSoundsDebugMode(pForce:Boolean) : void
+      public function set forceSoundsDebugMode(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -158,22 +158,22 @@ package com.ankamagames.dofus.kernel.sound.manager
          //Décompilation abandonné
       }
       
-      public function setDisplayOptions(pOptions:TubulOptions) : void
+      public function setDisplayOptions(param1:TubulOptions) : void
       {
          //Décompilation abandonné
       }
       
-      public function setSubArea(pMap:Map = null) : void
+      public function setSubArea(param1:Map = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function playUISound(pSoundId:String, pLoop:Boolean = false) : void
+      public function playUISound(param1:String, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function playSound(pSound:ISound, pLoop:Boolean = false, pLoops:int = -1) : ISound
+      public function playSound(param1:ISound, param2:Boolean = false, param3:int = -1) : ISound
       {
          //Décompilation abandonné
       }
@@ -193,12 +193,12 @@ package com.ankamagames.dofus.kernel.sound.manager
          //Décompilation abandonné
       }
       
-      public function handleFLAEvent(pAnimationName:String, pType:String, pParams:String, pSprite:Object = null) : void
+      public function handleFLAEvent(param1:String, param2:String, param3:String, param4:Object = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function applyDynamicMix(pFadeIn:VolumeFadeEffect, pWaitingTime:uint, pFadeOut:VolumeFadeEffect) : void
+      public function applyDynamicMix(param1:VolumeFadeEffect, param2:uint, param3:VolumeFadeEffect) : void
       {
          //Décompilation abandonné
       }
@@ -208,22 +208,22 @@ package com.ankamagames.dofus.kernel.sound.manager
          //Décompilation abandonné
       }
       
-      public function setSoundSourcePosition(pEntityId:int, pPosition:Point) : void
+      public function setSoundSourcePosition(param1:int, param2:Point) : void
       {
          //Décompilation abandonné
       }
       
-      public function addSoundEntity(pISound:ISound, pEntityId:int) : void
+      public function addSoundEntity(param1:ISound, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeSoundEntity(pISound:ISound) : void
+      public function removeSoundEntity(param1:ISound) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeEntitySound(pEntityId:IEntity) : void
+      public function removeEntitySound(param1:IEntity) : void
       {
          //Décompilation abandonné
       }
@@ -238,27 +238,27 @@ package com.ankamagames.dofus.kernel.sound.manager
          //Décompilation abandonné
       }
       
-      public function playIntroMusic(pFirstHarmonic:Boolean = true) : void
+      public function playIntroMusic(param1:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function switchIntroMusic(pFirstHarmonic:Boolean) : void
+      public function switchIntroMusic(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function stopIntroMusic(pImmediatly:Boolean = false) : void
+      public function stopIntroMusic(param1:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeAllSounds(pFade:Number = 0, pFadeTime:Number = 0) : void
+      public function removeAllSounds(param1:Number = 0, param2:Number = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function setBusVolume(pBusID:int, pNewVolume:Number) : void
+      public function setBusVolume(param1:int, param2:Number) : void
       {
          //Décompilation abandonné
       }
@@ -268,7 +268,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          //Décompilation abandonné
       }
       
-      private function findXmlSoundsInDirectory(pDirectory:File) : void
+      private function findXmlSoundsInDirectory(param1:File) : void
       {
          //Décompilation abandonné
       }
@@ -293,22 +293,22 @@ package com.ankamagames.dofus.kernel.sound.manager
          //Décompilation abandonné
       }
       
-      public function playAdminSound(pSoundId:String, pVolume:Number, pLoop:Boolean, pType:uint) : void
+      public function playAdminSound(param1:String, param2:Number, param3:Boolean, param4:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function stopAdminSound(pType:uint) : void
+      public function stopAdminSound(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function addSoundInPlaylist(pSoundId:String, pVolume:Number, pSilenceMin:uint, pSilenceMax:uint) : Boolean
+      public function addSoundInPlaylist(param1:String, param2:Number, param3:uint, param4:uint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function removeSoundInPLaylist(pSoundId:String) : Boolean
+      public function removeSoundInPLaylist(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -328,52 +328,52 @@ package com.ankamagames.dofus.kernel.sound.manager
          //Décompilation abandonné
       }
       
-      public function fadeBusVolume(pBusID:int, pFade:Number, pFadeTime:Number) : void
+      public function fadeBusVolume(param1:int, param2:Number, param3:Number) : void
       {
          //Décompilation abandonné
       }
       
-      private function onXMLPresetsRollOffLoaded(pEvent:ResourceLoadedEvent) : void
+      private function onXMLPresetsRollOffLoaded(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onXMLPresetsRollOffFailed(pEvent:ResourceErrorEvent) : void
+      private function onXMLPresetsRollOffFailed(param1:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onXMLSoundFileLoaded(pEvent:ResourceLoadedEvent) : void
+      private function onXMLSoundFileLoaded(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onXMLSoundFileFailed(pEvent:ResourceErrorEvent) : void
+      private function onXMLSoundFileFailed(param1:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onRemoveSoundInTubul(pEvent:AudioBusEvent) : void
+      private function onRemoveSoundInTubul(param1:AudioBusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSoundAdminComplete(pEvent:SoundCompleteEvent) : void
+      private function onSoundAdminComplete(param1:SoundCompleteEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onIntroMusicHarmonicOneLoaded(pEvent:LoadingSoundEvent) : void
+      private function onIntroMusicHarmonicOneLoaded(param1:LoadingSoundEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onIntroMusicHarmonicTwoLoaded(pEvent:LoadingSoundEvent) : void
+      private function onIntroMusicHarmonicTwoLoaded(param1:LoadingSoundEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTubulActivation(pEvent:TubulEvent) : void
+      private function onTubulActivation(param1:TubulEvent) : void
       {
          //Décompilation abandonné
       }

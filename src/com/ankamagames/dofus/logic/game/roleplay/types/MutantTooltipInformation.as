@@ -15,7 +15,7 @@ package com.ankamagames.dofus.logic.game.roleplay.types
       //Décompilation abandonné
       }
       
-      public function MutantTooltipInformation(pInfos:GameRolePlayMutantInformations)
+      public function MutantTooltipInformation(param1:GameRolePlayMutantInformations)
       {
          //Décompilation abandonné
       }

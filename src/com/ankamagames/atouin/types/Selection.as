@@ -38,7 +38,7 @@ package com.ankamagames.atouin.types
       
       public var visible:Boolean;
       
-      public function set mapId(id:uint) : void
+      public function set mapId(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -48,17 +48,17 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function update(pUpdateStrata:Boolean = false) : void
+      public function update(param1:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function remove(aCells:Vector.<uint> = null) : void
+      public function remove(param1:Vector.<uint> = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function isInside(cellId:uint) : Boolean
+      public function isInside(param1:uint) : Boolean
       {
          //Décompilation abandonné
       }

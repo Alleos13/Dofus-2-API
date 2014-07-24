@@ -16,7 +16,7 @@ package com.ankamagames.atouin.data.map
       //Décompilation abandonné
       }
       
-      public function Cell(layer:Layer)
+      public function Cell(param1:Layer)
       {
          //Décompilation abandonné
       }
@@ -25,22 +25,22 @@ package com.ankamagames.atouin.data.map
       
       private static var _cellCoords:Point;
       
-      public static function cellCoords(cellId:uint) : Point
+      public static function cellCoords(param1:uint) : Point
       {
          //Décompilation abandonné
       }
       
-      public static function cellId(p:Point) : uint
+      public static function cellId(param1:Point) : uint
       {
          //Décompilation abandonné
       }
       
-      public static function cellIdByXY(x:int, y:int) : uint
+      public static function cellIdByXY(param1:int, param2:int) : uint
       {
          //Décompilation abandonné
       }
       
-      public static function cellPixelCoords(cellId:uint) : Point
+      public static function cellPixelCoords(param1:uint) : Point
       {
          //Décompilation abandonné
       }
@@ -68,7 +68,7 @@ package com.ankamagames.atouin.data.map
          //Décompilation abandonné
       }
       
-      public function fromRaw(raw:IDataInput, mapVersion:int) : void
+      public function fromRaw(param1:IDataInput, param2:int) : void
       {
          //Décompilation abandonné
       }

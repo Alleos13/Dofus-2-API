@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.craft
          //Décompilation abandonné
       }
       
-      public static function create(pExchangeType:int, pTarget:uint, pSkillId:uint) : ExchangePlayerMultiCraftRequestAction
+      public static function create(param1:int, param2:uint, param3:uint) : ExchangePlayerMultiCraftRequestAction
       {
          //Décompilation abandonné
       }

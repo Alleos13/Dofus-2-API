@@ -9,7 +9,7 @@ package com.ankamagames.berilia
       
       function get finalized() : Boolean;
       
-      function set finalized(b:Boolean) : void;
+      function set finalized(param1:Boolean) : void;
       
       function finalize() : void;
    }

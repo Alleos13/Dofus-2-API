@@ -19,7 +19,7 @@ package by.blooddy.crypto.image
       
       private static var _jpegTable:ByteArray;
       
-      public static function getTable(quality:uint = 60) : ByteArray
+      public static function getTable(param1:uint = 60) : ByteArray
       {
          //Décompilation abandonné
       }

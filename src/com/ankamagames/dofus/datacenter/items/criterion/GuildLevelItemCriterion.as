@@ -13,7 +13,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function GuildLevelItemCriterion(pCriterion:String)
+      public function GuildLevelItemCriterion(param1:String)
       {
          //Décompilation abandonné
       }

@@ -26,7 +26,7 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      public function initObjectItemInformationWithQuantity(objectGID:uint = 0, effects:Vector.<ObjectEffect> = null, quantity:uint = 0) : ObjectItemInformationWithQuantity
+      public function initObjectItemInformationWithQuantity(param1:uint = 0, param2:Vector.<ObjectEffect> = null, param3:uint = 0) : ObjectItemInformationWithQuantity
       {
          //Décompilation abandonné
       }
@@ -36,22 +36,22 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectItemInformationWithQuantity(output:IDataOutput) : void
+      public function serializeAs_ObjectItemInformationWithQuantity(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectItemInformationWithQuantity(input:IDataInput) : void
+      public function deserializeAs_ObjectItemInformationWithQuantity(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

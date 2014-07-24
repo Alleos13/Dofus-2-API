@@ -11,7 +11,7 @@ package com.somerandomdude.colortoolkit.schemes
       //Décompilation abandonné
       }
       
-      public function Tetrad(primaryColor:int, angle:Number = 90)
+      public function Tetrad(param1:int, param2:Number = 90)
       {
          //Décompilation abandonné
       }
@@ -23,7 +23,7 @@ package com.somerandomdude.colortoolkit.schemes
          //Décompilation abandonné
       }
       
-      public function set angle(value:Number) : void
+      public function set angle(param1:Number) : void
       {
          //Décompilation abandonné
       }

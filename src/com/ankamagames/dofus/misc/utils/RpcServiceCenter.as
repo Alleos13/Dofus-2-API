@@ -29,12 +29,12 @@ package com.ankamagames.dofus.misc.utils
       
       private var _mainRpcServiceManager:RpcServiceManager;
       
-      public function makeRpcCall(serviceUrl:String, formatType:String, methodName:String, methodParams:*, callback:Function, newService:Boolean = true) : void
+      public function makeRpcCall(param1:String, param2:String, param3:String, param4:*, param5:Function, param6:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      private function getRpcService(serviceUrl:String, formatType:String) : RpcServiceManager
+      private function getRpcService(param1:String, param2:String) : RpcServiceManager
       {
          //Décompilation abandonné
       }

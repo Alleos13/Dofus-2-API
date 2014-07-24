@@ -14,14 +14,14 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function GroupItemCriterion(pCriterion:String)
+      public function GroupItemCriterion(param1:String)
       {
          //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      public static function create(pCriteria:Vector.<IItemCriterion>, pOperators:Vector.<String>) : GroupItemCriterion
+      public static function create(param1:Vector.<IItemCriterion>, param2:Vector.<String>) : GroupItemCriterion
       {
          //Décompilation abandonné
       }
@@ -78,12 +78,12 @@ package com.ankamagames.dofus.datacenter.items.criterion
          //Décompilation abandonné
       }
       
-      private function checkSingleOperatorType(pOperators:Vector.<String>) : Boolean
+      private function checkSingleOperatorType(param1:Vector.<String>) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function getFirstCriterion(pCriteria:String) : IItemCriterion
+      private function getFirstCriterion(param1:String) : IItemCriterion
       {
          //Décompilation abandonné
       }

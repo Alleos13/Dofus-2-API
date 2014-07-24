@@ -9,7 +9,7 @@ package com.somerandomdude.colortoolkit.spaces
       //Décompilation abandonné
       }
       
-      public function CMYK(cyan:Number = 0, magenta:Number = 0, yellow:Number = 0, black:Number = 0)
+      public function CMYK(param1:Number = 0, param2:Number = 0, param3:Number = 0, param4:Number = 0)
       {
          //Décompilation abandonné
       }
@@ -27,7 +27,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set cyan(value:Number) : void
+      public function set cyan(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -37,7 +37,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set magenta(value:Number) : void
+      public function set magenta(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -47,7 +47,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set yellow(value:Number) : void
+      public function set yellow(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -57,7 +57,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set black(value:Number) : void
+      public function set black(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -67,7 +67,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set color(value:int) : void
+      public function set color(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -77,12 +77,12 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      private function generateColorsFromHex(color:int) : CMYK
+      private function generateColorsFromHex(param1:int) : CMYK
       {
          //Décompilation abandonné
       }
       
-      private function generateColorsFromCMYK(cyan:Number, magenta:Number, yellow:Number, black:Number) : int
+      private function generateColorsFromCMYK(param1:Number, param2:Number, param3:Number, param4:Number) : int
       {
          //Décompilation abandonné
       }

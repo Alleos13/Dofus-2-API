@@ -24,7 +24,7 @@ package com.ankamagames.dofus.logic.game.common.misc
       
       public var maxCastPerTarget:CharacterBaseCharacteristic;
       
-      public function getTotalBonus(pCharac:CharacterBaseCharacteristic) : int
+      public function getTotalBonus(param1:CharacterBaseCharacteristic) : int
       {
          //Décompilation abandonné
       }

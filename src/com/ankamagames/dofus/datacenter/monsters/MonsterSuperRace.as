@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.monsters
       
       public static const MODULE:String = "MonsterSuperRaces";
       
-      public static function getMonsterSuperRaceById(id:uint) : MonsterSuperRace
+      public static function getMonsterSuperRaceById(param1:uint) : MonsterSuperRace
       {
          //Décompilation abandonné
       }

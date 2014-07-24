@@ -23,7 +23,7 @@ package com.ankamagames.dofus.logic.shield
       //Décompilation abandonné
       }
       
-      public function ShieldCertifcate(version:uint = 3)
+      public function ShieldCertifcate(param1:uint = 3)
       {
          //Décompilation abandonné
       }
@@ -38,7 +38,7 @@ package com.ankamagames.dofus.logic.shield
       
       public static const HEADER_V3:String;
       
-      public static function fromRaw(data:IDataInput, output:ShieldCertifcate = null) : ShieldCertifcate
+      public static function fromRaw(param1:IDataInput, param2:ShieldCertifcate = null) : ShieldCertifcate
       {
          //Décompilation abandonné
       }
@@ -59,7 +59,7 @@ package com.ankamagames.dofus.logic.shield
       
       public var filterVirtualNetwork:Boolean;
       
-      public function set secureLevel(level:uint) : void
+      public function set secureLevel(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -84,17 +84,17 @@ package com.ankamagames.dofus.logic.shield
          //Décompilation abandonné
       }
       
-      private function decrypt(data:IDataInput) : String
+      private function decrypt(param1:IDataInput) : String
       {
          //Décompilation abandonné
       }
       
-      private function getHash(reverse:Boolean = false) : String
+      private function getHash(param1:Boolean = false) : String
       {
          //Décompilation abandonné
       }
       
-      private function traceInfo(target:*, maxDepth:uint = 5, inc:String = "") : void
+      private function traceInfo(param1:*, param2:uint = 5, param3:String = "") : void
       {
          //Décompilation abandonné
       }

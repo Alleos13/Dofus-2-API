@@ -22,7 +22,7 @@ package com.ankamagames.dofus.datacenter.appearance
       
       private static var _log:Logger;
       
-      public static function getSkinMappingById(id:int) : SkinMapping
+      public static function getSkinMappingById(param1:int) : SkinMapping
       {
          //Décompilation abandonné
       }

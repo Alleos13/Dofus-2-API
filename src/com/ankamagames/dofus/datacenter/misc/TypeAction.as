@@ -17,7 +17,7 @@ package com.ankamagames.dofus.datacenter.misc
       
       public static const MODULE:String = "TypeActions";
       
-      public static function getTypeActionById(id:int) : TypeAction
+      public static function getTypeActionById(param1:int) : TypeAction
       {
          //Décompilation abandonné
       }

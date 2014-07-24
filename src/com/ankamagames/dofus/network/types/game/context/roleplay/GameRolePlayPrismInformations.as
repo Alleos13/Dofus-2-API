@@ -29,7 +29,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initGameRolePlayPrismInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, prism:PrismInformation = null) : GameRolePlayPrismInformations
+      public function initGameRolePlayPrismInformations(param1:int = 0, param2:EntityLook = null, param3:EntityDispositionInformations = null, param4:PrismInformation = null) : GameRolePlayPrismInformations
       {
          //Décompilation abandonné
       }
@@ -39,22 +39,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayPrismInformations(output:IDataOutput) : void
+      public function serializeAs_GameRolePlayPrismInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayPrismInformations(input:IDataInput) : void
+      public function deserializeAs_GameRolePlayPrismInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

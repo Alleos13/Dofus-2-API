@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.inventory.storage
          //Décompilation abandonné
       }
       
-      public function initStorageKamasUpdateMessage(kamasTotal:int = 0) : StorageKamasUpdateMessage
+      public function initStorageKamasUpdateMessage(param1:int = 0) : StorageKamasUpdateMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.inventory.storage
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_StorageKamasUpdateMessage(output:IDataOutput) : void
+      public function serializeAs_StorageKamasUpdateMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_StorageKamasUpdateMessage(input:IDataInput) : void
+      public function deserializeAs_StorageKamasUpdateMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

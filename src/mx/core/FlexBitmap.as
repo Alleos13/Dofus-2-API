@@ -11,7 +11,7 @@ package mx.core
       //Décompilation abandonné
       }
       
-      public function FlexBitmap(bitmapData:BitmapData = null, pixelSnapping:String = "auto", smoothing:Boolean = false)
+      public function FlexBitmap(param1:BitmapData = null, param2:String = "auto", param3:Boolean = false)
       {
          //Décompilation abandonné
       }

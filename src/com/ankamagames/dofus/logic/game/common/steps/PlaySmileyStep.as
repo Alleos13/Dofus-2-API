@@ -18,7 +18,7 @@ package com.ankamagames.dofus.logic.game.common.steps
       //Décompilation abandonné
       }
       
-      public function PlaySmileyStep(pEntity:AnimatedCharacter, pSmileyId:int, pWaitForEnd:Boolean)
+      public function PlaySmileyStep(param1:AnimatedCharacter, param2:int, param3:Boolean)
       {
          //Décompilation abandonné
       }
@@ -41,7 +41,7 @@ package com.ankamagames.dofus.logic.game.common.steps
          //Décompilation abandonné
       }
       
-      private function onTimer(pEvent:TimerEvent) : void
+      private function onTimer(param1:TimerEvent) : void
       {
          //Décompilation abandonné
       }

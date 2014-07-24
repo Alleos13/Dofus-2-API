@@ -22,12 +22,12 @@ package com.ankamagames.berilia.utils
       
       private static var _aCache:Array;
       
-      public static function init(path:String, cacheClass:ICache) : ICache
+      public static function init(param1:String, param2:ICache) : ICache
       {
          //Décompilation abandonné
       }
       
-      public static function getCacheFromUri(uri:Uri) : ICache
+      public static function getCacheFromUri(param1:Uri) : ICache
       {
          //Décompilation abandonné
       }

@@ -16,7 +16,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function ItemCriterion(pCriterion:String)
+      public function ItemCriterion(param1:String)
       {
          //Décompilation abandonné
       }
@@ -73,7 +73,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          //Décompilation abandonné
       }
       
-      private function getTotalCharac(pCharac:CharacterBaseCharacteristic) : int
+      private function getTotalCharac(param1:CharacterBaseCharacteristic) : int
       {
          //Décompilation abandonné
       }

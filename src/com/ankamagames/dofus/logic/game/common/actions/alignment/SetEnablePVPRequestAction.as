@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.alignment
          //Décompilation abandonné
       }
       
-      public static function create(enable:Boolean) : SetEnablePVPRequestAction
+      public static function create(param1:Boolean) : SetEnablePVPRequestAction
       {
          //Décompilation abandonné
       }

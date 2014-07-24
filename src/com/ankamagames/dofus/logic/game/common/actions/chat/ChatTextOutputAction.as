@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.chat
          //Décompilation abandonné
       }
       
-      public static function create(msg:String, channel:uint = 0, receiverName:String = "", objects:Array = null) : ChatTextOutputAction
+      public static function create(param1:String, param2:uint = 0, param3:String = "", param4:Array = null) : ChatTextOutputAction
       {
          //Décompilation abandonné
       }

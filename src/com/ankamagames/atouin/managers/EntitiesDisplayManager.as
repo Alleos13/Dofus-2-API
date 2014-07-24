@@ -45,27 +45,27 @@ package com.ankamagames.atouin.managers
       
       public var _dStrataRef:Dictionary;
       
-      public function displayEntity(oEntity:IDisplayable, cellCoords:MapPoint, strata:uint = 0) : void
+      public function displayEntity(param1:IDisplayable, param2:MapPoint, param3:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function refreshAlphaEntity(oEntity:IDisplayable, cellCoords:MapPoint, strata:uint = 0) : void
+      public function refreshAlphaEntity(param1:IDisplayable, param2:MapPoint, param3:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeEntity(oEntity:IDisplayable) : void
+      public function removeEntity(param1:IDisplayable) : void
       {
          //Décompilation abandonné
       }
       
-      public function orderEntity(entity:DisplayObject, cellSprite:Sprite) : void
+      public function orderEntity(param1:DisplayObject, param2:Sprite) : void
       {
          //Décompilation abandonné
       }
       
-      public function getAbsoluteBounds(entity:IDisplayable) : IRectangle
+      public function getAbsoluteBounds(param1:IDisplayable) : IRectangle
       {
          //Décompilation abandonné
       }

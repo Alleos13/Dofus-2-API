@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.connection.managers
       //Décompilation abandonné
       }
       
-      public function SpecialBetaAuthentification(login:String, type:String)
+      public function SpecialBetaAuthentification(param1:String, param2:String)
       {
          //Décompilation abandonné
       }
@@ -34,7 +34,7 @@ package com.ankamagames.dofus.logic.connection.managers
          //Décompilation abandonné
       }
       
-      private function onDataReceived(e:Event) : void
+      private function onDataReceived(param1:Event) : void
       {
          //Décompilation abandonné
       }

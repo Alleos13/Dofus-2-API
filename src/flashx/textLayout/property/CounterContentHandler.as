@@ -29,7 +29,7 @@ package flashx.textLayout.property
       
       private static const _trailingStuff:RegExp;
       
-      tlf_internal  static function extractListStyleTypeFromCounter(s:String) : String
+      tlf_internal  static function extractListStyleTypeFromCounter(param1:String) : String
       {
          //Décompilation abandonné
       }
@@ -38,21 +38,21 @@ package flashx.textLayout.property
       
       private static const _afterSuffixPattern2:RegExp;
       
-      tlf_internal  static function extractSuffixFromCounters2(s:String) : String
+      tlf_internal  static function extractSuffixFromCounters2(param1:String) : String
       {
          //Décompilation abandonné
       }
       
       private static const _afterSuffixPattern3:RegExp;
       
-      tlf_internal  static function extractSuffixFromCounters3(s:String) : String
+      tlf_internal  static function extractSuffixFromCounters3(param1:String) : String
       {
          //Décompilation abandonné
       }
       
       private static const _countersTillListStyleTypePattern:RegExp;
       
-      tlf_internal  static function extractListStyleTypeFromCounters(s:String) : String
+      tlf_internal  static function extractListStyleTypeFromCounters(param1:String) : String
       {
          //Décompilation abandonné
       }
@@ -62,17 +62,17 @@ package flashx.textLayout.property
          //Décompilation abandonné
       }
       
-      override public function toXMLString(val:Object) : String
+      override public function toXMLString(param1:Object) : String
       {
          //Décompilation abandonné
       }
       
-      override public function owningHandlerCheck(newVal:*) : *
+      override public function owningHandlerCheck(param1:*) : *
       {
          //Décompilation abandonné
       }
       
-      override public function setHelper(newVal:*) : *
+      override public function setHelper(param1:*) : *
       {
          //Décompilation abandonné
       }

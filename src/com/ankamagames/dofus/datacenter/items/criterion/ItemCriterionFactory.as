@@ -19,7 +19,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       
       protected static const _log:Logger;
       
-      public static function create(pServerCriterionForm:String) : ItemCriterion
+      public static function create(param1:String) : ItemCriterion
       {
          //Décompilation abandonné
       }

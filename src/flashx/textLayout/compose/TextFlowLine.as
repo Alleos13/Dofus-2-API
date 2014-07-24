@@ -54,7 +54,7 @@ package flashx.textLayout.compose
       //Décompilation abandonné
       }
       
-      public function TextFlowLine(textLine:TextLine, paragraph:ParagraphElement, outerTargetWidth:Number = 0, lineOffset:Number = 0, absoluteStart:int = 0, numChars:int = 0)
+      public function TextFlowLine(param1:TextLine, param2:ParagraphElement, param3:Number = 0, param4:Number = 0, param5:int = 0, param6:int = 0)
       {
          //Décompilation abandonné
       }
@@ -75,34 +75,34 @@ package flashx.textLayout.compose
       
       private static const _alignments:Array;
       
-      tlf_internal  static function initializeNumberLinePosition(numberLine:TextLine, listItemElement:ListItemElement, curParaElement:ParagraphElement, totalWidth:Number) : void
+      tlf_internal  static function initializeNumberLinePosition(param1:TextLine, param2:ListItemElement, param3:ParagraphElement, param4:Number) : void
       {
          //Décompilation abandonné
       }
       
       private static var numberLineFactory:NumberLineFactory;
       
-      tlf_internal  static function createNumberLine(listItemElement:ListItemElement, curParaElement:ParagraphElement, swfContext:ISWFContext, totalStartIndent:Number) : TextLine
+      tlf_internal  static function createNumberLine(param1:ListItemElement, param2:ParagraphElement, param3:ISWFContext, param4:Number) : TextLine
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function getTextLineTypographicAscent(textLine:TextLine, elem:FlowLeafElement, elemStart:int, textLineEnd:int) : Number
+      tlf_internal  static function getTextLineTypographicAscent(param1:TextLine, param2:FlowLeafElement, param3:int, param4:int) : Number
       {
          //Décompilation abandonné
       }
       
-      private static function createSelectionRect(selObj:Shape, color:uint, x:Number, y:Number, width:Number, height:Number) : DisplayObject
+      private static function createSelectionRect(param1:Shape, param2:uint, param3:Number, param4:Number, param5:Number, param6:Number) : DisplayObject
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function constrainRectToColumn(tf:TextFlow, rect:Rectangle, columnRect:Rectangle, hScrollPos:Number, vScrollPos:Number, compositionWidth:Number, compositionHeight:Number) : void
+      tlf_internal  static function constrainRectToColumn(param1:TextFlow, param2:Rectangle, param3:Rectangle, param4:Number, param5:Number, param6:Number, param7:Number) : void
       {
          //Décompilation abandonné
       }
       
-      private static function setRectangleValues(rect:Rectangle, x:Number, y:Number, width:Number, height:Number) : void
+      private static function setRectangleValues(param1:Rectangle, param2:Number, param3:Number, param4:Number, param5:Number) : void
       {
          //Décompilation abandonné
       }
@@ -113,47 +113,47 @@ package flashx.textLayout.compose
       
       private static const rlLocalOnePoint:Point;
       
-      tlf_internal  static function findNumberLine(textLine:TextLine) : TextLine
+      tlf_internal  static function findNumberLine(param1:TextLine) : TextLine
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function getNumberLineListStylePosition(numberLine:TextLine) : String
+      tlf_internal  static function getNumberLineListStylePosition(param1:TextLine) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function getNumberLineInsideLineWidth(numberLine:TextLine) : Number
+      tlf_internal  static function getNumberLineInsideLineWidth(param1:TextLine) : Number
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function getNumberLineSpanFormat(numberLine:TextLine) : ITextLayoutFormat
+      tlf_internal  static function getNumberLineSpanFormat(param1:TextLine) : ITextLayoutFormat
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function getNumberLineParagraphDirection(numberLine:TextLine) : String
+      tlf_internal  static function getNumberLineParagraphDirection(param1:TextLine) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function setListEndIndent(numberLine:TextLine, listEndIndent:Number) : void
+      tlf_internal  static function setListEndIndent(param1:TextLine, param2:Number) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function getListEndIndent(numberLine:TextLine) : Number
+      tlf_internal  static function getListEndIndent(param1:TextLine) : Number
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function setNumberLineBackground(numberLine:TextLine, background:BackgroundManager) : void
+      tlf_internal  static function setNumberLineBackground(param1:TextLine, param2:BackgroundManager) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function getNumberLineBackground(numberLine:TextLine) : BackgroundManager
+      tlf_internal  static function getNumberLineBackground(param1:TextLine) : BackgroundManager
       {
          //Décompilation abandonné
       }
@@ -200,17 +200,17 @@ package flashx.textLayout.compose
       
       private var _numberLinePosition:int;
       
-      tlf_internal function initialize(paragraph:ParagraphElement, outerTargetWidth:Number = 0, lineOffset:Number = 0, absoluteStart:int = 0, numChars:int = 0, textLine:TextLine = null) : void
+      tlf_internal function initialize(param1:ParagraphElement, param2:Number = 0, param3:Number = 0, param4:int = 0, param5:int = 0, param6:TextLine = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function setFlag(value:uint, mask:uint) : void
+      private function setFlag(param1:uint, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function getFlag(mask:uint) : uint
+      private function getFlag(param1:uint) : uint
       {
          //Décompilation abandonné
       }
@@ -265,7 +265,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      tlf_internal function set numberLinePosition(position:Number) : void
+      tlf_internal function set numberLinePosition(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -280,7 +280,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function set x(lineX:Number) : void
+      public function set x(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -300,12 +300,12 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function set y(lineY:Number) : void
+      public function set y(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function setXYAndHeight(lineX:Number, lineY:Number, lineHeight:Number) : void
+      tlf_internal function setXYAndHeight(param1:Number, param2:Number, param3:Number) : void
       {
          //Décompilation abandonné
       }
@@ -325,7 +325,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      tlf_internal function setController(cont:ContainerController, colNumber:int) : void
+      tlf_internal function setController(param1:ContainerController, param2:int) : void
       {
          //Décompilation abandonné
       }
@@ -360,7 +360,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      tlf_internal function setAbsoluteStart(val:int) : void
+      tlf_internal function setAbsoluteStart(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -370,7 +370,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      tlf_internal function setTextLength(val:int) : void
+      tlf_internal function setTextLength(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -390,7 +390,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      tlf_internal function set outerTargetWidth(val:Number) : void
+      tlf_internal function set outerTargetWidth(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -405,7 +405,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      private function setValidity(value:String) : void
+      private function setValidity(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -425,7 +425,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      tlf_internal function set lineExtent(value:Number) : void
+      tlf_internal function set lineExtent(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -435,7 +435,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      tlf_internal function set accumulatedLineExtent(value:Number) : void
+      tlf_internal function set accumulatedLineExtent(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -445,7 +445,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      tlf_internal function set accumulatedMinimumStart(value:Number) : void
+      tlf_internal function set accumulatedMinimumStart(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -455,7 +455,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      tlf_internal function set alignment(value:String) : void
+      tlf_internal function set alignment(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -470,17 +470,17 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      tlf_internal function damage(damageType:String) : void
+      tlf_internal function damage(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function isLineVisible(wmode:String, x:int, y:int, w:int, h:int) : Boolean
+      tlf_internal function isLineVisible(param1:String, param2:int, param3:int, param4:int, param5:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function cacheLineBounds(wmode:String, bndsx:Number, bndsy:Number, bndsw:Number, bndsh:Number) : void
+      tlf_internal function cacheLineBounds(param1:String, param2:Number, param3:Number, param4:Number, param5:Number) : void
       {
          //Décompilation abandonné
       }
@@ -500,7 +500,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function getTextLine(forceValid:Boolean = false) : TextLine
+      public function getTextLine(param1:Boolean = false) : TextLine
       {
          //Décompilation abandonné
       }
@@ -510,112 +510,112 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      tlf_internal function recreateTextLine(textBlock:TextBlock, previousLine:TextLine) : TextLine
+      tlf_internal function recreateTextLine(param1:TextBlock, param2:TextLine) : TextLine
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function createShape(bp:String, textLine:TextLine) : void
+      tlf_internal function createShape(param1:String, param2:TextLine) : void
       {
          //Décompilation abandonné
       }
       
-      private function createShapeY(bp:String) : Number
+      private function createShapeY(param1:String) : Number
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function createAdornments(blockProgression:String, elem:FlowLeafElement, elemStart:int, textLine:TextLine, numberLine:TextLine) : void
+      tlf_internal function createAdornments(param1:String, param2:FlowLeafElement, param3:int, param4:TextLine, param5:TextLine) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function getLineLeading(bp:String, elem:FlowLeafElement, elemStart:int) : Number
+      tlf_internal function getLineLeading(param1:String, param2:FlowLeafElement, param3:int) : Number
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function getLineTypographicAscent(elem:FlowLeafElement, elemStart:int, textLine:TextLine) : Number
+      tlf_internal function getLineTypographicAscent(param1:FlowLeafElement, param2:int, param3:TextLine) : Number
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function getCSSLineBox(bp:String, elem:FlowLeafElement, elemStart:int, swfContext:ISWFContext, effectiveListMarkerFormat:ITextLayoutFormat = null, numberLine:TextLine = null) : Rectangle
+      tlf_internal function getCSSLineBox(param1:String, param2:FlowLeafElement, param3:int, param4:ISWFContext, param5:ITextLayoutFormat = null, param6:TextLine = null) : Rectangle
       {
          //Décompilation abandonné
       }
       
-      private function isTextlineSubsetOfSpan(element:FlowLeafElement) : Boolean
+      private function isTextlineSubsetOfSpan(param1:FlowLeafElement) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function getSelectionShapesCacheEntry(begIdx:int, endIdx:int, prevLine:TextFlowLine, nextLine:TextFlowLine, blockProgression:String) : SelectionCache
+      private function getSelectionShapesCacheEntry(param1:int, param2:int, param3:TextFlowLine, param4:TextFlowLine, param5:String) : SelectionCache
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function calculateSelectionBounds(textLine:TextLine, rectArray:Array, begIdx:int, endIdx:int, blockProgression:String, heightAndAdj:Array) : void
+      tlf_internal function calculateSelectionBounds(param1:TextLine, param2:Array, param3:int, param4:int, param5:String, param6:Array) : void
       {
          //Décompilation abandonné
       }
       
-      private function createSelectionShapes(selObj:Shape, selFormat:SelectionFormat, container:DisplayObject, begIdx:int, endIdx:int, prevLine:TextFlowLine, nextLine:TextFlowLine) : void
+      private function createSelectionShapes(param1:Shape, param2:SelectionFormat, param3:DisplayObject, param4:int, param5:int, param6:TextFlowLine, param7:TextFlowLine) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function getRomanSelectionHeightAndVerticalAdjustment(prevLine:TextFlowLine, nextLine:TextFlowLine) : Array
+      tlf_internal function getRomanSelectionHeightAndVerticalAdjustment(param1:TextFlowLine, param2:TextFlowLine) : Array
       {
          //Décompilation abandonné
       }
       
-      private function makeSelectionBlocks(textLine:TextLine, begIdx:int, endIdx:int, paraAbsStart:int, blockProgression:String, direction:String, heightAndAdj:Array) : Array
+      private function makeSelectionBlocks(param1:TextLine, param2:int, param3:int, param4:int, param5:String, param6:String, param7:Array) : Array
       {
          //Décompilation abandonné
       }
       
-      private function makeBlock(textLine:TextLine, begTextIndex:int, begAtomIndex:int, endAtomIndex:int, startMetrics:Rectangle, blockProgression:String, direction:String, heightAndAdj:Array) : Rectangle
+      private function makeBlock(param1:TextLine, param2:int, param3:int, param4:int, param5:Rectangle, param6:String, param7:String, param8:Array) : Rectangle
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function convertLineRectToContainer(rect:Rectangle, constrainShape:Boolean) : void
+      tlf_internal function convertLineRectToContainer(param1:Rectangle, param2:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function hiliteBlockSelection(selObj:Shape, selFormat:SelectionFormat, container:DisplayObject, begIdx:int, endIdx:int, prevLine:TextFlowLine, nextLine:TextFlowLine) : void
+      tlf_internal function hiliteBlockSelection(param1:Shape, param2:SelectionFormat, param3:DisplayObject, param4:int, param5:int, param6:TextFlowLine, param7:TextFlowLine) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function hilitePointSelection(selFormat:SelectionFormat, idx:int, container:DisplayObject, prevLine:TextFlowLine, nextLine:TextFlowLine) : void
+      tlf_internal function hilitePointSelection(param1:SelectionFormat, param2:int, param3:DisplayObject, param4:TextFlowLine, param5:TextFlowLine) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function computePointSelectionRectangle(idx:int, container:DisplayObject, prevLine:TextFlowLine, nextLine:TextFlowLine, constrainSelRect:Boolean) : Rectangle
+      tlf_internal function computePointSelectionRectangle(param1:int, param2:DisplayObject, param3:TextFlowLine, param4:TextFlowLine, param5:Boolean) : Rectangle
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function selectionWillIntersectScrollRect(scrollRect:Rectangle, begIdx:int, endIdx:int, prevLine:TextFlowLine, nextLine:TextFlowLine) : int
+      tlf_internal function selectionWillIntersectScrollRect(param1:Rectangle, param2:int, param3:int, param4:TextFlowLine, param5:TextFlowLine) : int
       {
          //Décompilation abandonné
       }
       
-      private function normalizeRects(srcRects:Array, dstRects:Array, largestRise:Number, blockProgression:String, direction:String) : void
+      private function normalizeRects(param1:Array, param2:Array, param3:Number, param4:String, param5:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function adjustEndElementForBidi(textLine:TextLine, begIdx:int, endIdx:int, begAtomIndex:int, direction:String) : int
+      private function adjustEndElementForBidi(param1:TextLine, param2:int, param3:int, param4:int, param5:String) : int
       {
          //Décompilation abandonné
       }
       
-      private function isAtomBidi(textLine:TextLine, elementIdx:int, direction:String) : Boolean
+      private function isAtomBidi(param1:TextLine, param2:int, param3:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -651,7 +651,7 @@ final class SelectionCache extends Object
       //Décompilation abandonné
    }
    
-   public function set begIdx(val:int) : void
+   public function set begIdx(param1:int) : void
    {
       //Décompilation abandonné
    }
@@ -661,12 +661,12 @@ final class SelectionCache extends Object
       //Décompilation abandonné
    }
    
-   public function set endIdx(val:int) : void
+   public function set endIdx(param1:int) : void
    {
       //Décompilation abandonné
    }
    
-   public function pushSelectionBlock(drawRect:Rectangle) : void
+   public function pushSelectionBlock(param1:Rectangle) : void
    {
       //Décompilation abandonné
    }
@@ -691,7 +691,7 @@ class NumberLineUserData extends Object
    //Décompilation abandonné
    }
    
-   function NumberLineUserData(listStylePosition:String, insideLineWidth:Number, spanFormat:ITextLayoutFormat, paraDirection:String)
+   function NumberLineUserData(param1:String, param2:Number, param3:ITextLayoutFormat, param4:String)
    {
       //Décompilation abandonné
    }
@@ -731,7 +731,7 @@ class NumberLineFactory extends StringTextLineFactory
       //Décompilation abandonné
    }
    
-   tlf_internal  static function calculateInsideNumberLineWidth(numberLine:TextLine, bp:String) : Number
+   tlf_internal  static function calculateInsideNumberLineWidth(param1:TextLine, param2:String) : Number
    {
       //Décompilation abandonné
    }
@@ -747,7 +747,7 @@ class NumberLineFactory extends StringTextLineFactory
       //Décompilation abandonné
    }
    
-   public function set listStylePosition(val:String) : void
+   public function set listStylePosition(param1:String) : void
    {
       //Décompilation abandonné
    }
@@ -757,7 +757,7 @@ class NumberLineFactory extends StringTextLineFactory
       //Décompilation abandonné
    }
    
-   public function set markerFormat(val:ITextLayoutFormat) : void
+   public function set markerFormat(param1:ITextLayoutFormat) : void
    {
       //Décompilation abandonné
    }
@@ -772,12 +772,12 @@ class NumberLineFactory extends StringTextLineFactory
       //Décompilation abandonné
    }
    
-   override protected function callbackWithTextLines(callback:Function, delx:Number, dely:Number) : void
+   override protected function callbackWithTextLines(param1:Function, param2:Number, param3:Number) : void
    {
       //Décompilation abandonné
    }
    
-   override tlf_internal function processBackgroundColors(textFlow:TextFlow, callback:Function, x:Number, y:Number, constrainWidth:Number, constrainHeight:Number) : *
+   override tlf_internal function processBackgroundColors(param1:TextFlow, param2:Function, param3:Number, param4:Number, param5:Number, param6:Number) : *
    {
       //Décompilation abandonné
    }

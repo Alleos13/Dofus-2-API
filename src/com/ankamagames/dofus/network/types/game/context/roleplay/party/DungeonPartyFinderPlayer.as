@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      public function initDungeonPartyFinderPlayer(playerId:uint = 0, playerName:String = "", breed:int = 0, sex:Boolean = false, level:uint = 0) : DungeonPartyFinderPlayer
+      public function initDungeonPartyFinderPlayer(param1:uint = 0, param2:String = "", param3:int = 0, param4:Boolean = false, param5:uint = 0) : DungeonPartyFinderPlayer
       {
          //Décompilation abandonné
       }
@@ -44,22 +44,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_DungeonPartyFinderPlayer(output:IDataOutput) : void
+      public function serializeAs_DungeonPartyFinderPlayer(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_DungeonPartyFinderPlayer(input:IDataInput) : void
+      public function deserializeAs_DungeonPartyFinderPlayer(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

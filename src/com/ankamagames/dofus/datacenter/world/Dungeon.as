@@ -20,7 +20,7 @@ package com.ankamagames.dofus.datacenter.world
       
       private static var _allDungeons:Array;
       
-      public static function getDungeonById(id:int) : Dungeon
+      public static function getDungeonById(param1:int) : Dungeon
       {
          //Décompilation abandonné
       }

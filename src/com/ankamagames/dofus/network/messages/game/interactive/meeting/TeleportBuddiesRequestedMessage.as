@@ -38,7 +38,7 @@ package com.ankamagames.dofus.network.messages.game.interactive.meeting
          //Décompilation abandonné
       }
       
-      public function initTeleportBuddiesRequestedMessage(dungeonId:uint = 0, inviterId:uint = 0, invalidBuddiesIds:Vector.<uint> = null) : TeleportBuddiesRequestedMessage
+      public function initTeleportBuddiesRequestedMessage(param1:uint = 0, param2:uint = 0, param3:Vector.<uint> = null) : TeleportBuddiesRequestedMessage
       {
          //Décompilation abandonné
       }
@@ -48,32 +48,32 @@ package com.ankamagames.dofus.network.messages.game.interactive.meeting
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_TeleportBuddiesRequestedMessage(output:IDataOutput) : void
+      public function serializeAs_TeleportBuddiesRequestedMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_TeleportBuddiesRequestedMessage(input:IDataInput) : void
+      public function deserializeAs_TeleportBuddiesRequestedMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

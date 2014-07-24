@@ -30,12 +30,12 @@ package com.ankamagames.dofus.logic.common.utils
          //Décompilation abandonné
       }
       
-      override public function ping(msg:INetworkMessage = null) : void
+      override public function ping(param1:INetworkMessage = null) : void
       {
          //Décompilation abandonné
       }
       
-      override public function pong(msg:INetworkMessage = null) : void
+      override public function pong(param1:INetworkMessage = null) : void
       {
          //Décompilation abandonné
       }

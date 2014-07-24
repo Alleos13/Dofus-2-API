@@ -118,7 +118,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function set width(nValue:Number) : void
+      override public function set width(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -128,7 +128,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function set height(nValue:Number) : void
+      override public function set height(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -138,7 +138,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set css(sValue:Uri) : void
+      public function set css(param1:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -148,7 +148,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set min(nValue:int) : void
+      public function set min(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -158,7 +158,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set max(nValue:int) : void
+      public function set max(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -168,7 +168,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set total(nValue:int) : void
+      public function set total(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -178,7 +178,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set step(nValue:uint) : void
+      public function set step(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -188,12 +188,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set value(nValue:int) : void
+      public function set value(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function set scrollSpeed(nValue:Number) : void
+      public function set scrollSpeed(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -208,7 +208,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set finalized(bValue:Boolean) : void
+      public function set finalized(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -218,7 +218,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set vertical(b:Boolean) : void
+      public function set vertical(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -228,7 +228,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function set disabled(bool:Boolean) : void
+      override public function set disabled(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -253,12 +253,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function approximate(nValue:Number) : Number
+      private function approximate(param1:Number) : Number
       {
          //Décompilation abandonné
       }
       
-      private function valueOfPos(nPos:Number) : int
+      private function valueOfPos(param1:Number) : int
       {
          //Décompilation abandonné
       }
@@ -273,27 +273,27 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function process(msg:Message) : Boolean
+      override public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onDragRunning(e:Event) : void
+      private function onDragRunning(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTopArrowDown(e:Event) : void
+      private function onTopArrowDown(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onBottomArrowDown(e:Event) : void
+      private function onBottomArrowDown(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function onWheel(e:Object, dispatchEvt:Boolean = true) : void
+      public function onWheel(param1:Object, param2:Boolean = true) : void
       {
          //Décompilation abandonné
       }
@@ -308,7 +308,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function eventOnTextureReady(e:Event) : void
+      public function eventOnTextureReady(param1:Event) : void
       {
          //Décompilation abandonné
       }

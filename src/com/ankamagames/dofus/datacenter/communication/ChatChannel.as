@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.communication
       
       protected static const _log:Logger;
       
-      public static function getChannelById(id:int) : ChatChannel
+      public static function getChannelById(param1:int) : ChatChannel
       {
          //Décompilation abandonné
       }

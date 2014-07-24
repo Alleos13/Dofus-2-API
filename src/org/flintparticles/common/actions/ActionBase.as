@@ -20,17 +20,17 @@ package org.flintparticles.common.actions
          //Décompilation abandonné
       }
       
-      public function addedToEmitter(emitter:Emitter) : void
+      public function addedToEmitter(param1:Emitter) : void
       {
          //Décompilation abandonné
       }
       
-      public function removedFromEmitter(emitter:Emitter) : void
+      public function removedFromEmitter(param1:Emitter) : void
       {
          //Décompilation abandonné
       }
       
-      public function update(emitter:Emitter, particle:Particle, time:Number) : void
+      public function update(param1:Emitter, param2:Particle, param3:Number) : void
       {
          //Décompilation abandonné
       }

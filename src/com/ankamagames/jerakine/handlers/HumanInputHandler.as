@@ -89,7 +89,7 @@ package com.ankamagames.jerakine.handlers
          //Décompilation abandonné
       }
       
-      public function set debugOver(value:Boolean) : void
+      public function set debugOver(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -99,7 +99,7 @@ package com.ankamagames.jerakine.handlers
          //Décompilation abandonné
       }
       
-      public function set handler(value:MessageHandler) : void
+      public function set handler(param1:MessageHandler) : void
       {
          //Décompilation abandonné
       }
@@ -119,67 +119,67 @@ package com.ankamagames.jerakine.handlers
          //Décompilation abandonné
       }
       
-      public function unregisterListeners(target:Stage = null) : void
+      public function unregisterListeners(param1:Stage = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function registerListeners(target:Stage = null) : void
+      public function registerListeners(param1:Stage = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function onDoubleClick(me:MouseEvent) : void
+      private function onDoubleClick(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onClick(me:MouseEvent) : void
+      private function onClick(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseWheel(me:MouseEvent) : void
+      private function onMouseWheel(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseOver(me:MouseEvent) : void
+      private function onMouseOver(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseOut(me:MouseEvent) : void
+      private function onMouseOut(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMiddleClick(me:MouseEvent) : void
+      private function onMiddleClick(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onRightClick(me:MouseEvent) : void
+      private function onRightClick(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseDown(me:MouseEvent) : void
+      private function onMouseDown(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseUp(me:MouseEvent) : void
+      private function onMouseUp(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onKeyDown(ke:KeyboardEvent) : void
+      private function onKeyDown(param1:KeyboardEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onKeyUp(ke:KeyboardEvent) : void
+      private function onKeyUp(param1:KeyboardEvent) : void
       {
          //Décompilation abandonné
       }

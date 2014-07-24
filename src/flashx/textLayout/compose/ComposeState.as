@@ -32,7 +32,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      tlf_internal  static function releaseComposeState(state:ComposeState) : void
+      tlf_internal  static function releaseComposeState(param1:ComposeState) : void
       {
          //Décompilation abandonné
       }
@@ -50,47 +50,47 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      override protected function releaseParcelList(list:ParcelList) : void
+      override protected function releaseParcelList(param1:ParcelList) : void
       {
          //Décompilation abandonné
       }
       
-      override public function composeTextFlow(textFlow:TextFlow, composeToPosition:int, controllerEndIndex:int) : int
+      override public function composeTextFlow(param1:TextFlow, param2:int, param3:int) : int
       {
          //Décompilation abandonné
       }
       
-      override protected function initializeForComposer(composer:IFlowComposer, composeToPosition:int, controllerStartIndex:int, controllerEndIndex:int) : void
+      override protected function initializeForComposer(param1:IFlowComposer, param2:int, param3:int, param4:int) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function composeInternal(composeRoot:FlowGroupElement, absStart:int) : void
+      override protected function composeInternal(param1:FlowGroupElement, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function doVerticalAlignment(canVerticalAlign:Boolean, nextParcel:Parcel) : void
+      override protected function doVerticalAlignment(param1:Boolean, param2:Parcel) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function applyVerticalAlignmentToColumn(controller:ContainerController, vjType:String, lines:Array, beginIndex:int, numLines:int, beginFloatIndex:int, endFloatIndex:int) : void
+      override protected function applyVerticalAlignmentToColumn(param1:ContainerController, param2:String, param3:Array, param4:int, param5:int, param6:int, param7:int) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function finalParcelAdjustment(controller:ContainerController) : void
+      override protected function finalParcelAdjustment(param1:ContainerController) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function endLine(textLine:TextLine) : void
+      override protected function endLine(param1:TextLine) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function composeParagraphElement(elem:ParagraphElement, absStart:int) : Boolean
+      override protected function composeParagraphElement(param1:ParagraphElement, param2:int) : Boolean
       {
          //Décompilation abandonné
       }
@@ -100,7 +100,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      override protected function createTextLine(targetWidth:Number, allowEmergencyBreaks:Boolean) : TextLine
+      override protected function createTextLine(param1:Number, param2:Boolean) : TextLine
       {
          //Décompilation abandonné
       }

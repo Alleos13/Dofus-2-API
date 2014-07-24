@@ -10,7 +10,7 @@ package com.ankamagames.jerakine.network.messages
       //Décompilation abandonné
       }
       
-      public function ServerConnectionClosedMessage(closedConnection:ServerConnection)
+      public function ServerConnectionClosedMessage(param1:ServerConnection)
       {
          //Décompilation abandonné
       }

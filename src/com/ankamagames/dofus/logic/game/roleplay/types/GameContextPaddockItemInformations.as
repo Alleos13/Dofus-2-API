@@ -13,7 +13,7 @@ package com.ankamagames.dofus.logic.game.roleplay.types
       //Décompilation abandonné
       }
       
-      public function GameContextPaddockItemInformations(contextualId:int, look:TiphonEntityLook, cellId:uint, durability:ItemDurability, item:Item)
+      public function GameContextPaddockItemInformations(param1:int, param2:TiphonEntityLook, param3:uint, param4:ItemDurability, param5:Item)
       {
          //Décompilation abandonné
       }

@@ -23,7 +23,7 @@ package com.ankamagames.dofus.network.types.game.shortcut
          //Décompilation abandonné
       }
       
-      public function initShortcutObject(slot:uint = 0) : ShortcutObject
+      public function initShortcutObject(param1:uint = 0) : ShortcutObject
       {
          //Décompilation abandonné
       }
@@ -33,22 +33,22 @@ package com.ankamagames.dofus.network.types.game.shortcut
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ShortcutObject(output:IDataOutput) : void
+      public function serializeAs_ShortcutObject(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ShortcutObject(input:IDataInput) : void
+      public function deserializeAs_ShortcutObject(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

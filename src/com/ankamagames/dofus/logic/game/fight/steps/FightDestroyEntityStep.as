@@ -11,7 +11,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightDestroyEntityStep(entity:IEntity)
+      public function FightDestroyEntityStep(param1:IEntity)
       {
          //Décompilation abandonné
       }

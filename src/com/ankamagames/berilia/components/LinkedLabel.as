@@ -26,7 +26,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set url(value:String) : void
+      public function set url(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -36,12 +36,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set target(value:String) : void
+      public function set target(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      override public function process(msg:Message) : Boolean
+      override public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }

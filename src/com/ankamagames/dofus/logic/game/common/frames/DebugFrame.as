@@ -42,7 +42,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -62,7 +62,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      private function displayZone(name:String, cells:Vector.<uint>, color:uint, pStrata:uint) : void
+      private function displayZone(param1:String, param2:Vector.<uint>, param3:uint, param4:uint) : void
       {
          //Décompilation abandonné
       }

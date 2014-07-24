@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.communication
       
       private static var _log:Logger;
       
-      public static function getInfoMessageById(id:uint) : InfoMessage
+      public static function getInfoMessageById(param1:uint) : InfoMessage
       {
          //Décompilation abandonné
       }

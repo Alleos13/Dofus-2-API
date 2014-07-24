@@ -30,7 +30,7 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      public function initFightResultTaxCollectorListEntry(outcome:uint = 0, wave:uint = 0, rewards:FightLoot = null, id:int = 0, alive:Boolean = false, level:uint = 0, guildInfo:BasicGuildInformations = null, experienceForGuild:int = 0) : FightResultTaxCollectorListEntry
+      public function initFightResultTaxCollectorListEntry(param1:uint = 0, param2:uint = 0, param3:FightLoot = null, param4:int = 0, param5:Boolean = false, param6:uint = 0, param7:BasicGuildInformations = null, param8:int = 0) : FightResultTaxCollectorListEntry
       {
          //Décompilation abandonné
       }
@@ -40,22 +40,22 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_FightResultTaxCollectorListEntry(output:IDataOutput) : void
+      public function serializeAs_FightResultTaxCollectorListEntry(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_FightResultTaxCollectorListEntry(input:IDataInput) : void
+      public function deserializeAs_FightResultTaxCollectorListEntry(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

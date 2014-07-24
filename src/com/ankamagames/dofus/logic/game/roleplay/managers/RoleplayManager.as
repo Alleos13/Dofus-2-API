@@ -59,32 +59,32 @@ package com.ankamagames.dofus.logic.game.roleplay.managers
          //Décompilation abandonné
       }
       
-      public function displayCharacterContextualMenu(pGameContextActorInformations:GameContextActorInformations) : Boolean
+      public function displayCharacterContextualMenu(param1:GameContextActorInformations) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function displayContextualMenu(pGameContextActorInformations:GameContextActorInformations, pEntity:IInteractive) : Boolean
+      public function displayContextualMenu(param1:GameContextActorInformations, param2:IInteractive) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function putEntityOnTop(entity:AnimatedCharacter) : void
+      public function putEntityOnTop(param1:AnimatedCharacter) : void
       {
          //Décompilation abandonné
       }
       
-      public function getKamasReward(kamasScaleWithPlayerLevel:Boolean = true, optimalLevel:int = -1, kamasRatio:Number = 1, duration:Number = 1, pPlayerLevel:int = -1) : Number
+      public function getKamasReward(param1:Boolean = true, param2:int = -1, param3:Number = 1, param4:Number = 1, param5:int = -1) : Number
       {
          //Décompilation abandonné
       }
       
-      public function getExperienceReward(pPlayerLevel:int, pXpBonus:int, optimalLevel:int = -1, xpRatio:Number = 1, duration:Number = 1) : int
+      public function getExperienceReward(param1:int, param2:int, param3:int = -1, param4:Number = 1, param5:Number = 1) : int
       {
          //Décompilation abandonné
       }
       
-      private function getFixeExperienceReward(level:int, duration:Number, xpRatio:Number) : Number
+      private function getFixeExperienceReward(param1:int, param2:Number, param3:Number) : Number
       {
          //Décompilation abandonné
       }

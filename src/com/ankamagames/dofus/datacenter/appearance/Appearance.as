@@ -17,7 +17,7 @@ package com.ankamagames.dofus.datacenter.appearance
       
       public static const MODULE:String = "Appearances";
       
-      public static function getAppearanceById(id:uint) : Appearance
+      public static function getAppearanceById(param1:uint) : Appearance
       {
          //Décompilation abandonné
       }

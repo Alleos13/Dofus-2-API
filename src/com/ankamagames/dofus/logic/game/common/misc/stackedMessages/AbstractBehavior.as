@@ -30,7 +30,7 @@ package com.ankamagames.dofus.logic.game.common.misc.stackedMessages
       
       public static const ALWAYS:String = "always";
       
-      public static function createFake(type:String, params:Array = null) : AbstractBehavior
+      public static function createFake(param1:String, param2:Array = null) : AbstractBehavior
       {
          //Décompilation abandonné
       }
@@ -53,12 +53,12 @@ package com.ankamagames.dofus.logic.game.common.misc.stackedMessages
       
       public var pendingMessage:Message;
       
-      public function processInputMessage(pMsgToProcess:Message, pMode:String) : Boolean
+      public function processInputMessage(param1:Message, param2:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function processOutputMessage(pMsgToProcess:Message, pMode:String) : Boolean
+      public function processOutputMessage(param1:Message, param2:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -68,7 +68,7 @@ package com.ankamagames.dofus.logic.game.common.misc.stackedMessages
          //Décompilation abandonné
       }
       
-      public function isAvailableToProcess(pMsg:Message) : Boolean
+      public function isAvailableToProcess(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -78,7 +78,7 @@ package com.ankamagames.dofus.logic.game.common.misc.stackedMessages
          //Décompilation abandonné
       }
       
-      public function checkAvailability(pMsgToProcess:Message) : void
+      public function checkAvailability(param1:Message) : void
       {
          //Décompilation abandonné
       }
@@ -98,7 +98,7 @@ package com.ankamagames.dofus.logic.game.common.misc.stackedMessages
          //Décompilation abandonné
       }
       
-      public function isMessageCatchable(pMsg:Message) : Boolean
+      public function isMessageCatchable(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }

@@ -30,7 +30,7 @@ package com.ankamagames.dofus.network.types.game.character.choice
          //Décompilation abandonné
       }
       
-      public function initCharacterHardcoreInformations(id:uint = 0, level:uint = 0, name:String = "", entityLook:EntityLook = null, breed:int = 0, sex:Boolean = false, deathState:uint = 0, deathCount:uint = 0, deathMaxLevel:uint = 0) : CharacterHardcoreInformations
+      public function initCharacterHardcoreInformations(param1:uint = 0, param2:uint = 0, param3:String = "", param4:EntityLook = null, param5:int = 0, param6:Boolean = false, param7:uint = 0, param8:uint = 0, param9:uint = 0) : CharacterHardcoreInformations
       {
          //Décompilation abandonné
       }
@@ -40,22 +40,22 @@ package com.ankamagames.dofus.network.types.game.character.choice
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterHardcoreInformations(output:IDataOutput) : void
+      public function serializeAs_CharacterHardcoreInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterHardcoreInformations(input:IDataInput) : void
+      public function deserializeAs_CharacterHardcoreInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

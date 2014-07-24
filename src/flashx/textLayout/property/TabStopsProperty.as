@@ -11,12 +11,12 @@ package flashx.textLayout.property
       //Décompilation abandonné
       }
       
-      public function TabStopsProperty(nameValue:String, defaultValue:Array, inherited:Boolean, categories:Vector.<String>)
+      public function TabStopsProperty(param1:String, param2:Array, param3:Boolean, param4:Vector.<String>)
       {
          //Décompilation abandonné
       }
       
-      private static function compareTabStopFormats(a:TabStopFormat, b:TabStopFormat) : Number
+      private static function compareTabStopFormats(param1:TabStopFormat, param2:TabStopFormat) : Number
       {
          //Décompilation abandonné
       }
@@ -39,12 +39,12 @@ package flashx.textLayout.property
       
       private static const _spacePlaceHolder:String;
       
-      override public function setHelper(currVal:*, newVal:*) : *
+      override public function setHelper(param1:*, param2:*) : *
       {
          //Décompilation abandonné
       }
       
-      override public function toXMLString(val:Object) : String
+      override public function toXMLString(param1:Object) : String
       {
          //Décompilation abandonné
       }

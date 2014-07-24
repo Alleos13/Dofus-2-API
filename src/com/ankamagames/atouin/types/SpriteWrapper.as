@@ -11,7 +11,7 @@ package com.ankamagames.atouin.types
       //Décompilation abandonné
       }
       
-      public function SpriteWrapper(content:DisplayObject, identifier:uint)
+      public function SpriteWrapper(param1:DisplayObject, param2:uint)
       {
          //Décompilation abandonné
       }

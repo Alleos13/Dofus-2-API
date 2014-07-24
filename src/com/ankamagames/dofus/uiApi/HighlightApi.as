@@ -29,42 +29,42 @@ package com.ankamagames.dofus.uiApi
       
       private static var _currentCell:int;
       
-      private static function onCellTimer(e:Event) : void
+      private static function onCellTimer(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function forceArrowPosition(pUiName:String, pComponentName:String, pPosition:Point) : void
+      public function forceArrowPosition(param1:String, param2:String, param3:Point) : void
       {
          //Décompilation abandonné
       }
       
-      public function highlightUi(uiName:String, componentName:String, pos:int = 0, reverse:int = 0, strata:int = 5, loop:Boolean = false) : void
+      public function highlightUi(param1:String, param2:String, param3:int = 0, param4:int = 0, param5:int = 5, param6:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function highlightCell(cellIds:Array, loop:Boolean = false) : void
+      public function highlightCell(param1:Array, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function highlightAbsolute(targetRect:Rectangle, pos:uint, reverse:int = 0, strata:int = 5, loop:Boolean = false) : void
+      public function highlightAbsolute(param1:Rectangle, param2:uint, param3:int = 0, param4:int = 5, param5:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function highlightMapTransition(mapId:int, shapeOrientation:int, position:int, reverse:Boolean = false, strata:int = 5, loop:Boolean = false) : void
+      public function highlightMapTransition(param1:int, param2:int, param3:int, param4:Boolean = false, param5:int = 5, param6:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function highlightNpc(npcId:int, loop:Boolean = false) : void
+      public function highlightNpc(param1:int, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function highlightMonster(monsterId:int, loop:Boolean = false) : void
+      public function highlightMonster(param1:int, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }

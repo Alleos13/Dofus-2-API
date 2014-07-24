@@ -31,7 +31,7 @@ package com.ankamagames.dofus.network.types.web.krosmaster
          //Décompilation abandonné
       }
       
-      public function initKrosmasterFigure(uid:String = "", figure:uint = 0, pedestal:uint = 0, bound:Boolean = false) : KrosmasterFigure
+      public function initKrosmasterFigure(param1:String = "", param2:uint = 0, param3:uint = 0, param4:Boolean = false) : KrosmasterFigure
       {
          //Décompilation abandonné
       }
@@ -41,22 +41,22 @@ package com.ankamagames.dofus.network.types.web.krosmaster
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_KrosmasterFigure(output:IDataOutput) : void
+      public function serializeAs_KrosmasterFigure(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_KrosmasterFigure(input:IDataInput) : void
+      public function deserializeAs_KrosmasterFigure(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

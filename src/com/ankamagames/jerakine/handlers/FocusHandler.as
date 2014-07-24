@@ -41,12 +41,12 @@ package com.ankamagames.jerakine.handlers
          //Décompilation abandonné
       }
       
-      public function set handler(value:MessageHandler) : void
+      public function set handler(param1:MessageHandler) : void
       {
          //Décompilation abandonné
       }
       
-      public function setFocus(target:InteractiveObject) : void
+      public function setFocus(param1:InteractiveObject) : void
       {
          //Décompilation abandonné
       }
@@ -56,7 +56,7 @@ package com.ankamagames.jerakine.handlers
          //Décompilation abandonné
       }
       
-      public function hasFocus(io:InteractiveObject) : Boolean
+      public function hasFocus(param1:InteractiveObject) : Boolean
       {
          //Décompilation abandonné
       }

@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.prism
          //Décompilation abandonné
       }
       
-      public static function create(join:Boolean) : PrismInfoJoinLeaveRequestAction
+      public static function create(param1:Boolean) : PrismInfoJoinLeaveRequestAction
       {
          //Décompilation abandonné
       }

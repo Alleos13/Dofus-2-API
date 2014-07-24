@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.mount
          //Décompilation abandonné
       }
       
-      public static function create(newName:String, mountId:Number) : MountRenameRequestAction
+      public static function create(param1:String, param2:Number) : MountRenameRequestAction
       {
          //Décompilation abandonné
       }

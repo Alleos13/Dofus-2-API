@@ -7,6 +7,6 @@ package com.ankamagames.jerakine.network
       //Décompilation abandonné
       }
       
-      function getConnectionId(msg:INetworkMessage) : String;
+      function getConnectionId(param1:INetworkMessage) : String;
    }
 }

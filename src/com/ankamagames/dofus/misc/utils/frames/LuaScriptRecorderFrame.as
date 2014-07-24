@@ -78,7 +78,7 @@ package com.ankamagames.dofus.misc.utils.frames
       
       private var _currentCameraZoom:int;
       
-      private function addScriptLine(line:String, overrideRunningStatus:Boolean = false) : void
+      private function addScriptLine(param1:String, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -93,17 +93,17 @@ package com.ankamagames.dofus.misc.utils.frames
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function cameraZoom(value:Number, centerOnCharacter:Boolean = false) : void
+      public function cameraZoom(param1:Number, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function createLine(entity:String, cmd:String, param:String, useQuote:Boolean) : void
+      public function createLine(param1:String, param2:String, param3:String, param4:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -118,22 +118,22 @@ package com.ankamagames.dofus.misc.utils.frames
          //Décompilation abandonné
       }
       
-      public function start(autoTimer:Boolean) : void
+      public function start(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function set pause(paused:Boolean) : void
+      public function set pause(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function wait(time:Number) : void
+      public function wait(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function autoFollowCam(enabled:Boolean) : void
+      public function autoFollowCam(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -143,7 +143,7 @@ package com.ankamagames.dofus.misc.utils.frames
          //Décompilation abandonné
       }
       
-      public function set moveType(moveType:int) : void
+      public function set moveType(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -158,7 +158,7 @@ package com.ankamagames.dofus.misc.utils.frames
          //Décompilation abandonné
       }
       
-      public function set luaScript(value:String) : void
+      public function set luaScript(param1:String) : void
       {
          //Décompilation abandonné
       }

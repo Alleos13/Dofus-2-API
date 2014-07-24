@@ -46,7 +46,7 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
          //Décompilation abandonné
       }
       
-      public function initMimicryObjectFeedAndAssociateRequestMessage(mimicryUID:uint = 0, mimicryPos:uint = 0, foodUID:uint = 0, foodPos:uint = 0, hostUID:uint = 0, hostPos:uint = 0, preview:Boolean = false) : MimicryObjectFeedAndAssociateRequestMessage
+      public function initMimicryObjectFeedAndAssociateRequestMessage(param1:uint = 0, param2:uint = 0, param3:uint = 0, param4:uint = 0, param5:uint = 0, param6:uint = 0, param7:Boolean = false) : MimicryObjectFeedAndAssociateRequestMessage
       {
          //Décompilation abandonné
       }
@@ -56,32 +56,32 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_MimicryObjectFeedAndAssociateRequestMessage(output:IDataOutput) : void
+      public function serializeAs_MimicryObjectFeedAndAssociateRequestMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_MimicryObjectFeedAndAssociateRequestMessage(input:IDataInput) : void
+      public function deserializeAs_MimicryObjectFeedAndAssociateRequestMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

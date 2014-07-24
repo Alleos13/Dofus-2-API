@@ -17,7 +17,7 @@ package com.ankamagames.dofus.internalDatacenter.conquest
          //Décompilation abandonné
       }
       
-      public static function create(pFightersInformations:CharacterMinimalPlusLookInformations) : PrismFightersWrapper
+      public static function create(param1:CharacterMinimalPlusLookInformations) : PrismFightersWrapper
       {
          //Décompilation abandonné
       }

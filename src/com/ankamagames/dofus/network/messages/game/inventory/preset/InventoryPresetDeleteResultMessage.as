@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.game.inventory.preset
          //Décompilation abandonné
       }
       
-      public function initInventoryPresetDeleteResultMessage(presetId:uint = 0, code:uint = 2) : InventoryPresetDeleteResultMessage
+      public function initInventoryPresetDeleteResultMessage(param1:uint = 0, param2:uint = 2) : InventoryPresetDeleteResultMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.game.inventory.preset
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_InventoryPresetDeleteResultMessage(output:IDataOutput) : void
+      public function serializeAs_InventoryPresetDeleteResultMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_InventoryPresetDeleteResultMessage(input:IDataInput) : void
+      public function deserializeAs_InventoryPresetDeleteResultMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

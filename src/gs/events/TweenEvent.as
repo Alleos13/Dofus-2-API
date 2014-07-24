@@ -9,7 +9,7 @@ package gs.events
       //Décompilation abandonné
       }
       
-      public function TweenEvent($type:String, $info:Object = null, $bubbles:Boolean = false, $cancelable:Boolean = false)
+      public function TweenEvent(param1:String, param2:Object = null, param3:Boolean = false, param4:Boolean = false)
       {
          //Décompilation abandonné
       }

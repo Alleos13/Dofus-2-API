@@ -49,7 +49,7 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      public function initExchangeGuildTaxCollectorGetMessage(collectorName:String = "", worldX:int = 0, worldY:int = 0, mapId:int = 0, subAreaId:uint = 0, userName:String = "", experience:Number = 0, objectsInfos:Vector.<ObjectItemQuantity> = null) : ExchangeGuildTaxCollectorGetMessage
+      public function initExchangeGuildTaxCollectorGetMessage(param1:String = "", param2:int = 0, param3:int = 0, param4:int = 0, param5:uint = 0, param6:String = "", param7:Number = 0, param8:Vector.<ObjectItemQuantity> = null) : ExchangeGuildTaxCollectorGetMessage
       {
          //Décompilation abandonné
       }
@@ -59,32 +59,32 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeGuildTaxCollectorGetMessage(output:IDataOutput) : void
+      public function serializeAs_ExchangeGuildTaxCollectorGetMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeGuildTaxCollectorGetMessage(input:IDataInput) : void
+      public function deserializeAs_ExchangeGuildTaxCollectorGetMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

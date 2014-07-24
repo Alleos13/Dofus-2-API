@@ -29,17 +29,17 @@ package gs
       
       public static var enabled:Boolean;
       
-      public static function init($mode:int = 2) : int
+      public static function init(param1:int = 2) : int
       {
          //Décompilation abandonné
       }
       
-      public static function manageOverwrites($tween:TweenLite, $targetTweens:Array) : void
+      public static function manageOverwrites(param1:TweenLite, param2:Array) : void
       {
          //Décompilation abandonné
       }
       
-      public static function killVars($killVars:Object, $vars:Object, $tweens:Array, $subTweens:Array, $filters:Array) : void
+      public static function killVars(param1:Object, param2:Object, param3:Array, param4:Array, param5:Array) : void
       {
          //Décompilation abandonné
       }

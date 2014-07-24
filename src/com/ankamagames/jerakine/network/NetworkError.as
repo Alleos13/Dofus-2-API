@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.network
       //Décompilation abandonné
       }
       
-      public function NetworkError(message:String = "", id:uint = 0)
+      public function NetworkError(param1:String = "", param2:uint = 0)
       {
          //Décompilation abandonné
       }

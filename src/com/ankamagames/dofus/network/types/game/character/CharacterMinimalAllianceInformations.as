@@ -28,7 +28,7 @@ package com.ankamagames.dofus.network.types.game.character
          //Décompilation abandonné
       }
       
-      public function initCharacterMinimalAllianceInformations(id:uint = 0, level:uint = 0, name:String = "", entityLook:EntityLook = null, guild:BasicGuildInformations = null, alliance:BasicAllianceInformations = null) : CharacterMinimalAllianceInformations
+      public function initCharacterMinimalAllianceInformations(param1:uint = 0, param2:uint = 0, param3:String = "", param4:EntityLook = null, param5:BasicGuildInformations = null, param6:BasicAllianceInformations = null) : CharacterMinimalAllianceInformations
       {
          //Décompilation abandonné
       }
@@ -38,22 +38,22 @@ package com.ankamagames.dofus.network.types.game.character
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterMinimalAllianceInformations(output:IDataOutput) : void
+      public function serializeAs_CharacterMinimalAllianceInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterMinimalAllianceInformations(input:IDataInput) : void
+      public function deserializeAs_CharacterMinimalAllianceInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

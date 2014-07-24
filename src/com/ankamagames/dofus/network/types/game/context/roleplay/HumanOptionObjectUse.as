@@ -29,7 +29,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initHumanOptionObjectUse(delayTypeId:uint = 0, delayEndTime:Number = 0, objectGID:uint = 0) : HumanOptionObjectUse
+      public function initHumanOptionObjectUse(param1:uint = 0, param2:Number = 0, param3:uint = 0) : HumanOptionObjectUse
       {
          //Décompilation abandonné
       }
@@ -39,22 +39,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_HumanOptionObjectUse(output:IDataOutput) : void
+      public function serializeAs_HumanOptionObjectUse(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_HumanOptionObjectUse(input:IDataInput) : void
+      public function deserializeAs_HumanOptionObjectUse(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

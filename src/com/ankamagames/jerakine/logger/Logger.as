@@ -7,21 +7,21 @@ package com.ankamagames.jerakine.logger
       //Décompilation abandonné
       }
       
-      function trace(message:Object) : void;
+      function trace(param1:Object) : void;
       
-      function debug(message:Object) : void;
+      function debug(param1:Object) : void;
       
-      function info(message:Object) : void;
+      function info(param1:Object) : void;
       
-      function warn(message:Object) : void;
+      function warn(param1:Object) : void;
       
-      function error(message:Object) : void;
+      function error(param1:Object) : void;
       
-      function fatal(message:Object) : void;
+      function fatal(param1:Object) : void;
       
-      function log(level:uint, message:Object) : void;
+      function log(param1:uint, param2:Object) : void;
       
-      function logDirectly(logEvent:LogEvent) : void;
+      function logDirectly(param1:LogEvent) : void;
       
       function get category() : String;
       

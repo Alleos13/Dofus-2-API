@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.types
       //Décompilation abandonné
       }
       
-      public function DataStoreType(sCategory:String, bPersistant:Boolean, nLocation:Number = NaN, nBind:Number = NaN)
+      public function DataStoreType(param1:String, param2:Boolean, param3:Number = NaN, param4:Number = NaN)
       {
          //Décompilation abandonné
       }
@@ -25,7 +25,7 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public static function set CHARACTER_ID(value:String) : void
+      public static function set CHARACTER_ID(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -35,7 +35,7 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public static function set ACCOUNT_ID(value:String) : void
+      public static function set ACCOUNT_ID(param1:String) : void
       {
          //Décompilation abandonné
       }

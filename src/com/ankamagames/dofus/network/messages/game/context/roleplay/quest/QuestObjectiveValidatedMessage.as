@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.quest
          //Décompilation abandonné
       }
       
-      public function initQuestObjectiveValidatedMessage(questId:uint = 0, objectiveId:uint = 0) : QuestObjectiveValidatedMessage
+      public function initQuestObjectiveValidatedMessage(param1:uint = 0, param2:uint = 0) : QuestObjectiveValidatedMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.quest
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_QuestObjectiveValidatedMessage(output:IDataOutput) : void
+      public function serializeAs_QuestObjectiveValidatedMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_QuestObjectiveValidatedMessage(input:IDataInput) : void
+      public function deserializeAs_QuestObjectiveValidatedMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

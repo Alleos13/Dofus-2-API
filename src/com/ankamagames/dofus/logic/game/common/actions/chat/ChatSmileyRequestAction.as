@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.chat
          //Décompilation abandonné
       }
       
-      public static function create(id:int) : ChatSmileyRequestAction
+      public static function create(param1:int) : ChatSmileyRequestAction
       {
          //Décompilation abandonné
       }

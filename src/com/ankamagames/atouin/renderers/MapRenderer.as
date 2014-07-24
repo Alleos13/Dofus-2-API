@@ -89,7 +89,7 @@ package com.ankamagames.atouin.renderers
       //Décompilation abandonné
       }
       
-      public function MapRenderer(container:DisplayObjectContainer, elements:Elements)
+      public function MapRenderer(param1:DisplayObjectContainer, param2:Elements)
       {
          //Décompilation abandonné
       }
@@ -212,12 +212,12 @@ package com.ankamagames.atouin.renderers
          //Décompilation abandonné
       }
       
-      public function initRenderContainer(container:DisplayObjectContainer) : void
+      public function initRenderContainer(param1:DisplayObjectContainer) : void
       {
          //Décompilation abandonné
       }
       
-      public function render(dataContainer:DataMapContainer, forceReloadWithoutCache:Boolean = false, renderId:uint = 0, renderFixture:Boolean = true) : void
+      public function render(param1:DataMapContainer, param2:Boolean = false, param3:uint = 0, param4:Boolean = true) : void
       {
          //Décompilation abandonné
       }
@@ -227,12 +227,12 @@ package com.ankamagames.atouin.renderers
          //Décompilation abandonné
       }
       
-      public function modeTactic(activated:Boolean) : void
+      public function modeTactic(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function isCellUnderFixture(pCellId:uint) : Boolean
+      public function isCellUnderFixture(param1:uint) : Boolean
       {
          //Décompilation abandonné
       }
@@ -244,7 +244,7 @@ package com.ankamagames.atouin.renderers
       
       private var colorTransform:ColorTransform;
       
-      private function drawGround(groundLayerCtr:Bitmap, cellCtr:BitmapCellContainer) : void
+      private function drawGround(param1:Bitmap, param2:BitmapCellContainer) : void
       {
          //Décompilation abandonné
       }
@@ -255,24 +255,24 @@ package com.ankamagames.atouin.renderers
       
       private var _destPoint:Point;
       
-      private function groundMapLoaded(ground:Bitmap) : void
+      private function groundMapLoaded(param1:Bitmap) : void
       {
          //Décompilation abandonné
       }
       
-      private function groundMapNotLoaded(mapId:int) : void
+      private function groundMapNotLoaded(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function addCellBitmapsElements(cell:Cell, cellCtr:ICellContainer, transparent:Boolean = false, ground:Boolean = false) : Boolean
+      private function addCellBitmapsElements(param1:Cell, param2:ICellContainer, param3:Boolean = false, param4:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
       private var _ceilBitmapData:BitmapData;
       
-      private function renderFixture(fixtures:Array, container:Bitmap) : void
+      private function renderFixture(param1:Array, param2:Bitmap) : void
       {
          //Décompilation abandonné
       }
@@ -284,27 +284,27 @@ package com.ankamagames.atouin.renderers
          //Décompilation abandonné
       }
       
-      private function onAllGfxLoaded(e:ResourceLoaderProgressEvent) : void
+      private function onAllGfxLoaded(param1:ResourceLoaderProgressEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onBitmapGfxLoaded(e:ResourceLoadedEvent) : void
+      private function onBitmapGfxLoaded(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSwfGfxLoaded(e:ResourceLoadedEvent) : void
+      private function onSwfGfxLoaded(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onGfxError(e:ResourceErrorEvent) : void
+      private function onGfxError(param1:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onDownloadTimer(e:TimerEvent) : void
+      private function onDownloadTimer(param1:TimerEvent) : void
       {
          //Décompilation abandonné
       }

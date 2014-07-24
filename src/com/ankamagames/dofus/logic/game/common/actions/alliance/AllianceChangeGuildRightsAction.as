@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.alliance
          //Décompilation abandonné
       }
       
-      public static function create(guildId:uint, rights:uint) : AllianceChangeGuildRightsAction
+      public static function create(param1:uint, param2:uint) : AllianceChangeGuildRightsAction
       {
          //Décompilation abandonné
       }

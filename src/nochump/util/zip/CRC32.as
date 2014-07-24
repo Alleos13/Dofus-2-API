@@ -33,7 +33,7 @@ package nochump.util.zip
          //Décompilation abandonné
       }
       
-      public function update(buf:ByteArray) : void
+      public function update(param1:ByteArray) : void
       {
          //Décompilation abandonné
       }

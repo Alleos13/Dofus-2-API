@@ -18,7 +18,7 @@ package com.ankamagames.berilia.utils
          //Décompilation abandonné
       }
       
-      override protected function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void
+      override protected function loadDirectly(param1:Uri, param2:IResourceObserver, param3:Boolean, param4:Class) : void
       {
          //Décompilation abandonné
       }

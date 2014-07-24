@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      public function initGameFightFighterCompanionLightInformations(id:int = 0, wave:int = 0, level:uint = 0, breed:int = 0, sex:Boolean = false, alive:Boolean = false, companionId:int = 0, masterId:int = 0) : GameFightFighterCompanionLightInformations
+      public function initGameFightFighterCompanionLightInformations(param1:int = 0, param2:int = 0, param3:uint = 0, param4:int = 0, param5:Boolean = false, param6:Boolean = false, param7:int = 0, param8:int = 0) : GameFightFighterCompanionLightInformations
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightFighterCompanionLightInformations(output:IDataOutput) : void
+      public function serializeAs_GameFightFighterCompanionLightInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightFighterCompanionLightInformations(input:IDataInput) : void
+      public function deserializeAs_GameFightFighterCompanionLightInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

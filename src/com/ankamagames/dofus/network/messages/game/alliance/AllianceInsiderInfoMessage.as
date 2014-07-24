@@ -42,7 +42,7 @@ package com.ankamagames.dofus.network.messages.game.alliance
          //Décompilation abandonné
       }
       
-      public function initAllianceInsiderInfoMessage(allianceInfos:AllianceFactSheetInformations = null, guilds:Vector.<GuildInsiderFactSheetInformations> = null, prisms:Vector.<PrismSubareaEmptyInfo> = null) : AllianceInsiderInfoMessage
+      public function initAllianceInsiderInfoMessage(param1:AllianceFactSheetInformations = null, param2:Vector.<GuildInsiderFactSheetInformations> = null, param3:Vector.<PrismSubareaEmptyInfo> = null) : AllianceInsiderInfoMessage
       {
          //Décompilation abandonné
       }
@@ -52,32 +52,32 @@ package com.ankamagames.dofus.network.messages.game.alliance
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AllianceInsiderInfoMessage(output:IDataOutput) : void
+      public function serializeAs_AllianceInsiderInfoMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AllianceInsiderInfoMessage(input:IDataInput) : void
+      public function deserializeAs_AllianceInsiderInfoMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

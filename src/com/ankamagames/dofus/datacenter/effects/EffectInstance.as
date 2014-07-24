@@ -99,7 +99,7 @@ package com.ankamagames.dofus.datacenter.effects
       
       private var _rawZone:String;
       
-      public function set rawZone(data:String) : void
+      public function set rawZone(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -164,12 +164,12 @@ package com.ankamagames.dofus.datacenter.effects
          //Décompilation abandonné
       }
       
-      public function add(effect:*) : EffectInstance
+      public function add(param1:*) : EffectInstance
       {
          //Décompilation abandonné
       }
       
-      public function setParameter(paramIndex:uint, value:*) : void
+      public function setParameter(param1:uint, param2:*) : void
       {
          //Décompilation abandonné
       }
@@ -179,82 +179,82 @@ package com.ankamagames.dofus.datacenter.effects
          //Décompilation abandonné
       }
       
-      private function getTurnCountStr(bShowLast:Boolean) : String
+      private function getTurnCountStr(param1:Boolean) : String
       {
          //Décompilation abandonné
       }
       
-      private function getEmoticonName(id:int) : String
+      private function getEmoticonName(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      private function getItemTypeName(id:int) : String
+      private function getItemTypeName(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      private function getMonsterName(id:int) : String
+      private function getMonsterName(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      private function getCompanionName(id:int) : String
+      private function getCompanionName(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      private function getMonsterGrade(pId:int, pGrade:int) : String
+      private function getMonsterGrade(param1:int, param2:int) : String
       {
          //Décompilation abandonné
       }
       
-      private function getSpellName(id:int) : String
+      private function getSpellName(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      private function getSpellLevelName(id:int) : String
+      private function getSpellLevelName(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      private function getJobName(id:int) : String
+      private function getJobName(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      private function getDocumentTitle(id:int) : String
+      private function getDocumentTitle(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      private function getAlignmentSideName(id:int) : String
+      private function getAlignmentSideName(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      private function getItemName(id:int) : String
+      private function getItemName(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      private function getMonsterSuperRaceName(id:int) : String
+      private function getMonsterSuperRaceName(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      private function getMonsterRaceName(id:int) : String
+      private function getMonsterRaceName(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      private function getTitleName(id:int) : String
+      private function getTitleName(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      private function getSpellStateName(id:int) : String
+      private function getSpellStateName(param1:int) : String
       {
          //Décompilation abandonné
       }
@@ -264,7 +264,7 @@ package com.ankamagames.dofus.datacenter.effects
          //Décompilation abandonné
       }
       
-      private function prepareDescription(desc:String, effectId:uint) : String
+      private function prepareDescription(param1:String, param2:uint) : String
       {
          //Décompilation abandonné
       }

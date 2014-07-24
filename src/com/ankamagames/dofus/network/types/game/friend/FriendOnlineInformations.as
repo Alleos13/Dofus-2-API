@@ -45,7 +45,7 @@ package com.ankamagames.dofus.network.types.game.friend
          //Décompilation abandonné
       }
       
-      public function initFriendOnlineInformations(accountId:uint = 0, accountName:String = "", playerState:uint = 99, lastConnection:uint = 0, achievementPoints:int = 0, playerId:uint = 0, playerName:String = "", level:uint = 0, alignmentSide:int = 0, breed:int = 0, sex:Boolean = false, guildInfo:BasicGuildInformations = null, moodSmileyId:int = 0, status:PlayerStatus = null) : FriendOnlineInformations
+      public function initFriendOnlineInformations(param1:uint = 0, param2:String = "", param3:uint = 99, param4:uint = 0, param5:int = 0, param6:uint = 0, param7:String = "", param8:uint = 0, param9:int = 0, param10:int = 0, param11:Boolean = false, param12:BasicGuildInformations = null, param13:int = 0, param14:PlayerStatus = null) : FriendOnlineInformations
       {
          //Décompilation abandonné
       }
@@ -55,22 +55,22 @@ package com.ankamagames.dofus.network.types.game.friend
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_FriendOnlineInformations(output:IDataOutput) : void
+      public function serializeAs_FriendOnlineInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_FriendOnlineInformations(input:IDataInput) : void
+      public function deserializeAs_FriendOnlineInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

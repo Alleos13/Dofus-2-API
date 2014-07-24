@@ -13,14 +13,14 @@ package com.ankamagames.jerakine.entities.interfaces
       
       function get movementBehavior() : IMovementBehavior;
       
-      function set movementBehavior(oValue:IMovementBehavior) : void;
+      function set movementBehavior(param1:IMovementBehavior) : void;
       
       function get isMoving() : Boolean;
       
-      function move(path:MovementPath, callback:Function = null) : void;
+      function move(param1:MovementPath, param2:Function = null) : void;
       
-      function jump(newPosition:MapPoint) : void;
+      function jump(param1:MapPoint) : void;
       
-      function stop(forceStop:Boolean = false) : void;
+      function stop(param1:Boolean = false) : void;
    }
 }

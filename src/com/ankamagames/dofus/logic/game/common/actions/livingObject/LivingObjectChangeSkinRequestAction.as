@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.livingObject
          //Décompilation abandonné
       }
       
-      public static function create(livingUID:uint, livingPosition:uint, skinId:uint) : LivingObjectChangeSkinRequestAction
+      public static function create(param1:uint, param2:uint, param3:uint) : LivingObjectChangeSkinRequestAction
       {
          //Décompilation abandonné
       }

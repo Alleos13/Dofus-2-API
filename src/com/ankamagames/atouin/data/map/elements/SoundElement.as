@@ -12,7 +12,7 @@ package com.ankamagames.atouin.data.map.elements
       //Décompilation abandonné
       }
       
-      public function SoundElement(cell:Cell)
+      public function SoundElement(param1:Cell)
       {
          //Décompilation abandonné
       }
@@ -34,7 +34,7 @@ package com.ankamagames.atouin.data.map.elements
          //Décompilation abandonné
       }
       
-      override public function fromRaw(raw:IDataInput, mapVersion:int) : void
+      override public function fromRaw(param1:IDataInput, param2:int) : void
       {
          //Décompilation abandonné
       }

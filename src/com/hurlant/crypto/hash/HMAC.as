@@ -9,7 +9,7 @@ package com.hurlant.crypto.hash
       //Décompilation abandonné
       }
       
-      public function HMAC(hash:IHash, bits:uint = 0)
+      public function HMAC(param1:IHash, param2:uint = 0)
       {
          //Décompilation abandonné
       }
@@ -23,7 +23,7 @@ package com.hurlant.crypto.hash
          //Décompilation abandonné
       }
       
-      public function compute(key:ByteArray, data:ByteArray) : ByteArray
+      public function compute(param1:ByteArray, param2:ByteArray) : ByteArray
       {
          //Décompilation abandonné
       }

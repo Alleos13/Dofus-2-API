@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.script
       //Décompilation abandonné
       }
       
-      public function BinaryScript(data:ByteArray, path:String)
+      public function BinaryScript(param1:ByteArray, param2:String)
       {
          //Décompilation abandonné
       }

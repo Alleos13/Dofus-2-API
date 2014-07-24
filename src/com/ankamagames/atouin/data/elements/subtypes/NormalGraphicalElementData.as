@@ -16,7 +16,7 @@ package com.ankamagames.atouin.data.elements.subtypes
       //Décompilation abandonné
       }
       
-      public function NormalGraphicalElementData(elementId:int, elementType:int)
+      public function NormalGraphicalElementData(param1:int, param2:int)
       {
          //Décompilation abandonné
       }
@@ -35,7 +35,7 @@ package com.ankamagames.atouin.data.elements.subtypes
       
       public var size:Point;
       
-      override public function fromRaw(raw:IDataInput, version:int) : void
+      override public function fromRaw(param1:IDataInput, param2:int) : void
       {
          //Décompilation abandonné
       }

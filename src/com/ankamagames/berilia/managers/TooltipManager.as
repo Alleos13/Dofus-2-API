@@ -56,27 +56,27 @@ package com.ankamagames.berilia.managers
       
       private static var _isInit:Boolean = false;
       
-      public static function show(data:*, target:*, uiModule:UiModule, autoHide:Boolean = true, name:String = "standard", point:uint = 0, relativePoint:uint = 2, offset:int = 3, usePrefix:Boolean = true, tooltipMaker:String = null, script:Class = null, makerParam:Object = null, cacheName:String = null, mouseEnabled:Boolean = false, strata:int = 4, zoom:Number = 1, alwaysDisplayed:Boolean = true) : Tooltip
+      public static function show(param1:*, param2:*, param3:UiModule, param4:Boolean = true, param5:String = "standard", param6:uint = 0, param7:uint = 2, param8:int = 3, param9:Boolean = true, param10:String = null, param11:Class = null, param12:Object = null, param13:String = null, param14:Boolean = false, param15:int = 4, param16:Number = 1, param17:Boolean = true) : Tooltip
       {
          //Décompilation abandonné
       }
       
-      public static function hide(name:String = "standard") : void
+      public static function hide(param1:String = "standard") : void
       {
          //Décompilation abandonné
       }
       
-      public static function getTooltipName(pTooltip:UiRootContainer) : String
+      public static function getTooltipName(param1:UiRootContainer) : String
       {
          //Décompilation abandonné
       }
       
-      public static function isVisible(name:String) : Boolean
+      public static function isVisible(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function updateContent(ttCacheName:String, ttName:String, data:Object) : void
+      public static function updateContent(param1:String, param2:String, param3:Object) : void
       {
          //Décompilation abandonné
       }
@@ -91,32 +91,37 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      private static function onTooltipReady(tt:Tooltip, uiModule:UiModule, name:String, data:*, target:*, autoHide:Boolean, point:uint, relativePoint:uint, offset:int, cacheName:String, strata:int, param:Object, zoom:Number, alwaysDisplayed:Boolean) : void
+      public static function updateAllPositions(param1:Number, param2:Number) : void
       {
          //Décompilation abandonné
       }
       
-      private static function getTargetRect(target:*) : TooltipRectangle
+      private static function onTooltipReady(param1:Tooltip, param2:UiModule, param3:String, param4:*, param5:*, param6:Boolean, param7:uint, param8:uint, param9:int, param10:String, param11:int, param12:Object, param13:Number, param14:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      private static function localToGlobal(t:Object, p:Point = null) : Point
+      private static function getTargetRect(param1:*) : TooltipRectangle
       {
          //Décompilation abandonné
       }
       
-      private static function onUiRenderComplete(pEvt:UiRenderEvent) : void
+      private static function localToGlobal(param1:Object, param2:Point = null) : Point
       {
          //Décompilation abandonné
       }
       
-      private static function onUiUnloadStarted(pEvt:UiUnloadEvent) : void
+      private static function onUiRenderComplete(param1:UiRenderEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private static function removeTooltipsHiddenByUi(uiname:String) : void
+      private static function onUiUnloadStarted(param1:UiUnloadEvent) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      private static function removeTooltipsHiddenByUi(param1:String) : void
       {
          //Décompilation abandonné
       }

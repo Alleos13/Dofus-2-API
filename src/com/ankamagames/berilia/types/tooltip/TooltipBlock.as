@@ -57,7 +57,7 @@ package com.ankamagames.berilia.types.tooltip
          //Décompilation abandonné
       }
       
-      public function initChunk(chunksList:Array) : void
+      public function initChunk(param1:Array) : void
       {
          //Décompilation abandonné
       }
@@ -67,7 +67,7 @@ package com.ankamagames.berilia.types.tooltip
          //Décompilation abandonné
       }
       
-      public function getChunk(name:String) : TooltipChunk
+      public function getChunk(param1:String) : TooltipChunk
       {
          //Décompilation abandonné
       }
@@ -82,12 +82,12 @@ package com.ankamagames.berilia.types.tooltip
          //Décompilation abandonné
       }
       
-      private function onLoaded(e:ResourceLoadedEvent) : void
+      private function onLoaded(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onLoadError(e:ResourceErrorEvent) : void
+      private function onLoadError(param1:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }

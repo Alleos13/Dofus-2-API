@@ -9,7 +9,7 @@ package com.ankamagames.tubul.types.effects
       //Décompilation abandonné
       }
       
-      public function LowPassFilter(pResonance:Number = 0.0, pMinFreq:Number = 0.0, pMaxFreq:Number = 0.0, pLfoSpeed:Number = 0.0)
+      public function LowPassFilter(param1:Number = 0.0, param2:Number = 0.0, param3:Number = 0.0, param4:Number = 0.0)
       {
          //Décompilation abandonné
       }
@@ -44,7 +44,7 @@ package com.ankamagames.tubul.types.effects
          //Décompilation abandonné
       }
       
-      public function set lfoSpeedMs(pLfoSpeedMs:Number) : void
+      public function set lfoSpeedMs(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -54,7 +54,7 @@ package com.ankamagames.tubul.types.effects
          //Décompilation abandonné
       }
       
-      public function set resonance(pResonance:Number) : void
+      public function set resonance(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -64,7 +64,7 @@ package com.ankamagames.tubul.types.effects
          //Décompilation abandonné
       }
       
-      public function set minFreq(pMinFreq:Number) : void
+      public function set minFreq(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -74,12 +74,12 @@ package com.ankamagames.tubul.types.effects
          //Décompilation abandonné
       }
       
-      public function set maxFreq(pMaxFreq:Number) : void
+      public function set maxFreq(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function process(pInput:Number) : Number
+      public function process(param1:Number) : Number
       {
          //Décompilation abandonné
       }
@@ -89,7 +89,7 @@ package com.ankamagames.tubul.types.effects
          //Décompilation abandonné
       }
       
-      private function tanh(x:Number) : Number
+      private function tanh(param1:Number) : Number
       {
          //Décompilation abandonné
       }

@@ -60,17 +60,17 @@ package com.ankamagames.dofus.logic.game.approach.managers
          //Décompilation abandonné
       }
       
-      public function receiveParts(parts:Vector.<ContentPart>) : void
+      public function receiveParts(param1:Vector.<ContentPart>) : void
       {
          //Décompilation abandonné
       }
       
-      public function checkAndDownload(partName:String) : void
+      public function checkAndDownload(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function updatePart(part:ContentPart) : void
+      public function updatePart(param1:ContentPart) : void
       {
          //Décompilation abandonné
       }
@@ -80,7 +80,7 @@ package com.ankamagames.dofus.logic.game.approach.managers
          //Décompilation abandonné
       }
       
-      public function getPart(partName:String) : ContentPart
+      public function getPart(param1:String) : ContentPart
       {
          //Décompilation abandonné
       }
@@ -90,7 +90,7 @@ package com.ankamagames.dofus.logic.game.approach.managers
          //Décompilation abandonné
       }
       
-      public function getDownloadPercent(base:int) : int
+      public function getDownloadPercent(param1:int) : int
       {
          //Décompilation abandonné
       }
@@ -105,7 +105,7 @@ package com.ankamagames.dofus.logic.game.approach.managers
          //Décompilation abandonné
       }
       
-      private function download(partName:String) : void
+      private function download(param1:String) : void
       {
          //Décompilation abandonné
       }

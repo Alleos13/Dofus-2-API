@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.prism
          //Décompilation abandonné
       }
       
-      public function initPrismFightRemovedMessage(subAreaId:uint = 0) : PrismFightRemovedMessage
+      public function initPrismFightRemovedMessage(param1:uint = 0) : PrismFightRemovedMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.prism
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PrismFightRemovedMessage(output:IDataOutput) : void
+      public function serializeAs_PrismFightRemovedMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PrismFightRemovedMessage(input:IDataInput) : void
+      public function deserializeAs_PrismFightRemovedMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

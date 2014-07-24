@@ -14,7 +14,7 @@ package com.hurlant.crypto.prng
       //Décompilation abandonné
       }
       
-      public function Random(prng:Class = null)
+      public function Random(param1:Class = null)
       {
          //Décompilation abandonné
       }
@@ -31,7 +31,7 @@ package com.hurlant.crypto.prng
       
       private var seeded:Boolean = false;
       
-      public function seed(x:int = 0) : void
+      public function seed(param1:int = 0) : void
       {
          //Décompilation abandonné
       }
@@ -41,7 +41,7 @@ package com.hurlant.crypto.prng
          //Décompilation abandonné
       }
       
-      public function nextBytes(buffer:ByteArray, length:int) : void
+      public function nextBytes(param1:ByteArray, param2:int) : void
       {
          //Décompilation abandonné
       }

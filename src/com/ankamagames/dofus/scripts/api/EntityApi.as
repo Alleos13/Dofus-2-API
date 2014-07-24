@@ -43,17 +43,17 @@ package com.ankamagames.dofus.scripts.api
          //Décompilation abandonné
       }
       
-      public function getEntity(pEntityId:int) : ScriptEntity
+      public function getEntity(param1:int) : ScriptEntity
       {
          //Décompilation abandonné
       }
       
-      public function getWorldEntity(pEntityId:int) : ScriptEntity
+      public function getWorldEntity(param1:int) : ScriptEntity
       {
          //Décompilation abandonné
       }
       
-      public function getEntityFromCell(pCellID:uint) : ScriptEntity
+      public function getEntityFromCell(param1:uint) : ScriptEntity
       {
          //Décompilation abandonné
       }
@@ -63,22 +63,22 @@ package com.ankamagames.dofus.scripts.api
          //Décompilation abandonné
       }
       
-      public function createMonster(pMonsterId:int, pAddEntity:Boolean = true, pStartX:int = 0, pStartY:int = 0, pStartDirection:int = 1) : ScriptEntity
+      public function createMonster(param1:int, param2:Boolean = true, param3:int = 0, param4:int = 0, param5:int = 1) : ScriptEntity
       {
          //Décompilation abandonné
       }
       
-      public function createNpc(pNpcId:int, pAddEntity:Boolean = true, pStartX:int = 0, pStartY:int = 0, pStartDirection:int = 1) : ScriptEntity
+      public function createNpc(param1:int, param2:Boolean = true, param3:int = 0, param4:int = 0, param5:int = 1) : ScriptEntity
       {
          //Décompilation abandonné
       }
       
-      public function createCustom(pLook:String, pAddEntity:Boolean = true, pStartX:int = 0, pStartY:int = 0, pStartDirection:int = 1) : ScriptEntity
+      public function createCustom(param1:String, param2:Boolean = true, param3:int = 0, param4:int = 0, param5:int = 1) : ScriptEntity
       {
          //Décompilation abandonné
       }
       
-      public function removeEntity(pEntityId:int) : void
+      public function removeEntity(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -88,7 +88,7 @@ package com.ankamagames.dofus.scripts.api
          //Décompilation abandonné
       }
       
-      private function createEntity(pLook:String) : ScriptEntity
+      private function createEntity(param1:String) : ScriptEntity
       {
          //Décompilation abandonné
       }

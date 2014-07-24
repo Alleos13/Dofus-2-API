@@ -28,172 +28,172 @@ package flashx.textLayout.utils
          //Décompilation abandonné
       }
       
-      private static function validateTextRange(range:TextRange) : Boolean
+      private static function validateTextRange(param1:TextRange) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private static function doIncrement(flowRoot:TextFlow, pos:int, incrementer:Function) : int
+      private static function doIncrement(param1:TextFlow, param2:int, param3:Function) : int
       {
          //Décompilation abandonné
       }
       
-      private static function previousAtomHelper(flowRoot:TextFlow, para:ParagraphElement, pos:int, paraStart:int) : int
+      private static function previousAtomHelper(param1:TextFlow, param2:ParagraphElement, param3:int, param4:int) : int
       {
          //Décompilation abandonné
       }
       
-      public static function previousAtomPosition(flowRoot:TextFlow, absolutePos:int) : int
+      public static function previousAtomPosition(param1:TextFlow, param2:int) : int
       {
          //Décompilation abandonné
       }
       
-      private static function nextAtomHelper(flowRoot:TextFlow, para:ParagraphElement, pos:int, paraStart:int) : int
+      private static function nextAtomHelper(param1:TextFlow, param2:ParagraphElement, param3:int, param4:int) : int
       {
          //Décompilation abandonné
       }
       
-      public static function nextAtomPosition(flowRoot:TextFlow, absolutePos:int) : int
+      public static function nextAtomPosition(param1:TextFlow, param2:int) : int
       {
          //Décompilation abandonné
       }
       
-      public static function previousWordPosition(flowRoot:TextFlow, absolutePos:int) : int
+      public static function previousWordPosition(param1:TextFlow, param2:int) : int
       {
          //Décompilation abandonné
       }
       
-      public static function nextWordPosition(flowRoot:TextFlow, absolutePos:int) : int
+      public static function nextWordPosition(param1:TextFlow, param2:int) : int
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function updateStartIfInReadOnlyElement(textFlow:TextFlow, idx:int) : int
+      tlf_internal  static function updateStartIfInReadOnlyElement(param1:TextFlow, param2:int) : int
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function updateEndIfInReadOnlyElement(textFlow:TextFlow, idx:int) : int
+      tlf_internal  static function updateEndIfInReadOnlyElement(param1:TextFlow, param2:int) : int
       {
          //Décompilation abandonné
       }
       
-      private static function moveForwardHelper(range:TextRange, extendSelection:Boolean, incrementor:Function) : Boolean
+      private static function moveForwardHelper(param1:TextRange, param2:Boolean, param3:Function) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private static function moveBackwardHelper(range:TextRange, extendSelection:Boolean, incrementor:Function) : Boolean
+      private static function moveBackwardHelper(param1:TextRange, param2:Boolean, param3:Function) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function nextCharacter(range:TextRange, extendSelection:Boolean = false) : Boolean
+      public static function nextCharacter(param1:TextRange, param2:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function previousCharacter(range:TextRange, extendSelection:Boolean = false) : Boolean
+      public static function previousCharacter(param1:TextRange, param2:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function nextWord(range:TextRange, extendSelection:Boolean = false) : Boolean
+      public static function nextWord(param1:TextRange, param2:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function previousWord(range:TextRange, extendSelection:Boolean = false) : Boolean
+      public static function previousWord(param1:TextRange, param2:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function computeEndIdx(targetFlowLine:TextFlowLine, curTextFlowLine:TextFlowLine, blockProgression:String, isRTLDirection:Boolean, globalPoint:Point) : int
+      tlf_internal  static function computeEndIdx(param1:TextFlowLine, param2:TextFlowLine, param3:String, param4:Boolean, param5:Point) : int
       {
          //Décompilation abandonné
       }
       
-      public static function nextLine(range:TextRange, extendSelection:Boolean = false) : Boolean
+      public static function nextLine(param1:TextRange, param2:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function previousLine(range:TextRange, extendSelection:Boolean = false) : Boolean
+      public static function previousLine(param1:TextRange, param2:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function nextPage(range:TextRange, extendSelection:Boolean = false) : Boolean
+      public static function nextPage(param1:TextRange, param2:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function previousPage(range:TextRange, extendSelection:Boolean = false) : Boolean
+      public static function previousPage(param1:TextRange, param2:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function endOfLine(range:TextRange, extendSelection:Boolean = false) : Boolean
+      public static function endOfLine(param1:TextRange, param2:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function startOfLine(range:TextRange, extendSelection:Boolean = false) : Boolean
+      public static function startOfLine(param1:TextRange, param2:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function endOfDocument(range:TextRange, extendSelection:Boolean = false) : Boolean
+      public static function endOfDocument(param1:TextRange, param2:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function startOfDocument(range:TextRange, extendSelection:Boolean = false) : Boolean
+      public static function startOfDocument(param1:TextRange, param2:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function startOfParagraph(range:TextRange, extendSelection:Boolean = false) : Boolean
+      public static function startOfParagraph(param1:TextRange, param2:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function endOfParagraph(range:TextRange, extendSelection:Boolean = false) : Boolean
+      public static function endOfParagraph(param1:TextRange, param2:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private static function adjustForOversetForward(range:TextRange) : Boolean
+      private static function adjustForOversetForward(param1:TextRange) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private static function clampToFit(range:TextRange, endPos:int) : void
+      private static function clampToFit(param1:TextRange, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      private static function adjustForOversetBack(range:TextRange) : Boolean
+      private static function adjustForOversetBack(param1:TextRange) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private static function checkCompose(flowComposer:IFlowComposer, pos:int) : void
+      private static function checkCompose(param1:IFlowComposer, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      private static function endOfLastController(flowRoot:TextFlow) : int
+      private static function endOfLastController(param1:TextFlow) : int
       {
          //Décompilation abandonné
       }
       
-      private static function isOverset(flowRoot:TextFlow, absolutePos:int) : Boolean
+      private static function isOverset(param1:TextFlow, param2:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private static function isScrollable(flowRoot:TextFlow, absolutePos:int) : Boolean
+      private static function isScrollable(param1:TextFlow, param2:int) : Boolean
       {
          //Décompilation abandonné
       }

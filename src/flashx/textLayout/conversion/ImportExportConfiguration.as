@@ -20,22 +20,22 @@ package flashx.textLayout.conversion
       
       tlf_internal var classToNameMap:Object;
       
-      public function addIEInfo(name:String, flowClass:Class, parser:Function, exporter:Function) : void
+      public function addIEInfo(param1:String, param2:Class, param3:Function, param4:Function) : void
       {
          //Décompilation abandonné
       }
       
-      public function lookup(name:String) : FlowElementInfo
+      public function lookup(param1:String) : FlowElementInfo
       {
          //Décompilation abandonné
       }
       
-      public function lookupName(classToMatch:String) : String
+      public function lookupName(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function lookupByClass(classToMatch:String) : FlowElementInfo
+      public function lookupByClass(param1:String) : FlowElementInfo
       {
          //Décompilation abandonné
       }

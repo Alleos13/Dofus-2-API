@@ -37,7 +37,7 @@ package com.ankamagames.dofus.network.messages.game.achievement
          //Décompilation abandonné
       }
       
-      public function initAchievementListMessage(finishedAchievementsIds:Vector.<uint> = null, rewardableAchievements:Vector.<AchievementRewardable> = null) : AchievementListMessage
+      public function initAchievementListMessage(param1:Vector.<uint> = null, param2:Vector.<AchievementRewardable> = null) : AchievementListMessage
       {
          //Décompilation abandonné
       }
@@ -47,32 +47,32 @@ package com.ankamagames.dofus.network.messages.game.achievement
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AchievementListMessage(output:IDataOutput) : void
+      public function serializeAs_AchievementListMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AchievementListMessage(input:IDataInput) : void
+      public function deserializeAs_AchievementListMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

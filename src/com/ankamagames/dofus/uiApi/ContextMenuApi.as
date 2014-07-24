@@ -20,17 +20,17 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function registerMenuMaker(makerName:String, makerClass:Class) : void
+      public function registerMenuMaker(param1:String, param2:Class) : void
       {
          //Décompilation abandonné
       }
       
-      public function create(data:*, makerName:String = null, makerParams:Array = null) : ContextMenuData
+      public function create(param1:*, param2:String = null, param3:Array = null) : ContextMenuData
       {
          //Décompilation abandonné
       }
       
-      public function getMenuMaker(makerName:String) : Object
+      public function getMenuMaker(param1:String) : Object
       {
          //Décompilation abandonné
       }

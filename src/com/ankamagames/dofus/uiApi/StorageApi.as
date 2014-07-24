@@ -38,17 +38,17 @@ package com.ankamagames.dofus.uiApi
       
       public static const ITEM_TYPE_TO_SERVER_POSITION:Array;
       
-      public static function itemSuperTypeToServerPosition(superTypeId:uint) : Array
+      public static function itemSuperTypeToServerPosition(param1:uint) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function getLivingObjectFood(itemType:int) : Vector.<ItemWrapper>
+      public static function getLivingObjectFood(param1:int) : Vector.<ItemWrapper>
       {
          //Décompilation abandonné
       }
       
-      public static function getPetFood(id:int) : Vector.<ItemWrapper>
+      public static function getPetFood(param1:int) : Vector.<ItemWrapper>
       {
          //Décompilation abandonné
       }
@@ -58,12 +58,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public static function getViewContent(name:String) : Vector.<ItemWrapper>
+      public static function getViewContent(param1:String) : Vector.<ItemWrapper>
       {
          //Décompilation abandonné
       }
       
-      public static function getShortcutBarContent(barType:uint) : Array
+      public static function getShortcutBarContent(param1:uint) : Array
       {
          //Décompilation abandonné
       }
@@ -73,22 +73,22 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public static function getBestEquipablePosition(item:Object) : int
+      public static function getBestEquipablePosition(param1:Object) : int
       {
          //Décompilation abandonné
       }
       
-      public static function addItemMask(itemUID:int, name:String, quantity:int) : void
+      public static function addItemMask(param1:int, param2:String, param3:int) : void
       {
          //Décompilation abandonné
       }
       
-      public static function removeItemMask(itemUID:int, name:String) : void
+      public static function removeItemMask(param1:int, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      public static function removeAllItemMasks(name:String) : void
+      public static function removeAllItemMasks(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -113,27 +113,27 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public static function getStorageTypes(category:int) : Array
+      public static function getStorageTypes(param1:int) : Array
       {
          //Décompilation abandonné
       }
       
-      private static function sortStorageTypes(a:Object, b:Object) : int
+      private static function sortStorageTypes(param1:Object, param2:Object) : int
       {
          //Décompilation abandonné
       }
       
-      public static function getBankStorageTypes(category:int) : Array
+      public static function getBankStorageTypes(param1:int) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function setDisplayedCategory(category:int) : void
+      public static function setDisplayedCategory(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public static function setDisplayedBankCategory(category:int) : void
+      public static function setDisplayedBankCategory(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -148,12 +148,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public static function setStorageFilter(typeId:int) : void
+      public static function setStorageFilter(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public static function setBankStorageFilter(typeId:int) : void
+      public static function setBankStorageFilter(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -178,7 +178,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public static function sort(sortField:int, revert:Boolean) : void
+      public static function sort(param1:int, param2:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -188,7 +188,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public static function sortBank(sortField:int, revert:Boolean) : void
+      public static function sortBank(param1:int, param2:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -218,7 +218,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public static function enableBidHouseFilter(allowedTypes:Object, maxItemLevel:uint) : void
+      public static function enableBidHouseFilter(param1:Object, param2:uint) : void
       {
          //Décompilation abandonné
       }
@@ -233,7 +233,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public static function enableSmithMagicFilter(skill:Object) : void
+      public static function enableSmithMagicFilter(param1:Object) : void
       {
          //Décompilation abandonné
       }
@@ -243,7 +243,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public static function enableCraftFilter(skill:Object, slotCount:int) : void
+      public static function enableCraftFilter(param1:Object, param2:int) : void
       {
          //Décompilation abandonné
       }
@@ -258,7 +258,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public static function getItemMaskCount(objectUID:int, mask:String) : int
+      public static function getItemMaskCount(param1:int, param2:String) : int
       {
          //Décompilation abandonné
       }

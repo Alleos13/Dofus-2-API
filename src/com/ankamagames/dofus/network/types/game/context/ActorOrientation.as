@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.context
          //Décompilation abandonné
       }
       
-      public function initActorOrientation(id:int = 0, direction:uint = 1) : ActorOrientation
+      public function initActorOrientation(param1:int = 0, param2:uint = 1) : ActorOrientation
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.context
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ActorOrientation(output:IDataOutput) : void
+      public function serializeAs_ActorOrientation(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ActorOrientation(input:IDataInput) : void
+      public function deserializeAs_ActorOrientation(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

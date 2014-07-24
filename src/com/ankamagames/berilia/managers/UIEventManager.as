@@ -36,17 +36,17 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      public function registerInstance(ie:InstanceEvent) : void
+      public function registerInstance(param1:InstanceEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function isRegisteredInstance(target:DisplayObject, msg:* = null) : Boolean
+      public function isRegisteredInstance(param1:DisplayObject, param2:* = null) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function removeInstance(instance:*) : void
+      public function removeInstance(param1:*) : void
       {
          //Décompilation abandonné
       }

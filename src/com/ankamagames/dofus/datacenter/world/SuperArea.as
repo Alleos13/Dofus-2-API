@@ -20,7 +20,7 @@ package com.ankamagames.dofus.datacenter.world
       
       private static var _allSuperAreas:Array;
       
-      public static function getSuperAreaById(id:int) : SuperArea
+      public static function getSuperAreaById(param1:int) : SuperArea
       {
          //Décompilation abandonné
       }

@@ -42,22 +42,22 @@ package com.ankamagames.dofus.misc.utils
       
       private var _dt:DataStoreType;
       
-      public function report(key:String, value:String) : Boolean
+      public function report(param1:String, param2:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function isReported(key:String) : Boolean
+      public function isReported(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onSended(e:Event) : void
+      private function onSended(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSendError(e:Event) : void
+      private function onSendError(param1:Event) : void
       {
          //Décompilation abandonné
       }

@@ -65,7 +65,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getBalance(balanceId:uint) : AlignmentBalance
+      public function getBalance(param1:uint) : AlignmentBalance
       {
          //Décompilation abandonné
       }
@@ -75,12 +75,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getEffect(effectId:uint) : AlignmentEffect
+      public function getEffect(param1:uint) : AlignmentEffect
       {
          //Décompilation abandonné
       }
       
-      public function getGift(giftId:uint) : AlignmentGift
+      public function getGift(param1:uint) : AlignmentGift
       {
          //Décompilation abandonné
       }
@@ -90,17 +90,17 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getRankGifts(rankId:uint) : AlignmentRankJntGift
+      public function getRankGifts(param1:uint) : AlignmentRankJntGift
       {
          //Décompilation abandonné
       }
       
-      public function getGiftEffect(giftId:uint) : AlignmentEffect
+      public function getGiftEffect(param1:uint) : AlignmentEffect
       {
          //Décompilation abandonné
       }
       
-      public function getOrder(orderId:uint) : AlignmentOrder
+      public function getOrder(param1:uint) : AlignmentOrder
       {
          //Décompilation abandonné
       }
@@ -110,7 +110,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getRank(rankId:uint) : AlignmentRank
+      public function getRank(param1:uint) : AlignmentRank
       {
          //Décompilation abandonné
       }
@@ -120,37 +120,37 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getRankOrder(rankId:uint) : AlignmentOrder
+      public function getRankOrder(param1:uint) : AlignmentOrder
       {
          //Décompilation abandonné
       }
       
-      public function getOrderRanks(orderId:uint) : Array
+      public function getOrderRanks(param1:uint) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getSide(sideId:uint) : AlignmentSide
+      public function getSide(param1:uint) : AlignmentSide
       {
          //Décompilation abandonné
       }
       
-      public function getOrderSide(orderId:uint) : AlignmentSide
+      public function getOrderSide(param1:uint) : AlignmentSide
       {
          //Décompilation abandonné
       }
       
-      public function getSideOrders(sideId:uint) : Array
+      public function getSideOrders(param1:uint) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getTitleName(sideId:uint, grade:int) : String
+      public function getTitleName(param1:uint, param2:int) : String
       {
          //Décompilation abandonné
       }
       
-      public function getTitleShortName(sideId:uint, grade:int) : String
+      public function getTitleShortName(param1:uint, param2:int) : String
       {
          //Décompilation abandonné
       }
@@ -165,12 +165,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      private function filterGiftsByRank(rankJntGift:*, index:int, rankJntGifts:Array) : void
+      private function filterGiftsByRank(param1:*, param2:int, param3:Array) : void
       {
          //Décompilation abandonné
       }
       
-      private function filterOrdersBySide(order:*, index:int, orders:Array) : void
+      private function filterOrdersBySide(param1:*, param2:int, param3:Array) : void
       {
          //Décompilation abandonné
       }

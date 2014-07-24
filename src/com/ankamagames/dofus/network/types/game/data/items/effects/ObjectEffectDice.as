@@ -29,7 +29,7 @@ package com.ankamagames.dofus.network.types.game.data.items.effects
          //Décompilation abandonné
       }
       
-      public function initObjectEffectDice(actionId:uint = 0, diceNum:uint = 0, diceSide:uint = 0, diceConst:uint = 0) : ObjectEffectDice
+      public function initObjectEffectDice(param1:uint = 0, param2:uint = 0, param3:uint = 0, param4:uint = 0) : ObjectEffectDice
       {
          //Décompilation abandonné
       }
@@ -39,22 +39,22 @@ package com.ankamagames.dofus.network.types.game.data.items.effects
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectEffectDice(output:IDataOutput) : void
+      public function serializeAs_ObjectEffectDice(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectEffectDice(input:IDataInput) : void
+      public function deserializeAs_ObjectEffectDice(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

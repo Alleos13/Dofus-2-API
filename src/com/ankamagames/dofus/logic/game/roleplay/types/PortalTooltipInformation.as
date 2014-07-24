@@ -7,7 +7,7 @@ package com.ankamagames.dofus.logic.game.roleplay.types
       //Décompilation abandonné
       }
       
-      public function PortalTooltipInformation(pAreaId:int)
+      public function PortalTooltipInformation(param1:int)
       {
          //Décompilation abandonné
       }

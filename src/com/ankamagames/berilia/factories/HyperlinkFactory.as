@@ -48,67 +48,67 @@ package com.ankamagames.berilia.factories
       
       public static var lastClickEventFrame:uint;
       
-      public static function protocolIsRegister(protocolName:String) : Boolean
+      public static function protocolIsRegister(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function textProtocolIsRegister(protocolName:String) : Boolean
+      public static function textProtocolIsRegister(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function shiftProtocolIsRegister(protocolName:String) : Boolean
+      public static function shiftProtocolIsRegister(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function boldProtocolIsRegister(protocolName:String) : Boolean
+      public static function boldProtocolIsRegister(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function createTextClickHandler(component:EventDispatcher, styleSheet:Boolean = false) : void
+      public static function createTextClickHandler(param1:EventDispatcher, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public static function createRollOverHandler(component:EventDispatcher) : void
+      public static function createRollOverHandler(param1:EventDispatcher) : void
       {
          //Décompilation abandonné
       }
       
-      public static function activeSmallHyperlink(textField:TextField) : void
+      public static function activeSmallHyperlink(param1:TextField) : void
       {
          //Décompilation abandonné
       }
       
-      public static function decode(string:String, htmlMode:Boolean = true, textField:TextField = null) : String
+      public static function decode(param1:String, param2:Boolean = true, param3:TextField = null) : String
       {
          //Décompilation abandonné
       }
       
-      public static function registerProtocol(name:String, callBack:Function, textCallBack:Function = null, shiftCallBack:Function = null, useBoldText:Boolean = true, rollOverCallback:Function = null) : void
+      public static function registerProtocol(param1:String, param2:Function, param3:Function = null, param4:Function = null, param5:Boolean = true, param6:Function = null) : void
       {
          //Décompilation abandonné
       }
       
-      public static function processClick(event:TextEvent) : void
+      public static function processClick(param1:TextEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public static function processRollOver(pEvt:LinkInteractionEvent) : void
+      public static function processRollOver(param1:LinkInteractionEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public static function processRollOut(pEvt:LinkInteractionEvent) : void
+      public static function processRollOut(param1:LinkInteractionEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onRollOverTimerComplete(pEvt:TimerEvent) : void
+      private static function onRollOverTimerComplete(param1:TimerEvent) : void
       {
          //Décompilation abandonné
       }

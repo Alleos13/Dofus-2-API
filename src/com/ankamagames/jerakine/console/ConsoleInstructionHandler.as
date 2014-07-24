@@ -7,10 +7,10 @@ package com.ankamagames.jerakine.console
       //Décompilation abandonné
       }
       
-      function handle(console:ConsoleHandler, cmd:String, args:Array) : void;
+      function handle(param1:ConsoleHandler, param2:String, param3:Array) : void;
       
-      function getHelp(cmd:String) : String;
+      function getHelp(param1:String) : String;
       
-      function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array;
+      function getParamPossibilities(param1:String, param2:uint = 0, param3:Array = null) : Array;
    }
 }

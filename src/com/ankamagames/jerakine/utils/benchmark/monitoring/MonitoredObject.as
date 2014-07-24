@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring
       //Décompilation abandonné
       }
       
-      public function MonitoredObject(pName:String, pColor:uint, pParentList:List = null)
+      public function MonitoredObject(param1:String, param2:uint, param3:List = null)
       {
          //Décompilation abandonné
       }
@@ -28,7 +28,7 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring
       
       private var _extendsClass:List;
       
-      public function addNewValue(o:Object) : void
+      public function addNewValue(param1:Object) : void
       {
          //Décompilation abandonné
       }

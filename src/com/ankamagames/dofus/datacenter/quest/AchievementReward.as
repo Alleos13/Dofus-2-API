@@ -17,7 +17,7 @@ package com.ankamagames.dofus.datacenter.quest
       
       public static const MODULE:String = "AchievementRewards";
       
-      public static function getAchievementRewardById(id:int) : AchievementReward
+      public static function getAchievementRewardById(param1:int) : AchievementReward
       {
          //Décompilation abandonné
       }

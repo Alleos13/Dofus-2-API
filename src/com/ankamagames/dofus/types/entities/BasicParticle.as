@@ -9,7 +9,7 @@ package com.ankamagames.dofus.types.entities
       //Décompilation abandonné
       }
       
-      public function BasicParticle(sprite:DisplayObject, life:uint, subExplosion:Boolean, deathCallback:Function)
+      public function BasicParticle(param1:DisplayObject, param2:uint, param3:Boolean, param4:Function)
       {
          //Décompilation abandonné
       }
@@ -46,7 +46,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set subExplosion(v:Boolean) : void
+      public function set subExplosion(param1:Boolean) : void
       {
          //Décompilation abandonné
       }

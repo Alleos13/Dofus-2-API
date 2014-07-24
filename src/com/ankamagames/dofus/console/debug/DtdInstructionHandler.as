@@ -34,32 +34,32 @@ package com.ankamagames.dofus.console.debug
       
       private var _chCurrent:ConsoleHandler;
       
-      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void
+      public function handle(param1:ConsoleHandler, param2:String, param3:Array) : void
       {
          //Décompilation abandonné
       }
       
-      public function getHelp(cmd:String) : String
+      public function getHelp(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array
+      public function getParamPossibilities(param1:String, param2:uint = 0, param3:Array = null) : Array
       {
          //Décompilation abandonné
       }
       
-      private function parseShortcutXml(sXml:String) : void
+      private function parseShortcutXml(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function onXmlLoadComplete(event:Event) : void
+      public function onXmlLoadComplete(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function onXmlLoadError(event:Event) : void
+      public function onXmlLoadError(param1:Event) : void
       {
          //Décompilation abandonné
       }

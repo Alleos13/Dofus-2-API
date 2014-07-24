@@ -28,7 +28,7 @@ package com.ankamagames.dofus.network.types.game.social
          //Décompilation abandonné
       }
       
-      public function initAlliancedGuildFactSheetInformations(guildId:uint = 0, guildName:String = "", guildEmblem:GuildEmblem = null, allianceInfos:BasicNamedAllianceInformations = null) : AlliancedGuildFactSheetInformations
+      public function initAlliancedGuildFactSheetInformations(param1:uint = 0, param2:String = "", param3:GuildEmblem = null, param4:BasicNamedAllianceInformations = null) : AlliancedGuildFactSheetInformations
       {
          //Décompilation abandonné
       }
@@ -38,22 +38,22 @@ package com.ankamagames.dofus.network.types.game.social
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AlliancedGuildFactSheetInformations(output:IDataOutput) : void
+      public function serializeAs_AlliancedGuildFactSheetInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AlliancedGuildFactSheetInformations(input:IDataInput) : void
+      public function deserializeAs_AlliancedGuildFactSheetInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

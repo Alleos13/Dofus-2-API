@@ -9,7 +9,7 @@ package com.somerandomdude.colortoolkit.spaces
       //Décompilation abandonné
       }
       
-      public function Gray(gray:Number = 0)
+      public function Gray(param1:Number = 0)
       {
          //Décompilation abandonné
       }
@@ -23,7 +23,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set gray(value:Number) : void
+      public function set gray(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -38,12 +38,12 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function convertHexToGrayscale(color:int) : Number
+      public function convertHexToGrayscale(param1:int) : Number
       {
          //Décompilation abandonné
       }
       
-      private function convertGrayValuetoHex(gray:Number) : int
+      private function convertGrayValuetoHex(param1:Number) : int
       {
          //Décompilation abandonné
       }

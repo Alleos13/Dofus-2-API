@@ -15,7 +15,7 @@ package com.ankamagames.tubul.types
       //Décompilation abandonné
       }
       
-      public function SoundSilence(pSilenceMin:Number, pSilenceMax:Number)
+      public function SoundSilence(param1:Number, param2:Number)
       {
          //Décompilation abandonné
       }
@@ -58,12 +58,12 @@ package com.ankamagames.tubul.types
          //Décompilation abandonné
       }
       
-      public function setSilence(pSilenceMin:Number, pSilenceMax:Number) : void
+      public function setSilence(param1:Number, param2:Number) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTimerEnd(pEvent:TimerEvent) : void
+      private function onTimerEnd(param1:TimerEvent) : void
       {
          //Décompilation abandonné
       }

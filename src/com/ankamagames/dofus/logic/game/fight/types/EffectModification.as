@@ -7,7 +7,7 @@ package com.ankamagames.dofus.logic.game.fight.types
       //Décompilation abandonné
       }
       
-      public function EffectModification(pEffectId:int)
+      public function EffectModification(param1:int)
       {
          //Décompilation abandonné
       }

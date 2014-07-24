@@ -15,12 +15,12 @@ package com.ankamagames.berilia.api
          //Décompilation abandonné
       }
       
-      public static function throwUntrustedCallError(... args) : void
+      public static function throwUntrustedCallError(... rest) : void
       {
          //Décompilation abandonné
       }
       
-      public static function getRestrictedFunctionAccess(target:Function) : Function
+      public static function getRestrictedFunctionAccess(param1:Function) : Function
       {
          //Décompilation abandonné
       }

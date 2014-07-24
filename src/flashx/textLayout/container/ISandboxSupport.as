@@ -13,8 +13,8 @@ package flashx.textLayout.container
       
       function endMouseCapture() : void;
       
-      function mouseUpSomewhere(event:Event) : void;
+      function mouseUpSomewhere(param1:Event) : void;
       
-      function mouseMoveSomewhere(event:Event) : void;
+      function mouseMoveSomewhere(param1:Event) : void;
    }
 }

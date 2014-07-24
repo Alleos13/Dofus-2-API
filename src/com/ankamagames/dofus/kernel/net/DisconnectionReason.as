@@ -7,7 +7,7 @@ package com.ankamagames.dofus.kernel.net
       //Décompilation abandonné
       }
       
-      public function DisconnectionReason(expected:Boolean, reason:uint)
+      public function DisconnectionReason(param1:Boolean, param2:uint)
       {
          //Décompilation abandonné
       }

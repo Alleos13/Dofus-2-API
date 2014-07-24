@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      public function initExchangeObjectMovePricedMessage(objectUID:uint = 0, quantity:int = 0, price:int = 0) : ExchangeObjectMovePricedMessage
+      public function initExchangeObjectMovePricedMessage(param1:uint = 0, param2:int = 0, param3:int = 0) : ExchangeObjectMovePricedMessage
       {
          //Décompilation abandonné
       }
@@ -43,32 +43,32 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeObjectMovePricedMessage(output:IDataOutput) : void
+      public function serializeAs_ExchangeObjectMovePricedMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeObjectMovePricedMessage(input:IDataInput) : void
+      public function deserializeAs_ExchangeObjectMovePricedMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

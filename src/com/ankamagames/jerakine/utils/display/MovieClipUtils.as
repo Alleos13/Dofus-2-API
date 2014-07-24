@@ -26,17 +26,17 @@ package com.ankamagames.jerakine.utils.display
       
       public static var asynchStopDoneCount:uint;
       
-      public static function isSingleFrame(mc:DisplayObjectContainer) : Boolean
+      public static function isSingleFrame(param1:DisplayObjectContainer) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function stopMovieClip(clip:DisplayObjectContainer) : void
+      public static function stopMovieClip(param1:DisplayObjectContainer) : void
       {
          //Décompilation abandonné
       }
       
-      private static function stopMovieClipASynch(e:Event) : void
+      private static function stopMovieClipASynch(param1:Event) : void
       {
          //Décompilation abandonné
       }

@@ -11,6 +11,6 @@ package com.ankamagames.jerakine.network
       
       function get content() : ByteArray;
       
-      function set content(v:ByteArray) : void;
+      function set content(param1:ByteArray) : void;
    }
 }

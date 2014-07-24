@@ -11,22 +11,22 @@ package com.ankamagames.tubul.interfaces
       
       function get range() : Number;
       
-      function set range(range:Number) : void;
+      function set range(param1:Number) : void;
       
       function get saturationRange() : Number;
       
-      function set saturationRange(saturationRange:Number) : void;
+      function set saturationRange(param1:Number) : void;
       
       function get position() : Point;
       
-      function set position(position:Point) : void;
+      function set position(param1:Point) : void;
       
       function get pan() : Number;
       
-      function set pan(pan:Number) : void;
+      function set pan(param1:Number) : void;
       
       function get volumeMax() : Number;
       
-      function set volumeMax(pVolumeMax:Number) : void;
+      function set volumeMax(param1:Number) : void;
    }
 }

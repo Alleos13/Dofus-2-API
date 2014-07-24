@@ -10,7 +10,7 @@ package com.ankamagames.atouin.types
       //Décompilation abandonné
       }
       
-      public function BitmapCellContainer(id:uint)
+      public function BitmapCellContainer(param1:uint)
       {
          //Décompilation abandonné
       }
@@ -24,7 +24,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set cacheAsBitmap(val:Boolean) : void
+      public function set cacheAsBitmap(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -34,7 +34,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set mouseChildren(val:Boolean) : void
+      public function set mouseChildren(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -44,7 +44,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set mouseEnabled(val:Boolean) : void
+      public function set mouseEnabled(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -56,7 +56,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set cellId(val:uint) : void
+      public function set cellId(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -68,7 +68,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set layerId(val:int) : void
+      public function set layerId(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -80,7 +80,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set startX(val:int) : void
+      public function set startX(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -92,7 +92,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set startY(val:int) : void
+      public function set startY(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -104,7 +104,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set x(val:Number) : void
+      public function set x(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -116,7 +116,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set y(val:Number) : void
+      public function set y(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -128,7 +128,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set depth(val:int) : void
+      public function set depth(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -146,7 +146,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function addFakeChild(child:Object, data:Object, colors:Object) : void
+      public function addFakeChild(param1:Object, param2:Object, param3:Object) : void
       {
          //Décompilation abandonné
       }

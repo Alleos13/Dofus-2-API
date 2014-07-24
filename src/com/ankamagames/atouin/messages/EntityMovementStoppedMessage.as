@@ -10,7 +10,7 @@ package com.ankamagames.atouin.messages
       //Décompilation abandonné
       }
       
-      public function EntityMovementStoppedMessage(entity:IEntity)
+      public function EntityMovementStoppedMessage(param1:IEntity)
       {
          //Décompilation abandonné
       }

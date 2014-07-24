@@ -39,7 +39,7 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      public function initExchangeStartOkTaxCollectorMessage(collectorId:int = 0, objectsInfos:Vector.<ObjectItem> = null, goldInfo:uint = 0) : ExchangeStartOkTaxCollectorMessage
+      public function initExchangeStartOkTaxCollectorMessage(param1:int = 0, param2:Vector.<ObjectItem> = null, param3:uint = 0) : ExchangeStartOkTaxCollectorMessage
       {
          //Décompilation abandonné
       }
@@ -49,32 +49,32 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeStartOkTaxCollectorMessage(output:IDataOutput) : void
+      public function serializeAs_ExchangeStartOkTaxCollectorMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeStartOkTaxCollectorMessage(input:IDataInput) : void
+      public function deserializeAs_ExchangeStartOkTaxCollectorMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

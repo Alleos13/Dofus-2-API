@@ -15,7 +15,7 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public function getObject(accessKey:Object) : *
+      public function getObject(param1:Object) : *
       {
          //Décompilation abandonné
       }

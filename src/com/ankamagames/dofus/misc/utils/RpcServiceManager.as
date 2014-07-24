@@ -23,7 +23,7 @@ package com.ankamagames.dofus.misc.utils
       //Décompilation abandonné
       }
       
-      public function RpcServiceManager(pServiceName:String = "", pType:String = "")
+      public function RpcServiceManager(param1:String = "", param2:String = "")
       {
          //Décompilation abandonné
       }
@@ -58,27 +58,27 @@ package com.ankamagames.dofus.misc.utils
       
       private var _timedOutRetry:int;
       
-      private function onComplete(pEvt:Event) : void
+      private function onComplete(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onError(pEvt:Event) : void
+      private function onError(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTimedOut(e:TimerEvent) : void
+      private function onTimedOut(param1:TimerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function formateJsonResult(data:String) : Boolean
+      private function formateJsonResult(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function createRpcObject(method:String) : Object
+      private function createRpcObject(param1:String) : Object
       {
          //Décompilation abandonné
       }
@@ -98,22 +98,22 @@ package com.ankamagames.dofus.misc.utils
          //Décompilation abandonné
       }
       
-      public function getResultData(name:String) : *
+      public function getResultData(param1:String) : *
       {
          //Décompilation abandonné
       }
       
-      public function callMethod(name:String, params:*, callback:Function = null) : void
+      public function callMethod(param1:String, param2:*, param3:Function = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function set type(val:String) : void
+      public function set type(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function set service(val:String) : void
+      public function set service(param1:String) : void
       {
          //Décompilation abandonné
       }

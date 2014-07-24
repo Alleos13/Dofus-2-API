@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.types.version
          //Décompilation abandonné
       }
       
-      public function initVersion(major:uint = 0, minor:uint = 0, release:uint = 0, revision:uint = 0, patch:uint = 0, buildType:uint = 0) : Version
+      public function initVersion(param1:uint = 0, param2:uint = 0, param3:uint = 0, param4:uint = 0, param5:uint = 0, param6:uint = 0) : Version
       {
          //Décompilation abandonné
       }
@@ -45,22 +45,22 @@ package com.ankamagames.dofus.network.types.version
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_Version(output:IDataOutput) : void
+      public function serializeAs_Version(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_Version(input:IDataInput) : void
+      public function deserializeAs_Version(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

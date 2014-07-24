@@ -11,7 +11,7 @@ package com.ankamagames.dofus.internalDatacenter.people
       //Décompilation abandonné
       }
       
-      public function EnemyWrapper(o:IgnoredInformations)
+      public function EnemyWrapper(param1:IgnoredInformations)
       {
          //Décompilation abandonné
       }

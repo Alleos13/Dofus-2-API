@@ -23,7 +23,7 @@ package flashx.textLayout.formats
       //Décompilation abandonné
       }
       
-      public function TextLayoutFormat(initialValues:ITextLayoutFormat = null)
+      public function TextLayoutFormat(param1:ITextLayoutFormat = null)
       {
          //Décompilation abandonné
       }
@@ -168,7 +168,7 @@ package flashx.textLayout.formats
       
       private static const _emptyStyles:Object;
       
-      public static function isEqual(p1:ITextLayoutFormat, p2:ITextLayoutFormat) : Boolean
+      public static function isEqual(param1:ITextLayoutFormat, param2:ITextLayoutFormat) : Boolean
       {
          //Décompilation abandonné
       }
@@ -180,12 +180,12 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      tlf_internal  static function resetModifiedNoninheritedStyles(stylesObject:Object) : void
+      tlf_internal  static function resetModifiedNoninheritedStyles(param1:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public static function createTextLayoutFormat(initialValues:Object) : TextLayoutFormat
+      public static function createTextLayoutFormat(param1:Object) : TextLayoutFormat
       {
          //Décompilation abandonné
       }
@@ -204,7 +204,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      tlf_internal function setStyles(val:Object, shared:Boolean) : void
+      tlf_internal function setStyles(param1:Object, param2:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -229,52 +229,52 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      tlf_internal function setStyleByName(name:String, newValue:*) : void
+      tlf_internal function setStyleByName(param1:String, param2:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function setStyleByProperty(styleProp:Property, newValue:*) : void
+      private function setStyleByProperty(param1:Property, param2:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function setStyle(styleProp:String, newValue:*) : void
+      public function setStyle(param1:String, param2:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function getStyle(styleProp:String) : *
+      public function getStyle(param1:String) : *
       {
          //Décompilation abandonné
       }
       
-      public function copy(incoming:ITextLayoutFormat) : void
+      public function copy(param1:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
       
-      public function concat(incoming:ITextLayoutFormat) : void
+      public function concat(param1:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
       
-      public function concatInheritOnly(incoming:ITextLayoutFormat) : void
+      public function concatInheritOnly(param1:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
       
-      public function apply(incoming:ITextLayoutFormat) : void
+      public function apply(param1:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeMatching(incoming:ITextLayoutFormat) : void
+      public function removeMatching(param1:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeClashing(incoming:ITextLayoutFormat) : void
+      public function removeClashing(param1:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
@@ -284,7 +284,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set color(value:*) : void
+      public function set color(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -294,7 +294,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set backgroundColor(value:*) : void
+      public function set backgroundColor(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -304,7 +304,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set lineThrough(value:*) : void
+      public function set lineThrough(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -314,7 +314,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set textAlpha(value:*) : void
+      public function set textAlpha(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -324,7 +324,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set backgroundAlpha(value:*) : void
+      public function set backgroundAlpha(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -334,7 +334,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set fontSize(value:*) : void
+      public function set fontSize(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -344,7 +344,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set baselineShift(value:*) : void
+      public function set baselineShift(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -354,7 +354,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set trackingLeft(value:*) : void
+      public function set trackingLeft(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -364,7 +364,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set trackingRight(value:*) : void
+      public function set trackingRight(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -374,7 +374,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set lineHeight(value:*) : void
+      public function set lineHeight(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -384,7 +384,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set breakOpportunity(value:*) : void
+      public function set breakOpportunity(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -394,7 +394,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set digitCase(value:*) : void
+      public function set digitCase(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -404,7 +404,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set digitWidth(value:*) : void
+      public function set digitWidth(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -414,7 +414,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set dominantBaseline(value:*) : void
+      public function set dominantBaseline(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -424,7 +424,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set kerning(value:*) : void
+      public function set kerning(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -434,7 +434,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set ligatureLevel(value:*) : void
+      public function set ligatureLevel(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -444,7 +444,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set alignmentBaseline(value:*) : void
+      public function set alignmentBaseline(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -454,7 +454,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set locale(value:*) : void
+      public function set locale(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -464,7 +464,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set typographicCase(value:*) : void
+      public function set typographicCase(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -474,7 +474,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set fontFamily(value:*) : void
+      public function set fontFamily(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -484,7 +484,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set textDecoration(value:*) : void
+      public function set textDecoration(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -494,7 +494,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set fontWeight(value:*) : void
+      public function set fontWeight(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -504,7 +504,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set fontStyle(value:*) : void
+      public function set fontStyle(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -514,7 +514,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set whiteSpaceCollapse(value:*) : void
+      public function set whiteSpaceCollapse(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -524,7 +524,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set renderingMode(value:*) : void
+      public function set renderingMode(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -534,7 +534,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set cffHinting(value:*) : void
+      public function set cffHinting(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -544,7 +544,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set fontLookup(value:*) : void
+      public function set fontLookup(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -554,7 +554,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set textRotation(value:*) : void
+      public function set textRotation(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -564,7 +564,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set textIndent(value:*) : void
+      public function set textIndent(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -574,7 +574,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set paragraphStartIndent(value:*) : void
+      public function set paragraphStartIndent(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -584,7 +584,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set paragraphEndIndent(value:*) : void
+      public function set paragraphEndIndent(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -594,7 +594,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set paragraphSpaceBefore(value:*) : void
+      public function set paragraphSpaceBefore(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -604,7 +604,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set paragraphSpaceAfter(value:*) : void
+      public function set paragraphSpaceAfter(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -614,7 +614,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set textAlign(value:*) : void
+      public function set textAlign(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -624,7 +624,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set textAlignLast(value:*) : void
+      public function set textAlignLast(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -634,7 +634,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set textJustify(value:*) : void
+      public function set textJustify(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -644,7 +644,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set justificationRule(value:*) : void
+      public function set justificationRule(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -654,7 +654,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set justificationStyle(value:*) : void
+      public function set justificationStyle(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -664,7 +664,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set direction(value:*) : void
+      public function set direction(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -674,7 +674,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set wordSpacing(value:*) : void
+      public function set wordSpacing(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -684,7 +684,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set tabStops(value:*) : void
+      public function set tabStops(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -694,7 +694,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set leadingModel(value:*) : void
+      public function set leadingModel(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -704,7 +704,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set columnGap(value:*) : void
+      public function set columnGap(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -714,7 +714,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set paddingLeft(value:*) : void
+      public function set paddingLeft(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -724,7 +724,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set paddingTop(value:*) : void
+      public function set paddingTop(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -734,7 +734,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set paddingRight(value:*) : void
+      public function set paddingRight(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -744,7 +744,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set paddingBottom(value:*) : void
+      public function set paddingBottom(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -754,7 +754,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set columnCount(value:*) : void
+      public function set columnCount(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -764,7 +764,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set columnWidth(value:*) : void
+      public function set columnWidth(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -774,7 +774,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set firstBaselineOffset(value:*) : void
+      public function set firstBaselineOffset(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -784,7 +784,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set verticalAlign(value:*) : void
+      public function set verticalAlign(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -794,7 +794,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set blockProgression(value:*) : void
+      public function set blockProgression(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -804,7 +804,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set lineBreak(value:*) : void
+      public function set lineBreak(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -814,7 +814,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set listStyleType(value:*) : void
+      public function set listStyleType(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -824,7 +824,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set listStylePosition(value:*) : void
+      public function set listStylePosition(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -834,7 +834,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set listAutoPadding(value:*) : void
+      public function set listAutoPadding(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -844,7 +844,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set clearFloats(value:*) : void
+      public function set clearFloats(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -854,7 +854,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set styleName(value:*) : void
+      public function set styleName(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -864,7 +864,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set linkNormalFormat(value:*) : void
+      public function set linkNormalFormat(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -874,7 +874,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set linkActiveFormat(value:*) : void
+      public function set linkActiveFormat(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -884,7 +884,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set linkHoverFormat(value:*) : void
+      public function set linkHoverFormat(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -894,7 +894,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set listMarkerFormat(value:*) : void
+      public function set listMarkerFormat(param1:*) : void
       {
          //Décompilation abandonné
       }

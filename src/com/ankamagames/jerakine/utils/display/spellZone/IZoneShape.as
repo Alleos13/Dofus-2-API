@@ -9,9 +9,9 @@ package com.ankamagames.jerakine.utils.display.spellZone
       
       function get zoneSize() : uint;
       
-      function set zoneSize(pZoneSize:uint) : void;
+      function set zoneSize(param1:uint) : void;
       
-      function set zoneShape(pZoneShape:uint) : void;
+      function set zoneShape(param1:uint) : void;
       
       function get zoneShape() : uint;
    }

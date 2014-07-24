@@ -52,17 +52,17 @@ package com.ankamagames.berilia.components
       
       private static const _skinModifier:Dictionary;
       
-      public static function setSubEntityDefaultBehavior(category:uint, behavior:ISubEntityBehavior) : void
+      public static function setSubEntityDefaultBehavior(param1:uint, param2:ISubEntityBehavior) : void
       {
          //Décompilation abandonné
       }
       
-      public static function setAnimationModifier(boneId:uint, am:IAnimationModifier) : void
+      public static function setAnimationModifier(param1:uint, param2:IAnimationModifier) : void
       {
          //Décompilation abandonné
       }
       
-      public static function setSkinModifier(boneId:uint, sm:ISkinModifier) : void
+      public static function setSkinModifier(param1:uint, param2:ISkinModifier) : void
       {
          //Décompilation abandonné
       }
@@ -119,7 +119,7 @@ package com.ankamagames.berilia.components
       
       public var withoutMount:Boolean = false;
       
-      public function set look(rawLook:*) : void
+      public function set look(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -129,22 +129,22 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set direction(n:uint) : void
+      public function set direction(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function set animation(anim:String) : void
+      public function set animation(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function set gotoAndStop(value:int) : void
+      public function set gotoAndStop(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function set staticDisplay(b:Boolean) : void
+      public function set staticDisplay(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -154,7 +154,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function set scale(n:Number) : void
+      override public function set scale(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -174,12 +174,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set view(value:String) : void
+      public function set view(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set handCursor(value:Boolean) : void
+      override public function set handCursor(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -189,7 +189,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set useCache(value:Boolean) : void
+      public function set useCache(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -199,7 +199,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function set cacheAsBitmap(value:Boolean) : void
+      override public function set cacheAsBitmap(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -219,22 +219,22 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function setAnimationAndDirection(anim:String, dir:uint) : void
+      public function setAnimationAndDirection(param1:String, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function equipCharacter(list:Array, numDelete:int = 0) : void
+      public function equipCharacter(param1:Array, param2:int = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function getSlotPosition(name:String) : Point
+      public function getSlotPosition(param1:String) : Point
       {
          //Décompilation abandonné
       }
       
-      public function getSlotBounds(pSlotName:String) : Rectangle
+      public function getSlotBounds(param1:String) : Rectangle
       {
          //Décompilation abandonné
       }
@@ -249,42 +249,42 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function setColor(index:uint, color:uint) : void
+      public function setColor(param1:uint, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function resetColor(index:uint) : void
+      public function resetColor(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function onCharacterReady(e:Event) : void
+      private function onCharacterReady(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function destroyOldEntity(entity:TiphonSprite) : void
+      private function destroyOldEntity(param1:TiphonSprite) : void
       {
          //Décompilation abandonné
       }
       
-      private function needUpdate(e:Event = null) : void
+      private function needUpdate(param1:Event = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function onFade(e:Event) : void
+      private function onFade(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function mouseOver(e:MouseEvent) : void
+      private function mouseOver(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function mouseOut(e:MouseEvent) : void
+      private function mouseOut(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }

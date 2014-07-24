@@ -9,14 +9,14 @@ package com.ankamagames.jerakine.types
       //Décompilation abandonné
       }
       
-      public function ColorMultiplicator(redComponent:int, greenComponent:int, blueComponent:int, forceCalculation:Boolean = false)
+      public function ColorMultiplicator(param1:int, param2:int, param3:int, param4:Boolean = false)
       {
          //Décompilation abandonné
       }
       
       public static var MEMORY_LOG:Dictionary;
       
-      public static function clamp(value:Number, min:Number, max:Number) : Number
+      public static function clamp(param1:Number, param2:Number, param3:Number) : Number
       {
          //Décompilation abandonné
       }
@@ -34,7 +34,7 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public function multiply(cm:ColorMultiplicator) : ColorMultiplicator
+      public function multiply(param1:ColorMultiplicator) : ColorMultiplicator
       {
          //Décompilation abandonné
       }

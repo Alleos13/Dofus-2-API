@@ -24,7 +24,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightSpellCastStep(fighterId:int, cellId:int, sourceCellId:int, spellId:int, spellRank:uint, critical:uint)
+      public function FightSpellCastStep(param1:int, param2:int, param3:int, param4:int, param5:uint, param6:uint)
       {
          //Décompilation abandonné
       }

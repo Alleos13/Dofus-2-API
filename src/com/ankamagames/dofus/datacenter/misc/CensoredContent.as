@@ -36,12 +36,12 @@ package com.ankamagames.dofus.datacenter.misc
          //Décompilation abandonné
       }
       
-      public function set lang(value:String) : void
+      public function set lang(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function set type(t:int) : void
+      public function set type(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -51,7 +51,7 @@ package com.ankamagames.dofus.datacenter.misc
          //Décompilation abandonné
       }
       
-      public function set oldValue(ov:int) : void
+      public function set oldValue(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -61,7 +61,7 @@ package com.ankamagames.dofus.datacenter.misc
          //Décompilation abandonné
       }
       
-      public function set newValue(nv:int) : void
+      public function set newValue(param1:int) : void
       {
          //Décompilation abandonné
       }

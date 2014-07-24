@@ -18,7 +18,7 @@ package com.ankamagames.dofus.uiApi
       
       private var _module:UiModule;
       
-      public function set module(value:UiModule) : void
+      public function set module(param1:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -28,17 +28,17 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function changeLightness(c:uint, value:Number) : uint
+      public function changeLightness(param1:uint, param2:Number) : uint
       {
          //Décompilation abandonné
       }
       
-      public function changeSaturation(c:uint, saturation:Number) : uint
+      public function changeSaturation(param1:uint, param2:Number) : uint
       {
          //Décompilation abandonné
       }
       
-      public function generateColorList(methode:int) : Array
+      public function generateColorList(param1:int) : Array
       {
          //Décompilation abandonné
       }

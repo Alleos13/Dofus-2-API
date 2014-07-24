@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.connection.actions
          //Décompilation abandonné
       }
       
-      public static function create(nickname:String) : NicknameChoiceRequestAction
+      public static function create(param1:String) : NicknameChoiceRequestAction
       {
          //Décompilation abandonné
       }

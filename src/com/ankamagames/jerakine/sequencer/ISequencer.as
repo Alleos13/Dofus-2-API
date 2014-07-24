@@ -9,13 +9,13 @@ package com.ankamagames.jerakine.sequencer
       //Décompilation abandonné
       }
       
-      function addStep(item:ISequencable) : void;
+      function addStep(param1:ISequencable) : void;
       
       function start() : void;
       
       function toString() : String;
       
-      function set defaultStepTimeout(v:int) : void;
+      function set defaultStepTimeout(param1:int) : void;
       
       function get defaultStepTimeout() : int;
       

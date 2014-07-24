@@ -55,12 +55,12 @@ package flashx.textLayout.compose
       
       private static var _savedAlignData:AlignData;
       
-      private static function createAlignData(tfl:TextFlowLine) : AlignData
+      private static function createAlignData(param1:TextFlowLine) : AlignData
       {
          //Décompilation abandonné
       }
       
-      private static function releaseAlignData(ad:AlignData) : void
+      private static function releaseAlignData(param1:AlignData) : void
       {
          //Décompilation abandonné
       }
@@ -69,7 +69,7 @@ package flashx.textLayout.compose
       
       protected static var _floatSlug:Slug;
       
-      tlf_internal  static function computeNumberLineAlignment(alignData:AlignData, textLineWidth:Number, textLineOffset:Number, numberLine:TextLine, coord:Number, delta:Number, extraSpace:Number) : Number
+      tlf_internal  static function computeNumberLineAlignment(param1:AlignData, param2:Number, param3:Number, param4:TextLine, param5:Number, param6:Number, param7:Number) : Number
       {
          //Décompilation abandonné
       }
@@ -204,7 +204,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      protected function releaseParcelList(list:ParcelList) : void
+      protected function releaseParcelList(param1:ParcelList) : void
       {
          //Décompilation abandonné
       }
@@ -219,17 +219,17 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      protected function initializeForComposer(composer:IFlowComposer, composeToPosition:int, controllerStartIndex:int, controllerEndIndex:int) : void
+      protected function initializeForComposer(param1:IFlowComposer, param2:int, param3:int, param4:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function composeBlockElement(elem:FlowGroupElement, absStart:int) : Boolean
+      private function composeBlockElement(param1:FlowGroupElement, param2:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function composeTextFlow(textFlow:TextFlow, composeToPosition:int, controllerEndIndex:int) : int
+      public function composeTextFlow(param1:TextFlow, param2:int, param3:int) : int
       {
          //Décompilation abandonné
       }
@@ -239,12 +239,12 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      private function initializeContentBounds(lineIndex:int, lastLineToCheck:int) : void
+      private function initializeContentBounds(param1:int, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function computeTextFlowLineMinimumLogicalTop(line:TextFlowLine, textLine:TextLine) : Number
+      tlf_internal function computeTextFlowLineMinimumLogicalTop(param1:TextFlowLine, param2:TextLine) : Number
       {
          //Décompilation abandonné
       }
@@ -259,17 +259,17 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      protected function composeInternal(composeRoot:FlowGroupElement, absStart:int) : void
+      protected function composeInternal(param1:FlowGroupElement, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      protected function composeParagraphElement(elem:ParagraphElement, absStart:int) : Boolean
+      protected function composeParagraphElement(param1:ParagraphElement, param2:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      protected function getFirstIndentCharPos(paragraph:ParagraphElement) : int
+      protected function getFirstIndentCharPos(param1:ParagraphElement) : int
       {
          //Décompilation abandonné
       }
@@ -279,7 +279,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      protected function createTextLine(targetWidth:Number, allowEmergencyBreaks:Boolean) : TextLine
+      protected function createTextLine(param1:Number, param2:Boolean) : TextLine
       {
          //Décompilation abandonné
       }
@@ -289,22 +289,22 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      protected function isLineVisible(textLine:TextLine) : Boolean
+      protected function isLineVisible(param1:TextLine) : Boolean
       {
          //Décompilation abandonné
       }
       
-      protected function endLine(textLine:TextLine) : void
+      protected function endLine(param1:TextLine) : void
       {
          //Décompilation abandonné
       }
       
-      protected function resetLine(textLine:TextLine) : void
+      protected function resetLine(param1:TextLine) : void
       {
          //Décompilation abandonné
       }
       
-      protected function preProcessILGs(startPos:int) : Boolean
+      protected function preProcessILGs(param1:int) : Boolean
       {
          //Décompilation abandonné
       }
@@ -314,47 +314,47 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      protected function processFloatsAtLineEnd(textLine:TextLine) : Boolean
+      protected function processFloatsAtLineEnd(param1:TextLine) : Boolean
       {
          //Décompilation abandonné
       }
       
-      protected function processInlinesAtLineEnd(textLine:TextLine) : void
+      protected function processInlinesAtLineEnd(param1:TextLine) : void
       {
          //Décompilation abandonné
       }
       
-      protected function composeInlineGraphicElement(inlineGraphic:InlineGraphicElement, textLine:TextLine) : Boolean
+      protected function composeInlineGraphicElement(param1:InlineGraphicElement, param2:TextLine) : Boolean
       {
          //Décompilation abandonné
       }
       
-      protected function composeFloat(elem:InlineGraphicElement, afterLine:Boolean) : Boolean
+      protected function composeFloat(param1:InlineGraphicElement, param2:Boolean) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function calculateFloatBounds(elem:InlineGraphicElement, verticalText:Boolean, floatType:String) : Rectangle
+      private function calculateFloatBounds(param1:InlineGraphicElement, param2:Boolean, param3:String) : Rectangle
       {
          //Décompilation abandonné
       }
       
-      private function calculateLineWidthExplicit(textLine:TextLine) : Number
+      private function calculateLineWidthExplicit(param1:TextLine) : Number
       {
          //Décompilation abandonné
       }
       
-      private function getRightSideGap(curLine:TextFlowLine, aligned:Boolean) : Number
+      private function getRightSideGap(param1:TextFlowLine, param2:Boolean) : Number
       {
          //Décompilation abandonné
       }
       
-      private function getLeftSideGap(curLine:TextFlowLine) : Number
+      private function getLeftSideGap(param1:TextFlowLine) : Number
       {
          //Décompilation abandonné
       }
       
-      private function calculateLineAlignmentAndBounds(textLine:TextLine, numberLine:TextLine, alignData:AlignData) : AlignData
+      private function calculateLineAlignmentAndBounds(param1:TextLine, param2:TextLine, param3:AlignData) : AlignData
       {
          //Décompilation abandonné
       }
@@ -364,57 +364,57 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      protected function fitLineToParcel(textLine:TextLine, isNewLine:Boolean, numberLine:TextLine) : Boolean
+      protected function fitLineToParcel(param1:TextLine, param2:Boolean, param3:TextLine) : Boolean
       {
          //Décompilation abandonné
       }
       
-      protected function calculateLeadingParameters(curElement:FlowLeafElement, curElementStart:int, numberLine:TextLine = null) : Number
+      protected function calculateLeadingParameters(param1:FlowLeafElement, param2:int, param3:TextLine = null) : Number
       {
          //Décompilation abandonné
       }
       
-      protected function finishComposeLine(curTextLine:TextLine, numberLine:TextLine) : void
+      protected function finishComposeLine(param1:TextLine, param2:TextLine) : void
       {
          //Décompilation abandonné
       }
       
-      private function applyTextAlign(effectiveParcelWidth:Number) : void
+      private function applyTextAlign(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      protected function commitLastLineState(curLine:TextFlowLine) : void
+      protected function commitLastLineState(param1:TextFlowLine) : void
       {
          //Décompilation abandonné
       }
       
-      protected function doVerticalAlignment(canVerticalAlign:Boolean, nextParcel:Parcel) : void
+      protected function doVerticalAlignment(param1:Boolean, param2:Parcel) : void
       {
          //Décompilation abandonné
       }
       
-      protected function finalParcelAdjustment(controller:ContainerController) : void
+      protected function finalParcelAdjustment(param1:ContainerController) : void
       {
          //Décompilation abandonné
       }
       
-      protected function finishParcel(controller:ContainerController, nextParcel:Parcel) : Boolean
+      protected function finishParcel(param1:ContainerController, param2:Parcel) : Boolean
       {
          //Décompilation abandonné
       }
       
-      protected function applyVerticalAlignmentToColumn(controller:ContainerController, vjType:String, lines:Array, beginIndex:int, numLines:int, beginFloatIndex:int, endFloatIndex:int) : void
+      protected function applyVerticalAlignmentToColumn(param1:ContainerController, param2:String, param3:Array, param4:int, param5:int, param6:int, param7:int) : void
       {
          //Décompilation abandonné
       }
       
-      protected function finishController(controller:ContainerController) : void
+      protected function finishController(param1:ContainerController) : void
       {
          //Décompilation abandonné
       }
       
-      private function clearControllers(oldController:ContainerController, newController:ContainerController) : void
+      private function clearControllers(param1:ContainerController, param2:ContainerController) : void
       {
          //Décompilation abandonné
       }
@@ -424,17 +424,17 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      protected function parcelHasChanged(newParcel:Parcel) : void
+      protected function parcelHasChanged(param1:Parcel) : void
       {
          //Décompilation abandonné
       }
       
-      private function calculateControllerVisibleBounds(controller:ContainerController) : void
+      private function calculateControllerVisibleBounds(param1:ContainerController) : void
       {
          //Décompilation abandonné
       }
       
-      private function getLineAdjustmentForInline(curTextLine:TextLine, curLeadingDir:String, isFirstLine:Boolean) : LeadingAdjustment
+      private function getLineAdjustmentForInline(param1:TextLine, param2:String, param3:Boolean) : LeadingAdjustment
       {
          //Décompilation abandonné
       }
@@ -444,17 +444,17 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      private function calculateLinePlacementAdjustment(curTextLine:TextLine, domBaseline:String, curLeadingDir:String, inlineImg:InlineGraphicElement, isFirstLine:Boolean) : LeadingAdjustment
+      private function calculateLinePlacementAdjustment(param1:TextLine, param2:String, param3:String, param4:InlineGraphicElement, param5:Boolean) : LeadingAdjustment
       {
          //Décompilation abandonné
       }
       
-      protected function pushInsideListItemMargins(numberLine:TextLine) : void
+      protected function pushInsideListItemMargins(param1:TextLine) : void
       {
          //Décompilation abandonné
       }
       
-      protected function popInsideListItemMargins(numberLine:TextLine) : void
+      protected function popInsideListItemMargins(param1:TextLine) : void
       {
          //Décompilation abandonné
       }
@@ -470,7 +470,7 @@ class AlignData extends Object
    //Décompilation abandonné
    }
    
-   function AlignData(tfl:TextFlowLine)
+   function AlignData(param1:TextFlowLine)
    {
       //Décompilation abandonné
    }
@@ -505,7 +505,7 @@ class GlobalSWFContext extends Object implements ISWFContext
    
    public static const globalSWFContext:GlobalSWFContext;
    
-   public function callInContext(fn:Function, thisArg:Object, argsArray:Array, returns:Boolean = true) : *
+   public function callInContext(param1:Function, param2:Object, param3:Array, param4:Boolean = true) : *
    {
       //Décompilation abandonné
    }

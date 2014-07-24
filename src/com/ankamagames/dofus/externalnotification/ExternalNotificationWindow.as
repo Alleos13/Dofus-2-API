@@ -19,7 +19,7 @@ package com.ankamagames.dofus.externalnotification
       //Décompilation abandonné
       }
       
-      public function ExternalNotificationWindow(pNotificationType:int, pClientId:String, pId:String, pContent:Object, pWinOpts:NativeWindowInitOptions, pHookName:String = null, pHookParams:Array = null)
+      public function ExternalNotificationWindow(param1:int, param2:String, param3:String, param4:Object, param5:NativeWindowInitOptions, param6:String = null, param7:Array = null)
       {
          //Décompilation abandonné
       }
@@ -28,7 +28,7 @@ package com.ankamagames.dofus.externalnotification
       
       private static const _log:Logger;
       
-      private static function log(pMsg:Object) : void
+      private static function log(param1:Object) : void
       {
          //Décompilation abandonné
       }

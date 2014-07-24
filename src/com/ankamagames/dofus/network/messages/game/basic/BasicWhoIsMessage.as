@@ -55,7 +55,7 @@ package com.ankamagames.dofus.network.messages.game.basic
          //Décompilation abandonné
       }
       
-      public function initBasicWhoIsMessage(self:Boolean = false, position:int = -1, accountNickname:String = "", accountId:uint = 0, playerName:String = "", playerId:uint = 0, areaId:int = 0, socialGroups:Vector.<AbstractSocialGroupInfos> = null, verbose:Boolean = false, playerState:uint = 99) : BasicWhoIsMessage
+      public function initBasicWhoIsMessage(param1:Boolean = false, param2:int = -1, param3:String = "", param4:uint = 0, param5:String = "", param6:uint = 0, param7:int = 0, param8:Vector.<AbstractSocialGroupInfos> = null, param9:Boolean = false, param10:uint = 99) : BasicWhoIsMessage
       {
          //Décompilation abandonné
       }
@@ -65,32 +65,32 @@ package com.ankamagames.dofus.network.messages.game.basic
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_BasicWhoIsMessage(output:IDataOutput) : void
+      public function serializeAs_BasicWhoIsMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_BasicWhoIsMessage(input:IDataInput) : void
+      public function deserializeAs_BasicWhoIsMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -39,7 +39,7 @@ package com.ankamagames.dofus.logic.common.frames
       //Décompilation abandonné
       }
       
-      public function LoadingModuleFrame(manageAuthentificationFrame:Boolean = false)
+      public function LoadingModuleFrame(param1:Boolean = false)
       {
          //Décompilation abandonné
       }
@@ -74,12 +74,12 @@ package com.ankamagames.dofus.logic.common.frames
          //Décompilation abandonné
       }
       
-      private function changeTip(e:Event) : void
+      private function changeTip(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }

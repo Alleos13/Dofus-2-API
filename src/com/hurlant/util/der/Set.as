@@ -7,7 +7,7 @@ package com.hurlant.util.der
       //Décompilation abandonné
       }
       
-      public function Set(type:uint = 49, length:uint = 0)
+      public function Set(param1:uint = 49, param2:uint = 0)
       {
          //Décompilation abandonné
       }

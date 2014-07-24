@@ -37,7 +37,7 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
          //Décompilation abandonné
       }
       
-      public function initGuildFightPlayersHelpersJoinMessage(fightId:Number = 0, playerInfo:CharacterMinimalPlusLookInformations = null) : GuildFightPlayersHelpersJoinMessage
+      public function initGuildFightPlayersHelpersJoinMessage(param1:Number = 0, param2:CharacterMinimalPlusLookInformations = null) : GuildFightPlayersHelpersJoinMessage
       {
          //Décompilation abandonné
       }
@@ -47,32 +47,32 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GuildFightPlayersHelpersJoinMessage(output:IDataOutput) : void
+      public function serializeAs_GuildFightPlayersHelpersJoinMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildFightPlayersHelpersJoinMessage(input:IDataInput) : void
+      public function deserializeAs_GuildFightPlayersHelpersJoinMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

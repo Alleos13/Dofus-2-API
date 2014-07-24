@@ -29,7 +29,7 @@ package com.ankamagames.dofus.network.types.game.friend
          //Décompilation abandonné
       }
       
-      public function initFriendInformations(accountId:uint = 0, accountName:String = "", playerState:uint = 99, lastConnection:uint = 0, achievementPoints:int = 0) : FriendInformations
+      public function initFriendInformations(param1:uint = 0, param2:String = "", param3:uint = 99, param4:uint = 0, param5:int = 0) : FriendInformations
       {
          //Décompilation abandonné
       }
@@ -39,22 +39,22 @@ package com.ankamagames.dofus.network.types.game.friend
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_FriendInformations(output:IDataOutput) : void
+      public function serializeAs_FriendInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_FriendInformations(input:IDataInput) : void
+      public function deserializeAs_FriendInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

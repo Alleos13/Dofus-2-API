@@ -38,17 +38,17 @@ package com.ankamagames.jerakine.managers
       
       private static var _lastTime:int = 0;
       
-      public static function init(lowQualityEnabled:Boolean) : void
+      public static function init(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public static function setFrameRate(frameRate:int) : void
+      public static function setFrameRate(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onEnterFrame(e:Event) : void
+      private static function onEnterFrame(param1:Event) : void
       {
          //Décompilation abandonné
       }

@@ -118,7 +118,7 @@ package com.ankamagames.dofus.kernel
          //Décompilation abandonné
       }
       
-      public static function panic(errorId:uint = 0, panicArgs:Array = null) : void
+      public static function panic(param1:uint = 0, param2:Array = null) : void
       {
          //Décompilation abandonné
       }
@@ -135,7 +135,7 @@ package com.ankamagames.dofus.kernel
       
       private var _include_DebugTarget:DebugTarget = null;
       
-      public function init(stage:Stage, rootClip:DisplayObject) : void
+      public function init(param1:Stage, param2:DisplayObject) : void
       {
          //Décompilation abandonné
       }
@@ -145,7 +145,7 @@ package com.ankamagames.dofus.kernel
          //Décompilation abandonné
       }
       
-      public function reset(messagesToDispatchAfter:Array = null, autoRetry:Boolean = false, reloadData:Boolean = false) : void
+      public function reset(param1:Array = null, param2:Boolean = false, param3:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -155,12 +155,12 @@ package com.ankamagames.dofus.kernel
          //Décompilation abandonné
       }
       
-      private function onDofusOptionChange(e:PropertyChangeEvent) : void
+      private function onDofusOptionChange(param1:PropertyChangeEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function addInitialFrames(firstLaunch:Boolean = false) : void
+      private function addInitialFrames(param1:Boolean = false) : void
       {
          //Décompilation abandonné
       }

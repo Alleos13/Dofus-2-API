@@ -23,12 +23,12 @@ package com.ankamagames.jerakine.resources.protocols
       
       private static var _singleLoadingFile:Dictionary;
       
-      public function initAdapter(uri:Uri, forcedAdapter:Class) : void
+      public function initAdapter(param1:Uri, param2:Class) : void
       {
          //Décompilation abandonné
       }
       
-      public function getUrl(uri:Uri) : String
+      public function getUrl(param1:Uri) : String
       {
          //Décompilation abandonné
       }
@@ -48,7 +48,7 @@ package com.ankamagames.jerakine.resources.protocols
          //Décompilation abandonné
       }
       
-      public function set loadingFile(value:Dictionary) : void
+      public function set loadingFile(param1:Dictionary) : void
       {
          //Décompilation abandonné
       }
@@ -58,32 +58,32 @@ package com.ankamagames.jerakine.resources.protocols
          //Décompilation abandonné
       }
       
-      public function set singleLoadingFile(value:Dictionary) : void
+      public function set singleLoadingFile(param1:Dictionary) : void
       {
          //Décompilation abandonné
       }
       
-      public function load(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, cache:ICache, forcedAdapter:Class, singleFile:Boolean) : void
+      public function load(param1:Uri, param2:IResourceObserver, param3:Boolean, param4:ICache, param5:Class, param6:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function onLoaded(uri:Uri, resourceType:uint, resource:*) : void
+      public function onLoaded(param1:Uri, param2:uint, param3:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function onFailed(uri:Uri, errorMsg:String, errorCode:uint) : void
+      public function onFailed(param1:Uri, param2:String, param3:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function onProgress(uri:Uri, bytesLoaded:uint, bytesTotal:uint) : void
+      public function onProgress(param1:Uri, param2:uint, param3:uint) : void
       {
          //Décompilation abandonné
       }
       
-      protected function extractPath(path:String) : String
+      protected function extractPath(param1:String) : String
       {
          //Décompilation abandonné
       }

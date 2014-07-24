@@ -16,7 +16,7 @@ package com.ankamagames.dofus.logic.game.common.actions
          //Décompilation abandonné
       }
       
-      public static function create(ie:InteractiveElement, position:MapPoint, skillInstanceId:uint) : InteractiveElementActivationAction
+      public static function create(param1:InteractiveElement, param2:MapPoint, param3:uint) : InteractiveElementActivationAction
       {
          //Décompilation abandonné
       }

@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.effects
       
       public static const MODULE:String = "Effects";
       
-      public static function getEffectById(id:uint) : Effect
+      public static function getEffectById(param1:uint) : Effect
       {
          //Décompilation abandonné
       }

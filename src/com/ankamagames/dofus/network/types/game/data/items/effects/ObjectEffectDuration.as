@@ -29,7 +29,7 @@ package com.ankamagames.dofus.network.types.game.data.items.effects
          //Décompilation abandonné
       }
       
-      public function initObjectEffectDuration(actionId:uint = 0, days:uint = 0, hours:uint = 0, minutes:uint = 0) : ObjectEffectDuration
+      public function initObjectEffectDuration(param1:uint = 0, param2:uint = 0, param3:uint = 0, param4:uint = 0) : ObjectEffectDuration
       {
          //Décompilation abandonné
       }
@@ -39,22 +39,22 @@ package com.ankamagames.dofus.network.types.game.data.items.effects
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectEffectDuration(output:IDataOutput) : void
+      public function serializeAs_ObjectEffectDuration(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectEffectDuration(input:IDataInput) : void
+      public function deserializeAs_ObjectEffectDuration(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

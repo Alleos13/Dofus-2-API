@@ -22,7 +22,7 @@ package com.ankamagames.dofus.datacenter.communication
       
       protected static const _log:Logger;
       
-      public static function getCensoredWordById(id:int) : CensoredWord
+      public static function getCensoredWordById(param1:int) : CensoredWord
       {
          //Décompilation abandonné
       }

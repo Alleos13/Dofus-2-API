@@ -25,27 +25,27 @@ package flashx.textLayout.utils
       
       private static var _lastLocale:LocaleSettings = null;
       
-      public static function justificationRule(locale:String) : String
+      public static function justificationRule(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function justificationStyle(locale:String) : String
+      public static function justificationStyle(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function leadingModel(locale:String) : String
+      public static function leadingModel(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function dominantBaseline(locale:String) : String
+      public static function dominantBaseline(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      private static function addLocale(locale:String) : LocaleSettings
+      private static function addLocale(param1:String) : LocaleSettings
       {
          //Décompilation abandonné
       }
@@ -55,12 +55,12 @@ package flashx.textLayout.utils
          //Décompilation abandonné
       }
       
-      private static function getLocale(locale:String) : LocaleSettings
+      private static function getLocale(param1:String) : LocaleSettings
       {
          //Décompilation abandonné
       }
       
-      private static function fetchLocaleSet(locale:String) : LocaleSettings
+      private static function fetchLocaleSet(param1:String) : LocaleSettings
       {
          //Décompilation abandonné
       }
@@ -93,7 +93,7 @@ class LocaleSettings extends Object
       //Décompilation abandonné
    }
    
-   public function set justificationRule(newValue:String) : void
+   public function set justificationRule(param1:String) : void
    {
       //Décompilation abandonné
    }
@@ -103,7 +103,7 @@ class LocaleSettings extends Object
       //Décompilation abandonné
    }
    
-   public function set justificationStyle(newValue:String) : void
+   public function set justificationStyle(param1:String) : void
    {
       //Décompilation abandonné
    }
@@ -113,7 +113,7 @@ class LocaleSettings extends Object
       //Décompilation abandonné
    }
    
-   public function set leadingModel(newValue:String) : void
+   public function set leadingModel(param1:String) : void
    {
       //Décompilation abandonné
    }
@@ -123,7 +123,7 @@ class LocaleSettings extends Object
       //Décompilation abandonné
    }
    
-   public function set dominantBaseline(newValue:String) : void
+   public function set dominantBaseline(param1:String) : void
    {
       //Décompilation abandonné
    }

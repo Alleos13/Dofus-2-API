@@ -24,12 +24,12 @@ package com.ankamagames.dofus.logic.common.managers
          //Décompilation abandonné
       }
       
-      public static function showMonster(monsterId:int, loop:int = 0) : Sprite
+      public static function showMonster(param1:int, param2:int = 0) : Sprite
       {
          //Décompilation abandonné
       }
       
-      public static function getMonsterName(monsterId:uint) : String
+      public static function getMonsterName(param1:uint) : String
       {
          //Décompilation abandonné
       }

@@ -9,7 +9,7 @@ package com.ankamagames.dofus.internalDatacenter.connection
       //Décompilation abandonné
       }
       
-      public function SubscriberGift(id:uint, description:String, uri:String, link:String)
+      public function SubscriberGift(param1:uint, param2:String, param3:String, param4:String)
       {
          //Décompilation abandonné
       }

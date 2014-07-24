@@ -9,7 +9,7 @@ package org.audiofx.mp3
       //Décompilation abandonné
       }
       
-      function ByteArraySegment(ba:ByteArray, start:uint, length:uint)
+      function ByteArraySegment(param1:ByteArray, param2:uint, param3:uint)
       {
          //Décompilation abandonné
       }

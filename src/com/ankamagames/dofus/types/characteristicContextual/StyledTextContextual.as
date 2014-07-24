@@ -10,7 +10,7 @@ package com.ankamagames.dofus.types.characteristicContextual
       //Décompilation abandonné
       }
       
-      public function StyledTextContextual(value:String, style:uint)
+      public function StyledTextContextual(param1:String, param2:uint)
       {
          //Décompilation abandonné
       }
@@ -111,7 +111,7 @@ package com.ankamagames.dofus.types.characteristicContextual
       
       private static const STYLE_3_NUMBER_PLUS:Class;
       
-      private function init(value:String, style:uint) : void
+      private function init(param1:String, param2:uint) : void
       {
          //Décompilation abandonné
       }

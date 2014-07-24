@@ -23,17 +23,17 @@ package com.ankamagames.jerakine.utils.system
       
       private var _arguments:Dictionary;
       
-      public function setArguments(args:Array) : void
+      public function setArguments(param1:Array) : void
       {
          //Décompilation abandonné
       }
       
-      public function hasArgument(argument:String) : Boolean
+      public function hasArgument(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getArgument(argument:String) : String
+      public function getArgument(param1:String) : String
       {
          //Décompilation abandonné
       }

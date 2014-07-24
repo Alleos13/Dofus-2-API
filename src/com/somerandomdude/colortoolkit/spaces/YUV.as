@@ -9,7 +9,7 @@ package com.somerandomdude.colortoolkit.spaces
       //Décompilation abandonné
       }
       
-      public function YUV(y:Number = 0, u:Number = 0, v:Number = 0)
+      public function YUV(param1:Number = 0, param2:Number = 0, param3:Number = 0)
       {
          //Décompilation abandonné
       }
@@ -25,7 +25,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set color(value:int) : void
+      public function set color(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -35,7 +35,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set y(value:Number) : void
+      public function set y(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -45,7 +45,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set u(value:Number) : void
+      public function set u(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -55,7 +55,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set v(value:Number) : void
+      public function set v(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -65,12 +65,12 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      private function generateColorFromYUV(y:Number, u:Number, v:Number) : int
+      private function generateColorFromYUV(param1:Number, param2:Number, param3:Number) : int
       {
          //Décompilation abandonné
       }
       
-      private function generateYUVFromColor(color:int) : YUV
+      private function generateYUVFromColor(param1:int) : YUV
       {
          //Décompilation abandonné
       }

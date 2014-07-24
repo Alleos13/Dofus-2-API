@@ -11,7 +11,7 @@ package com.ankamagames.dofus.logic.game.roleplay.types
       //Décompilation abandonné
       }
       
-      public function Fight(fightId:uint, teams:Vector.<FightTeam>)
+      public function Fight(param1:uint, param2:Vector.<FightTeam>)
       {
          //Décompilation abandonné
       }
@@ -22,12 +22,12 @@ package com.ankamagames.dofus.logic.game.roleplay.types
       
       public var teams:Vector.<FightTeam>;
       
-      public function getTeamByType(teamType:uint) : FightTeam
+      public function getTeamByType(param1:uint) : FightTeam
       {
          //Décompilation abandonné
       }
       
-      public function getTeamById(teamId:uint) : FightTeam
+      public function getTeamById(param1:uint) : FightTeam
       {
          //Décompilation abandonné
       }

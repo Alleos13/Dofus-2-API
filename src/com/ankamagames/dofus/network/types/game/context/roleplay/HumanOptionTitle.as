@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initHumanOptionTitle(titleId:uint = 0, titleParam:String = "") : HumanOptionTitle
+      public function initHumanOptionTitle(param1:uint = 0, param2:String = "") : HumanOptionTitle
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_HumanOptionTitle(output:IDataOutput) : void
+      public function serializeAs_HumanOptionTitle(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_HumanOptionTitle(input:IDataInput) : void
+      public function deserializeAs_HumanOptionTitle(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

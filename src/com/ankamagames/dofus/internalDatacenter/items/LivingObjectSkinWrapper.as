@@ -24,7 +24,7 @@ package com.ankamagames.dofus.internalDatacenter.items
       
       private static const _log:Logger;
       
-      public static function create(objectId:int, mood:int, skin:int) : LivingObjectSkinWrapper
+      public static function create(param1:int, param2:int, param3:int) : LivingObjectSkinWrapper
       {
          //Décompilation abandonné
       }
@@ -88,12 +88,12 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      public function set backGroundIconUri(bgUri:Uri) : void
+      public function set backGroundIconUri(param1:Uri) : void
       {
          //Décompilation abandonné
       }
       
-      public function getIconUri(pngMode:Boolean = true) : Uri
+      public function getIconUri(param1:Boolean = true) : Uri
       {
          //Décompilation abandonné
       }
@@ -113,7 +113,7 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      public function set endTime(t:int) : void
+      public function set endTime(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -128,12 +128,12 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      public function addHolder(h:ISlotDataHolder) : void
+      public function addHolder(param1:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeHolder(h:ISlotDataHolder) : void
+      public function removeHolder(param1:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }

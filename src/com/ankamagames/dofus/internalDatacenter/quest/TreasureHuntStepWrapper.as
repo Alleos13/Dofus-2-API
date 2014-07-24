@@ -27,7 +27,7 @@ package com.ankamagames.dofus.internalDatacenter.quest
       
       protected static const _log:Logger;
       
-      public static function create(type:uint, direction:int, mapId:int, poiLabel:uint, count:uint = 0) : TreasureHuntStepWrapper
+      public static function create(param1:uint, param2:int, param3:int, param4:uint, param5:uint = 0) : TreasureHuntStepWrapper
       {
          //Décompilation abandonné
       }
@@ -56,7 +56,7 @@ package com.ankamagames.dofus.internalDatacenter.quest
          //Décompilation abandonné
       }
       
-      public function update(type:uint, direction:int, mapId:int, poiLabel:uint, count:uint = 0) : void
+      public function update(param1:uint, param2:int, param3:int, param4:uint, param5:uint = 0) : void
       {
          //Décompilation abandonné
       }

@@ -10,7 +10,7 @@ package com.ankamagames.jerakine.messages.events
       //Décompilation abandonné
       }
       
-      public function FramePulledEvent(frame:Frame)
+      public function FramePulledEvent(param1:Frame)
       {
          //Décompilation abandonné
       }

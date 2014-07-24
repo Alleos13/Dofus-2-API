@@ -17,7 +17,7 @@ package com.ankamagames.jerakine.utils.display
       
       public static const useDofus2Line:Boolean = true;
       
-      public static function getLine(x1:int, y1:int, z1:int, x2:int, y2:int, z2:int) : Array
+      public static function getLine(param1:int, param2:int, param3:int, param4:int, param5:int, param6:int) : Array
       {
          //Décompilation abandonné
       }

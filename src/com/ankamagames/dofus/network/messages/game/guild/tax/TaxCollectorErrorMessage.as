@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
          //Décompilation abandonné
       }
       
-      public function initTaxCollectorErrorMessage(reason:int = 0) : TaxCollectorErrorMessage
+      public function initTaxCollectorErrorMessage(param1:int = 0) : TaxCollectorErrorMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_TaxCollectorErrorMessage(output:IDataOutput) : void
+      public function serializeAs_TaxCollectorErrorMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_TaxCollectorErrorMessage(input:IDataInput) : void
+      public function deserializeAs_TaxCollectorErrorMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

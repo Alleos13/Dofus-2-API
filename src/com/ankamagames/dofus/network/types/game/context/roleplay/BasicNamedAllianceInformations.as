@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initBasicNamedAllianceInformations(allianceId:uint = 0, allianceTag:String = "", allianceName:String = "") : BasicNamedAllianceInformations
+      public function initBasicNamedAllianceInformations(param1:uint = 0, param2:String = "", param3:String = "") : BasicNamedAllianceInformations
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_BasicNamedAllianceInformations(output:IDataOutput) : void
+      public function serializeAs_BasicNamedAllianceInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_BasicNamedAllianceInformations(input:IDataInput) : void
+      public function deserializeAs_BasicNamedAllianceInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

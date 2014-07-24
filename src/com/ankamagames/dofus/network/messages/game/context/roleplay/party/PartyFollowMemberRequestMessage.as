@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      public function initPartyFollowMemberRequestMessage(partyId:uint = 0, playerId:uint = 0) : PartyFollowMemberRequestMessage
+      public function initPartyFollowMemberRequestMessage(param1:uint = 0, param2:uint = 0) : PartyFollowMemberRequestMessage
       {
          //Décompilation abandonné
       }
@@ -43,32 +43,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PartyFollowMemberRequestMessage(output:IDataOutput) : void
+      public function serializeAs_PartyFollowMemberRequestMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PartyFollowMemberRequestMessage(input:IDataInput) : void
+      public function deserializeAs_PartyFollowMemberRequestMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

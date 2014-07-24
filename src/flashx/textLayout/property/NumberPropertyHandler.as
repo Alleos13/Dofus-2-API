@@ -7,7 +7,7 @@ package flashx.textLayout.property
       //Décompilation abandonné
       }
       
-      public function NumberPropertyHandler(minValue:Number, maxValue:Number, limits:String = "allLimits")
+      public function NumberPropertyHandler(param1:Number, param2:Number, param3:String = "allLimits")
       {
          //Décompilation abandonné
       }
@@ -38,12 +38,12 @@ package flashx.textLayout.property
          //Décompilation abandonné
       }
       
-      override public function owningHandlerCheck(newVal:*) : *
+      override public function owningHandlerCheck(param1:*) : *
       {
          //Décompilation abandonné
       }
       
-      public function clampToRange(val:Number) : Number
+      public function clampToRange(param1:Number) : Number
       {
          //Décompilation abandonné
       }

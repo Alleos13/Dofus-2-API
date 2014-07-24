@@ -9,7 +9,7 @@ package com.ankamagames.dofus.logic.game.roleplay.types
       //Décompilation abandonné
       }
       
-      public function PrismTooltipInformation(pAllianceIdentity:AllianceWrapper)
+      public function PrismTooltipInformation(param1:AllianceWrapper)
       {
          //Décompilation abandonné
       }

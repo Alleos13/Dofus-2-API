@@ -12,7 +12,7 @@ package com.ankamagames.berilia.types.listener
       //Décompilation abandonné
       }
       
-      public function GenericListener(sEvent:String = null, oListener:* = null, fCallback:Function = null, nSortIndex:int = 0, listener_type:uint = 1, listenerContext:WeakReference = null)
+      public function GenericListener(param1:String = null, param2:* = null, param3:Function = null, param4:int = 0, param5:uint = 1, param6:WeakReference = null)
       {
          //Décompilation abandonné
       }
@@ -40,7 +40,7 @@ package com.ankamagames.berilia.types.listener
          //Décompilation abandonné
       }
       
-      public function set event(sEvent:String) : void
+      public function set event(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -50,7 +50,7 @@ package com.ankamagames.berilia.types.listener
          //Décompilation abandonné
       }
       
-      public function set listener(oListener:*) : void
+      public function set listener(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -60,7 +60,7 @@ package com.ankamagames.berilia.types.listener
          //Décompilation abandonné
       }
       
-      public function set callback(fCallback:Function) : void
+      public function set callback(param1:Function) : void
       {
          //Décompilation abandonné
       }
@@ -70,7 +70,7 @@ package com.ankamagames.berilia.types.listener
          //Décompilation abandonné
       }
       
-      public function set sortIndex(n:int) : void
+      public function set sortIndex(param1:int) : void
       {
          //Décompilation abandonné
       }

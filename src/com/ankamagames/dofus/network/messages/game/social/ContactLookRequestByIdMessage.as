@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.messages.game.social
          //Décompilation abandonné
       }
       
-      public function initContactLookRequestByIdMessage(requestId:uint = 0, contactType:uint = 0, playerId:uint = 0) : ContactLookRequestByIdMessage
+      public function initContactLookRequestByIdMessage(param1:uint = 0, param2:uint = 0, param3:uint = 0) : ContactLookRequestByIdMessage
       {
          //Décompilation abandonné
       }
@@ -43,32 +43,32 @@ package com.ankamagames.dofus.network.messages.game.social
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ContactLookRequestByIdMessage(output:IDataOutput) : void
+      public function serializeAs_ContactLookRequestByIdMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ContactLookRequestByIdMessage(input:IDataInput) : void
+      public function deserializeAs_ContactLookRequestByIdMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

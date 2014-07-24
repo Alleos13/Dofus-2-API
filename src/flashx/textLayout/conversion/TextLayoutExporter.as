@@ -29,27 +29,27 @@ package flashx.textLayout.conversion
       
       private static const brTabRegEx:RegExp;
       
-      public static function exportImage(exporter:BaseTextLayoutExporter, image:InlineGraphicElement) : XMLList
+      public static function exportImage(param1:BaseTextLayoutExporter, param2:InlineGraphicElement) : XMLList
       {
          //Décompilation abandonné
       }
       
-      public static function exportLink(exporter:BaseTextLayoutExporter, link:LinkElement) : XMLList
+      public static function exportLink(param1:BaseTextLayoutExporter, param2:LinkElement) : XMLList
       {
          //Décompilation abandonné
       }
       
-      public static function exportDiv(exporter:BaseTextLayoutExporter, div:DivElement) : XMLList
+      public static function exportDiv(param1:BaseTextLayoutExporter, param2:DivElement) : XMLList
       {
          //Décompilation abandonné
       }
       
-      public static function exportSPGE(exporter:BaseTextLayoutExporter, elem:SubParagraphGroupElement) : XMLList
+      public static function exportSPGE(param1:BaseTextLayoutExporter, param2:SubParagraphGroupElement) : XMLList
       {
          //Décompilation abandonné
       }
       
-      public static function exportTCY(exporter:BaseTextLayoutExporter, tcy:TCYElement) : XMLList
+      public static function exportTCY(param1:BaseTextLayoutExporter, param2:TCYElement) : XMLList
       {
          //Décompilation abandonné
       }
@@ -59,22 +59,22 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      override protected function getSpanTextReplacementXML(ch:String) : XML
+      override protected function getSpanTextReplacementXML(param1:String) : XML
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function createStylesFromDescription(styles:Object, description:Object, includeUserStyles:Boolean, exclusions:Array) : Array
+      tlf_internal function createStylesFromDescription(param1:Object, param2:Object, param3:Boolean, param4:Array) : Array
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportObjectAsTextLayoutFormat(key:String, styleDict:Object) : XMLList
+      tlf_internal function exportObjectAsTextLayoutFormat(param1:String, param2:Object) : XMLList
       {
          //Décompilation abandonné
       }
       
-      override protected function exportFlowElement(flowElement:FlowElement) : XMLList
+      override protected function exportFlowElement(param1:FlowElement) : XMLList
       {
          //Décompilation abandonné
       }

@@ -12,7 +12,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function SubareaItemCriterion(pCriterion:String)
+      public function SubareaItemCriterion(param1:String)
       {
          //Décompilation abandonné
       }

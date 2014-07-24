@@ -19,14 +19,14 @@ package com.ankamagames.jerakine.managers
       //Décompilation abandonné
       }
       
-      public function OptionManager(customName:String = null)
+      public function OptionManager(param1:String = null)
       {
          //Décompilation abandonné
       }
       
       private static var _optionsManager:Array;
       
-      public static function getOptionManager(name:String) : OptionManager
+      public static function getOptionManager(param1:String) : OptionManager
       {
          //Décompilation abandonné
       }
@@ -53,64 +53,64 @@ package com.ankamagames.jerakine.managers
       
       private var _dataStore:DataStoreType;
       
-      public function add(name:String, value:* = null, useCache:Boolean = true) : void
+      public function add(param1:String, param2:* = null, param3:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function getDefaultValue(name:String) : *
+      public function getDefaultValue(param1:String) : *
       {
          //Décompilation abandonné
       }
       
-      public function addEventListener(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false) : void
+      public function addEventListener(param1:String, param2:Function, param3:Boolean = false, param4:int = 0, param5:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function dispatchEvent(event:Event) : Boolean
+      public function dispatchEvent(param1:Event) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function hasEventListener(type:String) : Boolean
+      public function hasEventListener(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function removeEventListener(type:String, listener:Function, useCapture:Boolean = false) : void
+      public function removeEventListener(param1:String, param2:Function, param3:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function willTrigger(type:String) : Boolean
+      public function willTrigger(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function restaureDefaultValue(name:String) : void
+      public function restaureDefaultValue(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function getProperty(name:*) : *
+      override flash_proxy function getProperty(param1:*) : *
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function setProperty(name:*, value:*) : void
+      override flash_proxy function setProperty(param1:*, param2:*) : void
       {
          //Décompilation abandonné
       }
       
       protected var _item:Array;
       
-      override flash_proxy function nextNameIndex(index:int) : int
+      override flash_proxy function nextNameIndex(param1:int) : int
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function nextName(index:int) : String
+      override flash_proxy function nextName(param1:int) : String
       {
          //Décompilation abandonné
       }

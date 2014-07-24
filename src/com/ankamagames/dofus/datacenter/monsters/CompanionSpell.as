@@ -17,7 +17,7 @@ package com.ankamagames.dofus.datacenter.monsters
       
       public static const MODULE:String = "CompanionSpells";
       
-      public static function getCompanionSpellById(id:uint) : CompanionSpell
+      public static function getCompanionSpellById(param1:uint) : CompanionSpell
       {
          //Décompilation abandonné
       }

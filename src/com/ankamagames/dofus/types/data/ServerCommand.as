@@ -7,7 +7,7 @@ package com.ankamagames.dofus.types.data
       //Décompilation abandonné
       }
       
-      public function ServerCommand(name:String, help:String)
+      public function ServerCommand(param1:String, param2:String)
       {
          //Décompilation abandonné
       }
@@ -21,22 +21,22 @@ package com.ankamagames.dofus.types.data
          //Décompilation abandonné
       }
       
-      public static function autoComplete(cmd:String) : String
+      public static function autoComplete(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function getAutoCompletePossibilities(cmd:String) : Array
+      public static function getAutoCompletePossibilities(param1:String) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function getHelp(cmd:String) : String
+      public static function getHelp(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function hasCommand(cmd:String) : Boolean
+      public static function hasCommand(param1:String) : Boolean
       {
          //Décompilation abandonné
       }

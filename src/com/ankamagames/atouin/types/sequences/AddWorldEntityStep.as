@@ -12,7 +12,7 @@ package com.ankamagames.atouin.types.sequences
       //Décompilation abandonné
       }
       
-      public function AddWorldEntityStep(entity:IEntity)
+      public function AddWorldEntityStep(param1:IEntity)
       {
          //Décompilation abandonné
       }

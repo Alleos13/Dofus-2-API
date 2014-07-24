@@ -64,7 +64,7 @@ package com.ankamagames.jerakine.resources.protocols.impl
       
       private static var _urlRewriteReplace;
       
-      public static function init(replacePattern:*, replaceNeedle:*) : void
+      public static function init(param1:*, param2:*) : void
       {
          //Décompilation abandonné
       }
@@ -79,12 +79,12 @@ package com.ankamagames.jerakine.resources.protocols.impl
       
       private var _dataLoading:Dictionary;
       
-      public function load(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, cache:ICache, forcedAdapter:Class, singleFile:Boolean) : void
+      public function load(param1:Uri, param2:IResourceObserver, param3:Boolean, param4:ICache, param5:Class, param6:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      private function uriIsAlreadyWaitingForHttpDownload(uri:Uri) : Boolean
+      private function uriIsAlreadyWaitingForHttpDownload(param1:Uri) : Boolean
       {
          //Décompilation abandonné
       }
@@ -99,62 +99,62 @@ package com.ankamagames.jerakine.resources.protocols.impl
          //Décompilation abandonné
       }
       
-      private function loadFile(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, adapter:Class) : void
+      private function loadFile(param1:Uri, param2:IResourceObserver, param3:Boolean, param4:Class) : void
       {
          //Décompilation abandonné
       }
       
-      private function loadDirectlyUri(uri:Uri, dispatchProgress:Boolean) : void
+      private function loadDirectlyUri(param1:Uri, param2:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      private function onRemoteFileLoaded(uri:Uri, resourceType:uint, resource:*) : void
+      private function onRemoteFileLoaded(param1:Uri, param2:uint, param3:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function removeNullValue(item:Object, index:int, vector:Vector.<Object>) : Boolean
+      private function removeNullValue(param1:Object, param2:int, param3:Vector.<Object>) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getLocalPath(uri:Uri) : String
+      public function getLocalPath(param1:Uri) : String
       {
          //Décompilation abandonné
       }
       
-      public function getPathWithoutAkamaiHack(inStr:String) : String
+      public function getPathWithoutAkamaiHack(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      private function onRemoteFileFailed(uri:Uri, errorMsg:String, errorCode:uint) : void
+      private function onRemoteFileFailed(param1:Uri, param2:String, param3:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function onRemoteFileProgress(uri:Uri, bytesLoaded:uint, bytesTotal:uint) : void
+      private function onRemoteFileProgress(param1:Uri, param2:uint, param3:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function loadFromParent(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, adapter:Class) : void
+      private function loadFromParent(param1:Uri, param2:IResourceObserver, param3:Boolean, param4:Class) : void
       {
          //Décompilation abandonné
       }
       
-      private function getPathIntSum(path:String) : int
+      private function getPathIntSum(param1:String) : int
       {
          //Décompilation abandonné
       }
       
-      private function getPathForCrc(uri:Uri) : String
+      private function getPathForCrc(param1:Uri) : String
       {
          //Décompilation abandonné
       }
       
-      private function getFileIntSum(data:ByteArray) : int
+      private function getFileIntSum(param1:ByteArray) : int
       {
          //Décompilation abandonné
       }
@@ -169,7 +169,7 @@ package com.ankamagames.jerakine.resources.protocols.impl
          //Décompilation abandonné
       }
       
-      public function set serverRootDir(value:String) : void
+      public function set serverRootDir(param1:String) : void
       {
          //Décompilation abandonné
       }

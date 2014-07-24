@@ -9,6 +9,6 @@ package com.ankamagames.dofus.kernel.updaterv2.messages
       //Décompilation abandonné
       }
       
-      function deserialize(data:Object) : void;
+      function deserialize(param1:Object) : void;
    }
 }

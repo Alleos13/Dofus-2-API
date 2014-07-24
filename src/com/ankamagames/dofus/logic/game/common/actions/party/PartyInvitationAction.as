@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.party
          //Décompilation abandonné
       }
       
-      public static function create(name:String, dungeon:uint = 0, inArena:Boolean = false) : PartyInvitationAction
+      public static function create(param1:String, param2:uint = 0, param3:Boolean = false) : PartyInvitationAction
       {
          //Décompilation abandonné
       }

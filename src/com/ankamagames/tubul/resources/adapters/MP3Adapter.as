@@ -36,7 +36,7 @@ package com.ankamagames.tubul.resources.adapters
       
       private var _sound:Sound;
       
-      override public function loadDirectly(uri:Uri, path:String, observer:IResourceObserver, dispatchProgress:Boolean) : void
+      override public function loadDirectly(param1:Uri, param2:String, param3:IResourceObserver, param4:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -46,7 +46,7 @@ package com.ankamagames.tubul.resources.adapters
          //Décompilation abandonné
       }
       
-      override public function loadFromData(uri:Uri, data:ByteArray, observer:IResourceObserver, dispatchProgress:Boolean) : void
+      override public function loadFromData(param1:Uri, param2:ByteArray, param3:IResourceObserver, param4:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -61,7 +61,7 @@ package com.ankamagames.tubul.resources.adapters
          //Décompilation abandonné
       }
       
-      override protected function getResource(dataFormat:String, data:*) : *
+      override protected function getResource(param1:String, param2:*) : *
       {
          //Décompilation abandonné
       }
@@ -71,17 +71,17 @@ package com.ankamagames.tubul.resources.adapters
          //Décompilation abandonné
       }
       
-      override protected function onComplete(e:Event) : void
+      override protected function onComplete(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function onError(ee:ErrorEvent) : void
+      override protected function onError(param1:ErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function onProgress(pe:ProgressEvent) : void
+      override protected function onProgress(param1:ProgressEvent) : void
       {
          //Décompilation abandonné
       }

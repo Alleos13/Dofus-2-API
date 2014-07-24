@@ -11,7 +11,7 @@ package com.ankamagames.jerakine.utils.memory
       //Décompilation abandonné
       }
       
-      public function WeakProxyReference(p_object:Object)
+      public function WeakProxyReference(param1:Object)
       {
          //Décompilation abandonné
       }
@@ -28,22 +28,22 @@ package com.ankamagames.jerakine.utils.memory
          //Décompilation abandonné
       }
       
-      override flash_proxy function callProperty(p_methodName:*, ... p_args) : *
+      override flash_proxy function callProperty(param1:*, ... rest) : *
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function getProperty(p_propertyName:*) : *
+      override flash_proxy function getProperty(param1:*) : *
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function setProperty(p_propertyName:*, p_value:*) : void
+      override flash_proxy function setProperty(param1:*, param2:*) : void
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function deleteProperty(p_propertyName:*) : Boolean
+      override flash_proxy function deleteProperty(param1:*) : Boolean
       {
          //Décompilation abandonné
       }

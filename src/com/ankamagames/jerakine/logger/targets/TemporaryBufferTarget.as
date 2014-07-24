@@ -16,7 +16,7 @@ package com.ankamagames.jerakine.logger.targets
       
       private var _buffer:Array;
       
-      override public function logEvent(event:LogEvent) : void
+      override public function logEvent(param1:LogEvent) : void
       {
          //Décompilation abandonné
       }

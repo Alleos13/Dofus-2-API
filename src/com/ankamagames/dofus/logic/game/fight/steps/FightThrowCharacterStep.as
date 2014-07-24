@@ -43,7 +43,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightThrowCharacterStep(fighterId:int, carriedId:int, cellId:int)
+      public function FightThrowCharacterStep(param1:int, param2:int, param3:int)
       {
          //Décompilation abandonné
       }
@@ -75,7 +75,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
          //Décompilation abandonné
       }
       
-      private function throwFinished(e:Event = null) : void
+      private function throwFinished(param1:Event = null) : void
       {
          //Décompilation abandonné
       }

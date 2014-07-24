@@ -9,7 +9,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function TextureLoadFailMessage(pTexture:Texture)
+      public function TextureLoadFailMessage(param1:Texture)
       {
          //Décompilation abandonné
       }

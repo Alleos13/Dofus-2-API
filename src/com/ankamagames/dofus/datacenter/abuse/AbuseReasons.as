@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.abuse
       
       protected static const _log:Logger;
       
-      public static function getReasonNameById(id:uint) : AbuseReasons
+      public static function getReasonNameById(param1:uint) : AbuseReasons
       {
          //Décompilation abandonné
       }

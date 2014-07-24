@@ -11,7 +11,7 @@ package com.ankamagames.jerakine.pools
       //Décompilation abandonné
       }
       
-      public function Pool(pooledClass:Class, initialSize:int, growSize:int, warnLimit:int = 0)
+      public function Pool(param1:Class, param2:int, param3:int, param4:int = 0)
       {
          //Décompilation abandonné
       }
@@ -53,7 +53,7 @@ package com.ankamagames.jerakine.pools
          //Décompilation abandonné
       }
       
-      public function checkIn(freedObject:Poolable) : void
+      public function checkIn(param1:Poolable) : void
       {
          //Décompilation abandonné
       }

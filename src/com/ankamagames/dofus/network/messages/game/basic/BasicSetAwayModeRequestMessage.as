@@ -37,7 +37,7 @@ package com.ankamagames.dofus.network.messages.game.basic
          //Décompilation abandonné
       }
       
-      public function initBasicSetAwayModeRequestMessage(enable:Boolean = false, invisible:Boolean = false) : BasicSetAwayModeRequestMessage
+      public function initBasicSetAwayModeRequestMessage(param1:Boolean = false, param2:Boolean = false) : BasicSetAwayModeRequestMessage
       {
          //Décompilation abandonné
       }
@@ -47,32 +47,32 @@ package com.ankamagames.dofus.network.messages.game.basic
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_BasicSetAwayModeRequestMessage(output:IDataOutput) : void
+      public function serializeAs_BasicSetAwayModeRequestMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_BasicSetAwayModeRequestMessage(input:IDataInput) : void
+      public function deserializeAs_BasicSetAwayModeRequestMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

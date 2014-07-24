@@ -48,57 +48,57 @@ package com.ankamagames.dofus.scripts.api
          //Décompilation abandonné
       }
       
-      public static function CreateParallelStartSequenceStep(aSequence:Array, waitAllSequenceEnd:Boolean = true, waitFirstEndSequence:Boolean = false) : ISequencable
+      public static function CreateParallelStartSequenceStep(param1:Array, param2:Boolean = true, param3:Boolean = false) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public static function CreateStartSequenceStep(sequence:ISequencer) : ISequencable
+      public static function CreateStartSequenceStep(param1:ISequencer) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public static function CreateAddGfxEntityStep(runner:FxRunner, gfxId:uint, cell:MapPoint, angle:Number = 0, yOffset:int = 0, mode:uint = 0, startCell:MapPoint = null, endCell:MapPoint = null, popUnderPlayer:Boolean = false) : ISequencable
+      public static function CreateAddGfxEntityStep(param1:FxRunner, param2:uint, param3:MapPoint, param4:Number = 0, param5:int = 0, param6:uint = 0, param7:MapPoint = null, param8:MapPoint = null, param9:Boolean = false) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public static function CreateAddGlyphGfxStep(runner:SpellFxRunner, gfxId:uint, cell:MapPoint, markId:int) : ISequencable
+      public static function CreateAddGlyphGfxStep(param1:SpellFxRunner, param2:uint, param3:MapPoint, param4:int) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public static function CreatePlayAnimationStep(target:TiphonSprite, animationName:String, backToLastAnimationAtEnd:Boolean, waitForEvent:Boolean, eventEnd:String = "animation_event_end", loop:int = 1) : ISequencable
+      public static function CreatePlayAnimationStep(param1:TiphonSprite, param2:String, param3:Boolean, param4:Boolean, param5:String = "animation_event_end", param6:int = 1) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public static function CreateSetDirectionStep(target:TiphonSprite, nDirection:uint) : ISequencable
+      public static function CreateSetDirectionStep(param1:TiphonSprite, param2:uint) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public static function CreateParableGfxMovementStep(runner:FxRunner, gfxEntity:IMovable, targetPoint:MapPoint, speed:Number = 100, curvePrc:Number = 0.5, yOffset:int = 0, waitEnd:Boolean = true) : ParableGfxMovementStep
+      public static function CreateParableGfxMovementStep(param1:FxRunner, param2:IMovable, param3:MapPoint, param4:Number = 100, param5:Number = 0.5, param6:int = 0, param7:Boolean = true) : ParableGfxMovementStep
       {
          //Décompilation abandonné
       }
       
-      public static function CreateAddGfxInLineStep(runner:SpellFxRunner, gfxId:uint, startCell:MapPoint, endCell:MapPoint, yOffset:Number = 0, mode:uint = 0, minScale:Number = 0, maxScale:Number = 0, addOnStartCell:Boolean = false, addOnEndCell:Boolean = false, showUnder:Boolean = false, useSpellZone:Boolean = false, useOnlySpellZone:Boolean = false) : AddGfxInLineStep
+      public static function CreateAddGfxInLineStep(param1:SpellFxRunner, param2:uint, param3:MapPoint, param4:MapPoint, param5:Number = 0, param6:uint = 0, param7:Number = 0, param8:Number = 0, param9:Boolean = false, param10:Boolean = false, param11:Boolean = false, param12:Boolean = false, param13:Boolean = false) : AddGfxInLineStep
       {
          //Décompilation abandonné
       }
       
-      public static function CreateAddWorldEntityStep(entity:IEntity) : AddWorldEntityStep
+      public static function CreateAddWorldEntityStep(param1:IEntity) : AddWorldEntityStep
       {
          //Décompilation abandonné
       }
       
-      public static function CreateDestroyEntityStep(entity:IEntity) : DestroyEntityStep
+      public static function CreateDestroyEntityStep(param1:IEntity) : DestroyEntityStep
       {
          //Décompilation abandonné
       }
       
-      public static function CreateDebugStep(text:String) : DebugStep
+      public static function CreateDebugStep(param1:String) : DebugStep
       {
          //Décompilation abandonné
       }

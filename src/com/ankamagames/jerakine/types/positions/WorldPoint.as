@@ -20,12 +20,12 @@ package com.ankamagames.jerakine.types.positions
       
       private static const MAP_COORDS_MAX:uint;
       
-      public static function fromMapId(mapId:uint) : WorldPoint
+      public static function fromMapId(param1:uint) : WorldPoint
       {
          //Décompilation abandonné
       }
       
-      public static function fromCoords(worldId:uint, x:int, y:int) : WorldPoint
+      public static function fromCoords(param1:uint, param2:int, param3:int) : WorldPoint
       {
          //Décompilation abandonné
       }
@@ -43,7 +43,7 @@ package com.ankamagames.jerakine.types.positions
          //Décompilation abandonné
       }
       
-      public function set mapId(mapId:uint) : void
+      public function set mapId(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -53,7 +53,7 @@ package com.ankamagames.jerakine.types.positions
          //Décompilation abandonné
       }
       
-      public function set worldId(worldId:uint) : void
+      public function set worldId(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -63,7 +63,7 @@ package com.ankamagames.jerakine.types.positions
          //Décompilation abandonné
       }
       
-      public function set x(x:int) : void
+      public function set x(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -73,12 +73,12 @@ package com.ankamagames.jerakine.types.positions
          //Décompilation abandonné
       }
       
-      public function set y(y:int) : void
+      public function set y(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function add(offset:Point) : void
+      public function add(param1:Point) : void
       {
          //Décompilation abandonné
       }

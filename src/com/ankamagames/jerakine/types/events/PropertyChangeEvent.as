@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.types.events
       //Décompilation abandonné
       }
       
-      public function PropertyChangeEvent(watchedClassInstance:*, propertyName:String, propertyValue:*, propertyOldValue:*)
+      public function PropertyChangeEvent(param1:*, param2:String, param3:*, param4:*)
       {
          //Décompilation abandonné
       }

@@ -71,27 +71,27 @@ package com.ankamagames.berilia.frames
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function handleMessage(pKeyboardMessage:KeyboardMessage) : Boolean
+      private function handleMessage(param1:KeyboardMessage) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function getShortcut(pKeyboardMessage:KeyboardMessage) : Shortcut
+      private function getShortcut(param1:KeyboardMessage) : Shortcut
       {
          //Décompilation abandonné
       }
       
-      private function getCharCode(pKeyboardMessage:KeyboardMessage) : int
+      private function getCharCode(param1:KeyboardMessage) : int
       {
          //Décompilation abandonné
       }
       
-      private function onWindowDeactivate(pEvent:Event) : void
+      private function onWindowDeactivate(param1:Event) : void
       {
          //Décompilation abandonné
       }

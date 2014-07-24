@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.externalnotifications
       
       protected static const _log:Logger;
       
-      public static function getExternalNotificationById(pId:int) : ExternalNotification
+      public static function getExternalNotificationById(param1:int) : ExternalNotification
       {
          //Décompilation abandonné
       }

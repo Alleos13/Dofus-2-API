@@ -21,22 +21,22 @@ package com.ankamagames.dofus.logic.common.managers
          //Décompilation abandonné
       }
       
-      public static function getLink(pGuild:*, pText:String = null) : String
+      public static function getLink(param1:*, param2:String = null) : String
       {
          //Décompilation abandonné
       }
       
-      public static function showGuild(guildId:uint, guildName:String) : void
+      public static function showGuild(param1:uint, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      public static function getGuildName(guildId:uint, guildName:String) : String
+      public static function getGuildName(param1:uint, param2:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function rollOver(pX:int, pY:int, guildId:uint) : void
+      public static function rollOver(param1:int, param2:int, param3:uint) : void
       {
          //Décompilation abandonné
       }

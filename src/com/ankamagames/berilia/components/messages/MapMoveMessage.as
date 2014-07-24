@@ -9,7 +9,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function MapMoveMessage(map:MapViewer)
+      public function MapMoveMessage(param1:MapViewer)
       {
          //Décompilation abandonné
       }

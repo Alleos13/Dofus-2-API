@@ -66,7 +66,7 @@ package com.ankamagames.berilia.managers
       
       private var _lastRenderStart:uint;
       
-      public function loadUi(uiData:UiData, spContainer:UiRootContainer, oProperties:* = null, checkCache:Boolean = true) : void
+      public function loadUi(param1:UiData, param2:UiRootContainer, param3:* = null, param4:Boolean = true) : void
       {
          //Décompilation abandonné
       }
@@ -76,12 +76,12 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      public function clearCacheFromId(id:String) : void
+      public function clearCacheFromId(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function getUiDefinition(uiId:String) : UiDefinition
+      public function getUiDefinition(param1:String) : UiDefinition
       {
          //Décompilation abandonné
       }
@@ -91,32 +91,32 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      public function getUiVersion(id:String) : String
+      public function getUiVersion(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function setUiVersion(id:String, version:String) : void
+      public function setUiVersion(param1:String, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function setUiDefinition(uiDefinition:UiDefinition) : void
+      public function setUiDefinition(param1:UiDefinition) : void
       {
          //Décompilation abandonné
       }
       
-      public function cancelRender(uiData:UiData) : void
+      public function cancelRender(param1:UiData) : void
       {
          //Décompilation abandonné
       }
       
-      private function processWaitingUi(sId:String, checkCache:Boolean = true) : void
+      private function processWaitingUi(param1:String, param2:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      private function onUiRender(e:UiRenderEvent) : void
+      private function onUiRender(param1:UiRenderEvent) : void
       {
          //Décompilation abandonné
       }
@@ -133,7 +133,7 @@ class RenderQueueItem extends Object
    //Décompilation abandonné
    }
    
-   function RenderQueueItem(uiData:UiData, cont:UiRootContainer, prop:*)
+   function RenderQueueItem(param1:UiData, param2:UiRootContainer, param3:*)
    {
       //Décompilation abandonné
    }

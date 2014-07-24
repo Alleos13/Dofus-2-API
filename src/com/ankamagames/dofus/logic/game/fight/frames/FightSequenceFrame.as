@@ -169,7 +169,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
       //Décompilation abandonné
       }
       
-      public function FightSequenceFrame(pFightBattleFrame:FightBattleFrame, parent:FightSequenceFrame = null)
+      public function FightSequenceFrame(param1:FightBattleFrame, param2:FightSequenceFrame = null)
       {
          //Décompilation abandonné
       }
@@ -192,7 +192,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      private static function deleteTooltip(fighterId:int) : void
+      private static function deleteTooltip(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -270,27 +270,27 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      public function addSubSequence(sequence:ISequencer) : void
+      public function addSubSequence(param1:ISequencer) : void
       {
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function execute(callback:Function = null) : void
+      public function execute(param1:Function = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function executeBuffer(callback:Function, hadScript:Boolean, scriptSuccess:Boolean = false) : void
+      private function executeBuffer(param1:Function, param2:Boolean, param3:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSequenceEnd(e:SequencerEvent) : void
+      private function onSequenceEnd(param1:SequencerEvent) : void
       {
          //Décompilation abandonné
       }
@@ -300,192 +300,192 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      private function pushMovementStep(fighterId:int, path:MovementPath) : void
+      private function pushMovementStep(param1:int, param2:MovementPath) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushTeleportStep(fighterId:int, destinationCell:int) : void
+      private function pushTeleportStep(param1:int, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushExchangePositionsStep(fighterOneId:int, fighterOneNewCell:int, fighterTwoId:int, fighterTwoNewCell:int) : void
+      private function pushExchangePositionsStep(param1:int, param2:int, param3:int, param4:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushSlideStep(fighterId:int, startCell:int, endCell:int) : void
+      private function pushSlideStep(param1:int, param2:int, param3:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushSummonStep(summonerId:int, summonInfos:GameFightFighterInformations) : void
+      private function pushSummonStep(param1:int, param2:GameFightFighterInformations) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushVisibilityStep(fighterId:int, visibility:Boolean) : void
+      private function pushVisibilityStep(param1:int, param2:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushMarkCellsStep(markId:int, markType:int, cells:Vector.<GameActionMarkedCell>, markSpellId:int) : void
+      private function pushMarkCellsStep(param1:int, param2:int, param3:Vector.<GameActionMarkedCell>, param4:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushUnmarkCellsStep(markId:int) : void
+      private function pushUnmarkCellsStep(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushChangeLookStep(fighterId:int, newLook:EntityLook) : void
+      private function pushChangeLookStep(param1:int, param2:EntityLook) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushChangeVisibilityStep(fighterId:int, visibilityState:int) : void
+      private function pushChangeVisibilityStep(param1:int, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushPointsVariationStep(fighterId:int, actionId:uint, delta:int) : void
+      private function pushPointsVariationStep(param1:int, param2:uint, param3:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushShieldPointsVariationStep(fighterId:int, delta:int, actionId:int) : void
+      private function pushShieldPointsVariationStep(param1:int, param2:int, param3:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushTemporaryBoostStep(fighterId:int, statName:String, duration:int, durationText:String) : void
+      private function pushTemporaryBoostStep(param1:int, param2:String, param3:int, param4:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushPointsLossDodgeStep(fighterId:int, actionId:uint, amount:int) : void
+      private function pushPointsLossDodgeStep(param1:int, param2:uint, param3:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushLifePointsVariationStep(fighterId:int, delta:int, permanentDamages:int, action:int) : void
+      private function pushLifePointsVariationStep(param1:int, param2:int, param3:int, param4:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushDeathStep(fighterId:int, naturalDeath:Boolean = true) : void
+      private function pushDeathStep(param1:int, param2:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushVanishStep(fighterId:int, sourceId:int) : void
+      private function pushVanishStep(param1:int, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushDispellStep(fighterId:int) : void
+      private function pushDispellStep(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushDispellEffectStep(fighterId:int, boostUID:int) : void
+      private function pushDispellEffectStep(param1:int, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushDispellSpellStep(fighterId:int, spellId:int) : void
+      private function pushDispellSpellStep(param1:int, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushSpellCooldownVariationStep(targetId:int, actionId:int, spellId:int, delta:int) : void
+      private function pushSpellCooldownVariationStep(param1:int, param2:int, param3:int, param4:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushSpellImmunityStep(targetId:int) : void
+      private function pushSpellImmunityStep(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushInvisibleObstacleStep(fighterId:int, spellLevelId:int) : void
+      private function pushInvisibleObstacleStep(param1:int, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushKillStep(fighterId:int, killerId:int) : void
+      private function pushKillStep(param1:int, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushReducedDamagesStep(fighterId:int, amount:int) : void
+      private function pushReducedDamagesStep(param1:int, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushReflectedDamagesStep(fighterId:int) : void
+      private function pushReflectedDamagesStep(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushReflectedSpellStep(fighterId:int) : void
+      private function pushReflectedSpellStep(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushSpellCastStep(fighterId:int, cellId:int, sourceCellId:int, spellId:int, spellRank:uint, critical:uint) : void
+      private function pushSpellCastStep(param1:int, param2:int, param3:int, param4:int, param5:uint, param6:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushCloseCombatStep(fighterId:int, closeCombatWeaponId:uint, critical:uint) : void
+      private function pushCloseCombatStep(param1:int, param2:uint, param3:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushStealKamasStep(robberId:int, victimId:int, amount:uint) : void
+      private function pushStealKamasStep(param1:int, param2:int, param3:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushTackledStep(fighterId:int) : void
+      private function pushTackledStep(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushMarkTriggeredStep(fighterId:int, casterId:int, markId:int) : void
+      private function pushMarkTriggeredStep(param1:int, param2:int, param3:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushDisplayBuffStep(buff:BasicBuff) : void
+      private function pushDisplayBuffStep(param1:BasicBuff) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushModifyEffectsDurationStep(sourceId:int, targetId:int, delta:int) : void
+      private function pushModifyEffectsDurationStep(param1:int, param2:int, param3:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushCarryCharacterStep(fighterId:int, carriedId:int, cellId:int) : void
+      private function pushCarryCharacterStep(param1:int, param2:int, param3:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushThrowCharacterStep(fighterId:int, carriedId:int, cellId:int) : void
+      private function pushThrowCharacterStep(param1:int, param2:int, param3:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushFightInvisibleTemporarilyDetectedStep(targetId:int, cellId:uint) : void
+      private function pushFightInvisibleTemporarilyDetectedStep(param1:int, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function pushTurnListStep(turnsList:Vector.<int>, deadTurnsList:Vector.<int>) : void
+      private function pushTurnListStep(param1:Vector.<int>, param2:Vector.<int>) : void
       {
          //Décompilation abandonné
       }
@@ -495,7 +495,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      private function showTargetTooltip(pEntityId:int) : void
+      private function showTargetTooltip(param1:int) : void
       {
          //Décompilation abandonné
       }

@@ -22,7 +22,7 @@ package com.ankamagames.dofus.types.entities
       //Décompilation abandonné
       }
       
-      public function RoleplayObjectEntity(pId:int, pPosition:MapPoint)
+      public function RoleplayObjectEntity(param1:int, param2:MapPoint)
       {
          //Décompilation abandonné
       }
@@ -42,7 +42,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set id(nValue:int) : void
+      public function set id(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -52,7 +52,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set position(oValue:MapPoint) : void
+      public function set position(param1:MapPoint) : void
       {
          //Décompilation abandonné
       }
@@ -67,7 +67,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set displayBehaviors(oValue:IDisplayBehavior) : void
+      public function set displayBehaviors(param1:IDisplayBehavior) : void
       {
          //Décompilation abandonné
       }
@@ -92,7 +92,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function display(strata:uint = 10) : void
+      public function display(param1:uint = 10) : void
       {
          //Décompilation abandonné
       }

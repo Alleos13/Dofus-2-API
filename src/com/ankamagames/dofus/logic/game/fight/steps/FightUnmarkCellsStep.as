@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightUnmarkCellsStep(markId:int)
+      public function FightUnmarkCellsStep(param1:int)
       {
          //Décompilation abandonné
       }

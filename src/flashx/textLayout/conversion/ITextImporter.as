@@ -10,20 +10,20 @@ package flashx.textLayout.conversion
       //Décompilation abandonné
       }
       
-      function importToFlow(source:Object) : TextFlow;
+      function importToFlow(param1:Object) : TextFlow;
       
       function get errors() : Vector.<String>;
       
       function get throwOnError() : Boolean;
       
-      function set throwOnError(value:Boolean) : void;
+      function set throwOnError(param1:Boolean) : void;
       
       function get useClipboardAnnotations() : Boolean;
       
-      function set useClipboardAnnotations(value:Boolean) : void;
+      function set useClipboardAnnotations(param1:Boolean) : void;
       
       function get configuration() : IConfiguration;
       
-      function set configuration(value:IConfiguration) : void;
+      function set configuration(param1:IConfiguration) : void;
    }
 }

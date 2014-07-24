@@ -12,7 +12,7 @@ package com.ankamagames.jerakine.data
       //Décompilation abandonné
       }
       
-      public function GameDataProcess(stream:IDataInput)
+      public function GameDataProcess(param1:IDataInput)
       {
          //Décompilation abandonné
       }
@@ -36,37 +36,37 @@ package com.ankamagames.jerakine.data
          //Décompilation abandonné
       }
       
-      public function getFieldType(fieldName:String) : int
+      public function getFieldType(param1:String) : int
       {
          //Décompilation abandonné
       }
       
-      public function query(fieldName:String, match:Function) : Vector.<uint>
+      public function query(param1:String, param2:Function) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public function queryEquals(fieldName:String, value:*) : Vector.<uint>
+      public function queryEquals(param1:String, param2:*) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public function sort(fieldNames:*, ids:Vector.<uint>, ascending:* = true) : Vector.<uint>
+      public function sort(param1:*, param2:Vector.<uint>, param3:* = true) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      private function getSortFunction(fieldNames:*, ascending:*) : Function
+      private function getSortFunction(param1:*, param2:*) : Function
       {
          //Décompilation abandonné
       }
       
-      private function buildSortIndex(fieldName:String) : void
+      private function buildSortIndex(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function buildI18nSortIndex(fieldName:String) : void
+      private function buildI18nSortIndex(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -76,7 +76,7 @@ package com.ankamagames.jerakine.data
          //Décompilation abandonné
       }
       
-      private function getReadFunction(type:int) : Function
+      private function getReadFunction(param1:int) : Function
       {
          //Décompilation abandonné
       }

@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.types.game.prism
          //Décompilation abandonné
       }
       
-      public function initPrismInformation(typeId:uint = 0, state:uint = 1, nextVulnerabilityDate:uint = 0, placementDate:uint = 0, rewardTokenCount:uint = 0) : PrismInformation
+      public function initPrismInformation(param1:uint = 0, param2:uint = 1, param3:uint = 0, param4:uint = 0, param5:uint = 0) : PrismInformation
       {
          //Décompilation abandonné
       }
@@ -43,22 +43,22 @@ package com.ankamagames.dofus.network.types.game.prism
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PrismInformation(output:IDataOutput) : void
+      public function serializeAs_PrismInformation(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PrismInformation(input:IDataInput) : void
+      public function deserializeAs_PrismInformation(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

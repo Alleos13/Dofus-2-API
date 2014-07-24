@@ -31,22 +31,22 @@ package com.ankamagames.dofus.logic.common.managers
       
       private static var _monsterId:uint = 0;
       
-      public static function showMonster(monsterId:uint) : void
+      public static function showMonster(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public static function addMonster(monsterId:uint) : String
+      public static function addMonster(param1:uint) : String
       {
          //Décompilation abandonné
       }
       
-      public static function getMonsterName(monsterId:uint) : String
+      public static function getMonsterName(param1:uint) : String
       {
          //Décompilation abandonné
       }
       
-      public static function rollOver(pX:int, pY:int, objectGID:uint, monsterId:uint = 0) : void
+      public static function rollOver(param1:int, param2:int, param3:uint, param4:uint = 0) : void
       {
          //Décompilation abandonné
       }

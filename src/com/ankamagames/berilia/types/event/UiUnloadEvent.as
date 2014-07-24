@@ -9,7 +9,7 @@ package com.ankamagames.berilia.types.event
       //Décompilation abandonné
       }
       
-      public function UiUnloadEvent(type:String, name:String)
+      public function UiUnloadEvent(param1:String, param2:String)
       {
          //Décompilation abandonné
       }

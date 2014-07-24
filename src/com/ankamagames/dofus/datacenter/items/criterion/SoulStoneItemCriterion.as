@@ -13,7 +13,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function SoulStoneItemCriterion(pCriterion:String)
+      public function SoulStoneItemCriterion(param1:String)
       {
          //Décompilation abandonné
       }

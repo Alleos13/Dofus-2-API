@@ -20,7 +20,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightSummonStep(summonerId:int, summonInfos:GameFightFighterInformations)
+      public function FightSummonStep(param1:int, param2:GameFightFighterInformations)
       {
          //Décompilation abandonné
       }

@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.friend
          //Décompilation abandonné
       }
       
-      public function initAbstractContactInformations(accountId:uint = 0, accountName:String = "") : AbstractContactInformations
+      public function initAbstractContactInformations(param1:uint = 0, param2:String = "") : AbstractContactInformations
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.friend
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AbstractContactInformations(output:IDataOutput) : void
+      public function serializeAs_AbstractContactInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AbstractContactInformations(input:IDataInput) : void
+      public function deserializeAs_AbstractContactInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

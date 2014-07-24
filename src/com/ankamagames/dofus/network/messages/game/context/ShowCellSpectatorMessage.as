@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.messages.game.context
          //Décompilation abandonné
       }
       
-      public function initShowCellSpectatorMessage(sourceId:int = 0, cellId:uint = 0, playerName:String = "") : ShowCellSpectatorMessage
+      public function initShowCellSpectatorMessage(param1:int = 0, param2:uint = 0, param3:String = "") : ShowCellSpectatorMessage
       {
          //Décompilation abandonné
       }
@@ -43,32 +43,32 @@ package com.ankamagames.dofus.network.messages.game.context
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ShowCellSpectatorMessage(output:IDataOutput) : void
+      public function serializeAs_ShowCellSpectatorMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ShowCellSpectatorMessage(input:IDataInput) : void
+      public function deserializeAs_ShowCellSpectatorMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

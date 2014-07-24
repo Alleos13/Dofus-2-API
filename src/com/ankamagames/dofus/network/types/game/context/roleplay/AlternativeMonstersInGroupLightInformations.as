@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initAlternativeMonstersInGroupLightInformations(playerCount:int = 0, monsters:Vector.<MonsterInGroupLightInformations> = null) : AlternativeMonstersInGroupLightInformations
+      public function initAlternativeMonstersInGroupLightInformations(param1:int = 0, param2:Vector.<MonsterInGroupLightInformations> = null) : AlternativeMonstersInGroupLightInformations
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AlternativeMonstersInGroupLightInformations(output:IDataOutput) : void
+      public function serializeAs_AlternativeMonstersInGroupLightInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AlternativeMonstersInGroupLightInformations(input:IDataInput) : void
+      public function deserializeAs_AlternativeMonstersInGroupLightInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -9,7 +9,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function VideoConnectSuccessMessage(target:InteractiveObject)
+      public function VideoConnectSuccessMessage(param1:InteractiveObject)
       {
          //Décompilation abandonné
       }

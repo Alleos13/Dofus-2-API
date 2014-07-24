@@ -29,27 +29,27 @@ package com.ankamagames.dofus.console.debug
       
       protected static const _log:Logger;
       
-      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void
+      public function handle(param1:ConsoleHandler, param2:String, param3:Array) : void
       {
          //Décompilation abandonné
       }
       
-      public function getHelp(cmd:String) : String
+      public function getHelp(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      private function getParams(data:Array, types:Array) : Array
+      private function getParams(param1:Array, param2:Array) : Array
       {
          //Décompilation abandonné
       }
       
-      private function getParam(value:String, type:String) : *
+      private function getParam(param1:String, param2:String) : *
       {
          //Décompilation abandonné
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array
+      public function getParamPossibilities(param1:String, param2:uint = 0, param3:Array = null) : Array
       {
          //Décompilation abandonné
       }

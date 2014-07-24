@@ -17,7 +17,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightActionPointsVariationStep(entityId:int, value:int, voluntarlyUsed:Boolean, updateFighterInfos:Boolean = true, showChatmessage:Boolean = true)
+      public function FightActionPointsVariationStep(param1:int, param2:int, param3:Boolean, param4:Boolean = true, param5:Boolean = true)
       {
          //Décompilation abandonné
       }

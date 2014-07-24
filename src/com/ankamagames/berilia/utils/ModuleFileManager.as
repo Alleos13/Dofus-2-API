@@ -34,57 +34,57 @@ package com.ankamagames.berilia.utils
       
       private var _moduleFilesNum:Dictionary;
       
-      public function initModuleFiles(moduleId:String) : void
+      public function initModuleFiles(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateModuleSize(moduleId:String, delta:int) : void
+      public function updateModuleSize(param1:String, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateModuleFileNum(moduleId:String, delta:int) : void
+      public function updateModuleFileNum(param1:String, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function canCreateFiles(moduleId:String, amount:uint = 0) : Boolean
+      public function canCreateFiles(param1:String, param2:uint = 0) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function canAddSize(moduleId:String, amount:uint = 0) : Boolean
+      public function canAddSize(param1:String, param2:uint = 0) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getAvaibleSpace(moduleId:String) : uint
+      public function getAvaibleSpace(param1:String) : uint
       {
          //Décompilation abandonné
       }
       
-      public function getUsedSpace(moduleId:String) : uint
+      public function getUsedSpace(param1:String) : uint
       {
          //Décompilation abandonné
       }
       
-      public function getMaxSpace(moduleId:String) : uint
+      public function getMaxSpace(param1:String) : uint
       {
          //Décompilation abandonné
       }
       
-      public function getMaxFileCount(moduleId:String) : uint
+      public function getMaxFileCount(param1:String) : uint
       {
          //Décompilation abandonné
       }
       
-      public function getUsedFileCount(moduleId:String) : uint
+      public function getUsedFileCount(param1:String) : uint
       {
          //Décompilation abandonné
       }
       
-      private function updateFolderSize(folder:File, moduleId:String) : void
+      private function updateFolderSize(param1:File, param2:String) : void
       {
          //Décompilation abandonné
       }

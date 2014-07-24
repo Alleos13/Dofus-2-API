@@ -23,37 +23,37 @@ package flashx.textLayout.elements
       
       protected var _lineDict:Dictionary;
       
-      public function addRect(tl:TextLine, fle:FlowLeafElement, r:Rectangle, color:uint, alpha:Number) : void
+      public function addRect(param1:TextLine, param2:FlowLeafElement, param3:Rectangle, param4:uint, param5:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function addNumberLine(tl:TextLine, numberLine:TextLine) : void
+      public function addNumberLine(param1:TextLine, param2:TextLine) : void
       {
          //Décompilation abandonné
       }
       
-      public function finalizeLine(line:TextFlowLine) : void
+      public function finalizeLine(param1:TextFlowLine) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function getEntry(line:TextLine) : *
+      tlf_internal function getEntry(param1:TextLine) : *
       {
          //Décompilation abandonné
       }
       
-      public function drawAllRects(textFlow:TextFlow, bgShape:Shape, constrainWidth:Number, constrainHeight:Number) : void
+      public function drawAllRects(param1:TextFlow, param2:Shape, param3:Number, param4:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeLineFromCache(tl:TextLine) : void
+      public function removeLineFromCache(param1:TextLine) : void
       {
          //Décompilation abandonné
       }
       
-      public function onUpdateComplete(controller:ContainerController) : void
+      public function onUpdateComplete(param1:ContainerController) : void
       {
          //Décompilation abandonné
       }

@@ -12,7 +12,7 @@ package flashx.textLayout.property
          //Décompilation abandonné
       }
       
-      public static function createRange(rest:Array) : Object
+      public static function createRange(param1:Array) : Object
       {
          //Décompilation abandonné
       }
@@ -22,17 +22,17 @@ package flashx.textLayout.property
          //Décompilation abandonné
       }
       
-      public function toXMLString(val:Object) : String
+      public function toXMLString(param1:Object) : String
       {
          //Décompilation abandonné
       }
       
-      public function owningHandlerCheck(newVal:*) : *
+      public function owningHandlerCheck(param1:*) : *
       {
          //Décompilation abandonné
       }
       
-      public function setHelper(newVal:*) : *
+      public function setHelper(param1:*) : *
       {
          //Décompilation abandonné
       }

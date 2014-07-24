@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.fight.actions
          //Décompilation abandonné
       }
       
-      public static function create(targetId:uint) : GameContextKickAction
+      public static function create(param1:uint) : GameContextKickAction
       {
          //Décompilation abandonné
       }

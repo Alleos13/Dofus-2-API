@@ -13,7 +13,7 @@ package gs
       //Décompilation abandonné
       }
       
-      public function TweenMax($target:Object, $duration:Number, $vars:Object)
+      public function TweenMax(param1:Object, param2:Number, param3:Object)
       {
          //Décompilation abandonné
       }
@@ -34,57 +34,57 @@ package gs
       
       protected static var _pausedTweens:Dictionary;
       
-      public static function to($target:Object, $duration:Number, $vars:Object) : TweenMax
+      public static function to(param1:Object, param2:Number, param3:Object) : TweenMax
       {
          //Décompilation abandonné
       }
       
-      public static function from($target:Object, $duration:Number, $vars:Object) : TweenMax
+      public static function from(param1:Object, param2:Number, param3:Object) : TweenMax
       {
          //Décompilation abandonné
       }
       
-      public static function allTo($targets:Array, $duration:Number, $vars:Object) : Array
+      public static function allTo(param1:Array, param2:Number, param3:Object) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function allFrom($targets:Array, $duration:Number, $vars:Object) : Array
+      public static function allFrom(param1:Array, param2:Number, param3:Object) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function callbackProxy($functions:Array, $params:Array = null) : void
+      public static function callbackProxy(param1:Array, param2:Array = null) : void
       {
          //Décompilation abandonné
       }
       
-      public static function sequence($target:Object, $tweens:Array) : Array
+      public static function sequence(param1:Object, param2:Array) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function multiSequence($tweens:Array) : Array
+      public static function multiSequence(param1:Array) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function delayedCall($delay:Number, $onComplete:Function, $onCompleteParams:Array = null, $persist:Boolean = false) : TweenMax
+      public static function delayedCall(param1:Number, param2:Function, param3:Array = null, param4:Boolean = false) : TweenMax
       {
          //Décompilation abandonné
       }
       
-      public static function parseBeziers($props:Object, $through:Boolean = false) : Object
+      public static function parseBeziers(param1:Object, param2:Boolean = false) : Object
       {
          //Décompilation abandonné
       }
       
-      public static function getTweensOf($target:Object) : Array
+      public static function getTweensOf(param1:Object) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function isTweening($target:Object) : Boolean
+      public static function isTweening(param1:Object) : Boolean
       {
          //Décompilation abandonné
       }
@@ -94,52 +94,52 @@ package gs
          //Décompilation abandonné
       }
       
-      public static function killAllTweens($complete:Boolean = false) : void
+      public static function killAllTweens(param1:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public static function killAllDelayedCalls($complete:Boolean = false) : void
+      public static function killAllDelayedCalls(param1:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public static function killAll($complete:Boolean = false, $tweens:Boolean = true, $delayedCalls:Boolean = true) : void
+      public static function killAll(param1:Boolean = false, param2:Boolean = true, param3:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public static function pauseAll($tweens:Boolean = true, $delayedCalls:Boolean = false) : void
+      public static function pauseAll(param1:Boolean = true, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public static function resumeAll($tweens:Boolean = true, $delayedCalls:Boolean = false) : void
+      public static function resumeAll(param1:Boolean = true, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public static function changePause($pause:Boolean, $tweens:Boolean = true, $delayedCalls:Boolean = false) : void
+      public static function changePause(param1:Boolean, param2:Boolean = true, param3:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public static function hexColorsProxy($o:Object, $time:Number = 0) : void
+      public static function hexColorsProxy(param1:Object, param2:Number = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public static function bezierProxy($o:Object, $time:Number = 0) : void
+      public static function bezierProxy(param1:Object, param2:Number = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public static function bezierProxy2($o:Object, $time:Number = 0) : void
+      public static function bezierProxy2(param1:Object, param2:Number = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public static function set globalTimeScale($n:Number) : void
+      public static function set globalTimeScale(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -157,7 +157,7 @@ package gs
       
       public var pauseTime:Number;
       
-      override public function initTweenVals($hrp:Boolean = false, $reservedProps:String = "") : void
+      override public function initTweenVals(param1:Boolean = false, param2:String = "") : void
       {
          //Décompilation abandonné
       }
@@ -172,27 +172,27 @@ package gs
          //Décompilation abandonné
       }
       
-      public function restart($includeDelay:Boolean = false) : void
+      public function restart(param1:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function reverse($adjustDuration:Boolean = true, $forcePlay:Boolean = true) : void
+      public function reverse(param1:Boolean = true, param2:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function reverseEase($t:Number, $b:Number, $c:Number, $d:Number) : Number
+      public function reverseEase(param1:Number, param2:Number, param3:Number, param4:Number) : Number
       {
          //Décompilation abandonné
       }
       
-      public function invalidate($adjustStartValues:Boolean = true) : void
+      public function invalidate(param1:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function setDestination($property:String, $value:*, $adjustStartValues:Boolean = true) : void
+      public function setDestination(param1:String, param2:*, param3:Boolean = true) : void
       {
          //Décompilation abandonné
       }
@@ -202,12 +202,12 @@ package gs
          //Décompilation abandonné
       }
       
-      public function killProperties($names:Array) : void
+      public function killProperties(param1:Array) : void
       {
          //Décompilation abandonné
       }
       
-      override public function complete($skipRender:Boolean = false) : void
+      override public function complete(param1:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -217,42 +217,42 @@ package gs
          //Décompilation abandonné
       }
       
-      protected function onStartDispatcher(... $args) : void
+      protected function onStartDispatcher(... rest) : void
       {
          //Décompilation abandonné
       }
       
-      protected function onUpdateDispatcher(... $args) : void
+      protected function onUpdateDispatcher(... rest) : void
       {
          //Décompilation abandonné
       }
       
-      protected function onCompleteDispatcher(... $args) : void
+      protected function onCompleteDispatcher(... rest) : void
       {
          //Décompilation abandonné
       }
       
-      public function addEventListener($type:String, $listener:Function, $useCapture:Boolean = false, $priority:int = 0, $useWeakReference:Boolean = false) : void
+      public function addEventListener(param1:String, param2:Function, param3:Boolean = false, param4:int = 0, param5:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeEventListener($type:String, $listener:Function, $useCapture:Boolean = false) : void
+      public function removeEventListener(param1:String, param2:Function, param3:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function hasEventListener($type:String) : Boolean
+      public function hasEventListener(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function willTrigger($type:String) : Boolean
+      public function willTrigger(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function dispatchEvent($e:Event) : Boolean
+      public function dispatchEvent(param1:Event) : Boolean
       {
          //Décompilation abandonné
       }
@@ -262,7 +262,7 @@ package gs
          //Décompilation abandonné
       }
       
-      public function set paused($b:Boolean) : void
+      public function set paused(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -272,12 +272,12 @@ package gs
          //Décompilation abandonné
       }
       
-      public function set reversed($b:Boolean) : void
+      public function set reversed(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set enabled($b:Boolean) : void
+      override public function set enabled(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -287,7 +287,7 @@ package gs
          //Décompilation abandonné
       }
       
-      public function set progress($n:Number) : void
+      public function set progress(param1:Number) : void
       {
          //Décompilation abandonné
       }

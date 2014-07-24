@@ -35,12 +35,12 @@ package com.ankamagames.jerakine.pathfinding
       
       private static var _self:Pathfinding;
       
-      public static function init(minX:int, maxX:int, minY:int, maxY:int) : void
+      public static function init(param1:int, param2:int, param3:int, param4:int) : void
       {
          //Décompilation abandonné
       }
       
-      public static function findPath(map:IDataMapProvider, start:MapPoint, end:MapPoint, allowDiag:Boolean = true, bAllowTroughEntity:Boolean = true, callBack:Function = null, args:Array = null, bIsFighting:Boolean = false) : MovementPath
+      public static function findPath(param1:IDataMapProvider, param2:MapPoint, param3:MapPoint, param4:Boolean = true, param5:Boolean = true, param6:Function = null, param7:Array = null, param8:Boolean = false) : MovementPath
       {
          //Décompilation abandonné
       }
@@ -107,17 +107,17 @@ package com.ankamagames.jerakine.pathfinding
       
       private var _previousCellId:int;
       
-      public function processFindPath(map:IDataMapProvider, start:MapPoint, end:MapPoint, allowDiag:Boolean = true, bAllowTroughEntity:Boolean = true, callBack:Function = null, args:Array = null, bIsFighting:Boolean = false) : MovementPath
+      public function processFindPath(param1:IDataMapProvider, param2:MapPoint, param3:MapPoint, param4:Boolean = true, param5:Boolean = true, param6:Function = null, param7:Array = null, param8:Boolean = false) : MovementPath
       {
          //Décompilation abandonné
       }
       
-      private function isOpened(y:int, x:int) : Boolean
+      private function isOpened(param1:int, param2:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function isClosed(y:int, x:int) : Boolean
+      private function isClosed(param1:int, param2:int) : Boolean
       {
          //Décompilation abandonné
       }
@@ -127,17 +127,17 @@ package com.ankamagames.jerakine.pathfinding
          //Décompilation abandonné
       }
       
-      private function closeSquare(y:int, x:int) : void
+      private function closeSquare(param1:int, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function openSquare(y:int, x:int, parent:Array, movementCost:uint, heuristic:Number, replacing:Boolean) : void
+      private function openSquare(param1:int, param2:int, param3:Array, param4:uint, param5:Number, param6:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      private function movementPathFromArray(returnPath:Array) : void
+      private function movementPathFromArray(param1:Array) : void
       {
          //Décompilation abandonné
       }
@@ -147,7 +147,7 @@ package com.ankamagames.jerakine.pathfinding
          //Décompilation abandonné
       }
       
-      private function pathFrame(E:Event) : void
+      private function pathFrame(param1:Event) : void
       {
          //Décompilation abandonné
       }
@@ -157,17 +157,17 @@ package com.ankamagames.jerakine.pathfinding
          //Décompilation abandonné
       }
       
-      private function findPathInternal(map:IDataMapProvider, start:MapPoint, end:MapPoint, allowDiag:Boolean) : void
+      private function findPathInternal(param1:IDataMapProvider, param2:MapPoint, param3:MapPoint, param4:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      private function tracePath(returnPath:Array) : void
+      private function tracePath(param1:Array) : void
       {
          //Décompilation abandonné
       }
       
-      private function nearObstacle(x:int, y:int, map:IDataMapProvider) : int
+      private function nearObstacle(param1:int, param2:int, param3:IDataMapProvider) : int
       {
          //Décompilation abandonné
       }

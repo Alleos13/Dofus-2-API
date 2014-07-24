@@ -10,10 +10,10 @@ package com.ankamagames.jerakine.entities.behaviours
       //Décompilation abandonné
       }
       
-      function getAbsoluteBounds(entity:IDisplayable) : IRectangle;
+      function getAbsoluteBounds(param1:IDisplayable) : IRectangle;
       
-      function display(entity:IDisplayable, strata:uint = 0) : void;
+      function display(param1:IDisplayable, param2:uint = 0) : void;
       
-      function remove(entity:IDisplayable) : void;
+      function remove(param1:IDisplayable) : void;
    }
 }

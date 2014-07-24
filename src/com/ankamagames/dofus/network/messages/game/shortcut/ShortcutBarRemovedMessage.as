@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.game.shortcut
          //Décompilation abandonné
       }
       
-      public function initShortcutBarRemovedMessage(barType:uint = 0, slot:uint = 0) : ShortcutBarRemovedMessage
+      public function initShortcutBarRemovedMessage(param1:uint = 0, param2:uint = 0) : ShortcutBarRemovedMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.game.shortcut
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ShortcutBarRemovedMessage(output:IDataOutput) : void
+      public function serializeAs_ShortcutBarRemovedMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ShortcutBarRemovedMessage(input:IDataInput) : void
+      public function deserializeAs_ShortcutBarRemovedMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

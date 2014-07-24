@@ -52,7 +52,7 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      public function initFightResultExperienceData(experience:Number = 0, showExperience:Boolean = false, experienceLevelFloor:Number = 0, showExperienceLevelFloor:Boolean = false, experienceNextLevelFloor:Number = 0, showExperienceNextLevelFloor:Boolean = false, experienceFightDelta:int = 0, showExperienceFightDelta:Boolean = false, experienceForGuild:uint = 0, showExperienceForGuild:Boolean = false, experienceForMount:uint = 0, showExperienceForMount:Boolean = false, isIncarnationExperience:Boolean = false, rerollExperienceMul:int = 0) : FightResultExperienceData
+      public function initFightResultExperienceData(param1:Number = 0, param2:Boolean = false, param3:Number = 0, param4:Boolean = false, param5:Number = 0, param6:Boolean = false, param7:int = 0, param8:Boolean = false, param9:uint = 0, param10:Boolean = false, param11:uint = 0, param12:Boolean = false, param13:Boolean = false, param14:int = 0) : FightResultExperienceData
       {
          //Décompilation abandonné
       }
@@ -62,22 +62,22 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_FightResultExperienceData(output:IDataOutput) : void
+      public function serializeAs_FightResultExperienceData(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_FightResultExperienceData(input:IDataInput) : void
+      public function deserializeAs_FightResultExperienceData(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

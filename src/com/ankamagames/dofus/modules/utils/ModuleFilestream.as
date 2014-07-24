@@ -20,7 +20,7 @@ package com.ankamagames.dofus.modules.utils
       //Décompilation abandonné
       }
       
-      public function ModuleFilestream(name:String, fileMode:String, module:UiModule)
+      public function ModuleFilestream(param1:String, param2:String, param3:UiModule)
       {
          //Décompilation abandonné
       }
@@ -37,12 +37,12 @@ package com.ankamagames.dofus.modules.utils
       
       public static const MODULE_FILE_HEADER:String = "Ankama DOFUS 2 module File";
       
-      public static function checkCreation(url:String, module:UiModule) : File
+      public static function checkCreation(param1:String, param2:UiModule) : File
       {
          //Décompilation abandonné
       }
       
-      public static function cleanUrl(url:String) : String
+      public static function cleanUrl(param1:String) : String
       {
          //Décompilation abandonné
       }
@@ -68,7 +68,7 @@ package com.ankamagames.dofus.modules.utils
          //Décompilation abandonné
       }
       
-      public function set objectEncoding(version:uint) : void
+      public function set objectEncoding(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -83,7 +83,7 @@ package com.ankamagames.dofus.modules.utils
          //Décompilation abandonné
       }
       
-      public function set endian(type:String) : void
+      public function set endian(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -98,7 +98,7 @@ package com.ankamagames.dofus.modules.utils
          //Décompilation abandonné
       }
       
-      public function set position(offset:uint) : void
+      public function set position(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -108,7 +108,7 @@ package com.ankamagames.dofus.modules.utils
          //Décompilation abandonné
       }
       
-      public function readBytes(bytes:ByteArray, offset:uint = 0, length:uint = 0) : void
+      public function readBytes(param1:ByteArray, param2:uint = 0, param3:uint = 0) : void
       {
          //Décompilation abandonné
       }
@@ -158,7 +158,7 @@ package com.ankamagames.dofus.modules.utils
          //Décompilation abandonné
       }
       
-      public function readMultiByte(length:uint, charSet:String) : String
+      public function readMultiByte(param1:uint, param2:String) : String
       {
          //Décompilation abandonné
       }
@@ -168,7 +168,7 @@ package com.ankamagames.dofus.modules.utils
          //Décompilation abandonné
       }
       
-      public function readUTFBytes(length:uint) : String
+      public function readUTFBytes(param1:uint) : String
       {
          //Décompilation abandonné
       }
@@ -178,67 +178,67 @@ package com.ankamagames.dofus.modules.utils
          //Décompilation abandonné
       }
       
-      public function writeBytes(bytes:ByteArray, offset:uint = 0, length:uint = 0) : void
+      public function writeBytes(param1:ByteArray, param2:uint = 0, param3:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function writeBoolean(value:Boolean) : void
+      public function writeBoolean(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function writeByte(value:int) : void
+      public function writeByte(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function writeShort(value:int) : void
+      public function writeShort(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function writeInt(value:int) : void
+      public function writeInt(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function writeUnsignedInt(value:uint) : void
+      public function writeUnsignedInt(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function writeFloat(value:Number) : void
+      public function writeFloat(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function writeDouble(value:Number) : void
+      public function writeDouble(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function writeMultiByte(value:String, charSet:String) : void
+      public function writeMultiByte(param1:String, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function writeUTF(value:String) : void
+      public function writeUTF(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function writeUTFBytes(value:String) : void
+      public function writeUTFBytes(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function writeObject(object:*) : void
+      public function writeObject(param1:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function check(dataLength:uint) : Boolean
+      private function check(param1:uint) : Boolean
       {
          //Décompilation abandonné
       }

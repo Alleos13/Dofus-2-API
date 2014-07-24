@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.messages.game.character.stats
          //Décompilation abandonné
       }
       
-      public function initCharacterLevelUpInformationMessage(newLevel:uint = 0, name:String = "", id:uint = 0) : CharacterLevelUpInformationMessage
+      public function initCharacterLevelUpInformationMessage(param1:uint = 0, param2:String = "", param3:uint = 0) : CharacterLevelUpInformationMessage
       {
          //Décompilation abandonné
       }
@@ -45,32 +45,32 @@ package com.ankamagames.dofus.network.messages.game.character.stats
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterLevelUpInformationMessage(output:IDataOutput) : void
+      public function serializeAs_CharacterLevelUpInformationMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterLevelUpInformationMessage(input:IDataInput) : void
+      public function deserializeAs_CharacterLevelUpInformationMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -12,20 +12,20 @@ package com.ankamagames.berilia.interfaces
       //Décompilation abandonné
       }
       
-      function set grid(g:Grid) : void;
+      function set grid(param1:Grid) : void;
       
-      function render(data:*, index:uint, selected:Boolean, subIndex:uint = 0) : DisplayObject;
+      function render(param1:*, param2:uint, param3:Boolean, param4:uint = 0) : DisplayObject;
       
-      function update(data:*, index:uint, target:DisplayObject, selected:Boolean, subIndex:uint = 0) : void;
+      function update(param1:*, param2:uint, param3:DisplayObject, param4:Boolean, param5:uint = 0) : void;
       
-      function remove(dispObj:DisplayObject) : void;
+      function remove(param1:DisplayObject) : void;
       
       function destroy() : void;
       
-      function renderModificator(childs:Array) : Array;
+      function renderModificator(param1:Array) : Array;
       
-      function eventModificator(msg:Message, functionName:String, args:Array, target:UIComponent) : String;
+      function eventModificator(param1:Message, param2:String, param3:Array, param4:UIComponent) : String;
       
-      function getDataLength(data:*, selected:Boolean) : uint;
+      function getDataLength(param1:*, param2:Boolean) : uint;
    }
 }

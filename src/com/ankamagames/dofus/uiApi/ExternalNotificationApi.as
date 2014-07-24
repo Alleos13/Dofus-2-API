@@ -25,7 +25,7 @@ package com.ankamagames.dofus.uiApi
       
       private var _module:UiModule;
       
-      public function set module(value:UiModule) : void
+      public function set module(param1:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function setMaxNotifications(pValue:int) : void
+      public function setMaxNotifications(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function setNotificationsMode(pValue:int) : void
+      public function setNotificationsMode(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function setDisplayDuration(pValueId:int) : void
+      public function setDisplayDuration(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function isExternalNotificationTypeIgnored(pExternalNotificationType:int) : Boolean
+      public function isExternalNotificationTypeIgnored(param1:int) : Boolean
       {
          //Décompilation abandonné
       }
@@ -65,22 +65,22 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function canAddExternalNotification(pExternalNotificationType:int) : Boolean
+      public function canAddExternalNotification(param1:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function addExternalNotification(pNotificationType:int, pId:String, pUiName:String, pTitle:String, pMessage:String, pIconPath:String, pIconId:int, pIconBg:String, pCss:String = "normal", pCssClass:String = "p", pEntityContactData:Object = null, pSoundId:String = "16011", pAlwaysShow:Boolean = false, pHookName:String = null, pHookParams:Array = null) : String
+      public function addExternalNotification(param1:int, param2:String, param3:String, param4:String, param5:String, param6:String, param7:int, param8:String, param9:String = "normal", param10:String = "p", param11:Object = null, param12:String = "16011", param13:Boolean = false, param14:String = null, param15:Array = null) : String
       {
          //Décompilation abandonné
       }
       
-      public function removeExternalNotification(pInstanceId:String, pActivateClientWindow:Boolean = false) : void
+      public function removeExternalNotification(param1:String, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function resetExternalNotificationDisplayTimeout(pInstanceId:String) : void
+      public function resetExternalNotificationDisplayTimeout(param1:String) : void
       {
          //Décompilation abandonné
       }

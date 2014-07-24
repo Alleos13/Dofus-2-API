@@ -21,7 +21,7 @@ package com.ankamagames.dofus.uiApi
       
       private var _module:UiModule;
       
-      public function set module(value:UiModule) : void
+      public function set module(param1:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -41,22 +41,22 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getShortcutBind(shortcutName:String, returnDisabled:Boolean = false) : Bind
+      public function getShortcutBind(param1:String, param2:Boolean = false) : Bind
       {
          //Décompilation abandonné
       }
       
-      public function setShortcutBind(targetedShorcut:String, key:String, alt:Boolean, ctrl:Boolean, shift:Boolean) : void
+      public function setShortcutBind(param1:String, param2:String, param3:Boolean, param4:Boolean, param5:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeShortcutBind(targetedBind:String) : void
+      public function removeShortcutBind(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function getShortcutBindStr(shortcutName:String, returnDisabled:Boolean = false) : String
+      public function getShortcutBindStr(param1:String, param2:Boolean = false) : String
       {
          //Décompilation abandonné
       }
@@ -71,7 +71,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function changeKeyboard(locale:String) : void
+      public function changeKeyboard(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -81,37 +81,37 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function bindIsRegister(bind:Bind) : Boolean
+      public function bindIsRegister(param1:Bind) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function bindIsPermanent(bind:Bind) : Boolean
+      public function bindIsPermanent(param1:Bind) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function bindIsDisabled(bind:Bind) : Boolean
+      public function bindIsDisabled(param1:Bind) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function setBindDisabled(bind:Bind, disabled:Boolean) : void
+      public function setBindDisabled(param1:Bind, param2:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function getRegisteredBind(bind:Bind) : Bind
+      public function getRegisteredBind(param1:Bind) : Bind
       {
          //Décompilation abandonné
       }
       
-      public function getShortcutByName(name:String) : Shortcut
+      public function getShortcutByName(param1:String) : Shortcut
       {
          //Décompilation abandonné
       }
       
-      public function setShortcutEnabled(enabled:Boolean) : void
+      public function setShortcutEnabled(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -121,12 +121,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function disableShortcut(name:String, val:Boolean) : void
+      public function disableShortcut(param1:String, param2:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function enableShortcutKey(keyCode:uint, charCode:uint, enabled:Boolean) : void
+      public function enableShortcutKey(param1:uint, param2:uint, param3:Boolean) : void
       {
          //Décompilation abandonné
       }

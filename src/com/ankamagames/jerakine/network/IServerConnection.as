@@ -11,11 +11,11 @@ package com.ankamagames.jerakine.network
       
       function get rawParser() : RawDataParser;
       
-      function set rawParser(value:RawDataParser) : void;
+      function set rawParser(param1:RawDataParser) : void;
       
       function get handler() : MessageHandler;
       
-      function set handler(value:MessageHandler) : void;
+      function set handler(param1:MessageHandler) : void;
       
       function get pauseBuffer() : Array;
       
@@ -29,9 +29,9 @@ package com.ankamagames.jerakine.network
       
       function get lagometer() : ILagometer;
       
-      function set lagometer(l:ILagometer) : void;
+      function set lagometer(param1:ILagometer) : void;
       
-      function connect(host:String, port:int) : void;
+      function connect(param1:String, param2:int) : void;
       
       function close() : void;
       
@@ -39,6 +39,6 @@ package com.ankamagames.jerakine.network
       
       function resume() : void;
       
-      function send(msg:INetworkMessage) : void;
+      function send(param1:INetworkMessage) : void;
    }
 }

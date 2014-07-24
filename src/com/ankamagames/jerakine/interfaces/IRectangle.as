@@ -11,22 +11,22 @@ package com.ankamagames.jerakine.interfaces
       
       function get x() : Number;
       
-      function set x(nValue:Number) : void;
+      function set x(param1:Number) : void;
       
       function get y() : Number;
       
-      function set y(nValue:Number) : void;
+      function set y(param1:Number) : void;
       
       function get width() : Number;
       
-      function set width(nValue:Number) : void;
+      function set width(param1:Number) : void;
       
       function get height() : Number;
       
-      function set height(nValue:Number) : void;
+      function set height(param1:Number) : void;
       
-      function localToGlobal(point:Point) : Point;
+      function localToGlobal(param1:Point) : Point;
       
-      function globalToLocal(point:Point) : Point;
+      function globalToLocal(param1:Point) : Point;
    }
 }

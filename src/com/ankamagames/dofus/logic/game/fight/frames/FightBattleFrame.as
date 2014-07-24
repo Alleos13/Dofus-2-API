@@ -162,7 +162,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      public function set fightersList(turnList:Vector.<int>) : void
+      public function set fightersList(param1:Vector.<int>) : void
       {
          //Décompilation abandonné
       }
@@ -172,7 +172,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      public function set deadFightersList(deadTurnList:Vector.<int>) : void
+      public function set deadFightersList(param1:Vector.<int>) : void
       {
          //Décompilation abandonné
       }
@@ -187,7 +187,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      public function set turnsCount(turn:uint) : void
+      public function set turnsCount(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -227,7 +227,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -237,12 +237,12 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      public function delayCharacterStatsList(msg:CharacterStatsListMessage) : void
+      public function delayCharacterStatsList(param1:CharacterStatsListMessage) : void
       {
          //Décompilation abandonné
       }
       
-      public function prepareNextPlayableCharacter(currentCharacterId:int = 0) : void
+      public function prepareNextPlayableCharacter(param1:int = 0) : void
       {
          //Décompilation abandonné
       }
@@ -257,17 +257,17 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      private function finishSequence(sequenceFrame:FightSequenceFrame) : Function
+      private function finishSequence(param1:FightSequenceFrame) : Function
       {
          //Décompilation abandonné
       }
       
-      private function sendAutoEndTurn(e:TimerEvent) : void
+      private function sendAutoEndTurn(param1:TimerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateTurnsList(turnsList:Vector.<int>, deadTurnsList:Vector.<int>) : void
+      private function updateTurnsList(param1:Vector.<int>, param2:Vector.<int>) : void
       {
          //Décompilation abandonné
       }
@@ -277,17 +277,17 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      private function endBattle(fightEnd:GameFightEndMessage) : void
+      private function endBattle(param1:GameFightEndMessage) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSkipTurnTimeOut(event:TimerEvent) : void
+      private function onSkipTurnTimeOut(param1:TimerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function gameFightSynchronize(fighters:Vector.<GameFightFighterInformations>, synchronizeBuff:Boolean = true) : void
+      private function gameFightSynchronize(param1:Vector.<GameFightFighterInformations>, param2:Boolean = true) : void
       {
          //Décompilation abandonné
       }
@@ -306,7 +306,7 @@ class PlayerColorTransformManager extends Object
    //Décompilation abandonné
    }
    
-   function PlayerColorTransformManager(pPlayer:AnimatedCharacter)
+   function PlayerColorTransformManager(param1:AnimatedCharacter)
    {
       //Décompilation abandonné
    }
@@ -317,7 +317,7 @@ class PlayerColorTransformManager extends Object
    
    private var _player:AnimatedCharacter;
    
-   public function set offSetValue(pValue:Number) : void
+   public function set offSetValue(param1:Number) : void
    {
       //Décompilation abandonné
    }

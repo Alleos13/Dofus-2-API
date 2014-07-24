@@ -50,7 +50,7 @@ package com.ankamagames.dofus.internalDatacenter.items
       
       private static var _properties:Array;
       
-      public static function create(slot:uint, id:uint, type:uint = 0, gid:uint = 0) : ShortcutWrapper
+      public static function create(param1:uint, param2:uint, param3:uint = 0, param4:uint = 0) : ShortcutWrapper
       {
          //Décompilation abandonné
       }
@@ -90,7 +90,7 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      public function set backGroundIconUri(bgUri:Uri) : void
+      public function set backGroundIconUri(param1:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -115,7 +115,7 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      public function set endTime(t:int) : void
+      public function set endTime(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -130,7 +130,7 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      public function set active(b:Boolean) : void
+      public function set active(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -140,37 +140,37 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      override flash_proxy function getProperty(name:*) : *
+      override flash_proxy function getProperty(param1:*) : *
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function callProperty(name:*, ... rest) : *
+      override flash_proxy function callProperty(param1:*, ... rest) : *
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function nextNameIndex(index:int) : int
+      override flash_proxy function nextNameIndex(param1:int) : int
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function nextName(index:int) : String
+      override flash_proxy function nextName(param1:int) : String
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function hasProperty(name:*) : Boolean
+      override flash_proxy function hasProperty(param1:*) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function update(slot:uint, id:uint, type:uint = 0, gid:uint = 0) : void
+      public function update(param1:uint, param2:uint, param3:uint = 0, param4:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function getIconUri(pngMode:Boolean = true) : Uri
+      public function getIconUri(param1:Boolean = true) : Uri
       {
          //Décompilation abandonné
       }
@@ -180,12 +180,12 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      public function addHolder(h:ISlotDataHolder) : void
+      public function addHolder(param1:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeHolder(h:ISlotDataHolder) : void
+      public function removeHolder(param1:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }

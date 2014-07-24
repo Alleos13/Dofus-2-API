@@ -44,27 +44,27 @@ package com.ankamagames.dofus.internalDatacenter.fight
       
       private var _uri:Uri;
       
-      public function set id(id:uint) : void
+      public function set id(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function set targetId(targetId:int) : void
+      public function set targetId(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function set xpBonus(xpBonus:uint) : void
+      public function set xpBonus(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function set dropBonus(dropBonus:uint) : void
+      public function set dropBonus(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function set result(result:uint) : void
+      public function set result(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -119,7 +119,7 @@ package com.ankamagames.dofus.internalDatacenter.fight
          //Décompilation abandonné
       }
       
-      override flash_proxy function getProperty(name:*) : *
+      override flash_proxy function getProperty(param1:*) : *
       {
          //Décompilation abandonné
       }

@@ -9,6 +9,6 @@ package flashx.textLayout.conversion
       
       function get imageSourceResolveFunction() : Function;
       
-      function set imageSourceResolveFunction(resolver:Function) : void;
+      function set imageSourceResolveFunction(param1:Function) : void;
    }
 }

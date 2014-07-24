@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.roleplay
          //Décompilation abandonné
       }
       
-      public static function create(fightId:uint, teamLeaderId:uint) : JoinFightRequestAction
+      public static function create(param1:uint, param2:uint) : JoinFightRequestAction
       {
          //Décompilation abandonné
       }

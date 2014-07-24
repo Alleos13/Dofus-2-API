@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.types.events
       //Décompilation abandonné
       }
       
-      public function LangFileEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, sUrl:String = null, sUrlProvider:String = null)
+      public function LangFileEvent(param1:String, param2:Boolean = false, param3:Boolean = false, param4:String = null, param5:String = null)
       {
          //Décompilation abandonné
       }

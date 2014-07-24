@@ -25,6 +25,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
    import com.ankamagames.berilia.managers.KernelEventsManager;
    import com.ankamagames.dofus.misc.lists.TriggerHookList;
    import com.ankamagames.dofus.logic.game.common.managers.MapMovementAdapter;
+   import com.ankamagames.jerakine.managers.OptionManager;
    import com.ankamagames.dofus.logic.game.roleplay.managers.AnimFunManager;
    import com.ankamagames.jerakine.entities.interfaces.IMovable;
    import com.ankamagames.dofus.kernel.net.ConnectionsHandler;
@@ -83,7 +84,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -93,7 +94,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      function setNextMoveMapChange(mapId:int) : void
+      function setNextMoveMapChange(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -103,22 +104,22 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      function setFollowingInteraction(interaction:Object) : void
+      function setFollowingInteraction(param1:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function setFollowingMessage(message:*) : void
+      public function setFollowingMessage(param1:*) : void
       {
          //Décompilation abandonné
       }
       
-      function askMoveTo(cell:MapPoint) : Boolean
+      function askMoveTo(param1:MapPoint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function sendPath(path:MovementPath) : void
+      private function sendPath(param1:MovementPath) : void
       {
          //Décompilation abandonné
       }
@@ -128,7 +129,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      function activateSkill(skillInstanceId:uint, ie:InteractiveElement) : void
+      function activateSkill(param1:uint, param2:InteractiveElement) : void
       {
          //Décompilation abandonné
       }

@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.social
          //Décompilation abandonné
       }
       
-      public static function create(reportedId:uint, reason:uint, name:String, channel:uint, fingerprint:String, message:String, timestamp:Number) : ChatReportAction
+      public static function create(param1:uint, param2:uint, param3:String, param4:uint, param5:String, param6:String, param7:Number) : ChatReportAction
       {
          //Décompilation abandonné
       }

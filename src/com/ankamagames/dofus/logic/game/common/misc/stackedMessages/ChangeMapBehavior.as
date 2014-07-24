@@ -18,12 +18,12 @@ package com.ankamagames.dofus.logic.game.common.misc.stackedMessages
          //Décompilation abandonné
       }
       
-      override public function processInputMessage(pMsgToProcess:Message, pMode:String) : Boolean
+      override public function processInputMessage(param1:Message, param2:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      override public function processOutputMessage(pMsgToProcess:Message, pMode:String) : Boolean
+      override public function processOutputMessage(param1:Message, param2:String) : Boolean
       {
          //Décompilation abandonné
       }

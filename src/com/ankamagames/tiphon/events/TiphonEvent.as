@@ -10,7 +10,7 @@ package com.ankamagames.tiphon.events
       //Décompilation abandonné
       }
       
-      public function TiphonEvent(pType:String, pSprite:*, pParams:Object = null)
+      public function TiphonEvent(param1:String, param2:*, param3:Object = null)
       {
          //Décompilation abandonné
       }
@@ -61,7 +61,7 @@ package com.ankamagames.tiphon.events
       
       private var _direction:int = -1;
       
-      public function set label(pLabel:String) : void
+      public function set label(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -96,7 +96,7 @@ package com.ankamagames.tiphon.events
          //Décompilation abandonné
       }
       
-      public function set animationName(pAnimationName:String) : void
+      public function set animationName(param1:String) : void
       {
          //Décompilation abandonné
       }

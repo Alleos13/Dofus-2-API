@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.prism
          //Décompilation abandonné
       }
       
-      public static function create(subAreaId:uint) : PrismSetSabotagedRequestAction
+      public static function create(param1:uint) : PrismSetSabotagedRequestAction
       {
          //Décompilation abandonné
       }

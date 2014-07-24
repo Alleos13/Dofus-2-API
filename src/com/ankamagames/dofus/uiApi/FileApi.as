@@ -33,7 +33,7 @@ package com.ankamagames.dofus.uiApi
       
       private var _openedFiles:Dictionary;
       
-      public function set module(value:UiModule) : void
+      public function set module(param1:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -43,42 +43,42 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function loadXmlFile(url:String, loadSuccessCallBack:Function, loadErrorCallBack:Function = null) : void
+      public function loadXmlFile(param1:String, param2:Function, param3:Function = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function trustedLoadXmlFile(url:String, loadSuccessCallBack:Function, loadErrorCallBack:Function = null) : void
+      public function trustedLoadXmlFile(param1:String, param2:Function, param3:Function = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function openFile(url:String, openMode:String = "update") : ModuleFilestream
+      public function openFile(param1:String, param2:String = "update") : ModuleFilestream
       {
          //Décompilation abandonné
       }
       
-      public function deleteFile(url:String) : void
+      public function deleteFile(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function deleteDir(url:String, recursive:Boolean = true) : void
+      public function deleteDir(param1:String, param2:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function getDirectoryContent(url:String = null, hideFiles:Boolean = false, hideDirectories:Boolean = false) : Array
+      public function getDirectoryContent(param1:String = null, param2:Boolean = false, param3:Boolean = false) : Array
       {
          //Décompilation abandonné
       }
       
-      public function isDirectory(url:String) : Boolean
+      public function isDirectory(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function createDirectory(url:String) : void
+      public function createDirectory(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -108,12 +108,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      private function onLoaded(e:ResourceLoadedEvent) : void
+      private function onLoaded(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onError(e:ResourceErrorEvent) : void
+      private function onError(param1:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }

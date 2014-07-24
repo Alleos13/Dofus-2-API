@@ -16,7 +16,7 @@ package com.ankamagames.tiphon.types
       
       private static const baseColorTransform:ColorTransform;
       
-      override public function colorize(colorT:ColorTransform) : void
+      override public function colorize(param1:ColorTransform) : void
       {
          //Décompilation abandonné
       }

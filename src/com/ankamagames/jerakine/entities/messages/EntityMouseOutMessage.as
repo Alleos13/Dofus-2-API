@@ -10,14 +10,14 @@ package com.ankamagames.jerakine.entities.messages
       //Décompilation abandonné
       }
       
-      public function EntityMouseOutMessage(entity:IInteractive)
+      public function EntityMouseOutMessage(param1:IInteractive)
       {
          //Décompilation abandonné
       }
       
       private var _cancel:Boolean;
       
-      public function set cancel(b:Boolean) : void
+      public function set cancel(param1:Boolean) : void
       {
          //Décompilation abandonné
       }

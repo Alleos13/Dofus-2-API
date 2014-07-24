@@ -11,7 +11,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function AlignmentLevelItemCriterion(pCriterion:String)
+      public function AlignmentLevelItemCriterion(param1:String)
       {
          //Décompilation abandonné
       }

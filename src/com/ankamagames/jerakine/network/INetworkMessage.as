@@ -12,9 +12,9 @@ package com.ankamagames.jerakine.network
       //Décompilation abandonné
       }
       
-      function pack(output:IDataOutput) : void;
+      function pack(param1:IDataOutput) : void;
       
-      function unpack(input:IDataInput, length:uint) : void;
+      function unpack(param1:IDataInput, param2:uint) : void;
       
       function get isInitialized() : Boolean;
    }

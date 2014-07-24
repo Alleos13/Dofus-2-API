@@ -24,7 +24,7 @@ package org.flintparticles.twoD.actions
          //Décompilation abandonné
       }
       
-      override public function update(emitter:Emitter, particle:Particle, time:Number) : void
+      override public function update(param1:Emitter, param2:Particle, param3:Number) : void
       {
          //Décompilation abandonné
       }

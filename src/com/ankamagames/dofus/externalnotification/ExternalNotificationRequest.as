@@ -9,12 +9,12 @@ package com.ankamagames.dofus.externalnotification
       //Décompilation abandonné
       }
       
-      public function ExternalNotificationRequest(pNotificationType:int, pClientId:String, pOtherClientsIds:Array, pId:String, pShowMode:int, pUiName:String, pDisplayData:Object, pSoundId:String, pPlaySound:Boolean, pNotify:Boolean, pHookName:String = null, pHookParams:Array = null)
+      public function ExternalNotificationRequest(param1:int, param2:String, param3:Array, param4:String, param5:int, param6:String, param7:Object, param8:String, param9:Boolean, param10:Boolean, param11:String = null, param12:Array = null)
       {
          //Décompilation abandonné
       }
       
-      public static function createFromJSONString(pJSONStr:String) : ExternalNotificationRequest
+      public static function createFromJSONString(param1:String) : ExternalNotificationRequest
       {
          //Décompilation abandonné
       }

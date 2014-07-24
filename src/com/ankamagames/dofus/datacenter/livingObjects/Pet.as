@@ -22,7 +22,7 @@ package com.ankamagames.dofus.datacenter.livingObjects
       
       protected static const _log:Logger;
       
-      public static function getPetById(id:int) : Pet
+      public static function getPetById(param1:int) : Pet
       {
          //Décompilation abandonné
       }

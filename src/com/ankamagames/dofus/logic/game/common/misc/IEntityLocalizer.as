@@ -9,7 +9,7 @@ package com.ankamagames.dofus.logic.game.common.misc
       //Décompilation abandonné
       }
       
-      function getEntity(entityId:int) : IEntity;
+      function getEntity(param1:int) : IEntity;
       
       function unregistered() : void;
    }

@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.servers
       
       private static var _log:Logger;
       
-      public static function getServerPopulationById(id:int) : ServerPopulation
+      public static function getServerPopulationById(param1:int) : ServerPopulation
       {
          //Décompilation abandonné
       }

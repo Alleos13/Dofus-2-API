@@ -57,7 +57,7 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring.ui
          //Décompilation abandonné
       }
       
-      private function forceGC(pEvt:MouseEvent) : void
+      private function forceGC(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
@@ -77,7 +77,7 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring.ui
          //Décompilation abandonné
       }
       
-      private function drawGraphValue(pData:Vector.<Number>, pLimits:Vector.<Number>, pColor:uint) : void
+      private function drawGraphValue(param1:Vector.<Number>, param2:Vector.<Number>, param3:uint) : void
       {
          //Décompilation abandonné
       }
@@ -87,32 +87,32 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring.ui
          //Décompilation abandonné
       }
       
-      public function addNewGraph(o:MonitoredObject) : void
+      public function addNewGraph(param1:MonitoredObject) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeGraph(o:MonitoredObject) : void
+      public function removeGraph(param1:MonitoredObject) : void
       {
          //Décompilation abandonné
       }
       
-      private function drawLine(pData:Vector.<Number>, pLimits:Vector.<Number>, pColor:uint = 16711680) : void
+      private function drawLine(param1:Vector.<Number>, param2:Vector.<Number>, param3:uint = 16711680) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateGc(max_memory:Number = 0) : void
+      public function updateGc(param1:Number = 0) : void
       {
          //Décompilation abandonné
       }
       
-      private function getGraphValue(pData:Vector.<Number>, ind:int, pLimit:int = -1) : int
+      private function getGraphValue(param1:Vector.<Number>, param2:int, param3:int = -1) : int
       {
          //Décompilation abandonné
       }
       
-      private function linkGraphValues(px:int, py1:int, py2:int, pColor:uint) : void
+      private function linkGraphValues(param1:int, param2:int, param3:int, param4:uint) : void
       {
          //Décompilation abandonné
       }

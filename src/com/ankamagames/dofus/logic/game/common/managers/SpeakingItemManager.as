@@ -98,12 +98,12 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function set speakTimerMinuteDelay(delay:int) : void
+      public function set speakTimerMinuteDelay(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function triggerEvent(nEvent:int) : void
+      public function triggerEvent(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -118,12 +118,12 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      private function generateNextMsgCount(noMin:Boolean) : void
+      private function generateNextMsgCount(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTimer(event:TimerEvent) : void
+      private function onTimer(param1:TimerEvent) : void
       {
          //Décompilation abandonné
       }

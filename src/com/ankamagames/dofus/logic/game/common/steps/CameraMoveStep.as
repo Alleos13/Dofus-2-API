@@ -18,7 +18,7 @@ package com.ankamagames.dofus.logic.game.common.steps
       //Décompilation abandonné
       }
       
-      public function CameraMoveStep(pCamera:Camera, pArgs:Array, pInstant:Boolean)
+      public function CameraMoveStep(param1:Camera, param2:Array, param3:Boolean)
       {
          //Décompilation abandonné
       }
@@ -38,7 +38,7 @@ package com.ankamagames.dofus.logic.game.common.steps
          //Décompilation abandonné
       }
       
-      private function updatePos(pCamPosObj:Object) : void
+      private function updatePos(param1:Object) : void
       {
          //Décompilation abandonné
       }

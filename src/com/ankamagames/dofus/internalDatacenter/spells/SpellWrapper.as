@@ -53,37 +53,37 @@ package com.ankamagames.dofus.internalDatacenter.spells
       
       protected static const _log:Logger;
       
-      public static function create(position:int, spellID:uint, spellLevel:int, useCache:Boolean = true, playerId:int = 0) : SpellWrapper
+      public static function create(param1:int, param2:uint, param3:int, param4:Boolean = true, param5:int = 0) : SpellWrapper
       {
          //Décompilation abandonné
       }
       
-      public static function getSpellWrapperById(spellId:uint, playerID:int, position:int) : SpellWrapper
+      public static function getSpellWrapperById(param1:uint, param2:int, param3:int) : SpellWrapper
       {
          //Décompilation abandonné
       }
       
-      public static function getFirstSpellWrapperById(spellId:uint, playerID:int) : SpellWrapper
+      public static function getFirstSpellWrapperById(param1:uint, param2:int) : SpellWrapper
       {
          //Décompilation abandonné
       }
       
-      public static function getSpellWrappersById(spellId:uint, playerID:int) : Array
+      public static function getSpellWrappersById(param1:uint, param2:int) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function refreshAllPlayerSpellHolder(playerId:int) : void
+      public static function refreshAllPlayerSpellHolder(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public static function resetAllCoolDown(playerId:int, accessKey:Object) : void
+      public static function resetAllCoolDown(param1:int, param2:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public static function removeAllSpellWrapperBut(playerId:int, accessKey:Object) : void
+      public static function removeAllSpellWrapperBut(param1:int, param2:Object) : void
       {
          //Décompilation abandonné
       }
@@ -117,7 +117,7 @@ package com.ankamagames.dofus.internalDatacenter.spells
       
       private var _actualCooldown:uint = 0;
       
-      public function set actualCooldown(u:uint) : void
+      public function set actualCooldown(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -197,7 +197,7 @@ package com.ankamagames.dofus.internalDatacenter.spells
          //Décompilation abandonné
       }
       
-      public function set endTime(t:int) : void
+      public function set endTime(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -237,22 +237,22 @@ package com.ankamagames.dofus.internalDatacenter.spells
          //Décompilation abandonné
       }
       
-      override flash_proxy function hasProperty(name:*) : Boolean
+      override flash_proxy function hasProperty(param1:*) : Boolean
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function getProperty(name:*) : *
+      override flash_proxy function getProperty(param1:*) : *
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function callProperty(name:*, ... rest) : *
+      override flash_proxy function callProperty(param1:*, ... rest) : *
       {
          //Décompilation abandonné
       }
       
-      private function getWeaponProperty(name:*) : *
+      private function getWeaponProperty(param1:*) : *
       {
          //Décompilation abandonné
       }
@@ -267,17 +267,17 @@ package com.ankamagames.dofus.internalDatacenter.spells
          //Décompilation abandonné
       }
       
-      public function addHolder(h:ISlotDataHolder) : void
+      public function addHolder(param1:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      public function setLinkedSlotData(slotData:ISlotData) : void
+      public function setLinkedSlotData(param1:ISlotData) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeHolder(h:ISlotDataHolder) : void
+      public function removeHolder(param1:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }

@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.treasureHun
          //Décompilation abandonné
       }
       
-      public function initTreasureHuntRequestAnswerMessage(questType:uint = 0, result:uint = 0) : TreasureHuntRequestAnswerMessage
+      public function initTreasureHuntRequestAnswerMessage(param1:uint = 0, param2:uint = 0) : TreasureHuntRequestAnswerMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.treasureHun
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_TreasureHuntRequestAnswerMessage(output:IDataOutput) : void
+      public function serializeAs_TreasureHuntRequestAnswerMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_TreasureHuntRequestAnswerMessage(input:IDataInput) : void
+      public function deserializeAs_TreasureHuntRequestAnswerMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

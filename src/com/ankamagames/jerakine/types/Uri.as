@@ -20,7 +20,7 @@ package com.ankamagames.jerakine.types
       //Décompilation abandonné
       }
       
-      public function Uri(uri:String = null, secureMode:Boolean = true)
+      public function Uri(param1:String = null, param2:Boolean = true)
       {
          //Décompilation abandonné
       }
@@ -59,7 +59,7 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public function set protocol(value:String) : void
+      public function set protocol(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -69,7 +69,7 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public function set path(value:String) : void
+      public function set path(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -79,7 +79,7 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public function set subPath(value:String) : void
+      public function set subPath(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -89,7 +89,7 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public function set uri(value:String) : void
+      public function set uri(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -99,7 +99,7 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public function set tag(value:*) : void
+      public function set tag(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -109,7 +109,7 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public function set loaderContext(value:LoaderContext) : void
+      public function set loaderContext(param1:LoaderContext) : void
       {
          //Décompilation abandonné
       }
@@ -139,7 +139,7 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public function toString(withSubPath:Boolean = true) : String
+      public function toString(param1:Boolean = true) : String
       {
          //Décompilation abandonné
       }
@@ -154,12 +154,12 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      private function parseUri(uri:String) : void
+      private function parseUri(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function replaceChar(str:String, search:String, replace:String) : String
+      private function replaceChar(param1:String, param2:String, param3:String) : String
       {
          //Décompilation abandonné
       }

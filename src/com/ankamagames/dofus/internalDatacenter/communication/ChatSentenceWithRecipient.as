@@ -10,7 +10,7 @@ package com.ankamagames.dofus.internalDatacenter.communication
       //Décompilation abandonné
       }
       
-      public function ChatSentenceWithRecipient(id:uint, baseMsg:String, msg:String, channel:uint = 0, time:Number = 0, finger:String = "", senderId:uint = 0, senderName:String = "", receiverName:String = "", receiverId:uint = 0, objects:Vector.<ItemWrapper> = null)
+      public function ChatSentenceWithRecipient(param1:uint, param2:String, param3:String, param4:uint = 0, param5:Number = 0, param6:String = "", param7:uint = 0, param8:String = "", param9:String = "", param10:uint = 0, param11:Vector.<ItemWrapper> = null)
       {
          //Décompilation abandonné
       }

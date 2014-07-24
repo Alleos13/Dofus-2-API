@@ -14,7 +14,7 @@ package com.ankamagames.dofus.misc.utils
          //Décompilation abandonné
       }
       
-      public static function cleanBones1AnimName(bones:uint, anim:String = null) : String
+      public static function cleanBones1AnimName(param1:uint, param2:String = null) : String
       {
          //Décompilation abandonné
       }

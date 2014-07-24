@@ -9,12 +9,12 @@ package com.ankamagames.jerakine.entities.interfaces
       
       function getDirection() : uint;
       
-      function setDirection(value:uint) : void;
+      function setDirection(param1:uint) : void;
       
       function getAnimation() : String;
       
-      function setAnimation(value:String, startFrame:int = -1) : void;
+      function setAnimation(param1:String, param2:int = -1) : void;
       
-      function setAnimationAndDirection(animation:String, direction:uint, disableAnimModifier:Boolean = false) : void;
+      function setAnimationAndDirection(param1:String, param2:uint, param3:Boolean = false) : void;
    }
 }

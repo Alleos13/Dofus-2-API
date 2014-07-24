@@ -14,7 +14,7 @@ package com.ankamagames.atouin.renderers
       //Décompilation abandonné
       }
       
-      public function TrapZoneRenderer(nStrata:uint = 10)
+      public function TrapZoneRenderer(param1:uint = 10)
       {
          //Décompilation abandonné
       }
@@ -25,12 +25,12 @@ package com.ankamagames.atouin.renderers
       
       public var strata:uint;
       
-      public function render(cells:Vector.<uint>, oColor:Color, mapContainer:DataMapContainer, alpha:Boolean = false, updateStrata:Boolean = false) : void
+      public function render(param1:Vector.<uint>, param2:Color, param3:DataMapContainer, param4:Boolean = false, param5:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function remove(cells:Vector.<uint>, mapContainer:DataMapContainer) : void
+      public function remove(param1:Vector.<uint>, param2:DataMapContainer) : void
       {
          //Décompilation abandonné
       }

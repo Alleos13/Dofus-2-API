@@ -7,7 +7,7 @@ package mx.core
       //Décompilation abandonné
       }
       
-      public function EdgeMetrics(left:Number = 0, top:Number = 0, right:Number = 0, bottom:Number = 0)
+      public function EdgeMetrics(param1:Number = 0, param2:Number = 0, param3:Number = 0, param4:Number = 0)
       {
          //Décompilation abandonné
       }

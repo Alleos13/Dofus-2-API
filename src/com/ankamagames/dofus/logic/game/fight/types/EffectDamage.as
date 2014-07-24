@@ -7,7 +7,7 @@ package com.ankamagames.dofus.logic.game.fight.types
       //Décompilation abandonné
       }
       
-      public function EffectDamage(pEffectId:int, pElementId:int, pRandom:int)
+      public function EffectDamage(param1:int, param2:int, param3:int)
       {
          //Décompilation abandonné
       }
@@ -78,7 +78,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function set element(pElement:int) : void
+      public function set element(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -88,12 +88,12 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function applyDamageMultiplier(pMultiplier:Number) : void
+      public function applyDamageMultiplier(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function applyDamageModification(pModification:int) : void
+      public function applyDamageModification(param1:int) : void
       {
          //Décompilation abandonné
       }

@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions
          //Décompilation abandonné
       }
       
-      public static function create(name:String = null, param:Object = null) : OpenBookAction
+      public static function create(param1:String = null, param2:Object = null) : OpenBookAction
       {
          //Décompilation abandonné
       }

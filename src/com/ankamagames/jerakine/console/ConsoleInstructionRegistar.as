@@ -7,6 +7,6 @@ package com.ankamagames.jerakine.console
       //Décompilation abandonné
       }
       
-      function registerInstructions(console:ConsoleHandler) : void;
+      function registerInstructions(param1:ConsoleHandler) : void;
    }
 }

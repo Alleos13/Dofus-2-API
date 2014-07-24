@@ -14,7 +14,7 @@ package com.ankamagames.dofus.modules.utils.actions
          //Décompilation abandonné
       }
       
-      public static function create(url:String) : ModuleListRequestAction
+      public static function create(param1:String) : ModuleListRequestAction
       {
          //Décompilation abandonné
       }

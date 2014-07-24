@@ -11,7 +11,7 @@ package com.hurlant.crypto.symmetric
       //Décompilation abandonné
       }
       
-      public function AESKey(key:ByteArray)
+      public function AESKey(param1:ByteArray)
       {
          //Décompilation abandonné
       }
@@ -80,12 +80,12 @@ package com.hurlant.crypto.symmetric
          //Décompilation abandonné
       }
       
-      public function encrypt(block:ByteArray, index:uint = 0) : void
+      public function encrypt(param1:ByteArray, param2:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function decrypt(block:ByteArray, index:uint = 0) : void
+      public function decrypt(param1:ByteArray, param2:uint = 0) : void
       {
          //Décompilation abandonné
       }
@@ -115,7 +115,7 @@ package com.hurlant.crypto.symmetric
          //Décompilation abandonné
       }
       
-      protected function addRoundKey(key:ByteArray, offset:uint) : void
+      protected function addRoundKey(param1:ByteArray, param2:uint) : void
       {
          //Décompilation abandonné
       }

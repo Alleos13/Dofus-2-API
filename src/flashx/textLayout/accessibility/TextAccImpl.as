@@ -20,7 +20,7 @@ package flashx.textLayout.accessibility
       //Décompilation abandonné
       }
       
-      public function TextAccImpl(textCont:DisplayObject, textFlow:TextFlow)
+      public function TextAccImpl(param1:DisplayObject, param2:TextFlow)
       {
          //Décompilation abandonné
       }
@@ -39,7 +39,7 @@ package flashx.textLayout.accessibility
       
       protected static const EVENT_OBJECT_VALUECHANGE:uint = 32782;
       
-      private static function exportToString(source:TextFlow) : String
+      private static function exportToString(param1:TextFlow) : String
       {
          //Décompilation abandonné
       }
@@ -53,27 +53,27 @@ package flashx.textLayout.accessibility
          //Décompilation abandonné
       }
       
-      override public function get_accRole(childID:uint) : uint
+      override public function get_accRole(param1:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      override public function get_accState(childID:uint) : uint
+      override public function get_accState(param1:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      override public function get_accName(childID:uint) : String
+      override public function get_accName(param1:uint) : String
       {
          //Décompilation abandonné
       }
       
-      override public function get_accValue(childID:uint) : String
+      override public function get_accValue(param1:uint) : String
       {
          //Décompilation abandonné
       }
       
-      protected function eventHandler(event:Event) : void
+      protected function eventHandler(param1:Event) : void
       {
          //Décompilation abandonné
       }

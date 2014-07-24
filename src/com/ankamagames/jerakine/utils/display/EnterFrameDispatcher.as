@@ -47,22 +47,22 @@ package com.ankamagames.jerakine.utils.display
          //Décompilation abandonné
       }
       
-      public static function addEventListener(listener:Function, name:String, frameRate:uint = 4.294967295E9) : void
+      public static function addEventListener(param1:Function, param2:String, param3:uint = 4.294967295E9) : void
       {
          //Décompilation abandonné
       }
       
-      public static function hasEventListener(listener:Function) : Boolean
+      public static function hasEventListener(param1:Function) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function removeEventListener(listener:Function) : void
+      public static function removeEventListener(param1:Function) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onEnterFrame(e:Event) : void
+      private static function onEnterFrame(param1:Event) : void
       {
          //Décompilation abandonné
       }
@@ -75,7 +75,7 @@ class ControledEnterFrameListener extends Object
    //Décompilation abandonné
    }
    
-   function ControledEnterFrameListener(name:String, listener:Function, wantedGap:uint, latestChange:uint)
+   function ControledEnterFrameListener(param1:String, param2:Function, param3:uint, param4:uint)
    {
       //Décompilation abandonné
    }

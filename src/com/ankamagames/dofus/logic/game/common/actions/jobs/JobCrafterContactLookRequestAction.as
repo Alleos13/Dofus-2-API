@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.jobs
          //Décompilation abandonné
       }
       
-      public static function create(crafterId:uint) : JobCrafterContactLookRequestAction
+      public static function create(param1:uint) : JobCrafterContactLookRequestAction
       {
          //Décompilation abandonné
       }

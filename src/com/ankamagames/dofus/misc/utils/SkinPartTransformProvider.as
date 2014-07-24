@@ -16,7 +16,7 @@ package com.ankamagames.dofus.misc.utils
          //Décompilation abandonné
       }
       
-      public function init(skin:Skin) : void
+      public function init(param1:Skin) : void
       {
          //Décompilation abandonné
       }

@@ -76,27 +76,27 @@ package com.ankamagames.dofus.logic.game.common.frames
       
       private var _waitingMessage:Message;
       
-      private function onActivate(pEvt:Event) : void
+      private function onActivate(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function onKeyDown(pEvt:KeyboardEvent) : void
+      public function onKeyDown(param1:KeyboardEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function onKeyUp(pEvt:KeyboardEvent = null) : void
+      public function onKeyUp(param1:KeyboardEvent = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function getInputMessageAlreadyWatched(vector:Vector.<AbstractBehavior>, inpt:Class) : AbstractBehavior
+      private function getInputMessageAlreadyWatched(param1:Vector.<AbstractBehavior>, param2:Class) : AbstractBehavior
       {
          //Décompilation abandonné
       }
       
-      private function initStackInputMessages(newMode:String) : void
+      private function initStackInputMessages(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -116,32 +116,32 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean
+      public function process(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function processStackInputMessages(pMsg:Message) : Boolean
+      private function processStackInputMessages(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function getSameInOutputList(copy:AbstractBehavior) : AbstractBehavior
+      private function getSameInOutputList(param1:AbstractBehavior) : AbstractBehavior
       {
          //Décompilation abandonné
       }
       
-      private function processStackOutputMessages(pMsg:Message) : Boolean
+      private function processStackOutputMessages(param1:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function removeCheckPoint(stackElement:AbstractBehavior) : void
+      private function removeCheckPoint(param1:AbstractBehavior) : void
       {
          //Décompilation abandonné
       }
       
-      private function emptyStack(all:Boolean = true) : void
+      private function emptyStack(param1:Boolean = true) : void
       {
          //Décompilation abandonné
       }
@@ -151,7 +151,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      private function addBehaviorToInputStack(behavior:AbstractBehavior, pIsActive:Boolean = true) : void
+      private function addBehaviorToInputStack(param1:AbstractBehavior, param2:Boolean = true) : void
       {
          //Décompilation abandonné
       }
@@ -176,7 +176,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function set waitingMessage(pMsg:Message) : void
+      public function set waitingMessage(param1:Message) : void
       {
          //Décompilation abandonné
       }
@@ -186,7 +186,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function set paused(pPause:Boolean) : void
+      public function set paused(param1:Boolean) : void
       {
          //Décompilation abandonné
       }

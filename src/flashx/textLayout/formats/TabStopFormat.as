@@ -1,8 +1,8 @@
 package flashx.textLayout.formats
 {
    import flashx.textLayout.tlf_internal;
-   import flashx.textLayout.property.*;
    import flash.text.engine.TabAlignment;
+   import flashx.textLayout.property.*;
    
    public class TabStopFormat extends Object implements ITabStopFormat
    {
@@ -11,7 +11,7 @@ package flashx.textLayout.formats
       //Décompilation abandonné
       }
       
-      public function TabStopFormat(initialValues:ITabStopFormat = null)
+      public function TabStopFormat(param1:ITabStopFormat = null)
       {
          //Décompilation abandonné
       }
@@ -36,7 +36,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public static function isEqual(p1:ITabStopFormat, p2:ITabStopFormat) : Boolean
+      public static function isEqual(param1:ITabStopFormat, param2:ITabStopFormat) : Boolean
       {
          //Décompilation abandonné
       }
@@ -54,12 +54,12 @@ package flashx.textLayout.formats
       
       private var _decimalAlignmentToken;
       
-      public function getStyle(styleName:String) : *
+      public function getStyle(param1:String) : *
       {
          //Décompilation abandonné
       }
       
-      public function setStyle(styleName:String, value:*) : void
+      public function setStyle(param1:String, param2:*) : void
       {
          //Décompilation abandonné
       }
@@ -69,7 +69,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set position(newValue:*) : void
+      public function set position(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -79,7 +79,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set alignment(newValue:*) : void
+      public function set alignment(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -89,37 +89,37 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set decimalAlignmentToken(newValue:*) : void
+      public function set decimalAlignmentToken(param1:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function copy(values:ITabStopFormat) : void
+      public function copy(param1:ITabStopFormat) : void
       {
          //Décompilation abandonné
       }
       
-      public function concat(incoming:ITabStopFormat) : void
+      public function concat(param1:ITabStopFormat) : void
       {
          //Décompilation abandonné
       }
       
-      public function concatInheritOnly(incoming:ITabStopFormat) : void
+      public function concatInheritOnly(param1:ITabStopFormat) : void
       {
          //Décompilation abandonné
       }
       
-      public function apply(incoming:ITabStopFormat) : void
+      public function apply(param1:ITabStopFormat) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeMatching(incoming:ITabStopFormat) : void
+      public function removeMatching(param1:ITabStopFormat) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeClashing(incoming:ITabStopFormat) : void
+      public function removeClashing(param1:ITabStopFormat) : void
       {
          //Décompilation abandonné
       }

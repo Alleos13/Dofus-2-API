@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.misc
       
       public static const MODULE:String = "Url";
       
-      public static function getUrlById(id:int) : Url
+      public static function getUrlById(param1:int) : Url
       {
          //Décompilation abandonné
       }

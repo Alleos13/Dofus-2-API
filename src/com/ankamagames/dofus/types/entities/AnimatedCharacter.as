@@ -60,7 +60,7 @@ package com.ankamagames.dofus.types.entities
       //Décompilation abandonné
       }
       
-      public function AnimatedCharacter(nId:int, look:TiphonEntityLook, followed:AnimatedCharacter = null)
+      public function AnimatedCharacter(param1:int, param2:TiphonEntityLook, param3:AnimatedCharacter = null)
       {
          //Décompilation abandonné
       }
@@ -108,7 +108,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set id(nValue:int) : void
+      public function set id(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -123,7 +123,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set position(oValue:MapPoint) : void
+      public function set position(param1:MapPoint) : void
       {
          //Décompilation abandonné
       }
@@ -133,7 +133,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set movementBehavior(oValue:IMovementBehavior) : void
+      public function set movementBehavior(param1:IMovementBehavior) : void
       {
          //Décompilation abandonné
       }
@@ -148,7 +148,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set displayBehaviors(oValue:IDisplayBehavior) : void
+      public function set displayBehaviors(param1:IDisplayBehavior) : void
       {
          //Décompilation abandonné
       }
@@ -188,7 +188,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set visibleAura(visible:Boolean) : void
+      public function set visibleAura(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -203,19 +203,19 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set transparencyAllowed(allowed:Boolean) : void
+      public function set transparencyAllowed(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
       public var slideOnNextMove:Boolean;
       
-      private function onFirstError(e:TiphonEvent) : void
+      private function onFirstError(param1:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onFirstRender(e:TiphonEvent) : void
+      private function onFirstRender(param1:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
@@ -225,32 +225,32 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function setCanSeeThrough(value:Boolean) : void
+      public function setCanSeeThrough(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function move(path:MovementPath, callback:Function = null) : void
+      public function move(param1:MovementPath, param2:Function = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function processMove(followPath:MovementPath, args:Array) : void
+      private function processMove(param1:MovementPath, param2:Array) : void
       {
          //Décompilation abandonné
       }
       
-      public function jump(newPosition:MapPoint) : void
+      public function jump(param1:MapPoint) : void
       {
          //Décompilation abandonné
       }
       
-      public function stop(forceStop:Boolean = false) : void
+      public function stop(param1:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function display(strata:uint = 10) : void
+      public function display(param1:uint = 10) : void
       {
          //Décompilation abandonné
       }
@@ -275,12 +275,12 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function addFollower(follower:IMovable, instantSync:Boolean = false) : void
+      public function addFollower(param1:IMovable, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function followersEqual(pEntityLooks:Vector.<EntityLook>) : Boolean
+      public function followersEqual(param1:Vector.<EntityLook>) : Boolean
       {
          //Décompilation abandonné
       }
@@ -290,17 +290,17 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function highLightCharacterAndFollower(value:Boolean) : void
+      public function highLightCharacterAndFollower(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function highLight(value:Boolean) : void
+      public function highLight(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function showBitmapAlpha(alphaValue:Number) : void
+      public function showBitmapAlpha(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -310,12 +310,12 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      override public function addSubEntity(entity:DisplayObject, category:uint, slot:uint) : void
+      override public function addSubEntity(param1:DisplayObject, param2:uint, param3:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function onAdded(e:Event) : void
+      override protected function onAdded(param1:Event) : void
       {
          //Décompilation abandonné
       }

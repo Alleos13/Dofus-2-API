@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.npcs
       
       public static const MODULE:String = "TaxCollectorFirstnames";
       
-      public static function getTaxCollectorFirstnameById(id:int) : TaxCollectorFirstname
+      public static function getTaxCollectorFirstnameById(param1:int) : TaxCollectorFirstname
       {
          //Décompilation abandonné
       }

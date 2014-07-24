@@ -21,67 +21,67 @@ package com.ankamagames.dofus.scripts.api
          //Décompilation abandonné
       }
       
-      public static function GetCastingSpell(runner:SpellFxRunner) : CastingSpell
+      public static function GetCastingSpell(param1:SpellFxRunner) : CastingSpell
       {
          //Décompilation abandonné
       }
       
-      public static function GetUsedWeaponType(spell:CastingSpell) : uint
+      public static function GetUsedWeaponType(param1:CastingSpell) : uint
       {
          //Décompilation abandonné
       }
       
-      public static function IsCriticalHit(spell:CastingSpell) : Boolean
+      public static function IsCriticalHit(param1:CastingSpell) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function IsCriticalFail(spell:CastingSpell) : Boolean
+      public static function IsCriticalFail(param1:CastingSpell) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function GetSpellParam(spell:CastingSpell, name:String) : *
+      public static function GetSpellParam(param1:CastingSpell, param2:String) : *
       {
          //Décompilation abandonné
       }
       
-      public static function HasSpellParam(spell:CastingSpell, name:String) : Boolean
+      public static function HasSpellParam(param1:CastingSpell, param2:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function GetStepType(step:ISequencable) : String
+      public static function GetStepType(param1:ISequencable) : String
       {
          //Décompilation abandonné
       }
       
-      public static function GetStepsFromType(runner:SpellFxRunner, type:String) : Vector.<IFightStep>
+      public static function GetStepsFromType(param1:SpellFxRunner, param2:String) : Vector.<IFightStep>
       {
          //Décompilation abandonné
       }
       
-      public static function AddFrontStep(runner:SpellFxRunner, step:ISequencable) : void
+      public static function AddFrontStep(param1:SpellFxRunner, param2:ISequencable) : void
       {
          //Décompilation abandonné
       }
       
-      public static function AddBackStep(runner:SpellFxRunner, step:ISequencable) : void
+      public static function AddBackStep(param1:SpellFxRunner, param2:ISequencable) : void
       {
          //Décompilation abandonné
       }
       
-      public static function AddStepBefore(runner:SpellFxRunner, referenceStep:ISequencable, stepToAdd:ISequencable) : void
+      public static function AddStepBefore(param1:SpellFxRunner, param2:ISequencable, param3:ISequencable) : void
       {
          //Décompilation abandonné
       }
       
-      public static function AddStepAfter(runner:SpellFxRunner, referenceStep:ISequencable, stepToAdd:ISequencable) : void
+      public static function AddStepAfter(param1:SpellFxRunner, param2:ISequencable, param3:ISequencable) : void
       {
          //Décompilation abandonné
       }
       
-      public static function CreateExplosionEntity(runner:SpellFxRunner, gfxId:uint, startColors:String, particleCount:uint, levelChange:Boolean, subExplo:Boolean, exploType:uint) : ExplosionEntity
+      public static function CreateExplosionEntity(param1:SpellFxRunner, param2:uint, param3:String, param4:uint, param5:Boolean, param6:Boolean, param7:uint) : ExplosionEntity
       {
          //Décompilation abandonné
       }

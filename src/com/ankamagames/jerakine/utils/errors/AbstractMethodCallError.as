@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.utils.errors
       //Décompilation abandonné
       }
       
-      public function AbstractMethodCallError(message:String = "", id:int = 0)
+      public function AbstractMethodCallError(param1:String = "", param2:int = 0)
       {
          //Décompilation abandonné
       }

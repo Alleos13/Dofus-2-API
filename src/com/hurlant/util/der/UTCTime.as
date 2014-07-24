@@ -9,7 +9,7 @@ package com.hurlant.util.der
       //Décompilation abandonné
       }
       
-      public function UTCTime(type:uint, len:uint)
+      public function UTCTime(param1:uint, param2:uint)
       {
          //Décompilation abandonné
       }
@@ -30,7 +30,7 @@ package com.hurlant.util.der
          //Décompilation abandonné
       }
       
-      public function setUTCTime(str:String) : void
+      public function setUTCTime(param1:String) : void
       {
          //Décompilation abandonné
       }

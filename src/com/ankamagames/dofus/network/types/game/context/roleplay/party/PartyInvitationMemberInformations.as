@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      public function initPartyInvitationMemberInformations(id:uint = 0, level:uint = 0, name:String = "", entityLook:EntityLook = null, breed:int = 0, sex:Boolean = false, worldX:int = 0, worldY:int = 0, mapId:int = 0, subAreaId:uint = 0, companions:Vector.<PartyCompanionBaseInformations> = null) : PartyInvitationMemberInformations
+      public function initPartyInvitationMemberInformations(param1:uint = 0, param2:uint = 0, param3:String = "", param4:EntityLook = null, param5:int = 0, param6:Boolean = false, param7:int = 0, param8:int = 0, param9:int = 0, param10:uint = 0, param11:Vector.<PartyCompanionBaseInformations> = null) : PartyInvitationMemberInformations
       {
          //Décompilation abandonné
       }
@@ -46,22 +46,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PartyInvitationMemberInformations(output:IDataOutput) : void
+      public function serializeAs_PartyInvitationMemberInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PartyInvitationMemberInformations(input:IDataInput) : void
+      public function deserializeAs_PartyInvitationMemberInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

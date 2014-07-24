@@ -7,19 +7,19 @@ package com.somerandomdude.colortoolkit.schemes
       //Décompilation abandonné
       }
       
-      public function ColorWheelScheme(primaryColor:int)
+      public function ColorWheelScheme(param1:int)
       {
          //Décompilation abandonné
       }
       
       protected var _primaryColor:int;
       
-      override public function addColor(colortest:int) : void
+      override public function addColor(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      override public function removeColor(colortest:int) : void
+      override public function removeColor(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -29,7 +29,7 @@ package com.somerandomdude.colortoolkit.schemes
          //Décompilation abandonné
       }
       
-      public function set primaryColor(value:int) : void
+      public function set primaryColor(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -39,7 +39,7 @@ package com.somerandomdude.colortoolkit.schemes
          //Décompilation abandonné
       }
       
-      protected function wrap(x:Number, min:Number, threshold:Number, plus:Number) : Number
+      protected function wrap(param1:Number, param2:Number, param3:Number, param4:Number) : Number
       {
          //Décompilation abandonné
       }

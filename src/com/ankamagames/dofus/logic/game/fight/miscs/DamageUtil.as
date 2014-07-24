@@ -101,122 +101,122 @@ package com.ankamagames.dofus.logic.game.fight.miscs
       
       public static const NO_BOOST_EFFECTS_IDS:Array;
       
-      public static function isDamagedOrHealedBySpell(pCasterId:int, pTargetId:int, pSpell:Object) : Boolean
+      public static function isDamagedOrHealedBySpell(param1:int, param2:int, param3:Object) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function getBombDirectDamageSpellWrapper(pBombSummoningSpell:SpellWrapper) : SpellWrapper
+      public static function getBombDirectDamageSpellWrapper(param1:SpellWrapper) : SpellWrapper
       {
          //Décompilation abandonné
       }
       
-      public static function getBuffEffectElements(pBuff:BasicBuff) : Vector.<int>
+      public static function getBuffEffectElements(param1:BasicBuff) : Vector.<int>
       {
          //Décompilation abandonné
       }
       
-      public static function getBuffTriggers(pBuff:BasicBuff) : String
+      public static function getBuffTriggers(param1:BasicBuff) : String
       {
          //Décompilation abandonné
       }
       
-      public static function verifyBuffTriggers(pSpellInfo:SpellDamageInfo, pBuff:BasicBuff) : Boolean
+      public static function verifyBuffTriggers(param1:SpellDamageInfo, param2:BasicBuff) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function verifyEffectTrigger(pCasterId:int, pTargetId:int, pEffect:EffectInstance, pWeaponEffect:Boolean, pTriggers:String) : Boolean
+      public static function verifyEffectTrigger(param1:int, param2:int, param3:EffectInstance, param4:Boolean, param5:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function verifySpellEffectMask(pCasterId:int, pTargetId:int, pEffect:EffectInstance, pTriggeringSpellCasterId:int = 0) : Boolean
+      public static function verifySpellEffectMask(param1:int, param2:int, param3:EffectInstance, param4:int = 0) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function verifySpellEffectZone(pTargetId:int, pEffect:EffectInstance, pSpellImpactCell:int) : Boolean
+      public static function verifySpellEffectZone(param1:int, param2:EffectInstance, param3:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function getSpellElementDamage(pSpell:Object, pElementType:int, pCasterId:int = 0, pTargetId:int = 0) : SpellDamage
+      public static function getSpellElementDamage(param1:Object, param2:int, param3:int = 0, param4:int = 0) : SpellDamage
       {
          //Décompilation abandonné
       }
       
-      public static function applySpellModificationsOnEffect(pEffectDamage:EffectDamage, pSpellW:SpellWrapper) : void
+      public static function applySpellModificationsOnEffect(param1:EffectDamage, param2:SpellWrapper) : void
       {
          //Décompilation abandonné
       }
       
-      public static function getSpellDamage(pSpellDamageInfo:SpellDamageInfo, pWithTargetBuffs:Boolean = true, pWithTargetResists:Boolean = true) : SpellDamage
+      public static function getSpellDamage(param1:SpellDamageInfo, param2:Boolean = true, param3:Boolean = true) : SpellDamage
       {
          //Décompilation abandonné
       }
       
-      private static function computeDamage(pRawDamage:SpellDamage, pSpellDamageInfo:SpellDamageInfo, pEfficiencyMultiplier:Number, pIgnoreCasterStats:Boolean = false, pIgnoreCriticalResist:Boolean = false, pIgnoreTargetResists:Boolean = false) : EffectDamage
+      private static function computeDamage(param1:SpellDamage, param2:SpellDamageInfo, param3:Number, param4:Boolean = false, param5:Boolean = false, param6:Boolean = false) : EffectDamage
       {
          //Décompilation abandonné
       }
       
-      private static function getDamage(pBaseDmg:int, pStat:int, pStatBonus:int, pDamageBonus:int, pAllDamagesBonus:int, pDamageReduction:int, pResistPercent:int, pEfficiencyPercent:int, pDamageSharingMultiplicator:Number = 1) : int
+      private static function getDamage(param1:int, param2:int, param3:int, param4:int, param5:int, param6:int, param7:int, param8:int, param9:Number = 1) : int
       {
          //Décompilation abandonné
       }
       
-      private static function getMidLifeDamageMultiplier(pLifePercent:int) : Number
+      private static function getMidLifeDamageMultiplier(param1:int) : Number
       {
          //Décompilation abandonné
       }
       
-      private static function getDistance(pCellA:uint, pCellB:uint) : int
+      private static function getDistance(param1:uint, param2:uint) : int
       {
          //Décompilation abandonné
       }
       
-      private static function getSquareDistance(pCellA:uint, pCellB:uint) : int
+      private static function getSquareDistance(param1:uint, param2:uint) : int
       {
          //Décompilation abandonné
       }
       
-      public static function getShapeEfficiency(pShape:uint, pSpellImpactCell:uint, pTargetCell:uint, pShapeSize:int, pShapeMinSize:int, pShapeEfficiencyPercent:int, pShapeMaxEfficiency:int) : Number
+      public static function getShapeEfficiency(param1:uint, param2:uint, param3:uint, param4:int, param5:int, param6:int, param7:int) : Number
       {
          //Décompilation abandonné
       }
       
-      public static function getSimpleEfficiency(pDistance:int, pShapeSize:int, pShapeMinSize:int, pShapeEfficiencyPercent:int, pShapeMaxEfficiency:int) : Number
+      public static function getSimpleEfficiency(param1:int, param2:int, param3:int, param4:int, param5:int) : Number
       {
          //Décompilation abandonné
       }
       
-      public static function getSplashDamages(pTriggeredSpells:Vector.<TriggeredSpell>, pSourceSpellInfo:SpellDamageInfo) : Vector.<SplashDamage>
+      public static function getSplashDamages(param1:Vector.<TriggeredSpell>, param2:SpellDamageInfo) : Vector.<SplashDamage>
       {
          //Décompilation abandonné
       }
       
-      public static function getAverageElementResistance(pElement:uint, pEntitiesIds:Vector.<int>) : int
+      public static function getAverageElementResistance(param1:uint, param2:Vector.<int>) : int
       {
          //Décompilation abandonné
       }
       
-      public static function getAverageElementReduction(pElement:uint, pEntitiesIds:Vector.<int>) : int
+      public static function getAverageElementReduction(param1:uint, param2:Vector.<int>) : int
       {
          //Décompilation abandonné
       }
       
-      public static function getAverageBuffElementReduction(pSpellInfo:SpellDamageInfo, pEffectDamage:EffectDamage, pEntitiesIds:Vector.<int>) : int
+      public static function getAverageBuffElementReduction(param1:SpellDamageInfo, param2:EffectDamage, param3:Vector.<int>) : int
       {
          //Décompilation abandonné
       }
       
-      public static function getBuffElementReduction(pSpellInfo:SpellDamageInfo, pEffectDamage:EffectDamage, pTargetId:int) : int
+      public static function getBuffElementReduction(param1:SpellDamageInfo, param2:EffectDamage, param3:int) : int
       {
          //Décompilation abandonné
       }
       
-      public static function getAverageStat(pStatName:String, pEntitiesIds:Vector.<int>) : int
+      public static function getAverageStat(param1:String, param2:Vector.<int>) : int
       {
          //Décompilation abandonné
       }

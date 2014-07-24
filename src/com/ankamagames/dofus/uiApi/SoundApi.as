@@ -30,7 +30,7 @@ package com.ankamagames.dofus.uiApi
       
       private var _module:UiModule;
       
-      public function set module(value:UiModule) : void
+      public function set module(param1:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -40,7 +40,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function activateSounds(pActivate:Boolean) : void
+      public function activateSounds(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -55,27 +55,27 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function setBusVolume(pAudioBusId:uint, pVolume:uint) : void
+      public function setBusVolume(param1:uint, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function playSoundById(pSoundId:String) : void
+      public function playSoundById(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function fadeBusVolume(pBusId:uint, pFade:Number, pFadeTime:uint) : void
+      public function fadeBusVolume(param1:uint, param2:Number, param3:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function playSound(pSound:uint) : void
+      public function playSound(param1:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function playLookSound(pLook:String, pSoundType:uint) : void
+      public function playLookSound(param1:String, param2:uint) : void
       {
          //Décompilation abandonné
       }
@@ -85,7 +85,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function switchIntroMusic(pFirstHarmonic:Boolean = true) : void
+      public function switchIntroMusic(param1:Boolean = true) : void
       {
          //Décompilation abandonné
       }

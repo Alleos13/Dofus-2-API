@@ -11,7 +11,7 @@ package com.hurlant.crypto.symmetric
       //Décompilation abandonné
       }
       
-      public function IVMode(key:ISymmetricKey, padding:IPad = null)
+      public function IVMode(param1:ISymmetricKey, param2:IPad = null)
       {
          //Décompilation abandonné
       }
@@ -38,7 +38,7 @@ package com.hurlant.crypto.symmetric
          //Décompilation abandonné
       }
       
-      public function set IV(value:ByteArray) : void
+      public function set IV(param1:ByteArray) : void
       {
          //Décompilation abandonné
       }

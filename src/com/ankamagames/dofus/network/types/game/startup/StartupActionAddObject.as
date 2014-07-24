@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.types.game.startup
          //Décompilation abandonné
       }
       
-      public function initStartupActionAddObject(uid:uint = 0, title:String = "", text:String = "", descUrl:String = "", pictureUrl:String = "", items:Vector.<ObjectItemInformationWithQuantity> = null) : StartupActionAddObject
+      public function initStartupActionAddObject(param1:uint = 0, param2:String = "", param3:String = "", param4:String = "", param5:String = "", param6:Vector.<ObjectItemInformationWithQuantity> = null) : StartupActionAddObject
       {
          //Décompilation abandonné
       }
@@ -46,22 +46,22 @@ package com.ankamagames.dofus.network.types.game.startup
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_StartupActionAddObject(output:IDataOutput) : void
+      public function serializeAs_StartupActionAddObject(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_StartupActionAddObject(input:IDataInput) : void
+      public function deserializeAs_StartupActionAddObject(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

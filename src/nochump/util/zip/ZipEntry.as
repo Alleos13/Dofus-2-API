@@ -9,7 +9,7 @@ package nochump.util.zip
       //Décompilation abandonné
       }
       
-      public function ZipEntry(name:String)
+      public function ZipEntry(param1:String)
       {
          //Décompilation abandonné
       }
@@ -46,7 +46,7 @@ package nochump.util.zip
          //Décompilation abandonné
       }
       
-      public function set time(time:Number) : void
+      public function set time(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -56,7 +56,7 @@ package nochump.util.zip
          //Décompilation abandonné
       }
       
-      public function set size(size:int) : void
+      public function set size(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -66,7 +66,7 @@ package nochump.util.zip
          //Décompilation abandonné
       }
       
-      public function set compressedSize(csize:int) : void
+      public function set compressedSize(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -76,7 +76,7 @@ package nochump.util.zip
          //Décompilation abandonné
       }
       
-      public function set crc(crc:uint) : void
+      public function set crc(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -86,7 +86,7 @@ package nochump.util.zip
          //Décompilation abandonné
       }
       
-      public function set method(method:int) : void
+      public function set method(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -96,7 +96,7 @@ package nochump.util.zip
          //Décompilation abandonné
       }
       
-      public function set extra(extra:ByteArray) : void
+      public function set extra(param1:ByteArray) : void
       {
          //Décompilation abandonné
       }
@@ -106,7 +106,7 @@ package nochump.util.zip
          //Décompilation abandonné
       }
       
-      public function set comment(comment:String) : void
+      public function set comment(param1:String) : void
       {
          //Décompilation abandonné
       }

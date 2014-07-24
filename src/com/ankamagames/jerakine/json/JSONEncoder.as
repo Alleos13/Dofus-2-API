@@ -11,7 +11,7 @@ package com.ankamagames.jerakine.json
       //Décompilation abandonné
       }
       
-      public function JSONEncoder(value:*, pMaxDepth:uint = 0, pShowObjectType:Boolean = false)
+      public function JSONEncoder(param1:*, param2:uint = 0, param3:Boolean = false)
       {
          //Décompilation abandonné
       }
@@ -27,22 +27,22 @@ package com.ankamagames.jerakine.json
          //Décompilation abandonné
       }
       
-      private function convertToString(value:*, depth:int = 0) : String
+      private function convertToString(param1:*, param2:int = 0) : String
       {
          //Décompilation abandonné
       }
       
-      private function escapeString(str:String) : String
+      private function escapeString(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      private function arrayToString(a:*, depth:int) : String
+      private function arrayToString(param1:*, param2:int) : String
       {
          //Décompilation abandonné
       }
       
-      private function objectToString(o:Object, depth:int) : String
+      private function objectToString(param1:Object, param2:int) : String
       {
          //Décompilation abandonné
       }

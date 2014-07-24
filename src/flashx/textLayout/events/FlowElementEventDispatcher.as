@@ -12,7 +12,7 @@ package flashx.textLayout.events
       //Décompilation abandonné
       }
       
-      public function FlowElementEventDispatcher(element:FlowElement)
+      public function FlowElementEventDispatcher(param1:FlowElement)
       {
          //Décompilation abandonné
       }
@@ -21,12 +21,12 @@ package flashx.textLayout.events
       
       tlf_internal var _element:FlowElement;
       
-      override public function addEventListener(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false) : void
+      override public function addEventListener(param1:String, param2:Function, param3:Boolean = false, param4:int = 0, param5:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      override public function removeEventListener(type:String, listener:Function, useCapture:Boolean = false) : void
+      override public function removeEventListener(param1:String, param2:Function, param3:Boolean = false) : void
       {
          //Décompilation abandonné
       }

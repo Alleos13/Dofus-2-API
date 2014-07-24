@@ -53,7 +53,7 @@ package com.ankamagames.dofus.datacenter.items
       
       protected static const _log:Logger;
       
-      public static function getItemById(id:uint, returnDefaultItemIfNull:Boolean = true) : Item
+      public static function getItemById(param1:uint, param2:Boolean = true) : Item
       {
          //Décompilation abandonné
       }
@@ -165,7 +165,7 @@ package com.ankamagames.dofus.datacenter.items
          //Décompilation abandonné
       }
       
-      public function set weight(n:uint) : void
+      public function set weight(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -220,7 +220,7 @@ package com.ankamagames.dofus.datacenter.items
          //Décompilation abandonné
       }
       
-      public function copy(from:Item, to:Item) : void
+      public function copy(param1:Item, param2:Item) : void
       {
          //Décompilation abandonné
       }

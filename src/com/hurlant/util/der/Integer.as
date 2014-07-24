@@ -10,7 +10,7 @@ package com.hurlant.util.der
       //Décompilation abandonné
       }
       
-      public function Integer(type:uint, length:uint, b:ByteArray)
+      public function Integer(param1:uint, param2:uint, param3:ByteArray)
       {
          //Décompilation abandonné
       }
@@ -29,7 +29,7 @@ package com.hurlant.util.der
          //Décompilation abandonné
       }
       
-      override public function toString(radix:Number = 0) : String
+      override public function toString(param1:Number = 0) : String
       {
          //Décompilation abandonné
       }

@@ -79,7 +79,7 @@ package com.ankamagames.jerakine.managers
          //Décompilation abandonné
       }
       
-      public function set handler(value:MessageHandler) : void
+      public function set handler(param1:MessageHandler) : void
       {
          //Décompilation abandonné
       }
@@ -89,7 +89,7 @@ package com.ankamagames.jerakine.managers
          //Décompilation abandonné
       }
       
-      public function set lang(sLang:String) : void
+      public function set lang(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -99,162 +99,162 @@ package com.ankamagames.jerakine.managers
          //Décompilation abandonné
       }
       
-      public function set replaceErrorCallback(fct:Function) : void
+      public function set replaceErrorCallback(param1:Function) : void
       {
          //Décompilation abandonné
       }
       
-      public function loadFile(sUrl:String, parseReference:Boolean = true) : void
+      public function loadFile(param1:String, param2:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function loadFromXml(xml:String, category:String, url:String, parseReference:Boolean = true) : void
+      public function loadFromXml(param1:String, param2:String, param3:String, param4:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function getUntypedEntry(sKey:String) : *
+      public function getUntypedEntry(param1:String) : *
       {
          //Décompilation abandonné
       }
       
-      public function getEntry(sKey:String) : String
+      public function getEntry(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function getStringEntry(sKey:String) : String
+      public function getStringEntry(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function getBooleanEntry(sKey:String) : Boolean
+      public function getBooleanEntry(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getIntEntry(sKey:String) : int
+      public function getIntEntry(param1:String) : int
       {
          //Décompilation abandonné
       }
       
-      public function getFloatEntry(sKey:String) : Number
+      public function getFloatEntry(param1:String) : Number
       {
          //Décompilation abandonné
       }
       
-      public function setEntry(sKey:String, sValue:String, sType:String = null) : void
+      public function setEntry(param1:String, param2:String, param3:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function deleteEntry(sKey:String) : void
+      public function deleteEntry(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function replaceKey(sTxt:String, bReplaceDynamicReference:Boolean = false) : String
+      public function replaceKey(param1:String, param2:Boolean = false) : String
       {
          //Décompilation abandonné
       }
       
-      public function getCategory(sCategory:String, matchSubCategories:Boolean = true) : Array
+      public function getCategory(param1:String, param2:Boolean = true) : Array
       {
          //Décompilation abandonné
       }
       
-      public function findCategory(sKey:String) : Array
+      public function findCategory(param1:String) : Array
       {
          //Décompilation abandonné
       }
       
-      public function setFileVersion(sFilename:String, sVersion:String) : void
+      public function setFileVersion(param1:String, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function checkFileVersion(sFileName:String, sVersion:String) : Boolean
+      public function checkFileVersion(param1:String, param2:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function clear(sCategory:String = null) : void
+      public function clear(param1:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function resolve(targetKey:String) : void
+      public function resolve(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function resolveImp(targetKey:String, configKey:String) : void
+      private function resolveImp(param1:String, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function loadMetaDataFile(sUrl:String) : void
+      private function loadMetaDataFile(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function loadLangFile(sUrl:String, oMeta:LangMetaData) : void
+      private function loadLangFile(param1:String, param2:LangMetaData) : void
       {
          //Décompilation abandonné
       }
       
-      private function startParsing(aLangData:Array, sUrlProvider:String) : void
+      private function startParsing(param1:Array, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function onFileLoaded(e:ResourceLoadedEvent) : void
+      private function onFileLoaded(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onFileError(e:ResourceErrorEvent) : void
+      private function onFileError(param1:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onXmlLoadComplete(e:ResourceLoadedEvent) : void
+      private function onXmlLoadComplete(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onZipFileComplete(e:ResourceLoadedEvent) : void
+      private function onZipFileComplete(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMetaLoad(e:ResourceLoadedEvent) : void
+      private function onMetaLoad(param1:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onXmlLoadError(e:ResourceErrorEvent) : void
+      private function onXmlLoadError(param1:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onZipFileLoadError(e:ResourceErrorEvent) : void
+      private function onZipFileLoadError(param1:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTaskStep(e:LangFileEvent) : void
+      private function onTaskStep(param1:LangFileEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTaskEnd(e:LangFileEvent) : void
+      private function onTaskEnd(param1:LangFileEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMetaLoadError(e:ResourceErrorEvent) : void
+      private function onMetaLoadError(param1:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }

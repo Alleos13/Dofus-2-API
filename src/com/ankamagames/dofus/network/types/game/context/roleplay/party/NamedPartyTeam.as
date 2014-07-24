@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      public function initNamedPartyTeam(teamId:uint = 2, partyName:String = "") : NamedPartyTeam
+      public function initNamedPartyTeam(param1:uint = 2, param2:String = "") : NamedPartyTeam
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_NamedPartyTeam(output:IDataOutput) : void
+      public function serializeAs_NamedPartyTeam(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_NamedPartyTeam(input:IDataInput) : void
+      public function deserializeAs_NamedPartyTeam(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

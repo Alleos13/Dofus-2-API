@@ -11,7 +11,7 @@ package com.ankamagames.dofus.types.data
       //Décompilation abandonné
       }
       
-      public function GenericSlotData(iconUri:Uri = null, fullSizeIconUri:Uri = null, errorIconUri:Uri = null, info1:String = null, active:Boolean = true, timer:int = 0)
+      public function GenericSlotData(param1:Uri = null, param2:Uri = null, param3:Uri = null, param4:String = null, param5:Boolean = true, param6:int = 0)
       {
          //Décompilation abandonné
       }
@@ -28,32 +28,32 @@ package com.ankamagames.dofus.types.data
       
       private var _timer:int;
       
-      public function set fullSizeIconUri(value:Uri) : void
+      public function set fullSizeIconUri(param1:Uri) : void
       {
          //Décompilation abandonné
       }
       
-      public function set errorIconUri(value:Uri) : void
+      public function set errorIconUri(param1:Uri) : void
       {
          //Décompilation abandonné
       }
       
-      public function set info1(value:String) : void
+      public function set info1(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function set timer(value:int) : void
+      public function set timer(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function set active(value:Boolean) : void
+      public function set active(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function set iconUri(value:Uri) : void
+      public function set iconUri(param1:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -88,7 +88,7 @@ package com.ankamagames.dofus.types.data
          //Décompilation abandonné
       }
       
-      public function set endTime(t:int) : void
+      public function set endTime(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -103,12 +103,12 @@ package com.ankamagames.dofus.types.data
          //Décompilation abandonné
       }
       
-      public function addHolder(h:ISlotDataHolder) : void
+      public function addHolder(param1:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeHolder(h:ISlotDataHolder) : void
+      public function removeHolder(param1:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }

@@ -29,22 +29,22 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      public function registerEvent(e:GenericListener) : void
+      public function registerEvent(param1:GenericListener) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeEventListener(ge:GenericListener) : void
+      public function removeEventListener(param1:GenericListener) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeEventListenerByName(name:String) : void
+      public function removeEventListenerByName(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeEvent(sListener:*) : void
+      public function removeEvent(param1:*) : void
       {
          //Décompilation abandonné
       }

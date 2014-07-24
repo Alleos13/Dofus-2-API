@@ -12,7 +12,7 @@ package com.ankamagames.dofus.kernel.updaterv2
       //Décompilation abandonné
       }
       
-      public function UpdaterApi(handler:IUpdaterMessageHandler)
+      public function UpdaterApi(param1:IUpdaterMessageHandler)
       {
          //Décompilation abandonné
       }
@@ -24,22 +24,22 @@ package com.ankamagames.dofus.kernel.updaterv2
          //Décompilation abandonné
       }
       
-      public function log(message:String) : void
+      public function log(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function hasComponent(name:String) : Boolean
+      public function hasComponent(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function activateComponent(name:String, activate:Boolean, projectName:String = "game") : void
+      public function activateComponent(param1:String, param2:Boolean, param3:String = "game") : void
       {
          //Décompilation abandonné
       }
       
-      public function getComponentList(project:String = "game") : void
+      public function getComponentList(param1:String = "game") : void
       {
          //Décompilation abandonné
       }

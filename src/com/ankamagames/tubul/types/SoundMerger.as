@@ -51,17 +51,17 @@ package com.ankamagames.tubul.types
       
       private var _cuttingBytes:ByteArray;
       
-      public function getSoundChannel(sw:SoundWrapper) : SoundChannel
+      public function getSoundChannel(param1:SoundWrapper) : SoundChannel
       {
          //Décompilation abandonné
       }
       
-      public function addSound(sw:SoundWrapper) : void
+      public function addSound(param1:SoundWrapper) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeSound(sw:SoundWrapper) : void
+      public function removeSound(param1:SoundWrapper) : void
       {
          //Décompilation abandonné
       }
@@ -71,37 +71,37 @@ package com.ankamagames.tubul.types
          //Décompilation abandonné
       }
       
-      private function setSilence(activated:Boolean) : void
+      private function setSilence(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      private function directPlay(sw:SoundWrapper, loops:int) : void
+      private function directPlay(param1:SoundWrapper, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function directStop(sw:SoundWrapper, eventDispatched:Boolean = false) : void
+      private function directStop(param1:SoundWrapper, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private function sampleData(sde:SampleDataEvent) : void
+      private function sampleData(param1:SampleDataEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function sampleSilence(sde:SampleDataEvent) : void
+      private function sampleSilence(param1:SampleDataEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function directSoundComplete(e:Event) : void
+      private function directSoundComplete(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onEnterFrame(pEvent:Event) : void
+      private function onEnterFrame(param1:Event) : void
       {
          //Décompilation abandonné
       }

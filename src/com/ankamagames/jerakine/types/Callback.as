@@ -7,12 +7,12 @@ package com.ankamagames.jerakine.types
       //Décompilation abandonné
       }
       
-      public function Callback(fMethod:Function, ... aArgs)
+      public function Callback(param1:Function, ... rest)
       {
          //Décompilation abandonné
       }
       
-      public static function argFromArray(fMethod:Function, args:Array) : Callback
+      public static function argFromArray(param1:Function, param2:Array) : Callback
       {
          //Décompilation abandonné
       }

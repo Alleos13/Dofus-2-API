@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.types.game.house
          //Décompilation abandonné
       }
       
-      public function initHouseInformations(houseId:uint = 0, doorsOnMap:Vector.<uint> = null, ownerName:String = "", isOnSale:Boolean = false, isSaleLocked:Boolean = false, modelId:uint = 0) : HouseInformations
+      public function initHouseInformations(param1:uint = 0, param2:Vector.<uint> = null, param3:String = "", param4:Boolean = false, param5:Boolean = false, param6:uint = 0) : HouseInformations
       {
          //Décompilation abandonné
       }
@@ -46,22 +46,22 @@ package com.ankamagames.dofus.network.types.game.house
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_HouseInformations(output:IDataOutput) : void
+      public function serializeAs_HouseInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_HouseInformations(input:IDataInput) : void
+      public function deserializeAs_HouseInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

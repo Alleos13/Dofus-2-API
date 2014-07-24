@@ -18,7 +18,7 @@ package com.ankamagames.dofus.console.moduleLogger
       //Décompilation abandonné
       }
       
-      public function ConsoleIcon(name:String, size:int = 16, toolTip:String = "")
+      public function ConsoleIcon(param1:String, param2:int = 16, param3:String = "")
       {
          //Décompilation abandonné
       }
@@ -92,7 +92,7 @@ package com.ankamagames.dofus.console.moduleLogger
          //Décompilation abandonné
       }
       
-      public function set toggled(value:Boolean) : void
+      public function set toggled(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -102,27 +102,27 @@ package com.ankamagames.dofus.console.moduleLogger
          //Décompilation abandonné
       }
       
-      public function set enabled(value:Boolean) : void
+      public function set enabled(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function disable(value:Boolean) : void
+      public function disable(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function changeColor(color:ColorTransform) : void
+      public function changeColor(param1:ColorTransform) : void
       {
          //Décompilation abandonné
       }
       
-      private function onRollOver(e:MouseEvent) : void
+      private function onRollOver(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onRollOut(e:MouseEvent) : void
+      private function onRollOut(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }

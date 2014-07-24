@@ -38,12 +38,12 @@ package com.ankamagames.jerakine.resources.adapters
       
       private var _signedFileAdapter:SignedFileAdapter;
       
-      public function loadDirectly(uri:Uri, path:String, observer:IResourceObserver, dispatchProgress:Boolean) : void
+      public function loadDirectly(param1:Uri, param2:String, param3:IResourceObserver, param4:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function loadFromData(uri:Uri, data:ByteArray, observer:IResourceObserver, dispatchProgress:Boolean) : void
+      public function loadFromData(param1:Uri, param2:ByteArray, param3:IResourceObserver, param4:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -53,7 +53,7 @@ package com.ankamagames.jerakine.resources.adapters
          //Décompilation abandonné
       }
       
-      protected function getResource(ldr:LoaderInfo) : *
+      protected function getResource(param1:LoaderInfo) : *
       {
          //Décompilation abandonné
       }
@@ -73,27 +73,27 @@ package com.ankamagames.jerakine.resources.adapters
          //Décompilation abandonné
       }
       
-      protected function onInit(e:Event) : void
+      protected function onInit(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      protected function onError(ee:ErrorEvent) : void
+      protected function onError(param1:ErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function onProgress(pe:ProgressEvent) : void
+      protected function onProgress(param1:ProgressEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSignedFileLoaded(uri:Uri, resourceType:uint, resource:*) : void
+      private function onSignedFileLoaded(param1:Uri, param2:uint, param3:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSignedFileError(uri:Uri, errorMsg:String, errorCode:uint) : void
+      private function onSignedFileError(param1:Uri, param2:String, param3:uint) : void
       {
          //Décompilation abandonné
       }

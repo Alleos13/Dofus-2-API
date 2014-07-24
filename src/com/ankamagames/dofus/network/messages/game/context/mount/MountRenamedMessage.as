@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.game.context.mount
          //Décompilation abandonné
       }
       
-      public function initMountRenamedMessage(mountId:Number = 0, name:String = "") : MountRenamedMessage
+      public function initMountRenamedMessage(param1:Number = 0, param2:String = "") : MountRenamedMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.game.context.mount
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_MountRenamedMessage(output:IDataOutput) : void
+      public function serializeAs_MountRenamedMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_MountRenamedMessage(input:IDataInput) : void
+      public function deserializeAs_MountRenamedMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

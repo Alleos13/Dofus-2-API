@@ -13,22 +13,22 @@ package com.ankamagames.berilia.components.gridRenderer
       //Décompilation abandonné
       }
       
-      public function InlineXmlGridRender(args:String)
+      public function InlineXmlGridRender(param1:String)
       {
          //Décompilation abandonné
       }
       
-      override public function update(data:*, index:uint, target:DisplayObject, selected:Boolean, subIndex:uint = 0) : void
+      override public function update(param1:*, param2:uint, param3:DisplayObject, param4:Boolean, param5:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function uiUpdate(ui:UiRootContainer, target:DisplayObject, data:*, selected:Boolean, subIndex:uint) : void
+      override protected function uiUpdate(param1:UiRootContainer, param2:DisplayObject, param3:*, param4:Boolean, param5:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function renderModificator(childs:Array) : Array
+      override public function renderModificator(param1:Array) : Array
       {
          //Décompilation abandonné
       }

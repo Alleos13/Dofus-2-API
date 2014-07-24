@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.party
          //Décompilation abandonné
       }
       
-      public static function create(dungeonId:int, buddyId:int, accept:Boolean) : TeleportToBuddyAnswerAction
+      public static function create(param1:int, param2:int, param3:Boolean) : TeleportToBuddyAnswerAction
       {
          //Décompilation abandonné
       }

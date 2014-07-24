@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.types
       //Décompilation abandonné
       }
       
-      public function Swl(frameRate:uint, classesList:Array, applicationDomain:ApplicationDomain)
+      public function Swl(param1:uint, param2:Array, param3:ApplicationDomain)
       {
          //Décompilation abandonné
       }
@@ -25,12 +25,12 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public function getDefinition(name:String) : Object
+      public function getDefinition(param1:String) : Object
       {
          //Décompilation abandonné
       }
       
-      public function hasDefinition(name:String) : Boolean
+      public function hasDefinition(param1:String) : Boolean
       {
          //Décompilation abandonné
       }

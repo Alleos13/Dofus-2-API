@@ -56,7 +56,7 @@ package com.ankamagames.dofus.logic.game.approach.utils
          //Décompilation abandonné
       }
       
-      public function set downloadSpeed(speed:uint) : void
+      public function set downloadSpeed(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -66,7 +66,7 @@ package com.ankamagames.dofus.logic.game.approach.utils
          //Décompilation abandonné
       }
       
-      public function set mode(value:uint) : void
+      public function set mode(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -91,7 +91,7 @@ package com.ankamagames.dofus.logic.game.approach.utils
          //Décompilation abandonné
       }
       
-      private function onTimerEvent(te:TimerEvent) : void
+      private function onTimerEvent(param1:TimerEvent) : void
       {
          //Décompilation abandonné
       }

@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.game.context.fight.character
          //Décompilation abandonné
       }
       
-      public function initGameFightShowFighterMessage(informations:GameFightFighterInformations = null) : GameFightShowFighterMessage
+      public function initGameFightShowFighterMessage(param1:GameFightFighterInformations = null) : GameFightShowFighterMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.game.context.fight.character
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightShowFighterMessage(output:IDataOutput) : void
+      public function serializeAs_GameFightShowFighterMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightShowFighterMessage(input:IDataInput) : void
+      public function deserializeAs_GameFightShowFighterMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

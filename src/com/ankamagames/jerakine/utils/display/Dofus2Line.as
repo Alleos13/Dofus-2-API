@@ -15,7 +15,7 @@ package com.ankamagames.jerakine.utils.display
          //Décompilation abandonné
       }
       
-      public static function getLine(startCellId:uint, endCellId:uint) : Vector.<Point>
+      public static function getLine(param1:uint, param2:uint) : Vector.<Point>
       {
          //Décompilation abandonné
       }

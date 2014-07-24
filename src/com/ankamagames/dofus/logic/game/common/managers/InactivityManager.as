@@ -57,7 +57,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function set inactivityDelay(t:Number) : void
+      public function set inactivityDelay(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -87,17 +87,17 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      private function onActivity(event:Event) : void
+      private function onActivity(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onActivityTimerUp(event:Event) : void
+      private function onActivityTimerUp(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onServerActivityTimerUp(event:Event) : void
+      private function onServerActivityTimerUp(param1:Event) : void
       {
          //Décompilation abandonné
       }

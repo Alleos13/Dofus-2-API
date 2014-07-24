@@ -20,7 +20,7 @@ package com.ankamagames.dofus.logic.game.fight.types
       //Décompilation abandonné
       }
       
-      public function BasicBuff(effect:AbstractFightDispellableEffect = null, castingSpell:CastingSpell = null, actionId:uint = 0, param1:* = null, param2:* = null, param3:* = null)
+      public function BasicBuff(param1:AbstractFightDispellableEffect = null, param2:CastingSpell = null, param3:uint = 0, param4:* = null, param5:* = null, param6:* = null)
       {
          //Décompilation abandonné
       }
@@ -84,17 +84,17 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function set param1(v:*) : void
+      public function set param1(param1:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function set param2(v:*) : void
+      public function set param2(param1:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function set param3(v:*) : void
+      public function set param3(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -114,7 +114,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function canBeDispell(forceUndispellable:Boolean = false, targetBuffId:int = -2147483648, dying:Boolean = false) : Boolean
+      public function canBeDispell(param1:Boolean = false, param2:int = -2147483648, param3:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
@@ -144,17 +144,17 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function equals(other:BasicBuff, osefSpell:Boolean = false) : Boolean
+      public function equals(param1:BasicBuff, param2:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function add(buff:BasicBuff) : void
+      public function add(param1:BasicBuff) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateParam(value1:int = 0, value2:int = 0, value3:int = 0, buffId:int = -1) : void
+      public function updateParam(param1:int = 0, param2:int = 0, param3:int = 0, param4:int = -1) : void
       {
          //Décompilation abandonné
       }
@@ -164,7 +164,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function incrementDuration(delta:int, dispellEffect:Boolean = false) : Boolean
+      public function incrementDuration(param1:int, param2:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
@@ -174,7 +174,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function clone(id:int = 0) : BasicBuff
+      public function clone(param1:int = 0) : BasicBuff
       {
          //Décompilation abandonné
       }

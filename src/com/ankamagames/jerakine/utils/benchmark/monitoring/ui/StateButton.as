@@ -12,7 +12,7 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring.ui
       //Décompilation abandonné
       }
       
-      public function StateButton(pX:int, pY:int)
+      public function StateButton(param1:int, param2:int)
       {
          //Décompilation abandonné
       }
@@ -25,17 +25,17 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring.ui
       
       private var _triangle:Shape;
       
-      private function rollOutHandler(pEvt:MouseEvent) : void
+      private function rollOutHandler(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function rollOverHandler(pEvt:MouseEvent) : void
+      private function rollOverHandler(param1:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function draw(bgColor:uint, arrowColor:uint) : void
+      public function draw(param1:uint, param2:uint) : void
       {
          //Décompilation abandonné
       }

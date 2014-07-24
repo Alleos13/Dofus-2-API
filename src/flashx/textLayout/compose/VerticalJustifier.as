@@ -18,7 +18,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public static function applyVerticalAlignmentToColumn(controller:ContainerController, verticalAlignAttr:String, lines:Array, startIndex:int, numLines:int, beginFloatIndex:int, endFloatIndex:int) : Number
+      public static function applyVerticalAlignmentToColumn(param1:ContainerController, param2:String, param3:Array, param4:int, param5:int, param6:int, param7:int) : Number
       {
          //Décompilation abandonné
       }
@@ -35,19 +35,19 @@ interface IVerticalAdjustmentHelper
    //Décompilation abandonné
    }
    
-   function getBottom(line:IVerticalJustificationLine, controller:ContainerController, beginFloat:int, endFloat:int) : Number;
+   function getBottom(param1:IVerticalJustificationLine, param2:ContainerController, param3:int, param4:int) : Number;
    
-   function computeMiddleAdjustment(bottom:Number) : Number;
+   function computeMiddleAdjustment(param1:Number) : Number;
    
-   function applyAdjustment(line:IVerticalJustificationLine) : void;
+   function applyAdjustment(param1:IVerticalJustificationLine) : void;
    
-   function applyAdjustmentToFloat(floatInfo:FloatCompositionData) : void;
+   function applyAdjustmentToFloat(param1:FloatCompositionData) : void;
    
-   function computeBottomAdjustment(bottom:Number) : Number;
+   function computeBottomAdjustment(param1:Number) : Number;
    
-   function computeJustifyAdjustment(lineArray:Array, firstLine:int, numLines:int) : Number;
+   function computeJustifyAdjustment(param1:Array, param2:int, param3:int) : Number;
    
-   function applyJustifyAdjustment(lineArray:Array, firstLine:int, numLines:int) : void;
+   function applyJustifyAdjustment(param1:Array, param2:int, param3:int) : void;
 }
 import flashx.textLayout.container.ContainerController;
 import flashx.textLayout.compose.IVerticalJustificationLine;
@@ -64,7 +64,7 @@ class TB_VJHelper extends Object implements IVerticalAdjustmentHelper
    //Décompilation abandonné
    }
    
-   function TB_VJHelper(tf:ContainerController)
+   function TB_VJHelper(param1:ContainerController)
    {
       //Décompilation abandonné
    }
@@ -73,52 +73,52 @@ class TB_VJHelper extends Object implements IVerticalAdjustmentHelper
    
    private var adj:Number;
    
-   public function getBottom(line:IVerticalJustificationLine, controller:ContainerController, beginFloat:int, endFloat:int) : Number
+   public function getBottom(param1:IVerticalJustificationLine, param2:ContainerController, param3:int, param4:int) : Number
    {
       //Décompilation abandonné
    }
    
-   public function getBottomOfLine(line:IVerticalJustificationLine) : Number
+   public function getBottomOfLine(param1:IVerticalJustificationLine) : Number
    {
       //Décompilation abandonné
    }
    
-   private function getBaseline(line:IVerticalJustificationLine) : Number
+   private function getBaseline(param1:IVerticalJustificationLine) : Number
    {
       //Décompilation abandonné
    }
    
-   private function setBaseline(line:IVerticalJustificationLine, pos:Number) : void
+   private function setBaseline(param1:IVerticalJustificationLine, param2:Number) : void
    {
       //Décompilation abandonné
    }
    
-   public function computeMiddleAdjustment(contentBottom:Number) : Number
+   public function computeMiddleAdjustment(param1:Number) : Number
    {
       //Décompilation abandonné
    }
    
-   public function computeBottomAdjustment(contentBottom:Number) : Number
+   public function computeBottomAdjustment(param1:Number) : Number
    {
       //Décompilation abandonné
    }
    
-   public function applyAdjustment(line:IVerticalJustificationLine) : void
+   public function applyAdjustment(param1:IVerticalJustificationLine) : void
    {
       //Décompilation abandonné
    }
    
-   public function applyAdjustmentToFloat(floatInfo:FloatCompositionData) : void
+   public function applyAdjustmentToFloat(param1:FloatCompositionData) : void
    {
       //Décompilation abandonné
    }
    
-   public function computeJustifyAdjustment(lineArray:Array, firstLineIndex:int, numLines:int) : Number
+   public function computeJustifyAdjustment(param1:Array, param2:int, param3:int) : Number
    {
       //Décompilation abandonné
    }
    
-   public function applyJustifyAdjustment(lineArray:Array, firstLineIndex:int, numLines:int) : void
+   public function applyJustifyAdjustment(param1:Array, param2:int, param3:int) : void
    {
       //Décompilation abandonné
    }
@@ -136,7 +136,7 @@ class RL_VJHelper extends Object implements IVerticalAdjustmentHelper
    //Décompilation abandonné
    }
    
-   function RL_VJHelper(tf:ContainerController)
+   function RL_VJHelper(param1:ContainerController)
    {
       //Décompilation abandonné
    }
@@ -145,37 +145,37 @@ class RL_VJHelper extends Object implements IVerticalAdjustmentHelper
    
    private var adj:Number = 0;
    
-   public function getBottom(lastLine:IVerticalJustificationLine, controller:ContainerController, beginFloat:int, endFloat:int) : Number
+   public function getBottom(param1:IVerticalJustificationLine, param2:ContainerController, param3:int, param4:int) : Number
    {
       //Décompilation abandonné
    }
    
-   public function computeMiddleAdjustment(contentLeft:Number) : Number
+   public function computeMiddleAdjustment(param1:Number) : Number
    {
       //Décompilation abandonné
    }
    
-   public function computeBottomAdjustment(contentLeft:Number) : Number
+   public function computeBottomAdjustment(param1:Number) : Number
    {
       //Décompilation abandonné
    }
    
-   public function applyAdjustment(line:IVerticalJustificationLine) : void
+   public function applyAdjustment(param1:IVerticalJustificationLine) : void
    {
       //Décompilation abandonné
    }
    
-   public function applyAdjustmentToFloat(floatInfo:FloatCompositionData) : void
+   public function applyAdjustmentToFloat(param1:FloatCompositionData) : void
    {
       //Décompilation abandonné
    }
    
-   public function computeJustifyAdjustment(lineArray:Array, firstLineIndex:int, numLines:int) : Number
+   public function computeJustifyAdjustment(param1:Array, param2:int, param3:int) : Number
    {
       //Décompilation abandonné
    }
    
-   public function applyJustifyAdjustment(lineArray:Array, firstLineIndex:int, numLines:int) : void
+   public function applyJustifyAdjustment(param1:Array, param2:int, param3:int) : void
    {
       //Décompilation abandonné
    }

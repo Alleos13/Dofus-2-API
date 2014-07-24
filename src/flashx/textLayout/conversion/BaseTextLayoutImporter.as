@@ -27,7 +27,7 @@ package flashx.textLayout.conversion
       //Décompilation abandonné
       }
       
-      function BaseTextLayoutImporter(nsValue:Namespace, config:ImportExportConfiguration)
+      function BaseTextLayoutImporter(param1:Namespace, param2:ImportExportConfiguration)
       {
          //Décompilation abandonné
       }
@@ -38,52 +38,52 @@ package flashx.textLayout.conversion
       
       private static const tabNewLinePattern:RegExp;
       
-      protected static function stripWhitespace(insertString:String) : String
+      protected static function stripWhitespace(param1:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function parseTextFlow(importer:BaseTextLayoutImporter, xmlToParse:XML, parent:Object = null) : TextFlow
+      public static function parseTextFlow(param1:BaseTextLayoutImporter, param2:XML, param3:Object = null) : TextFlow
       {
          //Décompilation abandonné
       }
       
-      public static function parsePara(importer:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
+      public static function parsePara(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      protected static function copyAllStyleProps(dst:FlowLeafElement, src:FlowLeafElement) : void
+      protected static function copyAllStyleProps(param1:FlowLeafElement, param2:FlowLeafElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseSpan(importer:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
+      public static function parseSpan(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseBreak(importer:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
+      public static function parseBreak(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseTab(importer:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
+      public static function parseTab(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseList(importer:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
+      public static function parseList(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseListItem(importer:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
+      public static function parseListItem(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      protected static function extractAttributesHelper(curAttrs:Object, importer:TLFormatImporter) : Object
+      protected static function extractAttributesHelper(param1:Object, param2:TLFormatImporter) : Object
       {
          //Décompilation abandonné
       }
@@ -103,7 +103,7 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      public function importToFlow(source:Object) : TextFlow
+      public function importToFlow(param1:Object) : TextFlow
       {
          //Décompilation abandonné
       }
@@ -113,32 +113,32 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      public function set configuration(value:IConfiguration) : void
+      public function set configuration(param1:IConfiguration) : void
       {
          //Décompilation abandonné
       }
       
-      protected function importPropertyErrorHandler(p:Property, value:Object) : void
+      protected function importPropertyErrorHandler(param1:Property, param2:Object) : void
       {
          //Décompilation abandonné
       }
       
-      private function importToFlowCanThrow(source:Object) : TextFlow
+      private function importToFlowCanThrow(param1:Object) : TextFlow
       {
          //Décompilation abandonné
       }
       
-      protected function importFromString(source:String) : TextFlow
+      protected function importFromString(param1:String) : TextFlow
       {
          //Décompilation abandonné
       }
       
-      protected function importFromXML(xmlSource:XML) : TextFlow
+      protected function importFromXML(param1:XML) : TextFlow
       {
          //Décompilation abandonné
       }
       
-      protected function parseContent(rootStory:XML) : TextFlow
+      protected function parseContent(param1:XML) : TextFlow
       {
          //Décompilation abandonné
       }
@@ -148,92 +148,92 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      protected function checkNamespace(xmlToParse:XML) : Boolean
+      protected function checkNamespace(param1:XML) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function parseAttributes(xmlToParse:XML, formatImporters:Array) : void
+      public function parseAttributes(param1:XML, param2:Array) : void
       {
          //Décompilation abandonné
       }
       
-      public function createTextFlowFromXML(xmlToParse:XML, newFlow:TextFlow = null) : TextFlow
+      public function createTextFlowFromXML(param1:XML, param2:TextFlow = null) : TextFlow
       {
          //Décompilation abandonné
       }
       
-      public function createParagraphFromXML(xmlToParse:XML) : ParagraphElement
+      public function createParagraphFromXML(param1:XML) : ParagraphElement
       {
          //Décompilation abandonné
       }
       
-      public function createSpanFromXML(xmlToParse:XML) : SpanElement
+      public function createSpanFromXML(param1:XML) : SpanElement
       {
          //Décompilation abandonné
       }
       
-      public function createBreakFromXML(xmlToParse:XML) : BreakElement
+      public function createBreakFromXML(param1:XML) : BreakElement
       {
          //Décompilation abandonné
       }
       
-      public function createListFromXML(xmlToParse:XML) : ListElement
+      public function createListFromXML(param1:XML) : ListElement
       {
          //Décompilation abandonné
       }
       
-      public function createListItemFromXML(xmlToParse:XML) : ListItemElement
+      public function createListItemFromXML(param1:XML) : ListItemElement
       {
          //Décompilation abandonné
       }
       
-      public function createTabFromXML(xmlToParse:XML) : TabElement
+      public function createTabFromXML(param1:XML) : TabElement
       {
          //Décompilation abandonné
       }
       
-      public function parseFlowChildren(xmlToParse:XML, parent:FlowGroupElement) : void
+      public function parseFlowChildren(param1:XML, param2:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public function parseFlowGroupElementChildren(xmlToParse:XML, parent:FlowGroupElement, exceptionElements:Object = null, chainedParent:Boolean = false) : void
+      public function parseFlowGroupElementChildren(param1:XML, param2:FlowGroupElement, param3:Object = null, param4:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function createImpliedSpan(text:String) : SpanElement
+      public function createImpliedSpan(param1:String) : SpanElement
       {
          //Décompilation abandonné
       }
       
-      public function createParagraphFlowFromXML(xmlToParse:XML, newFlow:TextFlow = null) : TextFlow
+      public function createParagraphFlowFromXML(param1:XML, param2:TextFlow = null) : TextFlow
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function parseObject(name:String, xmlToParse:XML, parent:FlowGroupElement, exceptionElements:Object = null) : void
+      tlf_internal function parseObject(param1:String, param2:XML, param3:FlowGroupElement, param4:Object = null) : void
       {
          //Décompilation abandonné
       }
       
-      protected function handleUnknownElement(name:String, xmlToParse:XML, parent:FlowGroupElement) : void
+      protected function handleUnknownElement(param1:String, param2:XML, param3:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      protected function handleUnknownAttribute(elementName:String, propertyName:String) : void
+      protected function handleUnknownAttribute(param1:String, param2:String) : void
       {
          //Décompilation abandonné
       }
       
-      protected function getElementInfo(xmlToParse:XML) : FlowElementInfo
+      protected function getElementInfo(param1:XML) : FlowElementInfo
       {
          //Décompilation abandonné
       }
       
-      protected function GetClass(xmlToParse:XML) : Class
+      protected function GetClass(param1:XML) : Class
       {
          //Décompilation abandonné
       }
@@ -245,7 +245,7 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      tlf_internal function addChild(parent:FlowGroupElement, child:FlowElement) : Boolean
+      tlf_internal function addChild(param1:FlowGroupElement, param2:FlowElement) : Boolean
       {
          //Décompilation abandonné
       }
@@ -255,7 +255,7 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      protected function onResetImpliedPara(para:ParagraphElement) : void
+      protected function onResetImpliedPara(param1:ParagraphElement) : void
       {
          //Décompilation abandonné
       }

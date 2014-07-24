@@ -23,12 +23,12 @@ package com.ankamagames.berilia.components
       
       protected var _treeDataProvider:Vector.<TreeData>;
       
-      override public function set rendererName(value:String) : void
+      override public function set rendererName(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set dataProvider(data:*) : void
+      override public function set dataProvider(param1:*) : void
       {
          //Décompilation abandonné
       }
@@ -48,12 +48,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function expandItems(pItems:Array) : void
+      public function expandItems(param1:Array) : void
       {
          //Décompilation abandonné
       }
       
-      private function makeDataProvider(v:Vector.<TreeData>, result:Vector.<TreeData> = null) : Vector.<TreeData>
+      private function makeDataProvider(param1:Vector.<TreeData>, param2:Vector.<TreeData> = null) : Vector.<TreeData>
       {
          //Décompilation abandonné
       }

@@ -38,7 +38,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.paddock
          //Décompilation abandonné
       }
       
-      public function initPaddockSellBuyDialogMessage(bsell:Boolean = false, ownerId:uint = 0, price:uint = 0) : PaddockSellBuyDialogMessage
+      public function initPaddockSellBuyDialogMessage(param1:Boolean = false, param2:uint = 0, param3:uint = 0) : PaddockSellBuyDialogMessage
       {
          //Décompilation abandonné
       }
@@ -48,32 +48,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.paddock
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PaddockSellBuyDialogMessage(output:IDataOutput) : void
+      public function serializeAs_PaddockSellBuyDialogMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PaddockSellBuyDialogMessage(input:IDataInput) : void
+      public function deserializeAs_PaddockSellBuyDialogMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

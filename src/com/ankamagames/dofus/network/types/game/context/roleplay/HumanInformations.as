@@ -31,7 +31,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initHumanInformations(restrictions:ActorRestrictionsInformations = null, sex:Boolean = false, options:Vector.<HumanOption> = null) : HumanInformations
+      public function initHumanInformations(param1:ActorRestrictionsInformations = null, param2:Boolean = false, param3:Vector.<HumanOption> = null) : HumanInformations
       {
          //Décompilation abandonné
       }
@@ -41,22 +41,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_HumanInformations(output:IDataOutput) : void
+      public function serializeAs_HumanInformations(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_HumanInformations(input:IDataInput) : void
+      public function deserializeAs_HumanInformations(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -12,7 +12,7 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
       //Décompilation abandonné
       }
       
-      public function BankView(hookLock:HookLock)
+      public function BankView(param1:HookLock)
       {
          //Décompilation abandonné
       }

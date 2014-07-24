@@ -38,7 +38,7 @@ package com.ankamagames.dofus.network.messages.game.basic
          //Décompilation abandonné
       }
       
-      public function initBasicDateMessage(day:uint = 0, month:uint = 0, year:uint = 0) : BasicDateMessage
+      public function initBasicDateMessage(param1:uint = 0, param2:uint = 0, param3:uint = 0) : BasicDateMessage
       {
          //Décompilation abandonné
       }
@@ -48,32 +48,32 @@ package com.ankamagames.dofus.network.messages.game.basic
          //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void
+      override public function pack(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void
+      override public function unpack(param1:IDataInput, param2:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void
+      public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_BasicDateMessage(output:IDataOutput) : void
+      public function serializeAs_BasicDateMessage(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void
+      public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_BasicDateMessage(input:IDataInput) : void
+      public function deserializeAs_BasicDateMessage(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

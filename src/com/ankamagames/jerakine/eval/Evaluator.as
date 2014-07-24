@@ -22,82 +22,82 @@ package com.ankamagames.jerakine.eval
       
       private static const STRING:uint = 1;
       
-      public function eval(expr:String) : *
+      public function eval(param1:String) : *
       {
          //Décompilation abandonné
       }
       
-      private function simpleEval(expr:String) : *
+      private function simpleEval(param1:String) : *
       {
          //Décompilation abandonné
       }
       
-      private function complexEval(expr:String) : *
+      private function complexEval(param1:String) : *
       {
          //Décompilation abandonné
       }
       
-      private function plus(a:*, b:*) : *
+      private function plus(param1:*, param2:*) : *
       {
          //Décompilation abandonné
       }
       
-      private function minus(a:Number, b:Number) : Number
+      private function minus(param1:Number, param2:Number) : Number
       {
          //Décompilation abandonné
       }
       
-      private function multiply(a:Number, b:Number) : Number
+      private function multiply(param1:Number, param2:Number) : Number
       {
          //Décompilation abandonné
       }
       
-      private function divide(a:Number, b:Number) : Number
+      private function divide(param1:Number, param2:Number) : Number
       {
          //Décompilation abandonné
       }
       
-      private function sup(a:Number, b:Number) : Number
+      private function sup(param1:Number, param2:Number) : Number
       {
          //Décompilation abandonné
       }
       
-      private function supOrEquals(a:Number, b:Number) : Number
+      private function supOrEquals(param1:Number, param2:Number) : Number
       {
          //Décompilation abandonné
       }
       
-      private function inf(a:Number, b:Number) : Number
+      private function inf(param1:Number, param2:Number) : Number
       {
          //Décompilation abandonné
       }
       
-      private function infOrEquals(a:Number, b:Number) : Number
+      private function infOrEquals(param1:Number, param2:Number) : Number
       {
          //Décompilation abandonné
       }
       
-      private function and(a:Number, b:Number) : Number
+      private function and(param1:Number, param2:Number) : Number
       {
          //Décompilation abandonné
       }
       
-      private function or(a:Number, b:Number) : Number
+      private function or(param1:Number, param2:Number) : Number
       {
          //Décompilation abandonné
       }
       
-      private function equals(a:*, b:*) : Number
+      private function equals(param1:*, param2:*) : Number
       {
          //Décompilation abandonné
       }
       
-      private function diff(a:*, b:*) : Number
+      private function diff(param1:*, param2:*) : Number
       {
          //Décompilation abandonné
       }
       
-      private function ternary(cond:Number, a:*, b:*) : *
+      private function ternary(param1:Number, param2:*, param3:*) : *
       {
          //Décompilation abandonné
       }
@@ -107,12 +107,12 @@ package com.ankamagames.jerakine.eval
          //Décompilation abandonné
       }
       
-      private function showPosInExpr(pos:uint, expr:String) : String
+      private function showPosInExpr(param1:uint, param2:String) : String
       {
          //Décompilation abandonné
       }
       
-      private function trim(str:String) : String
+      private function trim(param1:String) : String
       {
          //Décompilation abandonné
       }

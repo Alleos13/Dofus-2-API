@@ -11,7 +11,7 @@ package com.ankamagames.berilia.types.tooltip
       //Décompilation abandonné
       }
       
-      public function TooltipRectangle(x:Number, y:Number, width:Number, height:Number)
+      public function TooltipRectangle(param1:Number, param2:Number, param3:Number, param4:Number)
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.berilia.types.tooltip
          //Décompilation abandonné
       }
       
-      public function set x(nValue:Number) : void
+      public function set x(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function set y(nValue:Number) : void
+      public function set y(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function set width(nValue:Number) : void
+      public function set width(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function set height(nValue:Number) : void
+      public function set height(param1:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function localToGlobal(point:Point) : Point
+      public function localToGlobal(param1:Point) : Point
       {
          //Décompilation abandonné
       }
       
-      public function globalToLocal(point:Point) : Point
+      public function globalToLocal(param1:Point) : Point
       {
          //Décompilation abandonné
       }

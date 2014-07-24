@@ -10,7 +10,7 @@ package com.hurlant.crypto.symmetric
       //Décompilation abandonné
       }
       
-      public function DESKey(key:ByteArray)
+      public function DESKey(param1:ByteArray)
       {
          //Décompilation abandonné
       }
@@ -54,7 +54,7 @@ package com.hurlant.crypto.symmetric
          //Décompilation abandonné
       }
       
-      public function decrypt(block:ByteArray, index:uint = 0) : void
+      public function decrypt(param1:ByteArray, param2:uint = 0) : void
       {
          //Décompilation abandonné
       }
@@ -64,17 +64,17 @@ package com.hurlant.crypto.symmetric
          //Décompilation abandonné
       }
       
-      public function encrypt(block:ByteArray, index:uint = 0) : void
+      public function encrypt(param1:ByteArray, param2:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      protected function generateWorkingKey(encrypting:Boolean, key:ByteArray, off:uint) : Array
+      protected function generateWorkingKey(param1:Boolean, param2:ByteArray, param3:uint) : Array
       {
          //Décompilation abandonné
       }
       
-      protected function desFunc(wKey:Array, inp:ByteArray, inOff:uint, out:ByteArray, outOff:uint) : void
+      protected function desFunc(param1:Array, param2:ByteArray, param3:uint, param4:ByteArray, param5:uint) : void
       {
          //Décompilation abandonné
       }

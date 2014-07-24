@@ -58,7 +58,7 @@ package com.ankamagames.dofus.logic.common.managers
       
       public var autoConnectOfASpecificCharacterId:int = -1;
       
-      public function set server(s:Server) : void
+      public function set server(param1:Server) : void
       {
          //Décompilation abandonné
       }

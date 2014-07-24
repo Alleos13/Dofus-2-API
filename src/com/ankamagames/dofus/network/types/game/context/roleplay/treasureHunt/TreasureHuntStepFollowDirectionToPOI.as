@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.treasureHunt
          //Décompilation abandonné
       }
       
-      public function initTreasureHuntStepFollowDirectionToPOI(direction:uint = 1, poiLabelId:uint = 0) : TreasureHuntStepFollowDirectionToPOI
+      public function initTreasureHuntStepFollowDirectionToPOI(param1:uint = 1, param2:uint = 0) : TreasureHuntStepFollowDirectionToPOI
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.treasureHunt
          //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void
+      override public function serialize(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_TreasureHuntStepFollowDirectionToPOI(output:IDataOutput) : void
+      public function serializeAs_TreasureHuntStepFollowDirectionToPOI(param1:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void
+      override public function deserialize(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_TreasureHuntStepFollowDirectionToPOI(input:IDataInput) : void
+      public function deserializeAs_TreasureHuntStepFollowDirectionToPOI(param1:IDataInput) : void
       {
          //Décompilation abandonné
       }

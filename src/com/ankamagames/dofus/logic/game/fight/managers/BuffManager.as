@@ -58,7 +58,7 @@ package com.ankamagames.dofus.logic.game.fight.managers
          //Décompilation abandonné
       }
       
-      public static function makeBuffFromEffect(effect:AbstractFightDispellableEffect, castingSpell:CastingSpell, actionId:uint) : BasicBuff
+      public static function makeBuffFromEffect(param1:AbstractFightDispellableEffect, param2:CastingSpell, param3:uint) : BasicBuff
       {
          //Décompilation abandonné
       }
@@ -74,7 +74,7 @@ package com.ankamagames.dofus.logic.game.fight.managers
          //Décompilation abandonné
       }
       
-      public function decrementDuration(targetId:int) : void
+      public function decrementDuration(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -84,72 +84,72 @@ package com.ankamagames.dofus.logic.game.fight.managers
          //Décompilation abandonné
       }
       
-      public function incrementDuration(targetId:int, delta:int, dispellEffect:Boolean = false, incrementMode:int = 1) : void
+      public function incrementDuration(param1:int, param2:int, param3:Boolean = false, param4:int = 1) : void
       {
          //Décompilation abandonné
       }
       
-      public function markFinishingBuffs(targetId:int, ignoreCurrent:Boolean = false) : void
+      public function markFinishingBuffs(param1:int, param2:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function addBuff(buff:BasicBuff, applyBuff:Boolean = true) : void
+      public function addBuff(param1:BasicBuff, param2:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateBuff(buff:BasicBuff) : Boolean
+      public function updateBuff(param1:BasicBuff) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function dispell(targetId:int, forceUndispellable:Boolean = false, critical:Boolean = false, dying:Boolean = false) : void
+      public function dispell(param1:int, param2:Boolean = false, param3:Boolean = false, param4:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function dispellSpell(targetId:int, spellId:uint, forceUndispellable:Boolean = false, critical:Boolean = false, dying:Boolean = false) : void
+      public function dispellSpell(param1:int, param2:uint, param3:Boolean = false, param4:Boolean = false, param5:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function dispellUniqueBuff(targetId:int, boostUID:int, forceUndispellable:Boolean = false, dying:Boolean = false, ultimateDebuff:Boolean = true) : void
+      public function dispellUniqueBuff(param1:int, param2:int, param3:Boolean = false, param4:Boolean = false, param5:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeLinkedBuff(sourceId:int, forceUndispellable:Boolean = false, dying:Boolean = false) : Array
+      public function removeLinkedBuff(param1:int, param2:Boolean = false, param3:Boolean = false) : Array
       {
          //Décompilation abandonné
       }
       
-      public function reaffectBuffs(sourceId:int) : void
+      public function reaffectBuffs(param1:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function getNextFighter(sourceId:int) : int
+      private function getNextFighter(param1:int) : int
       {
          //Décompilation abandonné
       }
       
-      public function getFighterInfo(targetId:int) : GameFightFighterInformations
+      public function getFighterInfo(param1:int) : GameFightFighterInformations
       {
          //Décompilation abandonné
       }
       
-      public function getAllBuff(targetId:int) : Array
+      public function getAllBuff(param1:int) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getBuff(buffId:uint, playerId:int) : BasicBuff
+      public function getBuff(param1:uint, param2:int) : BasicBuff
       {
          //Décompilation abandonné
       }
       
-      public function getFinishingBuffs(fighterid:int) : Array
+      public function getFinishingBuffs(param1:int) : Array
       {
          //Décompilation abandonné
       }
@@ -159,7 +159,7 @@ package com.ankamagames.dofus.logic.game.fight.managers
          //Décompilation abandonné
       }
       
-      private function getBuffIndex(targetId:int, buffId:int) : int
+      private function getBuffIndex(param1:int, param2:int) : int
       {
          //Décompilation abandonné
       }

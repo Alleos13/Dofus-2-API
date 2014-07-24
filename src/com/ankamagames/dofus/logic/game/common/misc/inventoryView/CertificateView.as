@@ -15,7 +15,7 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
       //Décompilation abandonné
       }
       
-      public function CertificateView(hookLock:HookLock)
+      public function CertificateView(param1:HookLock)
       {
          //Décompilation abandonné
       }
@@ -26,7 +26,7 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
       
       private var _hookLock:HookLock;
       
-      public function initialize(items:Vector.<ItemWrapper>) : void
+      public function initialize(param1:Vector.<ItemWrapper>) : void
       {
          //Décompilation abandonné
       }
@@ -41,22 +41,22 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
          //Décompilation abandonné
       }
       
-      public function addItem(item:ItemWrapper, invisible:int) : void
+      public function addItem(param1:ItemWrapper, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeItem(item:ItemWrapper, invisible:int) : void
+      public function removeItem(param1:ItemWrapper, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function modifyItem(item:ItemWrapper, oldItem:ItemWrapper, invisible:int) : void
+      public function modifyItem(param1:ItemWrapper, param2:ItemWrapper, param3:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function isListening(item:ItemWrapper) : Boolean
+      public function isListening(param1:ItemWrapper) : Boolean
       {
          //Décompilation abandonné
       }

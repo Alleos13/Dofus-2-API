@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.servers
       
       private static var _log:Logger;
       
-      public static function getServerCommunityById(id:int) : ServerCommunity
+      public static function getServerCommunityById(param1:int) : ServerCommunity
       {
          //Décompilation abandonné
       }

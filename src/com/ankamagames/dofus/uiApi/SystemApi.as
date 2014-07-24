@@ -140,12 +140,12 @@ package com.ankamagames.dofus.uiApi
       
       private var _hooks:Dictionary;
       
-      public function set module(value:UiModule) : void
+      public function set module(param1:UiModule) : void
       {
          //Décompilation abandonné
       }
       
-      public function set currentUi(value:UiRootContainer) : void
+      public function set currentUi(param1:UiRootContainer) : void
       {
          //Décompilation abandonné
       }
@@ -160,52 +160,52 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function addHook(hookClass:Class, callback:Function) : void
+      public function addHook(param1:Class, param2:Function) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeHook(hookClass:Class) : void
+      public function removeHook(param1:Class) : void
       {
          //Décompilation abandonné
       }
       
-      public function createHook(name:String) : void
+      public function createHook(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function dispatchHook(hookClass:Class, ... params) : void
+      public function dispatchHook(param1:Class, ... rest) : void
       {
          //Décompilation abandonné
       }
       
-      public function sendAction(action:Object) : uint
+      public function sendAction(param1:Object) : uint
       {
          //Décompilation abandonné
       }
       
-      private function onActionConfirm(actionToSend:Action, apiAction:DofusApiAction) : Function
+      private function onActionConfirm(param1:Action, param2:DofusApiAction) : Function
       {
          //Décompilation abandonné
       }
       
-      public function log(level:uint, text:*) : void
+      public function log(param1:uint, param2:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function setConfigEntry(sKey:String, sValue:*) : void
+      public function setConfigEntry(param1:String, param2:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function getConfigEntry(sKey:String) : *
+      public function getConfigEntry(param1:String) : *
       {
          //Décompilation abandonné
       }
       
-      public function getEnum(name:String) : Class
+      public function getEnum(param1:String) : Class
       {
          //Décompilation abandonné
       }
@@ -220,12 +220,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getConfigKey(key:String) : *
+      public function getConfigKey(param1:String) : *
       {
          //Décompilation abandonné
       }
       
-      public function goToUrl(url:String) : void
+      public function goToUrl(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -240,17 +240,17 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function setPort(port:uint) : Boolean
+      public function setPort(param1:uint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function setData(name:String, value:*, shareWithAccount:Boolean = false) : Boolean
+      public function setData(param1:String, param2:*, param3:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getSetData(name:String, value:*, shareWithAccount:Boolean = false) : *
+      public function getSetData(param1:String, param2:*, param3:Boolean = false) : *
       {
          //Décompilation abandonné
       }
@@ -270,12 +270,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function isAirVersionAvailable(version:uint) : Boolean
+      public function isAirVersionAvailable(param1:uint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function setAirVersion(version:uint) : Boolean
+      public function setAirVersion(param1:uint) : Boolean
       {
          //Décompilation abandonné
       }
@@ -295,22 +295,22 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getData(name:String, shareWithAccount:Boolean = false) : *
+      public function getData(param1:String, param2:Boolean = false) : *
       {
          //Décompilation abandonné
       }
       
-      public function getOption(name:String, moduleName:String) : *
+      public function getOption(param1:String, param2:String) : *
       {
          //Décompilation abandonné
       }
       
-      public function callbackHook(hook:Hook, ... params) : void
+      public function callbackHook(param1:Hook, ... rest) : void
       {
          //Décompilation abandonné
       }
       
-      public function showWorld(b:Boolean) : void
+      public function showWorld(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -320,27 +320,27 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getConsoleAutoCompletion(cmd:String, server:Boolean) : String
+      public function getConsoleAutoCompletion(param1:String, param2:Boolean) : String
       {
          //Décompilation abandonné
       }
       
-      public function getAutoCompletePossibilities(cmd:String, server:Boolean = false) : Array
+      public function getAutoCompletePossibilities(param1:String, param2:Boolean = false) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getAutoCompletePossibilitiesOnParam(cmd:String, server:Boolean = false, paramIndex:uint = 0, currentParams:Array = null) : Array
+      public function getAutoCompletePossibilitiesOnParam(param1:String, param2:Boolean = false, param3:uint = 0, param4:Array = null) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getCmdHelp(cmd:String, server:Boolean = false) : String
+      public function getCmdHelp(param1:String, param2:Boolean = false) : String
       {
          //Décompilation abandonné
       }
       
-      public function startChrono(label:String) : void
+      public function startChrono(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -350,7 +350,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function hasAdminCommand(cmd:String) : Boolean
+      public function hasAdminCommand(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -361,22 +361,22 @@ package com.ankamagames.dofus.uiApi
       
       private var _running:Boolean;
       
-      private function onEnterFrame(e:Event) : void
+      private function onEnterFrame(param1:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function addEventListener(listener:Function, name:String, frameRate:uint = 25) : void
+      public function addEventListener(param1:Function, param2:String, param3:uint = 25) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeEventListener(listener:Function) : void
+      public function removeEventListener(param1:Function) : void
       {
          //Décompilation abandonné
       }
       
-      public function disableWorldInteraction(pTotal:Boolean = true) : void
+      public function disableWorldInteraction(param1:Boolean = true) : void
       {
          //Décompilation abandonné
       }
@@ -386,7 +386,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function setFrameRate(f:uint) : void
+      public function setFrameRate(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -406,7 +406,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getEntityLookFromString(s:String) : TiphonEntityLook
+      public function getEntityLookFromString(param1:String) : TiphonEntityLook
       {
          //Décompilation abandonné
       }
@@ -426,7 +426,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function clearCache(pSelective:Boolean = false) : void
+      public function clearCache(param1:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -451,7 +451,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function zoom(value:Number) : void
+      public function zoom(param1:Number) : void
       {
          //Décompilation abandonné
       }
@@ -461,57 +461,57 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function goToThirdPartyLogin(target:WebBrowser) : void
+      public function goToThirdPartyLogin(param1:WebBrowser) : void
       {
          //Décompilation abandonné
       }
       
-      public function goToOgrinePortal(target:WebBrowser) : void
+      public function goToOgrinePortal(param1:WebBrowser) : void
       {
          //Décompilation abandonné
       }
       
-      public function goToAnkaBoxPortal(target:WebBrowser) : void
+      public function goToAnkaBoxPortal(param1:WebBrowser) : void
       {
          //Décompilation abandonné
       }
       
-      public function goToAnkaBoxLastMessage(target:WebBrowser) : void
+      public function goToAnkaBoxLastMessage(param1:WebBrowser) : void
       {
          //Décompilation abandonné
       }
       
-      public function goToAnkaBoxSend(target:WebBrowser, userId:int) : void
+      public function goToAnkaBoxSend(param1:WebBrowser, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function goToSupportFAQ(faqURL:String) : void
+      public function goToSupportFAQ(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function goToChangelogPortal(target:WebBrowser) : void
+      public function goToChangelogPortal(param1:WebBrowser) : void
       {
          //Décompilation abandonné
       }
       
-      public function goToCheckLink(url:String, sender:uint, senderName:String) : void
+      public function goToCheckLink(param1:String, param2:uint, param3:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function refreshUrl(target:WebBrowser, domain:uint = 0) : void
+      public function refreshUrl(param1:WebBrowser, param2:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function execServerCmd(cmd:String) : void
+      public function execServerCmd(param1:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function mouseZoom(zoomIn:Boolean = true) : void
+      public function mouseZoom(param1:Boolean = true) : void
       {
          //Décompilation abandonné
       }
@@ -531,7 +531,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function hasPart(partName:String) : Boolean
+      public function hasPart(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -561,12 +561,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function notifyUser(always:Boolean) : void
+      public function notifyUser(param1:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function setGameAlign(align:String) : void
+      public function setGameAlign(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -576,12 +576,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getDirectoryContent(path:String = ".") : Array
+      public function getDirectoryContent(param1:String = ".") : Array
       {
          //Décompilation abandonné
       }
       
-      public function getAccountId(playerName:String) : int
+      public function getAccountId(param1:String) : int
       {
          //Décompilation abandonné
       }
@@ -596,7 +596,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getObjectVariables(o:Object, onlyVar:Boolean = false, useCache:Boolean = false) : Array
+      public function getObjectVariables(param1:Object, param2:Boolean = false, param3:Boolean = false) : Array
       {
          //Décompilation abandonné
       }
@@ -606,12 +606,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function sendStatisticReport(key:String, value:String) : Boolean
+      public function sendStatisticReport(param1:String, param2:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function isStatisticReported(key:String) : Boolean
+      public function isStatisticReported(param1:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -621,7 +621,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function copyToClipboard(val:String) : void
+      public function copyToClipboard(param1:String) : void
       {
          //Décompilation abandonné
       }
@@ -646,7 +646,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function isKeyDown(keyCode:uint) : Boolean
+      public function isKeyDown(param1:uint) : Boolean
       {
          //Décompilation abandonné
       }
@@ -671,7 +671,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      private function luaZoom(value:Number) : void
+      private function luaZoom(param1:Number) : void
       {
          //Décompilation abandonné
       }

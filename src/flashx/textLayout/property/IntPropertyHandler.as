@@ -7,7 +7,7 @@ package flashx.textLayout.property
       //Décompilation abandonné
       }
       
-      public function IntPropertyHandler(minValue:int, maxValue:int, limits:String = "allLimits")
+      public function IntPropertyHandler(param1:int, param2:int, param3:String = "allLimits")
       {
          //Décompilation abandonné
       }
@@ -38,7 +38,7 @@ package flashx.textLayout.property
          //Décompilation abandonné
       }
       
-      override public function owningHandlerCheck(newVal:*) : *
+      override public function owningHandlerCheck(param1:*) : *
       {
          //Décompilation abandonné
       }

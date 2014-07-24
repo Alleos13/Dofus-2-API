@@ -9,7 +9,7 @@ package org.flintparticles.twoD.zones
       //Décompilation abandonné
       }
       
-      function contains(x:Number, y:Number) : Boolean;
+      function contains(param1:Number, param2:Number) : Boolean;
       
       function getLocation() : Point;
       

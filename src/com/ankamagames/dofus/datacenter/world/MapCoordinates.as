@@ -19,22 +19,22 @@ package com.ankamagames.dofus.datacenter.world
       
       private static const UNDEFINED_COORD:int = -2147483648;
       
-      public static function getMapCoordinatesByCompressedCoords(compressedCoords:uint) : MapCoordinates
+      public static function getMapCoordinatesByCompressedCoords(param1:uint) : MapCoordinates
       {
          //Décompilation abandonné
       }
       
-      public static function getMapCoordinatesByCoords(x:int, y:int) : MapCoordinates
+      public static function getMapCoordinatesByCoords(param1:int, param2:int) : MapCoordinates
       {
          //Décompilation abandonné
       }
       
-      private static function getSignedValue(v:int) : int
+      private static function getSignedValue(param1:int) : int
       {
          //Décompilation abandonné
       }
       
-      private static function getCompressedValue(v:int) : uint
+      private static function getCompressedValue(param1:int) : uint
       {
          //Décompilation abandonné
       }

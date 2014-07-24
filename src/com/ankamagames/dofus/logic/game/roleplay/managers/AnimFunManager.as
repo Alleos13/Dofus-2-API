@@ -82,10 +82,6 @@ package com.ankamagames.dofus.logic.game.roleplay.managers
       
       private var _nbNormalAnims:int;
       
-      private var _minDelay:int = 40000;
-      
-      private var _maxDelay:int = 80000;
-      
       private var _mapId:int = -1;
       
       private var _entitiesList:Array;
@@ -122,22 +118,12 @@ package com.ankamagames.dofus.logic.game.roleplay.managers
       
       private var _firstAnim:Boolean;
       
-      public function set fastDelay(value:Boolean) : void
-      {
-         //Décompilation abandonné
-      }
-      
-      public function get fastDelay() : Boolean
-      {
-         //Décompilation abandonné
-      }
-      
       public function get mapId() : int
       {
          //Décompilation abandonné
       }
       
-      public function initializeByMap(mapId:uint) : void
+      public function initializeByMap(param1:uint) : void
       {
          //Décompilation abandonné
       }
@@ -162,7 +148,7 @@ package com.ankamagames.dofus.logic.game.roleplay.managers
          //Décompilation abandonné
       }
       
-      public function cancelAnim(pEntityId:int) : void
+      public function cancelAnim(param1:int) : void
       {
          //Décompilation abandonné
       }
@@ -172,27 +158,27 @@ package com.ankamagames.dofus.logic.game.roleplay.managers
          //Décompilation abandonné
       }
       
-      private function checkAvailableAnim(pTimer:SynchroTimer) : void
+      private function checkAvailableAnim(param1:SynchroTimer) : void
       {
          //Décompilation abandonné
       }
       
-      private function playAnimFun(pAnimFun:AnimFun, pStartFrame:int = -1) : void
+      private function playAnimFun(param1:AnimFun, param2:int = -1) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAnimFunEnd(pEvent:SequencerEvent) : void
+      private function onAnimFunEnd(param1:SequencerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function randomActor(monsterSeed:int) : int
+      private function randomActor(param1:int) : int
       {
          //Décompilation abandonné
       }
       
-      private function randomAnim(actorId:int, animSeed:int) : String
+      private function randomAnim(param1:int, param2:int) : String
       {
          //Décompilation abandonné
       }
@@ -202,37 +188,37 @@ package com.ankamagames.dofus.logic.game.roleplay.managers
          //Décompilation abandonné
       }
       
-      private function synchCurrentAnim(pNextAnimFun:AnimFun, pElapsedTime:int) : void
+      private function synchCurrentAnim(param1:AnimFun, param2:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSwlLoaded(pEvent:SwlEvent) : void
+      private function onSwlLoaded(param1:SwlEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function getAnimSum(pAnimFun:AnimFun) : int
+      private function getAnimSum(param1:AnimFun) : int
       {
          //Décompilation abandonné
       }
       
-      private function playSynchAnim(pAnimFunInfo:AnimFunInfo) : void
+      private function playSynchAnim(param1:AnimFunInfo) : void
       {
          //Décompilation abandonné
       }
       
-      private function getAnimClipInfo(pAnimFun:AnimFun) : AnimFunClipInfo
+      private function getAnimClipInfo(param1:AnimFun) : AnimFunClipInfo
       {
          //Décompilation abandonné
       }
       
-      private function hasFastAnims(pActorId:int) : Boolean
+      private function hasFastAnims(param1:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function hasAnimsFun(pActorId:int) : Boolean
+      private function hasAnimsFun(param1:int) : Boolean
       {
          //Décompilation abandonné
       }
@@ -247,7 +233,7 @@ class AnimFunInfo extends Object
    //Décompilation abandonné
    }
    
-   function AnimFunInfo(pAnimFun:AnimFun, pPreviousAnimFun:AnimFun, pElapsedTime:int, pLoadTime:int = 0)
+   function AnimFunInfo(param1:AnimFun, param2:AnimFun, param3:int, param4:int = 0)
    {
       //Décompilation abandonné
    }
@@ -269,7 +255,7 @@ class AnimFunClipInfo extends Object
    //Décompilation abandonné
    }
    
-   function AnimFunClipInfo(pDuration:int, pTotalFrames:int)
+   function AnimFunClipInfo(param1:int, param2:int)
    {
       //Décompilation abandonné
    }
