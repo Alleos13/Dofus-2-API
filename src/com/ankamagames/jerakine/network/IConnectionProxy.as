@@ -6,8 +6,12 @@ package com.ankamagames.jerakine.network
    public interface IConnectionProxy
    {
       
-      function processAndSend(param1:INetworkMessage, param2:IDataOutput) : void;
+      {
+      //Décompilation abandonné
+      }
       
-      function processAndReceive(param1:IDataInput) : INetworkMessage;
+      function processAndSend(msg:INetworkMessage, output:IDataOutput) : void;
+      
+      function processAndReceive(input:IDataInput) : INetworkMessage;
    }
 }

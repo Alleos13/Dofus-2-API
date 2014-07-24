@@ -49,405 +49,317 @@ package com.ankamagames.dofus.uiApi
    public class PlayedCharacterApi extends Object implements IApi
    {
       
-      public function PlayedCharacterApi() {
-         super();
-         MEMORY_LOG[this] = 1;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PlayedCharacterApi()
+      {
+         //Décompilation abandonné
       }
       
       public static var MEMORY_LOG:Dictionary;
       
       protected static const _log:Logger;
       
-      public static function characteristics() : CharacterCharacteristicsInformations {
-         return PlayedCharacterManager.getInstance().characteristics;
+      public static function characteristics() : CharacterCharacteristicsInformations
+      {
+         //Décompilation abandonné
       }
       
-      public static function getPlayedCharacterInfo() : Object {
-         var i:CharacterBaseInformations = PlayedCharacterManager.getInstance().infos;
-         if(!i)
-         {
-            return null;
-         }
-         var o:Object = new Object();
-         o.id = i.id;
-         o.breed = i.breed;
-         o.level = i.level;
-         o.sex = i.sex;
-         o.name = i.name;
-         o.entityLook = EntityLookAdapter.fromNetwork(i.entityLook);
-         o.realEntityLook = o.entityLook;
-         if((isCreature()) && (PlayedCharacterManager.getInstance().realEntityLook))
-         {
-            o.entityLook = EntityLookAdapter.fromNetwork(PlayedCharacterManager.getInstance().realEntityLook);
-         }
-         var ridderLook:TiphonEntityLook = TiphonEntityLook(o.entityLook).getSubEntity(SubEntityBindingPointCategoryEnum.HOOK_POINT_CATEGORY_MOUNT_DRIVER,0);
-         if(ridderLook)
-         {
-            if(ridderLook.getBone() == 2)
-            {
-               ridderLook.setBone(1);
-            }
-            o.entityLook = ridderLook;
-         }
-         return o;
+      public static function getPlayedCharacterInfo() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public static function getCurrentEntityLook() : Object {
-         var look:TiphonEntityLook = null;
-         var entity:AnimatedCharacter = DofusEntities.getEntity(PlayedCharacterManager.getInstance().id) as AnimatedCharacter;
-         if(entity)
-         {
-            look = entity.look.clone();
-         }
-         else
-         {
-            look = EntityLookAdapter.fromNetwork(PlayedCharacterManager.getInstance().infos.entityLook);
-         }
-         return look;
+      public static function getCurrentEntityLook() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public static function getInventory() : Vector.<ItemWrapper> {
-         return InventoryManager.getInstance().realInventory;
+      public static function getInventory() : Vector.<ItemWrapper>
+      {
+         //Décompilation abandonné
       }
       
-      public static function getEquipment() : Array {
-         var item:* = undefined;
-         var equipment:Array = new Array();
-         for each(item in PlayedCharacterManager.getInstance().inventory)
-         {
-            if(item.position <= 15)
-            {
-               equipment.push(item);
-            }
-         }
-         return equipment;
+      public static function getEquipment() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSpellInventory() : Array {
-         return PlayedCharacterManager.getInstance().spellsInventory;
+      public static function getSpellInventory() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public static function getJobs() : Array {
-         return PlayedCharacterManager.getInstance().jobs;
+      public static function getJobs() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public static function getMount() : Object {
-         return PlayedCharacterManager.getInstance().mount;
+      public static function getMount() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public static function getTitle() : Title {
-         var title:Title = null;
-         var playerInfo:GameRolePlayCharacterInformations = null;
-         var option:* = undefined;
-         var title2:Title = null;
-         var titleId:int = (Kernel.getWorker().getFrame(TinselFrame) as TinselFrame).currentTitle;
-         if(titleId)
-         {
-            title = Title.getTitleById(titleId);
-            return title;
-         }
-         playerInfo = getEntityInfos();
-         if((playerInfo) && (playerInfo.humanoidInfo))
-         {
-            for each(option in playerInfo.humanoidInfo.options)
-            {
-               if(option is HumanOptionTitle)
-               {
-                  titleId = option.titleId;
-               }
-            }
-            title2 = Title.getTitleById(titleId);
-            return title2;
-         }
-         return null;
+      public static function getTitle() : Title
+      {
+         //Décompilation abandonné
       }
       
-      public static function getOrnament() : Ornament {
-         var ornament:Ornament = null;
-         var ornamentId:int = (Kernel.getWorker().getFrame(TinselFrame) as TinselFrame).currentOrnament;
-         if(ornamentId)
-         {
-            ornament = Ornament.getOrnamentById(ornamentId);
-            return ornament;
-         }
-         return null;
+      public static function getOrnament() : Ornament
+      {
+         //Décompilation abandonné
       }
       
-      public static function getKnownTitles() : Vector.<uint> {
-         return (Kernel.getWorker().getFrame(TinselFrame) as TinselFrame).knownTitles;
+      public static function getKnownTitles() : Vector.<uint>
+      {
+         //Décompilation abandonné
       }
       
-      public static function getKnownOrnaments() : Vector.<uint> {
-         return (Kernel.getWorker().getFrame(TinselFrame) as TinselFrame).knownOrnaments;
+      public static function getKnownOrnaments() : Vector.<uint>
+      {
+         //Décompilation abandonné
       }
       
-      public static function titlesOrnamentsAskedBefore() : Boolean {
-         return (Kernel.getWorker().getFrame(TinselFrame) as TinselFrame).titlesOrnamentsAskedBefore;
+      public static function titlesOrnamentsAskedBefore() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function getEntityInfos() : GameRolePlayCharacterInformations {
-         var entitiesFrame:AbstractEntitiesFrame = null;
-         if(isInFight())
-         {
-            entitiesFrame = Kernel.getWorker().getFrame(FightEntitiesFrame) as AbstractEntitiesFrame;
-         }
-         else
-         {
-            entitiesFrame = Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as AbstractEntitiesFrame;
-         }
-         if(!entitiesFrame)
-         {
-            return null;
-         }
-         var playerInfo:GameRolePlayCharacterInformations = entitiesFrame.getEntityInfos(PlayedCharacterManager.getInstance().id) as GameRolePlayCharacterInformations;
-         return playerInfo;
+      public static function getEntityInfos() : GameRolePlayCharacterInformations
+      {
+         //Décompilation abandonné
       }
       
-      public static function getEntityTooltipInfos() : CharacterTooltipInformation {
-         var playerInfo:GameRolePlayCharacterInformations = getEntityInfos();
-         if(!playerInfo)
-         {
-            return null;
-         }
-         var tooltipInfos:CharacterTooltipInformation = new CharacterTooltipInformation(playerInfo,0);
-         return tooltipInfos;
+      public static function getEntityTooltipInfos() : CharacterTooltipInformation
+      {
+         //Décompilation abandonné
       }
       
-      public static function inventoryWeight() : uint {
-         return PlayedCharacterManager.getInstance().inventoryWeight;
+      public static function inventoryWeight() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public static function inventoryWeightMax() : uint {
-         return PlayedCharacterManager.getInstance().inventoryWeightMax;
+      public static function inventoryWeightMax() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public static function isIncarnation() : Boolean {
-         return PlayedCharacterManager.getInstance().isIncarnation;
+      public static function isIncarnation() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function isMutated() : Boolean {
-         return PlayedCharacterManager.getInstance().isMutated;
+      public static function isMutated() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function isInHouse() : Boolean {
-         return PlayedCharacterManager.getInstance().isInHouse;
+      public static function isInHouse() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function isInExchange() : Boolean {
-         return PlayedCharacterManager.getInstance().isInExchange;
+      public static function isInExchange() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function isInFight() : Boolean {
-         return !(Kernel.getWorker().getFrame(FightContextFrame) == null);
+      public static function isInFight() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function isInPreFight() : Boolean {
-         return !(Kernel.getWorker().getFrame(FightPreparationFrame) == null);
+      public static function isInPreFight() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function isInParty() : Boolean {
-         return PlayedCharacterManager.getInstance().isInParty;
+      public static function isInParty() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function isPartyLeader() : Boolean {
-         return PlayedCharacterManager.getInstance().isPartyLeader;
+      public static function isPartyLeader() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function isRidding() : Boolean {
-         return PlayedCharacterManager.getInstance().isRidding;
+      public static function isRidding() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function isPetsMounting() : Boolean {
-         return PlayedCharacterManager.getInstance().isPetsMounting;
+      public static function isPetsMounting() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function hasCompanion() : Boolean {
-         return PlayedCharacterManager.getInstance().hasCompanion;
+      public static function hasCompanion() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function id() : uint {
-         return PlayedCharacterManager.getInstance().id;
+      public static function id() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public static function restrictions() : ActorRestrictionsInformations {
-         return PlayedCharacterManager.getInstance().restrictions;
+      public static function restrictions() : ActorRestrictionsInformations
+      {
+         //Décompilation abandonné
       }
       
-      public static function isMutant() : Boolean {
-         var rcf:RoleplayContextFrame = Kernel.getWorker().getFrame(RoleplayContextFrame) as RoleplayContextFrame;
-         var infos:GameRolePlayActorInformations = rcf.entitiesFrame.getEntityInfos(PlayedCharacterManager.getInstance().id) as GameRolePlayActorInformations;
-         return infos is GameRolePlayMutantInformations;
+      public static function isMutant() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function publicMode() : Boolean {
-         return PlayedCharacterManager.getInstance().publicMode;
+      public static function publicMode() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function artworkId() : int {
-         return PlayedCharacterManager.getInstance().artworkId;
+      public static function artworkId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public static function isCreature() : Boolean {
-         return EntitiesLooksManager.getInstance().isCreature(id());
+      public static function isCreature() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function getBone() : uint {
-         var i:CharacterBaseInformations = PlayedCharacterManager.getInstance().infos;
-         return EntityLookAdapter.fromNetwork(i.entityLook).getBone();
+      public static function getBone() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSkin() : uint {
-         var i:CharacterBaseInformations = PlayedCharacterManager.getInstance().infos;
-         if((EntityLookAdapter.fromNetwork(i.entityLook)) && (EntityLookAdapter.fromNetwork(i.entityLook).getSkins()) && (EntityLookAdapter.fromNetwork(i.entityLook).getSkins().length > 0))
-         {
-            return EntityLookAdapter.fromNetwork(i.entityLook).getSkins()[0];
-         }
-         return 0;
+      public static function getSkin() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public static function getColors() : Object {
-         var i:CharacterBaseInformations = PlayedCharacterManager.getInstance().infos;
-         return EntityLookAdapter.fromNetwork(i.entityLook).getColors();
+      public static function getColors() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSubentityColors() : Object {
-         var i:CharacterBaseInformations = PlayedCharacterManager.getInstance().infos;
-         var subTel:TiphonEntityLook = EntityLookAdapter.fromNetwork(i.entityLook).getSubEntity(SubEntityBindingPointCategoryEnum.HOOK_POINT_CATEGORY_MOUNT_DRIVER,0);
-         if((!subTel) && (PlayedCharacterManager.getInstance().realEntityLook))
-         {
-            subTel = EntityLookAdapter.fromNetwork(PlayedCharacterManager.getInstance().realEntityLook).getSubEntity(SubEntityBindingPointCategoryEnum.HOOK_POINT_CATEGORY_MOUNT_DRIVER,0);
-         }
-         return subTel?subTel.getColors():null;
+      public static function getSubentityColors() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAlignmentSide() : int {
-         return PlayedCharacterManager.getInstance().characteristics.alignmentInfos.alignmentSide;
+      public static function getAlignmentSide() : int
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAlignmentValue() : uint {
-         return PlayedCharacterManager.getInstance().characteristics.alignmentInfos.alignmentValue;
+      public static function getAlignmentValue() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAlignmentAggressableStatus() : uint {
-         return PlayedCharacterManager.getInstance().characteristics.alignmentInfos.aggressable;
+      public static function getAlignmentAggressableStatus() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAlignmentGrade() : uint {
-         return PlayedCharacterManager.getInstance().characteristics.alignmentInfos.alignmentGrade;
+      public static function getAlignmentGrade() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public static function getMaxSummonedCreature() : uint {
-         return PlayedCharacterManager.getInstance().characteristics.summonableCreaturesBoost.base + PlayedCharacterManager.getInstance().characteristics.summonableCreaturesBoost.objectsAndMountBonus + PlayedCharacterManager.getInstance().characteristics.summonableCreaturesBoost.alignGiftBonus + PlayedCharacterManager.getInstance().characteristics.summonableCreaturesBoost.contextModif;
+      public static function getMaxSummonedCreature() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public static function getCurrentSummonedCreature() : uint {
-         return PlayedCharacterManager.getInstance().currentSummonedCreature;
+      public static function getCurrentSummonedCreature() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public static function canSummon() : Boolean {
-         return getMaxSummonedCreature() >= getCurrentSummonedCreature() + 1;
+      public static function canSummon() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSpell(spellId:uint) : SpellWrapper {
-         return CurrentPlayedFighterManager.getInstance().getSpellById(spellId);
+      public static function getSpell(spellId:uint) : SpellWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public static function canCastThisSpell(spellId:uint, lvl:uint) : Boolean {
-         return CurrentPlayedFighterManager.getInstance().canCastThisSpell(spellId,lvl);
+      public static function canCastThisSpell(spellId:uint, lvl:uint) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function canCastThisSpellOnTarget(spellId:uint, lvl:uint, pTargetId:int) : Boolean {
-         return CurrentPlayedFighterManager.getInstance().canCastThisSpell(spellId,lvl,pTargetId);
+      public static function canCastThisSpellOnTarget(spellId:uint, lvl:uint, pTargetId:int) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSpellModification(spellId:uint, carac:int) : int {
-         var modif:CharacterSpellModification = CurrentPlayedFighterManager.getInstance().getSpellModifications(spellId,carac);
-         if((modif) && (modif.value))
-         {
-            return modif.value.alignGiftBonus + modif.value.base + modif.value.contextModif + modif.value.objectsAndMountBonus;
-         }
-         return 0;
+      public static function getSpellModification(spellId:uint, carac:int) : int
+      {
+         //Décompilation abandonné
       }
       
-      public static function isInHisHouse() : Boolean {
-         return PlayedCharacterManager.getInstance().isInHisHouse;
+      public static function isInHisHouse() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function getPlayerHouses() : Vector.<AccountHouseInformations> {
-         return (Kernel.getWorker().getFrame(MiscFrame) as MiscFrame).accountHouses;
+      public static function getPlayerHouses() : Vector.<AccountHouseInformations>
+      {
+         //Décompilation abandonné
       }
       
-      public static function currentMap() : WorldPointWrapper {
-         return PlayedCharacterManager.getInstance().currentMap;
+      public static function currentMap() : WorldPointWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public static function currentSubArea() : SubArea {
-         return PlayedCharacterManager.getInstance().currentSubArea;
+      public static function currentSubArea() : SubArea
+      {
+         //Décompilation abandonné
       }
       
-      public static function state() : uint {
-         return PlayedCharacterManager.getInstance().state;
+      public static function state() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public static function isAlive() : Boolean {
-         return PlayedCharacterManager.getInstance().state == PlayerLifeStatusEnum.STATUS_ALIVE_AND_KICKING;
+      public static function isAlive() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function getFollowingPlayerId() : int {
-         return PlayedCharacterManager.getInstance().followingPlayerId;
+      public static function getFollowingPlayerId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public static function getPlayerSet(objectGID:uint) : PlayerSetInfo {
-         return PlayedCharacterUpdatesFrame(Kernel.getWorker().getFrame(PlayedCharacterUpdatesFrame)).getPlayerSet(objectGID);
+      public static function getPlayerSet(objectGID:uint) : PlayerSetInfo
+      {
+         //Décompilation abandonné
       }
       
-      public static function getWeapon() : WeaponWrapper {
-         return PlayedCharacterManager.getInstance().currentWeapon;
+      public static function getWeapon() : WeaponWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public static function getExperienceBonusPercent() : int {
-         return PlayedCharacterManager.getInstance().experiencePercent;
+      public static function getExperienceBonusPercent() : int
+      {
+         //Décompilation abandonné
       }
       
-      public static function knowSpell(pSpellId:uint) : int {
-         var obtentionSpellLevel:uint = 0;
-         var playerSpellLevel:uint = 0;
-         var sp:SpellWrapper = null;
-         var disable:* = false;
-         var spellWrapper:SpellWrapper = null;
-         var spellLevelZero:SpellLevel = null;
-         var spell:Spell = Spell.getSpellById(pSpellId);
-         var spellLevel:SpellLevel = SpellLevel.getLevelById(pSpellId);
-         if(pSpellId == 0)
-         {
-            obtentionSpellLevel = 0;
-         }
-         else
-         {
-            spellLevelZero = spell.getSpellLevel(1);
-            obtentionSpellLevel = spellLevelZero.minPlayerLevel;
-         }
-         var spellInv:Array = getSpellInventory();
-         for each(sp in spellInv)
-         {
-            if(sp.spellId == pSpellId)
-            {
-               playerSpellLevel = sp.spellLevel;
-            }
-         }
-         disable = true;
-         for each(spellWrapper in spellInv)
-         {
-            if(spellWrapper.spellId == pSpellId)
-            {
-               disable = false;
-            }
-         }
-         if(disable)
-         {
-            return -1;
-         }
-         return playerSpellLevel;
+      public static function knowSpell(pSpellId:uint) : int
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -14,8 +14,13 @@ package com.ankamagames.dofus.datacenter.world
    public class MapPosition extends Object implements IDataCenter
    {
       
-      public function MapPosition() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapPosition()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "MapPositions";
@@ -52,31 +57,19 @@ package com.ankamagames.dofus.datacenter.world
       
       private static var _mapPositions:Dictionary;
       
-      public static function getMapPositionById(id:int) : MapPosition {
-         var mapPositions:Array = null;
-         var mapPos:MapPosition = null;
-         if(!_mapPositions)
-         {
-            _mapPositions = new Dictionary();
-            mapPositions = getMapPositions();
-            for each(_mapPositions[mapPos.id] in mapPositions)
-            {
-            }
-         }
-         return _mapPositions[id];
+      public static function getMapPositionById(id:int) : MapPosition
+      {
+         //Décompilation abandonné
       }
       
-      public static function getMapPositions() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getMapPositions() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public static function getMapIdByCoord(x:int, y:int) : Vector.<int> {
-         var mc:MapCoordinates = MapCoordinates.getMapCoordinatesByCoords(x,y);
-         if(mc)
-         {
-            return mc.mapIds;
-         }
-         return null;
+      public static function getMapIdByCoord(x:int, y:int) : Vector.<int>
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -103,72 +96,79 @@ package com.ankamagames.dofus.datacenter.world
       
       private var _subArea:SubArea;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get subArea() : SubArea {
-         if(!this._subArea)
-         {
-            this._subArea = SubArea.getSubAreaById(this.subAreaId);
-         }
-         return this._subArea;
+      public function get subArea() : SubArea
+      {
+         //Décompilation abandonné
       }
       
-      public function get allowChallenge() : Boolean {
-         return !((this.capabilities & CAPABILITY_ALLOW_CHALLENGE) == 0);
+      public function get allowChallenge() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get allowAggression() : Boolean {
-         return !((this.capabilities & CAPABILITY_ALLOW_AGGRESSION) == 0);
+      public function get allowAggression() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get allowTeleportTo() : Boolean {
-         return !((this.capabilities & CAPABILITY_ALLOW_TELEPORT_TO) == 0);
+      public function get allowTeleportTo() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get allowTeleportFrom() : Boolean {
-         return !((this.capabilities & CAPABILITY_ALLOW_TELEPORT_FROM) == 0);
+      public function get allowTeleportFrom() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get allowExchanges() : Boolean {
-         return !((this.capabilities & CAPABILITY_ALLOW_EXCHANGES_BETWEEN_PLAYERS) == 0);
+      public function get allowExchanges() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get allowHumanVendor() : Boolean {
-         return !((this.capabilities & CAPABILITY_ALLOW_HUMAN_VENDOR) == 0);
+      public function get allowHumanVendor() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get allowTaxCollector() : Boolean {
-         return !((this.capabilities & CAPABILITY_ALLOW_COLLECTOR) == 0);
+      public function get allowTaxCollector() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get allowSoulCapture() : Boolean {
-         return !((this.capabilities & CAPABILITY_ALLOW_SOUL_CAPTURE) == 0);
+      public function get allowSoulCapture() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get allowSoulSummon() : Boolean {
-         return !((this.capabilities & CAPABILITY_ALLOW_SOUL_SUMMON) == 0);
+      public function get allowSoulSummon() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get allowTavernRegen() : Boolean {
-         return !((this.capabilities & CAPABILITY_ALLOW_TAVERN_REGEN) == 0);
+      public function get allowTavernRegen() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get allowTombMode() : Boolean {
-         return !((this.capabilities & CAPABILITY_ALLOW_TOMB_MODE) == 0);
+      public function get allowTombMode() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get allowTeleportEverywhere() : Boolean {
-         return !((this.capabilities & CAPABILITY_ALLOW_TELEPORT_EVERYWHERE) == 0);
+      public function get allowTeleportEverywhere() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get allowFightChallenges() : Boolean {
-         return !((this.capabilities & CAPABILITY_ALLOW_FIGHT_CHALLENGES) == 0);
+      public function get allowFightChallenges() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

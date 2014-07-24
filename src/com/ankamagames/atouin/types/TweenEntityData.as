@@ -8,8 +8,13 @@ package com.ankamagames.atouin.types
    public class TweenEntityData extends Object
    {
       
-      public function TweenEntityData() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TweenEntityData()
+      {
+         //Décompilation abandonné
       }
       
       public var path:MovementPath;
@@ -36,7 +41,7 @@ package com.ankamagames.atouin.types
       
       public var velocity:Number;
       
-      public var orientation:uint;
+      public var orientation:uint = 1.0;
       
       public var currentCellSprite:Sprite;
       
@@ -44,9 +49,9 @@ package com.ankamagames.atouin.types
       
       public var callback:Function;
       
-      public function clear() : void {
-         this.currentCellSprite = null;
-         this.nextCellSprite = null;
+      public function clear() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

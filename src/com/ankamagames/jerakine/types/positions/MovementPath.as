@@ -6,11 +6,13 @@ package com.ankamagames.jerakine.types.positions
    public class MovementPath extends Object
    {
       
-      public function MovementPath() {
-         super();
-         this._oEnd = new MapPoint();
-         this._oStart = new MapPoint();
-         this._aPath = new Array();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MovementPath()
+      {
+         //Décompilation abandonné
       }
       
       public static var MAX_PATH_LENGTH:int = 100;
@@ -21,126 +23,79 @@ package com.ankamagames.jerakine.types.positions
       
       protected var _aPath:Array;
       
-      public function get start() : MapPoint {
-         return this._oStart;
+      public function get start() : MapPoint
+      {
+         //Décompilation abandonné
       }
       
-      public function set start(nValue:MapPoint) : void {
-         this._oStart = nValue;
+      public function set start(nValue:MapPoint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get end() : MapPoint {
-         return this._oEnd;
+      public function get end() : MapPoint
+      {
+         //Décompilation abandonné
       }
       
-      public function set end(nValue:MapPoint) : void {
-         this._oEnd = nValue;
+      public function set end(nValue:MapPoint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get path() : Array {
-         return this._aPath;
+      public function get path() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function get length() : uint {
-         return this._aPath.length;
+      public function get length() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function fillFromCellIds(cells:Vector.<uint>) : void {
-         var i:uint = 0;
-         while(i < cells.length)
-         {
-            this._aPath.push(new PathElement(MapPoint.fromCellId(cells[i])));
-            i++;
-         }
-         i = 0;
-         while(i < cells.length - 1)
-         {
-            PathElement(this._aPath[i]).orientation = PathElement(this._aPath[i]).step.orientationTo(PathElement(this._aPath[i + 1]).step);
-            i++;
-         }
-         if(this._aPath[0])
-         {
-            this._oStart = this._aPath[0].step;
-            this._oEnd = this._aPath[this._aPath.length - 1].step;
-         }
+      public function fillFromCellIds(cells:Vector.<uint>) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addPoint(pathElem:PathElement) : void {
-         this._aPath.push(pathElem);
+      public function addPoint(pathElem:PathElement) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getPointAtIndex(index:uint) : PathElement {
-         return this._aPath[index];
+      public function getPointAtIndex(index:uint) : PathElement
+      {
+         //Décompilation abandonné
       }
       
-      public function deletePoint(index:uint, deleteCount:uint = 1) : void {
-         if(deleteCount == 0)
-         {
-            this._aPath.splice(index);
-         }
-         else
-         {
-            this._aPath.splice(index,deleteCount);
-         }
+      public function deletePoint(index:uint, deleteCount:uint = 1) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function toString() : String {
-         var str:String = "\ndepart : [" + this._oStart.x + ", " + this._oStart.y + "]";
-         str = str + ("\narrivée : [" + this._oEnd.x + ", " + this._oEnd.y + "]\nchemin :");
-         var i:uint = 0;
-         while(i < this._aPath.length)
-         {
-            str = str + ("[" + PathElement(this._aPath[i]).step.x + ", " + PathElement(this._aPath[i]).step.y + ", " + PathElement(this._aPath[i]).orientation + "]  ");
-            i++;
-         }
-         return str;
+      public function toString() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function compress() : void {
-         var elem:uint = 0;
-         if(this._aPath.length > 0)
-         {
-            elem = this._aPath.length - 1;
-            while(elem > 0)
-            {
-               if(this._aPath[elem].orientation == this._aPath[elem - 1].orientation)
-               {
-                  this.deletePoint(elem);
-                  elem--;
-               }
-               else
-               {
-                  elem--;
-               }
-            }
-         }
+      public function compress() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function fill() : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public function fill() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getCells() : Vector.<uint> {
-         var mp:MapPoint = null;
-         var cells:Vector.<uint> = new Vector.<uint>();
-         var i:uint = 0;
-         while(i < this._aPath.length)
-         {
-            mp = this._aPath[i].step;
-            cells.push(mp.cellId);
-            i++;
-         }
-         cells.push(this._oEnd.cellId);
-         return cells;
+      public function getCells() : Vector.<uint>
+      {
+         //Décompilation abandonné
       }
       
-      public function replaceEnd(newEnd:MapPoint) : void {
-         this._oEnd = newEnd;
+      public function replaceEnd(newEnd:MapPoint) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

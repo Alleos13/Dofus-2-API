@@ -46,8 +46,13 @@ package com.ankamagames.dofus.misc.lists
    public class ApiExchangeActionList extends Object
    {
       
-      public function ApiExchangeActionList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ApiExchangeActionList()
+      {
+         //Décompilation abandonné
       }
       
       public static const ExchangeAccept:DofusApiAction;

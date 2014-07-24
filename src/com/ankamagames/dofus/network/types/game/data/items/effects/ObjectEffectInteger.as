@@ -7,61 +7,52 @@ package com.ankamagames.dofus.network.types.game.data.items.effects
    public class ObjectEffectInteger extends ObjectEffect implements INetworkType
    {
       
-      public function ObjectEffectInteger() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ObjectEffectInteger()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 70;
       
       public var value:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 70;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initObjectEffectInteger(actionId:uint = 0, value:uint = 0) : ObjectEffectInteger {
-         super.initObjectEffect(actionId);
-         this.value = value;
-         return this;
+      public function initObjectEffectInteger(actionId:uint = 0, value:uint = 0) : ObjectEffectInteger
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.value = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ObjectEffectInteger(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectEffectInteger(output:IDataOutput) : void {
-         super.serializeAs_ObjectEffect(output);
-         if(this.value < 0)
-         {
-            throw new Error("Forbidden value (" + this.value + ") on element value.");
-         }
-         else
-         {
-            output.writeShort(this.value);
-            return;
-         }
+      public function serializeAs_ObjectEffectInteger(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ObjectEffectInteger(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectEffectInteger(input:IDataInput) : void {
-         super.deserialize(input);
-         this.value = input.readShort();
-         if(this.value < 0)
-         {
-            throw new Error("Forbidden value (" + this.value + ") on element of ObjectEffectInteger.value.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_ObjectEffectInteger(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

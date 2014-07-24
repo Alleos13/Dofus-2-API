@@ -5,12 +5,13 @@ package com.ankamagames.jerakine.types.events
    public class PropertyChangeEvent extends Event
    {
       
-      public function PropertyChangeEvent(watchedClassInstance:*, propertyName:String, propertyValue:*, propertyOldValue:*) {
-         super(PROPERTY_CHANGED,false,false);
-         this._watchedClassInstance = watchedClassInstance;
-         this._propertyName = propertyName;
-         this._propertyValue = propertyValue;
-         this._propertyOldValue = propertyOldValue;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PropertyChangeEvent(watchedClassInstance:*, propertyName:String, propertyValue:*, propertyOldValue:*)
+      {
+         //Décompilation abandonné
       }
       
       public static var PROPERTY_CHANGED:String = "watchPropertyChanged";
@@ -23,20 +24,24 @@ package com.ankamagames.jerakine.types.events
       
       private var _propertyOldValue;
       
-      public function get watchedClassInstance() : * {
-         return this._watchedClassInstance;
+      public function get watchedClassInstance() : *
+      {
+         //Décompilation abandonné
       }
       
-      public function get propertyName() : String {
-         return this._propertyName;
+      public function get propertyName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get propertyValue() : * {
-         return this._propertyValue;
+      public function get propertyValue() : *
+      {
+         //Décompilation abandonné
       }
       
-      public function get propertyOldValue() : * {
-         return this._propertyOldValue;
+      public function get propertyOldValue() : *
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class ClientTechnologyEnum extends Object
    {
       
-      public function ClientTechnologyEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ClientTechnologyEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const CLIENT_TECHNOLOGY_UNKNOWN:uint = 0;

@@ -5,6 +5,10 @@ package com.ankamagames.jerakine.network
    public interface RawDataParser
    {
       
-      function parse(param1:IDataInput, param2:uint, param3:uint) : INetworkMessage;
+      {
+      //Décompilation abandonné
+      }
+      
+      function parse(raw:IDataInput, messageId:uint, messageLength:uint) : INetworkMessage;
    }
 }

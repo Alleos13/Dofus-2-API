@@ -6,16 +6,20 @@ package com.ankamagames.berilia.components.messages
    public class MapElementRollOutMessage extends ComponentMessage
    {
       
-      public function MapElementRollOutMessage(target:GraphicContainer, targetedElement:MapElement) {
-         super(target);
-         this._targetedElement = targetedElement;
-         _target = target;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapElementRollOutMessage(target:GraphicContainer, targetedElement:MapElement)
+      {
+         //Décompilation abandonné
       }
       
       private var _targetedElement:MapElement;
       
-      public function get targetedElement() : MapElement {
-         return this._targetedElement;
+      public function get targetedElement() : MapElement
+      {
+         //Décompilation abandonné
       }
    }
 }

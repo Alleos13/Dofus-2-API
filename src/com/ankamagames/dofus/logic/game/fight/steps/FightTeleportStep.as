@@ -18,45 +18,27 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightTeleportStep extends AbstractSequencable implements IFightStep
    {
       
-      public function FightTeleportStep(fighterId:int, destinationCell:MapPoint) {
-         super();
-         this._fighterId = fighterId;
-         this._destinationCell = destinationCell;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightTeleportStep(fighterId:int, destinationCell:MapPoint)
+      {
+         //Décompilation abandonné
       }
       
       private var _fighterId:int;
       
       private var _destinationCell:MapPoint;
       
-      public function get stepType() : String {
-         return "teleport";
+      public function get stepType() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function start() : void {
-         var fightTurnFrame:FightTurnFrame = null;
-         var entity:IMovable = DofusEntities.getEntity(this._fighterId) as IMovable;
-         if(entity)
-         {
-            (entity as IDisplayable).display(PlacementStrataEnums.STRATA_PLAYER);
-            entity.jump(this._destinationCell);
-         }
-         else
-         {
-            _log.warn("Unable to teleport unknown entity " + this._fighterId + ".");
-         }
-         var infos:GameFightFighterInformations = FightEntitiesFrame.getCurrentInstance().getEntityInfos(this._fighterId) as GameFightFighterInformations;
-         infos.disposition.cellId = this._destinationCell.cellId;
-         if(this._fighterId == PlayedCharacterManager.getInstance().id)
-         {
-            fightTurnFrame = Kernel.getWorker().getFrame(FightTurnFrame) as FightTurnFrame;
-            if((fightTurnFrame) && (fightTurnFrame.myTurn))
-            {
-               fightTurnFrame.drawPath();
-            }
-         }
-         FightSpellCastFrame.updateRangeAndTarget();
-         FightEventsHelper.sendFightEvent(FightEventEnum.FIGHTER_TELEPORTED,[this._fighterId],0,castingSpellId);
-         executeCallbacks();
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

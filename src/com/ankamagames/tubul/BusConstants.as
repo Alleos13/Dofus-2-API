@@ -3,8 +3,13 @@ package com.ankamagames.tubul
    public class BusConstants extends Object
    {
       
-      public function BusConstants() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BusConstants()
+      {
+         //Décompilation abandonné
       }
       
       public static const MAXIMUM_NUMBER_OF_BUS:int = 9;

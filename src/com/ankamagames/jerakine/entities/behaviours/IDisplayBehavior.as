@@ -6,10 +6,14 @@ package com.ankamagames.jerakine.entities.behaviours
    public interface IDisplayBehavior
    {
       
-      function getAbsoluteBounds(param1:IDisplayable) : IRectangle;
+      {
+      //Décompilation abandonné
+      }
       
-      function display(param1:IDisplayable, param2:uint = 0) : void;
+      function getAbsoluteBounds(entity:IDisplayable) : IRectangle;
       
-      function remove(param1:IDisplayable) : void;
+      function display(entity:IDisplayable, strata:uint = 0) : void;
+      
+      function remove(entity:IDisplayable) : void;
    }
 }

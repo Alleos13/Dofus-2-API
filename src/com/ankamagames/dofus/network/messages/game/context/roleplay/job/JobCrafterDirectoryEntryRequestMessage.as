@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.job
    public class JobCrafterDirectoryEntryRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function JobCrafterDirectoryEntryRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function JobCrafterDirectoryEntryRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6043;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var playerId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6043;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initJobCrafterDirectoryEntryRequestMessage(playerId:uint = 0) : JobCrafterDirectoryEntryRequestMessage {
-         this.playerId = playerId;
-         this._isInitialized = true;
-         return this;
+      public function initJobCrafterDirectoryEntryRequestMessage(playerId:uint = 0) : JobCrafterDirectoryEntryRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.playerId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_JobCrafterDirectoryEntryRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_JobCrafterDirectoryEntryRequestMessage(output:IDataOutput) : void {
-         if(this.playerId < 0)
-         {
-            throw new Error("Forbidden value (" + this.playerId + ") on element playerId.");
-         }
-         else
-         {
-            output.writeInt(this.playerId);
-            return;
-         }
+      public function serializeAs_JobCrafterDirectoryEntryRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_JobCrafterDirectoryEntryRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_JobCrafterDirectoryEntryRequestMessage(input:IDataInput) : void {
-         this.playerId = input.readInt();
-         if(this.playerId < 0)
-         {
-            throw new Error("Forbidden value (" + this.playerId + ") on element of JobCrafterDirectoryEntryRequestMessage.playerId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_JobCrafterDirectoryEntryRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

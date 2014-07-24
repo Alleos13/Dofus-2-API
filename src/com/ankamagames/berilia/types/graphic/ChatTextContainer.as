@@ -5,8 +5,13 @@ package com.ankamagames.berilia.types.graphic
    public class ChatTextContainer extends Sprite
    {
       
-      public function ChatTextContainer() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ChatTextContainer()
+      {
+         //Décompilation abandonné
       }
    }
 }

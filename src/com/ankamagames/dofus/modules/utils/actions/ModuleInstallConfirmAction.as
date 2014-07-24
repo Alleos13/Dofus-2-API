@@ -5,14 +5,18 @@ package com.ankamagames.dofus.modules.utils.actions
    public class ModuleInstallConfirmAction extends Object implements Action
    {
       
-      public function ModuleInstallConfirmAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(update:Boolean = false) : ModuleInstallConfirmAction {
-         var action:ModuleInstallConfirmAction = new ModuleInstallConfirmAction();
-         action.isUpdate = update;
-         return action;
+      public function ModuleInstallConfirmAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(update:Boolean = false) : ModuleInstallConfirmAction
+      {
+         //Décompilation abandonné
       }
       
       public var isUpdate:Boolean;

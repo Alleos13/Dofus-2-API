@@ -3,8 +3,13 @@ package com.ankamagames.dofus.kernel.sound.enum
    public class SoundTypeEnum extends Object
    {
       
-      public function SoundTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SoundTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const OK_BUTTON:uint = 1;

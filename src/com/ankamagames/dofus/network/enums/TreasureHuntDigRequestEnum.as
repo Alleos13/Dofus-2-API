@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class TreasureHuntDigRequestEnum extends Object
    {
       
-      public function TreasureHuntDigRequestEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TreasureHuntDigRequestEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const TREASURE_HUNT_DIG_ERROR_UNDEFINED:uint = 0;

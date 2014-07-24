@@ -3,8 +3,13 @@ package com.ankamagames.tiphon
    public class TiphonConstants extends Object
    {
       
-      public function TiphonConstants() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TiphonConstants()
+      {
+         //Décompilation abandonné
       }
       
       public static var SWF_SKULL_PATH:String;

@@ -3,8 +3,13 @@ package flashx.textLayout.conversion
    public final class ConversionType extends Object
    {
       
-      public function ConversionType() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ConversionType()
+      {
+         //Décompilation abandonné
       }
       
       public static const STRING_TYPE:String = "stringType";

@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.script
    public class CinematicMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function CinematicMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CinematicMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6053;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var cinematicId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6053;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCinematicMessage(cinematicId:uint = 0) : CinematicMessage {
-         this.cinematicId = cinematicId;
-         this._isInitialized = true;
-         return this;
+      public function initCinematicMessage(cinematicId:uint = 0) : CinematicMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.cinematicId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CinematicMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CinematicMessage(output:IDataOutput) : void {
-         if(this.cinematicId < 0)
-         {
-            throw new Error("Forbidden value (" + this.cinematicId + ") on element cinematicId.");
-         }
-         else
-         {
-            output.writeShort(this.cinematicId);
-            return;
-         }
+      public function serializeAs_CinematicMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CinematicMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CinematicMessage(input:IDataInput) : void {
-         this.cinematicId = input.readShort();
-         if(this.cinematicId < 0)
-         {
-            throw new Error("Forbidden value (" + this.cinematicId + ") on element of CinematicMessage.cinematicId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_CinematicMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

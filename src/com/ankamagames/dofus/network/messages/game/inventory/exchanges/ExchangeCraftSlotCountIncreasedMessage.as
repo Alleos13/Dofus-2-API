@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeCraftSlotCountIncreasedMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeCraftSlotCountIncreasedMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeCraftSlotCountIncreasedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6125;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var newMaxSlot:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6125;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeCraftSlotCountIncreasedMessage(newMaxSlot:uint = 0) : ExchangeCraftSlotCountIncreasedMessage {
-         this.newMaxSlot = newMaxSlot;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeCraftSlotCountIncreasedMessage(newMaxSlot:uint = 0) : ExchangeCraftSlotCountIncreasedMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.newMaxSlot = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeCraftSlotCountIncreasedMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeCraftSlotCountIncreasedMessage(output:IDataOutput) : void {
-         if(this.newMaxSlot < 0)
-         {
-            throw new Error("Forbidden value (" + this.newMaxSlot + ") on element newMaxSlot.");
-         }
-         else
-         {
-            output.writeByte(this.newMaxSlot);
-            return;
-         }
+      public function serializeAs_ExchangeCraftSlotCountIncreasedMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeCraftSlotCountIncreasedMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeCraftSlotCountIncreasedMessage(input:IDataInput) : void {
-         this.newMaxSlot = input.readByte();
-         if(this.newMaxSlot < 0)
-         {
-            throw new Error("Forbidden value (" + this.newMaxSlot + ") on element of ExchangeCraftSlotCountIncreasedMessage.newMaxSlot.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_ExchangeCraftSlotCountIncreasedMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

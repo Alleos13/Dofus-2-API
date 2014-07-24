@@ -5,9 +5,13 @@ package nochump.util.zip
    public class ZipEntry extends Object
    {
       
-      public function ZipEntry(name:String) {
-         super();
-         this._name = name;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ZipEntry(name:String)
+      {
+         //Décompilation abandonné
       }
       
       private var _name:String;
@@ -32,74 +36,89 @@ package nochump.util.zip
       
       var offset:int;
       
-      public function get name() : String {
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get time() : Number {
-         var d:Date = new Date((this.dostime >> 25 & 127) + 1980,(this.dostime >> 21 & 15) - 1,this.dostime >> 16 & 31,this.dostime >> 11 & 31,this.dostime >> 5 & 63,(this.dostime & 31) << 1);
-         return d.time;
+      public function get time() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function set time(time:Number) : void {
-         var d:Date = new Date(time);
-         this.dostime = (d.fullYear - 1980 & 127) << 25 | d.month + 1 << 21 | d.day << 16 | d.hours << 11 | d.minutes << 5 | d.seconds >> 1;
+      public function set time(time:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get size() : int {
-         return this._size;
+      public function get size() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set size(size:int) : void {
-         this._size = size;
+      public function set size(size:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get compressedSize() : int {
-         return this._compressedSize;
+      public function get compressedSize() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set compressedSize(csize:int) : void {
-         this._compressedSize = csize;
+      public function set compressedSize(csize:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get crc() : uint {
-         return this._crc;
+      public function get crc() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set crc(crc:uint) : void {
-         this._crc = crc;
+      public function set crc(crc:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get method() : int {
-         return this._method;
+      public function get method() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set method(method:int) : void {
-         this._method = method;
+      public function set method(method:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get extra() : ByteArray {
-         return this._extra;
+      public function get extra() : ByteArray
+      {
+         //Décompilation abandonné
       }
       
-      public function set extra(extra:ByteArray) : void {
-         this._extra = extra;
+      public function set extra(extra:ByteArray) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get comment() : String {
-         return this._comment;
+      public function get comment() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function set comment(comment:String) : void {
-         this._comment = comment;
+      public function set comment(comment:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function isDirectory() : Boolean {
-         return this._name.charAt(this._name.length - 1) == "/";
+      public function isDirectory() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function toString() : String {
-         return this._name;
+      public function toString() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

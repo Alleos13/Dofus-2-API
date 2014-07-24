@@ -11,9 +11,13 @@ package com.ankamagames.dofus.network.types.game.context.fight
    public class GameFightCharacterInformations extends GameFightFighterNamedInformations implements INetworkType
    {
       
-      public function GameFightCharacterInformations() {
-         this.alignmentInfos = new ActorAlignmentInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameFightCharacterInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 46;
@@ -24,61 +28,39 @@ package com.ankamagames.dofus.network.types.game.context.fight
       
       public var breed:int = 0;
       
-      override public function getTypeId() : uint {
-         return 46;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameFightCharacterInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, teamId:uint = 2, wave:uint = 0, alive:Boolean = false, stats:GameFightMinimalStats = null, name:String = "", status:PlayerStatus = null, level:uint = 0, alignmentInfos:ActorAlignmentInformations = null, breed:int = 0) : GameFightCharacterInformations {
-         super.initGameFightFighterNamedInformations(contextualId,look,disposition,teamId,wave,alive,stats,name,status);
-         this.level = level;
-         this.alignmentInfos = alignmentInfos;
-         this.breed = breed;
-         return this;
+      public function initGameFightCharacterInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, teamId:uint = 2, wave:uint = 0, alive:Boolean = false, stats:GameFightMinimalStats = null, name:String = "", status:PlayerStatus = null, level:uint = 0, alignmentInfos:ActorAlignmentInformations = null, breed:int = 0) : GameFightCharacterInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.level = 0;
-         this.alignmentInfos = new ActorAlignmentInformations();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameFightCharacterInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightCharacterInformations(output:IDataOutput) : void {
-         super.serializeAs_GameFightFighterNamedInformations(output);
-         if(this.level < 0)
-         {
-            throw new Error("Forbidden value (" + this.level + ") on element level.");
-         }
-         else
-         {
-            output.writeShort(this.level);
-            this.alignmentInfos.serializeAs_ActorAlignmentInformations(output);
-            output.writeByte(this.breed);
-            return;
-         }
+      public function serializeAs_GameFightCharacterInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameFightCharacterInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightCharacterInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.level = input.readShort();
-         if(this.level < 0)
-         {
-            throw new Error("Forbidden value (" + this.level + ") on element of GameFightCharacterInformations.level.");
-         }
-         else
-         {
-            this.alignmentInfos = new ActorAlignmentInformations();
-            this.alignmentInfos.deserialize(input);
-            this.breed = input.readByte();
-            return;
-         }
+      public function deserializeAs_GameFightCharacterInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -11,10 +11,13 @@ package com.ankamagames.dofus.scripts
    public class FxRunner extends Object implements IRunner
    {
       
-      public function FxRunner(fxCaster:IEntity, fxTarget:MapPoint) {
-         super();
-         this._fxCaster = fxCaster;
-         this._fxTarget = fxTarget;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FxRunner(fxCaster:IEntity, fxTarget:MapPoint)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -23,34 +26,19 @@ package com.ankamagames.dofus.scripts
       
       protected var _fxTarget:MapPoint;
       
-      public function get caster() : IEntity {
-         return this._fxCaster;
+      public function get caster() : IEntity
+      {
+         //Décompilation abandonné
       }
       
-      public function get target() : MapPoint {
-         return this._fxTarget;
+      public function get target() : MapPoint
+      {
+         //Décompilation abandonné
       }
       
-      public function run(script:Class) : uint {
-         var scriptInstance:* = new script();
-         try
-         {
-            scriptInstance["__setRunner__"](this);
-            scriptInstance.main("");
-         }
-         catch(e:Error)
-         {
-            if(e.getStackTrace())
-            {
-               _log.error(e.getStackTrace());
-            }
-            else
-            {
-               _log.error("no stack trace available");
-            }
-            return ScriptErrorEnum.SCRIPT_ERROR;
-         }
-         return ScriptErrorEnum.OK;
+      public function run(script:Class) : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

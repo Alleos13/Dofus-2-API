@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class LockableUseCodeAction extends Object implements Action
    {
       
-      public function LockableUseCodeAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(code:String) : LockableUseCodeAction {
-         var action:LockableUseCodeAction = new LockableUseCodeAction();
-         action.code = code;
-         return action;
+      public function LockableUseCodeAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(code:String) : LockableUseCodeAction
+      {
+         //Décompilation abandonné
       }
       
       public var code:String;

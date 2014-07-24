@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
    public class StatsUpgradeRequestAction extends Object implements Action
    {
       
-      public function StatsUpgradeRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(statId:uint, boostPoint:uint) : StatsUpgradeRequestAction {
-         var a:StatsUpgradeRequestAction = new StatsUpgradeRequestAction();
-         a.statId = statId;
-         a.boostPoint = boostPoint;
-         return a;
+      public function StatsUpgradeRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(statId:uint, boostPoint:uint) : StatsUpgradeRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var statId:uint;

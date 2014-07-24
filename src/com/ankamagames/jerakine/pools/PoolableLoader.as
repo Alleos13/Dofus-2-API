@@ -8,14 +8,20 @@ package com.ankamagames.jerakine.pools
    public class PoolableLoader extends Loader implements Poolable
    {
       
-      public function PoolableLoader() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PoolableLoader()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      public function free() : void {
-         unload();
+      public function free() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

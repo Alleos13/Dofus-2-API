@@ -6,8 +6,13 @@ package com.ankamagames.dofus.scripts
    public class DofusEmbedScript extends Object
    {
       
-      public function DofusEmbedScript() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DofusEmbedScript()
+      {
+         //Décompilation abandonné
       }
       
       private static const SCRIPT_1_DATA:Class;
@@ -36,12 +41,9 @@ package com.ankamagames.dofus.scripts
       
       private static const _cache:Dictionary;
       
-      public static function getScript(id:uint) : BinaryScript {
-         if(!_cache[id])
-         {
-            _cache[id] = new BinaryScript(new DofusEmbedScript["SCRIPT_" + id + "_DATA"](),DofusEmbedScript["SCRIPT_" + id + "_URI"]);
-         }
-         return _cache[id];
+      public static function getScript(id:uint) : BinaryScript
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.mount
    public class MountToggleRidingRequestAction extends Object implements Action
    {
       
-      public function MountToggleRidingRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : MountToggleRidingRequestAction {
-         return new MountToggleRidingRequestAction();
+      public function MountToggleRidingRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : MountToggleRidingRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

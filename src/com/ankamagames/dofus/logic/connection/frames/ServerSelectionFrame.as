@@ -35,22 +35,20 @@ package com.ankamagames.dofus.logic.connection.frames
    public class ServerSelectionFrame extends Object implements Frame
    {
       
-      public function ServerSelectionFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ServerSelectionFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      private static function serverDateSortFunction(a:GameServerInformations, b:GameServerInformations) : Number {
-         if(a.date < b.date)
-         {
-            return 1;
-         }
-         if(a.date == b.date)
-         {
-            return 0;
-         }
-         return -1;
+      private static function serverDateSortFunction(a:GameServerInformations, b:GameServerInformations) : Number
+      {
+         //Décompilation abandonné
       }
       
       private var _serversList:Vector.<GameServerInformations>;
@@ -63,87 +61,54 @@ package com.ankamagames.dofus.logic.connection.frames
       
       private var _worker:Worker;
       
-      public function get priority() : int {
-         return Priority.NORMAL;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get usedServers() : Vector.<GameServerInformations> {
-         return this._serversUsedList;
+      public function get usedServers() : Vector.<GameServerInformations>
+      {
+         //Décompilation abandonné
       }
       
-      public function get servers() : Vector.<GameServerInformations> {
-         return this._serversList;
+      public function get servers() : Vector.<GameServerInformations>
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         this._worker = Kernel.getWorker();
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function getSelectableServers() : Array {
-         var server:* = undefined;
-         var selectableServers:Array = new Array();
-         for each(server in this._serversList)
-         {
-            if((server.status == ServerStatusEnum.ONLINE) && (server.isSelectable))
-            {
-               selectableServers.push(server.id);
-            }
-         }
-         return selectableServers;
+      private function getSelectableServers() : Array
+      {
+         //Décompilation abandonné
       }
       
-      private function broadcastServersListUpdate() : void {
-         var server:Object = null;
-         this._serversUsedList = new Vector.<GameServerInformations>();
-         PlayerManager.getInstance().serversList = new Vector.<int>();
-         for each(server in this._serversList)
-         {
-            if(server.charactersCount > 0)
-            {
-               this._serversUsedList.push(server);
-               PlayerManager.getInstance().serversList.push(server.id);
-            }
-         }
-         KernelEventsManager.getInstance().processCallback(HookList.ServersList,this._serversList);
+      private function broadcastServersListUpdate() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function getUpdateServerFunction(serverToUpdate:GameServerInformations) : Function {
-         return function(element:*, index:int, arr:Vector.<GameServerInformations>):void
-         {
-            var gsi:* = element as GameServerInformations;
-            if(serverToUpdate.id == gsi.id)
-            {
-               gsi.charactersCount = serverToUpdate.charactersCount;
-               gsi.completion = serverToUpdate.completion;
-               gsi.isSelectable = serverToUpdate.isSelectable;
-               gsi.status = serverToUpdate.status;
-            }
-         };
+      private function getUpdateServerFunction(serverToUpdate:GameServerInformations) : Function
+      {
+         //Décompilation abandonné
       }
       
-      private function getUpdateServerStatusFunction(serverId:uint, newStatus:uint) : Function {
-         return function(element:*, index:int, arr:Vector.<GameServerInformations>):void
-         {
-            var gsi:* = element as GameServerInformations;
-            if(serverId == gsi.id)
-            {
-               gsi.status = newStatus;
-            }
-         };
+      private function getUpdateServerStatusFunction(serverId:uint, newStatus:uint) : Function
+      {
+         //Décompilation abandonné
       }
    }
 }

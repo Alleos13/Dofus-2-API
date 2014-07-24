@@ -8,44 +8,42 @@ package com.ankamagames.berilia.components
    public class LinkedLabel extends Label
    {
       
-      public function LinkedLabel() {
-         super();
-         buttonMode = true;
-         mouseChildren = false;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LinkedLabel()
+      {
+         //Décompilation abandonné
       }
       
       private var _sUrl:String;
       
       private var _sTarget:String = "_blank";
       
-      public function get url() : String {
-         return this._sUrl;
+      public function get url() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function set url(value:String) : void {
-         this._sUrl = value;
+      public function set url(value:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get target() : String {
-         return this._sTarget;
+      public function get target() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function set target(value:String) : void {
-         this._sTarget = value;
+      public function set target(value:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function process(msg:Message) : Boolean {
-         switch(true)
-         {
-            case msg is MouseClickMessage:
-               if(((msg as MouseClickMessage).target == this) && (getUi()) && (getUi().uiModule.trusted))
-               {
-                  navigateToURL(new URLRequest(this.url),this.target);
-                  return true;
-               }
-               break;
-         }
-         return false;
+      override public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

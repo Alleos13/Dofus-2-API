@@ -8,94 +8,69 @@ package com.ankamagames.dofus.network.messages.game.context
    public class GameContextRemoveMultipleElementsWithEventsMessage extends GameContextRemoveMultipleElementsMessage implements INetworkMessage
    {
       
-      public function GameContextRemoveMultipleElementsWithEventsMessage() {
-         this.elementEventIds = new Vector.<uint>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameContextRemoveMultipleElementsWithEventsMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6416;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var elementEventIds:Vector.<uint>;
       
-      override public function getMessageId() : uint {
-         return 6416;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameContextRemoveMultipleElementsWithEventsMessage(id:Vector.<int> = null, elementEventIds:Vector.<uint> = null) : GameContextRemoveMultipleElementsWithEventsMessage {
-         super.initGameContextRemoveMultipleElementsMessage(id);
-         this.elementEventIds = elementEventIds;
-         this._isInitialized = true;
-         return this;
+      public function initGameContextRemoveMultipleElementsWithEventsMessage(id:Vector.<int> = null, elementEventIds:Vector.<uint> = null) : GameContextRemoveMultipleElementsWithEventsMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.elementEventIds = new Vector.<uint>();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameContextRemoveMultipleElementsWithEventsMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameContextRemoveMultipleElementsWithEventsMessage(output:IDataOutput) : void {
-         super.serializeAs_GameContextRemoveMultipleElementsMessage(output);
-         output.writeShort(this.elementEventIds.length);
-         var _i1:uint = 0;
-         while(_i1 < this.elementEventIds.length)
-         {
-            if(this.elementEventIds[_i1] < 0)
-            {
-               throw new Error("Forbidden value (" + this.elementEventIds[_i1] + ") on element 1 (starting at 1) of elementEventIds.");
-            }
-            else
-            {
-               output.writeByte(this.elementEventIds[_i1]);
-               _i1++;
-               continue;
-            }
-         }
+      public function serializeAs_GameContextRemoveMultipleElementsWithEventsMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameContextRemoveMultipleElementsWithEventsMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameContextRemoveMultipleElementsWithEventsMessage(input:IDataInput) : void {
-         var _val1:uint = 0;
-         super.deserialize(input);
-         var _elementEventIdsLen:uint = input.readUnsignedShort();
-         var _i1:uint = 0;
-         while(_i1 < _elementEventIdsLen)
-         {
-            _val1 = input.readByte();
-            if(_val1 < 0)
-            {
-               throw new Error("Forbidden value (" + _val1 + ") on elements of elementEventIds.");
-            }
-            else
-            {
-               this.elementEventIds.push(_val1);
-               _i1++;
-               continue;
-            }
-         }
+      public function deserializeAs_GameContextRemoveMultipleElementsWithEventsMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

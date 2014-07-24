@@ -6,35 +6,30 @@ package com.ankamagames.dofus.datacenter.effects.instances
    public class EffectInstanceString extends EffectInstance implements IDataCenter
    {
       
-      public function EffectInstanceString() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EffectInstanceString()
+      {
+         //Décompilation abandonné
       }
       
       public var text:String;
       
-      override public function clone() : EffectInstance {
-         var o:EffectInstanceString = new EffectInstanceString();
-         o.rawZone = rawZone;
-         o.effectId = effectId;
-         o.duration = duration;
-         o.delay = delay;
-         o.text = this.text;
-         o.random = random;
-         o.group = group;
-         o.targetId = targetId;
-         o.targetMask = targetMask;
-         return o;
+      override public function clone() : EffectInstance
+      {
+         //Décompilation abandonné
       }
       
-      override public function get parameter3() : Object {
-         return this.text;
+      override public function get parameter3() : Object
+      {
+         //Décompilation abandonné
       }
       
-      override public function setParameter(paramIndex:uint, value:*) : void {
-         if(paramIndex == 3)
-         {
-            this.text = String(value);
-         }
+      override public function setParameter(paramIndex:uint, value:*) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

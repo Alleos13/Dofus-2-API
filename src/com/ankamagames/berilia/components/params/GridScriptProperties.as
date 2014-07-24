@@ -7,11 +7,13 @@ package com.ankamagames.berilia.components.params
    public class GridScriptProperties extends UiProperties
    {
       
-      public function GridScriptProperties(d:*, b:Boolean = false, grid:Grid = null) {
-         super();
-         this.data = d;
-         this.selected = b;
-         this.grid = new WeakProxyReference(grid);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GridScriptProperties(d:*, b:Boolean = false, grid:Grid = null)
+      {
+         //Décompilation abandonné
       }
       
       public var data;

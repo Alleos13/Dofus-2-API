@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.houses.guil
    public class HouseGuildNoneMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function HouseGuildNoneMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HouseGuildNoneMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5701;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var houseId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5701;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initHouseGuildNoneMessage(houseId:uint = 0) : HouseGuildNoneMessage {
-         this.houseId = houseId;
-         this._isInitialized = true;
-         return this;
+      public function initHouseGuildNoneMessage(houseId:uint = 0) : HouseGuildNoneMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.houseId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_HouseGuildNoneMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_HouseGuildNoneMessage(output:IDataOutput) : void {
-         if(this.houseId < 0)
-         {
-            throw new Error("Forbidden value (" + this.houseId + ") on element houseId.");
-         }
-         else
-         {
-            output.writeShort(this.houseId);
-            return;
-         }
+      public function serializeAs_HouseGuildNoneMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_HouseGuildNoneMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_HouseGuildNoneMessage(input:IDataInput) : void {
-         this.houseId = input.readShort();
-         if(this.houseId < 0)
-         {
-            throw new Error("Forbidden value (" + this.houseId + ") on element of HouseGuildNoneMessage.houseId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_HouseGuildNoneMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

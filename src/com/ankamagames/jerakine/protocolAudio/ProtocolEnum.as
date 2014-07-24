@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.protocolAudio
    public class ProtocolEnum extends Object
    {
       
-      public function ProtocolEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ProtocolEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const PLAY_SOUND:String = "playSound";

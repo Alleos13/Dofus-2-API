@@ -11,9 +11,13 @@ package com.ankamagames.dofus.network.types.game.context.fight
    public class GameFightFighterInformations extends GameContextActorInformations implements INetworkType
    {
       
-      public function GameFightFighterInformations() {
-         this.stats = new GameFightMinimalStats();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameFightFighterInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 143;
@@ -26,75 +30,39 @@ package com.ankamagames.dofus.network.types.game.context.fight
       
       public var stats:GameFightMinimalStats;
       
-      override public function getTypeId() : uint {
-         return 143;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameFightFighterInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, teamId:uint = 2, wave:uint = 0, alive:Boolean = false, stats:GameFightMinimalStats = null) : GameFightFighterInformations {
-         super.initGameContextActorInformations(contextualId,look,disposition);
-         this.teamId = teamId;
-         this.wave = wave;
-         this.alive = alive;
-         this.stats = stats;
-         return this;
+      public function initGameFightFighterInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, teamId:uint = 2, wave:uint = 0, alive:Boolean = false, stats:GameFightMinimalStats = null) : GameFightFighterInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.teamId = 2;
-         this.wave = 0;
-         this.alive = false;
-         this.stats = new GameFightMinimalStats();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameFightFighterInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightFighterInformations(output:IDataOutput) : void {
-         super.serializeAs_GameContextActorInformations(output);
-         output.writeByte(this.teamId);
-         if((this.wave < 0) || (this.wave > 4.294967295E9))
-         {
-            throw new Error("Forbidden value (" + this.wave + ") on element wave.");
-         }
-         else
-         {
-            output.writeUnsignedInt(this.wave);
-            output.writeBoolean(this.alive);
-            output.writeShort(this.stats.getTypeId());
-            this.stats.serialize(output);
-            return;
-         }
+      public function serializeAs_GameFightFighterInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameFightFighterInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightFighterInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.teamId = input.readByte();
-         if(this.teamId < 0)
-         {
-            throw new Error("Forbidden value (" + this.teamId + ") on element of GameFightFighterInformations.teamId.");
-         }
-         else
-         {
-            this.wave = input.readUnsignedInt();
-            if((this.wave < 0) || (this.wave > 4.294967295E9))
-            {
-               throw new Error("Forbidden value (" + this.wave + ") on element of GameFightFighterInformations.wave.");
-            }
-            else
-            {
-               this.alive = input.readBoolean();
-               _id4 = input.readUnsignedShort();
-               this.stats = ProtocolTypeManager.getInstance(GameFightMinimalStats,_id4);
-               this.stats.deserialize(input);
-               return;
-            }
-         }
+      public function deserializeAs_GameFightFighterInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

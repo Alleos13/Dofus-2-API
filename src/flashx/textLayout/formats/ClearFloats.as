@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public final class ClearFloats extends Object
    {
       
-      public function ClearFloats() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ClearFloats()
+      {
+         //Décompilation abandonné
       }
       
       public static const NONE:String = "none";

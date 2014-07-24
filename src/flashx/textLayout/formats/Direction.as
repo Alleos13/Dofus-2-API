@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public final class Direction extends Object
    {
       
-      public function Direction() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Direction()
+      {
+         //Décompilation abandonné
       }
       
       public static const LTR:String = "ltr";

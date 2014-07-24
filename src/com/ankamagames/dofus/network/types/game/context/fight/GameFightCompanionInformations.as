@@ -9,8 +9,13 @@ package com.ankamagames.dofus.network.types.game.context.fight
    public class GameFightCompanionInformations extends GameFightFighterInformations implements INetworkType
    {
       
-      public function GameFightCompanionInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameFightCompanionInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 450;
@@ -21,75 +26,39 @@ package com.ankamagames.dofus.network.types.game.context.fight
       
       public var masterId:int = 0;
       
-      override public function getTypeId() : uint {
-         return 450;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameFightCompanionInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, teamId:uint = 2, wave:uint = 0, alive:Boolean = false, stats:GameFightMinimalStats = null, companionGenericId:uint = 0, level:uint = 0, masterId:int = 0) : GameFightCompanionInformations {
-         super.initGameFightFighterInformations(contextualId,look,disposition,teamId,wave,alive,stats);
-         this.companionGenericId = companionGenericId;
-         this.level = level;
-         this.masterId = masterId;
-         return this;
+      public function initGameFightCompanionInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, teamId:uint = 2, wave:uint = 0, alive:Boolean = false, stats:GameFightMinimalStats = null, companionGenericId:uint = 0, level:uint = 0, masterId:int = 0) : GameFightCompanionInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.companionGenericId = 0;
-         this.level = 0;
-         this.masterId = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameFightCompanionInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightCompanionInformations(output:IDataOutput) : void {
-         super.serializeAs_GameFightFighterInformations(output);
-         if(this.companionGenericId < 0)
-         {
-            throw new Error("Forbidden value (" + this.companionGenericId + ") on element companionGenericId.");
-         }
-         else
-         {
-            output.writeShort(this.companionGenericId);
-            if(this.level < 0)
-            {
-               throw new Error("Forbidden value (" + this.level + ") on element level.");
-            }
-            else
-            {
-               output.writeShort(this.level);
-               output.writeInt(this.masterId);
-               return;
-            }
-         }
+      public function serializeAs_GameFightCompanionInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameFightCompanionInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightCompanionInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.companionGenericId = input.readShort();
-         if(this.companionGenericId < 0)
-         {
-            throw new Error("Forbidden value (" + this.companionGenericId + ") on element of GameFightCompanionInformations.companionGenericId.");
-         }
-         else
-         {
-            this.level = input.readShort();
-            if(this.level < 0)
-            {
-               throw new Error("Forbidden value (" + this.level + ") on element of GameFightCompanionInformations.level.");
-            }
-            else
-            {
-               this.masterId = input.readInt();
-               return;
-            }
-         }
+      public function deserializeAs_GameFightCompanionInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

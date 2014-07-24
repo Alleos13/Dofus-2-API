@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.approach.actions
    public class GetPartInfoAction extends Object implements Action
    {
       
-      public function GetPartInfoAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(id:String) : GetPartInfoAction {
-         var a:GetPartInfoAction = new GetPartInfoAction();
-         a.id = id;
-         return a;
+      public function GetPartInfoAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(id:String) : GetPartInfoAction
+      {
+         //Décompilation abandonné
       }
       
       public var id:String;

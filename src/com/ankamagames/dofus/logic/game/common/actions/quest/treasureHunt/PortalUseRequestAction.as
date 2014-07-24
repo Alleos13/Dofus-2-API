@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.quest.treasureHunt
    public class PortalUseRequestAction extends Object implements Action
    {
       
-      public function PortalUseRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(portalId:int) : PortalUseRequestAction {
-         var action:PortalUseRequestAction = new PortalUseRequestAction();
-         action.portalId = portalId;
-         return action;
+      public function PortalUseRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(portalId:int) : PortalUseRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var portalId:int;

@@ -5,22 +5,27 @@ package com.ankamagames.berilia.types.messages
    public class UiXmlParsedErrorMessage extends Object implements Message
    {
       
-      public function UiXmlParsedErrorMessage(url:String, msg:String) {
-         super();
-         this._url = url;
-         this._msg = msg;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UiXmlParsedErrorMessage(url:String, msg:String)
+      {
+         //Décompilation abandonné
       }
       
       private var _url:String;
       
       private var _msg:String;
       
-      public function get url() : String {
-         return this._url;
+      public function get url() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get msg() : String {
-         return this._msg;
+      public function get msg() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

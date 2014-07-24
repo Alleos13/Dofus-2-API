@@ -5,16 +5,23 @@ package com.ankamagames.berilia.types.graphic
    public class InternalComponentAccess extends Object
    {
       
-      public function InternalComponentAccess() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function getProperty(target:UIComponent, property:String) : * {
-         return target[property];
+      public function InternalComponentAccess()
+      {
+         //Décompilation abandonné
       }
       
-      public static function setProperty(target:UIComponent, property:String, value:*) : void {
-         target[property] = value;
+      public static function getProperty(target:UIComponent, property:String) : *
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function setProperty(target:UIComponent, property:String, value:*) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

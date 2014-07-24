@@ -7,18 +7,25 @@ package com.ankamagames.dofus.datacenter.monsters
    public class MonsterRace extends Object implements IDataCenter
    {
       
-      public function MonsterRace() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MonsterRace()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "MonsterRaces";
       
-      public static function getMonsterRaceById(id:uint) : MonsterRace {
-         return GameData.getObject(MODULE,id) as MonsterRace;
+      public static function getMonsterRaceById(id:uint) : MonsterRace
+      {
+         //Décompilation abandonné
       }
       
-      public static function getMonsterRaces() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getMonsterRaces() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -31,12 +38,9 @@ package com.ankamagames.dofus.datacenter.monsters
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

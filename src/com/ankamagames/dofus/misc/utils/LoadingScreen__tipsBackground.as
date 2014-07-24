@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.utils
    public class LoadingScreen__tipsBackground extends BitmapAsset
    {
       
-      public function LoadingScreen__tipsBackground() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LoadingScreen__tipsBackground()
+      {
+         //Décompilation abandonné
       }
    }
 }

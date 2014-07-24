@@ -21,104 +21,72 @@ package com.ankamagames.dofus.logic.game.roleplay.managers
    import com.ankamagames.atouin.managers.InteractiveCellManager;
    import flash.display.Sprite;
    import com.ankamagames.atouin.managers.EntitiesDisplayManager;
+   import com.ankamagames.dofus.logic.game.common.managers.PlayedCharacterManager;
    import com.ankamagames.jerakine.utils.errors.SingletonError;
    
    public class RoleplayManager extends Object implements IDestroyable
    {
       
-      public function RoleplayManager() {
-         super();
-         if(_self != null)
-         {
-            throw new SingletonError("RoleplayManager is a singleton and should not be instanciated directly.");
-         }
-         else
-         {
-            return;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RoleplayManager()
+      {
+         //Décompilation abandonné
       }
       
       private static var _self:RoleplayManager;
       
-      public static function getInstance() : RoleplayManager {
-         if(_self == null)
-         {
-            _self = new RoleplayManager();
-         }
-         return _self;
+      private static const REWARD_SCALE_CAP:Number = 1.5;
+      
+      private static const REWARD_REDUCED_SCALE:Number = 0.7;
+      
+      public static function getInstance() : RoleplayManager
+      {
+         //Décompilation abandonné
       }
       
       public var dofusTimeYearLag:int;
       
-      private function get roleplayContextFrame() : RoleplayContextFrame {
-         return Kernel.getWorker().getFrame(RoleplayContextFrame) as RoleplayContextFrame;
+      private function get roleplayContextFrame() : RoleplayContextFrame
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         _self = null;
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function displayCharacterContextualMenu(pGameContextActorInformations:GameContextActorInformations) : Boolean {
-         var modContextMenu:Object = UiModuleManager.getInstance().getModule("Ankama_ContextMenu").mainClass;
-         var menu:ContextMenuData = MenusFactory.create(pGameContextActorInformations,null,[{"id":pGameContextActorInformations.contextualId}]);
-         if(menu)
-         {
-            modContextMenu.createContextMenu(menu);
-            return true;
-         }
-         return false;
+      public function displayCharacterContextualMenu(pGameContextActorInformations:GameContextActorInformations) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function displayContextualMenu(pGameContextActorInformations:GameContextActorInformations, pEntity:IInteractive) : Boolean {
-         var menu:ContextMenuData = null;
-         var modContextMenu:Object = UiModuleManager.getInstance().getModule("Ankama_ContextMenu").mainClass;
-         switch(true)
-         {
-            case pGameContextActorInformations is GameRolePlayMutantInformations:
-               if((pGameContextActorInformations as GameRolePlayMutantInformations).humanoidInfo.restrictions.cantAttack)
-               {
-                  menu = MenusFactory.create(pGameContextActorInformations,null,[pEntity]);
-               }
-               break;
-            case pGameContextActorInformations is GameRolePlayCharacterInformations:
-               menu = MenusFactory.create(pGameContextActorInformations,null,[pEntity]);
-               break;
-            case pGameContextActorInformations is GameRolePlayMerchantInformations:
-               menu = MenusFactory.create(pGameContextActorInformations,null,[pEntity]);
-               break;
-            case pGameContextActorInformations is GameRolePlayNpcInformations:
-               menu = MenusFactory.create(pGameContextActorInformations,null,[pEntity]);
-               break;
-            case pGameContextActorInformations is GameRolePlayTaxCollectorInformations:
-               menu = MenusFactory.create(pGameContextActorInformations,null,[pEntity]);
-               break;
-            case pGameContextActorInformations is GameRolePlayPrismInformations:
-               menu = MenusFactory.create(pGameContextActorInformations,null,[pEntity]);
-               break;
-            case pGameContextActorInformations is GameRolePlayPortalInformations:
-               menu = MenusFactory.create(pGameContextActorInformations,null,[pEntity]);
-               break;
-            case pGameContextActorInformations is GameContextPaddockItemInformations:
-               if(this.roleplayContextFrame.currentPaddock.guildIdentity)
-               {
-                  menu = MenusFactory.create(pGameContextActorInformations,null,[pEntity]);
-               }
-               break;
-            case pGameContextActorInformations is GameRolePlayMountInformations:
-               menu = MenusFactory.create(pGameContextActorInformations,null,[pEntity]);
-               break;
-         }
-         if(menu)
-         {
-            modContextMenu.createContextMenu(menu);
-            return true;
-         }
-         return false;
+      public function displayContextualMenu(pGameContextActorInformations:GameContextActorInformations, pEntity:IInteractive) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function putEntityOnTop(entity:AnimatedCharacter) : void {
-         var cellSprite:Sprite = InteractiveCellManager.getInstance().getCell(entity.position.cellId);
-         EntitiesDisplayManager.getInstance().orderEntity(entity,cellSprite);
+      public function putEntityOnTop(entity:AnimatedCharacter) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public function getKamasReward(kamasScaleWithPlayerLevel:Boolean = true, optimalLevel:int = -1, kamasRatio:Number = 1, duration:Number = 1, pPlayerLevel:int = -1) : Number
+      {
+         //Décompilation abandonné
+      }
+      
+      public function getExperienceReward(pPlayerLevel:int, pXpBonus:int, optimalLevel:int = -1, xpRatio:Number = 1, duration:Number = 1) : int
+      {
+         //Décompilation abandonné
+      }
+      
+      private function getFixeExperienceReward(level:int, duration:Number, xpRatio:Number) : Number
+      {
+         //Décompilation abandonné
       }
    }
 }

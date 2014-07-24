@@ -6,12 +6,18 @@ package com.ankamagames.jerakine.types
    public dynamic class DynamicSecureObject extends Object implements Secure, INoBoxing
    {
       
-      public function DynamicSecureObject() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function getObject(accessKey:Object) : * {
-         return this;
+      public function DynamicSecureObject()
+      {
+         //Décompilation abandonné
+      }
+      
+      public function getObject(accessKey:Object) : *
+      {
+         //Décompilation abandonné
       }
    }
 }

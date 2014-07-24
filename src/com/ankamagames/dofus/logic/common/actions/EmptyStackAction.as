@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.common.actions
    public class EmptyStackAction extends Object implements Action
    {
       
-      public function EmptyStackAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : EmptyStackAction {
-         return new EmptyStackAction();
+      public function EmptyStackAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : EmptyStackAction
+      {
+         //Décompilation abandonné
       }
    }
 }

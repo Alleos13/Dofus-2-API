@@ -15,27 +15,23 @@ package com.ankamagames.dofus.logic.common.managers
    public class HyperlinkShowMonsterFightManager extends Object
    {
       
-      public function HyperlinkShowMonsterFightManager() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function showEntity(entityId:int) : void {
-         var entity:DisplayObject = null;
-         var fightEntitiesFrame:FightEntitiesFrame = Kernel.getWorker().getFrame(FightEntitiesFrame) as FightEntitiesFrame;
-         if(fightEntitiesFrame)
-         {
-            entity = DofusEntities.getEntity(entityId) as DisplayObject;
-            if(entity)
-            {
-               HyperlinkShowCellManager.showCell((entity as IEntity).position.cellId);
-            }
-         }
+      public function HyperlinkShowMonsterFightManager()
+      {
+         //Décompilation abandonné
       }
       
-      public static function rollOver(pX:int, pY:int, entityId:int) : void {
-         var target:Rectangle = new Rectangle(pX,pY,10,10);
-         var info:TextTooltipInfo = new TextTooltipInfo(I18n.getUiText("ui.tooltip.chat.whereAreYou"));
-         TooltipManager.show(info,target,UiModuleManager.getInstance().getModule("Ankama_GameUiCore"),false,"HyperLink",6,2,3,true,null,null,null,null,false,StrataEnum.STRATA_TOOLTIP,1);
+      public static function showEntity(entityId:int) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function rollOver(pX:int, pY:int, entityId:int) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

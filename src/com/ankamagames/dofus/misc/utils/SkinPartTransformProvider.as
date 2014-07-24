@@ -7,27 +7,18 @@ package com.ankamagames.dofus.misc.utils
    public class SkinPartTransformProvider extends Object implements ISkinPartTransformProvider
    {
       
-      public function SkinPartTransformProvider() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function init(skin:Skin) : void {
-         var skinId:uint = 0;
-         var sp:SkinPosition = null;
-         var i:uint = 0;
-         for each(skinId in skin.skinList)
-         {
-            sp = SkinPosition.getSkinPositionById(skinId);
-            if(sp)
-            {
-               i = 0;
-               while(i < sp.skin.length)
-               {
-                  skin.addTransform(sp.clip[i],sp.skin[i],sp.transformation[i]);
-                  i++;
-               }
-            }
-         }
+      public function SkinPartTransformProvider()
+      {
+         //Décompilation abandonné
+      }
+      
+      public function init(skin:Skin) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

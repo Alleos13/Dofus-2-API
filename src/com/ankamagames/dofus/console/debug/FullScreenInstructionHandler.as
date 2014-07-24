@@ -10,57 +10,28 @@ package com.ankamagames.dofus.console.debug
    public class FullScreenInstructionHandler extends Object implements ConsoleInstructionHandler
    {
       
-      public function FullScreenInstructionHandler() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void {
-         var resX:uint = 0;
-         var resY:uint = 0;
-         switch(cmd)
-         {
-            case "fullscreen":
-               if(args.length == 0)
-               {
-                  if(AirScanner.hasAir())
-                  {
-                     if(StageShareManager.stage.displayState == StageDisplayState["FULL_SCREEN_INTERACTIVE"])
-                     {
-                        StageShareManager.stage.displayState = StageDisplayState["NORMAL"];
-                     }
-                     else
-                     {
-                        console.output("Resolution needed.");
-                     }
-                  }
-               }
-               else if(args.length == 2)
-               {
-                  if(AirScanner.hasAir())
-                  {
-                     resX = uint(args[0]);
-                     resY = uint(args[1]);
-                     StageShareManager.stage.fullScreenSourceRect = new Rectangle(0,0,resX,resY);
-                     StageShareManager.stage.displayState = StageDisplayState["FULL_SCREEN_INTERACTIVE"];
-                  }
-               }
-               
-               break;
-         }
+      public function FullScreenInstructionHandler()
+      {
+         //Décompilation abandonné
       }
       
-      public function getHelp(cmd:String) : String {
-         switch(cmd)
-         {
-            case "fullscreen":
-               return "Toggle the full-screen display mode.";
-            default:
-               return "Unknown command";
-         }
+      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array {
-         return [];
+      public function getHelp(cmd:String) : String
+      {
+         //Décompilation abandonné
+      }
+      
+      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,12 +5,13 @@ package com.ankamagames.dofus.modules.utils
    public class SpellTooltipSettings extends Object implements IModuleUtil
    {
       
-      public function SpellTooltipSettings() {
-         super();
-         this._header = true;
-         this._effects = true;
-         this._description = true;
-         this._CC_EC = true;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpellTooltipSettings()
+      {
+         //Décompilation abandonné
       }
       
       private var _header:Boolean;
@@ -21,36 +22,44 @@ package com.ankamagames.dofus.modules.utils
       
       private var _CC_EC:Boolean;
       
-      public function get header() : Boolean {
-         return this._header;
+      public function get header() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set header(value:Boolean) : void {
-         this._header = value;
+      public function set header(value:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get effects() : Boolean {
-         return this._effects;
+      public function get effects() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set effects(value:Boolean) : void {
-         this._effects = value;
+      public function set effects(value:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get description() : Boolean {
-         return this._description;
+      public function get description() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set description(value:Boolean) : void {
-         this._description = value;
+      public function set description(value:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get CC_EC() : Boolean {
-         return this._CC_EC;
+      public function get CC_EC() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set CC_EC(value:Boolean) : void {
-         this._CC_EC = value;
+      public function set CC_EC(value:Boolean) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

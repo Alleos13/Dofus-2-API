@@ -10,38 +10,13 @@ package com.ankamagames.dofus.logic.connection.managers
    public class SpecialBetaAuthentification extends EventDispatcher
    {
       
-      public function SpecialBetaAuthentification(login:String, type:String) {
-         super();
-         var url:String = BASE_URL;
-         if((BuildInfos.BUILD_TYPE == BuildTypeEnum.RELEASE) || (BuildInfos.BUILD_TYPE == BuildTypeEnum.BETA) || (BuildInfos.BUILD_TYPE == BuildTypeEnum.ALPHA))
-         {
-            url = url + "com";
-         }
-         else
-         {
-            url = url + "lan";
-         }
-         var forumId:Array = [];
-         switch(type)
-         {
-            case STREAMING:
-               forumId.push(1210,1080,1008,1127);
-               break;
-            case MODULES:
-               forumId.push(1127);
-               break;
-         }
-         this._haveAccess = false;
-         if(forumId.length)
-         {
-            this._rpc = new RpcServiceManager(url + "/forum/forum.json","json");
-            this._rpc.addEventListener(Event.COMPLETE,this.onDataReceived);
-            this._rpc.callMethod("IsAuthorized",["dofus","fr",login,forumId]);
-         }
-         else
-         {
-            setTimeout(dispatchEvent,1,new Event(Event.INIT));
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpecialBetaAuthentification(login:String, type:String)
+      {
+         //Décompilation abandonné
       }
       
       private static var BASE_URL:String = "http://api.ankama.";
@@ -54,15 +29,14 @@ package com.ankamagames.dofus.logic.connection.managers
       
       private var _haveAccess:Boolean = false;
       
-      public function get haveAccess() : Boolean {
-         return this._haveAccess;
+      public function get haveAccess() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function onDataReceived(e:Event) : void {
-         var _loc2_:* = true;
-         var _loc3_:* = false;
-         this._haveAccess = this._rpc.getAllResultData();
-         dispatchEvent(new Event(Event.INIT));
+      private function onDataReceived(e:Event) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

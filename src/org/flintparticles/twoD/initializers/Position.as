@@ -10,38 +10,30 @@ package org.flintparticles.twoD.initializers
    public class Position extends InitializerBase
    {
       
-      public function Position(param1:Zone2D) {
-         super();
-         this._zone = param1;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Position(zone:Zone2D)
+      {
+         //Décompilation abandonné
       }
       
       private var _zone:Zone2D;
       
-      public function get zone() : Zone2D {
-         return this._zone;
+      public function get zone() : Zone2D
+      {
+         //Décompilation abandonné
       }
       
-      public function set zone(param1:Zone2D) : void {
-         this._zone = param1;
+      public function set zone(value:Zone2D) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function initialize(param1:Emitter, param2:Particle) : void {
-         var _loc5_:* = NaN;
-         var _loc6_:* = NaN;
-         var _loc3_:Particle2D = Particle2D(param2);
-         var _loc4_:Point = this._zone.getLocation();
-         if(_loc3_.rotation == 0)
-         {
-            _loc3_.x = _loc3_.x + _loc4_.x;
-            _loc3_.y = _loc3_.y + _loc4_.y;
-         }
-         else
-         {
-            _loc5_ = Math.sin(_loc3_.rotation);
-            _loc6_ = Math.cos(_loc3_.rotation);
-            _loc3_.x = _loc3_.x + (_loc6_ * _loc4_.x - _loc5_ * _loc4_.y);
-            _loc3_.y = _loc3_.y + (_loc6_ * _loc4_.y + _loc5_ * _loc4_.x);
-         }
+      override public function initialize(emitter:Emitter, particle:Particle) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

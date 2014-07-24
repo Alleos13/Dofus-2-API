@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.chat
    public class LivingObjectMessageRequestAction extends Object implements Action
    {
       
-      public function LivingObjectMessageRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(msgId:uint, livingObjectUID:uint) : LivingObjectMessageRequestAction {
-         var a:LivingObjectMessageRequestAction = new LivingObjectMessageRequestAction();
-         a.msgId = msgId;
-         a.livingObjectUID = livingObjectUID;
-         return a;
+      public function LivingObjectMessageRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(msgId:uint, livingObjectUID:uint) : LivingObjectMessageRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var msgId:uint;

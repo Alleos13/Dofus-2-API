@@ -5,17 +5,22 @@ package com.ankamagames.tubul.events
    public class SoundSilenceEvent extends Event
    {
       
-      public function SoundSilenceEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false) {
-         super(type,bubbles,cancelable);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SoundSilenceEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       public static const START:String = "start";
       
       public static const COMPLETE:String = "complete";
       
-      override public function clone() : Event {
-         var e:SoundSilenceEvent = new SoundSilenceEvent(this.type,this.bubbles,this.cancelable);
-         return e;
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
    }
 }

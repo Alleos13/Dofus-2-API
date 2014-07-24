@@ -8,45 +8,52 @@ package com.ankamagames.dofus.network.types.game.guild.tax
    public class TaxCollectorWaitingForHelpInformations extends TaxCollectorComplementaryInformations implements INetworkType
    {
       
-      public function TaxCollectorWaitingForHelpInformations() {
-         this.waitingForHelpInfo = new ProtectedEntityWaitingForHelpInfo();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TaxCollectorWaitingForHelpInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 447;
       
       public var waitingForHelpInfo:ProtectedEntityWaitingForHelpInfo;
       
-      override public function getTypeId() : uint {
-         return 447;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initTaxCollectorWaitingForHelpInformations(waitingForHelpInfo:ProtectedEntityWaitingForHelpInfo = null) : TaxCollectorWaitingForHelpInformations {
-         this.waitingForHelpInfo = waitingForHelpInfo;
-         return this;
+      public function initTaxCollectorWaitingForHelpInformations(waitingForHelpInfo:ProtectedEntityWaitingForHelpInfo = null) : TaxCollectorWaitingForHelpInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.waitingForHelpInfo = new ProtectedEntityWaitingForHelpInfo();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TaxCollectorWaitingForHelpInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_TaxCollectorWaitingForHelpInformations(output:IDataOutput) : void {
-         super.serializeAs_TaxCollectorComplementaryInformations(output);
-         this.waitingForHelpInfo.serializeAs_ProtectedEntityWaitingForHelpInfo(output);
+      public function serializeAs_TaxCollectorWaitingForHelpInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TaxCollectorWaitingForHelpInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_TaxCollectorWaitingForHelpInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.waitingForHelpInfo = new ProtectedEntityWaitingForHelpInfo();
-         this.waitingForHelpInfo.deserialize(input);
+      public function deserializeAs_TaxCollectorWaitingForHelpInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

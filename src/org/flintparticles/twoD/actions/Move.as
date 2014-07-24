@@ -8,20 +8,25 @@ package org.flintparticles.twoD.actions
    public class Move extends ActionBase
    {
       
-      public function Move() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Move()
+      {
+         //Décompilation abandonné
       }
       
       private var p:Particle2D;
       
-      override public function getDefaultPriority() : Number {
-         return -10;
+      override public function getDefaultPriority() : Number
+      {
+         //Décompilation abandonné
       }
       
-      override public function update(param1:Emitter, param2:Particle, param3:Number) : void {
-         this.p = Particle2D(param2);
-         this.p.x = this.p.x + this.p.velX * param3;
-         this.p.y = this.p.y + this.p.velY * param3;
+      override public function update(emitter:Emitter, particle:Particle, time:Number) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

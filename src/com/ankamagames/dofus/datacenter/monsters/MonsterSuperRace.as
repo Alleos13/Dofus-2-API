@@ -7,18 +7,25 @@ package com.ankamagames.dofus.datacenter.monsters
    public class MonsterSuperRace extends Object implements IDataCenter
    {
       
-      public function MonsterSuperRace() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MonsterSuperRace()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "MonsterSuperRaces";
       
-      public static function getMonsterSuperRaceById(id:uint) : MonsterSuperRace {
-         return GameData.getObject(MODULE,id) as MonsterSuperRace;
+      public static function getMonsterSuperRaceById(id:uint) : MonsterSuperRace
+      {
+         //Décompilation abandonné
       }
       
-      public static function getMonsterSuperRaces() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getMonsterSuperRaces() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -27,12 +34,9 @@ package com.ankamagames.dofus.datacenter.monsters
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

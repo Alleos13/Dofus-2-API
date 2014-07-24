@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.fight.actions
    public class TimelineEntityOutAction extends Object implements Action
    {
       
-      public function TimelineEntityOutAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(target:int) : TimelineEntityOutAction {
-         var a:TimelineEntityOutAction = new TimelineEntityOutAction();
-         a.targetId = target;
-         return a;
+      public function TimelineEntityOutAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(target:int) : TimelineEntityOutAction
+      {
+         //Décompilation abandonné
       }
       
       public var targetId:int;

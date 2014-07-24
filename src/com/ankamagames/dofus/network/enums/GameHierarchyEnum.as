@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class GameHierarchyEnum extends Object
    {
       
-      public function GameHierarchyEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameHierarchyEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const UNAVAILABLE:int = -1;

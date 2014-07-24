@@ -10,14 +10,13 @@ package com.ankamagames.dofus.types.entities
    public class CheckPointEntity extends Sprite implements IEntity, IDisplayable
    {
       
-      public function CheckPointEntity(spr:Sprite = null, pos:MapPoint = null) {
-         super();
-         this._position = pos;
-         if(spr != null)
-         {
-            this._displayedObject = spr;
-            addChild(this._displayedObject);
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CheckPointEntity(spr:Sprite = null, pos:MapPoint = null)
+      {
+         //Décompilation abandonné
       }
       
       private var _id:int;
@@ -28,48 +27,54 @@ package com.ankamagames.dofus.types.entities
       
       private var _displayedObject:Sprite;
       
-      public function get id() : int {
-         return this._id;
+      public function get id() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set id(nValue:int) : void {
-         this._id = nValue;
+      public function set id(nValue:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get position() : MapPoint {
-         return this._position;
+      public function get position() : MapPoint
+      {
+         //Décompilation abandonné
       }
       
-      public function set position(oValue:MapPoint) : void {
-         this._position = oValue;
+      public function set position(oValue:MapPoint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get displayBehaviors() : IDisplayBehavior {
-         return null;
+      public function get displayBehaviors() : IDisplayBehavior
+      {
+         //Décompilation abandonné
       }
       
-      public function set displayBehaviors(oValue:IDisplayBehavior) : void {
+      public function set displayBehaviors(oValue:IDisplayBehavior) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get absoluteBounds() : IRectangle {
-         return null;
+      public function get absoluteBounds() : IRectangle
+      {
+         //Décompilation abandonné
       }
       
-      public function get displayed() : Boolean {
-         return this._displayed;
+      public function get displayed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function display(strata:uint = 0) : void {
-         this._displayed = true;
+      public function display(strata:uint = 0) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function remove() : void {
-         if(this._displayedObject != null)
-         {
-            removeChild(this._displayedObject);
-            this._displayedObject = null;
-         }
-         this._displayed = false;
+      public function remove() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.social
    public class PlayerStatusUpdateRequestAction extends Object implements Action
    {
       
-      public function PlayerStatusUpdateRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(statusNumber:uint, msg:String = "") : PlayerStatusUpdateRequestAction {
-         var a:PlayerStatusUpdateRequestAction = new PlayerStatusUpdateRequestAction();
-         a.status = statusNumber;
-         a.message = msg;
-         return a;
+      public function PlayerStatusUpdateRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(statusNumber:uint, msg:String = "") : PlayerStatusUpdateRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var status:int;

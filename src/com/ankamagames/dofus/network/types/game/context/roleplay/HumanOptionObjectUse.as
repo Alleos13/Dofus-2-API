@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
    public class HumanOptionObjectUse extends HumanOption implements INetworkType
    {
       
-      public function HumanOptionObjectUse() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HumanOptionObjectUse()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 449;
@@ -19,80 +24,39 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
       
       public var objectGID:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 449;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initHumanOptionObjectUse(delayTypeId:uint = 0, delayEndTime:Number = 0, objectGID:uint = 0) : HumanOptionObjectUse {
-         this.delayTypeId = delayTypeId;
-         this.delayEndTime = delayEndTime;
-         this.objectGID = objectGID;
-         return this;
+      public function initHumanOptionObjectUse(delayTypeId:uint = 0, delayEndTime:Number = 0, objectGID:uint = 0) : HumanOptionObjectUse
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.delayTypeId = 0;
-         this.delayEndTime = 0;
-         this.objectGID = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_HumanOptionObjectUse(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_HumanOptionObjectUse(output:IDataOutput) : void {
-         super.serializeAs_HumanOption(output);
-         output.writeByte(this.delayTypeId);
-         if(this.delayEndTime < 0)
-         {
-            throw new Error("Forbidden value (" + this.delayEndTime + ") on element delayEndTime.");
-         }
-         else
-         {
-            output.writeDouble(this.delayEndTime);
-            if(this.objectGID < 0)
-            {
-               throw new Error("Forbidden value (" + this.objectGID + ") on element objectGID.");
-            }
-            else
-            {
-               output.writeShort(this.objectGID);
-               return;
-            }
-         }
+      public function serializeAs_HumanOptionObjectUse(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_HumanOptionObjectUse(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_HumanOptionObjectUse(input:IDataInput) : void {
-         super.deserialize(input);
-         this.delayTypeId = input.readByte();
-         if(this.delayTypeId < 0)
-         {
-            throw new Error("Forbidden value (" + this.delayTypeId + ") on element of HumanOptionObjectUse.delayTypeId.");
-         }
-         else
-         {
-            this.delayEndTime = input.readDouble();
-            if(this.delayEndTime < 0)
-            {
-               throw new Error("Forbidden value (" + this.delayEndTime + ") on element of HumanOptionObjectUse.delayEndTime.");
-            }
-            else
-            {
-               this.objectGID = input.readShort();
-               if(this.objectGID < 0)
-               {
-                  throw new Error("Forbidden value (" + this.objectGID + ") on element of HumanOptionObjectUse.objectGID.");
-               }
-               else
-               {
-                  return;
-               }
-            }
-         }
+      public function deserializeAs_HumanOptionObjectUse(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

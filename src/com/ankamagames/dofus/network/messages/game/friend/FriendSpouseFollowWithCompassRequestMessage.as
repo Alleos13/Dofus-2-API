@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.friend
    public class FriendSpouseFollowWithCompassRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function FriendSpouseFollowWithCompassRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FriendSpouseFollowWithCompassRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5606;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var enable:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 5606;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initFriendSpouseFollowWithCompassRequestMessage(enable:Boolean = false) : FriendSpouseFollowWithCompassRequestMessage {
-         this.enable = enable;
-         this._isInitialized = true;
-         return this;
+      public function initFriendSpouseFollowWithCompassRequestMessage(enable:Boolean = false) : FriendSpouseFollowWithCompassRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.enable = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_FriendSpouseFollowWithCompassRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_FriendSpouseFollowWithCompassRequestMessage(output:IDataOutput) : void {
-         output.writeBoolean(this.enable);
+      public function serializeAs_FriendSpouseFollowWithCompassRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_FriendSpouseFollowWithCompassRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_FriendSpouseFollowWithCompassRequestMessage(input:IDataInput) : void {
-         this.enable = input.readBoolean();
+      public function deserializeAs_FriendSpouseFollowWithCompassRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

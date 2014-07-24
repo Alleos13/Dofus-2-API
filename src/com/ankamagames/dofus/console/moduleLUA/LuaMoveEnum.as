@@ -3,8 +3,13 @@ package com.ankamagames.dofus.console.moduleLUA
    public class LuaMoveEnum extends Object
    {
       
-      public function LuaMoveEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LuaMoveEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const MOVE_DEFAULT:int = 0;

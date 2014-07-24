@@ -27,10 +27,13 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
    public class DelayedActionFrame extends Object implements Frame
    {
       
-      public function DelayedActionFrame() {
-         this._log = Log.getLogger(getQualifiedClassName(DelayedActionFrame));
-         this._delayedActionEntities = new Dictionary();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DelayedActionFrame()
+      {
+         //Décompilation abandonné
       }
       
       private static const TOOLTIP_NAME:String = "delayedItemUse";
@@ -39,84 +42,39 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
       
       private var _delayedActionEntities:Dictionary;
       
-      public function get priority() : int {
-         return Priority.HIGH;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         this.removeAll();
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var grpdaMsg:GameRolePlayDelayedActionMessage = null;
-         var dam:DelayedActionMessage = null;
-         var grpdafMsg:GameRolePlayDelayedActionFinishedMessage = null;
-         var grdoum:GameRolePlayDelayedObjectUseMessage = null;
-         switch(true)
-         {
-            case msg is CurrentMapMessage:
-               this.removeAll();
-               break;
-            case msg is GameContextRemoveElementMessage:
-               this.removeEntity(GameContextRemoveElementMessage(msg).id);
-               break;
-            case msg is GameRolePlayDelayedActionMessage:
-               grpdaMsg = msg as GameRolePlayDelayedActionMessage;
-               switch(grpdaMsg.delayTypeId)
-               {
-                  case DelayedActionTypeEnum.DELAYED_ACTION_OBJECT_USE:
-                     grdoum = msg as GameRolePlayDelayedObjectUseMessage;
-                     this.showItemUse(grdoum.delayedCharacterId,grdoum.objectGID,grpdaMsg.delayEndTime);
-                     break;
-               }
-               return true;
-            case msg is DelayedActionMessage:
-               dam = msg as DelayedActionMessage;
-               this.showItemUse(dam.playerId,dam.itemId,dam.endTime);
-               return true;
-            case msg is GameRolePlayDelayedActionFinishedMessage:
-               grpdafMsg = msg as GameRolePlayDelayedActionFinishedMessage;
-               this.removeEntity(grpdafMsg.delayedCharacterId);
-               return true;
-         }
-         return false;
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function showItemUse(playerId:int, itemId:uint, endTime:Number) : void {
-         var delay:* = NaN;
-         var w:DelayedActionItem = null;
-         var absBounds:IRectangle = null;
-         var delayTooltip:Tooltip = null;
-         if(DofusEntities.getEntity(playerId))
-         {
-            delay = endTime - TimeManager.getInstance().getUtcTimestamp();
-            w = new DelayedActionItem(playerId,DelayedActionTypeEnum.DELAYED_ACTION_OBJECT_USE,itemId,delay);
-            absBounds = (DofusEntities.getEntity(playerId) as IDisplayable).absoluteBounds;
-            delayTooltip = TooltipManager.show(w,absBounds,UiModuleManager.getInstance().getModule("Ankama_Tooltips"),false,TOOLTIP_NAME + playerId,LocationEnum.POINT_BOTTOM,LocationEnum.POINT_TOP,0,true,null,null,{"endTime":delay},null,false,-1);
-            delayTooltip.mustBeHidden = false;
-            this._delayedActionEntities[playerId] = TOOLTIP_NAME + playerId;
-         }
+      public function showItemUse(playerId:int, itemId:uint, endTime:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function removeEntity(id:int) : void {
-         if(this._delayedActionEntities[id])
-         {
-            TooltipManager.hide(this._delayedActionEntities[id]);
-            delete this._delayedActionEntities[id];
-         }
+      private function removeEntity(id:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function removeAll() : void {
-         var id:* = undefined;
-         for(id in this._delayedActionEntities)
-         {
-            this.removeEntity(id);
-         }
+      private function removeAll() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

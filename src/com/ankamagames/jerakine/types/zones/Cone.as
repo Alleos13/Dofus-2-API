@@ -10,11 +10,13 @@ package com.ankamagames.jerakine.types.zones
    public class Cone extends Object implements IZone
    {
       
-      public function Cone(nMinRadius:uint, nRadius:uint, dataMapProvider:IDataMapProvider) {
-         super();
-         this.radius = nRadius;
-         this.minRadius = nMinRadius;
-         this._dataMapProvider = dataMapProvider;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Cone(nMinRadius:uint, nRadius:uint, dataMapProvider:IDataMapProvider)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -29,142 +31,49 @@ package com.ankamagames.jerakine.types.zones
       
       private var _diagonalFree:Boolean = false;
       
-      public function get radius() : uint {
-         return this._radius;
+      public function get radius() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set radius(n:uint) : void {
-         this._radius = n;
+      public function set radius(n:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set minRadius(r:uint) : void {
-         this._minRadius = r;
+      public function set minRadius(r:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get minRadius() : uint {
-         return this._minRadius;
+      public function get minRadius() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set direction(d:uint) : void {
-         this._nDirection = d;
+      public function set direction(d:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get direction() : uint {
-         return this._nDirection;
+      public function get direction() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get surface() : uint {
-         return Math.pow(this._radius + 1,2);
+      public function get surface() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function getCells(cellId:uint = 0) : Vector.<uint> {
-         var i:* = 0;
-         var j:* = 0;
-         var aCells:Vector.<uint> = new Vector.<uint>();
-         var origin:MapPoint = MapPoint.fromCellId(cellId);
-         var x:int = origin.x;
-         var y:int = origin.y;
-         if(this._radius == 0)
-         {
-            if(this._minRadius == 0)
-            {
-               aCells.push(cellId);
-            }
-            return aCells;
-         }
-         var inc:int = 1;
-         var step:uint = 0;
-         switch(this._nDirection)
-         {
-            case DirectionsEnum.UP_LEFT:
-               i = x;
-               while(i >= x - this._radius)
-               {
-                  j = -step;
-                  while(j <= step)
-                  {
-                     if((!this._minRadius) || (Math.abs(x - i) + Math.abs(j) >= this._minRadius))
-                     {
-                        if(MapPoint.isInMap(i,j + y))
-                        {
-                           this.addCell(i,j + y,aCells);
-                        }
-                     }
-                     j++;
-                  }
-                  step = step + inc;
-                  i--;
-               }
-               break;
-            case DirectionsEnum.DOWN_LEFT:
-               j = y;
-               while(j >= y - this._radius)
-               {
-                  i = -step;
-                  while(i <= step)
-                  {
-                     if((!this._minRadius) || (Math.abs(i) + Math.abs(y - j) >= this._minRadius))
-                     {
-                        if(MapPoint.isInMap(i + x,j))
-                        {
-                           this.addCell(i + x,j,aCells);
-                        }
-                     }
-                     i++;
-                  }
-                  step = step + inc;
-                  j--;
-               }
-               break;
-            case DirectionsEnum.DOWN_RIGHT:
-               i = x;
-               while(i <= x + this._radius)
-               {
-                  j = -step;
-                  while(j <= step)
-                  {
-                     if((!this._minRadius) || (Math.abs(x - i) + Math.abs(j) >= this._minRadius))
-                     {
-                        if(MapPoint.isInMap(i,j + y))
-                        {
-                           this.addCell(i,j + y,aCells);
-                        }
-                     }
-                     j++;
-                  }
-                  step = step + inc;
-                  i++;
-               }
-               break;
-            case DirectionsEnum.UP_RIGHT:
-               j = y;
-               while(j <= y + this._radius)
-               {
-                  i = -step;
-                  while(i <= step)
-                  {
-                     if((!this._minRadius) || (Math.abs(i) + Math.abs(y - j) >= this._minRadius))
-                     {
-                        if(MapPoint.isInMap(i + x,j))
-                        {
-                           this.addCell(i + x,j,aCells);
-                        }
-                     }
-                     i++;
-                  }
-                  step = step + inc;
-                  j++;
-               }
-               break;
-         }
-         return aCells;
+      public function getCells(cellId:uint = 0) : Vector.<uint>
+      {
+         //Décompilation abandonné
       }
       
-      private function addCell(x:int, y:int, cellMap:Vector.<uint>) : void {
-         if((this._dataMapProvider == null) || (this._dataMapProvider.pointMov(x,y)))
-         {
-            cellMap.push(MapPoint.fromCoords(x,y).cellId);
-         }
+      private function addCell(x:int, y:int, cellMap:Vector.<uint>) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

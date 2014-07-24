@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeBidHouseGenericItemRemovedMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeBidHouseGenericItemRemovedMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeBidHouseGenericItemRemovedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5948;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var objGenericId:int = 0;
       
-      override public function getMessageId() : uint {
-         return 5948;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeBidHouseGenericItemRemovedMessage(objGenericId:int = 0) : ExchangeBidHouseGenericItemRemovedMessage {
-         this.objGenericId = objGenericId;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeBidHouseGenericItemRemovedMessage(objGenericId:int = 0) : ExchangeBidHouseGenericItemRemovedMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.objGenericId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeBidHouseGenericItemRemovedMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeBidHouseGenericItemRemovedMessage(output:IDataOutput) : void {
-         output.writeInt(this.objGenericId);
+      public function serializeAs_ExchangeBidHouseGenericItemRemovedMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeBidHouseGenericItemRemovedMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeBidHouseGenericItemRemovedMessage(input:IDataInput) : void {
-         this.objGenericId = input.readInt();
+      public function deserializeAs_ExchangeBidHouseGenericItemRemovedMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

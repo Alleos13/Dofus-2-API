@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.utils
    public class EmbedAssets_SWORDS_CLIP extends SpriteAsset
    {
       
-      public function EmbedAssets_SWORDS_CLIP() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EmbedAssets_SWORDS_CLIP()
+      {
+         //Décompilation abandonné
       }
    }
 }

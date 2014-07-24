@@ -9,28 +9,22 @@ package com.ankamagames.jerakine.pools
    public class PoolsManager extends Object
    {
       
-      public function PoolsManager() {
-         super();
-         if(_self)
-         {
-            throw new SingletonError("Direct initialization of singleton is forbidden. Please access PoolsManager using the getInstance method.");
-         }
-         else
-         {
-            return;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PoolsManager()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       private static var _self:PoolsManager;
       
-      public static function getInstance() : PoolsManager {
-         if(_self == null)
-         {
-            _self = new PoolsManager();
-         }
-         return _self;
+      public static function getInstance() : PoolsManager
+      {
+         //Décompilation abandonné
       }
       
       private var _loadersPool:Pool;
@@ -43,44 +37,29 @@ package com.ankamagames.jerakine.pools
       
       private var _soundPool:Pool;
       
-      public function getLoadersPool() : Pool {
-         if(this._loadersPool == null)
-         {
-            this._loadersPool = new Pool(PoolableLoader,JerakineConstants.LOADERS_POOL_INITIAL_SIZE,JerakineConstants.LOADERS_POOL_GROW_SIZE,JerakineConstants.LOADERS_POOL_WARN_LIMIT);
-         }
-         return this._loadersPool;
+      public function getLoadersPool() : Pool
+      {
+         //Décompilation abandonné
       }
       
-      public function getURLLoaderPool() : Pool {
-         if(this._urlLoadersPool == null)
-         {
-            this._urlLoadersPool = new Pool(PoolableURLLoader,JerakineConstants.URLLOADERS_POOL_INITIAL_SIZE,JerakineConstants.URLLOADERS_POOL_GROW_SIZE,JerakineConstants.URLLOADERS_POOL_WARN_LIMIT);
-         }
-         return this._urlLoadersPool;
+      public function getURLLoaderPool() : Pool
+      {
+         //Décompilation abandonné
       }
       
-      public function getRectanglePool() : Pool {
-         if(this._rectanglePool == null)
-         {
-            this._rectanglePool = new Pool(PoolableRectangle,JerakineConstants.RECTANGLE_POOL_INITIAL_SIZE,JerakineConstants.RECTANGLE_POOL_GROW_SIZE,JerakineConstants.RECTANGLE_POOL_WARN_LIMIT);
-         }
-         return this._rectanglePool;
+      public function getRectanglePool() : Pool
+      {
+         //Décompilation abandonné
       }
       
-      public function getPointPool() : Pool {
-         if(this._pointPool == null)
-         {
-            this._pointPool = new Pool(PoolablePoint,JerakineConstants.POINT_POOL_INITIAL_SIZE,JerakineConstants.POINT_POOL_GROW_SIZE,JerakineConstants.POINT_POOL_WARN_LIMIT);
-         }
-         return this._pointPool;
+      public function getPointPool() : Pool
+      {
+         //Décompilation abandonné
       }
       
-      public function getSoundPool() : Pool {
-         if(this._soundPool == null)
-         {
-            this._soundPool = new Pool(PoolableSound,JerakineConstants.SOUND_POOL_INITIAL_SIZE,JerakineConstants.SOUND_POOL_GROW_SIZE,JerakineConstants.SOUND_POOL_WARN_LIMIT);
-         }
-         return this._soundPool;
+      public function getSoundPool() : Pool
+      {
+         //Décompilation abandonné
       }
    }
 }

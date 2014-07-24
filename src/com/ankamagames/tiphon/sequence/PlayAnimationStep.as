@@ -13,15 +13,13 @@ package com.ankamagames.tiphon.sequence
    public class PlayAnimationStep extends AbstractSequencable
    {
       
-      public function PlayAnimationStep(target:TiphonSprite, animationName:String, backToLastAnimationAtEnd:Boolean = true, waitEvent:Boolean = true, eventEnd:String = "animation_event_end", loop:int = 1, endAnimationName:String = "") {
-         super();
-         this._endEvent = eventEnd;
-         this._target = target;
-         this._animationName = animationName;
-         this._loop = loop;
-         this._waitEvent = waitEvent;
-         this._backToLastAnimationAtEnd = backToLastAnimationAtEnd;
-         this._endAnimationName = endAnimationName;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PlayAnimationStep(target:TiphonSprite, animationName:String, backToLastAnimationAtEnd:Boolean = true, waitEvent:Boolean = true, eventEnd:String = "animation_event_end", loop:int = 1, endAnimationName:String = "")
+      {
+         //Décompilation abandonné
       }
       
       private static const _log:Logger;
@@ -29,6 +27,8 @@ package com.ankamagames.tiphon.sequence
       private var _target:TiphonSprite;
       
       private var _animationName:String;
+      
+      private var _startFrame:int = -1;
       
       private var _loop:int;
       
@@ -44,153 +44,64 @@ package com.ankamagames.tiphon.sequence
       
       private var _callbackExecuted:Boolean = false;
       
-      public function get target() : TiphonSprite {
-         return this._target;
+      public function get target() : TiphonSprite
+      {
+         //Décompilation abandonné
       }
       
-      public function get animation() : String {
-         return this._animationName;
+      public function get animation() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function set animation(anim:String) : void {
-         this._animationName = anim;
+      public function set animation(anim:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set waitEvent(v:Boolean) : void {
-         this._waitEvent = v;
+      public function set waitEvent(v:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function start() : void {
-         var s:String = null;
-         if(!this._target)
-         {
-            this._callbackExecuted = true;
-            executeCallbacks();
-            this.onAnimationEnd(null);
-            return;
-         }
-         this._target.addEventListener(Event.REMOVED_FROM_STAGE,this.onRemoveFromStage);
-         if(this._target.isShowingOnlyBackground())
-         {
-            this._callbackExecuted = true;
-            executeCallbacks();
-            return;
-         }
-         if(this._endEvent != TiphonEvent.ANIMATION_END)
-         {
-            this._target.addEventListener(this._endEvent,this.onCustomEvent);
-         }
-         this._target.addEventListener(TiphonEvent.ANIMATION_END,this.onAnimationEnd);
-         this._target.addEventListener(TiphonEvent.RENDER_FAILED,this.onAnimationFail);
-         this._target.addEventListener(TiphonEvent.SPRITE_INIT_FAILED,this.onAnimationFail);
-         this._target.overrideNextAnimation = true;
-         var directions:Array = this._target.getAvaibleDirection(this._animationName,true);
-         if(!directions[this._target.getDirection()])
-         {
-            for(s in directions)
-            {
-               if(directions[s])
-               {
-                  this._target.setDirection(uint(s));
-                  break;
-               }
-            }
-         }
-         this._target.setAnimation(this._animationName);
-         this._lastSpriteAnimation = this._target.getAnimation();
-         if(!this._waitEvent)
-         {
-            this._callbackExecuted = true;
-            executeCallbacks();
-         }
+      public function set startFrame(frame:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onCustomEvent(e:TiphonEvent) : void {
-         this._target.removeEventListener(this._endEvent,this.onCustomEvent);
-         this._callbackExecuted = true;
-         executeCallbacks();
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onAnimationFail(e:TiphonEvent) : void {
-         if(this._endEvent != TiphonEvent.ANIMATION_END)
-         {
-            this.onCustomEvent(e);
-         }
-         this.onAnimationEnd(e);
+      private function onCustomEvent(e:TiphonEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onRemoveFromStage(e:Event) : void {
-         var subEntity:TiphonSprite = null;
-         var playingAnim:Boolean = this._target.isPlayingAnimation();
-         var subEntities:Array = this._target.getSubEntitiesList();
-         if((!playingAnim) && (subEntities.length > 0))
-         {
-            for each(subEntity in subEntities)
-            {
-               if(subEntity.isPlayingAnimation())
-               {
-                  playingAnim = true;
-                  break;
-               }
-            }
-         }
-         if(!playingAnim)
-         {
-            setTimeout(this.onAnimationEnd,1,e);
-         }
+      private function onAnimationFail(e:TiphonEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onAnimationEnd(e:Event) : void {
-         var currentSpriteAnimation:String = null;
-         if(this._target)
-         {
-            if(this._loop > 0)
-            {
-               this._loop--;
-            }
-            if((this._loop > 0) || (this._loop == -1))
-            {
-               this._target.setAnimation(this._animationName);
-               return;
-            }
-            if(this._endEvent != TiphonEvent.ANIMATION_END)
-            {
-               this._target.removeEventListener(this._endEvent,this.onCustomEvent);
-            }
-            this._target.removeEventListener(TiphonEvent.ANIMATION_END,this.onAnimationEnd);
-            this._target.removeEventListener(TiphonEvent.RENDER_FAILED,this.onAnimationEnd);
-            this._target.removeEventListener(TiphonEvent.SPRITE_INIT_FAILED,this.onAnimationFail);
-            this._target.removeEventListener(Event.REMOVED_FROM_STAGE,this.onRemoveFromStage);
-            currentSpriteAnimation = this._target.getAnimation();
-            if(this._backToLastAnimationAtEnd)
-            {
-               if((currentSpriteAnimation) && (this._lastSpriteAnimation) && (!(this._lastSpriteAnimation.indexOf(currentSpriteAnimation) == -1)))
-               {
-                  if(this._endAnimationName)
-                  {
-                     this._target.setAnimation(this._endAnimationName);
-                  }
-                  else
-                  {
-                     this._target.setAnimation("AnimStatique");
-                  }
-               }
-            }
-         }
-         if(!this._callbackExecuted)
-         {
-            executeCallbacks();
-         }
+      private function onRemoveFromStage(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function toString() : String {
-         return "play " + this._animationName + " on " + (this._target?this._target.name:this._target);
+      private function onAnimationEnd(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      override protected function onTimeOut(e:TimerEvent) : void {
-         this._callbackExecuted = true;
-         this.onAnimationEnd(null);
-         super.onTimeOut(e);
+      override public function toString() : String
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function onTimeOut(e:TimerEvent) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

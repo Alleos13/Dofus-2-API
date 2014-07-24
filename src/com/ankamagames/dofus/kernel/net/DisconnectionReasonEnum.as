@@ -3,8 +3,13 @@ package com.ankamagames.dofus.kernel.net
    public final class DisconnectionReasonEnum extends Object
    {
       
-      public function DisconnectionReasonEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DisconnectionReasonEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const UNEXPECTED:uint = 0;

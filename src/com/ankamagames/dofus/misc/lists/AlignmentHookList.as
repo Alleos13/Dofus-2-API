@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.lists
    public class AlignmentHookList extends Object
    {
       
-      public function AlignmentHookList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AlignmentHookList()
+      {
+         //Décompilation abandonné
       }
       
       public static const AlignmentRankUpdate:Hook;

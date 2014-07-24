@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.lists
    public class MountHookList extends Object
    {
       
-      public function MountHookList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MountHookList()
+      {
+         //Décompilation abandonné
       }
       
       public static const MountSterilized:Hook;

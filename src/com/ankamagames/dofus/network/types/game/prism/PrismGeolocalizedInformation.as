@@ -8,9 +8,13 @@ package com.ankamagames.dofus.network.types.game.prism
    public class PrismGeolocalizedInformation extends PrismSubareaEmptyInfo implements INetworkType
    {
       
-      public function PrismGeolocalizedInformation() {
-         this.prism = new PrismInformation();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PrismGeolocalizedInformation()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 434;
@@ -23,82 +27,39 @@ package com.ankamagames.dofus.network.types.game.prism
       
       public var prism:PrismInformation;
       
-      override public function getTypeId() : uint {
-         return 434;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPrismGeolocalizedInformation(subAreaId:uint = 0, allianceId:uint = 0, worldX:int = 0, worldY:int = 0, mapId:int = 0, prism:PrismInformation = null) : PrismGeolocalizedInformation {
-         super.initPrismSubareaEmptyInfo(subAreaId,allianceId);
-         this.worldX = worldX;
-         this.worldY = worldY;
-         this.mapId = mapId;
-         this.prism = prism;
-         return this;
+      public function initPrismGeolocalizedInformation(subAreaId:uint = 0, allianceId:uint = 0, worldX:int = 0, worldY:int = 0, mapId:int = 0, prism:PrismInformation = null) : PrismGeolocalizedInformation
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.worldX = 0;
-         this.worldY = 0;
-         this.mapId = 0;
-         this.prism = new PrismInformation();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PrismGeolocalizedInformation(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PrismGeolocalizedInformation(output:IDataOutput) : void {
-         super.serializeAs_PrismSubareaEmptyInfo(output);
-         if((this.worldX < -255) || (this.worldX > 255))
-         {
-            throw new Error("Forbidden value (" + this.worldX + ") on element worldX.");
-         }
-         else
-         {
-            output.writeShort(this.worldX);
-            if((this.worldY < -255) || (this.worldY > 255))
-            {
-               throw new Error("Forbidden value (" + this.worldY + ") on element worldY.");
-            }
-            else
-            {
-               output.writeShort(this.worldY);
-               output.writeInt(this.mapId);
-               output.writeShort(this.prism.getTypeId());
-               this.prism.serialize(output);
-               return;
-            }
-         }
+      public function serializeAs_PrismGeolocalizedInformation(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PrismGeolocalizedInformation(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PrismGeolocalizedInformation(input:IDataInput) : void {
-         super.deserialize(input);
-         this.worldX = input.readShort();
-         if((this.worldX < -255) || (this.worldX > 255))
-         {
-            throw new Error("Forbidden value (" + this.worldX + ") on element of PrismGeolocalizedInformation.worldX.");
-         }
-         else
-         {
-            this.worldY = input.readShort();
-            if((this.worldY < -255) || (this.worldY > 255))
-            {
-               throw new Error("Forbidden value (" + this.worldY + ") on element of PrismGeolocalizedInformation.worldY.");
-            }
-            else
-            {
-               this.mapId = input.readInt();
-               _id4 = input.readUnsignedShort();
-               this.prism = ProtocolTypeManager.getInstance(PrismInformation,_id4);
-               this.prism.deserialize(input);
-               return;
-            }
-         }
+      public function deserializeAs_PrismGeolocalizedInformation(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

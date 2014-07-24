@@ -9,20 +9,27 @@ package com.ankamagames.dofus.datacenter.livingObjects
    public class Pet extends Object implements IDataCenter
    {
       
-      public function Pet() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Pet()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Pets";
       
       protected static const _log:Logger;
       
-      public static function getPetById(id:int) : Pet {
-         return GameData.getObject(MODULE,id) as Pet;
+      public static function getPetById(id:int) : Pet
+      {
+         //Décompilation abandonné
       }
       
-      public static function getPets() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getPets() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;

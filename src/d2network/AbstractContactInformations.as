@@ -3,16 +3,23 @@ package d2network
    public class AbstractContactInformations extends Object
    {
       
-      public function AbstractContactInformations() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function get accountId() : uint {
-         return new uint();
+      public function AbstractContactInformations()
+      {
+         //Décompilation abandonné
       }
       
-      public function get accountName() : String {
-         return new String();
+      public function get accountId() : uint
+      {
+         //Décompilation abandonné
+      }
+      
+      public function get accountName() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

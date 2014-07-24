@@ -9,67 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context
    public class GameMapChangeOrientationRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameMapChangeOrientationRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameMapChangeOrientationRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 945;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var direction:uint = 1;
       
-      override public function getMessageId() : uint {
-         return 945;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameMapChangeOrientationRequestMessage(direction:uint = 1) : GameMapChangeOrientationRequestMessage {
-         this.direction = direction;
-         this._isInitialized = true;
-         return this;
+      public function initGameMapChangeOrientationRequestMessage(direction:uint = 1) : GameMapChangeOrientationRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.direction = 1;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameMapChangeOrientationRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameMapChangeOrientationRequestMessage(output:IDataOutput) : void {
-         output.writeByte(this.direction);
+      public function serializeAs_GameMapChangeOrientationRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameMapChangeOrientationRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameMapChangeOrientationRequestMessage(input:IDataInput) : void {
-         this.direction = input.readByte();
-         if(this.direction < 0)
-         {
-            throw new Error("Forbidden value (" + this.direction + ") on element of GameMapChangeOrientationRequestMessage.direction.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_GameMapChangeOrientationRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

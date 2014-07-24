@@ -5,8 +5,13 @@ package com.ankamagames.dofus.datacenter.monsters
    public class MonsterGrade extends Object implements IDataCenter
    {
       
-      public function MonsterGrade() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MonsterGrade()
+      {
+         //Décompilation abandonné
       }
       
       public var grade:uint;
@@ -41,16 +46,14 @@ package com.ankamagames.dofus.datacenter.monsters
       
       private var _monster:Monster;
       
-      public function get monster() : Monster {
-         if(!this._monster)
-         {
-            this._monster = Monster.getMonsterById(this.monsterId);
-         }
-         return this._monster;
+      public function get monster() : Monster
+      {
+         //Décompilation abandonné
       }
       
-      public function get static() : Boolean {
-         return this.movementPoints == -1;
+      public function get method_1() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

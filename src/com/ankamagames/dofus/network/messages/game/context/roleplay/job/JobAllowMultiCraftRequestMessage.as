@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.job
    public class JobAllowMultiCraftRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function JobAllowMultiCraftRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function JobAllowMultiCraftRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5748;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var enabled:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 5748;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initJobAllowMultiCraftRequestMessage(enabled:Boolean = false) : JobAllowMultiCraftRequestMessage {
-         this.enabled = enabled;
-         this._isInitialized = true;
-         return this;
+      public function initJobAllowMultiCraftRequestMessage(enabled:Boolean = false) : JobAllowMultiCraftRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.enabled = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_JobAllowMultiCraftRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_JobAllowMultiCraftRequestMessage(output:IDataOutput) : void {
-         output.writeBoolean(this.enabled);
+      public function serializeAs_JobAllowMultiCraftRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_JobAllowMultiCraftRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_JobAllowMultiCraftRequestMessage(input:IDataInput) : void {
-         this.enabled = input.readBoolean();
+      public function deserializeAs_JobAllowMultiCraftRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

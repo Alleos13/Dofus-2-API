@@ -10,8 +10,13 @@ package com.ankamagames.berilia.utils
    public class GridItemList extends Object
    {
       
-      public function GridItemList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GridItemList()
+      {
+         //Décompilation abandonné
       }
       
       public static const import_XmlUiGridRenderer:XmlUiGridRenderer = null;

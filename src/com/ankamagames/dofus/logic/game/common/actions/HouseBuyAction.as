@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class HouseBuyAction extends Object implements Action
    {
       
-      public function HouseBuyAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(proposedPrice:uint) : HouseBuyAction {
-         var action:HouseBuyAction = new HouseBuyAction();
-         action.proposedPrice = proposedPrice;
-         return action;
+      public function HouseBuyAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(proposedPrice:uint) : HouseBuyAction
+      {
+         //Décompilation abandonné
       }
       
       public var proposedPrice:uint;

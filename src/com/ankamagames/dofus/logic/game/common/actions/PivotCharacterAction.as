@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class PivotCharacterAction extends Object implements Action
    {
       
-      public function PivotCharacterAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : PivotCharacterAction {
-         var action:PivotCharacterAction = new PivotCharacterAction();
-         return action;
+      public function PivotCharacterAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : PivotCharacterAction
+      {
+         //Décompilation abandonné
       }
    }
 }

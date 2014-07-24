@@ -13,104 +13,28 @@ package com.ankamagames.dofus.console.chat
    public class SocialInstructionHandler extends Object implements ConsoleInstructionHandler
    {
       
-      public function SocialInstructionHandler() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void {
-         var s:String = null;
-         var friend:String = null;
-         var name:String = null;
-         var inviteAction:PartyInvitationAction = null;
-         var reason:String = null;
-         var farmsg:FriendAddRequestMessage = null;
-         var iarmsg:IgnoredAddRequestMessage = null;
-         switch(cmd)
-         {
-            case "f":
-               if(args.length != 2)
-               {
-                  return;
-               }
-               s = args[0] as String;
-               friend = args[1] as String;
-               if((friend.length < 2) || (friend.length > 20))
-               {
-                  reason = I18n.getUiText("ui.social.friend.addFailureNotFound");
-                  console.output(reason);
-                  return;
-               }
-               if(friend != PlayedCharacterManager.getInstance().infos.name)
-               {
-                  if((s == "a") || (s == "+"))
-                  {
-                     farmsg = new FriendAddRequestMessage();
-                     farmsg.initFriendAddRequestMessage(friend);
-                     ConnectionsHandler.getConnection().send(farmsg);
-                  }
-               }
-               else
-               {
-                  console.output(I18n.getUiText("ui.social.friend.addFailureEgocentric"));
-               }
-               break;
-            case "ignore":
-               if(args.length != 2)
-               {
-                  return;
-               }
-               s = args[0] as String;
-               friend = args[1] as String;
-               if((friend.length < 2) || (friend.length > 20))
-               {
-                  reason = I18n.getUiText("ui.social.friend.addFailureNotFound");
-                  console.output(reason);
-                  return;
-               }
-               if(friend == PlayedCharacterManager.getInstance().infos.name)
-               {
-                  console.output(I18n.getUiText("ui.social.friend.addFailureEgocentric"));
-                  return;
-               }
-               if((s == "a") || (s == "+"))
-               {
-                  iarmsg = new IgnoredAddRequestMessage();
-                  iarmsg.initIgnoredAddRequestMessage(friend);
-                  ConnectionsHandler.getConnection().send(iarmsg);
-               }
-               break;
-            case "invite":
-               if(args.length != 1)
-               {
-                  return;
-               }
-               name = args[0] as String;
-               if((name == "") || (name.length < 2) || (name.length > 19))
-               {
-                  return;
-               }
-               inviteAction = PartyInvitationAction.create(name);
-               Kernel.getWorker().process(inviteAction);
-               break;
-         }
+      public function SocialInstructionHandler()
+      {
+         //Décompilation abandonné
       }
       
-      public function getHelp(cmd:String) : String {
-         switch(cmd)
-         {
-            case "f":
-               return I18n.getUiText("ui.chat.console.help.friendhelp");
-            case "ignore":
-               return I18n.getUiText("ui.chat.console.help.enemyhelp");
-            case "invite":
-               return I18n.getUiText("ui.chat.console.help.invite");
-            default:
-               return I18n.getUiText("ui.chat.console.noHelp",[cmd]);
-         }
+      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array {
-         return [];
+      public function getHelp(cmd:String) : String
+      {
+         //Décompilation abandonné
+      }
+      
+      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array
+      {
+         //Décompilation abandonné
       }
    }
 }

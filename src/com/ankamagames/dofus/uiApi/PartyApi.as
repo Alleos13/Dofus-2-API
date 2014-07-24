@@ -11,130 +11,112 @@ package com.ankamagames.dofus.uiApi
    public class PartyApi extends Object implements IApi
    {
       
-      public function PartyApi() {
-         this._log = Log.getLogger(getQualifiedClassName(PartyApi));
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PartyApi()
+      {
+         //Décompilation abandonné
       }
       
       private var _module:UiModule;
       
       protected var _log:Logger;
       
-      private function get partyManagementFrame() : PartyManagementFrame {
-         return Kernel.getWorker().getFrame(PartyManagementFrame) as PartyManagementFrame;
+      private function get partyManagementFrame() : PartyManagementFrame
+      {
+         //Décompilation abandonné
       }
       
-      public function set module(value:UiModule) : void {
-         this._module = value;
+      public function set module(value:UiModule) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         this._module = null;
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getPartyMembers(typeId:int = 0) : Object {
-         if(typeId == 1)
-         {
-            return this.partyManagementFrame.arenaPartyMembers;
-         }
-         return this.partyManagementFrame.partyMembers;
+      public function getPartyMembers(typeId:int = 0) : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function getPartyLeaderId(partyId:int) : int {
-         var pMember:Object = null;
-         if(partyId == this.partyManagementFrame.arenaPartyId)
-         {
-            for each(pMember in this.partyManagementFrame.arenaPartyMembers)
-            {
-               if(pMember.isLeader)
-               {
-                  return pMember.id;
-               }
-            }
-         }
-         else if(partyId == this.partyManagementFrame.partyId)
-         {
-            for each(pMember in this.partyManagementFrame.partyMembers)
-            {
-               if(pMember.isLeader)
-               {
-                  return pMember.id;
-               }
-            }
-         }
-         
-         return -1;
+      public function getPartyLeaderId(partyId:int) : int
+      {
+         //Décompilation abandonné
       }
       
-      public function isInParty(pPlayerId:uint) : Boolean {
-         var pMember:Object = null;
-         for each(pMember in this.partyManagementFrame.partyMembers)
-         {
-            if(pPlayerId == pMember.id)
-            {
-               return true;
-            }
-         }
-         for each(pMember in this.partyManagementFrame.arenaPartyMembers)
-         {
-            if(pPlayerId == pMember.id)
-            {
-               return true;
-            }
-         }
-         return false;
+      public function isInParty(pPlayerId:uint) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getPartyId() : int {
-         return this.partyManagementFrame.partyId;
+      public function getPartyId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function isArenaRegistered() : Boolean {
-         return this.partyManagementFrame.isArenaRegistered;
+      public function isArenaRegistered() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getArenaCurrentStatus() : int {
-         return this.partyManagementFrame.arenaCurrentStatus;
+      public function getArenaCurrentStatus() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function getArenaPartyId() : int {
-         return this.partyManagementFrame.arenaPartyId;
+      public function getArenaPartyId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function getArenaLeader() : Object {
-         return this.partyManagementFrame.arenaLeader;
+      public function getArenaLeader() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function getArenaReadyPartyMemberIds() : Object {
-         return this.partyManagementFrame.arenaReadyPartyMemberIds;
+      public function getArenaReadyPartyMemberIds() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function getArenaAlliesIds() : Object {
-         return this.partyManagementFrame.arenaAlliesIds;
+      public function getArenaAlliesIds() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function getArenaRanks() : Object {
-         return this.partyManagementFrame.arenaRanks;
+      public function getArenaRanks() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function getTodaysArenaFights() : int {
-         return this.partyManagementFrame.todaysArenaFights;
+      public function getTodaysArenaFights() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function getTodaysWonArenaFights() : int {
-         return this.partyManagementFrame.todaysWonArenaFights;
+      public function getTodaysWonArenaFights() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function getAllMemberFollowPlayerId(partyId:int) : uint {
-         return this.partyManagementFrame.allMemberFollowPlayerId;
+      public function getAllMemberFollowPlayerId(partyId:int) : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function getPartyLoyalty(partyId:int) : Boolean {
-         return this.partyManagementFrame.partyLoyalty;
+      public function getPartyLoyalty(partyId:int) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getAllSubscribedDungeons() : Vector.<uint> {
-         return this.partyManagementFrame.subscribedDungeons;
+      public function getAllSubscribedDungeons() : Vector.<uint>
+      {
+         //Décompilation abandonné
       }
    }
 }

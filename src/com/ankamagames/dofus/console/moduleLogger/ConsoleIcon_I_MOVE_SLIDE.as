@@ -5,8 +5,13 @@ package com.ankamagames.dofus.console.moduleLogger
    public class ConsoleIcon_I_MOVE_SLIDE extends SpriteAsset
    {
       
-      public function ConsoleIcon_I_MOVE_SLIDE() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ConsoleIcon_I_MOVE_SLIDE()
+      {
+         //Décompilation abandonné
       }
    }
 }

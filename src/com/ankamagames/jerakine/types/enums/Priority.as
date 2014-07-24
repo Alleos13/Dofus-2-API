@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.types.enums
    public class Priority extends Object
    {
       
-      public function Priority() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Priority()
+      {
+         //Décompilation abandonné
       }
       
       public static const LOG:int = 10;
@@ -21,48 +26,14 @@ package com.ankamagames.jerakine.types.enums
       
       public static const LOWEST:int = -2;
       
-      public static function toString(priority:int) : String {
-         switch(priority)
-         {
-            case LOG:
-               return "LOG";
-            case ULTIMATE_HIGHEST_DEPTH_OF_DOOM:
-               return "ULTIMATE_HIGHEST_DEPTH_OF_DOOM";
-            case HIGHEST:
-               return "HIGHEST";
-            case HIGH:
-               return "HIGH";
-            case NORMAL:
-               return "NORMAL";
-            case LOW:
-               return "LOW";
-            case LOWEST:
-               return "LOWEST";
-            default:
-               return "UNKNOW";
-         }
+      public static function toString(priority:int) : String
+      {
+         //Décompilation abandonné
       }
       
-      public static function fromString(priority:String) : int {
-         switch(priority)
-         {
-            case "LOG":
-               return LOG;
-            case "ULTIMATE_HIGHEST_DEPTH_OF_DOOM":
-               return ULTIMATE_HIGHEST_DEPTH_OF_DOOM;
-            case "HIGHEST":
-               return HIGHEST;
-            case "HIGH":
-               return HIGH;
-            case "NORMAL":
-               return NORMAL;
-            case "LOW":
-               return LOW;
-            case "LOWEST":
-               return LOWEST;
-            default:
-               return 666;
-         }
+      public static function fromString(priority:String) : int
+      {
+         //Décompilation abandonné
       }
    }
 }

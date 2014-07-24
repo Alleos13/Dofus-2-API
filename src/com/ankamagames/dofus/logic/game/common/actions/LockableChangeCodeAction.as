@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class LockableChangeCodeAction extends Object implements Action
    {
       
-      public function LockableChangeCodeAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(code:String) : LockableChangeCodeAction {
-         var action:LockableChangeCodeAction = new LockableChangeCodeAction();
-         action.code = code;
-         return action;
+      public function LockableChangeCodeAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(code:String) : LockableChangeCodeAction
+      {
+         //Décompilation abandonné
       }
       
       public var code:String;

@@ -18,10 +18,13 @@ package com.ankamagames.atouin.types
    public class ZoneTile extends Sprite implements IDisplayable, ITransparency
    {
       
-      public function ZoneTile() {
-         super();
-         mouseEnabled = false;
-         mouseChildren = false;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ZoneTile()
+      {
+         //Décompilation abandonné
       }
       
       private static const _cell:Class;
@@ -46,95 +49,69 @@ package com.ankamagames.atouin.types
       
       public var strata:uint = 0;
       
-      public function get displayBehaviors() : IDisplayBehavior {
-         return this._displayBehavior;
+      public function get displayBehaviors() : IDisplayBehavior
+      {
+         //Décompilation abandonné
       }
       
-      public function set displayBehaviors(oValue:IDisplayBehavior) : void {
-         this._displayBehavior = oValue;
+      public function set displayBehaviors(oValue:IDisplayBehavior) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get currentCellPosition() : Point {
-         return this._currentCell;
+      public function get currentCellPosition() : Point
+      {
+         //Décompilation abandonné
       }
       
-      public function set currentCellPosition(pValue:Point) : void {
-         this._currentCell = pValue;
+      public function set currentCellPosition(pValue:Point) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get displayed() : Boolean {
-         return this._displayed;
+      public function get displayed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get absoluteBounds() : IRectangle {
-         return this._displayBehavior.getAbsoluteBounds(this);
+      public function get absoluteBounds() : IRectangle
+      {
+         //Décompilation abandonné
       }
       
-      public function set color(c:uint) : void {
-         this._color = c;
+      public function set color(c:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get color() : uint {
-         return this._color;
+      public function get color() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get cellId() : uint {
-         return this._cellId;
+      public function get cellId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set cellId(nValue:uint) : void {
-         this._cellId = nValue;
+      public function set cellId(nValue:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function display(wishedStrata:uint = 0) : void {
-         if(this.text)
-         {
-            if(!this.format)
-            {
-               this.format = new TextFormat(FontManager.getInstance().getRealFontName("Verdana"),20,16777215,true);
-               this.format.align = TextFormatAlign.CENTER;
-            }
-            this._tf = new TextField();
-            this._tf.selectable = false;
-            this._tf.defaultTextFormat = this.format;
-            this._tf.setTextFormat(this.format);
-            this._tf.embedFonts = true;
-            this._tf.text = this.text;
-            this._tf.width = AtouinConstants.CELL_WIDTH;
-            this._tf.height = AtouinConstants.CELL_HEIGHT;
-            this._tf.x = -AtouinConstants.CELL_HALF_WIDTH;
-            this._tf.y = -AtouinConstants.CELL_HALF_HEIGHT + 7;
-            this._tf.alpha = 0.8;
-         }
-         else
-         {
-            this._tf = null;
-         }
-         this._cellInstance = new _cell();
-         var ct:ColorTransform = new ColorTransform();
-         ct.color = this._color;
-         this._cellInstance.transform.colorTransform = ct;
-         addChild(this._cellInstance);
-         if(this._tf)
-         {
-            addChild(this._tf);
-         }
-         EntitiesDisplayManager.getInstance().displayEntity(this,MapPoint.fromCellId(this._cellId),this.strata);
-         this._displayed = true;
+      public function display(wishedStrata:uint = 0) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function remove() : void {
-         this._displayed = false;
-         if(this._tf)
-         {
-            removeChild(this._tf);
-         }
-         removeChild(this._cellInstance);
-         EntitiesDisplayManager.getInstance().removeEntity(this);
+      public function remove() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getIsTransparencyAllowed() : Boolean {
-         return false;
+      public function getIsTransparencyAllowed() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

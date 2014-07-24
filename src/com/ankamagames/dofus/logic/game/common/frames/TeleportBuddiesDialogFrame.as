@@ -19,48 +19,35 @@ package com.ankamagames.dofus.logic.game.common.frames
    public class TeleportBuddiesDialogFrame extends Object implements Frame
    {
       
-      public function TeleportBuddiesDialogFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TeleportBuddiesDialogFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      public function get priority() : int {
-         return Priority.NORMAL;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var tbaa:TeleportBuddiesAnswerAction = null;
-         var tbamsg:TeleportBuddiesAnswerMessage = null;
-         var ldm:LeaveDialogMessage = null;
-         switch(true)
-         {
-            case msg is TeleportBuddiesAnswerAction:
-               tbaa = msg as TeleportBuddiesAnswerAction;
-               tbamsg = new TeleportBuddiesAnswerMessage();
-               tbamsg.initTeleportBuddiesAnswerMessage(tbaa.accept);
-               ConnectionsHandler.getConnection().send(tbamsg);
-               return true;
-            case msg is LeaveDialogMessage:
-               ldm = msg as LeaveDialogMessage;
-               if(ldm.dialogType == DialogTypeEnum.DIALOG_DUNGEON_MEETING)
-               {
-                  Kernel.getWorker().process(ChangeWorldInteractionAction.create(true));
-                  Kernel.getWorker().removeFrame(this);
-               }
-               return true;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         KernelEventsManager.getInstance().processCallback(HookList.LeaveDialog);
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

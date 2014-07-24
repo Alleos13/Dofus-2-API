@@ -10,20 +10,22 @@ package com.ankamagames.atouin.data.elements.subtypes
    public class ParticlesGraphicalElementData extends GraphicalElementData
    {
       
-      public function ParticlesGraphicalElementData(elementId:int, elementType:int) {
-         super(elementId,elementType);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ParticlesGraphicalElementData(elementId:int, elementType:int)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       public var scriptId:int;
       
-      override public function fromRaw(raw:IDataInput, version:int) : void {
-         this.scriptId = raw.readShort();
-         if(AtouinConstants.DEBUG_FILES_PARSING_ELEMENTS)
-         {
-            _log.debug("  (ParticlesGraphicalElementData) Script id : " + this.scriptId);
-         }
+      override public function fromRaw(raw:IDataInput, version:int) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

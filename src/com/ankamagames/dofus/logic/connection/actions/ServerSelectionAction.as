@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.connection.actions
    public class ServerSelectionAction extends Object implements Action
    {
       
-      public function ServerSelectionAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(serverId:int) : ServerSelectionAction {
-         var a:ServerSelectionAction = new ServerSelectionAction();
-         a.serverId = serverId;
-         return a;
+      public function ServerSelectionAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(serverId:int) : ServerSelectionAction
+      {
+         //Décompilation abandonné
       }
       
       public var serverId:int;

@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.quest
    public class QuestObjectiveValidationAction extends Object implements Action
    {
       
-      public function QuestObjectiveValidationAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(questId:int, objectiveId:int) : QuestObjectiveValidationAction {
-         var a:QuestObjectiveValidationAction = new QuestObjectiveValidationAction();
-         a.questId = questId;
-         a.objectiveId = objectiveId;
-         return a;
+      public function QuestObjectiveValidationAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(questId:int, objectiveId:int) : QuestObjectiveValidationAction
+      {
+         //Décompilation abandonné
       }
       
       public var questId:int;

@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public final class BaselineShift extends Object
    {
       
-      public function BaselineShift() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BaselineShift()
+      {
+         //Décompilation abandonné
       }
       
       public static const SUPERSCRIPT:String = "superscript";

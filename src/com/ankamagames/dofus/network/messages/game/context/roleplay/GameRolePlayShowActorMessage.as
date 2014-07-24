@@ -11,63 +11,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay
    public class GameRolePlayShowActorMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameRolePlayShowActorMessage() {
-         this.informations = new GameRolePlayActorInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameRolePlayShowActorMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5632;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var informations:GameRolePlayActorInformations;
       
-      override public function getMessageId() : uint {
-         return 5632;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameRolePlayShowActorMessage(informations:GameRolePlayActorInformations = null) : GameRolePlayShowActorMessage {
-         this.informations = informations;
-         this._isInitialized = true;
-         return this;
+      public function initGameRolePlayShowActorMessage(informations:GameRolePlayActorInformations = null) : GameRolePlayShowActorMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.informations = new GameRolePlayActorInformations();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameRolePlayShowActorMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayShowActorMessage(output:IDataOutput) : void {
-         output.writeShort(this.informations.getTypeId());
-         this.informations.serialize(output);
+      public function serializeAs_GameRolePlayShowActorMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameRolePlayShowActorMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayShowActorMessage(input:IDataInput) : void {
-         var _id1:uint = input.readUnsignedShort();
-         this.informations = ProtocolTypeManager.getInstance(GameRolePlayActorInformations,_id1);
-         this.informations.deserialize(input);
+      public function deserializeAs_GameRolePlayShowActorMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

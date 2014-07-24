@@ -13,25 +13,13 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
    public class StorageCraftFilterView extends StorageGenericView
    {
       
-      public function StorageCraftFilterView(hookLock:HookLock, parentView:IStorageView, skillId:int, slotCount:int) {
-         var recipe:RecipeWithSkill = null;
-         var selected:* = false;
-         var id:* = 0;
-         super(hookLock);
-         var recipies:Array = Recipe.getAllRecipesForSkillId(skillId,slotCount);
-         this._ingredients = new Dictionary();
-         for each(recipe in recipies)
-         {
-            selected = false;
-            for each(id in recipe.recipe.ingredientIds)
-            {
-               this._ingredients[id] = true;
-            }
-         }
-         this._ingredients[7508] = true;
-         this._skillId = skillId;
-         this._slotCount = slotCount;
-         this._parent = parentView;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StorageCraftFilterView(hookLock:HookLock, parentView:IStorageView, skillId:int, slotCount:int)
+      {
+         //Décompilation abandonné
       }
       
       private var _ingredients:Dictionary;
@@ -42,28 +30,29 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
       
       private var _parent:IStorageView;
       
-      override public function get name() : String {
-         return "storageCraftFilter";
+      override public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function isListening(item:ItemWrapper) : Boolean {
-         return (this._parent.isListening(item)) && (this._ingredients.hasOwnProperty(item.objectGID));
+      override public function isListening(item:ItemWrapper) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function updateView() : void {
-         super.updateView();
-         if(StorageOptionManager.getInstance().currentStorageView == this)
-         {
-            _hookLock.addHook(InventoryHookList.StorageViewContent,[content,InventoryManager.getInstance().inventory.localKamas]);
-         }
+      override public function updateView() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set parent(view:IStorageView) : void {
-         this._parent = view;
+      public function set parent(view:IStorageView) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get parent() : IStorageView {
-         return this._parent;
+      public function get parent() : IStorageView
+      {
+         //Décompilation abandonné
       }
    }
 }

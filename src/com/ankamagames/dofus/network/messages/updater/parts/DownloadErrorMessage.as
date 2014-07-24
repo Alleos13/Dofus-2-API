@@ -9,16 +9,22 @@ package com.ankamagames.dofus.network.messages.updater.parts
    public class DownloadErrorMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function DownloadErrorMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DownloadErrorMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 1513;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var errorId:uint = 0;
@@ -27,61 +33,49 @@ package com.ankamagames.dofus.network.messages.updater.parts
       
       public var helpUrl:String = "";
       
-      override public function getMessageId() : uint {
-         return 1513;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initDownloadErrorMessage(errorId:uint = 0, message:String = "", helpUrl:String = "") : DownloadErrorMessage {
-         this.errorId = errorId;
-         this.message = message;
-         this.helpUrl = helpUrl;
-         this._isInitialized = true;
-         return this;
+      public function initDownloadErrorMessage(errorId:uint = 0, message:String = "", helpUrl:String = "") : DownloadErrorMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.errorId = 0;
-         this.message = "";
-         this.helpUrl = "";
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_DownloadErrorMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_DownloadErrorMessage(output:IDataOutput) : void {
-         output.writeByte(this.errorId);
-         output.writeUTF(this.message);
-         output.writeUTF(this.helpUrl);
+      public function serializeAs_DownloadErrorMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_DownloadErrorMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_DownloadErrorMessage(input:IDataInput) : void {
-         this.errorId = input.readByte();
-         if(this.errorId < 0)
-         {
-            throw new Error("Forbidden value (" + this.errorId + ") on element of DownloadErrorMessage.errorId.");
-         }
-         else
-         {
-            this.message = input.readUTF();
-            this.helpUrl = input.readUTF();
-            return;
-         }
+      public function deserializeAs_DownloadErrorMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

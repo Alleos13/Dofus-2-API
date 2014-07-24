@@ -11,41 +11,23 @@ package com.ankamagames.atouin.data
    public class DefaultMap extends Map
    {
       
-      public function DefaultMap(id:uint = 0) {
-         var l:* = 0;
-         var cd:CellData = null;
-         super();
-         this.id = id;
-         mapVersion = 7;
-         backgroundFixtures = new Array();
-         foregroundFixtures = new Array();
-         layers = new Array();
-         layers.push(this.createLayer(Layer.LAYER_GROUND));
-         layers.push(this.createLayer(Layer.LAYER_DECOR));
-         cells = new Array();
-         cellsCount = AtouinConstants.MAP_CELLS_COUNT;
-         l = 0;
-         while(l < cellsCount)
-         {
-            cd = new CellData(this,l);
-            cells.push(cd);
-            l++;
-         }
+      {
+      //Décompilation abandonné
       }
       
-      override public function fromRaw(raw:IDataInput, decryptionKey:ByteArray = null) : void {
+      public function DefaultMap(id:uint = 0)
+      {
+         //Décompilation abandonné
       }
       
-      private function createLayer(id:uint) : Layer {
-         var bgLayer:Layer = null;
-         bgLayer = new Layer(this);
-         bgLayer.cells = new Array();
-         bgLayer.layerId = id;
-         bgLayer.cellsCount = 1;
-         var firstCell:Cell = new Cell(bgLayer);
-         firstCell.elements = new Array();
-         bgLayer.cells.push(firstCell);
-         return bgLayer;
+      override public function fromRaw(raw:IDataInput, decryptionKey:ByteArray = null) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      private function createLayer(id:uint) : Layer
+      {
+         //Décompilation abandonné
       }
    }
 }

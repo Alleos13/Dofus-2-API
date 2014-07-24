@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.treasureHun
    public class PortalUseRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function PortalUseRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PortalUseRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6492;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var portalId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6492;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPortalUseRequestMessage(portalId:uint = 0) : PortalUseRequestMessage {
-         this.portalId = portalId;
-         this._isInitialized = true;
-         return this;
+      public function initPortalUseRequestMessage(portalId:uint = 0) : PortalUseRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.portalId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PortalUseRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PortalUseRequestMessage(output:IDataOutput) : void {
-         if(this.portalId < 0)
-         {
-            throw new Error("Forbidden value (" + this.portalId + ") on element portalId.");
-         }
-         else
-         {
-            output.writeInt(this.portalId);
-            return;
-         }
+      public function serializeAs_PortalUseRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PortalUseRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PortalUseRequestMessage(input:IDataInput) : void {
-         this.portalId = input.readInt();
-         if(this.portalId < 0)
-         {
-            throw new Error("Forbidden value (" + this.portalId + ") on element of PortalUseRequestMessage.portalId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_PortalUseRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

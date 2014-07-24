@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.guild
    public class GuildListRequestAction extends Object implements Action
    {
       
-      public function GuildListRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : GuildListRequestAction {
-         var action:GuildListRequestAction = new GuildListRequestAction();
-         return action;
+      public function GuildListRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : GuildListRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

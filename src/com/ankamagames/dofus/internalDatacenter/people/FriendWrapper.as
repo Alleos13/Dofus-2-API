@@ -9,39 +9,13 @@ package com.ankamagames.dofus.internalDatacenter.people
    public class FriendWrapper extends Object implements IDataCenter
    {
       
-      public function FriendWrapper(o:FriendInformations) {
-         super();
-         this._item = o;
-         this.name = o.accountName;
-         this.accountId = o.accountId;
-         this.state = o.playerState;
-         this.lastConnection = o.lastConnection;
-         this.achievementPoints = o.achievementPoints;
-         if(o is FriendOnlineInformations)
-         {
-            this.playerName = FriendOnlineInformations(o).playerName;
-            this.playerId = FriendOnlineInformations(o).playerId;
-            this.level = FriendOnlineInformations(o).level;
-            this.alignmentSide = FriendOnlineInformations(o).alignmentSide;
-            this.breed = FriendOnlineInformations(o).breed;
-            this.sex = FriendOnlineInformations(o).sex?1:0;
-            if(FriendOnlineInformations(o).guildInfo.guildName == "#NONAME#")
-            {
-               this.guildName = I18n.getUiText("ui.guild.noName");
-            }
-            else
-            {
-               this.guildName = FriendOnlineInformations(o).guildInfo.guildName;
-            }
-            this.realGuildName = FriendOnlineInformations(o).guildInfo.guildName;
-            this.moodSmileyId = FriendOnlineInformations(o).moodSmileyId;
-            this.statusId = FriendOnlineInformations(o).status.statusId;
-            if(FriendOnlineInformations(o).status is PlayerStatusExtended)
-            {
-               this.awayMessage = PlayerStatusExtended(FriendOnlineInformations(o).status).message;
-            }
-            this.online = true;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FriendWrapper(o:FriendInformations)
+      {
+         //Décompilation abandonné
       }
       
       private var _item:FriendInformations;

@@ -8,8 +8,13 @@ package com.ankamagames.dofus.network.types.game.character.choice
    public class CharacterHardcoreInformations extends CharacterBaseInformations implements INetworkType
    {
       
-      public function CharacterHardcoreInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterHardcoreInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 86;
@@ -20,82 +25,39 @@ package com.ankamagames.dofus.network.types.game.character.choice
       
       public var deathMaxLevel:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 86;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCharacterHardcoreInformations(id:uint = 0, level:uint = 0, name:String = "", entityLook:EntityLook = null, breed:int = 0, sex:Boolean = false, deathState:uint = 0, deathCount:uint = 0, deathMaxLevel:uint = 0) : CharacterHardcoreInformations {
-         super.initCharacterBaseInformations(id,level,name,entityLook,breed,sex);
-         this.deathState = deathState;
-         this.deathCount = deathCount;
-         this.deathMaxLevel = deathMaxLevel;
-         return this;
+      public function initCharacterHardcoreInformations(id:uint = 0, level:uint = 0, name:String = "", entityLook:EntityLook = null, breed:int = 0, sex:Boolean = false, deathState:uint = 0, deathCount:uint = 0, deathMaxLevel:uint = 0) : CharacterHardcoreInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.deathState = 0;
-         this.deathCount = 0;
-         this.deathMaxLevel = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharacterHardcoreInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterHardcoreInformations(output:IDataOutput) : void {
-         super.serializeAs_CharacterBaseInformations(output);
-         output.writeByte(this.deathState);
-         if(this.deathCount < 0)
-         {
-            throw new Error("Forbidden value (" + this.deathCount + ") on element deathCount.");
-         }
-         else
-         {
-            output.writeShort(this.deathCount);
-            if((this.deathMaxLevel < 1) || (this.deathMaxLevel > 200))
-            {
-               throw new Error("Forbidden value (" + this.deathMaxLevel + ") on element deathMaxLevel.");
-            }
-            else
-            {
-               output.writeByte(this.deathMaxLevel);
-               return;
-            }
-         }
+      public function serializeAs_CharacterHardcoreInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharacterHardcoreInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterHardcoreInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.deathState = input.readByte();
-         if(this.deathState < 0)
-         {
-            throw new Error("Forbidden value (" + this.deathState + ") on element of CharacterHardcoreInformations.deathState.");
-         }
-         else
-         {
-            this.deathCount = input.readShort();
-            if(this.deathCount < 0)
-            {
-               throw new Error("Forbidden value (" + this.deathCount + ") on element of CharacterHardcoreInformations.deathCount.");
-            }
-            else
-            {
-               this.deathMaxLevel = input.readUnsignedByte();
-               if((this.deathMaxLevel < 1) || (this.deathMaxLevel > 200))
-               {
-                  throw new Error("Forbidden value (" + this.deathMaxLevel + ") on element of CharacterHardcoreInformations.deathMaxLevel.");
-               }
-               else
-               {
-                  return;
-               }
-            }
-         }
+      public function deserializeAs_CharacterHardcoreInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,10 +5,13 @@ package com.ankamagames.berilia.types.event
    public class ParsingErrorEvent extends Event
    {
       
-      public function ParsingErrorEvent(url:String, msg:String) {
-         super(ERROR);
-         this._url = url;
-         this._msg = msg;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ParsingErrorEvent(url:String, msg:String)
+      {
+         //Décompilation abandonné
       }
       
       public static const ERROR:String = "ParsingErrorEvent_Error";
@@ -17,12 +20,14 @@ package com.ankamagames.berilia.types.event
       
       private var _msg:String;
       
-      public function get url() : String {
-         return this._url;
+      public function get url() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get msg() : String {
-         return this._msg;
+      public function get msg() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

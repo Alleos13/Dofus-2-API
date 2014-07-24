@@ -3,18 +3,13 @@ package com.ankamagames.jerakine
    import by.blooddy.crypto.SHA256;
    import by.blooddy.crypto.MD5;
    import com.hurlant.crypto.symmetric.AESKey;
+   import com.hurlant.crypto.Crypto;
+   import com.hurlant.crypto.symmetric.PKCS5;
    import com.hurlant.crypto.symmetric.ECBMode;
    import by.blooddy.crypto.Base64;
    import by.blooddy.crypto.serialization.JSON;
    import com.somerandomdude.colortoolkit.ColorUtil;
    import com.somerandomdude.colortoolkit.spaces.HSL;
-   import org.as3commons.bytecode.io.AbcDeserializer;
-   import org.as3commons.bytecode.abc.AbcFile;
-   import org.as3commons.bytecode.swf.SWFFileIO;
-   import org.as3commons.bytecode.swf.SWFFile;
-   import org.as3commons.bytecode.tags.DoABCTag;
-   import org.as3commons.bytecode.tags.FileAttributesTag;
-   import org.as3commons.bytecode.abc.ClassInfo;
    import com.ankamagames.jerakine.types.DataStoreType;
    import com.ankamagames.jerakine.types.enums.DataStoreEnum;
    import com.ankamagames.jerakine.data.IDataContainer;
@@ -23,8 +18,13 @@ package com.ankamagames.jerakine
    public class JerakineConstants extends Object
    {
       
-      public function JerakineConstants() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function JerakineConstants()
+      {
+         //Décompilation abandonné
       }
       
       private static var _include_SHA:SHA256 = null;
@@ -32,6 +32,10 @@ package com.ankamagames.jerakine
       private static var _include_MD5:MD5 = null;
       
       private static var _include_AES:AESKey = null;
+      
+      private static var _include_Crypto:Crypto = null;
+      
+      private static var _include_PKCS5:PKCS5 = null;
       
       private static var _include_ECBMode:ECBMode = null;
       

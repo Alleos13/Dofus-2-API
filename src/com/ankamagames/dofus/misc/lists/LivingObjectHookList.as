@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.lists
    public class LivingObjectHookList extends Object
    {
       
-      public function LivingObjectHookList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LivingObjectHookList()
+      {
+         //Décompilation abandonné
       }
       
       public static const LivingObjectUpdate:Hook;

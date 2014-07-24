@@ -9,45 +9,53 @@ package com.ankamagames.dofus.logic.game.common.frames
    import com.ankamagames.dofus.network.messages.game.modificator.AreaFightModificatorUpdateMessage;
    import com.ankamagames.berilia.managers.KernelEventsManager;
    import com.ankamagames.dofus.misc.lists.QuestHookList;
+   import com.ankamagames.jerakine.data.I18n;
+   import com.ankamagames.dofus.datacenter.spells.SpellPair;
+   import com.ankamagames.dofus.misc.lists.ChatHookList;
+   import com.ankamagames.dofus.network.enums.ChatActivableChannelsEnum;
+   import com.ankamagames.dofus.logic.game.common.managers.TimeManager;
    
    public class WorldFrame extends Object implements Frame
    {
       
-      public function WorldFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function WorldFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       private var _settings:Array = null;
       
-      public function get priority() : int {
-         return Priority.NORMAL;
+      private var _currentFightModificator:int = -1;
+      
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get settings() : Array {
-         return this._settings;
+      public function get settings() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var afmumsg:AreaFightModificatorUpdateMessage = null;
-         switch(true)
-         {
-            case msg is AreaFightModificatorUpdateMessage:
-               afmumsg = msg as AreaFightModificatorUpdateMessage;
-               KernelEventsManager.getInstance().processCallback(QuestHookList.AreaFightModificatorUpdate,afmumsg.spellPairId);
-               return true;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

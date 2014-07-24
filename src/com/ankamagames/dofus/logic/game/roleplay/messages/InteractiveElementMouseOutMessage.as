@@ -6,15 +6,20 @@ package com.ankamagames.dofus.logic.game.roleplay.messages
    public class InteractiveElementMouseOutMessage extends Object implements Message
    {
       
-      public function InteractiveElementMouseOutMessage(ie:InteractiveElement) {
-         super();
-         this._ie = ie;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function InteractiveElementMouseOutMessage(ie:InteractiveElement)
+      {
+         //Décompilation abandonné
       }
       
       private var _ie:InteractiveElement;
       
-      public function get interactiveElement() : InteractiveElement {
-         return this._ie;
+      public function get interactiveElement() : InteractiveElement
+      {
+         //Décompilation abandonné
       }
    }
 }

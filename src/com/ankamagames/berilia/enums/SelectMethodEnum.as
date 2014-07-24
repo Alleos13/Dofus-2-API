@@ -3,8 +3,13 @@ package com.ankamagames.berilia.enums
    public class SelectMethodEnum extends Object
    {
       
-      public function SelectMethodEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SelectMethodEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const CLICK:uint = 0;

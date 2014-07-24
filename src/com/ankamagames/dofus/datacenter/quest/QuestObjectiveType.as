@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.quest
    public class QuestObjectiveType extends Object implements IDataCenter
    {
       
-      public function QuestObjectiveType() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function QuestObjectiveType()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       public static const MODULE:String = "QuestObjectiveTypes";
       
-      public static function getQuestObjectiveTypeById(id:int) : QuestObjectiveType {
-         return GameData.getObject(MODULE,id) as QuestObjectiveType;
+      public static function getQuestObjectiveTypeById(id:int) : QuestObjectiveType
+      {
+         //Décompilation abandonné
       }
       
-      public static function getQuestObjectiveTypes() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getQuestObjectiveTypes() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;
@@ -32,12 +39,9 @@ package com.ankamagames.dofus.datacenter.quest
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

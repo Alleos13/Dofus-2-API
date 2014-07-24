@@ -3,6 +3,10 @@ package com.ankamagames.jerakine.data
    public interface IDataContainer
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function get container() : Array;
       
       function get fileList() : Array;

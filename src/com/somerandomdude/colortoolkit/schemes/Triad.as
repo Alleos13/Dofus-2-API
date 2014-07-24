@@ -6,32 +6,30 @@ package com.somerandomdude.colortoolkit.schemes
    public class Triad extends ColorWheelScheme implements IColorScheme
    {
       
-      public function Triad(primaryColor:int, angle:Number = 120) {
-         this._angle = angle;
-         super(primaryColor);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Triad(primaryColor:int, angle:Number = 120)
+      {
+         //Décompilation abandonné
       }
       
       private var _angle:Number;
       
-      public function get angle() : Number {
-         return this._angle;
+      public function get angle() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function set angle(value:Number) : void {
-         _colors = new ColorList();
-         this._angle = value;
-         this.generate();
+      public function set angle(value:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      override protected function generate() : void {
-         var c1:HSB = new HSB();
-         c1.color = ColorUtil.rybRotate(_primaryColor,this._angle);
-         c1.brightness = c1.brightness + 10;
-         _colors.push(c1.color);
-         var c2:HSB = new HSB();
-         c2.color = ColorUtil.rybRotate(_primaryColor,-this._angle);
-         c2.brightness = c2.brightness + 10;
-         _colors.push(c2.color);
+      override protected function generate() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

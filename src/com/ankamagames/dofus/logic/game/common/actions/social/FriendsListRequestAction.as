@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.social
    public class FriendsListRequestAction extends Object implements Action
    {
       
-      public function FriendsListRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : FriendsListRequestAction {
-         var a:FriendsListRequestAction = new FriendsListRequestAction();
-         return a;
+      public function FriendsListRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : FriendsListRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

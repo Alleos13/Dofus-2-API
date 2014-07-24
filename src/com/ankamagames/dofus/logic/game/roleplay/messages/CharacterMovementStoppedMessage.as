@@ -5,8 +5,13 @@ package com.ankamagames.dofus.logic.game.roleplay.messages
    public class CharacterMovementStoppedMessage extends Object implements Message
    {
       
-      public function CharacterMovementStoppedMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterMovementStoppedMessage()
+      {
+         //Décompilation abandonné
       }
    }
 }

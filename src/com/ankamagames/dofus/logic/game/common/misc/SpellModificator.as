@@ -5,13 +5,13 @@ package com.ankamagames.dofus.logic.game.common.misc
    public final class SpellModificator extends Object
    {
       
-      public function SpellModificator() {
-         this.apCost = new CharacterBaseCharacteristic();
-         this.castInterval = new CharacterBaseCharacteristic();
-         this.castIntervalSet = new CharacterBaseCharacteristic();
-         this.maxCastPerTurn = new CharacterBaseCharacteristic();
-         this.maxCastPerTarget = new CharacterBaseCharacteristic();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpellModificator()
+      {
+         //Décompilation abandonné
       }
       
       public var apCost:CharacterBaseCharacteristic;
@@ -24,12 +24,9 @@ package com.ankamagames.dofus.logic.game.common.misc
       
       public var maxCastPerTarget:CharacterBaseCharacteristic;
       
-      public function getTotalBonus(pCharac:CharacterBaseCharacteristic) : int {
-         if(!pCharac)
-         {
-            return 0;
-         }
-         return pCharac.alignGiftBonus + pCharac.base + pCharac.contextModif + pCharac.objectsAndMountBonus;
+      public function getTotalBonus(pCharac:CharacterBaseCharacteristic) : int
+      {
+         //Décompilation abandonné
       }
    }
 }

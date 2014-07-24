@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.chat
    public class FightOutputAction extends Object implements Action
    {
       
-      public function FightOutputAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(msg:String, channel:uint = 0) : FightOutputAction {
-         var a:FightOutputAction = new FightOutputAction();
-         a.content = msg;
-         a.channel = channel;
-         return a;
+      public function FightOutputAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(msg:String, channel:uint = 0) : FightOutputAction
+      {
+         //Décompilation abandonné
       }
       
       public var content:String;

@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public final class JustificationRule extends Object
    {
       
-      public function JustificationRule() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function JustificationRule()
+      {
+         //Décompilation abandonné
       }
       
       public static const EAST_ASIAN:String = "eastAsian";

@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.houses
    public class HouseBuyRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function HouseBuyRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HouseBuyRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5738;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var proposedPrice:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5738;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initHouseBuyRequestMessage(proposedPrice:uint = 0) : HouseBuyRequestMessage {
-         this.proposedPrice = proposedPrice;
-         this._isInitialized = true;
-         return this;
+      public function initHouseBuyRequestMessage(proposedPrice:uint = 0) : HouseBuyRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.proposedPrice = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_HouseBuyRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_HouseBuyRequestMessage(output:IDataOutput) : void {
-         if(this.proposedPrice < 0)
-         {
-            throw new Error("Forbidden value (" + this.proposedPrice + ") on element proposedPrice.");
-         }
-         else
-         {
-            output.writeInt(this.proposedPrice);
-            return;
-         }
+      public function serializeAs_HouseBuyRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_HouseBuyRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_HouseBuyRequestMessage(input:IDataInput) : void {
-         this.proposedPrice = input.readInt();
-         if(this.proposedPrice < 0)
-         {
-            throw new Error("Forbidden value (" + this.proposedPrice + ") on element of HouseBuyRequestMessage.proposedPrice.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_HouseBuyRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

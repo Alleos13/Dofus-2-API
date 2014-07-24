@@ -3,8 +3,13 @@ package com.ankamagames.berilia.types.tooltip
    public class EmptyTooltip extends Tooltip
    {
       
-      public function EmptyTooltip() {
-         super(null,null);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EmptyTooltip()
+      {
+         //Décompilation abandonné
       }
    }
 }

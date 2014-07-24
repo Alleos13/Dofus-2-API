@@ -5,8 +5,13 @@ package com.ankamagames.dofus.console.moduleLogger
    public class ConsoleIcon_I_MOVE_TELEPORT extends SpriteAsset
    {
       
-      public function ConsoleIcon_I_MOVE_TELEPORT() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ConsoleIcon_I_MOVE_TELEPORT()
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -7,19 +7,18 @@ package com.ankamagames.tubul.types.bus
    public class LocalizedBus extends AudioBus
    {
       
-      public function LocalizedBus(id:int, name:String) {
-         super(id,name);
+      {
+      //Décompilation abandonné
       }
       
-      public function updateObserverPosition(pEarPosition:Point) : void {
-         var isound:ISound = null;
-         for each(isound in _soundVector)
-         {
-            if(isound is LocalizedSound)
-            {
-               (isound as LocalizedSound).updateObserverPosition(pEarPosition);
-            }
-         }
+      public function LocalizedBus(id:int, name:String)
+      {
+         //Décompilation abandonné
+      }
+      
+      public function updateObserverPosition(pEarPosition:Point) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

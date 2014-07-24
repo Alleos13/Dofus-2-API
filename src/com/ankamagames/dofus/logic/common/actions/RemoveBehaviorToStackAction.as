@@ -5,16 +5,20 @@ package com.ankamagames.dofus.logic.common.actions
    public class RemoveBehaviorToStackAction extends Object implements Action
    {
       
-      public function RemoveBehaviorToStackAction() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RemoveBehaviorToStackAction()
+      {
+         //Décompilation abandonné
       }
       
       public var behavior:String;
       
-      public function create(name:String) : RemoveBehaviorToStackAction {
-         var s:RemoveBehaviorToStackAction = new RemoveBehaviorToStackAction();
-         s.behavior = name;
-         return s;
+      public function create(name:String) : RemoveBehaviorToStackAction
+      {
+         //Décompilation abandonné
       }
    }
 }

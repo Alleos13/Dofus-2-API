@@ -5,15 +5,20 @@ package com.ankamagames.dofus.internalDatacenter.communication
    public class ChatBubble extends Object implements IDataCenter
    {
       
-      public function ChatBubble(text:String) {
-         super();
-         this._text = text;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ChatBubble(text:String)
+      {
+         //Décompilation abandonné
       }
       
       private var _text:String;
       
-      public function get text() : String {
-         return this._text;
+      public function get text() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

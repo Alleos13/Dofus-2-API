@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class TeamTypeEnum extends Object
    {
       
-      public function TeamTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TeamTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const TEAM_TYPE_PLAYER:uint = 0;

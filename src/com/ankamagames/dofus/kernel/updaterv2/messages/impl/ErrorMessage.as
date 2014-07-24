@@ -5,29 +5,37 @@ package com.ankamagames.dofus.kernel.updaterv2.messages.impl
    public class ErrorMessage extends Object implements IUpdaterInputMessage
    {
       
-      public function ErrorMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ErrorMessage()
+      {
+         //Décompilation abandonné
       }
       
       private var _type:int;
       
       private var _message:String;
       
-      public function deserialize(data:Object) : void {
-         this._type = data["_type"];
-         this._message = data["error"];
+      public function deserialize(data:Object) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get type() : int {
-         return this._type;
+      public function get type() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get message() : String {
-         return this._message;
+      public function get message() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function toString() : String {
-         return "[ErrorMessage type=" + this._type + ", message=" + this._message + "]";
+      public function toString() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

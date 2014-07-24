@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.spectator
    public class JoinAsSpectatorRequestAction extends Object implements Action
    {
       
-      public function JoinAsSpectatorRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(fightId:uint) : JoinAsSpectatorRequestAction {
-         var a:JoinAsSpectatorRequestAction = new JoinAsSpectatorRequestAction();
-         a.fightId = fightId;
-         return a;
+      public function JoinAsSpectatorRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(fightId:uint) : JoinAsSpectatorRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var fightId:uint;

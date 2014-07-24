@@ -8,47 +8,52 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
    public class MonsterInGroupInformations extends MonsterInGroupLightInformations implements INetworkType
    {
       
-      public function MonsterInGroupInformations() {
-         this.look = new EntityLook();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MonsterInGroupInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 144;
       
       public var look:EntityLook;
       
-      override public function getTypeId() : uint {
-         return 144;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initMonsterInGroupInformations(creatureGenericId:int = 0, grade:uint = 0, look:EntityLook = null) : MonsterInGroupInformations {
-         super.initMonsterInGroupLightInformations(creatureGenericId,grade);
-         this.look = look;
-         return this;
+      public function initMonsterInGroupInformations(creatureGenericId:int = 0, grade:uint = 0, look:EntityLook = null) : MonsterInGroupInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.look = new EntityLook();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_MonsterInGroupInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_MonsterInGroupInformations(output:IDataOutput) : void {
-         super.serializeAs_MonsterInGroupLightInformations(output);
-         this.look.serializeAs_EntityLook(output);
+      public function serializeAs_MonsterInGroupInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_MonsterInGroupInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_MonsterInGroupInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.look = new EntityLook();
-         this.look.deserialize(input);
+      public function deserializeAs_MonsterInGroupInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -13,8 +13,13 @@ package com.ankamagames.dofus.logic.game.common.misc.stackedMessages
    public class AbstractBehavior extends Object
    {
       
-      public function AbstractBehavior() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AbstractBehavior()
+      {
+         //Décompilation abandonné
       }
       
       protected static var _log:Logger;
@@ -25,16 +30,9 @@ package com.ankamagames.dofus.logic.game.common.misc.stackedMessages
       
       public static const ALWAYS:String = "always";
       
-      public static function createFake(type:String, params:Array = null) : AbstractBehavior {
-         var behavior:AbstractBehavior = null;
-         switch(type)
-         {
-            case StackActionEnum.MOVE:
-               behavior = new MoveBehavior();
-               behavior.position = params[0];
-               break;
-         }
-         return behavior;
+      public static function createFake(type:String, params:Array = null) : AbstractBehavior
+      {
+         //Décompilation abandonné
       }
       
       public var type:String;
@@ -55,63 +53,79 @@ package com.ankamagames.dofus.logic.game.common.misc.stackedMessages
       
       public var pendingMessage:Message;
       
-      public function processInputMessage(pMsgToProcess:Message, pMode:String) : Boolean {
-         throw new AbstractMethodCallError();
+      public function processInputMessage(pMsgToProcess:Message, pMode:String) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function processOutputMessage(pMsgToProcess:Message, pMode:String) : Boolean {
-         throw new AbstractMethodCallError();
+      public function processOutputMessage(pMsgToProcess:Message, pMode:String) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function processMessageToWorker() : void {
-         Kernel.getWorker().process(this.pendingMessage);
-         this.pendingMessage = null;
+      public function processMessageToWorker() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function isAvailableToProcess(pMsg:Message) : Boolean {
-         return true;
+      public function isAvailableToProcess(pMsg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function copy() : AbstractBehavior {
-         throw new AbstractMethodCallError();
+      public function copy() : AbstractBehavior
+      {
+         //Décompilation abandonné
       }
       
-      public function checkAvailability(pMsgToProcess:Message) : void {
+      public function checkAvailability(pMsgToProcess:Message) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.pendingMessage = null;
-         this.actionStarted = false;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getMapPoint() : MapPoint {
-         return this.position;
+      public function getMapPoint() : MapPoint
+      {
+         //Décompilation abandonné
       }
       
-      public function remove() : void {
-         this.sprite = null;
+      public function remove() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function isMessageCatchable(pMsg:Message) : Boolean {
-         return false;
+      public function isMessageCatchable(pMsg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function addIcon() : void {
+      public function addIcon() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeIcon() : void {
+      public function removeIcon() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get canBeRemoved() : Boolean {
-         return true;
+      public function get canBeRemoved() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get needToWait() : Boolean {
-         return false;
+      public function get needToWait() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getFakePosition() : MapPoint {
-         return null;
+      public function getFakePosition() : MapPoint
+      {
+         //Décompilation abandonné
       }
    }
 }

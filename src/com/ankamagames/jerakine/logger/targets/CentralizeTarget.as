@@ -8,8 +8,13 @@ package com.ankamagames.jerakine.logger.targets
    public class CentralizeTarget extends AbstractTarget
    {
       
-      public function CentralizeTarget() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CentralizeTarget()
+      {
+         //Décompilation abandonné
       }
       
       private static var _socket:Socket;
@@ -22,46 +27,24 @@ package com.ankamagames.jerakine.logger.targets
       
       public static var serverPort:int = 6666;
       
-      override public function logEvent(event:LogEvent) : void {
-         this.send(event.level,event.message);
+      override public function logEvent(event:LogEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function send(level:uint, message:String) : void {
-         var he:LoggerHistoryElement = null;
-         if(_socket.connected)
-         {
-            _socket.writeUTF("(" + LogLevel.getString(level) + ") " + message);
-         }
-         else
-         {
-            if(!_socket.hasEventListener("connect"))
-            {
-               _socket.addEventListener("connect",this.onSocket);
-               _socket.addEventListener("ioError",this.onSocketError);
-               _socket.addEventListener("securityError",this.onSocketError);
-            }
-            if(!_connecting)
-            {
-               _socket.connect(serverHost,serverPort);
-               _connecting = true;
-            }
-            he = new LoggerHistoryElement(level,message);
-            _history.push(he);
-         }
+      private function send(level:uint, message:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onSocket(e:Event) : void {
-         var o:LoggerHistoryElement = null;
-         _connecting = false;
-         for each(o in _history)
-         {
-            this.send(o.level,o.message);
-         }
-         _history = new Array();
+      private function onSocket(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onSocketError(e:Event) : void {
-         _connecting = false;
+      private function onSocketError(e:Event) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

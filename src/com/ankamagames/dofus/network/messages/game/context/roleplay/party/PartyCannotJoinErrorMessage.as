@@ -8,71 +8,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
    public class PartyCannotJoinErrorMessage extends AbstractPartyMessage implements INetworkMessage
    {
       
-      public function PartyCannotJoinErrorMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PartyCannotJoinErrorMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5583;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var reason:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5583;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPartyCannotJoinErrorMessage(partyId:uint = 0, reason:uint = 0) : PartyCannotJoinErrorMessage {
-         super.initAbstractPartyMessage(partyId);
-         this.reason = reason;
-         this._isInitialized = true;
-         return this;
+      public function initPartyCannotJoinErrorMessage(partyId:uint = 0, reason:uint = 0) : PartyCannotJoinErrorMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.reason = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PartyCannotJoinErrorMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PartyCannotJoinErrorMessage(output:IDataOutput) : void {
-         super.serializeAs_AbstractPartyMessage(output);
-         output.writeByte(this.reason);
+      public function serializeAs_PartyCannotJoinErrorMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PartyCannotJoinErrorMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PartyCannotJoinErrorMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.reason = input.readByte();
-         if(this.reason < 0)
-         {
-            throw new Error("Forbidden value (" + this.reason + ") on element of PartyCannotJoinErrorMessage.reason.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_PartyCannotJoinErrorMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

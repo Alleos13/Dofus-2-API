@@ -7,18 +7,25 @@ package com.ankamagames.dofus.datacenter.appearance
    public class SkinPosition extends Object implements IDataCenter
    {
       
-      public function SkinPosition() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SkinPosition()
+      {
+         //Décompilation abandonné
       }
       
       private static const MODULE:String = "SkinPositions";
       
-      public static function getSkinPositionById(id:int) : SkinPosition {
-         return GameData.getObject(MODULE,id) as SkinPosition;
+      public static function getSkinPositionById(id:int) : SkinPosition
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAllSkinPositions() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAllSkinPositions() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;

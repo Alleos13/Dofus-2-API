@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeStartOkNpcTradeMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeStartOkNpcTradeMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeStartOkNpcTradeMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5785;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var npcId:int = 0;
       
-      override public function getMessageId() : uint {
-         return 5785;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeStartOkNpcTradeMessage(npcId:int = 0) : ExchangeStartOkNpcTradeMessage {
-         this.npcId = npcId;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeStartOkNpcTradeMessage(npcId:int = 0) : ExchangeStartOkNpcTradeMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.npcId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeStartOkNpcTradeMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeStartOkNpcTradeMessage(output:IDataOutput) : void {
-         output.writeInt(this.npcId);
+      public function serializeAs_ExchangeStartOkNpcTradeMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeStartOkNpcTradeMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeStartOkNpcTradeMessage(input:IDataInput) : void {
-         this.npcId = input.readInt();
+      public function deserializeAs_ExchangeStartOkNpcTradeMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

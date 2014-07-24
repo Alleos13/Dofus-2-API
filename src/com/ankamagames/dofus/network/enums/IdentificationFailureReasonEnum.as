@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class IdentificationFailureReasonEnum extends Object
    {
       
-      public function IdentificationFailureReasonEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function IdentificationFailureReasonEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const BAD_VERSION:uint = 1;

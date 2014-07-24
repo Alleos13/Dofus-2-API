@@ -8,63 +8,69 @@ package com.ankamagames.dofus.network.messages.game.character.replay
    public class CharacterReplayWithRenameRequestMessage extends CharacterReplayRequestMessage implements INetworkMessage
    {
       
-      public function CharacterReplayWithRenameRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterReplayWithRenameRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6122;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var name:String = "";
       
-      override public function getMessageId() : uint {
-         return 6122;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCharacterReplayWithRenameRequestMessage(characterId:uint = 0, name:String = "") : CharacterReplayWithRenameRequestMessage {
-         super.initCharacterReplayRequestMessage(characterId);
-         this.name = name;
-         this._isInitialized = true;
-         return this;
+      public function initCharacterReplayWithRenameRequestMessage(characterId:uint = 0, name:String = "") : CharacterReplayWithRenameRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.name = "";
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharacterReplayWithRenameRequestMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterReplayWithRenameRequestMessage(output:IDataOutput) : void {
-         super.serializeAs_CharacterReplayRequestMessage(output);
-         output.writeUTF(this.name);
+      public function serializeAs_CharacterReplayWithRenameRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharacterReplayWithRenameRequestMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterReplayWithRenameRequestMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.name = input.readUTF();
+      public function deserializeAs_CharacterReplayWithRenameRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

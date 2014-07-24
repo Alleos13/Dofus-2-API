@@ -7,118 +7,58 @@ package com.somerandomdude.colortoolkit.schemes
    public dynamic class ColorList extends Array
    {
       
-      public function ColorList(numElements:int = 0) {
-         super(numElements);
+      {
+      //Décompilation abandonné
       }
       
-      public function empty() : void {
-         while(length)
-         {
-            this.splice(0,length);
-         }
+      public function ColorList(numElements:int = 0)
+      {
+         //Décompilation abandonné
       }
       
-      public function toRGB() : ColorList {
-         var list:ColorList = new ColorList();
-         var rgb:RGB = new RGB();
-         var i:int = 0;
-         while(i < this.length)
-         {
-            rgb.color = this[i] is IColorSpace?this[i].color:this[i];
-            list.push(rgb.toRGB());
-            i++;
-         }
-         return list;
+      public function empty() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function toHSB() : ColorList {
-         var list:ColorList = new ColorList();
-         var rgb:RGB = new RGB();
-         var i:int = 0;
-         while(i < this.length)
-         {
-            rgb.color = this[i] is IColorSpace?this[i].color:this[i];
-            list.push(rgb.toHSB());
-            i++;
-         }
-         return list;
+      public function toRGB() : ColorList
+      {
+         //Décompilation abandonné
       }
       
-      public function toCMYK() : ColorList {
-         var list:ColorList = new ColorList();
-         var rgb:RGB = new RGB();
-         var i:int = 0;
-         while(i < this.length)
-         {
-            rgb.color = this[i] is IColorSpace?this[i].color:this[i];
-            list.push(rgb.toCMYK());
-            i++;
-         }
-         return list;
+      public function toHSB() : ColorList
+      {
+         //Décompilation abandonné
       }
       
-      public function toColor() : ColorList {
-         var list:ColorList = new ColorList();
-         var rgb:RGB = new RGB();
-         var i:int = 0;
-         while(i < this.length)
-         {
-            list.push(new Color(this[i] is IColorSpace?this[i].color:this[i]));
-            i++;
-         }
-         return list;
+      public function toCMYK() : ColorList
+      {
+         //Décompilation abandonné
       }
       
-      public function toHex() : ColorList {
-         var list:ColorList = new ColorList();
-         var rgb:RGB = new RGB();
-         var i:int = 0;
-         while(i < this.length)
-         {
-            rgb.color = this[i] is IColorSpace?this[i].color:this[i];
-            list.push(rgb.color);
-            i++;
-         }
-         return list;
+      public function toColor() : ColorList
+      {
+         //Décompilation abandonné
       }
       
-      public function toLab() : ColorList {
-         var list:ColorList = new ColorList();
-         var rgb:RGB = new RGB();
-         var i:int = 0;
-         while(i < this.length)
-         {
-            rgb.color = this[i] is IColorSpace?this[i].color:this[i];
-            list.push(rgb.toLab());
-            i++;
-         }
-         return list;
+      public function toHex() : ColorList
+      {
+         //Décompilation abandonné
       }
       
-      public function toXYZ() : ColorList {
-         var list:ColorList = new ColorList();
-         var rgb:RGB = new RGB();
-         var i:int = 0;
-         while(i < this.length)
-         {
-            rgb.color = this[i] is IColorSpace?this[i].color:this[i];
-            list.push(rgb.toXYZ());
-            i++;
-         }
-         return list;
+      public function toLab() : ColorList
+      {
+         //Décompilation abandonné
       }
       
-      public function toHSL() : ColorList {
-         var list:ColorList = new ColorList();
-         var rgb:RGB = new RGB();
-         var i:int = 0;
-         while(i < this.length)
-         {
-            rgb.color = this[i] is IColorSpace?this[i].color:this[i];
-            list.push(rgb.toHSL()());
-            i++;
-         }
-         return list;
+      public function toXYZ() : ColorList
+      {
+         //Décompilation abandonné
+      }
+      
+      public function toHSL() : ColorList
+      {
+         //Décompilation abandonné
       }
    }
 }

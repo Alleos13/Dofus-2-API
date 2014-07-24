@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.notifications
    public class Notification extends Object implements IDataCenter
    {
       
-      public function Notification() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Notification()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Notifications";
       
       protected static const _log:Logger;
       
-      public static function getNotificationById(id:int) : Notification {
-         return GameData.getObject(MODULE,id) as Notification;
+      public static function getNotificationById(id:int) : Notification
+      {
+         //Décompilation abandonné
       }
       
-      public static function getNotifications() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getNotifications() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -42,20 +49,14 @@ package com.ankamagames.dofus.datacenter.notifications
       
       private var _message:String;
       
-      public function get title() : String {
-         if(!this._title)
-         {
-            this._title = I18n.getText(this.titleId);
-         }
-         return this._title;
+      public function get title() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get message() : String {
-         if(!this._message)
-         {
-            this._message = I18n.getText(this.messageId);
-         }
-         return this._message;
+      public function get message() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

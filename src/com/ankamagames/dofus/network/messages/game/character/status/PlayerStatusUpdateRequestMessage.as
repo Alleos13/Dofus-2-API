@@ -11,63 +11,69 @@ package com.ankamagames.dofus.network.messages.game.character.status
    public class PlayerStatusUpdateRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function PlayerStatusUpdateRequestMessage() {
-         this.status = new PlayerStatus();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PlayerStatusUpdateRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6387;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var status:PlayerStatus;
       
-      override public function getMessageId() : uint {
-         return 6387;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPlayerStatusUpdateRequestMessage(status:PlayerStatus = null) : PlayerStatusUpdateRequestMessage {
-         this.status = status;
-         this._isInitialized = true;
-         return this;
+      public function initPlayerStatusUpdateRequestMessage(status:PlayerStatus = null) : PlayerStatusUpdateRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.status = new PlayerStatus();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PlayerStatusUpdateRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PlayerStatusUpdateRequestMessage(output:IDataOutput) : void {
-         output.writeShort(this.status.getTypeId());
-         this.status.serialize(output);
+      public function serializeAs_PlayerStatusUpdateRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PlayerStatusUpdateRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PlayerStatusUpdateRequestMessage(input:IDataInput) : void {
-         var _id1:uint = input.readUnsignedShort();
-         this.status = ProtocolTypeManager.getInstance(PlayerStatus,_id1);
-         this.status.deserialize(input);
+      public function deserializeAs_PlayerStatusUpdateRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

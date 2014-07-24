@@ -7,11 +7,13 @@ package flashx.textLayout.events
    public class StatusChangeEvent extends Event
    {
       
-      public function StatusChangeEvent(param1:String, param2:Boolean=false, param3:Boolean=false, param4:FlowElement=null, param5:String=null, param6:ErrorEvent=null) {
-         this._element = param4;
-         this._status = param5;
-         this._errorEvent = param6;
-         super(param1,param2,param3);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StatusChangeEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, element:FlowElement = null, status:String = null, errorEvent:ErrorEvent = null)
+      {
+         //Décompilation abandonné
       }
       
       public static const INLINE_GRAPHIC_STATUS_CHANGE:String = "inlineGraphicStatusChange";
@@ -22,32 +24,39 @@ package flashx.textLayout.events
       
       private var _errorEvent:ErrorEvent;
       
-      override public function clone() : Event {
-         return new StatusChangeEvent(type,bubbles,cancelable,this._element,this._status,this._errorEvent);
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
       
-      public function get element() : FlowElement {
-         return this._element;
+      public function get element() : FlowElement
+      {
+         //Décompilation abandonné
       }
       
-      public function set element(param1:FlowElement) : void {
-         this._element = param1;
+      public function set element(value:FlowElement) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get status() : String {
-         return this._status;
+      public function get status() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function set status(param1:String) : void {
-         this._status = param1;
+      public function set status(value:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get errorEvent() : ErrorEvent {
-         return this._errorEvent;
+      public function get errorEvent() : ErrorEvent
+      {
+         //Décompilation abandonné
       }
       
-      public function set errorEvent(param1:ErrorEvent) : void {
-         this._errorEvent = param1;
+      public function set errorEvent(value:ErrorEvent) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -7,70 +7,60 @@ package com.ankamagames.berilia.factories
    public class MenusFactory extends Object
    {
       
-      public function MenusFactory() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MenusFactory()
+      {
+         //Décompilation abandonné
       }
       
       private static var _registeredMaker:Array;
       
       private static var _makerAssoc:Array;
       
-      public static function registerMaker(makerName:String, maker:Class, scriptClass:Class = null) : void {
-         _registeredMaker[makerName] = new MenuData(maker,scriptClass);
+      public static function registerMaker(makerName:String, maker:Class, scriptClass:Class = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function registerAssoc(dataClass:*, makerName:String) : void {
-         _makerAssoc[getQualifiedClassName(dataClass)] = makerName;
+      public static function registerAssoc(dataClass:*, makerName:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function unregister(dataType:Class, maker:Class) : void {
-         if(MenuData(_registeredMaker[getQualifiedClassName(dataType)]).maker === maker)
-         {
-            delete _registeredMaker[getQualifiedClassName(dataType)];
-         }
+      public static function unregister(dataType:Class, maker:Class) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function create(data:*, makerName:String = null, makerParam:Object = null) : ContextMenuData {
-         var td:MenuData = null;
-         var maker:* = undefined;
-         var tt:Array = null;
-         if(!makerName)
-         {
-            makerName = _makerAssoc[getQualifiedClassName(data)];
-         }
-         if(makerName)
-         {
-            td = _registeredMaker[makerName];
-         }
-         if(td)
-         {
-            maker = new td.maker();
-            tt = maker.createMenu(SecureCenter.secure(data),SecureCenter.secure(makerParam));
-            return new ContextMenuData(data,makerName,tt);
-         }
-         if(makerParam is Array)
-         {
-            return new ContextMenuData(data,makerName,makerParam as Array);
-         }
-         return null;
+      public static function create(data:*, makerName:String = null, makerParam:Object = null) : ContextMenuData
+      {
+         //Décompilation abandonné
       }
       
-      public static function getMenuMaker(makerName:String) : Object {
-         return _registeredMaker[makerName];
+      public static function getMenuMaker(makerName:String) : Object
+      {
+         //Décompilation abandonné
       }
       
-      public static function existMakerAssoc(dataClass:*) : Boolean {
-         return _makerAssoc[getQualifiedClassName(dataClass)]?true:false;
+      public static function existMakerAssoc(dataClass:*) : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }
 class MenuData extends Object
 {
    
-   function MenuData(maker:Class, scriptClass:Class) {
-      super();
-      this.maker = maker;
-      this.scriptClass = scriptClass;
+   {
+   //Décompilation abandonné
+   }
+   
+   function MenuData(maker:Class, scriptClass:Class)
+   {
+      //Décompilation abandonné
    }
    
    public var maker:Class;

@@ -9,88 +9,71 @@ package com.ankamagames.dofus.network.messages.game.interactive.zaap
    public class TeleportRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function TeleportRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TeleportRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5961;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var teleporterType:uint = 0;
       
       public var mapId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5961;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initTeleportRequestMessage(teleporterType:uint = 0, mapId:uint = 0) : TeleportRequestMessage {
-         this.teleporterType = teleporterType;
-         this.mapId = mapId;
-         this._isInitialized = true;
-         return this;
+      public function initTeleportRequestMessage(teleporterType:uint = 0, mapId:uint = 0) : TeleportRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.teleporterType = 0;
-         this.mapId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TeleportRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_TeleportRequestMessage(output:IDataOutput) : void {
-         output.writeByte(this.teleporterType);
-         if(this.mapId < 0)
-         {
-            throw new Error("Forbidden value (" + this.mapId + ") on element mapId.");
-         }
-         else
-         {
-            output.writeInt(this.mapId);
-            return;
-         }
+      public function serializeAs_TeleportRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TeleportRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_TeleportRequestMessage(input:IDataInput) : void {
-         this.teleporterType = input.readByte();
-         if(this.teleporterType < 0)
-         {
-            throw new Error("Forbidden value (" + this.teleporterType + ") on element of TeleportRequestMessage.teleporterType.");
-         }
-         else
-         {
-            this.mapId = input.readInt();
-            if(this.mapId < 0)
-            {
-               throw new Error("Forbidden value (" + this.mapId + ") on element of TeleportRequestMessage.mapId.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_TeleportRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

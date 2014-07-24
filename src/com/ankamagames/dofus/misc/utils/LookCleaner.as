@@ -7,31 +7,18 @@ package com.ankamagames.dofus.misc.utils
    public class LookCleaner extends Object
    {
       
-      public function LookCleaner() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function clean(look:TiphonEntityLook) : TiphonEntityLook {
-         var breed:Breed = null;
-         var result:TiphonEntityLook = look.clone();
-         var ridderLook:TiphonEntityLook = result.getSubEntity(SubEntityBindingPointCategoryEnum.HOOK_POINT_CATEGORY_MOUNT_DRIVER,0);
-         if(ridderLook)
-         {
-            if(ridderLook.getBone() == 2)
-            {
-               ridderLook.setBone(1);
-            }
-            return ridderLook;
-         }
-         for each(breed in Breed.getBreeds())
-         {
-            if(breed.creatureBonesId == result.getBone())
-            {
-               result.setBone(1);
-               break;
-            }
-         }
-         return result;
+      public function LookCleaner()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function clean(look:TiphonEntityLook) : TiphonEntityLook
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,12 +5,13 @@ package com.ankamagames.tiphon.types
    public dynamic class TiphonOptions extends OptionManager
    {
       
-      public function TiphonOptions() {
-         super("tiphon");
-         add("pointsOverhead",2);
-         add("auraMode",3);
-         add("alwaysShowAuraOnFront",false);
-         add("creaturesMode",20);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TiphonOptions()
+      {
+         //Décompilation abandonné
       }
    }
 }

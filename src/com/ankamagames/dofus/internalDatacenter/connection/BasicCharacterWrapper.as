@@ -9,23 +9,18 @@ package com.ankamagames.dofus.internalDatacenter.connection
    public class BasicCharacterWrapper extends Object implements IDataCenter
    {
       
-      public function BasicCharacterWrapper() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(id:uint, name:String, level:uint, entityLook:EntityLook, breed:uint, sex:Boolean, deathState:uint = 0, deathCount:uint = 0, bonusXp:uint = 0, unusable:Boolean = false) : BasicCharacterWrapper {
-         var obj:BasicCharacterWrapper = new BasicCharacterWrapper();
-         obj.id = id;
-         obj.name = name;
-         obj.level = level;
-         obj.entityLook = EntityLookAdapter.fromNetwork(entityLook);
-         obj.breedId = breed;
-         obj.sex = sex;
-         obj.deathState = deathState;
-         obj.deathCount = deathCount;
-         obj.bonusXp = bonusXp;
-         obj.unusable = unusable;
-         return obj;
+      public function BasicCharacterWrapper()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(id:uint, name:String, level:uint, entityLook:EntityLook, breed:uint, sex:Boolean, deathState:uint = 0, deathCount:uint = 0, bonusXp:uint = 0, unusable:Boolean = false) : BasicCharacterWrapper
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;
@@ -50,16 +45,14 @@ package com.ankamagames.dofus.internalDatacenter.connection
       
       private var _breed:Breed;
       
-      public function get breed() : Breed {
-         if(!this._breed)
-         {
-            this._breed = Breed.getBreedById(this.breedId);
-         }
-         return this._breed;
+      public function get breed() : Breed
+      {
+         //Décompilation abandonné
       }
       
-      public function toString() : String {
-         return "[BasicCharacterWrapper#" + this.id + "_" + this.name + "]";
+      public function toString() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

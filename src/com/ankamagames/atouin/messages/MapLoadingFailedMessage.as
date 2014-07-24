@@ -3,8 +3,13 @@ package com.ankamagames.atouin.messages
    public class MapLoadingFailedMessage extends MapMessage
    {
       
-      public function MapLoadingFailedMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapLoadingFailedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const NO_FILE:uint = 0;

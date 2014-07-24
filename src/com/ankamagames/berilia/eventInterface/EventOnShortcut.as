@@ -3,6 +3,10 @@ package com.ankamagames.berilia.eventInterface
    public interface EventOnShortcut extends UIEvent
    {
       
-      function eventOnShortcut(param1:String) : Boolean;
+      {
+      //Décompilation abandonné
+      }
+      
+      function eventOnShortcut(sShortcut:String) : Boolean;
    }
 }

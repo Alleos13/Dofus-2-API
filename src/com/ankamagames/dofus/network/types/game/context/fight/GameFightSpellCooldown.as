@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.context.fight
    public class GameFightSpellCooldown extends Object implements INetworkType
    {
       
-      public function GameFightSpellCooldown() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameFightSpellCooldown()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 205;
@@ -17,53 +22,39 @@ package com.ankamagames.dofus.network.types.game.context.fight
       
       public var cooldown:uint = 0;
       
-      public function getTypeId() : uint {
-         return 205;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameFightSpellCooldown(spellId:int = 0, cooldown:uint = 0) : GameFightSpellCooldown {
-         this.spellId = spellId;
-         this.cooldown = cooldown;
-         return this;
+      public function initGameFightSpellCooldown(spellId:int = 0, cooldown:uint = 0) : GameFightSpellCooldown
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.spellId = 0;
-         this.cooldown = 0;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameFightSpellCooldown(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightSpellCooldown(output:IDataOutput) : void {
-         output.writeInt(this.spellId);
-         if(this.cooldown < 0)
-         {
-            throw new Error("Forbidden value (" + this.cooldown + ") on element cooldown.");
-         }
-         else
-         {
-            output.writeByte(this.cooldown);
-            return;
-         }
+      public function serializeAs_GameFightSpellCooldown(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameFightSpellCooldown(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightSpellCooldown(input:IDataInput) : void {
-         this.spellId = input.readInt();
-         this.cooldown = input.readByte();
-         if(this.cooldown < 0)
-         {
-            throw new Error("Forbidden value (" + this.cooldown + ") on element of GameFightSpellCooldown.cooldown.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_GameFightSpellCooldown(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -10,17 +10,22 @@ package com.ankamagames.dofus.network.messages.game.alliance
    public class AllianceInvitedMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function AllianceInvitedMessage() {
-         this.allianceInfo = new BasicNamedAllianceInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AllianceInvitedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6397;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var recruterId:uint = 0;
@@ -29,70 +34,49 @@ package com.ankamagames.dofus.network.messages.game.alliance
       
       public var allianceInfo:BasicNamedAllianceInformations;
       
-      override public function getMessageId() : uint {
-         return 6397;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initAllianceInvitedMessage(recruterId:uint = 0, recruterName:String = "", allianceInfo:BasicNamedAllianceInformations = null) : AllianceInvitedMessage {
-         this.recruterId = recruterId;
-         this.recruterName = recruterName;
-         this.allianceInfo = allianceInfo;
-         this._isInitialized = true;
-         return this;
+      public function initAllianceInvitedMessage(recruterId:uint = 0, recruterName:String = "", allianceInfo:BasicNamedAllianceInformations = null) : AllianceInvitedMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.recruterId = 0;
-         this.recruterName = "";
-         this.allianceInfo = new BasicNamedAllianceInformations();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AllianceInvitedMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_AllianceInvitedMessage(output:IDataOutput) : void {
-         if(this.recruterId < 0)
-         {
-            throw new Error("Forbidden value (" + this.recruterId + ") on element recruterId.");
-         }
-         else
-         {
-            output.writeInt(this.recruterId);
-            output.writeUTF(this.recruterName);
-            this.allianceInfo.serializeAs_BasicNamedAllianceInformations(output);
-            return;
-         }
+      public function serializeAs_AllianceInvitedMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AllianceInvitedMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_AllianceInvitedMessage(input:IDataInput) : void {
-         this.recruterId = input.readInt();
-         if(this.recruterId < 0)
-         {
-            throw new Error("Forbidden value (" + this.recruterId + ") on element of AllianceInvitedMessage.recruterId.");
-         }
-         else
-         {
-            this.recruterName = input.readUTF();
-            this.allianceInfo = new BasicNamedAllianceInformations();
-            this.allianceInfo.deserialize(input);
-            return;
-         }
+      public function deserializeAs_AllianceInvitedMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

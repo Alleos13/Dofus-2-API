@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.prism
    public class PrismFightSwapRequestAction extends Object implements Action
    {
       
-      public function PrismFightSwapRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(subAreaId:uint, targetId:uint) : PrismFightSwapRequestAction {
-         var action:PrismFightSwapRequestAction = new PrismFightSwapRequestAction();
-         action.targetId = targetId;
-         action.subAreaId = subAreaId;
-         return action;
+      public function PrismFightSwapRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(subAreaId:uint, targetId:uint) : PrismFightSwapRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var subAreaId:uint;

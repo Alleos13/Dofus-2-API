@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class FightDispellableEnum extends Object
    {
       
-      public function FightDispellableEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightDispellableEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const DISPELLABLE:uint = 1;

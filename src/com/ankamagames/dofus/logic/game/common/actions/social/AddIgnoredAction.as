@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.social
    public class AddIgnoredAction extends Object implements Action
    {
       
-      public function AddIgnoredAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(name:String) : AddIgnoredAction {
-         var a:AddIgnoredAction = new AddIgnoredAction();
-         a.name = name;
-         return a;
+      public function AddIgnoredAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(name:String) : AddIgnoredAction
+      {
+         //Décompilation abandonné
       }
       
       public var name:String;

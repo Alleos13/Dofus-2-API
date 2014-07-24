@@ -10,117 +10,125 @@ package com.ankamagames.dofus.uiApi
    public class BindsApi extends Object implements IApi
    {
       
-      public function BindsApi() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BindsApi()
+      {
+         //Décompilation abandonné
       }
       
       private var _module:UiModule;
       
-      public function set module(value:UiModule) : void {
-         this._module = value;
+      public function set module(value:UiModule) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         this._module = null;
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getBindList() : Array {
-         return BindsManager.getInstance().binds;
+      public function getBindList() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getShortcut() : Array {
-         var s:Shortcut = null;
-         var copy:Array = new Array();
-         var ss:Array = Shortcut.getShortcuts();
-         for each(s in ss)
-         {
-            if(s.visible)
-            {
-               copy.push(s);
-            }
-         }
-         return copy;
+      public function getShortcut() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getShortcutBind(shortcutName:String, returnDisabled:Boolean = false) : Bind {
-         return BindsManager.getInstance().getBindFromShortcut(shortcutName,returnDisabled);
+      public function getShortcutBind(shortcutName:String, returnDisabled:Boolean = false) : Bind
+      {
+         //Décompilation abandonné
       }
       
-      public function setShortcutBind(targetedShorcut:String, key:String, alt:Boolean, ctrl:Boolean, shift:Boolean) : void {
-         BindsManager.getInstance().addBind(new Bind(key,targetedShorcut,alt,ctrl,shift));
+      public function setShortcutBind(targetedShorcut:String, key:String, alt:Boolean, ctrl:Boolean, shift:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeShortcutBind(targetedBind:String) : void {
-         BindsManager.getInstance().removeBind(BindsManager.getInstance().getBindFromShortcut(targetedBind));
+      public function removeShortcutBind(targetedBind:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getShortcutBindStr(shortcutName:String, returnDisabled:Boolean = false) : String {
-         var bind:Bind = this.getShortcutBind(shortcutName,returnDisabled);
-         if((!(bind == null)) && (!(bind.key == null)))
-         {
-            return bind.toString();
-         }
-         return "";
+      public function getShortcutBindStr(shortcutName:String, returnDisabled:Boolean = false) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function resetAllBinds() : void {
-         BindsManager.getInstance().reset();
+      public function resetAllBinds() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function avaibleKeyboard() : Array {
-         return BindsManager.getInstance().avaibleKeyboard.concat();
+      public function avaibleKeyboard() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function changeKeyboard(locale:String) : void {
-         BindsManager.getInstance().changeKeyboard(locale,true);
+      public function changeKeyboard(locale:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getCurrentLocale() : String {
-         return BindsManager.getInstance().currentLocale;
+      public function getCurrentLocale() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function bindIsRegister(bind:Bind) : Boolean {
-         return BindsManager.getInstance().isRegister(bind);
+      public function bindIsRegister(bind:Bind) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function bindIsPermanent(bind:Bind) : Boolean {
-         return BindsManager.getInstance().isPermanent(bind);
+      public function bindIsPermanent(bind:Bind) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function bindIsDisabled(bind:Bind) : Boolean {
-         return BindsManager.getInstance().isDisabled(bind);
+      public function bindIsDisabled(bind:Bind) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function setBindDisabled(bind:Bind, disabled:Boolean) : void {
-         BindsManager.getInstance().setDisabled(bind,disabled);
+      public function setBindDisabled(bind:Bind, disabled:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getRegisteredBind(bind:Bind) : Bind {
-         return BindsManager.getInstance().getRegisteredBind(bind);
+      public function getRegisteredBind(bind:Bind) : Bind
+      {
+         //Décompilation abandonné
       }
       
-      public function getShortcutByName(name:String) : Shortcut {
-         return Shortcut.getShortcutByName(name);
+      public function getShortcutByName(name:String) : Shortcut
+      {
+         //Décompilation abandonné
       }
       
-      public function setShortcutEnabled(enabled:Boolean) : void {
-         ShortcutsFrame.shortcutsEnabled = enabled;
+      public function setShortcutEnabled(enabled:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getIsShortcutEnabled() : Boolean {
-         return ShortcutsFrame.shortcutsEnabled;
+      public function getIsShortcutEnabled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function disableShortcut(name:String, val:Boolean) : void {
-         var shortcut:Shortcut = Shortcut.getShortcutByName(name);
-         if(shortcut != null)
-         {
-            shortcut.disable = val;
-         }
+      public function disableShortcut(name:String, val:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function enableShortcutKey(keyCode:uint, charCode:uint, enabled:Boolean) : void {
-         BindsManager.getInstance().setDisabled(new Bind(BindsManager.getInstance().getShortcutString(keyCode,charCode)),!enabled);
+      public function enableShortcutKey(keyCode:uint, charCode:uint, enabled:Boolean) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

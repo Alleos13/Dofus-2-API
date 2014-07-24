@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.quest
    public class AchievementObjective extends Object implements IDataCenter
    {
       
-      public function AchievementObjective() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AchievementObjective()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       public static const MODULE:String = "AchievementObjectives";
       
-      public static function getAchievementObjectiveById(id:int) : AchievementObjective {
-         return GameData.getObject(MODULE,id) as AchievementObjective;
+      public static function getAchievementObjectiveById(id:int) : AchievementObjective
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAchievementObjectives() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAchievementObjectives() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;
@@ -36,12 +43,9 @@ package com.ankamagames.dofus.datacenter.quest
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

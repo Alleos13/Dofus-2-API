@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.abuse
    public class AbuseReasons extends Object implements IDataCenter
    {
       
-      public function AbuseReasons() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AbuseReasons()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "AbuseReasons";
       
       protected static const _log:Logger;
       
-      public static function getReasonNameById(id:uint) : AbuseReasons {
-         return GameData.getObject(MODULE,id) as AbuseReasons;
+      public static function getReasonNameById(id:uint) : AbuseReasons
+      {
+         //Décompilation abandonné
       }
       
-      public static function getReasonNames() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getReasonNames() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var _abuseReasonId:uint;
@@ -34,12 +41,9 @@ package com.ankamagames.dofus.datacenter.abuse
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this._reasonTextId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -9,16 +9,22 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.fight
    public class GameRolePlayPlayerFightRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameRolePlayPlayerFightRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameRolePlayPlayerFightRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5731;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var targetId:uint = 0;
@@ -27,83 +33,49 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.fight
       
       public var friendly:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 5731;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameRolePlayPlayerFightRequestMessage(targetId:uint = 0, targetCellId:int = 0, friendly:Boolean = false) : GameRolePlayPlayerFightRequestMessage {
-         this.targetId = targetId;
-         this.targetCellId = targetCellId;
-         this.friendly = friendly;
-         this._isInitialized = true;
-         return this;
+      public function initGameRolePlayPlayerFightRequestMessage(targetId:uint = 0, targetCellId:int = 0, friendly:Boolean = false) : GameRolePlayPlayerFightRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.targetId = 0;
-         this.targetCellId = 0;
-         this.friendly = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameRolePlayPlayerFightRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayPlayerFightRequestMessage(output:IDataOutput) : void {
-         if(this.targetId < 0)
-         {
-            throw new Error("Forbidden value (" + this.targetId + ") on element targetId.");
-         }
-         else
-         {
-            output.writeInt(this.targetId);
-            if((this.targetCellId < -1) || (this.targetCellId > 559))
-            {
-               throw new Error("Forbidden value (" + this.targetCellId + ") on element targetCellId.");
-            }
-            else
-            {
-               output.writeShort(this.targetCellId);
-               output.writeBoolean(this.friendly);
-               return;
-            }
-         }
+      public function serializeAs_GameRolePlayPlayerFightRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameRolePlayPlayerFightRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayPlayerFightRequestMessage(input:IDataInput) : void {
-         this.targetId = input.readInt();
-         if(this.targetId < 0)
-         {
-            throw new Error("Forbidden value (" + this.targetId + ") on element of GameRolePlayPlayerFightRequestMessage.targetId.");
-         }
-         else
-         {
-            this.targetCellId = input.readShort();
-            if((this.targetCellId < -1) || (this.targetCellId > 559))
-            {
-               throw new Error("Forbidden value (" + this.targetCellId + ") on element of GameRolePlayPlayerFightRequestMessage.targetCellId.");
-            }
-            else
-            {
-               this.friendly = input.readBoolean();
-               return;
-            }
-         }
+      public function deserializeAs_GameRolePlayPlayerFightRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

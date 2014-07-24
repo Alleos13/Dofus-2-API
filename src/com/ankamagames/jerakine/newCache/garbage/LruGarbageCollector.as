@@ -1,6 +1,7 @@
 package com.ankamagames.jerakine.newCache.garbage
 {
    import com.ankamagames.jerakine.newCache.ICacheGarbageCollector;
+   import com.ankamagames.jerakine.pools.Pool;
    import flash.utils.Dictionary;
    import com.ankamagames.jerakine.newCache.ICache;
    import com.ankamagames.jerakine.interfaces.IDestroyable;
@@ -10,59 +11,62 @@ package com.ankamagames.jerakine.newCache.garbage
    public class LruGarbageCollector extends Object implements ICacheGarbageCollector
    {
       
-      public function LruGarbageCollector() {
-         this._usageCount = new Dictionary(true);
-         super();
+      {
+      //Décompilation abandonné
       }
+      
+      public function LruGarbageCollector()
+      {
+         //Décompilation abandonné
+      }
+      
+      private static var _pool:Pool;
       
       protected var _usageCount:Dictionary;
       
       private var _cache:ICache;
       
-      public function set cache(cache:ICache) : void {
-         this._cache = cache;
+      public function set cache(cache:ICache) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function used(ref:*) : void {
-         if(this._usageCount[ref])
-         {
-            this._usageCount[ref]++;
-         }
-         else
-         {
-            this._usageCount[ref] = 1;
-         }
+      public function used(ref:*) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function purge(bounds:uint) : void {
-         var obj:* = undefined;
-         var poke:* = undefined;
-         var elements:Array = new Array();
-         for(obj in this._usageCount)
-         {
-            elements.push(
-               {
-                  "ref":obj,
-                  "count":this._usageCount[obj]
-               });
-         }
-         elements.sortOn("count",Array.NUMERIC | Array.DESCENDING);
-         while((this._cache.size > bounds) && (elements.length))
-         {
-            poke = this._cache.extract(elements.pop().ref);
-            if(poke is IDestroyable)
-            {
-               (poke as IDestroyable).destroy();
-            }
-            if(poke is BitmapData)
-            {
-               (poke as BitmapData).dispose();
-            }
-            if(poke is ByteArray)
-            {
-               (poke as ByteArray).clear();
-            }
-         }
+      public function purge(bounds:uint) : void
+      {
+         //Décompilation abandonné
       }
+   }
+}
+import com.ankamagames.jerakine.pools.Poolable;
+
+class UsageCountHelper extends Object implements Poolable
+{
+   
+   {
+   //Décompilation abandonné
+   }
+   
+   function UsageCountHelper()
+   {
+      //Décompilation abandonné
+   }
+   
+   public var ref:Object;
+   
+   public var count:uint;
+   
+   public function init(ref:Object, count:uint) : UsageCountHelper
+   {
+      //Décompilation abandonné
+   }
+   
+   public function free() : void
+   {
+      //Décompilation abandonné
    }
 }

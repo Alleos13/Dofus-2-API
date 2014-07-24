@@ -10,61 +10,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeStartedBidBuyerMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeStartedBidBuyerMessage() {
-         this.buyerDescriptor = new SellerBuyerDescriptor();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeStartedBidBuyerMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5904;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var buyerDescriptor:SellerBuyerDescriptor;
       
-      override public function getMessageId() : uint {
-         return 5904;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeStartedBidBuyerMessage(buyerDescriptor:SellerBuyerDescriptor = null) : ExchangeStartedBidBuyerMessage {
-         this.buyerDescriptor = buyerDescriptor;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeStartedBidBuyerMessage(buyerDescriptor:SellerBuyerDescriptor = null) : ExchangeStartedBidBuyerMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.buyerDescriptor = new SellerBuyerDescriptor();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeStartedBidBuyerMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeStartedBidBuyerMessage(output:IDataOutput) : void {
-         this.buyerDescriptor.serializeAs_SellerBuyerDescriptor(output);
+      public function serializeAs_ExchangeStartedBidBuyerMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeStartedBidBuyerMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeStartedBidBuyerMessage(input:IDataInput) : void {
-         this.buyerDescriptor = new SellerBuyerDescriptor();
-         this.buyerDescriptor.deserialize(input);
+      public function deserializeAs_ExchangeStartedBidBuyerMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -10,83 +10,71 @@ package com.ankamagames.dofus.network.messages.game.inventory.preset
    public class InventoryPresetItemUpdateMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function InventoryPresetItemUpdateMessage() {
-         this.presetItem = new PresetItem();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function InventoryPresetItemUpdateMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6168;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var presetId:uint = 0;
       
       public var presetItem:PresetItem;
       
-      override public function getMessageId() : uint {
-         return 6168;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initInventoryPresetItemUpdateMessage(presetId:uint = 0, presetItem:PresetItem = null) : InventoryPresetItemUpdateMessage {
-         this.presetId = presetId;
-         this.presetItem = presetItem;
-         this._isInitialized = true;
-         return this;
+      public function initInventoryPresetItemUpdateMessage(presetId:uint = 0, presetItem:PresetItem = null) : InventoryPresetItemUpdateMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.presetId = 0;
-         this.presetItem = new PresetItem();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_InventoryPresetItemUpdateMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_InventoryPresetItemUpdateMessage(output:IDataOutput) : void {
-         if(this.presetId < 0)
-         {
-            throw new Error("Forbidden value (" + this.presetId + ") on element presetId.");
-         }
-         else
-         {
-            output.writeByte(this.presetId);
-            this.presetItem.serializeAs_PresetItem(output);
-            return;
-         }
+      public function serializeAs_InventoryPresetItemUpdateMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_InventoryPresetItemUpdateMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_InventoryPresetItemUpdateMessage(input:IDataInput) : void {
-         this.presetId = input.readByte();
-         if(this.presetId < 0)
-         {
-            throw new Error("Forbidden value (" + this.presetId + ") on element of InventoryPresetItemUpdateMessage.presetId.");
-         }
-         else
-         {
-            this.presetItem = new PresetItem();
-            this.presetItem.deserialize(input);
-            return;
-         }
+      public function deserializeAs_InventoryPresetItemUpdateMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

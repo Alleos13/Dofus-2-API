@@ -11,17 +11,22 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.treasureHun
    public class TreasureHuntMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function TreasureHuntMessage() {
-         this.stepList = new Vector.<TreasureHuntStep>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TreasureHuntMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6486;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var questType:uint = 0;
@@ -36,134 +41,49 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.treasureHun
       
       public var availableRetryCount:int = 0;
       
-      override public function getMessageId() : uint {
-         return 6486;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initTreasureHuntMessage(questType:uint = 0, startMapId:uint = 0, stepList:Vector.<TreasureHuntStep> = null, checkPointCurrent:uint = 0, checkPointTotal:uint = 0, availableRetryCount:int = 0) : TreasureHuntMessage {
-         this.questType = questType;
-         this.startMapId = startMapId;
-         this.stepList = stepList;
-         this.checkPointCurrent = checkPointCurrent;
-         this.checkPointTotal = checkPointTotal;
-         this.availableRetryCount = availableRetryCount;
-         this._isInitialized = true;
-         return this;
+      public function initTreasureHuntMessage(questType:uint = 0, startMapId:uint = 0, stepList:Vector.<TreasureHuntStep> = null, checkPointCurrent:uint = 0, checkPointTotal:uint = 0, availableRetryCount:int = 0) : TreasureHuntMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.questType = 0;
-         this.startMapId = 0;
-         this.stepList = new Vector.<TreasureHuntStep>();
-         this.checkPointCurrent = 0;
-         this.checkPointTotal = 0;
-         this.availableRetryCount = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TreasureHuntMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_TreasureHuntMessage(output:IDataOutput) : void {
-         output.writeByte(this.questType);
-         if(this.startMapId < 0)
-         {
-            throw new Error("Forbidden value (" + this.startMapId + ") on element startMapId.");
-         }
-         else
-         {
-            output.writeInt(this.startMapId);
-            output.writeShort(this.stepList.length);
-            _i3 = 0;
-            while(_i3 < this.stepList.length)
-            {
-               output.writeShort((this.stepList[_i3] as TreasureHuntStep).getTypeId());
-               (this.stepList[_i3] as TreasureHuntStep).serialize(output);
-               _i3++;
-            }
-            if(this.checkPointCurrent < 0)
-            {
-               throw new Error("Forbidden value (" + this.checkPointCurrent + ") on element checkPointCurrent.");
-            }
-            else
-            {
-               output.writeInt(this.checkPointCurrent);
-               if(this.checkPointTotal < 0)
-               {
-                  throw new Error("Forbidden value (" + this.checkPointTotal + ") on element checkPointTotal.");
-               }
-               else
-               {
-                  output.writeInt(this.checkPointTotal);
-                  output.writeInt(this.availableRetryCount);
-                  return;
-               }
-            }
-         }
+      public function serializeAs_TreasureHuntMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TreasureHuntMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_TreasureHuntMessage(input:IDataInput) : void {
-         var _id3:uint = 0;
-         var _item3:TreasureHuntStep = null;
-         this.questType = input.readByte();
-         if(this.questType < 0)
-         {
-            throw new Error("Forbidden value (" + this.questType + ") on element of TreasureHuntMessage.questType.");
-         }
-         else
-         {
-            this.startMapId = input.readInt();
-            if(this.startMapId < 0)
-            {
-               throw new Error("Forbidden value (" + this.startMapId + ") on element of TreasureHuntMessage.startMapId.");
-            }
-            else
-            {
-               _stepListLen = input.readUnsignedShort();
-               _i3 = 0;
-               while(_i3 < _stepListLen)
-               {
-                  _id3 = input.readUnsignedShort();
-                  _item3 = ProtocolTypeManager.getInstance(TreasureHuntStep,_id3);
-                  _item3.deserialize(input);
-                  this.stepList.push(_item3);
-                  _i3++;
-               }
-               this.checkPointCurrent = input.readInt();
-               if(this.checkPointCurrent < 0)
-               {
-                  throw new Error("Forbidden value (" + this.checkPointCurrent + ") on element of TreasureHuntMessage.checkPointCurrent.");
-               }
-               else
-               {
-                  this.checkPointTotal = input.readInt();
-                  if(this.checkPointTotal < 0)
-                  {
-                     throw new Error("Forbidden value (" + this.checkPointTotal + ") on element of TreasureHuntMessage.checkPointTotal.");
-                  }
-                  else
-                  {
-                     this.availableRetryCount = input.readInt();
-                     return;
-                  }
-               }
-            }
-         }
+      public function deserializeAs_TreasureHuntMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

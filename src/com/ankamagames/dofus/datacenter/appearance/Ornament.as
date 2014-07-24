@@ -7,18 +7,25 @@ package com.ankamagames.dofus.datacenter.appearance
    public class Ornament extends Object implements IDataCenter
    {
       
-      public function Ornament() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Ornament()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Ornaments";
       
-      public static function getOrnamentById(id:int) : Ornament {
-         return GameData.getObject(MODULE,id) as Ornament;
+      public static function getOrnamentById(id:int) : Ornament
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAllOrnaments() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAllOrnaments() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -37,12 +44,9 @@ package com.ankamagames.dofus.datacenter.appearance
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

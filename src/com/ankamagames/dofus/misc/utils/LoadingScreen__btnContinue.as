@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.utils
    public class LoadingScreen__btnContinue extends ButtonAsset
    {
       
-      public function LoadingScreen__btnContinue() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LoadingScreen__btnContinue()
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -8,8 +8,13 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.party
    public class DungeonPartyFinderPlayer extends Object implements INetworkType
    {
       
-      public function DungeonPartyFinderPlayer() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DungeonPartyFinderPlayer()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 373;
@@ -24,86 +29,39 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.party
       
       public var level:uint = 0;
       
-      public function getTypeId() : uint {
-         return 373;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initDungeonPartyFinderPlayer(playerId:uint = 0, playerName:String = "", breed:int = 0, sex:Boolean = false, level:uint = 0) : DungeonPartyFinderPlayer {
-         this.playerId = playerId;
-         this.playerName = playerName;
-         this.breed = breed;
-         this.sex = sex;
-         this.level = level;
-         return this;
+      public function initDungeonPartyFinderPlayer(playerId:uint = 0, playerName:String = "", breed:int = 0, sex:Boolean = false, level:uint = 0) : DungeonPartyFinderPlayer
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.playerId = 0;
-         this.playerName = "";
-         this.breed = 0;
-         this.sex = false;
-         this.level = 0;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_DungeonPartyFinderPlayer(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_DungeonPartyFinderPlayer(output:IDataOutput) : void {
-         if(this.playerId < 0)
-         {
-            throw new Error("Forbidden value (" + this.playerId + ") on element playerId.");
-         }
-         else
-         {
-            output.writeInt(this.playerId);
-            output.writeUTF(this.playerName);
-            output.writeByte(this.breed);
-            output.writeBoolean(this.sex);
-            if(this.level < 0)
-            {
-               throw new Error("Forbidden value (" + this.level + ") on element level.");
-            }
-            else
-            {
-               output.writeShort(this.level);
-               return;
-            }
-         }
+      public function serializeAs_DungeonPartyFinderPlayer(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_DungeonPartyFinderPlayer(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_DungeonPartyFinderPlayer(input:IDataInput) : void {
-         this.playerId = input.readInt();
-         if(this.playerId < 0)
-         {
-            throw new Error("Forbidden value (" + this.playerId + ") on element of DungeonPartyFinderPlayer.playerId.");
-         }
-         else
-         {
-            this.playerName = input.readUTF();
-            this.breed = input.readByte();
-            if((this.breed < PlayableBreedEnum.Feca) || (this.breed > PlayableBreedEnum.Steamer))
-            {
-               throw new Error("Forbidden value (" + this.breed + ") on element of DungeonPartyFinderPlayer.breed.");
-            }
-            else
-            {
-               this.sex = input.readBoolean();
-               this.level = input.readShort();
-               if(this.level < 0)
-               {
-                  throw new Error("Forbidden value (" + this.level + ") on element of DungeonPartyFinderPlayer.level.");
-               }
-               else
-               {
-                  return;
-               }
-            }
-         }
+      public function deserializeAs_DungeonPartyFinderPlayer(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

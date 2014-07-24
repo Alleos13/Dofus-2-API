@@ -6,27 +6,33 @@ package com.ankamagames.jerakine.utils.crypto
    public class Base64 extends Object
    {
       
-      public function Base64() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function encode(data:String) : String {
-         var bytes:ByteArray = new ByteArray();
-         bytes.writeUTFBytes(data);
-         return by.blooddy.crypto.Base64.encode(bytes);
+      public function Base64()
+      {
+         //Décompilation abandonné
       }
       
-      public static function encodeByteArray(data:ByteArray) : String {
-         return by.blooddy.crypto.Base64.encode(data);
+      public static function encode(data:String) : String
+      {
+         //Décompilation abandonné
       }
       
-      public static function decode(data:String) : String {
-         var bytes:ByteArray = by.blooddy.crypto.Base64.decode(data);
-         return bytes.readUTFBytes(bytes.length);
+      public static function encodeByteArray(data:ByteArray) : String
+      {
+         //Décompilation abandonné
       }
       
-      public static function decodeToByteArray(data:String) : ByteArray {
-         return by.blooddy.crypto.Base64.decode(data);
+      public static function decode(data:String) : String
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function decodeToByteArray(data:String) : ByteArray
+      {
+         //Décompilation abandonné
       }
    }
 }

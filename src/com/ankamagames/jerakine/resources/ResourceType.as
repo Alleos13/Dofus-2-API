@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.resources
    public class ResourceType extends Object
    {
       
-      public function ResourceType() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ResourceType()
+      {
+         //Décompilation abandonné
       }
       
       public static const RESOURCE_BINARY:uint = 1;
@@ -31,30 +36,9 @@ package com.ankamagames.jerakine.resources
       
       public static const RESOURCE_NONE:uint = 255;
       
-      public static function getName(type:uint) : String {
-         switch(type)
-         {
-            case RESOURCE_BINARY:
-               return "binary";
-            case RESOURCE_BITMAP:
-               return "bitmap";
-            case RESOURCE_DX:
-               return "dx";
-            case RESOURCE_SWF:
-               return "swf";
-            case RESOURCE_SWL:
-               return "swl";
-            case RESOURCE_XML:
-               return "xml";
-            case RESOURCE_MP3:
-               return "mp3";
-            case RESOURCE_SIGNED_FILE:
-               return "signedFile";
-            case RESOURCE_NONE:
-               return "none";
-            default:
-               return "unknown";
-         }
+      public static function getName(type:uint) : String
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,16 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.party
    public class TeleportToBuddyAnswerAction extends Object implements Action
    {
       
-      public function TeleportToBuddyAnswerAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(dungeonId:int, buddyId:int, accept:Boolean) : TeleportToBuddyAnswerAction {
-         var a:TeleportToBuddyAnswerAction = new TeleportToBuddyAnswerAction();
-         a.dungeonId = dungeonId;
-         a.buddyId = buddyId;
-         a.accept = accept;
-         return a;
+      public function TeleportToBuddyAnswerAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(dungeonId:int, buddyId:int, accept:Boolean) : TeleportToBuddyAnswerAction
+      {
+         //Décompilation abandonné
       }
       
       public var dungeonId:int;

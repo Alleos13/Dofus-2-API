@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class ExchangeReplayStopReasonEnum extends Object
    {
       
-      public function ExchangeReplayStopReasonEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeReplayStopReasonEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const STOPPED_REASON_OK:int = 1;

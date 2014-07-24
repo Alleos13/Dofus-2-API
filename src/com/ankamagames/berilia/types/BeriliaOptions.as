@@ -5,9 +5,13 @@ package com.ankamagames.berilia.types
    public dynamic class BeriliaOptions extends OptionManager
    {
       
-      public function BeriliaOptions() {
-         super("berilia");
-         add("uiShadows",true);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BeriliaOptions()
+      {
+         //Décompilation abandonné
       }
    }
 }

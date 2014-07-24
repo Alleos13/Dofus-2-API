@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.servers
    public class Server extends Object implements IDataCenter
    {
       
-      public function Server() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Server()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       public static const MODULE:String = "Servers";
       
-      public static function getServerById(id:int) : Server {
-         return GameData.getObject(MODULE,id) as Server;
+      public static function getServerById(id:int) : Server
+      {
+         //Décompilation abandonné
       }
       
-      public static function getServers() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getServers() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -54,44 +61,29 @@ package com.ankamagames.dofus.datacenter.servers
       
       private var _population:ServerPopulation;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get comment() : String {
-         if(!this._comment)
-         {
-            this._comment = I18n.getText(this.commentId);
-         }
-         return this._comment;
+      public function get comment() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get gameType() : ServerGameType {
-         if((!this._gameType) || (!(this._gameType.id == this.gameTypeId)))
-         {
-            this._gameType = ServerGameType.getServerGameTypeById(this.gameTypeId);
-         }
-         return this._gameType;
+      public function get gameType() : ServerGameType
+      {
+         //Décompilation abandonné
       }
       
-      public function get community() : ServerCommunity {
-         if((!this._community) || (!(this._community.id == this.communityId)))
-         {
-            this._community = ServerCommunity.getServerCommunityById(this.communityId);
-         }
-         return this._community;
+      public function get community() : ServerCommunity
+      {
+         //Décompilation abandonné
       }
       
-      public function get population() : ServerPopulation {
-         if(!this._population)
-         {
-            this._population = ServerPopulation.getServerPopulationById(this.populationId);
-         }
-         return this._population;
+      public function get population() : ServerPopulation
+      {
+         //Décompilation abandonné
       }
    }
 }

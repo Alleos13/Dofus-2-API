@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.party
    public class PartyAbdicateThroneAction extends Object implements Action
    {
       
-      public function PartyAbdicateThroneAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(partyId:int, pPlayerId:uint) : PartyAbdicateThroneAction {
-         var a:PartyAbdicateThroneAction = new PartyAbdicateThroneAction();
-         a.partyId = partyId;
-         a.playerId = pPlayerId;
-         return a;
+      public function PartyAbdicateThroneAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(partyId:int, pPlayerId:uint) : PartyAbdicateThroneAction
+      {
+         //Décompilation abandonné
       }
       
       public var playerId:uint;

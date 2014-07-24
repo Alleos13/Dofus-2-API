@@ -6,11 +6,13 @@ package com.ankamagames.berilia.types.messages
    public class ModuleRessourceLoadFailedMessage extends Object implements Message
    {
       
-      public function ModuleRessourceLoadFailedMessage(moduleName:String, uri:Uri, isImportant:Boolean = true) {
-         super();
-         this._moduleName = moduleName;
-         this._uri = uri;
-         this._isImportant = isImportant;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ModuleRessourceLoadFailedMessage(moduleName:String, uri:Uri, isImportant:Boolean = true)
+      {
+         //Décompilation abandonné
       }
       
       private var _moduleName:String;
@@ -19,16 +21,19 @@ package com.ankamagames.berilia.types.messages
       
       private var _isImportant:Boolean;
       
-      public function get moduleName() : String {
-         return this._moduleName;
+      public function get moduleName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get uri() : Uri {
-         return this._uri;
+      public function get uri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get isImportant() : Boolean {
-         return this._isImportant;
+      public function get isImportant() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

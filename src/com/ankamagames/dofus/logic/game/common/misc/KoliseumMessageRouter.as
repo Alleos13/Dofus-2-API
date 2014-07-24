@@ -7,12 +7,18 @@ package com.ankamagames.dofus.logic.game.common.misc
    public class KoliseumMessageRouter extends Object implements IMessageRouter
    {
       
-      public function KoliseumMessageRouter() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function getConnectionId(msg:INetworkMessage) : String {
-         return ConnectionType.TO_KOLI_SERVER;
+      public function KoliseumMessageRouter()
+      {
+         //Décompilation abandonné
+      }
+      
+      public function getConnectionId(msg:INetworkMessage) : String
+      {
+         //Décompilation abandonné
       }
    }
 }

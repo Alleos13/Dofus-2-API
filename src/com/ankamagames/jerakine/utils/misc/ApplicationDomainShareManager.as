@@ -5,18 +5,25 @@ package com.ankamagames.jerakine.utils.misc
    public class ApplicationDomainShareManager extends Object
    {
       
-      public function ApplicationDomainShareManager() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ApplicationDomainShareManager()
+      {
+         //Décompilation abandonné
       }
       
       private static var _applicationDomain:ApplicationDomain;
       
-      public static function set currentApplicationDomain(a:ApplicationDomain) : void {
-         _applicationDomain = a;
+      public static function set currentApplicationDomain(a:ApplicationDomain) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function get currentApplicationDomain() : ApplicationDomain {
-         return _applicationDomain;
+      public static function get currentApplicationDomain() : ApplicationDomain
+      {
+         //Décompilation abandonné
       }
    }
 }

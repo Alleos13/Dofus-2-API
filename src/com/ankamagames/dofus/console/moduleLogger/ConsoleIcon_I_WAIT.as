@@ -5,8 +5,13 @@ package com.ankamagames.dofus.console.moduleLogger
    public class ConsoleIcon_I_WAIT extends SpriteAsset
    {
       
-      public function ConsoleIcon_I_WAIT() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ConsoleIcon_I_WAIT()
+      {
+         //Décompilation abandonné
       }
    }
 }

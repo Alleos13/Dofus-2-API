@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.utils
    public class LoadingScreen__txProgressBarBackground extends MovieClipAsset
    {
       
-      public function LoadingScreen__txProgressBarBackground() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LoadingScreen__txProgressBarBackground()
+      {
+         //Décompilation abandonné
       }
    }
 }

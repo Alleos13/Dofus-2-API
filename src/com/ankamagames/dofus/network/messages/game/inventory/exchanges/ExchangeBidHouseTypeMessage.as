@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeBidHouseTypeMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeBidHouseTypeMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeBidHouseTypeMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5803;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var type:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5803;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeBidHouseTypeMessage(type:uint = 0) : ExchangeBidHouseTypeMessage {
-         this.type = type;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeBidHouseTypeMessage(type:uint = 0) : ExchangeBidHouseTypeMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.type = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeBidHouseTypeMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeBidHouseTypeMessage(output:IDataOutput) : void {
-         if(this.type < 0)
-         {
-            throw new Error("Forbidden value (" + this.type + ") on element type.");
-         }
-         else
-         {
-            output.writeInt(this.type);
-            return;
-         }
+      public function serializeAs_ExchangeBidHouseTypeMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeBidHouseTypeMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeBidHouseTypeMessage(input:IDataInput) : void {
-         this.type = input.readInt();
-         if(this.type < 0)
-         {
-            throw new Error("Forbidden value (" + this.type + ") on element of ExchangeBidHouseTypeMessage.type.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_ExchangeBidHouseTypeMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

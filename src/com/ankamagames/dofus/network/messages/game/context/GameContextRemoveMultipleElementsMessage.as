@@ -9,74 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context
    public class GameContextRemoveMultipleElementsMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameContextRemoveMultipleElementsMessage() {
-         this.id = new Vector.<int>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameContextRemoveMultipleElementsMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 252;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var id:Vector.<int>;
       
-      override public function getMessageId() : uint {
-         return 252;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameContextRemoveMultipleElementsMessage(id:Vector.<int> = null) : GameContextRemoveMultipleElementsMessage {
-         this.id = id;
-         this._isInitialized = true;
-         return this;
+      public function initGameContextRemoveMultipleElementsMessage(id:Vector.<int> = null) : GameContextRemoveMultipleElementsMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.id = new Vector.<int>();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameContextRemoveMultipleElementsMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameContextRemoveMultipleElementsMessage(output:IDataOutput) : void {
-         output.writeShort(this.id.length);
-         var _i1:uint = 0;
-         while(_i1 < this.id.length)
-         {
-            output.writeInt(this.id[_i1]);
-            _i1++;
-         }
+      public function serializeAs_GameContextRemoveMultipleElementsMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameContextRemoveMultipleElementsMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameContextRemoveMultipleElementsMessage(input:IDataInput) : void {
-         var _val1:* = 0;
-         var _idLen:uint = input.readUnsignedShort();
-         var _i1:uint = 0;
-         while(_i1 < _idLen)
-         {
-            _val1 = input.readInt();
-            this.id.push(_val1);
-            _i1++;
-         }
+      public function deserializeAs_GameContextRemoveMultipleElementsMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

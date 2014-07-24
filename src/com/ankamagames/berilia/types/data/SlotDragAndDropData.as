@@ -6,10 +6,13 @@ package com.ankamagames.berilia.types.data
    public class SlotDragAndDropData extends Object
    {
       
-      public function SlotDragAndDropData(currentHolder:ISlotDataHolder, slotData:ISlotData) {
-         super();
-         this.currentHolder = currentHolder;
-         this.slotData = slotData;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SlotDragAndDropData(currentHolder:ISlotDataHolder, slotData:ISlotData)
+      {
+         //Décompilation abandonné
       }
       
       public var currentHolder:ISlotDataHolder;

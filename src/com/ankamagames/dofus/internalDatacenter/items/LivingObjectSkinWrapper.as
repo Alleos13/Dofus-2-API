@@ -13,20 +13,20 @@ package com.ankamagames.dofus.internalDatacenter.items
    public class LivingObjectSkinWrapper extends Object implements ISlotData
    {
       
-      public function LivingObjectSkinWrapper() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LivingObjectSkinWrapper()
+      {
+         //Décompilation abandonné
       }
       
       private static const _log:Logger;
       
-      public static function create(objectId:int, mood:int, skin:int) : LivingObjectSkinWrapper {
-         var skinWrapper:LivingObjectSkinWrapper = new LivingObjectSkinWrapper();
-         var item:Item = Item.getItemById(objectId);
-         skinWrapper._id = objectId;
-         skinWrapper._category = item.category;
-         skinWrapper._mood = mood;
-         skinWrapper._skin = skin;
-         return skinWrapper;
+      public static function create(objectId:int, mood:int, skin:int) : LivingObjectSkinWrapper
+      {
+         //Décompilation abandonné
       }
       
       private var _id:int;
@@ -43,108 +43,99 @@ package com.ankamagames.dofus.internalDatacenter.items
       
       private var _backGroundIconUri:Uri;
       
-      public function get iconUri() : Uri {
-         return this.getIconUri(true);
+      public function get iconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get fullSizeIconUri() : Uri {
-         return this.getIconUri(false);
+      public function get fullSizeIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get id() : int {
-         return this._id;
+      public function get id() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get category() : int {
-         return this._category;
+      public function get category() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get mood() : int {
-         return this._mood;
+      public function get mood() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get skin() : int {
-         return this._skin;
+      public function get skin() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get uri() : Uri {
-         return this._uri;
+      public function get uri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get errorIconUri() : Uri {
-         return null;
+      public function get errorIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get backGroundIconUri() : Uri {
-         if(!this._backGroundIconUri)
-         {
-            this._backGroundIconUri = new Uri(XmlConfig.getInstance().getEntry("config.ui.skin").concat("bitmap/emptySlot.png"));
-         }
-         return this._backGroundIconUri;
+      public function get backGroundIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function set backGroundIconUri(bgUri:Uri) : void {
-         this._backGroundIconUri = bgUri;
+      public function set backGroundIconUri(bgUri:Uri) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getIconUri(pngMode:Boolean = true) : Uri {
-         var iconId:* = 0;
-         var update:Boolean = false;
-         if(this._uri)
-         {
-            if(pngMode != this._pngMode)
-            {
-               update = true;
-            }
-         }
-         else
-         {
-            update = true;
-         }
-         if(update)
-         {
-            iconId = LivingObjectSkinJntMood.getLivingObjectSkin(this._id,this._mood,this._skin);
-            if(pngMode)
-            {
-               this._pngMode = true;
-               this._uri = new Uri(XmlConfig.getInstance().getEntry("config.gfx.path.item.bitmap").concat(iconId).concat(".png"));
-            }
-            else
-            {
-               this._pngMode = false;
-               this._uri = new Uri(XmlConfig.getInstance().getEntry("config.gfx.path.item.vector").concat(iconId).concat(".swf"));
-            }
-         }
-         return this._uri;
+      public function getIconUri(pngMode:Boolean = true) : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get info1() : String {
-         return null;
+      public function get info1() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get startTime() : int {
-         return 0;
+      public function get startTime() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get endTime() : int {
-         return 0;
+      public function get endTime() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set endTime(t:int) : void {
+      public function set endTime(t:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get timer() : int {
-         return 0;
+      public function get timer() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get active() : Boolean {
-         return true;
+      public function get active() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function addHolder(h:ISlotDataHolder) : void {
+      public function addHolder(h:ISlotDataHolder) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeHolder(h:ISlotDataHolder) : void {
+      public function removeHolder(h:ISlotDataHolder) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

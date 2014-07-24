@@ -18,12 +18,13 @@ package com.ankamagames.dofus.types.entities
    public class RoleplayObjectEntity extends Sprite implements IInteractive, IDisplayable
    {
       
-      public function RoleplayObjectEntity(pId:int, pPosition:MapPoint) {
-         super();
-         this._displayBehavior = AtouinDisplayBehavior.getInstance();
-         this.id = EntitiesManager.getInstance().getFreeEntityId();
-         this.position = pPosition;
-         mouseChildren = false;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RoleplayObjectEntity(pId:int, pPosition:MapPoint)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -36,58 +37,69 @@ package com.ankamagames.dofus.types.entities
       
       protected var _displayBehavior:IDisplayBehavior;
       
-      public function get id() : int {
-         return this._id;
+      public function get id() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set id(nValue:int) : void {
-         this._id = nValue;
+      public function set id(nValue:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get position() : MapPoint {
-         return this._position;
+      public function get position() : MapPoint
+      {
+         //Décompilation abandonné
       }
       
-      public function set position(oValue:MapPoint) : void {
-         this._position = oValue;
+      public function set position(oValue:MapPoint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get displayed() : Boolean {
-         return this._displayed;
+      public function get displayed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get displayBehaviors() : IDisplayBehavior {
-         return this._displayBehavior;
+      public function get displayBehaviors() : IDisplayBehavior
+      {
+         //Décompilation abandonné
       }
       
-      public function set displayBehaviors(oValue:IDisplayBehavior) : void {
-         this._displayBehavior = oValue;
+      public function set displayBehaviors(oValue:IDisplayBehavior) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get absoluteBounds() : IRectangle {
-         return this._displayBehavior.getAbsoluteBounds(this);
+      public function get absoluteBounds() : IRectangle
+      {
+         //Décompilation abandonné
       }
       
-      public function get handler() : MessageHandler {
-         return Kernel.getWorker();
+      public function get handler() : MessageHandler
+      {
+         //Décompilation abandonné
       }
       
-      override public function get useHandCursor() : Boolean {
-         return true;
+      override public function get useHandCursor() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get enabledInteractions() : uint {
-         return InteractionsEnum.CLICK | InteractionsEnum.OUT | InteractionsEnum.OVER;
+      public function get enabledInteractions() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function display(strata:uint = 10) : void {
-         this._displayBehavior.display(this,strata);
-         this._displayed = true;
+      public function display(strata:uint = 10) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function remove() : void {
-         this._displayed = false;
-         this._displayBehavior.remove(this);
+      public function remove() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

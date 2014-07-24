@@ -21,10 +21,13 @@ package com.ankamagames.dofus.misc.utils
    public class Camera extends Object
    {
       
-      public function Camera(pZoom:Number = 1) {
-         super();
-         this._zoom = pZoom;
-         this._container = Atouin.getInstance().rootContainer;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Camera(pZoom:Number = 1)
+      {
+         //Décompilation abandonné
       }
       
       private static const CENTER_X:Number;
@@ -37,8 +40,6 @@ package com.ankamagames.dofus.misc.utils
       
       private static const MIN_SCALE:Number = 1;
       
-      private static const OFFSCREEN_Y:Number = 16;
-      
       private var _zoom:Number;
       
       private var _entityToFollow:AnimatedCharacter;
@@ -49,128 +50,69 @@ package com.ankamagames.dofus.misc.utils
       
       private var _y:Number;
       
-      public function get currentZoom() : Number {
-         return this._zoom;
+      public function get currentZoom() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function set currentZoom(pZoom:Number) : void {
-         this._zoom = pZoom;
+      public function set currentZoom(pZoom:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get x() : Number {
-         return this._x;
+      public function get x() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function get y() : Number {
-         return this._y;
+      public function get y() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function setZoom(pZoom:Number) : ISequencable {
-         return new CallbackStep(new Callback(function(pCamera:Camera, pNewZoom:Number):void
-         {
-            pCamera.currentZoom = pNewZoom;
-         },this,pZoom));
+      public function setZoom(pZoom:Number) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function zoom(pArgs:Array) : ISequencable {
-         var args:Array = pArgs;
-         var instant:Boolean = true;
-         if(args[args.length - 1] is Boolean)
-         {
-            instant = args.pop();
-         }
-         return new CameraZoomStep(this,args,instant);
+      public function zoom(pArgs:Array) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function moveTo(pArgs:Array) : ISequencable {
-         var args:Array = pArgs;
-         var instant:Boolean = true;
-         if(args[args.length - 1] is Boolean)
-         {
-            instant = args.pop();
-         }
-         return new CameraMoveStep(this,args,instant);
+      public function moveTo(pArgs:Array) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function follow(pEntity:ScriptEntity) : ISequencable {
-         return new CameraFollowStep(this,DofusEntities.getEntity(pEntity.id) as AnimatedCharacter);
+      public function follow(pEntity:ScriptEntity) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function stop() : ISequencable {
-         return new CallbackStep(new Callback(EnterFrameDispatcher.removeEventListener,this.onEnterFrame));
+      public function stop() : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : ISequencable {
-         return new CallbackStep(new Callback(this.zoomOnPos,MIN_SCALE,0,0));
+      public function reset() : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function followEntity(pEntity:AnimatedCharacter) : void {
-         this.stop().start();
-         this._entityToFollow = pEntity;
-         EnterFrameDispatcher.addEventListener(this.onEnterFrame,"Camera");
+      public function followEntity(pEntity:AnimatedCharacter) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function zoomOnPos(pTargetZoom:Number, pTargetX:Number, pTargetY:Number) : void {
-         var finalX:* = NaN;
-         var finalY:* = NaN;
-         if(pTargetZoom <= MIN_SCALE)
-         {
-            this._container.scaleX = MIN_SCALE;
-            this._container.scaleY = MIN_SCALE;
-            this._container.x = 0;
-            this._container.y = 0;
-            Atouin.getInstance().currentZoom = MIN_SCALE;
-            MapDisplayManager.getInstance().cacheAsBitmapEnabled(true);
-         }
-         else
-         {
-            MapDisplayManager.getInstance().cacheAsBitmapEnabled(false);
-            this._container.scaleX = pTargetZoom;
-            this._container.scaleY = pTargetZoom;
-            finalX = -pTargetX * pTargetZoom + CENTER_X;
-            finalY = -pTargetY * pTargetZoom + CENTER_Y;
-            if((LASTCELL_X - pTargetX) * pTargetZoom < LASTCELL_X / 2)
-            {
-               finalX = finalX + (CENTER_X - (1262 - pTargetX) * pTargetZoom);
-               if(finalX < -pTargetX * pTargetZoom)
-               {
-                  finalX = -pTargetX * pTargetZoom + CENTER_X;
-               }
-            }
-            else if(pTargetX < CENTER_X / pTargetZoom)
-            {
-               finalX = 0;
-            }
-            
-            if((LASTCELL_Y - pTargetY) * pTargetZoom < LASTCELL_Y / 2)
-            {
-               finalY = finalY + (CENTER_Y - (876 - OFFSCREEN_Y - pTargetY) * pTargetZoom);
-               if(finalY < -pTargetY * pTargetZoom)
-               {
-                  finalY = -pTargetY * pTargetZoom + CENTER_Y;
-               }
-               finalY = finalY + OFFSCREEN_Y;
-            }
-            else if(pTargetY < CENTER_Y / pTargetZoom)
-            {
-               finalY = 0;
-            }
-            
-            this._container.x = finalX;
-            this._container.y = finalY;
-            Atouin.getInstance().currentZoom = pTargetZoom;
-         }
-         this._x = pTargetX;
-         this._y = pTargetY;
+      public function zoomOnPos(pTargetZoom:Number, pTargetX:Number, pTargetY:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onEnterFrame(pEvent:Event) : void {
-         var entityPos:Point = this._entityToFollow.parent.localToGlobal(new Point(this._entityToFollow.x,this._entityToFollow.y));
-         var pos:Point = this._container.globalToLocal(entityPos);
-         if(this._zoom > MIN_SCALE)
-         {
-            this.zoomOnPos(this._zoom,pos.x,pos.y);
-         }
+      private function onEnterFrame(pEvent:Event) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

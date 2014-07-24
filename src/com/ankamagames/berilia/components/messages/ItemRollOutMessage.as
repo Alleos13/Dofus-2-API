@@ -6,15 +6,20 @@ package com.ankamagames.berilia.components.messages
    public class ItemRollOutMessage extends ComponentMessage
    {
       
-      public function ItemRollOutMessage(target:GraphicContainer, gridItem:GridItem) {
-         super(target);
-         this._gridItem = gridItem;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ItemRollOutMessage(target:GraphicContainer, gridItem:GridItem)
+      {
+         //Décompilation abandonné
       }
       
       private var _gridItem:GridItem;
       
-      public function get item() : GridItem {
-         return this._gridItem;
+      public function get item() : GridItem
+      {
+         //Décompilation abandonné
       }
    }
 }

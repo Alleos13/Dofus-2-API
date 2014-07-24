@@ -5,9 +5,13 @@ package com.ankamagames.dofus.logic.game.roleplay.types
    public class PrismTooltipInformation extends Object
    {
       
-      public function PrismTooltipInformation(pAllianceIdentity:AllianceWrapper) {
-         super();
-         this.allianceIdentity = pAllianceIdentity;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PrismTooltipInformation(pAllianceIdentity:AllianceWrapper)
+      {
+         //Décompilation abandonné
       }
       
       public var allianceIdentity:AllianceWrapper;

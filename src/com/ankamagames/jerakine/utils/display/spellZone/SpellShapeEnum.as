@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.utils.display.spellZone
    public class SpellShapeEnum extends Object
    {
       
-      public function SpellShapeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpellShapeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const X:uint = 88;

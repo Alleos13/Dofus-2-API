@@ -5,25 +5,25 @@ package com.ankamagames.jerakine.utils.memory
    public class WeakReference extends Object
    {
       
-      public function WeakReference(obj:*) {
-         super();
-         this.dictionary = new Dictionary(true);
-         this.dictionary[obj] = null;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function WeakReference(obj:*)
+      {
+         //Décompilation abandonné
       }
       
       private var dictionary:Dictionary;
       
-      public function get object() : * {
-         var n:* = undefined;
-         for(n in this.dictionary)
-         {
-            return n;
-         }
-         return null;
+      public function get object() : *
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         this.dictionary = null;
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

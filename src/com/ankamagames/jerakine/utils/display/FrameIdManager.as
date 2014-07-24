@@ -5,29 +5,32 @@ package com.ankamagames.jerakine.utils.display
    public class FrameIdManager extends Object
    {
       
-      public function FrameIdManager() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FrameIdManager()
+      {
+         //Décompilation abandonné
       }
       
       private static var _init:Boolean;
       
       private static var _frameId:uint;
       
-      public static function get frameId() : uint {
-         return _frameId;
+      public static function get frameId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public static function init() : void {
-         if(_init)
-         {
-            return;
-         }
-         EnterFrameDispatcher.addEventListener(onEnterFrame,"frameIdManager");
-         _init = true;
+      public static function init() : void
+      {
+         //Décompilation abandonné
       }
       
-      private static function onEnterFrame(e:Event) : void {
-         _frameId++;
+      private static function onEnterFrame(e:Event) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

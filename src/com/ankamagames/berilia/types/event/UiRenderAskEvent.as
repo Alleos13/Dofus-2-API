@@ -6,10 +6,13 @@ package com.ankamagames.berilia.types.event
    public class UiRenderAskEvent extends Event
    {
       
-      public function UiRenderAskEvent(name:String, uiData:UiData) {
-         super(UI_RENDER_ASK,false,false);
-         this._uiData = uiData;
-         this._name = name;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UiRenderAskEvent(name:String, uiData:UiData)
+      {
+         //Décompilation abandonné
       }
       
       public static const UI_RENDER_ASK:String = "UiRenderAsk";
@@ -18,12 +21,14 @@ package com.ankamagames.berilia.types.event
       
       private var _name:String;
       
-      public function get name() : String {
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get uiData() : UiData {
-         return this._uiData;
+      public function get uiData() : UiData
+      {
+         //Décompilation abandonné
       }
    }
 }

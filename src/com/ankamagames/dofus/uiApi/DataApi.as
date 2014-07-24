@@ -83,6 +83,7 @@ package com.ankamagames.dofus.uiApi
    import com.ankamagames.dofus.datacenter.spells.SpellPair;
    import com.ankamagames.dofus.datacenter.spells.SpellBomb;
    import com.ankamagames.dofus.datacenter.misc.Pack;
+   import com.ankamagames.dofus.datacenter.quest.treasureHunt.LegendaryTreasureHunt;
    import com.ankamagames.dofus.datacenter.appearance.Title;
    import com.ankamagames.dofus.datacenter.appearance.TitleCategory;
    import com.ankamagames.dofus.datacenter.appearance.Ornament;
@@ -95,673 +96,680 @@ package com.ankamagames.dofus.uiApi
    import com.ankamagames.dofus.datacenter.externalnotifications.ExternalNotification;
    import com.ankamagames.dofus.datacenter.misc.ActionDescription;
    import com.ankamagames.dofus.misc.utils.GameDataQuery;
+   import com.ankamagames.dofus.datacenter.world.Waypoint;
+   import com.ankamagames.dofus.internalDatacenter.taxi.TeleportDestinationWrapper;
    import com.ankamagames.jerakine.logger.Log;
    import flash.utils.getQualifiedClassName;
    
    public class DataApi extends Object implements IApi
    {
       
-      public function DataApi() {
-         this._log = Log.getLogger(getQualifiedClassName(DataApi));
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DataApi()
+      {
+         //Décompilation abandonné
       }
       
       protected var _log:Logger;
       
       private var _module:UiModule;
       
-      private function get entitiesFrame() : RoleplayEntitiesFrame {
-         return Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame;
+      private function get entitiesFrame() : RoleplayEntitiesFrame
+      {
+         //Décompilation abandonné
       }
       
-      public function set module(value:UiModule) : void {
-         this._module = value;
+      public function set module(value:UiModule) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         this._module = null;
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getNotifications() : Array {
-         return Notification.getNotifications();
+      public function getNotifications() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getServer(id:int) : Server {
-         return Server.getServerById(id);
+      public function getServer(id:int) : Server
+      {
+         //Décompilation abandonné
       }
       
-      public function getServerPopulation(id:int) : ServerPopulation {
-         return ServerPopulation.getServerPopulationById(id);
+      public function getServerPopulation(id:int) : ServerPopulation
+      {
+         //Décompilation abandonné
       }
       
-      public function getBreed(id:int) : Breed {
-         return Breed.getBreedById(id);
+      public function getBreed(id:int) : Breed
+      {
+         //Décompilation abandonné
       }
       
-      public function getBreeds() : Array {
-         return Breed.getBreeds();
+      public function getBreeds() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getHead(id:int) : Head {
-         return Head.getHeadById(id);
+      public function getHead(id:int) : Head
+      {
+         //Décompilation abandonné
       }
       
-      public function getHeads() : Array {
-         return Head.getHeads();
+      public function getHeads() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getSpell(id:int) : Spell {
-         return Spell.getSpellById(id);
+      public function getSpell(id:int) : Spell
+      {
+         //Décompilation abandonné
       }
       
-      public function getSpells() : Array {
-         return Spell.getSpells();
+      public function getSpells() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getSpellWrapper(id:uint, level:uint = 1) : SpellWrapper {
-         var sw:SpellWrapper = SpellWrapper.create(-1,id,level,false);
-         return sw;
+      public function getSpellWrapper(id:uint, level:uint = 1) : SpellWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function getEmoteWrapper(id:uint, position:uint = 0) : EmoteWrapper {
-         return EmoteWrapper.create(id,position);
+      public function getEmoteWrapper(id:uint, position:uint = 0) : EmoteWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function getButtonWrapper(buttonId:uint, position:int, uriName:String, callback:Function, name:String, shortcut:String = "") : ButtonWrapper {
-         return ButtonWrapper.create(buttonId,position,uriName,callback,name,shortcut);
+      public function getButtonWrapper(buttonId:uint, position:int, uriName:String, callback:Function, name:String, shortcut:String = "") : ButtonWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function getJobs() : Array {
-         return Job.getJobs();
+      public function getJobs() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getJobWrapper(id:uint) : JobWrapper {
-         return JobWrapper.create(id);
+      public function getJobWrapper(id:uint) : JobWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function getTitleWrapper(id:uint) : TitleWrapper {
-         return TitleWrapper.create(id);
+      public function getTitleWrapper(id:uint) : TitleWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function getOrnamentWrapper(id:uint) : OrnamentWrapper {
-         return OrnamentWrapper.create(id);
+      public function getOrnamentWrapper(id:uint) : OrnamentWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function getSpellLevel(id:int) : SpellLevel {
-         return SpellLevel.getLevelById(id);
+      public function getSpellLevel(id:int) : SpellLevel
+      {
+         //Décompilation abandonné
       }
       
-      public function getSpellLevelBySpell(spell:Spell, level:int) : SpellLevel {
-         return spell.getSpellLevel(level);
+      public function getSpellLevelBySpell(spell:Spell, level:int) : SpellLevel
+      {
+         //Décompilation abandonné
       }
       
-      public function getSpellType(id:int) : SpellType {
-         return SpellType.getSpellTypeById(id);
+      public function getSpellType(id:int) : SpellType
+      {
+         //Décompilation abandonné
       }
       
-      public function getSpellState(id:int) : SpellState {
-         return SpellState.getSpellStateById(id);
+      public function getSpellState(id:int) : SpellState
+      {
+         //Décompilation abandonné
       }
       
-      public function getChatChannel(id:int) : ChatChannel {
-         return ChatChannel.getChannelById(id);
+      public function getChatChannel(id:int) : ChatChannel
+      {
+         //Décompilation abandonné
       }
       
-      public function getAllChatChannels() : Array {
-         return ChatChannel.getChannels();
+      public function getAllChatChannels() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getSubArea(id:int) : SubArea {
-         return SubArea.getSubAreaById(id);
+      public function getSubArea(id:int) : SubArea
+      {
+         //Décompilation abandonné
       }
       
-      public function getSubAreaFromMap(mapId:int) : SubArea {
-         return SubArea.getSubAreaByMapId(mapId);
+      public function getSubAreaFromMap(mapId:int) : SubArea
+      {
+         //Décompilation abandonné
       }
       
-      public function getAllSubAreas() : Array {
-         return SubArea.getAllSubArea();
+      public function getAllSubAreas() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getArea(id:int) : Area {
-         return Area.getAreaById(id);
+      public function getArea(id:int) : Area
+      {
+         //Décompilation abandonné
       }
       
-      public function getSuperArea(id:int) : SuperArea {
-         return SuperArea.getSuperAreaById(id);
+      public function getSuperArea(id:int) : SuperArea
+      {
+         //Décompilation abandonné
       }
       
-      public function getAllArea(withHouses:Boolean = false, withPaddocks:Boolean = false) : Array {
-         var area:Area = null;
-         var results:Array = new Array();
-         for each(area in Area.getAllArea())
-         {
-            if((withHouses) && (area.containHouses) || (withPaddocks) && (area.containPaddocks) || (!withHouses) && (!withPaddocks))
-            {
-               results.push(area);
-            }
-         }
-         return results;
+      public function getAllArea(withHouses:Boolean = false, withPaddocks:Boolean = false) : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getWorldPoint(id:int) : WorldPoint {
-         return WorldPoint.fromMapId(id);
+      public function getWorldPoint(id:int) : WorldPoint
+      {
+         //Décompilation abandonné
       }
       
-      public function getItem(id:int, returnDefaultItemIfNull:Boolean = true) : Item {
-         return Item.getItemById(id,returnDefaultItemIfNull);
+      public function getItem(id:int, returnDefaultItemIfNull:Boolean = true) : Item
+      {
+         //Décompilation abandonné
       }
       
-      public function getItems() : Array {
-         return Item.getItems();
+      public function getItems() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getIncarnationLevel(incarnationId:int, level:int) : IncarnationLevel {
-         return IncarnationLevel.getIncarnationLevelByIdAndLevel(incarnationId,level);
+      public function getIncarnationLevel(incarnationId:int, level:int) : IncarnationLevel
+      {
+         //Décompilation abandonné
       }
       
-      public function getNewGenericSlotData() : GenericSlotData {
-         return new GenericSlotData();
+      public function getNewGenericSlotData() : GenericSlotData
+      {
+         //Décompilation abandonné
       }
       
-      public function getItemIconUri(iconId:uint) : Uri {
-         return new Uri(XmlConfig.getInstance().getEntry("config.gfx.path.item.bitmap").concat(iconId).concat(".png"));
+      public function getItemIconUri(iconId:uint) : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function getItemName(id:int) : String {
-         var i:Item = Item.getItemById(id);
-         if(i)
-         {
-            return i.name;
-         }
-         return null;
+      public function getItemName(id:int) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function getItemType(id:int) : String {
-         var it:ItemType = ItemType.getItemTypeById(id);
-         if(it)
-         {
-            return it.name;
-         }
-         return null;
+      public function getItemType(id:int) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function getItemSet(id:int) : ItemSet {
-         return ItemSet.getItemSetById(id);
+      public function getItemSet(id:int) : ItemSet
+      {
+         //Décompilation abandonné
       }
       
-      public function getPet(id:int) : Pet {
-         return Pet.getPetById(id);
+      public function getPet(id:int) : Pet
+      {
+         //Décompilation abandonné
       }
       
-      public function getSetEffects(GIDList:Array, setBonus:Array = null) : Array {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public function getSetEffects(GIDList:Array, setBonus:Array = null) : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getMonsterFromId(monsterId:uint) : Monster {
-         return Monster.getMonsterById(monsterId);
+      public function getMonsterFromId(monsterId:uint) : Monster
+      {
+         //Décompilation abandonné
       }
       
-      public function getMonsters() : Array {
-         return Monster.getMonsters();
+      public function getMonsters() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getMonsterMiniBossFromId(monsterId:uint) : MonsterMiniBoss {
-         return MonsterMiniBoss.getMonsterById(monsterId);
+      public function getMonsterMiniBossFromId(monsterId:uint) : MonsterMiniBoss
+      {
+         //Décompilation abandonné
       }
       
-      public function getMonsterRaceFromId(raceId:uint) : MonsterRace {
-         return MonsterRace.getMonsterRaceById(raceId);
+      public function getMonsterRaceFromId(raceId:uint) : MonsterRace
+      {
+         //Décompilation abandonné
       }
       
-      public function getMonsterRaces() : Array {
-         return MonsterRace.getMonsterRaces();
+      public function getMonsterRaces() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getMonsterSuperRaceFromId(raceId:uint) : MonsterSuperRace {
-         return MonsterSuperRace.getMonsterSuperRaceById(raceId);
+      public function getMonsterSuperRaceFromId(raceId:uint) : MonsterSuperRace
+      {
+         //Décompilation abandonné
       }
       
-      public function getMonsterSuperRaces() : Array {
-         return MonsterSuperRace.getMonsterSuperRaces();
+      public function getMonsterSuperRaces() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getCompanion(companionId:uint) : Companion {
-         return Companion.getCompanionById(companionId);
+      public function getCompanion(companionId:uint) : Companion
+      {
+         //Décompilation abandonné
       }
       
-      public function getAllCompanions() : Array {
-         return Companion.getCompanions();
+      public function getAllCompanions() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getCompanionCharacteristic(companionCharacteristicId:uint) : CompanionCharacteristic {
-         return CompanionCharacteristic.getCompanionCharacteristicById(companionCharacteristicId);
+      public function getCompanionCharacteristic(companionCharacteristicId:uint) : CompanionCharacteristic
+      {
+         //Décompilation abandonné
       }
       
-      public function getCompanionSpell(companionSpellId:uint) : CompanionSpell {
-         return CompanionSpell.getCompanionSpellById(companionSpellId);
+      public function getCompanionSpell(companionSpellId:uint) : CompanionSpell
+      {
+         //Décompilation abandonné
       }
       
-      public function getNpc(npcId:uint) : Npc {
-         return Npc.getNpcById(npcId);
+      public function getNpc(npcId:uint) : Npc
+      {
+         //Décompilation abandonné
       }
       
-      public function getNpcAction(actionId:uint) : NpcAction {
-         return NpcAction.getNpcActionById(actionId);
+      public function getNpcAction(actionId:uint) : NpcAction
+      {
+         //Décompilation abandonné
       }
       
-      public function getAlignmentSide(sideId:uint) : AlignmentSide {
-         return AlignmentSide.getAlignmentSideById(sideId);
+      public function getAlignmentSide(sideId:uint) : AlignmentSide
+      {
+         //Décompilation abandonné
       }
       
-      public function getAlignmentBalance(percent:uint) : AlignmentBalance {
-         var balance:uint = 0;
-         if(percent == 0)
-         {
-            balance = 1;
-         }
-         else if(percent == 10)
-         {
-            balance = 2;
-         }
-         else if(percent == 20)
-         {
-            balance = 3;
-         }
-         else if(percent == 30)
-         {
-            balance = 4;
-         }
-         else if(percent == 40)
-         {
-            balance = 5;
-         }
-         else if(percent == 50)
-         {
-            balance = 6;
-         }
-         else if(percent == 60)
-         {
-            balance = 7;
-         }
-         else if(percent == 70)
-         {
-            balance = 8;
-         }
-         else if(percent == 80)
-         {
-            balance = 9;
-         }
-         else if(percent == 90)
-         {
-            balance = 10;
-         }
-         else
-         {
-            balance = Math.ceil(percent / 10);
-         }
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         return AlignmentBalance.getAlignmentBalanceById(balance);
+      public function getAlignmentBalance(percent:uint) : AlignmentBalance
+      {
+         //Décompilation abandonné
       }
       
-      public function getRankName(rankId:uint) : RankName {
-         return RankName.getRankNameById(rankId);
+      public function getRankName(rankId:uint) : RankName
+      {
+         //Décompilation abandonné
       }
       
-      public function getAllRankNames() : Array {
-         return RankName.getRankNames();
+      public function getAllRankNames() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getItemWrapper(itemGID:uint, itemPosition:int = 0, itemUID:uint = 0, itemQuantity:uint = 0, itemEffects:* = null) : ItemWrapper {
-         if(itemEffects == null)
-         {
-            itemEffects = new Vector.<ObjectEffect>();
-         }
-         return ItemWrapper.create(itemPosition,itemUID,itemGID,itemQuantity,itemEffects,false);
+      public function getItemWrapper(itemGID:uint, itemPosition:int = 0, itemUID:uint = 0, itemQuantity:uint = 0, itemEffects:* = null) : ItemWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function getItemFromUId(objectUID:uint) : ItemWrapper {
-         return ItemWrapper.getItemFromUId(objectUID);
+      public function getItemFromUId(objectUID:uint) : ItemWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function getSkill(skillId:uint) : Skill {
-         return Skill.getSkillById(skillId);
+      public function getSkill(skillId:uint) : Skill
+      {
+         //Décompilation abandonné
       }
       
-      public function getHouseSkills() : Array {
-         var skill:Skill = null;
-         var houseSkills:Array = new Array();
-         for each(skill in Skill.getSkills())
-         {
-            if(skill.availableInHouse)
-            {
-               houseSkills.push(skill);
-            }
-         }
-         return houseSkills;
+      public function getHouseSkills() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getInfoMessage(infoMsgId:uint) : InfoMessage {
-         return InfoMessage.getInfoMessageById(infoMsgId);
+      public function getInfoMessage(infoMsgId:uint) : InfoMessage
+      {
+         //Décompilation abandonné
       }
       
-      public function getAllInfoMessages() : Array {
-         return InfoMessage.getInfoMessages();
+      public function getAllInfoMessages() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getSmiliesWrapperForPlayers() : Array {
-         var smiley:Smiley = null;
-         var smileyW:SmileyWrapper = null;
-         var chatFrame:ChatFrame = Kernel.getWorker().getFrame(ChatFrame) as ChatFrame;
-         if((chatFrame) && (chatFrame.smilies) && (chatFrame.smilies.length > 0))
-         {
-            return chatFrame.smilies;
-         }
-         var a:Array = new Array();
-         for each(smiley in Smiley.getSmileys())
-         {
-            if(smiley.forPlayers)
-            {
-               smileyW = SmileyWrapper.create(smiley.id,smiley.gfxId,smiley.order);
-               a.push(smileyW);
-            }
-         }
-         a.sortOn("order",Array.NUMERIC);
-         return a;
+      public function getSmiliesWrapperForPlayers() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getSmiley(id:uint) : Smiley {
-         return Smiley.getSmileyById(id);
+      public function getSmiley(id:uint) : Smiley
+      {
+         //Décompilation abandonné
       }
       
-      public function getAllSmiley() : Array {
-         return Smiley.getSmileys();
+      public function getAllSmiley() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getTaxCollectorName(id:uint) : TaxCollectorName {
-         return TaxCollectorName.getTaxCollectorNameById(id);
+      public function getTaxCollectorName(id:uint) : TaxCollectorName
+      {
+         //Décompilation abandonné
       }
       
-      public function getTaxCollectorFirstname(id:uint) : TaxCollectorFirstname {
-         return TaxCollectorFirstname.getTaxCollectorFirstnameById(id);
+      public function getTaxCollectorFirstname(id:uint) : TaxCollectorFirstname
+      {
+         //Décompilation abandonné
       }
       
-      public function getEmblems() : Array {
-         var upEmblem:EmblemSymbol = null;
-         var backEmblem:EmblemBackground = null;
-         var returnValue:Array = null;
-         var upEmblemTotal:Array = EmblemSymbol.getEmblemSymbols();
-         var backEmblemTotal:Array = EmblemBackground.getEmblemBackgrounds();
-         var upEmblems:Array = new Array();
-         var backEmblems:Array = new Array();
-         for each(upEmblem in upEmblemTotal)
-         {
-            upEmblems.push(EmblemWrapper.create(upEmblem.id,EmblemWrapper.UP));
-         }
-         upEmblems.sortOn("order",Array.NUMERIC);
-         for each(backEmblem in backEmblemTotal)
-         {
-            backEmblems.push(EmblemWrapper.create(backEmblem.id,EmblemWrapper.BACK));
-         }
-         backEmblems.sortOn("order",Array.NUMERIC);
-         returnValue = new Array(upEmblems,backEmblems);
-         return returnValue;
+      public function getEmblems() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getEmblemSymbol(symbolId:int) : EmblemSymbol {
-         return EmblemSymbol.getEmblemSymbolById(symbolId);
+      public function getEmblemSymbol(symbolId:int) : EmblemSymbol
+      {
+         //Décompilation abandonné
       }
       
-      public function getAllEmblemSymbolCategories() : Array {
-         return EmblemSymbolCategory.getEmblemSymbolCategories();
+      public function getAllEmblemSymbolCategories() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getQuest(questId:int) : Quest {
-         return Quest.getQuestById(questId);
+      public function getQuest(questId:int) : Quest
+      {
+         //Décompilation abandonné
       }
       
-      public function getQuestCategory(questCatId:int) : QuestCategory {
-         return QuestCategory.getQuestCategoryById(questCatId);
+      public function getQuestCategory(questCatId:int) : QuestCategory
+      {
+         //Décompilation abandonné
       }
       
-      public function getQuestObjective(questObjectiveId:int) : QuestObjective {
-         return QuestObjective.getQuestObjectiveById(questObjectiveId);
+      public function getQuestObjective(questObjectiveId:int) : QuestObjective
+      {
+         //Décompilation abandonné
       }
       
-      public function getQuestStep(questStepId:int) : QuestStep {
-         return QuestStep.getQuestStepById(questStepId);
+      public function getQuestStep(questStepId:int) : QuestStep
+      {
+         //Décompilation abandonné
       }
       
-      public function getAchievement(achievementId:int) : Achievement {
-         return Achievement.getAchievementById(achievementId);
+      public function getAchievement(achievementId:int) : Achievement
+      {
+         //Décompilation abandonné
       }
       
-      public function getAchievements() : Array {
-         return Achievement.getAchievements();
+      public function getAchievements() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getAchievementCategory(achievementCatId:int) : AchievementCategory {
-         return AchievementCategory.getAchievementCategoryById(achievementCatId);
+      public function getAchievementCategory(achievementCatId:int) : AchievementCategory
+      {
+         //Décompilation abandonné
       }
       
-      public function getAchievementCategories() : Array {
-         return AchievementCategory.getAchievementCategories();
+      public function getAchievementCategories() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getAchievementReward(rewardId:int) : AchievementReward {
-         return AchievementReward.getAchievementRewardById(rewardId);
+      public function getAchievementReward(rewardId:int) : AchievementReward
+      {
+         //Décompilation abandonné
       }
       
-      public function getAchievementRewards() : Array {
-         return AchievementReward.getAchievementRewards();
+      public function getAchievementRewards() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getAchievementObjective(objectiveId:int) : AchievementObjective {
-         return AchievementObjective.getAchievementObjectiveById(objectiveId);
+      public function getAchievementObjective(objectiveId:int) : AchievementObjective
+      {
+         //Décompilation abandonné
       }
       
-      public function getAchievementObjectives() : Array {
-         return AchievementObjective.getAchievementObjectives();
+      public function getAchievementObjectives() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getHouse(houseId:int) : House {
-         return House.getGuildHouseById(houseId);
+      public function getHouse(houseId:int) : House
+      {
+         //Décompilation abandonné
       }
       
-      public function getLivingObjectSkins(item:ItemWrapper) : Array {
-         if(!item.isLivingObject)
-         {
-            return [];
-         }
-         var array:Array = new Array();
-         var i:int = 1;
-         while(i <= item.livingObjectLevel)
-         {
-            array.push(LivingObjectSkinWrapper.create(item.livingObjectId?item.livingObjectId:item.id,item.livingObjectMood,i));
-            i++;
-         }
-         return array;
+      public function getLivingObjectSkins(item:ItemWrapper) : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getAbuseReasonName(abuseReasonId:uint) : AbuseReasons {
-         return AbuseReasons.getReasonNameById(abuseReasonId);
+      public function getAbuseReasonName(abuseReasonId:uint) : AbuseReasons
+      {
+         //Décompilation abandonné
       }
       
-      public function getAllAbuseReasons() : Array {
-         return AbuseReasons.getReasonNames();
+      public function getAllAbuseReasons() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getPresetIcons() : Array {
-         return PresetIcon.getPresetIcons();
+      public function getPresetIcons() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getPresetIcon(iconId:uint) : PresetIcon {
-         return PresetIcon.getPresetIconById(iconId);
+      public function getPresetIcon(iconId:uint) : PresetIcon
+      {
+         //Décompilation abandonné
       }
       
-      public function getDungeons() : Array {
-         return Dungeon.getAllDungeons();
+      public function getDungeons() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getDungeon(dungeonId:uint) : Dungeon {
-         return Dungeon.getDungeonById(dungeonId);
+      public function getDungeon(dungeonId:uint) : Dungeon
+      {
+         //Décompilation abandonné
       }
       
-      public function getMapInfo(mapId:uint) : MapPosition {
-         return MapPosition.getMapPositionById(mapId);
+      public function getMapInfo(mapId:uint) : MapPosition
+      {
+         //Décompilation abandonné
       }
       
-      public function getWorldMap(mapId:uint) : WorldMap {
-         return WorldMap.getWorldMapById(mapId);
+      public function getWorldMap(mapId:uint) : WorldMap
+      {
+         //Décompilation abandonné
       }
       
-      public function getAllWorldMaps() : Array {
-         return WorldMap.getAllWorldMaps();
+      public function getAllWorldMaps() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getHintCategory(hintId:uint) : HintCategory {
-         return HintCategory.getHintCategoryById(hintId);
+      public function getHintCategory(hintId:uint) : HintCategory
+      {
+         //Décompilation abandonné
       }
       
-      public function getHintCategories() : Array {
-         return HintCategory.getHintCategories();
+      public function getHintCategories() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getHousesInformations() : Dictionary {
-         if(this.entitiesFrame)
-         {
-            return this.entitiesFrame.housesInformations;
-         }
-         return null;
+      public function getHousesInformations() : Dictionary
+      {
+         //Décompilation abandonné
       }
       
-      public function getHouseInformations(doorId:uint) : HouseWrapper {
-         if(this.entitiesFrame)
-         {
-            return this.entitiesFrame.housesInformations[doorId];
-         }
-         return null;
+      public function getHouseInformations(doorId:uint) : HouseWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function getSpellPair(pairId:uint) : SpellPair {
-         return SpellPair.getSpellPairById(pairId);
+      public function getSpellPair(pairId:uint) : SpellPair
+      {
+         //Décompilation abandonné
       }
       
-      public function getBomb(bombId:uint) : SpellBomb {
-         return SpellBomb.getSpellBombById(bombId);
+      public function getBomb(bombId:uint) : SpellBomb
+      {
+         //Décompilation abandonné
       }
       
-      public function getPack(packId:uint) : Pack {
-         return Pack.getPackById(packId);
+      public function getPack(packId:uint) : Pack
+      {
+         //Décompilation abandonné
       }
       
-      public function getTitle(titleId:uint) : Title {
-         return Title.getTitleById(titleId);
+      public function getLegendaryTreasureHunt(huntId:uint) : LegendaryTreasureHunt
+      {
+         //Décompilation abandonné
       }
       
-      public function getTitles() : Array {
-         return Title.getAllTitle();
+      public function getLegendaryTreasureHunts() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getTitleCategory(titleCatId:uint) : TitleCategory {
-         return TitleCategory.getTitleCategoryById(titleCatId);
+      public function getTitle(titleId:uint) : Title
+      {
+         //Décompilation abandonné
       }
       
-      public function getTitleCategories() : Array {
-         return TitleCategory.getTitleCategories();
+      public function getTitles() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getOrnament(oId:uint) : Ornament {
-         return Ornament.getOrnamentById(oId);
+      public function getTitleCategory(titleCatId:uint) : TitleCategory
+      {
+         //Décompilation abandonné
       }
       
-      public function getOrnaments() : Array {
-         return Ornament.getAllOrnaments();
+      public function getTitleCategories() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getOptionalFeatureByKeyword(key:String) : OptionalFeature {
-         return OptionalFeature.getOptionalFeatureByKeyword(key);
+      public function getOrnament(oId:uint) : Ornament
+      {
+         //Décompilation abandonné
       }
       
-      public function getEffect(effectId:uint) : Effect {
-         return Effect.getEffectById(effectId);
+      public function getOrnaments() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getAlmanaxEvent() : AlmanaxEvent {
-         return AlmanaxManager.getInstance().event;
+      public function getOptionalFeatureByKeyword(key:String) : OptionalFeature
+      {
+         //Décompilation abandonné
       }
       
-      public function getAlmanaxZodiac() : AlmanaxZodiac {
-         return AlmanaxManager.getInstance().zodiac;
+      public function getEffect(effectId:uint) : Effect
+      {
+         //Décompilation abandonné
       }
       
-      public function getAlmanaxMonth() : AlmanaxMonth {
-         return AlmanaxManager.getInstance().month;
+      public function getAlmanaxEvent() : AlmanaxEvent
+      {
+         //Décompilation abandonné
       }
       
-      public function getAlmanaxCalendar(calendarId:uint) : AlmanaxCalendar {
-         return AlmanaxCalendar.getAlmanaxCalendarById(calendarId);
+      public function getAlmanaxZodiac() : AlmanaxZodiac
+      {
+         //Décompilation abandonné
       }
       
-      public function getExternalNotification(pExtNotifId:int) : ExternalNotification {
-         return ExternalNotification.getExternalNotificationById(pExtNotifId);
+      public function getAlmanaxMonth() : AlmanaxMonth
+      {
+         //Décompilation abandonné
       }
       
-      public function getExternalNotifications() : Array {
-         return ExternalNotification.getExternalNotifications();
+      public function getAlmanaxCalendar(calendarId:uint) : AlmanaxCalendar
+      {
+         //Décompilation abandonné
       }
       
-      public function getActionDescriptionByName(name:String) : ActionDescription {
-         return ActionDescription.getActionDescriptionByName(name);
+      public function getExternalNotification(pExtNotifId:int) : ExternalNotification
+      {
+         //Décompilation abandonné
       }
       
-      public function queryString(dataClass:Class, field:String, pattern:String) : Vector.<uint> {
-         return GameDataQuery.queryString(dataClass,field,pattern);
+      public function getExternalNotifications() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function queryEquals(dataClass:Class, field:String, value:*) : Vector.<uint> {
-         return GameDataQuery.queryEquals(dataClass,field,value);
+      public function getActionDescriptionByName(name:String) : ActionDescription
+      {
+         //Décompilation abandonné
       }
       
-      public function queryUnion(... ids) : Vector.<uint> {
-         return GameDataQuery.union.apply(null,ids);
+      public function queryString(dataClass:Class, field:String, pattern:String) : Vector.<uint>
+      {
+         //Décompilation abandonné
       }
       
-      public function queryIntersection(... ids) : Vector.<uint> {
-         return GameDataQuery.intersection.apply(null,ids);
+      public function queryEquals(dataClass:Class, field:String, value:*) : Vector.<uint>
+      {
+         //Décompilation abandonné
       }
       
-      public function queryGreaterThan(dataClass:Class, field:String, value:*) : Vector.<uint> {
-         return GameDataQuery.queryGreaterThan(dataClass,field,value);
+      public function queryUnion(... ids) : Vector.<uint>
+      {
+         //Décompilation abandonné
       }
       
-      public function querySmallerThan(dataClass:Class, field:String, value:*) : Vector.<uint> {
-         return GameDataQuery.querySmallerThan(dataClass,field,value);
+      public function queryIntersection(... ids) : Vector.<uint>
+      {
+         //Décompilation abandonné
       }
       
-      public function queryReturnInstance(dataClass:Class, ids:Vector.<uint>) : Vector.<Object> {
-         return GameDataQuery.returnInstance(dataClass,ids);
+      public function queryGreaterThan(dataClass:Class, field:String, value:*) : Vector.<uint>
+      {
+         //Décompilation abandonné
       }
       
-      public function querySort(dataClass:Class, ids:Vector.<uint>, fields:*, ascending:* = true) : Vector.<uint> {
-         return GameDataQuery.sort(dataClass,ids,fields,ascending);
+      public function querySmallerThan(dataClass:Class, field:String, value:*) : Vector.<uint>
+      {
+         //Décompilation abandonné
       }
       
-      public function querySortI18nId(data:*, fields:*, ascending:* = true) : * {
-         return GameDataQuery.sortI18n(data,fields,ascending);
+      public function queryReturnInstance(dataClass:Class, ids:Vector.<uint>) : Vector.<Object>
+      {
+         //Décompilation abandonné
+      }
+      
+      public function querySort(dataClass:Class, ids:Vector.<uint>, fields:*, ascending:* = true) : Vector.<uint>
+      {
+         //Décompilation abandonné
+      }
+      
+      public function querySortI18nId(data:*, fields:*, ascending:* = true) : *
+      {
+         //Décompilation abandonné
+      }
+      
+      public function getAllZaaps() : Array
+      {
+         //Décompilation abandonné
+      }
+      
+      public function getUnknowZaaps(knwonZaapList:Array) : Array
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -7,18 +7,25 @@ package com.ankamagames.dofus.datacenter.interactives
    public class Interactive extends Object implements IDataCenter
    {
       
-      public function Interactive() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Interactive()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Interactives";
       
-      public static function getInteractiveById(id:int) : Interactive {
-         return GameData.getObject(MODULE,id) as Interactive;
+      public static function getInteractiveById(id:int) : Interactive
+      {
+         //Décompilation abandonné
       }
       
-      public static function getInteractives() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getInteractives() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -31,12 +38,9 @@ package com.ankamagames.dofus.datacenter.interactives
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

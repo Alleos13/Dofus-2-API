@@ -6,16 +6,18 @@ package com.ankamagames.jerakine.handlers.messages.keyboard
    public class KeyboardKeyDownMessage extends KeyboardMessage
    {
       
-      public function KeyboardKeyDownMessage() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(target:InteractiveObject, keyboardEvent:KeyboardEvent, instance:KeyboardMessage = null) : KeyboardKeyDownMessage {
-         if(!instance)
-         {
-            instance = new KeyboardKeyDownMessage();
-         }
-         return KeyboardMessage.create(target,keyboardEvent,instance) as KeyboardKeyDownMessage;
+      public function KeyboardKeyDownMessage()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(target:InteractiveObject, keyboardEvent:KeyboardEvent, instance:KeyboardMessage = null) : KeyboardKeyDownMessage
+      {
+         //Décompilation abandonné
       }
    }
 }

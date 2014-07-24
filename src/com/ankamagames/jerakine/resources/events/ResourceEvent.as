@@ -5,12 +5,18 @@ package com.ankamagames.jerakine.resources.events
    public class ResourceEvent extends Event
    {
       
-      public function ResourceEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false) {
-         super(type,bubbles,cancelable);
+      {
+      //Décompilation abandonné
       }
       
-      override public function clone() : Event {
-         return new ResourceEvent(type,bubbles,cancelable);
+      public function ResourceEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
    }
 }

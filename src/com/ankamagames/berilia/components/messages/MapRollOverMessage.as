@@ -5,22 +5,27 @@ package com.ankamagames.berilia.components.messages
    public class MapRollOverMessage extends ComponentMessage
    {
       
-      public function MapRollOverMessage(target:InteractiveObject, x:int, y:int) {
-         super(target);
-         this._x = x;
-         this._y = y;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapRollOverMessage(target:InteractiveObject, x:int, y:int)
+      {
+         //Décompilation abandonné
       }
       
       private var _x:int;
       
       private var _y:int;
       
-      public function get x() : int {
-         return this._x;
+      public function get x() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get y() : int {
-         return this._y;
+      public function get y() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

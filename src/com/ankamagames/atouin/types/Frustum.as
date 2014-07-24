@@ -10,13 +10,13 @@ package com.ankamagames.atouin.types
    public class Frustum extends Rectangle
    {
       
-      public function Frustum(marginRight:uint = 0, marginTop:uint = 0, marginLeft:uint = 0, marginBottom:uint = 0) {
-         super();
-         this._marginTop = marginTop;
-         this._marginRight = marginRight;
-         this._marginBottom = marginBottom;
-         this._marginLeft = marginLeft;
-         this.refresh();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Frustum(marginRight:uint = 0, marginTop:uint = 0, marginLeft:uint = 0, marginBottom:uint = 0)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -37,68 +37,14 @@ package com.ankamagames.atouin.types
       
       public var scale:Number;
       
-      public function refresh() : Frustum {
-         var divX:* = NaN;
-         var divY:* = NaN;
-         width = MAX_WIDTH + this._marginRight + this._marginLeft;
-         height = MAX_HEIGHT + this._marginTop + this._marginBottom;
-         var yScale:Number = StageShareManager.startHeight / height;
-         width = MAX_WIDTH * yScale;
-         height = MAX_HEIGHT * yScale;
-         if(width / height < RATIO)
-         {
-            height = width / RATIO;
-         }
-         if(width / height > RATIO)
-         {
-            width = height * RATIO;
-         }
-         this.scale = yScale;
-         var xSpace:Number = StageShareManager.startWidth - MAX_WIDTH * this.scale + this._marginLeft - this._marginRight;
-         var ySpace:Number = StageShareManager.startHeight - MAX_HEIGHT * this.scale + this._marginTop - this._marginBottom;
-         if((this._marginLeft) && (this._marginRight))
-         {
-            divX = (this._marginLeft + this._marginRight) / this._marginLeft;
-         }
-         else if(this._marginLeft)
-         {
-            divX = 2 + xSpace / this._marginLeft;
-         }
-         else if(this._marginRight)
-         {
-            divX = 2 - xSpace / this._marginRight;
-         }
-         else
-         {
-            divX = 2;
-         }
-         
-         
-         if((this._marginTop) && (this._marginBottom))
-         {
-            divY = (this._marginTop + this._marginBottom) / this._marginTop;
-         }
-         else if(this._marginTop)
-         {
-            divY = 2 + ySpace / this._marginTop;
-         }
-         else if(this._marginBottom)
-         {
-            divY = ySpace / this._marginBottom - 2;
-         }
-         else
-         {
-            divY = 2;
-         }
-         
-         
-         x = xSpace / divX;
-         y = ySpace / divY;
-         return this;
+      public function refresh() : Frustum
+      {
+         //Décompilation abandonné
       }
       
-      override public function toString() : String {
-         return super.toString() + " scale=" + this.scale;
+      override public function toString() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

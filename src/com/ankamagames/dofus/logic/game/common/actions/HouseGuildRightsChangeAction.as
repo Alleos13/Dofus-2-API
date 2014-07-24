@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class HouseGuildRightsChangeAction extends Object implements Action
    {
       
-      public function HouseGuildRightsChangeAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(rights:int) : HouseGuildRightsChangeAction {
-         var action:HouseGuildRightsChangeAction = new HouseGuildRightsChangeAction();
-         action.rights = rights;
-         return action;
+      public function HouseGuildRightsChangeAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(rights:int) : HouseGuildRightsChangeAction
+      {
+         //Décompilation abandonné
       }
       
       public var rights:int;

@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.party
    public class DungeonPartyFinderAvailableDungeonsAction extends Object implements Action
    {
       
-      public function DungeonPartyFinderAvailableDungeonsAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : DungeonPartyFinderAvailableDungeonsAction {
-         var a:DungeonPartyFinderAvailableDungeonsAction = new DungeonPartyFinderAvailableDungeonsAction();
-         return a;
+      public function DungeonPartyFinderAvailableDungeonsAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : DungeonPartyFinderAvailableDungeonsAction
+      {
+         //Décompilation abandonné
       }
    }
 }

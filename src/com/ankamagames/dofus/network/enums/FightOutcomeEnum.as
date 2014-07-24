@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class FightOutcomeEnum extends Object
    {
       
-      public function FightOutcomeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightOutcomeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const RESULT_LOST:uint = 0;

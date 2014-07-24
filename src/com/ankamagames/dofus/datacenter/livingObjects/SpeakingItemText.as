@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.livingObjects
    public class SpeakingItemText extends Object implements IDataCenter
    {
       
-      public function SpeakingItemText() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpeakingItemText()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "SpeakingItemsText";
       
       protected static const _log:Logger;
       
-      public static function getSpeakingItemTextById(id:int) : SpeakingItemText {
-         return GameData.getObject(MODULE,id) as SpeakingItemText;
+      public static function getSpeakingItemTextById(id:int) : SpeakingItemText
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSpeakingItemsText() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getSpeakingItemsText() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var textId:int;
@@ -40,12 +47,9 @@ package com.ankamagames.dofus.datacenter.livingObjects
       
       private var _textString:String;
       
-      public function get textString() : String {
-         if(!this._textString)
-         {
-            this._textString = I18n.getText(this.textStringId);
-         }
-         return this._textString;
+      public function get textString() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

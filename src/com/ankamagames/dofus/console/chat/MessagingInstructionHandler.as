@@ -7,46 +7,28 @@ package com.ankamagames.dofus.console.chat
    public class MessagingInstructionHandler extends Object implements ConsoleInstructionHandler
    {
       
-      public function MessagingInstructionHandler() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void {
-         if(0)
-         {
-         }
+      public function MessagingInstructionHandler()
+      {
+         //Décompilation abandonné
       }
       
-      public function getHelp(cmd:String) : String {
-         switch(cmd)
-         {
-            case "w":
-               return I18n.getUiText("ui.chat.console.help.whisper");
-            case "whisper":
-               return I18n.getUiText("ui.chat.console.help.whisper");
-            case "msg":
-               return I18n.getUiText("ui.chat.console.help.whisper");
-            case "t":
-               return I18n.getUiText("ui.chat.console.help.teammessage");
-            case "g":
-               return I18n.getUiText("ui.chat.console.help.guildmessage");
-            case "p":
-               return I18n.getUiText("ui.chat.console.help.groupmessage");
-            case "a":
-               return I18n.getUiText("ui.chat.console.help.alliancemessage");
-            case "r":
-               return I18n.getUiText("ui.chat.console.help.aroundguildmessage");
-            case "b":
-               return I18n.getUiText("ui.chat.console.help.sellbuymessage");
-            case "m":
-               return I18n.getUiText("ui.chat.console.help.meetmessage");
-            default:
-               return I18n.getUiText("ui.chat.console.noHelp",[cmd]);
-         }
+      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array {
-         return [];
+      public function getHelp(cmd:String) : String
+      {
+         //Décompilation abandonné
+      }
+      
+      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array
+      {
+         //Décompilation abandonné
       }
    }
 }

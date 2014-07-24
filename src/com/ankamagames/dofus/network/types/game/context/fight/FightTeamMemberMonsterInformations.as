@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.context.fight
    public class FightTeamMemberMonsterInformations extends FightTeamMemberInformations implements INetworkType
    {
       
-      public function FightTeamMemberMonsterInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightTeamMemberMonsterInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6;
@@ -17,57 +22,39 @@ package com.ankamagames.dofus.network.types.game.context.fight
       
       public var grade:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 6;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initFightTeamMemberMonsterInformations(id:int = 0, monsterId:int = 0, grade:uint = 0) : FightTeamMemberMonsterInformations {
-         super.initFightTeamMemberInformations(id);
-         this.monsterId = monsterId;
-         this.grade = grade;
-         return this;
+      public function initFightTeamMemberMonsterInformations(id:int = 0, monsterId:int = 0, grade:uint = 0) : FightTeamMemberMonsterInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.monsterId = 0;
-         this.grade = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_FightTeamMemberMonsterInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_FightTeamMemberMonsterInformations(output:IDataOutput) : void {
-         super.serializeAs_FightTeamMemberInformations(output);
-         output.writeInt(this.monsterId);
-         if(this.grade < 0)
-         {
-            throw new Error("Forbidden value (" + this.grade + ") on element grade.");
-         }
-         else
-         {
-            output.writeByte(this.grade);
-            return;
-         }
+      public function serializeAs_FightTeamMemberMonsterInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_FightTeamMemberMonsterInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_FightTeamMemberMonsterInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.monsterId = input.readInt();
-         this.grade = input.readByte();
-         if(this.grade < 0)
-         {
-            throw new Error("Forbidden value (" + this.grade + ") on element of FightTeamMemberMonsterInformations.grade.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_FightTeamMemberMonsterInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

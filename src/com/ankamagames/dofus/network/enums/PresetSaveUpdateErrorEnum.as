@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class PresetSaveUpdateErrorEnum extends Object
    {
       
-      public function PresetSaveUpdateErrorEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PresetSaveUpdateErrorEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const PRESET_UPDATE_ERR_UNKNOWN:uint = 1;

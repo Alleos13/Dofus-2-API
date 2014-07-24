@@ -8,13 +8,13 @@ package com.ankamagames.jerakine.utils.display.spellZone
    public class SpellZoneCell extends Sprite
    {
       
-      public function SpellZoneCell(pWidth:uint, pHeight:uint, pId:uint) {
-         super();
-         this._cellWidth = pWidth;
-         this._cellHeight = pHeight;
-         this._cellId = pId;
-         width = this._cellWidth;
-         height = this._cellHeight;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpellZoneCell(pWidth:uint, pHeight:uint, pId:uint)
+      {
+         //Décompilation abandonné
       }
       
       private var _cellWidth:uint;
@@ -35,70 +35,64 @@ package com.ankamagames.jerakine.utils.display.spellZone
       
       public var isRangedCell:Boolean = false;
       
-      public function set defaultColor(pColor:uint) : void {
-         this._defaultColor = pColor;
+      public function set defaultColor(pColor:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function addListeners() : void {
-         addEventListener(MouseEvent.MOUSE_OVER,this.onRollOver);
-         addEventListener(MouseEvent.MOUSE_OUT,this.onRollOut);
-         addEventListener(MouseEvent.CLICK,this.onClick);
+      private function addListeners() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function removeListeners() : void {
-         removeEventListener(MouseEvent.MOUSE_OVER,this.onRollOver);
-         removeEventListener(MouseEvent.MOUSE_OUT,this.onRollOut);
-         removeEventListener(MouseEvent.CLICK,this.onClick);
+      private function removeListeners() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setNormalCell() : void {
-         this.removeListeners();
-         this._defaultColor = 0;
-         this.changeColorToDefault();
-         this.isRangedCell = false;
+      public function setNormalCell() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get cellId() : uint {
-         return this._cellId;
+      public function get cellId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      private function onRollOver(e:MouseEvent) : void {
-         var event:SpellZoneEvent = new SpellZoneEvent(SpellZoneEvent.CELL_ROLLOVER);
-         event.cell = this;
-         dispatchEvent(event);
+      private function onRollOver(e:MouseEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onRollOut(e:MouseEvent) : void {
-         this.colorCell(this._defaultColor);
-         var event:SpellZoneEvent = new SpellZoneEvent(SpellZoneEvent.CELL_ROLLOUT);
-         event.cell = this;
-         dispatchEvent(event);
+      private function onRollOut(e:MouseEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onClick(e:MouseEvent) : void {
+      private function onClick(e:MouseEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function colorCell(color:uint, setDefault:Boolean = false) : void {
-         var oColor:Color = new Color(color);
-         this.filters = [new ColorMatrixFilter([oColor.red / 255,0,0,0,0,0,oColor.green / 255,0,0,0,0,0,oColor.blue / 255,0,0,0,0,0,this._alpha,0])];
-         if(setDefault)
-         {
-            this._defaultColor = color;
-         }
+      public function colorCell(color:uint, setDefault:Boolean = false) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function changeColorToDefault() : void {
-         this.colorCell(this._defaultColor,true);
+      public function changeColorToDefault() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setRangeCell() : void {
-         this.colorCell(SpellZoneCellManager.RANGE_COLOR,true);
-         this.addListeners();
-         this.isRangedCell = true;
+      public function setRangeCell() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setSpellCell() : void {
-         this.colorCell(SpellZoneCellManager.SPELL_COLOR,false);
+      public function setSpellCell() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

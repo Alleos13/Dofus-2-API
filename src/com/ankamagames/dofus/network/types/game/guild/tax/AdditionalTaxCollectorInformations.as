@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.guild.tax
    public class AdditionalTaxCollectorInformations extends Object implements INetworkType
    {
       
-      public function AdditionalTaxCollectorInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AdditionalTaxCollectorInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 165;
@@ -17,53 +22,39 @@ package com.ankamagames.dofus.network.types.game.guild.tax
       
       public var date:uint = 0;
       
-      public function getTypeId() : uint {
-         return 165;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initAdditionalTaxCollectorInformations(collectorCallerName:String = "", date:uint = 0) : AdditionalTaxCollectorInformations {
-         this.collectorCallerName = collectorCallerName;
-         this.date = date;
-         return this;
+      public function initAdditionalTaxCollectorInformations(collectorCallerName:String = "", date:uint = 0) : AdditionalTaxCollectorInformations
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.collectorCallerName = "";
-         this.date = 0;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AdditionalTaxCollectorInformations(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_AdditionalTaxCollectorInformations(output:IDataOutput) : void {
-         output.writeUTF(this.collectorCallerName);
-         if(this.date < 0)
-         {
-            throw new Error("Forbidden value (" + this.date + ") on element date.");
-         }
-         else
-         {
-            output.writeInt(this.date);
-            return;
-         }
+      public function serializeAs_AdditionalTaxCollectorInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AdditionalTaxCollectorInformations(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_AdditionalTaxCollectorInformations(input:IDataInput) : void {
-         this.collectorCallerName = input.readUTF();
-         this.date = input.readInt();
-         if(this.date < 0)
-         {
-            throw new Error("Forbidden value (" + this.date + ") on element of AdditionalTaxCollectorInformations.date.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_AdditionalTaxCollectorInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.common.actions
    public class DirectSelectionCharacterAction extends Object implements Action
    {
       
-      public function DirectSelectionCharacterAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(serverId:uint, characterId:uint) : DirectSelectionCharacterAction {
-         var a:DirectSelectionCharacterAction = new DirectSelectionCharacterAction();
-         a.serverId = serverId;
-         a.characterId = characterId;
-         return a;
+      public function DirectSelectionCharacterAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(serverId:uint, characterId:uint) : DirectSelectionCharacterAction
+      {
+         //Décompilation abandonné
       }
       
       public var serverId:uint;

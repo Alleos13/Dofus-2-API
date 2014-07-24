@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.spell
    public class ValidateSpellForgetMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ValidateSpellForgetMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ValidateSpellForgetMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 1700;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var spellId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 1700;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initValidateSpellForgetMessage(spellId:uint = 0) : ValidateSpellForgetMessage {
-         this.spellId = spellId;
-         this._isInitialized = true;
-         return this;
+      public function initValidateSpellForgetMessage(spellId:uint = 0) : ValidateSpellForgetMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.spellId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ValidateSpellForgetMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ValidateSpellForgetMessage(output:IDataOutput) : void {
-         if(this.spellId < 0)
-         {
-            throw new Error("Forbidden value (" + this.spellId + ") on element spellId.");
-         }
-         else
-         {
-            output.writeShort(this.spellId);
-            return;
-         }
+      public function serializeAs_ValidateSpellForgetMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ValidateSpellForgetMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ValidateSpellForgetMessage(input:IDataInput) : void {
-         this.spellId = input.readShort();
-         if(this.spellId < 0)
-         {
-            throw new Error("Forbidden value (" + this.spellId + ") on element of ValidateSpellForgetMessage.spellId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_ValidateSpellForgetMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

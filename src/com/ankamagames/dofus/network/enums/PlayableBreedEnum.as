@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class PlayableBreedEnum extends Object
    {
       
-      public function PlayableBreedEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PlayableBreedEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const UNDEFINED:int = 0;

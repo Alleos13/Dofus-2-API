@@ -11,8 +11,13 @@ package com.ankamagames.jerakine.managers
    public class ErrorManager extends Object
    {
       
-      public function ErrorManager() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ErrorManager()
+      {
+         //Décompilation abandonné
       }
       
       public static var catchError:Boolean = false;
@@ -29,75 +34,36 @@ package com.ankamagames.jerakine.managers
       
       public static var lastTryFunctionParams:Array;
       
-      public static function tryFunction(fct:Function, params:Array = null, complementaryInformations:String = null, context:Object = null) : * {
-         var result:* = undefined;
-         var result2:* = undefined;
-         if(!catchError)
-         {
-            lastTryFunctionHasException = true;
-            result = fct.apply(context,params);
-            lastTryFunctionHasException = false;
-            return result;
-         }
-         try
-         {
-            lastTryFunctionParams = params;
-            lastTryFunctionHasException = false;
-            result2 = fct.apply(context,params);
-            lastTryFunctionParams = null;
-            return result2;
-         }
-         catch(e:Error)
-         {
-            lastExceptionStacktrace = e.message + " : \n" + e.getStackTrace();
-            lastTryFunctionHasException = true;
-            addError(complementaryInformations,e,showPopup);
-            lastTryFunctionParams = null;
-            return null;
-         }
+      public static function tryFunction(fct:Function, params:Array = null, complementaryInformations:String = null, context:Object = null) : *
+      {
+         //Décompilation abandonné
       }
       
-      public static function addError(txt:String = null, error:* = null, show:Boolean = true) : void {
-         if(!error)
-         {
-            error = new Error();
-         }
-         if(!txt)
-         {
-            txt = "";
-         }
-         eventDispatcher.dispatchEvent(new ErrorReportedEvent(error,txt,show));
+      public static function addError(txt:String = null, error:* = null, show:Boolean = true) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function registerLoaderInfo(loaderInfo:LoaderInfo) : void {
-         if(!ApplicationDomain.currentDomain.hasDefinition("flash.events::UncaughtErrorEvent"))
-         {
-            return;
-         }
-         var UncaughtErrorEvent:Object = ApplicationDomain.currentDomain.getDefinition("flash.events::UncaughtErrorEvent");
-         if(catchError)
-         {
-            loaderInfo["uncaughtErrorEvents"].addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR,onUncaughtError,false,0,true);
-         }
+      public static function registerLoaderInfo(loaderInfo:LoaderInfo) : void
+      {
+         //Décompilation abandonné
       }
       
-      private static function onUncaughtError(event:Object) : void {
-         event.preventDefault();
-         if(event.error is Error)
-         {
-            addError(null,event.error,showPopup);
-         }
-         else
-         {
-            addError(event.error,new EmptyError(),showPopup);
-         }
+      private static function onUncaughtError(event:Object) : void
+      {
+         //Décompilation abandonné
       }
    }
 }
 class EmptyError extends Error
 {
    
-   function EmptyError() {
-      super();
+   {
+   //Décompilation abandonné
+   }
+   
+   function EmptyError()
+   {
+      //Décompilation abandonné
    }
 }

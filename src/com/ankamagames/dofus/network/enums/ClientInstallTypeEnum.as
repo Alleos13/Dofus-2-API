@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class ClientInstallTypeEnum extends Object
    {
       
-      public function ClientInstallTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ClientInstallTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const CLIENT_INSTALL_UNKNOWN:uint = 0;

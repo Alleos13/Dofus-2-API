@@ -11,63 +11,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.houses
    public class HousePropertiesMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function HousePropertiesMessage() {
-         this.properties = new HouseInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HousePropertiesMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5734;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var properties:HouseInformations;
       
-      override public function getMessageId() : uint {
-         return 5734;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initHousePropertiesMessage(properties:HouseInformations = null) : HousePropertiesMessage {
-         this.properties = properties;
-         this._isInitialized = true;
-         return this;
+      public function initHousePropertiesMessage(properties:HouseInformations = null) : HousePropertiesMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.properties = new HouseInformations();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_HousePropertiesMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_HousePropertiesMessage(output:IDataOutput) : void {
-         output.writeShort(this.properties.getTypeId());
-         this.properties.serialize(output);
+      public function serializeAs_HousePropertiesMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_HousePropertiesMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_HousePropertiesMessage(input:IDataInput) : void {
-         var _id1:uint = input.readUnsignedShort();
-         this.properties = ProtocolTypeManager.getInstance(HouseInformations,_id1);
-         this.properties.deserialize(input);
+      public function deserializeAs_HousePropertiesMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

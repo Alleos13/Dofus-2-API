@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class TeamEnum extends Object
    {
       
-      public function TeamEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TeamEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const TEAM_CHALLENGER:uint = 0;

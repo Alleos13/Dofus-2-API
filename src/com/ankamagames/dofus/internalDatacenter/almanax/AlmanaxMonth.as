@@ -5,8 +5,13 @@ package com.ankamagames.dofus.internalDatacenter.almanax
    public class AlmanaxMonth extends Object implements IDataCenter
    {
       
-      public function AlmanaxMonth() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AlmanaxMonth()
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;

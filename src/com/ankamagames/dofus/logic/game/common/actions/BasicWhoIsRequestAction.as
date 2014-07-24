@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class BasicWhoIsRequestAction extends Object implements Action
    {
       
-      public function BasicWhoIsRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(playerName:String, verbose:Boolean) : BasicWhoIsRequestAction {
-         var a:BasicWhoIsRequestAction = new BasicWhoIsRequestAction();
-         a.playerName = playerName;
-         a.verbose = verbose;
-         return a;
+      public function BasicWhoIsRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(playerName:String, verbose:Boolean) : BasicWhoIsRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var playerName:String;

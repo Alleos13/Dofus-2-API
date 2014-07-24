@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class FightOptionsEnum extends Object
    {
       
-      public function FightOptionsEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightOptionsEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const FIGHT_OPTION_SET_SECRET:uint = 0;

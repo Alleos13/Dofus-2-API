@@ -5,8 +5,13 @@ package com.ankamagames.dofus
    public class Constants_SIGNATURE_KEY_DATA extends ByteArrayAsset
    {
       
-      public function Constants_SIGNATURE_KEY_DATA() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Constants_SIGNATURE_KEY_DATA()
+      {
+         //Décompilation abandonné
       }
    }
 }

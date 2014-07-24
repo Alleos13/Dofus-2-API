@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class GameActionMarkCellsTypeEnum extends Object
    {
       
-      public function GameActionMarkCellsTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameActionMarkCellsTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const CELLS_CIRCLE:int = 0;

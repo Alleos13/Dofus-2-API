@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.guild.tax
    public class TaxCollectorLootInformations extends TaxCollectorComplementaryInformations implements INetworkType
    {
       
-      public function TaxCollectorLootInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TaxCollectorLootInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 372;
@@ -21,105 +26,39 @@ package com.ankamagames.dofus.network.types.game.guild.tax
       
       public var itemsValue:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 372;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initTaxCollectorLootInformations(kamas:uint = 0, experience:Number = 0, pods:uint = 0, itemsValue:uint = 0) : TaxCollectorLootInformations {
-         this.kamas = kamas;
-         this.experience = experience;
-         this.pods = pods;
-         this.itemsValue = itemsValue;
-         return this;
+      public function initTaxCollectorLootInformations(kamas:uint = 0, experience:Number = 0, pods:uint = 0, itemsValue:uint = 0) : TaxCollectorLootInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.kamas = 0;
-         this.experience = 0;
-         this.pods = 0;
-         this.itemsValue = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TaxCollectorLootInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_TaxCollectorLootInformations(output:IDataOutput) : void {
-         super.serializeAs_TaxCollectorComplementaryInformations(output);
-         if(this.kamas < 0)
-         {
-            throw new Error("Forbidden value (" + this.kamas + ") on element kamas.");
-         }
-         else
-         {
-            output.writeInt(this.kamas);
-            if(this.experience < 0)
-            {
-               throw new Error("Forbidden value (" + this.experience + ") on element experience.");
-            }
-            else
-            {
-               output.writeDouble(this.experience);
-               if(this.pods < 0)
-               {
-                  throw new Error("Forbidden value (" + this.pods + ") on element pods.");
-               }
-               else
-               {
-                  output.writeInt(this.pods);
-                  if(this.itemsValue < 0)
-                  {
-                     throw new Error("Forbidden value (" + this.itemsValue + ") on element itemsValue.");
-                  }
-                  else
-                  {
-                     output.writeInt(this.itemsValue);
-                     return;
-                  }
-               }
-            }
-         }
+      public function serializeAs_TaxCollectorLootInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TaxCollectorLootInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_TaxCollectorLootInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.kamas = input.readInt();
-         if(this.kamas < 0)
-         {
-            throw new Error("Forbidden value (" + this.kamas + ") on element of TaxCollectorLootInformations.kamas.");
-         }
-         else
-         {
-            this.experience = input.readDouble();
-            if(this.experience < 0)
-            {
-               throw new Error("Forbidden value (" + this.experience + ") on element of TaxCollectorLootInformations.experience.");
-            }
-            else
-            {
-               this.pods = input.readInt();
-               if(this.pods < 0)
-               {
-                  throw new Error("Forbidden value (" + this.pods + ") on element of TaxCollectorLootInformations.pods.");
-               }
-               else
-               {
-                  this.itemsValue = input.readInt();
-                  if(this.itemsValue < 0)
-                  {
-                     throw new Error("Forbidden value (" + this.itemsValue + ") on element of TaxCollectorLootInformations.itemsValue.");
-                  }
-                  else
-                  {
-                     return;
-                  }
-               }
-            }
-         }
+      public function deserializeAs_TaxCollectorLootInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

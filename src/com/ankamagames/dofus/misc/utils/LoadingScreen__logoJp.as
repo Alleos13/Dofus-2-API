@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.utils
    public class LoadingScreen__logoJp extends BitmapAsset
    {
       
-      public function LoadingScreen__logoJp() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LoadingScreen__logoJp()
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.document
    public class DocumentReadingBeginMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function DocumentReadingBeginMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DocumentReadingBeginMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5675;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var documentId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5675;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initDocumentReadingBeginMessage(documentId:uint = 0) : DocumentReadingBeginMessage {
-         this.documentId = documentId;
-         this._isInitialized = true;
-         return this;
+      public function initDocumentReadingBeginMessage(documentId:uint = 0) : DocumentReadingBeginMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.documentId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_DocumentReadingBeginMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_DocumentReadingBeginMessage(output:IDataOutput) : void {
-         if(this.documentId < 0)
-         {
-            throw new Error("Forbidden value (" + this.documentId + ") on element documentId.");
-         }
-         else
-         {
-            output.writeShort(this.documentId);
-            return;
-         }
+      public function serializeAs_DocumentReadingBeginMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_DocumentReadingBeginMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_DocumentReadingBeginMessage(input:IDataInput) : void {
-         this.documentId = input.readShort();
-         if(this.documentId < 0)
-         {
-            throw new Error("Forbidden value (" + this.documentId + ") on element of DocumentReadingBeginMessage.documentId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_DocumentReadingBeginMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

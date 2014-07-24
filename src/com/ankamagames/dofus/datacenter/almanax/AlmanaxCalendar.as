@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.almanax
    public class AlmanaxCalendar extends Object implements IDataCenter
    {
       
-      public function AlmanaxCalendar() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AlmanaxCalendar()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "AlmanaxCalendars";
       
       protected static const _log:Logger;
       
-      public static function getAlmanaxCalendarById(id:int) : AlmanaxCalendar {
-         return GameData.getObject(MODULE,id) as AlmanaxCalendar;
+      public static function getAlmanaxCalendarById(id:int) : AlmanaxCalendar
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAlmanaxCalendars() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAlmanaxCalendars() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -38,20 +45,14 @@ package com.ankamagames.dofus.datacenter.almanax
       
       private var _description:String;
       
-      public function get bonusName() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get bonusName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get bonusDescription() : String {
-         if(!this._description)
-         {
-            this._description = I18n.getText(this.descId);
-         }
-         return this._description;
+      public function get bonusDescription() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

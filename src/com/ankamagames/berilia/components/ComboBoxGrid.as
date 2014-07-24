@@ -13,44 +13,20 @@ package com.ankamagames.berilia.components
    public class ComboBoxGrid extends Grid
    {
       
-      public function ComboBoxGrid() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ComboBoxGrid()
+      {
+         //Décompilation abandonné
       }
       
       private var _lastMouseUpFrameId:int = -1;
       
-      override public function process(msg:Message) : Boolean {
-         var mmsg:MouseMessage = null;
-         var currentItem:* = undefined;
-         switch(true)
-         {
-            case msg is MouseDoubleClickMessage:
-            case msg is MouseClickMessage:
-               if(this._lastMouseUpFrameId == FrameIdManager.frameId)
-               {
-                  return false;
-               }
-            case msg is MouseUpMessage:
-               this._lastMouseUpFrameId = FrameIdManager.frameId;
-               mmsg = MouseMessage(msg);
-               currentItem = super.getGridItem(mmsg.target);
-               if(currentItem)
-               {
-                  if(!currentItem.data)
-                  {
-                     if(UIEventManager.getInstance().isRegisteredInstance(this,SelectEmptyItemMessage))
-                     {
-                        super.dispatchMessage(new SelectEmptyItemMessage(this,SelectMethodEnum.CLICK));
-                     }
-                     setSelectedIndex(-1,SelectMethodEnum.CLICK);
-                  }
-                  setSelectedIndex(currentItem.index,SelectMethodEnum.CLICK);
-               }
-               return true;
-            default:
-               super.process(msg);
-               return false;
-         }
+      override public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

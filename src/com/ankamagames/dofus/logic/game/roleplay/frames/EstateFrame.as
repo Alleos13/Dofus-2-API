@@ -29,96 +29,37 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
    public class EstateFrame extends Object implements Frame
    {
       
-      public function EstateFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EstateFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       private var _estateList:Array;
       
-      public function get priority() : int {
-         return Priority.NORMAL;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var htslmsg:HouseToSellListMessage = null;
-         var ptslmsg:PaddockToSellListMessage = null;
-         var htsfa:HouseToSellFilterAction = null;
-         var htsfmsg:HouseToSellFilterMessage = null;
-         var ptsfa:PaddockToSellFilterAction = null;
-         var pfmsg:PaddockToSellFilterMessage = null;
-         var htslra:HouseToSellListRequestAction = null;
-         var htslrmsg:HouseToSellListRequestMessage = null;
-         var ptslra:PaddockToSellListRequestAction = null;
-         var ptslrmsg:PaddockToSellListRequestMessage = null;
-         var ldrmsg:LeaveDialogRequestMessage = null;
-         var house:HouseInformationsForSell = null;
-         var estHouse:Estate = null;
-         var paddock:PaddockInformationsForSell = null;
-         var estPaddock:Estate = null;
-         switch(true)
-         {
-            case msg is HouseToSellListMessage:
-               htslmsg = msg as HouseToSellListMessage;
-               this._estateList = new Array();
-               for each(house in htslmsg.houseList)
-               {
-                  estHouse = new Estate(house);
-                  this._estateList.push(estHouse);
-               }
-               KernelEventsManager.getInstance().processCallback(RoleplayHookList.EstateToSellList,this._estateList,htslmsg.pageIndex,htslmsg.totalPage,0);
-               return true;
-            case msg is PaddockToSellListMessage:
-               ptslmsg = msg as PaddockToSellListMessage;
-               this._estateList = new Array();
-               for each(paddock in ptslmsg.paddockList)
-               {
-                  estPaddock = new Estate(paddock);
-                  this._estateList.push(estPaddock);
-               }
-               KernelEventsManager.getInstance().processCallback(RoleplayHookList.EstateToSellList,this._estateList,ptslmsg.pageIndex,ptslmsg.totalPage,1);
-               return true;
-            case msg is HouseToSellFilterAction:
-               htsfa = msg as HouseToSellFilterAction;
-               htsfmsg = new HouseToSellFilterMessage();
-               htsfmsg.initHouseToSellFilterMessage(htsfa.areaId,htsfa.atLeastNbRoom,htsfa.atLeastNbChest,htsfa.skillRequested,htsfa.maxPrice);
-               ConnectionsHandler.getConnection().send(htsfmsg);
-               return true;
-            case msg is PaddockToSellFilterAction:
-               ptsfa = msg as PaddockToSellFilterAction;
-               pfmsg = new PaddockToSellFilterMessage();
-               pfmsg.initPaddockToSellFilterMessage(ptsfa.areaId,ptsfa.atLeastNbMount,ptsfa.atLeastNbMachine,ptsfa.maxPrice);
-               ConnectionsHandler.getConnection().send(pfmsg);
-               return true;
-            case msg is HouseToSellListRequestAction:
-               htslra = msg as HouseToSellListRequestAction;
-               htslrmsg = new HouseToSellListRequestMessage();
-               htslrmsg.initHouseToSellListRequestMessage(htslra.pageIndex);
-               ConnectionsHandler.getConnection().send(htslrmsg);
-               return true;
-            case msg is PaddockToSellListRequestAction:
-               ptslra = msg as PaddockToSellListRequestAction;
-               ptslrmsg = new PaddockToSellListRequestMessage();
-               ptslrmsg.initPaddockToSellListRequestMessage(ptslra.pageIndex);
-               ConnectionsHandler.getConnection().send(ptslrmsg);
-               return true;
-            case msg is LeaveDialogRequestAction:
-               ldrmsg = new LeaveDialogRequestMessage();
-               ConnectionsHandler.getConnection().send(ldrmsg);
-               return true;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         KernelEventsManager.getInstance().processCallback(HookList.LeaveDialog);
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,15 +5,20 @@ package com.ankamagames.atouin.types
    public class FrustumShape extends Sprite
    {
       
-      public function FrustumShape(direction:uint) {
-         super();
-         this._direction = direction;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FrustumShape(direction:uint)
+      {
+         //Décompilation abandonné
       }
       
       private var _direction:uint;
       
-      public function get direction() : uint {
-         return this._direction;
+      public function get direction() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

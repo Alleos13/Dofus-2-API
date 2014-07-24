@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
    public class MimicryObjectAssociatedMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function MimicryObjectAssociatedMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MimicryObjectAssociatedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6462;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var hostUID:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6462;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initMimicryObjectAssociatedMessage(hostUID:uint = 0) : MimicryObjectAssociatedMessage {
-         this.hostUID = hostUID;
-         this._isInitialized = true;
-         return this;
+      public function initMimicryObjectAssociatedMessage(hostUID:uint = 0) : MimicryObjectAssociatedMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.hostUID = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_MimicryObjectAssociatedMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_MimicryObjectAssociatedMessage(output:IDataOutput) : void {
-         if(this.hostUID < 0)
-         {
-            throw new Error("Forbidden value (" + this.hostUID + ") on element hostUID.");
-         }
-         else
-         {
-            output.writeInt(this.hostUID);
-            return;
-         }
+      public function serializeAs_MimicryObjectAssociatedMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_MimicryObjectAssociatedMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_MimicryObjectAssociatedMessage(input:IDataInput) : void {
-         this.hostUID = input.readInt();
-         if(this.hostUID < 0)
-         {
-            throw new Error("Forbidden value (" + this.hostUID + ") on element of MimicryObjectAssociatedMessage.hostUID.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_MimicryObjectAssociatedMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

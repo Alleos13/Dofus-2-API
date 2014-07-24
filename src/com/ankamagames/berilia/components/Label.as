@@ -34,14 +34,13 @@ package com.ankamagames.berilia.components
    public class Label extends GraphicContainer implements UIComponent, IRectangle, FinalizableUIComponent
    {
       
-      public function Label() {
-         super();
-         this.aStyleObj = new Array();
-         this.createTextField();
-         this._tText.type = TextFieldType.DYNAMIC;
-         this._tText.selectable = false;
-         this._tText.mouseEnabled = false;
-         MEMORY_LOG[this] = 1;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Label()
+      {
+         //Décompilation abandonné
       }
       
       public static var HEIGHT_OFFSET:int = 0;
@@ -130,1002 +129,484 @@ package com.ankamagames.berilia.components
       
       protected var _sCssClass:String;
       
-      public function get text() : String {
-         return this._tText.text;
-      }
-      
-      public function set text(sValue:String) : void {
-         if(sValue == null)
-         {
-            sValue = "";
-         }
-         this._sText = sValue;
-         if(this._bHtmlAllowed)
-         {
-            if(this._useStyleSheet)
-            {
-               this._tText.styleSheet = null;
-            }
-            this._tText.htmlText = sValue;
-            if(!this._useCustomFormat)
-            {
-               if((!(this._sCssUrl == null)) && (!this._cssApplied))
-               {
-                  this.applyCSS(this._sCssUrl);
-                  this._cssApplied = true;
-               }
-               else
-               {
-                  this.updateCss();
-                  if(_bgColor != -1)
-                  {
-                     this.bgColor = _bgColor;
-                  }
-               }
-            }
-         }
-         else
-         {
-            this._tText.text = sValue;
-         }
-         if(!this._useCustomFormat)
-         {
-            if(!this._sCssClass)
-            {
-               this.cssClass = "p";
-            }
-         }
-         if(this._hyperlinkEnabled)
-         {
-            HyperlinkFactory.createTextClickHandler(this._tText,this._useStyleSheet);
-         }
-         if(this._currentStyleSheet)
-         {
-            this._tText.styleSheet = this._currentStyleSheet;
-            this._tText.htmlText = sValue;
-         }
-         if((this._finalized) && (this._autoResize))
-         {
-            this.resizeText();
-         }
+      public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get htmlText() : String {
-         return this._tText.htmlText;
+      public function set text(sValue:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set htmlText(val:String) : void {
-         this._tText.htmlText = val;
+      public function get htmlText() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get hyperlinkEnabled() : Boolean {
-         return this._hyperlinkEnabled;
+      public function set htmlText(val:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set hyperlinkEnabled(bValue:Boolean) : void {
-         this._hyperlinkEnabled = bValue;
-         mouseEnabled = bValue;
-         mouseChildren = bValue;
-         this._tText.mouseEnabled = bValue;
+      public function get hyperlinkEnabled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get useStyleSheet() : Boolean {
-         return this._useStyleSheet;
+      public function set hyperlinkEnabled(bValue:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set useStyleSheet(bValue:Boolean) : void {
-         this._useStyleSheet = bValue;
+      public function get useStyleSheet() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get useCustomFormat() : Boolean {
-         return this._useCustomFormat;
+      public function set useStyleSheet(bValue:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set useCustomFormat(bValue:Boolean) : void {
-         this._useCustomFormat = bValue;
+      public function get useCustomFormat() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get neverIndent() : Boolean {
-         return this._neverIndent;
+      public function set useCustomFormat(bValue:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set neverIndent(bValue:Boolean) : void {
-         this._neverIndent = bValue;
+      public function get neverIndent() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get autoResize() : Boolean {
-         return this._autoResize;
+      public function set neverIndent(bValue:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set autoResize(bValue:Boolean) : void {
-         this._autoResize = bValue;
+      public function get autoResize() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get caretIndex() : int {
-         return this._tText.caretIndex;
+      public function set autoResize(bValue:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set caretIndex(pos:int) : void {
-         var lastPos:* = 0;
-         if(pos == -1)
-         {
-            lastPos = this._tText.text.length;
-            this._tText.setSelection(lastPos,lastPos);
-         }
-         else
-         {
-            this._tText.setSelection(pos,pos);
-         }
+      public function get caretIndex() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function selectAll() : void {
-         this._tText.setSelection(0,this._tText.length);
+      public function set caretIndex(pos:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get type() : String {
-         return this._sType;
+      public function selectAll() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set type(sValue:String) : void {
-         this._sType = sValue;
+      public function get type() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get css() : Uri {
-         return this._sCssUrl;
+      public function set type(sValue:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set css(sFile:Uri) : void {
-         this._cssApplied = false;
-         this.applyCSS(sFile);
+      public function get css() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function set cssClass(c:String) : void {
-         this._sCssClass = c == ""?"p":c;
-         this.bindCss();
+      public function set css(sFile:Uri) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get cssClass() : String {
-         return this._sCssClass;
+      public function set cssClass(c:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get antialias() : String {
-         return this._sAntialiasType;
+      public function get cssClass() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function set antialias(s:String) : void {
-         this._sAntialiasType = s;
-         this._tText.antiAliasType = this._sAntialiasType;
+      public function get antialias() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get thickness() : int {
-         return this._tText.thickness;
+      public function set antialias(s:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set thickness(value:int) : void {
-         this._tText.thickness = value;
+      public function get thickness() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set aStyleObj(value:Object) : void {
-         this._aStyleObj = value as Array;
+      public function set thickness(value:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get aStyleObj() : Object {
-         return this._aStyleObj;
+      public function set aStyleObj(value:Object) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function get width() : Number {
-         return (this._useExtendWidth) && (this._tText.numLines < 2)?this._tText.textWidth + 7:this._nWidth;
+      public function get aStyleObj() : Object
+      {
+         //Décompilation abandonné
       }
       
-      override public function set width(nValue:Number) : void {
-         this._nWidth = nValue;
-         this._tText.width = this._nWidth;
-         if(_bgColor != -1)
-         {
-            this.bgColor = _bgColor;
-         }
-         if(!this._bFixedHeight)
-         {
-            this.bindCss();
-         }
+      override public function get width() : Number
+      {
+         //Décompilation abandonné
       }
       
-      override public function get height() : Number {
-         return this._nHeight;
+      override public function set width(nValue:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function set height(nValue:Number) : void {
-         var valMin:* = NaN;
-         if(!this._tText.multiline)
-         {
-            valMin = this._tText.textHeight;
-            if(nValue < valMin)
-            {
-               nValue = valMin;
-            }
-         }
-         this._nHeight = nValue;
-         this._tText.height = this._nHeight;
-         __height = this._nHeight;
-         if(_bgColor != -1)
-         {
-            this.bgColor = _bgColor;
-         }
-         this.updateAlign();
+      override public function get height() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function get textWidth() : Number {
-         return this._tText.textWidth;
+      override public function set height(nValue:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get textHeight() : Number {
-         return this._tText.textHeight;
+      public function get textWidth() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function get finalized() : Boolean {
-         return this._finalized;
+      public function get textHeight() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function set finalized(value:Boolean) : void {
-         this._finalized = value;
+      public function get finalized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get html() : Boolean {
-         return this._bHtmlAllowed;
+      public function set finalized(value:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set html(bValue:Boolean) : void {
-         this._bHtmlAllowed = bValue;
+      public function get html() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set wordWrap(bWordWrap:Boolean) : void {
-         this._tText.wordWrap = bWordWrap;
+      public function set html(bValue:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get wordWrap() : Boolean {
-         return this._tText.wordWrap;
+      public function set wordWrap(bWordWrap:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set multiline(bMultiline:Boolean) : void {
-         this._tText.multiline = bMultiline;
+      public function get wordWrap() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get multiline() : Boolean {
-         return this._tText.multiline;
+      public function set multiline(bMultiline:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get border() : Boolean {
-         return this._tText.border;
+      public function get multiline() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set border(bValue:Boolean) : void {
-         this._tText.border = bValue;
+      public function get border() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get fixedWidth() : Boolean {
-         return this._bFixedWidth;
+      public function set border(bValue:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set fixedWidth(bValue:Boolean) : void {
-         this._bFixedWidth = bValue;
-         if(this._bFixedWidth)
-         {
-            this._tText.autoSize = TextFieldAutoSize.NONE;
-         }
-         else
-         {
-            this._tText.autoSize = TextFieldAutoSize.LEFT;
-         }
+      public function get fixedWidth() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get useExtendWidth() : Boolean {
-         return this._useExtendWidth;
+      public function set fixedWidth(bValue:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set useExtendWidth(v:Boolean) : void {
-         this._useExtendWidth = v;
+      public function get useExtendWidth() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get fixedHeight() : Boolean {
-         return this._bFixedHeight;
+      public function set useExtendWidth(v:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set fixedHeight(bValue:Boolean) : void {
-         this._bFixedHeight = bValue;
-         this._tText.wordWrap = !this._bFixedHeight;
+      public function get fixedHeight() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function set bgColor(nColor:int) : void {
-         _bgColor = nColor;
-         graphics.clear();
-         if((bgColor == -1) || (!this.width) || (!this.height))
-         {
-            return;
-         }
-         if(_borderColor != -1)
-         {
-            graphics.lineStyle(1,_borderColor);
-         }
-         graphics.beginFill(nColor,_bgAlpha);
-         if(!_bgCornerRadius)
-         {
-            graphics.drawRect(x,y,this.width,this.height + 2);
-         }
-         else
-         {
-            graphics.drawRoundRect(this._tText.x,this._tText.y,this._tText.width,this._tText.height + 2,_bgCornerRadius,_bgCornerRadius);
-         }
-         graphics.endFill();
+      public function set fixedHeight(bValue:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function set borderColor(nColor:int) : void {
-         if(nColor == -1)
-         {
-            this._tText.border = false;
-         }
-         else
-         {
-            this._tText.border = true;
-            this._tText.borderColor = nColor;
-         }
+      override public function set bgColor(nColor:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set selectable(bValue:Boolean) : void {
-         this._tText.selectable = bValue;
+      override public function set borderColor(nColor:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get length() : uint {
-         return this._tText.length;
+      public function set selectable(bValue:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set scrollV(nVal:int) : void {
-         this._tText.scrollV = nVal;
+      public function get length() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get scrollV() : int {
-         this._tText.getCharBoundaries(0);
-         return this._tText.scrollV;
+      public function set scrollV(nVal:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get maxScrollV() : int {
-         this._tText.getCharBoundaries(0);
-         return this._tText.maxScrollV;
+      public function get scrollV() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get textfield() : TextField {
-         return this._tText;
+      public function get maxScrollV() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get useEmbedFonts() : Boolean {
-         return this._useEmbedFonts;
+      public function get textfield() : TextField
+      {
+         //Décompilation abandonné
       }
       
-      public function set useEmbedFonts(b:Boolean) : void {
-         this._useEmbedFonts = b;
-         this._tText.embedFonts = b;
+      public function get useEmbedFonts() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function set disabled(bool:Boolean) : void {
-         if(bool)
-         {
-            handCursor = false;
-            mouseEnabled = false;
-            this._tText.mouseEnabled = false;
-         }
-         else
-         {
-            handCursor = true;
-            mouseEnabled = true;
-            this._tText.mouseEnabled = true;
-         }
-         this._bDisabled = bool;
+      public function set useEmbedFonts(b:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get verticalAlign() : String {
-         return this._sVerticalAlign;
+      override public function set disabled(bool:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set verticalAlign(s:String) : void {
-         this._sVerticalAlign = s;
-         this.updateAlign();
+      public function get verticalAlign() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get textFormat() : TextFormat {
-         return this._tfFormatter;
+      public function set verticalAlign(s:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set textFormat(tf:TextFormat) : void {
-         this._tfFormatter = tf;
-         this._tText.setTextFormat(this._tfFormatter);
+      public function get textFormat() : TextFormat
+      {
+         //Décompilation abandonné
       }
       
-      public function set restrict(restrictTo:String) : void {
-         this._tText.restrict = restrictTo;
+      public function set textFormat(tf:TextFormat) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get restrict() : String {
-         return this._tText.restrict;
+      public function set restrict(restrictTo:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set colorText(color:uint) : void {
-         if(!this._tfFormatter)
-         {
-            _log.error("Error. Try to change the size before formatter was initialized.");
-            return;
-         }
-         this._tfFormatter.color = color;
-         this._tText.setTextFormat(this._tfFormatter);
-         this._tText.defaultTextFormat = this._tfFormatter;
+      public function get restrict() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function setCssColor(color:String, style:String = null) : void {
-         this.changeCssClassColor(color,style);
+      public function set colorText(color:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setCssSize(size:uint, style:String = null) : void {
-         this.changeCssClassSize(size,style);
+      public function setCssColor(color:String, style:String = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setStyleSheet(styles:StyleSheet) : void {
-         this._useStyleSheet = true;
-         this._currentStyleSheet = styles;
+      public function setCssSize(size:uint, style:String = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function applyCSS(sFile:Uri) : void {
-         if(sFile == null)
-         {
-            return;
-         }
-         if((sFile == this._sCssUrl) && (this._tfFormatter))
-         {
-            this.updateCss();
-         }
-         else
-         {
-            this._sCssUrl = sFile;
-            CssManager.getInstance().askCss(sFile.uri,new Callback(this.bindCss));
-         }
+      public function setStyleSheet(styles:StyleSheet) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setBorderColor(nColor:int) : void {
-         this._tText.borderColor = nColor;
+      public function applyCSS(sFile:Uri) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function allowTextMouse(bValue:Boolean) : void {
-         this.mouseChildren = bValue;
-         this._tText.mouseEnabled = bValue;
+      public function setBorderColor(nColor:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function remove() : void {
-         super.remove();
-         if((this._tText) && (this._tText.parent))
-         {
-            removeChild(this._tText);
-         }
-         TooltipManager.hide("TextExtension");
+      public function allowTextMouse(bValue:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function free() : void {
-         super.free();
-         this._sType = "default";
-         this._nWidth = 100;
-         this._nHeight = 20;
-         this._bHtmlAllowed = true;
-         this._sAntialiasType = "normal";
-         this._bFixedWidth = true;
-         this._bFixedHeight = true;
-         this._ssSheet = null;
-         this._useEmbedFonts = true;
-         this._nPaddingLeft = 0;
-         this._nTextIndent = 0;
-         this._bDisabled = false;
-         this._nTextHeight = 0;
-         this._sVerticalAlign = "none";
-         this._useExtendWidth = false;
-         this._sCssClass = null;
-         this._tText.type = TextFieldType.DYNAMIC;
-         this._tText.selectable = false;
+      override public function remove() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function createTextField() : void {
-         this._tText = new TextField();
-         this._tText.addEventListener(TextEvent.LINK,this.onTextClick);
-         addChild(this._tText);
+      override public function free() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function changeCssClassColor(color:String, style:String = null) : void {
-         var i:* = undefined;
-         if(style)
-         {
-            this.aStyleObj[style].color = color;
-            this._tfFormatter = this._ssSheet.transform(this.aStyleObj[style]);
-            this._tText.setTextFormat(this._tfFormatter);
-            this._tText.defaultTextFormat = this._tfFormatter;
-         }
-         else
-         {
-            for each(i in this.aStyleObj)
-            {
-               i.color = color;
-            }
-         }
+      private function createTextField() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function changeCssClassSize(size:uint, style:String = null) : void {
-         var i:* = undefined;
-         if(style)
-         {
-            if(this.aStyleObj[style] == null)
-            {
-               this.aStyleObj[style] = new Object();
-            }
-            this.aStyleObj[style].fontSize = size + "px";
-         }
-         else
-         {
-            for each(i in this.aStyleObj)
-            {
-               i.fontSize = size + "px";
-            }
-         }
+      private function changeCssClassColor(color:String, style:String = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function appendText(sTxt:String, style:String = null) : void {
-         var textFormat:TextFormat = null;
-         if((style) && (this.aStyleObj[style]))
-         {
-            if(this._tText.filters.length)
-            {
-               this._tText.filters = new Array();
-            }
-            textFormat = this._ssSheet.transform(this.aStyleObj[style]);
-            textFormat.bold = false;
-            this._tText.defaultTextFormat = textFormat;
-         }
-         if(this._hyperlinkEnabled)
-         {
-            sTxt = HyperlinkFactory.decode(sTxt);
-         }
-         this._tText.htmlText = this._tText.htmlText + sTxt;
+      private function changeCssClassSize(size:uint, style:String = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function activeSmallHyperlink() : void {
-         HyperlinkFactory.activeSmallHyperlink(this._tText);
+      public function appendText(sTxt:String, style:String = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function bindCss() : void {
-         var styleToDisplay:String = null;
-         var s:String = null;
-         var sc:uint = 0;
-         var ss:uint = 0;
-         var fontClass:String = null;
-         var font:String = null;
-         if(!this._sCssUrl)
-         {
-            if(this._needToFinalize)
-            {
-               this.finalize();
-            }
-            return;
-         }
-         var oldCss:ExtendedStyleSheet = this._ssSheet;
-         this._ssSheet = CssManager.getInstance().getCss(this._sCssUrl.uri);
-         if(!this._ssSheet)
-         {
-            if(this._needToFinalize)
-            {
-               this.finalize();
-            }
-            return;
-         }
-         var currentStyleSheet:StyleSheet = this._tText.styleSheet;
-         this._tText.styleSheet = null;
-         this.aStyleObj = new Array();
-         for each(s in this._ssSheet.styleNames)
-         {
-            if((!styleToDisplay) || (s == this._sCssClass) || (!(this._sCssClass == styleToDisplay)) && (s == "p"))
-            {
-               styleToDisplay = s;
-            }
-            if((!(this._ssSheet == oldCss)) || (!this.aStyleObj[s]))
-            {
-               this.aStyleObj[s] = this._ssSheet.getStyle(s);
-            }
-         }
-         if((this.aStyleObj[styleToDisplay]["shadowSize"]) || (this.aStyleObj[styleToDisplay]["shadowColor"]))
-         {
-            sc = this.aStyleObj[styleToDisplay]["shadowColor"]?parseInt(this.aStyleObj[styleToDisplay]["shadowColor"].substr(1)):0;
-            ss = this.aStyleObj[styleToDisplay]["shadowSize"]?parseInt(this.aStyleObj[styleToDisplay]["shadowSize"]):5;
-            this._tText.filters = [new DropShadowFilter(0,0,sc,0.5,ss,ss,3)];
-         }
-         else
-         {
-            this._tText.filters = [];
-         }
-         if(this.aStyleObj[styleToDisplay]["useEmbedFonts"])
-         {
-            this._useEmbedFonts = this.aStyleObj[styleToDisplay]["useEmbedFonts"] == "true";
-         }
-         if(this.aStyleObj[styleToDisplay]["paddingLeft"])
-         {
-            this._nPaddingLeft = parseInt(this.aStyleObj[styleToDisplay]["paddingLeft"]);
-         }
-         if(this.aStyleObj[styleToDisplay]["verticalHeight"])
-         {
-            this._nTextHeight = parseInt(this.aStyleObj[styleToDisplay]["verticalHeight"]);
-         }
-         if(this.aStyleObj[styleToDisplay]["verticalAlign"])
-         {
-            this.verticalAlign = this.aStyleObj[styleToDisplay]["verticalAlign"];
-         }
-         if(this.aStyleObj[styleToDisplay]["thickness"])
-         {
-            this._tText.thickness = this.aStyleObj[styleToDisplay]["thickness"];
-         }
-         this._tText.gridFitType = GridFitType.PIXEL;
-         this._tText.htmlText = this._sText?this._sText:this.text;
-         this._tfFormatter = this._ssSheet.transform(this.aStyleObj[styleToDisplay]);
-         if(this.aStyleObj[styleToDisplay]["leading"])
-         {
-            this._tfFormatter.leading = this.aStyleObj[styleToDisplay]["leading"];
-         }
-         if(this.aStyleObj[styleToDisplay]["letterSpacing"])
-         {
-            this._tfFormatter.letterSpacing = parseFloat(this.aStyleObj[styleToDisplay]["letterSpacing"]);
-         }
-         if(this.aStyleObj[styleToDisplay]["kerning"])
-         {
-            this._tfFormatter.kerning = this.aStyleObj[styleToDisplay]["kerning"] == "true";
-         }
-         if(!this._neverIndent)
-         {
-            this._tfFormatter.indent = this._nTextIndent;
-         }
-         this._tfFormatter.leftMargin = this._nPaddingLeft;
-         if(this._useEmbedFonts)
-         {
-            fontClass = FontManager.getInstance().getFontClassName(this._tfFormatter.font);
-            if(fontClass)
-            {
-               this._tfFormatter.size = Math.round(int(this._tfFormatter.size) * FontManager.getInstance().getSizeMultipicator(this._tfFormatter.font));
-               this._tfFormatter.font = fontClass;
-               this._tText.defaultTextFormat.font = fontClass;
-               this._tText.embedFonts = true;
-               this._tText.antiAliasType = AntiAliasType.ADVANCED;
-            }
-            else if(this._tfFormatter)
-            {
-               _log.warn("System font [" + this._tfFormatter.font + "] used (in " + (getUi()?getUi().name:"unknow") + ", from " + this._sCssUrl.uri + ")");
-            }
-            else
-            {
-               _log.fatal("Erreur de formattage.");
-            }
-            
-         }
-         else
-         {
-            font = FontManager.getInstance().getRealFontName(this._tfFormatter.font);
-            this._tfFormatter.font = !(font == "")?font:this._tfFormatter.font;
-            this._tText.embedFonts = false;
-         }
-         this._tText.setTextFormat(this._tfFormatter);
-         this._tText.defaultTextFormat = this._tfFormatter;
-         if(this._hyperlinkEnabled)
-         {
-            HyperlinkFactory.createTextClickHandler(this._tText,true);
-         }
-         if(this._nTextHeight)
-         {
-            this._tText.height = this._nTextHeight;
-            this._tText.y = this._tText.y + (this._nHeight / 2 - this._tText.height / 2);
-         }
-         else if(!this._bFixedHeight)
-         {
-            this._tText.height = this._tText.textHeight + 5;
-            this._nHeight = this._tText.height;
-         }
-         else
-         {
-            this._tText.height = this._nHeight;
-         }
-         
-         if(this._useExtendWidth)
-         {
-            this._tText.width = this._tText.textWidth + 7;
-            this._nWidth = this._tText.width;
-         }
-         if(_bgColor != -1)
-         {
-            this.bgColor = _bgColor;
-         }
-         this.updateAlign();
-         if((this._useExtendWidth) && (getUi()))
-         {
-            getUi().render();
-         }
-         this._binded = true;
-         this.updateTooltipExtensionStyle();
-         if(this._needToFinalize)
-         {
-            this.finalize();
-         }
-      }
-      
-      public function updateCss() : void {
-         if(!this._tfFormatter)
-         {
-            return;
-         }
-         this._tText.setTextFormat(this._tfFormatter);
-         this._tText.defaultTextFormat = this._tfFormatter;
-         this.updateTooltipExtensionStyle();
-         if(!this._bFixedHeight)
-         {
-            this._tText.height = this._tText.textHeight + 5;
-            this._nHeight = this._tText.height;
-         }
-         else
-         {
-            this._tText.height = this._nHeight;
-         }
-         if(this._useExtendWidth)
-         {
-            this._tText.width = this._tText.textWidth + 7;
-            this._nWidth = this._tText.width;
-         }
-         if(_bgColor != -1)
-         {
-            this.bgColor = _bgColor;
-         }
-         this.updateAlign();
-         if((this._useExtendWidth) && (getUi()))
-         {
-            getUi().render();
-         }
-      }
-      
-      public function fullSize(width:int) : void {
-         this.removeTooltipExtension();
-         this._nWidth = width;
-         this._tText.width = width;
-         var tHeight:uint = this._tText.textHeight + 8;
-         this._tText.height = tHeight;
-         this._nHeight = tHeight;
-      }
-      
-      public function fullWidth(maxWidth:uint = 0) : void {
-         this._nWidth = int(this._tText.textWidth + 5);
-         this._tText.width = this._nWidth;
-         if(maxWidth > 0)
-         {
-            this._nWidth = maxWidth;
-            this._tText.width = maxWidth;
-            if(this._tText.textWidth < maxWidth)
-            {
-               this._tText.width = this._tText.textWidth + 10;
-            }
-         }
-         this._nHeight = this._tText.textHeight + 8;
-         this._tText.height = this._nHeight;
-      }
-      
-      public function resizeText(useSizeMin:Boolean = true) : void {
-         var currentSize:* = 0;
-         var sizeMin:* = 0;
-         var needTooltipExtension:* = false;
-         var currentTextFieldWidth:* = 0;
-         var textWidth:* = NaN;
-         this.removeTooltipExtension();
-         if((this._bFixedHeight) && (!this._tText.multiline) && (this._tText.autoSize == "none") && (this._tfFormatter))
-         {
-            currentSize = int(this._tfFormatter.size);
-            sizeMin = currentSize;
-            if(useSizeMin)
-            {
-               if(sizeMin < 12)
-               {
-                  sizeMin = 12;
-               }
-            }
-            else
-            {
-               sizeMin = 0;
-            }
-            needTooltipExtension = false;
-            currentTextFieldWidth = this._tText.width;
-            while(true)
-            {
-               textWidth = this._tText.textWidth;
-               if((textWidth > currentTextFieldWidth) || (this._tText.textHeight > this._tText.height))
-               {
-                  currentSize--;
-                  if(currentSize < sizeMin)
-                  {
-                     if(this._useTooltipExtension)
-                     {
-                        needTooltipExtension = true;
-                     }
-                     else
-                     {
-                        _log.warn("Attention : Ce texte est beaucoup trop long pour entrer dans ce TextField (Texte : " + this._tText.text + ")");
-                     }
-                     break;
-                  }
-                  this._tfFormatter.size = currentSize;
-                  this._tText.setTextFormat(this._tfFormatter);
-                  continue;
-               }
-               break;
-            }
-            if((needTooltipExtension) && (!this.multiline) && (this._bFixedHeight))
-            {
-               this.addTooltipExtension();
-            }
-            else if(this._lastWidth != this._tText.width)
-            {
-               this._lastWidth = this._tText.width + 4;
-               this._tText.width = this._lastWidth;
-            }
-            
-         }
-      }
-      
-      public function removeTooltipExtension() : void {
-         if(this._textFieldTooltipExtension)
-         {
-            removeChild(this._textFieldTooltipExtension);
-            this._tText.width = __width + int(this._textFieldTooltipExtension.width + 2);
-            __width = this._tText.width;
-            this._textFieldTooltipExtension.removeEventListener(MouseEvent.ROLL_OVER,this.onTooltipExtensionOver);
-            this._textFieldTooltipExtension.removeEventListener(MouseEvent.ROLL_OUT,this.onTooltipExtensionOut);
-            this._textFieldTooltipExtension = null;
-         }
-      }
-      
-      private function addTooltipExtension() : void {
-         this._textFieldTooltipExtension = new TextField();
-         this._textFieldTooltipExtension.selectable = false;
-         this._textFieldTooltipExtension.height = 1;
-         this._textFieldTooltipExtension.width = 1;
-         this._textFieldTooltipExtension.autoSize = TextFieldAutoSize.LEFT;
-         this.updateTooltipExtensionStyle();
-         this._textFieldTooltipExtension.text = "...";
-         this._textFieldTooltipExtension.name = "extension_" + name;
-         addChild(this._textFieldTooltipExtension);
-         var w:int = this._textFieldTooltipExtension.width + 2;
-         this._tText.width = this._tText.width - w;
-         __width = this._tText.width;
-         this._textFieldTooltipExtension.x = this._tText.width;
-         this._textFieldTooltipExtension.y = this._tText.y + this._tText.height - this._textFieldTooltipExtension.textHeight - 10;
-         if(!this._tText.wordWrap)
-         {
-            this._textFieldTooltipExtension.y = this._tText.y;
-            this._tText.height = this._tText.textHeight + 3;
-            __height = this._tText.height;
-         }
-         var target:DisplayObjectContainer = this;
-         var i:int = 0;
-         while(i < 4)
-         {
-            if(target is ButtonContainer)
-            {
-               (target as ButtonContainer).mouseChildren = true;
-               break;
-            }
-            target = target.parent;
-            if(!target)
-            {
-               break;
-            }
-            i++;
-         }
-         this._textFieldTooltipExtension.addEventListener(MouseEvent.ROLL_OVER,this.onTooltipExtensionOver,false,0,true);
-         this._textFieldTooltipExtension.addEventListener(MouseEvent.ROLL_OUT,this.onTooltipExtensionOut,false,0,true);
-         this._textFieldTooltipExtension.addEventListener(MouseEvent.MOUSE_WHEEL,this.onTooltipExtensionOut,false,0,true);
-      }
-      
-      private function updateTooltipExtensionStyle() : void {
-         if(!this._textFieldTooltipExtension)
-         {
-            return;
-         }
-         this._textFieldTooltipExtension.embedFonts = this._tText.embedFonts;
-         this._textFieldTooltipExtension.defaultTextFormat = this._tfFormatter;
-         this._textFieldTooltipExtension.setTextFormat(this._tfFormatter);
-         this._textTooltipExtensionColor = uint(this._tfFormatter.color);
-         this._textFieldTooltipExtension.textColor = this._textTooltipExtensionColor;
-      }
-      
-      private function onTextClick(e:TextEvent) : void {
-         e.stopPropagation();
-         Berilia.getInstance().handler.process(new TextClickMessage(this,e.text));
-      }
-      
-      protected function updateAlign() : void {
-         if(!this._tText.textHeight)
-         {
-            return;
-         }
-         var h:int = 0;
-         var i:int = 0;
-         while(i < this._tText.numLines)
-         {
-            h = h + (TextLineMetrics(this._tText.getLineMetrics(i)).height + TextLineMetrics(this._tText.getLineMetrics(i)).leading + TextLineMetrics(this._tText.getLineMetrics(i)).descent);
-            i++;
-         }
-         switch(this._sVerticalAlign.toUpperCase())
-         {
-            case VALIGN_CENTER:
-               this._tText.height = h;
-               this._tText.y = (this.height - this._tText.height) / 2;
-               break;
-            case VALIGN_BOTTOM:
-               this._tText.height = this.height;
-               this._tText.y = this.height - h;
-               break;
-            case VALIGN_TOP:
-               this._tText.height = h;
-               this._tText.y = 0;
-               break;
-            case VALIGN_FIXEDHEIGHT:
-               if((!this._tText.wordWrap) || (this._tText.multiline))
-               {
-                  this._tText.height = this._tText.textHeight + HEIGHT_OFFSET;
-               }
-               this._tText.y = 0;
-               break;
-            case VALIGN_NONE:
-               if((!this._tText.wordWrap) || (this._tText.multiline))
-               {
-                  this._tText.height = this._tText.textHeight + 4 + HEIGHT_OFFSET;
-               }
-               this._tText.y = 0;
-               break;
-         }
-      }
-      
-      private function onTooltipExtensionOver(e:MouseEvent) : void {
-         var docMain:Sprite = Berilia.getInstance().docMain;
-         TooltipManager.show(new TextTooltipInfo(this._tText.text),this,UiModuleManager.getInstance().getModule("Ankama_Tooltips"),false,"TextExtension",LocationEnum.POINT_TOP,LocationEnum.POINT_BOTTOM,20,true,null,TooltipManager.defaultTooltipUiScript,null,"TextInfo");
-         this._textFieldTooltipExtension.textColor = 16765814;
-      }
-      
-      private function onTooltipExtensionOut(e:MouseEvent = null) : void {
-         TooltipManager.hide("TextExtension");
-         this._textFieldTooltipExtension.textColor = this._textTooltipExtensionColor;
-      }
-      
-      public function finalize() : void {
-         var ui:UiRootContainer = null;
-         if(this._binded)
-         {
-            if(this._autoResize)
-            {
-               this.resizeText();
-            }
-            if(this._hyperlinkEnabled)
-            {
-               HyperlinkFactory.createTextClickHandler(this._tText);
-            }
-            this._finalized = true;
-            ui = getUi();
-            if(ui)
-            {
-               ui.iAmFinalized(this);
-            }
-         }
-         else
-         {
-            this._needToFinalize = true;
-         }
-      }
-      
-      public function get bmpText() : BitmapData {
-         var m:Matrix = new Matrix();
-         var bmpdt:BitmapData = new BitmapData(this.width,this.height,true,16711680);
-         bmpdt.draw(this._tText,m,null,null,null,true);
-         return bmpdt;
+      public function activeSmallHyperlink() : void
+      {
+         //Décompilation abandonné
+      }
+      
+      private function bindCss() : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public function updateCss() : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public function fullSize(width:int) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public function fullWidth(maxWidth:uint = 0) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public function resizeText(useSizeMin:Boolean = true) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public function removeTooltipExtension() : void
+      {
+         //Décompilation abandonné
+      }
+      
+      private function addTooltipExtension() : void
+      {
+         //Décompilation abandonné
+      }
+      
+      private function updateTooltipExtensionStyle() : void
+      {
+         //Décompilation abandonné
+      }
+      
+      private function onTextClick(e:TextEvent) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      protected function updateAlign() : void
+      {
+         //Décompilation abandonné
+      }
+      
+      private function onTooltipExtensionOver(e:MouseEvent) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      private function onTooltipExtensionOut(e:MouseEvent = null) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public function finalize() : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public function get bmpText() : BitmapData
+      {
+         //Décompilation abandonné
       }
    }
 }

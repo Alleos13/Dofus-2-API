@@ -14,25 +14,25 @@ package com.ankamagames.dofus.internalDatacenter.userInterface
    public class ButtonWrapper extends Proxy implements IDataCenter, ISlotData
    {
       
-      public function ButtonWrapper() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ButtonWrapper()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      public static function create(buttonId:uint, position:int, uriName:String, callback:Function, name:String, shortcut:String = "") : ButtonWrapper {
-         var button:ButtonWrapper = new ButtonWrapper();
-         button.id = buttonId;
-         button.position = position;
-         button.callback = callback;
-         button.uriName = uriName;
-         button.name = name;
-         button.shortcut = shortcut;
-         return button;
+      public static function create(buttonId:uint, position:int, uriName:String, callback:Function, name:String, shortcut:String = "") : ButtonWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public static function getButtonWrapperById(id:uint) : ButtonWrapper {
-         return null;
+      public static function getButtonWrapperById(id:uint) : ButtonWrapper
+      {
+         //Décompilation abandonné
       }
       
       private var _uri:Uri;
@@ -51,85 +51,94 @@ package com.ankamagames.dofus.internalDatacenter.userInterface
       
       public var shortcut:String;
       
-      public function get iconUri() : Uri {
-         if(!this._uri)
-         {
-            this._uri = new Uri(XmlConfig.getInstance().getEntry("config.ui.skin").concat("assets.swf|").concat(this.uriName));
-         }
-         return this._uri;
+      public function get iconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get fullSizeIconUri() : Uri {
-         if(!this._uri)
-         {
-            this._uri = new Uri(XmlConfig.getInstance().getEntry("config.ui.skin").concat("assets.swf|").concat(this.uriName));
-         }
-         return this._uri;
+      public function get fullSizeIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get backGroundIconUri() : Uri {
-         return null;
+      public function get backGroundIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get errorIconUri() : Uri {
-         return null;
+      public function get errorIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get info1() : String {
-         return null;
+      public function get info1() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get startTime() : int {
-         return 0;
+      public function get startTime() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get endTime() : int {
-         return 0;
+      public function get endTime() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set endTime(t:int) : void {
+      public function set endTime(t:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get timer() : int {
-         return 0;
+      public function get timer() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get active() : Boolean {
-         return this._active;
+      public function get active() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set active(active:Boolean) : void {
-         this._active = active;
+      public function set active(active:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      override flash_proxy function getProperty(name:*) : * {
-         if(isAttribute(name))
-         {
-            return this[name];
-         }
-         return "Error_on_buttonWrapper_" + name;
+      override flash_proxy function getProperty(name:*) : *
+      {
+         //Décompilation abandonné
       }
       
-      override flash_proxy function hasProperty(name:*) : Boolean {
-         return isAttribute(name);
+      override flash_proxy function hasProperty(name:*) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function toString() : String {
-         return "[ButtonWrapper#" + this.id + "]";
+      public function toString() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function setPosition(value:int) : void {
-         this.position = value;
+      public function setPosition(value:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addHolder(h:ISlotDataHolder) : void {
+      public function addHolder(h:ISlotDataHolder) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeHolder(h:ISlotDataHolder) : void {
+      public function removeHolder(h:ISlotDataHolder) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getIconUri(pngMode:Boolean = true) : Uri {
-         return this.iconUri;
+      public function getIconUri(pngMode:Boolean = true) : Uri
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -7,12 +7,13 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightTemporaryBoostStep extends AbstractSequencable implements IFightStep
    {
       
-      public function FightTemporaryBoostStep(fighterId:int, statName:String, duration:int, durationText:String) {
-         super();
-         this._fighterId = fighterId;
-         this._statName = statName;
-         this._duration = duration;
-         this._durationText = durationText;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightTemporaryBoostStep(fighterId:int, statName:String, duration:int, durationText:String)
+      {
+         //Décompilation abandonné
       }
       
       private var _fighterId:int;
@@ -23,13 +24,14 @@ package com.ankamagames.dofus.logic.game.fight.steps
       
       private var _durationText:String;
       
-      public function get stepType() : String {
-         return "temporaryBoost";
+      public function get stepType() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function start() : void {
-         FightEventsHelper.sendFightEvent(FightEventEnum.FIGHTER_TEMPORARY_BOOSTED,[this._fighterId,this._statName,this._duration,this._durationText],this._fighterId,castingSpellId,false,2);
-         executeCallbacks();
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

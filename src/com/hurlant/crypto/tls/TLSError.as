@@ -3,8 +3,13 @@ package com.hurlant.crypto.tls
    public class TLSError extends Error
    {
       
-      public function TLSError(message:String, id:int) {
-         super(message,id);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TLSError(message:String, id:int)
+      {
+         //Décompilation abandonné
       }
       
       public static const close_notify:uint = 0;

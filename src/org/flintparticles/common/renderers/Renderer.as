@@ -5,9 +5,13 @@ package org.flintparticles.common.renderers
    public interface Renderer
    {
       
-      function addEmitter(param1:Emitter) : void;
+      {
+      //Décompilation abandonné
+      }
       
-      function removeEmitter(param1:Emitter) : void;
+      function addEmitter(emitter:Emitter) : void;
+      
+      function removeEmitter(emitter:Emitter) : void;
       
       function get emitters() : Array;
    }

@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class ExchangeTypeEnum extends Object
    {
       
-      public function ExchangeTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const NPC_SHOP:int = 0;

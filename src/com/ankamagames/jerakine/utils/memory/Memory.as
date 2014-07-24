@@ -6,38 +6,32 @@ package com.ankamagames.jerakine.utils.memory
    public class Memory extends Object
    {
       
-      public function Memory() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Memory()
+      {
+         //Décompilation abandonné
       }
       
       private static const MOD:uint = 1024;
       
       private static const UNITS:Array;
       
-      public static function usage() : uint {
-         return System.totalMemory;
+      public static function usage() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public static function humanReadableUsage() : String {
-         var memory:uint = System.totalMemory;
-         var i:uint = 0;
-         while(memory > MOD)
-         {
-            memory = memory / MOD;
-            i++;
-         }
-         return memory + " " + UNITS[i];
+      public static function humanReadableUsage() : String
+      {
+         //Décompilation abandonné
       }
       
-      public static function gc() : void {
-         try
-         {
-            new LocalConnection().connect("foo");
-            new LocalConnection().connect("foo");
-         }
-         catch(e:*)
-         {
-         }
+      public static function gc() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

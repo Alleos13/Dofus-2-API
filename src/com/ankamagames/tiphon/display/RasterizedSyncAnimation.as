@@ -7,54 +7,30 @@ package com.ankamagames.tiphon.display
    public class RasterizedSyncAnimation extends RasterizedAnimation
    {
       
-      public function RasterizedSyncAnimation(target:MovieClip, lookCode:String) {
-         var animationName:String = null;
-         super(target,lookCode);
-         _target = target;
-         _totalFrames = _target.totalFrames;
-         spriteHandler = (target as ScriptedAnimation).spriteHandler;
-         switch(spriteHandler.getDirection())
-         {
-            case 1:
-            case 3:
-               animationName = spriteHandler.getAnimation() + "_1";
-               break;
-            case 5:
-            case 7:
-               animationName = spriteHandler.getAnimation() + "_5";
-               break;
-            default:
-               animationName = spriteHandler.getAnimation() + "_" + spriteHandler.getDirection();
-         }
-         if(spriteHandler != null)
-         {
-            spriteHandler.tiphonEventManager.parseLabels(currentScene,animationName);
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RasterizedSyncAnimation(target:MovieClip, lookCode:String)
+      {
+         //Décompilation abandonné
       }
       
       private static var _events:Dictionary;
       
-      override public function gotoAndStop(frame:Object, scene:String = null) : void {
-         var targetFrame:uint = frame as uint;
-         if(targetFrame > 0)
-         {
-            targetFrame--;
-         }
-         this.displayFrame(targetFrame % _totalFrames);
+      override public function gotoAndStop(frame:Object, scene:String = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function gotoAndPlay(frame:Object, scene:String = null) : void {
-         this.gotoAndStop(frame,scene);
-         play();
+      override public function gotoAndPlay(frame:Object, scene:String = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      override protected function displayFrame(frameIndex:uint) : Boolean {
-         var changed:Boolean = super.displayFrame(frameIndex);
-         if(changed)
-         {
-            spriteHandler.tiphonEventManager.dispatchEvents(frameIndex);
-         }
-         return changed;
+      override protected function displayFrame(frameIndex:uint) : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

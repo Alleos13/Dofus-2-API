@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.party
    public class DungeonPartyFinderRegisterAction extends Object implements Action
    {
       
-      public function DungeonPartyFinderRegisterAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(dungeons:Array) : DungeonPartyFinderRegisterAction {
-         var a:DungeonPartyFinderRegisterAction = new DungeonPartyFinderRegisterAction();
-         a.dungeons = dungeons;
-         return a;
+      public function DungeonPartyFinderRegisterAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(dungeons:Array) : DungeonPartyFinderRegisterAction
+      {
+         //Décompilation abandonné
       }
       
       public var dungeons:Array;

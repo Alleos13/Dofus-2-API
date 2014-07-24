@@ -10,61 +10,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.fight
    public class GameRolePlayShowChallengeMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameRolePlayShowChallengeMessage() {
-         this.commonsInfos = new FightCommonInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameRolePlayShowChallengeMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 301;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var commonsInfos:FightCommonInformations;
       
-      override public function getMessageId() : uint {
-         return 301;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameRolePlayShowChallengeMessage(commonsInfos:FightCommonInformations = null) : GameRolePlayShowChallengeMessage {
-         this.commonsInfos = commonsInfos;
-         this._isInitialized = true;
-         return this;
+      public function initGameRolePlayShowChallengeMessage(commonsInfos:FightCommonInformations = null) : GameRolePlayShowChallengeMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.commonsInfos = new FightCommonInformations();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameRolePlayShowChallengeMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayShowChallengeMessage(output:IDataOutput) : void {
-         this.commonsInfos.serializeAs_FightCommonInformations(output);
+      public function serializeAs_GameRolePlayShowChallengeMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameRolePlayShowChallengeMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayShowChallengeMessage(input:IDataInput) : void {
-         this.commonsInfos = new FightCommonInformations();
-         this.commonsInfos.deserialize(input);
+      public function deserializeAs_GameRolePlayShowChallengeMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

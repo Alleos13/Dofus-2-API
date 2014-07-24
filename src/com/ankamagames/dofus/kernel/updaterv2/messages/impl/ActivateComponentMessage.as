@@ -7,11 +7,13 @@ package com.ankamagames.dofus.kernel.updaterv2.messages.impl
    public class ActivateComponentMessage extends Object implements IUpdaterOutputMessage
    {
       
-      public function ActivateComponentMessage(component:String, activate:Boolean = true, project:String = "game") {
-         super();
-         this._component = component;
-         this._project = project;
-         this._activate = activate;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ActivateComponentMessage(component:String, activate:Boolean = true, project:String = "game")
+      {
+         //Décompilation abandonné
       }
       
       private var _component:String;
@@ -20,30 +22,29 @@ package com.ankamagames.dofus.kernel.updaterv2.messages.impl
       
       private var _activate:Boolean;
       
-      public function get component() : String {
-         return this._component;
+      public function get component() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get project() : String {
-         return this._project;
+      public function get project() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get activate() : Boolean {
-         return this._activate;
+      public function get activate() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize() : String {
-         return by.blooddy.crypto.serialization.JSON.encode(
-            {
-               "_msg_id":UpdaterMessageIDEnum.ACTIVATE_COMPONENT,
-               "component":this._component,
-               "project":this._project,
-               "activate":this._activate
-            });
+      public function serialize() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function toString() : String {
-         return "[ActivateComponentMessage component=" + this._component + " project=" + this._project + " activation=" + this._activate + "]";
+      public function toString() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

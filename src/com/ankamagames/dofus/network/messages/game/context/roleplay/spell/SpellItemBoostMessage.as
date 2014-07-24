@@ -9,16 +9,22 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.spell
    public class SpellItemBoostMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function SpellItemBoostMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpellItemBoostMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6011;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var statId:uint = 0;
@@ -27,83 +33,49 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.spell
       
       public var value:int = 0;
       
-      override public function getMessageId() : uint {
-         return 6011;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initSpellItemBoostMessage(statId:uint = 0, spellId:uint = 0, value:int = 0) : SpellItemBoostMessage {
-         this.statId = statId;
-         this.spellId = spellId;
-         this.value = value;
-         this._isInitialized = true;
-         return this;
+      public function initSpellItemBoostMessage(statId:uint = 0, spellId:uint = 0, value:int = 0) : SpellItemBoostMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.statId = 0;
-         this.spellId = 0;
-         this.value = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_SpellItemBoostMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_SpellItemBoostMessage(output:IDataOutput) : void {
-         if(this.statId < 0)
-         {
-            throw new Error("Forbidden value (" + this.statId + ") on element statId.");
-         }
-         else
-         {
-            output.writeInt(this.statId);
-            if(this.spellId < 0)
-            {
-               throw new Error("Forbidden value (" + this.spellId + ") on element spellId.");
-            }
-            else
-            {
-               output.writeShort(this.spellId);
-               output.writeShort(this.value);
-               return;
-            }
-         }
+      public function serializeAs_SpellItemBoostMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_SpellItemBoostMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_SpellItemBoostMessage(input:IDataInput) : void {
-         this.statId = input.readInt();
-         if(this.statId < 0)
-         {
-            throw new Error("Forbidden value (" + this.statId + ") on element of SpellItemBoostMessage.statId.");
-         }
-         else
-         {
-            this.spellId = input.readShort();
-            if(this.spellId < 0)
-            {
-               throw new Error("Forbidden value (" + this.spellId + ") on element of SpellItemBoostMessage.spellId.");
-            }
-            else
-            {
-               this.value = input.readShort();
-               return;
-            }
-         }
+      public function deserializeAs_SpellItemBoostMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.utils
    public class EmbedAssets_QUEST_CLIP extends MovieClipAsset
    {
       
-      public function EmbedAssets_QUEST_CLIP() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EmbedAssets_QUEST_CLIP()
+      {
+         //Décompilation abandonné
       }
    }
 }

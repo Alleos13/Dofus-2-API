@@ -5,16 +5,13 @@ package com.ankamagames.berilia.types.data
    public class ContextMenuData extends Object implements IDataCenter
    {
       
-      public function ContextMenuData(data:*, makerName:String, content:Array) {
-         var entry:* = undefined;
-         super();
-         this.data = data;
-         this.makerName = makerName;
-         this.content = new UnsecureArray();
-         for each(entry in content)
-         {
-            this.content.push(entry);
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ContextMenuData(data:*, makerName:String, content:Array)
+      {
+         //Décompilation abandonné
       }
       
       public var data;

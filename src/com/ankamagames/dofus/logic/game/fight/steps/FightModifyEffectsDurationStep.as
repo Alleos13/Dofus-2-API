@@ -10,11 +10,13 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightModifyEffectsDurationStep extends AbstractSequencable implements IFightStep, ISequencableListener
    {
       
-      public function FightModifyEffectsDurationStep(sourceId:int, targetId:int, delta:int) {
-         super();
-         this._sourceId = sourceId;
-         this._targetId = targetId;
-         this._delta = delta;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightModifyEffectsDurationStep(sourceId:int, targetId:int, delta:int)
+      {
+         //Décompilation abandonné
       }
       
       private var _sourceId:int;
@@ -25,27 +27,19 @@ package com.ankamagames.dofus.logic.game.fight.steps
       
       private var _virtualStep:IFightStep;
       
-      public function get stepType() : String {
-         return "modifyEffectsDuration";
+      public function get stepType() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function start() : void {
-         BuffManager.getInstance().incrementDuration(this._targetId,this._delta,true,BuffManager.INCREMENT_MODE_TARGET);
-         FightEventsHelper.sendFightEvent(FightEventEnum.FIGHTER_EFFECTS_MODIFY_DURATION,[this._sourceId,this._targetId,this._delta],this._targetId,castingSpellId);
-         if(!this._virtualStep)
-         {
-            executeCallbacks();
-         }
-         else
-         {
-            this._virtualStep.addListener(this);
-            this._virtualStep.start();
-         }
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function stepFinished(step:ISequencable, withTimout:Boolean = false) : void {
-         this._virtualStep.removeListener(this);
-         executeCallbacks();
+      public function stepFinished(step:ISequencable, withTimout:Boolean = false) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

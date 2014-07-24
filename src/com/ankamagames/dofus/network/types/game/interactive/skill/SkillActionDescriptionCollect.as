@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.interactive.skill
    public class SkillActionDescriptionCollect extends SkillActionDescriptionTimed implements INetworkType
    {
       
-      public function SkillActionDescriptionCollect() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SkillActionDescriptionCollect()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 99;
@@ -17,71 +22,39 @@ package com.ankamagames.dofus.network.types.game.interactive.skill
       
       public var max:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 99;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initSkillActionDescriptionCollect(skillId:uint = 0, time:uint = 0, min:uint = 0, max:uint = 0) : SkillActionDescriptionCollect {
-         super.initSkillActionDescriptionTimed(skillId,time);
-         this.min = min;
-         this.max = max;
-         return this;
+      public function initSkillActionDescriptionCollect(skillId:uint = 0, time:uint = 0, min:uint = 0, max:uint = 0) : SkillActionDescriptionCollect
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.min = 0;
-         this.max = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_SkillActionDescriptionCollect(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_SkillActionDescriptionCollect(output:IDataOutput) : void {
-         super.serializeAs_SkillActionDescriptionTimed(output);
-         if(this.min < 0)
-         {
-            throw new Error("Forbidden value (" + this.min + ") on element min.");
-         }
-         else
-         {
-            output.writeShort(this.min);
-            if(this.max < 0)
-            {
-               throw new Error("Forbidden value (" + this.max + ") on element max.");
-            }
-            else
-            {
-               output.writeShort(this.max);
-               return;
-            }
-         }
+      public function serializeAs_SkillActionDescriptionCollect(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_SkillActionDescriptionCollect(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_SkillActionDescriptionCollect(input:IDataInput) : void {
-         super.deserialize(input);
-         this.min = input.readShort();
-         if(this.min < 0)
-         {
-            throw new Error("Forbidden value (" + this.min + ") on element of SkillActionDescriptionCollect.min.");
-         }
-         else
-         {
-            this.max = input.readShort();
-            if(this.max < 0)
-            {
-               throw new Error("Forbidden value (" + this.max + ") on element of SkillActionDescriptionCollect.max.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_SkillActionDescriptionCollect(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

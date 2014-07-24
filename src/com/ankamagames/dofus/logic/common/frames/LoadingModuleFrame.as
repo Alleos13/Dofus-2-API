@@ -35,11 +35,13 @@ package com.ankamagames.dofus.logic.common.frames
    public class LoadingModuleFrame extends Object implements Frame
    {
       
-      public function LoadingModuleFrame(manageAuthentificationFrame:Boolean = false) {
-         this._tips = [];
-         this._tipsTimer = new Timer(20 * 1000);
-         super();
-         this._manageAuthentificationFrame = manageAuthentificationFrame;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LoadingModuleFrame(manageAuthentificationFrame:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -62,171 +64,39 @@ package com.ankamagames.dofus.logic.common.frames
       
       private var _progressRation:Number;
       
-      public function get priority() : int {
-         return Priority.HIGH;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         var tip:Tips = null;
-         this._waitDone = false;
-         this._startTime = getTimer();
-         this._loadingScreen = new LoadingScreen(true);
-         Dofus.getInstance().addChild(this._loadingScreen);
-         for each(tip in Tips.getAllTips())
-         {
-            this._tips.push(tip);
-         }
-         this._tipsTimer.addEventListener(TimerEvent.TIMER,this.changeTip);
-         this._tipsTimer.start();
-         this.changeTip(null);
-         if(UiModuleManager.getInstance().unparsedXmlTotalCount == 0)
-         {
-            this._progressRation = 1 / 2;
-         }
-         else
-         {
-            this._progressRation = 1 / 3;
-         }
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function changeTip(e:Event) : void {
-         var tip:Tips = this._tips[Math.floor(this._tips.length * Math.random())] as Tips;
-         if(tip)
-         {
-            this._loadingScreen.tip = tip.description;
-         }
+      private function changeTip(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var ankamaModule:* = false;
-         var mrlfm:ModuleRessourceLoadFailedMessage = null;
-         var modLog:String = null;
-         var modList:Array = null;
-         var newPrc:* = NaN;
-         var mod:UiModule = null;
-         switch(true)
-         {
-            case msg is ModuleLoadedMessage:
-               this._loadingScreen.value = this._loadingScreen.value + 100 / UiModuleManager.getInstance().moduleCount * this._progressRation;
-               ankamaModule = UiModuleManager.getInstance().getModule(ModuleLoadedMessage(msg).moduleName).trusted;
-               this._loadingScreen.log(ModuleLoadedMessage(msg).moduleName + " script loaded " + (ankamaModule?"":"UNTRUSTED module"),ankamaModule?LoadingScreen.IMPORTANT:LoadingScreen.WARNING);
-               return true;
-            case msg is ModuleExecErrorMessage:
-               this._loadingScreen.value = this._loadingScreen.value + 100 / UiModuleManager.getInstance().moduleCount * this._progressRation;
-               this._loadingScreen.log("Error while executing " + ModuleExecErrorMessage(msg).moduleName + "\'s main script :\n" + ModuleExecErrorMessage(msg).stackTrace,LoadingScreen.ERROR);
-               this._showContinueButton = true;
-               return true;
-            case msg is ModuleRessourceLoadFailedMessage:
-               mrlfm = msg as ModuleRessourceLoadFailedMessage;
-               this._loadingScreen.log("Module " + mrlfm.moduleName + " : Cannot load " + mrlfm.uri,mrlfm.isImportant?LoadingScreen.ERROR:LoadingScreen.WARNING);
-               if(mrlfm.isImportant)
-               {
-                  this._showContinueButton = true;
-               }
-               return true;
-            case msg is AllModulesLoadedMessage:
-               modLog = "";
-               modList = UiModuleManager.getInstance().getModules();
-               for each(mod in modList)
-               {
-                  if(!mod.trusted)
-                  {
-                     modLog = modLog + (mod.toString() + "\n");
-                  }
-               }
-               if(modLog.length)
-               {
-                  modLog = "PID:" + PlayerManager.getInstance().accountId + "\n" + modLog;
-                  StatisticReportingManager.getInstance().report("customMod",modLog);
-               }
-               if(this._manageAuthentificationFrame)
-               {
-                  if(!this._showContinueButton)
-                  {
-                     this.launchGame();
-                  }
-                  else
-                  {
-                     this._showContinueButton = false;
-                     this._loadingScreen.continueCallbak = this.launchGame;
-                  }
-                  return true;
-               }
-               if(this._showContinueButton)
-               {
-                  this._showContinueButton = false;
-                  this._loadingScreen.continueCallbak = this.dispatchEnd;
-                  return true;
-               }
-               break;
-            case msg is UiXmlParsedMessage:
-               newPrc = 1 - UiModuleManager.getInstance().unparsedXmlCount / UiModuleManager.getInstance().unparsedXmlTotalCount;
-               if(newPrc < this._lastXmlParsedPrc)
-               {
-                  break;
-               }
-               this._loadingScreen.log("Preparsing " + UiXmlParsedMessage(msg).url,LoadingScreen.INFO);
-               this._loadingScreen.value = this._loadingScreen.value + (newPrc - this._lastXmlParsedPrc) * 100 * this._progressRation;
-               this._lastXmlParsedPrc = newPrc;
-               return true;
-            case msg is UiXmlParsedErrorMessage:
-               this._loadingScreen.log("Error while parsing  " + UiXmlParsedErrorMessage(msg).url + " : " + UiXmlParsedErrorMessage(msg).msg,LoadingScreen.ERROR);
-               return true;
-            case msg is MapRenderProgressMessage:
-               this._loadingScreen.value = this._loadingScreen.value + MapRenderProgressMessage(msg).percent * this._progressRation;
-               return true;
-            case msg is GameStartingMessage:
-               Kernel.getWorker().removeFrame(this);
-               return true;
-            case msg is ServersListMessage:
-            case msg is MapComplementaryInformationsDataMessage:
-               Kernel.getWorker().removeFrame(this);
-               return false;
-         }
-         return false;
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         if(this._tipsTimer)
-         {
-            this._tipsTimer.removeEventListener(TimerEvent.TIMER,this.changeTip);
-         }
-         this._tipsTimer = null;
-         if(this._loadingScreen)
-         {
-            this._loadingScreen.parent.removeChild(this._loadingScreen);
-         }
-         this._loadingScreen = null;
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function dispatchEnd() : void {
-         Kernel.getWorker().process(new AllModulesLoadedMessage());
+      private function dispatchEnd() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function launchGame() : void {
-         if((getTimer() - this._startTime < 2000) && (!this._waitDone))
-         {
-            setTimeout(this.launchGame,2000 - (getTimer() - this._startTime));
-            this._waitDone = true;
-            return;
-         }
-         this._manageAuthentificationFrame = false;
-         Kernel.getWorker().addFrame(new AuthentificationFrame(AuthentificationManager.getInstance().loginValidationAction == null));
-         Kernel.getWorker().addFrame(new QueueFrame());
-         Kernel.getWorker().addFrame(new GameStartingFrame());
-         var nb:int = DisconnectionHandlerFrame.messagesAfterReset.length;
-         var i:int = 0;
-         while(i < nb)
-         {
-            Kernel.getWorker().process(DisconnectionHandlerFrame.messagesAfterReset.shift());
-            i++;
-         }
-         if(AuthentificationManager.getInstance().loginValidationAction)
-         {
-            Kernel.getWorker().process(AuthentificationManager.getInstance().loginValidationAction);
-         }
+      private function launchGame() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

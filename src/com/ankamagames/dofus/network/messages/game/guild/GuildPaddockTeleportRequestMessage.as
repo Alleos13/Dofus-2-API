@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.guild
    public class GuildPaddockTeleportRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GuildPaddockTeleportRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildPaddockTeleportRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5957;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var paddockId:int = 0;
       
-      override public function getMessageId() : uint {
-         return 5957;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGuildPaddockTeleportRequestMessage(paddockId:int = 0) : GuildPaddockTeleportRequestMessage {
-         this.paddockId = paddockId;
-         this._isInitialized = true;
-         return this;
+      public function initGuildPaddockTeleportRequestMessage(paddockId:int = 0) : GuildPaddockTeleportRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.paddockId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GuildPaddockTeleportRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GuildPaddockTeleportRequestMessage(output:IDataOutput) : void {
-         output.writeInt(this.paddockId);
+      public function serializeAs_GuildPaddockTeleportRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GuildPaddockTeleportRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildPaddockTeleportRequestMessage(input:IDataInput) : void {
-         this.paddockId = input.readInt();
+      public function deserializeAs_GuildPaddockTeleportRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

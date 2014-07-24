@@ -5,8 +5,13 @@ package com.ankamagames.dofus.internalDatacenter.almanax
    public class AlmanaxZodiac extends Object implements IDataCenter
    {
       
-      public function AlmanaxZodiac() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AlmanaxZodiac()
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;

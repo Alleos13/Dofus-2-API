@@ -11,77 +11,71 @@ package com.ankamagames.dofus.network.messages.game.shortcut
    public class ShortcutBarAddRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ShortcutBarAddRequestMessage() {
-         this.shortcut = new Shortcut();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ShortcutBarAddRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6225;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var barType:uint = 0;
       
       public var shortcut:Shortcut;
       
-      override public function getMessageId() : uint {
-         return 6225;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initShortcutBarAddRequestMessage(barType:uint = 0, shortcut:Shortcut = null) : ShortcutBarAddRequestMessage {
-         this.barType = barType;
-         this.shortcut = shortcut;
-         this._isInitialized = true;
-         return this;
+      public function initShortcutBarAddRequestMessage(barType:uint = 0, shortcut:Shortcut = null) : ShortcutBarAddRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.barType = 0;
-         this.shortcut = new Shortcut();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ShortcutBarAddRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ShortcutBarAddRequestMessage(output:IDataOutput) : void {
-         output.writeByte(this.barType);
-         output.writeShort(this.shortcut.getTypeId());
-         this.shortcut.serialize(output);
+      public function serializeAs_ShortcutBarAddRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ShortcutBarAddRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ShortcutBarAddRequestMessage(input:IDataInput) : void {
-         this.barType = input.readByte();
-         if(this.barType < 0)
-         {
-            throw new Error("Forbidden value (" + this.barType + ") on element of ShortcutBarAddRequestMessage.barType.");
-         }
-         else
-         {
-            _id2 = input.readUnsignedShort();
-            this.shortcut = ProtocolTypeManager.getInstance(Shortcut,_id2);
-            this.shortcut.deserialize(input);
-            return;
-         }
+      public function deserializeAs_ShortcutBarAddRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

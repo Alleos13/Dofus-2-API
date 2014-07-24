@@ -8,18 +8,25 @@ package com.ankamagames.dofus.datacenter.appearance
    public class Title extends Object implements IDataCenter
    {
       
-      public function Title() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Title()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Titles";
       
-      public static function getTitleById(id:int) : Title {
-         return GameData.getObject(MODULE,id) as Title;
+      public static function getTitleById(id:int) : Title
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAllTitle() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAllTitle() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -36,36 +43,19 @@ package com.ankamagames.dofus.datacenter.appearance
       
       private var _nameF:String;
       
-      public function get name() : String {
-         if((!PlayedCharacterManager.getInstance()) || (!PlayedCharacterManager.getInstance().infos) || (PlayedCharacterManager.getInstance().infos.sex == 0))
-         {
-            if(!this._nameM)
-            {
-               this._nameM = I18n.getText(this.nameMaleId);
-            }
-            return this._nameM;
-         }
-         if(!this._nameF)
-         {
-            this._nameF = I18n.getText(this.nameFemaleId);
-         }
-         return this._nameF;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get nameMale() : String {
-         if(!this._nameM)
-         {
-            this._nameM = I18n.getText(this.nameMaleId);
-         }
-         return this._nameM;
+      public function get nameMale() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get nameFemale() : String {
-         if(!this._nameF)
-         {
-            this._nameF = I18n.getText(this.nameFemaleId);
-         }
-         return this._nameF;
+      public function get nameFemale() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class LeaveDialogAction extends Object implements Action
    {
       
-      public function LeaveDialogAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : LeaveDialogAction {
-         var action:LeaveDialogAction = new LeaveDialogAction();
-         return action;
+      public function LeaveDialogAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : LeaveDialogAction
+      {
+         //Décompilation abandonné
       }
    }
 }

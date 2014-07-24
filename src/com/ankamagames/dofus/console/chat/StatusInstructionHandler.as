@@ -15,85 +15,28 @@ package com.ankamagames.dofus.console.chat
    public class StatusInstructionHandler extends Object implements ConsoleInstructionHandler
    {
       
-      public function StatusInstructionHandler() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void {
-         var status:PlayerStatus = null;
-         var grpfsrmmsg:GameRolePlayFreeSoulRequestMessage = null;
-         var message:String = null;
-         var s:String = null;
-         var psurmsg:PlayerStatusUpdateRequestMessage = new PlayerStatusUpdateRequestMessage();
-         switch(cmd)
-         {
-            case "away":
-            case I18n.getUiText("ui.chat.status.away").toLocaleLowerCase():
-               if(args.length > 0)
-               {
-                  message = "";
-                  for each(s in args)
-                  {
-                     message = message + (s + " ");
-                  }
-                  status = new PlayerStatusExtended();
-                  PlayerStatusExtended(status).initPlayerStatusExtended(PlayerStatusEnum.PLAYER_STATUS_AFK,message);
-                  KernelEventsManager.getInstance().processCallback(SocialHookList.NewAwayMessage,message);
-               }
-               else
-               {
-                  status = new PlayerStatus();
-                  status.initPlayerStatus(PlayerStatusEnum.PLAYER_STATUS_AFK);
-               }
-               psurmsg.initPlayerStatusUpdateRequestMessage(status);
-               ConnectionsHandler.getConnection().send(psurmsg);
-               break;
-            case I18n.getUiText("ui.chat.status.solo").toLocaleLowerCase():
-               status = new PlayerStatus();
-               status.initPlayerStatus(PlayerStatusEnum.PLAYER_STATUS_SOLO);
-               psurmsg.initPlayerStatusUpdateRequestMessage(status);
-               ConnectionsHandler.getConnection().send(psurmsg);
-               break;
-            case I18n.getUiText("ui.chat.status.private").toLocaleLowerCase():
-               status = new PlayerStatus();
-               status.initPlayerStatus(PlayerStatusEnum.PLAYER_STATUS_PRIVATE);
-               psurmsg.initPlayerStatusUpdateRequestMessage(status);
-               ConnectionsHandler.getConnection().send(psurmsg);
-               break;
-            case I18n.getUiText("ui.chat.status.availiable").toLocaleLowerCase():
-               status = new PlayerStatus();
-               status.initPlayerStatus(PlayerStatusEnum.PLAYER_STATUS_AVAILABLE);
-               psurmsg.initPlayerStatusUpdateRequestMessage(status);
-               ConnectionsHandler.getConnection().send(psurmsg);
-               break;
-            case "release":
-               grpfsrmmsg = new GameRolePlayFreeSoulRequestMessage();
-               ConnectionsHandler.getConnection().send(grpfsrmmsg);
-               break;
-         }
+      public function StatusInstructionHandler()
+      {
+         //Décompilation abandonné
       }
       
-      public function getHelp(cmd:String) : String {
-         switch(cmd)
-         {
-            case "away":
-            case I18n.getUiText("ui.chat.status.away").toLocaleLowerCase():
-               return "- /" + I18n.getUiText("ui.chat.status.away".toLocaleLowerCase()) + I18n.getUiText("ui.common.colon") + I18n.getUiText("ui.chat.status.awaytooltip");
-            case I18n.getUiText("ui.chat.status.solo").toLocaleLowerCase():
-               return "- /" + I18n.getUiText("ui.chat.status.solo").toLocaleLowerCase() + I18n.getUiText("ui.common.colon") + I18n.getUiText("ui.chat.status.solotooltip");
-            case I18n.getUiText("ui.chat.status.private").toLocaleLowerCase():
-               return "- /" + I18n.getUiText("ui.chat.status.private").toLocaleLowerCase() + I18n.getUiText("ui.common.colon") + I18n.getUiText("ui.chat.status.privatetooltip");
-            case I18n.getUiText("ui.chat.status.availiable").toLocaleLowerCase():
-               return "- /" + I18n.getUiText("ui.chat.status.availiable").toLocaleLowerCase() + I18n.getUiText("ui.common.colon") + I18n.getUiText("ui.chat.status.availiabletooltip");
-            case "release":
-               return I18n.getUiText("ui.common.freeSoul");
-            default:
-               return I18n.getUiText("ui.chat.console.noHelp",[cmd]);
-         }
+      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array {
-         return [];
+      public function getHelp(cmd:String) : String
+      {
+         //Décompilation abandonné
+      }
+      
+      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array
+      {
+         //Décompilation abandonné
       }
    }
 }

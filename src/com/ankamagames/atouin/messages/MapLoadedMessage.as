@@ -5,8 +5,13 @@ package com.ankamagames.atouin.messages
    public class MapLoadedMessage extends MapMessage implements ILogableMessage
    {
       
-      public function MapLoadedMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapLoadedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public var globalRenderingTime:uint;

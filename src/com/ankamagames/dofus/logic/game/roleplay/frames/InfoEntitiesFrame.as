@@ -43,6 +43,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
    import com.ankamagames.dofus.logic.game.common.actions.roleplay.SwitchCreatureModeAction;
    import com.ankamagames.dofus.network.messages.game.context.fight.GameFightSynchronizeMessage;
    import com.ankamagames.dofus.network.messages.game.actions.sequence.SequenceEndMessage;
+   import com.ankamagames.atouin.messages.MapZoomMessage;
    import com.ankamagames.jerakine.types.enums.Priority;
    import com.ankamagames.dofus.network.types.game.context.roleplay.GameRolePlayCharacterInformations;
    import com.ankamagames.dofus.network.types.game.context.roleplay.GameRolePlayMerchantInformations;
@@ -63,16 +64,19 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
    import flash.geom.Rectangle;
    import com.ankamagames.jerakine.utils.display.Rectangle2;
    import com.ankamagames.jerakine.utils.display.StageShareManager;
+   import com.ankamagames.dofus.network.enums.SubEntityBindingPointCategoryEnum;
    import com.ankamagames.jerakine.entities.interfaces.IDisplayable;
    
    public class InfoEntitiesFrame extends Object implements Frame
    {
       
-      public function InfoEntitiesFrame() {
-         super();
-         this._labelContainer = new Sprite();
-         this._movableEntities = new Vector.<uint>();
-         this._waitList = new Vector.<uint>();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function InfoEntitiesFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -93,668 +97,144 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
       
       private var _fightContextFrame:FightContextFrame;
       
-      public function pushed() : Boolean {
-         var entityId:* = 0;
-         if(!this._namesVisible)
-         {
-            this._playersNames = new Vector.<DisplayedEntity>();
-            if(PlayedCharacterApi.isInFight())
-            {
-               if(this._fightEntitiesFrame == null)
-               {
-                  this._fightEntitiesFrame = Kernel.getWorker().getFrame(FightEntitiesFrame) as FightEntitiesFrame;
-               }
-               if(this._fightContextFrame == null)
-               {
-                  this._fightContextFrame = Kernel.getWorker().getFrame(FightContextFrame) as FightContextFrame;
-               }
-               for each(entityId in this._fightEntitiesFrame.getEntitiesIdsList())
-               {
-                  if(entityId > 0)
-                  {
-                     this.addEntity(entityId,this._fightContextFrame.getFighterName(entityId));
-                  }
-               }
-            }
-            else
-            {
-               this.updateEntities();
-            }
-            this.addListener();
-            this._namesVisible = true;
-            DisplayObjectContainer(Berilia.getInstance().docMain.getChildAt(StrataEnum.STRATA_WORLD + 1)).addChild(this._labelContainer);
-         }
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         if(this._namesVisible)
-         {
-            this.removeAllTooltips();
-            this._namesVisible = false;
-            EnterFrameDispatcher.removeEventListener(this.updateTextsPosition);
-            DisplayObjectContainer(Berilia.getInstance().docMain.getChildAt(StrataEnum.STRATA_WORLD + 1)).removeChild(this._labelContainer);
-            KernelEventsManager.getInstance().processCallback(HookList.ShowPlayersNames,false);
-         }
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var gmmmsg:GameMapMovementMessage = null;
-         var tosmmsg:TeleportOnSameMapMessage = null;
-         var gcremsg:GameContextRemoveElementMessage = null;
-         var ac:AnimatedCharacter = null;
-         var emovmsg:EntityMouseOverMessage = null;
-         var conmsg:CellOverMessage = null;
-         var cellEntity:AnimatedCharacter = null;
-         var coutMsg:CellOutMessage = null;
-         var cellEntity2:AnimatedCharacter = null;
-         var emomsg:EntityMouseOutMessage = null;
-         var gaftosmmsg:GameActionFightTeleportOnSameMapMessage = null;
-         var gaflmsg:GameActionFightLeaveMessage = null;
-         var gafdmsg:GameActionFightDeathMessage = null;
-         var entity:IEntity = null;
-         var entity2:IEntity = null;
-         this.addListener();
-         switch(true)
-         {
-            case msg is CurrentMapMessage:
-               this.removeAllTooltips();
-               break;
-            case msg is GameMapMovementMessage:
-               gmmmsg = msg as GameMapMovementMessage;
-               this.movementHandler(gmmmsg.actorId);
-               break;
-            case msg is EntityMovementCompleteMessage:
-               this.entityMovementCompleteHandler((msg as EntityMovementCompleteMessage).entity);
-               break;
-            case msg is EntityMovementStoppedMessage:
-               this.entityMovementCompleteHandler((msg as EntityMovementStoppedMessage).entity);
-               break;
-            case msg is TeleportOnSameMapMessage:
-               tosmmsg = msg as TeleportOnSameMapMessage;
-               this.movementHandler(tosmmsg.targetId);
-               break;
-            case msg is GameRolePlayShowActorMessage:
-               this.gameRolePlayShowActorHandler(msg);
-               break;
-            case msg is GameContextRemoveElementMessage:
-               gcremsg = msg as GameContextRemoveElementMessage;
-               ac = DofusEntities.getEntity(gcremsg.id) as AnimatedCharacter;
-               if(ac)
-               {
-                  ac.removeEventListener(TiphonEvent.RENDER_FAILED,this.onUpdateEntityFail);
-                  ac.removeEventListener(TiphonEvent.RENDER_SUCCEED,this.onUpdateEntitySuccess);
-               }
-               this.removeElementHandler(gcremsg.id);
-               break;
-            case msg is GameFightStartingMessage:
-               Kernel.getWorker().removeFrame(this);
-               break;
-            case msg is GameFightEndMessage:
-               Kernel.getWorker().removeFrame(this);
-               break;
-            case msg is EntityMouseOverMessage:
-               emovmsg = msg as EntityMouseOverMessage;
-               this.mouseOverHandler(emovmsg.entity.id);
-               break;
-            case msg is CellOverMessage:
-               conmsg = msg as CellOverMessage;
-               for each(entity in EntitiesManager.getInstance().getEntitiesOnCell(conmsg.cellId))
-               {
-                  if((entity is AnimatedCharacter) && (!(entity as AnimatedCharacter).isMoving))
-                  {
-                     cellEntity = entity as AnimatedCharacter;
-                     break;
-                  }
-               }
-               if(cellEntity)
-               {
-                  this.mouseOverHandler(cellEntity.id);
-               }
-               break;
-            case msg is CellOutMessage:
-               coutMsg = msg as CellOutMessage;
-               for each(entity2 in EntitiesManager.getInstance().getEntitiesOnCell(coutMsg.cellId))
-               {
-                  if(entity2 is AnimatedCharacter)
-                  {
-                     cellEntity2 = entity2 as AnimatedCharacter;
-                     break;
-                  }
-               }
-               if(cellEntity2)
-               {
-                  this.mouseOutHandler(cellEntity2.id);
-               }
-               break;
-            case msg is TimelineEntityOverAction:
-               this.mouseOverHandler((msg as TimelineEntityOverAction).targetId);
-               break;
-            case msg is TimelineEntityOutAction:
-               this.mouseOutHandler((msg as TimelineEntityOutAction).targetId);
-               break;
-            case msg is EntityMouseOutMessage:
-               emomsg = msg as EntityMouseOutMessage;
-               this.mouseOutHandler(emomsg.entity.id);
-               break;
-            case msg is GameActionFightTeleportOnSameMapMessage:
-               gaftosmmsg = msg as GameActionFightTeleportOnSameMapMessage;
-               this.getEntity(gaftosmmsg.targetId).visible = false;
-               (DofusEntities.getEntity(gaftosmmsg.targetId) as AnimatedCharacter).addEventListener(TiphonEvent.ANIMATION_END,this.onAnimationEnd);
-               break;
-            case msg is GameActionFightLeaveMessage:
-               gaflmsg = msg as GameActionFightLeaveMessage;
-               this.removeElementHandler(gaflmsg.targetId);
-               break;
-            case msg is GameActionFightDeathMessage:
-               gafdmsg = msg as GameActionFightDeathMessage;
-               this.removeElementHandler(gafdmsg.targetId);
-               break;
-            case msg is ToggleDematerializationAction:
-               this.updateAllTooltipsAfterRender();
-               break;
-            case msg is SwitchCreatureModeAction:
-               this.updateAllTooltipsAfterRender();
-               break;
-            case msg is GameFightSynchronizeMessage:
-               this.updateAllTooltips();
-               break;
-            case msg is SequenceEndMessage:
-               this.updateAllTooltips();
-               break;
-         }
-         return false;
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get priority() : int {
-         return Priority.HIGHEST;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function update() : void {
-         this.removeAllTooltips();
-         this.updateEntities();
-         this.updateAllTooltipsAfterRender();
+      public function update() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function movementHandler(actorId:int) : void {
-         var de:DisplayedEntity = null;
-         var movedEntity:IEntity = DofusEntities.getEntity(actorId);
-         if(!movedEntity)
-         {
-            _log.warn("The entity " + actorId + " not found.");
-         }
-         else
-         {
-            de = this.getEntity(movedEntity.id);
-            if(de)
-            {
-               this._movableEntities.push(this._playersNames.indexOf(de));
-            }
-         }
-         this.addListener();
+      private function movementHandler(actorId:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function entityMovementCompleteHandler(entity:IEntity) : void {
-         var startIndex:* = 0;
-         var de:DisplayedEntity = this.getEntity(entity.id);
-         var index:int = this._playersNames.indexOf(de);
-         if(index != -1)
-         {
-            startIndex = this._movableEntities.indexOf(index);
-            this._movableEntities.splice(startIndex,1);
-            de.target = this.getBounds(entity.id);
-            this.updateDisplayedEntityPosition(de);
-         }
+      private function entityMovementCompleteHandler(entity:IEntity) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function gameRolePlayShowActorHandler(grpsamsg:Object) : void {
-         var infos:GameRolePlayCharacterInformations = null;
-         var entityId:* = 0;
-         var de:DisplayedEntity = null;
-         var allianceTag:String = null;
-         var option:* = undefined;
-         if(grpsamsg.informations is GameRolePlayMerchantInformations)
-         {
-            this.removeElementHandler(grpsamsg.informations.contextualId);
-         }
-         else
-         {
-            infos = grpsamsg.informations as GameRolePlayCharacterInformations;
-            if(infos == null)
-            {
-               return;
-            }
-            entityId = infos.contextualId;
-            de = this.getEntity(entityId);
-            allianceTag = "";
-            for each(option in infos.humanoidInfo.options)
-            {
-               if(option is HumanOptionAlliance)
-               {
-                  allianceTag = "[" + option.allianceInformations.allianceTag + "]";
-               }
-            }
-            if(de)
-            {
-               if(allianceTag != de.allianceName)
-               {
-                  this.removeElementHandler(entityId);
-                  de = null;
-               }
-               else
-               {
-                  de.visible = false;
-                  (DofusEntities.getEntity(entityId) as AnimatedCharacter).addEventListener(TiphonEvent.RENDER_SUCCEED,this.onAnimationEnd);
-               }
-            }
-            if(!de)
-            {
-               this.addEntity(entityId,infos.name,allianceTag);
-            }
-         }
+      private function gameRolePlayShowActorHandler(grpsamsg:Object) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function removeElementHandler(entityId:int) : void {
-         var nameIndex:* = 0;
-         var mvtIndex:* = 0;
-         var entity:DisplayedEntity = this.getEntity(entityId);
-         if(entity != null)
-         {
-            nameIndex = this._playersNames.indexOf(entity);
-            if(nameIndex != -1)
-            {
-               mvtIndex = this._movableEntities.indexOf(nameIndex);
-               if(mvtIndex != -1)
-               {
-                  this._movableEntities.splice(mvtIndex,1);
-               }
-               this._playersNames.splice(nameIndex,1);
-               if(this._labelContainer.contains(entity.text))
-               {
-                  this._labelContainer.removeChild(entity.text);
-               }
-               entity.text.removeEventListener(MouseEvent.CLICK,this.onTooltipClicked);
-               entity.clear();
-               entity = null;
-            }
-         }
+      private function removeElementHandler(entityId:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function mouseOverHandler(identityId:int) : void {
-         var identity:DisplayedEntity = this.getEntity(identityId);
-         if(identity != null)
-         {
-            identity.visible = false;
-         }
+      private function mouseOverHandler(identityId:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function mouseOutHandler(identityId:int) : void {
-         var identity:DisplayedEntity = this.getEntity(identityId);
-         if(identity != null)
-         {
-            identity.visible = true;
-         }
+      private function mouseOutHandler(identityId:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onAnimationEnd(pEvt:TiphonEvent) : void {
-         var de:DisplayedEntity = null;
-         var e:AnimatedCharacter = pEvt.currentTarget as AnimatedCharacter;
-         if(e.hasEventListener(TiphonEvent.ANIMATION_END))
-         {
-            e.removeEventListener(TiphonEvent.ANIMATION_END,this.onAnimationEnd);
-         }
-         if(e.hasEventListener(TiphonEvent.RENDER_SUCCEED))
-         {
-            e.removeEventListener(TiphonEvent.RENDER_SUCCEED,this.onAnimationEnd);
-         }
-         if(StealthBones.getStealthBonesById((pEvt.currentTarget as TiphonSprite).look.getBone()))
-         {
-            this.removeElementHandler(e.id);
-         }
-         else
-         {
-            de = this.getEntity(e.id);
-            de.visible = true;
-            de.target = this.getBounds(e.id);
-            this.updateDisplayedEntityPosition(de);
-         }
+      private function onAnimationEnd(pEvt:TiphonEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function updateEntities() : void {
-         var entityId:* = 0;
-         var entityInfo:GameRolePlayCharacterInformations = null;
-         var allianceTag:String = null;
-         var option:* = undefined;
-         if(this._roleplayEntitiesFrame == null)
-         {
-            this._roleplayEntitiesFrame = Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame;
-         }
-         var ids:Array = this._roleplayEntitiesFrame.playersId;
-         for each(entityId in ids)
-         {
-            entityInfo = this._roleplayEntitiesFrame.getEntityInfos(entityId) as GameRolePlayCharacterInformations;
-            if(entityInfo != null)
-            {
-               allianceTag = "";
-               for each(option in entityInfo.humanoidInfo.options)
-               {
-                  if(option is HumanOptionAlliance)
-                  {
-                     allianceTag = "[" + option.allianceInformations.allianceTag + "]";
-                  }
-               }
-               this.addEntity(entityId,entityInfo.name,allianceTag);
-            }
-            else
-            {
-               _log.warn("Entity info for " + entityId + " not found");
-            }
-         }
+      private function updateEntities() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function removeAllTooltips() : void {
-         var de:DisplayedEntity = null;
-         var i:* = 0;
-         var ac:AnimatedCharacter = null;
-         while(this._playersNames.length)
-         {
-            de = this._playersNames.pop();
-            if(de != null)
-            {
-               if(this._labelContainer.contains(de.text))
-               {
-                  this._labelContainer.removeChild(de.text);
-               }
-               ac = DofusEntities.getEntity(de.entityId) as AnimatedCharacter;
-               if(ac)
-               {
-                  ac.removeEventListener(TiphonEvent.RENDER_FAILED,this.onUpdateEntityFail);
-                  ac.removeEventListener(TiphonEvent.RENDER_SUCCEED,this.onUpdateEntitySuccess);
-               }
-               de.clear();
-               de = null;
-            }
-         }
+      private function removeAllTooltips() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function getEntity(id:int) : DisplayedEntity {
-         var i:* = 0;
-         var len:int = this._playersNames.length;
-         i = 0;
-         while(i < len)
-         {
-            if(this._playersNames[i].entityId == id)
-            {
-               return this._playersNames[i];
-            }
-            i++;
-         }
-         _log.warn("DisplayedEntity " + id + " not found");
-         return null;
+      private function getEntity(id:int) : DisplayedEntity
+      {
+         //Décompilation abandonné
       }
       
-      private function getEntityFromLabel(lbl:Label) : DisplayedEntity {
-         var i:* = 0;
-         var len:int = this._playersNames.length;
-         i = 0;
-         while(i < len)
-         {
-            if(this._playersNames[i].text == lbl)
-            {
-               return this._playersNames[i];
-            }
-            i++;
-         }
-         _log.warn("DisplayedEntity not found");
-         return null;
+      private function getEntityFromLabel(lbl:Label) : DisplayedEntity
+      {
+         //Décompilation abandonné
       }
       
-      private function updateDisplayedEntityPosition(de:DisplayedEntity) : void {
-         if(de == null)
-         {
-            return;
-         }
-         if((de.target == null) || (de.target.width == 0) || (de.target.height == 0))
-         {
-            this._waitList.push(de.entityId);
-            if(!EnterFrameDispatcher.hasEventListener(this.waitForEntity))
-            {
-               EnterFrameDispatcher.addEventListener(this.waitForEntity,"wait for entity",5);
-            }
-         }
-         else
-         {
-            de.text.x = de.target.x + (de.target.width > de.text.textWidth?(de.target.width - de.text.textWidth) / 2:(de.text.textWidth - de.target.width) / 2 * -1);
-            de.text.y = de.target.y - 30;
-         }
+      private function updateDisplayedEntityPosition(de:DisplayedEntity) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function addEntity(entityId:int, pName:String, aTag:String = "") : void {
-         var lbl:Label = null;
-         var ts:TiphonSprite = null;
-         var de:DisplayedEntity = null;
-         var e:IEntity = null;
-         var startIndex:* = 0;
-         if(this.getEntity(entityId) == null)
-         {
-            lbl = new Label();
-            lbl.css = new Uri(XmlConfig.getInstance().getEntry("config.ui.skin") + "css/normal.css");
-            if(aTag != "")
-            {
-               lbl.text = pName + " " + aTag;
-            }
-            else
-            {
-               lbl.text = pName;
-            }
-            lbl.mouseEnabled = true;
-            lbl.bgColor = XmlConfig.getInstance().getEntry("colors.tooltip.bg");
-            lbl.bgAlpha = XmlConfig.getInstance().getEntry("colors.tooltip.bg.alpha");
-            lbl.width = lbl.textWidth + 7;
-            lbl.height = lbl.height + 4;
-            lbl.buttonMode = true;
-            lbl.addEventListener(MouseEvent.CLICK,this.onTooltipClicked);
-            if(entityId == PlayedCharacterApi.id())
-            {
-               lbl.colorText = XmlConfig.getInstance().getEntry("colors.tooltip.text.red");
-            }
-            ts = DofusEntities.getEntity(entityId) as TiphonSprite;
-            if(ts == null)
-            {
-               de = new DisplayedEntity(entityId,lbl);
-            }
-            else
-            {
-               de = new DisplayedEntity(entityId,lbl,this.getBounds(entityId),aTag);
-               if(StealthBones.getStealthBonesById(ts.look.getBone()))
-               {
-                  return;
-               }
-               this._labelContainer.addChild(lbl);
-            }
-            this.updateDisplayedEntityPosition(de);
-            this._playersNames.push(de);
-            e = DofusEntities.getEntity(entityId);
-            if(e is IMovable)
-            {
-               if(IMovable(e).isMoving)
-               {
-                  this._movableEntities.push(this._playersNames.indexOf(de));
-               }
-               else
-               {
-                  startIndex = this._movableEntities.indexOf(this._playersNames.indexOf(de));
-                  if(startIndex != -1)
-                  {
-                     this._movableEntities.splice(startIndex,1);
-                  }
-               }
-            }
-         }
+      private function addEntity(entityId:int, pName:String, aTag:String = "") : void
+      {
+         //Décompilation abandonné
       }
       
-      private function updateAllTooltips() : void {
-         var ent:DisplayedEntity = null;
-         for each(ent in this._playersNames)
-         {
-            ent.target = this.getBounds(ent.entityId);
-            this.updateDisplayedEntityPosition(ent);
-         }
+      private function updateAllTooltips() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function updateAllTooltipsAfterRender() : void {
-         var ent:DisplayedEntity = null;
-         var ac:AnimatedCharacter = null;
-         for each(ent in this._playersNames)
-         {
-            ac = DofusEntities.getEntity(ent.entityId) as AnimatedCharacter;
-            ac.addEventListener(TiphonEvent.RENDER_FAILED,this.onUpdateEntityFail,false,0,true);
-            ac.addEventListener(TiphonEvent.RENDER_SUCCEED,this.onUpdateEntitySuccess,false,0,true);
-         }
+      private function updateAllTooltipsAfterRender() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onUpdateEntitySuccess(pEvt:TiphonEvent) : void {
-         pEvt.sprite.removeEventListener(TiphonEvent.RENDER_FAILED,this.onUpdateEntityFail);
-         pEvt.sprite.removeEventListener(TiphonEvent.RENDER_SUCCEED,this.onUpdateEntitySuccess);
-         var ent:DisplayedEntity = this.getEntity(pEvt.target.id);
-         ent.target = this.getBounds(ent.entityId);
-         this.updateDisplayedEntityPosition(ent);
+      private function onUpdateEntitySuccess(pEvt:TiphonEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onUpdateEntityFail(pEvt:TiphonEvent) : void {
-         pEvt.sprite.removeEventListener(TiphonEvent.RENDER_FAILED,this.onUpdateEntityFail);
-         pEvt.sprite.removeEventListener(TiphonEvent.RENDER_SUCCEED,this.onUpdateEntitySuccess);
+      private function onUpdateEntityFail(pEvt:TiphonEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onTooltipClicked(pEvt:MouseEvent) : void {
-         var entity:DisplayedEntity = null;
-         var entityInfo:GameContextActorInformations = null;
-         if(!PlayedCharacterManager.getInstance().isFighting)
-         {
-            entity = this.getEntityFromLabel(pEvt.currentTarget as Label);
-            entityInfo = this._roleplayEntitiesFrame.getEntityInfos(entity.entityId);
-            if(entityInfo)
-            {
-               RoleplayManager.getInstance().displayCharacterContextualMenu(entityInfo);
-            }
-         }
+      private function onTooltipClicked(pEvt:MouseEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function updateTextsPosition(pEvt:Event) : void {
-         var i:* = 0;
-         var len:* = 0;
-         var de:DisplayedEntity = null;
-         var entityId:* = 0;
-         if(!this.removeListener())
-         {
-            len = this._movableEntities.length;
-            i = 0;
-            while(i < len)
-            {
-               if(!((i >= this._movableEntities.length) || (this._movableEntities[i] >= this._playersNames.length) || (this._playersNames[this._movableEntities[i]] == null)))
-               {
-                  entityId = this._playersNames[this._movableEntities[i]].entityId;
-                  de = this.getEntity(entityId);
-                  if(de)
-                  {
-                     de.target = this.getBounds(entityId);
-                     this.updateDisplayedEntityPosition(de);
-                  }
-               }
-               i = i + 1;
-            }
-         }
+      private function updateTextsPosition(pEvt:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function addListener() : Boolean {
-         if((this._movableEntities.length > 0) && (!EnterFrameDispatcher.hasEventListener(this.updateTextsPosition)))
-         {
-            EnterFrameDispatcher.addEventListener(this.updateTextsPosition,"Infos Entities",25);
-            return true;
-         }
-         return false;
+      private function addListener() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function removeListener() : Boolean {
-         if((this._movableEntities.length <= 0) && (EnterFrameDispatcher.hasEventListener(this.updateTextsPosition)))
-         {
-            EnterFrameDispatcher.removeEventListener(this.updateTextsPosition);
-            return true;
-         }
-         return false;
+      private function removeListener() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function waitForEntity(pEvt:Event) : void {
-         var entityId:uint = 0;
-         var entity:DisplayedEntity = null;
-         var ts:TiphonSprite = null;
-         var t:DisplayObject = null;
-         for each(entityId in this._waitList)
-         {
-            entity = this.getEntity(entityId);
-            if((!(entity == null)) && (!(DofusEntities.getEntity(entityId) == null)))
-            {
-               ts = DofusEntities.getEntity(entityId) as TiphonSprite;
-               t = ts.getSlot("Tete");
-               entity.target = this.getBounds(entityId);
-               if((ts) && (!(entity.target.width == 0)) && (!(entity.target.height == 0)))
-               {
-                  this._waitList.splice(this._waitList.indexOf(entityId),1);
-                  if(StealthBones.getStealthBonesById(ts.look.getBone()))
-                  {
-                     return;
-                  }
-                  if(!this._labelContainer.contains(entity.text))
-                  {
-                     this._labelContainer.addChild(entity.text);
-                  }
-                  this.updateDisplayedEntityPosition(entity);
-               }
-            }
-         }
-         if(this._waitList.length <= 0)
-         {
-            EnterFrameDispatcher.removeEventListener(this.waitForEntity);
-         }
+      private function waitForEntity(pEvt:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function getBounds(entityId:int) : IRectangle {
-         var targetBounds:IRectangle = null;
-         var r1:Rectangle = null;
-         var r2:Rectangle2 = null;
-         var foot:DisplayObject = null;
-         var ts:TiphonSprite = DofusEntities.getEntity(entityId) as TiphonSprite;
-         if(ts == null)
-         {
-            return null;
-         }
-         var head:DisplayObject = ts.getSlot("Tete");
-         if(head)
-         {
-            r1 = head.getBounds(StageShareManager.stage);
-            r2 = new Rectangle2(r1.x,r1.y,r1.width,r1.height);
-            targetBounds = r2;
-            if(targetBounds.y <= targetBounds.height)
-            {
-               foot = ts.getSlot("Pied");
-               if(foot)
-               {
-                  r1 = foot.getBounds(StageShareManager.stage);
-                  r2 = new Rectangle2(r1.x,r1.y + targetBounds.height + 30,r1.width,r1.height);
-                  targetBounds = r2;
-               }
-            }
-         }
-         if(!targetBounds)
-         {
-            targetBounds = (ts as IDisplayable).absoluteBounds;
-            if(targetBounds.y <= targetBounds.height)
-            {
-               targetBounds.y = targetBounds.y + (targetBounds.height + 30);
-            }
-         }
-         return targetBounds;
+      private function getBounds(entityId:int) : IRectangle
+      {
+         //Décompilation abandonné
       }
    }
 }
@@ -764,12 +244,13 @@ import com.ankamagames.jerakine.interfaces.IRectangle;
 class DisplayedEntity extends Object
 {
    
-   function DisplayedEntity(pId:int = 0, pText:Label = null, pTarget:IRectangle = null, pAllianceName:String = "") {
-      super();
-      this.entityId = pId;
-      this.text = pText;
-      this.target = pTarget;
-      this.allianceName = pAllianceName;
+   {
+   //Décompilation abandonné
+   }
+   
+   function DisplayedEntity(pId:int = 0, pText:Label = null, pTarget:IRectangle = null, pAllianceName:String = "")
+   {
+      //Décompilation abandonné
    }
    
    public var entityId:int;
@@ -780,13 +261,13 @@ class DisplayedEntity extends Object
    
    public var allianceName:String;
    
-   public function clear() : void {
-      this.text.remove();
-      this.text = null;
-      this.target = null;
+   public function clear() : void
+   {
+      //Décompilation abandonné
    }
    
-   public function set visible(val:Boolean) : void {
-      this.text.visible = val;
+   public function set visible(val:Boolean) : void
+   {
+      //Décompilation abandonné
    }
 }

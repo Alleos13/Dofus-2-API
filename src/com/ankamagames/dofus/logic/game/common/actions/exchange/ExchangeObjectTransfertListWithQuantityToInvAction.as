@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.exchange
    public class ExchangeObjectTransfertListWithQuantityToInvAction extends Object implements Action
    {
       
-      public function ExchangeObjectTransfertListWithQuantityToInvAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pIds:Vector.<uint>, pQtys:Vector.<uint>) : ExchangeObjectTransfertListWithQuantityToInvAction {
-         var a:ExchangeObjectTransfertListWithQuantityToInvAction = new ExchangeObjectTransfertListWithQuantityToInvAction();
-         a.ids = pIds;
-         a.qtys = pQtys;
-         return a;
+      public function ExchangeObjectTransfertListWithQuantityToInvAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pIds:Vector.<uint>, pQtys:Vector.<uint>) : ExchangeObjectTransfertListWithQuantityToInvAction
+      {
+         //Décompilation abandonné
       }
       
       public var ids:Vector.<uint>;

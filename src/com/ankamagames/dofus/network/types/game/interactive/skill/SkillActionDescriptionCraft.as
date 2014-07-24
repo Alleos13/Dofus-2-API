@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.interactive.skill
    public class SkillActionDescriptionCraft extends SkillActionDescription implements INetworkType
    {
       
-      public function SkillActionDescriptionCraft() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SkillActionDescriptionCraft()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 100;
@@ -17,71 +22,39 @@ package com.ankamagames.dofus.network.types.game.interactive.skill
       
       public var probability:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 100;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initSkillActionDescriptionCraft(skillId:uint = 0, maxSlots:uint = 0, probability:uint = 0) : SkillActionDescriptionCraft {
-         super.initSkillActionDescription(skillId);
-         this.maxSlots = maxSlots;
-         this.probability = probability;
-         return this;
+      public function initSkillActionDescriptionCraft(skillId:uint = 0, maxSlots:uint = 0, probability:uint = 0) : SkillActionDescriptionCraft
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.maxSlots = 0;
-         this.probability = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_SkillActionDescriptionCraft(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_SkillActionDescriptionCraft(output:IDataOutput) : void {
-         super.serializeAs_SkillActionDescription(output);
-         if(this.maxSlots < 0)
-         {
-            throw new Error("Forbidden value (" + this.maxSlots + ") on element maxSlots.");
-         }
-         else
-         {
-            output.writeByte(this.maxSlots);
-            if(this.probability < 0)
-            {
-               throw new Error("Forbidden value (" + this.probability + ") on element probability.");
-            }
-            else
-            {
-               output.writeByte(this.probability);
-               return;
-            }
-         }
+      public function serializeAs_SkillActionDescriptionCraft(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_SkillActionDescriptionCraft(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_SkillActionDescriptionCraft(input:IDataInput) : void {
-         super.deserialize(input);
-         this.maxSlots = input.readByte();
-         if(this.maxSlots < 0)
-         {
-            throw new Error("Forbidden value (" + this.maxSlots + ") on element of SkillActionDescriptionCraft.maxSlots.");
-         }
-         else
-         {
-            this.probability = input.readByte();
-            if(this.probability < 0)
-            {
-               throw new Error("Forbidden value (" + this.probability + ") on element of SkillActionDescriptionCraft.probability.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_SkillActionDescriptionCraft(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

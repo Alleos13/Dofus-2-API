@@ -7,34 +7,42 @@ package org.flintparticles.common.initializers
    public class ImageClass extends InitializerBase
    {
       
-      public function ImageClass(param1:Class, ... rest) {
-         super();
-         this._imageClass = param1;
-         this._parameters = rest;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ImageClass(imageClass:Class, ... parameters)
+      {
+         //Décompilation abandonné
       }
       
       private var _imageClass:Class;
       
       private var _parameters:Array;
       
-      public function get imageClass() : Class {
-         return this._imageClass;
+      public function get imageClass() : Class
+      {
+         //Décompilation abandonné
       }
       
-      public function set imageClass(param1:Class) : void {
-         this._imageClass = param1;
+      public function set imageClass(value:Class) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get parameters() : Array {
-         return this._parameters;
+      public function get parameters() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function set parameters(param1:Array) : void {
-         this._parameters = param1;
+      public function set parameters(value:Array) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function initialize(param1:Emitter, param2:Particle) : void {
-         param2.image = construct(this._imageClass,this._parameters);
+      override public function initialize(emitter:Emitter, particle:Particle) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

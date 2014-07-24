@@ -9,65 +9,71 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.fight.arena
    public class GameRolePlayArenaFightAnswerMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameRolePlayArenaFightAnswerMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameRolePlayArenaFightAnswerMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6279;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var fightId:int = 0;
       
       public var accept:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 6279;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameRolePlayArenaFightAnswerMessage(fightId:int = 0, accept:Boolean = false) : GameRolePlayArenaFightAnswerMessage {
-         this.fightId = fightId;
-         this.accept = accept;
-         this._isInitialized = true;
-         return this;
+      public function initGameRolePlayArenaFightAnswerMessage(fightId:int = 0, accept:Boolean = false) : GameRolePlayArenaFightAnswerMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.fightId = 0;
-         this.accept = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameRolePlayArenaFightAnswerMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayArenaFightAnswerMessage(output:IDataOutput) : void {
-         output.writeInt(this.fightId);
-         output.writeBoolean(this.accept);
+      public function serializeAs_GameRolePlayArenaFightAnswerMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameRolePlayArenaFightAnswerMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayArenaFightAnswerMessage(input:IDataInput) : void {
-         this.fightId = input.readInt();
-         this.accept = input.readBoolean();
+      public function deserializeAs_GameRolePlayArenaFightAnswerMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

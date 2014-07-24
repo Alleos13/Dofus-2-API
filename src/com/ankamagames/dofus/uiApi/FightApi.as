@@ -33,9 +33,13 @@ package com.ankamagames.dofus.uiApi
    public class FightApi extends Object implements IApi
    {
       
-      public function FightApi() {
-         this._log = Log.getLogger(getQualifiedClassName(FightApi));
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightApi()
+      {
+         //Décompilation abandonné
       }
       
       private static var UNKNOWN_FIGHTER_NAME:String = "???";
@@ -44,213 +48,154 @@ package com.ankamagames.dofus.uiApi
       
       private var _module:UiModule;
       
-      public function set module(value:UiModule) : void {
-         this._module = value;
+      public function set module(value:UiModule) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         this._module = null;
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getFighterInformations(fighterId:int) : FighterInformations {
-         var fighterInfos:FighterInformations = new FighterInformations(fighterId);
-         return fighterInfos;
+      public function getFighterInformations(fighterId:int) : FighterInformations
+      {
+         //Décompilation abandonné
       }
       
-      public function getFighterName(fighterId:int) : String {
-         try
-         {
-            return this.getFightFrame().getFighterName(fighterId);
-         }
-         catch(apiErr:ApiError)
-         {
-            return UNKNOWN_FIGHTER_NAME;
-         }
-         return null;
+      public function getFighterName(fighterId:int) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function getFighterLevel(fighterId:int) : uint {
-         return this.getFightFrame().getFighterLevel(fighterId);
+      public function getFighterLevel(fighterId:int) : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function getFighters() : Vector.<int> {
-         if((Kernel.getWorker().getFrame(FightBattleFrame)) && (!Kernel.getWorker().getFrame(FightPreparationFrame)))
-         {
-            return this.getFightFrame().battleFrame.fightersList;
-         }
-         return this.getFightFrame().entitiesFrame.getOrdonnedPreFighters();
+      public function getFighters() : Vector.<int>
+      {
+         //Décompilation abandonné
       }
       
-      public function getMonsterId(id:int) : int {
-         var gffi:GameFightFighterInformations = this.getFighterInfos(id);
-         if(gffi is GameFightMonsterInformations)
-         {
-            return GameFightMonsterInformations(gffi).creatureGenericId;
-         }
-         return -1;
+      public function getMonsterId(id:int) : int
+      {
+         //Décompilation abandonné
       }
       
-      public function getDeadFighters() : Vector.<int> {
-         if(Kernel.getWorker().getFrame(FightBattleFrame))
-         {
-            return this.getFightFrame().battleFrame.deadFightersList;
-         }
-         return new Vector.<int>();
+      public function getDeadFighters() : Vector.<int>
+      {
+         //Décompilation abandonné
       }
       
-      public function getFightType() : uint {
-         return this.getFightFrame().fightType;
+      public function getFightType() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function getBuffList(targetId:int) : Array {
-         return BuffManager.getInstance().getAllBuff(targetId);
+      public function getBuffList(targetId:int) : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getBuffById(buffId:uint, playerId:int) : BasicBuff {
-         return BuffManager.getInstance().getBuff(buffId,playerId);
+      public function getBuffById(buffId:uint, playerId:int) : BasicBuff
+      {
+         //Décompilation abandonné
       }
       
-      public function createEffectsWrapper(spell:Spell, effects:Array, name:String) : EffectsWrapper {
-         return new EffectsWrapper(effects,spell,name);
+      public function createEffectsWrapper(spell:Spell, effects:Array, name:String) : EffectsWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function getCastingSpellBuffEffects(targetId:int, castingSpellId:uint) : EffectsWrapper {
-         var spell:Spell = null;
-         var buffItem:BasicBuff = null;
-         var effects:EffectsWrapper = null;
-         var ei:EffectInstance = null;
-         var eii:EffectInstanceInteger = null;
-         var res:Array = new Array();
-         var buffs:Array = BuffManager.getInstance().getAllBuff(targetId);
-         var triggerList:Array = new Array();
-         for each(buffItem in buffs)
-         {
-            if(buffItem.castingSpell.castingSpellId == castingSpellId)
-            {
-               ei = buffItem.effects;
-               if((ei.trigger) && (ei is EffectInstanceInteger))
-               {
-                  eii = ei as EffectInstanceInteger;
-                  if(triggerList[eii.effectId + "," + eii.value])
-                  {
-                     continue;
-                  }
-                  triggerList[eii.effectId + "," + eii.value] = true;
-                  res.push(ei);
-               }
-               else
-               {
-                  res.push(ei);
-               }
-               if(!spell)
-               {
-                  spell = buffItem.castingSpell.spell;
-               }
-            }
-         }
-         effects = new EffectsWrapper(res,spell,"");
-         return effects;
+      public function getCastingSpellBuffEffects(targetId:int, castingSpellId:uint) : EffectsWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function getAllBuffEffects(targetId:int) : EffectsListWrapper {
-         return new EffectsListWrapper(BuffManager.getInstance().getAllBuff(targetId));
+      public function getAllBuffEffects(targetId:int) : EffectsListWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function isCastingSpell() : Boolean {
-         return Kernel.getWorker().contains(FightSpellCastFrame);
+      public function isCastingSpell() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function cancelSpell() : void {
-         if(Kernel.getWorker().contains(FightSpellCastFrame))
-         {
-            Kernel.getWorker().removeFrame(Kernel.getWorker().getFrame(FightSpellCastFrame));
-         }
+      public function cancelSpell() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getChallengeList() : Array {
-         return this.getFightFrame().challengesList;
+      public function getChallengeList() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getCurrentPlayedFighterId() : int {
-         return CurrentPlayedFighterManager.getInstance().currentFighterId;
+      public function getCurrentPlayedFighterId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function getCurrentPlayedCharacteristicsInformations() : CharacterCharacteristicsInformations {
-         return CurrentPlayedFighterManager.getInstance().getCharacteristicsInformations();
+      public function getCurrentPlayedCharacteristicsInformations() : CharacterCharacteristicsInformations
+      {
+         //Décompilation abandonné
       }
       
-      public function preFightIsActive() : Boolean {
-         return FightContextFrame.preFightIsActive;
+      public function preFightIsActive() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function isWaitingBeforeFight() : Boolean {
-         if((this.getFightFrame().fightType == FightTypeEnum.FIGHT_TYPE_PvMA) || (this.getFightFrame().fightType == FightTypeEnum.FIGHT_TYPE_PvT))
-         {
-            return true;
-         }
-         return false;
+      public function isWaitingBeforeFight() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function isFightLeader() : Boolean {
-         return this.getFightFrame().isFightLeader;
+      public function isFightLeader() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function isSpectator() : Boolean {
-         return PlayedCharacterManager.getInstance().isSpectator;
+      public function isSpectator() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function isDematerializated() : Boolean {
-         return this.getFightFrame().entitiesFrame.dematerialization;
+      public function isDematerializated() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getTurnsCount() : int {
-         return this.getFightFrame().battleFrame.turnsCount;
+      public function getTurnsCount() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function getFighterStatus(fighterId:uint) : int {
-         var frame:Frame = Kernel.getWorker().getFrame(FightEntitiesFrame);
-         var fightersStatus:Dictionary = FightEntitiesFrame(frame).lastKnownPlayerStatus;
-         if(fightersStatus[fighterId])
-         {
-            return fightersStatus[fighterId];
-         }
-         return -1;
+      public function getFighterStatus(fighterId:uint) : int
+      {
+         //Décompilation abandonné
       }
       
-      public function isMouseOverFighter(fighterId:uint) : Boolean {
-         var fcf:FightContextFrame = Kernel.getWorker().getFrame(FightContextFrame) as FightContextFrame;
-         return (this.getFighterInfos(fighterId).disposition.cellId == FightContextFrame.currentCell) || (fcf.timelineOverEntity) && (fighterId == fcf.timelineOverEntityId);
+      public function isMouseOverFighter(fighterId:int) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function getFighterInfos(fighterId:int) : GameFightFighterInformations {
-         return this.getFightFrame().entitiesFrame.getEntityInfos(fighterId) as GameFightFighterInformations;
+      private function getFighterInfos(fighterId:int) : GameFightFighterInformations
+      {
+         //Décompilation abandonné
       }
       
-      private function getFightFrame() : FightContextFrame {
-         var frame:Frame = Kernel.getWorker().getFrame(FightContextFrame);
-         if(!frame)
-         {
-            throw new ApiError("Unallowed call of FightApi method while not fighting.");
-         }
-         else
-         {
-            return frame as FightContextFrame;
-         }
+      private function getFightFrame() : FightContextFrame
+      {
+         //Décompilation abandonné
       }
       
-      private function getFighterTeam(fighterInfos:GameFightFighterInformations) : String {
-         switch(fighterInfos.teamId)
-         {
-            case TeamEnum.TEAM_CHALLENGER:
-               return "challenger";
-            case TeamEnum.TEAM_DEFENDER:
-               return "defender";
-            case TeamEnum.TEAM_SPECTATOR:
-               return "spectator";
-            default:
-               this._log.warn("Unknown teamId " + fighterInfos.teamId + " ?!");
-               return "unknown";
-         }
+      private function getFighterTeam(fighterInfos:GameFightFighterInformations) : String
+      {
+         //Décompilation abandonné
       }
    }
 }

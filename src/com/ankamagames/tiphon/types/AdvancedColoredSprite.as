@@ -5,20 +5,20 @@ package com.ankamagames.tiphon.types
    public class AdvancedColoredSprite extends ColoredSprite
    {
       
-      public function AdvancedColoredSprite() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AdvancedColoredSprite()
+      {
+         //Décompilation abandonné
       }
       
       private static const baseColorTransform:ColorTransform;
       
-      override public function colorize(colorT:ColorTransform) : void {
-         if(colorT)
-         {
-            baseColorTransform.redMultiplier = colorT.redOffset / 128;
-            baseColorTransform.greenMultiplier = colorT.greenOffset / 128;
-            baseColorTransform.blueMultiplier = colorT.blueOffset / 128;
-            transform.colorTransform = baseColorTransform;
-         }
+      override public function colorize(colorT:ColorTransform) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -7,23 +7,28 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class WeightItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function WeightItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         var readableCriterionValue:String = _criterionValue.toString();
-         var readableCriterionRef:String = I18n.getUiText("ui.common.weight");
-         return readableCriterionRef + " " + _operator.text + " " + readableCriterionValue;
+      public function WeightItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:WeightItemCriterion = new WeightItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getCriterion() : int {
-         return PlayedCharacterManager.getInstance().inventoryWeight;
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getCriterion() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

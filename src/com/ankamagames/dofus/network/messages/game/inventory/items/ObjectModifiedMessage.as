@@ -10,61 +10,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
    public class ObjectModifiedMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ObjectModifiedMessage() {
-         this.object = new ObjectItem();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ObjectModifiedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 3029;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var object:ObjectItem;
       
-      override public function getMessageId() : uint {
-         return 3029;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initObjectModifiedMessage(object:ObjectItem = null) : ObjectModifiedMessage {
-         this.object = object;
-         this._isInitialized = true;
-         return this;
+      public function initObjectModifiedMessage(object:ObjectItem = null) : ObjectModifiedMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.object = new ObjectItem();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ObjectModifiedMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectModifiedMessage(output:IDataOutput) : void {
-         this.object.serializeAs_ObjectItem(output);
+      public function serializeAs_ObjectModifiedMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ObjectModifiedMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectModifiedMessage(input:IDataInput) : void {
-         this.object = new ObjectItem();
-         this.object.deserialize(input);
+      public function deserializeAs_ObjectModifiedMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

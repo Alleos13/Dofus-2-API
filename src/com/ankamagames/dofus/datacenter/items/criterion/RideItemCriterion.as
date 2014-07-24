@@ -8,35 +8,28 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class RideItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function RideItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         var readableCriterion:String = null;
-         if((_operator.text == ItemCriterionOperator.EQUAL) && (_criterionValue == 1) || (_operator.text == ItemCriterionOperator.DIFFERENT) && (_criterionValue == 0))
-         {
-            readableCriterion = I18n.getUiText("ui.tooltip.mountEquiped");
-         }
-         if((_operator.text == ItemCriterionOperator.EQUAL) && (_criterionValue == 0) || (_operator.text == ItemCriterionOperator.DIFFERENT) && (_criterionValue == 1))
-         {
-            readableCriterion = I18n.getUiText("ui.tooltip.mountNonEquiped");
-         }
-         return readableCriterion;
+      public function RideItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:RideItemCriterion = new RideItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getCriterion() : int {
-         var isOnRide:Boolean = (Kernel.getWorker().getFrame(AbstractEntitiesFrame) as AbstractEntitiesFrame).playerIsOnRide;
-         if(isOnRide)
-         {
-            return 1;
-         }
-         return 0;
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getCriterion() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

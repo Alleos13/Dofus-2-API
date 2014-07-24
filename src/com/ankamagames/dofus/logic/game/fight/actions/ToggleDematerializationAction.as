@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.fight.actions
    public class ToggleDematerializationAction extends Object implements Action
    {
       
-      public function ToggleDematerializationAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : ToggleDematerializationAction {
-         var a:ToggleDematerializationAction = new ToggleDematerializationAction();
-         return a;
+      public function ToggleDematerializationAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : ToggleDematerializationAction
+      {
+         //Décompilation abandonné
       }
    }
 }

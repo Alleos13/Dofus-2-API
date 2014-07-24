@@ -7,45 +7,52 @@ package com.ankamagames.dofus.network.types.game.context.fight
    public class GameFightFighterNamedLightInformations extends GameFightFighterLightInformations implements INetworkType
    {
       
-      public function GameFightFighterNamedLightInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameFightFighterNamedLightInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 456;
       
       public var name:String = "";
       
-      override public function getTypeId() : uint {
-         return 456;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameFightFighterNamedLightInformations(id:int = 0, wave:int = 0, level:uint = 0, breed:int = 0, sex:Boolean = false, alive:Boolean = false, name:String = "") : GameFightFighterNamedLightInformations {
-         super.initGameFightFighterLightInformations(id,wave,level,breed,sex,alive);
-         this.name = name;
-         return this;
+      public function initGameFightFighterNamedLightInformations(id:int = 0, wave:int = 0, level:uint = 0, breed:int = 0, sex:Boolean = false, alive:Boolean = false, name:String = "") : GameFightFighterNamedLightInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.name = "";
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameFightFighterNamedLightInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightFighterNamedLightInformations(output:IDataOutput) : void {
-         super.serializeAs_GameFightFighterLightInformations(output);
-         output.writeUTF(this.name);
+      public function serializeAs_GameFightFighterNamedLightInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameFightFighterNamedLightInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightFighterNamedLightInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.name = input.readUTF();
+      public function deserializeAs_GameFightFighterNamedLightInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

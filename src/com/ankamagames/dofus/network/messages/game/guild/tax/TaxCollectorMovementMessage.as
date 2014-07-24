@@ -10,17 +10,22 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
    public class TaxCollectorMovementMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function TaxCollectorMovementMessage() {
-         this.basicInfos = new TaxCollectorBasicInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TaxCollectorMovementMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5633;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var hireOrFire:Boolean = false;
@@ -31,73 +36,49 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
       
       public var playerName:String = "";
       
-      override public function getMessageId() : uint {
-         return 5633;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initTaxCollectorMovementMessage(hireOrFire:Boolean = false, basicInfos:TaxCollectorBasicInformations = null, playerId:uint = 0, playerName:String = "") : TaxCollectorMovementMessage {
-         this.hireOrFire = hireOrFire;
-         this.basicInfos = basicInfos;
-         this.playerId = playerId;
-         this.playerName = playerName;
-         this._isInitialized = true;
-         return this;
+      public function initTaxCollectorMovementMessage(hireOrFire:Boolean = false, basicInfos:TaxCollectorBasicInformations = null, playerId:uint = 0, playerName:String = "") : TaxCollectorMovementMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.hireOrFire = false;
-         this.basicInfos = new TaxCollectorBasicInformations();
-         this.playerName = "";
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TaxCollectorMovementMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_TaxCollectorMovementMessage(output:IDataOutput) : void {
-         output.writeBoolean(this.hireOrFire);
-         this.basicInfos.serializeAs_TaxCollectorBasicInformations(output);
-         if(this.playerId < 0)
-         {
-            throw new Error("Forbidden value (" + this.playerId + ") on element playerId.");
-         }
-         else
-         {
-            output.writeInt(this.playerId);
-            output.writeUTF(this.playerName);
-            return;
-         }
+      public function serializeAs_TaxCollectorMovementMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TaxCollectorMovementMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_TaxCollectorMovementMessage(input:IDataInput) : void {
-         this.hireOrFire = input.readBoolean();
-         this.basicInfos = new TaxCollectorBasicInformations();
-         this.basicInfos.deserialize(input);
-         this.playerId = input.readInt();
-         if(this.playerId < 0)
-         {
-            throw new Error("Forbidden value (" + this.playerId + ") on element of TaxCollectorMovementMessage.playerId.");
-         }
-         else
-         {
-            this.playerName = input.readUTF();
-            return;
-         }
+      public function deserializeAs_TaxCollectorMovementMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

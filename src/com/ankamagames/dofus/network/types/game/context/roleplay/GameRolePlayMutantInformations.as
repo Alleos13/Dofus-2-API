@@ -9,8 +9,13 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
    public class GameRolePlayMutantInformations extends GameRolePlayHumanoidInformations implements INetworkType
    {
       
-      public function GameRolePlayMutantInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameRolePlayMutantInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 3;
@@ -19,41 +24,39 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
       
       public var powerLevel:int = 0;
       
-      override public function getTypeId() : uint {
-         return 3;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameRolePlayMutantInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, name:String = "", humanoidInfo:HumanInformations = null, accountId:uint = 0, monsterId:int = 0, powerLevel:int = 0) : GameRolePlayMutantInformations {
-         super.initGameRolePlayHumanoidInformations(contextualId,look,disposition,name,humanoidInfo,accountId);
-         this.monsterId = monsterId;
-         this.powerLevel = powerLevel;
-         return this;
+      public function initGameRolePlayMutantInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, name:String = "", humanoidInfo:HumanInformations = null, accountId:uint = 0, monsterId:int = 0, powerLevel:int = 0) : GameRolePlayMutantInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.monsterId = 0;
-         this.powerLevel = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameRolePlayMutantInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayMutantInformations(output:IDataOutput) : void {
-         super.serializeAs_GameRolePlayHumanoidInformations(output);
-         output.writeInt(this.monsterId);
-         output.writeByte(this.powerLevel);
+      public function serializeAs_GameRolePlayMutantInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameRolePlayMutantInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayMutantInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.monsterId = input.readInt();
-         this.powerLevel = input.readByte();
+      public function deserializeAs_GameRolePlayMutantInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

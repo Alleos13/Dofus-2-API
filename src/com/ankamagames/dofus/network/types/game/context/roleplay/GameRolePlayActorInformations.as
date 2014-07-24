@@ -10,39 +10,50 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
    public class GameRolePlayActorInformations extends GameContextActorInformations implements INetworkType
    {
       
-      public function GameRolePlayActorInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameRolePlayActorInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 141;
       
-      override public function getTypeId() : uint {
-         return 141;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameRolePlayActorInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null) : GameRolePlayActorInformations {
-         super.initGameContextActorInformations(contextualId,look,disposition);
-         return this;
+      public function initGameRolePlayActorInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null) : GameRolePlayActorInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameRolePlayActorInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayActorInformations(output:IDataOutput) : void {
-         super.serializeAs_GameContextActorInformations(output);
+      public function serializeAs_GameRolePlayActorInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameRolePlayActorInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayActorInformations(input:IDataInput) : void {
-         super.deserialize(input);
+      public function deserializeAs_GameRolePlayActorInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

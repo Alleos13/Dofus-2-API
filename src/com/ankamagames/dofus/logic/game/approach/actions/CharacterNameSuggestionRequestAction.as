@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.game.approach.actions
    public class CharacterNameSuggestionRequestAction extends Object implements Action
    {
       
-      public function CharacterNameSuggestionRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : CharacterNameSuggestionRequestAction {
-         return new CharacterNameSuggestionRequestAction();
+      public function CharacterNameSuggestionRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : CharacterNameSuggestionRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

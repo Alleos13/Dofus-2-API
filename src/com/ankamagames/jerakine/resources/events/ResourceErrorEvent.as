@@ -6,8 +6,13 @@ package com.ankamagames.jerakine.resources.events
    public class ResourceErrorEvent extends ResourceEvent
    {
       
-      public function ResourceErrorEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false) {
-         super(type,bubbles,cancelable);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ResourceErrorEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       public static const ERROR:String = "error";
@@ -18,12 +23,9 @@ package com.ankamagames.jerakine.resources.events
       
       public var errorCode:uint;
       
-      override public function clone() : Event {
-         var re:ResourceErrorEvent = new ResourceErrorEvent(type,bubbles,cancelable);
-         re.uri = this.uri;
-         re.errorMsg = this.errorMsg;
-         re.errorCode = this.errorCode;
-         return re;
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
    }
 }

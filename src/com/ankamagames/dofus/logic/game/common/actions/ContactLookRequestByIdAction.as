@@ -5,27 +5,32 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class ContactLookRequestByIdAction extends Object implements Action
    {
       
-      public function ContactLookRequestByIdAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pContactType:uint, pEntityId:uint) : ContactLookRequestByIdAction {
-         var clrbia:ContactLookRequestByIdAction = new ContactLookRequestByIdAction();
-         clrbia._contactType = pContactType;
-         clrbia._entityId = pEntityId;
-         return clrbia;
+      public function ContactLookRequestByIdAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pContactType:uint, pEntityId:uint) : ContactLookRequestByIdAction
+      {
+         //Décompilation abandonné
       }
       
       private var _contactType:uint;
       
-      public function get contactType() : uint {
-         return this._contactType;
+      public function get contactType() : uint
+      {
+         //Décompilation abandonné
       }
       
       private var _entityId:uint;
       
-      public function get entityId() : uint {
-         return this._entityId;
+      public function get entityId() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

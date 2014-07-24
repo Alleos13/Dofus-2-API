@@ -23,8 +23,13 @@ package com.ankamagames.dofus.internalDatacenter.items
    public class ShortcutWrapper extends Proxy implements ISlotData, IDataCenter
    {
       
-      public function ShortcutWrapper() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ShortcutWrapper()
+      {
+         //Décompilation abandonné
       }
       
       private static const _log:Logger;
@@ -45,52 +50,9 @@ package com.ankamagames.dofus.internalDatacenter.items
       
       private static var _properties:Array;
       
-      public static function create(slot:uint, id:uint, type:uint = 0, gid:uint = 0) : ShortcutWrapper {
-         var itemWrapper:ItemWrapper = null;
-         var emoteWrapper:EmoteWrapper = null;
-         var rpEmoteFrame:EmoticonFrame = null;
-         var item:ShortcutWrapper = new ShortcutWrapper();
-         item.slot = slot;
-         item.id = id;
-         item.type = type;
-         item.gid = gid;
-         if(type == TYPE_ITEM_WRAPPER)
-         {
-            if(id != 0)
-            {
-               itemWrapper = InventoryManager.getInstance().inventory.getItem(id);
-            }
-            else
-            {
-               itemWrapper = ItemWrapper.create(0,0,gid,0,null,false);
-            }
-            if(itemWrapper)
-            {
-               item.quantity = itemWrapper.quantity;
-            }
-            if(item.quantity == 0)
-            {
-               item.active = false;
-            }
-            else
-            {
-               item.active = true;
-            }
-         }
-         if(type == TYPE_EMOTE_WRAPPER)
-         {
-            emoteWrapper = EmoteWrapper.create(item.id,item.slot);
-            rpEmoteFrame = Kernel.getWorker().getFrame(EmoticonFrame) as EmoticonFrame;
-            if(rpEmoteFrame.isKnownEmote(item.id))
-            {
-               item.active = true;
-            }
-            else
-            {
-               item.active = false;
-            }
-         }
-         return item;
+      public static function create(slot:uint, id:uint, type:uint = 0, gid:uint = 0) : ShortcutWrapper
+      {
+         //Décompilation abandonné
       }
       
       private var _uri:Uri;
@@ -113,489 +75,124 @@ package com.ankamagames.dofus.internalDatacenter.items
       
       public var quantity:int = 0;
       
-      public function get iconUri() : Uri {
-         return this.getIconUri(true);
+      public function get iconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get fullSizeIconUri() : Uri {
-         return this.getIconUri(false);
+      public function get fullSizeIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get backGroundIconUri() : Uri {
-         if(!this._backGroundIconUri)
-         {
-            this._backGroundIconUri = new Uri(XmlConfig.getInstance().getEntry("config.ui.skin").concat("bitmap/emptySlot.png"));
-         }
-         return this._backGroundIconUri;
+      public function get backGroundIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function set backGroundIconUri(bgUri:Uri) : void {
-         this._backGroundIconUri = bgUri;
+      public function set backGroundIconUri(bgUri:Uri) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get errorIconUri() : Uri {
-         if(!_errorIconUri)
-         {
-            _errorIconUri = new Uri(XmlConfig.getInstance().getEntry("config.gfx.path.item.bitmap").concat("error.png"));
-         }
-         return _errorIconUri;
+      public function get errorIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get info1() : String {
-         var spellWrapper:SpellWrapper = null;
-         if(this.type == TYPE_ITEM_WRAPPER)
-         {
-            return this.quantity.toString();
-         }
-         if(this.type == TYPE_SPELL_WRAPPER)
-         {
-            spellWrapper = SpellWrapper.getFirstSpellWrapperById(this.id,this.getCharaId());
-            return spellWrapper?spellWrapper.info1:"";
-         }
-         return "";
+      public function get info1() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get startTime() : int {
-         var emoteWrapper:EmoteWrapper = null;
-         if(this.type == TYPE_EMOTE_WRAPPER)
-         {
-            emoteWrapper = EmoteWrapper.getEmoteWrapperById(this.id);
-            return emoteWrapper?emoteWrapper.startTime:0;
-         }
-         return 0;
+      public function get startTime() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get endTime() : int {
-         var emoteWrapper:EmoteWrapper = null;
-         if(this.type == TYPE_EMOTE_WRAPPER)
-         {
-            emoteWrapper = EmoteWrapper.getEmoteWrapperById(this.id);
-            return emoteWrapper?emoteWrapper.endTime:0;
-         }
-         return 0;
+      public function get endTime() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set endTime(t:int) : void {
-         var emoteWrapper:EmoteWrapper = null;
-         if(this.type == TYPE_EMOTE_WRAPPER)
-         {
-            emoteWrapper = EmoteWrapper.getEmoteWrapperById(this.id);
-            if(emoteWrapper)
-            {
-               emoteWrapper.endTime = t;
-            }
-         }
+      public function set endTime(t:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get timer() : int {
-         var emoteWrapper:EmoteWrapper = null;
-         if(this.type == TYPE_EMOTE_WRAPPER)
-         {
-            emoteWrapper = EmoteWrapper.getEmoteWrapperById(this.id);
-            return emoteWrapper?emoteWrapper.timer:0;
-         }
-         return 0;
+      public function get timer() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get active() : Boolean {
-         var spellWrapper:SpellWrapper = null;
-         var rpEmoticonFrame:EmoticonFrame = null;
-         if(this.type == TYPE_SPELL_WRAPPER)
-         {
-            spellWrapper = SpellWrapper.getFirstSpellWrapperById(this.id,this.getCharaId());
-            return spellWrapper?spellWrapper.active:false;
-         }
-         if(this.type == TYPE_EMOTE_WRAPPER)
-         {
-            rpEmoticonFrame = Kernel.getWorker().getFrame(EmoticonFrame) as EmoticonFrame;
-            return rpEmoticonFrame.isKnownEmote(this.id);
-         }
-         return this._active;
+      public function get active() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set active(b:Boolean) : void {
-         this._active = b;
+      public function set active(b:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get realItem() : ISlotData {
-         var itemWrapper:ItemWrapper = null;
-         if(this.type == TYPE_ITEM_WRAPPER)
-         {
-            if(this.id != 0)
-            {
-               itemWrapper = InventoryManager.getInstance().inventory.getItem(this.id);
-            }
-            else
-            {
-               itemWrapper = ItemWrapper.create(0,0,this.gid,0,null,false);
-            }
-            return itemWrapper;
-         }
-         if(this.type == TYPE_PRESET_WRAPPER)
-         {
-            return InventoryManager.getInstance().presets[this.id];
-         }
-         if(this.type == TYPE_SPELL_WRAPPER)
-         {
-            return SpellWrapper.getFirstSpellWrapperById(this.id,this.getCharaId());
-         }
-         if(this.type == TYPE_EMOTE_WRAPPER)
-         {
-            return EmoteWrapper.getEmoteWrapperById(this.id);
-         }
-         if(this.type == TYPE_SMILEY_WRAPPER)
-         {
-            return SmileyWrapper.getSmileyWrapperById(this.id);
-         }
-         return null;
+      public function get realItem() : ISlotData
+      {
+         //Décompilation abandonné
       }
       
-      override flash_proxy function getProperty(name:*) : * {
-         var itemWrapper:ItemWrapper = null;
-         var presetWrapper:PresetWrapper = null;
-         var emoteWrapper:EmoteWrapper = null;
-         var spellWrapper:SpellWrapper = null;
-         if(isAttribute(name))
-         {
-            return this[name];
-         }
-         if(this.type == TYPE_ITEM_WRAPPER)
-         {
-            if(this.id != 0)
-            {
-               itemWrapper = InventoryManager.getInstance().inventory.getItem(this.id);
-            }
-            else
-            {
-               itemWrapper = ItemWrapper.create(0,0,this.gid,0,null,false);
-            }
-            if(!itemWrapper)
-            {
-               _log.debug("Null item " + this.id + " - " + this.gid);
-            }
-            else
-            {
-               try
-               {
-                  return itemWrapper[name];
-               }
-               catch(e:Error)
-               {
-                  if(e.getStackTrace())
-                  {
-                     _log.error("Item " + id + " " + gid + " " + name + " : " + e.getStackTrace());
-                  }
-                  return "Error_on_item_" + name;
-               }
-            }
-         }
-         else if(this.type == TYPE_PRESET_WRAPPER)
-         {
-            presetWrapper = InventoryManager.getInstance().presets[this.id];
-            if(!presetWrapper)
-            {
-               _log.debug("Null preset " + this.id + " - " + this.gid);
-            }
-            else
-            {
-               try
-               {
-                  return presetWrapper[name];
-               }
-               catch(e:Error)
-               {
-                  if(e.getStackTrace())
-                  {
-                     _log.error("Preset " + id + " " + name + " : " + e.getStackTrace());
-                  }
-                  return "Error_on_preset_" + name;
-               }
-            }
-         }
-         else if(this.type == TYPE_EMOTE_WRAPPER)
-         {
-            emoteWrapper = EmoteWrapper.getEmoteWrapperById(this.id);
-            if(!emoteWrapper)
-            {
-               _log.debug("Null emote " + this.id);
-            }
-            else
-            {
-               try
-               {
-                  return emoteWrapper[name];
-               }
-               catch(e:Error)
-               {
-                  if(e.getStackTrace())
-                  {
-                     _log.error("Emote " + id + " " + name + " : " + e.getStackTrace());
-                  }
-                  return "Error_on_emote_" + name;
-               }
-            }
-         }
-         else if(this.type == TYPE_SPELL_WRAPPER)
-         {
-            spellWrapper = SpellWrapper.getFirstSpellWrapperById(this.id,this.getCharaId());
-            if(!spellWrapper)
-            {
-               _log.debug("Null preset " + this.id + " - " + this.gid);
-            }
-            else
-            {
-               try
-               {
-                  return presetWrapper[name];
-               }
-               catch(e:Error)
-               {
-                  if(e.getStackTrace())
-                  {
-                     _log.error("Preset " + id + " " + name + " : " + e.getStackTrace());
-                  }
-                  return "Error_on_preset_" + name;
-               }
-            }
-         }
-         
-         
-         
-         return "Error on getProperty " + name;
+      override flash_proxy function getProperty(name:*) : *
+      {
+         //Décompilation abandonné
       }
       
-      override flash_proxy function callProperty(name:*, ... rest) : * {
-         var res:* = undefined;
-         switch(QName(name).localName)
-         {
-            case "toString":
-               res = "[ShortcutWrapper : type " + this.type + ", id " + this.id + ", slot " + this.slot + ", gid " + this.gid + ", quantity " + this.quantity + "]";
-               break;
-            case "hasOwnProperty":
-               res = this.hasProperty(name);
-               break;
-         }
-         return res;
+      override flash_proxy function callProperty(name:*, ... rest) : *
+      {
+         //Décompilation abandonné
       }
       
-      override flash_proxy function nextNameIndex(index:int) : int {
-         return 0;
+      override flash_proxy function nextNameIndex(index:int) : int
+      {
+         //Décompilation abandonné
       }
       
-      override flash_proxy function nextName(index:int) : String {
-         return "nextName";
+      override flash_proxy function nextName(index:int) : String
+      {
+         //Décompilation abandonné
       }
       
-      override flash_proxy function hasProperty(name:*) : Boolean {
-         return false;
+      override flash_proxy function hasProperty(name:*) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function update(slot:uint, id:uint, type:uint = 0, gid:uint = 0) : void {
-         var itemWrapper:ItemWrapper = null;
-         var rpEmoteFrame:EmoticonFrame = null;
-         if((!(this.id == id)) || (!(this.type == type)))
-         {
-            this._uri = this._uriFullsize = null;
-         }
-         this.slot = slot;
-         this.id = id;
-         this.type = type;
-         this.gid = gid;
-         this.active = true;
-         if(this.type == TYPE_ITEM_WRAPPER)
-         {
-            if(this.id != 0)
-            {
-               itemWrapper = InventoryManager.getInstance().inventory.getItem(this.id);
-            }
-            else
-            {
-               itemWrapper = ItemWrapper.create(0,0,this.gid,0,null,false);
-            }
-            if(itemWrapper)
-            {
-               this.quantity = itemWrapper.quantity;
-            }
-            if(this.quantity == 0)
-            {
-               this.active = false;
-            }
-         }
-         if(this.type == TYPE_PRESET_WRAPPER)
-         {
-            this._uri = this._uriFullsize = null;
-         }
-         if(type == TYPE_EMOTE_WRAPPER)
-         {
-            rpEmoteFrame = Kernel.getWorker().getFrame(EmoticonFrame) as EmoticonFrame;
-            if(!rpEmoteFrame.isKnownEmote(id))
-            {
-               this.active = false;
-            }
-         }
+      public function update(slot:uint, id:uint, type:uint = 0, gid:uint = 0) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getIconUri(pngMode:Boolean = true) : Uri {
-         var itemWrapper:ItemWrapper = null;
-         var fakeItemWrapper:ItemWrapper = null;
-         var presetWrapper:PresetWrapper = null;
-         var spellWrapper:SpellWrapper = null;
-         var smileyWrapper:SmileyWrapper = null;
-         var emoteWrapper:EmoteWrapper = null;
-         if((!(this.type == TYPE_SPELL_WRAPPER)) || (!(this.id == 0)))
-         {
-            if((pngMode) && (this._uri))
-            {
-               return this._uri;
-            }
-            if((!pngMode) && (this._uriFullsize))
-            {
-               return this._uriFullsize;
-            }
-         }
-         if(this.type == TYPE_ITEM_WRAPPER)
-         {
-            if(this.id != 0)
-            {
-               itemWrapper = InventoryManager.getInstance().inventory.getItem(this.id);
-               if(itemWrapper)
-               {
-                  this._uri = itemWrapper.iconUri;
-                  this._uriFullsize = itemWrapper.fullSizeIconUri;
-               }
-               else
-               {
-                  this._uri = this._uriFullsize = null;
-               }
-            }
-            else
-            {
-               fakeItemWrapper = ItemWrapper.create(0,0,this.gid,0,null,false);
-               if(fakeItemWrapper)
-               {
-                  this._uri = fakeItemWrapper.iconUri;
-                  this._uriFullsize = fakeItemWrapper.fullSizeIconUri;
-               }
-               else
-               {
-                  this._uri = this._uriFullsize = null;
-               }
-            }
-         }
-         else if(this.type == TYPE_PRESET_WRAPPER)
-         {
-            presetWrapper = InventoryManager.getInstance().presets[this.id];
-            if(presetWrapper)
-            {
-               this._uri = presetWrapper.iconUri;
-               this._uriFullsize = presetWrapper.fullSizeIconUri;
-            }
-            else
-            {
-               this._uri = this._uriFullsize = null;
-            }
-         }
-         else if(this.type == TYPE_SPELL_WRAPPER)
-         {
-            spellWrapper = SpellWrapper.getFirstSpellWrapperById(this.id,this.getCharaId());
-            if(spellWrapper)
-            {
-               this._uri = spellWrapper.iconUri;
-               this._uriFullsize = spellWrapper.fullSizeIconUri;
-            }
-            else
-            {
-               this._uri = this._uriFullsize = null;
-            }
-         }
-         else if(this.type == TYPE_SMILEY_WRAPPER)
-         {
-            smileyWrapper = SmileyWrapper.getSmileyWrapperById(this.id);
-            if(smileyWrapper)
-            {
-               this._uri = smileyWrapper.iconUri;
-               this._uriFullsize = smileyWrapper.fullSizeIconUri;
-            }
-            else
-            {
-               this._uri = this._uriFullsize = null;
-            }
-         }
-         else if(this.type == TYPE_EMOTE_WRAPPER)
-         {
-            emoteWrapper = EmoteWrapper.getEmoteWrapperById(this.id);
-            if(emoteWrapper)
-            {
-               this._uri = emoteWrapper.iconUri;
-               this._uriFullsize = emoteWrapper.fullSizeIconUri;
-            }
-            else
-            {
-               this._uri = this._uriFullsize = null;
-            }
-         }
-         
-         
-         
-         
-         if((pngMode) && (this._uri))
-         {
-            return this._uri;
-         }
-         if((!pngMode) && (this._uriFullsize))
-         {
-            return this._uriFullsize;
-         }
-         return null;
+      public function getIconUri(pngMode:Boolean = true) : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function clone() : ShortcutWrapper {
-         var shortcut:ShortcutWrapper = new ShortcutWrapper();
-         shortcut.slot = this.slot;
-         shortcut.id = this.id;
-         shortcut.type = this.type;
-         shortcut.gid = this.gid;
-         shortcut.quantity = this.quantity;
-         return shortcut;
+      public function clone() : ShortcutWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function addHolder(h:ISlotDataHolder) : void {
-         var spellWrappers:Array = null;
-         var spellWrapper:SpellWrapper = null;
-         var emoteWrapper:EmoteWrapper = null;
-         if(this.type == TYPE_SPELL_WRAPPER)
-         {
-            spellWrappers = SpellWrapper.getSpellWrappersById(this.id,this.getCharaId());
-            for each(spellWrapper in spellWrappers)
-            {
-               if(spellWrapper)
-               {
-                  spellWrapper.addHolder(h);
-                  spellWrapper.setLinkedSlotData(this);
-               }
-            }
-         }
-         else if(this.type == TYPE_EMOTE_WRAPPER)
-         {
-            emoteWrapper = EmoteWrapper.getEmoteWrapperById(this.id);
-            if(emoteWrapper)
-            {
-               emoteWrapper.addHolder(h);
-               emoteWrapper.setLinkedSlotData(this);
-            }
-         }
-         
+      public function addHolder(h:ISlotDataHolder) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeHolder(h:ISlotDataHolder) : void {
+      public function removeHolder(h:ISlotDataHolder) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function getCharaId() : int {
-         if(CurrentPlayedFighterManager.getInstance().currentFighterId)
-         {
-            return CurrentPlayedFighterManager.getInstance().currentFighterId;
-         }
-         return PlayedCharacterManager.getInstance().id;
+      private function getCharaId() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.roleplay
    public class BasicSwitchModeAction extends Object implements Action
    {
       
-      public function BasicSwitchModeAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pType:int) : BasicSwitchModeAction {
-         var action:BasicSwitchModeAction = new BasicSwitchModeAction();
-         action.type = pType;
-         return action;
+      public function BasicSwitchModeAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pType:int) : BasicSwitchModeAction
+      {
+         //Décompilation abandonné
       }
       
       public var type:int;

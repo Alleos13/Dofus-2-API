@@ -5,18 +5,18 @@ package com.ankamagames.dofus.logic.game.approach.actions
    public class CharacterCreationAction extends Object implements Action
    {
       
-      public function CharacterCreationAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(name:String, breed:uint, sex:Boolean, colors:Array, head:int) : CharacterCreationAction {
-         var a:CharacterCreationAction = new CharacterCreationAction();
-         a.name = name;
-         a.breed = breed;
-         a.sex = sex;
-         a.colors = colors;
-         a.head = head;
-         return a;
+      public function CharacterCreationAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(name:String, breed:uint, sex:Boolean, colors:Array, head:int) : CharacterCreationAction
+      {
+         //Décompilation abandonné
       }
       
       public var name:String;

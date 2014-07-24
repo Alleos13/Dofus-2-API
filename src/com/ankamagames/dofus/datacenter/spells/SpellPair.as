@@ -7,18 +7,25 @@ package com.ankamagames.dofus.datacenter.spells
    public class SpellPair extends Object implements IDataCenter
    {
       
-      public function SpellPair() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpellPair()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "SpellPairs";
       
-      public static function getSpellPairById(id:int) : SpellPair {
-         return GameData.getObject(MODULE,id) as SpellPair;
+      public static function getSpellPairById(id:int) : SpellPair
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSpellPairs() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getSpellPairs() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -33,20 +40,14 @@ package com.ankamagames.dofus.datacenter.spells
       
       private var _desc:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get description() : String {
-         if(!this._desc)
-         {
-            this._desc = I18n.getText(this.descriptionId);
-         }
-         return this._desc;
+      public function get description() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -6,8 +6,13 @@ package com.ankamagames.dofus.datacenter.effects.instances
    public class EffectInstanceDuration extends EffectInstance implements IDataCenter
    {
       
-      public function EffectInstanceDuration() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EffectInstanceDuration()
+      {
+         //Décompilation abandonné
       }
       
       public var days:uint;
@@ -16,47 +21,29 @@ package com.ankamagames.dofus.datacenter.effects.instances
       
       public var minutes:uint;
       
-      override public function clone() : EffectInstance {
-         var o:EffectInstanceDuration = new EffectInstanceDuration();
-         o.rawZone = rawZone;
-         o.effectId = effectId;
-         o.duration = duration;
-         o.delay = delay;
-         o.days = this.days;
-         o.hours = this.hours;
-         o.minutes = this.minutes;
-         o.random = random;
-         o.group = group;
-         o.targetId = targetId;
-         o.targetMask = targetMask;
-         return o;
+      override public function clone() : EffectInstance
+      {
+         //Décompilation abandonné
       }
       
-      override public function get parameter0() : Object {
-         return this.days;
+      override public function get parameter0() : Object
+      {
+         //Décompilation abandonné
       }
       
-      override public function get parameter1() : Object {
-         return this.hours;
+      override public function get parameter1() : Object
+      {
+         //Décompilation abandonné
       }
       
-      override public function get parameter2() : Object {
-         return this.minutes;
+      override public function get parameter2() : Object
+      {
+         //Décompilation abandonné
       }
       
-      override public function setParameter(paramIndex:uint, value:*) : void {
-         switch(paramIndex)
-         {
-            case 0:
-               this.days = uint(value);
-               break;
-            case 1:
-               this.hours = uint(value);
-               break;
-            case 2:
-               this.minutes = uint(value);
-               break;
-         }
+      override public function setParameter(paramIndex:uint, value:*) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

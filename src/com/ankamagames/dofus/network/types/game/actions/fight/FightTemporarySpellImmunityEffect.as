@@ -7,45 +7,52 @@ package com.ankamagames.dofus.network.types.game.actions.fight
    public class FightTemporarySpellImmunityEffect extends AbstractFightDispellableEffect implements INetworkType
    {
       
-      public function FightTemporarySpellImmunityEffect() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightTemporarySpellImmunityEffect()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 366;
       
       public var immuneSpellId:int = 0;
       
-      override public function getTypeId() : uint {
-         return 366;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initFightTemporarySpellImmunityEffect(uid:uint = 0, targetId:int = 0, turnDuration:int = 0, dispelable:uint = 1, spellId:uint = 0, parentBoostUid:uint = 0, immuneSpellId:int = 0) : FightTemporarySpellImmunityEffect {
-         super.initAbstractFightDispellableEffect(uid,targetId,turnDuration,dispelable,spellId,parentBoostUid);
-         this.immuneSpellId = immuneSpellId;
-         return this;
+      public function initFightTemporarySpellImmunityEffect(uid:uint = 0, targetId:int = 0, turnDuration:int = 0, dispelable:uint = 1, spellId:uint = 0, parentBoostUid:uint = 0, immuneSpellId:int = 0) : FightTemporarySpellImmunityEffect
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.immuneSpellId = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_FightTemporarySpellImmunityEffect(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_FightTemporarySpellImmunityEffect(output:IDataOutput) : void {
-         super.serializeAs_AbstractFightDispellableEffect(output);
-         output.writeInt(this.immuneSpellId);
+      public function serializeAs_FightTemporarySpellImmunityEffect(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_FightTemporarySpellImmunityEffect(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_FightTemporarySpellImmunityEffect(input:IDataInput) : void {
-         super.deserialize(input);
-         this.immuneSpellId = input.readInt();
+      public function deserializeAs_FightTemporarySpellImmunityEffect(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

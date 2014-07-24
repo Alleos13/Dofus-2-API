@@ -9,32 +9,29 @@ package org.flintparticles.common.utils
    public class FrameUpdater extends EventDispatcher
    {
       
-      public function FrameUpdater() {
-         super();
-         this._shape = new Shape();
-         this._shape.addEventListener(Event.ENTER_FRAME,this.frameUpdate,false,0,true);
-         this._time = getTimer();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FrameUpdater()
+      {
+         //Décompilation abandonné
       }
       
       private static var _instance:FrameUpdater;
       
-      public static function get instance() : FrameUpdater {
-         if(_instance == null)
-         {
-            _instance = new FrameUpdater();
-         }
-         return _instance;
+      public static function get instance() : FrameUpdater
+      {
+         //Décompilation abandonné
       }
       
       private var _shape:Shape;
       
       private var _time:Number;
       
-      private function frameUpdate(param1:Event) : void {
-         var _loc2_:int = this._time;
-         this._time = getTimer();
-         var _loc3_:Number = (this._time - _loc2_) * 0.001;
-         dispatchEvent(new UpdateEvent(UpdateEvent.UPDATE,_loc3_));
+      private function frameUpdate(ev:Event) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

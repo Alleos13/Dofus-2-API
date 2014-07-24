@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.guild
    public class GuildKickRequestAction extends Object implements Action
    {
       
-      public function GuildKickRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pTargetId:uint) : GuildKickRequestAction {
-         var action:GuildKickRequestAction = new GuildKickRequestAction();
-         action.targetId = pTargetId;
-         return action;
+      public function GuildKickRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pTargetId:uint) : GuildKickRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var targetId:uint;

@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.prism
    public class PrismFightStateUpdateMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function PrismFightStateUpdateMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PrismFightStateUpdateMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6040;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var state:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6040;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPrismFightStateUpdateMessage(state:uint = 0) : PrismFightStateUpdateMessage {
-         this.state = state;
-         this._isInitialized = true;
-         return this;
+      public function initPrismFightStateUpdateMessage(state:uint = 0) : PrismFightStateUpdateMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.state = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PrismFightStateUpdateMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PrismFightStateUpdateMessage(output:IDataOutput) : void {
-         if(this.state < 0)
-         {
-            throw new Error("Forbidden value (" + this.state + ") on element state.");
-         }
-         else
-         {
-            output.writeByte(this.state);
-            return;
-         }
+      public function serializeAs_PrismFightStateUpdateMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PrismFightStateUpdateMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PrismFightStateUpdateMessage(input:IDataInput) : void {
-         this.state = input.readByte();
-         if(this.state < 0)
-         {
-            throw new Error("Forbidden value (" + this.state + ") on element of PrismFightStateUpdateMessage.state.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_PrismFightStateUpdateMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

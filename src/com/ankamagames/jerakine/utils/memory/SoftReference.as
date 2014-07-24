@@ -6,11 +6,13 @@ package com.ankamagames.jerakine.utils.memory
    public class SoftReference extends Object
    {
       
-      public function SoftReference(obj:*, keptTime:uint = 10000) {
-         super();
-         this.value = obj;
-         this.keptTime = keptTime;
-         this.resetTimeout();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SoftReference(obj:*, keptTime:uint = 10000)
+      {
+         //Décompilation abandonné
       }
       
       private var value;
@@ -19,21 +21,19 @@ package com.ankamagames.jerakine.utils.memory
       
       private var timeout:uint;
       
-      public function get object() : * {
-         this.resetTimeout();
-         return this.value;
+      public function get object() : *
+      {
+         //Décompilation abandonné
       }
       
-      private function resetTimeout() : void {
-         clearTimeout(this.timeout);
-         if(this.value)
-         {
-            this.timeout = setTimeout(this.clearReference,this.keptTime);
-         }
+      private function resetTimeout() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function clearReference() : void {
-         this.value = null;
+      private function clearReference() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,24 +5,28 @@ package com.ankamagames.jerakine.interfaces
    public interface IRectangle
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function get x() : Number;
       
-      function set x(param1:Number) : void;
+      function set x(nValue:Number) : void;
       
       function get y() : Number;
       
-      function set y(param1:Number) : void;
+      function set y(nValue:Number) : void;
       
       function get width() : Number;
       
-      function set width(param1:Number) : void;
+      function set width(nValue:Number) : void;
       
       function get height() : Number;
       
-      function set height(param1:Number) : void;
+      function set height(nValue:Number) : void;
       
-      function localToGlobal(param1:Point) : Point;
+      function localToGlobal(point:Point) : Point;
       
-      function globalToLocal(param1:Point) : Point;
+      function globalToLocal(point:Point) : Point;
    }
 }

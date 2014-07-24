@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.roleplay
    public class GameRolePlayFreeSoulRequestAction extends Object implements Action
    {
       
-      public function GameRolePlayFreeSoulRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : GameRolePlayFreeSoulRequestAction {
-         return new GameRolePlayFreeSoulRequestAction();
+      public function GameRolePlayFreeSoulRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : GameRolePlayFreeSoulRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

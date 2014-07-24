@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.common.actions
    public class AddBehaviorToStackAction extends Object implements Action
    {
       
-      public function AddBehaviorToStackAction(data:Array = null) {
-         super();
-         this.behavior = !(data == null)?data:new Array();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : AddBehaviorToStackAction {
-         var s:AddBehaviorToStackAction = new AddBehaviorToStackAction(new Array());
-         return s;
+      public function AddBehaviorToStackAction(data:Array = null)
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : AddBehaviorToStackAction
+      {
+         //Décompilation abandonné
       }
       
       public var behavior:Array;

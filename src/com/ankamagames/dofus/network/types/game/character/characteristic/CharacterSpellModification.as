@@ -7,9 +7,13 @@ package com.ankamagames.dofus.network.types.game.character.characteristic
    public class CharacterSpellModification extends Object implements INetworkType
    {
       
-      public function CharacterSpellModification() {
-         this.value = new CharacterBaseCharacteristic();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterSpellModification()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 215;
@@ -20,65 +24,39 @@ package com.ankamagames.dofus.network.types.game.character.characteristic
       
       public var value:CharacterBaseCharacteristic;
       
-      public function getTypeId() : uint {
-         return 215;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCharacterSpellModification(modificationType:uint = 0, spellId:uint = 0, value:CharacterBaseCharacteristic = null) : CharacterSpellModification {
-         this.modificationType = modificationType;
-         this.spellId = spellId;
-         this.value = value;
-         return this;
+      public function initCharacterSpellModification(modificationType:uint = 0, spellId:uint = 0, value:CharacterBaseCharacteristic = null) : CharacterSpellModification
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.modificationType = 0;
-         this.spellId = 0;
-         this.value = new CharacterBaseCharacteristic();
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharacterSpellModification(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterSpellModification(output:IDataOutput) : void {
-         output.writeByte(this.modificationType);
-         if(this.spellId < 0)
-         {
-            throw new Error("Forbidden value (" + this.spellId + ") on element spellId.");
-         }
-         else
-         {
-            output.writeShort(this.spellId);
-            this.value.serializeAs_CharacterBaseCharacteristic(output);
-            return;
-         }
+      public function serializeAs_CharacterSpellModification(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharacterSpellModification(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterSpellModification(input:IDataInput) : void {
-         this.modificationType = input.readByte();
-         if(this.modificationType < 0)
-         {
-            throw new Error("Forbidden value (" + this.modificationType + ") on element of CharacterSpellModification.modificationType.");
-         }
-         else
-         {
-            this.spellId = input.readShort();
-            if(this.spellId < 0)
-            {
-               throw new Error("Forbidden value (" + this.spellId + ") on element of CharacterSpellModification.spellId.");
-            }
-            else
-            {
-               this.value = new CharacterBaseCharacteristic();
-               this.value.deserialize(input);
-               return;
-            }
-         }
+      public function deserializeAs_CharacterSpellModification(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

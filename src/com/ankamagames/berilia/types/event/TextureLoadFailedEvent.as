@@ -7,10 +7,13 @@ package com.ankamagames.berilia.types.event
    public class TextureLoadFailedEvent extends Event
    {
       
-      public function TextureLoadFailedEvent(target:Texture, behavior:DynamicSecureObject) {
-         super(EVENT_TEXTURE_LOAD_FAILED,false,false);
-         this._targetedTexture = target;
-         this._behavior = behavior;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TextureLoadFailedEvent(target:Texture, behavior:DynamicSecureObject)
+      {
+         //Décompilation abandonné
       }
       
       public static const EVENT_TEXTURE_LOAD_FAILED:String = "TextureLoadFailedEvent";
@@ -19,12 +22,14 @@ package com.ankamagames.berilia.types.event
       
       private var _targetedTexture:Texture;
       
-      public function get behavior() : DynamicSecureObject {
-         return this._behavior;
+      public function get behavior() : DynamicSecureObject
+      {
+         //Décompilation abandonné
       }
       
-      public function get targetedTexture() : Texture {
-         return this._targetedTexture;
+      public function get targetedTexture() : Texture
+      {
+         //Décompilation abandonné
       }
    }
 }

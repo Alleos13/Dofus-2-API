@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.exchange
    public class ExchangeReadyAction extends Object implements Action
    {
       
-      public function ExchangeReadyAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pIsReady:Boolean) : ExchangeReadyAction {
-         var a:ExchangeReadyAction = new ExchangeReadyAction();
-         a.isReady = pIsReady;
-         return a;
+      public function ExchangeReadyAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pIsReady:Boolean) : ExchangeReadyAction
+      {
+         //Décompilation abandonné
       }
       
       public var isReady:Boolean;

@@ -6,18 +6,25 @@ package com.ankamagames.dofus.datacenter.misc
    public class TypeAction extends Object implements IDataCenter
    {
       
-      public function TypeAction() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TypeAction()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "TypeActions";
       
-      public static function getTypeActionById(id:int) : TypeAction {
-         return GameData.getObject(MODULE,id) as TypeAction;
+      public static function getTypeActionById(id:int) : TypeAction
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAllTypeAction() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAllTypeAction() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;

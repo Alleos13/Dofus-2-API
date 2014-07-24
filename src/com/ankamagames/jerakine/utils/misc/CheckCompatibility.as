@@ -7,32 +7,30 @@ package com.ankamagames.jerakine.utils.misc
    public class CheckCompatibility extends Object
    {
       
-      public function CheckCompatibility() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CheckCompatibility()
+      {
+         //Décompilation abandonné
       }
       
       private static var _cache:Dictionary;
       
-      public static function isCompatible(reference:Class, target:*, strict:Boolean = false, throwError:Boolean = true) : Boolean {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public static function isCompatible(reference:Class, target:*, strict:Boolean = false, throwError:Boolean = true) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function getIncompatibility(reference:Class, target:*, strict:Boolean = false) : String {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public static function getIncompatibility(reference:Class, target:*, strict:Boolean = false) : String
+      {
+         //Décompilation abandonné
       }
       
-      private static function throwErrorMsg(reference:Class, target:*, strict:Boolean = false) : void {
-         throw new Error(target + " don\'t implement correctly [" + getIncompatibility(reference,target) + "]");
+      private static function throwErrorMsg(reference:Class, target:*, strict:Boolean = false) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

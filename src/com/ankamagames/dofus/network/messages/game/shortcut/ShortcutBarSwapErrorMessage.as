@@ -9,67 +9,69 @@ package com.ankamagames.dofus.network.messages.game.shortcut
    public class ShortcutBarSwapErrorMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ShortcutBarSwapErrorMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ShortcutBarSwapErrorMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6226;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var error:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6226;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initShortcutBarSwapErrorMessage(error:uint = 0) : ShortcutBarSwapErrorMessage {
-         this.error = error;
-         this._isInitialized = true;
-         return this;
+      public function initShortcutBarSwapErrorMessage(error:uint = 0) : ShortcutBarSwapErrorMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.error = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ShortcutBarSwapErrorMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ShortcutBarSwapErrorMessage(output:IDataOutput) : void {
-         output.writeByte(this.error);
+      public function serializeAs_ShortcutBarSwapErrorMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ShortcutBarSwapErrorMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ShortcutBarSwapErrorMessage(input:IDataInput) : void {
-         this.error = input.readByte();
-         if(this.error < 0)
-         {
-            throw new Error("Forbidden value (" + this.error + ") on element of ShortcutBarSwapErrorMessage.error.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_ShortcutBarSwapErrorMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

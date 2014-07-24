@@ -6,10 +6,13 @@ package org.audiofx.mp3
    public class MP3SoundEvent extends Event
    {
       
-      public function MP3SoundEvent(param1:String, param2:Sound, param3:uint, param4:Boolean=false, param5:Boolean=false) {
-         super(param1,param4,param5);
-         this.sound = param2;
-         this.channels = param3;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MP3SoundEvent(type:String, sound:Sound, channels:uint, bubbles:Boolean = false, cancelable:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       public static const COMPLETE:String = "complete";

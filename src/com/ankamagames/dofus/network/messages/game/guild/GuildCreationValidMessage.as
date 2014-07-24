@@ -10,67 +10,71 @@ package com.ankamagames.dofus.network.messages.game.guild
    public class GuildCreationValidMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GuildCreationValidMessage() {
-         this.guildEmblem = new GuildEmblem();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildCreationValidMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5546;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var guildName:String = "";
       
       public var guildEmblem:GuildEmblem;
       
-      override public function getMessageId() : uint {
-         return 5546;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGuildCreationValidMessage(guildName:String = "", guildEmblem:GuildEmblem = null) : GuildCreationValidMessage {
-         this.guildName = guildName;
-         this.guildEmblem = guildEmblem;
-         this._isInitialized = true;
-         return this;
+      public function initGuildCreationValidMessage(guildName:String = "", guildEmblem:GuildEmblem = null) : GuildCreationValidMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.guildName = "";
-         this.guildEmblem = new GuildEmblem();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GuildCreationValidMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GuildCreationValidMessage(output:IDataOutput) : void {
-         output.writeUTF(this.guildName);
-         this.guildEmblem.serializeAs_GuildEmblem(output);
+      public function serializeAs_GuildCreationValidMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GuildCreationValidMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildCreationValidMessage(input:IDataInput) : void {
-         this.guildName = input.readUTF();
-         this.guildEmblem = new GuildEmblem();
-         this.guildEmblem.deserialize(input);
+      public function deserializeAs_GuildCreationValidMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

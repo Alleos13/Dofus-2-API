@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class CloseBookAction extends Object implements Action
    {
       
-      public function CloseBookAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : CloseBookAction {
-         return new CloseBookAction();
+      public function CloseBookAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : CloseBookAction
+      {
+         //Décompilation abandonné
       }
       
       private var _name:String;

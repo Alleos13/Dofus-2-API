@@ -7,9 +7,13 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
    public class HumanOptionAlliance extends HumanOption implements INetworkType
    {
       
-      public function HumanOptionAlliance() {
-         this.allianceInformations = new AllianceInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HumanOptionAlliance()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 425;
@@ -18,47 +22,39 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
       
       public var aggressable:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 425;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initHumanOptionAlliance(allianceInformations:AllianceInformations = null, aggressable:uint = 0) : HumanOptionAlliance {
-         this.allianceInformations = allianceInformations;
-         this.aggressable = aggressable;
-         return this;
+      public function initHumanOptionAlliance(allianceInformations:AllianceInformations = null, aggressable:uint = 0) : HumanOptionAlliance
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.allianceInformations = new AllianceInformations();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_HumanOptionAlliance(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_HumanOptionAlliance(output:IDataOutput) : void {
-         super.serializeAs_HumanOption(output);
-         this.allianceInformations.serializeAs_AllianceInformations(output);
-         output.writeByte(this.aggressable);
+      public function serializeAs_HumanOptionAlliance(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_HumanOptionAlliance(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_HumanOptionAlliance(input:IDataInput) : void {
-         super.deserialize(input);
-         this.allianceInformations = new AllianceInformations();
-         this.allianceInformations.deserialize(input);
-         this.aggressable = input.readByte();
-         if(this.aggressable < 0)
-         {
-            throw new Error("Forbidden value (" + this.aggressable + ") on element of HumanOptionAlliance.aggressable.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_HumanOptionAlliance(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

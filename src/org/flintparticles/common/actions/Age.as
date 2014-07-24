@@ -7,39 +7,30 @@ package org.flintparticles.common.actions
    public class Age extends ActionBase
    {
       
-      public function Age(param1:Function=null) {
-         super();
-         if(param1 == null)
-         {
-            this._easing = Linear.easeNone;
-         }
-         else
-         {
-            this._easing = param1;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Age(easing:Function = null)
+      {
+         //Décompilation abandonné
       }
       
       private var _easing:Function;
       
-      public function get easing() : Function {
-         return this._easing;
+      public function get easing() : Function
+      {
+         //Décompilation abandonné
       }
       
-      public function set easing(param1:Function) : void {
-         this._easing = param1;
+      public function set easing(value:Function) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function update(param1:Emitter, param2:Particle, param3:Number) : void {
-         param2.age = param2.age + param3;
-         if(param2.age >= param2.lifetime)
-         {
-            param2.energy = 0;
-            param2.isDead = true;
-         }
-         else
-         {
-            param2.energy = this._easing(param2.age,param2.lifetime);
-         }
+      override public function update(emitter:Emitter, particle:Particle, time:Number) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -11,84 +11,71 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class UpdateMountBoostMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function UpdateMountBoostMessage() {
-         this.boostToUpdateList = new Vector.<UpdateMountBoost>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UpdateMountBoostMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6179;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var rideId:Number = 0;
       
       public var boostToUpdateList:Vector.<UpdateMountBoost>;
       
-      override public function getMessageId() : uint {
-         return 6179;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initUpdateMountBoostMessage(rideId:Number = 0, boostToUpdateList:Vector.<UpdateMountBoost> = null) : UpdateMountBoostMessage {
-         this.rideId = rideId;
-         this.boostToUpdateList = boostToUpdateList;
-         this._isInitialized = true;
-         return this;
+      public function initUpdateMountBoostMessage(rideId:Number = 0, boostToUpdateList:Vector.<UpdateMountBoost> = null) : UpdateMountBoostMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.rideId = 0;
-         this.boostToUpdateList = new Vector.<UpdateMountBoost>();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_UpdateMountBoostMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_UpdateMountBoostMessage(output:IDataOutput) : void {
-         output.writeDouble(this.rideId);
-         output.writeShort(this.boostToUpdateList.length);
-         var _i2:uint = 0;
-         while(_i2 < this.boostToUpdateList.length)
-         {
-            output.writeShort((this.boostToUpdateList[_i2] as UpdateMountBoost).getTypeId());
-            (this.boostToUpdateList[_i2] as UpdateMountBoost).serialize(output);
-            _i2++;
-         }
+      public function serializeAs_UpdateMountBoostMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_UpdateMountBoostMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_UpdateMountBoostMessage(input:IDataInput) : void {
-         var _id2:uint = 0;
-         var _item2:UpdateMountBoost = null;
-         this.rideId = input.readDouble();
-         var _boostToUpdateListLen:uint = input.readUnsignedShort();
-         var _i2:uint = 0;
-         while(_i2 < _boostToUpdateListLen)
-         {
-            _id2 = input.readUnsignedShort();
-            _item2 = ProtocolTypeManager.getInstance(UpdateMountBoost,_id2);
-            _item2.deserialize(input);
-            this.boostToUpdateList.push(_item2);
-            _i2++;
-         }
+      public function deserializeAs_UpdateMountBoostMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

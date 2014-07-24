@@ -11,63 +11,82 @@ package com.ankamagames.dofus.internalDatacenter.items
    public class SimpleTextureWrapper extends Object implements ISlotData, IDataCenter
    {
       
-      public function SimpleTextureWrapper() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SimpleTextureWrapper()
+      {
+         //Décompilation abandonné
       }
       
       private static const _log:Logger;
       
-      public static function create(uri:Uri) : SimpleTextureWrapper {
-         var simpleTextureWrapper:SimpleTextureWrapper = new SimpleTextureWrapper();
-         simpleTextureWrapper._uri = uri;
-         return simpleTextureWrapper;
+      public static function create(uri:Uri) : SimpleTextureWrapper
+      {
+         //Décompilation abandonné
       }
       
       private var _uri:Uri;
       
-      public function get iconUri() : Uri {
-         return this._uri;
+      public function get iconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get fullSizeIconUri() : Uri {
-         return this._uri;
+      public function get fullSizeIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get errorIconUri() : Uri {
-         return null;
+      public function get errorIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get uri() : Uri {
-         return this._uri;
+      public function get uri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get info1() : String {
-         return null;
+      public function get info1() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get startTime() : int {
-         return 0;
+      public function get startTime() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get endTime() : int {
-         return 0;
+      public function get endTime() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set endTime(t:int) : void {
+      public function set endTime(t:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get timer() : int {
-         return 0;
+      public function get timer() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get active() : Boolean {
-         return true;
+      public function get active() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function addHolder(h:ISlotDataHolder) : void {
+      public function addHolder(h:ISlotDataHolder) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeHolder(h:ISlotDataHolder) : void {
+      public function removeHolder(h:ISlotDataHolder) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

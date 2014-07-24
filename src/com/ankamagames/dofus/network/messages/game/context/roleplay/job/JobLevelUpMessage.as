@@ -10,83 +10,71 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.job
    public class JobLevelUpMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function JobLevelUpMessage() {
-         this.jobsDescription = new JobDescription();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function JobLevelUpMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5656;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var newLevel:uint = 0;
       
       public var jobsDescription:JobDescription;
       
-      override public function getMessageId() : uint {
-         return 5656;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initJobLevelUpMessage(newLevel:uint = 0, jobsDescription:JobDescription = null) : JobLevelUpMessage {
-         this.newLevel = newLevel;
-         this.jobsDescription = jobsDescription;
-         this._isInitialized = true;
-         return this;
+      public function initJobLevelUpMessage(newLevel:uint = 0, jobsDescription:JobDescription = null) : JobLevelUpMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.newLevel = 0;
-         this.jobsDescription = new JobDescription();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_JobLevelUpMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_JobLevelUpMessage(output:IDataOutput) : void {
-         if(this.newLevel < 0)
-         {
-            throw new Error("Forbidden value (" + this.newLevel + ") on element newLevel.");
-         }
-         else
-         {
-            output.writeByte(this.newLevel);
-            this.jobsDescription.serializeAs_JobDescription(output);
-            return;
-         }
+      public function serializeAs_JobLevelUpMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_JobLevelUpMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_JobLevelUpMessage(input:IDataInput) : void {
-         this.newLevel = input.readByte();
-         if(this.newLevel < 0)
-         {
-            throw new Error("Forbidden value (" + this.newLevel + ") on element of JobLevelUpMessage.newLevel.");
-         }
-         else
-         {
-            this.jobsDescription = new JobDescription();
-            this.jobsDescription.deserialize(input);
-            return;
-         }
+      public function deserializeAs_JobLevelUpMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

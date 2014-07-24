@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.updater.parts
    public class DownloadCurrentSpeedMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function DownloadCurrentSpeedMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DownloadCurrentSpeedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 1511;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var downloadSpeed:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 1511;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initDownloadCurrentSpeedMessage(downloadSpeed:uint = 0) : DownloadCurrentSpeedMessage {
-         this.downloadSpeed = downloadSpeed;
-         this._isInitialized = true;
-         return this;
+      public function initDownloadCurrentSpeedMessage(downloadSpeed:uint = 0) : DownloadCurrentSpeedMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.downloadSpeed = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_DownloadCurrentSpeedMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_DownloadCurrentSpeedMessage(output:IDataOutput) : void {
-         if((this.downloadSpeed < 1) || (this.downloadSpeed > 10))
-         {
-            throw new Error("Forbidden value (" + this.downloadSpeed + ") on element downloadSpeed.");
-         }
-         else
-         {
-            output.writeByte(this.downloadSpeed);
-            return;
-         }
+      public function serializeAs_DownloadCurrentSpeedMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_DownloadCurrentSpeedMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_DownloadCurrentSpeedMessage(input:IDataInput) : void {
-         this.downloadSpeed = input.readByte();
-         if((this.downloadSpeed < 1) || (this.downloadSpeed > 10))
-         {
-            throw new Error("Forbidden value (" + this.downloadSpeed + ") on element of DownloadCurrentSpeedMessage.downloadSpeed.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_DownloadCurrentSpeedMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

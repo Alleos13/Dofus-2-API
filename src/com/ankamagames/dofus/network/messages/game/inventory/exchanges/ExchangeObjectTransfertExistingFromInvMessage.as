@@ -9,47 +9,65 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeObjectTransfertExistingFromInvMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeObjectTransfertExistingFromInvMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeObjectTransfertExistingFromInvMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6325;
       
-      override public function get isInitialized() : Boolean {
-         return true;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function getMessageId() : uint {
-         return 6325;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeObjectTransfertExistingFromInvMessage() : ExchangeObjectTransfertExistingFromInvMessage {
-         return this;
+      public function initExchangeObjectTransfertExistingFromInvMessage() : ExchangeObjectTransfertExistingFromInvMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeObjectTransfertExistingFromInvMessage(output:IDataOutput) : void {
+      public function serializeAs_ExchangeObjectTransfertExistingFromInvMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeObjectTransfertExistingFromInvMessage(input:IDataInput) : void {
+      public function deserializeAs_ExchangeObjectTransfertExistingFromInvMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

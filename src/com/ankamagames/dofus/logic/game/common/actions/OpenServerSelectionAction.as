@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class OpenServerSelectionAction extends Object implements Action
    {
       
-      public function OpenServerSelectionAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : OpenServerSelectionAction {
-         return new OpenServerSelectionAction();
+      public function OpenServerSelectionAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : OpenServerSelectionAction
+      {
+         //Décompilation abandonné
       }
       
       private var _name:String;

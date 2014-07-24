@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.initialization
    public class CharacterCapabilitiesMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function CharacterCapabilitiesMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterCapabilitiesMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6339;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var guildEmblemSymbolCategories:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6339;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCharacterCapabilitiesMessage(guildEmblemSymbolCategories:uint = 0) : CharacterCapabilitiesMessage {
-         this.guildEmblemSymbolCategories = guildEmblemSymbolCategories;
-         this._isInitialized = true;
-         return this;
+      public function initCharacterCapabilitiesMessage(guildEmblemSymbolCategories:uint = 0) : CharacterCapabilitiesMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.guildEmblemSymbolCategories = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharacterCapabilitiesMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterCapabilitiesMessage(output:IDataOutput) : void {
-         if(this.guildEmblemSymbolCategories < 0)
-         {
-            throw new Error("Forbidden value (" + this.guildEmblemSymbolCategories + ") on element guildEmblemSymbolCategories.");
-         }
-         else
-         {
-            output.writeInt(this.guildEmblemSymbolCategories);
-            return;
-         }
+      public function serializeAs_CharacterCapabilitiesMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharacterCapabilitiesMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterCapabilitiesMessage(input:IDataInput) : void {
-         this.guildEmblemSymbolCategories = input.readInt();
-         if(this.guildEmblemSymbolCategories < 0)
-         {
-            throw new Error("Forbidden value (" + this.guildEmblemSymbolCategories + ") on element of CharacterCapabilitiesMessage.guildEmblemSymbolCategories.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_CharacterCapabilitiesMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

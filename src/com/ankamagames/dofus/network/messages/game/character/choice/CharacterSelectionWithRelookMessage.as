@@ -8,79 +8,69 @@ package com.ankamagames.dofus.network.messages.game.character.choice
    public class CharacterSelectionWithRelookMessage extends CharacterSelectionMessage implements INetworkMessage
    {
       
-      public function CharacterSelectionWithRelookMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterSelectionWithRelookMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6353;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var cosmeticId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6353;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCharacterSelectionWithRelookMessage(id:int = 0, cosmeticId:uint = 0) : CharacterSelectionWithRelookMessage {
-         super.initCharacterSelectionMessage(id);
-         this.cosmeticId = cosmeticId;
-         this._isInitialized = true;
-         return this;
+      public function initCharacterSelectionWithRelookMessage(id:int = 0, cosmeticId:uint = 0) : CharacterSelectionWithRelookMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.cosmeticId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharacterSelectionWithRelookMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterSelectionWithRelookMessage(output:IDataOutput) : void {
-         super.serializeAs_CharacterSelectionMessage(output);
-         if(this.cosmeticId < 0)
-         {
-            throw new Error("Forbidden value (" + this.cosmeticId + ") on element cosmeticId.");
-         }
-         else
-         {
-            output.writeInt(this.cosmeticId);
-            return;
-         }
+      public function serializeAs_CharacterSelectionWithRelookMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharacterSelectionWithRelookMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterSelectionWithRelookMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.cosmeticId = input.readInt();
-         if(this.cosmeticId < 0)
-         {
-            throw new Error("Forbidden value (" + this.cosmeticId + ") on element of CharacterSelectionWithRelookMessage.cosmeticId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_CharacterSelectionWithRelookMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

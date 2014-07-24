@@ -16,81 +16,13 @@ package com.ankamagames.dofus.logic.game.roleplay.types
    public class RoleplayTeamFightersTooltipInformation extends Object
    {
       
-      public function RoleplayTeamFightersTooltipInformation(pFightTeam:FightTeam) {
-         var fightMemberInfo:FightTeamMemberInformations = null;
-         var i:* = 0;
-         var fighter:Fighter = null;
-         var allianceTag:String = null;
-         var monster:Monster = null;
-         var monsterLevel:uint = 0;
-         var monsterName:String = null;
-         var taxCollectorLevel:uint = 0;
-         var firstName:String = null;
-         var lastName:String = null;
-         var taxCollectorName:String = null;
-         var companionInfo:FightTeamMemberCompanionInformations = null;
-         super();
-         this.nbWaves = pFightTeam.teamInfos.nbWaves;
-         this.fighters = new Vector.<Fighter>();
-         var len:int = pFightTeam.teamInfos.teamMembers.length;
-         i = 0;
-         while(i < len)
-         {
-            fightMemberInfo = pFightTeam.teamInfos.teamMembers[i];
-            fighter = null;
-            switch(true)
-            {
-               case fightMemberInfo is FightTeamMemberCharacterInformations:
-                  if(fightMemberInfo is FightTeamMemberWithAllianceCharacterInformations)
-                  {
-                     allianceTag = (fightMemberInfo as FightTeamMemberWithAllianceCharacterInformations).allianceInfos.allianceTag;
-                  }
-                  fighter = new Fighter(fightMemberInfo.id,(fightMemberInfo as FightTeamMemberCharacterInformations).name,(fightMemberInfo as FightTeamMemberCharacterInformations).level,allianceTag);
-                  break;
-               case fightMemberInfo is FightTeamMemberMonsterInformations:
-                  monster = Monster.getMonsterById((fightMemberInfo as FightTeamMemberMonsterInformations).monsterId);
-                  monsterLevel = monster.getMonsterGrade((fightMemberInfo as FightTeamMemberMonsterInformations).grade).level;
-                  monsterName = monster.name;
-                  fighter = new Fighter(fightMemberInfo.id,monsterName,monsterLevel);
-                  break;
-               case fightMemberInfo is FightTeamMemberTaxCollectorInformations:
-                  taxCollectorLevel = (fightMemberInfo as FightTeamMemberTaxCollectorInformations).level;
-                  firstName = TaxCollectorFirstname.getTaxCollectorFirstnameById((fightMemberInfo as FightTeamMemberTaxCollectorInformations).firstNameId).firstname;
-                  lastName = TaxCollectorName.getTaxCollectorNameById((fightMemberInfo as FightTeamMemberTaxCollectorInformations).lastNameId).name;
-                  taxCollectorName = firstName + " " + lastName;
-                  fighter = new Fighter(fightMemberInfo.id,taxCollectorName,taxCollectorLevel);
-                  break;
-               case fightMemberInfo is FightTeamMemberCompanionInformations:
-                  companionInfo = fightMemberInfo as FightTeamMemberCompanionInformations;
-                  if((this.fighters.length > 0) && (i > 0) && (this.fighters[i - 1].id == companionInfo.masterId))
-                  {
-                     fighter = this.getCompanionFighter(this.fighters[i - 1],companionInfo.id,companionInfo.companionId);
-                  }
-                  else
-                  {
-                     if(!this._waitingCompanions)
-                     {
-                        this._waitingCompanions = new Dictionary();
-                     }
-                     this._waitingCompanions[companionInfo.masterId] = 
-                        {
-                           "id":companionInfo.id,
-                           "genericId":companionInfo.companionId
-                        };
-                  }
-                  break;
-            }
-            if(fighter)
-            {
-               this.fighters.push(fighter);
-               if((this._waitingCompanions) && (this._waitingCompanions[fighter.id]))
-               {
-                  this.fighters.push(this.getCompanionFighter(fighter,this._waitingCompanions[fighter.id].id,this._waitingCompanions[fighter.id].genericId));
-                  delete this._waitingCompanions[fighter.id];
-               }
-            }
-            i++;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RoleplayTeamFightersTooltipInformation(pFightTeam:FightTeam)
+      {
+         //Décompilation abandonné
       }
       
       private var _waitingCompanions:Dictionary;
@@ -99,20 +31,22 @@ package com.ankamagames.dofus.logic.game.roleplay.types
       
       public var nbWaves:uint;
       
-      private function getCompanionFighter(pFighter:Fighter, pCompanionId:int, pCompanionGenericId:int) : Fighter {
-         return new Fighter(pCompanionId,I18n.getUiText("ui.common.belonging",[Companion.getCompanionById(pCompanionGenericId).name,pFighter.name]),pFighter.level,pFighter.allianceTagName);
+      private function getCompanionFighter(pFighter:Fighter, pCompanionId:int, pCompanionGenericId:int) : Fighter
+      {
+         //Décompilation abandonné
       }
    }
 }
 class Fighter extends Object
 {
    
-   function Fighter(pId:int, pName:String, pLevel:uint, pAllianceTagName:String = null) {
-      super();
-      this._id = pId;
-      this.name = pName;
-      this.level = pLevel;
-      this.allianceTagName = pAllianceTagName;
+   {
+   //Décompilation abandonné
+   }
+   
+   function Fighter(pId:int, pName:String, pLevel:uint, pAllianceTagName:String = null)
+   {
+      //Décompilation abandonné
    }
    
    private var _id:int;
@@ -123,11 +57,13 @@ class Fighter extends Object
    
    public var level:uint;
    
-   public function get allianceTag() : String {
-      return this.allianceTagName?"[" + this.allianceTagName + "]":null;
+   public function get allianceTag() : String
+   {
+      //Décompilation abandonné
    }
    
-   public function get id() : int {
-      return this._id;
+   public function get id() : int
+   {
+      //Décompilation abandonné
    }
 }

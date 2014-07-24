@@ -8,10 +8,13 @@ package com.ankamagames.atouin.types
    public class LayerContainer extends Sprite
    {
       
-      public function LayerContainer(nId:int) {
-         super();
-         this._nLayerId = nId;
-         name = "layer" + nId;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LayerContainer(nId:int)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -20,30 +23,14 @@ package com.ankamagames.atouin.types
       
       private var _lastIndexCell:uint;
       
-      public function get layerId() : int {
-         return this._nLayerId;
+      public function get layerId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function addCell(cellCtr:CellContainer) : void {
-         var currentCell:CellContainer = null;
-         var startIndex:uint = 0;
-         var i:uint = startIndex;
-         while(i < numChildren)
-         {
-            currentCell = getChildAt(i) as CellContainer;
-            if(currentCell)
-            {
-               if(cellCtr.depth < currentCell.depth)
-               {
-                  this._lastIndexCell = i;
-                  addChildAt(cellCtr,i);
-                  return;
-               }
-            }
-            i++;
-         }
-         this._lastIndexCell = numChildren;
-         addChild(cellCtr);
+      public function addCell(cellCtr:CellContainer) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.approach.actions
    public class CharacterRelookSelectionAction extends Object implements Action
    {
       
-      public function CharacterRelookSelectionAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(characterId:int, characterHead:int) : CharacterRelookSelectionAction {
-         var a:CharacterRelookSelectionAction = new CharacterRelookSelectionAction();
-         a.characterId = characterId;
-         a.characterHead = characterHead;
-         return a;
+      public function CharacterRelookSelectionAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(characterId:int, characterHead:int) : CharacterRelookSelectionAction
+      {
+         //Décompilation abandonné
       }
       
       public var characterId:int;

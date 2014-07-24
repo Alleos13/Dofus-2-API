@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.alliance
    public class AllianceModificationNameAndTagValidAction extends Object implements Action
    {
       
-      public function AllianceModificationNameAndTagValidAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pName:String, pTag:String) : AllianceModificationNameAndTagValidAction {
-         var action:AllianceModificationNameAndTagValidAction = new AllianceModificationNameAndTagValidAction();
-         action.name = pName;
-         action.tag = pTag;
-         return action;
+      public function AllianceModificationNameAndTagValidAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pName:String, pTag:String) : AllianceModificationNameAndTagValidAction
+      {
+         //Décompilation abandonné
       }
       
       public var name:String;

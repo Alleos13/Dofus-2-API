@@ -6,11 +6,13 @@ package flashx.textLayout.events
    public class CompositionCompleteEvent extends Event
    {
       
-      public function CompositionCompleteEvent(param1:String, param2:Boolean=false, param3:Boolean=false, param4:TextFlow=null, param5:int=0, param6:int=0) {
-         this._compositionStart = param5;
-         this._compositionLength = param6;
-         this._textFlow = param4;
-         super(param1,param2,param3);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CompositionCompleteEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, textFlow:TextFlow = null, compositionStart:int = 0, compositionLength:int = 0)
+      {
+         //Décompilation abandonné
       }
       
       public static const COMPOSITION_COMPLETE:String = "compositionComplete";
@@ -21,32 +23,39 @@ package flashx.textLayout.events
       
       private var _textFlow:TextFlow;
       
-      override public function clone() : Event {
-         return new CompositionCompleteEvent(type,bubbles,cancelable,this.textFlow,this.compositionStart,this.compositionLength);
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
       
-      public function get compositionStart() : int {
-         return this._compositionStart;
+      public function get compositionStart() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set compositionStart(param1:int) : void {
-         this._compositionStart = param1;
+      public function set compositionStart(value:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get compositionLength() : int {
-         return this._compositionLength;
+      public function get compositionLength() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set compositionLength(param1:int) : void {
-         this._compositionLength = param1;
+      public function set compositionLength(value:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get textFlow() : TextFlow {
-         return this._textFlow;
+      public function get textFlow() : TextFlow
+      {
+         //Décompilation abandonné
       }
       
-      public function set textFlow(param1:TextFlow) : void {
-         this._textFlow = param1;
+      public function set textFlow(value:TextFlow) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -7,18 +7,25 @@ package com.ankamagames.dofus.datacenter.quest
    public class QuestCategory extends Object implements IDataCenter
    {
       
-      public function QuestCategory() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function QuestCategory()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "QuestCategory";
       
-      public static function getQuestCategoryById(id:int) : QuestCategory {
-         return GameData.getObject(MODULE,id) as QuestCategory;
+      public static function getQuestCategoryById(id:int) : QuestCategory
+      {
+         //Décompilation abandonné
       }
       
-      public static function getQuestCategories() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getQuestCategories() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;
@@ -33,29 +40,14 @@ package com.ankamagames.dofus.datacenter.quest
       
       private var _quests:Vector.<Quest>;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get quests() : Vector.<Quest> {
-         var i:* = 0;
-         var len:* = 0;
-         if(!this._quests)
-         {
-            len = this.questIds.length;
-            this._quests = new Vector.<Quest>(len,true);
-            i = 0;
-            while(i < len)
-            {
-               this._quests[i] = Quest.getQuestById(this.questIds[i]);
-               i = i + 1;
-            }
-         }
-         return this._quests;
+      public function get quests() : Vector.<Quest>
+      {
+         //Décompilation abandonné
       }
    }
 }

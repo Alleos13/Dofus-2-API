@@ -5,17 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions.estate
    public class PaddockToSellFilterAction extends Object implements Action
    {
       
-      public function PaddockToSellFilterAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(areaId:int, atLeastNbMount:uint, atLeastNbMachine:uint, maxPrice:uint) : PaddockToSellFilterAction {
-         var a:PaddockToSellFilterAction = new PaddockToSellFilterAction();
-         a.areaId = areaId;
-         a.atLeastNbMount = atLeastNbMount;
-         a.atLeastNbMachine = atLeastNbMachine;
-         a.maxPrice = maxPrice;
-         return a;
+      public function PaddockToSellFilterAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(areaId:int, atLeastNbMount:uint, atLeastNbMachine:uint, maxPrice:uint) : PaddockToSellFilterAction
+      {
+         //Décompilation abandonné
       }
       
       public var areaId:int;

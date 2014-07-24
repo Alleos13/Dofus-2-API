@@ -9,65 +9,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeCraftResultWithObjectDescMessage extends ExchangeCraftResultMessage implements INetworkMessage
    {
       
-      public function ExchangeCraftResultWithObjectDescMessage() {
-         this.objectInfo = new ObjectItemNotInContainer();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeCraftResultWithObjectDescMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5999;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var objectInfo:ObjectItemNotInContainer;
       
-      override public function getMessageId() : uint {
-         return 5999;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeCraftResultWithObjectDescMessage(craftResult:uint = 0, objectInfo:ObjectItemNotInContainer = null) : ExchangeCraftResultWithObjectDescMessage {
-         super.initExchangeCraftResultMessage(craftResult);
-         this.objectInfo = objectInfo;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeCraftResultWithObjectDescMessage(craftResult:uint = 0, objectInfo:ObjectItemNotInContainer = null) : ExchangeCraftResultWithObjectDescMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.objectInfo = new ObjectItemNotInContainer();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeCraftResultWithObjectDescMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeCraftResultWithObjectDescMessage(output:IDataOutput) : void {
-         super.serializeAs_ExchangeCraftResultMessage(output);
-         this.objectInfo.serializeAs_ObjectItemNotInContainer(output);
+      public function serializeAs_ExchangeCraftResultWithObjectDescMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeCraftResultWithObjectDescMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeCraftResultWithObjectDescMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.objectInfo = new ObjectItemNotInContainer();
-         this.objectInfo.deserialize(input);
+      public function deserializeAs_ExchangeCraftResultWithObjectDescMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

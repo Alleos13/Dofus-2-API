@@ -5,16 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.livingObject
    public class LivingObjectChangeSkinRequestAction extends Object implements Action
    {
       
-      public function LivingObjectChangeSkinRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(livingUID:uint, livingPosition:uint, skinId:uint) : LivingObjectChangeSkinRequestAction {
-         var action:LivingObjectChangeSkinRequestAction = new LivingObjectChangeSkinRequestAction();
-         action.livingUID = livingUID;
-         action.livingPosition = livingPosition;
-         action.skinId = skinId;
-         return action;
+      public function LivingObjectChangeSkinRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(livingUID:uint, livingPosition:uint, skinId:uint) : LivingObjectChangeSkinRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var livingUID:uint;

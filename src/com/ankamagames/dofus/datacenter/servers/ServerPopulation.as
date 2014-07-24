@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.servers
    public class ServerPopulation extends Object implements IDataCenter
    {
       
-      public function ServerPopulation() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ServerPopulation()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "ServerPopulations";
       
       private static var _log:Logger;
       
-      public static function getServerPopulationById(id:int) : ServerPopulation {
-         return GameData.getObject(MODULE,id) as ServerPopulation;
+      public static function getServerPopulationById(id:int) : ServerPopulation
+      {
+         //Décompilation abandonné
       }
       
-      public static function getServerPopulations() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getServerPopulations() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -34,12 +41,9 @@ package com.ankamagames.dofus.datacenter.servers
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -7,16 +7,13 @@ package com.ankamagames.berilia.types.event
    public class InstanceEvent extends Object
    {
       
-      public function InstanceEvent(doInstance:DisplayObject, oCallback:Object) {
-         super();
-         this._doInstance = doInstance;
-         this._aEvent = new Array();
-         this._oCallback = oCallback;
-         if(doInstance is InteractiveObject)
-         {
-            InteractiveObject(doInstance).mouseEnabled = true;
-         }
-         MEMORY_LOG[this] = 1;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function InstanceEvent(doInstance:DisplayObject, oCallback:Object)
+      {
+         //Décompilation abandonné
       }
       
       public static var MEMORY_LOG:Dictionary;
@@ -27,28 +24,34 @@ package com.ankamagames.berilia.types.event
       
       private var _oCallback:Object;
       
-      public function get instance() : DisplayObject {
-         return this._doInstance;
+      public function get instance() : DisplayObject
+      {
+         //Décompilation abandonné
       }
       
-      public function get events() : Array {
-         return this._aEvent;
+      public function get events() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function get callbackObject() : Object {
-         return this._oCallback;
+      public function get callbackObject() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function set callbackObject(o:Object) : void {
-         this._oCallback = o;
+      public function set callbackObject(o:Object) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get haveEvent() : Boolean {
-         return !(this._aEvent.length == 0);
+      public function get haveEvent() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function push(sEventName:String) : void {
-         this._aEvent[sEventName] = true;
+      public function push(sEventName:String) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

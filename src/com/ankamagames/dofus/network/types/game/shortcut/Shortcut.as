@@ -7,57 +7,52 @@ package com.ankamagames.dofus.network.types.game.shortcut
    public class Shortcut extends Object implements INetworkType
    {
       
-      public function Shortcut() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Shortcut()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 369;
       
       public var slot:uint = 0;
       
-      public function getTypeId() : uint {
-         return 369;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initShortcut(slot:uint = 0) : Shortcut {
-         this.slot = slot;
-         return this;
+      public function initShortcut(slot:uint = 0) : Shortcut
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.slot = 0;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_Shortcut(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_Shortcut(output:IDataOutput) : void {
-         if((this.slot < 0) || (this.slot > 99))
-         {
-            throw new Error("Forbidden value (" + this.slot + ") on element slot.");
-         }
-         else
-         {
-            output.writeInt(this.slot);
-            return;
-         }
+      public function serializeAs_Shortcut(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_Shortcut(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_Shortcut(input:IDataInput) : void {
-         this.slot = input.readInt();
-         if((this.slot < 0) || (this.slot > 99))
-         {
-            throw new Error("Forbidden value (" + this.slot + ") on element of Shortcut.slot.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_Shortcut(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

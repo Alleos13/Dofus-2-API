@@ -5,16 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.livingObject
    public class LivingObjectFeedAction extends Object implements Action
    {
       
-      public function LivingObjectFeedAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(objectUID:uint, foodUID:uint, foodQuantity:uint) : LivingObjectFeedAction {
-         var action:LivingObjectFeedAction = new LivingObjectFeedAction();
-         action.objectUID = objectUID;
-         action.foodUID = foodUID;
-         action.foodQuantity = foodQuantity;
-         return action;
+      public function LivingObjectFeedAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(objectUID:uint, foodUID:uint, foodQuantity:uint) : LivingObjectFeedAction
+      {
+         //Décompilation abandonné
       }
       
       public var objectUID:uint;

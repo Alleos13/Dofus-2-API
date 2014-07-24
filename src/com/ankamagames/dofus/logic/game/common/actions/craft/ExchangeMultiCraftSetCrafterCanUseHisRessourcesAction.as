@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.craft
    public class ExchangeMultiCraftSetCrafterCanUseHisRessourcesAction extends Object implements Action
    {
       
-      public function ExchangeMultiCraftSetCrafterCanUseHisRessourcesAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pAllow:Boolean) : ExchangeMultiCraftSetCrafterCanUseHisRessourcesAction {
-         var action:ExchangeMultiCraftSetCrafterCanUseHisRessourcesAction = new ExchangeMultiCraftSetCrafterCanUseHisRessourcesAction();
-         action.allow = pAllow;
-         return action;
+      public function ExchangeMultiCraftSetCrafterCanUseHisRessourcesAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pAllow:Boolean) : ExchangeMultiCraftSetCrafterCanUseHisRessourcesAction
+      {
+         //Décompilation abandonné
       }
       
       public var allow:Boolean;

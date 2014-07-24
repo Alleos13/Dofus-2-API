@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.party
    public class PartyLeaveRequestAction extends Object implements Action
    {
       
-      public function PartyLeaveRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(partyId:int) : PartyLeaveRequestAction {
-         var a:PartyLeaveRequestAction = new PartyLeaveRequestAction();
-         a.partyId = partyId;
-         return a;
+      public function PartyLeaveRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(partyId:int) : PartyLeaveRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var partyId:int;

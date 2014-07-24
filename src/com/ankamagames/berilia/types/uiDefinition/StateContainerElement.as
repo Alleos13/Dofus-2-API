@@ -3,9 +3,13 @@ package com.ankamagames.berilia.types.uiDefinition
    public class StateContainerElement extends ContainerElement
    {
       
-      public function StateContainerElement() {
-         this.stateChangingProperties = new Array();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StateContainerElement()
+      {
+         //Décompilation abandonné
       }
       
       public var stateChangingProperties:Array;

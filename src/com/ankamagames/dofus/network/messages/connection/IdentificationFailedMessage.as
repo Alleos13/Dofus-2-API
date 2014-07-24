@@ -9,67 +9,69 @@ package com.ankamagames.dofus.network.messages.connection
    public class IdentificationFailedMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function IdentificationFailedMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function IdentificationFailedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 20;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var reason:uint = 99;
       
-      override public function getMessageId() : uint {
-         return 20;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initIdentificationFailedMessage(reason:uint = 99) : IdentificationFailedMessage {
-         this.reason = reason;
-         this._isInitialized = true;
-         return this;
+      public function initIdentificationFailedMessage(reason:uint = 99) : IdentificationFailedMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.reason = 99;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_IdentificationFailedMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_IdentificationFailedMessage(output:IDataOutput) : void {
-         output.writeByte(this.reason);
+      public function serializeAs_IdentificationFailedMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_IdentificationFailedMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_IdentificationFailedMessage(input:IDataInput) : void {
-         this.reason = input.readByte();
-         if(this.reason < 0)
-         {
-            throw new Error("Forbidden value (" + this.reason + ") on element of IdentificationFailedMessage.reason.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_IdentificationFailedMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

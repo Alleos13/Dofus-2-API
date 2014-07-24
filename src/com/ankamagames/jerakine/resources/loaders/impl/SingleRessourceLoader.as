@@ -13,62 +13,37 @@ package com.ankamagames.jerakine.resources.loaders.impl
    public class SingleRessourceLoader extends AbstractRessourceLoader implements IResourceLoader, IResourceObserver
    {
       
-      public function SingleRessourceLoader() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SingleRessourceLoader()
+      {
+         //Décompilation abandonné
       }
       
       private var _uri:Uri;
       
       private var _protocol:IProtocol;
       
-      public function load(uri:*, cache:ICache = null, forcedAdapter:Class = null, singleFile:Boolean = false) : void {
-         if(this._uri != null)
-         {
-            throw new IllegalOperationError("A single ressource loader can\'t handle more than one load at a time.");
-         }
-         else if(uri == null)
-         {
-            throw new ArgumentError("Can\'t load a null uri.");
-         }
-         else if(!(uri is Uri))
-         {
-            throw new ArgumentError("Can\'t load an array of URIs when using a LOADER_SINGLE loader.");
-         }
-         else
-         {
-            this._uri = uri;
-            _cache = cache;
-            _completed = false;
-            _filesTotal = 1;
-            if(!checkCache(this._uri))
-            {
-               this._protocol = ProtocolFactory.getProtocol(this._uri);
-               this._protocol.load(this._uri,this,hasEventListener(ResourceProgressEvent.PROGRESS),_cache,forcedAdapter,singleFile);
-            }
-            return;
-         }
-         
-         
+      public function load(uri:*, cache:ICache = null, forcedAdapter:Class = null, singleFile:Boolean = false) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function cancel() : void {
-         super.cancel();
-         if(this._protocol)
-         {
-            this._protocol.cancel();
-            this._protocol = null;
-         }
-         this._uri = null;
+      override public function cancel() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function onLoaded(uri:Uri, resourceType:uint, resource:*) : void {
-         super.onLoaded(uri,resourceType,resource);
-         this._protocol = null;
+      override public function onLoaded(uri:Uri, resourceType:uint, resource:*) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function onFailed(uri:Uri, errorMsg:String, errorCode:uint) : void {
-         super.onFailed(uri,errorMsg,errorCode);
-         this._protocol = null;
+      override public function onFailed(uri:Uri, errorMsg:String, errorCode:uint) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

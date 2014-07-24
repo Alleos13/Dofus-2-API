@@ -9,65 +9,71 @@ package com.ankamagames.dofus.network.messages.game.guild
    public class GuildMemberLeavingMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GuildMemberLeavingMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildMemberLeavingMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5923;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var kicked:Boolean = false;
       
       public var memberId:int = 0;
       
-      override public function getMessageId() : uint {
-         return 5923;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGuildMemberLeavingMessage(kicked:Boolean = false, memberId:int = 0) : GuildMemberLeavingMessage {
-         this.kicked = kicked;
-         this.memberId = memberId;
-         this._isInitialized = true;
-         return this;
+      public function initGuildMemberLeavingMessage(kicked:Boolean = false, memberId:int = 0) : GuildMemberLeavingMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.kicked = false;
-         this.memberId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GuildMemberLeavingMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GuildMemberLeavingMessage(output:IDataOutput) : void {
-         output.writeBoolean(this.kicked);
-         output.writeInt(this.memberId);
+      public function serializeAs_GuildMemberLeavingMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GuildMemberLeavingMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildMemberLeavingMessage(input:IDataInput) : void {
-         this.kicked = input.readBoolean();
-         this.memberId = input.readInt();
+      public function deserializeAs_GuildMemberLeavingMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

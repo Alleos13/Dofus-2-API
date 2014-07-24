@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.party
    public class PartyAllFollowMemberAction extends Object implements Action
    {
       
-      public function PartyAllFollowMemberAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(partyId:int, pPlayerId:uint) : PartyAllFollowMemberAction {
-         var a:PartyAllFollowMemberAction = new PartyAllFollowMemberAction();
-         a.partyId = partyId;
-         a.playerId = pPlayerId;
-         return a;
+      public function PartyAllFollowMemberAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(partyId:int, pPlayerId:uint) : PartyAllFollowMemberAction
+      {
+         //Décompilation abandonné
       }
       
       public var playerId:uint;

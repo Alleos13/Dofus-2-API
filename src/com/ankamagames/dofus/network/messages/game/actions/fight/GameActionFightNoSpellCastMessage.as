@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.actions.fight
    public class GameActionFightNoSpellCastMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameActionFightNoSpellCastMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameActionFightNoSpellCastMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6132;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var spellLevelId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6132;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameActionFightNoSpellCastMessage(spellLevelId:uint = 0) : GameActionFightNoSpellCastMessage {
-         this.spellLevelId = spellLevelId;
-         this._isInitialized = true;
-         return this;
+      public function initGameActionFightNoSpellCastMessage(spellLevelId:uint = 0) : GameActionFightNoSpellCastMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.spellLevelId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameActionFightNoSpellCastMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameActionFightNoSpellCastMessage(output:IDataOutput) : void {
-         if(this.spellLevelId < 0)
-         {
-            throw new Error("Forbidden value (" + this.spellLevelId + ") on element spellLevelId.");
-         }
-         else
-         {
-            output.writeInt(this.spellLevelId);
-            return;
-         }
+      public function serializeAs_GameActionFightNoSpellCastMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameActionFightNoSpellCastMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameActionFightNoSpellCastMessage(input:IDataInput) : void {
-         this.spellLevelId = input.readInt();
-         if(this.spellLevelId < 0)
-         {
-            throw new Error("Forbidden value (" + this.spellLevelId + ") on element of GameActionFightNoSpellCastMessage.spellLevelId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_GameActionFightNoSpellCastMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

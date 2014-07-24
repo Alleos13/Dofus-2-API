@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.externalGame
    public class KrosmasterInventoryRequestAction extends Object implements Action
    {
       
-      public function KrosmasterInventoryRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : KrosmasterInventoryRequestAction {
-         var action:KrosmasterInventoryRequestAction = new KrosmasterInventoryRequestAction();
-         return action;
+      public function KrosmasterInventoryRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : KrosmasterInventoryRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

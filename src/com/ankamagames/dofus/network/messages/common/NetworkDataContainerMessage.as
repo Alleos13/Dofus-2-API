@@ -10,8 +10,13 @@ package com.ankamagames.dofus.network.messages.common
    public class NetworkDataContainerMessage extends NetworkMessage implements INetworkMessage, INetworkDataContainerMessage
    {
       
-      public function NetworkDataContainerMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function NetworkDataContainerMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 2;
@@ -20,61 +25,64 @@ package com.ankamagames.dofus.network.messages.common
       
       private var _isInitialized:Boolean = false;
       
-      public function get content() : ByteArray {
-         return this._content;
+      public function get content() : ByteArray
+      {
+         //Décompilation abandonné
       }
       
-      public function set content(value:ByteArray) : void {
-         this._content = value;
+      public function set content(value:ByteArray) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function getMessageId() : uint {
-         return 2;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initNetworkDataContainerMessage(content:ByteArray = null) : NetworkDataContainerMessage {
-         this.content = content;
-         this._isInitialized = true;
-         return this;
+      public function initNetworkDataContainerMessage(content:ByteArray = null) : NetworkDataContainerMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.content = new ByteArray();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_NetworkDataContainerMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_NetworkDataContainerMessage(output:IDataOutput) : void {
-         output.writeBytes(this.content);
+      public function serializeAs_NetworkDataContainerMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_NetworkDataContainerMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_NetworkDataContainerMessage(input:IDataInput) : void {
-         var _contentLen:uint = input.readUnsignedShort();
-         var tmpBuffer:ByteArray = new ByteArray();
-         input.readBytes(tmpBuffer);
-         tmpBuffer.uncompress();
-         this.content = tmpBuffer;
+      public function deserializeAs_NetworkDataContainerMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

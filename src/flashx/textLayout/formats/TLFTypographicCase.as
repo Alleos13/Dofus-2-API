@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public final class TLFTypographicCase extends Object
    {
       
-      public function TLFTypographicCase() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TLFTypographicCase()
+      {
+         //Décompilation abandonné
       }
       
       public static const DEFAULT:String = "default";

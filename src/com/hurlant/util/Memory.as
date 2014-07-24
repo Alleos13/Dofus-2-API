@@ -6,23 +6,23 @@ package com.hurlant.util
    public class Memory extends Object
    {
       
-      public function Memory() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function gc() : void {
-         try
-         {
-            new LocalConnection().connect("foo");
-            new LocalConnection().connect("foo");
-         }
-         catch(e:*)
-         {
-         }
+      public function Memory()
+      {
+         //Décompilation abandonné
       }
       
-      public static function get used() : uint {
-         return System.totalMemory;
+      public static function gc() : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function get used() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -10,8 +10,13 @@ package com.ankamagames.dofus.types.characteristicContextual
    public class TextContextual extends CharacteristicContextual
    {
       
-      public function TextContextual() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TextContextual()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -22,35 +27,29 @@ package com.ankamagames.dofus.types.characteristicContextual
       
       private var _textFormat:TextFormat;
       
-      public function get text() : String {
-         return this._tText;
+      public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function set text(sValue:String) : void {
-         this._tText = sValue;
+      public function set text(sValue:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get textFormat() : TextFormat {
-         return this._textFormat;
+      public function get textFormat() : TextFormat
+      {
+         //Décompilation abandonné
       }
       
-      public function set textFormat(tfFormat:TextFormat) : void {
-         this._textFormat = tfFormat;
+      public function set textFormat(tfFormat:TextFormat) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function finalize() : void {
-         this._text = new TextField();
-         this._text.selectable = false;
-         this._text.defaultTextFormat = this._textFormat;
-         this._text.setTextFormat(this._textFormat);
-         if(EmbedFontManager.getInstance().isEmbed(this._textFormat.font))
-         {
-            this._text.embedFonts = true;
-         }
-         this._text.text = this._tText;
-         this._text.width = this._text.textWidth + 5;
-         this._text.height = this._text.textHeight;
-         addChild(this._text);
+      public function finalize() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

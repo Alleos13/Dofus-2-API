@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class OpenStatsAction extends Object implements Action
    {
       
-      public function OpenStatsAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : OpenStatsAction {
-         var a:OpenStatsAction = new OpenStatsAction();
-         return a;
+      public function OpenStatsAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : OpenStatsAction
+      {
+         //Décompilation abandonné
       }
    }
 }

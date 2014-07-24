@@ -7,10 +7,14 @@ package com.ankamagames.jerakine.resources.loaders
    public interface IResourceLoader extends IEventDispatcher
    {
       
-      function load(param1:*, param2:ICache = null, param3:Class = null, param4:Boolean = false) : void;
+      {
+      //Décompilation abandonné
+      }
+      
+      function load(uris:*, cache:ICache = null, forcedAdapter:Class = null, singleFile:Boolean = false) : void;
       
       function cancel() : void;
       
-      function isInCache(param1:Uri) : Boolean;
+      function isInCache(uri:Uri) : Boolean;
    }
 }

@@ -6,24 +6,27 @@ package com.ankamagames.dofus.datacenter.items
    public class Incarnation extends Object implements IDataCenter
    {
       
-      public function Incarnation() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Incarnation()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Incarnation";
       
       private static var _incarnationsList:Array;
       
-      public static function getIncarnationById(id:uint) : Incarnation {
-         return GameData.getObject(MODULE,id) as Incarnation;
+      public static function getIncarnationById(id:uint) : Incarnation
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAllIncarnation() : Array {
-         if(!_incarnationsList)
-         {
-            _incarnationsList = GameData.getObjects(MODULE) as Array;
-         }
-         return _incarnationsList;
+      public static function getAllIncarnation() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;

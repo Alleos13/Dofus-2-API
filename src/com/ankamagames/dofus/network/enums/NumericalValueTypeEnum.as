@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class NumericalValueTypeEnum extends Object
    {
       
-      public function NumericalValueTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function NumericalValueTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const NUMERICAL_VALUE_DEFAULT:uint = 0;

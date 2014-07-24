@@ -5,8 +5,13 @@ package com.ankamagames.jerakine.BalanceManager.events
    public class BalanceEvent extends Event
    {
       
-      public function BalanceEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false) {
-         super(type,bubbles,cancelable);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BalanceEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       public static const BALANCE_UPDATE:String = "balance_update";

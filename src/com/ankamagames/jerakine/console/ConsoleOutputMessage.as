@@ -5,11 +5,13 @@ package com.ankamagames.jerakine.console
    public class ConsoleOutputMessage extends Object implements Message
    {
       
-      public function ConsoleOutputMessage(consoleId:String, text:String, type:uint) {
-         super();
-         this._consoleId = consoleId;
-         this._text = text;
-         this._type = type;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ConsoleOutputMessage(consoleId:String, text:String, type:uint)
+      {
+         //Décompilation abandonné
       }
       
       private var _consoleId:String;
@@ -18,16 +20,19 @@ package com.ankamagames.jerakine.console
       
       private var _type:uint;
       
-      public function get consoleId() : String {
-         return this._consoleId;
+      public function get consoleId() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get text() : String {
-         return this._text;
+      public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get type() : uint {
-         return this._type;
+      public function get type() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

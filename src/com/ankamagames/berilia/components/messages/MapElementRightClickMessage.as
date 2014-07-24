@@ -6,16 +6,20 @@ package com.ankamagames.berilia.components.messages
    public class MapElementRightClickMessage extends ComponentMessage
    {
       
-      public function MapElementRightClickMessage(target:GraphicContainer, targetedElement:MapElement) {
-         super(target);
-         this._targetedElement = targetedElement;
-         _target = target;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapElementRightClickMessage(target:GraphicContainer, targetedElement:MapElement)
+      {
+         //Décompilation abandonné
       }
       
       private var _targetedElement:MapElement;
       
-      public function get targetedElement() : MapElement {
-         return this._targetedElement;
+      public function get targetedElement() : MapElement
+      {
+         //Décompilation abandonné
       }
    }
 }

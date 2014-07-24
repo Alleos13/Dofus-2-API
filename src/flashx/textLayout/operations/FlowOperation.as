@@ -6,14 +6,16 @@ package flashx.textLayout.operations
    import flashx.textLayout.edit.IEditManager;
    import flashx.textLayout.tlf_internal;
    
-   use namespace tlf_internal;
-   
    public class FlowOperation extends Object implements IOperation
    {
       
-      public function FlowOperation(param1:TextFlow) {
-         super();
-         this._textFlow = param1;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FlowOperation(textFlow:TextFlow)
+      {
+         //Décompilation abandonné
       }
       
       public var userData;
@@ -24,61 +26,64 @@ package flashx.textLayout.operations
       
       private var _textFlow:TextFlow;
       
-      public function get textFlow() : TextFlow {
-         return this._textFlow;
+      public function get textFlow() : TextFlow
+      {
+         //Décompilation abandonné
       }
       
-      public function set textFlow(param1:TextFlow) : void {
-         this._textFlow = param1;
+      public function set textFlow(value:TextFlow) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function doOperation() : Boolean {
-         return false;
+      public function doOperation() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function undo() : SelectionState {
-         return null;
+      public function undo() : SelectionState
+      {
+         //Décompilation abandonné
       }
       
-      public function canUndo() : Boolean {
-         return true;
+      public function canUndo() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function redo() : SelectionState {
-         return null;
+      public function redo() : SelectionState
+      {
+         //Décompilation abandonné
       }
       
-      public function get beginGeneration() : uint {
-         return this._beginGeneration;
+      public function get beginGeneration() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get endGeneration() : uint {
-         return this._endGeneration;
+      public function get endGeneration() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function performUndo() : void {
-         var _loc1_:IEditManager = this.textFlow?this.textFlow.interactionManager as IEditManager:null;
-         if(_loc1_ != null)
-         {
-            _loc1_.performUndo(this);
-         }
+      public function performUndo() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function performRedo() : void {
-         var _loc1_:IEditManager = this.textFlow?this.textFlow.interactionManager as IEditManager:null;
-         if(_loc1_ != null)
-         {
-            _loc1_.performRedo(this);
-         }
+      public function performRedo() : void
+      {
+         //Décompilation abandonné
       }
       
-      tlf_internal function setGenerations(param1:uint, param2:uint) : void {
-         this._beginGeneration = param1;
-         this._endGeneration = param2;
+      tlf_internal function setGenerations(beginGeneration:uint, endGeneration:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      tlf_internal function merge(param1:FlowOperation) : FlowOperation {
-         return null;
+      tlf_internal function merge(operation:FlowOperation) : FlowOperation
+      {
+         //Décompilation abandonné
       }
    }
 }

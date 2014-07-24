@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class PvpArenaStepEnum extends Object
    {
       
-      public function PvpArenaStepEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PvpArenaStepEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const ARENA_STEP_REGISTRED:uint = 0;

@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.friend
    public class SpouseStatusMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function SpouseStatusMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpouseStatusMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6265;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var hasSpouse:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 6265;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initSpouseStatusMessage(hasSpouse:Boolean = false) : SpouseStatusMessage {
-         this.hasSpouse = hasSpouse;
-         this._isInitialized = true;
-         return this;
+      public function initSpouseStatusMessage(hasSpouse:Boolean = false) : SpouseStatusMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.hasSpouse = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_SpouseStatusMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_SpouseStatusMessage(output:IDataOutput) : void {
-         output.writeBoolean(this.hasSpouse);
+      public function serializeAs_SpouseStatusMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_SpouseStatusMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_SpouseStatusMessage(input:IDataInput) : void {
-         this.hasSpouse = input.readBoolean();
+      public function deserializeAs_SpouseStatusMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

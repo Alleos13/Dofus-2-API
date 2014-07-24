@@ -5,14 +5,18 @@ package com.ankamagames.dofus.modules.utils.actions
    public class ModuleInstallRequestAction extends Object implements Action
    {
       
-      public function ModuleInstallRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(url:String) : ModuleInstallRequestAction {
-         var action:ModuleInstallRequestAction = new ModuleInstallRequestAction();
-         action.moduleUrl = url;
-         return action;
+      public function ModuleInstallRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(url:String) : ModuleInstallRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var moduleUrl:String;

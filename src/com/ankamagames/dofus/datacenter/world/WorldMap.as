@@ -6,18 +6,25 @@ package com.ankamagames.dofus.datacenter.world
    public class WorldMap extends Object implements IDataCenter
    {
       
-      public function WorldMap() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function WorldMap()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "WorldMaps";
       
-      public static function getWorldMapById(id:int) : WorldMap {
-         return GameData.getObject(MODULE,id) as WorldMap;
+      public static function getWorldMapById(id:int) : WorldMap
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAllWorldMaps() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAllWorldMaps() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;

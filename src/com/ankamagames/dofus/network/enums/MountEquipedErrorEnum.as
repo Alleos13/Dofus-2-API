@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class MountEquipedErrorEnum extends Object
    {
       
-      public function MountEquipedErrorEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MountEquipedErrorEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const UNSET:uint = 0;

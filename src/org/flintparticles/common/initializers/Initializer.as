@@ -6,12 +6,16 @@ package org.flintparticles.common.initializers
    public interface Initializer
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function getDefaultPriority() : Number;
       
-      function addedToEmitter(param1:Emitter) : void;
+      function addedToEmitter(emitter:Emitter) : void;
       
-      function removedFromEmitter(param1:Emitter) : void;
+      function removedFromEmitter(emitter:Emitter) : void;
       
-      function initialize(param1:Emitter, param2:Particle) : void;
+      function initialize(emitter:Emitter, particle:Particle) : void;
    }
 }

@@ -20,8 +20,13 @@ package com.ankamagames.dofus.console.debug.frames
    public class UpdaterDebugFrame extends Object implements Frame
    {
       
-      public function UpdaterDebugFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UpdaterDebugFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -30,97 +35,49 @@ package com.ankamagames.dofus.console.debug.frames
       
       private var _updaterSpeedCallback:Function;
       
-      public function get priority() : int {
-         return Priority.LOW;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         this._partInfoCallback = null;
-         this._updaterSpeedCallback = null;
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var plmsg:PartsListMessage = null;
-         var pimsg:PartInfoMessage = null;
-         var dcsmsg:DownloadCurrentSpeedMessage = null;
-         var cp:ContentPart = null;
-         switch(true)
-         {
-            case msg is PartsListMessage:
-               plmsg = msg as PartsListMessage;
-               if(this._partInfoCallback != null)
-               {
-                  for each(cp in plmsg.parts)
-                  {
-                     this._partInfoCallback(cp);
-                  }
-                  this._partInfoCallback = null;
-               }
-               return false;
-            case msg is PartInfoMessage:
-               pimsg = msg as PartInfoMessage;
-               if(this._partInfoCallback != null)
-               {
-                  this._partInfoCallback(pimsg.part);
-                  this._partInfoCallback = null;
-               }
-               return false;
-            case msg is DownloadCurrentSpeedMessage:
-               dcsmsg = msg as DownloadCurrentSpeedMessage;
-               if(this._updaterSpeedCallback != null)
-               {
-                  this._updaterSpeedCallback(dcsmsg.downloadSpeed);
-                  this._updaterSpeedCallback = null;
-               }
-               return false;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function partListRequest(partInfoCallback:Function) : void {
-         _log.info("Send part list request");
-         this._partInfoCallback = partInfoCallback;
-         var gplmsg:GetPartsListMessage = new GetPartsListMessage();
-         gplmsg.initGetPartsListMessage();
-         UpdaterConnexionHandler.getConnection().send(gplmsg);
+      public function partListRequest(partInfoCallback:Function) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function partInfoRequest(id:String, partInfoCallback:Function) : void {
-         _log.info("Send part info request");
-         this._partInfoCallback = partInfoCallback;
-         var gpimsg:GetPartInfoMessage = new GetPartInfoMessage();
-         gpimsg.initGetPartInfoMessage(id);
-         UpdaterConnexionHandler.getConnection().send(gpimsg);
+      public function partInfoRequest(id:String, partInfoCallback:Function) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setUpdaterSpeedRequest(speed:int, updaterSpeedCallback:Function) : void {
-         _log.info("Send updater speed request");
-         this._updaterSpeedCallback = updaterSpeedCallback;
-         var dssrmsg:DownloadSetSpeedRequestMessage = new DownloadSetSpeedRequestMessage();
-         dssrmsg.initDownloadSetSpeedRequestMessage(speed);
-         UpdaterConnexionHandler.getConnection().send(dssrmsg);
+      public function setUpdaterSpeedRequest(speed:int, updaterSpeedCallback:Function) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getUpdaterSpeedRequest(updaterSpeedCallback:Function) : void {
-         _log.info("Send updater speed request");
-         this._updaterSpeedCallback = updaterSpeedCallback;
-         var dgcsrmsg:DownloadGetCurrentSpeedRequestMessage = new DownloadGetCurrentSpeedRequestMessage();
-         dgcsrmsg.initDownloadGetCurrentSpeedRequestMessage();
-         UpdaterConnexionHandler.getConnection().send(dgcsrmsg);
+      public function getUpdaterSpeedRequest(updaterSpeedCallback:Function) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function downloadPartRequest(id:String, partInfoCallback:Function) : void {
-         _log.info("Send download part request");
-         this._partInfoCallback = partInfoCallback;
-         var dpmsg:DownloadPartMessage = new DownloadPartMessage();
-         dpmsg.initDownloadPartMessage(id);
-         UpdaterConnexionHandler.getConnection().send(dpmsg);
+      public function downloadPartRequest(id:String, partInfoCallback:Function) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

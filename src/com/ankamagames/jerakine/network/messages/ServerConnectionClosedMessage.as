@@ -6,15 +6,20 @@ package com.ankamagames.jerakine.network.messages
    public class ServerConnectionClosedMessage extends Object implements Message
    {
       
-      public function ServerConnectionClosedMessage(closedConnection:ServerConnection) {
-         super();
-         this._closedConnection = closedConnection;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ServerConnectionClosedMessage(closedConnection:ServerConnection)
+      {
+         //Décompilation abandonné
       }
       
       private var _closedConnection:ServerConnection;
       
-      public function get closedConnection() : ServerConnection {
-         return this._closedConnection;
+      public function get closedConnection() : ServerConnection
+      {
+         //Décompilation abandonné
       }
    }
 }

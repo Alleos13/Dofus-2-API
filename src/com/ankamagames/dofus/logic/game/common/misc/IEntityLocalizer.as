@@ -5,7 +5,11 @@ package com.ankamagames.dofus.logic.game.common.misc
    public interface IEntityLocalizer
    {
       
-      function getEntity(param1:int) : IEntity;
+      {
+      //Décompilation abandonné
+      }
+      
+      function getEntity(entityId:int) : IEntity;
       
       function unregistered() : void;
    }

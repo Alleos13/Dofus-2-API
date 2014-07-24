@@ -25,8 +25,13 @@ package com.ankamagames.berilia.utils
    public class ComponentList extends Object
    {
       
-      public function ComponentList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ComponentList()
+      {
+         //Décompilation abandonné
       }
       
       public static const charaWheel:CharacterWheel = null;

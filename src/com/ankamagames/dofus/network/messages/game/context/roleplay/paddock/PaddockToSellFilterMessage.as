@@ -9,16 +9,22 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.paddock
    public class PaddockToSellFilterMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function PaddockToSellFilterMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PaddockToSellFilterMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6161;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var areaId:int = 0;
@@ -29,73 +35,49 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.paddock
       
       public var maxPrice:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6161;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPaddockToSellFilterMessage(areaId:int = 0, atLeastNbMount:int = 0, atLeastNbMachine:int = 0, maxPrice:uint = 0) : PaddockToSellFilterMessage {
-         this.areaId = areaId;
-         this.atLeastNbMount = atLeastNbMount;
-         this.atLeastNbMachine = atLeastNbMachine;
-         this.maxPrice = maxPrice;
-         this._isInitialized = true;
-         return this;
+      public function initPaddockToSellFilterMessage(areaId:int = 0, atLeastNbMount:int = 0, atLeastNbMachine:int = 0, maxPrice:uint = 0) : PaddockToSellFilterMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.areaId = 0;
-         this.atLeastNbMount = 0;
-         this.atLeastNbMachine = 0;
-         this.maxPrice = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PaddockToSellFilterMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PaddockToSellFilterMessage(output:IDataOutput) : void {
-         output.writeInt(this.areaId);
-         output.writeByte(this.atLeastNbMount);
-         output.writeByte(this.atLeastNbMachine);
-         if(this.maxPrice < 0)
-         {
-            throw new Error("Forbidden value (" + this.maxPrice + ") on element maxPrice.");
-         }
-         else
-         {
-            output.writeInt(this.maxPrice);
-            return;
-         }
+      public function serializeAs_PaddockToSellFilterMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PaddockToSellFilterMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PaddockToSellFilterMessage(input:IDataInput) : void {
-         this.areaId = input.readInt();
-         this.atLeastNbMount = input.readByte();
-         this.atLeastNbMachine = input.readByte();
-         this.maxPrice = input.readInt();
-         if(this.maxPrice < 0)
-         {
-            throw new Error("Forbidden value (" + this.maxPrice + ") on element of PaddockToSellFilterMessage.maxPrice.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_PaddockToSellFilterMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

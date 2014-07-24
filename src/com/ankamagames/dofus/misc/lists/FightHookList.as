@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.lists
    public class FightHookList extends Object
    {
       
-      public function FightHookList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightHookList()
+      {
+         //Décompilation abandonné
       }
       
       public static const BuffUpdate:Hook;
@@ -46,5 +51,7 @@ package com.ankamagames.dofus.misc.lists
       public static const ShowMonsterArtwork:Hook;
       
       public static const WaveUpdated:Hook;
+      
+      public static const SpectateUpdate:Hook;
    }
 }

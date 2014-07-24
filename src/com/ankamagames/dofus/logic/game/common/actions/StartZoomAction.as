@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class StartZoomAction extends Object implements Action
    {
       
-      public function StartZoomAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(playerId:uint, value:Number) : StartZoomAction {
-         var action:StartZoomAction = new StartZoomAction();
-         action.playerId = playerId;
-         action.value = value;
-         return action;
+      public function StartZoomAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(playerId:uint, value:Number) : StartZoomAction
+      {
+         //Décompilation abandonné
       }
       
       public var playerId:uint;

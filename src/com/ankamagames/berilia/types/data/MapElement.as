@@ -9,45 +9,35 @@ package com.ankamagames.berilia.types.data
    public class MapElement extends Object implements Secure
    {
       
-      public function MapElement(id:String, x:int, y:int, layer:String, owner:*) {
-         super();
-         this.x = x;
-         this.y = y;
-         this.layer = layer;
-         if(!_elementRef[owner])
-         {
-            _elementRef[owner] = new Dictionary();
-         }
-         this._owner = new WeakReference(owner);
-         _elementRef[owner][id] = this;
-         this._id = id;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapElement(id:String, x:int, y:int, layer:String, owner:*)
+      {
+         //Décompilation abandonné
       }
       
       public static var _elementRef:Dictionary;
       
-      public static function getElementById(id:String, owner:*) : MapElement {
-         return _elementRef[owner]?_elementRef[owner][id]:null;
+      public static function getElementById(id:String, owner:*) : MapElement
+      {
+         //Décompilation abandonné
       }
       
-      public static function removeElementById(id:String, owner:*) : void {
-         if(_elementRef[owner][id])
-         {
-            _elementRef[owner][id].remove();
-         }
-         delete _elementRef[owner][id];
+      public static function removeElementById(id:String, owner:*) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function removeAllElements(owner:*) : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public static function removeAllElements(owner:*) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function getOwnerElements(owner:*) : Dictionary {
-         return _elementRef[owner];
+      public static function getOwnerElements(owner:*) : Dictionary
+      {
+         //Décompilation abandonné
       }
       
       private var _id:String;
@@ -60,26 +50,19 @@ package com.ankamagames.berilia.types.data
       
       public var layer:String;
       
-      public function getObject(accessKey:Object) : * {
-         if(accessKey != SecureCenter.ACCESS_KEY)
-         {
-            throw new IllegalOperationError();
-         }
-         else
-         {
-            return this;
-         }
+      public function getObject(accessKey:Object) : *
+      {
+         //Décompilation abandonné
       }
       
-      public function get id() : String {
-         return this._id;
+      public function get id() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function remove() : void {
-         if((this._owner.object) && (_elementRef[this._owner.object]))
-         {
-            delete _elementRef[this._owner.object][this._id];
-         }
+      public function remove() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

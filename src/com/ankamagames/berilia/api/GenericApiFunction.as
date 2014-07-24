@@ -6,31 +6,23 @@ package com.ankamagames.berilia.api
    public class GenericApiFunction extends Object
    {
       
-      public function GenericApiFunction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function throwUntrustedCallError(... args) : void {
-         throw new UntrustedApiCallError("Unstrusted script called a trusted method");
+      public function GenericApiFunction()
+      {
+         //Décompilation abandonné
       }
       
-      public static function getRestrictedFunctionAccess(target:Function) : Function {
-         return function(... args):*
-         {
-            var arg:* = undefined;
-            var accessKey:* = SecureCenter.ACCESS_KEY;
-            var i:* = 0;
-            for each(arg in args)
-            {
-               if(arg == accessKey)
-               {
-                  args.splice(i,1);
-                  return target.apply(null,args);
-               }
-               i++;
-            }
-            throw new UntrustedApiCallError("Unstrusted script called a trusted method");
-         };
+      public static function throwUntrustedCallError(... args) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function getRestrictedFunctionAccess(target:Function) : Function
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -16,35 +16,25 @@ package com.ankamagames.jerakine.resources.adapters.impl
    public class SignedFileAdapter extends AbstractUrlLoaderAdapter implements IAdapter
    {
       
-      public function SignedFileAdapter(signatureKey:SignatureKey = null, rawContent:Boolean = false) {
-         super();
-         this._rawContent = rawContent;
-         if(signatureKey)
-         {
-            this._signatureKey = signatureKey;
-         }
-         else
-         {
-            this._signatureKey = _defaultSignatureKey;
-         }
-         if(!this._signatureKey)
-         {
-            throw new ArgumentError("A signature key must be defined (you can also set defaultSignatureKey)");
-         }
-         else
-         {
-            return;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SignedFileAdapter(signatureKey:SignatureKey = null, rawContent:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       private static var _defaultSignatureKey:SignatureKey;
       
-      public static function set defaultSignatureKey(v:SignatureKey) : void {
-         _defaultSignatureKey = v;
+      public static function set defaultSignatureKey(v:SignatureKey) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function get defaultSignatureKey() : SignatureKey {
-         return _defaultSignatureKey;
+      public static function get defaultSignatureKey() : SignatureKey
+      {
+         //Décompilation abandonné
       }
       
       private var _signatureKey:SignatureKey;
@@ -57,78 +47,49 @@ package com.ankamagames.jerakine.resources.adapters.impl
       
       private var _rawContent:Boolean;
       
-      override public function loadDirectly(uri:Uri, path:String, observer:IResourceObserver, dispatchProgress:Boolean) : void {
-         this._uri = uri;
-         super.loadDirectly(uri,path,observer,dispatchProgress);
+      override public function loadDirectly(uri:Uri, path:String, observer:IResourceObserver, dispatchProgress:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function loadFromData(uri:Uri, data:ByteArray, observer:IResourceObserver, dispatchProgress:Boolean) : void {
-         this._uri = uri;
-         super.loadFromData(uri,data,observer,dispatchProgress);
+      override public function loadFromData(uri:Uri, data:ByteArray, observer:IResourceObserver, dispatchProgress:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function free() : void {
-         this._resource = null;
-         this._resourceObserverWrapper = null;
-         this._uri = null;
-         super.free();
+      override public function free() : void
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getResource(dataFormat:String, data:*) : * {
-         return this._resource;
+      override protected function getResource(dataFormat:String, data:*) : *
+      {
+         //Décompilation abandonné
       }
       
-      override public function getResourceType() : uint {
-         return ResourceType.RESOURCE_SIGNED_FILE;
+      override public function getResourceType() : uint
+      {
+         //Décompilation abandonné
       }
       
-      override protected function process(dataFormat:String, data:*) : void {
-         var sig:Signature = new Signature(this._signatureKey);
-         var content:ByteArray = new ByteArray();
-         try
-         {
-            if(!sig.verify(data,content))
-            {
-               dispatchFailure("Invalid signature",ResourceErrorCode.INVALID_SIGNATURE);
-               return;
-            }
-         }
-         catch(e:Error)
-         {
-            dispatchFailure("Invalid signature : " + e.message,ResourceErrorCode.INVALID_SIGNATURE);
-         }
-         var contentUri:Uri = new Uri(this._uri.path.substr(0,this._uri.path.length - 1));
-         var contentAdapter:IAdapter = AdapterFactory.getAdapter(contentUri);
-         if(!contentAdapter)
-         {
-            dispatchFailure("Cannot found any adapted adpter for file content",ResourceErrorCode.INCOMPATIBLE_ADAPTER);
-            return;
-         }
-         if(!this._rawContent)
-         {
-            if(!this._resourceObserverWrapper)
-            {
-               this._resourceObserverWrapper = new ResourceObserverWrapper(this.onContentLoad,this.onContentLoadFailed);
-            }
-            contentAdapter.loadFromData(this._uri,content,this._resourceObserverWrapper,false);
-         }
-         else
-         {
-            this.onContentLoad(this._uri,ResourceType.RESOURCE_BINARY,content);
-         }
+      override protected function process(dataFormat:String, data:*) : void
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getDataFormat() : String {
-         return URLLoaderDataFormat.BINARY;
+      override protected function getDataFormat() : String
+      {
+         //Décompilation abandonné
       }
       
-      private function onContentLoad(uri:Uri, resourceType:uint, resource:*) : void {
-         this._resource = resource;
-         dispatchSuccess(ResourceType.getName(resourceType),resource);
+      private function onContentLoad(uri:Uri, resourceType:uint, resource:*) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onContentLoadFailed(uri:Uri, errorMsg:String, errorCode:uint) : void {
-         dispatchFailure(errorMsg,errorCode);
+      private function onContentLoadFailed(uri:Uri, errorMsg:String, errorCode:uint) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

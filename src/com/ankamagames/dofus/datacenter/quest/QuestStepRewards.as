@@ -6,18 +6,25 @@ package com.ankamagames.dofus.datacenter.quest
    public class QuestStepRewards extends Object implements IDataCenter
    {
       
-      public function QuestStepRewards() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function QuestStepRewards()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "QuestStepRewards";
       
-      public static function getQuestStepRewardsById(id:int) : QuestStepRewards {
-         return GameData.getObject(MODULE,id) as QuestStepRewards;
+      public static function getQuestStepRewardsById(id:int) : QuestStepRewards
+      {
+         //Décompilation abandonné
       }
       
-      public static function getQuestStepRewards() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getQuestStepRewards() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;

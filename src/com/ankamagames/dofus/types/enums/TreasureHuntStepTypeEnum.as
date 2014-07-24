@@ -3,8 +3,13 @@ package com.ankamagames.dofus.types.enums
    public class TreasureHuntStepTypeEnum extends Object
    {
       
-      public function TreasureHuntStepTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TreasureHuntStepTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const START:uint = 0;

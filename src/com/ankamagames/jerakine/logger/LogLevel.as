@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.logger
    public final class LogLevel extends Object
    {
       
-      public function LogLevel() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LogLevel()
+      {
+         //Décompilation abandonné
       }
       
       public static const TRACE:uint = 1;
@@ -21,24 +26,9 @@ package com.ankamagames.jerakine.logger
       
       public static const COMMANDS:uint;
       
-      public static function getString(level:uint) : String {
-         switch(level)
-         {
-            case TRACE:
-               return "TRACE";
-            case DEBUG:
-               return "DEBUG";
-            case INFO:
-               return "INFO";
-            case WARN:
-               return "WARN";
-            case ERROR:
-               return "ERROR";
-            case FATAL:
-               return "FATAL";
-            default:
-               return "UNKNOWN";
-         }
+      public static function getString(level:uint) : String
+      {
+         //Décompilation abandonné
       }
    }
 }

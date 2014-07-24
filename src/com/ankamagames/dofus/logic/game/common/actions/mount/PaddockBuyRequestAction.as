@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.mount
    public class PaddockBuyRequestAction extends Object implements Action
    {
       
-      public function PaddockBuyRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : PaddockBuyRequestAction {
-         return new PaddockBuyRequestAction();
+      public function PaddockBuyRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : PaddockBuyRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

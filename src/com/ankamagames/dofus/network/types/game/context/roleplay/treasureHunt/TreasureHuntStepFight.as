@@ -7,33 +7,50 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.treasureHunt
    public class TreasureHuntStepFight extends TreasureHuntStep implements INetworkType
    {
       
-      public function TreasureHuntStepFight() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TreasureHuntStepFight()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 462;
       
-      override public function getTypeId() : uint {
-         return 462;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initTreasureHuntStepFight() : TreasureHuntStepFight {
-         return this;
+      public function initTreasureHuntStepFight() : TreasureHuntStepFight
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_TreasureHuntStepFight(output:IDataOutput) : void {
+      public function serializeAs_TreasureHuntStepFight(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_TreasureHuntStepFight(input:IDataInput) : void {
+      public function deserializeAs_TreasureHuntStepFight(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

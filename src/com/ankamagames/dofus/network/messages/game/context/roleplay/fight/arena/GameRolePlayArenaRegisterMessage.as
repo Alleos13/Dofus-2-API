@@ -9,67 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.fight.arena
    public class GameRolePlayArenaRegisterMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameRolePlayArenaRegisterMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameRolePlayArenaRegisterMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6280;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var battleMode:uint = 3;
       
-      override public function getMessageId() : uint {
-         return 6280;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameRolePlayArenaRegisterMessage(battleMode:uint = 3) : GameRolePlayArenaRegisterMessage {
-         this.battleMode = battleMode;
-         this._isInitialized = true;
-         return this;
+      public function initGameRolePlayArenaRegisterMessage(battleMode:uint = 3) : GameRolePlayArenaRegisterMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.battleMode = 3;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameRolePlayArenaRegisterMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayArenaRegisterMessage(output:IDataOutput) : void {
-         output.writeInt(this.battleMode);
+      public function serializeAs_GameRolePlayArenaRegisterMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameRolePlayArenaRegisterMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayArenaRegisterMessage(input:IDataInput) : void {
-         this.battleMode = input.readInt();
-         if(this.battleMode < 0)
-         {
-            throw new Error("Forbidden value (" + this.battleMode + ") on element of GameRolePlayArenaRegisterMessage.battleMode.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_GameRolePlayArenaRegisterMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

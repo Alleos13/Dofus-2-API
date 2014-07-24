@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.humanVendor
    public class ExchangeShopStockMouvmentRemoveAction extends Object implements Action
    {
       
-      public function ExchangeShopStockMouvmentRemoveAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pObjectUID:uint, pQuantity:int) : ExchangeShopStockMouvmentRemoveAction {
-         var a:ExchangeShopStockMouvmentRemoveAction = new ExchangeShopStockMouvmentRemoveAction();
-         a.objectUID = pObjectUID;
-         a.quantity = -Math.abs(pQuantity);
-         return a;
+      public function ExchangeShopStockMouvmentRemoveAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pObjectUID:uint, pQuantity:int) : ExchangeShopStockMouvmentRemoveAction
+      {
+         //Décompilation abandonné
       }
       
       public var objectUID:uint;

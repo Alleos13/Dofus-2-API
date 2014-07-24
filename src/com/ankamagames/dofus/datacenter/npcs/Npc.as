@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.npcs
    public class Npc extends Object implements IDataCenter
    {
       
-      public function Npc() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Npc()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       public static const MODULE:String = "Npcs";
       
-      public static function getNpcById(id:int) : Npc {
-         return GameData.getObject(MODULE,id) as Npc;
+      public static function getNpcById(id:int) : Npc
+      {
+         //Décompilation abandonné
       }
       
-      public static function getNpcs() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getNpcs() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -44,14 +51,13 @@ package com.ankamagames.dofus.datacenter.npcs
       
       public var animFunList:Vector.<AnimFunNpcData>;
       
+      public var fastAnimsFun:Boolean;
+      
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

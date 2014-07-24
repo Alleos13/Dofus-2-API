@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class FightTypeEnum extends Object
    {
       
-      public function FightTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const FIGHT_TYPE_CHALLENGE:uint = 0;

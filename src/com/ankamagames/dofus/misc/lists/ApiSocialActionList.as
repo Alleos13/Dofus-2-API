@@ -56,8 +56,13 @@ package com.ankamagames.dofus.misc.lists
    public class ApiSocialActionList extends Object
    {
       
-      public function ApiSocialActionList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ApiSocialActionList()
+      {
+         //Décompilation abandonné
       }
       
       public static const OpenSocial:DofusApiAction;

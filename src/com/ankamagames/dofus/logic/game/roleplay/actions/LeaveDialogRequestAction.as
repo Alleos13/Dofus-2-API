@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
    public class LeaveDialogRequestAction extends Object implements Action
    {
       
-      public function LeaveDialogRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : LeaveDialogRequestAction {
-         return new LeaveDialogRequestAction();
+      public function LeaveDialogRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : LeaveDialogRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

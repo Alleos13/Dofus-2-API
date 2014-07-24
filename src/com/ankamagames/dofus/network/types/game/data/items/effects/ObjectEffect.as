@@ -7,54 +7,52 @@ package com.ankamagames.dofus.network.types.game.data.items.effects
    public class ObjectEffect extends Object implements INetworkType
    {
       
-      public function ObjectEffect() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ObjectEffect()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 76;
       
       public var actionId:uint = 0;
       
-      public function getTypeId() : uint {
-         return 76;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initObjectEffect(actionId:uint = 0) : ObjectEffect {
-         this.actionId = actionId;
-         return this;
+      public function initObjectEffect(actionId:uint = 0) : ObjectEffect
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.actionId = 0;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ObjectEffect(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectEffect(output:IDataOutput) : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: NullPointerException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public function serializeAs_ObjectEffect(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ObjectEffect(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectEffect(input:IDataInput) : void {
-         this.actionId = input.readShort();
-         if(this.actionId < 0)
-         {
-            throw new Error("Forbidden value (" + this.actionId + ") on element of ObjectEffect.actionId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_ObjectEffect(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

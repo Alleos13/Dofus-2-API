@@ -9,65 +9,71 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.fight
    public class GameRolePlayPlayerFightFriendlyAnswerMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameRolePlayPlayerFightFriendlyAnswerMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameRolePlayPlayerFightFriendlyAnswerMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5732;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var fightId:int = 0;
       
       public var accept:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 5732;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameRolePlayPlayerFightFriendlyAnswerMessage(fightId:int = 0, accept:Boolean = false) : GameRolePlayPlayerFightFriendlyAnswerMessage {
-         this.fightId = fightId;
-         this.accept = accept;
-         this._isInitialized = true;
-         return this;
+      public function initGameRolePlayPlayerFightFriendlyAnswerMessage(fightId:int = 0, accept:Boolean = false) : GameRolePlayPlayerFightFriendlyAnswerMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.fightId = 0;
-         this.accept = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameRolePlayPlayerFightFriendlyAnswerMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayPlayerFightFriendlyAnswerMessage(output:IDataOutput) : void {
-         output.writeInt(this.fightId);
-         output.writeBoolean(this.accept);
+      public function serializeAs_GameRolePlayPlayerFightFriendlyAnswerMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameRolePlayPlayerFightFriendlyAnswerMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayPlayerFightFriendlyAnswerMessage(input:IDataInput) : void {
-         this.fightId = input.readInt();
-         this.accept = input.readBoolean();
+      public function deserializeAs_GameRolePlayPlayerFightFriendlyAnswerMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

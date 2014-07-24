@@ -8,25 +8,28 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class MonthItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function MonthItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         var readableCriterionValue:String = Month.getMonthById(_criterionValue).name;
-         var readableCriterionRef:String = I18n.getUiText("ui.time.months");
-         return readableCriterionRef + " " + _operator.text + " " + readableCriterionValue;
+      public function MonthItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:MonthItemCriterion = new MonthItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getCriterion() : int {
-         var date:Date = new Date();
-         var monthInt:int = TimeManager.getInstance().getDateFromTime(date.getTime())[3];
-         return monthInt - 1;
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getCriterion() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

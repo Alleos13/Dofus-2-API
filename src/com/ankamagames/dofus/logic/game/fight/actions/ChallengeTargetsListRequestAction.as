@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.fight.actions
    public class ChallengeTargetsListRequestAction extends Object implements Action
    {
       
-      public function ChallengeTargetsListRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(challengeId:uint) : ChallengeTargetsListRequestAction {
-         var a:ChallengeTargetsListRequestAction = new ChallengeTargetsListRequestAction();
-         a.challengeId = challengeId;
-         return a;
+      public function ChallengeTargetsListRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(challengeId:uint) : ChallengeTargetsListRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var challengeId:uint;

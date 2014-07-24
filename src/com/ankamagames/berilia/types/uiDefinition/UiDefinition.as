@@ -5,13 +5,13 @@ package com.ankamagames.berilia.types.uiDefinition
    public class UiDefinition extends Object
    {
       
-      public function UiDefinition() {
-         super();
-         this.graphicTree = new Array();
-         this.kernelEvents = new Array();
-         this.shortcutsEvents = new Array();
-         this.constants = new Array();
-         MEMORY_LOG[this] = 1;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UiDefinition()
+      {
+         //Décompilation abandonné
       }
       
       public static var MEMORY_LOG:Dictionary;

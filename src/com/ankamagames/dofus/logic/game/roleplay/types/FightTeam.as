@@ -19,18 +19,13 @@ package com.ankamagames.dofus.logic.game.roleplay.types
    public class FightTeam extends GameContextActorInformations
    {
       
-      public function FightTeam(fight:Fight, teamType:uint, teamEntity:IEntity, teamInfos:FightTeamInformations, teamOptions:FightOptionsInformations) {
-         super();
-         this.fight = fight;
-         this.teamType = teamType;
-         this.teamEntity = teamEntity;
-         this.teamInfos = teamInfos;
-         this.look = EntityLookAdapter.toNetwork((teamEntity as AnimatedCharacter).look);
-         this.teamOptions = new Array();
-         this.teamOptions[FightOptionsEnum.FIGHT_OPTION_ASK_FOR_HELP] = teamOptions.isAskingForHelp;
-         this.teamOptions[FightOptionsEnum.FIGHT_OPTION_SET_CLOSED] = teamOptions.isClosed;
-         this.teamOptions[FightOptionsEnum.FIGHT_OPTION_SET_SECRET] = teamOptions.isSecret;
-         this.teamOptions[FightOptionsEnum.FIGHT_OPTION_SET_TO_PARTY_ONLY] = teamOptions.isRestrictedToPartyOnly;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightTeam(fight:Fight, teamType:uint, teamEntity:IEntity, teamInfos:FightTeamInformations, teamOptions:FightOptionsInformations)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -45,39 +40,14 @@ package com.ankamagames.dofus.logic.game.roleplay.types
       
       public var teamOptions:Array;
       
-      public function hasGroupMember() : Boolean {
-         var partyMember:PartyMemberWrapper = null;
-         var fightTeamMember:FightTeamMemberInformations = null;
-         var teamHasGroupMember:Boolean = false;
-         var pmf:PartyManagementFrame = Kernel.getWorker().getFrame(PartyManagementFrame) as PartyManagementFrame;
-         var partyMemberNames:Vector.<String> = new Vector.<String>();
-         for each(partyMember in pmf.partyMembers)
-         {
-            partyMemberNames.push(partyMember.name);
-         }
-         for each(fightTeamMember in this.teamInfos.teamMembers)
-         {
-            if((fightTeamMember) && (fightTeamMember is FightTeamMemberCharacterInformations) && (!(partyMemberNames.indexOf(FightTeamMemberCharacterInformations(fightTeamMember).name) == -1)))
-            {
-               teamHasGroupMember = true;
-               break;
-            }
-         }
-         return teamHasGroupMember;
+      public function hasGroupMember() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function hasOptions() : Boolean {
-         var opt:* = undefined;
-         var hasOptions:Boolean = false;
-         for(opt in this.teamOptions)
-         {
-            if(this.teamOptions[opt])
-            {
-               hasOptions = true;
-               break;
-            }
-         }
-         return hasOptions;
+      public function hasOptions() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -9,20 +9,27 @@ package com.ankamagames.dofus.datacenter.alignments
    public class AlignmentRankJntGift extends Object implements IDataCenter
    {
       
-      public function AlignmentRankJntGift() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AlignmentRankJntGift()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "AlignmentRankJntGift";
       
       protected static const _log:Logger;
       
-      public static function getAlignmentRankJntGiftById(id:int) : AlignmentRankJntGift {
-         return GameData.getObject(MODULE,id) as AlignmentRankJntGift;
+      public static function getAlignmentRankJntGiftById(id:int) : AlignmentRankJntGift
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAlignmentRankJntGifts() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAlignmentRankJntGifts() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;

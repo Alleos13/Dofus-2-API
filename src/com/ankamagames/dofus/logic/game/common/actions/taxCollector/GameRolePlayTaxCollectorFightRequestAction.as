@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.taxCollector
    public class GameRolePlayTaxCollectorFightRequestAction extends Object implements Action
    {
       
-      public function GameRolePlayTaxCollectorFightRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pTaxCollectorId:uint) : GameRolePlayTaxCollectorFightRequestAction {
-         var action:GameRolePlayTaxCollectorFightRequestAction = new GameRolePlayTaxCollectorFightRequestAction();
-         action.taxCollectorId = pTaxCollectorId;
-         return action;
+      public function GameRolePlayTaxCollectorFightRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pTaxCollectorId:uint) : GameRolePlayTaxCollectorFightRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var taxCollectorId:uint;

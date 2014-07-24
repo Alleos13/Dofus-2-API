@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.guild
    public class GuildFactsRequestAction extends Object implements Action
    {
       
-      public function GuildFactsRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(guildId:uint) : GuildFactsRequestAction {
-         var action:GuildFactsRequestAction = new GuildFactsRequestAction();
-         action.guildId = guildId;
-         return action;
+      public function GuildFactsRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(guildId:uint) : GuildFactsRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var guildId:uint;

@@ -7,9 +7,13 @@ package com.ankamagames.jerakine.messages
    public class RegisteringFrame extends Object implements Frame
    {
       
-      public function RegisteringFrame() {
-         super();
-         this.initialize();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RegisteringFrame()
+      {
+         //Décompilation abandonné
       }
       
       private var _allowsRegistration:Boolean;
@@ -18,48 +22,39 @@ package com.ankamagames.jerakine.messages
       
       protected var _priority:int = 1;
       
-      public function get priority() : int {
-         return this._priority;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var handler:Function = this._registeredTypes[msg["constructor"]];
-         if(handler != null)
-         {
-            return handler(msg);
-         }
-         return false;
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      protected function registerMessages() : void {
-         throw new AbstractMethodCallError();
+      protected function registerMessages() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      protected function register(type:Class, handler:Function) : void {
-         if((!this._allowsRegistration) || (!type) || (this._registeredTypes[type]))
-         {
-            throw new IllegalOperationError();
-         }
-         else
-         {
-            this._registeredTypes[type] = handler;
-            return;
-         }
+      protected function register(type:Class, handler:Function) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function initialize() : void {
-         this._registeredTypes = new Dictionary();
-         this._allowsRegistration = true;
-         this.registerMessages();
-         this._allowsRegistration = false;
+      private function initialize() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

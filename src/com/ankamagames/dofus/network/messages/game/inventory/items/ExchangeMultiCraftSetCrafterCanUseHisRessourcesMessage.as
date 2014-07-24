@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
    public class ExchangeMultiCraftSetCrafterCanUseHisRessourcesMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeMultiCraftSetCrafterCanUseHisRessourcesMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeMultiCraftSetCrafterCanUseHisRessourcesMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6021;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var allow:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 6021;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeMultiCraftSetCrafterCanUseHisRessourcesMessage(allow:Boolean = false) : ExchangeMultiCraftSetCrafterCanUseHisRessourcesMessage {
-         this.allow = allow;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeMultiCraftSetCrafterCanUseHisRessourcesMessage(allow:Boolean = false) : ExchangeMultiCraftSetCrafterCanUseHisRessourcesMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.allow = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeMultiCraftSetCrafterCanUseHisRessourcesMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeMultiCraftSetCrafterCanUseHisRessourcesMessage(output:IDataOutput) : void {
-         output.writeBoolean(this.allow);
+      public function serializeAs_ExchangeMultiCraftSetCrafterCanUseHisRessourcesMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeMultiCraftSetCrafterCanUseHisRessourcesMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeMultiCraftSetCrafterCanUseHisRessourcesMessage(input:IDataInput) : void {
-         this.allow = input.readBoolean();
+      public function deserializeAs_ExchangeMultiCraftSetCrafterCanUseHisRessourcesMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -10,75 +10,52 @@ package com.ankamagames.berilia.components
    public class Tree extends Grid implements UIComponent
    {
       
-      public function Tree() {
-         super();
-         _sRendererName = getQualifiedClassName(TreeGridRenderer);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Tree()
+      {
+         //Décompilation abandonné
       }
       
       protected var _realDataProvider;
       
       protected var _treeDataProvider:Vector.<TreeData>;
       
-      override public function set rendererName(value:String) : void {
-         throw new IllegalOperationError("rendererName cannot be set");
+      override public function set rendererName(value:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function set dataProvider(data:*) : void {
-         this._realDataProvider = data;
-         this._treeDataProvider = TreeData.fromArray(data);
-         super.dataProvider = this.makeDataProvider(this._treeDataProvider);
+      override public function set dataProvider(data:*) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function get dataProvider() : * {
-         return this._realDataProvider;
+      override public function get dataProvider() : *
+      {
+         //Décompilation abandonné
       }
       
-      public function get treeRoot() : TreeData {
-         var treeRoot:TreeData = null;
-         if(_dataProvider.length > 0)
-         {
-            treeRoot = _dataProvider[0].parent;
-         }
-         return treeRoot;
+      public function get treeRoot() : TreeData
+      {
+         //Décompilation abandonné
       }
       
-      public function rerender() : void {
-         super.dataProvider = this.makeDataProvider(this._treeDataProvider);
+      public function rerender() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function expandItems(pItems:Array) : void {
-         var item:Object = null;
-         var treeData:TreeData = null;
-         if(!pItems)
-         {
-            return;
-         }
-         for each(item in pItems)
-         {
-            treeData = SecureCenter.unsecure(item) as TreeData;
-            if(treeData.children.length > 0)
-            {
-               treeData.expend = true;
-            }
-         }
-         this.rerender();
+      public function expandItems(pItems:Array) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function makeDataProvider(v:Vector.<TreeData>, result:Vector.<TreeData> = null) : Vector.<TreeData> {
-         var node:TreeData = null;
-         if(!result)
-         {
-            result = new Vector.<TreeData>();
-         }
-         for each(node in v)
-         {
-            result.push(node);
-            if(node.expend)
-            {
-               this.makeDataProvider(node.children,result);
-            }
-         }
-         return result;
+      private function makeDataProvider(v:Vector.<TreeData>, result:Vector.<TreeData> = null) : Vector.<TreeData>
+      {
+         //Décompilation abandonné
       }
    }
 }

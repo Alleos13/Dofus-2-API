@@ -9,22 +9,22 @@ package com.ankamagames.atouin.data.elements.subtypes
    public class BlendedGraphicalElementData extends NormalGraphicalElementData
    {
       
-      public function BlendedGraphicalElementData(elementId:int, elementType:int) {
-         super(elementId,elementType);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BlendedGraphicalElementData(elementId:int, elementType:int)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       public var blendMode:String;
       
-      override public function fromRaw(raw:IDataInput, version:int) : void {
-         super.fromRaw(raw,version);
-         var blendModeLength:uint = raw.readInt();
-         this.blendMode = raw.readUTFBytes(blendModeLength);
-         if(AtouinConstants.DEBUG_FILES_PARSING_ELEMENTS)
-         {
-            _log.debug("  (BlendedGraphicalElementData) BlendMode : " + this.blendMode);
-         }
+      override public function fromRaw(raw:IDataInput, version:int) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

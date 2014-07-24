@@ -7,30 +7,28 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class SubscribeItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function SubscribeItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         if((_criterionValue == 1) && (_operator.text == ItemCriterionOperator.EQUAL) || (_criterionValue == 0) && (_operator.text == ItemCriterionOperator.DIFFERENT))
-         {
-            return I18n.getUiText("ui.tooltip.beSubscirber");
-         }
-         return I18n.getUiText("ui.tooltip.dontBeSubscriber");
+      public function SubscribeItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:SubscribeItemCriterion = new SubscribeItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getCriterion() : int {
-         var timeRemaining:Number = PlayerManager.getInstance().subscriptionEndDate;
-         if((timeRemaining > 0) || (PlayerManager.getInstance().hasRights))
-         {
-            return 1;
-         }
-         return 0;
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getCriterion() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -22,9 +22,13 @@ package com.ankamagames.dofus.uiApi
    public class AlignmentApi extends Object implements IApi
    {
       
-      public function AlignmentApi() {
-         this._log = Log.getLogger(getQualifiedClassName(DataApi));
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AlignmentApi()
+      {
+         //Décompilation abandonné
       }
       
       protected var _log:Logger;
@@ -41,152 +45,134 @@ package com.ankamagames.dofus.uiApi
       
       private var include_mapPosition:MapPosition = null;
       
-      private function get allianceFrame() : AllianceFrame {
-         return Kernel.getWorker().getFrame(AllianceFrame) as AllianceFrame;
+      private function get allianceFrame() : AllianceFrame
+      {
+         //Décompilation abandonné
       }
       
-      private function get alignmentFrame() : AlignmentFrame {
-         return Kernel.getWorker().getFrame(AlignmentFrame) as AlignmentFrame;
+      private function get alignmentFrame() : AlignmentFrame
+      {
+         //Décompilation abandonné
       }
       
-      private function get roleplayEntitiesFrame() : RoleplayEntitiesFrame {
-         return Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame;
+      private function get roleplayEntitiesFrame() : RoleplayEntitiesFrame
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         this._orderRanks = null;
-         this._rankGifts = null;
-         this._sideOrders = null;
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getBalance(balanceId:uint) : AlignmentBalance {
-         return AlignmentBalance.getAlignmentBalanceById(balanceId);
+      public function getBalance(balanceId:uint) : AlignmentBalance
+      {
+         //Décompilation abandonné
       }
       
-      public function getBalances() : Array {
-         return AlignmentBalance.getAlignmentBalances();
+      public function getBalances() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getEffect(effectId:uint) : AlignmentEffect {
-         return AlignmentEffect.getAlignmentEffectById(effectId);
+      public function getEffect(effectId:uint) : AlignmentEffect
+      {
+         //Décompilation abandonné
       }
       
-      public function getGift(giftId:uint) : AlignmentGift {
-         return AlignmentGift.getAlignmentGiftById(giftId);
+      public function getGift(giftId:uint) : AlignmentGift
+      {
+         //Décompilation abandonné
       }
       
-      public function getGifts() : Array {
-         return AlignmentGift.getAlignmentGifts();
+      public function getGifts() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getRankGifts(rankId:uint) : AlignmentRankJntGift {
-         return AlignmentRankJntGift.getAlignmentRankJntGiftById(rankId);
+      public function getRankGifts(rankId:uint) : AlignmentRankJntGift
+      {
+         //Décompilation abandonné
       }
       
-      public function getGiftEffect(giftId:uint) : AlignmentEffect {
-         return this.getEffect(this.getGift(giftId).effectId);
+      public function getGiftEffect(giftId:uint) : AlignmentEffect
+      {
+         //Décompilation abandonné
       }
       
-      public function getOrder(orderId:uint) : AlignmentOrder {
-         return AlignmentOrder.getAlignmentOrderById(orderId);
+      public function getOrder(orderId:uint) : AlignmentOrder
+      {
+         //Décompilation abandonné
       }
       
-      public function getOrders() : Array {
-         return AlignmentOrder.getAlignmentOrders();
+      public function getOrders() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getRank(rankId:uint) : AlignmentRank {
-         return AlignmentRank.getAlignmentRankById(rankId);
+      public function getRank(rankId:uint) : AlignmentRank
+      {
+         //Décompilation abandonné
       }
       
-      public function getRanks() : Array {
-         return AlignmentRank.getAlignmentRanks();
+      public function getRanks() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getRankOrder(rankId:uint) : AlignmentOrder {
-         return this.getOrder(this.getRank(rankId).orderId);
+      public function getRankOrder(rankId:uint) : AlignmentOrder
+      {
+         //Décompilation abandonné
       }
       
-      public function getOrderRanks(orderId:uint) : Array {
-         var alignmentRank:AlignmentRank = null;
-         var listOrderRanks:Array = new Array();
-         var listRanks:Array = AlignmentRank.getAlignmentRanks();
-         var nRanks:int = listRanks.length;
-         var i:int = 0;
-         while(i < nRanks)
-         {
-            alignmentRank = listRanks[i];
-            if(alignmentRank)
-            {
-               if(alignmentRank.orderId == orderId)
-               {
-                  listOrderRanks.push(alignmentRank);
-               }
-            }
-            i++;
-         }
-         return listOrderRanks.sortOn("minimumAlignment",Array.NUMERIC);
+      public function getOrderRanks(orderId:uint) : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getSide(sideId:uint) : AlignmentSide {
-         return AlignmentSide.getAlignmentSideById(sideId);
+      public function getSide(sideId:uint) : AlignmentSide
+      {
+         //Décompilation abandonné
       }
       
-      public function getOrderSide(orderId:uint) : AlignmentSide {
-         return this.getSide(this.getOrder(orderId).sideId);
+      public function getOrderSide(orderId:uint) : AlignmentSide
+      {
+         //Décompilation abandonné
       }
       
-      public function getSideOrders(sideId:uint) : Array {
-         this._sideId = sideId;
-         AlignmentRank.getAlignmentRanks().forEach(this.filterOrdersBySide);
-         return this._sideOrders;
+      public function getSideOrders(sideId:uint) : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getTitleName(sideId:uint, grade:int) : String {
-         return AlignmentTitle.getAlignmentTitlesById(sideId).getNameFromGrade(grade);
+      public function getTitleName(sideId:uint, grade:int) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function getTitleShortName(sideId:uint, grade:int) : String {
-         return AlignmentTitle.getAlignmentTitlesById(sideId).getShortNameFromGrade(grade);
+      public function getTitleShortName(sideId:uint, grade:int) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function getPlayerRank() : int {
-         return this.alignmentFrame.playerRank;
+      public function getPlayerRank() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function getAlliancesOnTheHill() : Vector.<AllianceOnTheHillWrapper> {
-         return this.allianceFrame.alliancesOnTheHill;
+      public function getAlliancesOnTheHill() : Vector.<AllianceOnTheHillWrapper>
+      {
+         //Décompilation abandonné
       }
       
-      private function filterGiftsByRank(rankJntGift:*, index:int, rankJntGifts:Array) : void {
-         var giftsIds:Array = null;
-         var gifts:Array = null;
-         var giftId:* = 0;
-         var gift:* = undefined;
-         this._rankGifts = new Array();
-         if(rankJntGift.id == this._rankId)
-         {
-            giftsIds = rankJntGift.gifts;
-            gifts = AlignmentGift.getAlignmentGifts();
-            for each(giftId in giftsIds)
-            {
-               for each(gift in gifts)
-               {
-                  if(giftId == gift.id)
-                  {
-                     this._rankGifts.push(gift);
-                  }
-               }
-            }
-         }
+      private function filterGiftsByRank(rankJntGift:*, index:int, rankJntGifts:Array) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function filterOrdersBySide(order:*, index:int, orders:Array) : void {
-         this._sideOrders = new Array();
-         if(order.sideId == this._sideId)
-         {
-            this._sideOrders.push(order);
-         }
+      private function filterOrdersBySide(order:*, index:int, orders:Array) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

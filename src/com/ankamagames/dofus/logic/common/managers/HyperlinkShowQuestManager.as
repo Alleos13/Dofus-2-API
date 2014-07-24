@@ -13,43 +13,32 @@ package com.ankamagames.dofus.logic.common.managers
    public class HyperlinkShowQuestManager extends Object
    {
       
-      public function HyperlinkShowQuestManager() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HyperlinkShowQuestManager()
+      {
+         //Décompilation abandonné
       }
       
       private static var _questList:Array;
       
       private static var _questId:uint = 0;
       
-      public static function showQuest(questId:uint) : void {
-         var data:Object = null;
-         var quest:Quest = Quest.getQuestById(_questList[questId].id);
-         if(quest)
-         {
-            data = new Object();
-            data.quest = quest;
-            data.forceOpen = true;
-            KernelEventsManager.getInstance().processCallback(HookList.OpenBook,"questTab",data);
-         }
+      public static function showQuest(questId:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function addQuest(questId:uint) : String {
-         var code:String = null;
-         var quest:Quest = Quest.getQuestById(questId);
-         if(quest)
-         {
-            _questList[_questId] = quest;
-            code = "{chatquest," + _questId + "::[" + quest.name + "]}";
-            _questId++;
-            return code;
-         }
-         return "[null]";
+      public static function addQuest(questId:uint) : String
+      {
+         //Décompilation abandonné
       }
       
-      public static function rollOver(pX:int, pY:int, objectGID:uint, questId:uint = 0) : void {
-         var target:Rectangle = new Rectangle(pX,pY,10,10);
-         var info:TextTooltipInfo = new TextTooltipInfo(I18n.getUiText("ui.tooltip.chat.quest"));
-         TooltipManager.show(info,target,UiModuleManager.getInstance().getModule("Ankama_GameUiCore"),false,"HyperLink",6,2,3,true,null,null,null,null,false,StrataEnum.STRATA_TOOLTIP,1);
+      public static function rollOver(pX:int, pY:int, objectGID:uint, questId:uint = 0) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

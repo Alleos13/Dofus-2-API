@@ -3,10 +3,13 @@ package flashx.textLayout.conversion
    public class TLFormatImporter extends Object implements IFormatImporter
    {
       
-      public function TLFormatImporter(param1:Class, param2:Object) {
-         super();
-         this._classType = param1;
-         this._description = param2;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TLFormatImporter(classType:Class, description:Object)
+      {
+         //Décompilation abandonné
       }
       
       private var _classType:Class;
@@ -15,29 +18,24 @@ package flashx.textLayout.conversion
       
       private var _rslt:Object;
       
-      public function get classType() : Class {
-         return this._classType;
+      public function get classType() : Class
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this._rslt = null;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get result() : Object {
-         return this._rslt;
+      public function get result() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function importOneFormat(param1:String, param2:String) : Boolean {
-         if(this._description.hasOwnProperty(param1))
-         {
-            if(this._rslt == null)
-            {
-               this._rslt = new this._classType();
-            }
-            this._rslt[param1] = this._description[param1].setHelper(undefined,param2);
-            return true;
-         }
-         return false;
+      public function importOneFormat(key:String, val:String) : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

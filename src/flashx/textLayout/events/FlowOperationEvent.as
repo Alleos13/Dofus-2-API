@@ -6,11 +6,13 @@ package flashx.textLayout.events
    public class FlowOperationEvent extends Event
    {
       
-      public function FlowOperationEvent(param1:String, param2:Boolean=false, param3:Boolean=false, param4:FlowOperation=null, param5:int=0, param6:Error=null) {
-         this._op = param4;
-         this._e = param6;
-         this._level = param5;
-         super(param1,param2,param3);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FlowOperationEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, operation:FlowOperation = null, level:int = 0, error:Error = null)
+      {
+         //Décompilation abandonné
       }
       
       public static const FLOW_OPERATION_BEGIN:String = "flowOperationBegin";
@@ -25,32 +27,39 @@ package flashx.textLayout.events
       
       private var _level:int;
       
-      public function get operation() : FlowOperation {
-         return this._op;
+      public function get operation() : FlowOperation
+      {
+         //Décompilation abandonné
       }
       
-      public function set operation(param1:FlowOperation) : void {
-         this._op = param1;
+      public function set operation(value:FlowOperation) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get error() : Error {
-         return this._e;
+      public function get error() : Error
+      {
+         //Décompilation abandonné
       }
       
-      public function set error(param1:Error) : void {
-         this._e = param1;
+      public function set error(value:Error) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get level() : int {
-         return this._level;
+      public function get level() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set level(param1:int) : void {
-         this._level = param1;
+      public function set level(value:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : Event {
-         return new FlowOperationEvent(type,bubbles,cancelable,this._op,this._level,this._e);
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -6,45 +6,28 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class MariedItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function MariedItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         var readableCriterion:String = "";
-         switch(_operator.text)
-         {
-            case ItemCriterionOperator.EQUAL:
-               if(_criterionValue == 1)
-               {
-                  readableCriterion = I18n.getUiText("ui.tooltip.beMaried");
-               }
-               else
-               {
-                  readableCriterion = I18n.getUiText("ui.tooltip.beSingle");
-               }
-               break;
-            case ItemCriterionOperator.DIFFERENT:
-               if(_criterionValue == 2)
-               {
-                  readableCriterion = I18n.getUiText("ui.tooltip.beMaried");
-               }
-               else
-               {
-                  readableCriterion = I18n.getUiText("ui.tooltip.beSingle");
-               }
-               break;
-         }
-         return readableCriterion;
+      public function MariedItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:MariedItemCriterion = new MariedItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getCriterion() : int {
-         return 0;
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getCriterion() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -6,14 +6,20 @@ package com.ankamagames.dofus.datacenter.world
    public class Phoenix extends Object implements IDataCenter
    {
       
-      public function Phoenix() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Phoenix()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Phoenixes";
       
-      public static function getAllPhoenixes() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAllPhoenixes() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var mapId:uint;

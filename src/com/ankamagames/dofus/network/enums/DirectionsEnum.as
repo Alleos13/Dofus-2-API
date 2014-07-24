@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class DirectionsEnum extends Object
    {
       
-      public function DirectionsEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DirectionsEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const DIRECTION_EAST:uint = 0;

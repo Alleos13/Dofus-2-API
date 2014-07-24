@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.roleplay
    public class SwitchCreatureModeAction extends Object implements Action
    {
       
-      public function SwitchCreatureModeAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pActivated:Boolean = false) : SwitchCreatureModeAction {
-         var a:SwitchCreatureModeAction = new SwitchCreatureModeAction();
-         a.isActivated = pActivated;
-         return a;
+      public function SwitchCreatureModeAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pActivated:Boolean = false) : SwitchCreatureModeAction
+      {
+         //Décompilation abandonné
       }
       
       public var isActivated:Boolean;

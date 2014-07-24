@@ -5,16 +5,13 @@ package com.ankamagames.atouin.entities.behaviours.movements
    public class SlideMovementBehavior extends AnimatedMovementBehavior
    {
       
-      public function SlideMovementBehavior() {
-         super();
-         if(_self)
-         {
-            throw new SingletonError("Warning : SlideMovementBehavior is a singleton class and shoulnd\'t be instancied directly!");
-         }
-         else
-         {
-            return;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SlideMovementBehavior()
+      {
+         //Décompilation abandonné
       }
       
       private static const RUN_LINEAR_VELOCITY:Number = 0.01764705882352941;
@@ -27,32 +24,34 @@ package com.ankamagames.atouin.entities.behaviours.movements
       
       private static var _self:SlideMovementBehavior;
       
-      public static function getInstance() : SlideMovementBehavior {
-         if(!_self)
-         {
-            _self = new SlideMovementBehavior();
-         }
-         return _self;
+      public static function getInstance() : SlideMovementBehavior
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getLinearVelocity() : Number {
-         return RUN_LINEAR_VELOCITY;
+      override protected function getLinearVelocity() : Number
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getHorizontalDiagonalVelocity() : Number {
-         return RUN_HORIZONTAL_DIAGONAL_VELOCITY;
+      override protected function getHorizontalDiagonalVelocity() : Number
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getVerticalDiagonalVelocity() : Number {
-         return RUN_VERTICAL_DIAGONAL_VELOCITY;
+      override protected function getVerticalDiagonalVelocity() : Number
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getAnimation() : String {
-         return null;
+      override protected function getAnimation() : String
+      {
+         //Décompilation abandonné
       }
       
-      override protected function mustChangeOrientation() : Boolean {
-         return false;
+      override protected function mustChangeOrientation() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

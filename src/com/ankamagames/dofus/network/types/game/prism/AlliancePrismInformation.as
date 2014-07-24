@@ -8,47 +8,52 @@ package com.ankamagames.dofus.network.types.game.prism
    public class AlliancePrismInformation extends PrismInformation implements INetworkType
    {
       
-      public function AlliancePrismInformation() {
-         this.alliance = new AllianceInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AlliancePrismInformation()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 427;
       
       public var alliance:AllianceInformations;
       
-      override public function getTypeId() : uint {
-         return 427;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initAlliancePrismInformation(typeId:uint = 0, state:uint = 1, nextVulnerabilityDate:uint = 0, placementDate:uint = 0, rewardTokenCount:uint = 0, alliance:AllianceInformations = null) : AlliancePrismInformation {
-         super.initPrismInformation(typeId,state,nextVulnerabilityDate,placementDate,rewardTokenCount);
-         this.alliance = alliance;
-         return this;
+      public function initAlliancePrismInformation(typeId:uint = 0, state:uint = 1, nextVulnerabilityDate:uint = 0, placementDate:uint = 0, rewardTokenCount:uint = 0, alliance:AllianceInformations = null) : AlliancePrismInformation
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.alliance = new AllianceInformations();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AlliancePrismInformation(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_AlliancePrismInformation(output:IDataOutput) : void {
-         super.serializeAs_PrismInformation(output);
-         this.alliance.serializeAs_AllianceInformations(output);
+      public function serializeAs_AlliancePrismInformation(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AlliancePrismInformation(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_AlliancePrismInformation(input:IDataInput) : void {
-         super.deserialize(input);
-         this.alliance = new AllianceInformations();
-         this.alliance.deserialize(input);
+      public function deserializeAs_AlliancePrismInformation(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

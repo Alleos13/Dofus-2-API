@@ -7,20 +7,25 @@ package com.ankamagames.jerakine.types
    public class DefaultableColor extends Color implements IExternalizable
    {
       
-      public function DefaultableColor(c:uint = 0) {
-         super(c);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DefaultableColor(c:uint = 0)
+      {
+         //Décompilation abandonné
       }
       
       public var isDefault:Boolean = false;
       
-      override public function writeExternal(output:IDataOutput) : void {
-         super.writeExternal(output);
-         output.writeBoolean(this.isDefault);
+      override public function writeExternal(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function readExternal(input:IDataInput) : void {
-         super.readExternal(input);
-         this.isDefault = input.readBoolean();
+      override public function readExternal(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

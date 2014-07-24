@@ -7,18 +7,25 @@ package com.ankamagames.dofus.datacenter.mounts
    public class Mount extends Object implements IDataCenter
    {
       
-      public function Mount() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Mount()
+      {
+         //Décompilation abandonné
       }
       
       private static var MODULE:String = "Mounts";
       
-      public static function getMountById(id:uint) : Mount {
-         return GameData.getObject(MODULE,id) as Mount;
+      public static function getMountById(id:uint) : Mount
+      {
+         //Décompilation abandonné
       }
       
-      public static function getMounts() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getMounts() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;
@@ -29,12 +36,9 @@ package com.ankamagames.dofus.datacenter.mounts
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

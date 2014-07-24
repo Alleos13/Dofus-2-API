@@ -13,9 +13,13 @@ package com.ankamagames.jerakine.types
    public class CustomSharedObject extends Object
    {
       
-      public function CustomSharedObject() {
-         this.data = new Object();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CustomSharedObject()
+      {
+         //Décompilation abandonné
       }
       
       public static const DATAFILE_EXTENSION:String = "dat";
@@ -28,60 +32,19 @@ package com.ankamagames.jerakine.types
       
       public static var throwException:Boolean;
       
-      public static function getLocal(name:String) : CustomSharedObject {
-         if(_cache[name])
-         {
-            return _cache[name];
-         }
-         if(!COMMON_FOLDER)
-         {
-            COMMON_FOLDER = getCustomSharedObjectDirectory();
-         }
-         var cso:CustomSharedObject = new CustomSharedObject();
-         cso._name = name;
-         cso.getDataFromFile();
-         _cache[name] = cso;
-         return cso;
+      public static function getLocal(name:String) : CustomSharedObject
+      {
+         //Décompilation abandonné
       }
       
-      public static function getCustomSharedObjectDirectory() : String {
-         var tmp:Array = null;
-         var dir:File = null;
-         var tmp2:Array = null;
-         if(!COMMON_FOLDER)
-         {
-            tmp = File.applicationDirectory.nativePath.split(File.separator);
-            if(AirScanner.hasAir())
-            {
-               tmp2 = File.applicationStorageDirectory.nativePath.split(File.separator);
-               tmp2.pop();
-               tmp2.pop();
-               COMMON_FOLDER = tmp2.join(File.separator) + File.separator + tmp[tmp.length - 2];
-            }
-            else
-            {
-               COMMON_FOLDER = File.applicationStorageDirectory.nativePath;
-            }
-            COMMON_FOLDER = COMMON_FOLDER + File.separator;
-            dir = new File(COMMON_FOLDER);
-            if(!dir.exists)
-            {
-               dir.createDirectory();
-            }
-         }
-         return COMMON_FOLDER;
+      public static function getCustomSharedObjectDirectory() : String
+      {
+         //Décompilation abandonné
       }
       
-      public static function closeAll() : void {
-         var cso:CustomSharedObject = null;
-         for each(cso in _cache)
-         {
-            if(cso)
-            {
-               cso.data = null;
-            }
-         }
-         _cache = [];
+      public static function closeAll() : void
+      {
+         //Décompilation abandonné
       }
       
       private var _name:String;
@@ -94,72 +57,29 @@ package com.ankamagames.jerakine.types
       
       public var objectEncoding:uint;
       
-      public function flush() : void {
-         this.writeData(this.data);
+      public function flush() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function clear() : void {
-         this.writeData(new Object());
+      public function clear() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function close() : void {
+      public function close() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function writeData(data:*) : Boolean {
-         try
-         {
-            this._fileStream.open(this._file,FileMode.WRITE);
-            this._fileStream.writeObject(data);
-            this._fileStream.close();
-         }
-         catch(e:Error)
-         {
-            if(_fileStream)
-            {
-               _fileStream.close();
-            }
-            _log.error("Impossible d\'écrire le fichier " + _file.url);
-            return false;
-         }
-         return true;
+      private function writeData(data:*) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function getDataFromFile() : void {
-         if(!this._file)
-         {
-            this._file = new File(COMMON_FOLDER + this._name + "." + DATAFILE_EXTENSION);
-            this._fileStream = new FileStream();
-         }
-         if(this._file.exists)
-         {
-            try
-            {
-               this._fileStream.objectEncoding = ObjectEncoding.AMF3;
-               this._fileStream.open(this._file,FileMode.READ);
-               this.data = this._fileStream.readObject();
-               if(!this.data)
-               {
-                  this.data = new Object();
-               }
-               this._fileStream.close();
-            }
-            catch(e:Error)
-            {
-               if(_fileStream)
-               {
-                  _fileStream.close();
-               }
-               _log.error("Impossible d\'ouvrir le fichier " + _file.url);
-               if(throwException)
-               {
-                  throw new CustomSharedObjectFileFormatError("Malformated file : " + _file.url);
-               }
-            }
-         }
-         else
-         {
-            this.data = new Object();
-         }
+      private function getDataFromFile() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.fight.actions
    public class ShowAllNamesAction extends Object implements Action
    {
       
-      public function ShowAllNamesAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : ShowAllNamesAction {
-         var a:ShowAllNamesAction = new ShowAllNamesAction();
-         return a;
+      public function ShowAllNamesAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : ShowAllNamesAction
+      {
+         //Décompilation abandonné
       }
    }
 }

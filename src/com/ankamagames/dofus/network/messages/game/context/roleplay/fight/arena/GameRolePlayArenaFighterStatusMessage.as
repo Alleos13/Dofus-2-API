@@ -9,16 +9,22 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.fight.arena
    public class GameRolePlayArenaFighterStatusMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameRolePlayArenaFighterStatusMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameRolePlayArenaFighterStatusMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6281;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var fightId:int = 0;
@@ -27,69 +33,49 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.fight.arena
       
       public var accepted:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 6281;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameRolePlayArenaFighterStatusMessage(fightId:int = 0, playerId:uint = 0, accepted:Boolean = false) : GameRolePlayArenaFighterStatusMessage {
-         this.fightId = fightId;
-         this.playerId = playerId;
-         this.accepted = accepted;
-         this._isInitialized = true;
-         return this;
+      public function initGameRolePlayArenaFighterStatusMessage(fightId:int = 0, playerId:uint = 0, accepted:Boolean = false) : GameRolePlayArenaFighterStatusMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.fightId = 0;
-         this.playerId = 0;
-         this.accepted = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameRolePlayArenaFighterStatusMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayArenaFighterStatusMessage(output:IDataOutput) : void {
-         output.writeInt(this.fightId);
-         if(this.playerId < 0)
-         {
-            throw new Error("Forbidden value (" + this.playerId + ") on element playerId.");
-         }
-         else
-         {
-            output.writeInt(this.playerId);
-            output.writeBoolean(this.accepted);
-            return;
-         }
+      public function serializeAs_GameRolePlayArenaFighterStatusMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameRolePlayArenaFighterStatusMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayArenaFighterStatusMessage(input:IDataInput) : void {
-         this.fightId = input.readInt();
-         this.playerId = input.readInt();
-         if(this.playerId < 0)
-         {
-            throw new Error("Forbidden value (" + this.playerId + ") on element of GameRolePlayArenaFighterStatusMessage.playerId.");
-         }
-         else
-         {
-            this.accepted = input.readBoolean();
-            return;
-         }
+      public function deserializeAs_GameRolePlayArenaFighterStatusMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

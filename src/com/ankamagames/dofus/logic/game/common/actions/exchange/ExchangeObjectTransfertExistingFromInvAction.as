@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.exchange
    public class ExchangeObjectTransfertExistingFromInvAction extends Object implements Action
    {
       
-      public function ExchangeObjectTransfertExistingFromInvAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : ExchangeObjectTransfertExistingFromInvAction {
-         return new ExchangeObjectTransfertExistingFromInvAction();
+      public function ExchangeObjectTransfertExistingFromInvAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : ExchangeObjectTransfertExistingFromInvAction
+      {
+         //Décompilation abandonné
       }
    }
 }

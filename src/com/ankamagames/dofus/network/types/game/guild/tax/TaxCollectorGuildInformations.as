@@ -8,45 +8,52 @@ package com.ankamagames.dofus.network.types.game.guild.tax
    public class TaxCollectorGuildInformations extends TaxCollectorComplementaryInformations implements INetworkType
    {
       
-      public function TaxCollectorGuildInformations() {
-         this.guild = new BasicGuildInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TaxCollectorGuildInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 446;
       
       public var guild:BasicGuildInformations;
       
-      override public function getTypeId() : uint {
-         return 446;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initTaxCollectorGuildInformations(guild:BasicGuildInformations = null) : TaxCollectorGuildInformations {
-         this.guild = guild;
-         return this;
+      public function initTaxCollectorGuildInformations(guild:BasicGuildInformations = null) : TaxCollectorGuildInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.guild = new BasicGuildInformations();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TaxCollectorGuildInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_TaxCollectorGuildInformations(output:IDataOutput) : void {
-         super.serializeAs_TaxCollectorComplementaryInformations(output);
-         this.guild.serializeAs_BasicGuildInformations(output);
+      public function serializeAs_TaxCollectorGuildInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TaxCollectorGuildInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_TaxCollectorGuildInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.guild = new BasicGuildInformations();
-         this.guild.deserialize(input);
+      public function deserializeAs_TaxCollectorGuildInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

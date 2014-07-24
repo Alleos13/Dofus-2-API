@@ -3,10 +3,14 @@ package com.ankamagames.jerakine.console
    public interface ConsoleInstructionHandler
    {
       
-      function handle(param1:ConsoleHandler, param2:String, param3:Array) : void;
+      {
+      //Décompilation abandonné
+      }
       
-      function getHelp(param1:String) : String;
+      function handle(console:ConsoleHandler, cmd:String, args:Array) : void;
       
-      function getParamPossibilities(param1:String, param2:uint = 0, param3:Array = null) : Array;
+      function getHelp(cmd:String) : String;
+      
+      function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array;
    }
 }

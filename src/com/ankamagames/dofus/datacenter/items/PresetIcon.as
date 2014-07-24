@@ -6,18 +6,25 @@ package com.ankamagames.dofus.datacenter.items
    public class PresetIcon extends Object implements IDataCenter
    {
       
-      public function PresetIcon() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PresetIcon()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "PresetIcons";
       
-      public static function getPresetIconById(id:int) : PresetIcon {
-         return GameData.getObject(MODULE,id) as PresetIcon;
+      public static function getPresetIconById(id:int) : PresetIcon
+      {
+         //Décompilation abandonné
       }
       
-      public static function getPresetIcons() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getPresetIcons() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;

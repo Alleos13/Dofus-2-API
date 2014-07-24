@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.enum
    public class ColorGenerationMethodsEnum extends Object
    {
       
-      public function ColorGenerationMethodsEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ColorGenerationMethodsEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const MONOCHROME:uint = 0;

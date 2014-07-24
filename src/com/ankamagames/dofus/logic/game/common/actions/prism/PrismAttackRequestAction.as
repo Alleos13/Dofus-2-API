@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.prism
    public class PrismAttackRequestAction extends Object implements Action
    {
       
-      public function PrismAttackRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : PrismAttackRequestAction {
-         var action:PrismAttackRequestAction = new PrismAttackRequestAction();
-         return action;
+      public function PrismAttackRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : PrismAttackRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

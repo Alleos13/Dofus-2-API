@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context
    public class GameContextRemoveElementMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameContextRemoveElementMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameContextRemoveElementMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 251;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var id:int = 0;
       
-      override public function getMessageId() : uint {
-         return 251;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameContextRemoveElementMessage(id:int = 0) : GameContextRemoveElementMessage {
-         this.id = id;
-         this._isInitialized = true;
-         return this;
+      public function initGameContextRemoveElementMessage(id:int = 0) : GameContextRemoveElementMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.id = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameContextRemoveElementMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameContextRemoveElementMessage(output:IDataOutput) : void {
-         output.writeInt(this.id);
+      public function serializeAs_GameContextRemoveElementMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameContextRemoveElementMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameContextRemoveElementMessage(input:IDataInput) : void {
-         this.id = input.readInt();
+      public function deserializeAs_GameContextRemoveElementMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

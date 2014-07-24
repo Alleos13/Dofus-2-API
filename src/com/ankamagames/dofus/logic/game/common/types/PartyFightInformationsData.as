@@ -5,16 +5,13 @@ package com.ankamagames.dofus.logic.game.common.types
    public class PartyFightInformationsData extends Object
    {
       
-      public function PartyFightInformationsData(fightMapId:int, fightId:int, memberName:String, memberId:int, timeBeforeStart:uint) {
-         super();
-         this._fightMapId = fightMapId;
-         this._fightId = fightId;
-         this._memberName = memberName;
-         this._timeBeforeStart = timeBeforeStart;
-         this._timeUntilFightbegin = new Timer(this._timeBeforeStart,1);
-         this._memberId = memberId;
-         var currentDate:Date = new Date();
-         this._fightStartDate = currentDate.getTime() + this._timeBeforeStart as Number;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PartyFightInformationsData(fightMapId:int, fightId:int, memberName:String, memberId:int, timeBeforeStart:uint)
+      {
+         //Décompilation abandonné
       }
       
       private var _fightMapId:int;
@@ -31,52 +28,64 @@ package com.ankamagames.dofus.logic.game.common.types
       
       private var _fightStartDate:Number;
       
-      public function get fightMapId() : int {
-         return this._fightMapId;
+      public function get fightMapId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set fightMapId(value:int) : void {
-         this._fightMapId = value;
+      public function set fightMapId(value:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get fightId() : int {
-         return this._fightId;
+      public function get fightId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set fightId(value:int) : void {
-         this._fightId = value;
+      public function set fightId(value:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get timeUntilFightbegin() : Timer {
-         return this._timeUntilFightbegin;
+      public function get timeUntilFightbegin() : Timer
+      {
+         //Décompilation abandonné
       }
       
-      public function set timeUntilFightbegin(value:Timer) : void {
-         this._timeUntilFightbegin = value;
+      public function set timeUntilFightbegin(value:Timer) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get memberName() : String {
-         return this._memberName;
+      public function get memberName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function set memberName(value:String) : void {
-         this._memberName = value;
+      public function set memberName(value:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get timeBeforeStart() : uint {
-         return this._timeBeforeStart;
+      public function get timeBeforeStart() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set timeBeforeStart(value:uint) : void {
-         this._timeBeforeStart = value;
+      public function set timeBeforeStart(value:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get fightStartDate() : uint {
-         return this._fightStartDate;
+      public function get fightStartDate() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get memberId() : int {
-         return this._memberId;
+      public function get memberId() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.social
    public class EnemiesListRequestAction extends Object implements Action
    {
       
-      public function EnemiesListRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : EnemiesListRequestAction {
-         var a:EnemiesListRequestAction = new EnemiesListRequestAction();
-         return a;
+      public function EnemiesListRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : EnemiesListRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

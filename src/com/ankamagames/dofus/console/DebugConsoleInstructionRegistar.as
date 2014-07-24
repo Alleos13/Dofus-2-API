@@ -34,39 +34,18 @@ package com.ankamagames.dofus.console
    public class DebugConsoleInstructionRegistar extends Object implements ConsoleInstructionRegistar
    {
       
-      public function DebugConsoleInstructionRegistar() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function registerInstructions(console:ConsoleHandler) : void {
-         console.addHandler("version",new VersionInstructionHandler());
-         console.addHandler(["crc32","md5"],new CryptoInstructionHandler());
-         console.addHandler(["displaymap","displaymapdebug","getmapcoord","getmapid","testatouin","mapid","showcellid","playerjump","showtransitions","groundcache"],new DisplayMapInstructionHandler());
-         console.addHandler(["clearscene","clearentities"],new ClearSceneInstructionHandler());
-         console.addHandler(["inspector","uiinspector","inspectuielement","inspectuielementsos","modulelist","loadui","unloadui","clearuicache","setuiscale","useuicache","uilist","reloadui","fps","getmoduleinfo","chatoutput"],new UiHandlerInstructionHandler());
-         console.addHandler(["dtd","componentdtd","shortcutsdtd","kerneleventdtd"],new DtdInstructionHandler());
-         console.addHandler("cleartexturecache",new ClearTextureCacheInstructionHandler());
-         console.addHandler(["connectionstatus","inspecttraffic"],new ConnectionInstructionHandler());
-         console.addHandler(["panic","throw"],new PanicInstructionHandler());
-         console.addHandler("fullscreen",new FullScreenInstructionHandler());
-         console.addHandler("reset",new ResetInstructionHandler());
-         console.addHandler("enterframecount",new EnterFrameInstructionHandler());
-         console.addHandler(["savereplaylog","parallelsequenceteststart","log","i18nsize","newdofus","clear","config","clearwebcache","geteventmodeparams","setquality","lowdefskin","copylog","synchrosequence","throw","debugmouseover","idletime","setmonsterspeed"],new MiscInstructionHandler());
-         console.addHandler(["additem","looklike"],new TiphonInstructionHandler());
-         console.addHandler(["listinventory","searchitem","makeinventory"],new InventoryInstructionHandler());
-         console.addHandler(["enablelogs","info","search","searchmonster","searchspell","enablereport","savereport","loadpacket","reccordpacket"],new UtilInstructionHandler());
-         console.addHandler("jptest",new FontInstructionHandler());
-         console.addHandler(["aping","ping"],new LatencyInstructionHandler());
-         console.addHandler(["framelist","framepriority"],new FrameInstructionHandler());
-         console.addHandler(["addmovingcharacter","setanimation","setdirection","memorylog","bot-spectator","bot-fight","tiphon-error","fpsmanager","fastanimfun","tacticmode"],new BenchmarkInstructionHandler());
-         console.addHandler(["sendaction","listactions","sendhook"],new ActionsInstructionHandler());
-         console.addHandler(["debuglos","tracepath","debugcellsinline"],new IAInstructionHandler());
-         console.addHandler(["setspellscriptparam","setspellscript"],new FightInstructionHandler());
-         console.addHandler(["playmusic","stopmusic","playambiance","stopambiance","addsoundinplaylist","stopplaylist","playplaylist","activesounds","adduisoundelement"],new SoundInstructionHandler());
-         console.addHandler(["floodlivingobject"],new LivingObjectInstructionHandler());
-         console.addHandler(["partdebug","partlist","partinfo","updaterspeed","downloadpart"],new UpdaterInstructionHandler());
-         console.addHandler(["getuid"],new SystemInstructionHandler());
-         console.addHandler(["lua","luarecorder"],new LuaInstructionHandler());
+      public function DebugConsoleInstructionRegistar()
+      {
+         //Décompilation abandonné
+      }
+      
+      public function registerInstructions(console:ConsoleHandler) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

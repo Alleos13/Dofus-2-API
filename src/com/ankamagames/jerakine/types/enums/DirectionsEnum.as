@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.types.enums
    public class DirectionsEnum extends Object
    {
       
-      public function DirectionsEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DirectionsEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const RIGHT:int = 0;

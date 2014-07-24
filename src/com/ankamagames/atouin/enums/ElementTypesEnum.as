@@ -3,8 +3,13 @@ package com.ankamagames.atouin.enums
    public class ElementTypesEnum extends Object
    {
       
-      public function ElementTypesEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ElementTypesEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const GRAPHICAL:int = 2;

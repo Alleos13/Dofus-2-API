@@ -20,8 +20,13 @@ package com.ankamagames.dofus.misc.lists
    public class ApiMountActionList extends Object
    {
       
-      public function ApiMountActionList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ApiMountActionList()
+      {
+         //Décompilation abandonné
       }
       
       public static const MountToggleRidingRequest:DofusApiAction;

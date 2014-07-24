@@ -5,7 +5,11 @@ package com.ankamagames.dofus.logic.game.common.misc
    public interface IHookLock
    {
       
-      function addHook(param1:Hook, param2:Array) : void;
+      {
+      //Décompilation abandonné
+      }
+      
+      function addHook(hook:Hook, args:Array) : void;
       
       function release() : void;
    }

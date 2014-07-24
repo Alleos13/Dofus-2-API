@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class OpenMountAction extends Object implements Action
    {
       
-      public function OpenMountAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : OpenMountAction {
-         return new OpenMountAction();
+      public function OpenMountAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : OpenMountAction
+      {
+         //Décompilation abandonné
       }
    }
 }

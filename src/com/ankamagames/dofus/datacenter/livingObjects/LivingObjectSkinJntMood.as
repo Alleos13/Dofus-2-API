@@ -9,26 +9,27 @@ package com.ankamagames.dofus.datacenter.livingObjects
    public class LivingObjectSkinJntMood extends Object implements IDataCenter
    {
       
-      public function LivingObjectSkinJntMood() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LivingObjectSkinJntMood()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "LivingObjectSkinJntMood";
       
       protected static const _log:Logger;
       
-      public static function getLivingObjectSkin(objectId:int, moodId:int, skinId:int) : int {
-         var losjm:LivingObjectSkinJntMood = GameData.getObject(MODULE,objectId) as LivingObjectSkinJntMood;
-         if((!losjm) || (!losjm.moods[moodId]))
-         {
-            return 0;
-         }
-         var ve:Vector.<int> = losjm.moods[moodId] as Vector.<int>;
-         return ve[Math.max(0,skinId - 1)];
+      public static function getLivingObjectSkin(objectId:int, moodId:int, skinId:int) : int
+      {
+         //Décompilation abandonné
       }
       
-      public static function getLivingObjectSkins() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getLivingObjectSkins() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var skinId:int;

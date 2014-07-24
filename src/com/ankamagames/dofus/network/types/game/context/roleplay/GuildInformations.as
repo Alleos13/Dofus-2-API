@@ -8,47 +8,52 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
    public class GuildInformations extends BasicGuildInformations implements INetworkType
    {
       
-      public function GuildInformations() {
-         this.guildEmblem = new GuildEmblem();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 127;
       
       public var guildEmblem:GuildEmblem;
       
-      override public function getTypeId() : uint {
-         return 127;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGuildInformations(guildId:uint = 0, guildName:String = "", guildEmblem:GuildEmblem = null) : GuildInformations {
-         super.initBasicGuildInformations(guildId,guildName);
-         this.guildEmblem = guildEmblem;
-         return this;
+      public function initGuildInformations(guildId:uint = 0, guildName:String = "", guildEmblem:GuildEmblem = null) : GuildInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.guildEmblem = new GuildEmblem();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GuildInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GuildInformations(output:IDataOutput) : void {
-         super.serializeAs_BasicGuildInformations(output);
-         this.guildEmblem.serializeAs_GuildEmblem(output);
+      public function serializeAs_GuildInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GuildInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.guildEmblem = new GuildEmblem();
-         this.guildEmblem.deserialize(input);
+      public function deserializeAs_GuildInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

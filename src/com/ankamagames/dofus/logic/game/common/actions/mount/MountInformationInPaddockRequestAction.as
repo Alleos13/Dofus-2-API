@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.mount
    public class MountInformationInPaddockRequestAction extends Object implements Action
    {
       
-      public function MountInformationInPaddockRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(mountId:uint) : MountInformationInPaddockRequestAction {
-         var act:MountInformationInPaddockRequestAction = new MountInformationInPaddockRequestAction();
-         act.mountId = mountId;
-         return act;
+      public function MountInformationInPaddockRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(mountId:uint) : MountInformationInPaddockRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var mountId:uint;

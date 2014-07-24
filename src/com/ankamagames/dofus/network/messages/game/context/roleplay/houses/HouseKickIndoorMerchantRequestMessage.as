@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.houses
    public class HouseKickIndoorMerchantRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function HouseKickIndoorMerchantRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HouseKickIndoorMerchantRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5661;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var cellId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5661;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initHouseKickIndoorMerchantRequestMessage(cellId:uint = 0) : HouseKickIndoorMerchantRequestMessage {
-         this.cellId = cellId;
-         this._isInitialized = true;
-         return this;
+      public function initHouseKickIndoorMerchantRequestMessage(cellId:uint = 0) : HouseKickIndoorMerchantRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.cellId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_HouseKickIndoorMerchantRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_HouseKickIndoorMerchantRequestMessage(output:IDataOutput) : void {
-         if((this.cellId < 0) || (this.cellId > 559))
-         {
-            throw new Error("Forbidden value (" + this.cellId + ") on element cellId.");
-         }
-         else
-         {
-            output.writeShort(this.cellId);
-            return;
-         }
+      public function serializeAs_HouseKickIndoorMerchantRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_HouseKickIndoorMerchantRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_HouseKickIndoorMerchantRequestMessage(input:IDataInput) : void {
-         this.cellId = input.readShort();
-         if((this.cellId < 0) || (this.cellId > 559))
-         {
-            throw new Error("Forbidden value (" + this.cellId + ") on element of HouseKickIndoorMerchantRequestMessage.cellId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_HouseKickIndoorMerchantRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

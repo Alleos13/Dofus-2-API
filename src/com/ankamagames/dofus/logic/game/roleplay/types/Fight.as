@@ -7,10 +7,13 @@ package com.ankamagames.dofus.logic.game.roleplay.types
    public class Fight extends Object
    {
       
-      public function Fight(fightId:uint, teams:Vector.<FightTeam>) {
-         super();
-         this.fightId = fightId;
-         this.teams = teams;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Fight(fightId:uint, teams:Vector.<FightTeam>)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -19,28 +22,14 @@ package com.ankamagames.dofus.logic.game.roleplay.types
       
       public var teams:Vector.<FightTeam>;
       
-      public function getTeamByType(teamType:uint) : FightTeam {
-         var team:FightTeam = null;
-         for each(team in this.teams)
-         {
-            if(team.teamType == teamType)
-            {
-               return team;
-            }
-         }
-         return null;
+      public function getTeamByType(teamType:uint) : FightTeam
+      {
+         //Décompilation abandonné
       }
       
-      public function getTeamById(teamId:uint) : FightTeam {
-         var team:FightTeam = null;
-         for each(team in this.teams)
-         {
-            if(team.teamInfos.teamId == teamId)
-            {
-               return team;
-            }
-         }
-         return null;
+      public function getTeamById(teamId:uint) : FightTeam
+      {
+         //Décompilation abandonné
       }
    }
 }

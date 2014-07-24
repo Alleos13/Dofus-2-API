@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.mount
    public class MountSterilizeRequestAction extends Object implements Action
    {
       
-      public function MountSterilizeRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : MountSterilizeRequestAction {
-         return new MountSterilizeRequestAction();
+      public function MountSterilizeRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : MountSterilizeRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,12 +5,13 @@ package com.ankamagames.dofus.internalDatacenter.connection
    public class SubscriberGift extends Object implements IDataCenter
    {
       
-      public function SubscriberGift(id:uint, description:String, uri:String, link:String) {
-         super();
-         this._id = id;
-         this._description = description;
-         this._link = link;
-         this._uri = uri;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SubscriberGift(id:uint, description:String, uri:String, link:String)
+      {
+         //Décompilation abandonné
       }
       
       private var _id:uint;
@@ -21,20 +22,24 @@ package com.ankamagames.dofus.internalDatacenter.connection
       
       private var _link:String;
       
-      public function get id() : uint {
-         return this._id;
+      public function get id() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get description() : String {
-         return this._description;
+      public function get description() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get uri() : String {
-         return this._uri;
+      public function get uri() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get link() : String {
-         return this._link;
+      public function get link() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

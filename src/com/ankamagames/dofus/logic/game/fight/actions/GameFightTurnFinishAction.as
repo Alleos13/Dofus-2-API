@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.game.fight.actions
    public class GameFightTurnFinishAction extends Object implements Action
    {
       
-      public function GameFightTurnFinishAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : GameFightTurnFinishAction {
-         return new GameFightTurnFinishAction();
+      public function GameFightTurnFinishAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : GameFightTurnFinishAction
+      {
+         //Décompilation abandonné
       }
    }
 }

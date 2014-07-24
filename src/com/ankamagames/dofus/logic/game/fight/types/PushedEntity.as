@@ -3,12 +3,13 @@ package com.ankamagames.dofus.logic.game.fight.types
    public class PushedEntity extends Object
    {
       
-      public function PushedEntity(pEntityId:int, pFirstIndex:uint, pForce:int) {
-         super();
-         this._id = pEntityId;
-         this._pushedIndexes = new Vector.<uint>(0);
-         this._pushedIndexes.push(pFirstIndex);
-         this._force = pForce;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PushedEntity(pEntityId:int, pFirstIndex:uint, pForce:int)
+      {
+         //Décompilation abandonné
       }
       
       private var _id:int;
@@ -21,44 +22,66 @@ package com.ankamagames.dofus.logic.game.fight.types
       
       private var _damage:int;
       
-      public function get id() : int {
-         return this._id;
+      private var _criticalDamage:int;
+      
+      public function get id() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set id(value:int) : void {
-         this._id = value;
+      public function set id(value:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get pushedIndexes() : Vector.<uint> {
-         return this._pushedIndexes;
+      public function get pushedIndexes() : Vector.<uint>
+      {
+         //Décompilation abandonné
       }
       
-      public function set pushedIndexes(value:Vector.<uint>) : void {
-         this._pushedIndexes = value;
+      public function set pushedIndexes(value:Vector.<uint>) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get force() : int {
-         return this._force;
+      public function get force() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set force(value:int) : void {
-         this._force = value;
+      public function set force(value:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get pushingEntity() : PushedEntity {
-         return this._pushingEntity;
+      public function get pushingEntity() : PushedEntity
+      {
+         //Décompilation abandonné
       }
       
-      public function set pushingEntity(value:PushedEntity) : void {
-         this._pushingEntity = value;
+      public function set pushingEntity(value:PushedEntity) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get damage() : int {
-         return this._damage;
+      public function get damage() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set damage(value:int) : void {
-         this._damage = value;
+      public function set damage(value:int) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public function get criticalDamage() : int
+      {
+         //Décompilation abandonné
+      }
+      
+      public function set criticalDamage(value:int) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

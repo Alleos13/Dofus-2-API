@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.prism
    public class PrismFightJoinLeaveRequestAction extends Object implements Action
    {
       
-      public function PrismFightJoinLeaveRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(subAreaId:uint, join:Boolean) : PrismFightJoinLeaveRequestAction {
-         var action:PrismFightJoinLeaveRequestAction = new PrismFightJoinLeaveRequestAction();
-         action.subAreaId = subAreaId;
-         action.join = join;
-         return action;
+      public function PrismFightJoinLeaveRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(subAreaId:uint, join:Boolean) : PrismFightJoinLeaveRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var subAreaId:uint;

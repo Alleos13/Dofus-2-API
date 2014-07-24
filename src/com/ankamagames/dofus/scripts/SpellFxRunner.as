@@ -12,21 +12,27 @@ package com.ankamagames.dofus.scripts
    public class SpellFxRunner extends FxRunner implements IRunner
    {
       
-      public function SpellFxRunner(spellCastProvider:ISpellCastProvider) {
-         super(DofusEntities.getEntity(spellCastProvider.castingSpell.casterId),spellCastProvider.castingSpell.targetedCell);
-         this._spellCastProvider = spellCastProvider;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpellFxRunner(spellCastProvider:ISpellCastProvider)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       private var _spellCastProvider:ISpellCastProvider;
       
-      public function get castingSpell() : CastingSpell {
-         return this._spellCastProvider.castingSpell;
+      public function get castingSpell() : CastingSpell
+      {
+         //Décompilation abandonné
       }
       
-      public function get stepsBuffer() : Vector.<ISequencable> {
-         return this._spellCastProvider.stepsBuffer;
+      public function get stepsBuffer() : Vector.<ISequencable>
+      {
+         //Décompilation abandonné
       }
    }
 }

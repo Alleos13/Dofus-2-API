@@ -9,65 +9,71 @@ package com.ankamagames.dofus.network.messages.game.context.mount
    public class MountRenameRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function MountRenameRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MountRenameRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5987;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var name:String = "";
       
       public var mountId:Number = 0;
       
-      override public function getMessageId() : uint {
-         return 5987;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initMountRenameRequestMessage(name:String = "", mountId:Number = 0) : MountRenameRequestMessage {
-         this.name = name;
-         this.mountId = mountId;
-         this._isInitialized = true;
-         return this;
+      public function initMountRenameRequestMessage(name:String = "", mountId:Number = 0) : MountRenameRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.name = "";
-         this.mountId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_MountRenameRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_MountRenameRequestMessage(output:IDataOutput) : void {
-         output.writeUTF(this.name);
-         output.writeDouble(this.mountId);
+      public function serializeAs_MountRenameRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_MountRenameRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_MountRenameRequestMessage(input:IDataInput) : void {
-         this.name = input.readUTF();
-         this.mountId = input.readDouble();
+      public function deserializeAs_MountRenameRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

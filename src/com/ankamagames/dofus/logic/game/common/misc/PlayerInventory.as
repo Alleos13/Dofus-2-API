@@ -5,16 +5,18 @@ package com.ankamagames.dofus.logic.game.common.misc
    public class PlayerInventory extends Inventory
    {
       
-      public function PlayerInventory() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      override public function set kamas(value:int) : void {
-         if(PlayedCharacterManager.getInstance().characteristics)
-         {
-            PlayedCharacterManager.getInstance().characteristics.kamas = value;
-         }
-         super.kamas = value;
+      public function PlayerInventory()
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function set kamas(value:int) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

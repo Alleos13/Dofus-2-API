@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions.estate
    public class HouseToSellListRequestAction extends Object implements Action
    {
       
-      public function HouseToSellListRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pageIndex:uint) : HouseToSellListRequestAction {
-         var a:HouseToSellListRequestAction = new HouseToSellListRequestAction();
-         a.pageIndex = pageIndex;
-         return a;
+      public function HouseToSellListRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pageIndex:uint) : HouseToSellListRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var pageIndex:uint;

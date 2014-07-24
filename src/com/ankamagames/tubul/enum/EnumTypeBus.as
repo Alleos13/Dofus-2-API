@@ -3,8 +3,13 @@ package com.ankamagames.tubul.enum
    public class EnumTypeBus extends Object
    {
       
-      public function EnumTypeBus() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EnumTypeBus()
+      {
+         //Décompilation abandonné
       }
       
       public static const UNLOCALIZED_BUS:uint = 2;

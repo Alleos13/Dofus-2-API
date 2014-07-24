@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.prism
    public class PrismsListRegisterAction extends Object implements Action
    {
       
-      public function PrismsListRegisterAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(uiName:String, listen:uint) : PrismsListRegisterAction {
-         var action:PrismsListRegisterAction = new PrismsListRegisterAction();
-         action.uiName = uiName;
-         action.listen = listen;
-         return action;
+      public function PrismsListRegisterAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(uiName:String, listen:uint) : PrismsListRegisterAction
+      {
+         //Décompilation abandonné
       }
       
       public var uiName:String;

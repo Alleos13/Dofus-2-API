@@ -86,14 +86,13 @@ package com.ankamagames.dofus.logic.game.common.frames
    public class CraftFrame extends Object implements Frame
    {
       
-      public function CraftFrame() {
-         this.playerList = new PlayerExchangeCraftList();
-         this.otherPlayerList = new PlayerExchangeCraftList();
-         this.paymentCraftList = new PaymentCraftList();
-         this._crafterInfos = new PlayerInfo();
-         this._customerInfos = new PlayerInfo();
-         this.bagList = new Array();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CraftFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -128,303 +127,112 @@ package com.ankamagames.dofus.logic.game.common.frames
       
       private var _success:Boolean;
       
-      public function get priority() : int {
-         return Priority.NORMAL;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      private function get socialFrame() : SocialFrame {
-         return Kernel.getWorker().getFrame(SocialFrame) as SocialFrame;
+      private function get socialFrame() : SocialFrame
+      {
+         //Décompilation abandonné
       }
       
-      public function get crafterInfos() : PlayerInfo {
-         return this._crafterInfos;
+      public function get crafterInfos() : PlayerInfo
+      {
+         //Décompilation abandonné
       }
       
-      public function get customerInfos() : PlayerInfo {
-         return this._customerInfos;
+      public function get customerInfos() : PlayerInfo
+      {
+         //Décompilation abandonné
       }
       
-      public function get skillId() : int {
-         return this._skillId;
+      public function get skillId() : int
+      {
+         //Décompilation abandonné
       }
       
-      private function get roleplayContextFrame() : RoleplayContextFrame {
-         return Kernel.getWorker().getFrame(RoleplayContextFrame) as RoleplayContextFrame;
+      private function get roleplayContextFrame() : RoleplayContextFrame
+      {
+         //Décompilation abandonné
       }
       
-      private function get commonExchangeFrame() : CommonExchangeManagementFrame {
-         return Kernel.getWorker().getFrame(CommonExchangeManagementFrame) as CommonExchangeManagementFrame;
+      private function get commonExchangeFrame() : CommonExchangeManagementFrame
+      {
+         //Décompilation abandonné
       }
       
-      public function processExchangeOkMultiCraftMessage(msg:ExchangeOkMultiCraftMessage) : void {
-         PlayedCharacterManager.getInstance().isInExchange = true;
-         var eomcmsg:ExchangeOkMultiCraftMessage = msg as ExchangeOkMultiCraftMessage;
-         if(eomcmsg.role == ExchangeTypeEnum.MULTICRAFT_CRAFTER)
-         {
-            this.playerList.isCrafter = true;
-            this.otherPlayerList.isCrafter = false;
-            this._crafterInfos.id = PlayedCharacterManager.getInstance().id;
-            if(this.crafterInfos.id == eomcmsg.initiatorId)
-            {
-               this._customerInfos.id = eomcmsg.otherId;
-            }
-            else
-            {
-               this._customerInfos.id = eomcmsg.initiatorId;
-            }
-         }
-         else
-         {
-            this.playerList.isCrafter = false;
-            this.otherPlayerList.isCrafter = true;
-            this._customerInfos.id = PlayedCharacterManager.getInstance().id;
-            if(this.customerInfos.id == eomcmsg.initiatorId)
-            {
-               this._crafterInfos.id = eomcmsg.otherId;
-            }
-            else
-            {
-               this._crafterInfos.id = eomcmsg.initiatorId;
-            }
-         }
-         var crafterEntity:GameContextActorInformations = this.roleplayContextFrame.entitiesFrame.getEntityInfos(this.crafterInfos.id);
-         if(crafterEntity)
-         {
-            this._crafterInfos.look = EntityLookAdapter.getRiderLook(crafterEntity.look);
-            this._crafterInfos.name = (crafterEntity as GameRolePlayNamedActorInformations).name;
-         }
-         else
-         {
-            this._crafterInfos.look = null;
-            this._crafterInfos.name = "";
-         }
-         var customerEntity:GameContextActorInformations = this.roleplayContextFrame.entitiesFrame.getEntityInfos(this.customerInfos.id);
-         if(customerEntity)
-         {
-            this._customerInfos.look = EntityLookAdapter.getRiderLook(customerEntity.look);
-            this._customerInfos.name = (customerEntity as GameRolePlayNamedActorInformations).name;
-         }
-         else
-         {
-            this._customerInfos.look = null;
-            this._customerInfos.name = "";
-         }
-         var otherName:String = "";
-         var askerId:uint = eomcmsg.initiatorId;
-         if(eomcmsg.initiatorId == PlayedCharacterManager.getInstance().id)
-         {
-            if(eomcmsg.initiatorId == this.crafterInfos.id)
-            {
-               this._isCrafter = true;
-               otherName = this.customerInfos.name;
-            }
-            else
-            {
-               this._isCrafter = false;
-               otherName = this.crafterInfos.name;
-            }
-         }
-         else if(eomcmsg.otherId == this.crafterInfos.id)
-         {
-            this._isCrafter = false;
-            otherName = this.crafterInfos.name;
-         }
-         else
-         {
-            this._isCrafter = true;
-            otherName = this.customerInfos.name;
-         }
-         
-         if(!this.socialFrame.isIgnored(otherName))
-         {
-            KernelEventsManager.getInstance().processCallback(CraftHookList.ExchangeMultiCraftRequest,eomcmsg.role,otherName,askerId);
-         }
+      public function processExchangeOkMultiCraftMessage(msg:ExchangeOkMultiCraftMessage) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function processExchangeStartOkCraftWithInformationMessage(msg:ExchangeStartOkCraftWithInformationMessage) : void {
-         PlayedCharacterManager.getInstance().isInExchange = true;
-         var esocwimsg:ExchangeStartOkCraftWithInformationMessage = msg as ExchangeStartOkCraftWithInformationMessage;
-         this._skillId = esocwimsg.skillId;
-         var recipes:Array = Recipe.getAllRecipesForSkillId(esocwimsg.skillId,esocwimsg.nbCase);
-         this._isCrafter = true;
-         var skill:Skill = Skill.getSkillById(this._skillId);
-         if(skill.isForgemagus)
-         {
-            this._craftType = 1;
-         }
-         else if(skill.isRepair)
-         {
-            this._craftType = 2;
-         }
-         else
-         {
-            this._craftType = 0;
-         }
-         
-         KernelEventsManager.getInstance().processCallback(CraftHookList.ExchangeStartOkCraft,recipes,esocwimsg.skillId,esocwimsg.nbCase);
+      public function processExchangeStartOkCraftWithInformationMessage(msg:ExchangeStartOkCraftWithInformationMessage) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         this._success = false;
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         if(Kernel.getWorker().contains(CommonExchangeManagementFrame))
-         {
-            Kernel.getWorker().removeFrame(Kernel.getWorker().getFrame(CommonExchangeManagementFrame));
-         }
-         KernelEventsManager.getInstance().processCallback(ExchangeHookList.ExchangeLeave,this._success);
-         this.playerList = new PlayerExchangeCraftList();
-         this.otherPlayerList = new PlayerExchangeCraftList();
-         this.bagList = new Array();
-         this._crafterInfos = new PlayerInfo();
-         this._customerInfos = new PlayerInfo();
-         this.paymentCraftList = new PaymentCraftList();
-         this._smithMagicOldObject = null;
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function resetLists() : void {
-         this.paymentCraftList.kamaPayment = 0;
-         this.paymentCraftList.kamaPaymentOnlySuccess = 0;
-         this.paymentCraftList.objectsPayment = new Array();
-         this.paymentCraftList.objectsPaymentOnlySuccess = new Array();
+      private function resetLists() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addCraftComponent(pRemote:Boolean, pItemWrapper:ItemWrapper) : void {
-         var playerExchangeCraftList:PlayerExchangeCraftList = null;
-         if(pRemote)
-         {
-            playerExchangeCraftList = this.otherPlayerList;
-         }
-         else
-         {
-            playerExchangeCraftList = this.playerList;
-         }
-         playerExchangeCraftList.componentList.push(pItemWrapper);
-         this.sendUpdateHook(playerExchangeCraftList);
-         if((!(this._craftType == 0)) && (!(pItemWrapper.typeId == SMITHMAGIC_RUNE_ID)) && (!(pItemWrapper.typeId == SMITHMAGIC_POTION_ID)) && (!(pItemWrapper.objectGID == SIGNATURE_RUNE_ID)))
-         {
-            this._smithMagicOldObject = pItemWrapper.clone();
-         }
+      public function addCraftComponent(pRemote:Boolean, pItemWrapper:ItemWrapper) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function modifyCraftComponent(pRemote:Boolean, pItemWrapper:ItemWrapper) : void {
-         var playerExchangeCraftList:PlayerExchangeCraftList = null;
-         if(pRemote)
-         {
-            playerExchangeCraftList = this.otherPlayerList;
-         }
-         else
-         {
-            playerExchangeCraftList = this.playerList;
-         }
-         var index:int = 0;
-         while(index < playerExchangeCraftList.componentList.length)
-         {
-            if((playerExchangeCraftList.componentList[index].objectGID == pItemWrapper.objectGID) && (playerExchangeCraftList.componentList[index].objectUID == pItemWrapper.objectUID))
-            {
-               playerExchangeCraftList.componentList.splice(index,1,pItemWrapper);
-            }
-            index++;
-         }
-         this.sendUpdateHook(playerExchangeCraftList);
+      public function modifyCraftComponent(pRemote:Boolean, pItemWrapper:ItemWrapper) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeCraftComponent(pRemote:Boolean, pUID:uint) : void {
-         var itemo:ItemWrapper = null;
-         var itemp:ItemWrapper = null;
-         var compt:uint = 0;
-         var playerExchangeCraftList:PlayerExchangeCraftList = new PlayerExchangeCraftList();
-         for each(itemo in this.otherPlayerList.componentList)
-         {
-            if(itemo.objectUID == pUID)
-            {
-               this.otherPlayerList.componentList.splice(compt,1);
-               this.sendUpdateHook(this.otherPlayerList);
-               break;
-            }
-            compt++;
-         }
-         compt = 0;
-         for each(itemp in this.playerList.componentList)
-         {
-            if(itemp.objectUID == pUID)
-            {
-               this.playerList.componentList.splice(compt,1);
-               this.sendUpdateHook(this.playerList);
-               break;
-            }
-            compt++;
-         }
+      public function removeCraftComponent(pRemote:Boolean, pUID:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addObjetPayment(pOnlySuccess:Boolean, pItemWrapper:ItemWrapper) : void {
-         if(pOnlySuccess)
-         {
-            this.paymentCraftList.objectsPaymentOnlySuccess.push(pItemWrapper);
-         }
-         else
-         {
-            this.paymentCraftList.objectsPayment.push(pItemWrapper);
-         }
+      public function addObjetPayment(pOnlySuccess:Boolean, pItemWrapper:ItemWrapper) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeObjetPayment(pUID:uint, pOnlySuccess:Boolean) : void {
-         var objects:Array = null;
-         var itemW:ItemWrapper = null;
-         var compt:uint = 0;
-         if(pOnlySuccess)
-         {
-            objects = this.paymentCraftList.objectsPaymentOnlySuccess;
-         }
-         else
-         {
-            objects = this.paymentCraftList.objectsPayment;
-         }
-         for each(itemW in objects)
-         {
-            if(itemW.objectUID == pUID)
-            {
-               objects.splice(compt,1);
-            }
-            compt++;
-         }
-         KernelEventsManager.getInstance().processCallback(CraftHookList.PaymentCraftList,this.paymentCraftList,true);
+      public function removeObjetPayment(pUID:uint, pOnlySuccess:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function sendUpdateHook(pPlayerExchangeCraftList:PlayerExchangeCraftList) : void {
-         switch(pPlayerExchangeCraftList)
-         {
-            case this.otherPlayerList:
-               KernelEventsManager.getInstance().processCallback(CraftHookList.OtherPlayerListUpdate,pPlayerExchangeCraftList);
-               break;
-            case this.playerList:
-               KernelEventsManager.getInstance().processCallback(CraftHookList.PlayerListUpdate,pPlayerExchangeCraftList);
-               break;
-         }
+      private function sendUpdateHook(pPlayerExchangeCraftList:PlayerExchangeCraftList) : void
+      {
+         //Décompilation abandonné
       }
    }
 }
 class PaymentCraftList extends Object
 {
    
-   function PaymentCraftList() {
-      super();
-      this.kamaPaymentOnlySuccess = 0;
-      this.objectsPaymentOnlySuccess = new Array();
-      this.kamaPayment = 0;
-      this.objectsPayment = new Array();
+   {
+   //Décompilation abandonné
+   }
+   
+   function PaymentCraftList()
+   {
+      //Décompilation abandonné
    }
    
    public var kamaPaymentOnlySuccess:uint;
@@ -438,10 +246,13 @@ class PaymentCraftList extends Object
 class PlayerExchangeCraftList extends Object
 {
    
-   function PlayerExchangeCraftList() {
-      super();
-      this.componentList = new Array();
-      this.isCrafter = false;
+   {
+   //Décompilation abandonné
+   }
+   
+   function PlayerExchangeCraftList()
+   {
+      //Décompilation abandonné
    }
    
    public var componentList:Array;
@@ -453,8 +264,13 @@ import com.ankamagames.tiphon.types.look.TiphonEntityLook;
 class PlayerInfo extends Object
 {
    
-   function PlayerInfo() {
-      super();
+   {
+   //Décompilation abandonné
+   }
+   
+   function PlayerInfo()
+   {
+      //Décompilation abandonné
    }
    
    public var id:uint;

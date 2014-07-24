@@ -14,26 +14,33 @@ package com.ankamagames.dofus.logic.common.managers
    public class HyperlinkURLManager extends Object
    {
       
-      public function HyperlinkURLManager() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function openURL(url:String) : void {
-         navigateToURL(new URLRequest(url),"_blank");
+      public function HyperlinkURLManager()
+      {
+         //Décompilation abandonné
       }
       
-      public static function chatLinkRelease(link:String, sender:uint, senderName:String) : void {
-         KernelEventsManager.getInstance().processCallback(ChatHookList.ChatLinkRelease,link,sender,senderName);
+      public static function openURL(url:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function chatWarning() : void {
-         KernelEventsManager.getInstance().processCallback(ChatHookList.ChatWarning);
+      public static function chatLinkRelease(link:String, sender:uint, senderName:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function rollOver(pX:int, pY:int, link:String, sender:uint, senderName:String) : void {
-         var target:Rectangle = new Rectangle(pX,pY,10,10);
-         var info:TextTooltipInfo = new TextTooltipInfo(I18n.getUiText("ui.tooltip.chat.url"));
-         TooltipManager.show(info,target,UiModuleManager.getInstance().getModule("Ankama_GameUiCore"),false,"HyperLink",6,2,3,true,null,null,null,null,false,StrataEnum.STRATA_TOOLTIP,1);
+      public static function chatWarning() : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function rollOver(pX:int, pY:int, link:String, sender:uint, senderName:String) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

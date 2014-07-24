@@ -9,20 +9,27 @@ package com.ankamagames.dofus.datacenter.guild
    public class EmblemSymbol extends Object implements IDataCenter
    {
       
-      public function EmblemSymbol() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EmblemSymbol()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "EmblemSymbols";
       
       protected static const _log:Logger;
       
-      public static function getEmblemSymbolById(id:int) : EmblemSymbol {
-         return GameData.getObject(MODULE,id) as EmblemSymbol;
+      public static function getEmblemSymbolById(id:int) : EmblemSymbol
+      {
+         //Décompilation abandonné
       }
       
-      public static function getEmblemSymbols() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getEmblemSymbols() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;

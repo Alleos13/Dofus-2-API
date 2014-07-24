@@ -13,26 +13,13 @@ package com.ankamagames.dofus.logic.game.common.steps
    public class MoveStep extends AbstractSequencable
    {
       
-      public function MoveStep(pEntity:AnimatedCharacter, pArgs:Array, pMovementBehavior:IMovementBehavior = null) {
-         var i:* = 0;
-         super();
-         this._entity = pEntity;
-         this._args = pArgs;
-         if(pMovementBehavior)
-         {
-            this._behavior = pMovementBehavior;
-         }
-         this._allowDiag = true;
-         while(i <= 6)
-         {
-            if((!this._entity.hasAnimation(AnimationEnum.ANIM_MARCHE,i)) || (!this._entity.hasAnimation(AnimationEnum.ANIM_COURSE,i)))
-            {
-               this._allowDiag = false;
-               break;
-            }
-            i = i + 2;
-         }
-         timeout = 20000;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MoveStep(pEntity:AnimatedCharacter, pArgs:Array, pMovementBehavior:IMovementBehavior = null)
+      {
+         //Décompilation abandonné
       }
       
       private var _entity:AnimatedCharacter;
@@ -43,30 +30,19 @@ package com.ankamagames.dofus.logic.game.common.steps
       
       private var _allowDiag:Boolean;
       
-      override public function start() : void {
-         TooltipManager.hide("textBubble" + this._entity.id);
-         TooltipManager.hide("smiley" + this._entity.id);
-         if(this._entity.isMoving)
-         {
-            this._entity.stop();
-         }
-         Pathfinding.findPath(DataMapProvider.getInstance(),this._entity.position,ScriptsUtil.getMapPoint(this._args),this._allowDiag,true,this.onPath);
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onPath(pPath:MovementPath) : void {
-         if(this._behavior)
-         {
-            this._entity.movementBehavior = this._behavior;
-            this._behavior.move(this._entity,pPath,this.onMovementEnd);
-         }
-         else
-         {
-            this._entity.move(pPath,this.onMovementEnd);
-         }
+      private function onPath(pPath:MovementPath) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onMovementEnd() : void {
-         executeCallbacks();
+      private function onMovementEnd() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

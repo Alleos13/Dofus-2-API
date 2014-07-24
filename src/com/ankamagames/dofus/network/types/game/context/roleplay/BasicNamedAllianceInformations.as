@@ -7,45 +7,52 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
    public class BasicNamedAllianceInformations extends BasicAllianceInformations implements INetworkType
    {
       
-      public function BasicNamedAllianceInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BasicNamedAllianceInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 418;
       
       public var allianceName:String = "";
       
-      override public function getTypeId() : uint {
-         return 418;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initBasicNamedAllianceInformations(allianceId:uint = 0, allianceTag:String = "", allianceName:String = "") : BasicNamedAllianceInformations {
-         super.initBasicAllianceInformations(allianceId,allianceTag);
-         this.allianceName = allianceName;
-         return this;
+      public function initBasicNamedAllianceInformations(allianceId:uint = 0, allianceTag:String = "", allianceName:String = "") : BasicNamedAllianceInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.allianceName = "";
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_BasicNamedAllianceInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_BasicNamedAllianceInformations(output:IDataOutput) : void {
-         super.serializeAs_BasicAllianceInformations(output);
-         output.writeUTF(this.allianceName);
+      public function serializeAs_BasicNamedAllianceInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_BasicNamedAllianceInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_BasicNamedAllianceInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.allianceName = input.readUTF();
+      public function deserializeAs_BasicNamedAllianceInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

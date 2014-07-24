@@ -9,47 +9,65 @@ package com.ankamagames.dofus.network.messages.game.prism
    public class PrismAttackRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function PrismAttackRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PrismAttackRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6042;
       
-      override public function get isInitialized() : Boolean {
-         return true;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function getMessageId() : uint {
-         return 6042;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPrismAttackRequestMessage() : PrismAttackRequestMessage {
-         return this;
+      public function initPrismAttackRequestMessage() : PrismAttackRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PrismAttackRequestMessage(output:IDataOutput) : void {
+      public function serializeAs_PrismAttackRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PrismAttackRequestMessage(input:IDataInput) : void {
+      public function deserializeAs_PrismAttackRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

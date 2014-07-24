@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class DebugLevelEnum extends Object
    {
       
-      public function DebugLevelEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DebugLevelEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const LEVEL_TRACE:uint = 0;

@@ -6,9 +6,13 @@ package org.flintparticles.common.particles
    public class Particle extends Object
    {
       
-      public function Particle() {
-         super();
-         this.initialize();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Particle()
+      {
+         //Décompilation abandonné
       }
       
       public var color:uint = 4.294967295E9;
@@ -33,41 +37,26 @@ package org.flintparticles.common.particles
       
       public var isDead:Boolean = false;
       
-      public function get dictionary() : Dictionary {
-         if(this._dictionary == null)
-         {
-            this._dictionary = new Dictionary();
-         }
-         return this._dictionary;
+      public function get dictionary() : Dictionary
+      {
+         //Décompilation abandonné
       }
       
       private var _dictionary:Dictionary = null;
       
-      public function initialize() : void {
-         this.color = 4.294967295E9;
-         this.scale = 1;
-         this.mass = 1;
-         this.collisionRadius = 1;
-         this.lifetime = 0;
-         this.age = 0;
-         this.energy = 1;
-         this.isDead = false;
-         this.image = null;
-         this._dictionary = null;
-         this._colorTransform = null;
+      public function initialize() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get colorTransform() : ColorTransform {
-         if(!this._colorTransform || !(this._previousColor == this.color))
-         {
-            this._colorTransform = new ColorTransform((this.color >>> 16 & 255) / 255,(this.color >>> 8 & 255) / 255,(this.color & 255) / 255,(this.color >>> 24 & 255) / 255,0,0,0,0);
-            this._previousColor = this.color;
-         }
-         return this._colorTransform;
+      public function get colorTransform() : ColorTransform
+      {
+         //Décompilation abandonné
       }
       
-      public function get alpha() : Number {
-         return ((this.color & 4.27819008E9) >>> 24) / 255;
+      public function get alpha() : Number
+      {
+         //Décompilation abandonné
       }
    }
 }

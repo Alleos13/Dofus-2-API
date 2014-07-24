@@ -9,45 +9,52 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
    public class GameRolePlayNamedActorInformations extends GameRolePlayActorInformations implements INetworkType
    {
       
-      public function GameRolePlayNamedActorInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameRolePlayNamedActorInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 154;
       
       public var name:String = "";
       
-      override public function getTypeId() : uint {
-         return 154;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameRolePlayNamedActorInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, name:String = "") : GameRolePlayNamedActorInformations {
-         super.initGameRolePlayActorInformations(contextualId,look,disposition);
-         this.name = name;
-         return this;
+      public function initGameRolePlayNamedActorInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, name:String = "") : GameRolePlayNamedActorInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.name = "";
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameRolePlayNamedActorInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayNamedActorInformations(output:IDataOutput) : void {
-         super.serializeAs_GameRolePlayActorInformations(output);
-         output.writeUTF(this.name);
+      public function serializeAs_GameRolePlayNamedActorInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameRolePlayNamedActorInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayNamedActorInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.name = input.readUTF();
+      public function deserializeAs_GameRolePlayNamedActorInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

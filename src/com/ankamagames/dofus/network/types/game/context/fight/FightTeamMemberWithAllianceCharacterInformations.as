@@ -8,47 +8,52 @@ package com.ankamagames.dofus.network.types.game.context.fight
    public class FightTeamMemberWithAllianceCharacterInformations extends FightTeamMemberCharacterInformations implements INetworkType
    {
       
-      public function FightTeamMemberWithAllianceCharacterInformations() {
-         this.allianceInfos = new BasicAllianceInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightTeamMemberWithAllianceCharacterInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 426;
       
       public var allianceInfos:BasicAllianceInformations;
       
-      override public function getTypeId() : uint {
-         return 426;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initFightTeamMemberWithAllianceCharacterInformations(id:int = 0, name:String = "", level:uint = 0, allianceInfos:BasicAllianceInformations = null) : FightTeamMemberWithAllianceCharacterInformations {
-         super.initFightTeamMemberCharacterInformations(id,name,level);
-         this.allianceInfos = allianceInfos;
-         return this;
+      public function initFightTeamMemberWithAllianceCharacterInformations(id:int = 0, name:String = "", level:uint = 0, allianceInfos:BasicAllianceInformations = null) : FightTeamMemberWithAllianceCharacterInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.allianceInfos = new BasicAllianceInformations();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_FightTeamMemberWithAllianceCharacterInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_FightTeamMemberWithAllianceCharacterInformations(output:IDataOutput) : void {
-         super.serializeAs_FightTeamMemberCharacterInformations(output);
-         this.allianceInfos.serializeAs_BasicAllianceInformations(output);
+      public function serializeAs_FightTeamMemberWithAllianceCharacterInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_FightTeamMemberWithAllianceCharacterInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_FightTeamMemberWithAllianceCharacterInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.allianceInfos = new BasicAllianceInformations();
-         this.allianceInfos.deserialize(input);
+      public function deserializeAs_FightTeamMemberWithAllianceCharacterInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

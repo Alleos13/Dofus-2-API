@@ -14,11 +14,13 @@ package com.ankamagames.tubul.types
    public class VolumeFadeEffect extends EventDispatcher
    {
       
-      public function VolumeFadeEffect(pBeginningFadeValue:Number = 0, pEndingFadeValue:Number = 1, pFadeTime:Number = 0) {
-         super();
-         this._beginningValue = pBeginningFadeValue;
-         this._endingValue = pEndingFadeValue;
-         this._timeFade = pFadeTime;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function VolumeFadeEffect(pBeginningFadeValue:Number = 0, pEndingFadeValue:Number = 1, pFadeTime:Number = 0)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -35,96 +37,64 @@ package com.ankamagames.tubul.types
       
       private var _tween:TweenMax;
       
-      public function get running() : Boolean {
-         return this._running;
+      public function get running() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get beginningValue() : Number {
-         return this._beginningValue;
+      public function get beginningValue() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function get endingValue() : Number {
-         return this._endingValue;
+      public function get endingValue() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function get timeFade() : Number {
-         return this._timeFade;
+      public function get timeFade() : Number
+      {
+         //Décompilation abandonné
       }
       
-      private function get soundSource() : ISoundController {
-         return this._soundSource;
+      private function get soundSource() : ISoundController
+      {
+         //Décompilation abandonné
       }
       
-      public function attachToSoundSource(pISoundSource:ISoundController) : void {
-         this._soundSource = pISoundSource;
+      public function attachToSoundSource(pISoundSource:ISoundController) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function start(pUseBeginningValue:Boolean = true) : void {
-         var logInfo:String = null;
-         if(this.soundSource == null)
-         {
-            _log.warn("L\'effet de fade ne peut être lancé car le son auquel il est attaché ne peut être trouvé");
-            return;
-         }
-         if((this._endingValue < 0) || (this._endingValue > 1))
-         {
-            _log.warn("Le paramètre \'endingValue\' n\'est pas valide !");
-            return;
-         }
-         if(this.soundSource is AudioBus)
-         {
-            logInfo = "Fade sur le bus " + (this.soundSource as AudioBus).name;
-         }
-         if(this.soundSource is MP3SoundDofus)
-         {
-            logInfo = "Fade sur le son " + (this.soundSource as MP3SoundDofus).id + "(" + (this.soundSource as MP3SoundDofus).uri.fileName + ")";
-         }
-         _log.warn(logInfo + " / => " + this._endingValue + " en " + this._timeFade + " sec.");
-         this.clearTween();
-         if((pUseBeginningValue) && (this._beginningValue >= 0))
-         {
-            this.soundSource.currentFadeVolume = this._beginningValue;
-         }
-         this._tween = new TweenMax(this.soundSource,this._timeFade,
-            {
-               "currentFadeVolume":this._endingValue,
-               "onComplete":this.onFadeEnd,
-               "ease":Linear.easeNone
-            });
-         this._running = true;
+      public function start(pUseBeginningValue:Boolean = true) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function stop() : void {
-         this.clearTween();
-         this.onFadeEnd();
+      public function stop() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function reset(pBeginningFadeValue:Number, pEndingFadeValue:Number, pFadeTime:Number) : void {
-         this.clearTween();
-         this._beginningValue = pBeginningFadeValue;
-         this._endingValue = pEndingFadeValue;
-         this._timeFade = pFadeTime;
+      public function reset(pBeginningFadeValue:Number, pEndingFadeValue:Number, pFadeTime:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function clone() : VolumeFadeEffect {
-         var fade:VolumeFadeEffect = new VolumeFadeEffect(this._beginningValue,this._endingValue,this._timeFade);
-         return fade;
+      public function clone() : VolumeFadeEffect
+      {
+         //Décompilation abandonné
       }
       
-      private function clearTween() : void {
-         if(this._tween)
-         {
-            this._tween.clear();
-            this._tween = null;
-         }
-         this._running = false;
+      private function clearTween() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onFadeEnd() : void {
-         var e:FadeEvent = new FadeEvent(FadeEvent.COMPLETE);
-         e.soundSource = this.soundSource;
-         dispatchEvent(e);
-         this.clearTween();
+      private function onFadeEnd() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

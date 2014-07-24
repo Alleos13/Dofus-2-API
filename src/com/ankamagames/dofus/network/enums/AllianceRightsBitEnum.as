@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class AllianceRightsBitEnum extends Object
    {
       
-      public function AllianceRightsBitEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AllianceRightsBitEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const ALLIANCE_RIGHT_NONE:uint = 0;

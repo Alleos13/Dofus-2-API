@@ -7,61 +7,52 @@ package com.ankamagames.dofus.network.types.game.context.fight
    public class FightResultMutantListEntry extends FightResultFighterListEntry implements INetworkType
    {
       
-      public function FightResultMutantListEntry() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightResultMutantListEntry()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 216;
       
       public var level:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 216;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initFightResultMutantListEntry(outcome:uint = 0, wave:uint = 0, rewards:FightLoot = null, id:int = 0, alive:Boolean = false, level:uint = 0) : FightResultMutantListEntry {
-         super.initFightResultFighterListEntry(outcome,wave,rewards,id,alive);
-         this.level = level;
-         return this;
+      public function initFightResultMutantListEntry(outcome:uint = 0, wave:uint = 0, rewards:FightLoot = null, id:int = 0, alive:Boolean = false, level:uint = 0) : FightResultMutantListEntry
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.level = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_FightResultMutantListEntry(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_FightResultMutantListEntry(output:IDataOutput) : void {
-         super.serializeAs_FightResultFighterListEntry(output);
-         if((this.level < 0) || (this.level > 65535))
-         {
-            throw new Error("Forbidden value (" + this.level + ") on element level.");
-         }
-         else
-         {
-            output.writeShort(this.level);
-            return;
-         }
+      public function serializeAs_FightResultMutantListEntry(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_FightResultMutantListEntry(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_FightResultMutantListEntry(input:IDataInput) : void {
-         super.deserialize(input);
-         this.level = input.readUnsignedShort();
-         if((this.level < 0) || (this.level > 65535))
-         {
-            throw new Error("Forbidden value (" + this.level + ") on element of FightResultMutantListEntry.level.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_FightResultMutantListEntry(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

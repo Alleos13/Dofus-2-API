@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.achievement
    public class AchievementObjective extends Object implements INetworkType
    {
       
-      public function AchievementObjective() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AchievementObjective()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 404;
@@ -17,67 +22,39 @@ package com.ankamagames.dofus.network.types.game.achievement
       
       public var maxValue:uint = 0;
       
-      public function getTypeId() : uint {
-         return 404;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initAchievementObjective(id:uint = 0, maxValue:uint = 0) : AchievementObjective {
-         this.id = id;
-         this.maxValue = maxValue;
-         return this;
+      public function initAchievementObjective(id:uint = 0, maxValue:uint = 0) : AchievementObjective
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.id = 0;
-         this.maxValue = 0;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AchievementObjective(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_AchievementObjective(output:IDataOutput) : void {
-         if(this.id < 0)
-         {
-            throw new Error("Forbidden value (" + this.id + ") on element id.");
-         }
-         else
-         {
-            output.writeInt(this.id);
-            if(this.maxValue < 0)
-            {
-               throw new Error("Forbidden value (" + this.maxValue + ") on element maxValue.");
-            }
-            else
-            {
-               output.writeShort(this.maxValue);
-               return;
-            }
-         }
+      public function serializeAs_AchievementObjective(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AchievementObjective(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_AchievementObjective(input:IDataInput) : void {
-         this.id = input.readInt();
-         if(this.id < 0)
-         {
-            throw new Error("Forbidden value (" + this.id + ") on element of AchievementObjective.id.");
-         }
-         else
-         {
-            this.maxValue = input.readShort();
-            if(this.maxValue < 0)
-            {
-               throw new Error("Forbidden value (" + this.maxValue + ") on element of AchievementObjective.maxValue.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_AchievementObjective(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

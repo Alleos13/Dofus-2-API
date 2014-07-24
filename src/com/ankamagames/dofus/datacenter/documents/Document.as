@@ -7,20 +7,27 @@ package com.ankamagames.dofus.datacenter.documents
    public class Document extends Object implements IDataCenter
    {
       
-      public function Document() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Document()
+      {
+         //Décompilation abandonné
       }
       
       private static const MODULE:String = "Documents";
       
       private static const PAGEFEED:String = "<pagefeed/>";
       
-      public static function getDocumentById(id:int) : Document {
-         return GameData.getObject(MODULE,id) as Document;
+      public static function getDocumentById(id:int) : Document
+      {
+         //Décompilation abandonné
       }
       
-      public static function getDocuments() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getDocuments() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -47,48 +54,29 @@ package com.ankamagames.dofus.datacenter.documents
       
       private var _pages:Array;
       
-      public function get title() : String {
-         if(!this._title)
-         {
-            this._title = I18n.getText(this.titleId);
-         }
-         return this._title;
+      public function get title() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get author() : String {
-         if(!this._author)
-         {
-            this._author = I18n.getText(this.authorId);
-         }
-         return this._author;
+      public function get author() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get subTitle() : String {
-         if(!this._subTitle)
-         {
-            this._subTitle = I18n.getText(this.subTitleId);
-            if(this._subTitle.charAt(0) == "[")
-            {
-               this._subTitle = "";
-            }
-         }
-         return this._subTitle;
+      public function get subTitle() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get content() : String {
-         if(!this._content)
-         {
-            this._content = I18n.getText(this.contentId);
-         }
-         return this._content;
+      public function get content() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get pages() : Array {
-         if(!this._pages)
-         {
-            this._pages = this.content.split(PAGEFEED);
-         }
-         return this._pages;
+      public function get pages() : Array
+      {
+         //Décompilation abandonné
       }
    }
 }

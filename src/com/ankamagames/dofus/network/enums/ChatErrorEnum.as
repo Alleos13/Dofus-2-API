@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class ChatErrorEnum extends Object
    {
       
-      public function ChatErrorEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ChatErrorEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const CHAT_ERROR_UNKNOWN:uint = 0;

@@ -7,18 +7,25 @@ package com.ankamagames.dofus.datacenter.misc
    public class Tips extends Object implements IDataCenter
    {
       
-      public function Tips() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Tips()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Tips";
       
-      public static function getTipsById(id:int) : Tips {
-         return GameData.getObject(MODULE,id) as Tips;
+      public static function getTipsById(id:int) : Tips
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAllTips() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAllTips() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -27,12 +34,9 @@ package com.ankamagames.dofus.datacenter.misc
       
       private var _description:String;
       
-      public function get description() : String {
-         if(!this._description)
-         {
-            this._description = I18n.getText(this.descId);
-         }
-         return this._description;
+      public function get description() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

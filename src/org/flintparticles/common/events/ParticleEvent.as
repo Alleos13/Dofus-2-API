@@ -6,9 +6,13 @@ package org.flintparticles.common.events
    public class ParticleEvent extends Event
    {
       
-      public function ParticleEvent(param1:String, param2:Particle=null, param3:Boolean=false, param4:Boolean=false) {
-         super(param1,param3,param4);
-         this.particle = param2;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ParticleEvent(type:String, particle:Particle = null, bubbles:Boolean = false, cancelable:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       public static var PARTICLE_CREATED:String = "particleCreated";

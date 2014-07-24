@@ -5,11 +5,13 @@ package com.ankamagames.tiphon.types
    public class SubEntityTempInfo extends Object
    {
       
-      public function SubEntityTempInfo(entity:DisplayObject, category:int, slot:int) {
-         super();
-         this.entity = entity;
-         this.category = category;
-         this.slot = slot;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SubEntityTempInfo(entity:DisplayObject, category:int, slot:int)
+      {
+         //Décompilation abandonné
       }
       
       public var entity:DisplayObject;

@@ -7,15 +7,18 @@ package com.ankamagames.jerakine.utils.crypto
    public class RSA extends Object
    {
       
-      public function RSA() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function publicEncrypt(key:String, baIn:ByteArray) : ByteArray {
-         var baOut:ByteArray = new ByteArray();
-         var publicKey:RSAKey = PEM.readRSAPublicKey(key);
-         publicKey.encrypt(baIn,baOut,baIn.length);
-         return baOut;
+      public function RSA()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function publicEncrypt(key:String, baIn:ByteArray) : ByteArray
+      {
+         //Décompilation abandonné
       }
    }
 }

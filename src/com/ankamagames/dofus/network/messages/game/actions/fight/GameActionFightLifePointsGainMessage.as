@@ -9,85 +9,71 @@ package com.ankamagames.dofus.network.messages.game.actions.fight
    public class GameActionFightLifePointsGainMessage extends AbstractGameActionMessage implements INetworkMessage
    {
       
-      public function GameActionFightLifePointsGainMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameActionFightLifePointsGainMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6311;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var targetId:int = 0;
       
       public var delta:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6311;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameActionFightLifePointsGainMessage(actionId:uint = 0, sourceId:int = 0, targetId:int = 0, delta:uint = 0) : GameActionFightLifePointsGainMessage {
-         super.initAbstractGameActionMessage(actionId,sourceId);
-         this.targetId = targetId;
-         this.delta = delta;
-         this._isInitialized = true;
-         return this;
+      public function initGameActionFightLifePointsGainMessage(actionId:uint = 0, sourceId:int = 0, targetId:int = 0, delta:uint = 0) : GameActionFightLifePointsGainMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.targetId = 0;
-         this.delta = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameActionFightLifePointsGainMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameActionFightLifePointsGainMessage(output:IDataOutput) : void {
-         super.serializeAs_AbstractGameActionMessage(output);
-         output.writeInt(this.targetId);
-         if(this.delta < 0)
-         {
-            throw new Error("Forbidden value (" + this.delta + ") on element delta.");
-         }
-         else
-         {
-            output.writeShort(this.delta);
-            return;
-         }
+      public function serializeAs_GameActionFightLifePointsGainMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameActionFightLifePointsGainMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameActionFightLifePointsGainMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.targetId = input.readInt();
-         this.delta = input.readShort();
-         if(this.delta < 0)
-         {
-            throw new Error("Forbidden value (" + this.delta + ") on element of GameActionFightLifePointsGainMessage.delta.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_GameActionFightLifePointsGainMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

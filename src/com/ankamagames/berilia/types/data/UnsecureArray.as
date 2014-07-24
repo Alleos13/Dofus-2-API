@@ -5,12 +5,18 @@ package com.ankamagames.berilia.types.data
    public dynamic class UnsecureArray extends Array implements Secure
    {
       
-      public function UnsecureArray() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function getObject(accessKey:Object) : * {
-         return this;
+      public function UnsecureArray()
+      {
+         //Décompilation abandonné
+      }
+      
+      public function getObject(accessKey:Object) : *
+      {
+         //Décompilation abandonné
       }
    }
 }

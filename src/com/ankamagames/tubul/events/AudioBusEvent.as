@@ -6,8 +6,13 @@ package com.ankamagames.tubul.events
    public class AudioBusEvent extends Event
    {
       
-      public function AudioBusEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false) {
-         super(type,bubbles,cancelable);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AudioBusEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       public static const ADD_SOUND_IN_BUS:String = "add_sound_in_bus";
@@ -16,10 +21,9 @@ package com.ankamagames.tubul.events
       
       public var sound:ISound;
       
-      override public function clone() : Event {
-         var abe:AudioBusEvent = new AudioBusEvent(type,bubbles,cancelable);
-         abe.sound = this.sound;
-         return abe;
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
    }
 }

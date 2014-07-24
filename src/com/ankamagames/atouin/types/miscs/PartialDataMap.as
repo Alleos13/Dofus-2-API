@@ -3,10 +3,13 @@ package com.ankamagames.atouin.types.miscs
    public class PartialDataMap extends Object
    {
       
-      public function PartialDataMap() {
-         this.cell = new Array();
-         this.gfx = new Array();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PartialDataMap()
+      {
+         //Décompilation abandonné
       }
       
       public var cell:Array;

@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.lists
    public class ChatHookList extends Object
    {
       
-      public function ChatHookList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ChatHookList()
+      {
+         //Décompilation abandonné
       }
       
       public static const ChatSendPreInit:Hook;

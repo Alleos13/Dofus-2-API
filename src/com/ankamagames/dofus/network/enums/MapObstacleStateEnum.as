@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class MapObstacleStateEnum extends Object
    {
       
-      public function MapObstacleStateEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapObstacleStateEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const OBSTACLE_OPENED:uint = 1;

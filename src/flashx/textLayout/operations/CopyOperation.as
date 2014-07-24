@@ -7,28 +7,33 @@ package flashx.textLayout.operations
    public class CopyOperation extends FlowTextOperation
    {
       
-      public function CopyOperation(param1:SelectionState) {
-         super(param1);
+      {
+      //Décompilation abandonné
       }
       
-      override public function doOperation() : Boolean {
-         if(originalSelectionState.activePosition != originalSelectionState.anchorPosition)
-         {
-            TextClipboard.setContents(TextScrap.createTextScrap(originalSelectionState));
-         }
-         return true;
+      public function CopyOperation(operationState:SelectionState)
+      {
+         //Décompilation abandonné
       }
       
-      override public function undo() : SelectionState {
-         return originalSelectionState;
+      override public function doOperation() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function redo() : SelectionState {
-         return originalSelectionState;
+      override public function undo() : SelectionState
+      {
+         //Décompilation abandonné
       }
       
-      override public function canUndo() : Boolean {
-         return false;
+      override public function redo() : SelectionState
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function canUndo() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

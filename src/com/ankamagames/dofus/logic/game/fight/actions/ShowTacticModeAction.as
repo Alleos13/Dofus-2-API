@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.fight.actions
    public class ShowTacticModeAction extends Object implements Action
    {
       
-      public function ShowTacticModeAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : ShowTacticModeAction {
-         var a:ShowTacticModeAction = new ShowTacticModeAction();
-         return a;
+      public function ShowTacticModeAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : ShowTacticModeAction
+      {
+         //Décompilation abandonné
       }
    }
 }

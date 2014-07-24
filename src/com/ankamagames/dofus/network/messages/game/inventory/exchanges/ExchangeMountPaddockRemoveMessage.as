@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeMountPaddockRemoveMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeMountPaddockRemoveMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeMountPaddockRemoveMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6050;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var mountId:Number = 0;
       
-      override public function getMessageId() : uint {
-         return 6050;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeMountPaddockRemoveMessage(mountId:Number = 0) : ExchangeMountPaddockRemoveMessage {
-         this.mountId = mountId;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeMountPaddockRemoveMessage(mountId:Number = 0) : ExchangeMountPaddockRemoveMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.mountId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeMountPaddockRemoveMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeMountPaddockRemoveMessage(output:IDataOutput) : void {
-         output.writeDouble(this.mountId);
+      public function serializeAs_ExchangeMountPaddockRemoveMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeMountPaddockRemoveMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeMountPaddockRemoveMessage(input:IDataInput) : void {
-         this.mountId = input.readDouble();
+      public function deserializeAs_ExchangeMountPaddockRemoveMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

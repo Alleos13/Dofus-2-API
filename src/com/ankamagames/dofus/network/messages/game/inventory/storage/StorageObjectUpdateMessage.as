@@ -10,61 +10,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.storage
    public class StorageObjectUpdateMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function StorageObjectUpdateMessage() {
-         this.object = new ObjectItem();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StorageObjectUpdateMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5647;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var object:ObjectItem;
       
-      override public function getMessageId() : uint {
-         return 5647;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initStorageObjectUpdateMessage(object:ObjectItem = null) : StorageObjectUpdateMessage {
-         this.object = object;
-         this._isInitialized = true;
-         return this;
+      public function initStorageObjectUpdateMessage(object:ObjectItem = null) : StorageObjectUpdateMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.object = new ObjectItem();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_StorageObjectUpdateMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_StorageObjectUpdateMessage(output:IDataOutput) : void {
-         this.object.serializeAs_ObjectItem(output);
+      public function serializeAs_StorageObjectUpdateMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_StorageObjectUpdateMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_StorageObjectUpdateMessage(input:IDataInput) : void {
-         this.object = new ObjectItem();
-         this.object.deserialize(input);
+      public function deserializeAs_StorageObjectUpdateMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

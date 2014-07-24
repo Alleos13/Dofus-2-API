@@ -9,9 +9,13 @@ package com.ankamagames.dofus.network.types.game.data.items
    public class ObjectItemMinimalInformation extends Item implements INetworkType
    {
       
-      public function ObjectItemMinimalInformation() {
-         this.effects = new Vector.<ObjectEffect>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ObjectItemMinimalInformation()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 124;
@@ -20,73 +24,39 @@ package com.ankamagames.dofus.network.types.game.data.items
       
       public var effects:Vector.<ObjectEffect>;
       
-      override public function getTypeId() : uint {
-         return 124;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initObjectItemMinimalInformation(objectGID:uint = 0, effects:Vector.<ObjectEffect> = null) : ObjectItemMinimalInformation {
-         this.objectGID = objectGID;
-         this.effects = effects;
-         return this;
+      public function initObjectItemMinimalInformation(objectGID:uint = 0, effects:Vector.<ObjectEffect> = null) : ObjectItemMinimalInformation
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.objectGID = 0;
-         this.effects = new Vector.<ObjectEffect>();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ObjectItemMinimalInformation(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectItemMinimalInformation(output:IDataOutput) : void {
-         super.serializeAs_Item(output);
-         if(this.objectGID < 0)
-         {
-            throw new Error("Forbidden value (" + this.objectGID + ") on element objectGID.");
-         }
-         else
-         {
-            output.writeShort(this.objectGID);
-            output.writeShort(this.effects.length);
-            _i2 = 0;
-            while(_i2 < this.effects.length)
-            {
-               output.writeShort((this.effects[_i2] as ObjectEffect).getTypeId());
-               (this.effects[_i2] as ObjectEffect).serialize(output);
-               _i2++;
-            }
-            return;
-         }
+      public function serializeAs_ObjectItemMinimalInformation(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ObjectItemMinimalInformation(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectItemMinimalInformation(input:IDataInput) : void {
-         var _id2:uint = 0;
-         var _item2:ObjectEffect = null;
-         super.deserialize(input);
-         this.objectGID = input.readShort();
-         if(this.objectGID < 0)
-         {
-            throw new Error("Forbidden value (" + this.objectGID + ") on element of ObjectItemMinimalInformation.objectGID.");
-         }
-         else
-         {
-            _effectsLen = input.readUnsignedShort();
-            _i2 = 0;
-            while(_i2 < _effectsLen)
-            {
-               _id2 = input.readUnsignedShort();
-               _item2 = ProtocolTypeManager.getInstance(ObjectEffect,_id2);
-               _item2.deserialize(input);
-               this.effects.push(_item2);
-               _i2++;
-            }
-            return;
-         }
+      public function deserializeAs_ObjectItemMinimalInformation(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

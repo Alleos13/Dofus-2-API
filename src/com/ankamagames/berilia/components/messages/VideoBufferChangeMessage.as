@@ -5,15 +5,20 @@ package com.ankamagames.berilia.components.messages
    public class VideoBufferChangeMessage extends ComponentMessage
    {
       
-      public function VideoBufferChangeMessage(target:InteractiveObject, state:uint) {
-         super(target);
-         this._state = state;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function VideoBufferChangeMessage(target:InteractiveObject, state:uint)
+      {
+         //Décompilation abandonné
       }
       
       private var _state:uint;
       
-      public function get state() : uint {
-         return this._state;
+      public function get state() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

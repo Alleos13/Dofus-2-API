@@ -5,8 +5,13 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
    public class RoleplayInteractivesFrame_INTERACTIVE_CURSOR_4 extends SpriteAsset
    {
       
-      public function RoleplayInteractivesFrame_INTERACTIVE_CURSOR_4() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RoleplayInteractivesFrame_INTERACTIVE_CURSOR_4()
+      {
+         //Décompilation abandonné
       }
    }
 }

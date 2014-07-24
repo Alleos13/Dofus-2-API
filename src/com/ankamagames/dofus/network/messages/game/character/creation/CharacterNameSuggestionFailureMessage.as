@@ -9,67 +9,69 @@ package com.ankamagames.dofus.network.messages.game.character.creation
    public class CharacterNameSuggestionFailureMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function CharacterNameSuggestionFailureMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterNameSuggestionFailureMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 164;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var reason:uint = 1;
       
-      override public function getMessageId() : uint {
-         return 164;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCharacterNameSuggestionFailureMessage(reason:uint = 1) : CharacterNameSuggestionFailureMessage {
-         this.reason = reason;
-         this._isInitialized = true;
-         return this;
+      public function initCharacterNameSuggestionFailureMessage(reason:uint = 1) : CharacterNameSuggestionFailureMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.reason = 1;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharacterNameSuggestionFailureMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterNameSuggestionFailureMessage(output:IDataOutput) : void {
-         output.writeByte(this.reason);
+      public function serializeAs_CharacterNameSuggestionFailureMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharacterNameSuggestionFailureMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterNameSuggestionFailureMessage(input:IDataInput) : void {
-         this.reason = input.readByte();
-         if(this.reason < 0)
-         {
-            throw new Error("Forbidden value (" + this.reason + ") on element of CharacterNameSuggestionFailureMessage.reason.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_CharacterNameSuggestionFailureMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

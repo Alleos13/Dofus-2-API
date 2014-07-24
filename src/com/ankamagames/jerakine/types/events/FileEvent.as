@@ -5,10 +5,13 @@ package com.ankamagames.jerakine.types.events
    public class FileEvent extends Event
    {
       
-      public function FileEvent(type:String, sFile:String, bSuccess:Boolean) {
-         super(type,bubbles,cancelable);
-         this._sFile = sFile;
-         this._bSuccess = bSuccess;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FileEvent(type:String, sFile:String, bSuccess:Boolean)
+      {
+         //Décompilation abandonné
       }
       
       public static const ERROR:String = "FILE_ERROR_EVENT";
@@ -17,12 +20,14 @@ package com.ankamagames.jerakine.types.events
       
       private var _bSuccess:Boolean;
       
-      public function get file() : String {
-         return this._sFile;
+      public function get file() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get success() : Boolean {
-         return this._bSuccess;
+      public function get success() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

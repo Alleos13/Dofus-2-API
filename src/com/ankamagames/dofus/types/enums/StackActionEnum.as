@@ -3,8 +3,13 @@ package com.ankamagames.dofus.types.enums
    public class StackActionEnum extends Object
    {
       
-      public function StackActionEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StackActionEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const MOVE:String = "MoveBehavior";

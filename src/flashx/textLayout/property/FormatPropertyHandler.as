@@ -3,26 +3,35 @@ package flashx.textLayout.property
    public class FormatPropertyHandler extends PropertyHandler
    {
       
-      public function FormatPropertyHandler() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FormatPropertyHandler()
+      {
+         //Décompilation abandonné
       }
       
       private var _converter:Function;
       
-      public function get converter() : Function {
-         return this._converter;
+      public function get converter() : Function
+      {
+         //Décompilation abandonné
       }
       
-      public function set converter(param1:Function) : void {
-         this._converter = param1;
+      public function set converter(val:Function) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function owningHandlerCheck(param1:*) : * {
-         return param1 is String?undefined:param1;
+      override public function owningHandlerCheck(newVal:*) : *
+      {
+         //Décompilation abandonné
       }
       
-      override public function setHelper(param1:*) : * {
-         return this._converter(param1);
+      override public function setHelper(newVal:*) : *
+      {
+         //Décompilation abandonné
       }
    }
 }

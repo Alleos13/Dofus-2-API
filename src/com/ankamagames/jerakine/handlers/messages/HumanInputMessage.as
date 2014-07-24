@@ -11,19 +11,18 @@ package com.ankamagames.jerakine.handlers.messages
    public class HumanInputMessage extends Object implements Message, DiscardableMessage, Poolable
    {
       
-      public function HumanInputMessage() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(target:InteractiveObject, nativeEvent:Event, instance:HumanInputMessage = null) : HumanInputMessage {
-         if(!instance)
-         {
-            instance = new HumanInputMessage();
-         }
-         instance._target = target;
-         instance._nativeEvent = nativeEvent;
-         instance._frameId = FrameIdManager.frameId;
-         return instance;
+      public function HumanInputMessage()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(target:InteractiveObject, nativeEvent:Event, instance:HumanInputMessage = null) : HumanInputMessage
+      {
+         //Décompilation abandonné
       }
       
       protected var _target:InteractiveObject;
@@ -38,50 +37,39 @@ package com.ankamagames.jerakine.handlers.messages
       
       public var bubbling:Boolean;
       
-      public function get target() : DisplayObject {
-         return this._target;
+      public function get target() : DisplayObject
+      {
+         //Décompilation abandonné
       }
       
-      public function get frameId() : uint {
-         return this._frameId;
+      public function get frameId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get canceled() : Boolean {
-         return this._canceled;
+      public function get canceled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set canceled(value:Boolean) : void {
-         if(this.bubbling)
-         {
-            throw new InvalidCancelError("Can\'t cancel a bubbling message.");
-         }
-         else if((this._canceled) && (!value))
-         {
-            throw new InvalidCancelError("Can\'t uncancel a canceled message.");
-         }
-         else
-         {
-            this._canceled = value;
-            return;
-         }
-         
+      public function set canceled(value:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get actions() : Array {
-         return this._actions;
+      public function get actions() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function free() : void {
-         this._target = null;
-         this._nativeEvent = null;
+      public function free() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addAction(action:Action) : void {
-         if(this._actions == null)
-         {
-            this._actions = new Array();
-         }
-         this._actions.push(action);
+      public function addAction(action:Action) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

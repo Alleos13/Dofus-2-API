@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.alignments
    public class AlignmentGift extends Object implements IDataCenter
    {
       
-      public function AlignmentGift() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AlignmentGift()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "AlignmentGift";
       
       protected static const _log:Logger;
       
-      public static function getAlignmentGiftById(id:int) : AlignmentGift {
-         return GameData.getObject(MODULE,id) as AlignmentGift;
+      public static function getAlignmentGiftById(id:int) : AlignmentGift
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAlignmentGifts() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAlignmentGifts() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -36,12 +43,9 @@ package com.ankamagames.dofus.datacenter.alignments
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

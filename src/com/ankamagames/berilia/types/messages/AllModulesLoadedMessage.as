@@ -5,8 +5,13 @@ package com.ankamagames.berilia.types.messages
    public class AllModulesLoadedMessage extends Object implements Message
    {
       
-      public function AllModulesLoadedMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AllModulesLoadedMessage()
+      {
+         //Décompilation abandonné
       }
    }
 }

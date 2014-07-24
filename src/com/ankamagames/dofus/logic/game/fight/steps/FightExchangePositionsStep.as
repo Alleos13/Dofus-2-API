@@ -14,17 +14,13 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightExchangePositionsStep extends AbstractSequencable implements IFightStep
    {
       
-      public function FightExchangePositionsStep(fighterOne:int, fighterOneNewCell:int, fighterTwo:int, fighterTwoNewCell:int) {
-         super();
-         this._fighterOne = fighterOne;
-         this._fighterOneNewCell = fighterOneNewCell;
-         this._fighterTwo = fighterTwo;
-         this._fighterTwoNewCell = fighterTwoNewCell;
-         var infos:GameFightFighterInformations = FightEntitiesFrame.getCurrentInstance().getEntityInfos(this._fighterOne) as GameFightFighterInformations;
-         this._fighterOneVisibility = infos.stats.invisibilityState;
-         infos.disposition.cellId = this._fighterOneNewCell;
-         infos = FightEntitiesFrame.getCurrentInstance().getEntityInfos(this._fighterTwo) as GameFightFighterInformations;
-         infos.disposition.cellId = this._fighterTwoNewCell;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightExchangePositionsStep(fighterOne:int, fighterOneNewCell:int, fighterTwo:int, fighterTwoNewCell:int)
+      {
+         //Décompilation abandonné
       }
       
       private var _fighterOne:int;
@@ -37,46 +33,19 @@ package com.ankamagames.dofus.logic.game.fight.steps
       
       private var _fighterOneVisibility:int;
       
-      public function get stepType() : String {
-         return "exchangePositions";
+      public function get stepType() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function start() : void {
-         if(this._fighterOneVisibility != GameActionFightInvisibilityStateEnum.INVISIBLE)
-         {
-            if(!this.doJump(this._fighterOne,this._fighterOneNewCell))
-            {
-               _log.warn("Unable to move unexisting fighter " + this._fighterOne + " (1) to " + this._fighterOneNewCell + " during a positions exchange.");
-            }
-         }
-         if(!this.doJump(this._fighterTwo,this._fighterTwoNewCell))
-         {
-            _log.warn("Unable to move unexisting fighter " + this._fighterTwo + " (2) to " + this._fighterTwoNewCell + " during a positions exchange.");
-         }
-         var fighterInfosOne:GameFightFighterInformations = FightEntitiesFrame.getCurrentInstance().getEntityInfos(this._fighterOne) as GameFightFighterInformations;
-         var fighterInfosTwo:GameFightFighterInformations = FightEntitiesFrame.getCurrentInstance().getEntityInfos(this._fighterTwo) as GameFightFighterInformations;
-         fighterInfosOne.disposition.cellId = this._fighterOneNewCell;
-         fighterInfosTwo.disposition.cellId = this._fighterTwoNewCell;
-         FightEventsHelper.sendFightEvent(FightEventEnum.FIGHTERS_POSITION_EXCHANGE,[this._fighterOne,this._fighterTwo],0,castingSpellId);
-         FightSpellCastFrame.updateRangeAndTarget();
-         executeCallbacks();
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function doJump(fighterId:int, newCell:int) : Boolean {
-         var fighterEntity:IMovable = null;
-         if(newCell > -1)
-         {
-            fighterEntity = DofusEntities.getEntity(fighterId) as IMovable;
-            if(fighterEntity)
-            {
-               fighterEntity.jump(MapPoint.fromCellId(newCell));
-            }
-            else
-            {
-               return false;
-            }
-         }
-         return true;
+      private function doJump(fighterId:int, newCell:int) : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

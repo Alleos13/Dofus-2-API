@@ -11,18 +11,22 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
    public class TaxCollectorAttackedResultMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function TaxCollectorAttackedResultMessage() {
-         this.basicInfos = new TaxCollectorBasicInformations();
-         this.guild = new BasicGuildInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TaxCollectorAttackedResultMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5635;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var deadOrAlive:Boolean = false;
@@ -31,54 +35,49 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
       
       public var guild:BasicGuildInformations;
       
-      override public function getMessageId() : uint {
-         return 5635;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initTaxCollectorAttackedResultMessage(deadOrAlive:Boolean = false, basicInfos:TaxCollectorBasicInformations = null, guild:BasicGuildInformations = null) : TaxCollectorAttackedResultMessage {
-         this.deadOrAlive = deadOrAlive;
-         this.basicInfos = basicInfos;
-         this.guild = guild;
-         this._isInitialized = true;
-         return this;
+      public function initTaxCollectorAttackedResultMessage(deadOrAlive:Boolean = false, basicInfos:TaxCollectorBasicInformations = null, guild:BasicGuildInformations = null) : TaxCollectorAttackedResultMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.deadOrAlive = false;
-         this.basicInfos = new TaxCollectorBasicInformations();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TaxCollectorAttackedResultMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_TaxCollectorAttackedResultMessage(output:IDataOutput) : void {
-         output.writeBoolean(this.deadOrAlive);
-         this.basicInfos.serializeAs_TaxCollectorBasicInformations(output);
-         this.guild.serializeAs_BasicGuildInformations(output);
+      public function serializeAs_TaxCollectorAttackedResultMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TaxCollectorAttackedResultMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_TaxCollectorAttackedResultMessage(input:IDataInput) : void {
-         this.deadOrAlive = input.readBoolean();
-         this.basicInfos = new TaxCollectorBasicInformations();
-         this.basicInfos.deserialize(input);
-         this.guild = new BasicGuildInformations();
-         this.guild.deserialize(input);
+      public function deserializeAs_TaxCollectorAttackedResultMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

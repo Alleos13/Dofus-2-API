@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.alliance
    public class AllianceInvitationAnswerMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function AllianceInvitationAnswerMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AllianceInvitationAnswerMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6401;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var accept:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 6401;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initAllianceInvitationAnswerMessage(accept:Boolean = false) : AllianceInvitationAnswerMessage {
-         this.accept = accept;
-         this._isInitialized = true;
-         return this;
+      public function initAllianceInvitationAnswerMessage(accept:Boolean = false) : AllianceInvitationAnswerMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.accept = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AllianceInvitationAnswerMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_AllianceInvitationAnswerMessage(output:IDataOutput) : void {
-         output.writeBoolean(this.accept);
+      public function serializeAs_AllianceInvitationAnswerMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AllianceInvitationAnswerMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_AllianceInvitationAnswerMessage(input:IDataInput) : void {
-         this.accept = input.readBoolean();
+      public function deserializeAs_AllianceInvitationAnswerMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

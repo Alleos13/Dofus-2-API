@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.quest
    public class GuidedModeReturnRequestAction extends Object implements Action
    {
       
-      public function GuidedModeReturnRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : GuidedModeReturnRequestAction {
-         return new GuidedModeReturnRequestAction();
+      public function GuidedModeReturnRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : GuidedModeReturnRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -31,8 +31,13 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
    public class ZaapFrame extends Object implements Frame
    {
       
-      public function ZaapFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ZaapFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -41,101 +46,34 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
       
       private var _spawnMapId:uint;
       
-      public function get spawnMapId() : uint {
-         return this._spawnMapId;
+      public function get spawnMapId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get priority() : int {
-         return this._priority;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set priority(p:int) : void {
-         this._priority = p;
+      public function set priority(p:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var zlmsg:ZaapListMessage = null;
-         var destinationz:Array = null;
-         var tdlmsg:TeleportDestinationsListMessage = null;
-         var destinations:Array = null;
-         var hints:Vector.<Hint> = null;
-         var hint:Hint = null;
-         var tra:TeleportRequestAction = null;
-         var ldm:LeaveDialogMessage = null;
-         var i:* = 0;
-         var trmsg:TeleportRequestMessage = null;
-         switch(true)
-         {
-            case msg is ZaapListMessage:
-               zlmsg = msg as ZaapListMessage;
-               destinationz = new Array();
-               i = 0;
-               while(i < zlmsg.mapIds.length)
-               {
-                  destinationz.push(new TeleportDestinationWrapper(zlmsg.teleporterType,zlmsg.mapIds[i],zlmsg.subAreaIds[i],zlmsg.destTeleporterType[i],zlmsg.costs[i],zlmsg.spawnMapId == zlmsg.mapIds[i]));
-                  i++;
-               }
-               this._spawnMapId = zlmsg.spawnMapId;
-               KernelEventsManager.getInstance().processCallback(RoleplayHookList.TeleportDestinationList,destinationz,TeleporterTypeEnum.TELEPORTER_ZAAP);
-               return true;
-            case msg is TeleportDestinationsListMessage:
-               tdlmsg = msg as TeleportDestinationsListMessage;
-               destinations = new Array();
-               i = 0;
-               while(i < tdlmsg.mapIds.length)
-               {
-                  if(tdlmsg.teleporterType == TeleporterTypeEnum.TELEPORTER_SUBWAY)
-                  {
-                     hints = TeleportDestinationWrapper.getHintsFromMapId(tdlmsg.mapIds[i]);
-                     for each(hint in hints)
-                     {
-                        destinations.push(new TeleportDestinationWrapper(tdlmsg.teleporterType,tdlmsg.mapIds[i],tdlmsg.subAreaIds[i],TeleporterTypeEnum.TELEPORTER_SUBWAY,tdlmsg.costs[i],false,hint));
-                     }
-                  }
-                  else
-                  {
-                     destinations.push(new TeleportDestinationWrapper(tdlmsg.teleporterType,tdlmsg.mapIds[i],tdlmsg.subAreaIds[i],tdlmsg.destTeleporterType[i],tdlmsg.costs[i]));
-                  }
-                  i++;
-               }
-               KernelEventsManager.getInstance().processCallback(RoleplayHookList.TeleportDestinationList,destinations,tdlmsg.teleporterType);
-               return true;
-            case msg is TeleportRequestAction:
-               tra = msg as TeleportRequestAction;
-               if(tra.cost <= PlayedCharacterManager.getInstance().characteristics.kamas)
-               {
-                  trmsg = new TeleportRequestMessage();
-                  trmsg.initTeleportRequestMessage(tra.teleportType,tra.mapId);
-                  ConnectionsHandler.getConnection().send(trmsg);
-               }
-               else
-               {
-                  KernelEventsManager.getInstance().processCallback(ChatHookList.TextInformation,I18n.getUiText("ui.popup.not_enough_rich"),ChatFrame.RED_CHANNEL_ID,TimeManager.getInstance().getTimestamp());
-               }
-               return true;
-            case msg is LeaveDialogRequestAction:
-               ConnectionsHandler.getConnection().send(new LeaveDialogRequestMessage());
-               return true;
-            case msg is LeaveDialogMessage:
-               ldm = msg as LeaveDialogMessage;
-               if(ldm.dialogType == DialogTypeEnum.DIALOG_TELEPORTER)
-               {
-                  Kernel.getWorker().process(ChangeWorldInteractionAction.create(true));
-                  Kernel.getWorker().removeFrame(this);
-               }
-               return true;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         KernelEventsManager.getInstance().processCallback(HookList.LeaveDialog);
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

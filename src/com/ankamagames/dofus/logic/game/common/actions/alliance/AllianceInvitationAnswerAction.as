@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.alliance
    public class AllianceInvitationAnswerAction extends Object implements Action
    {
       
-      public function AllianceInvitationAnswerAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pAccept:Boolean) : AllianceInvitationAnswerAction {
-         var action:AllianceInvitationAnswerAction = new AllianceInvitationAnswerAction();
-         action.accept = pAccept;
-         return action;
+      public function AllianceInvitationAnswerAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pAccept:Boolean) : AllianceInvitationAnswerAction
+      {
+         //Décompilation abandonné
       }
       
       public var accept:Boolean;

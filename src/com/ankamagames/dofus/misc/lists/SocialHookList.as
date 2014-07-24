@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.lists
    public class SocialHookList extends Object
    {
       
-      public function SocialHookList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SocialHookList()
+      {
+         //Décompilation abandonné
       }
       
       public static const OpenSocial:Hook;

@@ -8,38 +8,28 @@ package com.ankamagames.tiphon.types
    public class DynamicSprite extends MovieClip
    {
       
-      public function DynamicSprite() {
-         super();
-         addEventListener(Event.ADDED_TO_STAGE,this.onAdded);
+      {
+      //Décompilation abandonné
       }
       
-      public function init(handler:IAnimationSpriteHandler) : void {
+      public function DynamicSprite()
+      {
+         //Décompilation abandonné
       }
       
-      private function onAdded(e:Event) : void {
-         removeEventListener(Event.ADDED_TO_STAGE,this.onAdded);
-         var currentDo:DisplayObject = e.target as DisplayObject;
-         while((!(currentDo is TiphonSprite)) && (currentDo.parent))
-         {
-            currentDo = currentDo.parent;
-         }
-         if(currentDo is TiphonSprite)
-         {
-            this.init(currentDo as TiphonSprite);
-         }
+      public function init(handler:IAnimationSpriteHandler) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getRoot() : ScriptedAnimation {
-         var current:DisplayObject = this;
-         while(current)
-         {
-            if(current is ScriptedAnimation)
-            {
-               return current as ScriptedAnimation;
-            }
-            current = current.parent;
-         }
-         return null;
+      private function onAdded(e:Event) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public function getRoot() : ScriptedAnimation
+      {
+         //Décompilation abandonné
       }
    }
 }

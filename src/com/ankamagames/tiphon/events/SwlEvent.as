@@ -5,21 +5,27 @@ package com.ankamagames.tiphon.events
    public class SwlEvent extends Event
    {
       
-      public function SwlEvent(type:String, pUrl:String, bubbles:Boolean = false, cancelable:Boolean = false) {
-         super(type,bubbles,cancelable);
-         this._url = pUrl;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SwlEvent(type:String, pUrl:String, bubbles:Boolean = false, cancelable:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       public static const SWL_LOADED:String = "onSwfLoaded";
       
       private var _url:String;
       
-      override public function clone() : Event {
-         return new SwlEvent(type,this.url,bubbles,cancelable);
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
       
-      public function get url() : String {
-         return this._url;
+      public function get url() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

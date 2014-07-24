@@ -8,22 +8,13 @@ package com.ankamagames.dofus.types.data
    public class PlayerSetInfo extends Object
    {
       
-      public function PlayerSetInfo(id:uint, items:Vector.<uint>, effects:Vector.<ObjectEffect>) {
-         this.setObjects = new Vector.<uint>();
-         super();
-         var itemSet:ItemSet = ItemSet.getItemSetById(id);
-         this.setName = itemSet.name;
-         this.allItems = itemSet.items;
-         this.setId = id;
-         this.setObjects = items;
-         var nEffect:int = effects.length;
-         this.setEffects = new Vector.<EffectInstance>(nEffect);
-         var i:int = 0;
-         while(i < nEffect)
-         {
-            this.setEffects[i] = ObjectEffectAdapter.fromNetwork(effects[i]);
-            i++;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PlayerSetInfo(id:uint, items:Vector.<uint>, effects:Vector.<ObjectEffect>)
+      {
+         //Décompilation abandonné
       }
       
       public var setId:uint = 0;

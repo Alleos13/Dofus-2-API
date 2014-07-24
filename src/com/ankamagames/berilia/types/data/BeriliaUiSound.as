@@ -3,8 +3,13 @@ package com.ankamagames.berilia.types.data
    public class BeriliaUiSound extends Object
    {
       
-      public function BeriliaUiSound() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BeriliaUiSound()
+      {
+         //Décompilation abandonné
       }
       
       public var uiName:String;

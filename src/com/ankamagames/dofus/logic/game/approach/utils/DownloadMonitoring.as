@@ -15,8 +15,13 @@ package com.ankamagames.dofus.logic.game.approach.utils
    public class DownloadMonitoring extends Object
    {
       
-      public function DownloadMonitoring() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DownloadMonitoring()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -27,12 +32,9 @@ package com.ankamagames.dofus.logic.game.approach.utils
       
       public static const MODE_WATCH:uint = 1;
       
-      public static function getInstance() : DownloadMonitoring {
-         if(!_singleton)
-         {
-            _singleton = new DownloadMonitoring();
-         }
-         return _singleton;
+      public static function getInstance() : DownloadMonitoring
+      {
+         //Décompilation abandonné
       }
       
       private var _connection:IServerConnection;
@@ -49,106 +51,49 @@ package com.ankamagames.dofus.logic.game.approach.utils
       
       private var _mode:uint = 0;
       
-      public function get downloadSpeed() : uint {
-         return this._downloadSpeed;
+      public function get downloadSpeed() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set downloadSpeed(speed:uint) : void {
-         this._downloadSpeed = speed;
+      public function set downloadSpeed(speed:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get mode() : uint {
-         return this._mode;
+      public function get mode() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set mode(value:uint) : void {
-         this._mode = value;
+      public function set mode(value:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get firstAping() : uint {
-         return this._apingSum / this._apingCount;
+      public function get firstAping() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initialize() : void {
-         var dcsrmsg:DownloadGetCurrentSpeedRequestMessage = null;
-         if(InterClientManager.isMaster())
-         {
-            if(!this._initialized)
-            {
-               this._initialized = true;
-               this._mode = MODE_LISTEN;
-               this._timer = new Timer(2000,0);
-               this._timer.addEventListener(TimerEvent.TIMER,this.onTimerEvent);
-               this._apingSum = 0;
-               this._apingCount = 0;
-               if(UpdaterConnexionHandler.getConnection())
-               {
-                  dcsrmsg = new DownloadGetCurrentSpeedRequestMessage();
-                  dcsrmsg.initDownloadGetCurrentSpeedRequestMessage();
-                  UpdaterConnexionHandler.getConnection().send(dcsrmsg);
-               }
-            }
-         }
+      public function initialize() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function start() : void {
-         if(InterClientManager.isMaster())
-         {
-            this.initialize();
-            this.mode = MODE_WATCH;
-         }
+      public function start() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function stop() : void {
-         if(this._initialized)
-         {
-            this.mode = MODE_LISTEN;
-         }
+      public function stop() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onTimerEvent(te:TimerEvent) : void {
-         var aping:uint = 0;
-         var dssrmsg:DownloadSetSpeedRequestMessage = null;
-         if(this._connection == null)
-         {
-            this._connection = ConnectionsHandler.getConnection().mainConnection;
-         }
-         if(this._mode == MODE_LISTEN)
-         {
-            if(this._connection)
-            {
-               this._apingSum = this._apingSum + this._connection.latencyAvg;
-               this._apingCount++;
-            }
-         }
-         else if(this._mode == MODE_WATCH)
-         {
-            aping = this._connection.latencyAvg;
-            if(aping >= this.firstAping * 2)
-            {
-               if(this._downloadSpeed > 1)
-               {
-                  this._downloadSpeed--;
-                  _log.info("Decrease download speed to " + this._downloadSpeed);
-                  dssrmsg = new DownloadSetSpeedRequestMessage();
-                  dssrmsg.initDownloadSetSpeedRequestMessage(this._downloadSpeed);
-                  UpdaterConnexionHandler.getConnection().send(dssrmsg);
-               }
-            }
-            else if(aping < this.firstAping * 1.5)
-            {
-               if(this._downloadSpeed < 10)
-               {
-                  this._downloadSpeed++;
-                  _log.info("Increase download speed to " + this._downloadSpeed);
-                  dssrmsg = new DownloadSetSpeedRequestMessage();
-                  dssrmsg.initDownloadSetSpeedRequestMessage(this._downloadSpeed);
-                  UpdaterConnexionHandler.getConnection().send(dssrmsg);
-               }
-            }
-            
-         }
-         
+      private function onTimerEvent(te:TimerEvent) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -9,48 +9,28 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class ObjectItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function ObjectItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get isRespected() : Boolean {
-         var iw:ItemWrapper = null;
-         for each(iw in InventoryManager.getInstance().realInventory)
-         {
-            if(iw.objectGID == _criterionValue)
-            {
-               if(_operator.text == ItemCriterionOperator.EQUAL)
-               {
-                  return true;
-               }
-               return false;
-            }
-         }
-         if(_operator.text == ItemCriterionOperator.DIFFERENT)
-         {
-            return true;
-         }
-         return false;
+      public function ObjectItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         var objectName:String = Item.getItemById(_criterionValue).name;
-         var readableCriterion:String = "";
-         switch(_operator.text)
-         {
-            case ItemCriterionOperator.DIFFERENT:
-               readableCriterion = I18n.getUiText("ui.common.doNotPossess",[objectName]);
-               break;
-            case ItemCriterionOperator.EQUAL:
-               readableCriterion = I18n.getUiText("ui.common.doPossess",[objectName]);
-               break;
-         }
-         return readableCriterion;
+      override public function get isRespected() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:ObjectItemCriterion = new ObjectItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
       }
    }
 }

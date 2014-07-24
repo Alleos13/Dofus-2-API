@@ -3,8 +3,13 @@ package com.ankamagames.dofusModuleLibrary.enum
    public class WebLocationEnum extends Object
    {
       
-      public function WebLocationEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function WebLocationEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const WEB_LOCATION_OGRINE:uint = 0;

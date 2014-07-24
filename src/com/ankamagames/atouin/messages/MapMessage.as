@@ -5,8 +5,13 @@ package com.ankamagames.atouin.messages
    public class MapMessage extends Object implements Message
    {
       
-      public function MapMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapMessage()
+      {
+         //Décompilation abandonné
       }
       
       private var _id:uint;
@@ -15,20 +20,24 @@ package com.ankamagames.atouin.messages
       
       public var renderRequestId:uint;
       
-      public function get id() : uint {
-         return this._id;
+      public function get id() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set id(nValue:uint) : void {
-         this._id = nValue;
+      public function set id(nValue:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get transitionType() : String {
-         return this._transitionType;
+      public function get transitionType() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function set transitionType(sValue:String) : void {
-         this._transitionType = sValue;
+      public function set transitionType(sValue:String) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

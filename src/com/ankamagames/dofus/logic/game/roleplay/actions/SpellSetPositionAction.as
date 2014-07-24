@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
    public class SpellSetPositionAction extends Object implements Action
    {
       
-      public function SpellSetPositionAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(spellID:uint, position:uint) : SpellSetPositionAction {
-         var a:SpellSetPositionAction = new SpellSetPositionAction();
-         a.spellID = spellID;
-         a.position = position;
-         return a;
+      public function SpellSetPositionAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(spellID:uint, position:uint) : SpellSetPositionAction
+      {
+         //Décompilation abandonné
       }
       
       public var spellID:uint;

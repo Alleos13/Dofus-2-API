@@ -5,26 +5,18 @@ package com.ankamagames.dofus.externalnotification
    public class ExternalNotificationRequest extends Object
    {
       
-      public function ExternalNotificationRequest(pNotificationType:int, pClientId:String, pOtherClientsIds:Array, pId:String, pShowMode:int, pUiName:String, pDisplayData:Object, pSoundId:String, pPlaySound:Boolean, pNotify:Boolean, pHookName:String = null, pHookParams:Array = null) {
-         super();
-         this._notificationType = pNotificationType;
-         this._clientId = pClientId;
-         this._otherClientsIds = pOtherClientsIds;
-         this._id = pId;
-         this._showMode = pShowMode;
-         this._uiName = pUiName;
-         this._displayData = pDisplayData;
-         this._soundId = pSoundId;
-         this._playSound = pPlaySound;
-         this._notify = pNotify;
-         this._hookName = pHookName;
-         this._hookParams = pHookParams;
+      {
+      //Décompilation abandonné
       }
       
-      public static function createFromJSONString(pJSONStr:String) : ExternalNotificationRequest {
-         var obj:Object = com.ankamagames.jerakine.json.JSON.decode(pJSONStr);
-         var req:ExternalNotificationRequest = new ExternalNotificationRequest(obj.notificationType,obj.clientId,obj.otherClientsIds,obj.id,obj.showMode,obj.uiName,obj.displayData,obj.soundId,obj.playSound,obj.notify,obj.hookName,obj.hookParams);
-         return req;
+      public function ExternalNotificationRequest(pNotificationType:int, pClientId:String, pOtherClientsIds:Array, pId:String, pShowMode:int, pUiName:String, pDisplayData:Object, pSoundId:String, pPlaySound:Boolean, pNotify:Boolean, pHookName:String = null, pHookParams:Array = null)
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function createFromJSONString(pJSONStr:String) : ExternalNotificationRequest
+      {
+         //Décompilation abandonné
       }
       
       private var _notificationType:int;
@@ -51,56 +43,69 @@ package com.ankamagames.dofus.externalnotification
       
       private var _notify:Boolean;
       
-      public function get notificationType() : int {
-         return this._notificationType;
+      public function get notificationType() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get instanceId() : String {
-         return this._clientId + "#" + this._id;
+      public function get instanceId() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get clientId() : String {
-         return this._clientId;
+      public function get clientId() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get otherClientsIds() : Array {
-         return this._otherClientsIds;
+      public function get otherClientsIds() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function get id() : String {
-         return this._id;
+      public function get id() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get showMode() : int {
-         return this._showMode;
+      public function get showMode() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get uiName() : String {
-         return this._uiName;
+      public function get uiName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get displayData() : Object {
-         return this._displayData;
+      public function get displayData() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function get soundId() : String {
-         return this._soundId;
+      public function get soundId() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get hookName() : String {
-         return this._hookName;
+      public function get hookName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get hookParams() : Array {
-         return this._hookParams;
+      public function get hookParams() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function get playSound() : Boolean {
-         return this._playSound;
+      public function get playSound() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get notify() : Boolean {
-         return this._notify;
+      public function get notify() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

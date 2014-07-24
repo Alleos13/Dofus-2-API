@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class UpdatableMountBoostEnum extends Object
    {
       
-      public function UpdatableMountBoostEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UpdatableMountBoostEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const STAMINA:int = 3;

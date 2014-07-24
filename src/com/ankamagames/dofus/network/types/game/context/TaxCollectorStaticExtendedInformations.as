@@ -9,47 +9,52 @@ package com.ankamagames.dofus.network.types.game.context
    public class TaxCollectorStaticExtendedInformations extends TaxCollectorStaticInformations implements INetworkType
    {
       
-      public function TaxCollectorStaticExtendedInformations() {
-         this.allianceIdentity = new AllianceInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TaxCollectorStaticExtendedInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 440;
       
       public var allianceIdentity:AllianceInformations;
       
-      override public function getTypeId() : uint {
-         return 440;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initTaxCollectorStaticExtendedInformations(firstNameId:uint = 0, lastNameId:uint = 0, guildIdentity:GuildInformations = null, allianceIdentity:AllianceInformations = null) : TaxCollectorStaticExtendedInformations {
-         super.initTaxCollectorStaticInformations(firstNameId,lastNameId,guildIdentity);
-         this.allianceIdentity = allianceIdentity;
-         return this;
+      public function initTaxCollectorStaticExtendedInformations(firstNameId:uint = 0, lastNameId:uint = 0, guildIdentity:GuildInformations = null, allianceIdentity:AllianceInformations = null) : TaxCollectorStaticExtendedInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.allianceIdentity = new AllianceInformations();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TaxCollectorStaticExtendedInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_TaxCollectorStaticExtendedInformations(output:IDataOutput) : void {
-         super.serializeAs_TaxCollectorStaticInformations(output);
-         this.allianceIdentity.serializeAs_AllianceInformations(output);
+      public function serializeAs_TaxCollectorStaticExtendedInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TaxCollectorStaticExtendedInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_TaxCollectorStaticExtendedInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.allianceIdentity = new AllianceInformations();
-         this.allianceIdentity.deserialize(input);
+      public function deserializeAs_TaxCollectorStaticExtendedInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

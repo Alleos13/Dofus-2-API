@@ -7,12 +7,13 @@ package com.ankamagames.atouin.messages
    public class AdjacentMapOverMessage extends Object implements Message
    {
       
-      public function AdjacentMapOverMessage(nDirection:uint, zone:DisplayObject, cellId:int, cellData:CellData) {
-         super();
-         this._nDirection = nDirection;
-         this._spZone = zone;
-         this._cellId = cellId;
-         this._cellData = cellData;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AdjacentMapOverMessage(nDirection:uint, zone:DisplayObject, cellId:int, cellData:CellData)
+      {
+         //Décompilation abandonné
       }
       
       private var _nDirection:uint;
@@ -25,20 +26,24 @@ package com.ankamagames.atouin.messages
       
       private var _neighborMapId:uint;
       
-      public function get direction() : uint {
-         return this._nDirection;
+      public function get direction() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get zone() : DisplayObject {
-         return this._spZone;
+      public function get zone() : DisplayObject
+      {
+         //Décompilation abandonné
       }
       
-      public function get cellId() : int {
-         return this._cellId;
+      public function get cellId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get cellData() : CellData {
-         return this._cellData;
+      public function get cellData() : CellData
+      {
+         //Décompilation abandonné
       }
    }
 }

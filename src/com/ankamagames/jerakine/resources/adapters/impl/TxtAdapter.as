@@ -8,20 +8,23 @@ package com.ankamagames.jerakine.resources.adapters.impl
    public class TxtAdapter extends AbstractUrlLoaderAdapter implements IAdapter
    {
       
-      public function TxtAdapter() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      override protected function getResource(dataFormat:String, data:*) : * {
-         if((dataFormat == ResourceType.getName(ResourceType.RESOURCE_BINARY)) && (data is IDataInput))
-         {
-            return IDataInput(data).readUTFBytes(IDataInput(data).bytesAvailable);
-         }
-         return data as String;
+      public function TxtAdapter()
+      {
+         //Décompilation abandonné
       }
       
-      override public function getResourceType() : uint {
-         return ResourceType.RESOURCE_TXT;
+      override protected function getResource(dataFormat:String, data:*) : *
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function getResourceType() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

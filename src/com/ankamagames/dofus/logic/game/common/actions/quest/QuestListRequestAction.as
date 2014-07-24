@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.quest
    public class QuestListRequestAction extends Object implements Action
    {
       
-      public function QuestListRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : QuestListRequestAction {
-         return new QuestListRequestAction();
+      public function QuestListRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : QuestListRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

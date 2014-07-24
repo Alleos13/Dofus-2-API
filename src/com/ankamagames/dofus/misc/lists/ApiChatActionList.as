@@ -15,8 +15,13 @@ package com.ankamagames.dofus.misc.lists
    public class ApiChatActionList extends Object
    {
       
-      public function ApiChatActionList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ApiChatActionList()
+      {
+         //Décompilation abandonné
       }
       
       public static const ChannelEnabling:DofusApiAction;

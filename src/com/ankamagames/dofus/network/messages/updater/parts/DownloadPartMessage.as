@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.updater.parts
    public class DownloadPartMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function DownloadPartMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DownloadPartMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 1503;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var id:String = "";
       
-      override public function getMessageId() : uint {
-         return 1503;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initDownloadPartMessage(id:String = "") : DownloadPartMessage {
-         this.id = id;
-         this._isInitialized = true;
-         return this;
+      public function initDownloadPartMessage(id:String = "") : DownloadPartMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.id = "";
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_DownloadPartMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_DownloadPartMessage(output:IDataOutput) : void {
-         output.writeUTF(this.id);
+      public function serializeAs_DownloadPartMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_DownloadPartMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_DownloadPartMessage(input:IDataInput) : void {
-         this.id = input.readUTF();
+      public function deserializeAs_DownloadPartMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

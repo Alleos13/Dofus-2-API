@@ -9,85 +9,71 @@ package com.ankamagames.dofus.network.messages.game.actions.fight
    public class GameActionFightSpellImmunityMessage extends AbstractGameActionMessage implements INetworkMessage
    {
       
-      public function GameActionFightSpellImmunityMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameActionFightSpellImmunityMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6221;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var targetId:int = 0;
       
       public var spellId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6221;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameActionFightSpellImmunityMessage(actionId:uint = 0, sourceId:int = 0, targetId:int = 0, spellId:uint = 0) : GameActionFightSpellImmunityMessage {
-         super.initAbstractGameActionMessage(actionId,sourceId);
-         this.targetId = targetId;
-         this.spellId = spellId;
-         this._isInitialized = true;
-         return this;
+      public function initGameActionFightSpellImmunityMessage(actionId:uint = 0, sourceId:int = 0, targetId:int = 0, spellId:uint = 0) : GameActionFightSpellImmunityMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.targetId = 0;
-         this.spellId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameActionFightSpellImmunityMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameActionFightSpellImmunityMessage(output:IDataOutput) : void {
-         super.serializeAs_AbstractGameActionMessage(output);
-         output.writeInt(this.targetId);
-         if(this.spellId < 0)
-         {
-            throw new Error("Forbidden value (" + this.spellId + ") on element spellId.");
-         }
-         else
-         {
-            output.writeInt(this.spellId);
-            return;
-         }
+      public function serializeAs_GameActionFightSpellImmunityMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameActionFightSpellImmunityMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameActionFightSpellImmunityMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.targetId = input.readInt();
-         this.spellId = input.readInt();
-         if(this.spellId < 0)
-         {
-            throw new Error("Forbidden value (" + this.spellId + ") on element of GameActionFightSpellImmunityMessage.spellId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_GameActionFightSpellImmunityMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

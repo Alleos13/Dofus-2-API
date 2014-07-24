@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.bid
    public class LeaveBidHouseAction extends Object implements Action
    {
       
-      public function LeaveBidHouseAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : LeaveBidHouseAction {
-         var a:LeaveBidHouseAction = new LeaveBidHouseAction();
-         return a;
+      public function LeaveBidHouseAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : LeaveBidHouseAction
+      {
+         //Décompilation abandonné
       }
    }
 }

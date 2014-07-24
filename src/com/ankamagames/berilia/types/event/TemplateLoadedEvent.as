@@ -5,17 +5,22 @@ package com.ankamagames.berilia.types.event
    public class TemplateLoadedEvent extends Event
    {
       
-      public function TemplateLoadedEvent(templateUrl:String) {
-         super(EVENT_TEMPLATE_LOADED,false,false);
-         this._templateUrl = templateUrl;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TemplateLoadedEvent(templateUrl:String)
+      {
+         //Décompilation abandonné
       }
       
       public static const EVENT_TEMPLATE_LOADED:String = "onTemplateLoadedEvent";
       
       private var _templateUrl:String;
       
-      public function get templateUrl() : String {
-         return this._templateUrl;
+      public function get templateUrl() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -7,20 +7,25 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightReflectedSpellStep extends AbstractSequencable implements IFightStep
    {
       
-      public function FightReflectedSpellStep(fighterId:int) {
-         super();
-         this._fighterId = fighterId;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightReflectedSpellStep(fighterId:int)
+      {
+         //Décompilation abandonné
       }
       
       private var _fighterId:int;
       
-      public function get stepType() : String {
-         return "reflectedSpell";
+      public function get stepType() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function start() : void {
-         FightEventsHelper.sendFightEvent(FightEventEnum.FIGHTER_REFLECTED_SPELL,[this._fighterId],this._fighterId,castingSpellId);
-         executeCallbacks();
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

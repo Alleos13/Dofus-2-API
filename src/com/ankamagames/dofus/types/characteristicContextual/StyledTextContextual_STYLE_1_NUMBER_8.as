@@ -5,8 +5,13 @@ package com.ankamagames.dofus.types.characteristicContextual
    public class StyledTextContextual_STYLE_1_NUMBER_8 extends SpriteAsset
    {
       
-      public function StyledTextContextual_STYLE_1_NUMBER_8() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StyledTextContextual_STYLE_1_NUMBER_8()
+      {
+         //Décompilation abandonné
       }
    }
 }

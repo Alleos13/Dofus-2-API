@@ -3,8 +3,13 @@ package com.ankamagames.atouin.entities.behaviours.movements
    public class RunningMovementBehavior extends AnimatedMovementBehavior
    {
       
-      public function RunningMovementBehavior() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RunningMovementBehavior()
+      {
+         //Décompilation abandonné
       }
       
       private static const RUN_LINEAR_VELOCITY:Number = 0.0058823529411764705;
@@ -15,24 +20,29 @@ package com.ankamagames.atouin.entities.behaviours.movements
       
       private static const RUN_ANIMATION:String = "AnimCourse";
       
-      public static function getInstance(speedAdjust:Number = 0.0) : RunningMovementBehavior {
-         return getFromCache(speedAdjust,RunningMovementBehavior) as RunningMovementBehavior;
+      public static function getInstance(speedAdjust:Number = 0.0) : RunningMovementBehavior
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getLinearVelocity() : Number {
-         return RUN_LINEAR_VELOCITY;
+      override protected function getLinearVelocity() : Number
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getHorizontalDiagonalVelocity() : Number {
-         return RUN_HORIZONTAL_DIAGONAL_VELOCITY;
+      override protected function getHorizontalDiagonalVelocity() : Number
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getVerticalDiagonalVelocity() : Number {
-         return RUN_VERTICAL_DIAGONAL_VELOCITY;
+      override protected function getVerticalDiagonalVelocity() : Number
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getAnimation() : String {
-         return RUN_ANIMATION;
+      override protected function getAnimation() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

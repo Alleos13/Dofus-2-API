@@ -5,15 +5,20 @@ package com.ankamagames.berilia.components.messages
    public class TextClickMessage extends ComponentMessage
    {
       
-      public function TextClickMessage(target:InteractiveObject, textEvent:String) {
-         this._textEvent = textEvent;
-         super(target);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TextClickMessage(target:InteractiveObject, textEvent:String)
+      {
+         //Décompilation abandonné
       }
       
       private var _textEvent:String;
       
-      public function get textEvent() : String {
-         return this._textEvent;
+      public function get textEvent() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

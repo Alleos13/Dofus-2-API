@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class PvpArenaTypeEnum extends Object
    {
       
-      public function PvpArenaTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PvpArenaTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const ARENA_TYPE_3VS3:uint = 3;

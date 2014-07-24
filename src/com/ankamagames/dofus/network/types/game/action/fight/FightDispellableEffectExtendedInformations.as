@@ -9,9 +9,13 @@ package com.ankamagames.dofus.network.types.game.action.fight
    public class FightDispellableEffectExtendedInformations extends Object implements INetworkType
    {
       
-      public function FightDispellableEffectExtendedInformations() {
-         this.effect = new AbstractFightDispellableEffect();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightDispellableEffectExtendedInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 208;
@@ -22,60 +26,39 @@ package com.ankamagames.dofus.network.types.game.action.fight
       
       public var effect:AbstractFightDispellableEffect;
       
-      public function getTypeId() : uint {
-         return 208;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initFightDispellableEffectExtendedInformations(actionId:uint = 0, sourceId:int = 0, effect:AbstractFightDispellableEffect = null) : FightDispellableEffectExtendedInformations {
-         this.actionId = actionId;
-         this.sourceId = sourceId;
-         this.effect = effect;
-         return this;
+      public function initFightDispellableEffectExtendedInformations(actionId:uint = 0, sourceId:int = 0, effect:AbstractFightDispellableEffect = null) : FightDispellableEffectExtendedInformations
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.actionId = 0;
-         this.sourceId = 0;
-         this.effect = new AbstractFightDispellableEffect();
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_FightDispellableEffectExtendedInformations(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_FightDispellableEffectExtendedInformations(output:IDataOutput) : void {
-         if(this.actionId < 0)
-         {
-            throw new Error("Forbidden value (" + this.actionId + ") on element actionId.");
-         }
-         else
-         {
-            output.writeShort(this.actionId);
-            output.writeInt(this.sourceId);
-            output.writeShort(this.effect.getTypeId());
-            this.effect.serialize(output);
-            return;
-         }
+      public function serializeAs_FightDispellableEffectExtendedInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_FightDispellableEffectExtendedInformations(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_FightDispellableEffectExtendedInformations(input:IDataInput) : void {
-         this.actionId = input.readShort();
-         if(this.actionId < 0)
-         {
-            throw new Error("Forbidden value (" + this.actionId + ") on element of FightDispellableEffectExtendedInformations.actionId.");
-         }
-         else
-         {
-            this.sourceId = input.readInt();
-            _id3 = input.readUnsignedShort();
-            this.effect = ProtocolTypeManager.getInstance(AbstractFightDispellableEffect,_id3);
-            this.effect.deserialize(input);
-            return;
-         }
+      public function deserializeAs_FightDispellableEffectExtendedInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

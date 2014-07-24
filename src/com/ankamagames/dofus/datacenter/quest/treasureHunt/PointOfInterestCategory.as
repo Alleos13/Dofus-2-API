@@ -7,18 +7,25 @@ package com.ankamagames.dofus.datacenter.quest.treasureHunt
    public class PointOfInterestCategory extends Object implements IDataCenter
    {
       
-      public function PointOfInterestCategory() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PointOfInterestCategory()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "PointOfInterestCategory";
       
-      public static function getPointOfInterestCategoryById(id:int) : PointOfInterestCategory {
-         return GameData.getObject(MODULE,id) as PointOfInterestCategory;
+      public static function getPointOfInterestCategoryById(id:int) : PointOfInterestCategory
+      {
+         //Décompilation abandonné
       }
       
-      public static function getPointOfInterestCategories() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getPointOfInterestCategories() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;
@@ -27,12 +34,9 @@ package com.ankamagames.dofus.datacenter.quest.treasureHunt
       
       private var _actionLabel:String;
       
-      public function get actionLabel() : String {
-         if(!this._actionLabel)
-         {
-            this._actionLabel = I18n.getText(this.actionLabelId);
-         }
-         return this._actionLabel;
+      public function get actionLabel() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.prism
    public class PrismSubareaEmptyInfo extends Object implements INetworkType
    {
       
-      public function PrismSubareaEmptyInfo() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PrismSubareaEmptyInfo()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 438;
@@ -17,67 +22,39 @@ package com.ankamagames.dofus.network.types.game.prism
       
       public var allianceId:uint = 0;
       
-      public function getTypeId() : uint {
-         return 438;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPrismSubareaEmptyInfo(subAreaId:uint = 0, allianceId:uint = 0) : PrismSubareaEmptyInfo {
-         this.subAreaId = subAreaId;
-         this.allianceId = allianceId;
-         return this;
+      public function initPrismSubareaEmptyInfo(subAreaId:uint = 0, allianceId:uint = 0) : PrismSubareaEmptyInfo
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.subAreaId = 0;
-         this.allianceId = 0;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PrismSubareaEmptyInfo(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PrismSubareaEmptyInfo(output:IDataOutput) : void {
-         if(this.subAreaId < 0)
-         {
-            throw new Error("Forbidden value (" + this.subAreaId + ") on element subAreaId.");
-         }
-         else
-         {
-            output.writeShort(this.subAreaId);
-            if(this.allianceId < 0)
-            {
-               throw new Error("Forbidden value (" + this.allianceId + ") on element allianceId.");
-            }
-            else
-            {
-               output.writeInt(this.allianceId);
-               return;
-            }
-         }
+      public function serializeAs_PrismSubareaEmptyInfo(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PrismSubareaEmptyInfo(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PrismSubareaEmptyInfo(input:IDataInput) : void {
-         this.subAreaId = input.readShort();
-         if(this.subAreaId < 0)
-         {
-            throw new Error("Forbidden value (" + this.subAreaId + ") on element of PrismSubareaEmptyInfo.subAreaId.");
-         }
-         else
-         {
-            this.allianceId = input.readInt();
-            if(this.allianceId < 0)
-            {
-               throw new Error("Forbidden value (" + this.allianceId + ") on element of PrismSubareaEmptyInfo.allianceId.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_PrismSubareaEmptyInfo(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

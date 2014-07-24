@@ -10,97 +10,71 @@ package com.ankamagames.dofus.network.messages.game.guild
    public class GuildInformationsPaddocksMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GuildInformationsPaddocksMessage() {
-         this.paddocksInformations = new Vector.<PaddockContentInformations>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildInformationsPaddocksMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5959;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var nbPaddockMax:uint = 0;
       
       public var paddocksInformations:Vector.<PaddockContentInformations>;
       
-      override public function getMessageId() : uint {
-         return 5959;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGuildInformationsPaddocksMessage(nbPaddockMax:uint = 0, paddocksInformations:Vector.<PaddockContentInformations> = null) : GuildInformationsPaddocksMessage {
-         this.nbPaddockMax = nbPaddockMax;
-         this.paddocksInformations = paddocksInformations;
-         this._isInitialized = true;
-         return this;
+      public function initGuildInformationsPaddocksMessage(nbPaddockMax:uint = 0, paddocksInformations:Vector.<PaddockContentInformations> = null) : GuildInformationsPaddocksMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.nbPaddockMax = 0;
-         this.paddocksInformations = new Vector.<PaddockContentInformations>();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GuildInformationsPaddocksMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GuildInformationsPaddocksMessage(output:IDataOutput) : void {
-         if(this.nbPaddockMax < 0)
-         {
-            throw new Error("Forbidden value (" + this.nbPaddockMax + ") on element nbPaddockMax.");
-         }
-         else
-         {
-            output.writeByte(this.nbPaddockMax);
-            output.writeShort(this.paddocksInformations.length);
-            _i2 = 0;
-            while(_i2 < this.paddocksInformations.length)
-            {
-               (this.paddocksInformations[_i2] as PaddockContentInformations).serializeAs_PaddockContentInformations(output);
-               _i2++;
-            }
-            return;
-         }
+      public function serializeAs_GuildInformationsPaddocksMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GuildInformationsPaddocksMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildInformationsPaddocksMessage(input:IDataInput) : void {
-         var _item2:PaddockContentInformations = null;
-         this.nbPaddockMax = input.readByte();
-         if(this.nbPaddockMax < 0)
-         {
-            throw new Error("Forbidden value (" + this.nbPaddockMax + ") on element of GuildInformationsPaddocksMessage.nbPaddockMax.");
-         }
-         else
-         {
-            _paddocksInformationsLen = input.readUnsignedShort();
-            _i2 = 0;
-            while(_i2 < _paddocksInformationsLen)
-            {
-               _item2 = new PaddockContentInformations();
-               _item2.deserialize(input);
-               this.paddocksInformations.push(_item2);
-               _i2++;
-            }
-            return;
-         }
+      public function deserializeAs_GuildInformationsPaddocksMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

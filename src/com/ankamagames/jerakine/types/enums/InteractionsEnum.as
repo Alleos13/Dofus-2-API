@@ -10,8 +10,13 @@ package com.ankamagames.jerakine.types.enums
    public class InteractionsEnum extends Object
    {
       
-      public function InteractionsEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function InteractionsEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const CLICK:uint;
@@ -20,33 +25,14 @@ package com.ankamagames.jerakine.types.enums
       
       public static const OUT:uint;
       
-      public static function getEvents(interactionType:uint) : Array {
-         switch(interactionType)
-         {
-            case CLICK:
-               return [MouseEvent.CLICK];
-            case OVER:
-               return [MouseEvent.MOUSE_OVER];
-            case OUT:
-               return [MouseEvent.MOUSE_OUT,Event.REMOVED_FROM_STAGE];
-            default:
-               throw new JerakineError("Unknown interaction type " + interactionType + ".");
-         }
+      public static function getEvents(interactionType:uint) : Array
+      {
+         //Décompilation abandonné
       }
       
-      public static function getMessage(eventType:String) : Class {
-         switch(eventType)
-         {
-            case MouseEvent.CLICK:
-               return EntityClickMessage;
-            case MouseEvent.MOUSE_OVER:
-               return EntityMouseOverMessage;
-            case Event.REMOVED_FROM_STAGE:
-            case MouseEvent.MOUSE_OUT:
-               return EntityMouseOutMessage;
-            default:
-               throw new JerakineError("Unknown event type for an interaction \'" + eventType + "\'.");
-         }
+      public static function getMessage(eventType:String) : Class
+      {
+         //Décompilation abandonné
       }
    }
 }

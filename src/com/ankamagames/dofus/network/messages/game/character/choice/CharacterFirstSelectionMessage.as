@@ -8,63 +8,69 @@ package com.ankamagames.dofus.network.messages.game.character.choice
    public class CharacterFirstSelectionMessage extends CharacterSelectionMessage implements INetworkMessage
    {
       
-      public function CharacterFirstSelectionMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterFirstSelectionMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6084;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var doTutorial:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 6084;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCharacterFirstSelectionMessage(id:int = 0, doTutorial:Boolean = false) : CharacterFirstSelectionMessage {
-         super.initCharacterSelectionMessage(id);
-         this.doTutorial = doTutorial;
-         this._isInitialized = true;
-         return this;
+      public function initCharacterFirstSelectionMessage(id:int = 0, doTutorial:Boolean = false) : CharacterFirstSelectionMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.doTutorial = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharacterFirstSelectionMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterFirstSelectionMessage(output:IDataOutput) : void {
-         super.serializeAs_CharacterSelectionMessage(output);
-         output.writeBoolean(this.doTutorial);
+      public function serializeAs_CharacterFirstSelectionMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharacterFirstSelectionMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterFirstSelectionMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.doTutorial = input.readBoolean();
+      public function deserializeAs_CharacterFirstSelectionMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.connection
    public class ServerSelectionMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ServerSelectionMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ServerSelectionMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 40;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var serverId:int = 0;
       
-      override public function getMessageId() : uint {
-         return 40;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initServerSelectionMessage(serverId:int = 0) : ServerSelectionMessage {
-         this.serverId = serverId;
-         this._isInitialized = true;
-         return this;
+      public function initServerSelectionMessage(serverId:int = 0) : ServerSelectionMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.serverId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ServerSelectionMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ServerSelectionMessage(output:IDataOutput) : void {
-         output.writeShort(this.serverId);
+      public function serializeAs_ServerSelectionMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ServerSelectionMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ServerSelectionMessage(input:IDataInput) : void {
-         this.serverId = input.readShort();
+      public function deserializeAs_ServerSelectionMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

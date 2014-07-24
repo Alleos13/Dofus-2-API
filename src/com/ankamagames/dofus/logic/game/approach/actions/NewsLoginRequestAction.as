@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.approach.actions
    public class NewsLoginRequestAction extends Object implements Action
    {
       
-      public function NewsLoginRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : NewsLoginRequestAction {
-         var action:NewsLoginRequestAction = new NewsLoginRequestAction();
-         return action;
+      public function NewsLoginRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : NewsLoginRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -9,67 +9,69 @@ package com.ankamagames.dofus.network.messages.game.tinsel
    public class TitleSelectErrorMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function TitleSelectErrorMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TitleSelectErrorMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6373;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var reason:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6373;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initTitleSelectErrorMessage(reason:uint = 0) : TitleSelectErrorMessage {
-         this.reason = reason;
-         this._isInitialized = true;
-         return this;
+      public function initTitleSelectErrorMessage(reason:uint = 0) : TitleSelectErrorMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.reason = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TitleSelectErrorMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_TitleSelectErrorMessage(output:IDataOutput) : void {
-         output.writeByte(this.reason);
+      public function serializeAs_TitleSelectErrorMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TitleSelectErrorMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_TitleSelectErrorMessage(input:IDataInput) : void {
-         this.reason = input.readByte();
-         if(this.reason < 0)
-         {
-            throw new Error("Forbidden value (" + this.reason + ") on element of TitleSelectErrorMessage.reason.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_TitleSelectErrorMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

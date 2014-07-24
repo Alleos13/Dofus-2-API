@@ -15,34 +15,22 @@ package com.ankamagames.dofus.externalnotification
    public class ExternalNotificationWindow extends NativeWindow
    {
       
-      public function ExternalNotificationWindow(pNotificationType:int, pClientId:String, pId:String, pContent:Object, pWinOpts:NativeWindowInitOptions, pHookName:String = null, pHookParams:Array = null) {
-         this._notificationType = pNotificationType;
-         this._id = pId;
-         this._clientId = pClientId;
-         this._hookName = pHookName;
-         this._hookParams = pHookParams;
-         super(pWinOpts);
-         visible = false;
-         alwaysInFront = true;
-         stage.scaleMode = StageScaleMode.NO_SCALE;
-         stage.align = StageAlign.TOP_LEFT;
-         this._contentWidth = pContent.contentWidth;
-         this._contentHeight = pContent.contentHeight;
-         HumanInputHandler.getInstance().registerListeners(stage);
-         var notifCtr:Sprite = new Sprite();
-         notifCtr.addChild(pContent as DisplayObject);
-         stage.addChild(notifCtr);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExternalNotificationWindow(pNotificationType:int, pClientId:String, pId:String, pContent:Object, pWinOpts:NativeWindowInitOptions, pHookName:String = null, pHookParams:Array = null)
+      {
+         //Décompilation abandonné
       }
       
       private static const DEBUG:Boolean = false;
       
       private static const _log:Logger;
       
-      private static function log(pMsg:Object) : void {
-         if(DEBUG)
-         {
-            _log.debug(pMsg);
-         }
+      private static function log(pMsg:Object) : void
+      {
+         //Décompilation abandonné
       }
       
       private var _notificationType:int;
@@ -61,48 +49,54 @@ package com.ankamagames.dofus.externalnotification
       
       public var timeoutId:uint;
       
-      public function get notificationType() : int {
-         return this._notificationType;
+      public function get notificationType() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get id() : String {
-         return this._id;
+      public function get id() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get clientId() : String {
-         return this._clientId;
+      public function get clientId() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get instanceId() : String {
-         return this._clientId + "#" + this._id;
+      public function get instanceId() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get contentWidth() : Number {
-         return this._contentWidth;
+      public function get contentWidth() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function get contentHeight() : Number {
-         return this._contentHeight;
+      public function get contentHeight() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function get hookName() : String {
-         return this._hookName;
+      public function get hookName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get hookParams() : Array {
-         return this._hookParams;
+      public function get hookParams() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function show() : void {
-         visible = true;
+      public function show() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         HumanInputHandler.getInstance().unregisterListeners(stage);
-         visible = false;
-         Berilia.getInstance().unloadUi(this.instanceId);
-         stage.removeChildAt(0);
-         close();
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

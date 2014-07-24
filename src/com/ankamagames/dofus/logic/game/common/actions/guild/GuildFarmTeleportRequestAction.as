@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.guild
    public class GuildFarmTeleportRequestAction extends Object implements Action
    {
       
-      public function GuildFarmTeleportRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pFarmId:uint) : GuildFarmTeleportRequestAction {
-         var action:GuildFarmTeleportRequestAction = new GuildFarmTeleportRequestAction();
-         action.farmId = pFarmId;
-         return action;
+      public function GuildFarmTeleportRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pFarmId:uint) : GuildFarmTeleportRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var farmId:uint;

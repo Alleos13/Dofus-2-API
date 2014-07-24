@@ -5,10 +5,13 @@ package com.ankamagames.atouin.types.events
    public class RenderMapEvent extends Event
    {
       
-      public function RenderMapEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, mapId:uint = 0, renderId:uint = 0) {
-         super(type,bubbles,cancelable);
-         this._mapId = mapId;
-         this._renderId = renderId;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RenderMapEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, mapId:uint = 0, renderId:uint = 0)
+      {
+         //Décompilation abandonné
       }
       
       public static const GFX_LOADING_START:String = "GFX_LOADING_START";
@@ -23,12 +26,14 @@ package com.ankamagames.atouin.types.events
       
       private var _renderId:uint;
       
-      public function get mapId() : uint {
-         return this._mapId;
+      public function get mapId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get renderId() : uint {
-         return this._renderId;
+      public function get renderId() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

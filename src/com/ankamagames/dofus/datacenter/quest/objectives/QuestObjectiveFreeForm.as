@@ -7,30 +7,30 @@ package com.ankamagames.dofus.datacenter.quest.objectives
    public class QuestObjectiveFreeForm extends QuestObjective implements IDataCenter
    {
       
-      public function QuestObjectiveFreeForm() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function QuestObjectiveFreeForm()
+      {
+         //Décompilation abandonné
       }
       
       private var _freeFormText:String;
       
-      public function get freeFormTextId() : uint {
-         if(!this.parameters)
-         {
-            return 0;
-         }
-         return this.parameters[0];
+      public function get freeFormTextId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get freeFormText() : String {
-         if(!this._freeFormText)
-         {
-            this._freeFormText = I18n.getText(this.freeFormTextId);
-         }
-         return this._freeFormText;
+      public function get freeFormText() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         return this.freeFormText;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -9,81 +9,71 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeObjectUseInWorkshopMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeObjectUseInWorkshopMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeObjectUseInWorkshopMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6004;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var objectUID:uint = 0;
       
       public var quantity:int = 0;
       
-      override public function getMessageId() : uint {
-         return 6004;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeObjectUseInWorkshopMessage(objectUID:uint = 0, quantity:int = 0) : ExchangeObjectUseInWorkshopMessage {
-         this.objectUID = objectUID;
-         this.quantity = quantity;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeObjectUseInWorkshopMessage(objectUID:uint = 0, quantity:int = 0) : ExchangeObjectUseInWorkshopMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.objectUID = 0;
-         this.quantity = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeObjectUseInWorkshopMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeObjectUseInWorkshopMessage(output:IDataOutput) : void {
-         if(this.objectUID < 0)
-         {
-            throw new Error("Forbidden value (" + this.objectUID + ") on element objectUID.");
-         }
-         else
-         {
-            output.writeInt(this.objectUID);
-            output.writeInt(this.quantity);
-            return;
-         }
+      public function serializeAs_ExchangeObjectUseInWorkshopMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeObjectUseInWorkshopMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeObjectUseInWorkshopMessage(input:IDataInput) : void {
-         this.objectUID = input.readInt();
-         if(this.objectUID < 0)
-         {
-            throw new Error("Forbidden value (" + this.objectUID + ") on element of ExchangeObjectUseInWorkshopMessage.objectUID.");
-         }
-         else
-         {
-            this.quantity = input.readInt();
-            return;
-         }
+      public function deserializeAs_ExchangeObjectUseInWorkshopMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

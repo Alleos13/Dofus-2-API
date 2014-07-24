@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.alignment
    public class SetEnablePVPRequestAction extends Object implements Action
    {
       
-      public function SetEnablePVPRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(enable:Boolean) : SetEnablePVPRequestAction {
-         var action:SetEnablePVPRequestAction = new SetEnablePVPRequestAction();
-         action.enable = enable;
-         return action;
+      public function SetEnablePVPRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(enable:Boolean) : SetEnablePVPRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var enable:Boolean;

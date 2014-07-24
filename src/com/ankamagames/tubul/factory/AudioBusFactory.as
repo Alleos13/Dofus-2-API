@@ -8,20 +8,18 @@ package com.ankamagames.tubul.factory
    public class AudioBusFactory extends Object
    {
       
-      public function AudioBusFactory() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function getAudioBus(pType:uint, pId:uint, pName:String) : IAudioBus {
-         switch(pType)
-         {
-            case EnumTypeBus.LOCALIZED_BUS:
-               return new LocalizedBus(pId,pName);
-            case EnumTypeBus.UNLOCALIZED_BUS:
-               return new UnlocalizedBus(pId,pName);
-            default:
-               throw new ArgumentError("Unknown audio bus type " + pType + ". See EnumTypeBus !");
-         }
+      public function AudioBusFactory()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function getAudioBus(pType:uint, pId:uint, pName:String) : IAudioBus
+      {
+         //Décompilation abandonné
       }
    }
 }

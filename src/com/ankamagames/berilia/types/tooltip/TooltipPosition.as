@@ -7,14 +7,13 @@ package com.ankamagames.berilia.types.tooltip
    public class TooltipPosition extends Object
    {
       
-      public function TooltipPosition(pTooltip:UiRootContainer, pTarget:IRectangle, pCellId:uint) {
-         super();
-         this._tooltip = pTooltip;
-         this._target = pTarget;
-         this._cellId = pCellId;
-         this._rect = new Rectangle2(this._tooltip.x,this._tooltip.y,this._tooltip.width,this._tooltip.height);
-         this._originalX = this._tooltip.x;
-         this._originalY = this._tooltip.y;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TooltipPosition(pTooltip:UiRootContainer, pTarget:IRectangle, pCellId:uint)
+      {
+         //Décompilation abandonné
       }
       
       private var _tooltip:UiRootContainer;
@@ -29,40 +28,44 @@ package com.ankamagames.berilia.types.tooltip
       
       private var _originalY:Number;
       
-      public function get tooltip() : UiRootContainer {
-         return this._tooltip;
+      public function get tooltip() : UiRootContainer
+      {
+         //Décompilation abandonné
       }
       
-      public function get target() : IRectangle {
-         return this._target;
+      public function get target() : IRectangle
+      {
+         //Décompilation abandonné
       }
       
-      public function set target(pTarget:IRectangle) : void {
-         this._target = pTarget;
+      public function set target(pTarget:IRectangle) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get cellId() : uint {
-         return this._cellId;
+      public function get cellId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get mapRow() : int {
-         return this._cellId / 14;
+      public function get mapRow() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get rect() : Rectangle2 {
-         this._rect.y = this._tooltip.y;
-         this._rect.x = this._tooltip.x;
-         this._rect.width = this._tooltip.width;
-         this._rect.height = this._tooltip.height;
-         return this._rect;
+      public function get rect() : Rectangle2
+      {
+         //Décompilation abandonné
       }
       
-      public function get originalX() : Number {
-         return this._originalX;
+      public function get originalX() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function get originalY() : Number {
-         return this._originalY;
+      public function get originalY() : Number
+      {
+         //Décompilation abandonné
       }
    }
 }

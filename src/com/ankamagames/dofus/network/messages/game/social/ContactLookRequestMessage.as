@@ -9,88 +9,71 @@ package com.ankamagames.dofus.network.messages.game.social
    public class ContactLookRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ContactLookRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ContactLookRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5932;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var requestId:uint = 0;
       
       public var contactType:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5932;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initContactLookRequestMessage(requestId:uint = 0, contactType:uint = 0) : ContactLookRequestMessage {
-         this.requestId = requestId;
-         this.contactType = contactType;
-         this._isInitialized = true;
-         return this;
+      public function initContactLookRequestMessage(requestId:uint = 0, contactType:uint = 0) : ContactLookRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.requestId = 0;
-         this.contactType = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ContactLookRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ContactLookRequestMessage(output:IDataOutput) : void {
-         if((this.requestId < 0) || (this.requestId > 255))
-         {
-            throw new Error("Forbidden value (" + this.requestId + ") on element requestId.");
-         }
-         else
-         {
-            output.writeByte(this.requestId);
-            output.writeByte(this.contactType);
-            return;
-         }
+      public function serializeAs_ContactLookRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ContactLookRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ContactLookRequestMessage(input:IDataInput) : void {
-         this.requestId = input.readUnsignedByte();
-         if((this.requestId < 0) || (this.requestId > 255))
-         {
-            throw new Error("Forbidden value (" + this.requestId + ") on element of ContactLookRequestMessage.requestId.");
-         }
-         else
-         {
-            this.contactType = input.readByte();
-            if(this.contactType < 0)
-            {
-               throw new Error("Forbidden value (" + this.contactType + ") on element of ContactLookRequestMessage.contactType.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_ContactLookRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

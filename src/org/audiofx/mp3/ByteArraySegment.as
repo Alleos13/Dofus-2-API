@@ -5,11 +5,13 @@ package org.audiofx.mp3
    class ByteArraySegment extends Object
    {
       
-      function ByteArraySegment(param1:ByteArray, param2:uint, param3:uint) {
-         super();
-         this.byteArray = param1;
-         this.start = param2;
-         this.length = param3;
+      {
+      //Décompilation abandonné
+      }
+      
+      function ByteArraySegment(ba:ByteArray, start:uint, length:uint)
+      {
+         //Décompilation abandonné
       }
       
       public var start:uint;

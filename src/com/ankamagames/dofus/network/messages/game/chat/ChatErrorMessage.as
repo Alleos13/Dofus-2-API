@@ -9,67 +9,69 @@ package com.ankamagames.dofus.network.messages.game.chat
    public class ChatErrorMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ChatErrorMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ChatErrorMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 870;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var reason:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 870;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initChatErrorMessage(reason:uint = 0) : ChatErrorMessage {
-         this.reason = reason;
-         this._isInitialized = true;
-         return this;
+      public function initChatErrorMessage(reason:uint = 0) : ChatErrorMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.reason = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ChatErrorMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ChatErrorMessage(output:IDataOutput) : void {
-         output.writeByte(this.reason);
+      public function serializeAs_ChatErrorMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ChatErrorMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ChatErrorMessage(input:IDataInput) : void {
-         this.reason = input.readByte();
-         if(this.reason < 0)
-         {
-            throw new Error("Forbidden value (" + this.reason + ") on element of ChatErrorMessage.reason.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_ChatErrorMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

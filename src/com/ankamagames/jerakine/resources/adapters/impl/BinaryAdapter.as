@@ -8,20 +8,28 @@ package com.ankamagames.jerakine.resources.adapters.impl
    public class BinaryAdapter extends AbstractUrlLoaderAdapter implements IAdapter
    {
       
-      public function BinaryAdapter() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      override protected function getResource(dataFormat:String, data:*) : * {
-         return data;
+      public function BinaryAdapter()
+      {
+         //Décompilation abandonné
       }
       
-      override public function getResourceType() : uint {
-         return ResourceType.RESOURCE_BINARY;
+      override protected function getResource(dataFormat:String, data:*) : *
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getDataFormat() : String {
-         return URLLoaderDataFormat.BINARY;
+      override public function getResourceType() : uint
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getDataFormat() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

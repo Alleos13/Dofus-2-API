@@ -7,11 +7,13 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightEnteringStateStep extends AbstractSequencable implements IFightStep
    {
       
-      public function FightEnteringStateStep(fighterId:int, stateId:int, durationString:String) {
-         super();
-         this._fighterId = fighterId;
-         this._stateId = stateId;
-         this._durationString = durationString;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightEnteringStateStep(fighterId:int, stateId:int, durationString:String)
+      {
+         //Décompilation abandonné
       }
       
       private var _fighterId:int;
@@ -20,13 +22,14 @@ package com.ankamagames.dofus.logic.game.fight.steps
       
       private var _durationString:String;
       
-      public function get stepType() : String {
-         return "enteringState";
+      public function get stepType() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function start() : void {
-         FightEventsHelper.sendFightEvent(FightEventEnum.FIGHTER_ENTERING_STATE,[this._fighterId,this._stateId,this._durationString],this._fighterId,-1);
-         executeCallbacks();
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

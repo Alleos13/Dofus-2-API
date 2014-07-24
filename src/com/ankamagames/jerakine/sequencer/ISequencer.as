@@ -5,13 +5,17 @@ package com.ankamagames.jerakine.sequencer
    public interface ISequencer extends ISequencableListener, IEventDispatcher
    {
       
-      function addStep(param1:ISequencable) : void;
+      {
+      //Décompilation abandonné
+      }
+      
+      function addStep(item:ISequencable) : void;
       
       function start() : void;
       
       function toString() : String;
       
-      function set defaultStepTimeout(param1:int) : void;
+      function set defaultStepTimeout(v:int) : void;
       
       function get defaultStepTimeout() : int;
       

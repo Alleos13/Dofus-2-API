@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.mount
    public class MountReleaseRequestAction extends Object implements Action
    {
       
-      public function MountReleaseRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : MountReleaseRequestAction {
-         return new MountReleaseRequestAction();
+      public function MountReleaseRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : MountReleaseRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -9,20 +9,27 @@ package com.ankamagames.dofus.datacenter.communication
    public class CensoredWord extends Object implements IDataCenter
    {
       
-      public function CensoredWord() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CensoredWord()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "CensoredWords";
       
       protected static const _log:Logger;
       
-      public static function getCensoredWordById(id:int) : CensoredWord {
-         return GameData.getObject(MODULE,id) as CensoredWord;
+      public static function getCensoredWordById(id:int) : CensoredWord
+      {
+         //Décompilation abandonné
       }
       
-      public static function getCensoredWords() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getCensoredWords() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;

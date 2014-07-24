@@ -10,75 +10,69 @@ package com.ankamagames.dofus.network.messages.updater.parts
    public class PartsListMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function PartsListMessage() {
-         this.parts = new Vector.<ContentPart>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PartsListMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 1502;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var parts:Vector.<ContentPart>;
       
-      override public function getMessageId() : uint {
-         return 1502;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPartsListMessage(parts:Vector.<ContentPart> = null) : PartsListMessage {
-         this.parts = parts;
-         this._isInitialized = true;
-         return this;
+      public function initPartsListMessage(parts:Vector.<ContentPart> = null) : PartsListMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.parts = new Vector.<ContentPart>();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PartsListMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PartsListMessage(output:IDataOutput) : void {
-         output.writeShort(this.parts.length);
-         var _i1:uint = 0;
-         while(_i1 < this.parts.length)
-         {
-            (this.parts[_i1] as ContentPart).serializeAs_ContentPart(output);
-            _i1++;
-         }
+      public function serializeAs_PartsListMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PartsListMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PartsListMessage(input:IDataInput) : void {
-         var _item1:ContentPart = null;
-         var _partsLen:uint = input.readUnsignedShort();
-         var _i1:uint = 0;
-         while(_i1 < _partsLen)
-         {
-            _item1 = new ContentPart();
-            _item1.deserialize(input);
-            this.parts.push(_item1);
-            _i1++;
-         }
+      public function deserializeAs_PartsListMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

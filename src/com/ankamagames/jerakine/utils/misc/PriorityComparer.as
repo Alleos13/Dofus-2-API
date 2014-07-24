@@ -3,20 +3,18 @@ package com.ankamagames.jerakine.utils.misc
    public final class PriorityComparer extends Object
    {
       
-      public function PriorityComparer() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function compare(x:Prioritizable, y:Prioritizable) : Number {
-         if(x.priority > y.priority)
-         {
-            return -1;
-         }
-         if(x.priority < y.priority)
-         {
-            return 1;
-         }
-         return 0;
+      public function PriorityComparer()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function compare(x:Prioritizable, y:Prioritizable) : Number
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,11 +5,13 @@ package com.ankamagames.jerakine.types
    public class Swl extends Object
    {
       
-      public function Swl(frameRate:uint, classesList:Array, applicationDomain:ApplicationDomain) {
-         super();
-         this._frameRate = frameRate;
-         this._classesList = classesList;
-         this._applicationDomain = applicationDomain;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Swl(frameRate:uint, classesList:Array, applicationDomain:ApplicationDomain)
+      {
+         //Décompilation abandonné
       }
       
       private var _frameRate:uint;
@@ -18,20 +20,24 @@ package com.ankamagames.jerakine.types
       
       private var _applicationDomain:ApplicationDomain;
       
-      public function get frameRate() : uint {
-         return this._frameRate;
+      public function get frameRate() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function getDefinition(name:String) : Object {
-         return this._applicationDomain.getDefinition(name);
+      public function getDefinition(name:String) : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function hasDefinition(name:String) : Boolean {
-         return this._applicationDomain.hasDefinition(name);
+      public function hasDefinition(name:String) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getDefinitions() : Array {
-         return this._classesList;
+      public function getDefinitions() : Array
+      {
+         //Décompilation abandonné
       }
    }
 }

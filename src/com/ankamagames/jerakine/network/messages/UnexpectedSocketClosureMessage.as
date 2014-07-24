@@ -5,8 +5,13 @@ package com.ankamagames.jerakine.network.messages
    public class UnexpectedSocketClosureMessage extends Object implements Message
    {
       
-      public function UnexpectedSocketClosureMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UnexpectedSocketClosureMessage()
+      {
+         //Décompilation abandonné
       }
    }
 }

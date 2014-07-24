@@ -5,11 +5,13 @@ package flashx.textLayout.operations
    public class FlowTextOperation extends FlowOperation
    {
       
-      public function FlowTextOperation(param1:SelectionState) {
-         super(param1.textFlow);
-         this._absoluteStart = param1.absoluteStart;
-         this._absoluteEnd = param1.absoluteEnd;
-         this._originalSelectionState = param1;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FlowTextOperation(operationState:SelectionState)
+      {
+         //Décompilation abandonné
       }
       
       private var _originalSelectionState:SelectionState;
@@ -18,33 +20,39 @@ package flashx.textLayout.operations
       
       private var _absoluteEnd:int;
       
-      public function get absoluteStart() : int {
-         return this._absoluteStart;
+      public function get absoluteStart() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set absoluteStart(param1:int) : void {
-         this._absoluteStart = param1;
+      public function set absoluteStart(value:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get absoluteEnd() : int {
-         return this._absoluteEnd;
+      public function get absoluteEnd() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set absoluteEnd(param1:int) : void {
-         this._absoluteEnd = param1;
+      public function set absoluteEnd(value:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get originalSelectionState() : SelectionState {
-         return this._originalSelectionState;
+      public function get originalSelectionState() : SelectionState
+      {
+         //Décompilation abandonné
       }
       
-      public function set originalSelectionState(param1:SelectionState) : void {
-         this._originalSelectionState = param1;
+      public function set originalSelectionState(value:SelectionState) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function redo() : SelectionState {
-         doOperation();
-         return this._originalSelectionState;
+      override public function redo() : SelectionState
+      {
+         //Décompilation abandonné
       }
    }
 }

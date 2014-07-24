@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.humanVendor
    public class LeaveShopStockAction extends Object implements Action
    {
       
-      public function LeaveShopStockAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : LeaveShopStockAction {
-         var a:LeaveShopStockAction = new LeaveShopStockAction();
-         return a;
+      public function LeaveShopStockAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : LeaveShopStockAction
+      {
+         //Décompilation abandonné
       }
    }
 }

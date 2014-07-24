@@ -21,8 +21,13 @@ package com.ankamagames.dofus.logic.game.common.frames
    public class SynchronisationFrame extends Object implements Frame
    {
       
-      public function SynchronisationFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SynchronisationFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -39,69 +44,34 @@ package com.ankamagames.dofus.logic.game.common.frames
       
       private var _timeToTest:Timer;
       
-      public function get priority() : int {
-         return Priority.HIGHEST;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         this._synchroStep = 0;
-         this._timeToTest = new Timer(30000,1);
-         this._timeToTest.addEventListener(TimerEvent.TIMER_COMPLETE,this.checkSpeedHack);
-         this._timeToTest.start();
-         this._timerSpeedHack = new Timer(10000,1);
-         this._timerSpeedHack.addEventListener(TimerEvent.TIMER_COMPLETE,this.onTimerComplete);
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var snMsg:SequenceNumberMessage = null;
-         switch(true)
-         {
-            case msg is SequenceNumberRequestMessage:
-               snMsg = new SequenceNumberMessage();
-               this._synchroStep = this._synchroStep + 1;
-               snMsg.initSequenceNumberMessage(this._synchroStep);
-               ConnectionsHandler.getConnection().send(snMsg);
-               return true;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function checkSpeedHack(pEvt:TimerEvent) : void {
-         this._timeToTest.stop();
-         this._creationTimeFlash = getTimer();
-         this._creationTimeOs = new Date().time;
-         this._timerSpeedHack.start();
+      private function checkSpeedHack(pEvt:TimerEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onTimerComplete(pEvt:TimerEvent) : void {
-         this._timerSpeedHack.stop();
-         var flashValue:uint = getTimer() - this._creationTimeFlash;
-         var osValue:uint = new Date().time - this._creationTimeOs;
-         if(flashValue > osValue + STEP_TIME)
-         {
-            _log.error("This account is cheating : flash=" + flashValue + ", os=" + osValue + ", diff= flash:" + flashValue + " / os:" + osValue);
-            if(BuildInfos.BUILD_TYPE != BuildTypeEnum.DEBUG)
-            {
-               Kernel.getWorker().process(ResetGameAction.create(I18n.getUiText("ui.error.speedHack")));
-            }
-            else
-            {
-               _log.fatal("Reset du jeu annulé mais on sait bien que tu cheat");
-            }
-         }
-         this._timeToTest.start();
+      private function onTimerComplete(pEvt:TimerEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         this._timerSpeedHack.stop();
-         this._timerSpeedHack.removeEventListener(TimerEvent.TIMER_COMPLETE,this.onTimerComplete);
-         this._timerSpeedHack = null;
-         this._timeToTest.stop();
-         this._timeToTest.removeEventListener(TimerEvent.TIMER_COMPLETE,this.onTimerComplete);
-         this._timeToTest = null;
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

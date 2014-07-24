@@ -2,22 +2,26 @@ package flashx.textLayout.elements
 {
    import flashx.textLayout.tlf_internal;
    
-   use namespace tlf_internal;
-   
    public final class TabElement extends SpecialCharacterElement
    {
       
-      public function TabElement() {
-         super();
-         this.text = "\t";
+      {
+      //Décompilation abandonné
       }
       
-      override protected function get abstract() : Boolean {
-         return false;
+      public function TabElement()
+      {
+         //Décompilation abandonné
       }
       
-      override tlf_internal function get defaultTypeName() : String {
-         return "tab";
+      override protected function get abstract() : Boolean
+      {
+         //Décompilation abandonné
+      }
+      
+      override tlf_internal function get defaultTypeName() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -6,19 +6,25 @@ package com.ankamagames.dofus.datacenter.world
    public class MapReference extends Object implements IDataCenter
    {
       
-      public function MapReference() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapReference()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "MapReferences";
       
-      public static function getMapReferenceById(id:int) : MapReference {
-         var gd:Object = GameData.getObject(MODULE,id);
-         return GameData.getObject(MODULE,id) as MapReference;
+      public static function getMapReferenceById(id:int) : MapReference
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAllMapReference() : Array {
-         return GameData.getObjects(MODULE) as Array;
+      public static function getAllMapReference() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;

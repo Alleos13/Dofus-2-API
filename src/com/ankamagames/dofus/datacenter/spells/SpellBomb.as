@@ -6,14 +6,20 @@ package com.ankamagames.dofus.datacenter.spells
    public class SpellBomb extends Object implements IDataCenter
    {
       
-      public function SpellBomb() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpellBomb()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "SpellBombs";
       
-      public static function getSpellBombById(id:int) : SpellBomb {
-         return GameData.getObject(MODULE,id) as SpellBomb;
+      public static function getSpellBombById(id:int) : SpellBomb
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;

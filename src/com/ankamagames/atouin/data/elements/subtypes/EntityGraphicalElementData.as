@@ -10,8 +10,13 @@ package com.ankamagames.atouin.data.elements.subtypes
    public class EntityGraphicalElementData extends GraphicalElementData
    {
       
-      public function EntityGraphicalElementData(elementId:int, elementType:int) {
-         super(elementId,elementType);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EntityGraphicalElementData(elementId:int, elementType:int)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -28,47 +33,9 @@ package com.ankamagames.atouin.data.elements.subtypes
       
       public var maxDelay:uint;
       
-      override public function fromRaw(raw:IDataInput, version:int) : void {
-         var entityLookLength:uint = raw.readInt();
-         this.entityLook = raw.readUTFBytes(entityLookLength);
-         if(AtouinConstants.DEBUG_FILES_PARSING_ELEMENTS)
-         {
-            _log.debug("  (EntityGraphicalElementData) Entity look : " + this.entityLook);
-         }
-         this.horizontalSymmetry = raw.readBoolean();
-         if(AtouinConstants.DEBUG_FILES_PARSING_ELEMENTS)
-         {
-            _log.debug("  (EntityGraphicalElementData) Element horizontals symmetry : " + this.horizontalSymmetry);
-         }
-         if(version >= 7)
-         {
-            this.playAnimation = raw.readBoolean();
-            if(AtouinConstants.DEBUG_FILES_PARSING_ELEMENTS)
-            {
-               _log.debug("  (EntityGraphicalElementData) playAnimation : " + this.playAnimation);
-            }
-         }
-         if(version >= 6)
-         {
-            this.playAnimStatic = raw.readBoolean();
-            if(AtouinConstants.DEBUG_FILES_PARSING_ELEMENTS)
-            {
-               _log.debug("  (EntityGraphicalElementData) playAnimStatic : " + this.playAnimStatic);
-            }
-         }
-         if(version >= 5)
-         {
-            this.minDelay = raw.readInt();
-            if(AtouinConstants.DEBUG_FILES_PARSING_ELEMENTS)
-            {
-               _log.debug("  (EntityGraphicalElementData) minDelay : " + this.minDelay);
-            }
-            this.maxDelay = raw.readInt();
-            if(AtouinConstants.DEBUG_FILES_PARSING_ELEMENTS)
-            {
-               _log.debug("  (EntityGraphicalElementData) maxDelay : " + this.maxDelay);
-            }
-         }
+      override public function fromRaw(raw:IDataInput, version:int) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

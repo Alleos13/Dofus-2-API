@@ -6,8 +6,13 @@ package com.ankamagames.dofus.datacenter.effects.instances
    public class EffectInstanceMount extends EffectInstance implements IDataCenter
    {
       
-      public function EffectInstanceMount() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EffectInstanceMount()
+      {
+         //Décompilation abandonné
       }
       
       public var date:Number;
@@ -16,47 +21,29 @@ package com.ankamagames.dofus.datacenter.effects.instances
       
       public var mountId:uint;
       
-      override public function clone() : EffectInstance {
-         var o:EffectInstanceMount = new EffectInstanceMount();
-         o.rawZone = rawZone;
-         o.effectId = effectId;
-         o.duration = duration;
-         o.delay = delay;
-         o.date = this.date;
-         o.modelId = this.modelId;
-         o.mountId = this.mountId;
-         o.random = random;
-         o.group = group;
-         o.targetId = targetId;
-         o.targetMask = targetMask;
-         return o;
+      override public function clone() : EffectInstance
+      {
+         //Décompilation abandonné
       }
       
-      override public function get parameter0() : Object {
-         return this.date;
+      override public function get parameter0() : Object
+      {
+         //Décompilation abandonné
       }
       
-      override public function get parameter1() : Object {
-         return this.modelId;
+      override public function get parameter1() : Object
+      {
+         //Décompilation abandonné
       }
       
-      override public function get parameter2() : Object {
-         return this.mountId;
+      override public function get parameter2() : Object
+      {
+         //Décompilation abandonné
       }
       
-      override public function setParameter(paramIndex:uint, value:*) : void {
-         switch(paramIndex)
-         {
-            case 0:
-               this.date = Number(value);
-               break;
-            case 1:
-               this.modelId = uint(value);
-               break;
-            case 2:
-               this.mountId = uint(value);
-               break;
-         }
+      override public function setParameter(paramIndex:uint, value:*) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

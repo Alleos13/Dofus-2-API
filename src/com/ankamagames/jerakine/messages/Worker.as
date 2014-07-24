@@ -19,10 +19,13 @@ package com.ankamagames.jerakine.messages
    public class Worker extends EventDispatcher implements MessageHandler
    {
       
-      public function Worker() {
-         this._unstoppableMsgClassList = new Array();
-         this._framesBeingDeleted = new Dictionary(true);
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Worker()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -57,313 +60,114 @@ package com.ankamagames.jerakine.messages
       
       private var _currentFrameTypesCache:Dictionary;
       
-      public function get framesList() : Vector.<Frame> {
-         return this._framesList;
+      public function get framesList() : Vector.<Frame>
+      {
+         //Décompilation abandonné
       }
       
-      public function get isPaused() : Boolean {
-         return this._paused;
+      public function get isPaused() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get pausedQueue() : Vector.<Message> {
-         return this._pausedQueue;
+      public function get pausedQueue() : Vector.<Message>
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         this._messagesQueue.push(msg);
-         this.run();
-         return true;
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function addFrame(frame:Frame, allowDuplicateFrame:Boolean = false) : void {
-         var frameRemoving:* = false;
-         var frameAdding:* = false;
-         var f:Frame = null;
-         var f2:Frame = null;
-         if(this._currentFrameTypesCache[frame["constructor"]])
-         {
-            frameRemoving = false;
-            frameAdding = false;
-            if(this._processingMessage)
-            {
-               for each(f in this._framesToAdd)
-               {
-                  if(f["constructor"] == frame["constructor"])
-                  {
-                     frameAdding = true;
-                     break;
-                  }
-               }
-               if(!frameAdding)
-               {
-                  for each(f2 in this._framesToRemove)
-                  {
-                     if(f2["constructor"] == frame["constructor"])
-                     {
-                        frameRemoving = true;
-                        break;
-                     }
-                  }
-               }
-            }
-            if((!frameRemoving) || (frameAdding))
-            {
-               _log.error("Someone asked for the frame " + frame + " to be " + "added to the worker, but there is already another " + "frame of the same type within it.");
-               if(!allowDuplicateFrame)
-               {
-                  return;
-               }
-            }
-         }
-         if(!frame)
-         {
-            return;
-         }
-         if(DEBUG_FRAMES)
-         {
-            _log.info("Adding frame: " + frame);
-         }
-         if(this._processingMessage)
-         {
-            this._framesToAdd.push(frame);
-         }
-         else
-         {
-            this.pushFrame(frame);
-         }
+      public function processImmediately(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function removeFrame(frame:Frame) : void {
-         if(!frame)
-         {
-            return;
-         }
-         if(DEBUG_FRAMES)
-         {
-            _log.info("Removing frame: " + frame);
-         }
-         if(this._processingMessage)
-         {
-            this._framesToRemove.push(frame);
-         }
-         else if(!this.isBeingDeleted(frame))
-         {
-            this._framesBeingDeleted[frame] = true;
-            this.pullFrame(frame);
-         }
-         
+      public function addFrame(frame:Frame, allowDuplicateFrame:Boolean = false) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function isBeingDeleted(frame:Frame) : Boolean {
-         var fr:* = undefined;
-         for(fr in this._framesBeingDeleted)
-         {
-            if(fr == frame)
-            {
-               return true;
-            }
-         }
-         return false;
+      public function removeFrame(frame:Frame) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function contains(frameClass:Class) : Boolean {
-         return !(this.getFrame(frameClass) == null);
+      private function isBeingDeleted(frame:Frame) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getFrame(frameClass:Class) : Frame {
-         return this._currentFrameTypesCache[frameClass];
+      public function contains(frameClass:Class) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pause(targetClass:Class = null, unstoppableMsgClassList:Array = null) : void {
-         _log.info("Worker is paused, all queueable messages will be queued : ");
-         this._paused = true;
-         this._pauseFilter = targetClass;
-         if(unstoppableMsgClassList)
-         {
-            this._unstoppableMsgClassList = this._unstoppableMsgClassList.concat(unstoppableMsgClassList);
-         }
+      public function getFrame(frameClass:Class) : Frame
+      {
+         //Décompilation abandonné
       }
       
-      public function clearUnstoppableMsgClassList() : void {
-         this._unstoppableMsgClassList = [];
+      public function pause(targetClass:Class = null, unstoppableMsgClassList:Array = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function msgIsUnstoppable(msg:Message) : Boolean {
-         var msgClass:Class = null;
-         for each(msgClass in this._unstoppableMsgClassList)
-         {
-            if(msg is msgClass)
-            {
-               return true;
-            }
-         }
-         return false;
+      public function clearUnstoppableMsgClassList() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function resume() : void {
-         if(!this._paused)
-         {
-            return;
-         }
-         _log.info("Worker is resuming, processing all queued messages.");
-         this._paused = false;
-         this._messagesQueue = this._messagesQueue.concat(this._pausedQueue);
-         this._pausedQueue = new Vector.<Message>();
-         this.processFramesInAndOut();
-         this.processMessages();
+      private function msgIsUnstoppable(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function clear() : void {
-         var frame:Frame = null;
-         if(DEBUG_FRAMES)
-         {
-            _log.info("Clearing worker (no more frames or messages in queue)");
-         }
-         var nonPulledFrameList:Vector.<Frame> = new Vector.<Frame>();
-         for each(frame in this._framesList)
-         {
-            if(!frame.pulled())
-            {
-               nonPulledFrameList.push(frame);
-            }
-         }
-         this._framesList = new Vector.<Frame>();
-         this._framesToAdd = new Vector.<Frame>();
-         this._framesToRemove = new Vector.<Frame>();
-         this._messagesQueue = new Vector.<Message>();
-         this._pausedQueue = new Vector.<Message>();
-         this._currentFrameTypesCache = new Dictionary();
-         for each(frame in nonPulledFrameList)
-         {
-            this.pushFrame(frame);
-         }
-         EnterFrameDispatcher.removeEventListener(this.onEnterFrame);
-         this._paused = false;
+      public function resume() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onEnterFrame(e:Event) : void {
-         FpsManager.getInstance().startTracking("DofusFrame",16549650);
-         this.processMessages();
-         FpsManager.getInstance().stopTracking("DofusFrame");
+      public function clear() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function run() : void {
-         if(EnterFrameDispatcher.hasEventListener(this.onEnterFrame))
-         {
-            return;
-         }
-         EnterFrameDispatcher.addEventListener(this.onEnterFrame,"Worker");
+      private function onEnterFrame(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function pushFrame(frame:Frame) : void {
-         if(frame.pushed())
-         {
-            this._framesList.push(frame);
-            this._framesList.sort(PriorityComparer.compare);
-            this._currentFrameTypesCache[frame["constructor"]] = frame;
-            if(hasEventListener(FramePushedEvent.EVENT_FRAME_PUSHED))
-            {
-               dispatchEvent(new FramePushedEvent(frame));
-            }
-         }
-         else
-         {
-            _log.warn("Frame " + frame + " refused to be pushed.");
-         }
+      private function run() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function pullFrame(frame:Frame) : void {
-         var index:* = 0;
-         if(frame.pulled())
-         {
-            index = this._framesList.indexOf(frame);
-            if(index > -1)
-            {
-               this._framesList.splice(index,1);
-               delete this._currentFrameTypesCache[frame["constructor"]];
-               delete this._framesBeingDeleted[frame];
-            }
-            if(hasEventListener(FramePulledEvent.EVENT_FRAME_PULLED))
-            {
-               dispatchEvent(new FramePulledEvent(frame));
-            }
-         }
-         else
-         {
-            _log.warn("Frame " + frame + " refused to be pulled.");
-         }
+      private function pushFrame(frame:Frame) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function processMessages() : void {
-         var msg:Message = null;
-         var messagesProcessed:uint = 0;
-         var startTime:uint = getTimer();
-         while((messagesProcessed < MAX_MESSAGES_PER_FRAME) && (this._messagesQueue.length > 0) && (getTimer() - startTime < MAX_TIME_FRAME))
-         {
-            msg = this._messagesQueue.shift();
-            if(!((msg is CancelableMessage) && (CancelableMessage(msg).cancel)))
-            {
-               if((this._paused) && (msg is QueueableMessage) && (!this.msgIsUnstoppable(msg)))
-               {
-                  this._pausedQueue.push(msg);
-                  _log.warn("Queued message: " + msg);
-               }
-               else
-               {
-                  this.processMessage(msg);
-                  if(msg is Poolable)
-                  {
-                     GenericPool.free(msg as Poolable);
-                  }
-                  this.processFramesInAndOut();
-                  messagesProcessed++;
-               }
-            }
-         }
-         if(this._messagesQueue.length == 0)
-         {
-            EnterFrameDispatcher.removeEventListener(this.onEnterFrame);
-         }
+      private function pullFrame(frame:Frame) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function processMessage(msg:Message) : void {
-         var processed:* = false;
-         var frame:Frame = null;
-         this._processingMessage = true;
-         for each(frame in this._framesList)
-         {
-            if(frame.process(msg))
-            {
-               processed = true;
-               break;
-            }
-         }
-         this._processingMessage = false;
-         if((!processed) && (!(msg is DiscardableMessage)))
-         {
-            _log.debug("Discarded message: " + msg + " (at frame " + FrameIdManager.frameId + ")");
-         }
+      private function processMessages() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function processFramesInAndOut() : void {
-         var frameToRemove:Frame = null;
-         var frameToAdd:Frame = null;
-         if(this._framesToRemove.length > 0)
-         {
-            for each(frameToRemove in this._framesToRemove)
-            {
-               this.pullFrame(frameToRemove);
-            }
-            this._framesToRemove.splice(0,this._framesToRemove.length);
-         }
-         if(this._framesToAdd.length > 0)
-         {
-            for each(frameToAdd in this._framesToAdd)
-            {
-               this.pushFrame(frameToAdd);
-            }
-            this._framesToAdd.splice(0,this._framesToAdd.length);
-         }
+      private function processMessage(msg:Message) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      private function processFramesInAndOut() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

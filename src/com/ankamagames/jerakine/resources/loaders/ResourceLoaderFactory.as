@@ -7,22 +7,18 @@ package com.ankamagames.jerakine.resources.loaders
    public class ResourceLoaderFactory extends Object
    {
       
-      public function ResourceLoaderFactory() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function getLoader(type:uint) : IResourceLoader {
-         switch(type)
-         {
-            case ResourceLoaderType.PARALLEL_LOADER:
-               return new ParallelRessourceLoader(JerakineConstants.MAX_PARALLEL_LOADINGS);
-            case ResourceLoaderType.SERIAL_LOADER:
-               return new ParallelRessourceLoader(1);
-            case ResourceLoaderType.SINGLE_LOADER:
-               return new SingleRessourceLoader();
-            default:
-               throw new ArgumentError("Unknown loader type " + type + ".");
-         }
+      public function ResourceLoaderFactory()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function getLoader(type:uint) : IResourceLoader
+      {
+         //Décompilation abandonné
       }
    }
 }

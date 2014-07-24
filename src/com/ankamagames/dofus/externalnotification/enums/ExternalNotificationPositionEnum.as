@@ -3,8 +3,13 @@ package com.ankamagames.dofus.externalnotification.enums
    public class ExternalNotificationPositionEnum extends Object
    {
       
-      public function ExternalNotificationPositionEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExternalNotificationPositionEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const BOTTOM_RIGHT:int = 0;

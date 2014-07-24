@@ -10,9 +10,13 @@ package com.ankamagames.dofus.network.types.game.context.fight
    public class GameFightFighterNamedInformations extends GameFightFighterInformations implements INetworkType
    {
       
-      public function GameFightFighterNamedInformations() {
-         this.status = new PlayerStatus();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameFightFighterNamedInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 158;
@@ -21,42 +25,39 @@ package com.ankamagames.dofus.network.types.game.context.fight
       
       public var status:PlayerStatus;
       
-      override public function getTypeId() : uint {
-         return 158;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameFightFighterNamedInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, teamId:uint = 2, wave:uint = 0, alive:Boolean = false, stats:GameFightMinimalStats = null, name:String = "", status:PlayerStatus = null) : GameFightFighterNamedInformations {
-         super.initGameFightFighterInformations(contextualId,look,disposition,teamId,wave,alive,stats);
-         this.name = name;
-         this.status = status;
-         return this;
+      public function initGameFightFighterNamedInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, teamId:uint = 2, wave:uint = 0, alive:Boolean = false, stats:GameFightMinimalStats = null, name:String = "", status:PlayerStatus = null) : GameFightFighterNamedInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.name = "";
-         this.status = new PlayerStatus();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameFightFighterNamedInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightFighterNamedInformations(output:IDataOutput) : void {
-         super.serializeAs_GameFightFighterInformations(output);
-         output.writeUTF(this.name);
-         this.status.serializeAs_PlayerStatus(output);
+      public function serializeAs_GameFightFighterNamedInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameFightFighterNamedInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightFighterNamedInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.name = input.readUTF();
-         this.status = new PlayerStatus();
-         this.status.deserialize(input);
+      public function deserializeAs_GameFightFighterNamedInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

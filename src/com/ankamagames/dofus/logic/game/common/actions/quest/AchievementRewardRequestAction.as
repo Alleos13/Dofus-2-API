@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.quest
    public class AchievementRewardRequestAction extends Object implements Action
    {
       
-      public function AchievementRewardRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(achievementId:int) : AchievementRewardRequestAction {
-         var action:AchievementRewardRequestAction = new AchievementRewardRequestAction();
-         action.achievementId = achievementId;
-         return action;
+      public function AchievementRewardRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(achievementId:int) : AchievementRewardRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var achievementId:int;

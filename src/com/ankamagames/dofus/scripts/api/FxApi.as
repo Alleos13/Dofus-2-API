@@ -22,102 +22,97 @@ package com.ankamagames.dofus.scripts.api
    public class FxApi extends Object
    {
       
-      public function FxApi() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FxApi()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       public static const ANIMEVENT_SHOT:String = "SHOT";
       
-      public static function GetCurrentTargetedCell(runner:FxRunner) : MapPoint {
-         return runner.target;
+      public static function GetCurrentTargetedCell(runner:FxRunner) : MapPoint
+      {
+         //Décompilation abandonné
       }
       
-      public static function GetCurrentCaster(runner:SpellFxRunner) : IEntity {
-         return runner.caster;
+      public static function GetCurrentCaster(runner:SpellFxRunner) : IEntity
+      {
+         //Décompilation abandonné
       }
       
-      public static function IsCasterPlayer(runner:SpellFxRunner) : Boolean {
-         return runner.caster.id == PlayedCharacterManager.getInstance().id;
+      public static function IsCasterPlayer(runner:SpellFxRunner) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function GetOrientationTo(fromPoint:MapPoint, toPoint:MapPoint, use4Dir:Boolean = true) : uint {
-         return fromPoint.advancedOrientationTo(toPoint,use4Dir);
+      public static function GetOrientationTo(fromPoint:MapPoint, toPoint:MapPoint, use4Dir:Boolean = true) : uint
+      {
+         //Décompilation abandonné
       }
       
-      public static function GetAngleTo(fromPoint:MapPoint, toPoint:MapPoint) : Number {
-         var ac:int = CellUtil.getPixelXFromMapPoint(toPoint) - CellUtil.getPixelXFromMapPoint(fromPoint);
-         var bc:int = CellUtil.getPixelYFromMapPoint(fromPoint) - CellUtil.getPixelYFromMapPoint(toPoint);
-         return Math.acos(ac / Math.sqrt(Math.pow(ac,2) + Math.pow(bc,2))) * 180 / Math.PI * (CellUtil.getPixelYFromMapPoint(toPoint) > CellUtil.getPixelYFromMapPoint(fromPoint)?1:-1);
+      public static function GetAngleTo(fromPoint:MapPoint, toPoint:MapPoint) : Number
+      {
+         //Décompilation abandonné
       }
       
-      public static function SetGfxRotation(gfx:DisplayObject, angle:Number) : void {
-         gfx.rotation = angle;
+      public static function SetGfxRotation(gfx:DisplayObject, angle:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function GetEntityCell(entity:IEntity) : MapPoint {
-         return entity.position;
+      public static function GetEntityCell(entity:IEntity) : MapPoint
+      {
+         //Décompilation abandonné
       }
       
-      public static function IsPositionsEquals(pointOne:MapPoint, pointTwo:MapPoint) : Boolean {
-         if((!pointOne) || (!pointTwo))
-         {
-            return false;
-         }
-         return pointOne.cellId == pointTwo.cellId;
+      public static function IsPositionsEquals(pointOne:MapPoint, pointTwo:MapPoint) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function GetEntityOnCell(point:MapPoint) : IEntity {
-         return Atouin.getInstance().getEntityOnCell(point.cellId);
+      public static function GetEntityOnCell(point:MapPoint) : IEntity
+      {
+         //Décompilation abandonné
       }
       
-      public static function GetEntityId(entity:IEntity) : int {
-         return entity.id;
+      public static function GetEntityId(entity:IEntity) : int
+      {
+         //Décompilation abandonné
       }
       
-      public static function GetEntityPosition(entity:IEntity) : MapPoint {
-         return entity.position;
+      public static function GetEntityPosition(entity:IEntity) : MapPoint
+      {
+         //Décompilation abandonné
       }
       
-      public static function CreateGfxEntity(gfxId:uint, cell:MapPoint, randomRotationMin:Number = 0, randomRotationMax:Number = 0, randomFlip:Boolean = false, startPlayingOnlyWhenDisplayed:Boolean = true) : IEntity {
-         var id:int = -10000;
-         while(DofusEntities.getEntity(id))
-         {
-            id = -10000 + Math.random() * 10000;
-         }
-         var entity:Projectile = new Projectile(id,TiphonEntityLook.fromString("{" + gfxId + "}"),false);
-         entity.position = cell;
-         entity.rotation = Math.random() * (randomRotationMax - randomRotationMin) + randomRotationMin;
-         if((randomFlip) && (Math.random() < 0.5))
-         {
-            entity.scaleX = -1;
-         }
-         return entity;
+      public static function CreateGfxEntity(gfxId:uint, cell:MapPoint, randomRotationMin:Number = 0, randomRotationMax:Number = 0, randomFlip:Boolean = false, startPlayingOnlyWhenDisplayed:Boolean = true) : IEntity
+      {
+         //Décompilation abandonné
       }
       
-      public static function CreateTailEntity() : TailEntity {
-         return new TailEntity();
+      public static function CreateTailEntity() : TailEntity
+      {
+         //Décompilation abandonné
       }
       
-      public static function SetEntityAnimation(target:TiphonSprite, animName:String) : void {
-         target.setAnimation(animName);
+      public static function SetEntityAnimation(target:TiphonSprite, animName:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function SetSubEntity(target:TiphonSprite, subentity:DisplayObject, category:uint, slot:uint) : void {
-         if(target)
-         {
-            target.addSubEntity(subentity,category,slot);
-         }
+      public static function SetSubEntity(target:TiphonSprite, subentity:DisplayObject, category:uint, slot:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function CreateParticlesEntity(rendererType:uint) : ParticuleEmitterEntity {
-         var id:int = -10000;
-         while(DofusEntities.getEntity(id))
-         {
-            id = -10000 + Math.random() * 10000;
-         }
-         return new ParticuleEmitterEntity(id,rendererType);
+      public static function CreateParticlesEntity(rendererType:uint) : ParticuleEmitterEntity
+      {
+         //Décompilation abandonné
       }
    }
 }

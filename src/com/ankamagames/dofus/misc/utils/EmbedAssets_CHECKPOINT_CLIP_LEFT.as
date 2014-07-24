@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.utils
    public class EmbedAssets_CHECKPOINT_CLIP_LEFT extends SpriteAsset
    {
       
-      public function EmbedAssets_CHECKPOINT_CLIP_LEFT() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EmbedAssets_CHECKPOINT_CLIP_LEFT()
+      {
+         //Décompilation abandonné
       }
    }
 }

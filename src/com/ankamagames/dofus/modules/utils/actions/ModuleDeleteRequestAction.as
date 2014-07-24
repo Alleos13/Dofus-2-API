@@ -5,14 +5,18 @@ package com.ankamagames.dofus.modules.utils.actions
    public class ModuleDeleteRequestAction extends Object implements Action
    {
       
-      public function ModuleDeleteRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(directoryName:String) : ModuleDeleteRequestAction {
-         var action:ModuleDeleteRequestAction = new ModuleDeleteRequestAction();
-         action.moduleDirectory = directoryName;
-         return action;
+      public function ModuleDeleteRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(directoryName:String) : ModuleDeleteRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var moduleDirectory:String;

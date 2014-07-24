@@ -9,47 +9,65 @@ package com.ankamagames.dofus.network.messages.game.tinsel
    public class TitlesAndOrnamentsListRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function TitlesAndOrnamentsListRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TitlesAndOrnamentsListRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6363;
       
-      override public function get isInitialized() : Boolean {
-         return true;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function getMessageId() : uint {
-         return 6363;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initTitlesAndOrnamentsListRequestMessage() : TitlesAndOrnamentsListRequestMessage {
-         return this;
+      public function initTitlesAndOrnamentsListRequestMessage() : TitlesAndOrnamentsListRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_TitlesAndOrnamentsListRequestMessage(output:IDataOutput) : void {
+      public function serializeAs_TitlesAndOrnamentsListRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_TitlesAndOrnamentsListRequestMessage(input:IDataInput) : void {
+      public function deserializeAs_TitlesAndOrnamentsListRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

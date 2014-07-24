@@ -50,9 +50,13 @@ package com.ankamagames.dofus.kernel.sound.manager
    public class RegSoundManager extends EventDispatcher implements ISoundManager
    {
       
-      public function RegSoundManager() {
-         super();
-         this.init();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RegSoundManager()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -85,563 +89,239 @@ package com.ankamagames.dofus.kernel.sound.manager
       
       private var _adminPlaylist:PlayList;
       
-      public function set soundDirectoryExist(pExists:Boolean) : void {
-         this._soundDirectoryExist = pExists;
+      public function set soundDirectoryExist(pExists:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get soundDirectoryExist() : Boolean {
-         return this._soundDirectoryExist;
+      public function get soundDirectoryExist() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get soundIsActivate() : Boolean {
-         return this.checkIfAvailable();
+      public function get soundIsActivate() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get entitySounds() : Array {
-         return this._entitySounds;
+      public function get entitySounds() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function get reverseEntitySounds() : Dictionary {
-         return this._reverseEntitySounds;
+      public function get reverseEntitySounds() : Dictionary
+      {
+         //Décompilation abandonné
       }
       
-      public function set forceSoundsDebugMode(pForce:Boolean) : void {
-         this._forceSounds = pForce;
+      public function set forceSoundsDebugMode(pForce:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function playMainClientSounds() : void {
-         if((!(this._localizedSoundsManager == null)) && (this._localizedSoundsManager.isInitialized))
-         {
-            this._localizedSoundsManager.playLocalizedSounds();
-         }
-         if(this._ambientManager != null)
-         {
-            this._ambientManager.playMusicAndAmbient();
-         }
-         if((!(this._fightMusicManager == null)) && (this._inFight))
-         {
-            this._fightMusicManager.playFightMusic();
-         }
-         this.playIntroMusic();
-         SoundManager.getInstance().setSoundOptions();
+      public function playMainClientSounds() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function stopMainClientSounds() : void {
-         if((!(this._localizedSoundsManager == null)) && (this._localizedSoundsManager.isInitialized))
-         {
-            this._localizedSoundsManager.stopLocalizedSounds();
-         }
-         if(this._ambientManager != null)
-         {
-            this._ambientManager.stopMusicAndAmbient();
-         }
-         if((!(this._fightMusicManager == null)) && (this._inFight))
-         {
-            this._fightMusicManager.stopFightMusic();
-         }
-         this.stopIntroMusic(true);
+      public function stopMainClientSounds() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function activateSound() : void {
-         this._forceSounds = true;
-         this.playMainClientSounds();
+      public function activateSound() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deactivateSound() : void {
-         this.stopMainClientSounds();
-         this._forceSounds = false;
-         RegConnectionManager.getInstance().send(ProtocolEnum.DEACTIVATE_SOUNDS);
+      public function deactivateSound() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setSubArea(pMap:Map = null) : void {
-         var saas:AmbientSound = null;
-         var newAs:AmbientSound = null;
-         var mp:MapPosition = MapPosition.getMapPositionById(pMap.id);
-         this.removeLocalizedSounds();
-         this._localizedSoundsManager.setMap(pMap);
-         if((this.soundIsActivate) && (RegConnectionManager.getInstance().isMain))
-         {
-            this._localizedSoundsManager.playLocalizedSounds();
-         }
-         this._previousSubareaId = pMap.subareaId;
-         this._criterionSubarea = 1;
-         var subArea:SubArea = SubArea.getSubAreaById(pMap.subareaId);
-         if(subArea == null)
-         {
-            return;
-         }
-         var sounds:Vector.<Vector.<AmbientSound>> = new Vector.<Vector.<AmbientSound>>();
-         var i:int = 0;
-         while(i < 4)
-         {
-            sounds[i] = new Vector.<AmbientSound>();
-            i++;
-         }
-         if(mp)
-         {
-            for each(saas in mp.sounds)
-            {
-               newAs = new AmbientSound();
-               newAs.channel = saas.channel;
-               newAs.criterionId = saas.criterionId;
-               newAs.id = saas.id;
-               newAs.silenceMax = saas.silenceMax;
-               newAs.silenceMin = saas.silenceMin;
-               newAs.volume = saas.volume;
-               sounds[saas.type_id - 1].push(newAs);
-            }
-         }
-         for each(saas in subArea.ambientSounds)
-         {
-            if(!((saas.type_id == 2) && (sounds[saas.type_id - 1].length == 1)))
-            {
-               newAs = new AmbientSound();
-               newAs.channel = saas.channel;
-               newAs.criterionId = saas.criterionId;
-               newAs.id = saas.id;
-               newAs.silenceMax = saas.silenceMax;
-               newAs.silenceMin = saas.silenceMin;
-               newAs.volume = saas.volume;
-               sounds[saas.type_id - 1].push(newAs);
-            }
-         }
-         _log.info("Subarea Id : " + subArea.id + " / Map id : " + pMap.id);
-         this._ambientManager.setAmbientSounds(sounds[1],sounds[0]);
-         this._ambientManager.selectValidSounds();
-         this._ambientManager.playMusicAndAmbient();
-         this._fightMusicManager.setFightSounds(sounds[2],sounds[3]);
+      public function setSubArea(pMap:Map = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function playUISound(pSoundId:String, pLoop:Boolean = false) : void {
-         if(!this.checkIfAvailable())
-         {
-            return;
-         }
-         var newSound:SoundDofus = new SoundDofus(pSoundId);
-         newSound.play(pLoop);
+      public function playUISound(pSoundId:String, pLoop:Boolean = false) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function playSound(pSound:ISound, pLoop:Boolean = false, pLoops:int = -1) : ISound {
-         var prop:String = null;
-         if(!this.checkIfAvailable())
-         {
-            return null;
-         }
-         var soundID:String = pSound.uri.fileName.split(".mp3")[0];
-         var newSound:SoundDofus = new SoundDofus(soundID,true);
-         for(prop in pSound)
-         {
-            if(newSound.hasOwnProperty(prop))
-            {
-               newSound[prop] = pSound;
-            }
-         }
-         newSound.play(pLoop,pLoops);
-         return newSound;
+      public function playSound(pSound:ISound, pLoop:Boolean = false, pLoops:int = -1) : ISound
+      {
+         //Décompilation abandonné
       }
       
-      public function playFightMusic() : void {
-         this._inFight = true;
-         this._fightMusicManager.selectValidSounds();
-         this._fightMusicManager.startFight();
-         this._fightMusicManager.playFightMusic();
+      public function playFightMusic() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function prepareFightMusic() : void {
-         this._fightMusicManager.prepareFightMusic();
+      public function prepareFightMusic() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function stopFightMusic() : void {
-         this._inFight = false;
-         this._fightMusicManager.stopFightMusic();
+      public function stopFightMusic() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function handleFLAEvent(pAnimationName:String, pType:String, pParams:String, pSprite:Object = null) : void {
-         var sprite:TiphonSprite = null;
-         var parent:Object = null;
-         if(!((this.soundIsActivate) && (RegConnectionManager.getInstance().isMain)))
-         {
-            return;
-         }
-         if((pSprite is TiphonSprite) && (TiphonSprite(pSprite).parentSprite) && (TiphonSprite(pSprite).parentSprite.getSubEntitySlot(SubEntityBindingPointCategoryEnum.HOOK_POINT_CATEGORY_PET,0)))
-         {
-            return;
-         }
-         var posX:Number = 0;
-         var posY:Number = 0;
-         var entityId:int = -1;
-         if(pSprite.hasOwnProperty("absoluteBounds"))
-         {
-            posX = pSprite.absoluteBounds.x;
-            posY = pSprite.absoluteBounds.y;
-            entityId = pSprite.id;
-            if((!(entityId == PlayedCharacterManager.getInstance().id)) && (entityId > 0) && (Kernel.getWorker().getFrame(FightBattleFrame) == null))
-            {
-               return;
-            }
-         }
-         else if(pSprite is WorldEntitySprite)
-         {
-            posX = InteractiveCellManager.getInstance().getCell((pSprite as WorldEntitySprite).cellId).x;
-            posY = InteractiveCellManager.getInstance().getCell((pSprite as WorldEntitySprite).cellId).y;
-            entityId = (pSprite as WorldEntitySprite).identifier;
-         }
-         else if(pSprite is TiphonSprite)
-         {
-            sprite = pSprite as TiphonSprite;
-            if(sprite.parentSprite is TiphonSprite)
-            {
-               if(sprite.parentSprite.getSubEntitySlot(SubEntityBindingPointCategoryEnum.HOOK_POINT_CATEGORY_MOUNT_DRIVER,0) != null)
-               {
-                  parent = sprite.parentSprite;
-                  if(parent.hasOwnProperty("absoluteBounds"))
-                  {
-                     posX = parent.absoluteBounds.x;
-                     posY = parent.absoluteBounds.y;
-                     entityId = parent.id;
-                     if((!(entityId == PlayedCharacterManager.getInstance().id)) && (entityId > 0) && (Kernel.getWorker().getFrame(FightBattleFrame) == null))
-                     {
-                        return;
-                     }
-                  }
-               }
-            }
-            else
-            {
-               return;
-            }
-         }
-         else
-         {
-            return;
-         }
-         
-         
-         switch(pType)
-         {
-            case "Sound":
-               pParams = pParams + "*";
-               break;
-            case "DataSound":
-               pParams = this.buildSoundLabel(entityId,pAnimationName,pParams) + "*";
-               break;
-         }
-         var skin:int = -1;
-         if(pSprite.look.skins)
-         {
-            skin = TiphonEntityLook(pSprite.look).firstSkin;
-         }
-         if(pParams)
-         {
-            RegConnectionManager.getInstance().send(ProtocolEnum.FLA_EVENT,pParams,entityId,posX,posY,skin);
-         }
+      public function handleFLAEvent(pAnimationName:String, pType:String, pParams:String, pSprite:Object = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function applyDynamicMix(pFadeIn:VolumeFadeEffect, pWaitingTime:uint, pFadeOut:VolumeFadeEffect) : void {
-         RegConnectionManager.getInstance().send(ProtocolEnum.DYNAMIC_MIX,RegConnectionManager.getInstance().socketClientID,pFadeIn.endingValue,pFadeIn.timeFade,pWaitingTime,pFadeOut.timeFade);
+      public function applyDynamicMix(pFadeIn:VolumeFadeEffect, pWaitingTime:uint, pFadeOut:VolumeFadeEffect) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function retriveRollOffPresets() : void {
+      public function retriveRollOffPresets() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setSoundSourcePosition(pEntityId:int, pPosition:Point) : void {
-         if(!this.checkIfAvailable())
-         {
-            return;
-         }
-         if(pEntityId == PlayedCharacterManager.getInstance().id)
-         {
-            RegConnectionManager.getInstance().send(ProtocolEnum.SET_PLAYER_POSITION,RegConnectionManager.getInstance().socketClientID,pPosition.x,pPosition.y);
-         }
-         else
-         {
-            RegConnectionManager.getInstance().send(ProtocolEnum.SET_SOUND_SOURCE_POSITION,RegConnectionManager.getInstance().socketClientID,this._entitySounds[pEntityId],pPosition.x,pPosition.y);
-         }
+      public function setSoundSourcePosition(pEntityId:int, pPosition:Point) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addSoundEntity(pISound:ISound, pEntityId:int) : void {
-         if(!this.checkIfAvailable())
-         {
-            return;
-         }
-         if(this._entitySounds[pEntityId] == null)
-         {
-            this._entitySounds[pEntityId] = new Vector.<ISound>();
-         }
-         this._entityDictionary[DofusEntities.getEntity(pEntityId)] = this._entitySounds[pEntityId];
-         this._entitySounds[pEntityId].push(pISound);
-         this._reverseEntitySounds[pISound] = pEntityId;
+      public function addSoundEntity(pISound:ISound, pEntityId:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeSoundEntity(pISound:ISound) : void {
-         var isound:ISound = null;
-         var entityId:int = this._reverseEntitySounds[pISound];
-         if(!this._entitySounds[entityId])
-         {
-            return;
-         }
-         for each(isound in this._entitySounds[entityId])
-         {
-            if(isound == pISound)
-            {
-               isound.stop();
-               this._entitySounds[entityId].splice(this._entitySounds[entityId].indexOf(isound),1);
-               delete this._reverseEntitySounds[pISound];
-               if(this._entitySounds[entityId].length == 0)
-               {
-                  this._entitySounds[entityId] = null;
-               }
-               return;
-            }
-         }
+      public function removeSoundEntity(pISound:ISound) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeEntitySound(pEntityId:IEntity) : void {
-         var isound:ISound = null;
-         var fadeOut:VolumeFadeEffect = null;
-         if(this._entityDictionary[pEntityId] == null)
-         {
-            return;
-         }
-         for each(isound in this._entityDictionary[pEntityId])
-         {
-            fadeOut = new VolumeFadeEffect(-1,0,0.1);
-            isound.stop(fadeOut);
-         }
-         delete this._entityDictionary[pEntityId];
+      public function removeEntitySound(pEntityId:IEntity) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function retriveXMLSounds() : void {
+      public function retriveXMLSounds() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function playIntro() : void {
+      private function playIntro() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function playIntroMusic(pFirstHarmonic:Boolean = true) : void {
-         if(!((this.soundIsActivate) && (RegConnectionManager.getInstance().isMain)))
-         {
-            return;
-         }
-         var sysApi:SystemApi = new SystemApi();
-         if(sysApi.isInGame())
-         {
-            return;
-         }
-         RegConnectionManager.getInstance().send(ProtocolEnum.PLAY_INTRO,RegConnectionManager.getInstance().socketClientID);
+      public function playIntroMusic(pFirstHarmonic:Boolean = true) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function switchIntroMusic(pFirstHarmonic:Boolean) : void {
-         if(!((this.soundIsActivate) && (RegConnectionManager.getInstance().isMain)))
-         {
-            return;
-         }
-         var sysApi:SystemApi = new SystemApi();
-         if(sysApi.isInGame())
-         {
-            return;
-         }
-         RegConnectionManager.getInstance().send(ProtocolEnum.SWITCH_INTRO,RegConnectionManager.getInstance().socketClientID,pFirstHarmonic);
+      public function switchIntroMusic(pFirstHarmonic:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function stopIntroMusic(pImmediatly:Boolean = false) : void {
-         if(!this.checkIfAvailable())
-         {
-            return;
-         }
-         RegConnectionManager.getInstance().send(ProtocolEnum.STOP_INTRO,RegConnectionManager.getInstance().socketClientID,pImmediatly);
+      public function stopIntroMusic(pImmediatly:Boolean = false) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeAllSounds(pFade:Number = 0, pFadeTime:Number = 0) : void {
-         RegConnectionManager.getInstance().send(ProtocolEnum.REMOVE_ALL_SOUNDS,RegConnectionManager.getInstance().socketClientID);
+      public function removeAllSounds(pFade:Number = 0, pFadeTime:Number = 0) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function fadeBusVolume(pBusID:int, pFade:Number, pFadeTime:Number) : void {
-         RegConnectionManager.getInstance().send(ProtocolEnum.FADE_BUS,pBusID,pFade,pFadeTime);
+      public function fadeBusVolume(pBusID:int, pFade:Number, pFadeTime:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setBusVolume(pBusID:int, pNewVolume:Number) : void {
-         RegConnectionManager.getInstance().send(ProtocolEnum.SET_BUS_VOLUME,pBusID,pNewVolume);
+      public function setBusVolume(pBusID:int, pNewVolume:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.stopMainClientSounds();
-         this.removeAllSounds();
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function init() : void {
-         this._previousSubareaId = -1;
-         this._localizedSoundsManager = new LocalizedSoundsManager();
-         this._ambientManager = new AmbientSoundsManager();
-         this._fightMusicManager = new FightMusicManager();
-         this._entitySounds = new Array();
-         this._reverseEntitySounds = new Dictionary();
-         this._adminSounds = new Dictionary();
-         this._entityDictionary = new Dictionary();
-         if(AirScanner.hasAir())
-         {
-            StageShareManager.stage["nativeWindow"].addEventListener(Event.CLOSE,this.onClose);
-         }
-         RegConnectionManager.getInstance().send(ProtocolEnum.SAY_HELLO,RegConnectionManager.getInstance().socketClientID,File.applicationDirectory.nativePath + "/config.xml");
+      private function init() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function removeLocalizedSounds() : void {
-         this._entitySounds = new Array();
-         this._reverseEntitySounds = new Dictionary();
-         RegConnectionManager.getInstance().send(ProtocolEnum.REMOVE_LOCALIZED_SOUNDS,RegConnectionManager.getInstance().socketClientID);
+      private function removeLocalizedSounds() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function checkIfAvailable() : Boolean {
-         return (this._forceSounds) && (this._soundDirectoryExist);
+      private function checkIfAvailable() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function playAdminSound(pSoundId:String, pVolume:Number, pLoop:Boolean, pType:uint) : void {
-         var busId:uint = SoundUtil.getBusIdBySoundId(pSoundId);
-         var soundPath:String = SoundUtil.getConfigEntryByBusId(busId);
-         var soundUri:Uri = new Uri(soundPath + pSoundId + ".mp3");
-         var isound:ISound = new SoundDofus(pSoundId);
-         isound.busId = busId;
-         this._adminSounds[pType] = isound;
-         isound.play(pLoop);
-         isound.volume = pVolume;
+      public function playAdminSound(pSoundId:String, pVolume:Number, pLoop:Boolean, pType:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function stopAdminSound(pType:uint) : void {
-         var isound:ISound = this._adminSounds[pType] as ISound;
-         isound.stop();
+      public function stopAdminSound(pType:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addSoundInPlaylist(pSoundId:String, pVolume:Number, pSilenceMin:uint, pSilenceMax:uint) : Boolean {
-         if(this._adminPlaylist == null)
-         {
-            this._adminPlaylist = new PlayList(false,true);
-         }
-         var busId:uint = SoundUtil.getBusIdBySoundId(pSoundId);
-         var soundPath:String = SoundUtil.getConfigEntryByBusId(busId);
-         var soundUri:Uri = new Uri(soundPath + pSoundId + ".mp3");
-         var isound:ISound = SoundFactory.getSound(EnumSoundType.UNLOCALIZED_SOUND,soundUri);
-         isound.busId = busId;
-         if(this._adminPlaylist.addSound(isound) > 0)
-         {
-            return true;
-         }
-         return false;
+      public function addSoundInPlaylist(pSoundId:String, pVolume:Number, pSilenceMin:uint, pSilenceMax:uint) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function removeSoundInPLaylist(pSoundId:String) : Boolean {
-         if(this._adminPlaylist == null)
-         {
-            return false;
-         }
-         this._adminPlaylist.removeSoundBySoundId(pSoundId,true);
-         return true;
+      public function removeSoundInPLaylist(pSoundId:String) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function playPlaylist() : void {
-         if(this.checkIfAvailable())
-         {
-            return;
-         }
-         if(this._adminPlaylist == null)
-         {
-            return;
-         }
-         this._adminPlaylist.play();
+      public function playPlaylist() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function stopPlaylist() : void {
-         if(this.checkIfAvailable())
-         {
-            return;
-         }
-         if(this._adminPlaylist == null)
-         {
-            return;
-         }
-         this._adminPlaylist.stop();
+      public function stopPlaylist() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function resetPlaylist() : void {
-         if(this._adminPlaylist)
-         {
-            this._adminPlaylist.reset();
-         }
+      public function resetPlaylist() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onRemoveSoundInTubul(pEvent:AudioBusEvent) : void {
-         this.removeSoundEntity(pEvent.sound);
+      private function onRemoveSoundInTubul(pEvent:AudioBusEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onSoundAdminComplete(pEvent:SoundCompleteEvent) : void {
-         pEvent.sound.eventDispatcher.removeEventListener(SoundCompleteEvent.SOUND_COMPLETE,this.onSoundAdminComplete);
-         var soundId:String = pEvent.sound.uri.fileName.split(".mp3")[0];
-         this._adminSounds[soundId] = null;
-         delete this._adminSounds[soundId];
+      private function onSoundAdminComplete(pEvent:SoundCompleteEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function onClose(pEvent:Event) : void {
-         RegConnectionManager.getInstance().send(ProtocolEnum.SAY_GOODBYE,RegConnectionManager.getInstance().socketClientID);
+      public function onClose(pEvent:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function buildSoundLabel(entityId:int, animationType:String, params:String) : String {
-         var r:RegExp = null;
-         var entity:TiphonSprite = null;
-         if(params != null)
-         {
-            r = new RegExp("^\\s*(.*?)\\s*$","g");
-            params = params.replace(r,"$1");
-            if(params.length == 0)
-            {
-               params = null;
-            }
-         }
-         var entitiesFrame:AbstractEntitiesFrame = Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as AbstractEntitiesFrame;
-         if(!entitiesFrame)
-         {
-            entitiesFrame = Kernel.getWorker().getFrame(FightEntitiesFrame) as AbstractEntitiesFrame;
-         }
-         var infos:GameContextActorInformations = entitiesFrame?entitiesFrame.getEntityInfos(entityId):null;
-         if((!infos) || (!infos.look))
-         {
-            _log.error(entityId + " : donnés incomplètes pour ce bones, impossible de créer les sons");
-            return null;
-         }
-         var bonesId:int = infos.look.bonesId;
-         var sb:SoundBones = SoundBones.getSoundBonesById(bonesId);
-         var soundEvents:Vector.<SoundEventParamWrapper> = new Vector.<SoundEventParamWrapper>();
-         if(sb != null)
-         {
-            soundEvents = this.createSoundEvent(sb,animationType,params);
-         }
-         if(soundEvents.length <= 0)
-         {
-            entity = DofusEntities.getEntity(entityId) as TiphonSprite;
-            if((!entity) || (!entity.look))
-            {
-               _log.error(entityId + " : donnés incomplètes pour ce bones, impossible de créer les sons");
-               return null;
-            }
-            bonesId = (TiphonUtility.getEntityWithoutMount(entity) as TiphonSprite).look.getBone();
-            sb = SoundBones.getSoundBonesById(bonesId);
-            if(sb != null)
-            {
-               soundEvents = this.createSoundEvent(sb,animationType,params);
-            }
-         }
-         if(soundEvents.length > 0)
-         {
-            return FLAEventLabelParser.buildSoundLabel(soundEvents);
-         }
-         return null;
+      public function buildSoundLabel(entityId:int, animationType:String, params:String) : String
+      {
+         //Décompilation abandonné
       }
       
-      private function createSoundEvent(sb:SoundBones, animationType:String, params:String) : Vector.<SoundEventParamWrapper> {
-         var sa:SoundAnimation = null;
-         var soundEvents:Vector.<SoundEventParamWrapper> = new Vector.<SoundEventParamWrapper>();
-         for each(sa in sb.getSoundAnimationByLabel(animationType,params))
-         {
-            soundEvents.push(new SoundEventParamWrapper(sa.filename,sa.volume,sa.rolloff,sa.automationDuration,sa.automationVolume,sa.automationFadeIn,sa.automationFadeOut,sa.noCutSilence));
-         }
-         return soundEvents;
+      private function createSoundEvent(sb:SoundBones, animationType:String, params:String) : Vector.<SoundEventParamWrapper>
+      {
+         //Décompilation abandonné
       }
    }
 }

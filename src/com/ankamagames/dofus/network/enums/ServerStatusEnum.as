@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class ServerStatusEnum extends Object
    {
       
-      public function ServerStatusEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ServerStatusEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const STATUS_UNKNOWN:uint = 0;

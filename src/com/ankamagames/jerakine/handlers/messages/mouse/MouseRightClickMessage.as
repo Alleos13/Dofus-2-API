@@ -6,16 +6,18 @@ package com.ankamagames.jerakine.handlers.messages.mouse
    public class MouseRightClickMessage extends MouseMessage
    {
       
-      public function MouseRightClickMessage() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(target:InteractiveObject, mouseEvent:MouseEvent, instance:MouseMessage = null) : MouseRightClickMessage {
-         if(!instance)
-         {
-            instance = new MouseRightClickMessage();
-         }
-         return MouseMessage.create(target,mouseEvent,instance) as MouseRightClickMessage;
+      public function MouseRightClickMessage()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(target:InteractiveObject, mouseEvent:MouseEvent, instance:MouseMessage = null) : MouseRightClickMessage
+      {
+         //Décompilation abandonné
       }
    }
 }

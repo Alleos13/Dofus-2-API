@@ -12,58 +12,55 @@ package com.somerandomdude.colortoolkit
    public class CoreColor extends Object
    {
       
-      public function CoreColor() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CoreColor()
+      {
+         //Décompilation abandonné
       }
       
       protected var _color:int;
       
-      public function toLab() : Lab {
-         var lab:Lab = new Lab();
-         lab.color = this._color;
-         return lab;
+      public function toLab() : Lab
+      {
+         //Décompilation abandonné
       }
       
-      public function toGrayscale() : Gray {
-         var g:Gray = new Gray();
-         g.convertHexToGrayscale(this._color);
-         return g;
+      public function toGrayscale() : Gray
+      {
+         //Décompilation abandonné
       }
       
-      public function toRGB() : RGB {
-         var rgb:RGB = new RGB();
-         rgb.color = this._color;
-         return rgb;
+      public function toRGB() : RGB
+      {
+         //Décompilation abandonné
       }
       
-      public function toHSB() : HSB {
-         var hsb:HSB = new HSB();
-         hsb.color = this._color;
-         return hsb;
+      public function toHSB() : HSB
+      {
+         //Décompilation abandonné
       }
       
-      public function toHSL() : HSL {
-         var h:HSL = new HSL();
-         h.color = this._color;
-         return h;
+      public function toHSL() : HSL
+      {
+         //Décompilation abandonné
       }
       
-      public function toCMYK() : CMYK {
-         var cmyk:CMYK = new CMYK();
-         cmyk.color = this._color;
-         return cmyk;
+      public function toCMYK() : CMYK
+      {
+         //Décompilation abandonné
       }
       
-      public function toXYZ() : XYZ {
-         var xyz:XYZ = new XYZ();
-         xyz.color = this._color;
-         return xyz;
+      public function toXYZ() : XYZ
+      {
+         //Décompilation abandonné
       }
       
-      public function toYUV() : YUV {
-         var yuv:YUV = new YUV();
-         yuv.color = this._color;
-         return yuv;
+      public function toYUV() : YUV
+      {
+         //Décompilation abandonné
       }
    }
 }

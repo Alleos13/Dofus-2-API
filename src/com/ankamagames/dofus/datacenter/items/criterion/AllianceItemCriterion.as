@@ -8,38 +8,28 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class AllianceItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function AllianceItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         if(_criterionValue == 0)
-         {
-            return I18n.getUiText("ui.criterion.noAlliance");
-         }
-         if(_criterionValue == 1)
-         {
-            return I18n.getUiText("ui.criterion.hasAlliance");
-         }
-         return I18n.getUiText("ui.criterion.hasValidAlliance");
+      public function AllianceItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:AllianceItemCriterion = new AllianceItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getCriterion() : int {
-         var alliance:AllianceWrapper = AllianceFrame.getInstance().alliance;
-         if(alliance)
-         {
-            if(alliance.enabled)
-            {
-               return 2;
-            }
-            return 1;
-         }
-         return 0;
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getCriterion() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

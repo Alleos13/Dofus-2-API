@@ -15,11 +15,13 @@ package com.ankamagames.jerakine.lua
    public class LuaPlayer extends EventDispatcher implements IScriptsPlayer
    {
       
-      public function LuaPlayer(pDispatchMessages:Boolean = true) {
-         super();
-         this._luaAlchemy = new LuaAlchemy();
-         this._dispatchMessages = pDispatchMessages;
-         this._resetOnComplete = false;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LuaPlayer(pDispatchMessages:Boolean = true)
+      {
+         //Décompilation abandonné
       }
       
       private var _luaAlchemy:LuaAlchemy;
@@ -36,122 +38,64 @@ package com.ankamagames.jerakine.lua
       
       private var _alwaysShowAuraOnFront:Boolean;
       
-      public function get resetOnComplete() : Boolean {
-         return this._resetOnComplete;
+      public function get resetOnComplete() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set resetOnComplete(pValue:Boolean) : void {
-         this._resetOnComplete = pValue;
+      public function set resetOnComplete(pValue:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addApi(pApiId:String, pApi:*) : void {
-         this._luaAlchemy.setGlobal(pApiId,pApi);
-         switch(pApiId)
-         {
-            case "EntityApi":
-               this._entityApi = pApi;
-               break;
-            case "SeqApi":
-               this._seqApi = pApi;
-               break;
-            case "CameraApi":
-               this._cameraApi = pApi;
-               break;
-         }
+      public function addApi(pApiId:String, pApi:*) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function playScript(pLuaScript:String) : void {
-         this.init();
-         this._luaAlchemy.doStringAsync(pLuaScript,this.resultCallback);
+      public function playScript(pLuaScript:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setGlobal(pKey:String, pValue:*) : void {
-         this._luaAlchemy.setGlobal(pKey,pValue);
+      public function setGlobal(pKey:String, pValue:*) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function playFile(pUri:String) : void {
-         var loader:IResourceLoader = ResourceLoaderFactory.getLoader(ResourceLoaderType.SINGLE_LOADER);
-         loader.addEventListener(ResourceLoadedEvent.LOADED,this.onFileLoaded);
-         loader.addEventListener(ResourceErrorEvent.ERROR,this.onFileLoadError);
-         loader.load(new Uri(pUri));
+      public function playFile(pUri:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         if(this._seqApi)
-         {
-            this._seqApi.clear();
-         }
-         if(this._entityApi)
-         {
-            this._entityApi.reset();
-         }
-         if(this._cameraApi)
-         {
-            this._cameraApi.reset();
-         }
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function init() : void {
-         if(this._seqApi)
-         {
-            this._seqApi.clear();
-         }
-         if(this._entityApi)
-         {
-            this._entityApi.init();
-         }
-         this._alwaysShowAuraOnFront = OptionManager.getOptionManager("tiphon").alwaysShowAuraOnFront;
-         OptionManager.getOptionManager("tiphon").alwaysShowAuraOnFront = false;
+      private function init() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onFileLoaded(pEvent:ResourceLoadedEvent) : void {
-         pEvent.currentTarget.removeEventListener(ResourceLoadedEvent.LOADED,this.onFileLoaded);
-         this.init();
-         var ba:ByteArray = pEvent.resource as ByteArray;
-         this._luaAlchemy.doStringAsync(ba.readUTFBytes(ba.bytesAvailable),this.resultCallback);
+      private function onFileLoaded(pEvent:ResourceLoadedEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onFileLoadError(pEvent:ResourceErrorEvent) : void {
-         var e:LuaPlayerEvent = new LuaPlayerEvent(LuaPlayerEvent.PLAY_ERROR);
-         e.stackTrace = pEvent.errorMsg;
-         dispatchEvent(e);
+      private function onFileLoadError(pEvent:ResourceErrorEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function resultCallback(pStack:Array) : void {
-         var lpe:LuaPlayerEvent = null;
-         var result:Boolean = pStack.shift();
-         if(this._dispatchMessages)
-         {
-            if(result)
-            {
-               dispatchEvent(new LuaPlayerEvent(LuaPlayerEvent.PLAY_SUCCESS));
-               if((!this._seqApi) || (!this._seqApi.hasSequences()))
-               {
-                  this.onScriptComplete();
-               }
-               else if(this._seqApi)
-               {
-                  this._seqApi.addCompleteCallback(this.onScriptComplete);
-               }
-               
-            }
-            else
-            {
-               this.reset();
-               lpe = new LuaPlayerEvent(LuaPlayerEvent.PLAY_ERROR);
-               lpe.stackTrace = pStack[0];
-               dispatchEvent(lpe);
-            }
-         }
+      private function resultCallback(pStack:Array) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onScriptComplete() : void {
-         dispatchEvent(new LuaPlayerEvent(LuaPlayerEvent.PLAY_COMPLETE));
-         if(this._resetOnComplete)
-         {
-            this.reset();
-         }
-         OptionManager.getOptionManager("tiphon").alwaysShowAuraOnFront = this._alwaysShowAuraOnFront;
+      private function onScriptComplete() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

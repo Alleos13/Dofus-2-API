@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public final class Category extends Object
    {
       
-      public function Category() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Category()
+      {
+         //Décompilation abandonné
       }
       
       public static const PARAGRAPH:String = "Paragraph";

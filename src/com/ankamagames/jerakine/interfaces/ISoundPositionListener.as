@@ -5,6 +5,10 @@ package com.ankamagames.jerakine.interfaces
    public interface ISoundPositionListener
    {
       
-      function setSoundSourcePosition(param1:int, param2:Point) : void;
+      {
+      //Décompilation abandonné
+      }
+      
+      function setSoundSourcePosition(pEntityId:int, pPosition:Point) : void;
    }
 }

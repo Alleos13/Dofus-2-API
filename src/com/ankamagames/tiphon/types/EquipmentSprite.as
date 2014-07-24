@@ -8,8 +8,13 @@ package com.ankamagames.tiphon.types
    public class EquipmentSprite extends DynamicSprite
    {
       
-      public function EquipmentSprite() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EquipmentSprite()
+      {
+         //Décompilation abandonné
       }
       
       public static var enableLiveReference:Boolean = false;
@@ -18,44 +23,19 @@ package com.ankamagames.tiphon.types
       
       private static const _handlerRef:Dictionary;
       
-      public function updateTransform() : void {
-         if(_handlerRef[this])
-         {
-            this.makeChild(_handlerRef[this]);
-         }
+      public function updateTransform() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function init(handler:IAnimationSpriteHandler) : void {
-         if(getQualifiedClassName(parent) == getQualifiedClassName(this))
-         {
-            return;
-         }
-         var c:DisplayObject = this.makeChild(handler);
-         if((c) && (enableLiveReference))
-         {
-            if(!liveReference[getQualifiedClassName(c)])
-            {
-               liveReference[getQualifiedClassName(c)] = new Dictionary(true);
-            }
-            liveReference[getQualifiedClassName(c)][this] = 1;
-            _handlerRef[this] = handler;
-         }
+      override public function init(handler:IAnimationSpriteHandler) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function makeChild(handler:IAnimationSpriteHandler) : DisplayObject {
-         var lastNumChild:uint = 0;
-         var c:Sprite = handler.getSkinSprite(this);
-         if((c) && (!(c == this)))
-         {
-            lastNumChild = 0;
-            while((numChildren) && (!(lastNumChild == numChildren)))
-            {
-               lastNumChild = numChildren;
-               removeChildAt(0);
-            }
-            return addChild(c);
-         }
-         return null;
+      private function makeChild(handler:IAnimationSpriteHandler) : DisplayObject
+      {
+         //Décompilation abandonné
       }
    }
 }

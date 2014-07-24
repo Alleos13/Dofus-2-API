@@ -10,61 +10,69 @@ package com.ankamagames.dofus.network.messages.game.prism
    public class PrismFightAddedMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function PrismFightAddedMessage() {
-         this.fight = new PrismFightersInformation();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PrismFightAddedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6452;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var fight:PrismFightersInformation;
       
-      override public function getMessageId() : uint {
-         return 6452;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPrismFightAddedMessage(fight:PrismFightersInformation = null) : PrismFightAddedMessage {
-         this.fight = fight;
-         this._isInitialized = true;
-         return this;
+      public function initPrismFightAddedMessage(fight:PrismFightersInformation = null) : PrismFightAddedMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.fight = new PrismFightersInformation();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PrismFightAddedMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PrismFightAddedMessage(output:IDataOutput) : void {
-         this.fight.serializeAs_PrismFightersInformation(output);
+      public function serializeAs_PrismFightAddedMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PrismFightAddedMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PrismFightAddedMessage(input:IDataInput) : void {
-         this.fight = new PrismFightersInformation();
-         this.fight.deserialize(input);
+      public function deserializeAs_PrismFightAddedMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

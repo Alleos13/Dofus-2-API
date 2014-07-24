@@ -7,45 +7,52 @@ package com.ankamagames.dofus.network.types.game.approach
    public class ServerSessionConstantInteger extends ServerSessionConstant implements INetworkType
    {
       
-      public function ServerSessionConstantInteger() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ServerSessionConstantInteger()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 433;
       
       public var value:int = 0;
       
-      override public function getTypeId() : uint {
-         return 433;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initServerSessionConstantInteger(id:uint = 0, value:int = 0) : ServerSessionConstantInteger {
-         super.initServerSessionConstant(id);
-         this.value = value;
-         return this;
+      public function initServerSessionConstantInteger(id:uint = 0, value:int = 0) : ServerSessionConstantInteger
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.value = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ServerSessionConstantInteger(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ServerSessionConstantInteger(output:IDataOutput) : void {
-         super.serializeAs_ServerSessionConstant(output);
-         output.writeInt(this.value);
+      public function serializeAs_ServerSessionConstantInteger(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ServerSessionConstantInteger(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ServerSessionConstantInteger(input:IDataInput) : void {
-         super.deserialize(input);
-         this.value = input.readInt();
+      public function deserializeAs_ServerSessionConstantInteger(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,30 +5,39 @@ package com.ankamagames.jerakine.utils.misc
    public class FightProfiler extends Object
    {
       
-      public function FightProfiler() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightProfiler()
+      {
+         //Décompilation abandonné
       }
       
       private static const _profiler:FightProfiler;
       
       private static var _startTime:int = 0;
       
-      public static function getInstance() : FightProfiler {
-         return _profiler;
+      public static function getInstance() : FightProfiler
+      {
+         //Décompilation abandonné
       }
       
       private var _info:String;
       
-      public function start() : void {
-         _startTime = getTimer();
+      public function start() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function stop() : void {
-         this._info = (getTimer() - _startTime).toString();
+      public function stop() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get info() : String {
-         return this._info;
+      public function get info() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

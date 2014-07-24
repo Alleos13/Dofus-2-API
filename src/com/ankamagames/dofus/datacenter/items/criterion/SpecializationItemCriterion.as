@@ -6,21 +6,28 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class SpecializationItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function SpecializationItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         return _criterionRef + " " + _operator.text + " " + _criterionValue;
+      public function SpecializationItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:SpecializationItemCriterion = new SpecializationItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getCriterion() : int {
-         return PlayedCharacterManager.getInstance().characteristics.alignmentInfos.alignmentGrade;
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getCriterion() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

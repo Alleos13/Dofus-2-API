@@ -9,36 +9,27 @@ package com.ankamagames.berilia.types.graphic
    public class TimeoutHTMLLoader extends HTMLLoader
    {
       
-      public function TimeoutHTMLLoader() {
-         super();
-         addEventListener(Event["LOCATION_CHANGE"],this.onLocationChange);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TimeoutHTMLLoader()
+      {
+         //Décompilation abandonné
       }
       
       private static var INSTANCE_CACHE:Dictionary;
       
       public static const TIMEOUT:String = "TimeoutHTMLLoader_timeout";
       
-      public static function getLoader(uid:String = null) : TimeoutHTMLLoader {
-         var instance:TimeoutHTMLLoader = null;
-         if((!(uid == null)) && (INSTANCE_CACHE[uid]))
-         {
-            instance = INSTANCE_CACHE[uid];
-            instance._fromCache = true;
-            instance._timer.reset();
-            instance._timer.start();
-            return instance;
-         }
-         instance = new TimeoutHTMLLoader();
-         instance._uid = uid;
-         if(uid)
-         {
-            INSTANCE_CACHE[uid] = instance;
-         }
-         return instance;
+      public static function getLoader(uid:String = null) : TimeoutHTMLLoader
+      {
+         //Décompilation abandonné
       }
       
-      public static function resetCache() : void {
-         INSTANCE_CACHE = new Dictionary();
+      public static function resetCache() : void
+      {
+         //Décompilation abandonné
       }
       
       private var _fromCache:Boolean;
@@ -47,31 +38,24 @@ package com.ankamagames.berilia.types.graphic
       
       private var _uid:String;
       
-      public function set life(value:Number) : void {
-         this._timer = new Timer(value * 60 * 1000);
-         this._timer.addEventListener(TimerEvent.TIMER,this.onTimeOut);
+      public function set life(value:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get fromCache() : Boolean {
-         return this._fromCache;
+      public function get fromCache() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function onLocationChange(e:Event) : void {
-         if(this._timer)
-         {
-            this._timer.reset();
-            this._timer.start();
-         }
+      private function onLocationChange(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onTimeOut(e:Event) : void {
-         this._timer.stop();
-         dispatchEvent(new Event(TIMEOUT));
-         if((!this._timer.running) && (this._uid))
-         {
-            delete INSTANCE_CACHE[this._uid];
-            this._timer.removeEventListener(TimerEvent.TIMER,this.onTimeOut);
-         }
+      private function onTimeOut(e:Event) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

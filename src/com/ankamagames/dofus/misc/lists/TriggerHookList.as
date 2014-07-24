@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.lists
    public class TriggerHookList extends Object
    {
       
-      public function TriggerHookList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TriggerHookList()
+      {
+         //Décompilation abandonné
       }
       
       public static const NotificationList:Hook;

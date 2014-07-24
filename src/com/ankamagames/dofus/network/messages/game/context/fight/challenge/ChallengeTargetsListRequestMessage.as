@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.fight.challenge
    public class ChallengeTargetsListRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ChallengeTargetsListRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ChallengeTargetsListRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5614;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var challengeId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5614;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initChallengeTargetsListRequestMessage(challengeId:uint = 0) : ChallengeTargetsListRequestMessage {
-         this.challengeId = challengeId;
-         this._isInitialized = true;
-         return this;
+      public function initChallengeTargetsListRequestMessage(challengeId:uint = 0) : ChallengeTargetsListRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.challengeId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ChallengeTargetsListRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ChallengeTargetsListRequestMessage(output:IDataOutput) : void {
-         if(this.challengeId < 0)
-         {
-            throw new Error("Forbidden value (" + this.challengeId + ") on element challengeId.");
-         }
-         else
-         {
-            output.writeShort(this.challengeId);
-            return;
-         }
+      public function serializeAs_ChallengeTargetsListRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ChallengeTargetsListRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ChallengeTargetsListRequestMessage(input:IDataInput) : void {
-         this.challengeId = input.readShort();
-         if(this.challengeId < 0)
-         {
-            throw new Error("Forbidden value (" + this.challengeId + ") on element of ChallengeTargetsListRequestMessage.challengeId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_ChallengeTargetsListRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,16 +5,13 @@ package com.ankamagames.atouin.entities.behaviours.movements
    public class MountedMovementBehavior extends AnimatedMovementBehavior
    {
       
-      public function MountedMovementBehavior() {
-         super();
-         if(_self)
-         {
-            throw new SingletonError("Warning : MountedMovementBehavior is a singleton class and shoulnd\'t be instancied directly!");
-         }
-         else
-         {
-            return;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MountedMovementBehavior()
+      {
+         //Décompilation abandonné
       }
       
       private static const RUN_LINEAR_VELOCITY:Number = 0.007407407407407408;
@@ -27,28 +24,29 @@ package com.ankamagames.atouin.entities.behaviours.movements
       
       private static var _self:MountedMovementBehavior;
       
-      public static function getInstance() : MountedMovementBehavior {
-         if(!_self)
-         {
-            _self = new MountedMovementBehavior();
-         }
-         return _self;
+      public static function getInstance() : MountedMovementBehavior
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getLinearVelocity() : Number {
-         return RUN_LINEAR_VELOCITY;
+      override protected function getLinearVelocity() : Number
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getHorizontalDiagonalVelocity() : Number {
-         return RUN_HORIZONTAL_DIAGONAL_VELOCITY;
+      override protected function getHorizontalDiagonalVelocity() : Number
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getVerticalDiagonalVelocity() : Number {
-         return RUN_VERTICAL_DIAGONAL_VELOCITY;
+      override protected function getVerticalDiagonalVelocity() : Number
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getAnimation() : String {
-         return RUN_ANIMATION;
+      override protected function getAnimation() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

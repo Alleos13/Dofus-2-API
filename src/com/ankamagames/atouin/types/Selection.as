@@ -11,8 +11,13 @@ package com.ankamagames.atouin.types
    public class Selection extends Object
    {
       
-      public function Selection() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Selection()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -33,56 +38,29 @@ package com.ankamagames.atouin.types
       
       public var visible:Boolean;
       
-      public function set mapId(id:uint) : void {
-         this._mapId = id;
+      public function set mapId(id:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get mapId() : uint {
-         if(isNaN(this._mapId))
-         {
-            return MapDisplayManager.getInstance().currentMapPoint.mapId;
-         }
-         return this._mapId;
+      public function get mapId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function update(pUpdateStrata:Boolean = false) : void {
-         if(this.renderer)
-         {
-            this.renderer.render(this.cells,this.color,MapDisplayManager.getInstance().getDataMapContainer(),this.alpha,pUpdateStrata);
-         }
-         this.visible = true;
+      public function update(pUpdateStrata:Boolean = false) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function remove(aCells:Vector.<uint> = null) : void {
-         if(this.renderer)
-         {
-            if(!aCells)
-            {
-               this.renderer.remove(this.cells,MapDisplayManager.getInstance().getDataMapContainer());
-            }
-            else
-            {
-               this.renderer.remove(aCells,MapDisplayManager.getInstance().getDataMapContainer());
-            }
-         }
-         this.visible = false;
+      public function remove(aCells:Vector.<uint> = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function isInside(cellId:uint) : Boolean {
-         if(!this.cells)
-         {
-            return false;
-         }
-         var i:uint = 0;
-         while(i < this.cells.length)
-         {
-            if(this.cells[i] == cellId)
-            {
-               return true;
-            }
-            i++;
-         }
-         return false;
+      public function isInside(cellId:uint) : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -9,16 +9,23 @@ package com.ankamagames.jerakine.resources.adapters.impl
    public class BitmapAdapter extends AbstractLoaderAdapter implements IAdapter
    {
       
-      public function BitmapAdapter() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      override protected function getResource(ldr:LoaderInfo) : * {
-         return Bitmap(ldr.loader.content).bitmapData;
+      public function BitmapAdapter()
+      {
+         //Décompilation abandonné
       }
       
-      override public function getResourceType() : uint {
-         return ResourceType.RESOURCE_BITMAP;
+      override protected function getResource(ldr:LoaderInfo) : *
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function getResourceType() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

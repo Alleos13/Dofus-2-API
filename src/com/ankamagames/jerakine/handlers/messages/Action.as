@@ -4,5 +4,9 @@ package com.ankamagames.jerakine.handlers.messages
    
    public interface Action extends Message
    {
+      
+      {
+      //Décompilation abandonné
+      }
    }
 }

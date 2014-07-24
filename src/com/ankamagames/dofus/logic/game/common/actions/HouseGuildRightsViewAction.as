@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class HouseGuildRightsViewAction extends Object implements Action
    {
       
-      public function HouseGuildRightsViewAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : HouseGuildRightsViewAction {
-         var action:HouseGuildRightsViewAction = new HouseGuildRightsViewAction();
-         return action;
+      public function HouseGuildRightsViewAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : HouseGuildRightsViewAction
+      {
+         //Décompilation abandonné
       }
    }
 }

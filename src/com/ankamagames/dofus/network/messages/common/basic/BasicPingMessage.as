@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.common.basic
    public class BasicPingMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function BasicPingMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BasicPingMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 182;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var quiet:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 182;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initBasicPingMessage(quiet:Boolean = false) : BasicPingMessage {
-         this.quiet = quiet;
-         this._isInitialized = true;
-         return this;
+      public function initBasicPingMessage(quiet:Boolean = false) : BasicPingMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.quiet = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_BasicPingMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_BasicPingMessage(output:IDataOutput) : void {
-         output.writeBoolean(this.quiet);
+      public function serializeAs_BasicPingMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_BasicPingMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_BasicPingMessage(input:IDataInput) : void {
-         this.quiet = input.readBoolean();
+      public function deserializeAs_BasicPingMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

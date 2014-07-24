@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.exchange
    public class ExchangeRequestOnTaxCollectorAction extends Object implements Action
    {
       
-      public function ExchangeRequestOnTaxCollectorAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(taxCollectorId:int) : ExchangeRequestOnTaxCollectorAction {
-         var a:ExchangeRequestOnTaxCollectorAction = new ExchangeRequestOnTaxCollectorAction();
-         a.taxCollectorId = taxCollectorId;
-         return a;
+      public function ExchangeRequestOnTaxCollectorAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(taxCollectorId:int) : ExchangeRequestOnTaxCollectorAction
+      {
+         //Décompilation abandonné
       }
       
       public var taxCollectorId:int;

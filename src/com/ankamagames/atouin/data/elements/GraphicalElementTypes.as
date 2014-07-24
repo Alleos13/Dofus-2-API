@@ -3,8 +3,13 @@ package com.ankamagames.atouin.data.elements
    public class GraphicalElementTypes extends Object
    {
       
-      public function GraphicalElementTypes() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GraphicalElementTypes()
+      {
+         //Décompilation abandonné
       }
       
       public static const NORMAL:uint = 0;

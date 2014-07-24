@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class SubEntityBindingPointCategoryEnum extends Object
    {
       
-      public function SubEntityBindingPointCategoryEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SubEntityBindingPointCategoryEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const HOOK_POINT_CATEGORY_UNUSED:uint = 0;

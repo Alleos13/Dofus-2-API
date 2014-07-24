@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class PrismStateEnum extends Object
    {
       
-      public function PrismStateEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PrismStateEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const PRISM_STATE_INVULNERABLE:uint = 0;

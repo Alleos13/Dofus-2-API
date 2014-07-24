@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class BuildTypeEnum extends Object
    {
       
-      public function BuildTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BuildTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const RELEASE:uint = 0;

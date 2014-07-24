@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.guild
    public class GuildCharacsUpgradeRequestAction extends Object implements Action
    {
       
-      public function GuildCharacsUpgradeRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pCharaTypeTarget:uint) : GuildCharacsUpgradeRequestAction {
-         var action:GuildCharacsUpgradeRequestAction = new GuildCharacsUpgradeRequestAction();
-         action.charaTypeTarget = pCharaTypeTarget;
-         return action;
+      public function GuildCharacsUpgradeRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pCharaTypeTarget:uint) : GuildCharacsUpgradeRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var charaTypeTarget:uint;

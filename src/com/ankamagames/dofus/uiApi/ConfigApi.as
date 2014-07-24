@@ -28,177 +28,107 @@ package com.ankamagames.dofus.uiApi
    public class ConfigApi extends Object implements IApi
    {
       
-      public function ConfigApi() {
-         super();
-         this.init();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ConfigApi()
+      {
+         //Décompilation abandonné
       }
       
       private static var _init:Boolean = false;
       
       private var _module:UiModule;
       
-      public function set module(value:UiModule) : void {
-         this._module = value;
+      public function set module(value:UiModule) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         this._module = null;
-         _init = false;
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getConfigProperty(configModuleName:String, propertyName:String) : * {
-         var target:* = OptionManager.getOptionManager(configModuleName);
-         if(!target)
-         {
-            throw new ApiError("Config module [" + configModuleName + "] does not exist.");
-         }
-         else
-         {
-            if((target) && (this.isSimpleConfigType(target[propertyName])))
-            {
-               return target[propertyName];
-            }
-            return null;
-         }
+      public function getConfigProperty(configModuleName:String, propertyName:String) : *
+      {
+         //Décompilation abandonné
       }
       
-      public function setConfigProperty(configModuleName:String, propertyName:String, value:*) : void {
-         var target:OptionManager = OptionManager.getOptionManager(configModuleName);
-         if(!target)
-         {
-            throw new ApiError("Config module [" + configModuleName + "] does not exist.");
-         }
-         else
-         {
-            if(this.isSimpleConfigType(target.getDefaultValue(propertyName)))
-            {
-               target[propertyName] = value;
-               return;
-            }
-            throw new ApiError(propertyName + " cannot be set in config module " + configModuleName + ".");
-         }
+      public function setConfigProperty(configModuleName:String, propertyName:String, value:*) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function resetConfigProperty(configModuleName:String, propertyName:String) : void {
-         if(!OptionManager.getOptionManager(configModuleName))
-         {
-            throw ApiError("Config module [" + configModuleName + "] does not exist.");
-         }
-         else
-         {
-            OptionManager.getOptionManager(configModuleName).restaureDefaultValue(propertyName);
-            return;
-         }
+      public function resetConfigProperty(configModuleName:String, propertyName:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function createOptionManager(name:String) : OptionManager {
-         var om:OptionManager = new OptionManager(name);
-         return om;
+      public function createOptionManager(name:String) : OptionManager
+      {
+         //Décompilation abandonné
       }
       
-      public function getAllThemes() : Array {
-         return ThemeManager.getInstance().getThemes();
+      public function getAllThemes() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getCurrentTheme() : String {
-         return ThemeManager.getInstance().currentTheme;
+      public function getCurrentTheme() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function isOptionalFeatureActive(id:int) : Boolean {
-         var miscFrame:MiscFrame = Kernel.getWorker().getFrame(MiscFrame) as MiscFrame;
-         return miscFrame.isOptionalFeatureActive(id);
+      public function isOptionalFeatureActive(id:int) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getServerConstant(id:int) : Object {
-         return MiscFrame.getInstance().getServerSessionConstant(id);
+      public function getServerConstant(id:int) : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function getExternalNotificationOptions(pNotificationType:int) : Object {
-         return ExternalNotificationManager.getInstance().getNotificationOptions(pNotificationType);
+      public function getExternalNotificationOptions(pNotificationType:int) : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function setExternalNotificationOptions(pNotificationType:int, pOptions:Object) : void {
-         ExternalNotificationManager.getInstance().setNotificationOptions(pNotificationType,pOptions);
+      public function setExternalNotificationOptions(pNotificationType:int, pOptions:Object) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setDebugMode(activate:Boolean) : void {
-         DofusErrorHandler.manualActivation = activate;
-         if(activate)
-         {
-            DofusErrorHandler.activateDebugMode();
-         }
+      public function setDebugMode(activate:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getDebugMode() : Boolean {
-         return DofusErrorHandler.manualActivation;
+      public function getDebugMode() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function debugFileExists() : Boolean {
-         return DofusErrorHandler.debugFileExists;
+      public function debugFileExists() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function init() : void {
-         if(_init)
-         {
-            return;
-         }
-         _init = true;
-         Atouin.getInstance().options.addEventListener(PropertyChangeEvent.PROPERTY_CHANGED,this.onPropertyChanged);
-         Dofus.getInstance().options.addEventListener(PropertyChangeEvent.PROPERTY_CHANGED,this.onPropertyChanged);
-         Tiphon.getInstance().options.addEventListener(PropertyChangeEvent.PROPERTY_CHANGED,this.onPropertyChanged);
+      private function init() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function isSimpleConfigType(value:*) : Boolean {
-         switch(true)
-         {
-            case value is int:
-            case value is uint:
-            case value is Number:
-            case value is Boolean:
-            case value is String:
-            case value is Point:
-               return true;
-            default:
-               return false;
-         }
+      private function isSimpleConfigType(value:*) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function onPropertyChanged(e:PropertyChangeEvent) : void {
-         var className:String = null;
-         var newValue:* = e.propertyValue;
-         if(newValue is DisplayObject)
-         {
-            newValue = SecureCenter.secure(newValue,this._module.trusted);
-         }
-         var oldValue:* = e.propertyOldValue;
-         if(oldValue is DisplayObject)
-         {
-            newValue = SecureCenter.secure(newValue,this._module.trusted);
-         }
-         switch(true)
-         {
-            case e.watchedClassInstance is AtouinOptions:
-               className = "atouin";
-               break;
-            case e.watchedClassInstance is DofusOptions:
-               className = "dofus";
-               break;
-            case e.watchedClassInstance is BeriliaOptions:
-               className = "berilia";
-               break;
-            case e.watchedClassInstance is TiphonOptions:
-               className = "tiphon";
-               break;
-            case e.watchedClassInstance is TubulOptions:
-               className = "soundmanager";
-               break;
-            case e.watchedClassInstance is ChatOptions:
-               className = "chat";
-               break;
-            default:
-               className = getQualifiedClassName(e.watchedClassInstance);
-         }
-         KernelEventsManager.getInstance().processCallback(HookList.ConfigPropertyChange,className,e.propertyName,newValue,oldValue);
+      private function onPropertyChanged(e:PropertyChangeEvent) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

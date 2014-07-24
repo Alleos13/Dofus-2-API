@@ -11,57 +11,32 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightDisplayBuffStep extends AbstractSequencable implements IFightStep, ISequencableListener
    {
       
-      public function FightDisplayBuffStep(buff:BasicBuff) {
-         super();
-         this._buff = buff;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightDisplayBuffStep(buff:BasicBuff)
+      {
+         //Décompilation abandonné
       }
       
       private var _buff:BasicBuff;
       
       private var _virtualStep:IFightStep;
       
-      public function get stepType() : String {
-         return "displayBuff";
+      public function get stepType() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function start() : void {
-         var statName:String = null;
-         var buffUnknown:Boolean = true;
-         if(this._buff.actionId == ActionIdConverter.ACTION_CHARACTER_UPDATE_BOOST)
-         {
-            buffUnknown = !BuffManager.getInstance().updateBuff(this._buff);
-         }
-         else
-         {
-            if(this._buff is StatBuff)
-            {
-               statName = (this._buff as StatBuff).statName;
-               switch(statName)
-               {
-                  case "movementPoints":
-                     this._virtualStep = new FightMovementPointsVariationStep(this._buff.targetId,(this._buff as StatBuff).delta,false,false,false);
-                     break;
-                  case "actionPoints":
-                     this._virtualStep = new FightActionPointsVariationStep(this._buff.targetId,(this._buff as StatBuff).delta,false,false,false);
-                     break;
-               }
-            }
-            BuffManager.getInstance().addBuff(this._buff);
-         }
-         if(!this._virtualStep)
-         {
-            executeCallbacks();
-         }
-         else
-         {
-            this._virtualStep.addListener(this);
-            this._virtualStep.start();
-         }
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function stepFinished(step:ISequencable, withTimout:Boolean = false) : void {
-         this._virtualStep.removeListener(this);
-         executeCallbacks();
+      public function stepFinished(step:ISequencable, withTimout:Boolean = false) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

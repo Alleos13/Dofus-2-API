@@ -3,10 +3,13 @@ package com.ankamagames.berilia.types.template
    public class TemplateParam extends Object
    {
       
-      public function TemplateParam(sName:String, sValue:String = null) {
-         super();
-         this.name = sName;
-         this.value = sValue;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TemplateParam(sName:String, sValue:String = null)
+      {
+         //Décompilation abandonné
       }
       
       public var name:String;

@@ -7,18 +7,25 @@ package com.ankamagames.dofus.datacenter.quest
    public class AchievementCategory extends Object implements IDataCenter
    {
       
-      public function AchievementCategory() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AchievementCategory()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "AchievementCategories";
       
-      public static function getAchievementCategoryById(id:int) : AchievementCategory {
-         return GameData.getObject(MODULE,id) as AchievementCategory;
+      public static function getAchievementCategoryById(id:int) : AchievementCategory
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAchievementCategories() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAchievementCategories() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;
@@ -39,29 +46,14 @@ package com.ankamagames.dofus.datacenter.quest
       
       private var _achievements:Vector.<Achievement>;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get achievements() : Vector.<Achievement> {
-         var i:* = 0;
-         var len:* = 0;
-         if(!this._achievements)
-         {
-            len = this.achievementIds.length;
-            this._achievements = new Vector.<Achievement>(len,true);
-            i = 0;
-            while(i < len)
-            {
-               this._achievements[i] = Achievement.getAchievementById(this.achievementIds[i]);
-               i++;
-            }
-         }
-         return this._achievements;
+      public function get achievements() : Vector.<Achievement>
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.paddock
    public class MountInformationsForPaddock extends Object implements INetworkType
    {
       
-      public function MountInformationsForPaddock() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MountInformationsForPaddock()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 184;
@@ -19,41 +24,39 @@ package com.ankamagames.dofus.network.types.game.paddock
       
       public var ownerName:String = "";
       
-      public function getTypeId() : uint {
-         return 184;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initMountInformationsForPaddock(modelId:int = 0, name:String = "", ownerName:String = "") : MountInformationsForPaddock {
-         this.modelId = modelId;
-         this.name = name;
-         this.ownerName = ownerName;
-         return this;
+      public function initMountInformationsForPaddock(modelId:int = 0, name:String = "", ownerName:String = "") : MountInformationsForPaddock
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.modelId = 0;
-         this.name = "";
-         this.ownerName = "";
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_MountInformationsForPaddock(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_MountInformationsForPaddock(output:IDataOutput) : void {
-         output.writeInt(this.modelId);
-         output.writeUTF(this.name);
-         output.writeUTF(this.ownerName);
+      public function serializeAs_MountInformationsForPaddock(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_MountInformationsForPaddock(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_MountInformationsForPaddock(input:IDataInput) : void {
-         this.modelId = input.readInt();
-         this.name = input.readUTF();
-         this.ownerName = input.readUTF();
+      public function deserializeAs_MountInformationsForPaddock(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

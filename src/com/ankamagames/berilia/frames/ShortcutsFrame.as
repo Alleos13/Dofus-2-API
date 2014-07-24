@@ -31,8 +31,13 @@ package com.ankamagames.berilia.frames
    public class ShortcutsFrame extends Object implements Frame
    {
       
-      public function ShortcutsFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ShortcutsFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -51,181 +56,54 @@ package com.ankamagames.berilia.frames
       
       private var _heldShortcuts:Vector.<String>;
       
-      public function get isProcessingDirectInteraction() : Boolean {
-         return this._isProcessingDirectInteraction;
+      public function get isProcessingDirectInteraction() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get heldShortcuts() : Vector.<String> {
-         return this._heldShortcuts;
+      public function get heldShortcuts() : Vector.<String>
+      {
+         //Décompilation abandonné
       }
       
-      public function get priority() : int {
-         return Priority.NORMAL;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var kdmsg:KeyboardKeyDownMessage = null;
-         var s:Shortcut = null;
-         var kumsg:KeyboardKeyUpMessage = null;
-         this._isProcessingDirectInteraction = false;
-         if(!shortcutsEnabled)
-         {
-            return false;
-         }
-         switch(true)
-         {
-            case msg is KeyboardKeyDownMessage:
-               kdmsg = KeyboardKeyDownMessage(msg);
-               shiftKey = kdmsg.keyboardEvent.shiftKey;
-               ctrlKey = kdmsg.keyboardEvent.ctrlKey;
-               altKey = kdmsg.keyboardEvent.altKey;
-               this._lastCtrlKey = false;
-               s = this.getShortcut(kdmsg);
-               if((s) && (s.holdKeys) && (this._heldShortcuts.indexOf(s.defaultBind.targetedShortcut) == -1))
-               {
-                  this.handleMessage(kdmsg);
-                  this._heldShortcuts.push(s.defaultBind.targetedShortcut);
-               }
-               return false;
-            case msg is KeyboardKeyUpMessage:
-               kumsg = KeyboardKeyUpMessage(msg);
-               shiftKey = kumsg.keyboardEvent.shiftKey;
-               ctrlKey = kumsg.keyboardEvent.ctrlKey;
-               altKey = kumsg.keyboardEvent.altKey;
-               return this.handleMessage(kumsg);
-            default:
-               this._isProcessingDirectInteraction = false;
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function handleMessage(pKeyboardMessage:KeyboardMessage) : Boolean {
-         var imeActive:* = false;
-         var sh:Shortcut = null;
-         var tf:TextField = null;
-         var focusAsTextField:TextField = null;
-         var heldShortcutIndex:* = 0;
-         var keyCode:int = pKeyboardMessage.keyboardEvent.keyCode;
-         if(keyCode == Keyboard.CONTROL)
-         {
-            this._lastCtrlKey = true;
-         }
-         else if(this._lastCtrlKey)
-         {
-            this._lastCtrlKey = false;
-            return false;
-         }
-         
-         this._isProcessingDirectInteraction = true;
-         var sShortcut:String = BindsManager.getInstance().getShortcutString(pKeyboardMessage.keyboardEvent.keyCode,this.getCharCode(pKeyboardMessage));
-         if((FocusHandler.getInstance().getFocus() is TextField) && (Berilia.getInstance().useIME) && (IME.enabled))
-         {
-            tf = FocusHandler.getInstance().getFocus() as TextField;
-            if(tf.parent is Input)
-            {
-               imeActive = !(tf.text == Input(tf.parent).lastTextOnInput);
-               if((!imeActive) && (Input(tf.parent).imeActive))
-               {
-                  Input(tf.parent).imeActive = false;
-                  imeActive = true;
-               }
-               else
-               {
-                  Input(tf.parent).imeActive = imeActive;
-               }
-            }
-         }
-         else
-         {
-            IME.enabled = false;
-         }
-         if((sShortcut == null) || (imeActive))
-         {
-            this._isProcessingDirectInteraction = false;
-            return true;
-         }
-         var bind:Bind = new Bind(sShortcut,"",pKeyboardMessage.keyboardEvent.altKey,pKeyboardMessage.keyboardEvent.ctrlKey,pKeyboardMessage.keyboardEvent.shiftKey);
-         var shortcut:Bind = BindsManager.getInstance().getBind(bind);
-         if(shortcut != null)
-         {
-            sh = Shortcut.getShortcutByName(shortcut.targetedShortcut);
-         }
-         if((BindsManager.getInstance().canBind(bind)) && ((!(sh == null)) && (!sh.disable) || (sh == null)))
-         {
-            KernelEventsManager.getInstance().processCallback(BeriliaHookList.KeyboardShortcut,bind,pKeyboardMessage.keyboardEvent.keyCode);
-         }
-         if((!(shortcut == null)) && (sh) && (!sh.disable))
-         {
-            if(!Shortcut.getShortcutByName(shortcut.targetedShortcut))
-            {
-               return false;
-            }
-            if(sh.holdKeys)
-            {
-               heldShortcutIndex = this._heldShortcuts.indexOf(sh.defaultBind.targetedShortcut);
-               if(heldShortcutIndex != -1)
-               {
-                  this._heldShortcuts.splice(heldShortcutIndex,1);
-               }
-            }
-            focusAsTextField = StageShareManager.stage.focus as TextField;
-            if((focusAsTextField) && (focusAsTextField.type == TextFieldType.INPUT))
-            {
-               if(!Shortcut.getShortcutByName(shortcut.targetedShortcut).textfieldEnabled)
-               {
-                  return false;
-               }
-            }
-            LogFrame.log(LogTypeEnum.SHORTCUT,new com.ankamagames.jerakine.replay.KeyboardShortcut(shortcut.targetedShortcut));
-            BindsManager.getInstance().processCallback(shortcut,shortcut.targetedShortcut);
-         }
-         this._isProcessingDirectInteraction = false;
-         return false;
+      private function handleMessage(pKeyboardMessage:KeyboardMessage) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function getShortcut(pKeyboardMessage:KeyboardMessage) : Shortcut {
-         var sShortcut:String = BindsManager.getInstance().getShortcutString(pKeyboardMessage.keyboardEvent.keyCode,this.getCharCode(pKeyboardMessage));
-         var bind:Bind = BindsManager.getInstance().getBind(new Bind(sShortcut,"",pKeyboardMessage.keyboardEvent.altKey,pKeyboardMessage.keyboardEvent.ctrlKey,pKeyboardMessage.keyboardEvent.shiftKey));
-         return bind?Shortcut.getShortcutByName(bind.targetedShortcut):null;
+      private function getShortcut(pKeyboardMessage:KeyboardMessage) : Shortcut
+      {
+         //Décompilation abandonné
       }
       
-      private function getCharCode(pKeyboardMessage:KeyboardMessage) : int {
-         var charCode:* = 0;
-         if((pKeyboardMessage.keyboardEvent.shiftKey) && (pKeyboardMessage.keyboardEvent.keyCode == 52))
-         {
-            charCode = 39;
-         }
-         else if((pKeyboardMessage.keyboardEvent.shiftKey) && (pKeyboardMessage.keyboardEvent.keyCode == 54))
-         {
-            charCode = 45;
-         }
-         else
-         {
-            charCode = pKeyboardMessage.keyboardEvent.charCode;
-         }
-         
-         return charCode;
+      private function getCharCode(pKeyboardMessage:KeyboardMessage) : int
+      {
+         //Décompilation abandonné
       }
       
-      private function onWindowDeactivate(pEvent:Event) : void {
-         this._heldShortcuts.length = 0;
+      private function onWindowDeactivate(pEvent:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         this._heldShortcuts = new Vector.<String>(0);
-         if(AirScanner.hasAir())
-         {
-            StageShareManager.stage.nativeWindow.addEventListener(Event.DEACTIVATE,this.onWindowDeactivate);
-         }
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         if(AirScanner.hasAir())
-         {
-            StageShareManager.stage.nativeWindow.removeEventListener(Event.DEACTIVATE,this.onWindowDeactivate);
-         }
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

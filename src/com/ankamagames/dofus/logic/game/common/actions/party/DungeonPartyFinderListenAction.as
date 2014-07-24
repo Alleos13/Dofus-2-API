@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.party
    public class DungeonPartyFinderListenAction extends Object implements Action
    {
       
-      public function DungeonPartyFinderListenAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(dungeonId:uint) : DungeonPartyFinderListenAction {
-         var a:DungeonPartyFinderListenAction = new DungeonPartyFinderListenAction();
-         a.dungeonId = dungeonId;
-         return a;
+      public function DungeonPartyFinderListenAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(dungeonId:uint) : DungeonPartyFinderListenAction
+      {
+         //Décompilation abandonné
       }
       
       public var dungeonId:uint;

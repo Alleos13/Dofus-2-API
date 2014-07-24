@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.alliance
    public class AllianceChangeGuildRightsAction extends Object implements Action
    {
       
-      public function AllianceChangeGuildRightsAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(guildId:uint, rights:uint) : AllianceChangeGuildRightsAction {
-         var action:AllianceChangeGuildRightsAction = new AllianceChangeGuildRightsAction();
-         action.guildId = guildId;
-         action.rights = rights;
-         return action;
+      public function AllianceChangeGuildRightsAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(guildId:uint, rights:uint) : AllianceChangeGuildRightsAction
+      {
+         //Décompilation abandonné
       }
       
       public var guildId:uint;

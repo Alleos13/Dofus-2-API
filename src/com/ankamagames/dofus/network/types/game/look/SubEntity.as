@@ -7,9 +7,13 @@ package com.ankamagames.dofus.network.types.game.look
    public class SubEntity extends Object implements INetworkType
    {
       
-      public function SubEntity() {
-         this.subEntityLook = new EntityLook();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SubEntity()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 54;
@@ -20,65 +24,39 @@ package com.ankamagames.dofus.network.types.game.look
       
       public var subEntityLook:EntityLook;
       
-      public function getTypeId() : uint {
-         return 54;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initSubEntity(bindingPointCategory:uint = 0, bindingPointIndex:uint = 0, subEntityLook:EntityLook = null) : SubEntity {
-         this.bindingPointCategory = bindingPointCategory;
-         this.bindingPointIndex = bindingPointIndex;
-         this.subEntityLook = subEntityLook;
-         return this;
+      public function initSubEntity(bindingPointCategory:uint = 0, bindingPointIndex:uint = 0, subEntityLook:EntityLook = null) : SubEntity
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.bindingPointCategory = 0;
-         this.bindingPointIndex = 0;
-         this.subEntityLook = new EntityLook();
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_SubEntity(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_SubEntity(output:IDataOutput) : void {
-         output.writeByte(this.bindingPointCategory);
-         if(this.bindingPointIndex < 0)
-         {
-            throw new Error("Forbidden value (" + this.bindingPointIndex + ") on element bindingPointIndex.");
-         }
-         else
-         {
-            output.writeByte(this.bindingPointIndex);
-            this.subEntityLook.serializeAs_EntityLook(output);
-            return;
-         }
+      public function serializeAs_SubEntity(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_SubEntity(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_SubEntity(input:IDataInput) : void {
-         this.bindingPointCategory = input.readByte();
-         if(this.bindingPointCategory < 0)
-         {
-            throw new Error("Forbidden value (" + this.bindingPointCategory + ") on element of SubEntity.bindingPointCategory.");
-         }
-         else
-         {
-            this.bindingPointIndex = input.readByte();
-            if(this.bindingPointIndex < 0)
-            {
-               throw new Error("Forbidden value (" + this.bindingPointIndex + ") on element of SubEntity.bindingPointIndex.");
-            }
-            else
-            {
-               this.subEntityLook = new EntityLook();
-               this.subEntityLook.deserialize(input);
-               return;
-            }
-         }
+      public function deserializeAs_SubEntity(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

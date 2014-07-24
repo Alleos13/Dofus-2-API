@@ -6,8 +6,13 @@ package org.flintparticles.twoD.particles
    public class Particle2D extends Particle
    {
       
-      public function Particle2D() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Particle2D()
+      {
+         //Décompilation abandonné
       }
       
       public var x:Number = 0;
@@ -28,33 +33,21 @@ package org.flintparticles.twoD.particles
       
       private var _inertia:Number;
       
-      public function get inertia() : Number {
-         if(!(mass == this._previousMass) || !(collisionRadius == this._previousRadius))
-         {
-            this._inertia = mass * collisionRadius * collisionRadius * 0.5;
-            this._previousMass = mass;
-            this._previousRadius = collisionRadius;
-         }
-         return this._inertia;
+      public function get inertia() : Number
+      {
+         //Décompilation abandonné
       }
       
       public var sortID:uint;
       
-      override public function initialize() : void {
-         super.initialize();
-         this.x = 0;
-         this.y = 0;
-         this.velX = 0;
-         this.velY = 0;
-         this.rotation = 0;
-         this.angVelocity = 0;
-         this.sortID = 0;
+      override public function initialize() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get matrixTransform() : Matrix {
-         var _loc1_:Number = scale * Math.cos(this.rotation);
-         var _loc2_:Number = scale * Math.sin(this.rotation);
-         return new Matrix(_loc1_,_loc2_,-_loc2_,_loc1_,this.x,this.y);
+      public function get matrixTransform() : Matrix
+      {
+         //Décompilation abandonné
       }
    }
 }

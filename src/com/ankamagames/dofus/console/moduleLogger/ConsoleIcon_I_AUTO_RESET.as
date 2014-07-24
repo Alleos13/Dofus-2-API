@@ -5,8 +5,13 @@ package com.ankamagames.dofus.console.moduleLogger
    public class ConsoleIcon_I_AUTO_RESET extends SpriteAsset
    {
       
-      public function ConsoleIcon_I_AUTO_RESET() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ConsoleIcon_I_AUTO_RESET()
+      {
+         //Décompilation abandonné
       }
    }
 }

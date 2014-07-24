@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.replay
    public class LogTypeEnum extends Object
    {
       
-      public function LogTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LogTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const REGISTER_CLASS:uint = 0;

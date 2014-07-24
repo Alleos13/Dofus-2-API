@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.utils
    public class LoadingScreen__btnLog extends ButtonAsset
    {
       
-      public function LoadingScreen__btnLog() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LoadingScreen__btnLog()
+      {
+         //Décompilation abandonné
       }
    }
 }

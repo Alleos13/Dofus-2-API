@@ -6,29 +6,38 @@ package com.ankamagames.dofus.uiApi
    public class SecurityApi extends Object implements IApi
    {
       
-      public function SecurityApi() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function askSecureModeCode(callback:Function) : void {
-         SecureModeManager.getInstance().askCode(callback);
+      public function SecurityApi()
+      {
+         //Décompilation abandonné
       }
       
-      public static function sendSecureModeCode(code:String, callback:Function, computerName:String = null) : void {
-         SecureModeManager.getInstance().computerName = computerName;
-         SecureModeManager.getInstance().sendCode(code,callback);
+      public static function askSecureModeCode(callback:Function) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function SecureModeisActive() : Boolean {
-         return SecureModeManager.getInstance().active;
+      public static function sendSecureModeCode(code:String, callback:Function, computerName:String = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function setShieldLevel(level:uint) : void {
-         SecureModeManager.getInstance().shieldLevel = level;
+      public static function SecureModeisActive() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function getShieldLevel() : uint {
-         return SecureModeManager.getInstance().shieldLevel;
+      public static function setShieldLevel(level:uint) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function getShieldLevel() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

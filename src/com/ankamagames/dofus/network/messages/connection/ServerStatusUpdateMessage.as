@@ -10,61 +10,69 @@ package com.ankamagames.dofus.network.messages.connection
    public class ServerStatusUpdateMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ServerStatusUpdateMessage() {
-         this.server = new GameServerInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ServerStatusUpdateMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 50;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var server:GameServerInformations;
       
-      override public function getMessageId() : uint {
-         return 50;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initServerStatusUpdateMessage(server:GameServerInformations = null) : ServerStatusUpdateMessage {
-         this.server = server;
-         this._isInitialized = true;
-         return this;
+      public function initServerStatusUpdateMessage(server:GameServerInformations = null) : ServerStatusUpdateMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.server = new GameServerInformations();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ServerStatusUpdateMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ServerStatusUpdateMessage(output:IDataOutput) : void {
-         this.server.serializeAs_GameServerInformations(output);
+      public function serializeAs_ServerStatusUpdateMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ServerStatusUpdateMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ServerStatusUpdateMessage(input:IDataInput) : void {
-         this.server = new GameServerInformations();
-         this.server.deserialize(input);
+      public function deserializeAs_ServerStatusUpdateMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

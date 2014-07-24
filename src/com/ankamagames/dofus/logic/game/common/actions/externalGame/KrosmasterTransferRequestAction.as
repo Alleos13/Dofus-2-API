@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.externalGame
    public class KrosmasterTransferRequestAction extends Object implements Action
    {
       
-      public function KrosmasterTransferRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(figureId:String) : KrosmasterTransferRequestAction {
-         var action:KrosmasterTransferRequestAction = new KrosmasterTransferRequestAction();
-         action.figureId = figureId;
-         return action;
+      public function KrosmasterTransferRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(figureId:String) : KrosmasterTransferRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var figureId:String;

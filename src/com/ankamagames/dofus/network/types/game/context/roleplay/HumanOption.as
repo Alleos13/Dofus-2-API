@@ -7,33 +7,50 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
    public class HumanOption extends Object implements INetworkType
    {
       
-      public function HumanOption() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HumanOption()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 406;
       
-      public function getTypeId() : uint {
-         return 406;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initHumanOption() : HumanOption {
-         return this;
+      public function initHumanOption() : HumanOption
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_HumanOption(output:IDataOutput) : void {
+      public function serializeAs_HumanOption(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_HumanOption(input:IDataInput) : void {
+      public function deserializeAs_HumanOption(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

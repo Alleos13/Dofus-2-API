@@ -9,20 +9,27 @@ package com.ankamagames.dofus.datacenter.livingObjects
    public class SpeakingItemsTrigger extends Object implements IDataCenter
    {
       
-      public function SpeakingItemsTrigger() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpeakingItemsTrigger()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "SpeakingItemsTriggers";
       
       protected static const _log:Logger;
       
-      public static function getSpeakingItemsTriggerById(id:int) : SpeakingItemsTrigger {
-         return GameData.getObject(MODULE,id) as SpeakingItemsTrigger;
+      public static function getSpeakingItemsTriggerById(id:int) : SpeakingItemsTrigger
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSpeakingItemsTriggers() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getSpeakingItemsTriggers() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var triggersId:int;

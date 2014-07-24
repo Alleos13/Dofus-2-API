@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.npcs
    public class NpcAction extends Object implements IDataCenter
    {
       
-      public function NpcAction() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function NpcAction()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       public static const MODULE:String = "NpcActions";
       
-      public static function getNpcActionById(id:int) : NpcAction {
-         return GameData.getObject(MODULE,id) as NpcAction;
+      public static function getNpcActionById(id:int) : NpcAction
+      {
+         //Décompilation abandonné
       }
       
-      public static function getNpcActions() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getNpcActions() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -32,12 +39,9 @@ package com.ankamagames.dofus.datacenter.npcs
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

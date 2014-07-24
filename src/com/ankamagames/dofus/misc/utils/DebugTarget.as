@@ -12,37 +12,27 @@ package com.ankamagames.dofus.misc.utils
    public class DebugTarget extends AbstractTarget implements ConfigurableLoggingTarget
    {
       
-      public function DebugTarget() {
-         super();
-         logLevels[LogLevel.COMMANDS] = false;
-         logLevels[LogLevel.DEBUG] = true;
-         logLevels[LogLevel.ERROR] = true;
-         logLevels[LogLevel.FATAL] = true;
-         logLevels[LogLevel.INFO] = true;
-         logLevels[LogLevel.TRACE] = true;
-         logLevels[LogLevel.WARN] = true;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DebugTarget()
+      {
+         //Décompilation abandonné
       }
       
       public static const LOG_FOLDER:File;
       
       public static var logLevels:Array;
       
-      override public function logEvent(event:LogEvent) : void {
-         if((event is TextLogEvent) && (logLevels[event.level]))
-         {
-            LogFrame.log(LogTypeEnum.TEXT,event);
-         }
+      override public function logEvent(event:LogEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function configure(config:XML) : void {
-         var level:XML = null;
-         for each(level in config..level)
-         {
-            if(LogLevel[level.@name.toString().toUpperCase()])
-            {
-               logLevels[LogLevel[level.@name.toString().toUpperCase()]] = level.@log.toString() == "true";
-            }
-         }
+      public function configure(config:XML) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

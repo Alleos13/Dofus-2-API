@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class ServerConnectionErrorEnum extends Object
    {
       
-      public function ServerConnectionErrorEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ServerConnectionErrorEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const SERVER_CONNECTION_ERROR_DUE_TO_STATUS:uint = 0;

@@ -8,63 +8,69 @@ package com.ankamagames.dofus.network.messages.connection
    public class IdentificationSuccessWithLoginTokenMessage extends IdentificationSuccessMessage implements INetworkMessage
    {
       
-      public function IdentificationSuccessWithLoginTokenMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function IdentificationSuccessWithLoginTokenMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6209;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var loginToken:String = "";
       
-      override public function getMessageId() : uint {
-         return 6209;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initIdentificationSuccessWithLoginTokenMessage(login:String = "", nickname:String = "", accountId:uint = 0, communityId:uint = 0, hasRights:Boolean = false, secretQuestion:String = "", subscriptionEndDate:Number = 0, wasAlreadyConnected:Boolean = false, accountCreation:Number = 0, loginToken:String = "") : IdentificationSuccessWithLoginTokenMessage {
-         super.initIdentificationSuccessMessage(login,nickname,accountId,communityId,hasRights,secretQuestion,subscriptionEndDate,wasAlreadyConnected,accountCreation);
-         this.loginToken = loginToken;
-         this._isInitialized = true;
-         return this;
+      public function initIdentificationSuccessWithLoginTokenMessage(login:String = "", nickname:String = "", accountId:uint = 0, communityId:uint = 0, hasRights:Boolean = false, secretQuestion:String = "", subscriptionEndDate:Number = 0, wasAlreadyConnected:Boolean = false, accountCreation:Number = 0, loginToken:String = "") : IdentificationSuccessWithLoginTokenMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.loginToken = "";
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_IdentificationSuccessWithLoginTokenMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_IdentificationSuccessWithLoginTokenMessage(output:IDataOutput) : void {
-         super.serializeAs_IdentificationSuccessMessage(output);
-         output.writeUTF(this.loginToken);
+      public function serializeAs_IdentificationSuccessWithLoginTokenMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_IdentificationSuccessWithLoginTokenMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_IdentificationSuccessWithLoginTokenMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.loginToken = input.readUTF();
+      public function deserializeAs_IdentificationSuccessWithLoginTokenMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

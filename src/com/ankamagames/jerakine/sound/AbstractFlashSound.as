@@ -9,13 +9,13 @@ package com.ankamagames.jerakine.sound
    public class AbstractFlashSound extends Socket
    {
       
-      public function AbstractFlashSound(lcid:uint = 0) {
-         super();
-         CONNECTION_NAME = CONNECTION_NAME + lcid.toString();
-         this._data = new ByteArray();
-         this._conn = new LocalConnection();
-         this._pingTimer = new Timer(5000,1);
-         this._pingTimer.addEventListener(TimerEvent.TIMER_COMPLETE,this.onPingTimerComplete);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AbstractFlashSound(lcid:uint = 0)
+      {
+         //Décompilation abandonné
       }
       
       protected static var CONNECTION_NAME:String = "DofusRegConnection";
@@ -30,33 +30,39 @@ package com.ankamagames.jerakine.sound
       
       protected var _pingTimer:Timer;
       
-      protected function removePingTimer() : void {
-         this._pingTimer.stop();
-         this._pingTimer.removeEventListener(TimerEvent.TIMER_COMPLETE,this.onPingTimerComplete);
-         this._pingTimer = null;
+      protected function removePingTimer() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onPingTimerComplete(pEvt:TimerEvent) : void {
-         this.connect("",0);
+      private function onPingTimerComplete(pEvt:TimerEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function connect(host:String, port:int) : void {
+      override public function connect(host:String, port:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function readUTFBytes(length:uint) : String {
-         return this._data.readUTFBytes(length);
+      override public function readUTFBytes(length:uint) : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function writeUTFBytes(value:String) : void {
-         this._data.writeUTFBytes(value);
+      override public function writeUTFBytes(value:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function flush() : void {
+      override public function flush() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function close() : void {
-         this._data.clear();
-         this._conn.close();
+      override public function close() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

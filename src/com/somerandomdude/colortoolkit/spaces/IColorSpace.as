@@ -3,6 +3,10 @@ package com.somerandomdude.colortoolkit.spaces
    public interface IColorSpace
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function toGrayscale() : Gray;
       
       function toRGB() : RGB;

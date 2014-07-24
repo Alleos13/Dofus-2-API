@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
    public class ValidateSpellForgetAction extends Object implements Action
    {
       
-      public function ValidateSpellForgetAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(spellId:uint) : ValidateSpellForgetAction {
-         var a:ValidateSpellForgetAction = new ValidateSpellForgetAction();
-         a.spellId = spellId;
-         return a;
+      public function ValidateSpellForgetAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(spellId:uint) : ValidateSpellForgetAction
+      {
+         //Décompilation abandonné
       }
       
       public var spellId:uint;

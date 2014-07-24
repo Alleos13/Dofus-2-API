@@ -9,16 +9,22 @@ package com.ankamagames.dofus.network.messages.game.context.display
    public class DisplayNumericalValueMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function DisplayNumericalValueMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DisplayNumericalValueMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5808;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var entityId:int = 0;
@@ -27,61 +33,49 @@ package com.ankamagames.dofus.network.messages.game.context.display
       
       public var type:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5808;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initDisplayNumericalValueMessage(entityId:int = 0, value:int = 0, type:uint = 0) : DisplayNumericalValueMessage {
-         this.entityId = entityId;
-         this.value = value;
-         this.type = type;
-         this._isInitialized = true;
-         return this;
+      public function initDisplayNumericalValueMessage(entityId:int = 0, value:int = 0, type:uint = 0) : DisplayNumericalValueMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.entityId = 0;
-         this.value = 0;
-         this.type = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_DisplayNumericalValueMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_DisplayNumericalValueMessage(output:IDataOutput) : void {
-         output.writeInt(this.entityId);
-         output.writeInt(this.value);
-         output.writeByte(this.type);
+      public function serializeAs_DisplayNumericalValueMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_DisplayNumericalValueMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_DisplayNumericalValueMessage(input:IDataInput) : void {
-         this.entityId = input.readInt();
-         this.value = input.readInt();
-         this.type = input.readByte();
-         if(this.type < 0)
-         {
-            throw new Error("Forbidden value (" + this.type + ") on element of DisplayNumericalValueMessage.type.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_DisplayNumericalValueMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

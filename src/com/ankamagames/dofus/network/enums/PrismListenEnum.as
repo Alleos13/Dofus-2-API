@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class PrismListenEnum extends Object
    {
       
-      public function PrismListenEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PrismListenEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const PRISM_LISTEN_NONE:uint = 0;

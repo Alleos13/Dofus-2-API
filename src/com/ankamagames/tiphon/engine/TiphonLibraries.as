@@ -3,8 +3,13 @@ package com.ankamagames.tiphon.engine
    public class TiphonLibraries extends Object
    {
       
-      public function TiphonLibraries() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TiphonLibraries()
+      {
+         //Décompilation abandonné
       }
       
       public static const skullLibrary:LibrariesManager;

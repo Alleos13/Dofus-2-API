@@ -14,12 +14,13 @@ package com.ankamagames.dofus.logic.game.common.steps
    public class CameraMoveStep extends AbstractSequencable
    {
       
-      public function CameraMoveStep(pCamera:Camera, pArgs:Array, pInstant:Boolean) {
-         super();
-         this._camera = pCamera;
-         this._args = pArgs;
-         this._instant = pInstant;
-         this._container = Atouin.getInstance().worldContainer;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CameraMoveStep(pCamera:Camera, pArgs:Array, pInstant:Boolean)
+      {
+         //Décompilation abandonné
       }
       
       private var _camera:Camera;
@@ -32,48 +33,19 @@ package com.ankamagames.dofus.logic.game.common.steps
       
       private var _container:DisplayObjectContainer;
       
-      override public function start() : void {
-         var mp:MapPoint = null;
-         var cell:GraphicCell = null;
-         var cellPos:Point = null;
-         var camPosObj:Object = null;
-         var t:TweenLite = null;
-         if((this._camera.currentZoom > Atouin.getInstance().options.frustum.scale) && (!isNaN(this._camera.x)) && (!isNaN(this._camera.y)))
-         {
-            mp = ScriptsUtil.getMapPoint(this._args);
-            cell = InteractiveCellManager.getInstance().getCell(mp.cellId);
-            cellPos = cell.parent.localToGlobal(new Point(cell.x + cell.width / 2,cell.y + cell.height / 2));
-            this._targetPos = this._container.globalToLocal(cellPos);
-            if(this._instant)
-            {
-               this._camera.zoomOnPos(this._camera.currentZoom,this._targetPos.x,this._targetPos.y);
-               executeCallbacks();
-            }
-            else
-            {
-               camPosObj = 
-                  {
-                     "x":this._camera.x,
-                     "y":this._camera.y
-                  };
-               t = new TweenLite(camPosObj,2,
-                  {
-                     "x":this._targetPos.x,
-                     "y":this._targetPos.y,
-                     "onUpdate":this.updatePos,
-                     "onUpdateParams":[camPosObj],
-                     "onComplete":this.moveComplete
-                  });
-            }
-         }
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function updatePos(pCamPosObj:Object) : void {
-         this._camera.zoomOnPos(this._camera.currentZoom,pCamPosObj.x,pCamPosObj.y);
+      private function updatePos(pCamPosObj:Object) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function moveComplete() : void {
-         executeCallbacks();
+      private function moveComplete() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

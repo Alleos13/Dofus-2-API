@@ -8,48 +8,63 @@ package com.ankamagames.jerakine.script.api
    public class RootApi extends Object
    {
       
-      public function RootApi() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function Random(max:int) : int {
-         return Math.floor(Math.random() * max);
+      public function RootApi()
+      {
+         //Décompilation abandonné
       }
       
-      public static function CreatePoint(x:Number = 0, y:Number = 0) : Point {
-         return new Point(x,y);
+      public static function Random(max:int) : int
+      {
+         //Décompilation abandonné
       }
       
-      public static function GetPointX(point:Point) : Number {
-         return point.x;
+      public static function CreatePoint(x:Number = 0, y:Number = 0) : Point
+      {
+         //Décompilation abandonné
       }
       
-      public static function GetPointY(point:Point) : Number {
-         return point.y;
+      public static function GetPointX(point:Point) : Number
+      {
+         //Décompilation abandonné
       }
       
-      public static function CreateRectangle(x:Number = 0, y:Number = 0, width:Number = 0, height:Number = 0) : Rectangle {
-         return new Rectangle(x,y,width,height);
+      public static function GetPointY(point:Point) : Number
+      {
+         //Décompilation abandonné
       }
       
-      public static function GetRectangleX(rect:Rectangle) : Number {
-         return rect.x;
+      public static function CreateRectangle(x:Number = 0, y:Number = 0, width:Number = 0, height:Number = 0) : Rectangle
+      {
+         //Décompilation abandonné
       }
       
-      public static function GetRectangleY(rect:Rectangle) : Number {
-         return rect.y;
+      public static function GetRectangleX(rect:Rectangle) : Number
+      {
+         //Décompilation abandonné
       }
       
-      public static function GetRectangleHeight(rect:Rectangle) : Number {
-         return rect.height;
+      public static function GetRectangleY(rect:Rectangle) : Number
+      {
+         //Décompilation abandonné
       }
       
-      public static function GetRectangleWidth(rect:Rectangle) : Number {
-         return rect.width;
+      public static function GetRectangleHeight(rect:Rectangle) : Number
+      {
+         //Décompilation abandonné
       }
       
-      public static function GetStage() : Stage {
-         return StageShareManager.stage;
+      public static function GetRectangleWidth(rect:Rectangle) : Number
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function GetStage() : Stage
+      {
+         //Décompilation abandonné
       }
    }
 }

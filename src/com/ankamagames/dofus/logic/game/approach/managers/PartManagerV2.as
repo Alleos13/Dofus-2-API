@@ -25,12 +25,13 @@ package com.ankamagames.dofus.logic.game.approach.managers
    public class PartManagerV2 extends Object implements IUpdaterMessageHandler
    {
       
-      public function PartManagerV2() {
-         super();
-         if(!this.api)
-         {
-            this.api = new UpdaterApi(this);
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PartManagerV2()
+      {
+         //Décompilation abandonné
       }
       
       private static const instance:PartManagerV2;
@@ -39,8 +40,9 @@ package com.ankamagames.dofus.logic.game.approach.managers
       
       private static const PROJECT_NAME:String = "game";
       
-      public static function getInstance() : PartManagerV2 {
-         return instance;
+      public static function getInstance() : PartManagerV2
+      {
+         //Décompilation abandonné
       }
       
       private var api:UpdaterApi;
@@ -49,83 +51,39 @@ package com.ankamagames.dofus.logic.game.approach.managers
       
       private var _init_mode:Boolean;
       
-      public function init() : void {
-         logger.info("Initializing PartManager");
-         this.api.getComponentList(PROJECT_NAME);
+      public function init() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function hasComponent(name:String) : Boolean {
-         return this._modules?!(this._modules[name] == null)?this._modules[name].activated as Boolean:false:false;
+      public function hasComponent(name:String) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function activateComponent(name:String, activate:Boolean = true, project:String = "game") : void {
-         if(!this.hasComponent(name))
-         {
-            logger.debug("Ask updater for " + activate?"activate":"desactivate" + " component : " + name);
-            this.api.activateComponent(name,activate,project);
-         }
+      public function activateComponent(name:String, activate:Boolean = true, project:String = "game") : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set installedModules(m:Dictionary) : void {
-         this._modules = m;
+      public function set installedModules(m:Dictionary) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function handleMessage(msg:IUpdaterInputMessage) : void {
-         var clm:ComponentListMessage = null;
-         var sm:StepMessage = null;
-         var uiM:UiModule = null;
-         var pm:ProgressMessage = null;
-         var fm:FinishedMessage = null;
-         var em:ErrorMessage = null;
-         var hook:Hook = null;
-         var params:Array = null;
-         switch(true)
-         {
-            case msg is ComponentListMessage:
-               clm = msg as ComponentListMessage;
-               this._modules = clm.components;
-               break;
-            case msg is StepMessage:
-               sm = msg as StepMessage;
-               if(sm.step == StepMessage.UPDATING_STEP)
-               {
-                  uiM = UiModuleManager.getInstance().getModule("Ankama_Common");
-                  if(!Berilia.getInstance().isUiDisplayed("downloadUiNewUpdaterInstance"))
-                  {
-                     Berilia.getInstance().loadUi(uiM,uiM.getUi("downloadUiNewUpdater"),"downloadUiNewUpdaterInstance",null,false,StrataEnum.STRATA_HIGH);
-                  }
-               }
-               hook = HookList.UpdateStepChange;
-               params = [hook,sm.step];
-               break;
-            case msg is ProgressMessage:
-               pm = msg as ProgressMessage;
-               hook = HookList.UpdateProgress;
-               params = [hook,pm.step,pm.currentSize,pm.eta,pm.progress,pm.smooth,pm.speed,pm.totalSize];
-               break;
-            case msg is FinishedMessage:
-               fm = msg as FinishedMessage;
-               hook = HookList.UpdateFinished;
-               params = [hook,fm.needRestart,fm.needUpdate,fm.newVersion,fm.previousVersion,fm.error];
-               setTimeout(Berilia.getInstance().unloadUi,2000,"downloadUiNewUpdaterInstance");
-               break;
-            case msg is d2hooks.UpdateError:
-               em = msg as ErrorMessage;
-               hook = HookList.UpdateError;
-               params = [hook,em.type,em.message];
-         }
-         if(hook)
-         {
-            KernelEventsManager.getInstance().processCallback.apply(null,params);
-         }
+      public function handleMessage(msg:IUpdaterInputMessage) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function handleConnectionOpened() : void {
-         logger.info("Updater is online");
+      public function handleConnectionOpened() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function handleConnectionClosed() : void {
-         logger.info("Connexion with updater has been closed");
+      public function handleConnectionClosed() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

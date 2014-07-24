@@ -6,16 +6,18 @@ package com.ankamagames.jerakine.handlers.messages.mouse
    public class MouseWheelMessage extends MouseMessage
    {
       
-      public function MouseWheelMessage() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(target:InteractiveObject, mouseEvent:MouseEvent, instance:MouseMessage = null) : MouseWheelMessage {
-         if(!instance)
-         {
-            instance = new MouseWheelMessage();
-         }
-         return MouseMessage.create(target,mouseEvent,instance) as MouseWheelMessage;
+      public function MouseWheelMessage()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(target:InteractiveObject, mouseEvent:MouseEvent, instance:MouseMessage = null) : MouseWheelMessage
+      {
+         //Décompilation abandonné
       }
    }
 }

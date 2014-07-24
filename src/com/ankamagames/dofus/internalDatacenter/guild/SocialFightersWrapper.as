@@ -8,23 +8,18 @@ package com.ankamagames.dofus.internalDatacenter.guild
    public class SocialFightersWrapper extends Object implements IDataCenter
    {
       
-      public function SocialFightersWrapper() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pAlly:uint, pFightersInformations:CharacterMinimalPlusLookInformations) : SocialFightersWrapper {
-         var item:SocialFightersWrapper = new SocialFightersWrapper();
-         item.ally = pAlly;
-         item.playerCharactersInformations = pFightersInformations;
-         if(pFightersInformations.entityLook != null)
-         {
-            item.entityLook = EntityLookAdapter.getRiderLook(pFightersInformations.entityLook);
-         }
-         else
-         {
-            trace("Le entityLook est null :(");
-         }
-         return item;
+      public function SocialFightersWrapper()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pAlly:uint, pFightersInformations:CharacterMinimalPlusLookInformations) : SocialFightersWrapper
+      {
+         //Décompilation abandonné
       }
       
       public var ally:uint;
@@ -33,17 +28,9 @@ package com.ankamagames.dofus.internalDatacenter.guild
       
       public var entityLook:TiphonEntityLook;
       
-      public function update(pAlly:uint, pFightersInformations:CharacterMinimalPlusLookInformations) : void {
-         this.ally = pAlly;
-         this.playerCharactersInformations = pFightersInformations;
-         if(pFightersInformations.entityLook != null)
-         {
-            this.entityLook = EntityLookAdapter.getRiderLook(pFightersInformations.entityLook);
-         }
-         else
-         {
-            trace("Le entityLook est null :(");
-         }
+      public function update(pAlly:uint, pFightersInformations:CharacterMinimalPlusLookInformations) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

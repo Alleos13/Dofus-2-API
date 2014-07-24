@@ -27,8 +27,13 @@ package com.ankamagames.berilia.managers
    public class TooltipManager extends Object
    {
       
-      public function TooltipManager() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TooltipManager()
+      {
+         //Décompilation abandonné
       }
       
       protected static var _log:Logger;
@@ -51,288 +56,69 @@ package com.ankamagames.berilia.managers
       
       private static var _isInit:Boolean = false;
       
-      public static function show(data:*, target:*, uiModule:UiModule, autoHide:Boolean = true, name:String = "standard", point:uint = 0, relativePoint:uint = 2, offset:int = 3, usePrefix:Boolean = true, tooltipMaker:String = null, script:Class = null, makerParam:Object = null, cacheName:String = null, mouseEnabled:Boolean = false, strata:int = 4, zoom:Number = 1, alwaysDisplayed:Boolean = true) : Tooltip {
-         var cacheNameInfo:Array = null;
-         var tooltipCache:Tooltip = null;
-         if(!_isInit)
-         {
-            Berilia.getInstance().addEventListener(UiRenderEvent.UIRenderComplete,onUiRenderComplete);
-            Berilia.getInstance().addEventListener(UiUnloadEvent.UNLOAD_UI_STARTED,onUiUnloadStarted);
-            _isInit = true;
-         }
-         var name:String = (usePrefix?TOOLTIP_UI_NAME_PREFIX:"") + name;
-         if(script == null)
-         {
-            script = defaultTooltipUiScript;
-         }
-         if(_tooltips[name])
-         {
-            hide(name);
-         }
-         if(cacheName)
-         {
-            cacheNameInfo = cacheName.split("#");
-            if((_tooltipCache[cacheNameInfo[0]]) && (cacheNameInfo.length == 1) || (_tooltipCache[cacheNameInfo[0]] && cacheNameInfo.length > 1) && (_tooltipCacheParam[cacheNameInfo[0]] == cacheNameInfo[1]))
-            {
-               tooltipCache = _tooltipCache[cacheNameInfo[0]] as Tooltip;
-               _tooltips[name] = data;
-               _tooltipsStrata[name] = tooltipCache.display.strata;
-               Berilia.getInstance().uiList[name] = tooltipCache.display;
-               DisplayObjectContainer(Berilia.getInstance().docMain.getChildAt(strata + 1)).addChild(tooltipCache.display);
-               if((!(tooltipCache == null)) && (!(tooltipCache.display == null)))
-               {
-                  tooltipCache.display.x = tooltipCache.display.y = 0;
-                  tooltipCache.display.scaleX = tooltipCache.display.scaleY = zoom;
-                  tooltipCache.display.uiClass.main(new TooltipProperties(tooltipCache,autoHide,getTargetRect(target),point,relativePoint,offset,SecureCenter.secure(data),makerParam,zoom,alwaysDisplayed));
-               }
-               return tooltipCache;
-            }
-         }
-         var tt:Tooltip = TooltipsFactory.create(data,tooltipMaker,script,makerParam);
-         if(!tt)
-         {
-            _log.error("Erreur lors du rendu du tooltip de " + data + " (" + getQualifiedClassName(data) + ")");
-            return null;
-         }
-         if(uiModule)
-         {
-            tt.uiModuleName = uiModule.id;
-         }
-         _tooltips[name] = data;
-         if(mouseEnabled)
-         {
-            strata = StrataEnum.STRATA_TOP;
-         }
-         tt.askTooltip(new Callback(onTooltipReady,tt,uiModule,name,data,target,autoHide,point,relativePoint,offset,cacheName,strata,makerParam,zoom,alwaysDisplayed));
-         _tooltipsDico[name] = tt;
-         return tt;
+      public static function show(data:*, target:*, uiModule:UiModule, autoHide:Boolean = true, name:String = "standard", point:uint = 0, relativePoint:uint = 2, offset:int = 3, usePrefix:Boolean = true, tooltipMaker:String = null, script:Class = null, makerParam:Object = null, cacheName:String = null, mouseEnabled:Boolean = false, strata:int = 4, zoom:Number = 1, alwaysDisplayed:Boolean = true) : Tooltip
+      {
+         //Décompilation abandonné
       }
       
-      public static function hide(name:String = "standard") : void {
-         if(name == null)
-         {
-            name = TOOLTIP_STANDAR_NAME;
-         }
-         if(name.indexOf(TOOLTIP_UI_NAME_PREFIX) == -1)
-         {
-            name = TOOLTIP_UI_NAME_PREFIX + name;
-         }
-         if(_tooltips[name])
-         {
-            if(Berilia.getInstance().getUi(name))
-            {
-               TooltipPlacer.removeTooltipPosition(Berilia.getInstance().getUi(name));
-            }
-            else
-            {
-               TooltipPlacer.removeTooltipPositionByName(name);
-            }
-            Berilia.getInstance().unloadUi(name);
-            delete _tooltips[name];
-            delete _tooltipsDico[name];
-         }
-         else
-         {
-            TooltipPlacer.removeTooltipPositionByName(name);
-         }
+      public static function hide(name:String = "standard") : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function getTooltipName(pTooltip:UiRootContainer) : String {
-         var name:String = null;
-         if(pTooltip.cached)
-         {
-            for(name in Berilia.getInstance().uiList)
-            {
-               if(Berilia.getInstance().uiList[name] == pTooltip)
-               {
-                  return name;
-               }
-            }
-         }
-         else
-         {
-            for(name in _tooltips)
-            {
-               if((_tooltipsDico[name]) && (_tooltipsDico[name].display == pTooltip))
-               {
-                  return name;
-               }
-            }
-         }
-         return null;
+      public static function getTooltipName(pTooltip:UiRootContainer) : String
+      {
+         //Décompilation abandonné
       }
       
-      public static function isVisible(name:String) : Boolean {
-         if(name.indexOf(TOOLTIP_UI_NAME_PREFIX) == -1)
-         {
-            name = TOOLTIP_UI_NAME_PREFIX + name;
-         }
-         return !(_tooltips[name] == null);
+      public static function isVisible(name:String) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function updateContent(ttCacheName:String, ttName:String, data:Object) : void {
-         var tooltipCache:Tooltip = null;
-         if(isVisible(ttName))
-         {
-            tooltipCache = _tooltipCache[ttCacheName] as Tooltip;
-            if(tooltipCache)
-            {
-               tooltipCache.display.uiClass.updateContent(new TooltipProperties(tooltipCache,false,null,0,0,0,data,null));
-            }
-         }
+      public static function updateContent(ttCacheName:String, ttName:String, data:Object) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function hideAll() : void {
-         var name:String = null;
-         var strata:* = 0;
-         var ttt:Tooltip = null;
-         for(name in _tooltips)
-         {
-            strata = _tooltipsStrata[name];
-            ttt = _tooltipsDico[name];
-            if(((strata == StrataEnum.STRATA_TOOLTIP) || (strata == StrataEnum.STRATA_WORLD)) && ((ttt == null) || (ttt.mustBeHidden)))
-            {
-               hide(name);
-            }
-         }
+      public static function hideAll() : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function clearCache() : void {
-         var tt:Tooltip = null;
-         var berilia:Berilia = Berilia.getInstance();
-         for each(tt in _tooltipCache)
-         {
-            tt.display.cached = false;
-            berilia.uiList[tt.display.name] = tt.display;
-            berilia.unloadUi(tt.display.name);
-         }
-         _tooltipCache = new Dictionary();
-         _tooltipCacheParam = new Dictionary();
+      public static function clearCache() : void
+      {
+         //Décompilation abandonné
       }
       
-      private static function onTooltipReady(tt:Tooltip, uiModule:UiModule, name:String, data:*, target:*, autoHide:Boolean, point:uint, relativePoint:uint, offset:int, cacheName:String, strata:int, param:Object, zoom:Number, alwaysDisplayed:Boolean) : void {
-         var uiData:UiData = null;
-         var cacheNameInfo:Array = null;
-         var cacheMode:Boolean = !(cacheName == null);
-         var showNow:Boolean = (_tooltips[name]) && (_tooltips[name] === data);
-         _tooltipsStrata[name] = strata;
-         if((showNow) || (cacheName))
-         {
-            uiData = new UiData(uiModule,name,null,null);
-            uiData.xml = tt.content;
-            uiData.uiClass = tt.scriptClass;
-            tt.display = Berilia.getInstance().loadUi(uiModule,uiData,name,new TooltipProperties(tt,autoHide,getTargetRect(target),point,relativePoint,offset,SecureCenter.secure(data),param,zoom,alwaysDisplayed),true,strata,!showNow,null);
-            if(cacheName)
-            {
-               cacheNameInfo = cacheName.split("#");
-               _tooltipCache[cacheNameInfo[0]] = tt;
-               if(cacheNameInfo.length > 0)
-               {
-                  _tooltipCacheParam[cacheNameInfo[0]] = cacheNameInfo[1];
-               }
-               tt.display.cached = true;
-               tt.display.cacheAsBitmap = true;
-               if(tt.display.scale != zoom)
-               {
-                  tt.display.scale = zoom;
-               }
-            }
-            else
-            {
-               tt.display.scale = zoom;
-            }
-         }
+      private static function onTooltipReady(tt:Tooltip, uiModule:UiModule, name:String, data:*, target:*, autoHide:Boolean, point:uint, relativePoint:uint, offset:int, cacheName:String, strata:int, param:Object, zoom:Number, alwaysDisplayed:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      private static function getTargetRect(target:*) : TooltipRectangle {
-         var coord:Point = null;
-         var localCoord:Point = null;
-         var sx:* = NaN;
-         var sy:* = NaN;
-         var inBerilia:* = false;
-         var ttrect:TooltipRectangle = null;
-         var realtarget:* = SecureCenter.unsecure(target);
-         if(realtarget)
-         {
-            if(realtarget is Rectangle)
-            {
-               coord = new Point(realtarget.x,realtarget.y);
-            }
-            else if((realtarget.hasOwnProperty("parent")) && (realtarget.parent))
-            {
-               coord = localToGlobal(realtarget.parent,new Point(realtarget.x,realtarget.y));
-            }
-            else
-            {
-               coord = realtarget.localToGlobal(new Point(realtarget.x,realtarget.y));
-            }
-            
-            localCoord = Berilia.getInstance().strataTooltip.globalToLocal(coord);
-            sx = StageShareManager.stageScaleX;
-            sy = StageShareManager.stageScaleY;
-            inBerilia = realtarget is DisplayObject?Berilia.getInstance().docMain.contains(realtarget):false;
-            ttrect = new TooltipRectangle(localCoord.x * (inBerilia?sx:1),localCoord.y * (inBerilia?sy:1),realtarget.width / sx,realtarget.height / sy);
-            return ttrect;
-         }
-         return null;
+      private static function getTargetRect(target:*) : TooltipRectangle
+      {
+         //Décompilation abandonné
       }
       
-      private static function localToGlobal(t:Object, p:Point = null) : Point {
-         if(!p)
-         {
-            p = new Point();
-         }
-         if(!t.hasOwnProperty("parent"))
-         {
-            return t.localToGlobal(new Point(t.x,t.y));
-         }
-         p.x = p.x + t.x;
-         p.y = p.y + t.y;
-         if((t.parent) && (!(t.parent is IApplicationContainer)))
-         {
-            p.x = p.x * t.parent.scaleX;
-            p.y = p.y * t.parent.scaleY;
-            p = localToGlobal(t.parent,p);
-         }
-         return p;
+      private static function localToGlobal(t:Object, p:Point = null) : Point
+      {
+         //Décompilation abandonné
       }
       
-      private static function onUiRenderComplete(pEvt:UiRenderEvent) : void {
-         TooltipManager.removeTooltipsHiddenByUi(pEvt.uiTarget.name);
+      private static function onUiRenderComplete(pEvt:UiRenderEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private static function onUiUnloadStarted(pEvt:UiUnloadEvent) : void {
-         TooltipManager.removeTooltipsHiddenByUi(pEvt.name);
+      private static function onUiUnloadStarted(pEvt:UiUnloadEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private static function removeTooltipsHiddenByUi(uiname:String) : void {
-         var name:String = null;
-         var strata:* = 0;
-         var ttt:Tooltip = null;
-         var e:Rectangle = null;
-         var berilia:Berilia = Berilia.getInstance();
-         var ctr:UiRootContainer = berilia.getUi(uiname);
-         if((!ctr) || (_tooltips[uiname]))
-         {
-            return;
-         }
-         var containerBounds:Rectangle = ctr.getBounds(StageShareManager.stage);
-         for(name in _tooltips)
-         {
-            strata = _tooltipsStrata[name];
-            ttt = _tooltipsDico[name];
-            if(((strata == StrataEnum.STRATA_TOOLTIP) || (strata == StrataEnum.STRATA_WORLD)) && ((ttt == null) || (ttt.mustBeHidden)))
-            {
-               if(berilia.getUi(name))
-               {
-                  e = berilia.getUi(name).getBounds(StageShareManager.stage);
-                  if((e.x > containerBounds.x) && (e.x + e.width < containerBounds.x + containerBounds.width) && (e.y > containerBounds.y) && (e.y + e.height < containerBounds.x + containerBounds.height))
-                  {
-                     hide(name);
-                  }
-               }
-            }
-         }
+      private static function removeTooltipsHiddenByUi(uiname:String) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

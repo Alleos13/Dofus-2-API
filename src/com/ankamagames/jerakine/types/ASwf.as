@@ -6,12 +6,13 @@ package com.ankamagames.jerakine.types
    public class ASwf extends Object
    {
       
-      public function ASwf(content:DisplayObject, appDomain:ApplicationDomain, loaderWidth:Number, loaderHeight:Number) {
-         super();
-         this._content = content;
-         this._appDomain = appDomain;
-         this._loaderWidth = loaderWidth;
-         this._loaderHeight = loaderHeight;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ASwf(content:DisplayObject, appDomain:ApplicationDomain, loaderWidth:Number, loaderHeight:Number)
+      {
+         //Décompilation abandonné
       }
       
       private var _content:DisplayObject;
@@ -22,20 +23,24 @@ package com.ankamagames.jerakine.types
       
       private var _loaderHeight:Number;
       
-      public function get content() : DisplayObject {
-         return this._content;
+      public function get content() : DisplayObject
+      {
+         //Décompilation abandonné
       }
       
-      public function get applicationDomain() : ApplicationDomain {
-         return this._appDomain;
+      public function get applicationDomain() : ApplicationDomain
+      {
+         //Décompilation abandonné
       }
       
-      public function get loaderWidth() : Number {
-         return this._loaderWidth;
+      public function get loaderWidth() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function get loaderHeight() : Number {
-         return this._loaderHeight;
+      public function get loaderHeight() : Number
+      {
+         //Décompilation abandonné
       }
    }
 }

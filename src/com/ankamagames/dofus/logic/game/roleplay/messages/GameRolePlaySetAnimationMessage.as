@@ -6,14 +6,13 @@ package com.ankamagames.dofus.logic.game.roleplay.messages
    public class GameRolePlaySetAnimationMessage extends Object implements Message
    {
       
-      public function GameRolePlaySetAnimationMessage(informations:GameContextActorInformations, animation:String, duration:uint = 0, instant:Boolean = true, directions8:Boolean = true, playStaticOnly:Boolean = false) {
-         super();
-         this._informations = informations;
-         this._animation = animation;
-         this._duration = duration;
-         this._instant = instant;
-         this._directions8 = directions8;
-         this._playStaticOnly = playStaticOnly;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameRolePlaySetAnimationMessage(informations:GameContextActorInformations, animation:String, duration:uint = 0, instant:Boolean = true, directions8:Boolean = true, playStaticOnly:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       private var _informations:GameContextActorInformations;
@@ -28,28 +27,34 @@ package com.ankamagames.dofus.logic.game.roleplay.messages
       
       private var _playStaticOnly:Boolean;
       
-      public function get informations() : GameContextActorInformations {
-         return this._informations;
+      public function get informations() : GameContextActorInformations
+      {
+         //Décompilation abandonné
       }
       
-      public function get animation() : String {
-         return this._animation;
+      public function get animation() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get duration() : uint {
-         return this._duration;
+      public function get duration() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get instant() : Boolean {
-         return this._instant;
+      public function get instant() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get directions8() : Boolean {
-         return this._directions8;
+      public function get directions8() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get playStaticOnly() : Boolean {
-         return this._playStaticOnly;
+      public function get playStaticOnly() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -7,25 +7,28 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class SexItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function SexItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         if(_criterionValue == 1)
-         {
-            return I18n.getUiText("ui.tooltip.beFemale");
-         }
-         return I18n.getUiText("ui.tooltip.beMale");
+      public function SexItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:SexItemCriterion = new SexItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getCriterion() : int {
-         return int(PlayedCharacterManager.getInstance().infos.sex);
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getCriterion() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

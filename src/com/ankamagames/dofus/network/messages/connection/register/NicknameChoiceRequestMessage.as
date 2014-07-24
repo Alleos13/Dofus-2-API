@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.connection.register
    public class NicknameChoiceRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function NicknameChoiceRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function NicknameChoiceRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5639;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var nickname:String = "";
       
-      override public function getMessageId() : uint {
-         return 5639;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initNicknameChoiceRequestMessage(nickname:String = "") : NicknameChoiceRequestMessage {
-         this.nickname = nickname;
-         this._isInitialized = true;
-         return this;
+      public function initNicknameChoiceRequestMessage(nickname:String = "") : NicknameChoiceRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.nickname = "";
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_NicknameChoiceRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_NicknameChoiceRequestMessage(output:IDataOutput) : void {
-         output.writeUTF(this.nickname);
+      public function serializeAs_NicknameChoiceRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_NicknameChoiceRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_NicknameChoiceRequestMessage(input:IDataInput) : void {
-         this.nickname = input.readUTF();
+      public function deserializeAs_NicknameChoiceRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

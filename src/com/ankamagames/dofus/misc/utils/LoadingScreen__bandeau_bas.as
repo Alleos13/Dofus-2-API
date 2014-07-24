@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.utils
    public class LoadingScreen__bandeau_bas extends BitmapAsset
    {
       
-      public function LoadingScreen__bandeau_bas() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LoadingScreen__bandeau_bas()
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -6,18 +6,25 @@ package com.ankamagames.dofus.datacenter.monsters
    public class MonsterMiniBoss extends Object implements IDataCenter
    {
       
-      public function MonsterMiniBoss() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MonsterMiniBoss()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "MonsterMiniBoss";
       
-      public static function getMonsterById(id:uint) : MonsterMiniBoss {
-         return GameData.getObject(MODULE,id) as MonsterMiniBoss;
+      public static function getMonsterById(id:uint) : MonsterMiniBoss
+      {
+         //Décompilation abandonné
       }
       
-      public static function getMonsters() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getMonsters() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;

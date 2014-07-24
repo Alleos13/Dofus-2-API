@@ -6,8 +6,13 @@ package com.ankamagames.tiphon.display
    public class TiphonAnimation extends MovieClip
    {
       
-      public function TiphonAnimation() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TiphonAnimation()
+      {
+         //Décompilation abandonné
       }
       
       public var spriteHandler:IAnimationSpriteHandler;

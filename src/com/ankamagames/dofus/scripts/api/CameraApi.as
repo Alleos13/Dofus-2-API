@@ -8,48 +8,60 @@ package com.ankamagames.dofus.scripts.api
    public class CameraApi extends Object implements LuaPackage
    {
       
-      public function CameraApi() {
-         super();
-         this._camera = new Camera();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CameraApi()
+      {
+         //Décompilation abandonné
       }
       
       private var _camera:Camera;
       
-      public function get currentZoom() : Number {
-         return this._camera.currentZoom;
+      public function get currentZoom() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function set currentZoom(pZoom:Number) : void {
-         this._camera.currentZoom = pZoom;
+      public function set currentZoom(pZoom:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setZoom(pZoom:Number) : ISequencable {
-         return this._camera.setZoom(pZoom);
+      public function setZoom(pZoom:Number) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function zoom(... pArgs) : ISequencable {
-         return this._camera.zoom(pArgs);
+      public function zoom(... pArgs) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function moveTo(... pArgs) : ISequencable {
-         return this._camera.moveTo(pArgs);
+      public function moveTo(... pArgs) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function follow(pEntity:ScriptEntity) : ISequencable {
-         return this._camera.follow(pEntity);
+      public function follow(pEntity:ScriptEntity) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function stop() : ISequencable {
-         return this._camera.stop();
+      public function stop() : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function resetCamera() : ISequencable {
-         return this._camera.reset();
+      public function resetCamera() : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this._camera.stop().start();
-         this._camera.reset().start();
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -11,13 +11,13 @@ package com.ankamagames.dofus.logic.game.fight.miscs
    public class FightReachableCellsMaker extends Object
    {
       
-      public function FightReachableCellsMaker(infos:GameFightFighterInformations, fromCellId:int = -1, movementPoint:int = -1) {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightReachableCellsMaker(infos:GameFightFighterInformations, fromCellId:int = -1, movementPoint:int = -1)
+      {
+         //Décompilation abandonné
       }
       
       private var _cellGrid:Vector.<Vector.<_ReachableCellStore>>;
@@ -36,113 +36,24 @@ package com.ankamagames.dofus.logic.game.fight.miscs
       
       private var _watchedCells:Vector.<_ReachableCellStore>;
       
-      public function get reachableCells() : Vector.<uint> {
-         return this._reachableCells;
+      public function get reachableCells() : Vector.<uint>
+      {
+         //Décompilation abandonné
       }
       
-      public function get unreachableCells() : Vector.<uint> {
-         return this._unreachableCells;
+      public function get unreachableCells() : Vector.<uint>
+      {
+         //Décompilation abandonné
       }
       
-      private function compute() : void {
-         var tmpCells:Vector.<_ReachableCellStore> = null;
-         var node:_ReachableCellStore = null;
-         var mp:int = this._mp;
-         var untacledMp:int = this._mp;
-         this._waitingCells = new Vector.<_ReachableCellStore>();
-         this._watchedCells = new Vector.<_ReachableCellStore>();
-         this.markNode(this._mapPoint.x,this._mapPoint.y,mp,untacledMp);
-         while((this._waitingCells.length) || (this._watchedCells.length))
-         {
-            if(this._waitingCells.length)
-            {
-               tmpCells = this._waitingCells;
-               this._waitingCells = new Vector.<_ReachableCellStore>();
-            }
-            else
-            {
-               tmpCells = this._watchedCells;
-               this._watchedCells = new Vector.<_ReachableCellStore>();
-            }
-            for each(node in tmpCells)
-            {
-               mp = int(node.bestMp * node.evade + 0.49) - 1;
-               untacledMp = node.bestUntackledMp - 1;
-               if(MapPoint.isInMap(node.mapPoint.x - 1,node.mapPoint.y))
-               {
-                  this.markNode(node.mapPoint.x - 1,node.mapPoint.y,mp,untacledMp);
-               }
-               if(MapPoint.isInMap(node.mapPoint.x + 1,node.mapPoint.y))
-               {
-                  this.markNode(node.mapPoint.x + 1,node.mapPoint.y,mp,untacledMp);
-               }
-               if(MapPoint.isInMap(node.mapPoint.x,node.mapPoint.y - 1))
-               {
-                  this.markNode(node.mapPoint.x,node.mapPoint.y - 1,mp,untacledMp);
-               }
-               if(MapPoint.isInMap(node.mapPoint.x,node.mapPoint.y + 1))
-               {
-                  this.markNode(node.mapPoint.x,node.mapPoint.y + 1,mp,untacledMp);
-               }
-            }
-         }
+      private function compute() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function markNode(x:int, y:int, mp:int, untackledMp:int) : void {
-         var index:* = 0;
-         var xTab:int = x - this._mapPoint.x + this._mp;
-         var yTab:int = y - this._mapPoint.y + this._mp;
-         var node:_ReachableCellStore = this._cellGrid[xTab][yTab];
-         if(!node)
-         {
-            node = new _ReachableCellStore(MapPoint.fromCoords(x,y),xTab,yTab,this._cellGrid);
-            this._cellGrid[xTab][yTab] = node;
-            node.findState(this._infos);
-            if(node.state != _ReachableCellStore.STATE_UNREACHABLE)
-            {
-               if(mp >= 0)
-               {
-                  this._reachableCells.push(node.mapPoint.cellId);
-               }
-               else
-               {
-                  this._unreachableCells.push(node.mapPoint.cellId);
-               }
-            }
-         }
-         if(node.state == _ReachableCellStore.STATE_UNREACHABLE)
-         {
-            return;
-         }
-         if((!node.set) || (mp > node.bestMp) || (untackledMp > node.bestUntackledMp))
-         {
-            if((mp >= 0) && (node.bestMp < 0))
-            {
-               this._reachableCells.push(node.mapPoint.cellId);
-               index = this._unreachableCells.indexOf(node.mapPoint.cellId);
-               if(index == -1)
-               {
-                  throw new Error("INTERNAL ERROR : " + node.mapPoint.cellId + " : Can\'t delete cell because it don\'t exist");
-               }
-               else
-               {
-                  this._unreachableCells.splice(index,1);
-               }
-            }
-            node.updateMp(mp,untackledMp);
-            if(untackledMp > 0)
-            {
-               if(node.state == _ReachableCellStore.STATE_REACHABLE)
-               {
-                  this._waitingCells.push(node);
-               }
-               else if(node.state == _ReachableCellStore.STATE_WATCHED)
-               {
-                  this._watchedCells.push(node);
-               }
-               
-            }
-         }
+      private function markNode(x:int, y:int, mp:int, untackledMp:int) : void
+      {
+         //Décompilation abandonné
       }
    }
 }
@@ -154,12 +65,13 @@ import com.ankamagames.atouin.managers.MapDisplayManager;
 class _ReachableCellStore extends Object
 {
    
-   function _ReachableCellStore(mapPoint:MapPoint, gridX:int, gridY:int, cellGrid:Vector.<Vector.<_ReachableCellStore>>) {
-      super();
-      this.mapPoint = mapPoint;
-      this.gridX = gridX;
-      this.gridY = gridY;
-      this.cellGrid = cellGrid;
+   {
+   //Décompilation abandonné
+   }
+   
+   function _ReachableCellStore(mapPoint:MapPoint, gridX:int, gridY:int, cellGrid:Vector.<Vector.<_ReachableCellStore>>)
+   {
+      //Décompilation abandonné
    }
    
    public static const STATE_UNDEFINED:int = 0;
@@ -180,7 +92,7 @@ class _ReachableCellStore extends Object
    
    public var bestUntackledMp:int;
    
-   public var set:Boolean;
+   public var var_2:Boolean;
    
    public var gridX:int;
    
@@ -188,61 +100,13 @@ class _ReachableCellStore extends Object
    
    public var cellGrid:Vector.<Vector.<_ReachableCellStore>>;
    
-   public function findState(playerInfos:GameFightFighterInformations) : void {
-      var neighbour:_ReachableCellStore = null;
-      var cellData:CellData = CellData(MapDisplayManager.getInstance().getDataMapContainer().dataMap.cells[this.mapPoint.cellId]);
-      if((!cellData.mov) || (cellData.nonWalkableDuringFight))
-      {
-         this.state = STATE_UNREACHABLE;
-      }
-      else
-      {
-         this.evade = 1;
-         if(this.gridX > 0)
-         {
-            neighbour = this.cellGrid[this.gridX - 1][this.gridY];
-            if((neighbour) && (neighbour.state == STATE_UNREACHABLE))
-            {
-               this.evade = this.evade * neighbour.evade;
-            }
-         }
-         if(this.gridX < this.cellGrid.length - 1)
-         {
-            neighbour = this.cellGrid[this.gridX + 1][this.gridY];
-            if((neighbour) && (neighbour.state == STATE_UNREACHABLE))
-            {
-               this.evade = this.evade * neighbour.evade;
-            }
-         }
-         if(this.gridY > 0)
-         {
-            neighbour = this.cellGrid[this.gridX][this.gridY - 1];
-            if((neighbour) && (neighbour.state == STATE_UNREACHABLE))
-            {
-               this.evade = this.evade * neighbour.evade;
-            }
-         }
-         if(this.gridY < this.cellGrid[0].length - 1)
-         {
-            neighbour = this.cellGrid[this.gridX][this.gridY + 1];
-            if((neighbour) && (neighbour.state == STATE_UNREACHABLE))
-            {
-               this.evade = this.evade * neighbour.evade;
-            }
-         }
-         this.state = this.evade == 1?STATE_REACHABLE:STATE_WATCHED;
-      }
+   public function findState(playerInfos:GameFightFighterInformations) : void
+   {
+      //Décompilation abandonné
    }
    
-   public function updateMp(bestMp:int, bestUntackledMp:int) : void {
-      this.set = true;
-      if(bestMp > this.bestMp)
-      {
-         this.bestMp = bestMp;
-      }
-      if(bestUntackledMp > this.bestUntackledMp)
-      {
-         this.bestUntackledMp = bestUntackledMp;
-      }
+   public function updateMp(bestMp:int, bestUntackledMp:int) : void
+   {
+      //Décompilation abandonné
    }
 }

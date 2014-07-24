@@ -6,17 +6,22 @@ package com.ankamagames.berilia.types.event
    public class HookEvent extends Event
    {
       
-      public function HookEvent(type:String, hook:Hook) {
-         super(type,false,false);
-         this._hook = hook;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HookEvent(type:String, hook:Hook)
+      {
+         //Décompilation abandonné
       }
       
       public static const DISPATCHED:String = "hooDispatched";
       
       private var _hook:Hook;
       
-      public function get hook() : Hook {
-         return this._hook;
+      public function get hook() : Hook
+      {
+         //Décompilation abandonné
       }
    }
 }

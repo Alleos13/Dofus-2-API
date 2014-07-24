@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.utils
    public class EmbedAssets_FLAG_CURSOR extends SpriteAsset
    {
       
-      public function EmbedAssets_FLAG_CURSOR() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EmbedAssets_FLAG_CURSOR()
+      {
+         //Décompilation abandonné
       }
    }
 }

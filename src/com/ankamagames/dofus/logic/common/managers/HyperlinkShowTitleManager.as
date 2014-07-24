@@ -16,8 +16,13 @@ package com.ankamagames.dofus.logic.common.managers
    public class HyperlinkShowTitleManager extends Object
    {
       
-      public function HyperlinkShowTitleManager() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HyperlinkShowTitleManager()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -26,31 +31,19 @@ package com.ankamagames.dofus.logic.common.managers
       
       private static var _titleId:uint = 0;
       
-      public static function showTitle(titleId:uint) : void {
-         var data:Object = new Object();
-         data.id = _titleList[titleId].id;
-         data.idIsTitle = true;
-         data.forceOpen = true;
-         KernelEventsManager.getInstance().processCallback(HookList.OpenBook,"titleTab",data);
+      public static function showTitle(titleId:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function addTitle(titleId:uint) : String {
-         var code:String = null;
-         var title:Title = Title.getTitleById(titleId);
-         if(title)
-         {
-            _titleList[_titleId] = title;
-            code = "{chattitle," + _titleId + "::[" + title.name + "]}";
-            _titleId++;
-            return code;
-         }
-         return "[null]";
+      public static function addTitle(titleId:uint) : String
+      {
+         //Décompilation abandonné
       }
       
-      public static function rollOver(pX:int, pY:int, objectGID:uint, titleId:uint = 0) : void {
-         var target:Rectangle = new Rectangle(pX,pY,10,10);
-         var info:TextTooltipInfo = new TextTooltipInfo(I18n.getUiText("ui.tooltip.chat.title"));
-         TooltipManager.show(info,target,UiModuleManager.getInstance().getModule("Ankama_GameUiCore"),false,"HyperLink",6,2,3,true,null,null,null,null,false,StrataEnum.STRATA_TOOLTIP,1);
+      public static function rollOver(pX:int, pY:int, objectGID:uint, titleId:uint = 0) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

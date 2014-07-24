@@ -3,8 +3,13 @@ package com.ankamagames.dofus.types.enums
    public class LanguageEnum extends Object
    {
       
-      public function LanguageEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LanguageEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const LANG_FR:String = "fr";

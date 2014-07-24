@@ -10,57 +10,67 @@ package com.ankamagames.dofus.network.messages.game.inventory.storage
    public class StorageInventoryContentMessage extends InventoryContentMessage implements INetworkMessage
    {
       
-      public function StorageInventoryContentMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StorageInventoryContentMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5646;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function getMessageId() : uint {
-         return 5646;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initStorageInventoryContentMessage(objects:Vector.<ObjectItem> = null, kamas:uint = 0) : StorageInventoryContentMessage {
-         super.initInventoryContentMessage(objects,kamas);
-         this._isInitialized = true;
-         return this;
+      public function initStorageInventoryContentMessage(objects:Vector.<ObjectItem> = null, kamas:uint = 0) : StorageInventoryContentMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_StorageInventoryContentMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_StorageInventoryContentMessage(output:IDataOutput) : void {
-         super.serializeAs_InventoryContentMessage(output);
+      public function serializeAs_StorageInventoryContentMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_StorageInventoryContentMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_StorageInventoryContentMessage(input:IDataInput) : void {
-         super.deserialize(input);
+      public function deserializeAs_StorageInventoryContentMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

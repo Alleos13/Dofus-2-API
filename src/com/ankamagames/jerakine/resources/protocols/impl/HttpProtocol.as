@@ -9,23 +9,28 @@ package com.ankamagames.jerakine.resources.protocols.impl
    public class HttpProtocol extends AbstractProtocol implements IProtocol
    {
       
-      public function HttpProtocol() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function load(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, cache:ICache, forcedAdapter:Class, uniqueFile:Boolean) : void {
-         getAdapter(uri,forcedAdapter);
-         _adapter.loadDirectly(uri,uri.protocol + "://" + uri.path,observer,dispatchProgress);
+      public function HttpProtocol()
+      {
+         //Décompilation abandonné
       }
       
-      override protected function release() : void {
+      public function load(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, cache:ICache, forcedAdapter:Class, uniqueFile:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function cancel() : void {
-         if(_adapter)
-         {
-            _adapter.free();
-         }
+      override protected function release() : void
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function cancel() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

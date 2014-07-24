@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.common.actions
    public class QuitGameAction extends Object implements Action
    {
       
-      public function QuitGameAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : QuitGameAction {
-         return new QuitGameAction();
+      public function QuitGameAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : QuitGameAction
+      {
+         //Décompilation abandonné
       }
    }
 }

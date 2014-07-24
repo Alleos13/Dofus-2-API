@@ -7,45 +7,52 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
    public class HumanOptionGuild extends HumanOption implements INetworkType
    {
       
-      public function HumanOptionGuild() {
-         this.guildInformations = new GuildInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HumanOptionGuild()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 409;
       
       public var guildInformations:GuildInformations;
       
-      override public function getTypeId() : uint {
-         return 409;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initHumanOptionGuild(guildInformations:GuildInformations = null) : HumanOptionGuild {
-         this.guildInformations = guildInformations;
-         return this;
+      public function initHumanOptionGuild(guildInformations:GuildInformations = null) : HumanOptionGuild
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.guildInformations = new GuildInformations();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_HumanOptionGuild(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_HumanOptionGuild(output:IDataOutput) : void {
-         super.serializeAs_HumanOption(output);
-         this.guildInformations.serializeAs_GuildInformations(output);
+      public function serializeAs_HumanOptionGuild(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_HumanOptionGuild(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_HumanOptionGuild(input:IDataInput) : void {
-         super.deserialize(input);
-         this.guildInformations = new GuildInformations();
-         this.guildInformations.deserialize(input);
+      public function deserializeAs_HumanOptionGuild(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

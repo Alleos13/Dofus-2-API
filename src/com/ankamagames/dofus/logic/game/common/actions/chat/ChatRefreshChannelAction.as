@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.chat
    public class ChatRefreshChannelAction extends Object implements Action
    {
       
-      public function ChatRefreshChannelAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : ChatRefreshChannelAction {
-         var a:ChatRefreshChannelAction = new ChatRefreshChannelAction();
-         return a;
+      public function ChatRefreshChannelAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : ChatRefreshChannelAction
+      {
+         //Décompilation abandonné
       }
    }
 }

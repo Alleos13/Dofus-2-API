@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring
    public class FpsManagerConst extends Object
    {
       
-      public function FpsManagerConst() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FpsManagerConst()
+      {
+         //Décompilation abandonné
       }
       
       public static const BOX_WIDTH:int = 250;

@@ -12,9 +12,13 @@ package com.ankamagames.atouin.data.elements.subtypes
    public class NormalGraphicalElementData extends GraphicalElementData
    {
       
-      public function NormalGraphicalElementData(elementId:int, elementType:int) {
-         super(elementId,elementType);
-         MEMORY_LOG[this] = 1;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function NormalGraphicalElementData(elementId:int, elementType:int)
+      {
+         //Décompilation abandonné
       }
       
       public static var MEMORY_LOG:Dictionary;
@@ -31,32 +35,9 @@ package com.ankamagames.atouin.data.elements.subtypes
       
       public var size:Point;
       
-      override public function fromRaw(raw:IDataInput, version:int) : void {
-         this.gfxId = raw.readInt();
-         if(AtouinConstants.DEBUG_FILES_PARSING_ELEMENTS)
-         {
-            _log.debug("  (ElementData) Element gfx id : " + this.gfxId);
-         }
-         this.height = raw.readByte();
-         if(AtouinConstants.DEBUG_FILES_PARSING_ELEMENTS)
-         {
-            _log.debug("  (ElementData) Element height : " + this.height);
-         }
-         this.horizontalSymmetry = raw.readBoolean();
-         if(AtouinConstants.DEBUG_FILES_PARSING_ELEMENTS)
-         {
-            _log.debug("  (ElementData) Element horizontals symmetry : " + this.horizontalSymmetry);
-         }
-         this.origin = new Point(raw.readShort(),raw.readShort());
-         if(AtouinConstants.DEBUG_FILES_PARSING_ELEMENTS)
-         {
-            _log.debug("  (ElementData) Origin : (" + this.origin.x + ";" + this.origin.y + ")");
-         }
-         this.size = new Point(raw.readShort(),raw.readShort());
-         if(AtouinConstants.DEBUG_FILES_PARSING_ELEMENTS)
-         {
-            _log.debug("  (ElementData) Size : (" + this.size.x + ";" + this.size.y + ")");
-         }
+      override public function fromRaw(raw:IDataInput, version:int) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

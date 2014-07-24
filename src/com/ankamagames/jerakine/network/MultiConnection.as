@@ -10,12 +10,13 @@ package com.ankamagames.jerakine.network
    public class MultiConnection extends EventDispatcher
    {
       
-      public function MultiConnection() {
-         this._connectionByMsg = new Dictionary(true);
-         this._connectionByEvent = new Dictionary(true);
-         this._connectionById = new Dictionary();
-         this._idByConnection = new Dictionary();
-         super(this);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MultiConnection()
+      {
+         //Décompilation abandonné
       }
       
       private var _connectionByMsg:Dictionary;
@@ -34,176 +35,89 @@ package com.ankamagames.jerakine.network
       
       private var _connectionConnectedCount:int;
       
-      public function get mainConnection() : IServerConnection {
-         return this._mainConnection;
+      public function get mainConnection() : IServerConnection
+      {
+         //Décompilation abandonné
       }
       
-      public function set mainConnection(conn:IServerConnection) : void {
-         if(!this._idByConnection[conn])
-         {
-            throw new ArgumentError("Connection must be added before setted to be the main connection");
-         }
-         else
-         {
-            this._mainConnection = conn;
-            return;
-         }
+      public function set mainConnection(conn:IServerConnection) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get messageRouter() : IMessageRouter {
-         return this._messageRouter;
+      public function get messageRouter() : IMessageRouter
+      {
+         //Décompilation abandonné
       }
       
-      public function set messageRouter(mr:IMessageRouter) : void {
-         this._messageRouter = mr;
+      public function set messageRouter(mr:IMessageRouter) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get connected() : Boolean {
-         return !(this._connectionConnectedCount == 0);
+      public function get connected() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get connectionCount() : uint {
-         return this._connectionCount;
+      public function get connectionCount() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function addConnection(conn:IServerConnection, id:String) : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public function addConnection(conn:IServerConnection, id:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeConnection(idOrConnection:*) : Boolean {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public function removeConnection(idOrConnection:*) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getSubConnection(idOrMessageOrEvent:* = null) : IServerConnection {
-         if(idOrMessageOrEvent is String)
-         {
-            return this._connectionById[idOrMessageOrEvent];
-         }
-         if(idOrMessageOrEvent is Message)
-         {
-            return this._connectionByMsg[idOrMessageOrEvent];
-         }
-         if(idOrMessageOrEvent is Event)
-         {
-            return this._connectionByEvent[idOrMessageOrEvent];
-         }
-         throw new TypeError("Can\'t handle " + idOrMessageOrEvent + " class");
+      public function getSubConnection(idOrMessageOrEvent:* = null) : IServerConnection
+      {
+         //Décompilation abandonné
       }
       
-      public function getConnectionId(idOrMessageOrEvent:* = null) : String {
-         var conn:IServerConnection = this.getSubConnection(idOrMessageOrEvent);
-         return this._idByConnection[conn];
+      public function getConnectionId(idOrMessageOrEvent:* = null) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function getPauseBuffer(id:String = null) : Array {
-         var mergedPauseBuffer:Array = null;
-         var conn:IServerConnection = null;
-         if((id) && (this._connectionById[id]))
-         {
-            return IServerConnection(this._connectionById[id]).pauseBuffer;
-         }
-         if(!id)
-         {
-            mergedPauseBuffer = [];
-            for each(conn in this._connectionById)
-            {
-               mergedPauseBuffer = mergedPauseBuffer.concat(conn.pauseBuffer);
-            }
-            return mergedPauseBuffer;
-         }
-         return null;
+      public function getPauseBuffer(id:String = null) : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function close(id:String = null) : void {
-         var connection:IServerConnection = null;
-         if(id)
-         {
-            if(this._connectionById[id])
-            {
-               IServerConnection(this._connectionById[id]).close();
-            }
-            return;
-         }
-         for each(connection in this._connectionById)
-         {
-            connection.close();
-         }
+      public function close(id:String = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function pause(id:String = null) : void {
-         var connection:IServerConnection = null;
-         if(id)
-         {
-            if(this._connectionById[id])
-            {
-               IServerConnection(this._connectionById[id]).pause();
-            }
-            return;
-         }
-         for each(connection in this._connectionById)
-         {
-            connection.pause();
-         }
+      public function pause(id:String = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function resume(id:String = null) : void {
-         var connection:IServerConnection = null;
-         if(id)
-         {
-            if(this._connectionById[id])
-            {
-               IServerConnection(this._connectionById[id]).resume();
-            }
-            return;
-         }
-         for each(connection in this._connectionById)
-         {
-            connection.resume();
-         }
+      public function resume(id:String = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function send(msg:INetworkMessage) : void {
-         if(this._messageRouter)
-         {
-            this.getSubConnection(this._messageRouter.getConnectionId(msg)).send(msg);
-         }
-         else if(this._mainConnection)
-         {
-            this._mainConnection.send(msg);
-         }
-         
-         if(hasEventListener(NetworkSentEvent.EVENT_SENT))
-         {
-            dispatchEvent(new NetworkSentEvent(NetworkSentEvent.EVENT_SENT,msg));
-         }
+      public function send(msg:INetworkMessage) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function proccessMsg(msg:Message, conn:IServerConnection) : void {
-         this._connectionByMsg[msg] = conn;
+      private function proccessMsg(msg:Message, conn:IServerConnection) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onSubConnectionEvent(e:Event) : void {
-         switch(e.type)
-         {
-            case Event.CONNECT:
-               this._connectionConnectedCount++;
-               break;
-            case Event.CLOSE:
-               this._connectionConnectedCount--;
-               break;
-         }
-         this._connectionByEvent[e] = e.target as IServerConnection;
-         dispatchEvent(e);
+      private function onSubConnectionEvent(e:Event) : void
+      {
+         //Décompilation abandonné
       }
    }
 }
@@ -214,11 +128,13 @@ import com.ankamagames.jerakine.messages.Message;
 class MessageWatcher extends Object implements MessageHandler
 {
    
-   function MessageWatcher(watchFunction:Function, handler:MessageHandler, conn:IServerConnection) {
-      super();
-      this.watchFunction = watchFunction;
-      this.handler = handler;
-      this.conn = conn;
+   {
+   //Décompilation abandonné
+   }
+   
+   function MessageWatcher(watchFunction:Function, handler:MessageHandler, conn:IServerConnection)
+   {
+      //Décompilation abandonné
    }
    
    public var watchFunction:Function;
@@ -227,8 +143,8 @@ class MessageWatcher extends Object implements MessageHandler
    
    public var conn:IServerConnection;
    
-   public function process(msg:Message) : Boolean {
-      this.watchFunction(msg,this.conn);
-      return this.handler.process(msg);
+   public function process(msg:Message) : Boolean
+   {
+      //Décompilation abandonné
    }
 }

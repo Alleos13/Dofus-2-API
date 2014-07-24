@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.chat
    public class ChatLoadedAction extends Object implements Action
    {
       
-      public function ChatLoadedAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : ChatLoadedAction {
-         var a:ChatLoadedAction = new ChatLoadedAction();
-         return a;
+      public function ChatLoadedAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : ChatLoadedAction
+      {
+         //Décompilation abandonné
       }
    }
 }

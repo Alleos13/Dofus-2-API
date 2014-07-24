@@ -9,74 +9,69 @@ package com.ankamagames.dofus.network.messages.connection.search
    public class AcquaintanceServerListMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function AcquaintanceServerListMessage() {
-         this.servers = new Vector.<int>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AcquaintanceServerListMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6142;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var servers:Vector.<int>;
       
-      override public function getMessageId() : uint {
-         return 6142;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initAcquaintanceServerListMessage(servers:Vector.<int> = null) : AcquaintanceServerListMessage {
-         this.servers = servers;
-         this._isInitialized = true;
-         return this;
+      public function initAcquaintanceServerListMessage(servers:Vector.<int> = null) : AcquaintanceServerListMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.servers = new Vector.<int>();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AcquaintanceServerListMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_AcquaintanceServerListMessage(output:IDataOutput) : void {
-         output.writeShort(this.servers.length);
-         var _i1:uint = 0;
-         while(_i1 < this.servers.length)
-         {
-            output.writeShort(this.servers[_i1]);
-            _i1++;
-         }
+      public function serializeAs_AcquaintanceServerListMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AcquaintanceServerListMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_AcquaintanceServerListMessage(input:IDataInput) : void {
-         var _val1:* = 0;
-         var _serversLen:uint = input.readUnsignedShort();
-         var _i1:uint = 0;
-         while(_i1 < _serversLen)
-         {
-            _val1 = input.readShort();
-            this.servers.push(_val1);
-            _i1++;
-         }
+      public function deserializeAs_AcquaintanceServerListMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

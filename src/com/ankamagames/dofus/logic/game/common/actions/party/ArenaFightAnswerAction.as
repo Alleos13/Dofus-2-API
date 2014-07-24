@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.party
    public class ArenaFightAnswerAction extends Object implements Action
    {
       
-      public function ArenaFightAnswerAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(fightId:uint, accept:Boolean) : ArenaFightAnswerAction {
-         var a:ArenaFightAnswerAction = new ArenaFightAnswerAction();
-         a.fightId = fightId;
-         a.accept = accept;
-         return a;
+      public function ArenaFightAnswerAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(fightId:uint, accept:Boolean) : ArenaFightAnswerAction
+      {
+         //Décompilation abandonné
       }
       
       public var fightId:uint;

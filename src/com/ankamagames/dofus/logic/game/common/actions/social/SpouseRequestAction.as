@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.social
    public class SpouseRequestAction extends Object implements Action
    {
       
-      public function SpouseRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : SpouseRequestAction {
-         var a:SpouseRequestAction = new SpouseRequestAction();
-         return a;
+      public function SpouseRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : SpouseRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

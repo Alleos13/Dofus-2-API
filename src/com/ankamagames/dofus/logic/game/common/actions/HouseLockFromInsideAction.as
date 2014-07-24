@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class HouseLockFromInsideAction extends Object implements Action
    {
       
-      public function HouseLockFromInsideAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(code:String) : HouseLockFromInsideAction {
-         var action:HouseLockFromInsideAction = new HouseLockFromInsideAction();
-         action.code = code;
-         return action;
+      public function HouseLockFromInsideAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(code:String) : HouseLockFromInsideAction
+      {
+         //Décompilation abandonné
       }
       
       public var code:String;

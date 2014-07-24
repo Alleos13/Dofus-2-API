@@ -18,20 +18,22 @@ package com.ankamagames.dofus.logic.game.common.frames
    public class ProtectPishingFrame extends Object implements Frame
    {
       
-      public function ProtectPishingFrame() {
-         this._inputBufferRef = new Dictionary(true);
-         this._advancedInputBufferRef = new Dictionary(true);
-         this._cancelTarget = new Dictionary(true);
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ProtectPishingFrame()
+      {
+         //Décompilation abandonné
       }
       
       private static var _passwordHash:String;
       
       private static var _passwordLength:uint;
       
-      public static function setPasswordHash(hash:String, len:uint) : void {
-         _passwordHash = hash;
-         _passwordLength = len;
+      public static function setPasswordHash(hash:String, len:uint) : void
+      {
+         //Décompilation abandonné
       }
       
       private var _inputBufferRef:Dictionary;
@@ -44,174 +46,39 @@ package com.ankamagames.dofus.logic.game.common.frames
       
       private var _globalBuffer:String;
       
-      public function pushed() : Boolean {
-         if((_passwordHash) && (_passwordLength))
-         {
-            StageShareManager.stage.addEventListener(Event.CHANGE,this.onChange);
-            StageShareManager.stage.addEventListener(TextEvent.TEXT_INPUT,this.onTextInput);
-         }
-         return !(_passwordLength == 0);
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         if((_passwordHash) && (_passwordLength))
-         {
-            StageShareManager.stage.removeEventListener(Event.CHANGE,this.onChange);
-            StageShareManager.stage.removeEventListener(TextEvent.TEXT_INPUT,this.onTextInput);
-         }
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var input:Input = null;
-         var commonMod:Object = null;
-         switch(true)
-         {
-            case msg is ChangeMessage:
-               input = ChangeMessage(msg).target as Input;
-               if((input) && (this._cancelTarget[input.textfield]))
-               {
-                  this._cancelTarget[Input(ChangeMessage(msg).target).textfield] = false;
-                  commonMod = UiModuleManager.getInstance().getModule("Ankama_Common").mainClass;
-                  if(input.getUi().uiModule.trusted)
-                  {
-                     commonMod.openPopup(I18n.getUiText("ui.popup.warning"),I18n.getUiText("ui.popup.warning.password"),[I18n.getUiText("ui.common.ok")]);
-                  }
-                  else
-                  {
-                     commonMod.openPopup(I18n.getUiText("ui.popup.warning.pishing.title"),I18n.getUiText("ui.popup.warning.pishing.content"),[I18n.getUiText("ui.common.ok")]);
-                     input.getUi().uiModule.enable = false;
-                  }
-                  return true;
-               }
-               break;
-         }
-         return false;
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get priority() : int {
-         return Priority.ULTIMATE_HIGHEST_DEPTH_OF_DOOM;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      private function onTextInput(te:TextEvent) : void {
-         var len:uint = 0;
-         this._globalBuffer = this._globalBuffer + te.text;
-         if(!((te.target is TextField && TextField(te.target).parent is Input) && (Input(TextField(te.target).parent).getUi()) && !Input(TextField(te.target).parent).getUi().uiModule.trusted))
-         {
-            return;
-         }
-         this._globalModBuffer = this._globalModBuffer + te.text;
-         if(!this._advancedInputBufferRef[te.target])
-         {
-            this._advancedInputBufferRef[te.target] = "";
-         }
-         var inputBuffer:String = this._advancedInputBufferRef[te.target];
-         var oldBuffer:String = inputBuffer;
-         inputBuffer = inputBuffer + te.text;
-         if(inputBuffer.length >= _passwordLength)
-         {
-            len = inputBuffer.length - _passwordLength + 1;
-            if(this.detectHash(inputBuffer,_passwordHash,_passwordLength))
-            {
-               te.preventDefault();
-               this._cancelTarget[te.target] = true;
-               this._advancedInputBufferRef[te.target] = oldBuffer;
-               return;
-            }
-            inputBuffer = inputBuffer.substr(len);
-         }
-         if(this._globalBuffer.length >= _passwordLength)
-         {
-            len = this._globalBuffer.length - _passwordLength + 1;
-            if(this.detectHash(this._globalBuffer,_passwordHash,_passwordLength))
-            {
-               te.preventDefault();
-               this._cancelTarget[te.target] = true;
-               return;
-            }
-            this._globalBuffer = this._globalBuffer.substr(len);
-         }
-         if(this._globalModBuffer.length >= _passwordLength)
-         {
-            len = this._globalModBuffer.length - _passwordLength + 1;
-            if(this.detectHash(this._globalModBuffer,_passwordHash,_passwordLength))
-            {
-               te.preventDefault();
-               this._cancelTarget[te.target] = true;
-               return;
-            }
-            this._globalModBuffer = this._globalModBuffer.substr(len);
-         }
-         this._advancedInputBufferRef[te.target] = inputBuffer;
+      private function onTextInput(te:TextEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function detectHash(input:String, hash:String, originalLength:uint) : Boolean {
-         var len:uint = input.length - originalLength + 1;
-         var i:uint = 0;
-         while(i < len)
-         {
-            if(MD5.hash(input.substr(i,originalLength).toUpperCase()) == hash)
-            {
-               return true;
-            }
-            i++;
-         }
-         return false;
+      private function detectHash(input:String, hash:String, originalLength:uint) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      protected function onChange(e:Event) : void {
-         var len:uint = 0;
-         var upperBuffer:String = null;
-         var i:uint = 0;
-         var ts:uint = getTimer();
-         var tf:TextField = e.target as TextField;
-         if(!tf)
-         {
-            return;
-         }
-         if(!this._inputBufferRef[e.target])
-         {
-            this._inputBufferRef[e.target] = "";
-         }
-         var inputBuffer:String = this._inputBufferRef[e.target];
-         if(inputBuffer.length >= _passwordLength)
-         {
-            if(tf.text.substring(0,inputBuffer.length) == inputBuffer)
-            {
-               inputBuffer = tf.text.substring(inputBuffer.length - _passwordLength);
-            }
-            else if(inputBuffer.substring(0,tf.text.length) == tf.text)
-            {
-               inputBuffer = inputBuffer.substring(tf.text.length - _passwordLength);
-            }
-            else
-            {
-               inputBuffer = tf.text;
-            }
-            
-         }
-         else
-         {
-            inputBuffer = tf.text;
-         }
-         if(inputBuffer.length >= _passwordLength)
-         {
-            len = inputBuffer.length - _passwordLength + 1;
-            upperBuffer = inputBuffer.toUpperCase();
-            i = 0;
-            while(i < len)
-            {
-               if(MD5.hash(upperBuffer.substr(i,_passwordLength)) == _passwordHash)
-               {
-                  tf.text = tf.text.split(inputBuffer.substr(i,_passwordLength)).join("");
-                  this._cancelTarget[tf] = true;
-                  break;
-               }
-               i++;
-            }
-         }
-         inputBuffer = tf.text;
-         this._inputBufferRef[e.target] = inputBuffer;
+      protected function onChange(e:Event) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,6 +5,10 @@ package com.ankamagames.dofus.kernel.updaterv2.messages
    public interface IUpdaterOutputMessage extends QueueableMessage
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function serialize() : String;
    }
 }

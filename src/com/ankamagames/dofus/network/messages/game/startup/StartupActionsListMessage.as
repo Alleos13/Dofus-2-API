@@ -10,75 +10,69 @@ package com.ankamagames.dofus.network.messages.game.startup
    public class StartupActionsListMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function StartupActionsListMessage() {
-         this.actions = new Vector.<StartupActionAddObject>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StartupActionsListMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 1301;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var actions:Vector.<StartupActionAddObject>;
       
-      override public function getMessageId() : uint {
-         return 1301;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initStartupActionsListMessage(actions:Vector.<StartupActionAddObject> = null) : StartupActionsListMessage {
-         this.actions = actions;
-         this._isInitialized = true;
-         return this;
+      public function initStartupActionsListMessage(actions:Vector.<StartupActionAddObject> = null) : StartupActionsListMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.actions = new Vector.<StartupActionAddObject>();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_StartupActionsListMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_StartupActionsListMessage(output:IDataOutput) : void {
-         output.writeShort(this.actions.length);
-         var _i1:uint = 0;
-         while(_i1 < this.actions.length)
-         {
-            (this.actions[_i1] as StartupActionAddObject).serializeAs_StartupActionAddObject(output);
-            _i1++;
-         }
+      public function serializeAs_StartupActionsListMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_StartupActionsListMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_StartupActionsListMessage(input:IDataInput) : void {
-         var _item1:StartupActionAddObject = null;
-         var _actionsLen:uint = input.readUnsignedShort();
-         var _i1:uint = 0;
-         while(_i1 < _actionsLen)
-         {
-            _item1 = new StartupActionAddObject();
-            _item1.deserialize(input);
-            this.actions.push(_item1);
-            _i1++;
-         }
+      public function deserializeAs_StartupActionsListMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

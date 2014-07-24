@@ -5,10 +5,13 @@ package com.ankamagames.dofus.types.events
    public class RpcEvent extends Event
    {
       
-      public function RpcEvent(type:String, method:String, result:Object = null) {
-         super(type,false,false);
-         this._result = result;
-         this._method = method;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RpcEvent(type:String, method:String, result:Object = null)
+      {
+         //Décompilation abandonné
       }
       
       public static const EVENT_DATA:String = "RpcEvent_data";
@@ -19,12 +22,14 @@ package com.ankamagames.dofus.types.events
       
       private var _method:String;
       
-      public function get result() : Object {
-         return this._result;
+      public function get result() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function get method() : String {
-         return this._method;
+      public function get method() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

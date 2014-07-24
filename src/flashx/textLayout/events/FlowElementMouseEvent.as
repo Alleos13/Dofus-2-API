@@ -7,10 +7,13 @@ package flashx.textLayout.events
    public class FlowElementMouseEvent extends Event
    {
       
-      public function FlowElementMouseEvent(param1:String, param2:Boolean=false, param3:Boolean=true, param4:FlowElement=null, param5:MouseEvent=null) {
-         super(param1,param2,param3);
-         this._flowElement = param4;
-         this._originalEvent = param5;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FlowElementMouseEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = true, flowElement:FlowElement = null, originalEvent:MouseEvent = null)
+      {
+         //Décompilation abandonné
       }
       
       public static const MOUSE_DOWN:String = "mouseDown";
@@ -29,24 +32,29 @@ package flashx.textLayout.events
       
       private var _originalEvent:MouseEvent;
       
-      public function get flowElement() : FlowElement {
-         return this._flowElement;
+      public function get flowElement() : FlowElement
+      {
+         //Décompilation abandonné
       }
       
-      public function set flowElement(param1:FlowElement) : void {
-         this._flowElement = param1;
+      public function set flowElement(value:FlowElement) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get originalEvent() : MouseEvent {
-         return this._originalEvent;
+      public function get originalEvent() : MouseEvent
+      {
+         //Décompilation abandonné
       }
       
-      public function set originalEvent(param1:MouseEvent) : void {
-         this._originalEvent = param1;
+      public function set originalEvent(value:MouseEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : Event {
-         return new FlowElementMouseEvent(type,bubbles,cancelable,this.flowElement,this.originalEvent);
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
    }
 }

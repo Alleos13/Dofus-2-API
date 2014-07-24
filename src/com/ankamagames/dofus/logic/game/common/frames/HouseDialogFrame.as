@@ -19,48 +19,35 @@ package com.ankamagames.dofus.logic.game.common.frames
    public class HouseDialogFrame extends Object implements Frame
    {
       
-      public function HouseDialogFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HouseDialogFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      public function get priority() : int {
-         return Priority.NORMAL;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var luca:LockableUseCodeAction = null;
-         var lucmsg:LockableUseCodeMessage = null;
-         var ldm:LeaveDialogMessage = null;
-         switch(true)
-         {
-            case msg is LockableUseCodeAction:
-               luca = msg as LockableUseCodeAction;
-               lucmsg = new LockableUseCodeMessage();
-               lucmsg.initLockableUseCodeMessage(luca.code);
-               ConnectionsHandler.getConnection().send(lucmsg);
-               return true;
-            case msg is LeaveDialogMessage:
-               ldm = msg as LeaveDialogMessage;
-               if((ldm.dialogType == DialogTypeEnum.DIALOG_PURCHASABLE) || (ldm.dialogType == DialogTypeEnum.DIALOG_LOCKABLE))
-               {
-                  Kernel.getWorker().process(ChangeWorldInteractionAction.create(true));
-                  Kernel.getWorker().removeFrame(this);
-               }
-               return true;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         KernelEventsManager.getInstance().processCallback(HookList.LeaveDialog);
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

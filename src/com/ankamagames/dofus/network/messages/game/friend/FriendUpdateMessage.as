@@ -11,63 +11,69 @@ package com.ankamagames.dofus.network.messages.game.friend
    public class FriendUpdateMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function FriendUpdateMessage() {
-         this.friendUpdated = new FriendInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FriendUpdateMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5924;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var friendUpdated:FriendInformations;
       
-      override public function getMessageId() : uint {
-         return 5924;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initFriendUpdateMessage(friendUpdated:FriendInformations = null) : FriendUpdateMessage {
-         this.friendUpdated = friendUpdated;
-         this._isInitialized = true;
-         return this;
+      public function initFriendUpdateMessage(friendUpdated:FriendInformations = null) : FriendUpdateMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.friendUpdated = new FriendInformations();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_FriendUpdateMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_FriendUpdateMessage(output:IDataOutput) : void {
-         output.writeShort(this.friendUpdated.getTypeId());
-         this.friendUpdated.serialize(output);
+      public function serializeAs_FriendUpdateMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_FriendUpdateMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_FriendUpdateMessage(input:IDataInput) : void {
-         var _id1:uint = input.readUnsignedShort();
-         this.friendUpdated = ProtocolTypeManager.getInstance(FriendInformations,_id1);
-         this.friendUpdated.deserialize(input);
+      public function deserializeAs_FriendUpdateMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

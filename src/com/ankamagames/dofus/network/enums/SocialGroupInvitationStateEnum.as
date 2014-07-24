@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class SocialGroupInvitationStateEnum extends Object
    {
       
-      public function SocialGroupInvitationStateEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SocialGroupInvitationStateEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const SOCIAL_GROUP_INVITATION_FAILED:uint = 0;

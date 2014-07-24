@@ -3,8 +3,13 @@ package com.ankamagames.berilia.enums
    public class EventEnums extends Object
    {
       
-      public function EventEnums() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EventEnums()
+      {
+         //Décompilation abandonné
       }
       
       public static const EVENT_ONROLLOVER:String = "onRollOver";
@@ -155,84 +160,9 @@ package com.ankamagames.berilia.enums
       
       public static const EVENT_ONVIDEOBUFFERCHANGE_MSG:String;
       
-      public static function convertMsgToFct(msgName:String) : String {
-         switch(msgName)
-         {
-            case EVENT_ONPRESS_MSG:
-               return EVENT_ONPRESS;
-            case EVENT_ONRELEASE_MSG:
-               return EVENT_ONRELEASE;
-            case EVENT_ONROLLOUT_MSG:
-               return EVENT_ONROLLOUT;
-            case EVENT_ONROLLOVER_MSG:
-               return EVENT_ONROLLOVER;
-            case EVENT_ONRELEASEOUTSIDE_MSG:
-               return EVENT_ONRELEASEOUTSIDE;
-            case EVENT_ONRIGHTCLICK_MSG:
-               return EVENT_ONRIGHTCLICK;
-            case EVENT_ONDOUBLECLICK_MSG:
-               return EVENT_ONDOUBLECLICK;
-            case EVENT_ONCOLORCHANGE_MSG:
-               return EVENT_ONCOLORCHANGE;
-            case EVENT_ONENTITYREADY_MSG:
-               return EVENT_ONENTITYREADY;
-            case EVENT_ONCHANGE_MSG:
-               return EVENT_ONCHANGE;
-            case EVENT_ONSELECTITEM_MSG:
-               return EVENT_ONSELECTITEM;
-            case EVENT_ONSELECTEMPTYITEM_MSG:
-               return EVENT_ONSELECTEMPTYITEM;
-            case EVENT_ONDROP_MSG:
-               return EVENT_ONDROP;
-            case EVENT_ONWHEEL_MSG:
-               return EVENT_ONWHEEL;
-            case EVENT_ONMOUSEUP_MSG:
-               return EVENT_ONMOUSEUP;
-            case EVENT_ONCREATETAB_MSG:
-               return EVENT_ONCREATETAB;
-            case EVENT_ONDELETETAB_MSG:
-               return EVENT_ONDELETETAB;
-            case EVENT_ONRENAMETAB_MSG:
-               return EVENT_ONRENAMETAB;
-            case EVENT_ONITEMROLLOVER_MSG:
-               return EVENT_ONITEMROLLOVER;
-            case EVENT_ONITEMROLLOUT_MSG:
-               return EVENT_ONITEMROLLOUT;
-            case EVENT_ONITEMRIGHTCLICK_MSG:
-               return EVENT_ONITEMRIGHTCLICK;
-            case EVENT_ONTEXTUREREADY_MSG:
-               return EVENT_ONTEXTUREREADY;
-            case EVENT_ONTEXTURELOADFAIL_MSG:
-               return EVENT_ONTEXTURELOADFAIL;
-            case EVENT_ONMAPMOVE_MSG:
-               return EVENT_ONMAPMOVE;
-            case EVENT_ONMAPELEMENTROLLOUT_MSG:
-               return EVENT_ONMAPELEMENTROLLOUT;
-            case EVENT_ONMAPELEMENTROLLOVER_MSG:
-               return EVENT_ONMAPELEMENTROLLOVER;
-            case EVENT_ONMAPELEMENTRIGHTCLICK_MSG:
-               return EVENT_ONMAPELEMENTRIGHTCLICK;
-            case EVENT_ONMAPROLLOVER_MSG:
-               return EVENT_ONMAPROLLOVER;
-            case EVENT_ONVIDEOCONNECTFAILED_MSG:
-               return EVENT_ONVIDEOCONNECTFAILED;
-            case EVENT_ONVIDEOCONNECTSUCCESS_MSG:
-               return EVENT_ONVIDEOCONNECTSUCCESS;
-            case EVENT_ONVIDEOBUFFERCHANGE_MSG:
-               return EVENT_ONVIDEOBUFFERCHANGE;
-            case EVENT_ONCOMPONENTREADY_MSG:
-               return EVENT_ONCOMPONENTREADY;
-            case EVENT_ONBROWSER_SESSION_TIMEOUT_MSG:
-               return EVENT_ONBROWSER_SESSION_TIMEOUT;
-            case EVENT_ONBROWSER_DOM_READY_MSG:
-               return EVENT_ONBROWSER_DOM_READY;
-            case EVENT_ONTEXTCLICK_MSG:
-               return EVENT_ONTEXTCLICK;
-            case EVENT_MIDDLECLICK_MSG:
-               return EVENT_MIDDLECLICK;
-            default:
-               return null;
-         }
+      public static function convertMsgToFct(msgName:String) : String
+      {
+         //Décompilation abandonné
       }
    }
 }

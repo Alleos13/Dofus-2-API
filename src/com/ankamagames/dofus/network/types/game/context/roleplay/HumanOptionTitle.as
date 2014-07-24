@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
    public class HumanOptionTitle extends HumanOption implements INetworkType
    {
       
-      public function HumanOptionTitle() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HumanOptionTitle()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 408;
@@ -17,55 +22,39 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
       
       public var titleParam:String = "";
       
-      override public function getTypeId() : uint {
-         return 408;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initHumanOptionTitle(titleId:uint = 0, titleParam:String = "") : HumanOptionTitle {
-         this.titleId = titleId;
-         this.titleParam = titleParam;
-         return this;
+      public function initHumanOptionTitle(titleId:uint = 0, titleParam:String = "") : HumanOptionTitle
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.titleId = 0;
-         this.titleParam = "";
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_HumanOptionTitle(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_HumanOptionTitle(output:IDataOutput) : void {
-         super.serializeAs_HumanOption(output);
-         if(this.titleId < 0)
-         {
-            throw new Error("Forbidden value (" + this.titleId + ") on element titleId.");
-         }
-         else
-         {
-            output.writeShort(this.titleId);
-            output.writeUTF(this.titleParam);
-            return;
-         }
+      public function serializeAs_HumanOptionTitle(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_HumanOptionTitle(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_HumanOptionTitle(input:IDataInput) : void {
-         super.deserialize(input);
-         this.titleId = input.readShort();
-         if(this.titleId < 0)
-         {
-            throw new Error("Forbidden value (" + this.titleId + ") on element of HumanOptionTitle.titleId.");
-         }
-         else
-         {
-            this.titleParam = input.readUTF();
-            return;
-         }
+      public function deserializeAs_HumanOptionTitle(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -7,27 +7,27 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightVisibilityStep extends AbstractSequencable implements IFightStep
    {
       
-      public function FightVisibilityStep(fighterId:int, visibility:Boolean) {
-         super();
-         this._fighterId = fighterId;
-         this._visibility = visibility;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightVisibilityStep(fighterId:int, visibility:Boolean)
+      {
+         //Décompilation abandonné
       }
       
       private var _fighterId:int;
       
       private var _visibility:Boolean;
       
-      public function get stepType() : String {
-         return "visibility";
+      public function get stepType() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function start() : void {
-         var summonedCreature:Sprite = DofusEntities.getEntity(this._fighterId) as Sprite;
-         if(summonedCreature)
-         {
-            summonedCreature.visible = this._visibility;
-         }
-         executeCallbacks();
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

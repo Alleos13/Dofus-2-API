@@ -5,25 +5,33 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class StaticCriterionItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function StaticCriterionItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         return "";
+      public function StaticCriterionItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function get isRespected() : Boolean {
-         return true;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:StaticCriterionItemCriterion = new StaticCriterionItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get isRespected() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getCriterion() : int {
-         return 0;
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getCriterion() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

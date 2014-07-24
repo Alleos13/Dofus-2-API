@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class OpenInventoryAction extends Object implements Action
    {
       
-      public function OpenInventoryAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(behavior:String = "bag") : OpenInventoryAction {
-         var a:OpenInventoryAction = new OpenInventoryAction();
-         a.behavior = behavior;
-         return a;
+      public function OpenInventoryAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(behavior:String = "bag") : OpenInventoryAction
+      {
+         //Décompilation abandonné
       }
       
       public var behavior:String;

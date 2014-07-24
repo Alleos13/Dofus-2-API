@@ -6,8 +6,13 @@ package com.ankamagames.jerakine.resources.events
    public class ResourceLoadedEvent extends ResourceEvent
    {
       
-      public function ResourceLoadedEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false) {
-         super(type,bubbles,cancelable);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ResourceLoadedEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       public static const LOADED:String = "loaded";
@@ -18,12 +23,9 @@ package com.ankamagames.jerakine.resources.events
       
       public var uri:Uri;
       
-      override public function clone() : Event {
-         var re:ResourceLoadedEvent = new ResourceLoadedEvent(type,bubbles,cancelable);
-         re.resource = this.resource;
-         re.resourceType = this.resourceType;
-         re.uri = this.uri;
-         return re;
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
    }
 }

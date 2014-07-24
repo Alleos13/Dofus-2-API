@@ -3,8 +3,13 @@ package com.ankamagames.dofus.kernel.updaterv2.messages
    public class UpdaterMessageIDEnum extends Object
    {
       
-      public function UpdaterMessageIDEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UpdaterMessageIDEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const ACTIVATE_COMPONENT:String = "ACTIVATE_COMPONENT";

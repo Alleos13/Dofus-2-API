@@ -11,17 +11,22 @@ package com.ankamagames.dofus.network.messages.game.prism
    public class PrismFightDefenderAddMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function PrismFightDefenderAddMessage() {
-         this.defender = new CharacterMinimalPlusLookInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PrismFightDefenderAddMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5895;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var subAreaId:uint = 0;
@@ -30,72 +35,49 @@ package com.ankamagames.dofus.network.messages.game.prism
       
       public var defender:CharacterMinimalPlusLookInformations;
       
-      override public function getMessageId() : uint {
-         return 5895;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPrismFightDefenderAddMessage(subAreaId:uint = 0, fightId:Number = 0, defender:CharacterMinimalPlusLookInformations = null) : PrismFightDefenderAddMessage {
-         this.subAreaId = subAreaId;
-         this.fightId = fightId;
-         this.defender = defender;
-         this._isInitialized = true;
-         return this;
+      public function initPrismFightDefenderAddMessage(subAreaId:uint = 0, fightId:Number = 0, defender:CharacterMinimalPlusLookInformations = null) : PrismFightDefenderAddMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.subAreaId = 0;
-         this.fightId = 0;
-         this.defender = new CharacterMinimalPlusLookInformations();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PrismFightDefenderAddMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PrismFightDefenderAddMessage(output:IDataOutput) : void {
-         if(this.subAreaId < 0)
-         {
-            throw new Error("Forbidden value (" + this.subAreaId + ") on element subAreaId.");
-         }
-         else
-         {
-            output.writeShort(this.subAreaId);
-            output.writeDouble(this.fightId);
-            output.writeShort(this.defender.getTypeId());
-            this.defender.serialize(output);
-            return;
-         }
+      public function serializeAs_PrismFightDefenderAddMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PrismFightDefenderAddMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PrismFightDefenderAddMessage(input:IDataInput) : void {
-         this.subAreaId = input.readShort();
-         if(this.subAreaId < 0)
-         {
-            throw new Error("Forbidden value (" + this.subAreaId + ") on element of PrismFightDefenderAddMessage.subAreaId.");
-         }
-         else
-         {
-            this.fightId = input.readDouble();
-            _id3 = input.readUnsignedShort();
-            this.defender = ProtocolTypeManager.getInstance(CharacterMinimalPlusLookInformations,_id3);
-            this.defender.deserialize(input);
-            return;
-         }
+      public function deserializeAs_PrismFightDefenderAddMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

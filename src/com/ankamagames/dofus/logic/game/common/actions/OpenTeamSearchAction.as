@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class OpenTeamSearchAction extends Object implements Action
    {
       
-      public function OpenTeamSearchAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : OpenTeamSearchAction {
-         var a:OpenTeamSearchAction = new OpenTeamSearchAction();
-         return a;
+      public function OpenTeamSearchAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : OpenTeamSearchAction
+      {
+         //Décompilation abandonné
       }
    }
 }

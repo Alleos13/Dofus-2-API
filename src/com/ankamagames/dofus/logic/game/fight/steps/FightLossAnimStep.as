@@ -10,11 +10,13 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightLossAnimStep extends AbstractSequencable implements IFightStep
    {
       
-      public function FightLossAnimStep(pTarget:IEntity, pValue:int, pColor:uint) {
-         super();
-         this._value = pValue;
-         this._target = pTarget;
-         this._color = pColor;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightLossAnimStep(pTarget:IEntity, pValue:int, pColor:uint)
+      {
+         //Décompilation abandonné
       }
       
       private var _value:int;
@@ -23,13 +25,14 @@ package com.ankamagames.dofus.logic.game.fight.steps
       
       private var _color:uint;
       
-      public function get stepType() : String {
-         return "lifeLossAnim";
+      public function get stepType() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function start() : void {
-         var ccm:CharacteristicContextual = CharacteristicContextualManager.getInstance().addStatContextual(this._value.toString(),this._target,new TextFormat("Verdana",24,this._color,true),OptionManager.getOptionManager("tiphon").pointsOverhead);
-         executeCallbacks();
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

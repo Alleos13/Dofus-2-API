@@ -7,26 +7,22 @@ package com.ankamagames.dofus.datacenter.misc
    public class ActionDescription extends Object implements IDataCenter
    {
       
-      public function ActionDescription() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ActionDescription()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "ActionDescriptions";
       
       private static var _actionByName:Array;
       
-      public static function getActionDescriptionByName(name:String) : ActionDescription {
-         var actions:Array = null;
-         var action:ActionDescription = null;
-         if(!_actionByName)
-         {
-            _actionByName = new Array();
-            actions = GameData.getObjects(MODULE);
-            for each(_actionByName[action.name] in actions)
-            {
-            }
-         }
-         return _actionByName[name];
+      public static function getActionDescriptionByName(name:String) : ActionDescription
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;
@@ -51,12 +47,9 @@ package com.ankamagames.dofus.datacenter.misc
       
       private var _description:String;
       
-      public function get description() : String {
-         if(!this._description)
-         {
-            this._description = I18n.getText(this.descriptionId);
-         }
-         return this._description;
+      public function get description() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

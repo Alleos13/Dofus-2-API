@@ -6,8 +6,13 @@ package com.ankamagames.tubul.types.sounds
    public class UnlocalizedSound extends MP3SoundDofus implements IUnlocalizedSound
    {
       
-      public function UnlocalizedSound(id:uint, uri:Uri, isStereo:Boolean) {
-         super(id,uri,isStereo);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UnlocalizedSound(id:uint, uri:Uri, isStereo:Boolean)
+      {
+         //Décompilation abandonné
       }
    }
 }

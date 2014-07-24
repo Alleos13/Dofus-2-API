@@ -8,42 +8,30 @@ package com.ankamagames.dofus.logic.game.fight.miscs
    public class CarrierAnimationModifier extends Object implements IAnimationModifier
    {
       
-      public function CarrierAnimationModifier() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CarrierAnimationModifier()
+      {
+         //Décompilation abandonné
       }
       
       private static var _self:CarrierAnimationModifier;
       
-      public static function getInstance() : CarrierAnimationModifier {
-         if(!_self)
-         {
-            _self = new CarrierAnimationModifier();
-         }
-         return _self;
+      public static function getInstance() : CarrierAnimationModifier
+      {
+         //Décompilation abandonné
       }
       
-      public function get priority() : int {
-         return AnimationModifierPriority.HIGH;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function getModifiedAnimation(animation:String, look:TiphonEntityLook) : String {
-         switch(animation)
-         {
-            case AnimationEnum.ANIM_STATIQUE:
-               return AnimationEnum.ANIM_STATIQUE_CARRYING;
-            case AnimationEnum.ANIM_MARCHE:
-               return AnimationEnum.ANIM_MARCHE_CARRYING;
-            case AnimationEnum.ANIM_COURSE:
-               return AnimationEnum.ANIM_COURSE_CARRYING;
-            case AnimationEnum.ANIM_HIT:
-               return AnimationEnum.ANIM_HIT_CARRYING;
-            case AnimationEnum.ANIM_MORT:
-               return AnimationEnum.ANIM_MORT_CARRYING;
-            case AnimationEnum.ANIM_TACLE:
-               return AnimationEnum.ANIM_TACLE_CARRYING;
-            default:
-               return animation;
-         }
+      public function getModifiedAnimation(animation:String, look:TiphonEntityLook) : String
+      {
+         //Décompilation abandonné
       }
    }
 }

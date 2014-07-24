@@ -8,47 +8,52 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
    public class AllianceInformations extends BasicNamedAllianceInformations implements INetworkType
    {
       
-      public function AllianceInformations() {
-         this.allianceEmblem = new GuildEmblem();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AllianceInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 417;
       
       public var allianceEmblem:GuildEmblem;
       
-      override public function getTypeId() : uint {
-         return 417;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initAllianceInformations(allianceId:uint = 0, allianceTag:String = "", allianceName:String = "", allianceEmblem:GuildEmblem = null) : AllianceInformations {
-         super.initBasicNamedAllianceInformations(allianceId,allianceTag,allianceName);
-         this.allianceEmblem = allianceEmblem;
-         return this;
+      public function initAllianceInformations(allianceId:uint = 0, allianceTag:String = "", allianceName:String = "", allianceEmblem:GuildEmblem = null) : AllianceInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.allianceEmblem = new GuildEmblem();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AllianceInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_AllianceInformations(output:IDataOutput) : void {
-         super.serializeAs_BasicNamedAllianceInformations(output);
-         this.allianceEmblem.serializeAs_GuildEmblem(output);
+      public function serializeAs_AllianceInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AllianceInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_AllianceInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.allianceEmblem = new GuildEmblem();
-         this.allianceEmblem.deserialize(input);
+      public function deserializeAs_AllianceInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

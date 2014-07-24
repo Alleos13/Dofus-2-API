@@ -11,47 +11,44 @@ package com.ankamagames.berilia.managers
    public class UIEventManager extends Object
    {
       
-      public function UIEventManager() {
-         this._dInstanceIndex = new Dictionary(true);
-         super();
-         if(_self != null)
-         {
-            throw new BeriliaError("UIEventManager is a singleton and should not be instanciated directly.");
-         }
-         else
-         {
-            return;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UIEventManager()
+      {
+         //Décompilation abandonné
       }
       
       private static var _self:UIEventManager;
       
       protected static const _log:Logger;
       
-      public static function getInstance() : UIEventManager {
-         if(_self == null)
-         {
-            _self = new UIEventManager();
-         }
-         return _self;
+      public static function getInstance() : UIEventManager
+      {
+         //Décompilation abandonné
       }
       
       private var _dInstanceIndex:Dictionary;
       
-      public function get instances() : Dictionary {
-         return this._dInstanceIndex;
+      public function get instances() : Dictionary
+      {
+         //Décompilation abandonné
       }
       
-      public function registerInstance(ie:InstanceEvent) : void {
-         this._dInstanceIndex[ie.instance] = ie;
+      public function registerInstance(ie:InstanceEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function isRegisteredInstance(target:DisplayObject, msg:* = null) : Boolean {
-         return (this._dInstanceIndex[target]) && (this._dInstanceIndex[target].events[getQualifiedClassName(msg)]);
+      public function isRegisteredInstance(target:DisplayObject, msg:* = null) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function removeInstance(instance:*) : void {
-         delete this._dInstanceIndex[instance];
+      public function removeInstance(instance:*) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

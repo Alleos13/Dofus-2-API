@@ -5,12 +5,16 @@ package com.ankamagames.tubul.interfaces
    public interface ILocalizedSoundListener
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function get entitySounds() : Array;
       
       function get reverseEntitySounds() : Dictionary;
       
-      function addSoundEntity(param1:ISound, param2:int) : void;
+      function addSoundEntity(pISound:ISound, pEntityId:int) : void;
       
-      function removeSoundEntity(param1:ISound) : void;
+      function removeSoundEntity(pISound:ISound) : void;
    }
 }

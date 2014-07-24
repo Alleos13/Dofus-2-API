@@ -5,18 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions.estate
    public class HouseToSellFilterAction extends Object implements Action
    {
       
-      public function HouseToSellFilterAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(areaId:int, atLeastNbRoom:uint, atLeastNbChest:uint, skillRequested:uint, maxPrice:uint) : HouseToSellFilterAction {
-         var a:HouseToSellFilterAction = new HouseToSellFilterAction();
-         a.areaId = areaId;
-         a.atLeastNbRoom = atLeastNbRoom;
-         a.atLeastNbChest = atLeastNbChest;
-         a.skillRequested = skillRequested;
-         a.maxPrice = maxPrice;
-         return a;
+      public function HouseToSellFilterAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(areaId:int, atLeastNbRoom:uint, atLeastNbChest:uint, skillRequested:uint, maxPrice:uint) : HouseToSellFilterAction
+      {
+         //Décompilation abandonné
       }
       
       public var areaId:int;

@@ -9,88 +9,71 @@ package com.ankamagames.dofus.network.messages.game.shortcut
    public class ShortcutBarRemoveRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ShortcutBarRemoveRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ShortcutBarRemoveRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6228;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var barType:uint = 0;
       
       public var slot:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6228;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initShortcutBarRemoveRequestMessage(barType:uint = 0, slot:uint = 0) : ShortcutBarRemoveRequestMessage {
-         this.barType = barType;
-         this.slot = slot;
-         this._isInitialized = true;
-         return this;
+      public function initShortcutBarRemoveRequestMessage(barType:uint = 0, slot:uint = 0) : ShortcutBarRemoveRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.barType = 0;
-         this.slot = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ShortcutBarRemoveRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ShortcutBarRemoveRequestMessage(output:IDataOutput) : void {
-         output.writeByte(this.barType);
-         if((this.slot < 0) || (this.slot > 99))
-         {
-            throw new Error("Forbidden value (" + this.slot + ") on element slot.");
-         }
-         else
-         {
-            output.writeInt(this.slot);
-            return;
-         }
+      public function serializeAs_ShortcutBarRemoveRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ShortcutBarRemoveRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ShortcutBarRemoveRequestMessage(input:IDataInput) : void {
-         this.barType = input.readByte();
-         if(this.barType < 0)
-         {
-            throw new Error("Forbidden value (" + this.barType + ") on element of ShortcutBarRemoveRequestMessage.barType.");
-         }
-         else
-         {
-            this.slot = input.readInt();
-            if((this.slot < 0) || (this.slot > 99))
-            {
-               throw new Error("Forbidden value (" + this.slot + ") on element of ShortcutBarRemoveRequestMessage.slot.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_ShortcutBarRemoveRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

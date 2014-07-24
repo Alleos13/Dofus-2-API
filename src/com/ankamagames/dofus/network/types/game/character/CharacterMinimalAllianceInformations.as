@@ -10,47 +10,52 @@ package com.ankamagames.dofus.network.types.game.character
    public class CharacterMinimalAllianceInformations extends CharacterMinimalGuildInformations implements INetworkType
    {
       
-      public function CharacterMinimalAllianceInformations() {
-         this.alliance = new BasicAllianceInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterMinimalAllianceInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 444;
       
       public var alliance:BasicAllianceInformations;
       
-      override public function getTypeId() : uint {
-         return 444;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCharacterMinimalAllianceInformations(id:uint = 0, level:uint = 0, name:String = "", entityLook:EntityLook = null, guild:BasicGuildInformations = null, alliance:BasicAllianceInformations = null) : CharacterMinimalAllianceInformations {
-         super.initCharacterMinimalGuildInformations(id,level,name,entityLook,guild);
-         this.alliance = alliance;
-         return this;
+      public function initCharacterMinimalAllianceInformations(id:uint = 0, level:uint = 0, name:String = "", entityLook:EntityLook = null, guild:BasicGuildInformations = null, alliance:BasicAllianceInformations = null) : CharacterMinimalAllianceInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.alliance = new BasicAllianceInformations();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharacterMinimalAllianceInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterMinimalAllianceInformations(output:IDataOutput) : void {
-         super.serializeAs_CharacterMinimalGuildInformations(output);
-         this.alliance.serializeAs_BasicAllianceInformations(output);
+      public function serializeAs_CharacterMinimalAllianceInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharacterMinimalAllianceInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterMinimalAllianceInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.alliance = new BasicAllianceInformations();
-         this.alliance.deserialize(input);
+      public function deserializeAs_CharacterMinimalAllianceInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
    public class EmotePlayRequestAction extends Object implements Action
    {
       
-      public function EmotePlayRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(emoteId:uint) : EmotePlayRequestAction {
-         var a:EmotePlayRequestAction = new EmotePlayRequestAction();
-         a.emoteId = emoteId;
-         return a;
+      public function EmotePlayRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(emoteId:uint) : EmotePlayRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var emoteId:uint;

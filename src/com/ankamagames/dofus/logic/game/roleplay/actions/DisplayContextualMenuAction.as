@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
    public class DisplayContextualMenuAction extends Object implements Action
    {
       
-      public function DisplayContextualMenuAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(playerId:uint) : DisplayContextualMenuAction {
-         var o:DisplayContextualMenuAction = new DisplayContextualMenuAction();
-         o.playerId = playerId;
-         return o;
+      public function DisplayContextualMenuAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(playerId:uint) : DisplayContextualMenuAction
+      {
+         //Décompilation abandonné
       }
       
       public var playerId:uint;

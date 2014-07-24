@@ -9,79 +9,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeStartOkMountMessage extends ExchangeStartOkMountWithOutPaddockMessage implements INetworkMessage
    {
       
-      public function ExchangeStartOkMountMessage() {
-         this.paddockedMountsDescription = new Vector.<MountClientData>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeStartOkMountMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5979;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var paddockedMountsDescription:Vector.<MountClientData>;
       
-      override public function getMessageId() : uint {
-         return 5979;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeStartOkMountMessage(stabledMountsDescription:Vector.<MountClientData> = null, paddockedMountsDescription:Vector.<MountClientData> = null) : ExchangeStartOkMountMessage {
-         super.initExchangeStartOkMountWithOutPaddockMessage(stabledMountsDescription);
-         this.paddockedMountsDescription = paddockedMountsDescription;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeStartOkMountMessage(stabledMountsDescription:Vector.<MountClientData> = null, paddockedMountsDescription:Vector.<MountClientData> = null) : ExchangeStartOkMountMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.paddockedMountsDescription = new Vector.<MountClientData>();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeStartOkMountMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeStartOkMountMessage(output:IDataOutput) : void {
-         super.serializeAs_ExchangeStartOkMountWithOutPaddockMessage(output);
-         output.writeShort(this.paddockedMountsDescription.length);
-         var _i1:uint = 0;
-         while(_i1 < this.paddockedMountsDescription.length)
-         {
-            (this.paddockedMountsDescription[_i1] as MountClientData).serializeAs_MountClientData(output);
-            _i1++;
-         }
+      public function serializeAs_ExchangeStartOkMountMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeStartOkMountMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeStartOkMountMessage(input:IDataInput) : void {
-         var _item1:MountClientData = null;
-         super.deserialize(input);
-         var _paddockedMountsDescriptionLen:uint = input.readUnsignedShort();
-         var _i1:uint = 0;
-         while(_i1 < _paddockedMountsDescriptionLen)
-         {
-            _item1 = new MountClientData();
-            _item1.deserialize(input);
-            this.paddockedMountsDescription.push(_item1);
-            _i1++;
-         }
+      public function deserializeAs_ExchangeStartOkMountMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

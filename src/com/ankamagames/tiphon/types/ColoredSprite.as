@@ -8,34 +8,27 @@ package com.ankamagames.tiphon.types
    public class ColoredSprite extends DynamicSprite
    {
       
-      public function ColoredSprite() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ColoredSprite()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       private static const NEUTRAL_COLOR_TRANSFORM:ColorTransform;
       
-      override public function init(handler:IAnimationSpriteHandler) : void {
-         var colorT:ColorTransform = null;
-         var nColorIndex:uint = parseInt(getQualifiedClassName(this).split("_")[1]);
-         colorT = handler.getColorTransform(nColorIndex);
-         if(colorT)
-         {
-            this.colorize(colorT);
-         }
-         handler.registerColoredSprite(this,nColorIndex);
+      override public function init(handler:IAnimationSpriteHandler) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function colorize(colorT:ColorTransform) : void {
-         if(colorT)
-         {
-            transform.colorTransform = colorT;
-         }
-         else
-         {
-            transform.colorTransform = NEUTRAL_COLOR_TRANSFORM;
-         }
+      public function colorize(colorT:ColorTransform) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

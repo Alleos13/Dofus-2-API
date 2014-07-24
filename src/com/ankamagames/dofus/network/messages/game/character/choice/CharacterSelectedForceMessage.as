@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.character.choice
    public class CharacterSelectedForceMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function CharacterSelectedForceMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterSelectedForceMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6068;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var id:int = 0;
       
-      override public function getMessageId() : uint {
-         return 6068;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCharacterSelectedForceMessage(id:int = 0) : CharacterSelectedForceMessage {
-         this.id = id;
-         this._isInitialized = true;
-         return this;
+      public function initCharacterSelectedForceMessage(id:int = 0) : CharacterSelectedForceMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.id = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharacterSelectedForceMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterSelectedForceMessage(output:IDataOutput) : void {
-         if((this.id < 1) || (this.id > 2147483647))
-         {
-            throw new Error("Forbidden value (" + this.id + ") on element id.");
-         }
-         else
-         {
-            output.writeInt(this.id);
-            return;
-         }
+      public function serializeAs_CharacterSelectedForceMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharacterSelectedForceMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterSelectedForceMessage(input:IDataInput) : void {
-         this.id = input.readInt();
-         if((this.id < 1) || (this.id > 2147483647))
-         {
-            throw new Error("Forbidden value (" + this.id + ") on element of CharacterSelectedForceMessage.id.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_CharacterSelectedForceMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

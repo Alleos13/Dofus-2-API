@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.party
    public class ArenaUnregisterAction extends Object implements Action
    {
       
-      public function ArenaUnregisterAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : ArenaUnregisterAction {
-         var a:ArenaUnregisterAction = new ArenaUnregisterAction();
-         return a;
+      public function ArenaUnregisterAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : ArenaUnregisterAction
+      {
+         //Décompilation abandonné
       }
    }
 }

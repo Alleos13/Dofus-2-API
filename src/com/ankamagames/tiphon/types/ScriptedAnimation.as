@@ -12,31 +12,13 @@ package com.ankamagames.tiphon.types
    public class ScriptedAnimation extends TiphonAnimation
    {
       
-      public function ScriptedAnimation() {
-         var animationName:String = null;
-         this.events = [];
-         this.anims = [];
-         super();
-         spriteHandler = currentSpriteHandler;
-         MEMORY_LOG[this] = 1;
-         if(spriteHandler != null)
-         {
-            switch(spriteHandler.getDirection())
-            {
-               case 1:
-               case 3:
-                  animationName = spriteHandler.getAnimation() + "_1";
-                  break;
-               case 5:
-               case 7:
-                  animationName = spriteHandler.getAnimation() + "_5";
-                  break;
-               default:
-                  animationName = spriteHandler.getAnimation() + "_" + spriteHandler.getDirection();
-            }
-            spriteHandler.tiphonEventManager.parseLabels(currentScene,animationName);
-         }
-         TiphonFpsManager.addOldScriptedAnimation(this);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ScriptedAnimation()
+      {
+         //Décompilation abandonné
       }
       
       public static var MEMORY_LOG:Dictionary;
@@ -73,56 +55,29 @@ package com.ankamagames.tiphon.types
       
       public var inCache:Boolean = false;
       
-      public function playEventAtFrame(frame:int) : void {
-         if((!this.destroyed) && (!(frame == this._lastFrame)))
-         {
-            if(currentLabel == PLAYER_STOP)
-            {
-               stop();
-               FpsControler.uncontrolFps(this);
-            }
-            if(!this.destroyed)
-            {
-               spriteHandler.tiphonEventManager.dispatchEvents(frame);
-            }
-            if((!this.destroyed) && (totalFrames > 1) && (frame == totalFrames))
-            {
-               spriteHandler.onAnimationEvent(TiphonEvent.ANIMATION_END);
-            }
-            this._lastFrame = frame;
-         }
+      public function playEventAtFrame(frame:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         if(!this.destroyed)
-         {
-            this.destroyed = true;
-            this.events = null;
-            this.anims = null;
-            spriteHandler = null;
-            if(parent)
-            {
-               parent.removeChild(this);
-            }
-         }
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setAnimation(... args) : void {
-         trace("setAnimation",args);
+      public function setAnimation(... args) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function event(... args) : void {
-         trace("event",args);
+      public function event(... args) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function help() : void {
-         trace("Fonctions utilisables : ");
-         trace("\t\t- setAnimation([nom_anim])");
-         trace("\t\t- event([nom])");
-         trace("");
-         trace("Events :");
-         trace("\t\t- SHOT : la cible du sort est touché");
-         trace("\t\t- END : l\'animation est finie");
+      public function help() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

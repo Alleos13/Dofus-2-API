@@ -6,17 +6,18 @@ package com.ankamagames.dofus.logic.connection.actions
    public class LoginValidationAction extends Object implements Action, IDontLogThisMessage
    {
       
-      public function LoginValidationAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(username:String, password:String, autoSelectServer:Boolean, serverId:uint = 0) : LoginValidationAction {
-         var a:LoginValidationAction = new LoginValidationAction();
-         a.password = password;
-         a.username = username;
-         a.autoSelectServer = autoSelectServer;
-         a.serverId = serverId;
-         return a;
+      public function LoginValidationAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(username:String, password:String, autoSelectServer:Boolean, serverId:uint = 0) : LoginValidationAction
+      {
+         //Décompilation abandonné
       }
       
       public var username:String;

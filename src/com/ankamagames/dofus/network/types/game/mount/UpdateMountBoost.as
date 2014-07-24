@@ -7,41 +7,52 @@ package com.ankamagames.dofus.network.types.game.mount
    public class UpdateMountBoost extends Object implements INetworkType
    {
       
-      public function UpdateMountBoost() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UpdateMountBoost()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 356;
       
       public var type:int = 0;
       
-      public function getTypeId() : uint {
-         return 356;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initUpdateMountBoost(type:int = 0) : UpdateMountBoost {
-         this.type = type;
-         return this;
+      public function initUpdateMountBoost(type:int = 0) : UpdateMountBoost
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.type = 0;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_UpdateMountBoost(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_UpdateMountBoost(output:IDataOutput) : void {
-         output.writeByte(this.type);
+      public function serializeAs_UpdateMountBoost(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_UpdateMountBoost(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_UpdateMountBoost(input:IDataInput) : void {
-         this.type = input.readByte();
+      public function deserializeAs_UpdateMountBoost(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -8,30 +8,40 @@ package com.ankamagames.dofus.kernel.updaterv2
    public class UpdaterApi extends Object implements IApi
    {
       
-      public function UpdaterApi(handler:IUpdaterMessageHandler) {
-         super();
-         updaterConnection.addObserver(handler);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UpdaterApi(handler:IUpdaterMessageHandler)
+      {
+         //Décompilation abandonné
       }
       
       public static const updaterConnection:UpdaterConnexionHelper;
       
-      public function sayHello() : void {
+      public function sayHello() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function log(message:String) : void {
+      public function log(message:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function hasComponent(name:String) : Boolean {
-         return PartManagerV2.getInstance().hasComponent(name);
+      public function hasComponent(name:String) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function activateComponent(name:String, activate:Boolean, projectName:String = "game") : void {
-         var acm:ActivateComponentMessage = new ActivateComponentMessage(name,activate,projectName);
-         updaterConnection.sendMessage(acm);
+      public function activateComponent(name:String, activate:Boolean, projectName:String = "game") : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getComponentList(project:String = "game") : void {
-         updaterConnection.sendMessage(new GetComponentsListMessage(project));
+      public function getComponentList(project:String = "game") : void
+      {
+         //Décompilation abandonné
       }
    }
 }

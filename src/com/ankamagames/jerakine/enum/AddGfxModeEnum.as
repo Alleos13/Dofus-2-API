@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.enum
    public class AddGfxModeEnum extends Object
    {
       
-      public function AddGfxModeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AddGfxModeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const NORMAL:uint = 0;

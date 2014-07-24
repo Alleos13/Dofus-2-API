@@ -3,8 +3,13 @@ package com.ankamagames.tubul.resources
    public class TubulResourceType extends Object
    {
       
-      public function TubulResourceType() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TubulResourceType()
+      {
+         //Décompilation abandonné
       }
       
       public static const RESOURCE_MP3_SOUND:uint = 512;

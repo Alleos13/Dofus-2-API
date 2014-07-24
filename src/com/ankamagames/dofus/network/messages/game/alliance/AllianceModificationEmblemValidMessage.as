@@ -10,61 +10,69 @@ package com.ankamagames.dofus.network.messages.game.alliance
    public class AllianceModificationEmblemValidMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function AllianceModificationEmblemValidMessage() {
-         this.Alliancemblem = new GuildEmblem();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AllianceModificationEmblemValidMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6447;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var Alliancemblem:GuildEmblem;
       
-      override public function getMessageId() : uint {
-         return 6447;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initAllianceModificationEmblemValidMessage(Alliancemblem:GuildEmblem = null) : AllianceModificationEmblemValidMessage {
-         this.Alliancemblem = Alliancemblem;
-         this._isInitialized = true;
-         return this;
+      public function initAllianceModificationEmblemValidMessage(Alliancemblem:GuildEmblem = null) : AllianceModificationEmblemValidMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.Alliancemblem = new GuildEmblem();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AllianceModificationEmblemValidMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_AllianceModificationEmblemValidMessage(output:IDataOutput) : void {
-         this.Alliancemblem.serializeAs_GuildEmblem(output);
+      public function serializeAs_AllianceModificationEmblemValidMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AllianceModificationEmblemValidMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_AllianceModificationEmblemValidMessage(input:IDataInput) : void {
-         this.Alliancemblem = new GuildEmblem();
-         this.Alliancemblem.deserialize(input);
+      public function deserializeAs_AllianceModificationEmblemValidMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

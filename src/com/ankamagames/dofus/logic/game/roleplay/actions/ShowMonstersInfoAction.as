@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
    public class ShowMonstersInfoAction extends Object implements Action
    {
       
-      public function ShowMonstersInfoAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pFromShortcut:Boolean = true) : ShowMonstersInfoAction {
-         var a:ShowMonstersInfoAction = new ShowMonstersInfoAction();
-         a.fromShortcut = pFromShortcut;
-         return a;
+      public function ShowMonstersInfoAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pFromShortcut:Boolean = true) : ShowMonstersInfoAction
+      {
+         //Décompilation abandonné
       }
       
       public var fromShortcut:Boolean;

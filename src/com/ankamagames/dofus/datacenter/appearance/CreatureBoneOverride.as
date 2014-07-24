@@ -6,19 +6,25 @@ package com.ankamagames.dofus.datacenter.appearance
    public class CreatureBoneOverride extends Object implements IDataCenter
    {
       
-      public function CreatureBoneOverride() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CreatureBoneOverride()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "CreatureBonesOverrides";
       
-      public static function getCreatureBones(pBoneId:int) : int {
-         var bonesOverride:CreatureBoneOverride = GameData.getObject(MODULE,pBoneId) as CreatureBoneOverride;
-         return bonesOverride?bonesOverride.creatureBoneId:0;
+      public static function getCreatureBones(pBoneId:int) : int
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAllCreatureBonesOverrides() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAllCreatureBonesOverrides() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var boneId:int;

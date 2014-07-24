@@ -6,10 +6,13 @@ package com.ankamagames.jerakine.BalanceManager.type
    public class BalancedObject extends EventDispatcher
    {
       
-      public function BalancedObject(pItem:Object) {
-         super();
-         this.item = pItem;
-         this.nbCall = 0;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BalancedObject(pItem:Object)
+      {
+         //Décompilation abandonné
       }
       
       public var item:Object;
@@ -20,23 +23,19 @@ package com.ankamagames.jerakine.BalanceManager.type
       
       public var chanceToBeCall:Number;
       
-      public function increment() : uint {
-         this.nbCall = this._nbCall + 1;
-         return this._nbCall;
+      public function increment() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set nbCall(pNbCall:uint) : void {
-         var previousNbCall:uint = this._nbCall;
-         this._nbCall = pNbCall;
-         var be:BalanceEvent = new BalanceEvent(BalanceEvent.BALANCE_UPDATE);
-         be.previousBalance = previousNbCall;
-         be.newBalance = this._nbCall;
-         be.item = this.item;
-         dispatchEvent(be);
+      public function set nbCall(pNbCall:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get nbCall() : uint {
-         return this._nbCall;
+      public function get nbCall() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

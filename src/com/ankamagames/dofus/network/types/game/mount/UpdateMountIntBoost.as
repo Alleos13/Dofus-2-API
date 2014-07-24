@@ -7,45 +7,52 @@ package com.ankamagames.dofus.network.types.game.mount
    public class UpdateMountIntBoost extends UpdateMountBoost implements INetworkType
    {
       
-      public function UpdateMountIntBoost() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UpdateMountIntBoost()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 357;
       
       public var value:int = 0;
       
-      override public function getTypeId() : uint {
-         return 357;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initUpdateMountIntBoost(type:int = 0, value:int = 0) : UpdateMountIntBoost {
-         super.initUpdateMountBoost(type);
-         this.value = value;
-         return this;
+      public function initUpdateMountIntBoost(type:int = 0, value:int = 0) : UpdateMountIntBoost
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.value = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_UpdateMountIntBoost(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_UpdateMountIntBoost(output:IDataOutput) : void {
-         super.serializeAs_UpdateMountBoost(output);
-         output.writeInt(this.value);
+      public function serializeAs_UpdateMountIntBoost(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_UpdateMountIntBoost(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_UpdateMountIntBoost(input:IDataInput) : void {
-         super.deserialize(input);
-         this.value = input.readInt();
+      public function deserializeAs_UpdateMountIntBoost(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

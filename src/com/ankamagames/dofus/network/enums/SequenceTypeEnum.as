@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class SequenceTypeEnum extends Object
    {
       
-      public function SequenceTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SequenceTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const SEQUENCE_SPELL:int = 1;

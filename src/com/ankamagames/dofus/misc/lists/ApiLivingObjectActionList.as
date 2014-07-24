@@ -10,8 +10,13 @@ package com.ankamagames.dofus.misc.lists
    public class ApiLivingObjectActionList extends Object
    {
       
-      public function ApiLivingObjectActionList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ApiLivingObjectActionList()
+      {
+         //Décompilation abandonné
       }
       
       public static const LivingObjectDissociate:DofusApiAction;

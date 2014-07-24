@@ -17,17 +17,13 @@ package com.ankamagames.jerakine.utils.files
    public class ZipLoader extends EventDispatcher implements ICachable
    {
       
-      public function ZipLoader(fileRequest:URLRequest = null, oExtraData:* = null) {
-         super();
-         if(fileRequest)
-         {
-            this._name = "ZIP_" + fileRequest.url;
-         }
-         this._oExtraData = oExtraData;
-         if(fileRequest != null)
-         {
-            this.load(fileRequest);
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ZipLoader(fileRequest:URLRequest = null, oExtraData:* = null)
+      {
+         //Décompilation abandonné
       }
       
       private var _zipFile:ZipFile;
@@ -48,111 +44,84 @@ package com.ankamagames.jerakine.utils.files
       
       public var loaded:Boolean;
       
-      public function get inUse() : Boolean {
-         return this._inUse;
+      public function get inUse() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set inUse(value:Boolean) : void {
-         this._inUse = value;
+      public function set inUse(value:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get name() : String {
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function set name(value:String) : void {
-         this._name = value;
+      public function set name(value:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get extraData() : * {
-         return this._oExtraData;
+      public function get extraData() : *
+      {
+         //Décompilation abandonné
       }
       
-      public function load(request:URLRequest) : void {
-         this.loaded = false;
-         this._files = new Array();
-         this._filesNames = new Array();
-         this._name = "ZIP_" + request.url;
-         this._zipFile = null;
-         this._loader = new URLLoader();
-         this._loader.dataFormat = URLLoaderDataFormat.BINARY;
-         this._loader.addEventListener(Event.COMPLETE,this.onLoadComplete);
-         this._loader.addEventListener(HTTPStatusEvent.HTTP_STATUS,this.onHttpStatus);
-         this._loader.addEventListener(IOErrorEvent.IO_ERROR,this.onIOError);
-         this._loader.addEventListener(Event.OPEN,this.onOpen);
-         this._loader.addEventListener(SecurityErrorEvent.SECURITY_ERROR,this.onSecurityError);
-         this._loader.addEventListener(ProgressEvent.PROGRESS,this.onProgress);
-         this._loader.load(request);
-         this.url = request.url;
+      public function load(request:URLRequest) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getFilesList() : Array {
-         return this._filesNames;
+      public function getFilesList() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getFileDatas(fileName:String) : ByteArray {
-         return this._zipFile.getInput(this._files[fileName]);
+      public function getFileDatas(fileName:String) : ByteArray
+      {
+         //Décompilation abandonné
       }
       
-      public function fileExists(fileName:String) : Boolean {
-         var i:uint = 0;
-         while(i < this._filesNames.length)
-         {
-            if(this._filesNames[i] == fileName)
-            {
-               return true;
-            }
-            i++;
-         }
-         return false;
+      public function fileExists(fileName:String) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         try
-         {
-            if(this._loader)
-            {
-               this._loader.close();
-            }
-         }
-         catch(e:Error)
-         {
-         }
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onLoadComplete(e:Event) : void {
-         var entry:ZipEntry = null;
-         var zipData:ByteArray = ByteArray(URLLoader(e.target).data);
-         this._zipFile = new ZipFile(zipData);
-         var i:uint = 0;
-         while(i < this._zipFile.entries.length)
-         {
-            entry = this._zipFile.entries[i];
-            this._files[entry.name] = entry;
-            this._filesNames.push(entry.name);
-            i++;
-         }
-         dispatchEvent(e);
+      private function onLoadComplete(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onHttpStatus(httpse:HTTPStatusEvent) : void {
-         dispatchEvent(httpse);
+      private function onHttpStatus(httpse:HTTPStatusEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onIOError(ioe:IOErrorEvent) : void {
-         dispatchEvent(ioe);
+      private function onIOError(ioe:IOErrorEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onOpen(e:Event) : void {
-         dispatchEvent(e);
+      private function onOpen(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onSecurityError(se:SecurityErrorEvent) : void {
-         dispatchEvent(se);
+      private function onSecurityError(se:SecurityErrorEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onProgress(pe:ProgressEvent) : void {
-         dispatchEvent(pe);
+      private function onProgress(pe:ProgressEvent) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

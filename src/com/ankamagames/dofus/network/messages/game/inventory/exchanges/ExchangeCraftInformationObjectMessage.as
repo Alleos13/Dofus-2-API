@@ -8,79 +8,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeCraftInformationObjectMessage extends ExchangeCraftResultWithObjectIdMessage implements INetworkMessage
    {
       
-      public function ExchangeCraftInformationObjectMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeCraftInformationObjectMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5794;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var playerId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5794;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeCraftInformationObjectMessage(craftResult:uint = 0, objectGenericId:uint = 0, playerId:uint = 0) : ExchangeCraftInformationObjectMessage {
-         super.initExchangeCraftResultWithObjectIdMessage(craftResult,objectGenericId);
-         this.playerId = playerId;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeCraftInformationObjectMessage(craftResult:uint = 0, objectGenericId:uint = 0, playerId:uint = 0) : ExchangeCraftInformationObjectMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.playerId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeCraftInformationObjectMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeCraftInformationObjectMessage(output:IDataOutput) : void {
-         super.serializeAs_ExchangeCraftResultWithObjectIdMessage(output);
-         if(this.playerId < 0)
-         {
-            throw new Error("Forbidden value (" + this.playerId + ") on element playerId.");
-         }
-         else
-         {
-            output.writeInt(this.playerId);
-            return;
-         }
+      public function serializeAs_ExchangeCraftInformationObjectMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeCraftInformationObjectMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeCraftInformationObjectMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.playerId = input.readInt();
-         if(this.playerId < 0)
-         {
-            throw new Error("Forbidden value (" + this.playerId + ") on element of ExchangeCraftInformationObjectMessage.playerId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_ExchangeCraftInformationObjectMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

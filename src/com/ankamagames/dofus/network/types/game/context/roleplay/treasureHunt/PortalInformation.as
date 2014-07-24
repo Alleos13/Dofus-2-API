@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.treasureHunt
    public class PortalInformation extends Object implements INetworkType
    {
       
-      public function PortalInformation() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PortalInformation()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 466;
@@ -17,53 +22,39 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.treasureHunt
       
       public var areaId:int = 0;
       
-      public function getTypeId() : uint {
-         return 466;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPortalInformation(portalId:uint = 0, areaId:int = 0) : PortalInformation {
-         this.portalId = portalId;
-         this.areaId = areaId;
-         return this;
+      public function initPortalInformation(portalId:uint = 0, areaId:int = 0) : PortalInformation
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.portalId = 0;
-         this.areaId = 0;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PortalInformation(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PortalInformation(output:IDataOutput) : void {
-         if(this.portalId < 0)
-         {
-            throw new Error("Forbidden value (" + this.portalId + ") on element portalId.");
-         }
-         else
-         {
-            output.writeShort(this.portalId);
-            output.writeShort(this.areaId);
-            return;
-         }
+      public function serializeAs_PortalInformation(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PortalInformation(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PortalInformation(input:IDataInput) : void {
-         this.portalId = input.readShort();
-         if(this.portalId < 0)
-         {
-            throw new Error("Forbidden value (" + this.portalId + ") on element of PortalInformation.portalId.");
-         }
-         else
-         {
-            this.areaId = input.readShort();
-            return;
-         }
+      public function deserializeAs_PortalInformation(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

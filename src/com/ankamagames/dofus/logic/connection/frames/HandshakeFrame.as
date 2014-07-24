@@ -25,74 +25,42 @@ package com.ankamagames.dofus.logic.connection.frames
    public class HandshakeFrame extends Object implements Frame
    {
       
-      public function HandshakeFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HandshakeFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       private var _timeOutTimer:Timer;
       
-      public function get priority() : int {
-         return Priority.HIGHEST;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var prmsg:ProtocolRequired = null;
-         var authoFrame:AuthorizedFrame = null;
-         var commonMod:Object = null;
-         ConnectionsHandler.hasReceivedMsg = true;
-         if((msg is INetworkMessage) && (this._timeOutTimer))
-         {
-            this._timeOutTimer.stop();
-         }
-         switch(true)
-         {
-            case msg is ProtocolRequired:
-               prmsg = msg as ProtocolRequired;
-               if(prmsg.requiredVersion > Metadata.PROTOCOL_BUILD)
-               {
-                  _log.fatal("Current protocol build is " + Metadata.PROTOCOL_BUILD + ", required build is " + prmsg.requiredVersion + ".");
-                  Kernel.panic(PanicMessages.PROTOCOL_TOO_OLD,[Metadata.PROTOCOL_BUILD,prmsg.requiredVersion]);
-               }
-               if(prmsg.currentVersion < Metadata.PROTOCOL_REQUIRED_BUILD)
-               {
-                  _log.fatal("Current protocol build (" + Metadata.PROTOCOL_BUILD + ") is too new for the server version (" + prmsg.currentVersion + ").");
-                  authoFrame = Kernel.getWorker().getFrame(AuthorizedFrame) as AuthorizedFrame;
-                  if((BuildInfos.BUILD_TYPE >= BuildTypeEnum.TESTING) || (authoFrame.isFantomas()))
-                  {
-                     commonMod = UiModuleManager.getInstance().getModule("Ankama_Common").mainClass;
-                     commonMod.openPopup(I18n.getUiText("ui.popup.warning"),I18n.getUiText("ui.popup.protocolError",[Metadata.PROTOCOL_BUILD,prmsg.currentVersion]),[I18n.getUiText("ui.common.ok")]);
-                  }
-               }
-               Kernel.getWorker().removeFrame(this);
-               return true;
-            case msg is ConnectedMessage:
-               this._timeOutTimer = new Timer(3000,1);
-               this._timeOutTimer.addEventListener(TimerEvent.TIMER_COMPLETE,this.onTimeOut);
-               this._timeOutTimer.start();
-               return true;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function onTimeOut(e:TimerEvent) : void {
-         var pingMsg:BasicPingMessage = new BasicPingMessage();
-         pingMsg.initBasicPingMessage(true);
-         ConnectionsHandler.getConnection().send(pingMsg);
+      public function onTimeOut(e:TimerEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         if(this._timeOutTimer)
-         {
-            this._timeOutTimer.removeEventListener(TimerEvent.TIMER_COMPLETE,this.onTimeOut);
-         }
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

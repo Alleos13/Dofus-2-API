@@ -12,48 +12,28 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class AllianceAvAItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function AllianceAvAItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get isRespected() : Boolean {
-         var aggressable:* = 0;
-         var subArea:SubArea = null;
-         var currentPrism:PrismSubAreaWrapper = null;
-         if(_operator.text == ItemCriterionOperator.EQUAL)
-         {
-            aggressable = PlayedCharacterManager.getInstance().characteristics.alignmentInfos.aggressable;
-            if((!(aggressable == AggressableStatusEnum.AvA_ENABLED_AGGRESSABLE)) && (!(aggressable == AggressableStatusEnum.AvA_PREQUALIFIED_AGGRESSABLE)))
-            {
-               return false;
-            }
-            subArea = PlayedCharacterManager.getInstance().currentSubArea;
-            currentPrism = AllianceFrame.getInstance().getPrismSubAreaById(subArea.id);
-            if((!currentPrism) || (currentPrism.mapId == -1))
-            {
-               return false;
-            }
-            if(currentPrism.state != PrismStateEnum.PRISM_STATE_VULNERABLE)
-            {
-               return false;
-            }
-            return true;
-         }
-         return false;
+      public function AllianceAvAItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         var readableCriterion:String = null;
-         if(_operator.text == ItemCriterionOperator.EQUAL)
-         {
-            readableCriterion = I18n.getUiText("ui.criterion.allianceAvA");
-         }
-         return readableCriterion;
+      override public function get isRespected() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:AllianceAvAItemCriterion = new AllianceAvAItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
       }
    }
 }

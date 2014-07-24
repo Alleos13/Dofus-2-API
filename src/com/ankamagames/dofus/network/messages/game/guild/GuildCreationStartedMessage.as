@@ -9,47 +9,65 @@ package com.ankamagames.dofus.network.messages.game.guild
    public class GuildCreationStartedMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GuildCreationStartedMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildCreationStartedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5920;
       
-      override public function get isInitialized() : Boolean {
-         return true;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function getMessageId() : uint {
-         return 5920;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGuildCreationStartedMessage() : GuildCreationStartedMessage {
-         return this;
+      public function initGuildCreationStartedMessage() : GuildCreationStartedMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GuildCreationStartedMessage(output:IDataOutput) : void {
+      public function serializeAs_GuildCreationStartedMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildCreationStartedMessage(input:IDataInput) : void {
+      public function deserializeAs_GuildCreationStartedMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

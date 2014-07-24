@@ -5,8 +5,13 @@ package com.ankamagames.berilia.components.messages
    public class ChangeMessage extends ComponentMessage
    {
       
-      public function ChangeMessage(target:InteractiveObject) {
-         super(target);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ChangeMessage(target:InteractiveObject)
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -9,81 +9,71 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeHandleMountStableMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeHandleMountStableMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeHandleMountStableMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5965;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var actionType:int = 0;
       
       public var rideId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5965;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeHandleMountStableMessage(actionType:int = 0, rideId:uint = 0) : ExchangeHandleMountStableMessage {
-         this.actionType = actionType;
-         this.rideId = rideId;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeHandleMountStableMessage(actionType:int = 0, rideId:uint = 0) : ExchangeHandleMountStableMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.actionType = 0;
-         this.rideId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeHandleMountStableMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeHandleMountStableMessage(output:IDataOutput) : void {
-         output.writeByte(this.actionType);
-         if(this.rideId < 0)
-         {
-            throw new Error("Forbidden value (" + this.rideId + ") on element rideId.");
-         }
-         else
-         {
-            output.writeInt(this.rideId);
-            return;
-         }
+      public function serializeAs_ExchangeHandleMountStableMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeHandleMountStableMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeHandleMountStableMessage(input:IDataInput) : void {
-         this.actionType = input.readByte();
-         this.rideId = input.readInt();
-         if(this.rideId < 0)
-         {
-            throw new Error("Forbidden value (" + this.rideId + ") on element of ExchangeHandleMountStableMessage.rideId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_ExchangeHandleMountStableMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

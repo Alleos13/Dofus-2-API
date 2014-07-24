@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.exchange
    public class ExchangeObjectMoveKamaAction extends Object implements Action
    {
       
-      public function ExchangeObjectMoveKamaAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pKamas:uint) : ExchangeObjectMoveKamaAction {
-         var a:ExchangeObjectMoveKamaAction = new ExchangeObjectMoveKamaAction();
-         a.kamas = pKamas;
-         return a;
+      public function ExchangeObjectMoveKamaAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pKamas:uint) : ExchangeObjectMoveKamaAction
+      {
+         //Décompilation abandonné
       }
       
       public var kamas:uint;

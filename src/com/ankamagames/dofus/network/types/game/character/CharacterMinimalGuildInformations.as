@@ -9,47 +9,52 @@ package com.ankamagames.dofus.network.types.game.character
    public class CharacterMinimalGuildInformations extends CharacterMinimalPlusLookInformations implements INetworkType
    {
       
-      public function CharacterMinimalGuildInformations() {
-         this.guild = new BasicGuildInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterMinimalGuildInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 445;
       
       public var guild:BasicGuildInformations;
       
-      override public function getTypeId() : uint {
-         return 445;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCharacterMinimalGuildInformations(id:uint = 0, level:uint = 0, name:String = "", entityLook:EntityLook = null, guild:BasicGuildInformations = null) : CharacterMinimalGuildInformations {
-         super.initCharacterMinimalPlusLookInformations(id,level,name,entityLook);
-         this.guild = guild;
-         return this;
+      public function initCharacterMinimalGuildInformations(id:uint = 0, level:uint = 0, name:String = "", entityLook:EntityLook = null, guild:BasicGuildInformations = null) : CharacterMinimalGuildInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.guild = new BasicGuildInformations();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharacterMinimalGuildInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterMinimalGuildInformations(output:IDataOutput) : void {
-         super.serializeAs_CharacterMinimalPlusLookInformations(output);
-         this.guild.serializeAs_BasicGuildInformations(output);
+      public function serializeAs_CharacterMinimalGuildInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharacterMinimalGuildInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterMinimalGuildInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.guild = new BasicGuildInformations();
-         this.guild.deserialize(input);
+      public function deserializeAs_CharacterMinimalGuildInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

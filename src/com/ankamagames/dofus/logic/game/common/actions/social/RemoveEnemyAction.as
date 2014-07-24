@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.social
    public class RemoveEnemyAction extends Object implements Action
    {
       
-      public function RemoveEnemyAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(accountId:int) : RemoveEnemyAction {
-         var a:RemoveEnemyAction = new RemoveEnemyAction();
-         a.accountId = accountId;
-         return a;
+      public function RemoveEnemyAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(accountId:int) : RemoveEnemyAction
+      {
+         //Décompilation abandonné
       }
       
       public var accountId:int;

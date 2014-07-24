@@ -6,18 +6,25 @@ package com.ankamagames.dofus.datacenter.sounds
    public class SoundUiHook extends Object implements IDataCenter
    {
       
-      public function SoundUiHook() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SoundUiHook()
+      {
+         //Décompilation abandonné
       }
       
       public static var MODULE:String = "SoundUiHook";
       
-      public static function getSoundUiHookById(id:uint) : SoundUiHook {
-         return GameData.getObject(MODULE,id) as SoundUiHook;
+      public static function getSoundUiHookById(id:uint) : SoundUiHook
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSoundUiHooks() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getSoundUiHooks() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;

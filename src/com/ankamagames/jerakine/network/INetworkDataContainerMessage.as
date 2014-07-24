@@ -5,8 +5,12 @@ package com.ankamagames.jerakine.network
    public interface INetworkDataContainerMessage
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function get content() : ByteArray;
       
-      function set content(param1:ByteArray) : void;
+      function set content(v:ByteArray) : void;
    }
 }

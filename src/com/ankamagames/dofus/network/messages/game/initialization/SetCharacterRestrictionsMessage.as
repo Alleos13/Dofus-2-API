@@ -10,61 +10,69 @@ package com.ankamagames.dofus.network.messages.game.initialization
    public class SetCharacterRestrictionsMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function SetCharacterRestrictionsMessage() {
-         this.restrictions = new ActorRestrictionsInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SetCharacterRestrictionsMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 170;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var restrictions:ActorRestrictionsInformations;
       
-      override public function getMessageId() : uint {
-         return 170;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initSetCharacterRestrictionsMessage(restrictions:ActorRestrictionsInformations = null) : SetCharacterRestrictionsMessage {
-         this.restrictions = restrictions;
-         this._isInitialized = true;
-         return this;
+      public function initSetCharacterRestrictionsMessage(restrictions:ActorRestrictionsInformations = null) : SetCharacterRestrictionsMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.restrictions = new ActorRestrictionsInformations();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_SetCharacterRestrictionsMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_SetCharacterRestrictionsMessage(output:IDataOutput) : void {
-         this.restrictions.serializeAs_ActorRestrictionsInformations(output);
+      public function serializeAs_SetCharacterRestrictionsMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_SetCharacterRestrictionsMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_SetCharacterRestrictionsMessage(input:IDataInput) : void {
-         this.restrictions = new ActorRestrictionsInformations();
-         this.restrictions.deserialize(input);
+      public function deserializeAs_SetCharacterRestrictionsMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -3,8 +3,13 @@ package com.ankamagames.berilia.enums
    public class ShortcutsEnum extends Object
    {
       
-      public function ShortcutsEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ShortcutsEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const BASIC_SHORTCUT_KEYCODE:Array;

@@ -5,8 +5,13 @@ package com.ankamagames.berilia.components.messages
    public class BrowserDomReady extends ComponentMessage
    {
       
-      public function BrowserDomReady(target:InteractiveObject) {
-         super(target);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BrowserDomReady(target:InteractiveObject)
+      {
+         //Décompilation abandonné
       }
    }
 }

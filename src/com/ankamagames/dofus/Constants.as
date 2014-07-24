@@ -7,8 +7,13 @@ package com.ankamagames.dofus
    public class Constants extends Object
    {
       
-      public function Constants() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Constants()
+      {
+         //Décompilation abandonné
       }
       
       public static const SIGNATURE_KEY_DATA:Class;

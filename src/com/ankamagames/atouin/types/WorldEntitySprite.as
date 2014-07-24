@@ -7,11 +7,13 @@ package com.ankamagames.atouin.types
    public class WorldEntitySprite extends TiphonSprite implements ICustomUnicNameGetter
    {
       
-      public function WorldEntitySprite(look:TiphonEntityLook, cellId:int, identifier:int) {
-         super(look);
-         this._name = "mapGfx::" + identifier;
-         this._cellId = cellId;
-         this._identifier = identifier;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function WorldEntitySprite(look:TiphonEntityLook, cellId:int, identifier:int)
+      {
+         //Décompilation abandonné
       }
       
       private var _cellId:int;
@@ -20,16 +22,19 @@ package com.ankamagames.atouin.types
       
       private var _name:String;
       
-      public function get cellId() : int {
-         return this._cellId;
+      public function get cellId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get identifier() : int {
-         return this._identifier;
+      public function get identifier() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get customUnicName() : String {
-         return this._name;
+      public function get customUnicName() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

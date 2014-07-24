@@ -6,20 +6,20 @@ package com.ankamagames.jerakine.script
    public class ScriptsManager extends Object
    {
       
-      public function ScriptsManager() {
-         this._players = new Dictionary();
-         this._apis = new Dictionary();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ScriptsManager()
+      {
+         //Décompilation abandonné
       }
       
       private static var _self:ScriptsManager;
       
-      public static function getInstance() : ScriptsManager {
-         if(!_self)
-         {
-            _self = new ScriptsManager();
-         }
-         return _self;
+      public static function getInstance() : ScriptsManager
+      {
+         //Décompilation abandonné
       }
       
       public static const LUA_PLAYER:String = "LUA_PLAYER";
@@ -28,38 +28,34 @@ package com.ankamagames.jerakine.script
       
       private var _apis:Dictionary;
       
-      public function addPlayer(pPlayerType:String, pPlayer:IScriptsPlayer) : void {
-         this._players[pPlayerType] = pPlayer;
+      public function addPlayer(pPlayerType:String, pPlayer:IScriptsPlayer) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getPlayer(pPlayerType:String) : IScriptsPlayer {
-         return this._players[pPlayerType];
+      public function getPlayer(pPlayerType:String) : IScriptsPlayer
+      {
+         //Décompilation abandonné
       }
       
-      public function addPlayerApi(pPlayer:IScriptsPlayer, pApiId:String, pApi:*) : void {
-         if(!this._apis[pPlayer])
-         {
-            this._apis[pPlayer] = new Dictionary();
-         }
-         this._apis[pPlayer][pApiId] = pApi;
-         pPlayer.addApi(pApiId,pApi);
+      public function addPlayerApi(pPlayer:IScriptsPlayer, pApiId:String, pApi:*) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getPlayerApi(pPlayer:IScriptsPlayer, pApiId:String) : * {
-         var api:* = undefined;
-         if(this._apis[pPlayer])
-         {
-            api = this._apis[pPlayer][pApiId];
-         }
-         return api;
+      public function getPlayerApi(pPlayer:IScriptsPlayer, pApiId:String) : *
+      {
+         //Décompilation abandonné
       }
       
-      public function playScript(pPlayerType:String, pScript:String) : void {
-         this._players[pPlayerType].playScript(pScript);
+      public function playScript(pPlayerType:String, pScript:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function playFile(pPlayerType:String, pScriptUri:String) : void {
-         this._players[pPlayerType].playFile(pScriptUri);
+      public function playFile(pPlayerType:String, pScriptUri:String) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

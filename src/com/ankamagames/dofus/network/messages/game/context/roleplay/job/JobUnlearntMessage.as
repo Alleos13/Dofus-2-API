@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.job
    public class JobUnlearntMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function JobUnlearntMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function JobUnlearntMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5657;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var jobId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5657;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initJobUnlearntMessage(jobId:uint = 0) : JobUnlearntMessage {
-         this.jobId = jobId;
-         this._isInitialized = true;
-         return this;
+      public function initJobUnlearntMessage(jobId:uint = 0) : JobUnlearntMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.jobId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_JobUnlearntMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_JobUnlearntMessage(output:IDataOutput) : void {
-         if(this.jobId < 0)
-         {
-            throw new Error("Forbidden value (" + this.jobId + ") on element jobId.");
-         }
-         else
-         {
-            output.writeByte(this.jobId);
-            return;
-         }
+      public function serializeAs_JobUnlearntMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_JobUnlearntMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_JobUnlearntMessage(input:IDataInput) : void {
-         this.jobId = input.readByte();
-         if(this.jobId < 0)
-         {
-            throw new Error("Forbidden value (" + this.jobId + ") on element of JobUnlearntMessage.jobId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_JobUnlearntMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

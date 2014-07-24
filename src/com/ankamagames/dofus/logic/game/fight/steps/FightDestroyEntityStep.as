@@ -7,13 +7,18 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightDestroyEntityStep extends DestroyEntityStep implements IFightStep
    {
       
-      public function FightDestroyEntityStep(entity:IEntity) {
-         super(entity);
-         FightEntitiesHolder.getInstance().unholdEntity(entity.id);
+      {
+      //Décompilation abandonné
       }
       
-      public function get stepType() : String {
-         return "destroyEntity";
+      public function FightDestroyEntityStep(entity:IEntity)
+      {
+         //Décompilation abandonné
+      }
+      
+      public function get stepType() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

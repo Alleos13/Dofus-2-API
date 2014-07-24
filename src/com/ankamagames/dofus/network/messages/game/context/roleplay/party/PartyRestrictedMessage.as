@@ -8,63 +8,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
    public class PartyRestrictedMessage extends AbstractPartyMessage implements INetworkMessage
    {
       
-      public function PartyRestrictedMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PartyRestrictedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6175;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var restricted:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 6175;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPartyRestrictedMessage(partyId:uint = 0, restricted:Boolean = false) : PartyRestrictedMessage {
-         super.initAbstractPartyMessage(partyId);
-         this.restricted = restricted;
-         this._isInitialized = true;
-         return this;
+      public function initPartyRestrictedMessage(partyId:uint = 0, restricted:Boolean = false) : PartyRestrictedMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.restricted = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PartyRestrictedMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PartyRestrictedMessage(output:IDataOutput) : void {
-         super.serializeAs_AbstractPartyMessage(output);
-         output.writeBoolean(this.restricted);
+      public function serializeAs_PartyRestrictedMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PartyRestrictedMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PartyRestrictedMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.restricted = input.readBoolean();
+      public function deserializeAs_PartyRestrictedMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

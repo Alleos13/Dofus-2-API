@@ -9,67 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.death
    public class GameRolePlayPlayerLifeStatusMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameRolePlayPlayerLifeStatusMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameRolePlayPlayerLifeStatusMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5996;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var state:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5996;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameRolePlayPlayerLifeStatusMessage(state:uint = 0) : GameRolePlayPlayerLifeStatusMessage {
-         this.state = state;
-         this._isInitialized = true;
-         return this;
+      public function initGameRolePlayPlayerLifeStatusMessage(state:uint = 0) : GameRolePlayPlayerLifeStatusMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.state = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameRolePlayPlayerLifeStatusMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayPlayerLifeStatusMessage(output:IDataOutput) : void {
-         output.writeByte(this.state);
+      public function serializeAs_GameRolePlayPlayerLifeStatusMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameRolePlayPlayerLifeStatusMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayPlayerLifeStatusMessage(input:IDataInput) : void {
-         this.state = input.readByte();
-         if(this.state < 0)
-         {
-            throw new Error("Forbidden value (" + this.state + ") on element of GameRolePlayPlayerLifeStatusMessage.state.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_GameRolePlayPlayerLifeStatusMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

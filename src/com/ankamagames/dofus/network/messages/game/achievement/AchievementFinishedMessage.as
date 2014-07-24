@@ -9,95 +9,71 @@ package com.ankamagames.dofus.network.messages.game.achievement
    public class AchievementFinishedMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function AchievementFinishedMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AchievementFinishedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6208;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint = 0;
       
       public var finishedlevel:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6208;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initAchievementFinishedMessage(id:uint = 0, finishedlevel:uint = 0) : AchievementFinishedMessage {
-         this.id = id;
-         this.finishedlevel = finishedlevel;
-         this._isInitialized = true;
-         return this;
+      public function initAchievementFinishedMessage(id:uint = 0, finishedlevel:uint = 0) : AchievementFinishedMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.id = 0;
-         this.finishedlevel = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AchievementFinishedMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_AchievementFinishedMessage(output:IDataOutput) : void {
-         if(this.id < 0)
-         {
-            throw new Error("Forbidden value (" + this.id + ") on element id.");
-         }
-         else
-         {
-            output.writeShort(this.id);
-            if((this.finishedlevel < 0) || (this.finishedlevel > 200))
-            {
-               throw new Error("Forbidden value (" + this.finishedlevel + ") on element finishedlevel.");
-            }
-            else
-            {
-               output.writeShort(this.finishedlevel);
-               return;
-            }
-         }
+      public function serializeAs_AchievementFinishedMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AchievementFinishedMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_AchievementFinishedMessage(input:IDataInput) : void {
-         this.id = input.readShort();
-         if(this.id < 0)
-         {
-            throw new Error("Forbidden value (" + this.id + ") on element of AchievementFinishedMessage.id.");
-         }
-         else
-         {
-            this.finishedlevel = input.readShort();
-            if((this.finishedlevel < 0) || (this.finishedlevel > 200))
-            {
-               throw new Error("Forbidden value (" + this.finishedlevel + ") on element of AchievementFinishedMessage.finishedlevel.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_AchievementFinishedMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

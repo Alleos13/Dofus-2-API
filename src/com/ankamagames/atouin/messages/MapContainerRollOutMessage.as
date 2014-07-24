@@ -5,8 +5,13 @@ package com.ankamagames.atouin.messages
    public class MapContainerRollOutMessage extends Object implements Message
    {
       
-      public function MapContainerRollOutMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapContainerRollOutMessage()
+      {
+         //Décompilation abandonné
       }
    }
 }

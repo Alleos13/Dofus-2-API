@@ -6,24 +6,22 @@ package com.ankamagames.atouin.renderers
    public class MovementZoneRenderer extends ZoneDARenderer
    {
       
-      public function MovementZoneRenderer(showText:Boolean, startAt:int = 1) {
-         super();
-         this._showText = showText;
-         this._startAt = startAt;
-         _strata = PlacementStrataEnums.STRATA_AREA;
-         currentStrata = Atouin.getInstance().options.transparentOverlayMode?PlacementStrataEnums.STRATA_NO_Z_ORDER:_strata;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MovementZoneRenderer(showText:Boolean, startAt:int = 1)
+      {
+         //Décompilation abandonné
       }
       
       private var _showText:Boolean;
       
       private var _startAt:int;
       
-      override protected function getText(count:int) : String {
-         if(this._showText)
-         {
-            return String(count + this._startAt);
-         }
-         return null;
+      override protected function getText(count:int) : String
+      {
+         //Décompilation abandonné
       }
    }
 }

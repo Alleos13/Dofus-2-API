@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.common.actions
    public class AuthorizedCommandAction extends Object implements Action
    {
       
-      public function AuthorizedCommandAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(command:String) : AuthorizedCommandAction {
-         var a:AuthorizedCommandAction = new AuthorizedCommandAction();
-         a.command = command;
-         return a;
+      public function AuthorizedCommandAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(command:String) : AuthorizedCommandAction
+      {
+         //Décompilation abandonné
       }
       
       public var command:String;

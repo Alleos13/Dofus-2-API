@@ -5,14 +5,18 @@ package com.ankamagames.dofus.modules.utils.actions
    public class ModuleListRequestAction extends Object implements Action
    {
       
-      public function ModuleListRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(url:String) : ModuleListRequestAction {
-         var action:ModuleListRequestAction = new ModuleListRequestAction();
-         action.moduleListUrl = url;
-         return action;
+      public function ModuleListRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(url:String) : ModuleListRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var moduleListUrl:String;

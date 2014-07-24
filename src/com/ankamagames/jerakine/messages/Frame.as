@@ -5,6 +5,10 @@ package com.ankamagames.jerakine.messages
    public interface Frame extends MessageHandler, Prioritizable
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function pushed() : Boolean;
       
       function pulled() : Boolean;

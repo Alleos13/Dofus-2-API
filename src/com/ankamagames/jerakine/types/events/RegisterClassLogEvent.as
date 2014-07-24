@@ -6,19 +6,25 @@ package com.ankamagames.jerakine.types.events
    public class RegisterClassLogEvent extends LogEvent
    {
       
-      public function RegisterClassLogEvent(className:String) {
-         super(null,null,0);
-         this._className = className;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RegisterClassLogEvent(className:String)
+      {
+         //Décompilation abandonné
       }
       
       private var _className:String;
       
-      public function get className() : String {
-         return this._className;
+      public function get className() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : Event {
-         return new RegisterClassLogEvent(this._className);
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.bid
    public class BidHouseStringSearchAction extends Object implements Action
    {
       
-      public function BidHouseStringSearchAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pSearchString:String) : BidHouseStringSearchAction {
-         var a:BidHouseStringSearchAction = new BidHouseStringSearchAction();
-         a.searchString = pSearchString;
-         return a;
+      public function BidHouseStringSearchAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pSearchString:String) : BidHouseStringSearchAction
+      {
+         //Décompilation abandonné
       }
       
       public var searchString:String;

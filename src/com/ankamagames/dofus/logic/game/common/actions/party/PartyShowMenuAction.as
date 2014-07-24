@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.party
    public class PartyShowMenuAction extends Object implements Action
    {
       
-      public function PartyShowMenuAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pPlayerId:uint, pPartyId:int) : PartyShowMenuAction {
-         var a:PartyShowMenuAction = new PartyShowMenuAction();
-         a.playerId = pPlayerId;
-         a.partyId = pPartyId;
-         return a;
+      public function PartyShowMenuAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pPlayerId:uint, pPartyId:int) : PartyShowMenuAction
+      {
+         //Décompilation abandonné
       }
       
       public var playerId:uint;

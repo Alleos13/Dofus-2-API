@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class CharacterSpellModificationTypeEnum extends Object
    {
       
-      public function CharacterSpellModificationTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterSpellModificationTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const INVALID_MODIFICATION:uint = 0;

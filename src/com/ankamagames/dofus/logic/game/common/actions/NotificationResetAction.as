@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class NotificationResetAction extends Object implements Action
    {
       
-      public function NotificationResetAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : NotificationResetAction {
-         var action:NotificationResetAction = new NotificationResetAction();
-         return action;
+      public function NotificationResetAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : NotificationResetAction
+      {
+         //Décompilation abandonné
       }
    }
 }

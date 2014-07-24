@@ -14,16 +14,22 @@ package com.ankamagames.dofus.datacenter.spells
    public class SpellLevel extends Object implements ICellZoneProvider, IDataCenter
    {
       
-      public function SpellLevel() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpellLevel()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       private static const MODULE:String = "SpellLevels";
       
-      public static function getLevelById(id:int) : SpellLevel {
-         return GameData.getObject(MODULE,id) as SpellLevel;
+      public static function getLevelById(id:int) : SpellLevel
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;
@@ -90,105 +96,64 @@ package com.ankamagames.dofus.datacenter.spells
       
       private var _spellZoneEffects:Vector.<IZoneShape>;
       
-      public function get spell() : Spell {
-         if(!this._spell)
-         {
-            this._spell = Spell.getSpellById(this.spellId);
-         }
-         return this._spell;
+      public function get spell() : Spell
+      {
+         //Décompilation abandonné
       }
       
-      public function get minimalRange() : uint {
-         return this.minRange;
+      public function get minimalRange() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set minimalRange(pMinRange:uint) : void {
-         this.minRange = pMinRange;
+      public function set minimalRange(pMinRange:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get maximalRange() : uint {
-         return this.range;
+      public function get maximalRange() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set maximalRange(pRange:uint) : void {
-         this.range = pRange;
+      public function set maximalRange(pRange:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get castZoneInLine() : Boolean {
-         return this.castInLine;
+      public function get castZoneInLine() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set castZoneInLine(pCastInLine:Boolean) : void {
-         this.castInLine = pCastInLine;
+      public function set castZoneInLine(pCastInLine:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get castZoneInDiagonal() : Boolean {
-         return this.castInDiagonal;
+      public function get castZoneInDiagonal() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set castZoneInDiagonal(pCastInDiagonal:Boolean) : void {
-         this.castInDiagonal = pCastInDiagonal;
+      public function set castZoneInDiagonal(pCastInDiagonal:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get spellZoneEffects() : Vector.<IZoneShape> {
-         var i:EffectInstanceDice = null;
-         var zone:ZoneEffect = null;
-         if(!this._spellZoneEffects)
-         {
-            this._spellZoneEffects = new Vector.<IZoneShape>();
-            for each(i in this.effects)
-            {
-               zone = new ZoneEffect(uint(i.zoneSize),i.zoneShape);
-               this._spellZoneEffects.push(zone);
-            }
-         }
-         return this._spellZoneEffects;
+      public function get spellZoneEffects() : Vector.<IZoneShape>
+      {
+         //Décompilation abandonné
       }
       
-      public function get canSummon() : Boolean {
-         var effect:EffectInstanceDice = null;
-         var summonId:* = 0;
-         var monsterS:Monster = null;
-         for each(effect in this.effects)
-         {
-            if((effect.effectId == 180) || (effect.effectId == 1011))
-            {
-               return true;
-            }
-            if(effect.effectId == 181)
-            {
-               summonId = effect.diceNum;
-               monsterS = Monster.getMonsterById(summonId);
-               if((monsterS) && (monsterS.useSummonSlot))
-               {
-                  return true;
-               }
-            }
-         }
-         return false;
+      public function get canSummon() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get canBomb() : Boolean {
-         var effect:EffectInstanceDice = null;
-         var summonId:* = 0;
-         var monsterS:Monster = null;
-         for each(effect in this.effects)
-         {
-            if(effect.effectId == 1008)
-            {
-               return true;
-            }
-            if(effect.effectId == 181)
-            {
-               summonId = effect.diceNum;
-               monsterS = Monster.getMonsterById(summonId);
-               if((monsterS) && (monsterS.useBombSlot))
-               {
-                  return true;
-               }
-            }
-         }
-         return false;
+      public function get canBomb() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

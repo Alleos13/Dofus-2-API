@@ -9,42 +9,23 @@ package com.ankamagames.dofus.internalDatacenter.house
    public class HouseWrapper extends Object implements IDataCenter
    {
       
-      public function HouseWrapper() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(houseInformations:HouseInformations) : HouseWrapper {
-         var hie:HouseInformationsExtended = null;
-         var house:HouseWrapper = new HouseWrapper();
-         var houseInfo:House = House.getGuildHouseById(houseInformations.modelId);
-         house.houseId = houseInformations.houseId;
-         house.name = houseInfo.name;
-         house.description = houseInfo.description;
-         house.ownerName = houseInformations.ownerName;
-         house.isOnSale = houseInformations.isOnSale;
-         house.gfxId = houseInfo.gfxId;
-         house.defaultPrice = houseInfo.defaultPrice;
-         house.isSaleLocked = houseInformations.isSaleLocked;
-         if(houseInformations is HouseInformationsExtended)
-         {
-            hie = houseInformations as HouseInformationsExtended;
-            house.guildIdentity = GuildWrapper.create(hie.guildInfo.guildId,hie.guildInfo.guildName,hie.guildInfo.guildEmblem,0,true);
-         }
-         return house;
+      public function HouseWrapper()
+      {
+         //Décompilation abandonné
       }
       
-      public static function manualCreate(typeId:int, houseId:int, ownerName:String, isOnSale:Boolean, isSaleLocked:Boolean = false) : HouseWrapper {
-         var house:HouseWrapper = new HouseWrapper();
-         var houseInfo:House = House.getGuildHouseById(typeId);
-         house.houseId = houseId;
-         house.name = houseInfo.name;
-         house.description = houseInfo.description;
-         house.ownerName = ownerName;
-         house.isOnSale = isOnSale;
-         house.gfxId = houseInfo.gfxId;
-         house.defaultPrice = houseInfo.defaultPrice;
-         house.isSaleLocked = isSaleLocked;
-         return house;
+      public static function create(houseInformations:HouseInformations) : HouseWrapper
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function manualCreate(typeId:int, houseId:int, ownerName:String, isOnSale:Boolean, isSaleLocked:Boolean = false) : HouseWrapper
+      {
+         //Décompilation abandonné
       }
       
       public var houseId:int;

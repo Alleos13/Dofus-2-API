@@ -5,8 +5,13 @@ package com.ankamagames.berilia.components.messages
    public class BrowserSessionTimeout extends ComponentMessage
    {
       
-      public function BrowserSessionTimeout(target:InteractiveObject) {
-         super(target);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BrowserSessionTimeout(target:InteractiveObject)
+      {
+         //Décompilation abandonné
       }
    }
 }

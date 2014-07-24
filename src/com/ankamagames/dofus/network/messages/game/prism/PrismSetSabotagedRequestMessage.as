@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.prism
    public class PrismSetSabotagedRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function PrismSetSabotagedRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PrismSetSabotagedRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6468;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var subAreaId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6468;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPrismSetSabotagedRequestMessage(subAreaId:uint = 0) : PrismSetSabotagedRequestMessage {
-         this.subAreaId = subAreaId;
-         this._isInitialized = true;
-         return this;
+      public function initPrismSetSabotagedRequestMessage(subAreaId:uint = 0) : PrismSetSabotagedRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.subAreaId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PrismSetSabotagedRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PrismSetSabotagedRequestMessage(output:IDataOutput) : void {
-         if(this.subAreaId < 0)
-         {
-            throw new Error("Forbidden value (" + this.subAreaId + ") on element subAreaId.");
-         }
-         else
-         {
-            output.writeShort(this.subAreaId);
-            return;
-         }
+      public function serializeAs_PrismSetSabotagedRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PrismSetSabotagedRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PrismSetSabotagedRequestMessage(input:IDataInput) : void {
-         this.subAreaId = input.readShort();
-         if(this.subAreaId < 0)
-         {
-            throw new Error("Forbidden value (" + this.subAreaId + ") on element of PrismSetSabotagedRequestMessage.subAreaId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_PrismSetSabotagedRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

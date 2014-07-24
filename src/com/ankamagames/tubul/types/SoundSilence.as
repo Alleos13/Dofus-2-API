@@ -11,9 +11,13 @@ package com.ankamagames.tubul.types
    public class SoundSilence extends EventDispatcher
    {
       
-      public function SoundSilence(pSilenceMin:Number, pSilenceMax:Number) {
-         super();
-         this.setSilence(pSilenceMin,pSilenceMax);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SoundSilence(pSilenceMin:Number, pSilenceMax:Number)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -24,65 +28,44 @@ package com.ankamagames.tubul.types
       
       private var _timer:Timer;
       
-      public function get silenceMin() : Number {
-         return this._silenceMin;
+      public function get silenceMin() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function get silenceMax() : Number {
-         return this._silenceMax;
+      public function get silenceMax() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function get running() : Boolean {
-         if((this._timer) && (this._timer.running))
-         {
-            return true;
-         }
-         return false;
+      public function get running() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function start() : void {
-         if((this._timer) && (this._timer.running))
-         {
-            return;
-         }
-         var silenceRandom:uint = (Math.random() * (this._silenceMax - this._silenceMin) + this._silenceMin) * 1000 * 60;
-         this._timer = new Timer(silenceRandom,1);
-         if(!this._timer.hasEventListener(TimerEvent.TIMER))
-         {
-            this._timer.addEventListener(TimerEvent.TIMER,this.onTimerEnd);
-         }
-         this._timer.start();
-         var e:SoundSilenceEvent = new SoundSilenceEvent(SoundSilenceEvent.START);
-         dispatchEvent(e);
+      public function start() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function stop() : void {
-         if(!this.running)
-         {
-            return;
-         }
-         this._timer.stop();
+      public function stop() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function clean() : void {
-         this.stop();
-         if(this._timer == null)
-         {
-            return;
-         }
-         this._timer.removeEventListener(TimerEvent.TIMER,this.onTimerEnd);
-         this._timer = null;
+      public function clean() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setSilence(pSilenceMin:Number, pSilenceMax:Number) : void {
-         this._silenceMin = Math.min(pSilenceMin,pSilenceMax);
-         this._silenceMax = Math.max(pSilenceMin,pSilenceMax);
+      public function setSilence(pSilenceMin:Number, pSilenceMax:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onTimerEnd(pEvent:TimerEvent) : void {
-         this.clean();
-         var e:SoundSilenceEvent = new SoundSilenceEvent(SoundSilenceEvent.COMPLETE);
-         dispatchEvent(e);
+      private function onTimerEnd(pEvent:TimerEvent) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

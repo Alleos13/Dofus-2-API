@@ -5,8 +5,13 @@ package com.ankamagames.dofus.logic.connection.managers
    public class AuthentificationManager__verifyKey extends ByteArrayAsset
    {
       
-      public function AuthentificationManager__verifyKey() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AuthentificationManager__verifyKey()
+      {
+         //Décompilation abandonné
       }
    }
 }

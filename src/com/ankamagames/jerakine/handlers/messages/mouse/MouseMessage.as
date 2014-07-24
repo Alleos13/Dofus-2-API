@@ -7,20 +7,23 @@ package com.ankamagames.jerakine.handlers.messages.mouse
    public class MouseMessage extends HumanInputMessage
    {
       
-      public function MouseMessage() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(target:InteractiveObject, mouseEvent:MouseEvent, instance:MouseMessage = null) : MouseMessage {
-         if(!instance)
-         {
-            instance = new MouseMessage();
-         }
-         return HumanInputMessage.create(target,mouseEvent,instance) as MouseMessage;
+      public function MouseMessage()
+      {
+         //Décompilation abandonné
       }
       
-      public function get mouseEvent() : MouseEvent {
-         return MouseEvent(_nativeEvent);
+      public static function create(target:InteractiveObject, mouseEvent:MouseEvent, instance:MouseMessage = null) : MouseMessage
+      {
+         //Décompilation abandonné
+      }
+      
+      public function get mouseEvent() : MouseEvent
+      {
+         //Décompilation abandonné
       }
    }
 }

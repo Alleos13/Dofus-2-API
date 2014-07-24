@@ -9,16 +9,22 @@ package com.ankamagames.dofus.network.messages.game.context.fight.challenge
    public class ChallengeDungeonStackedBonusMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ChallengeDungeonStackedBonusMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ChallengeDungeonStackedBonusMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6151;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var dungeonId:uint = 0;
@@ -27,97 +33,49 @@ package com.ankamagames.dofus.network.messages.game.context.fight.challenge
       
       public var dropBonus:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6151;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initChallengeDungeonStackedBonusMessage(dungeonId:uint = 0, xpBonus:uint = 0, dropBonus:uint = 0) : ChallengeDungeonStackedBonusMessage {
-         this.dungeonId = dungeonId;
-         this.xpBonus = xpBonus;
-         this.dropBonus = dropBonus;
-         this._isInitialized = true;
-         return this;
+      public function initChallengeDungeonStackedBonusMessage(dungeonId:uint = 0, xpBonus:uint = 0, dropBonus:uint = 0) : ChallengeDungeonStackedBonusMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.dungeonId = 0;
-         this.xpBonus = 0;
-         this.dropBonus = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ChallengeDungeonStackedBonusMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ChallengeDungeonStackedBonusMessage(output:IDataOutput) : void {
-         if(this.dungeonId < 0)
-         {
-            throw new Error("Forbidden value (" + this.dungeonId + ") on element dungeonId.");
-         }
-         else
-         {
-            output.writeInt(this.dungeonId);
-            if(this.xpBonus < 0)
-            {
-               throw new Error("Forbidden value (" + this.xpBonus + ") on element xpBonus.");
-            }
-            else
-            {
-               output.writeInt(this.xpBonus);
-               if(this.dropBonus < 0)
-               {
-                  throw new Error("Forbidden value (" + this.dropBonus + ") on element dropBonus.");
-               }
-               else
-               {
-                  output.writeInt(this.dropBonus);
-                  return;
-               }
-            }
-         }
+      public function serializeAs_ChallengeDungeonStackedBonusMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ChallengeDungeonStackedBonusMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ChallengeDungeonStackedBonusMessage(input:IDataInput) : void {
-         this.dungeonId = input.readInt();
-         if(this.dungeonId < 0)
-         {
-            throw new Error("Forbidden value (" + this.dungeonId + ") on element of ChallengeDungeonStackedBonusMessage.dungeonId.");
-         }
-         else
-         {
-            this.xpBonus = input.readInt();
-            if(this.xpBonus < 0)
-            {
-               throw new Error("Forbidden value (" + this.xpBonus + ") on element of ChallengeDungeonStackedBonusMessage.xpBonus.");
-            }
-            else
-            {
-               this.dropBonus = input.readInt();
-               if(this.dropBonus < 0)
-               {
-                  throw new Error("Forbidden value (" + this.dropBonus + ") on element of ChallengeDungeonStackedBonusMessage.dropBonus.");
-               }
-               else
-               {
-                  return;
-               }
-            }
-         }
+      public function deserializeAs_ChallengeDungeonStackedBonusMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

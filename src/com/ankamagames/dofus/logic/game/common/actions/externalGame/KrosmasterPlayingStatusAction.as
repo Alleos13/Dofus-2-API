@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.externalGame
    public class KrosmasterPlayingStatusAction extends Object implements Action
    {
       
-      public function KrosmasterPlayingStatusAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(playing:Boolean) : KrosmasterPlayingStatusAction {
-         var action:KrosmasterPlayingStatusAction = new KrosmasterPlayingStatusAction();
-         action.playing = playing;
-         return action;
+      public function KrosmasterPlayingStatusAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(playing:Boolean) : KrosmasterPlayingStatusAction
+      {
+         //Décompilation abandonné
       }
       
       public var playing:Boolean;

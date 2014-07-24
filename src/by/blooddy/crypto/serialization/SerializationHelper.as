@@ -7,9 +7,13 @@ package by.blooddy.crypto.serialization
    public final class SerializationHelper extends Object
    {
       
-      public function SerializationHelper() {
-         super();
-         Error.throwError(ArgumentError,2012,getQualifiedClassName(this));
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SerializationHelper()
+      {
+         //Décompilation abandonné
       }
       
       private static const _EMPTY_ARR:Array;
@@ -18,13 +22,9 @@ package by.blooddy.crypto.serialization
       
       private static const _HASH_INSTANCE:Dictionary;
       
-      public static function getPropertyNames(o:Object) : Array {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public static function getPropertyNames(o:Object) : Array
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -7,14 +7,20 @@ package com.ankamagames.dofus.datacenter.effects
    public class Effect extends Object implements IDataCenter
    {
       
-      public function Effect() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Effect()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Effects";
       
-      public static function getEffectById(id:uint) : Effect {
-         return GameData.getObject(MODULE,id) as Effect;
+      public static function getEffectById(id:uint) : Effect
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -57,20 +63,14 @@ package com.ankamagames.dofus.datacenter.effects
       
       private var _theoricDescription:String;
       
-      public function get description() : String {
-         if(!this._description)
-         {
-            this._description = I18n.getText(this.descriptionId);
-         }
-         return this._description;
+      public function get description() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get theoreticalDescription() : String {
-         if(!this._theoricDescription)
-         {
-            this._theoricDescription = I18n.getText(this.theoreticalDescriptionId);
-         }
-         return this._theoricDescription;
+      public function get theoreticalDescription() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

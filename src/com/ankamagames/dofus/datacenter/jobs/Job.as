@@ -8,18 +8,25 @@ package com.ankamagames.dofus.datacenter.jobs
    public class Job extends Object implements IDataCenter
    {
       
-      public function Job() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Job()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Jobs";
       
-      public static function getJobById(id:int) : Job {
-         return GameData.getObject(MODULE,id) as Job;
+      public static function getJobById(id:int) : Job
+      {
+         //Décompilation abandonné
       }
       
-      public static function getJobs() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getJobs() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -38,40 +45,19 @@ package com.ankamagames.dofus.datacenter.jobs
       
       private var _tools:Vector.<Item>;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get specializationOf() : Job {
-         if(!this._specializationOf)
-         {
-            if(this.specializationOfId != 0)
-            {
-               this._specializationOf = Job.getJobById(this.specializationOfId);
-            }
-         }
-         return this._specializationOf;
+      public function get specializationOf() : Job
+      {
+         //Décompilation abandonné
       }
       
-      public function get tools() : Vector.<Item> {
-         var toolsCount:uint = 0;
-         var i:uint = 0;
-         if(!this._tools)
-         {
-            toolsCount = this.toolIds.length;
-            this._tools = new Vector.<Item>(toolsCount,true);
-            i = 0;
-            while(i < toolsCount)
-            {
-               this._tools[i] = Item.getItemById(this.toolIds[i]);
-               i++;
-            }
-         }
-         return this._tools;
+      public function get tools() : Vector.<Item>
+      {
+         //Décompilation abandonné
       }
    }
 }

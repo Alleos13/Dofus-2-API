@@ -7,33 +7,50 @@ package com.ankamagames.dofus.network.types.game.social
    public class AbstractSocialGroupInfos extends Object implements INetworkType
    {
       
-      public function AbstractSocialGroupInfos() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AbstractSocialGroupInfos()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 416;
       
-      public function getTypeId() : uint {
-         return 416;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initAbstractSocialGroupInfos() : AbstractSocialGroupInfos {
-         return this;
+      public function initAbstractSocialGroupInfos() : AbstractSocialGroupInfos
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_AbstractSocialGroupInfos(output:IDataOutput) : void {
+      public function serializeAs_AbstractSocialGroupInfos(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_AbstractSocialGroupInfos(input:IDataInput) : void {
+      public function deserializeAs_AbstractSocialGroupInfos(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

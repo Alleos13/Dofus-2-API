@@ -5,10 +5,14 @@ package com.hurlant.crypto.symmetric
    public interface IPad
    {
       
-      function pad(param1:ByteArray) : void;
+      {
+      //Décompilation abandonné
+      }
       
-      function unpad(param1:ByteArray) : void;
+      function pad(a:ByteArray) : void;
       
-      function setBlockSize(param1:uint) : void;
+      function unpad(a:ByteArray) : void;
+      
+      function setBlockSize(bs:uint) : void;
    }
 }

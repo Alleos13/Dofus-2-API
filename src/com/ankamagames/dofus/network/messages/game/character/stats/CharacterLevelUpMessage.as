@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.character.stats
    public class CharacterLevelUpMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function CharacterLevelUpMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterLevelUpMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5670;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var newLevel:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5670;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCharacterLevelUpMessage(newLevel:uint = 0) : CharacterLevelUpMessage {
-         this.newLevel = newLevel;
-         this._isInitialized = true;
-         return this;
+      public function initCharacterLevelUpMessage(newLevel:uint = 0) : CharacterLevelUpMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.newLevel = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharacterLevelUpMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterLevelUpMessage(output:IDataOutput) : void {
-         if((this.newLevel < 2) || (this.newLevel > 200))
-         {
-            throw new Error("Forbidden value (" + this.newLevel + ") on element newLevel.");
-         }
-         else
-         {
-            output.writeByte(this.newLevel);
-            return;
-         }
+      public function serializeAs_CharacterLevelUpMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharacterLevelUpMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterLevelUpMessage(input:IDataInput) : void {
-         this.newLevel = input.readUnsignedByte();
-         if((this.newLevel < 2) || (this.newLevel > 200))
-         {
-            throw new Error("Forbidden value (" + this.newLevel + ") on element of CharacterLevelUpMessage.newLevel.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_CharacterLevelUpMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

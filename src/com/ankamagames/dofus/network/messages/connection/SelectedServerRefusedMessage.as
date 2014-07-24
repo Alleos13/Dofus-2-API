@@ -9,16 +9,22 @@ package com.ankamagames.dofus.network.messages.connection
    public class SelectedServerRefusedMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function SelectedServerRefusedMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SelectedServerRefusedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 41;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var serverId:int = 0;
@@ -27,68 +33,49 @@ package com.ankamagames.dofus.network.messages.connection
       
       public var serverStatus:uint = 1;
       
-      override public function getMessageId() : uint {
-         return 41;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initSelectedServerRefusedMessage(serverId:int = 0, error:uint = 1, serverStatus:uint = 1) : SelectedServerRefusedMessage {
-         this.serverId = serverId;
-         this.error = error;
-         this.serverStatus = serverStatus;
-         this._isInitialized = true;
-         return this;
+      public function initSelectedServerRefusedMessage(serverId:int = 0, error:uint = 1, serverStatus:uint = 1) : SelectedServerRefusedMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.serverId = 0;
-         this.error = 1;
-         this.serverStatus = 1;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_SelectedServerRefusedMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_SelectedServerRefusedMessage(output:IDataOutput) : void {
-         output.writeShort(this.serverId);
-         output.writeByte(this.error);
-         output.writeByte(this.serverStatus);
+      public function serializeAs_SelectedServerRefusedMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_SelectedServerRefusedMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_SelectedServerRefusedMessage(input:IDataInput) : void {
-         this.serverId = input.readShort();
-         this.error = input.readByte();
-         if(this.error < 0)
-         {
-            throw new Error("Forbidden value (" + this.error + ") on element of SelectedServerRefusedMessage.error.");
-         }
-         else
-         {
-            this.serverStatus = input.readByte();
-            if(this.serverStatus < 0)
-            {
-               throw new Error("Forbidden value (" + this.serverStatus + ") on element of SelectedServerRefusedMessage.serverStatus.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_SelectedServerRefusedMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

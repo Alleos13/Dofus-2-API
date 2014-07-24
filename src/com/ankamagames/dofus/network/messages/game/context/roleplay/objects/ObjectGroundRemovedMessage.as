@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.objects
    public class ObjectGroundRemovedMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ObjectGroundRemovedMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ObjectGroundRemovedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 3014;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var cell:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 3014;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initObjectGroundRemovedMessage(cell:uint = 0) : ObjectGroundRemovedMessage {
-         this.cell = cell;
-         this._isInitialized = true;
-         return this;
+      public function initObjectGroundRemovedMessage(cell:uint = 0) : ObjectGroundRemovedMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.cell = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ObjectGroundRemovedMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectGroundRemovedMessage(output:IDataOutput) : void {
-         if((this.cell < 0) || (this.cell > 559))
-         {
-            throw new Error("Forbidden value (" + this.cell + ") on element cell.");
-         }
-         else
-         {
-            output.writeShort(this.cell);
-            return;
-         }
+      public function serializeAs_ObjectGroundRemovedMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ObjectGroundRemovedMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectGroundRemovedMessage(input:IDataInput) : void {
-         this.cell = input.readShort();
-         if((this.cell < 0) || (this.cell > 559))
-         {
-            throw new Error("Forbidden value (" + this.cell + ") on element of ObjectGroundRemovedMessage.cell.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_ObjectGroundRemovedMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

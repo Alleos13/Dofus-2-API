@@ -5,18 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
    public class PlayerFightRequestAction extends Object implements Action
    {
       
-      public function PlayerFightRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(targetedPlayerId:uint, ava:Boolean, friendly:Boolean = true, launch:Boolean = false, cellId:int = -1) : PlayerFightRequestAction {
-         var o:PlayerFightRequestAction = new PlayerFightRequestAction();
-         o.ava = ava;
-         o.friendly = friendly;
-         o.cellId = cellId;
-         o.targetedPlayerId = targetedPlayerId;
-         o.launch = launch;
-         return o;
+      public function PlayerFightRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(targetedPlayerId:uint, ava:Boolean, friendly:Boolean = true, launch:Boolean = false, cellId:int = -1) : PlayerFightRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var targetedPlayerId:uint;

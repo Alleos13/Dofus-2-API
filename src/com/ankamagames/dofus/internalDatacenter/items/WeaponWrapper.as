@@ -6,8 +6,13 @@ package com.ankamagames.dofus.internalDatacenter.items
    public class WeaponWrapper extends ItemWrapper implements IDataCenter
    {
       
-      public function WeaponWrapper() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function WeaponWrapper()
+      {
+         //Décompilation abandonné
       }
       
       private static var _weaponUtil:Weapon;
@@ -32,14 +37,14 @@ package com.ankamagames.dofus.internalDatacenter.items
       
       public var criticalFailureProbability:int;
       
-      override public function get isWeapon() : Boolean {
-         return true;
+      override public function get isWeapon() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone(baseClass:Class = null) : ItemWrapper {
-         var result:ItemWrapper = super.clone(WeaponWrapper);
-         _weaponUtil.copy(this,result);
-         return result;
+      override public function clone(baseClass:Class = null) : ItemWrapper
+      {
+         //Décompilation abandonné
       }
    }
 }

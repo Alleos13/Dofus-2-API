@@ -3,28 +3,13 @@ package com.ankamagames.dofus.logic.game.fight.types
    public class SplashDamage extends Object
    {
       
-      public function SplashDamage(pSpellId:int, pCasterId:int, pTargets:Vector.<int>, pSourceSpellDamage:SpellDamage, pSplashPercent:int, pSplashElement:int, pSpellShape:uint, pSpellShapeSize:Object, pSpellShapeMinSize:Object, pSpellShapeEfficiencyPercent:Object, pSpellShapeMaxEfficiency:Object, pHasCritical:Boolean) {
-         var ed:EffectDamage = null;
-         super();
-         this._spellId = pSpellId;
-         this._casterId = pCasterId;
-         this._targets = pTargets;
-         this._damage = pSourceSpellDamage;
-         this._spellShape = pSpellShape;
-         this._spellShapeSize = pSpellShapeSize;
-         this._spellShapeMinSize = pSpellShapeMinSize;
-         this._spellShapeEfficiencyPercent = pSpellShapeEfficiencyPercent;
-         this._spellShapeMaxEfficiency = pSpellShapeMaxEfficiency;
-         this._hasCritical = pHasCritical;
-         for each(ed in this._damage.effectDamages)
-         {
-            ed.applyDamageMultiplier(pSplashPercent / 100);
-            if((!(pSplashElement == -1)) && (!(ed.element == -1)))
-            {
-               ed.element = pSplashElement;
-            }
-         }
-         this._damage.updateDamage();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SplashDamage(pSpellId:int, pCasterId:int, pTargets:Vector.<int>, pSourceSpellDamage:SpellDamage, pSplashPercent:int, pSplashElement:int, pSpellShape:uint, pSpellShapeSize:Object, pSpellShapeMinSize:Object, pSpellShapeEfficiencyPercent:Object, pSpellShapeMaxEfficiency:Object, pHasCritical:Boolean)
+      {
+         //Décompilation abandonné
       }
       
       private var _spellId:int;
@@ -47,44 +32,54 @@ package com.ankamagames.dofus.logic.game.fight.types
       
       private var _hasCritical:Boolean;
       
-      public function get spellId() : int {
-         return this._spellId;
+      public function get spellId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get casterId() : int {
-         return this._casterId;
+      public function get casterId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get targets() : Vector.<int> {
-         return this._targets;
+      public function get targets() : Vector.<int>
+      {
+         //Décompilation abandonné
       }
       
-      public function get damage() : SpellDamage {
-         return this._damage;
+      public function get damage() : SpellDamage
+      {
+         //Décompilation abandonné
       }
       
-      public function get spellShape() : uint {
-         return this._spellShape;
+      public function get spellShape() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get spellShapeSize() : Object {
-         return this._spellShapeSize;
+      public function get spellShapeSize() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function get spellShapeMinSize() : Object {
-         return this._spellShapeMinSize;
+      public function get spellShapeMinSize() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function get spellShapeEfficiencyPercent() : Object {
-         return this._spellShapeEfficiencyPercent;
+      public function get spellShapeEfficiencyPercent() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function get spellShapeMaxEfficiency() : Object {
-         return this._spellShapeMaxEfficiency;
+      public function get spellShapeMaxEfficiency() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function get hasCritical() : Boolean {
-         return this._hasCritical;
+      public function get hasCritical() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

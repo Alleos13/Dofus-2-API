@@ -7,17 +7,23 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightActionPointsLossDodgeStep extends AbstractDodgePointLossStep implements IFightStep
    {
       
-      public function FightActionPointsLossDodgeStep(fighterId:int, amount:int) {
-         super(fighterId,amount);
+      {
+      //Décompilation abandonné
       }
       
-      public function get stepType() : String {
-         return "actionPointsLossDodge";
+      public function FightActionPointsLossDodgeStep(fighterId:int, amount:int)
+      {
+         //Décompilation abandonné
       }
       
-      override public function start() : void {
-         FightEventsHelper.sendFightEvent(FightEventEnum.FIGHTER_AP_LOSS_DODGED,[_fighterId,_amount],_fighterId,castingSpellId);
-         executeCallbacks();
+      public function get stepType() : String
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

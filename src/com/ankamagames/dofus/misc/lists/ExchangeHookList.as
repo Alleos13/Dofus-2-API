@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.lists
    public class ExchangeHookList extends Object
    {
       
-      public function ExchangeHookList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeHookList()
+      {
+         //Décompilation abandonné
       }
       
       public static const ExchangeError:Hook;

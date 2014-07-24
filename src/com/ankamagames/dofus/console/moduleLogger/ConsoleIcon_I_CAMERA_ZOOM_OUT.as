@@ -5,8 +5,13 @@ package com.ankamagames.dofus.console.moduleLogger
    public class ConsoleIcon_I_CAMERA_ZOOM_OUT extends SpriteAsset
    {
       
-      public function ConsoleIcon_I_CAMERA_ZOOM_OUT() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ConsoleIcon_I_CAMERA_ZOOM_OUT()
+      {
+         //Décompilation abandonné
       }
    }
 }

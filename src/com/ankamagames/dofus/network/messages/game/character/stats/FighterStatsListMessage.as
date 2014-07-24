@@ -10,61 +10,69 @@ package com.ankamagames.dofus.network.messages.game.character.stats
    public class FighterStatsListMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function FighterStatsListMessage() {
-         this.stats = new CharacterCharacteristicsInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FighterStatsListMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6322;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var stats:CharacterCharacteristicsInformations;
       
-      override public function getMessageId() : uint {
-         return 6322;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initFighterStatsListMessage(stats:CharacterCharacteristicsInformations = null) : FighterStatsListMessage {
-         this.stats = stats;
-         this._isInitialized = true;
-         return this;
+      public function initFighterStatsListMessage(stats:CharacterCharacteristicsInformations = null) : FighterStatsListMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.stats = new CharacterCharacteristicsInformations();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_FighterStatsListMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_FighterStatsListMessage(output:IDataOutput) : void {
-         this.stats.serializeAs_CharacterCharacteristicsInformations(output);
+      public function serializeAs_FighterStatsListMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_FighterStatsListMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_FighterStatsListMessage(input:IDataInput) : void {
-         this.stats = new CharacterCharacteristicsInformations();
-         this.stats.deserialize(input);
+      public function deserializeAs_FighterStatsListMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

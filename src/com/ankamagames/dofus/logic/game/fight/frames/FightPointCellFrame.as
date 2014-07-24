@@ -32,8 +32,13 @@ package com.ankamagames.dofus.logic.game.fight.frames
    public class FightPointCellFrame extends Object implements Frame
    {
       
-      public function FightPointCellFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightPointCellFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -44,111 +49,49 @@ package com.ankamagames.dofus.logic.game.fight.frames
       
       private var _targetSelection:Selection;
       
-      public function get priority() : int {
-         return Priority.HIGHEST;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var kkumsg:KeyboardKeyUpMessage = null;
-         var conmsg:CellOverMessage = null;
-         var emomsg:EntityMouseOverMessage = null;
-         var ccmsg:CellClickMessage = null;
-         var ecmsg:EntityClickMessage = null;
-         switch(true)
-         {
-            case msg is KeyboardKeyUpMessage:
-               kkumsg = msg as KeyboardKeyUpMessage;
-               if(kkumsg.keyboardEvent.keyCode == 27)
-               {
-                  this.cancelShow();
-                  return true;
-               }
-               return false;
-            case msg is CellOverMessage:
-               conmsg = msg as CellOverMessage;
-               this.refreshTarget(conmsg.cellId);
-               return true;
-            case msg is EntityMouseOverMessage:
-               emomsg = msg as EntityMouseOverMessage;
-               this.refreshTarget(emomsg.entity.position.cellId);
-               return true;
-            case msg is MouseClickMessage:
-               if((!(MouseClickMessage(msg).target is GraphicCell)) && (!(MouseClickMessage(msg).target is TiphonSprite)))
-               {
-                  this.cancelShow();
-               }
-               return true;
-            case msg is CellClickMessage:
-               ccmsg = msg as CellClickMessage;
-               this.showCell(ccmsg.cellId);
-               return true;
-            case msg is EntityClickMessage:
-               ecmsg = msg as EntityClickMessage;
-               this.showCell(ecmsg.entity.position.cellId);
-               return true;
-            case msg is AdjacentMapClickMessage:
-               this.cancelShow();
-               return true;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function refreshTarget(target:uint) : void {
-         if(this.isValidCell(target))
-         {
-            if(!this._targetSelection)
-            {
-               this._targetSelection = new Selection();
-               this._targetSelection.renderer = new ZoneDARenderer(PlacementStrataEnums.STRATA_AREA);
-               this._targetSelection.color = TARGET_COLOR;
-               this._targetSelection.zone = new Cross(0,0,DataMapProvider.getInstance());
-               SelectionManager.getInstance().addSelection(this._targetSelection,SELECTION_TARGET);
-            }
-            SelectionManager.getInstance().update(SELECTION_TARGET,target);
-         }
-         else
-         {
-            this.removeTarget();
-         }
+      private function refreshTarget(target:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function removeTarget() : void {
-         var s:Selection = SelectionManager.getInstance().getSelection(SELECTION_TARGET);
-         if(s)
-         {
-            s.remove();
-            this._targetSelection = null;
-         }
+      private function removeTarget() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function showCell(cell:uint) : void {
-         var scrmsg:ShowCellRequestMessage = null;
-         if(this.isValidCell(cell))
-         {
-            scrmsg = new ShowCellRequestMessage();
-            scrmsg.initShowCellRequestMessage(cell);
-            ConnectionsHandler.getConnection().send(scrmsg);
-         }
-         this.cancelShow();
+      private function showCell(cell:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function cancelShow() : void {
-         this.removeTarget();
-         KernelEventsManager.getInstance().processCallback(HookList.ShowCell);
-         Kernel.getWorker().removeFrame(this);
+      private function cancelShow() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function isValidCell(cell:uint) : Boolean {
-         return DataMapProvider.getInstance().pointMov(MapPoint.fromCellId(cell).x,MapPoint.fromCellId(cell).y,true);
+      private function isValidCell(cell:uint) : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -6,8 +6,13 @@ package com.ankamagames.jerakine.resources.events
    public class ResourceProgressEvent extends ResourceEvent
    {
       
-      public function ResourceProgressEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false) {
-         super(type,bubbles,cancelable);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ResourceProgressEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       public static const PROGRESS:String = "progress";
@@ -18,12 +23,9 @@ package com.ankamagames.jerakine.resources.events
       
       public var bytesTotal:uint;
       
-      override public function clone() : Event {
-         var re:ResourceProgressEvent = new ResourceProgressEvent(type,bubbles,cancelable);
-         re.uri = this.uri;
-         re.bytesLoaded = this.bytesLoaded;
-         re.bytesTotal = this.bytesTotal;
-         return re;
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
    }
 }

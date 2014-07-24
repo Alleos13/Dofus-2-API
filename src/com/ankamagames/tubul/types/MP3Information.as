@@ -3,8 +3,13 @@ package com.ankamagames.tubul.types
    public class MP3Information extends Object
    {
       
-      public function MP3Information() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MP3Information()
+      {
+         //Décompilation abandonné
       }
       
       public var layer:uint;

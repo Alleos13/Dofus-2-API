@@ -10,61 +10,69 @@ package com.ankamagames.dofus.network.messages.game.character.choice
    public class CharacterSelectedSuccessMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function CharacterSelectedSuccessMessage() {
-         this.infos = new CharacterBaseInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterSelectedSuccessMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 153;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var infos:CharacterBaseInformations;
       
-      override public function getMessageId() : uint {
-         return 153;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCharacterSelectedSuccessMessage(infos:CharacterBaseInformations = null) : CharacterSelectedSuccessMessage {
-         this.infos = infos;
-         this._isInitialized = true;
-         return this;
+      public function initCharacterSelectedSuccessMessage(infos:CharacterBaseInformations = null) : CharacterSelectedSuccessMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.infos = new CharacterBaseInformations();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharacterSelectedSuccessMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterSelectedSuccessMessage(output:IDataOutput) : void {
-         this.infos.serializeAs_CharacterBaseInformations(output);
+      public function serializeAs_CharacterSelectedSuccessMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharacterSelectedSuccessMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterSelectedSuccessMessage(input:IDataInput) : void {
-         this.infos = new CharacterBaseInformations();
-         this.infos.deserialize(input);
+      public function deserializeAs_CharacterSelectedSuccessMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

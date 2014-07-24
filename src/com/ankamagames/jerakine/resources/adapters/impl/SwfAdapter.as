@@ -8,16 +8,23 @@ package com.ankamagames.jerakine.resources.adapters.impl
    public class SwfAdapter extends AbstractLoaderAdapter implements IAdapter
    {
       
-      public function SwfAdapter() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      override protected function getResource(ldr:LoaderInfo) : * {
-         return ldr.loader.content;
+      public function SwfAdapter()
+      {
+         //Décompilation abandonné
       }
       
-      override public function getResourceType() : uint {
-         return ResourceType.RESOURCE_SWF;
+      override protected function getResource(ldr:LoaderInfo) : *
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function getResourceType() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -9,67 +9,69 @@ package com.ankamagames.dofus.network.messages.game.prism
    public class PrismsListRegisterMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function PrismsListRegisterMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PrismsListRegisterMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6441;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var listen:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6441;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPrismsListRegisterMessage(listen:uint = 0) : PrismsListRegisterMessage {
-         this.listen = listen;
-         this._isInitialized = true;
-         return this;
+      public function initPrismsListRegisterMessage(listen:uint = 0) : PrismsListRegisterMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.listen = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PrismsListRegisterMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PrismsListRegisterMessage(output:IDataOutput) : void {
-         output.writeByte(this.listen);
+      public function serializeAs_PrismsListRegisterMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PrismsListRegisterMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PrismsListRegisterMessage(input:IDataInput) : void {
-         this.listen = input.readByte();
-         if(this.listen < 0)
-         {
-            throw new Error("Forbidden value (" + this.listen + ") on element of PrismsListRegisterMessage.listen.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_PrismsListRegisterMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

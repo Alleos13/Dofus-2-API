@@ -5,12 +5,18 @@ package com.ankamagames.jerakine.logger
    public class TextLogEvent extends LogEvent
    {
       
-      public function TextLogEvent(category:String = null, message:String = null, logLevel:uint = 0) {
-         super(category,message,logLevel);
+      {
+      //Décompilation abandonné
       }
       
-      override public function clone() : Event {
-         return new TextLogEvent(category,message,level);
+      public function TextLogEvent(category:String = null, message:String = null, logLevel:uint = 0)
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
    }
 }

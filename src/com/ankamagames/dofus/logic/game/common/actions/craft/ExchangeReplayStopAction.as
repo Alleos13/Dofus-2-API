@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.craft
    public class ExchangeReplayStopAction extends Object implements Action
    {
       
-      public function ExchangeReplayStopAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : ExchangeReplayStopAction {
-         var action:ExchangeReplayStopAction = new ExchangeReplayStopAction();
-         return action;
+      public function ExchangeReplayStopAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : ExchangeReplayStopAction
+      {
+         //Décompilation abandonné
       }
    }
 }

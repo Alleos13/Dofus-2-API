@@ -8,36 +8,32 @@ package com.ankamagames.dofus.datacenter.quest.objectives
    public class QuestObjectiveDuelSpecificPlayer extends QuestObjective implements IDataCenter
    {
       
-      public function QuestObjectiveDuelSpecificPlayer() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function QuestObjectiveDuelSpecificPlayer()
+      {
+         //Décompilation abandonné
       }
       
       private var _specificPlayerText:String;
       
       private var _text:String;
       
-      public function get specificPlayerTextId() : uint {
-         if(!this.parameters)
-         {
-            return 0;
-         }
-         return this.parameters[0];
+      public function get specificPlayerTextId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get specificPlayerText() : String {
-         if(!this._specificPlayerText)
-         {
-            this._specificPlayerText = I18n.getText(this.specificPlayerTextId);
-         }
-         return this._specificPlayerText;
+      public function get specificPlayerText() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         if(!this._text)
-         {
-            this._text = PatternDecoder.getDescription(this.type.name,[this.specificPlayerText]);
-         }
-         return this._text;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

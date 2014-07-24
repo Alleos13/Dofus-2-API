@@ -7,12 +7,13 @@ package com.ankamagames.berilia.components
    public class MapIconElement extends MapElement
    {
       
-      public function MapIconElement(id:String, x:int, y:int, layer:String, texture:Texture, legend:String, owner:*) {
-         super(id,x,y,layer,owner);
-         this.texture = SecureCenter.secure(texture,false);
-         this.legend = legend;
-         this._texture = texture;
-         texture.mouseEnabled = true;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapIconElement(id:String, x:int, y:int, layer:String, texture:Texture, legend:String, owner:*)
+      {
+         //Décompilation abandonné
       }
       
       public var texture:Object;
@@ -27,29 +28,21 @@ package com.ankamagames.berilia.components
       
       private var _boundsRef:Texture;
       
-      public function get bounds() : Rectangle {
-         return this._boundsRef?this._boundsRef.getStageRect():this._texture?this._texture.getStageRect():null;
+      public function get bounds() : Rectangle
+      {
+         //Décompilation abandonné
       }
       
-      public function set boundsRef(v:Texture) : void {
-         this._boundsRef = v;
+      public function set boundsRef(v:Texture) : void
+      {
+         //Décompilation abandonné
       }
       
       var _texture:Texture;
       
-      override public function remove() : void {
-         if(this._texture)
-         {
-            this._texture.remove();
-            if(this._texture.parent)
-            {
-               this._texture.parent.removeChild(this._texture);
-            }
-         }
-         this._texture = null;
-         SecureCenter.destroy(this.texture);
-         this.texture = null;
-         super.remove();
+      override public function remove() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

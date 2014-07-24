@@ -3,13 +3,16 @@ package flashx.textLayout.container
    import flashx.textLayout.tlf_internal;
    import flashx.textLayout.property.Property;
    
-   use namespace tlf_internal;
-   
    public final class ScrollPolicy extends Object
    {
       
-      public function ScrollPolicy() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ScrollPolicy()
+      {
+         //Décompilation abandonné
       }
       
       public static const AUTO:String = "auto";
@@ -18,6 +21,6 @@ package flashx.textLayout.container
       
       public static const ON:String = "on";
       
-      tlf_internal  static const scrollPolicyPropertyDefinition:Property = Property.NewEnumStringProperty("scrollPolicy",ScrollPolicy.AUTO,false,null,ScrollPolicy.AUTO,ScrollPolicy.OFF,ScrollPolicy.ON);
+      tlf_internal  static const scrollPolicyPropertyDefinition:Property;
    }
 }

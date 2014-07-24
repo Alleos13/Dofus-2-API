@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.guild
    public class GuildEmblem extends Object implements INetworkType
    {
       
-      public function GuildEmblem() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildEmblem()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 87;
@@ -21,45 +26,39 @@ package com.ankamagames.dofus.network.types.game.guild
       
       public var backgroundColor:int = 0;
       
-      public function getTypeId() : uint {
-         return 87;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGuildEmblem(symbolShape:int = 0, symbolColor:int = 0, backgroundShape:int = 0, backgroundColor:int = 0) : GuildEmblem {
-         this.symbolShape = symbolShape;
-         this.symbolColor = symbolColor;
-         this.backgroundShape = backgroundShape;
-         this.backgroundColor = backgroundColor;
-         return this;
+      public function initGuildEmblem(symbolShape:int = 0, symbolColor:int = 0, backgroundShape:int = 0, backgroundColor:int = 0) : GuildEmblem
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.symbolShape = 0;
-         this.symbolColor = 0;
-         this.backgroundShape = 0;
-         this.backgroundColor = 0;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GuildEmblem(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GuildEmblem(output:IDataOutput) : void {
-         output.writeShort(this.symbolShape);
-         output.writeInt(this.symbolColor);
-         output.writeShort(this.backgroundShape);
-         output.writeInt(this.backgroundColor);
+      public function serializeAs_GuildEmblem(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GuildEmblem(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildEmblem(input:IDataInput) : void {
-         this.symbolShape = input.readShort();
-         this.symbolColor = input.readInt();
-         this.backgroundShape = input.readShort();
-         this.backgroundColor = input.readInt();
+      public function deserializeAs_GuildEmblem(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

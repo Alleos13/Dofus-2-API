@@ -5,8 +5,13 @@ package com.ankamagames.atouin
    public class AtouinConstants extends Object
    {
       
-      public function AtouinConstants() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AtouinConstants()
+      {
+         //Décompilation abandonné
       }
       
       public static const DEBUG_FILES_PARSING:Boolean = false;

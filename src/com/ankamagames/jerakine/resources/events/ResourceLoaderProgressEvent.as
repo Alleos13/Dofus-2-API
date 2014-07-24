@@ -6,8 +6,13 @@ package com.ankamagames.jerakine.resources.events
    public class ResourceLoaderProgressEvent extends ResourceEvent
    {
       
-      public function ResourceLoaderProgressEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false) {
-         super(type,bubbles,cancelable);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ResourceLoaderProgressEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       public static const LOADER_PROGRESS:String = "loaderProgress";
@@ -20,12 +25,9 @@ package com.ankamagames.jerakine.resources.events
       
       public var filesTotal:uint;
       
-      override public function clone() : Event {
-         var re:ResourceLoaderProgressEvent = new ResourceLoaderProgressEvent(type,bubbles,cancelable);
-         re.uri = this.uri;
-         re.filesLoaded = this.filesLoaded;
-         re.filesTotal = this.filesTotal;
-         return re;
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
    }
 }

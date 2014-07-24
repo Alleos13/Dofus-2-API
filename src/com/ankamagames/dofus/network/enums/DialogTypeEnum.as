@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class DialogTypeEnum extends Object
    {
       
-      public function DialogTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DialogTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const DIALOG_BOOK:uint = 0;

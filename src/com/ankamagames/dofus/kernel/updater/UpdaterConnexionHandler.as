@@ -18,33 +18,13 @@ package com.ankamagames.dofus.kernel.updater
    public class UpdaterConnexionHandler extends Object
    {
       
-      public function UpdaterConnexionHandler() {
-         super();
-         if(!_self)
-         {
-            _currentConnection = new ServerConnection();
-            _currentConnection.addEventListener(IOErrorEvent.IO_ERROR,this.onIoError);
-            _currentConnection.addEventListener(Event.CONNECT,this.onConnect);
-            if(AirScanner.isStreamingVersion())
-            {
-               return;
-            }
-            _currentConnection.handler = Kernel.getWorker();
-            _currentConnection.rawParser = new MessageReceiver();
-            Kernel.getWorker().addFrame(new UpdaterDialogFrame());
-            if(CommandLineArguments.getInstance().hasArgument("update-server-port"))
-            {
-               _log.debug("Using port " + CommandLineArguments.getInstance().getArgument("update-server-port") + " send by server");
-               _currentConnection.connect("localhost",int(CommandLineArguments.getInstance().getArgument("update-server-port")));
-            }
-            else if(!AirScanner.isStreamingVersion())
-            {
-               _currentConnection.connect("localhost",4242);
-            }
-            
-            return;
-         }
-         throw new Error("La classe UpdaterConnexionHandler est un singleton");
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UpdaterConnexionHandler()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -53,33 +33,24 @@ package com.ankamagames.dofus.kernel.updater
       
       private static var _currentConnection:ServerConnection;
       
-      public static function getInstance() : UpdaterConnexionHandler {
-         if(!_self)
-         {
-            _self = new UpdaterConnexionHandler();
-         }
-         return _self;
+      public static function getInstance() : UpdaterConnexionHandler
+      {
+         //Décompilation abandonné
       }
       
-      public static function getConnection() : ServerConnection {
-         return _currentConnection;
+      public static function getConnection() : ServerConnection
+      {
+         //Décompilation abandonné
       }
       
-      public function onConnect(e:Event) : void {
-         StatisticReportingManager.getInstance().report("UpdaterConnexion - " + BuildInfos.BUILD_TYPE + " - " + BuildInfos.BUILD_VERSION,"success");
-         PartManager.getInstance().initialize();
+      public function onConnect(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function onIoError(e:IOErrorEvent) : void {
-         if(CommandLineArguments.getInstance().hasArgument("update-server-port"))
-         {
-            StatisticReportingManager.getInstance().report("UpdaterConnexion - " + BuildInfos.BUILD_TYPE + " - " + BuildInfos.BUILD_VERSION,"failed");
-         }
-         else
-         {
-            StatisticReportingManager.getInstance().report("UpdaterConnexion - " + BuildInfos.BUILD_TYPE + " - " + BuildInfos.BUILD_VERSION,"noupdater");
-         }
-         _log.error("Can\'t etablish connection with updater");
+      public function onIoError(e:IOErrorEvent) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

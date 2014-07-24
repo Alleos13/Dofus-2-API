@@ -16,58 +16,52 @@ package com.ankamagames.dofus.logic.game.common.frames
    public class MountDialogFrame extends Object implements Frame
    {
       
-      public function MountDialogFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MountDialogFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      public static function get mountFrame() : MountFrame {
-         return Kernel.getWorker().getFrame(MountFrame) as MountFrame;
+      public static function get mountFrame() : MountFrame
+      {
+         //Décompilation abandonné
       }
       
       private var _inStable:Boolean = false;
       
-      public function get priority() : int {
-         return 0;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get inStable() : Boolean {
-         return this._inStable;
+      public function get inStable() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         this._inStable = true;
-         this.sendStartOkMount();
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var elm:ExchangeLeaveMessage = null;
-         switch(true)
-         {
-            case msg is ExchangeMountStableErrorMessage:
-               return true;
-            case msg is ExchangeLeaveMessage:
-               elm = msg as ExchangeLeaveMessage;
-               if(elm.dialogType == DialogTypeEnum.DIALOG_EXCHANGE)
-               {
-                  Kernel.getWorker().removeFrame(this);
-               }
-               return true;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         this._inStable = false;
-         KernelEventsManager.getInstance().processCallback(ExchangeHookList.ExchangeLeave,true);
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function sendStartOkMount() : void {
-         KernelEventsManager.getInstance().processCallback(MountHookList.ExchangeStartOkMount,mountFrame.stableList,mountFrame.paddockList);
+      private function sendStartOkMount() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

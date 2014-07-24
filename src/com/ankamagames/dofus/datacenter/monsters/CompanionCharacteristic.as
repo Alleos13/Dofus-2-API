@@ -7,18 +7,25 @@ package com.ankamagames.dofus.datacenter.monsters
    public class CompanionCharacteristic extends Object implements IDataCenter
    {
       
-      public function CompanionCharacteristic() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CompanionCharacteristic()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "CompanionCharacteristics";
       
-      public static function getCompanionCharacteristicById(id:uint) : CompanionCharacteristic {
-         return GameData.getObject(MODULE,id) as CompanionCharacteristic;
+      public static function getCompanionCharacteristicById(id:uint) : CompanionCharacteristic
+      {
+         //Décompilation abandonné
       }
       
-      public static function getCompanionCharacteristics() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getCompanionCharacteristics() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -37,12 +44,9 @@ package com.ankamagames.dofus.datacenter.monsters
       
       private var _label:String;
       
-      public function get label() : String {
-         if(!this._label)
-         {
-            this._label = I18n.getUiText("ui.stats." + this.labelId);
-         }
-         return this._label;
+      public function get label() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

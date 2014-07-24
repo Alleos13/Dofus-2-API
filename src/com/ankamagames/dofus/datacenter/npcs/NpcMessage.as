@@ -10,16 +10,22 @@ package com.ankamagames.dofus.datacenter.npcs
    public class NpcMessage extends Object implements IDataCenter
    {
       
-      public function NpcMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function NpcMessage()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       public static const MODULE:String = "NpcMessages";
       
-      public static function getNpcMessageById(id:int) : NpcMessage {
-         return GameData.getObject(MODULE,id) as NpcMessage;
+      public static function getNpcMessageById(id:int) : NpcMessage
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -28,12 +34,9 @@ package com.ankamagames.dofus.datacenter.npcs
       
       private var _messageText:String;
       
-      public function get message() : String {
-         if(!this._messageText)
-         {
-            this._messageText = I18n.getText(this.messageId);
-         }
-         return this._messageText;
+      public function get message() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

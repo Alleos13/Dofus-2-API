@@ -3,8 +3,13 @@ package com.ankamagames.dofus.kernel.sound.enum
    public class UISoundEnum extends Object
    {
       
-      public function UISoundEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UISoundEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const LEVEL_UP:String = "16062";

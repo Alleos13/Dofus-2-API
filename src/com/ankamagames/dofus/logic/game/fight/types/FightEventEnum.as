@@ -3,8 +3,13 @@ package com.ankamagames.dofus.logic.game.fight.types
    public class FightEventEnum extends Object
    {
       
-      public function FightEventEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightEventEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const UNKNOWN_FIGHT_EVENT:String = "unknown";

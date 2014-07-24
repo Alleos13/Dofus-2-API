@@ -5,16 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
    public class ShortcutBarSwapRequestAction extends Object implements Action
    {
       
-      public function ShortcutBarSwapRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(barType:uint, firstSlot:uint, secondSlot:uint) : ShortcutBarSwapRequestAction {
-         var a:ShortcutBarSwapRequestAction = new ShortcutBarSwapRequestAction();
-         a.barType = barType;
-         a.firstSlot = firstSlot;
-         a.secondSlot = secondSlot;
-         return a;
+      public function ShortcutBarSwapRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(barType:uint, firstSlot:uint, secondSlot:uint) : ShortcutBarSwapRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var barType:uint;

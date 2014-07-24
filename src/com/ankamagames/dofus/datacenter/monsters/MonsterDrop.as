@@ -5,8 +5,13 @@ package com.ankamagames.dofus.datacenter.monsters
    public class MonsterDrop extends Object implements IDataCenter
    {
       
-      public function MonsterDrop() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MonsterDrop()
+      {
+         //Décompilation abandonné
       }
       
       public var dropId:uint;
@@ -33,12 +38,9 @@ package com.ankamagames.dofus.datacenter.monsters
       
       private var _monster:Monster;
       
-      public function get monster() : Monster {
-         if(!this._monster)
-         {
-            this._monster = Monster.getMonsterById(this.monsterId);
-         }
-         return this._monster;
+      public function get monster() : Monster
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -8,29 +8,28 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class MaxRankCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function MaxRankCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         var readableCriterionValue:String = String(_criterionValue);
-         var readableCriterionRef:String = I18n.getUiText("ui.common.pvpMaxRank");
-         var readableOperator:String = ">";
-         if(_operator.text == ItemCriterionOperator.DIFFERENT)
-         {
-            readableOperator = I18n.getUiText("ui.common.differentFrom") + " >";
-         }
-         return readableCriterionRef + " " + readableOperator + " " + readableCriterionValue;
+      public function MaxRankCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:MaxRankCriterion = new MaxRankCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getCriterion() : int {
-         var frame:PartyManagementFrame = Kernel.getWorker().getFrame(PartyManagementFrame) as PartyManagementFrame;
-         return frame.arenaRanks[1];
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getCriterion() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -6,18 +6,25 @@ package com.ankamagames.dofus.datacenter.world
    public class MapScrollAction extends Object implements IDataCenter
    {
       
-      public function MapScrollAction() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapScrollAction()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "MapScrollActions";
       
-      public static function getMapScrollActionById(id:int) : MapScrollAction {
-         return GameData.getObject(MODULE,id) as MapScrollAction;
+      public static function getMapScrollActionById(id:int) : MapScrollAction
+      {
+         //Décompilation abandonné
       }
       
-      public static function getMapScrollActions() : Array {
-         return GameData.getObjects(MODULE) as Array;
+      public static function getMapScrollActions() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;

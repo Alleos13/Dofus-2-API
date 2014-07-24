@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeClearPaymentForCraftMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeClearPaymentForCraftMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeClearPaymentForCraftMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6145;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var paymentType:int = 0;
       
-      override public function getMessageId() : uint {
-         return 6145;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeClearPaymentForCraftMessage(paymentType:int = 0) : ExchangeClearPaymentForCraftMessage {
-         this.paymentType = paymentType;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeClearPaymentForCraftMessage(paymentType:int = 0) : ExchangeClearPaymentForCraftMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.paymentType = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeClearPaymentForCraftMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeClearPaymentForCraftMessage(output:IDataOutput) : void {
-         output.writeByte(this.paymentType);
+      public function serializeAs_ExchangeClearPaymentForCraftMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeClearPaymentForCraftMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeClearPaymentForCraftMessage(input:IDataInput) : void {
-         this.paymentType = input.readByte();
+      public function deserializeAs_ExchangeClearPaymentForCraftMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,6 +5,10 @@ package com.ankamagames.dofus.types.entities
    public interface IParticule
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function update() : void;
       
       function get sprite() : DisplayObject;
@@ -13,6 +17,6 @@ package com.ankamagames.dofus.types.entities
       
       function get subExplosion() : Boolean;
       
-      function set subExplosion(param1:Boolean) : void;
+      function set subExplosion(v:Boolean) : void;
    }
 }

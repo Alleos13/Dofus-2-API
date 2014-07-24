@@ -19,20 +19,13 @@ package com.ankamagames.dofus.types.characteristicContextual
    public class CharacteristicContextualManager extends EventDispatcher
    {
       
-      public function CharacteristicContextualManager() {
-         super();
-         if(_self)
-         {
-            throw new SingletonError("Warning : CharacteristicContextualManager is a singleton class and shoulnd\'t be instancied directly!");
-         }
-         else
-         {
-            _aEntitiesTweening = new Array();
-            this._bEnterFrameNeeded = true;
-            this._tweeningCount = 0;
-            this._tweenByEntities = new Dictionary(true);
-            return;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacteristicContextualManager()
+      {
+         //Décompilation abandonné
       }
       
       private static const MAX_ENTITY_HEIGHT:uint = 250;
@@ -43,12 +36,9 @@ package com.ankamagames.dofus.types.characteristicContextual
       
       private static var _aEntitiesTweening:Array;
       
-      public static function getInstance() : CharacteristicContextualManager {
-         if(_self == null)
-         {
-            _self = new CharacteristicContextualManager();
-         }
-         return _self;
+      public static function getInstance() : CharacteristicContextualManager
+      {
+         //Décompilation abandonné
       }
       
       private var _bEnterFrameNeeded:Boolean;
@@ -59,90 +49,24 @@ package com.ankamagames.dofus.types.characteristicContextual
       
       private var _type:uint = 1;
       
-      public function addStatContextual(sText:String, oEntity:IEntity, format:TextFormat, type:uint, pScrollSpeed:Number = 1, pScrollDuration:uint = 2500) : CharacteristicContextual {
-         var txtCxt:TextContextual = null;
-         var txtSCxt:StyledTextContextual = null;
-         var data:TweenData = null;
-         if((!oEntity) || (oEntity.position.cellId == -1))
-         {
-            return null;
-         }
-         this._type = type;
-         var dist:Array = [Math.abs(16711680 - (format.color as uint)),Math.abs(255 - (format.color as uint)),Math.abs(26112 - (format.color as uint)),Math.abs(10053324 - (format.color as uint))];
-         var style:uint = dist.indexOf(Math.min(dist[0],dist[1],dist[2],dist[3]));
-         switch(this._type)
-         {
-            case 1:
-               txtCxt = new TextContextual();
-               txtCxt.referedEntity = oEntity;
-               txtCxt.text = sText;
-               txtCxt.textFormat = format;
-               txtCxt.finalize();
-               if(!this._tweenByEntities[oEntity])
-               {
-                  this._tweenByEntities[oEntity] = new Array();
-               }
-               data = new TweenData(txtCxt,oEntity,pScrollSpeed,pScrollDuration);
-               (this._tweenByEntities[oEntity] as Array).unshift(data);
-               if((this._tweenByEntities[oEntity] as Array).length == 1)
-               {
-                  _aEntitiesTweening.push(data);
-               }
-               this._tweeningCount++;
-               this.beginTween(txtCxt);
-               break;
-            case 2:
-               txtSCxt = new StyledTextContextual(sText,style);
-               txtSCxt.referedEntity = oEntity;
-               if(!this._tweenByEntities[oEntity])
-               {
-                  this._tweenByEntities[oEntity] = new Array();
-               }
-               data = new TweenData(txtSCxt,oEntity,pScrollSpeed,pScrollDuration);
-               (this._tweenByEntities[oEntity] as Array).unshift(data);
-               if((this._tweenByEntities[oEntity] as Array).length == 1)
-               {
-                  _aEntitiesTweening.push(data);
-               }
-               this._tweeningCount++;
-               this.beginTween(txtSCxt);
-               break;
-         }
-         return txtCxt?txtCxt:txtSCxt;
+      public function addStatContextual(sText:String, oEntity:IEntity, format:TextFormat, type:uint, pScrollSpeed:Number = 1, pScrollDuration:uint = 2500) : CharacteristicContextual
+      {
+         //Décompilation abandonné
       }
       
-      private function removeStatContextual(nIndex:Number) : void {
-         var entity:CharacteristicContextual = null;
-         if(_aEntitiesTweening[nIndex] != null)
-         {
-            entity = _aEntitiesTweening[nIndex].context;
-            entity.remove();
-            Berilia.getInstance().strataLow.removeChild(entity);
-            _aEntitiesTweening[nIndex] = null;
-            delete _aEntitiesTweening[nIndex];
-         }
+      private function removeStatContextual(nIndex:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function beginTween(oEntity:CharacteristicContextual) : void {
-         Berilia.getInstance().strataLow.addChild(oEntity);
-         var display:IRectangle = IDisplayable(oEntity.referedEntity).absoluteBounds;
-         oEntity.x = (display.x + display.width / 2 - oEntity.width / 2 - StageShareManager.stageOffsetX) / StageShareManager.stageScaleX;
-         oEntity.y = (display.y - oEntity.height - StageShareManager.stageOffsetY) / StageShareManager.stageScaleY;
-         oEntity.alpha = 0;
-         if(this._bEnterFrameNeeded)
-         {
-            EnterFrameDispatcher.addEventListener(this.onScroll,"CharacteristicContextManager");
-            this._bEnterFrameNeeded = false;
-         }
+      private function beginTween(oEntity:CharacteristicContextual) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onScroll(e:Event) : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      private function onScroll(e:Event) : void
+      {
+         //Décompilation abandonné
       }
    }
 }
@@ -153,13 +77,13 @@ import flash.utils.getTimer;
 class TweenData extends Object
 {
    
-   function TweenData(oEntity:CharacteristicContextual, entity:IEntity, pScrollSpeed:Number, pScrollDuration:uint) {
-      this.startTime = getTimer();
-      super();
-      this.context = oEntity;
-      this.entity = entity;
-      this.scrollSpeed = pScrollSpeed;
-      this.scrollDuration = pScrollDuration;
+   {
+   //Décompilation abandonné
+   }
+   
+   function TweenData(oEntity:CharacteristicContextual, entity:IEntity, pScrollSpeed:Number, pScrollDuration:uint)
+   {
+      //Décompilation abandonné
    }
    
    public var entity:IEntity;

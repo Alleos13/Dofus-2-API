@@ -6,21 +6,18 @@ package com.ankamagames.dofus.logic.common.managers
    public class HyperlinkShowCellManager extends Object
    {
       
-      public function HyperlinkShowCellManager() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function showCell(... args) : void {
-         var sq:SerialSequencer = null;
-         try
-         {
-            sq = new SerialSequencer();
-            sq.addStep(new AddGfxEntityStep(645,args[int(Math.random() * args.length)]));
-            sq.start();
-         }
-         catch(e:Error)
-         {
-         }
+      public function HyperlinkShowCellManager()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function showCell(... args) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

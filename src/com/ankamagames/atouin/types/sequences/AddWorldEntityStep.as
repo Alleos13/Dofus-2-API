@@ -8,16 +8,20 @@ package com.ankamagames.atouin.types.sequences
    public class AddWorldEntityStep extends AbstractSequencable
    {
       
-      public function AddWorldEntityStep(entity:IEntity) {
-         super();
-         this._entity = entity;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AddWorldEntityStep(entity:IEntity)
+      {
+         //Décompilation abandonné
       }
       
       private var _entity:IEntity;
       
-      override public function start() : void {
-         (this._entity as IDisplayable).display(PlacementStrataEnums.STRATA_PLAYER);
-         executeCallbacks();
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

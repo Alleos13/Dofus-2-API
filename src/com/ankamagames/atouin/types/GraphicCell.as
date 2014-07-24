@@ -6,17 +6,13 @@ package com.ankamagames.atouin.types
    public class GraphicCell extends Sprite implements ICustomUnicNameGetter
    {
       
-      public function GraphicCell(cellId:uint) {
-         this._dropValidator = this.returnTrueFunction;
-         this._removeDropSource = this.returnTrueFunction;
-         this._processDrop = this.returnTrueFunction;
-         super();
-         this.cellId = cellId;
-         name = cellId.toString();
-         this._name = "cell::" + cellId;
-         buttonMode = true;
-         mouseChildren = false;
-         cacheAsBitmap = true;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GraphicCell(cellId:uint)
+      {
+         //Décompilation abandonné
       }
       
       private var _dropValidator:Function;
@@ -29,36 +25,44 @@ package com.ankamagames.atouin.types
       
       public var cellId:uint;
       
-      public function get customUnicName() : String {
-         return this._name;
+      public function get customUnicName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function set dropValidator(dv:Function) : void {
-         this._dropValidator = dv;
+      public function set dropValidator(dv:Function) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get dropValidator() : Function {
-         return this._dropValidator;
+      public function get dropValidator() : Function
+      {
+         //Décompilation abandonné
       }
       
-      public function set removeDropSource(rds:Function) : void {
-         this._removeDropSource = rds;
+      public function set removeDropSource(rds:Function) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get removeDropSource() : Function {
-         return this._removeDropSource;
+      public function get removeDropSource() : Function
+      {
+         //Décompilation abandonné
       }
       
-      public function set processDrop(pd:Function) : void {
-         this._processDrop = pd;
+      public function set processDrop(pd:Function) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get processDrop() : Function {
-         return this._processDrop;
+      public function get processDrop() : Function
+      {
+         //Décompilation abandonné
       }
       
-      private function returnTrueFunction(... args) : Boolean {
-         return true;
+      private function returnTrueFunction(... args) : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

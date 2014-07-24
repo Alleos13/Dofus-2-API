@@ -6,14 +6,20 @@ package com.ankamagames.dofus.datacenter.mounts
    public class RideFood extends Object implements IDataCenter
    {
       
-      public function RideFood() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RideFood()
+      {
+         //Décompilation abandonné
       }
       
       public static var MODULE:String = "RideFood";
       
-      public static function getRideFoods() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getRideFoods() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var gid:uint;

@@ -1,15 +1,17 @@
 package flashx.textLayout.conversion
 {
-   import __AS3__.vec.Vector;
    import flashx.textLayout.tlf_internal;
-   
-   use namespace tlf_internal;
    
    public class ConverterBase extends Object
    {
       
-      public function ConverterBase() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ConverterBase()
+      {
+         //Décompilation abandonné
       }
       
       public static const MERGE_TO_NEXT_ON_PASTE:String = "mergeToNextOnPaste";
@@ -20,44 +22,39 @@ package flashx.textLayout.conversion
       
       private var _useClipboardAnnotations:Boolean = false;
       
-      public function get errors() : Vector.<String> {
-         return this._errors;
+      public function get errors() : Vector.<String>
+      {
+         //Décompilation abandonné
       }
       
-      public function get throwOnError() : Boolean {
-         return this._throwOnError;
+      public function get throwOnError() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set throwOnError(param1:Boolean) : void {
-         this._throwOnError = param1;
+      public function set throwOnError(value:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      tlf_internal function clear() : void {
-         this._errors = null;
+      tlf_internal function clear() : void
+      {
+         //Décompilation abandonné
       }
       
-      tlf_internal function reportError(param1:String) : void {
-         if(this._throwOnError)
-         {
-            throw new Error(param1);
-         }
-         else
-         {
-            if(!this._errors)
-            {
-               this._errors = new Vector.<String>();
-            }
-            this._errors.push(param1);
-            return;
-         }
+      tlf_internal function reportError(error:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get useClipboardAnnotations() : Boolean {
-         return this._useClipboardAnnotations;
+      public function get useClipboardAnnotations() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set useClipboardAnnotations(param1:Boolean) : void {
-         this._useClipboardAnnotations = param1;
+      public function set useClipboardAnnotations(value:Boolean) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public final class ListStylePosition extends Object
    {
       
-      public function ListStylePosition() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ListStylePosition()
+      {
+         //Décompilation abandonné
       }
       
       public static const INSIDE:String = "inside";

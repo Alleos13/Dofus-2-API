@@ -5,11 +5,13 @@ package com.ankamagames.berilia.types.shortcut
    public class LocalizedKeyboard extends Object
    {
       
-      public function LocalizedKeyboard(uri:Uri, locale:String, description:String) {
-         super();
-         this._uri = uri;
-         this._locale = locale;
-         this._description = description;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LocalizedKeyboard(uri:Uri, locale:String, description:String)
+      {
+         //Décompilation abandonné
       }
       
       private var _uri:Uri;
@@ -18,16 +20,19 @@ package com.ankamagames.berilia.types.shortcut
       
       private var _description:String;
       
-      public function get uri() : Uri {
-         return this._uri;
+      public function get uri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get locale() : String {
-         return this._locale;
+      public function get locale() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get description() : String {
-         return this._description;
+      public function get description() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

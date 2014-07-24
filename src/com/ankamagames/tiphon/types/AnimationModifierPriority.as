@@ -3,8 +3,13 @@ package com.ankamagames.tiphon.types
    public class AnimationModifierPriority extends Object
    {
       
-      public function AnimationModifierPriority() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AnimationModifierPriority()
+      {
+         //Décompilation abandonné
       }
       
       public static const LOW:int = 100;

@@ -9,47 +9,65 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ItemNoMoreAvailableMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ItemNoMoreAvailableMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ItemNoMoreAvailableMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5769;
       
-      override public function get isInitialized() : Boolean {
-         return true;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function getMessageId() : uint {
-         return 5769;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initItemNoMoreAvailableMessage() : ItemNoMoreAvailableMessage {
-         return this;
+      public function initItemNoMoreAvailableMessage() : ItemNoMoreAvailableMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ItemNoMoreAvailableMessage(output:IDataOutput) : void {
+      public function serializeAs_ItemNoMoreAvailableMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ItemNoMoreAvailableMessage(input:IDataInput) : void {
+      public function deserializeAs_ItemNoMoreAvailableMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

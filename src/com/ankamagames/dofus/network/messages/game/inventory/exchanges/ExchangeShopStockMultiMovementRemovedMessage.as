@@ -9,90 +9,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeShopStockMultiMovementRemovedMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeShopStockMultiMovementRemovedMessage() {
-         this.objectIdList = new Vector.<uint>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeShopStockMultiMovementRemovedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6037;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var objectIdList:Vector.<uint>;
       
-      override public function getMessageId() : uint {
-         return 6037;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeShopStockMultiMovementRemovedMessage(objectIdList:Vector.<uint> = null) : ExchangeShopStockMultiMovementRemovedMessage {
-         this.objectIdList = objectIdList;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeShopStockMultiMovementRemovedMessage(objectIdList:Vector.<uint> = null) : ExchangeShopStockMultiMovementRemovedMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.objectIdList = new Vector.<uint>();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeShopStockMultiMovementRemovedMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeShopStockMultiMovementRemovedMessage(output:IDataOutput) : void {
-         output.writeShort(this.objectIdList.length);
-         var _i1:uint = 0;
-         while(_i1 < this.objectIdList.length)
-         {
-            if(this.objectIdList[_i1] < 0)
-            {
-               throw new Error("Forbidden value (" + this.objectIdList[_i1] + ") on element 1 (starting at 1) of objectIdList.");
-            }
-            else
-            {
-               output.writeInt(this.objectIdList[_i1]);
-               _i1++;
-               continue;
-            }
-         }
+      public function serializeAs_ExchangeShopStockMultiMovementRemovedMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeShopStockMultiMovementRemovedMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeShopStockMultiMovementRemovedMessage(input:IDataInput) : void {
-         var _val1:uint = 0;
-         var _objectIdListLen:uint = input.readUnsignedShort();
-         var _i1:uint = 0;
-         while(_i1 < _objectIdListLen)
-         {
-            _val1 = input.readInt();
-            if(_val1 < 0)
-            {
-               throw new Error("Forbidden value (" + _val1 + ") on elements of objectIdList.");
-            }
-            else
-            {
-               this.objectIdList.push(_val1);
-               _i1++;
-               continue;
-            }
-         }
+      public function deserializeAs_ExchangeShopStockMultiMovementRemovedMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

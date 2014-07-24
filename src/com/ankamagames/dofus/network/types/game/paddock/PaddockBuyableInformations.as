@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.paddock
    public class PaddockBuyableInformations extends PaddockInformations implements INetworkType
    {
       
-      public function PaddockBuyableInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PaddockBuyableInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 130;
@@ -17,57 +22,39 @@ package com.ankamagames.dofus.network.types.game.paddock
       
       public var locked:Boolean = false;
       
-      override public function getTypeId() : uint {
-         return 130;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPaddockBuyableInformations(maxOutdoorMount:uint = 0, maxItems:uint = 0, price:uint = 0, locked:Boolean = false) : PaddockBuyableInformations {
-         super.initPaddockInformations(maxOutdoorMount,maxItems);
-         this.price = price;
-         this.locked = locked;
-         return this;
+      public function initPaddockBuyableInformations(maxOutdoorMount:uint = 0, maxItems:uint = 0, price:uint = 0, locked:Boolean = false) : PaddockBuyableInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.price = 0;
-         this.locked = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PaddockBuyableInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PaddockBuyableInformations(output:IDataOutput) : void {
-         super.serializeAs_PaddockInformations(output);
-         if(this.price < 0)
-         {
-            throw new Error("Forbidden value (" + this.price + ") on element price.");
-         }
-         else
-         {
-            output.writeInt(this.price);
-            output.writeBoolean(this.locked);
-            return;
-         }
+      public function serializeAs_PaddockBuyableInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PaddockBuyableInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PaddockBuyableInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.price = input.readInt();
-         if(this.price < 0)
-         {
-            throw new Error("Forbidden value (" + this.price + ") on element of PaddockBuyableInformations.price.");
-         }
-         else
-         {
-            this.locked = input.readBoolean();
-            return;
-         }
+      public function deserializeAs_PaddockBuyableInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

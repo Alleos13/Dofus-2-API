@@ -9,95 +9,71 @@ package com.ankamagames.dofus.network.messages.game.startup
    public class StartupActionsObjetAttributionMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function StartupActionsObjetAttributionMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StartupActionsObjetAttributionMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 1303;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var actionId:uint = 0;
       
       public var characterId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 1303;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initStartupActionsObjetAttributionMessage(actionId:uint = 0, characterId:uint = 0) : StartupActionsObjetAttributionMessage {
-         this.actionId = actionId;
-         this.characterId = characterId;
-         this._isInitialized = true;
-         return this;
+      public function initStartupActionsObjetAttributionMessage(actionId:uint = 0, characterId:uint = 0) : StartupActionsObjetAttributionMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.actionId = 0;
-         this.characterId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_StartupActionsObjetAttributionMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_StartupActionsObjetAttributionMessage(output:IDataOutput) : void {
-         if(this.actionId < 0)
-         {
-            throw new Error("Forbidden value (" + this.actionId + ") on element actionId.");
-         }
-         else
-         {
-            output.writeInt(this.actionId);
-            if(this.characterId < 0)
-            {
-               throw new Error("Forbidden value (" + this.characterId + ") on element characterId.");
-            }
-            else
-            {
-               output.writeInt(this.characterId);
-               return;
-            }
-         }
+      public function serializeAs_StartupActionsObjetAttributionMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_StartupActionsObjetAttributionMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_StartupActionsObjetAttributionMessage(input:IDataInput) : void {
-         this.actionId = input.readInt();
-         if(this.actionId < 0)
-         {
-            throw new Error("Forbidden value (" + this.actionId + ") on element of StartupActionsObjetAttributionMessage.actionId.");
-         }
-         else
-         {
-            this.characterId = input.readInt();
-            if(this.characterId < 0)
-            {
-               throw new Error("Forbidden value (" + this.characterId + ") on element of StartupActionsObjetAttributionMessage.characterId.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_StartupActionsObjetAttributionMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

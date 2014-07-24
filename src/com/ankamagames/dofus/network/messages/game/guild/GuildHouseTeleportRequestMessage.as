@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.guild
    public class GuildHouseTeleportRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GuildHouseTeleportRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildHouseTeleportRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5712;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var houseId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5712;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGuildHouseTeleportRequestMessage(houseId:uint = 0) : GuildHouseTeleportRequestMessage {
-         this.houseId = houseId;
-         this._isInitialized = true;
-         return this;
+      public function initGuildHouseTeleportRequestMessage(houseId:uint = 0) : GuildHouseTeleportRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.houseId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GuildHouseTeleportRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GuildHouseTeleportRequestMessage(output:IDataOutput) : void {
-         if(this.houseId < 0)
-         {
-            throw new Error("Forbidden value (" + this.houseId + ") on element houseId.");
-         }
-         else
-         {
-            output.writeInt(this.houseId);
-            return;
-         }
+      public function serializeAs_GuildHouseTeleportRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GuildHouseTeleportRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildHouseTeleportRequestMessage(input:IDataInput) : void {
-         this.houseId = input.readInt();
-         if(this.houseId < 0)
-         {
-            throw new Error("Forbidden value (" + this.houseId + ") on element of GuildHouseTeleportRequestMessage.houseId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_GuildHouseTeleportRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -3,8 +3,13 @@ package com.ankamagames.berilia.enums
    public class XmlTagsEnum extends Object
    {
       
-      public function XmlTagsEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function XmlTagsEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const TAG_CONTAINER:String = "Container";

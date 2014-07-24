@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public final class TextAlign extends Object
    {
       
-      public function TextAlign() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TextAlign()
+      {
+         //Décompilation abandonné
       }
       
       public static const START:String = "start";

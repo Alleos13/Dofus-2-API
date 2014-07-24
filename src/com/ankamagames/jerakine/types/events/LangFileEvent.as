@@ -5,10 +5,13 @@ package com.ankamagames.jerakine.types.events
    public class LangFileEvent extends Event
    {
       
-      public function LangFileEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, sUrl:String = null, sUrlProvider:String = null) {
-         super(type,bubbles,cancelable);
-         this._sUrl = sUrl;
-         this._sUrlProvider = sUrlProvider;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LangFileEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, sUrl:String = null, sUrlProvider:String = null)
+      {
+         //Décompilation abandonné
       }
       
       public static var ALL_COMPLETE:String = "LangFileEvent_ALL_COMPLETE";
@@ -19,16 +22,19 @@ package com.ankamagames.jerakine.types.events
       
       private var _sUrlProvider:String;
       
-      override public function clone() : Event {
-         return new LangFileEvent(type,bubbles,cancelable,this._sUrl,this._sUrlProvider);
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
       
-      public function get url() : String {
-         return this._sUrl;
+      public function get url() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get urlProvider() : String {
-         return this._sUrlProvider;
+      public function get urlProvider() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

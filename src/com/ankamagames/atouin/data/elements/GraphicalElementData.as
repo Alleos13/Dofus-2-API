@@ -9,10 +9,13 @@ package com.ankamagames.atouin.data.elements
    public class GraphicalElementData extends Object
    {
       
-      public function GraphicalElementData(elementId:int, elementType:int) {
-         super();
-         this.id = elementId;
-         this.type = elementType;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GraphicalElementData(elementId:int, elementType:int)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -21,8 +24,9 @@ package com.ankamagames.atouin.data.elements
       
       public var type:int;
       
-      public function fromRaw(raw:IDataInput, version:int) : void {
-         throw new AbstractMethodCallError();
+      public function fromRaw(raw:IDataInput, version:int) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

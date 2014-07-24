@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.enum
    public class OptionEnum extends Object
    {
       
-      public function OptionEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function OptionEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const AURA_NONE:int = 0;

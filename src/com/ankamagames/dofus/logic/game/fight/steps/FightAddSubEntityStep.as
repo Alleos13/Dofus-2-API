@@ -13,13 +13,13 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightAddSubEntityStep extends AbstractSequencable implements IFightStep
    {
       
-      public function FightAddSubEntityStep(fighterId:int, carriedEntityId:int, category:uint, slot:uint, subEntityBehaviour:ISubEntityBehavior = null) {
-         super();
-         this._fighterId = fighterId;
-         this._carriedEntityId = carriedEntityId;
-         this._category = category;
-         this._slot = slot;
-         this._subEntityBehaviour = subEntityBehaviour;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightAddSubEntityStep(fighterId:int, carriedEntityId:int, category:uint, slot:uint, subEntityBehaviour:ISubEntityBehavior = null)
+      {
+         //Décompilation abandonné
       }
       
       private var _fighterId:int;
@@ -32,46 +32,19 @@ package com.ankamagames.dofus.logic.game.fight.steps
       
       private var _subEntityBehaviour:ISubEntityBehavior;
       
-      public function get stepType() : String {
-         return "addSubEntity";
+      public function get stepType() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function start() : void {
-         var parentEntity:IEntity = DofusEntities.getEntity(this._fighterId);
-         var carriedEntity:IEntity = DofusEntities.getEntity(this._carriedEntityId);
-         var carryingSprite:TiphonSprite = TiphonUtility.getEntityWithoutMount(parentEntity as TiphonSprite) as TiphonSprite;
-         if((carriedEntity) && (carryingSprite) && (carryingSprite is TiphonSprite))
-         {
-            if(this._subEntityBehaviour)
-            {
-               carryingSprite.setSubEntityBehaviour(this._category,this._subEntityBehaviour);
-            }
-            carryingSprite.addSubEntity(DisplayObject(carriedEntity),this._category,this._slot);
-            if((carryingSprite.getTmpSubEntitiesNb() > 0) && (!carryingSprite.libraryIsAvaible))
-            {
-               carryingSprite.addEventListener(TiphonEvent.SPRITE_INIT,this.forceRender);
-            }
-         }
-         else
-         {
-            _log.warn("Unable to add a subentity to fighter " + this._fighterId + ", non-existing or not a sprite.");
-         }
-         if(parentEntity is IMovable)
-         {
-            IMovable(parentEntity).movementBehavior.synchroniseSubEntitiesPosition(IMovable(parentEntity));
-         }
-         executeCallbacks();
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function forceRender(pEvt:TiphonEvent) : void {
-         if((pEvt.currentTarget as TiphonSprite).hasEventListener(TiphonEvent.SPRITE_INIT))
-         {
-            (pEvt.currentTarget as TiphonSprite).removeEventListener(TiphonEvent.SPRITE_INIT,this.forceRender);
-            if((pEvt.currentTarget as TiphonSprite).getTmpSubEntitiesNb() > 0)
-            {
-               (pEvt.currentTarget as TiphonSprite).forceRender();
-            }
-         }
+      private function forceRender(pEvt:TiphonEvent) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

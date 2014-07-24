@@ -3,6 +3,10 @@ package com.ankamagames.tiphon.types
    public interface ITiphonEvent
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function get label() : String;
       
       function get sprite() : *;

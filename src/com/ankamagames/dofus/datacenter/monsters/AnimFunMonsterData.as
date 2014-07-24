@@ -5,8 +5,13 @@ package com.ankamagames.dofus.datacenter.monsters
    public final class AnimFunMonsterData extends AnimFunData
    {
       
-      public function AnimFunMonsterData() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AnimFunMonsterData()
+      {
+         //Décompilation abandonné
       }
    }
 }

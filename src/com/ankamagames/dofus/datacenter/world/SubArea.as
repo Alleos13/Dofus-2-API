@@ -10,39 +10,32 @@ package com.ankamagames.dofus.datacenter.world
    public class SubArea extends Object implements IDataCenter
    {
       
-      public function SubArea() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SubArea()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "SubAreas";
       
       private static var _allSubAreas:Array;
       
-      public static function getSubAreaById(id:int) : SubArea {
-         var subArea:SubArea = GameData.getObject(MODULE,id) as SubArea;
-         if((!subArea) || (!subArea.area))
-         {
-            return null;
-         }
-         return subArea;
+      public static function getSubAreaById(id:int) : SubArea
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSubAreaByMapId(mapId:uint) : SubArea {
-         var mp:MapPosition = MapPosition.getMapPositionById(mapId);
-         if(mp)
-         {
-            return mp.subArea;
-         }
-         return null;
+      public static function getSubAreaByMapId(mapId:uint) : SubArea
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAllSubArea() : Array {
-         if(_allSubAreas)
-         {
-            return _allSubAreas;
-         }
-         _allSubAreas = GameData.getObjects(MODULE) as Array;
-         return _allSubAreas;
+      public static function getAllSubArea() : Array
+      {
+         //Décompilation abandonné
       }
       
       private var _bounds:Rectangle;
@@ -89,78 +82,29 @@ package com.ankamagames.dofus.datacenter.world
       
       private var _center:Point;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get area() : Area {
-         if(!this._area)
-         {
-            this._area = Area.getAreaById(this.areaId);
-         }
-         return this._area;
+      public function get area() : Area
+      {
+         //Décompilation abandonné
       }
       
-      public function get worldmap() : WorldMap {
-         if(!this._worldMap)
-         {
-            if(this.hasCustomWorldMap)
-            {
-               this._worldMap = WorldMap.getWorldMapById(this.customWorldMap[0]);
-            }
-            else
-            {
-               this._worldMap = this.area.superArea.worldmap;
-            }
-         }
-         return this._worldMap;
+      public function get worldmap() : WorldMap
+      {
+         //Décompilation abandonné
       }
       
-      public function get hasCustomWorldMap() : Boolean {
-         return (this.customWorldMap) && (this.customWorldMap.length > 0);
+      public function get hasCustomWorldMap() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get center() : Point {
-         var minX:* = 0;
-         var maxX:* = 0;
-         var minY:* = 0;
-         var maxY:* = 0;
-         var i:* = 0;
-         var posX:* = 0;
-         var posY:* = 0;
-         var nCoords:uint = this.shape.length;
-         if((!this._center) && (nCoords > 0))
-         {
-            posX = this.shape[0];
-            posY = this.shape[1];
-            minX = maxX = posX > 10000?posX - 11000:posX;
-            minY = maxY = posY > 10000?posY - 11000:posY;
-            i = 2;
-            while(i < nCoords)
-            {
-               posX = this.shape[i];
-               posY = this.shape[i + 1];
-               if(posX > 10000)
-               {
-                  posX = posX - 11000;
-               }
-               if(posY > 10000)
-               {
-                  posY = posY - 11000;
-               }
-               minX = posX < minX?posX:minX;
-               maxX = posX > maxX?posX:maxX;
-               minY = posY < minY?posY:minY;
-               maxY = posY > maxY?posY:maxY;
-               i = i + 2;
-            }
-            this._center = new Point((minX + maxX) / 2,(minY + maxY) / 2);
-         }
-         return this._center;
+      public function get center() : Point
+      {
+         //Décompilation abandonné
       }
    }
 }

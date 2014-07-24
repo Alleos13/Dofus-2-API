@@ -7,10 +7,13 @@ package com.ankamagames.berilia.types.event
    public class UiRenderEvent extends Event
    {
       
-      public function UiRenderEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, uiTarget:UiRootContainer = null, uiRenderer:UiRenderer = null) {
-         super(type,bubbles,cancelable);
-         this._secUiTarget = uiTarget;
-         this._uiRenderer = uiRenderer;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UiRenderEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, uiTarget:UiRootContainer = null, uiRenderer:UiRenderer = null)
+      {
+         //Décompilation abandonné
       }
       
       public static var UIRenderComplete:String = "UIRenderComplete";
@@ -21,16 +24,19 @@ package com.ankamagames.berilia.types.event
       
       private var _uiRenderer:UiRenderer;
       
-      public function get uiTarget() : UiRootContainer {
-         return this._secUiTarget;
+      public function get uiTarget() : UiRootContainer
+      {
+         //Décompilation abandonné
       }
       
-      public function get uiRenderer() : UiRenderer {
-         return this._uiRenderer;
+      public function get uiRenderer() : UiRenderer
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : Event {
-         return new UiRenderEvent(type,bubbles,cancelable,this.uiTarget,this.uiRenderer);
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
    }
 }

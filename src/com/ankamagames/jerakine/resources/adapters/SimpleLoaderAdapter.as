@@ -19,8 +19,13 @@ package com.ankamagames.jerakine.resources.adapters
    public class SimpleLoaderAdapter extends Object implements IAdapter
    {
       
-      public function SimpleLoaderAdapter() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SimpleLoaderAdapter()
+      {
+         //Décompilation abandonné
       }
       
       private var _ldr:Loader;
@@ -33,108 +38,64 @@ package com.ankamagames.jerakine.resources.adapters
       
       private var _signedFileAdapter:SignedFileAdapter;
       
-      public function loadDirectly(uri:Uri, path:String, observer:IResourceObserver, dispatchProgress:Boolean) : void {
-         if(this._ldr)
-         {
-            throw new IllegalOperationError("A single adapter can\'t handle two simultaneous loadings.");
-         }
-         else
-         {
-            this._observer = observer;
-            this._uri = uri;
-            this._dispatchProgress = dispatchProgress;
-            if(uri.fileType.charAt(uri.fileType.length - 1) == "s")
-            {
-               this._signedFileAdapter = new SignedFileAdapter(null,true);
-               this._signedFileAdapter.loadDirectly(uri,path,new ResourceObserverWrapper(this.onSignedFileLoaded,this.onSignedFileError),false);
-            }
-            else
-            {
-               this.prepareLoader();
-               this._ldr.load(new URLRequest(path),uri.loaderContext);
-            }
-            return;
-         }
+      public function loadDirectly(uri:Uri, path:String, observer:IResourceObserver, dispatchProgress:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function loadFromData(uri:Uri, data:ByteArray, observer:IResourceObserver, dispatchProgress:Boolean) : void {
-         if(this._ldr)
-         {
-            throw new IllegalOperationError("A single adapter can\'t handle two simultaneous loadings.");
-         }
-         else
-         {
-            this._observer = observer;
-            this._uri = uri;
-            this.prepareLoader();
-            this._ldr.loadBytes(data,uri.loaderContext);
-            return;
-         }
+      public function loadFromData(uri:Uri, data:ByteArray, observer:IResourceObserver, dispatchProgress:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function free() : void {
-         this.releaseLoader();
-         this._observer = null;
-         this._uri = null;
+      public function free() : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function getResource(ldr:LoaderInfo) : * {
-         return this._ldr;
+      protected function getResource(ldr:LoaderInfo) : *
+      {
+         //Décompilation abandonné
       }
       
-      public function getResourceType() : uint {
-         return ResourceType.RESOURCE_NONE;
+      public function getResourceType() : uint
+      {
+         //Décompilation abandonné
       }
       
-      private function prepareLoader() : void {
-         this._ldr = new Loader();
-         this._ldr.contentLoaderInfo.addEventListener(Event.INIT,this.onInit,false,0,true);
-         this._ldr.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR,this.onError,false,0,true);
-         if(this._dispatchProgress)
-         {
-            this._ldr.contentLoaderInfo.addEventListener(ProgressEvent.PROGRESS,this.onProgress,false,0,true);
-         }
+      private function prepareLoader() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function releaseLoader() : void {
-         if(this._ldr)
-         {
-            try
-            {
-               this._ldr.close();
-            }
-            catch(e:Error)
-            {
-            }
-            this._ldr.contentLoaderInfo.removeEventListener(Event.INIT,this.onInit);
-            this._ldr.contentLoaderInfo.removeEventListener(IOErrorEvent.IO_ERROR,this.onError);
-            this._ldr.contentLoaderInfo.removeEventListener(ProgressEvent.PROGRESS,this.onProgress);
-         }
-         this._ldr = null;
+      private function releaseLoader() : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function onInit(e:Event) : void {
-         var res:* = this.getResource(LoaderInfo(e.target));
-         this._observer.onLoaded(this._uri,this.getResourceType(),res);
-         this._uri = null;
+      protected function onInit(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function onError(ee:ErrorEvent) : void {
-         this.releaseLoader();
-         this._observer.onFailed(this._uri,ee.text,ResourceErrorCode.RESOURCE_NOT_FOUND);
-         this._uri = null;
+      protected function onError(ee:ErrorEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function onProgress(pe:ProgressEvent) : void {
-         this._observer.onProgress(this._uri,pe.bytesLoaded,pe.bytesTotal);
+      protected function onProgress(pe:ProgressEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onSignedFileLoaded(uri:Uri, resourceType:uint, resource:*) : void {
-         this.loadFromData(uri,resource as ByteArray,this._observer,this._dispatchProgress);
+      private function onSignedFileLoaded(uri:Uri, resourceType:uint, resource:*) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onSignedFileError(uri:Uri, errorMsg:String, errorCode:uint) : void {
-         this.onError(new ErrorEvent(errorMsg));
+      private function onSignedFileError(uri:Uri, errorMsg:String, errorCode:uint) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

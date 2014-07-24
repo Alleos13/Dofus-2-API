@@ -7,26 +7,27 @@ package com.ankamagames.dofus.datacenter.world
    public class Dungeon extends Object implements IDataCenter
    {
       
-      public function Dungeon() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Dungeon()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Dungeons";
       
       private static var _allDungeons:Array;
       
-      public static function getDungeonById(id:int) : Dungeon {
-         var dungeon:Dungeon = GameData.getObject(MODULE,id) as Dungeon;
-         return dungeon;
+      public static function getDungeonById(id:int) : Dungeon
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAllDungeons() : Array {
-         if(_allDungeons)
-         {
-            return _allDungeons;
-         }
-         _allDungeons = GameData.getObjects(MODULE) as Array;
-         return _allDungeons;
+      public static function getAllDungeons() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -43,12 +44,9 @@ package com.ankamagames.dofus.datacenter.world
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

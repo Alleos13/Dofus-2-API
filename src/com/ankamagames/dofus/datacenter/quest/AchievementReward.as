@@ -6,18 +6,25 @@ package com.ankamagames.dofus.datacenter.quest
    public class AchievementReward extends Object implements IDataCenter
    {
       
-      public function AchievementReward() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AchievementReward()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "AchievementRewards";
       
-      public static function getAchievementRewardById(id:int) : AchievementReward {
-         return GameData.getObject(MODULE,id) as AchievementReward;
+      public static function getAchievementRewardById(id:int) : AchievementReward
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAchievementRewards() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAchievementRewards() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;

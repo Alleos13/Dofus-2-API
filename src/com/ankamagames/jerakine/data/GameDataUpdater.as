@@ -9,51 +9,35 @@ package com.ankamagames.jerakine.data
    public class GameDataUpdater extends DataUpdateManager
    {
       
-      public function GameDataUpdater() {
-         super();
-         if(_self)
-         {
-            throw new SingletonError();
-         }
-         else
-         {
-            return;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameDataUpdater()
+      {
+         //Décompilation abandonné
       }
       
       private static var _self:GameDataUpdater;
       
-      public static function getInstance() : GameDataUpdater {
-         if(!_self)
-         {
-            _self = new GameDataUpdater();
-         }
-         return _self;
+      public static function getInstance() : GameDataUpdater
+      {
+         //Décompilation abandonné
       }
       
-      override protected function checkFileVersion(sFileName:String, sVersion:String) : Boolean {
-         return false;
+      override protected function checkFileVersion(sFileName:String, sVersion:String) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function clear() : void {
-         GameDataFileAccessor.getInstance().close();
+      override public function clear() : void
+      {
+         //Décompilation abandonné
       }
       
-      override protected function onLoaded(e:ResourceLoadedEvent) : void {
-         switch(e.uri.fileType)
-         {
-            case "d2o":
-            case "d2os":
-               GameDataFileAccessor.getInstance().init(e.uri);
-               _versions[e.uri.tag.file] = e.uri.tag.version;
-               StoreDataManager.getInstance().setData(JerakineConstants.DATASTORE_FILES_INFO,_storeKey,_versions);
-               dispatchEvent(new LangFileEvent(LangFileEvent.COMPLETE,false,false,e.uri.tag.file));
-               _dataFilesLoaded = true;
-               _loadedFileCount++;
-               break;
-            default:
-               super.onLoaded(e);
-         }
+      override protected function onLoaded(e:ResourceLoadedEvent) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

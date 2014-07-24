@@ -7,57 +7,52 @@ package com.ankamagames.dofus.network.types.game.character
    public class AbstractCharacterInformation extends Object implements INetworkType
    {
       
-      public function AbstractCharacterInformation() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AbstractCharacterInformation()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 400;
       
       public var id:uint = 0;
       
-      public function getTypeId() : uint {
-         return 400;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initAbstractCharacterInformation(id:uint = 0) : AbstractCharacterInformation {
-         this.id = id;
-         return this;
+      public function initAbstractCharacterInformation(id:uint = 0) : AbstractCharacterInformation
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.id = 0;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AbstractCharacterInformation(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_AbstractCharacterInformation(output:IDataOutput) : void {
-         if(this.id < 0)
-         {
-            throw new Error("Forbidden value (" + this.id + ") on element id.");
-         }
-         else
-         {
-            output.writeInt(this.id);
-            return;
-         }
+      public function serializeAs_AbstractCharacterInformation(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AbstractCharacterInformation(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_AbstractCharacterInformation(input:IDataInput) : void {
-         this.id = input.readInt();
-         if(this.id < 0)
-         {
-            throw new Error("Forbidden value (" + this.id + ") on element of AbstractCharacterInformation.id.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_AbstractCharacterInformation(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

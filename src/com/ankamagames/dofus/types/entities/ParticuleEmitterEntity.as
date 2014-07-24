@@ -19,23 +19,13 @@ package com.ankamagames.dofus.types.entities
    public class ParticuleEmitterEntity extends Sprite implements IDisplayable, IEntity
    {
       
-      public function ParticuleEmitterEntity(nId:int, renderedType:uint) {
-         super();
-         this.id = nId;
-         switch(renderedType)
-         {
-            case NORMAL_RENDERER_TYPE:
-               this._renderer = new DisplayObjectRenderer();
-               break;
-            case BITMAP_RENDERER_TYPE:
-               this._renderer = new BitmapRenderer(new Rectangle(0,0,StageShareManager.stage.stageWidth,StageShareManager.stage.stageHeight));
-               break;
-            case PIXEL_RENDERER_TYPE:
-               this._renderer = new PixelRenderer(new Rectangle(0,0,StageShareManager.stage.stageWidth,StageShareManager.stage.stageHeight));
-               break;
-         }
-         mouseChildren = false;
-         mouseEnabled = false;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ParticuleEmitterEntity(nId:int, renderedType:uint)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -56,45 +46,54 @@ package com.ankamagames.dofus.types.entities
       
       private var _displayBehavior:IDisplayBehavior;
       
-      public function get displayBehaviors() : IDisplayBehavior {
-         return this._displayBehavior;
+      public function get displayBehaviors() : IDisplayBehavior
+      {
+         //Décompilation abandonné
       }
       
-      public function set displayBehaviors(oValue:IDisplayBehavior) : void {
-         this._displayBehavior = oValue;
+      public function set displayBehaviors(oValue:IDisplayBehavior) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get id() : int {
-         return this._id;
+      public function get id() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set id(nValue:int) : void {
-         this._id = nValue;
+      public function set id(nValue:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get position() : MapPoint {
-         return this._position;
+      public function get position() : MapPoint
+      {
+         //Décompilation abandonné
       }
       
-      public function set position(oValue:MapPoint) : void {
-         this._position = oValue;
+      public function set position(oValue:MapPoint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get absoluteBounds() : IRectangle {
-         return this._displayBehavior.getAbsoluteBounds(this);
+      public function get absoluteBounds() : IRectangle
+      {
+         //Décompilation abandonné
       }
       
-      public function get displayed() : Boolean {
-         return this._displayed;
+      public function get displayed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function display(strata:uint = 0) : void {
-         this._displayBehavior.display(this,strata);
-         this._displayed = true;
+      public function display(strata:uint = 0) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function remove() : void {
-         this._displayed = false;
+      public function remove() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

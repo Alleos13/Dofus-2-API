@@ -9,34 +9,32 @@ package com.ankamagames.berilia.utils
    public class UriCacheFactory extends Object
    {
       
-      public function UriCacheFactory() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UriCacheFactory()
+      {
+         //Décompilation abandonné
       }
       
       private static var _log:Logger;
       
       private static var _aCache:Array;
       
-      public static function init(path:String, cacheClass:ICache) : ICache {
-         _aCache[path] = cacheClass;
-         return cacheClass;
+      public static function init(path:String, cacheClass:ICache) : ICache
+      {
+         //Décompilation abandonné
       }
       
-      public static function getCacheFromUri(uri:Uri) : ICache {
-         var key:String = null;
-         var currentPath:String = uri.normalizedUri;
-         for(key in _aCache)
-         {
-            if(currentPath.indexOf(key) != -1)
-            {
-               return _aCache[key];
-            }
-         }
-         return null;
+      public static function getCacheFromUri(uri:Uri) : ICache
+      {
+         //Décompilation abandonné
       }
       
-      public static function get caches() : Array {
-         return _aCache;
+      public static function get caches() : Array
+      {
+         //Décompilation abandonné
       }
    }
 }

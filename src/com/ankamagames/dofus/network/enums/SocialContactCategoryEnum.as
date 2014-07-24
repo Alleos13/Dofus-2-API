@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class SocialContactCategoryEnum extends Object
    {
       
-      public function SocialContactCategoryEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SocialContactCategoryEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const SOCIAL_CONTACT_FRIEND:uint = 0;
@@ -20,5 +25,7 @@ package com.ankamagames.dofus.network.enums
       public static const SOCIAL_CONTACT_CRAFTER:uint = 5;
       
       public static const SOCIAL_CONTACT_INTERLOCUTOR:uint = 6;
+      
+      public static const SOCIAL_CONTACT_FIGHT:uint = 7;
    }
 }

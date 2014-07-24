@@ -8,10 +8,13 @@ package com.ankamagames.jerakine.logger.targets
    public class AbstractTarget extends Object implements LoggingTarget
    {
       
-      public function AbstractTarget() {
-         this._loggers = new Array();
-         this._filters = new Array();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AbstractTarget()
+      {
+         //Décompilation abandonné
       }
       
       private static const FILTERS_FORBIDDEN_CHARS:String = "[]~$^&/(){}<>+=`!#%?,:;\'\"@";
@@ -20,92 +23,44 @@ package com.ankamagames.jerakine.logger.targets
       
       private var _filters:Array;
       
-      public function set filters(value:Array) : void {
-         if(!this.checkIsFiltersValid(value))
-         {
-            throw new InvalidFilterError("These characters are invalid on a filter : " + FILTERS_FORBIDDEN_CHARS);
-         }
-         else
-         {
-            this._filters = value;
-            return;
-         }
+      public function set filters(value:Array) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get filters() : Array {
-         return this._filters;
+      public function get filters() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function logEvent(event:LogEvent) : void {
+      public function logEvent(event:LogEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addLogger(logger:Logger) : void {
-         this._loggers.push(logger);
+      public function addLogger(logger:Logger) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeLogger(logger:Logger) : void {
-         var index:int = this._loggers.indexOf(logger);
-         if(index > -1)
-         {
-            this._loggers.splice(index,1);
-         }
+      public function removeLogger(logger:Logger) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function checkIsFiltersValid(filters:Array) : Boolean {
-         var filter:LogTargetFilter = null;
-         for each(filter in filters)
-         {
-            if(!this.checkIsFilterValid(filter.target))
-            {
-               return false;
-            }
-         }
-         return true;
+      private function checkIsFiltersValid(filters:Array) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function checkIsFilterValid(filter:String) : Boolean {
-         var i:int = 0;
-         while(i < FILTERS_FORBIDDEN_CHARS.length)
-         {
-            if(filter.indexOf(FILTERS_FORBIDDEN_CHARS.charAt(i)) > -1)
-            {
-               return false;
-            }
-            i++;
-         }
-         return true;
+      private function checkIsFilterValid(filter:String) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function onLog(e:LogEvent) : void {
-         var filter:LogTargetFilter = null;
-         var reg:RegExp = null;
-         var testResult:* = false;
-         var passing:Boolean = false;
-         if(this._filters.length > 0)
-         {
-            for each(filter in this._filters)
-            {
-               reg = new RegExp(filter.target.replace("*",".*"),"i");
-               testResult = reg.test(e.category);
-               if((e.category == filter.target) && (!filter.allow))
-               {
-                  passing = false;
-                  break;
-               }
-               if((testResult) && (filter.allow))
-               {
-                  passing = true;
-               }
-            }
-         }
-         else
-         {
-            passing = true;
-         }
-         if(passing)
-         {
-            this.logEvent(e);
-         }
+      public function onLog(e:LogEvent) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.social
    public class MemberWarningSetAction extends Object implements Action
    {
       
-      public function MemberWarningSetAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(enable:Boolean) : MemberWarningSetAction {
-         var a:MemberWarningSetAction = new MemberWarningSetAction();
-         a.enable = enable;
-         return a;
+      public function MemberWarningSetAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(enable:Boolean) : MemberWarningSetAction
+      {
+         //Décompilation abandonné
       }
       
       public var enable:Boolean;

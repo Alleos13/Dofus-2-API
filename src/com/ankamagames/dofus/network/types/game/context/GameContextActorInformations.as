@@ -9,10 +9,13 @@ package com.ankamagames.dofus.network.types.game.context
    public class GameContextActorInformations extends Object implements INetworkType
    {
       
-      public function GameContextActorInformations() {
-         this.look = new EntityLook();
-         this.disposition = new EntityDispositionInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameContextActorInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 150;
@@ -23,44 +26,39 @@ package com.ankamagames.dofus.network.types.game.context
       
       public var disposition:EntityDispositionInformations;
       
-      public function getTypeId() : uint {
-         return 150;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameContextActorInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null) : GameContextActorInformations {
-         this.contextualId = contextualId;
-         this.look = look;
-         this.disposition = disposition;
-         return this;
+      public function initGameContextActorInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null) : GameContextActorInformations
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.contextualId = 0;
-         this.look = new EntityLook();
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameContextActorInformations(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameContextActorInformations(output:IDataOutput) : void {
-         output.writeInt(this.contextualId);
-         this.look.serializeAs_EntityLook(output);
-         output.writeShort(this.disposition.getTypeId());
-         this.disposition.serialize(output);
+      public function serializeAs_GameContextActorInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameContextActorInformations(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameContextActorInformations(input:IDataInput) : void {
-         this.contextualId = input.readInt();
-         this.look = new EntityLook();
-         this.look.deserialize(input);
-         var _id3:uint = input.readUnsignedShort();
-         this.disposition = ProtocolTypeManager.getInstance(EntityDispositionInformations,_id3);
-         this.disposition.deserialize(input);
+      public function deserializeAs_GameContextActorInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

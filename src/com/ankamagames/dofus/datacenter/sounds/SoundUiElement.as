@@ -5,8 +5,13 @@ package com.ankamagames.dofus.datacenter.sounds
    public class SoundUiElement extends Object implements IDataCenter
    {
       
-      public function SoundUiElement() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SoundUiElement()
+      {
+         //Décompilation abandonné
       }
       
       public static var MODULE:String = "SoundUiElement";
@@ -21,9 +26,9 @@ package com.ankamagames.dofus.datacenter.sounds
       
       public var volume:uint;
       
-      public function get hook() : String {
-         var h:SoundUiHook = SoundUiHook.getSoundUiHookById(this.id);
-         return h?h.name:null;
+      public function get hook() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

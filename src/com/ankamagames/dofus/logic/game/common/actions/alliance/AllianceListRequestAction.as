@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.alliance
    public class AllianceListRequestAction extends Object implements Action
    {
       
-      public function AllianceListRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : AllianceListRequestAction {
-         var action:AllianceListRequestAction = new AllianceListRequestAction();
-         return action;
+      public function AllianceListRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : AllianceListRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -68,90 +68,35 @@ package com.ankamagames.dofus.logic.common.frames
    public class CleanupCrewFrame extends Object implements Frame
    {
       
-      public function CleanupCrewFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CleanupCrewFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      public function get priority() : int {
-         return Priority.LOWEST;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         switch(true)
-         {
-            case msg is ServerConnectionFailedMessage:
-            case msg is BasicAckMessage:
-            case msg is BasicNoOperationMessage:
-            case msg is CredentialsAcknowledgementMessage:
-            case msg is OnConnectionEventMessage:
-            case msg is ExchangeBidHouseBuyResultMessage:
-            case msg is ObjectJobAddedMessage:
-            case msg is AllUiXmlParsedMessage:
-            case msg is ConnectionResumedMessage:
-            case msg is GameStartingMessage:
-            case msg is BannerEmptySlotClickAction:
-            case msg is MapRenderProgressMessage:
-            case msg is GameEntitiesDispositionMessage:
-            case msg is GameFightShowFighterMessage:
-            case msg is TextureReadyMessage:
-            case msg is EntityReadyMessage:
-            case msg is MapRollOverMessage:
-            case msg is ChangeMessage:
-            case msg is SelectItemMessage:
-            case msg is MapMoveMessage:
-            case msg is TextClickMessage:
-            case msg is DropMessage:
-            case msg is MouseMiddleClickMessage:
-            case msg is MapsLoadingStartedMessage:
-            case msg is EntityMovementStartMessage:
-            case msg is MapContainerRollOverMessage:
-            case msg is MapContainerRollOutMessage:
-            case msg is GameContextDestroyMessage:
-            case msg is PlayerStatusUpdateMessage:
-            case msg is MapComplementaryInformationsDataMessage:
-            case msg is CellClickMessage:
-            case msg is AdjacentMapClickMessage:
-            case msg is AdjacentMapOutMessage:
-            case msg is AdjacentMapOverMessage:
-            case msg is EntityMouseOverMessage:
-            case msg is InteractiveElementActivationMessage:
-            case msg is InteractiveElementMouseOverMessage:
-            case msg is InteractiveElementMouseOutMessage:
-            case msg is MouseOverMessage:
-            case msg is MouseOutMessage:
-            case msg is MouseDownMessage:
-            case msg is MouseUpMessage:
-            case msg is MouseClickMessage:
-            case msg is MouseDoubleClickMessage:
-            case msg is KeyboardKeyDownMessage:
-            case msg is KeyboardKeyUpMessage:
-            case msg is MouseRightClickOutsideMessage:
-            case msg is MouseRightClickMessage:
-            case msg is MouseReleaseOutsideMessage:
-            case msg is ItemRollOverMessage:
-            case msg is ItemRollOutMessage:
-            case msg is MouseWheelMessage:
-            case msg is CellOverMessage:
-            case msg is CellOutMessage:
-            case msg is EntityMouseOutMessage:
-            case msg is PlaySoundAction:
-            case msg is ShowMonstersInfoAction:
-            case msg is SlaveSwitchContextMessage:
-               return true;
-            default:
-               _log.warn("[Warning] " + (getQualifiedClassName(msg) as String).split("::")[1] + " wasn\'t stopped by a frame.");
-               return true;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class GuildRightsBitEnum extends Object
    {
       
-      public function GuildRightsBitEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildRightsBitEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const GUILD_RIGHT_NONE:uint = 0;

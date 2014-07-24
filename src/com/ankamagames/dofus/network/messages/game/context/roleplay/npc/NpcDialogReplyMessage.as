@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.npc
    public class NpcDialogReplyMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function NpcDialogReplyMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function NpcDialogReplyMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5616;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var replyId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5616;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initNpcDialogReplyMessage(replyId:uint = 0) : NpcDialogReplyMessage {
-         this.replyId = replyId;
-         this._isInitialized = true;
-         return this;
+      public function initNpcDialogReplyMessage(replyId:uint = 0) : NpcDialogReplyMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.replyId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_NpcDialogReplyMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_NpcDialogReplyMessage(output:IDataOutput) : void {
-         if(this.replyId < 0)
-         {
-            throw new Error("Forbidden value (" + this.replyId + ") on element replyId.");
-         }
-         else
-         {
-            output.writeShort(this.replyId);
-            return;
-         }
+      public function serializeAs_NpcDialogReplyMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_NpcDialogReplyMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_NpcDialogReplyMessage(input:IDataInput) : void {
-         this.replyId = input.readShort();
-         if(this.replyId < 0)
-         {
-            throw new Error("Forbidden value (" + this.replyId + ") on element of NpcDialogReplyMessage.replyId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_NpcDialogReplyMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -10,10 +10,13 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
    public class ListView extends Object implements IInventoryView
    {
       
-      public function ListView(hookLock:IHookLock) {
-         this._view = new Vector.<ItemWrapper>();
-         super();
-         this._hookLock = hookLock;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ListView(hookLock:IHookLock)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -22,65 +25,49 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
       
       protected var _hookLock:IHookLock;
       
-      public function get name() : String {
-         throw new Error("get name() is abstract method, it should be implemented");
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function initialize(items:Vector.<ItemWrapper>) : void {
-         var item:ItemWrapper = null;
-         this._view.splice(0,this._view.length);
-         for each(item in items)
-         {
-            this._view.push(item);
-         }
-         this.updateView();
+      public function initialize(items:Vector.<ItemWrapper>) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get content() : Vector.<ItemWrapper> {
-         return this._view;
+      public function get content() : Vector.<ItemWrapper>
+      {
+         //Décompilation abandonné
       }
       
-      public function addItem(item:ItemWrapper, invisible:int) : void {
-         this._view.push(item);
+      public function addItem(item:ItemWrapper, invisible:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeItem(item:ItemWrapper, invisible:int) : void {
-         var i:int = this._view.indexOf(item);
-         if(i == -1)
-         {
-            throw new Error("Demande de suppression d\'un item (id " + item.objectUID + ") qui n\'existe pas dans la vue " + this.name);
-         }
-         else
-         {
-            this._view.splice(i,1);
-            return;
-         }
+      public function removeItem(item:ItemWrapper, invisible:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function modifyItem(item:ItemWrapper, oldItem:ItemWrapper, invisible:int) : void {
-         var i:int = this._view.indexOf(item);
-         if(i == -1)
-         {
-            throw new Error("Demande de modification d\'un item (id " + item.objectUID + ") qui n\'existe pas dans la vue " + this.name);
-         }
-         else
-         {
-            this._view[i] = item;
-            return;
-         }
+      public function modifyItem(item:ItemWrapper, oldItem:ItemWrapper, invisible:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function isListening(item:ItemWrapper) : Boolean {
-         throw new Error("isListening() is abstract method, it should be implemented");
+      public function isListening(item:ItemWrapper) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function updateView() : void {
-         throw new Error("updateView() is abstract method, it should be implemented");
+      public function updateView() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function empty() : void {
-         this._view = new Vector.<ItemWrapper>();
-         this.updateView();
+      public function empty() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

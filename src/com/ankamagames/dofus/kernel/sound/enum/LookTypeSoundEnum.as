@@ -3,8 +3,13 @@ package com.ankamagames.dofus.kernel.sound.enum
    public class LookTypeSoundEnum extends Object
    {
       
-      public function LookTypeSoundEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LookTypeSoundEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const HIT:uint = 1;

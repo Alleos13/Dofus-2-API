@@ -5,25 +5,25 @@ package com.ankamagames.berilia.types.tooltip
    public class TooltipChunk extends EventDispatcher
    {
       
-      public function TooltipChunk(content:String) {
-         super();
-         this._content = content;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TooltipChunk(content:String)
+      {
+         //Décompilation abandonné
       }
       
       private var _content:String;
       
-      public function processContent(params:Object) : String {
-         var i:String = null;
-         var content:String = this._content;
-         for(i in params)
-         {
-            content = content.split("#" + i).join(params[i]);
-         }
-         return content;
+      public function processContent(params:Object) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get content() : String {
-         return this._content;
+      public function get content() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -3,8 +3,13 @@ package com.ankamagames.dofus.types.enums
    public class AnimationEnum extends Object
    {
       
-      public function AnimationEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AnimationEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const ANIM_STATIQUE:String = "AnimStatique";

@@ -10,61 +10,69 @@ package com.ankamagames.dofus.network.messages.game.context.mount
    public class MountSetMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function MountSetMessage() {
-         this.mountData = new MountClientData();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MountSetMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5968;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var mountData:MountClientData;
       
-      override public function getMessageId() : uint {
-         return 5968;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initMountSetMessage(mountData:MountClientData = null) : MountSetMessage {
-         this.mountData = mountData;
-         this._isInitialized = true;
-         return this;
+      public function initMountSetMessage(mountData:MountClientData = null) : MountSetMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.mountData = new MountClientData();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_MountSetMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_MountSetMessage(output:IDataOutput) : void {
-         this.mountData.serializeAs_MountClientData(output);
+      public function serializeAs_MountSetMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_MountSetMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_MountSetMessage(input:IDataInput) : void {
-         this.mountData = new MountClientData();
-         this.mountData.deserialize(input);
+      public function deserializeAs_MountSetMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

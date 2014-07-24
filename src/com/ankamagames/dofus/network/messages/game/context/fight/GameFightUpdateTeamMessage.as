@@ -10,83 +10,71 @@ package com.ankamagames.dofus.network.messages.game.context.fight
    public class GameFightUpdateTeamMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameFightUpdateTeamMessage() {
-         this.team = new FightTeamInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameFightUpdateTeamMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5572;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var fightId:uint = 0;
       
       public var team:FightTeamInformations;
       
-      override public function getMessageId() : uint {
-         return 5572;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameFightUpdateTeamMessage(fightId:uint = 0, team:FightTeamInformations = null) : GameFightUpdateTeamMessage {
-         this.fightId = fightId;
-         this.team = team;
-         this._isInitialized = true;
-         return this;
+      public function initGameFightUpdateTeamMessage(fightId:uint = 0, team:FightTeamInformations = null) : GameFightUpdateTeamMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.fightId = 0;
-         this.team = new FightTeamInformations();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameFightUpdateTeamMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightUpdateTeamMessage(output:IDataOutput) : void {
-         if(this.fightId < 0)
-         {
-            throw new Error("Forbidden value (" + this.fightId + ") on element fightId.");
-         }
-         else
-         {
-            output.writeShort(this.fightId);
-            this.team.serializeAs_FightTeamInformations(output);
-            return;
-         }
+      public function serializeAs_GameFightUpdateTeamMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameFightUpdateTeamMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightUpdateTeamMessage(input:IDataInput) : void {
-         this.fightId = input.readShort();
-         if(this.fightId < 0)
-         {
-            throw new Error("Forbidden value (" + this.fightId + ") on element of GameFightUpdateTeamMessage.fightId.");
-         }
-         else
-         {
-            this.team = new FightTeamInformations();
-            this.team.deserialize(input);
-            return;
-         }
+      public function deserializeAs_GameFightUpdateTeamMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

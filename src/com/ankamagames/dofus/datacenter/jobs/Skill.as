@@ -8,18 +8,25 @@ package com.ankamagames.dofus.datacenter.jobs
    public class Skill extends Object implements IDataCenter
    {
       
-      public function Skill() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Skill()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Skills";
       
-      public static function getSkillById(id:int) : Skill {
-         return GameData.getObject(MODULE,id) as Skill;
+      public static function getSkillById(id:int) : Skill
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSkills() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getSkills() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -54,28 +61,19 @@ package com.ankamagames.dofus.datacenter.jobs
       
       private var _interactive:Interactive;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get parentJob() : Job {
-         if(!this._parentJob)
-         {
-            this._parentJob = Job.getJobById(this.parentJobId);
-         }
-         return this._parentJob;
+      public function get parentJob() : Job
+      {
+         //Décompilation abandonné
       }
       
-      public function get interactive() : Interactive {
-         if(!this._interactive)
-         {
-            this._interactive = Interactive.getInteractiveById(this.interactiveId);
-         }
-         return this._interactive;
+      public function get interactive() : Interactive
+      {
+         //Décompilation abandonné
       }
    }
 }

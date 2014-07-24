@@ -11,78 +11,69 @@ package com.ankamagames.dofus.network.messages.game.friend
    public class IgnoredListMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function IgnoredListMessage() {
-         this.ignoredList = new Vector.<IgnoredInformations>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function IgnoredListMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5674;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var ignoredList:Vector.<IgnoredInformations>;
       
-      override public function getMessageId() : uint {
-         return 5674;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initIgnoredListMessage(ignoredList:Vector.<IgnoredInformations> = null) : IgnoredListMessage {
-         this.ignoredList = ignoredList;
-         this._isInitialized = true;
-         return this;
+      public function initIgnoredListMessage(ignoredList:Vector.<IgnoredInformations> = null) : IgnoredListMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.ignoredList = new Vector.<IgnoredInformations>();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_IgnoredListMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_IgnoredListMessage(output:IDataOutput) : void {
-         output.writeShort(this.ignoredList.length);
-         var _i1:uint = 0;
-         while(_i1 < this.ignoredList.length)
-         {
-            output.writeShort((this.ignoredList[_i1] as IgnoredInformations).getTypeId());
-            (this.ignoredList[_i1] as IgnoredInformations).serialize(output);
-            _i1++;
-         }
+      public function serializeAs_IgnoredListMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_IgnoredListMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_IgnoredListMessage(input:IDataInput) : void {
-         var _id1:uint = 0;
-         var _item1:IgnoredInformations = null;
-         var _ignoredListLen:uint = input.readUnsignedShort();
-         var _i1:uint = 0;
-         while(_i1 < _ignoredListLen)
-         {
-            _id1 = input.readUnsignedShort();
-            _item1 = ProtocolTypeManager.getInstance(IgnoredInformations,_id1);
-            _item1.deserialize(input);
-            this.ignoredList.push(_item1);
-            _i1++;
-         }
+      public function deserializeAs_IgnoredListMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.social
    public class ContactLookErrorMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ContactLookErrorMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ContactLookErrorMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6045;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var requestId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6045;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initContactLookErrorMessage(requestId:uint = 0) : ContactLookErrorMessage {
-         this.requestId = requestId;
-         this._isInitialized = true;
-         return this;
+      public function initContactLookErrorMessage(requestId:uint = 0) : ContactLookErrorMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.requestId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ContactLookErrorMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ContactLookErrorMessage(output:IDataOutput) : void {
-         if(this.requestId < 0)
-         {
-            throw new Error("Forbidden value (" + this.requestId + ") on element requestId.");
-         }
-         else
-         {
-            output.writeInt(this.requestId);
-            return;
-         }
+      public function serializeAs_ContactLookErrorMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ContactLookErrorMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ContactLookErrorMessage(input:IDataInput) : void {
-         this.requestId = input.readInt();
-         if(this.requestId < 0)
-         {
-            throw new Error("Forbidden value (" + this.requestId + ") on element of ContactLookErrorMessage.requestId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_ContactLookErrorMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

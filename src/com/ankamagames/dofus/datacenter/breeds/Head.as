@@ -9,34 +9,32 @@ package com.ankamagames.dofus.datacenter.breeds
    public class Head extends Object implements IDataCenter
    {
       
-      public function Head() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Head()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Heads";
       
       protected static const _log:Logger;
       
-      public static function getHeadById(id:int) : Head {
-         return GameData.getObject(MODULE,id) as Head;
+      public static function getHeadById(id:int) : Head
+      {
+         //Décompilation abandonné
       }
       
-      public static function getHeads() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getHeads() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public static function getHead(breed:uint, gender:uint) : Array {
-         var head:Head = null;
-         var heads:Array = GameData.getObjects(MODULE);
-         var result:Array = [];
-         for each(head in heads)
-         {
-            if((head.breed == breed) && (head.gender == gender))
-            {
-               result.push(head);
-            }
-         }
-         return result;
+      public static function getHead(breed:uint, gender:uint) : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;

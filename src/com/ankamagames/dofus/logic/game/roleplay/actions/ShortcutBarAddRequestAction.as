@@ -5,16 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
    public class ShortcutBarAddRequestAction extends Object implements Action
    {
       
-      public function ShortcutBarAddRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(barType:uint, id:uint, slot:uint) : ShortcutBarAddRequestAction {
-         var a:ShortcutBarAddRequestAction = new ShortcutBarAddRequestAction();
-         a.barType = barType;
-         a.id = id;
-         a.slot = slot;
-         return a;
+      public function ShortcutBarAddRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(barType:uint, id:uint, slot:uint) : ShortcutBarAddRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var barType:uint;

@@ -9,80 +9,71 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.treasureHun
    public class TreasureHuntRequestAnswerMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function TreasureHuntRequestAnswerMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TreasureHuntRequestAnswerMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6489;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var questType:uint = 0;
       
       public var result:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6489;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initTreasureHuntRequestAnswerMessage(questType:uint = 0, result:uint = 0) : TreasureHuntRequestAnswerMessage {
-         this.questType = questType;
-         this.result = result;
-         this._isInitialized = true;
-         return this;
+      public function initTreasureHuntRequestAnswerMessage(questType:uint = 0, result:uint = 0) : TreasureHuntRequestAnswerMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.questType = 0;
-         this.result = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TreasureHuntRequestAnswerMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_TreasureHuntRequestAnswerMessage(output:IDataOutput) : void {
-         output.writeByte(this.questType);
-         output.writeByte(this.result);
+      public function serializeAs_TreasureHuntRequestAnswerMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TreasureHuntRequestAnswerMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_TreasureHuntRequestAnswerMessage(input:IDataInput) : void {
-         this.questType = input.readByte();
-         if(this.questType < 0)
-         {
-            throw new Error("Forbidden value (" + this.questType + ") on element of TreasureHuntRequestAnswerMessage.questType.");
-         }
-         else
-         {
-            this.result = input.readByte();
-            if(this.result < 0)
-            {
-               throw new Error("Forbidden value (" + this.result + ") on element of TreasureHuntRequestAnswerMessage.result.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_TreasureHuntRequestAnswerMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

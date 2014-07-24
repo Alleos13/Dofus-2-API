@@ -9,65 +9,71 @@ package com.ankamagames.dofus.network.messages.game.friend
    public class IgnoredAddRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function IgnoredAddRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function IgnoredAddRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5673;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var name:String = "";
       
       public var session:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 5673;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initIgnoredAddRequestMessage(name:String = "", session:Boolean = false) : IgnoredAddRequestMessage {
-         this.name = name;
-         this.session = session;
-         this._isInitialized = true;
-         return this;
+      public function initIgnoredAddRequestMessage(name:String = "", session:Boolean = false) : IgnoredAddRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.name = "";
-         this.session = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_IgnoredAddRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_IgnoredAddRequestMessage(output:IDataOutput) : void {
-         output.writeUTF(this.name);
-         output.writeBoolean(this.session);
+      public function serializeAs_IgnoredAddRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_IgnoredAddRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_IgnoredAddRequestMessage(input:IDataInput) : void {
-         this.name = input.readUTF();
-         this.session = input.readBoolean();
+      public function deserializeAs_IgnoredAddRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

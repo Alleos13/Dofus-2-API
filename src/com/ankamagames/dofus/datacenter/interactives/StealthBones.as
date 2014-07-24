@@ -6,14 +6,20 @@ package com.ankamagames.dofus.datacenter.interactives
    public class StealthBones extends Object implements IDataCenter
    {
       
-      public function StealthBones() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StealthBones()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "StealthBones";
       
-      public static function getStealthBonesById(id:int) : StealthBones {
-         return GameData.getObject(MODULE,id) as StealthBones;
+      public static function getStealthBonesById(id:int) : StealthBones
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;

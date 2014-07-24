@@ -10,16 +10,22 @@ package com.ankamagames.dofus.datacenter.houses
    public class House extends Object implements IDataCenter
    {
       
-      public function House() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function House()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Houses";
       
       protected static const _log:Logger;
       
-      public static function getGuildHouseById(id:int) : House {
-         return GameData.getObject(MODULE,id) as House;
+      public static function getGuildHouseById(id:int) : House
+      {
+         //Décompilation abandonné
       }
       
       public var typeId:int;
@@ -36,20 +42,14 @@ package com.ankamagames.dofus.datacenter.houses
       
       private var _description:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get description() : String {
-         if(!this._description)
-         {
-            this._description = I18n.getText(this.descriptionId);
-         }
-         return this._description;
+      public function get description() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

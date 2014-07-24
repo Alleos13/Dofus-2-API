@@ -6,36 +6,13 @@ package com.ankamagames.dofus.internalDatacenter.people
    public class PartyMemberWrapper extends Object implements IDataCenter
    {
       
-      public function PartyMemberWrapper(id:int, name:String, status:uint, isMember:Boolean, isLeader:Boolean = false, level:int = 0, entityLook:EntityLook = null, lifePoints:int = 0, maxLifePoints:int = 0, maxInitiative:int = 0, prospecting:int = 0, alignmentSide:int = 0, regenRate:int = 0, rank:int = 0, worldX:int = 0, worldY:int = 0, mapId:int = 0, subAreaId:int = 0, breedId:int = 0, companions:Array = null) {
-         this.companions = new Array();
-         super();
-         this.id = id;
-         this.name = name;
-         this.isMember = isMember;
-         this.isLeader = isLeader;
-         this.level = level;
-         this.entityLook = entityLook;
-         this.breedId = breedId;
-         this.lifePoints = lifePoints;
-         this.maxLifePoints = maxLifePoints;
-         this.maxInitiative = maxInitiative;
-         this.prospecting = prospecting;
-         this.alignmentSide = alignmentSide;
-         this.regenRate = regenRate;
-         this.rank = rank;
-         this.worldX = worldX;
-         this.worldY = worldY;
-         this.mapId = mapId;
-         this.subAreaId = subAreaId;
-         this.status = status;
-         if(!companions)
-         {
-            this.companions = new Array();
-         }
-         else
-         {
-            this.companions = companions;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PartyMemberWrapper(id:int, name:String, status:uint, isMember:Boolean, isLeader:Boolean = false, level:int = 0, entityLook:EntityLook = null, lifePoints:int = 0, maxLifePoints:int = 0, maxInitiative:int = 0, prospecting:int = 0, alignmentSide:int = 0, regenRate:int = 0, rank:int = 0, worldX:int = 0, worldY:int = 0, mapId:int = 0, subAreaId:int = 0, breedId:int = 0, companions:Array = null)
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -82,8 +59,9 @@ package com.ankamagames.dofus.internalDatacenter.people
       
       public var companions:Array;
       
-      public function get initiative() : int {
-         return this.maxInitiative * this.lifePoints / this.maxLifePoints;
+      public function get initiative() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

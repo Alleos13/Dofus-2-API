@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.exchange
    public class ExchangeAcceptAction extends Object implements Action
    {
       
-      public function ExchangeAcceptAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : ExchangeAcceptAction {
-         var a:ExchangeAcceptAction = new ExchangeAcceptAction();
-         return a;
+      public function ExchangeAcceptAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : ExchangeAcceptAction
+      {
+         //Décompilation abandonné
       }
    }
 }

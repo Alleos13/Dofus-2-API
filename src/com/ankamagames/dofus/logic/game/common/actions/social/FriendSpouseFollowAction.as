@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.social
    public class FriendSpouseFollowAction extends Object implements Action
    {
       
-      public function FriendSpouseFollowAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(enable:Boolean) : FriendSpouseFollowAction {
-         var a:FriendSpouseFollowAction = new FriendSpouseFollowAction();
-         a.enable = enable;
-         return a;
+      public function FriendSpouseFollowAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(enable:Boolean) : FriendSpouseFollowAction
+      {
+         //Décompilation abandonné
       }
       
       public var enable:Boolean;

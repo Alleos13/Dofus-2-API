@@ -5,12 +5,16 @@ package flashx.textLayout.container
    public interface ISandboxSupport
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function beginMouseCapture() : void;
       
       function endMouseCapture() : void;
       
-      function mouseUpSomewhere(param1:Event) : void;
+      function mouseUpSomewhere(event:Event) : void;
       
-      function mouseMoveSomewhere(param1:Event) : void;
+      function mouseMoveSomewhere(event:Event) : void;
    }
 }

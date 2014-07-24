@@ -5,22 +5,27 @@ package com.ankamagames.dofus.logic.game.fight.messages
    public class TextActionInformationMessage extends Object implements Message
    {
       
-      public function TextActionInformationMessage(textKey:uint, params:Array = null) {
-         super();
-         this._textKey = textKey;
-         this._params = params;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TextActionInformationMessage(textKey:uint, params:Array = null)
+      {
+         //Décompilation abandonné
       }
       
       private var _textKey:uint;
       
       private var _params:Array;
       
-      public function get textKey() : uint {
-         return this._textKey;
+      public function get textKey() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get params() : Array {
-         return this._params;
+      public function get params() : Array
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.script.api
    public class VectorApi extends Object
    {
       
-      public function VectorApi() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function VectorApi()
+      {
+         //Décompilation abandonné
       }
    }
 }

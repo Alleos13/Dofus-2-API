@@ -5,40 +5,25 @@ package com.ankamagames.berilia.types.data
    public class Hook extends Object
    {
       
-      public function Hook(name:String, trusted:Boolean, nativeHook:Boolean = true) {
-         super();
-         if(!_hookNameList)
-         {
-            _hookNameList = new Array();
-         }
-         _hookNameList[name] = this;
-         this._name = name;
-         this._trusted = trusted;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Hook(name:String, trusted:Boolean, nativeHook:Boolean = true)
+      {
+         //Décompilation abandonné
       }
       
       private static var _hookNameList:Array;
       
-      public static function create(name:String, trusted:Boolean, nativeHook:Boolean = true) : Hook {
-         var h:Hook = _hookNameList[name];
-         if(h)
-         {
-            if(trusted)
-            {
-               throw new BeriliaError("Hook name (" + name + ") aleardy used, please rename it.");
-            }
-            else
-            {
-               return h;
-            }
-         }
-         else
-         {
-            return new Hook(name,trusted,nativeHook);
-         }
+      public static function create(name:String, trusted:Boolean, nativeHook:Boolean = true) : Hook
+      {
+         //Décompilation abandonné
       }
       
-      public static function getHookByName(name:String) : Hook {
-         return _hookNameList[name];
+      public static function getHookByName(name:String) : Hook
+      {
+         //Décompilation abandonné
       }
       
       private var _trusted:Boolean;
@@ -47,16 +32,19 @@ package com.ankamagames.berilia.types.data
       
       private var _nativeHook:Boolean;
       
-      public function get trusted() : Boolean {
-         return this._trusted;
+      public function get trusted() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get name() : String {
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get nativeHook() : Boolean {
-         return this._nativeHook;
+      public function get nativeHook() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

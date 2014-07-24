@@ -3,6 +3,10 @@ package flashx.textLayout.formats
    public interface IListMarkerFormat extends ITextLayoutFormat
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function get counterReset() : *;
       
       function get counterIncrement() : *;

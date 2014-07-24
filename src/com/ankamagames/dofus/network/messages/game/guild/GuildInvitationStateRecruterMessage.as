@@ -9,73 +9,71 @@ package com.ankamagames.dofus.network.messages.game.guild
    public class GuildInvitationStateRecruterMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GuildInvitationStateRecruterMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildInvitationStateRecruterMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5563;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var recrutedName:String = "";
       
       public var invitationState:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5563;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGuildInvitationStateRecruterMessage(recrutedName:String = "", invitationState:uint = 0) : GuildInvitationStateRecruterMessage {
-         this.recrutedName = recrutedName;
-         this.invitationState = invitationState;
-         this._isInitialized = true;
-         return this;
+      public function initGuildInvitationStateRecruterMessage(recrutedName:String = "", invitationState:uint = 0) : GuildInvitationStateRecruterMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.recrutedName = "";
-         this.invitationState = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GuildInvitationStateRecruterMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GuildInvitationStateRecruterMessage(output:IDataOutput) : void {
-         output.writeUTF(this.recrutedName);
-         output.writeByte(this.invitationState);
+      public function serializeAs_GuildInvitationStateRecruterMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GuildInvitationStateRecruterMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildInvitationStateRecruterMessage(input:IDataInput) : void {
-         this.recrutedName = input.readUTF();
-         this.invitationState = input.readByte();
-         if(this.invitationState < 0)
-         {
-            throw new Error("Forbidden value (" + this.invitationState + ") on element of GuildInvitationStateRecruterMessage.invitationState.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_GuildInvitationStateRecruterMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

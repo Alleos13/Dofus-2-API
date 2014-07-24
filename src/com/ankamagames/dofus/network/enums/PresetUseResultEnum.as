@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class PresetUseResultEnum extends Object
    {
       
-      public function PresetUseResultEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PresetUseResultEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const PRESET_USE_OK:uint = 1;

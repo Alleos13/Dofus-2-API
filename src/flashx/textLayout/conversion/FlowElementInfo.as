@@ -5,12 +5,13 @@ package flashx.textLayout.conversion
    class FlowElementInfo extends Object
    {
       
-      function FlowElementInfo(param1:Class, param2:Function, param3:Function) {
-         super();
-         this._flowClass = param1;
-         this._parser = param2;
-         this._exporter = param3;
-         this._flowClassName = getQualifiedClassName(param1);
+      {
+      //Décompilation abandonné
+      }
+      
+      function FlowElementInfo(flowClass:Class, parser:Function, exporter:Function)
+      {
+         //Décompilation abandonné
       }
       
       private var _flowClass:Class;
@@ -21,20 +22,24 @@ package flashx.textLayout.conversion
       
       private var _exporter:Function;
       
-      public function get flowClass() : Class {
-         return this._flowClass;
+      public function get flowClass() : Class
+      {
+         //Décompilation abandonné
       }
       
-      public function get flowClassName() : String {
-         return this._flowClassName;
+      public function get flowClassName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get parser() : Function {
-         return this._parser;
+      public function get parser() : Function
+      {
+         //Décompilation abandonné
       }
       
-      public function get exporter() : Function {
-         return this._exporter;
+      public function get exporter() : Function
+      {
+         //Décompilation abandonné
       }
    }
 }

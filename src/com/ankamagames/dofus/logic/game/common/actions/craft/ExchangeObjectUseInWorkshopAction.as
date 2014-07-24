@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.craft
    public class ExchangeObjectUseInWorkshopAction extends Object implements Action
    {
       
-      public function ExchangeObjectUseInWorkshopAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pObjectUID:uint, pQuantity:uint) : ExchangeObjectUseInWorkshopAction {
-         var action:ExchangeObjectUseInWorkshopAction = new ExchangeObjectUseInWorkshopAction();
-         action.objectUID = pObjectUID;
-         action.quantity = pQuantity;
-         return action;
+      public function ExchangeObjectUseInWorkshopAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pObjectUID:uint, pQuantity:uint) : ExchangeObjectUseInWorkshopAction
+      {
+         //Décompilation abandonné
       }
       
       public var objectUID:uint;

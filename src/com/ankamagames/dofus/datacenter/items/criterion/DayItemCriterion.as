@@ -8,24 +8,28 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class DayItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function DayItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         var readableCriterionValue:String = _criterionValue.toString();
-         var readableCriterionRef:String = PatternDecoder.combine(I18n.getUiText("ui.time.days"),"n",true);
-         return readableCriterionRef + " " + _operator.text + " " + readableCriterionValue;
+      public function DayItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:DayItemCriterion = new DayItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getCriterion() : int {
-         var date:Date = new Date();
-         return TimeManager.getInstance().getDateFromTime(date.getTime())[2];
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getCriterion() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

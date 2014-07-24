@@ -8,8 +8,13 @@ package com.ankamagames.dofus.network.types.game.data.items
    public class ObjectItemToSellInNpcShop extends ObjectItemMinimalInformation implements INetworkType
    {
       
-      public function ObjectItemToSellInNpcShop() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ObjectItemToSellInNpcShop()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 352;
@@ -18,57 +23,39 @@ package com.ankamagames.dofus.network.types.game.data.items
       
       public var buyCriterion:String = "";
       
-      override public function getTypeId() : uint {
-         return 352;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initObjectItemToSellInNpcShop(objectGID:uint = 0, effects:Vector.<ObjectEffect> = null, objectPrice:uint = 0, buyCriterion:String = "") : ObjectItemToSellInNpcShop {
-         super.initObjectItemMinimalInformation(objectGID,effects);
-         this.objectPrice = objectPrice;
-         this.buyCriterion = buyCriterion;
-         return this;
+      public function initObjectItemToSellInNpcShop(objectGID:uint = 0, effects:Vector.<ObjectEffect> = null, objectPrice:uint = 0, buyCriterion:String = "") : ObjectItemToSellInNpcShop
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.objectPrice = 0;
-         this.buyCriterion = "";
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ObjectItemToSellInNpcShop(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectItemToSellInNpcShop(output:IDataOutput) : void {
-         super.serializeAs_ObjectItemMinimalInformation(output);
-         if(this.objectPrice < 0)
-         {
-            throw new Error("Forbidden value (" + this.objectPrice + ") on element objectPrice.");
-         }
-         else
-         {
-            output.writeInt(this.objectPrice);
-            output.writeUTF(this.buyCriterion);
-            return;
-         }
+      public function serializeAs_ObjectItemToSellInNpcShop(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ObjectItemToSellInNpcShop(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectItemToSellInNpcShop(input:IDataInput) : void {
-         super.deserialize(input);
-         this.objectPrice = input.readInt();
-         if(this.objectPrice < 0)
-         {
-            throw new Error("Forbidden value (" + this.objectPrice + ") on element of ObjectItemToSellInNpcShop.objectPrice.");
-         }
-         else
-         {
-            this.buyCriterion = input.readUTF();
-            return;
-         }
+      public function deserializeAs_ObjectItemToSellInNpcShop(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

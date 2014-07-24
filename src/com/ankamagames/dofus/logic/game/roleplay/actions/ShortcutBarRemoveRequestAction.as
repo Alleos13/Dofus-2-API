@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
    public class ShortcutBarRemoveRequestAction extends Object implements Action
    {
       
-      public function ShortcutBarRemoveRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(barType:uint, slot:uint) : ShortcutBarRemoveRequestAction {
-         var a:ShortcutBarRemoveRequestAction = new ShortcutBarRemoveRequestAction();
-         a.barType = barType;
-         a.slot = slot;
-         return a;
+      public function ShortcutBarRemoveRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(barType:uint, slot:uint) : ShortcutBarRemoveRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var barType:uint;

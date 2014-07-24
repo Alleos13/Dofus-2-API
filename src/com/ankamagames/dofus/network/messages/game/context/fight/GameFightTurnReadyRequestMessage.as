@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.fight
    public class GameFightTurnReadyRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameFightTurnReadyRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameFightTurnReadyRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 715;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var id:int = 0;
       
-      override public function getMessageId() : uint {
-         return 715;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameFightTurnReadyRequestMessage(id:int = 0) : GameFightTurnReadyRequestMessage {
-         this.id = id;
-         this._isInitialized = true;
-         return this;
+      public function initGameFightTurnReadyRequestMessage(id:int = 0) : GameFightTurnReadyRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.id = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameFightTurnReadyRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightTurnReadyRequestMessage(output:IDataOutput) : void {
-         output.writeInt(this.id);
+      public function serializeAs_GameFightTurnReadyRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameFightTurnReadyRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightTurnReadyRequestMessage(input:IDataInput) : void {
-         this.id = input.readInt();
+      public function deserializeAs_GameFightTurnReadyRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

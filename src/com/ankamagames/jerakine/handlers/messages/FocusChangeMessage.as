@@ -6,16 +6,18 @@ package com.ankamagames.jerakine.handlers.messages
    public class FocusChangeMessage extends HumanInputMessage
    {
       
-      public function FocusChangeMessage() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(target:InteractiveObject, instance:FocusChangeMessage = null) : FocusChangeMessage {
-         if(!instance)
-         {
-            instance = new FocusChangeMessage();
-         }
-         return HumanInputMessage.create(target,new Event("FocusChange"),instance) as FocusChangeMessage;
+      public function FocusChangeMessage()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(target:InteractiveObject, instance:FocusChangeMessage = null) : FocusChangeMessage
+      {
+         //Décompilation abandonné
       }
    }
 }

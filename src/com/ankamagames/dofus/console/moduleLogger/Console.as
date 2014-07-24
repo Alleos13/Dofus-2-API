@@ -26,34 +26,12 @@ package com.ankamagames.dofus.console.moduleLogger
    {
       
       {
-         CONSOLE_STYLE.setStyle(".yellow",{"color":"#ADAE30"});
-         CONSOLE_STYLE.setStyle(".orange",{"color":"#EDC597"});
-         CONSOLE_STYLE.setStyle(".red",{"color":"#DD5555"});
-         CONSOLE_STYLE.setStyle(".red+",{"color":"#FF0000"});
-         CONSOLE_STYLE.setStyle(".gray",{"color":"#666688"});
-         CONSOLE_STYLE.setStyle(".gray+",{"color":"#8888AA"});
-         CONSOLE_STYLE.setStyle(".pink",{"color":"#DD55DD"});
-         CONSOLE_STYLE.setStyle(".green",{"color":"#00BBBB"});
-         CONSOLE_STYLE.setStyle(".blue",{"color":"#97A2ED"});
-         CONSOLE_STYLE.setStyle(".white",{"color":"#C2C2DA"});
-         CONSOLE_STYLE.setStyle("a:hover",{"color":"#EDC597"});
+      //Décompilation abandonné
       }
       
-      public function Console() {
-         this._lines = new Vector.<String>();
-         this._allInfo = new Vector.<TypeMessage>();
-         this.regExp = new RegExp("<[^>]*>","g");
-         this.regExp2 = new RegExp("•","g");
-         super();
-         if(_self)
-         {
-            throw new Error();
-         }
-         else
-         {
-            ModuleLogger.init(this.log);
-            return;
-         }
+      public function Console()
+      {
+         //Décompilation abandonné
       }
       
       private static const OPTIONS_HEIGHT:uint = 30;
@@ -84,16 +62,14 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private static var _displayed:Boolean = false;
       
-      public static function getInstance() : Console {
-         if(!_self)
-         {
-            _self = new Console();
-         }
-         return _self;
+      public static function getInstance() : Console
+      {
+         //Décompilation abandonné
       }
       
-      public static function isVisible() : Boolean {
-         return _displayed;
+      public static function isVisible() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       private var _window:NativeWindow;
@@ -126,428 +102,113 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private var _showShortcut:Boolean = true;
       
-      private function output(message:TypeMessage) : void {
-         var type:* = 0;
-         var text:String = null;
-         var newLines:Array = null;
-         if(this._active)
-         {
-            this._allInfo.push(message);
-            if(!_displayed)
-            {
-               return;
-            }
-            if((this._filterUI) && (this._filterUI.isOn) && (this._filterUI.isFiltered(message.name)))
-            {
-               return;
-            }
-            type = message.type;
-            if((type == TypeMessage.TYPE_HOOK) && (!this._showHook))
-            {
-               return;
-            }
-            if((type == TypeMessage.TYPE_UI) && (!this._showUI))
-            {
-               return;
-            }
-            if((type == TypeMessage.TYPE_ACTION) && (!this._showAction))
-            {
-               return;
-            }
-            if((type == TypeMessage.TYPE_SHORTCUT) && (!this._showShortcut))
-            {
-               return;
-            }
-            text = message.textInfo;
-            newLines = text.split("\n");
-            this._lines.push.apply(this._lines,newLines);
-            this._scrollBar.updateScrolling();
-            this._scrollBarH.resize();
-         }
+      private function output(message:TypeMessage) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function close() : void {
-         _displayed = false;
-         if(this._window)
-         {
-            this._window.close();
-            this._window = null;
-         }
-         this.saveData();
+      public function close() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function disableLogEvent() : void {
-         var icon:ConsoleIcon = null;
-         this._showHook = false;
-         this._showUI = false;
-         this._showAction = false;
-         this._showShortcut = false;
-         for each(icon in this._filterButton)
-         {
-            icon.disable(true);
-         }
-         this.onFilterChange();
+      public function disableLogEvent() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function display(quietMode:Boolean = false) : void {
-         ModuleLogger.active = true;
-         this._active = true;
-         if(quietMode)
-         {
-            return;
-         }
-         if(!this._window)
-         {
-            this.createWindow();
-         }
-         _displayed = true;
-         this._window.activate();
+      public function display(quietMode:Boolean = false) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function toggleDisplay() : void {
-         if(_displayed)
-         {
-            this.close();
-         }
-         else
-         {
-            this.display();
-         }
+      public function toggleDisplay() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function log(... args) : void {
-         var message:TypeMessage = null;
-         if((this._active) && (args.length))
-         {
-            message = CallWithParameters.callConstructor(TypeMessage,args);
-            this.output(message);
-         }
+      private function log(... args) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function clearConsole(e:Event = null) : void {
-         this._lines.splice(0,this._lines.length);
-         this._allInfo.splice(0,this._allInfo.length);
-         this._scrollBar.updateScrolling();
-         this._scrollBarH.resize();
-         this._textField.text = "";
+      private function clearConsole(e:Event = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function createUI() : void {
-         var book:ConsoleIcon = null;
-         this._backGround = new Sprite();
-         this._textField = new TextField();
-         this._textField.addEventListener(TextEvent.LINK,this.onTextClick);
-         this._textField.multiline = true;
-         this._textField.wordWrap = false;
-         this._textField.mouseWheelEnabled = false;
-         this._scrollBar = new TextFieldScrollBar(this._textField,this._lines,10,SCROLL_BG_COLOR,SCROLL_COLOR);
-         this._scrollBarH = new TextFieldOldScrollBarH(this._textField,5,SCROLL_BG_COLOR,SCROLL_COLOR);
-         var textFormat:TextFormat = new TextFormat();
-         textFormat.font = "Courier New";
-         textFormat.size = 16;
-         textFormat.color = OUTPUT_COLOR;
-         this._textField.defaultTextFormat = textFormat;
-         this._textField.styleSheet = CONSOLE_STYLE;
-         var posX:int = 0;
-         this._iconList = new Sprite();
-         var erase:ConsoleIcon = new ConsoleIcon("cancel",ICON_SIZE);
-         erase.addEventListener(MouseEvent.MOUSE_DOWN,this.clearConsole);
-         this._iconList.addChild(erase);
-         posX = posX + (ICON_SIZE + ICON_INTERVAL);
-         var disk:ConsoleIcon = new ConsoleIcon("disk",ICON_SIZE);
-         disk.addEventListener(MouseEvent.MOUSE_DOWN,this.saveText);
-         disk.x = posX;
-         this._iconList.addChild(disk);
-         posX = posX + (ICON_SIZE + ICON_INTERVAL);
-         var filter:ConsoleIcon = new ConsoleIcon("list",ICON_SIZE);
-         filter.addEventListener(MouseEvent.MOUSE_DOWN,this.onIconFilterMouseDown);
-         filter.x = posX;
-         this._iconList.addChild(filter);
-         this._filterButton = new Array();
-         var bookList:Array = new Array(new ColorTransform(0.9,1,1.1),new ColorTransform(0.9,1.2,0.8),new ColorTransform(1.3,0.7,0.8),new ColorTransform(1.3,1.3,0.5));
-         var i:int = 0;
-         while(i < bookList.length)
-         {
-            book = new ConsoleIcon("book",ICON_SIZE);
-            this._filterButton[i] = book;
-            book.changeColor(bookList[i]);
-            this._iconList.addChild(book);
-            book.name = "_" + i;
-            book.addEventListener(MouseEvent.MOUSE_DOWN,this.onBookClick);
-            i++;
-         }
-         this._filterUI = new FilterUI(FILTER_UI_COLOR);
-         this._filterUI.addEventListener(Event.CHANGE,this.onFilterChange);
-         this._window.addEventListener(NativeWindowDisplayStateEvent.DISPLAY_STATE_CHANGE,this.onResize);
-         this._window.stage.addChild(this._backGround);
-         this._window.stage.addChild(this._textField);
-         this._window.stage.addChild(this._scrollBar);
-         this._window.stage.addChild(this._scrollBarH);
-         this._window.stage.addChild(this._iconList);
-         var data:Object = StoreDataManager.getInstance().getData(Constants.DATASTORE_MODULE_DEBUG,"console_pref");
-         this.loadData(data);
-         this.onResize();
+      private function createUI() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function openFilterUI(open:Boolean) : void {
-         if(open)
-         {
-            this._window.stage.addChild(this._filterUI);
-            this.onResize();
-         }
-         else if(this._filterUI.parent)
-         {
-            this._filterUI.parent.removeChild(this._filterUI);
-         }
-         
+      private function openFilterUI(open:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function createWindow() : void {
-         var options:NativeWindowInitOptions = null;
-         if(!this._window)
-         {
-            options = new NativeWindowInitOptions();
-            options.resizable = true;
-            this._window = new NativeWindow(options);
-            this._window.width = 800;
-            this._window.height = 600;
-            this._window.title = "Module Console";
-            this._window.addEventListener(Event.CLOSE,this.onClose);
-            this._window.addEventListener(NativeWindowBoundsEvent.RESIZE,this.onResize);
-            this._window.stage.align = StageAlign.TOP_LEFT;
-            this._window.stage.scaleMode = StageScaleMode.NO_SCALE;
-            this._window.stage.tabChildren = false;
-            this.createUI();
-         }
+      private function createWindow() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function saveData() : void {
-         var data:Object = null;
-         try
-         {
-            data = new Object();
-            if(this._filterUI)
-            {
-               data.filter = this._filterUI.getCurrentOptions();
-            }
-            data.showHook = this._showHook;
-            data.showUI = this._showUI;
-            data.showAction = this._showAction;
-            data.showShortcut = this._showShortcut;
-            StoreDataManager.getInstance().setData(Constants.DATASTORE_MODULE_DEBUG,"console_pref",data);
-         }
-         catch(e:Error)
-         {
-         }
+      private function saveData() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function loadData(data:Object) : void {
-         if(data)
-         {
-            if(data.filter)
-            {
-               this._filterUI.setOptions(data.filter);
-               if(data.filter.isOn)
-               {
-                  this.openFilterUI(true);
-               }
-            }
-            if((data.hasOwnProperty("showHook")) && (!data.showHook))
-            {
-               this._filterButton[0].disable(true);
-               this._showHook = false;
-            }
-            if((data.hasOwnProperty("showUI")) && (!data.showUI))
-            {
-               this._filterButton[1].disable(true);
-               this._showUI = false;
-            }
-            if((data.hasOwnProperty("showAction")) && (!data.showAction))
-            {
-               this._filterButton[2].disable(true);
-               this._showAction = false;
-            }
-            if((data.hasOwnProperty("showShortcut")) && (!data.showShortcut))
-            {
-               this._filterButton[3].disable(true);
-               this._showShortcut = false;
-            }
-            this.onFilterChange();
-         }
+      private function loadData(data:Object) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onIconFilterMouseDown(e:Event) : void {
-         if(this._filterUI)
-         {
-            this.openFilterUI(!this._filterUI.parent);
-         }
-         else
-         {
-            this.openFilterUI(true);
-         }
+      private function onIconFilterMouseDown(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onFilterChange(event:Event = null) : void {
-         var message:TypeMessage = null;
-         var type:* = 0;
-         var text:String = null;
-         var newLines:Array = null;
-         this._lines.splice(0,this._lines.length);
-         var filterIsOn:Boolean = (this._filterUI) && (this._filterUI.isOn);
-         var num:int = this._allInfo.length;
-         var i:int = -1;
-         while(++i < num)
-         {
-            message = this._allInfo[i];
-            if(!((filterIsOn) && (this._filterUI.isFiltered(message.name))))
-            {
-               type = message.type;
-               if(!((type == TypeMessage.TYPE_HOOK) && (!this._showHook)))
-               {
-                  if(!((type == TypeMessage.TYPE_UI) && (!this._showUI)))
-                  {
-                     if(!((type == TypeMessage.TYPE_ACTION) && (!this._showAction)))
-                     {
-                        if(!((type == TypeMessage.TYPE_SHORTCUT) && (!this._showShortcut)))
-                        {
-                           text = message.textInfo;
-                           newLines = text.split("\n");
-                           this._lines.push.apply(this._lines,newLines);
-                        }
-                     }
-                  }
-               }
-            }
-         }
-         this._scrollBar.scrollText(-1);
-         this._scrollBarH.resize();
-         this.onResize();
+      private function onFilterChange(event:Event = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onResize(event:Event = null) : void {
-         var posX:* = 0;
-         var k:* = 0;
-         this._backGround.graphics.clear();
-         this._backGround.graphics.beginFill(BACKGROUND_COLOR);
-         this._backGround.graphics.drawRect(0,0,this._window.stage.stageWidth,this._window.stage.stageHeight);
-         this._backGround.graphics.endFill();
-         this._backGround.graphics.beginFill(OPTIONS_BACKGROUND_COLOR);
-         this._backGround.graphics.drawRect(0,0,this._window.stage.stageWidth,OPTIONS_HEIGHT);
-         this._backGround.graphics.endFill();
-         if(this._iconList)
-         {
-            this._iconList.x = 10;
-            this._iconList.y = 3;
-         }
-         if(this._filterButton)
-         {
-            posX = this._window.stage.stageWidth - ICON_SIZE - 20;
-            k = this._filterButton.length - 1;
-            while(k >= 0)
-            {
-               this._filterButton[k].x = posX;
-               posX = posX - (ICON_SIZE + 5);
-               k--;
-            }
-         }
-         if(this._filterUI)
-         {
-            this._filterUI.x = this._window.stage.stageWidth - this._filterUI.width - 20;
-            this._filterUI.y = OPTIONS_HEIGHT + 10;
-         }
-         this._textField.y = OPTIONS_HEIGHT;
-         this._textField.width = this._window.stage.stageWidth - TextFieldScrollBar.WIDTH;
-         this._textField.height = this._window.stage.stageHeight - this._textField.y - SCROLLBAR_SIZE;
-         this._textField.scrollV = 0;
-         var text:String = "";
-         var i:int = 0;
-         while(i < 200)
-         {
-            text = text + "o\n";
-            i++;
-         }
-         this._textField.text = text;
-         var numLines:int = this._textField.numLines - this._textField.maxScrollV;
-         this._textField.text = "";
-         this._scrollBar.addEventListener(Event.CHANGE,this.onScrollVChange);
-         this._scrollBar.scrollAtEnd();
-         this._scrollBar.resize(numLines);
-         this._scrollBarH.resize();
+      private function onResize(event:Event = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onTextClick(textEvent:TextEvent) : void {
-         var text:String = textEvent.text;
-         if(text.charAt(0) == "@")
-         {
-            this._filterUI.addToFilter(text.substr(1));
-         }
+      private function onTextClick(textEvent:TextEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onBookClick(e:MouseEvent) : void {
-         var target:ConsoleIcon = e.currentTarget as ConsoleIcon;
-         var type:int = int(target.name.substr(1));
-         if(type == TypeMessage.TYPE_HOOK)
-         {
-            this._showHook = !this._showHook;
-            target.disable(!this._showHook);
-         }
-         else if(type == TypeMessage.TYPE_UI)
-         {
-            this._showUI = !this._showUI;
-            target.disable(!this._showUI);
-         }
-         else if(type == TypeMessage.TYPE_ACTION)
-         {
-            this._showAction = !this._showAction;
-            target.disable(!this._showAction);
-         }
-         else if(type == TypeMessage.TYPE_SHORTCUT)
-         {
-            this._showShortcut = !this._showShortcut;
-            target.disable(!this._showShortcut);
-         }
-         
-         
-         
-         this.onFilterChange();
+      private function onBookClick(e:MouseEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function saveText(e:Event) : void {
-         var file:File = new File();
-         file.browseForSave("Save");
-         file.addEventListener(Event.SELECT,this.onFileSelect);
+      private function saveText(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onClose(e:Event) : void {
-         _displayed = false;
-         this._window = null;
-         this.saveData();
+      private function onClose(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
       private var regExp:RegExp;
       
       private var regExp2:RegExp;
       
-      private function onFileSelect(e:Event) : void {
-         var fileStream:FileStream = null;
-         var text:String = null;
-         try
-         {
-            text = this._lines.join(File.lineEnding);
-            text = text.replace(this.regExp,"");
-            text = text.replace(this.regExp2," ");
-            fileStream = new FileStream();
-            fileStream.open(e.target as File,FileMode.WRITE);
-            fileStream.writeUTFBytes(text);
-            fileStream.close();
-         }
-         catch(e:Error)
-         {
-         }
+      private function onFileSelect(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onScrollVChange(e:Event) : void {
-         this._scrollBarH.resize();
+      private function onScrollVChange(e:Event) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

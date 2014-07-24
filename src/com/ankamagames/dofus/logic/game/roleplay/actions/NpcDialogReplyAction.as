@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
    public class NpcDialogReplyAction extends Object implements Action
    {
       
-      public function NpcDialogReplyAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(replyId:int) : NpcDialogReplyAction {
-         var a:NpcDialogReplyAction = new NpcDialogReplyAction();
-         a.replyId = replyId;
-         return a;
+      public function NpcDialogReplyAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(replyId:int) : NpcDialogReplyAction
+      {
+         //Décompilation abandonné
       }
       
       public var replyId:uint;

@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.fight.actions
    public class DisableAfkAction extends Object implements Action
    {
       
-      public function DisableAfkAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : DisableAfkAction {
-         var a:DisableAfkAction = new DisableAfkAction();
-         return a;
+      public function DisableAfkAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : DisableAfkAction
+      {
+         //Décompilation abandonné
       }
    }
 }

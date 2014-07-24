@@ -7,61 +7,52 @@ package com.ankamagames.dofus.network.types.game.context.fight
    public class GameFightFighterMonsterLightInformations extends GameFightFighterLightInformations implements INetworkType
    {
       
-      public function GameFightFighterMonsterLightInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameFightFighterMonsterLightInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 455;
       
       public var creatureGenericId:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 455;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameFightFighterMonsterLightInformations(id:int = 0, wave:int = 0, level:uint = 0, breed:int = 0, sex:Boolean = false, alive:Boolean = false, creatureGenericId:uint = 0) : GameFightFighterMonsterLightInformations {
-         super.initGameFightFighterLightInformations(id,wave,level,breed,sex,alive);
-         this.creatureGenericId = creatureGenericId;
-         return this;
+      public function initGameFightFighterMonsterLightInformations(id:int = 0, wave:int = 0, level:uint = 0, breed:int = 0, sex:Boolean = false, alive:Boolean = false, creatureGenericId:uint = 0) : GameFightFighterMonsterLightInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.creatureGenericId = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameFightFighterMonsterLightInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightFighterMonsterLightInformations(output:IDataOutput) : void {
-         super.serializeAs_GameFightFighterLightInformations(output);
-         if(this.creatureGenericId < 0)
-         {
-            throw new Error("Forbidden value (" + this.creatureGenericId + ") on element creatureGenericId.");
-         }
-         else
-         {
-            output.writeShort(this.creatureGenericId);
-            return;
-         }
+      public function serializeAs_GameFightFighterMonsterLightInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameFightFighterMonsterLightInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightFighterMonsterLightInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.creatureGenericId = input.readShort();
-         if(this.creatureGenericId < 0)
-         {
-            throw new Error("Forbidden value (" + this.creatureGenericId + ") on element of GameFightFighterMonsterLightInformations.creatureGenericId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_GameFightFighterMonsterLightInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -10,20 +10,28 @@ package com.ankamagames.jerakine.resources.adapters.impl
    public class ZipAdapter extends AbstractUrlLoaderAdapter implements IAdapter
    {
       
-      public function ZipAdapter() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      override protected function getResource(dataFormat:String, data:*) : * {
-         return new ZipFile(data as ByteArray);
+      public function ZipAdapter()
+      {
+         //Décompilation abandonné
       }
       
-      override public function getResourceType() : uint {
-         return ResourceType.RESOURCE_ZIP;
+      override protected function getResource(dataFormat:String, data:*) : *
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getDataFormat() : String {
-         return URLLoaderDataFormat.BINARY;
+      override public function getResourceType() : uint
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getDataFormat() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

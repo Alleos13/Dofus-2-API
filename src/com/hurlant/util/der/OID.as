@@ -3,8 +3,13 @@ package com.hurlant.util.der
    public class OID extends Object
    {
       
-      public function OID() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function OID()
+      {
+         //Décompilation abandonné
       }
       
       public static const RSA_ENCRYPTION:String = "1.2.840.113549.1.1.1";

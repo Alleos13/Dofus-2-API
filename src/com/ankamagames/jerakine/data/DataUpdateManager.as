@@ -21,9 +21,13 @@ package com.ankamagames.jerakine.data
    public class DataUpdateManager extends EventDispatcher
    {
       
-      public function DataUpdateManager() {
-         this._log = Log.getLogger(getQualifiedClassName(DataUpdateManager));
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DataUpdateManager()
+      {
+         //Décompilation abandonné
       }
       
       public static const SQL_MODE:Boolean;
@@ -48,90 +52,49 @@ package com.ankamagames.jerakine.data
       
       private var _datastoreList:Array;
       
-      public function init(metaFileListe:Uri, clearAll:Boolean = false) : void {
-         this._metaFileListe = metaFileListe;
-         this._storeKey = "version_" + this._metaFileListe.uri;
-         this._clearAll = clearAll;
-         if(this._clearAll)
-         {
-            this.clear();
-         }
-         this.initMetaFileListe();
+      public function init(metaFileListe:Uri, clearAll:Boolean = false) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function initMetaFileListe() : void {
-         this._versions = this._clearAll?new Array():StoreDataManager.getInstance().getSetData(JerakineConstants.DATASTORE_FILES_INFO,this._storeKey,new Array());
-         this._files = new Array();
-         this._loader = ResourceLoaderFactory.getLoader(ResourceLoaderType.SERIAL_LOADER);
-         this._loader.addEventListener(ResourceLoaderProgressEvent.LOADER_COMPLETE,this.onComplete);
-         this._loader.addEventListener(ResourceLoadedEvent.LOADED,this.onLoaded);
-         this._loader.addEventListener(ResourceErrorEvent.ERROR,this.onLoadFailed);
-         this._loader.load(this._metaFileListe);
+      public function initMetaFileListe() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get files() : Array {
-         return this._files;
+      public function get files() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function clear() : void {
+      public function clear() : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function checkFileVersion(sFileName:String, sVersion:String) : Boolean {
-         return this._versions[sFileName] == sVersion;
+      protected function checkFileVersion(sFileName:String, sVersion:String) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      protected function onLoaded(e:ResourceLoadedEvent) : void {
-         var meta:LangMetaData = null;
-         var uri:Uri = null;
-         var container:Object = null;
-         var file:String = null;
-         switch(e.uri.fileType)
-         {
-            case "meta":
-               meta = LangMetaData.fromXml(e.resource,e.uri.uri,this.checkFileVersion);
-               for(file in meta.clearFile)
-               {
-                  uri = new Uri(FileUtils.getFilePath(e.uri.path) + "/" + file);
-                  uri.tag = 
-                     {
-                        "version":meta.clearFile[file],
-                        "file":FileUtils.getFileStartName(e.uri.uri) + "." + file
-                     };
-                  this._files.push(uri);
-               }
-               if(meta.clearFileCount)
-               {
-                  this._loader.load(this._files);
-               }
-               else
-               {
-                  dispatchEvent(new Event(Event.COMPLETE));
-               }
-               break;
-            case "swf":
-               this._dataFilesLoaded = true;
-               container = e.resource;
-               StoreDataManager.getInstance().setData(JerakineConstants.DATASTORE_FILES_INFO,container.moduleName + "_filelist",container.fileList);
-               StoreDataManager.getInstance().setData(JerakineConstants.DATASTORE_FILES_INFO,container.moduleName + "_chunkLength",container.chunkLength);
-               this._loadedFileCount++;
-               this.processFileData(container,e.uri);
-               break;
-         }
+      protected function onLoaded(e:ResourceLoadedEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function processFileData(container:Object, uri:Uri) : void {
+      protected function processFileData(container:Object, uri:Uri) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onLoadFailed(e:ResourceErrorEvent) : void {
-         this._log.error("Failed " + e.uri);
-         dispatchEvent(new FileEvent(FileEvent.ERROR,e.uri.uri,false));
+      private function onLoadFailed(e:ResourceErrorEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onComplete(e:ResourceLoaderProgressEvent) : void {
-         if(this._dataFilesLoaded)
-         {
-            dispatchEvent(new Event(Event.COMPLETE));
-         }
+      private function onComplete(e:ResourceLoaderProgressEvent) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

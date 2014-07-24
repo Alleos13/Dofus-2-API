@@ -5,13 +5,18 @@ package com.ankamagames.dofus.modules.utils.actions
    public class ModuleInstallCancelAction extends Object implements Action
    {
       
-      public function ModuleInstallCancelAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : ModuleInstallCancelAction {
-         var action:ModuleInstallCancelAction = new ModuleInstallCancelAction();
-         return action;
+      public function ModuleInstallCancelAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : ModuleInstallCancelAction
+      {
+         //Décompilation abandonné
       }
    }
 }

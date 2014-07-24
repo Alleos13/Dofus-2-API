@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public final class LineBreak extends Object
    {
       
-      public function LineBreak() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LineBreak()
+      {
+         //Décompilation abandonné
       }
       
       public static const TO_FIT:String = "toFit";

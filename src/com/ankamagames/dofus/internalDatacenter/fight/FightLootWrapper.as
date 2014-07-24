@@ -8,16 +8,13 @@ package com.ankamagames.dofus.internalDatacenter.fight
    public class FightLootWrapper extends Object implements IDataCenter
    {
       
-      public function FightLootWrapper(loot:FightLoot) {
-         super();
-         this.objects = new Array();
-         var i:uint = 0;
-         while(i < loot.objects.length)
-         {
-            this.objects.push(ItemWrapper.create(63,0,loot.objects[i],loot.objects[i + 1],new Vector.<ObjectEffect>(),false));
-            i = i + 2;
-         }
-         this.kamas = loot.kamas;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightLootWrapper(loot:FightLoot)
+      {
+         //Décompilation abandonné
       }
       
       public var objects:Array;

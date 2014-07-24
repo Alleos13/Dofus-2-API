@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.common.actions
    public class ChangeServerAction extends Object implements Action
    {
       
-      public function ChangeServerAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : ChangeServerAction {
-         return new ChangeServerAction();
+      public function ChangeServerAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : ChangeServerAction
+      {
+         //Décompilation abandonné
       }
    }
 }

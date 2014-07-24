@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.fight
    public class GameFightNewRoundMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameFightNewRoundMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameFightNewRoundMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6239;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var roundNumber:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6239;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameFightNewRoundMessage(roundNumber:uint = 0) : GameFightNewRoundMessage {
-         this.roundNumber = roundNumber;
-         this._isInitialized = true;
-         return this;
+      public function initGameFightNewRoundMessage(roundNumber:uint = 0) : GameFightNewRoundMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.roundNumber = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameFightNewRoundMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightNewRoundMessage(output:IDataOutput) : void {
-         if(this.roundNumber < 0)
-         {
-            throw new Error("Forbidden value (" + this.roundNumber + ") on element roundNumber.");
-         }
-         else
-         {
-            output.writeInt(this.roundNumber);
-            return;
-         }
+      public function serializeAs_GameFightNewRoundMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameFightNewRoundMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightNewRoundMessage(input:IDataInput) : void {
-         this.roundNumber = input.readInt();
-         if(this.roundNumber < 0)
-         {
-            throw new Error("Forbidden value (" + this.roundNumber + ") on element of GameFightNewRoundMessage.roundNumber.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_GameFightNewRoundMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

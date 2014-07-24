@@ -5,8 +5,13 @@ package com.ankamagames.berilia.utils
    public class EmbedIcons extends Object
    {
       
-      public function EmbedIcons() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EmbedIcons()
+      {
+         //Décompilation abandonné
       }
       
       public static var SLOT_DEFAULT_ICON:BitmapData;

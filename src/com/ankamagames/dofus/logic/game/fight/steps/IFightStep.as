@@ -5,10 +5,14 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public interface IFightStep extends ISequencable
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function get stepType() : String;
       
       function get castingSpellId() : int;
       
-      function set castingSpellId(param1:int) : void;
+      function set castingSpellId(val:int) : void;
    }
 }

@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.script
    public class ScriptErrorEnum extends Object
    {
       
-      public function ScriptErrorEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ScriptErrorEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const OK:uint = 0;

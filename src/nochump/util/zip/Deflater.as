@@ -5,9 +5,13 @@ package nochump.util.zip
    public class Deflater extends Object
    {
       
-      public function Deflater() {
-         super();
-         this.reset();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Deflater()
+      {
+         //Décompilation abandonné
       }
       
       private var buf:ByteArray;
@@ -18,34 +22,29 @@ package nochump.util.zip
       
       private var totalOut:uint;
       
-      public function reset() : void {
-         this.buf = new ByteArray();
-         this.compressed = false;
-         this.totalOut = this.totalIn = 0;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setInput(input:ByteArray) : void {
-         this.buf.writeBytes(input);
-         this.totalIn = this.buf.length;
+      public function setInput(input:ByteArray) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deflate(output:ByteArray) : uint {
-         if(!this.compressed)
-         {
-            this.buf.compress();
-            this.compressed = true;
-         }
-         output.writeBytes(this.buf,2,this.buf.length - 6);
-         this.totalOut = output.length;
-         return 0;
+      public function deflate(output:ByteArray) : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function getBytesRead() : uint {
-         return this.totalIn;
+      public function getBytesRead() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function getBytesWritten() : uint {
-         return this.totalOut;
+      public function getBytesWritten() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

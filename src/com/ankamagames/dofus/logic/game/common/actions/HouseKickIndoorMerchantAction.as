@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class HouseKickIndoorMerchantAction extends Object implements Action
    {
       
-      public function HouseKickIndoorMerchantAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(cellId:uint) : HouseKickIndoorMerchantAction {
-         var action:HouseKickIndoorMerchantAction = new HouseKickIndoorMerchantAction();
-         action.cellId = cellId;
-         return action;
+      public function HouseKickIndoorMerchantAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(cellId:uint) : HouseKickIndoorMerchantAction
+      {
+         //Décompilation abandonné
       }
       
       public var cellId:uint;

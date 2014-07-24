@@ -12,76 +12,77 @@ package com.ankamagames.dofus.uiApi
    public class ExternalNotificationApi extends Object implements IApi
    {
       
-      public function ExternalNotificationApi() {
-         this._log = Log.getLogger(getQualifiedClassName(ExternalNotificationApi));
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExternalNotificationApi()
+      {
+         //Décompilation abandonné
       }
       
       protected var _log:Logger;
       
       private var _module:UiModule;
       
-      public function set module(value:UiModule) : void {
-         this._module = value;
+      public function set module(value:UiModule) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         this._module = null;
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setMaxNotifications(pValue:int) : void {
-         ExternalNotificationManager.getInstance().setMaxNotifications(pValue);
+      public function setMaxNotifications(pValue:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setNotificationsMode(pValue:int) : void {
-         ExternalNotificationManager.getInstance().setNotificationsMode(pValue);
+      public function setNotificationsMode(pValue:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setDisplayDuration(pValueId:int) : void {
-         ExternalNotificationManager.getInstance().setDisplayDuration(pValueId);
+      public function setDisplayDuration(pValueId:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function isExternalNotificationTypeIgnored(pExternalNotificationType:int) : Boolean {
-         return ExternalNotificationManager.getInstance().isExternalNotificationTypeIgnored(pExternalNotificationType);
+      public function isExternalNotificationTypeIgnored(pExternalNotificationType:int) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function areExternalNotificationsEnabled() : Boolean {
-         return ExternalNotificationManager.getInstance().notificationsEnabled;
+      public function areExternalNotificationsEnabled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getShowMode() : int {
-         return ExternalNotificationManager.getInstance().showMode;
+      public function getShowMode() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function canAddExternalNotification(pExternalNotificationType:int) : Boolean {
-         return ExternalNotificationManager.getInstance().canAddExternalNotification(pExternalNotificationType);
+      public function canAddExternalNotification(pExternalNotificationType:int) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function addExternalNotification(pNotificationType:int, pId:String, pUiName:String, pTitle:String, pMessage:String, pIconPath:String, pIconId:int, pIconBg:String, pCss:String = "normal", pCssClass:String = "p", pEntityContactData:Object = null, pSoundId:String = "16011", pAlwaysShow:Boolean = false, pHookName:String = null, pHookParams:Array = null) : String {
-         var displayData:Object = 
-            {
-               "title":pTitle,
-               "message":pMessage,
-               "iconPath":pIconPath,
-               "icon":pIconId,
-               "iconBg":pIconBg,
-               "css":pCss,
-               "cssClass":pCssClass,
-               "entityContactData":pEntityContactData
-            };
-         var req:ExternalNotificationRequest = new ExternalNotificationRequest(pNotificationType,ExternalNotificationManager.getInstance().clientId,ExternalNotificationManager.getInstance().otherClientsIds,pId,pAlwaysShow?ExternalNotificationModeEnum.ALWAYS:ExternalNotificationManager.getInstance().showMode,pUiName,displayData,pSoundId,ExternalNotificationManager.getInstance().notificationPlaySound(pNotificationType),ExternalNotificationManager.getInstance().notificationNotify(pNotificationType),pHookName,pHookParams);
-         ExternalNotificationManager.getInstance().handleNotificationRequest(req);
-         return req.instanceId;
+      public function addExternalNotification(pNotificationType:int, pId:String, pUiName:String, pTitle:String, pMessage:String, pIconPath:String, pIconId:int, pIconBg:String, pCss:String = "normal", pCssClass:String = "p", pEntityContactData:Object = null, pSoundId:String = "16011", pAlwaysShow:Boolean = false, pHookName:String = null, pHookParams:Array = null) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function removeExternalNotification(pInstanceId:String, pActivateClientWindow:Boolean = false) : void {
-         var ids:Array = pInstanceId.split("#");
-         ExternalNotificationManager.getInstance().closeExternalNotification(ids[0],ids[1],pActivateClientWindow);
+      public function removeExternalNotification(pInstanceId:String, pActivateClientWindow:Boolean = false) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function resetExternalNotificationDisplayTimeout(pInstanceId:String) : void {
-         var ids:Array = pInstanceId.split("#");
-         ExternalNotificationManager.getInstance().resetNotificationDisplayTimeout(ids[0],ids[1]);
+      public function resetExternalNotificationDisplayTimeout(pInstanceId:String) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

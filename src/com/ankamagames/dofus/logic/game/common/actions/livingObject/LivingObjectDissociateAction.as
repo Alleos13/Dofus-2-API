@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.livingObject
    public class LivingObjectDissociateAction extends Object implements Action
    {
       
-      public function LivingObjectDissociateAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(livingUID:uint, livingPosition:uint) : LivingObjectDissociateAction {
-         var action:LivingObjectDissociateAction = new LivingObjectDissociateAction();
-         action.livingUID = livingUID;
-         action.livingPosition = livingPosition;
-         return action;
+      public function LivingObjectDissociateAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(livingUID:uint, livingPosition:uint) : LivingObjectDissociateAction
+      {
+         //Décompilation abandonné
       }
       
       public var livingUID:uint;

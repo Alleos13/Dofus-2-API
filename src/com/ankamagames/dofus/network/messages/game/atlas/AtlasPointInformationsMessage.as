@@ -10,61 +10,69 @@ package com.ankamagames.dofus.network.messages.game.atlas
    public class AtlasPointInformationsMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function AtlasPointInformationsMessage() {
-         this.type = new AtlasPointsInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AtlasPointInformationsMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5956;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var type:AtlasPointsInformations;
       
-      override public function getMessageId() : uint {
-         return 5956;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initAtlasPointInformationsMessage(type:AtlasPointsInformations = null) : AtlasPointInformationsMessage {
-         this.type = type;
-         this._isInitialized = true;
-         return this;
+      public function initAtlasPointInformationsMessage(type:AtlasPointsInformations = null) : AtlasPointInformationsMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.type = new AtlasPointsInformations();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AtlasPointInformationsMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_AtlasPointInformationsMessage(output:IDataOutput) : void {
-         this.type.serializeAs_AtlasPointsInformations(output);
+      public function serializeAs_AtlasPointInformationsMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AtlasPointInformationsMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_AtlasPointInformationsMessage(input:IDataInput) : void {
-         this.type = new AtlasPointsInformations();
-         this.type.deserialize(input);
+      public function deserializeAs_AtlasPointInformationsMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

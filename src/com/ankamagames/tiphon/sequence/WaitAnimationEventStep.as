@@ -6,12 +6,13 @@ package com.ankamagames.tiphon.sequence
    public class WaitAnimationEventStep extends AbstractSequencable
    {
       
-      public function WaitAnimationEventStep(animStep:PlayAnimationStep, waitedEvent:String = "animation_event_end") {
-         super();
-         animStep.target.addEventListener(TiphonEvent.ANIMATION_EVENT,this.onEvent);
-         this._waitedEvent = waitedEvent;
-         this._targetStep = animStep;
-         this._initOk = true;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function WaitAnimationEventStep(animStep:PlayAnimationStep, waitedEvent:String = "animation_event_end")
+      {
+         //Décompilation abandonné
       }
       
       private var _targetStep:PlayAnimationStep;
@@ -24,42 +25,19 @@ package com.ankamagames.tiphon.sequence
       
       private var _waiting:Boolean;
       
-      override public function start() : void {
-         if((!this._targetStep) || (!this._targetStep.target))
-         {
-            executeCallbacks();
-            return;
-         }
-         if((!this._initOk) || (this._released) || (!(this._targetStep.animation == this._targetStep.target.getAnimation())))
-         {
-            this._targetStep.target.removeEventListener(TiphonEvent.ANIMATION_EVENT,this.onEvent);
-            this._targetStep = null;
-            executeCallbacks();
-         }
-         else
-         {
-            this._waiting = true;
-         }
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onEvent(e:TiphonEvent) : void {
-         if((e) && (e.type == this._waitedEvent) || (!(this._targetStep.animation == this._targetStep.target.getAnimation())))
-         {
-            this._released = true;
-            if(this._targetStep)
-            {
-               this._targetStep.target.removeEventListener(TiphonEvent.ANIMATION_EVENT,this.onEvent);
-            }
-            this._targetStep = null;
-            if(this._waiting)
-            {
-               executeCallbacks();
-            }
-         }
+      private function onEvent(e:TiphonEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function toString() : String {
-         return "Waiting event [" + this._waitedEvent + "] for " + this._targetStep;
+      override public function toString() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

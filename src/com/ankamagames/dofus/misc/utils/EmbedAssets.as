@@ -9,8 +9,13 @@ package com.ankamagames.dofus.misc.utils
    public class EmbedAssets extends Object
    {
       
-      public function EmbedAssets() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EmbedAssets()
+      {
+         //Décompilation abandonné
       }
       
       private static var _cache:Dictionary;
@@ -43,41 +48,24 @@ package com.ankamagames.dofus.misc.utils
       
       private static var matrix:Matrix;
       
-      public static function getBitmap(className:String, unique:Boolean = false, useCache:Boolean = true) : Bitmap {
-         var bmp:Bitmap = null;
-         var bmpdt:BitmapData = null;
-         if((useCache) && (!(_cache[className] == null)))
-         {
-            bmp = _cache[className];
-            if(!unique)
-            {
-               return bmp;
-            }
-            bmpdt = new BitmapData(bmp.width,bmp.height,true,16711935);
-            bmpdt.draw(bmp,matrix);
-            return new Bitmap(bmpdt);
-         }
-         var ClassReference:Class = EmbedAssets[className] as Class;
-         bmp = new ClassReference() as Bitmap;
-         if(useCache)
-         {
-            saveCache(className,bmp);
-         }
-         return bmp;
+      public static function getBitmap(className:String, unique:Boolean = false, useCache:Boolean = true) : Bitmap
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSprite(className:String) : Sprite {
-         var ClassReference:Class = EmbedAssets[className] as Class;
-         var spr:Sprite = new ClassReference() as Sprite;
-         return spr;
+      public static function getSprite(className:String) : Sprite
+      {
+         //Décompilation abandonné
       }
       
-      public static function getClass(className:String) : Class {
-         return EmbedAssets[className] as Class;
+      public static function getClass(className:String) : Class
+      {
+         //Décompilation abandonné
       }
       
-      private static function saveCache(className:String, data:*) : void {
-         _cache[className] = data;
+      private static function saveCache(className:String, data:*) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

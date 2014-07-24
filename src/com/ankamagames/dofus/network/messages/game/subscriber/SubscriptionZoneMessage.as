@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.subscriber
    public class SubscriptionZoneMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function SubscriptionZoneMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SubscriptionZoneMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5573;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var active:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 5573;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initSubscriptionZoneMessage(active:Boolean = false) : SubscriptionZoneMessage {
-         this.active = active;
-         this._isInitialized = true;
-         return this;
+      public function initSubscriptionZoneMessage(active:Boolean = false) : SubscriptionZoneMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.active = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_SubscriptionZoneMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_SubscriptionZoneMessage(output:IDataOutput) : void {
-         output.writeBoolean(this.active);
+      public function serializeAs_SubscriptionZoneMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_SubscriptionZoneMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_SubscriptionZoneMessage(input:IDataInput) : void {
-         this.active = input.readBoolean();
+      public function deserializeAs_SubscriptionZoneMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

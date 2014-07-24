@@ -7,18 +7,25 @@ package com.ankamagames.dofus.datacenter.monsters
    public class Monster extends Object implements IDataCenter
    {
       
-      public function Monster() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Monster()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Monsters";
       
-      public static function getMonsterById(id:uint) : Monster {
-         return GameData.getObject(MODULE,id) as Monster;
+      public static function getMonsterById(id:uint) : Monster
+      {
+         //Décompilation abandonné
       }
       
-      public static function getMonsters() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getMonsters() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -65,30 +72,28 @@ package com.ankamagames.dofus.datacenter.monsters
       
       public var canBePushed:Boolean;
       
+      public var fastAnimsFun:Boolean;
+      
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get type() : MonsterRace {
-         return MonsterRace.getMonsterRaceById(this.race);
+      public function get type() : MonsterRace
+      {
+         //Décompilation abandonné
       }
       
-      public function getMonsterGrade(grade:uint) : MonsterGrade {
-         if((grade < 1) || (grade > this.grades.length))
-         {
-            grade = this.grades.length;
-         }
-         return this.grades[grade - 1] as MonsterGrade;
+      public function getMonsterGrade(grade:uint) : MonsterGrade
+      {
+         //Décompilation abandonné
       }
       
-      public function toString() : String {
-         return this.name;
+      public function toString() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

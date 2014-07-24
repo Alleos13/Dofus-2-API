@@ -9,95 +9,71 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.treasureHun
    public class PortalDialogQuestionMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function PortalDialogQuestionMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PortalDialogQuestionMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6495;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var availableUseLeft:uint = 0;
       
       public var closeDate:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6495;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPortalDialogQuestionMessage(availableUseLeft:uint = 0, closeDate:uint = 0) : PortalDialogQuestionMessage {
-         this.availableUseLeft = availableUseLeft;
-         this.closeDate = closeDate;
-         this._isInitialized = true;
-         return this;
+      public function initPortalDialogQuestionMessage(availableUseLeft:uint = 0, closeDate:uint = 0) : PortalDialogQuestionMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.availableUseLeft = 0;
-         this.closeDate = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PortalDialogQuestionMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PortalDialogQuestionMessage(output:IDataOutput) : void {
-         if(this.availableUseLeft < 0)
-         {
-            throw new Error("Forbidden value (" + this.availableUseLeft + ") on element availableUseLeft.");
-         }
-         else
-         {
-            output.writeInt(this.availableUseLeft);
-            if(this.closeDate < 0)
-            {
-               throw new Error("Forbidden value (" + this.closeDate + ") on element closeDate.");
-            }
-            else
-            {
-               output.writeInt(this.closeDate);
-               return;
-            }
-         }
+      public function serializeAs_PortalDialogQuestionMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PortalDialogQuestionMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PortalDialogQuestionMessage(input:IDataInput) : void {
-         this.availableUseLeft = input.readInt();
-         if(this.availableUseLeft < 0)
-         {
-            throw new Error("Forbidden value (" + this.availableUseLeft + ") on element of PortalDialogQuestionMessage.availableUseLeft.");
-         }
-         else
-         {
-            this.closeDate = input.readInt();
-            if(this.closeDate < 0)
-            {
-               throw new Error("Forbidden value (" + this.closeDate + ") on element of PortalDialogQuestionMessage.closeDate.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_PortalDialogQuestionMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

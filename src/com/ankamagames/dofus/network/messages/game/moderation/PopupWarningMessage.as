@@ -9,16 +9,22 @@ package com.ankamagames.dofus.network.messages.game.moderation
    public class PopupWarningMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function PopupWarningMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PopupWarningMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6134;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var lockDuration:uint = 0;
@@ -27,69 +33,49 @@ package com.ankamagames.dofus.network.messages.game.moderation
       
       public var content:String = "";
       
-      override public function getMessageId() : uint {
-         return 6134;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPopupWarningMessage(lockDuration:uint = 0, author:String = "", content:String = "") : PopupWarningMessage {
-         this.lockDuration = lockDuration;
-         this.author = author;
-         this.content = content;
-         this._isInitialized = true;
-         return this;
+      public function initPopupWarningMessage(lockDuration:uint = 0, author:String = "", content:String = "") : PopupWarningMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.lockDuration = 0;
-         this.author = "";
-         this.content = "";
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PopupWarningMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PopupWarningMessage(output:IDataOutput) : void {
-         if((this.lockDuration < 0) || (this.lockDuration > 255))
-         {
-            throw new Error("Forbidden value (" + this.lockDuration + ") on element lockDuration.");
-         }
-         else
-         {
-            output.writeByte(this.lockDuration);
-            output.writeUTF(this.author);
-            output.writeUTF(this.content);
-            return;
-         }
+      public function serializeAs_PopupWarningMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PopupWarningMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PopupWarningMessage(input:IDataInput) : void {
-         this.lockDuration = input.readUnsignedByte();
-         if((this.lockDuration < 0) || (this.lockDuration > 255))
-         {
-            throw new Error("Forbidden value (" + this.lockDuration + ") on element of PopupWarningMessage.lockDuration.");
-         }
-         else
-         {
-            this.author = input.readUTF();
-            this.content = input.readUTF();
-            return;
-         }
+      public function deserializeAs_PopupWarningMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

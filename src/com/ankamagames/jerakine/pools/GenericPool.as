@@ -5,28 +5,25 @@ package com.ankamagames.jerakine.pools
    public class GenericPool extends Object
    {
       
-      public function GenericPool() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GenericPool()
+      {
+         //Décompilation abandonné
       }
       
       private static var _pools:Dictionary;
       
-      public static function get(type:Class, ... args) : * {
-         if((_pools[type]) && (_pools[type].length))
-         {
-            return type["create"].apply(null,args.concat(_pools[type].pop()));
-         }
-         return type["create"].apply(null,args);
+      public static function name_1(type:Class, ... args) : *
+      {
+         //Décompilation abandonné
       }
       
-      public static function free(target:Poolable) : void {
-         target.free();
-         var type:Class = Object(target).constructor;
-         if(!_pools[type])
-         {
-            _pools[type] = new Array();
-         }
-         (_pools[type] as Array).push(target);
+      public static function free(target:Poolable) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

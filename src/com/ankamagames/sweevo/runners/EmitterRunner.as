@@ -11,10 +11,13 @@ package com.ankamagames.sweevo.runners
    public class EmitterRunner extends Object implements IRunner
    {
       
-      public function EmitterRunner(renderer:Renderer, onRun:Callback = null) {
-         super();
-         this._renderer = renderer;
-         this._onRun = onRun;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EmitterRunner(renderer:Renderer, onRun:Callback = null)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -25,27 +28,14 @@ package com.ankamagames.sweevo.runners
       
       private var _scriptInstance;
       
-      public function get renderer() : Renderer {
-         return this._renderer;
+      public function get renderer() : Renderer
+      {
+         //Décompilation abandonné
       }
       
-      public function run(script:Class) : uint {
-         this._scriptInstance = new script();
-         this._scriptInstance["__setRunner__"](this);
-         try
-         {
-            this._scriptInstance.main();
-         }
-         catch(e:Error)
-         {
-            _log.error("Error while executing a script :");
-            _log.error(e.getStackTrace());
-         }
-         if(this._onRun)
-         {
-            this._onRun.exec();
-         }
-         return ScriptErrorEnum.OK;
+      public function run(script:Class) : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

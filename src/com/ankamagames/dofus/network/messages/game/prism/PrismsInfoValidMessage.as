@@ -10,75 +10,69 @@ package com.ankamagames.dofus.network.messages.game.prism
    public class PrismsInfoValidMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function PrismsInfoValidMessage() {
-         this.fights = new Vector.<PrismFightersInformation>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PrismsInfoValidMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6451;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var fights:Vector.<PrismFightersInformation>;
       
-      override public function getMessageId() : uint {
-         return 6451;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPrismsInfoValidMessage(fights:Vector.<PrismFightersInformation> = null) : PrismsInfoValidMessage {
-         this.fights = fights;
-         this._isInitialized = true;
-         return this;
+      public function initPrismsInfoValidMessage(fights:Vector.<PrismFightersInformation> = null) : PrismsInfoValidMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.fights = new Vector.<PrismFightersInformation>();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PrismsInfoValidMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PrismsInfoValidMessage(output:IDataOutput) : void {
-         output.writeShort(this.fights.length);
-         var _i1:uint = 0;
-         while(_i1 < this.fights.length)
-         {
-            (this.fights[_i1] as PrismFightersInformation).serializeAs_PrismFightersInformation(output);
-            _i1++;
-         }
+      public function serializeAs_PrismsInfoValidMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PrismsInfoValidMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PrismsInfoValidMessage(input:IDataInput) : void {
-         var _item1:PrismFightersInformation = null;
-         var _fightsLen:uint = input.readUnsignedShort();
-         var _i1:uint = 0;
-         while(_i1 < _fightsLen)
-         {
-            _item1 = new PrismFightersInformation();
-            _item1.deserialize(input);
-            this.fights.push(_item1);
-            _i1++;
-         }
+      public function deserializeAs_PrismsInfoValidMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

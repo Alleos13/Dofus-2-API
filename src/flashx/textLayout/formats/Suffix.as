@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public class Suffix extends Object
    {
       
-      public function Suffix() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Suffix()
+      {
+         //Décompilation abandonné
       }
       
       public static const AUTO:String = "auto";

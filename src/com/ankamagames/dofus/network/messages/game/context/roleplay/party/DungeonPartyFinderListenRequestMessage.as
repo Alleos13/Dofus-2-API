@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
    public class DungeonPartyFinderListenRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function DungeonPartyFinderListenRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DungeonPartyFinderListenRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6246;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var dungeonId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6246;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initDungeonPartyFinderListenRequestMessage(dungeonId:uint = 0) : DungeonPartyFinderListenRequestMessage {
-         this.dungeonId = dungeonId;
-         this._isInitialized = true;
-         return this;
+      public function initDungeonPartyFinderListenRequestMessage(dungeonId:uint = 0) : DungeonPartyFinderListenRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.dungeonId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_DungeonPartyFinderListenRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_DungeonPartyFinderListenRequestMessage(output:IDataOutput) : void {
-         if(this.dungeonId < 0)
-         {
-            throw new Error("Forbidden value (" + this.dungeonId + ") on element dungeonId.");
-         }
-         else
-         {
-            output.writeShort(this.dungeonId);
-            return;
-         }
+      public function serializeAs_DungeonPartyFinderListenRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_DungeonPartyFinderListenRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_DungeonPartyFinderListenRequestMessage(input:IDataInput) : void {
-         this.dungeonId = input.readShort();
-         if(this.dungeonId < 0)
-         {
-            throw new Error("Forbidden value (" + this.dungeonId + ") on element of DungeonPartyFinderListenRequestMessage.dungeonId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_DungeonPartyFinderListenRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

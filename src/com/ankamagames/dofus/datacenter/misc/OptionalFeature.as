@@ -7,32 +7,32 @@ package com.ankamagames.dofus.datacenter.misc
    public class OptionalFeature extends Object implements IDataCenter
    {
       
-      public function OptionalFeature() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function OptionalFeature()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "OptionalFeatures";
       
-      public static function getOptionalFeatureById(id:int) : OptionalFeature {
-         return GameData.getObject(MODULE,id) as OptionalFeature;
+      public static function getOptionalFeatureById(id:int) : OptionalFeature
+      {
+         //Décompilation abandonné
       }
       
       private static var _keywords:Dictionary;
       
-      public static function getOptionalFeatureByKeyword(key:String) : OptionalFeature {
-         var feature:OptionalFeature = null;
-         if((!_keywords) || (!_keywords[key]))
-         {
-            _keywords = new Dictionary();
-            for each(_keywords[feature.keyword] in getAllOptionalFeatures())
-            {
-            }
-         }
-         return _keywords[key];
+      public static function getOptionalFeatureByKeyword(key:String) : OptionalFeature
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAllOptionalFeatures() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAllOptionalFeatures() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;

@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.fight.actions
    public class ToggleLockFightAction extends Object implements Action
    {
       
-      public function ToggleLockFightAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : ToggleLockFightAction {
-         var a:ToggleLockFightAction = new ToggleLockFightAction();
-         return a;
+      public function ToggleLockFightAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : ToggleLockFightAction
+      {
+         //Décompilation abandonné
       }
    }
 }

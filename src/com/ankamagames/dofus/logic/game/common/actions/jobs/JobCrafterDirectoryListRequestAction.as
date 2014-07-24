@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.jobs
    public class JobCrafterDirectoryListRequestAction extends Object implements Action
    {
       
-      public function JobCrafterDirectoryListRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(jobId:uint) : JobCrafterDirectoryListRequestAction {
-         var act:JobCrafterDirectoryListRequestAction = new JobCrafterDirectoryListRequestAction();
-         act.jobId = jobId;
-         return act;
+      public function JobCrafterDirectoryListRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(jobId:uint) : JobCrafterDirectoryListRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var jobId:uint;

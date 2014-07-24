@@ -7,26 +7,20 @@ package com.ankamagames.berilia.pools
    public class PoolsManager extends Object
    {
       
-      public function PoolsManager() {
-         super();
-         if(_self)
-         {
-            throw new SingletonError("Direct initialization of singleton is forbidden. Please access PoolsManager using the getInstance method.");
-         }
-         else
-         {
-            return;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PoolsManager()
+      {
+         //Décompilation abandonné
       }
       
       private static var _self:PoolsManager;
       
-      public static function getInstance() : PoolsManager {
-         if(_self == null)
-         {
-            _self = new PoolsManager();
-         }
-         return _self;
+      public static function getInstance() : PoolsManager
+      {
+         //Décompilation abandonné
       }
       
       private var _loadersPool:Pool;
@@ -35,28 +29,19 @@ package com.ankamagames.berilia.pools
       
       private var _uiRendererPool:Pool;
       
-      public function getLoadersPool() : Pool {
-         if(this._loadersPool == null)
-         {
-            this._loadersPool = new Pool(PoolableLoader,1,1,1);
-         }
-         return this._loadersPool;
+      public function getLoadersPool() : Pool
+      {
+         //Décompilation abandonné
       }
       
-      public function getXmlParsorPool() : Pool {
-         if(this._xmlParsorPool == null)
-         {
-            this._xmlParsorPool = new Pool(PoolableXmlParsor,10,5,25);
-         }
-         return this._xmlParsorPool;
+      public function getXmlParsorPool() : Pool
+      {
+         //Décompilation abandonné
       }
       
-      public function getUiRendererPool() : Pool {
-         if(this._uiRendererPool == null)
-         {
-            this._uiRendererPool = new Pool(PoolableUiRenderer,10,5,25);
-         }
-         return this._uiRendererPool;
+      public function getUiRendererPool() : Pool
+      {
+         //Décompilation abandonné
       }
    }
 }

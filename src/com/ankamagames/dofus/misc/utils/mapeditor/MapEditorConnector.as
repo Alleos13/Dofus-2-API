@@ -13,9 +13,13 @@ package com.ankamagames.dofus.misc.utils.mapeditor
    public class MapEditorConnector extends EventDispatcher
    {
       
-      public function MapEditorConnector() {
-         super();
-         setTimeout(this.init,1);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapEditorConnector()
+      {
+         //Décompilation abandonné
       }
       
       private const RETRY_INTERVAL:uint = 10000;
@@ -42,106 +46,64 @@ package com.ankamagames.dofus.misc.utils.mapeditor
       
       private var _currentData:MapEditorMessage;
       
-      private function init() : void {
-         this._socket = new Socket();
-         this._socket.endian = Endian.BIG_ENDIAN;
-         this._socket.addEventListener(Event.CONNECT,this.onConnect);
-         this._socket.addEventListener(Event.CLOSE,this.onClose);
-         this._socket.addEventListener(ProgressEvent.SOCKET_DATA,this.onData);
-         this._socket.addEventListener(IOErrorEvent.IO_ERROR,this.onError);
-         this._socket.addEventListener(SecurityErrorEvent.SECURITY_ERROR,this.onSecurityError);
-         this.tryConnect();
+      private function init() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function tryConnect() : void {
-         if(this._socket.connected)
-         {
-            return;
-         }
-         try
-         {
-            this._socket.connect(this.EDITOR_HOST,this.EDITOR_PORT);
-         }
-         catch(e:Error)
-         {
-            setTimeout(tryConnect,RETRY_INTERVAL);
-         }
+      private function tryConnect() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function checkData() : void {
-         if(!this._socktetInit)
-         {
-            this.getCrossDomain();
-         }
-         if(this._socket.bytesAvailable >= this._waitingForLength)
-         {
-            if(this._parsingState == this.STEP_HEAD)
-            {
-               this.parseHead();
-            }
-            else if(this._parsingState == this.STEP_BODY)
-            {
-               this.parseBody();
-            }
-            
-         }
+      private function checkData() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function getCrossDomain() : void {
-         if(this._socktetInit)
-         {
-            return;
-         }
-         while((this._socket.bytesAvailable) && (!this._socktetInit))
-         {
-            this._socktetInit = this._socket.readByte() == 0;
-         }
+      private function getCrossDomain() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function parseHead() : void {
-         this._waitingForLength = this._socket.readInt() - 4;
-         this._currentData = new MapEditorMessage(this._socket.readInt());
-         this._parsingState = this.STEP_BODY;
-         this.checkData();
+      private function parseHead() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function parseBody() : void {
-         this._currentData.data = new ByteArray();
-         this._socket.readBytes(this._currentData.data,0,this._waitingForLength);
-         this._waitingForLength = this.HEAD_LENGTH;
-         this._parsingState = this.STEP_HEAD;
-         dispatchEvent(new MapEditorDataEvent(MapEditorDataEvent.NEW_DATA,this._currentData));
-         trace("Info " + this._currentData.type + " ok");
-         this.checkData();
+      private function parseBody() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onSecurityError(e:Event) : void {
+      private function onSecurityError(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function sayHello() : void {
-         var helloMsg:MapEditorMessage = new MapEditorMessage(MapEditorMessage.MESSAGE_TYPE_HELLO);
-         helloMsg.serialize(this._socket);
-         this._socket.flush();
+      private function sayHello() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onConnect(e:Event) : void {
-         this._socktetInit = false;
-         dispatchEvent(new Event(Event.CONNECT));
-         this.sayHello();
+      private function onConnect(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onClose(e:Event) : void {
-         dispatchEvent(new Event(Event.CLOSE));
-         setTimeout(this.tryConnect,this.RETRY_INTERVAL);
+      private function onClose(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onData(e:ProgressEvent) : void {
-         dispatchEvent(new ProgressEvent(ProgressEvent.SOCKET_DATA));
-         this.checkData();
+      private function onData(e:ProgressEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onError(e:IOErrorEvent) : void {
-         setTimeout(this.tryConnect,this.RETRY_INTERVAL);
+      private function onError(e:IOErrorEvent) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

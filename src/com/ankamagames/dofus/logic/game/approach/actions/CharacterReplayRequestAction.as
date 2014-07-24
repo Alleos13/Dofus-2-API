@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.approach.actions
    public class CharacterReplayRequestAction extends Object implements Action
    {
       
-      public function CharacterReplayRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(characterId:uint) : CharacterReplayRequestAction {
-         var a:CharacterReplayRequestAction = new CharacterReplayRequestAction();
-         a.characterId = characterId;
-         return a;
+      public function CharacterReplayRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(characterId:uint) : CharacterReplayRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var characterId:uint;

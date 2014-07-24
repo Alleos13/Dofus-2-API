@@ -10,61 +10,69 @@ package com.ankamagames.dofus.network.messages.game.guild
    public class GuildPaddockBoughtMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GuildPaddockBoughtMessage() {
-         this.paddockInfo = new PaddockContentInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildPaddockBoughtMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5952;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var paddockInfo:PaddockContentInformations;
       
-      override public function getMessageId() : uint {
-         return 5952;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGuildPaddockBoughtMessage(paddockInfo:PaddockContentInformations = null) : GuildPaddockBoughtMessage {
-         this.paddockInfo = paddockInfo;
-         this._isInitialized = true;
-         return this;
+      public function initGuildPaddockBoughtMessage(paddockInfo:PaddockContentInformations = null) : GuildPaddockBoughtMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.paddockInfo = new PaddockContentInformations();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GuildPaddockBoughtMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GuildPaddockBoughtMessage(output:IDataOutput) : void {
-         this.paddockInfo.serializeAs_PaddockContentInformations(output);
+      public function serializeAs_GuildPaddockBoughtMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GuildPaddockBoughtMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildPaddockBoughtMessage(input:IDataInput) : void {
-         this.paddockInfo = new PaddockContentInformations();
-         this.paddockInfo.deserialize(input);
+      public function deserializeAs_GuildPaddockBoughtMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

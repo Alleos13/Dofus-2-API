@@ -3,8 +3,13 @@ package com.ankamagames.berilia.types
    public class LocationEnum extends Object
    {
       
-      public function LocationEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LocationEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const POINT_TOPLEFT:uint = 0;

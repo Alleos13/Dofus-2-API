@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.jobs
    public class JobCrafterContactLookRequestAction extends Object implements Action
    {
       
-      public function JobCrafterContactLookRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(crafterId:uint) : JobCrafterContactLookRequestAction {
-         var act:JobCrafterContactLookRequestAction = new JobCrafterContactLookRequestAction();
-         act.crafterId = crafterId;
-         return act;
+      public function JobCrafterContactLookRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(crafterId:uint) : JobCrafterContactLookRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var crafterId:uint;

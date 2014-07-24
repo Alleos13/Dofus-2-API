@@ -3,8 +3,13 @@ package flashx.textLayout.elements
    public final class InlineGraphicElementStatus extends Object
    {
       
-      public function InlineGraphicElementStatus() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function InlineGraphicElementStatus()
+      {
+         //Décompilation abandonné
       }
       
       public static const LOAD_PENDING:String = "loadPending";

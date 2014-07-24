@@ -3,8 +3,13 @@ package com.ankamagames.dofus.logic.shield
    public class ShieldSecureLevel extends Object
    {
       
-      public function ShieldSecureLevel() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ShieldSecureLevel()
+      {
+         //Décompilation abandonné
       }
       
       public static const MAX:uint = 2;

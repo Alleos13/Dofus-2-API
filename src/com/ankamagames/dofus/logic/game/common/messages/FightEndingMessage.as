@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.game.common.messages
    public class FightEndingMessage extends Object implements Message
    {
       
-      public function FightEndingMessage() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function initFightEndingMessage() : FightEndingMessage {
-         return this;
+      public function FightEndingMessage()
+      {
+         //Décompilation abandonné
+      }
+      
+      public function initFightEndingMessage() : FightEndingMessage
+      {
+         //Décompilation abandonné
       }
    }
 }

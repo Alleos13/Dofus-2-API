@@ -5,15 +5,20 @@ package com.ankamagames.berilia.components.messages
    public class SelectEmptyItemMessage extends ComponentMessage
    {
       
-      public function SelectEmptyItemMessage(target:InteractiveObject, selectMethod:uint = 7) {
-         super(target);
-         this._method = selectMethod;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SelectEmptyItemMessage(target:InteractiveObject, selectMethod:uint = 7)
+      {
+         //Décompilation abandonné
       }
       
       private var _method:uint;
       
-      public function get selectMethod() : uint {
-         return this._method;
+      public function get selectMethod() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

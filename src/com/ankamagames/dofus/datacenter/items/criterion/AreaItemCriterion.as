@@ -8,51 +8,33 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class AreaItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function AreaItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get isRespected() : Boolean {
-         switch(_operator.text)
-         {
-            case ItemCriterionOperator.EQUAL:
-            case ItemCriterionOperator.DIFFERENT:
-               return super.isRespected;
-            default:
-               trace("Opérateur non conforme : " + _serverCriterionForm);
-               return false;
-         }
+      public function AreaItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         var readableCriterion:String = null;
-         var area:Area = Area.getAreaById(_criterionValue);
-         if(!area)
-         {
-            return "error on AreaItemCriterion";
-         }
-         var areaName:String = area.name;
-         switch(_operator.text)
-         {
-            case ItemCriterionOperator.EQUAL:
-               readableCriterion = I18n.getUiText("ui.tooltip.beInArea",[areaName]);
-               break;
-            case ItemCriterionOperator.DIFFERENT:
-               readableCriterion = I18n.getUiText("ui.tooltip.dontBeInArea",[areaName]);
-               break;
-            default:
-               trace("Opérateur non conforme : " + _serverCriterionForm);
-         }
-         return readableCriterion;
+      override public function get isRespected() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:AreaItemCriterion = new AreaItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getCriterion() : int {
-         return PlayedCharacterManager.getInstance().currentSubArea.area.id;
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getCriterion() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

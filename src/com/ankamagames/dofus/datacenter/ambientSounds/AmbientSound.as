@@ -6,8 +6,13 @@ package com.ankamagames.dofus.datacenter.ambientSounds
    public class AmbientSound extends Object implements IDataCenter
    {
       
-      public function AmbientSound() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AmbientSound()
+      {
+         //Décompilation abandonné
       }
       
       public static const AMBIENT_TYPE_ROLEPLAY:int = 1;
@@ -20,8 +25,9 @@ package com.ankamagames.dofus.datacenter.ambientSounds
       
       public static const MODULE:String = "AmbientSounds";
       
-      public static function getAmbientSoundById(id:uint) : AmbientSound {
-         return GameData.getObject(MODULE,id) as AmbientSound;
+      public static function getAmbientSoundById(id:uint) : AmbientSound
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;

@@ -5,13 +5,13 @@ package com.ankamagames.dofus.modules.utils
    public class ItemTooltipSettings extends Object implements IModuleUtil
    {
       
-      public function ItemTooltipSettings() {
-         super();
-         this._header = true;
-         this._effects = true;
-         this._conditions = true;
-         this._description = true;
-         this._averagePrice = true;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ItemTooltipSettings()
+      {
+         //Décompilation abandonné
       }
       
       private var _header:Boolean;
@@ -24,44 +24,54 @@ package com.ankamagames.dofus.modules.utils
       
       private var _averagePrice:Boolean;
       
-      public function get header() : Boolean {
-         return this._header;
+      public function get header() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set header(value:Boolean) : void {
-         this._header = value;
+      public function set header(value:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get effects() : Boolean {
-         return this._effects;
+      public function get effects() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set effects(value:Boolean) : void {
-         this._effects = value;
+      public function set effects(value:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get conditions() : Boolean {
-         return this._conditions;
+      public function get conditions() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set conditions(value:Boolean) : void {
-         this._conditions = value;
+      public function set conditions(value:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get description() : Boolean {
-         return this._description;
+      public function get description() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set description(value:Boolean) : void {
-         this._description = value;
+      public function set description(value:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get averagePrice() : Boolean {
-         return this._averagePrice;
+      public function get averagePrice() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set averagePrice(value:Boolean) : void {
-         this._averagePrice = value;
+      public function set averagePrice(value:Boolean) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

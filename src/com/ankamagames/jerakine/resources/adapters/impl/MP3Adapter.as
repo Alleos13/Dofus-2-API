@@ -20,8 +20,13 @@ package com.ankamagames.jerakine.resources.adapters.impl
    public class MP3Adapter extends Object implements IAdapter
    {
       
-      public function MP3Adapter() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MP3Adapter()
+      {
+         //Décompilation abandonné
       }
       
       private static var _a:Array;
@@ -36,92 +41,59 @@ package com.ankamagames.jerakine.resources.adapters.impl
       
       private var _mp3BinaryLoader:MP3FileReferenceLoader;
       
-      public function loadDirectly(uri:Uri, path:String, observer:IResourceObserver, dispatchProgress:Boolean) : void {
-         if(this._sound)
-         {
-            throw new IllegalOperationError("A single adapter can\'t handle two simultaneous loadings.");
-         }
-         else
-         {
-            this._observer = observer;
-            this._uri = uri;
-            this._dispatchProgress = dispatchProgress;
-            this.prepareLoader();
-            this._sound.load(new URLRequest(path));
-            return;
-         }
+      public function loadDirectly(uri:Uri, path:String, observer:IResourceObserver, dispatchProgress:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function loadFromData(uri:Uri, data:ByteArray, observer:IResourceObserver, dispatchProgress:Boolean) : void {
-         this._observer = observer;
-         this._uri = uri;
-         this._dispatchProgress = dispatchProgress;
-         this._mp3BinaryLoader = new MP3FileReferenceLoader();
-         this._mp3BinaryLoader.addEventListener(MP3SoundEvent.COMPLETE,this.onMp3BinaryParsed);
-         this._mp3BinaryLoader.loadMP3ByteArray(data);
-         _a[this] = this._mp3BinaryLoader;
+      public function loadFromData(uri:Uri, data:ByteArray, observer:IResourceObserver, dispatchProgress:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function free() : void {
-         this.releaseLoader();
-         this._observer = null;
-         this._uri = null;
+      public function free() : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function getResource(ldr:LoaderInfo) : * {
-         return this._sound;
+      protected function getResource(ldr:LoaderInfo) : *
+      {
+         //Décompilation abandonné
       }
       
-      public function getResourceType() : uint {
-         return ResourceType.RESOURCE_MP3;
+      public function getResourceType() : uint
+      {
+         //Décompilation abandonné
       }
       
-      private function prepareLoader() : void {
-         this._sound = new Sound();
-         this._sound.addEventListener(Event.COMPLETE,this.onInit);
-         this._sound.addEventListener(IOErrorEvent.IO_ERROR,this.onError);
-         if(this._dispatchProgress)
-         {
-            this._sound.addEventListener(ProgressEvent.PROGRESS,this.onProgress);
-         }
+      private function prepareLoader() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function releaseLoader() : void {
-         if(this._sound)
-         {
-            try
-            {
-               this._sound.close();
-            }
-            catch(e:Error)
-            {
-            }
-            this._sound.removeEventListener(Event.COMPLETE,this.onInit);
-            this._sound.removeEventListener(IOErrorEvent.IO_ERROR,this.onError);
-            this._sound.removeEventListener(ProgressEvent.PROGRESS,this.onProgress);
-         }
-         this._sound = null;
+      private function releaseLoader() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onMp3BinaryParsed(e:MP3SoundEvent) : void {
-         var res:* = e.sound;
-         this.releaseLoader();
-         this._observer.onLoaded(this._uri,this.getResourceType(),res);
+      private function onMp3BinaryParsed(e:MP3SoundEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function onInit(e:Event) : void {
-         var res:* = e.target as Sound;
-         this.releaseLoader();
-         this._observer.onLoaded(this._uri,this.getResourceType(),res);
+      protected function onInit(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function onError(ee:ErrorEvent) : void {
-         this.releaseLoader();
-         this._observer.onFailed(this._uri,ee.text,ResourceErrorCode.RESOURCE_NOT_FOUND);
+      protected function onError(ee:ErrorEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function onProgress(pe:ProgressEvent) : void {
-         this._observer.onProgress(this._uri,pe.bytesLoaded,pe.bytesTotal);
+      protected function onProgress(pe:ProgressEvent) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

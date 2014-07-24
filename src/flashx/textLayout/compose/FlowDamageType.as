@@ -3,8 +3,13 @@ package flashx.textLayout.compose
    public class FlowDamageType extends Object
    {
       
-      public function FlowDamageType() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FlowDamageType()
+      {
+         //Décompilation abandonné
       }
       
       public static const INVALID:String = "invalid";

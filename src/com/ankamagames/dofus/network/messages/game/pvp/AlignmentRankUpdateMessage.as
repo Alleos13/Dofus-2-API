@@ -9,81 +9,71 @@ package com.ankamagames.dofus.network.messages.game.pvp
    public class AlignmentRankUpdateMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function AlignmentRankUpdateMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AlignmentRankUpdateMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6058;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var alignmentRank:uint = 0;
       
       public var verbose:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 6058;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initAlignmentRankUpdateMessage(alignmentRank:uint = 0, verbose:Boolean = false) : AlignmentRankUpdateMessage {
-         this.alignmentRank = alignmentRank;
-         this.verbose = verbose;
-         this._isInitialized = true;
-         return this;
+      public function initAlignmentRankUpdateMessage(alignmentRank:uint = 0, verbose:Boolean = false) : AlignmentRankUpdateMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.alignmentRank = 0;
-         this.verbose = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AlignmentRankUpdateMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_AlignmentRankUpdateMessage(output:IDataOutput) : void {
-         if(this.alignmentRank < 0)
-         {
-            throw new Error("Forbidden value (" + this.alignmentRank + ") on element alignmentRank.");
-         }
-         else
-         {
-            output.writeByte(this.alignmentRank);
-            output.writeBoolean(this.verbose);
-            return;
-         }
+      public function serializeAs_AlignmentRankUpdateMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AlignmentRankUpdateMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_AlignmentRankUpdateMessage(input:IDataInput) : void {
-         this.alignmentRank = input.readByte();
-         if(this.alignmentRank < 0)
-         {
-            throw new Error("Forbidden value (" + this.alignmentRank + ") on element of AlignmentRankUpdateMessage.alignmentRank.");
-         }
-         else
-         {
-            this.verbose = input.readBoolean();
-            return;
-         }
+      public function deserializeAs_AlignmentRankUpdateMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

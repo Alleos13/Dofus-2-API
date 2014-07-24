@@ -10,75 +10,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.job
    public class JobCrafterDirectoryListMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function JobCrafterDirectoryListMessage() {
-         this.listEntries = new Vector.<JobCrafterDirectoryListEntry>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function JobCrafterDirectoryListMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6046;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var listEntries:Vector.<JobCrafterDirectoryListEntry>;
       
-      override public function getMessageId() : uint {
-         return 6046;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initJobCrafterDirectoryListMessage(listEntries:Vector.<JobCrafterDirectoryListEntry> = null) : JobCrafterDirectoryListMessage {
-         this.listEntries = listEntries;
-         this._isInitialized = true;
-         return this;
+      public function initJobCrafterDirectoryListMessage(listEntries:Vector.<JobCrafterDirectoryListEntry> = null) : JobCrafterDirectoryListMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.listEntries = new Vector.<JobCrafterDirectoryListEntry>();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_JobCrafterDirectoryListMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_JobCrafterDirectoryListMessage(output:IDataOutput) : void {
-         output.writeShort(this.listEntries.length);
-         var _i1:uint = 0;
-         while(_i1 < this.listEntries.length)
-         {
-            (this.listEntries[_i1] as JobCrafterDirectoryListEntry).serializeAs_JobCrafterDirectoryListEntry(output);
-            _i1++;
-         }
+      public function serializeAs_JobCrafterDirectoryListMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_JobCrafterDirectoryListMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_JobCrafterDirectoryListMessage(input:IDataInput) : void {
-         var _item1:JobCrafterDirectoryListEntry = null;
-         var _listEntriesLen:uint = input.readUnsignedShort();
-         var _i1:uint = 0;
-         while(_i1 < _listEntriesLen)
-         {
-            _item1 = new JobCrafterDirectoryListEntry();
-            _item1.deserialize(input);
-            this.listEntries.push(_item1);
-            _i1++;
-         }
+      public function deserializeAs_JobCrafterDirectoryListMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

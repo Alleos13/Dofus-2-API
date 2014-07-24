@@ -20,42 +20,20 @@ package com.ankamagames.atouin.utils
    public class GroundMapLoader extends Object
    {
       
-      public function GroundMapLoader(map:Map, file:File, callBack:Function, errorCallBack:Function) {
-         var fileStream:FileStream = null;
-         var rawJPG:ByteArray = null;
-         super();
-         try
-         {
-            this._map = map;
-            this._callBack = callBack;
-            this._errorCallBack = errorCallBack;
-            this._loader = new Loader();
-            this._loader.contentLoaderInfo.addEventListener(Event.COMPLETE,this.onJPGReady);
-            this._loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR,this.onError);
-            this._loader.contentLoaderInfo.addEventListener(ProgressEvent.PROGRESS,this.onProgress);
-            fileStream = new FileStream();
-            fileStream.open(file,FileMode.READ);
-            rawJPG = new ByteArray();
-            fileStream.readInt();
-            fileStream.readByte();
-            fileStream.readInt();
-            fileStream.readBytes(rawJPG);
-            fileStream.close();
-            this._loader.loadBytes(rawJPG);
-         }
-         catch(e:Error)
-         {
-            if(e)
-            {
-               _log.fatal(e.getStackTrace());
-            }
-            onError(null);
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GroundMapLoader(map:Map, file:File, callBack:Function, errorCallBack:Function)
+      {
+         //Décompilation abandonné
       }
       
       private static const _log:Logger;
       
-      public static function loadGroundMap(map:Map, file:File, callBack:Function, errorCallBack:Function) : void {
+      public static function loadGroundMap(map:Map, file:File, callBack:Function, errorCallBack:Function) : void
+      {
+         //Décompilation abandonné
       }
       
       private var _callBack:Function;
@@ -70,61 +48,24 @@ package com.ankamagames.atouin.utils
       
       private var _time:int = 0;
       
-      private function onJPGReady(e:Event) : void {
-         var bitmap:Bitmap = null;
-         try
-         {
-            this._groundIsLoaded = true;
-            bitmap = this._loader.content as Bitmap;
-            if((this._map.groundCacheCurrentlyUsed == GroundCache.GROUND_CACHE_LOW_QUALITY) || (this._map.groundCacheCurrentlyUsed == GroundCache.GROUND_CACHE_MEDIUM_QUALITY))
-            {
-               bitmap.width = AtouinConstants.RESOLUTION_HIGH_QUALITY.x;
-               bitmap.height = AtouinConstants.RESOLUTION_HIGH_QUALITY.y;
-            }
-            this._loader.contentLoaderInfo.removeEventListener(Event.INIT,this.onJPGReady);
-            this._loader.contentLoaderInfo.removeEventListener(IOErrorEvent.IO_ERROR,this.onError);
-            this._loader.contentLoaderInfo.removeEventListener(ProgressEvent.PROGRESS,this.onProgress);
-            this._callBack(bitmap);
-         }
-         catch(e:Error)
-         {
-            if(e)
-            {
-               _log.fatal(e.getStackTrace());
-            }
-            onError(null);
-         }
+      private function onJPGReady(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onError(e:Event) : void {
-         _log.info("On a pas pu charger la map :/");
-         this._errorCallBack(this._map.id);
-         this._loader.contentLoaderInfo.removeEventListener(Event.INIT,this.onJPGReady);
-         this._loader.contentLoaderInfo.removeEventListener(IOErrorEvent.IO_ERROR,this.onError);
-         this._loader.contentLoaderInfo.removeEventListener(ProgressEvent.PROGRESS,this.onProgress);
+      private function onError(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onProgress(e:ProgressEvent) : void {
-         if(e.bytesLoaded == e.bytesTotal)
-         {
-            EnterFrameDispatcher.addEventListener(this.check,"GroundMapLoader");
-         }
+      private function onProgress(e:ProgressEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function check(e:Event) : void {
-         if(this._time > 5)
-         {
-            if(!this._groundIsLoaded)
-            {
-               this._groundIsLoaded = true;
-               this.onError(null);
-            }
-            EnterFrameDispatcher.removeEventListener(this.check);
-         }
-         else
-         {
-            this._time++;
-         }
+      private function check(e:Event) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

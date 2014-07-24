@@ -6,12 +6,18 @@ package com.ankamagames.jerakine.resources.adapters.impl
    public class AdvancedSignedFileAdapter extends SignedFileAdapter
    {
       
-      public function AdvancedSignedFileAdapter(signatureKey:SignatureKey = null) {
-         super(signatureKey,true);
+      {
+      //Décompilation abandonné
       }
       
-      override public function getResourceType() : uint {
-         return ResourceType.RESOURCE_BINARY;
+      public function AdvancedSignedFileAdapter(signatureKey:SignatureKey = null)
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function getResourceType() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

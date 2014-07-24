@@ -12,38 +12,37 @@ package com.ankamagames.atouin.data.map
    public class Cell extends Object
    {
       
-      public function Cell(layer:Layer) {
-         super();
-         this._layer = layer;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Cell(layer:Layer)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       private static var _cellCoords:Point;
       
-      public static function cellCoords(cellId:uint) : Point {
-         if(_cellCoords == null)
-         {
-            _cellCoords = new Point();
-         }
-         _cellCoords.x = cellId % AtouinConstants.MAP_WIDTH;
-         _cellCoords.y = Math.floor(cellId / AtouinConstants.MAP_WIDTH);
-         return _cellCoords;
+      public static function cellCoords(cellId:uint) : Point
+      {
+         //Décompilation abandonné
       }
       
-      public static function cellId(p:Point) : uint {
-         return CellIdConverter.coordToCellId(p.x,p.y);
+      public static function cellId(p:Point) : uint
+      {
+         //Décompilation abandonné
       }
       
-      public static function cellIdByXY(x:int, y:int) : uint {
-         return CellIdConverter.coordToCellId(x,y);
+      public static function cellIdByXY(x:int, y:int) : uint
+      {
+         //Décompilation abandonné
       }
       
-      public static function cellPixelCoords(cellId:uint) : Point {
-         var p:Point = cellCoords(cellId);
-         p.x = p.x * AtouinConstants.CELL_WIDTH + (p.y % 2 == 1?AtouinConstants.CELL_HALF_WIDTH:0);
-         p.y = p.y * AtouinConstants.CELL_HALF_HEIGHT;
-         return p;
+      public static function cellPixelCoords(cellId:uint) : Point
+      {
+         //Décompilation abandonné
       }
       
       public var cellId:int;
@@ -54,51 +53,24 @@ package com.ankamagames.atouin.data.map
       
       private var _layer:Layer;
       
-      public function get layer() : Layer {
-         return this._layer;
+      public function get layer() : Layer
+      {
+         //Décompilation abandonné
       }
       
-      public function get coords() : Point {
-         return CellIdConverter.cellIdToCoord(this.cellId);
+      public function get coords() : Point
+      {
+         //Décompilation abandonné
       }
       
-      public function get pixelCoords() : Point {
-         return cellPixelCoords(this.cellId);
+      public function get pixelCoords() : Point
+      {
+         //Décompilation abandonné
       }
       
-      public function fromRaw(raw:IDataInput, mapVersion:int) : void {
-         var be:BasicElement = null;
-         var i:int = 0;
-         try
-         {
-            this.cellId = raw.readShort();
-            if(AtouinConstants.DEBUG_FILES_PARSING)
-            {
-               _log.debug("    (Cell) Id : " + this.cellId);
-            }
-            this.elementsCount = raw.readShort();
-            if(AtouinConstants.DEBUG_FILES_PARSING)
-            {
-               _log.debug("    (Cell) Elements count : " + this.elementsCount);
-            }
-            this.elements = new Array();
-            i = 0;
-            while(i < this.elementsCount)
-            {
-               be = BasicElement.getElementFromType(raw.readByte(),this);
-               if(AtouinConstants.DEBUG_FILES_PARSING)
-               {
-                  _log.debug("    (Cell) Element at index " + i + " :");
-               }
-               be.fromRaw(raw,mapVersion);
-               this.elements.push(be);
-               i++;
-            }
-         }
-         catch(e:*)
-         {
-            throw e;
-         }
+      public function fromRaw(raw:IDataInput, mapVersion:int) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

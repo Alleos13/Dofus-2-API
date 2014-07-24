@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class OpenArenaAction extends Object implements Action
    {
       
-      public function OpenArenaAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : OpenArenaAction {
-         var a:OpenArenaAction = new OpenArenaAction();
-         return a;
+      public function OpenArenaAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : OpenArenaAction
+      {
+         //Décompilation abandonné
       }
    }
 }

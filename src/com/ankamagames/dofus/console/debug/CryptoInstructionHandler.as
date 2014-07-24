@@ -9,42 +9,28 @@ package com.ankamagames.dofus.console.debug
    public class CryptoInstructionHandler extends Object implements ConsoleInstructionHandler
    {
       
-      public function CryptoInstructionHandler() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void {
-         var crc32:CRC32 = null;
-         var buffer:ByteArray = null;
-         switch(cmd)
-         {
-            case "crc32":
-               crc32 = new CRC32();
-               buffer = new ByteArray();
-               buffer.writeUTFBytes(args.join(" "));
-               crc32.update(buffer);
-               console.output("CRC32 checksum : " + crc32.getValue().toString(16));
-               break;
-            case "md5":
-               console.output("MD5 hash : " + MD5.hash(args.join(" ")));
-               break;
-         }
+      public function CryptoInstructionHandler()
+      {
+         //Décompilation abandonné
       }
       
-      public function getHelp(cmd:String) : String {
-         switch(cmd)
-         {
-            case "crc32":
-               return "Calculate the CRC32 checksum of a given string.";
-            case "md5":
-               return "Calculate the MD5 hash of a given string.";
-            default:
-               return "No help for command \'" + cmd + "\'";
-         }
+      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array {
-         return [];
+      public function getHelp(cmd:String) : String
+      {
+         //Décompilation abandonné
+      }
+      
+      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array
+      {
+         //Décompilation abandonné
       }
    }
 }

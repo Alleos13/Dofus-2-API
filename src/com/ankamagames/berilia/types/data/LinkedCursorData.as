@@ -6,8 +6,13 @@ package com.ankamagames.berilia.types.data
    public class LinkedCursorData extends Object
    {
       
-      public function LinkedCursorData() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LinkedCursorData()
+      {
+         //Décompilation abandonné
       }
       
       public var sprite:Sprite;

@@ -3,11 +3,16 @@ package com.ankamagames.berilia.types.uiDefinition
    public class BasicElement extends Object
    {
       
-      public function BasicElement() {
-         this.event = new Array();
-         this.properties = new Array();
-         super();
+      {
+      //Décompilation abandonné
       }
+      
+      public function BasicElement()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static var ID:uint = 10000;
       
       public var name:String;
       
@@ -35,30 +40,14 @@ package com.ankamagames.berilia.types.uiDefinition
       
       public var cachedY:int = 2147483647;
       
-      public function setName(sName:String) : void {
-         this.name = sName;
-         this.properties["name"] = sName;
+      public function setName(sName:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function copy(target:BasicElement) : void {
-         var key:String = null;
-         target.strata = this.strata;
-         target.size = this.size;
-         target.minSize = this.minSize;
-         target.maxSize = this.maxSize;
-         target.anchors = this.anchors;
-         target.event = this.event;
-         target.properties = [];
-         for(key in this.properties)
-         {
-            target.properties[key] = this.properties[key];
-         }
-         target.className = this.className;
-         target.cachedWidth = this.cachedWidth;
-         target.cachedHeight = this.cachedHeight;
-         target.cachedX = this.cachedX;
-         target.cachedY = this.cachedY;
-         target.setName(this.name);
+      public function copy(target:BasicElement) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

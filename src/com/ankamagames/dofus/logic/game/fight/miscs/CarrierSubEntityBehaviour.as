@@ -9,8 +9,13 @@ package com.ankamagames.dofus.logic.game.fight.miscs
    public class CarrierSubEntityBehaviour extends Object implements ISubEntityBehavior
    {
       
-      public function CarrierSubEntityBehaviour() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CarrierSubEntityBehaviour()
+      {
+         //Décompilation abandonné
       }
       
       private var _subentity:TiphonSprite;
@@ -19,23 +24,19 @@ package com.ankamagames.dofus.logic.game.fight.miscs
       
       private var _animation:String;
       
-      public function updateFromParentEntity(target:TiphonSprite, parentData:BehaviorData) : void {
-         this._subentity = target;
-         this._parentData = parentData;
-         this._animation = AnimationEnum.ANIM_STATIQUE;
-         parentData.parent.addEventListener(TiphonEvent.RENDER_FATHER_SUCCEED,this.onFatherRendered);
+      public function updateFromParentEntity(target:TiphonSprite, parentData:BehaviorData) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function remove() : void {
-         this._parentData.parent.removeEventListener(TiphonEvent.RENDER_FATHER_SUCCEED,this.onFatherRendered);
-         this._subentity = null;
-         this._parentData = null;
+      public function remove() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onFatherRendered(e:TiphonEvent) : void {
-         var p:TiphonSprite = e.target as TiphonSprite;
-         this._parentData.parent.removeEventListener(TiphonEvent.RENDER_FATHER_SUCCEED,this.onFatherRendered);
-         this._subentity.setAnimationAndDirection(this._animation,this._parentData.direction);
+      private function onFatherRendered(e:TiphonEvent) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -9,87 +9,73 @@ package com.ankamagames.dofus.network.messages.game.context.fight
    public class GameFightNewWaveMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameFightNewWaveMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameFightNewWaveMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6490;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint = 0;
       
-      public var teamId:int = 0;
+      public var teamId:uint = 2;
       
       public var nbTurnBeforeNextWave:int = 0;
       
-      override public function getMessageId() : uint {
-         return 6490;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameFightNewWaveMessage(id:uint = 0, teamId:int = 0, nbTurnBeforeNextWave:int = 0) : GameFightNewWaveMessage {
-         this.id = id;
-         this.teamId = teamId;
-         this.nbTurnBeforeNextWave = nbTurnBeforeNextWave;
-         this._isInitialized = true;
-         return this;
+      public function initGameFightNewWaveMessage(id:uint = 0, teamId:uint = 2, nbTurnBeforeNextWave:int = 0) : GameFightNewWaveMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.id = 0;
-         this.teamId = 0;
-         this.nbTurnBeforeNextWave = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameFightNewWaveMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightNewWaveMessage(output:IDataOutput) : void {
-         if((this.id < 0) || (this.id > 4.294967295E9))
-         {
-            throw new Error("Forbidden value (" + this.id + ") on element id.");
-         }
-         else
-         {
-            output.writeUnsignedInt(this.id);
-            output.writeInt(this.teamId);
-            output.writeInt(this.nbTurnBeforeNextWave);
-            return;
-         }
+      public function serializeAs_GameFightNewWaveMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameFightNewWaveMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightNewWaveMessage(input:IDataInput) : void {
-         this.id = input.readUnsignedInt();
-         if((this.id < 0) || (this.id > 4.294967295E9))
-         {
-            throw new Error("Forbidden value (" + this.id + ") on element of GameFightNewWaveMessage.id.");
-         }
-         else
-         {
-            this.teamId = input.readInt();
-            this.nbTurnBeforeNextWave = input.readInt();
-            return;
-         }
+      public function deserializeAs_GameFightNewWaveMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

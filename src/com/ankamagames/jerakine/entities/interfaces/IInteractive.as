@@ -6,6 +6,10 @@ package com.ankamagames.jerakine.entities.interfaces
    public interface IInteractive extends IEventDispatcher, IEntity
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function get handler() : MessageHandler;
       
       function get useHandCursor() : Boolean;

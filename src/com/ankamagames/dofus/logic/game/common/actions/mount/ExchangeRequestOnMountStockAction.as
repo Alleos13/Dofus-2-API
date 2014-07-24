@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.mount
    public class ExchangeRequestOnMountStockAction extends Object implements Action
    {
       
-      public function ExchangeRequestOnMountStockAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : ExchangeRequestOnMountStockAction {
-         return new ExchangeRequestOnMountStockAction();
+      public function ExchangeRequestOnMountStockAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : ExchangeRequestOnMountStockAction
+      {
+         //Décompilation abandonné
       }
    }
 }

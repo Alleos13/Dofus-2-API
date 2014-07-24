@@ -5,11 +5,13 @@ package com.ankamagames.jerakine.resources
    public class ResourceObserverWrapper extends Object implements IResourceObserver
    {
       
-      public function ResourceObserverWrapper(onLoadedCallback:Function = null, onFailedCallback:Function = null, onProgressCallback:Function = null) {
-         super();
-         this._onLoadedCallback = onLoadedCallback;
-         this._onFailedCallback = onFailedCallback;
-         this._onProgressCallback = onProgressCallback;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ResourceObserverWrapper(onLoadedCallback:Function = null, onFailedCallback:Function = null, onProgressCallback:Function = null)
+      {
+         //Décompilation abandonné
       }
       
       private var _onLoadedCallback:Function;
@@ -18,25 +20,19 @@ package com.ankamagames.jerakine.resources
       
       private var _onProgressCallback:Function;
       
-      public function onLoaded(uri:Uri, resourceType:uint, resource:*) : void {
-         if(this._onLoadedCallback != null)
-         {
-            this._onLoadedCallback(uri,resourceType,resource);
-         }
+      public function onLoaded(uri:Uri, resourceType:uint, resource:*) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function onFailed(uri:Uri, errorMsg:String, errorCode:uint) : void {
-         if(this._onFailedCallback != null)
-         {
-            this._onFailedCallback(uri,errorMsg,errorCode);
-         }
+      public function onFailed(uri:Uri, errorMsg:String, errorCode:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function onProgress(uri:Uri, bytesLoaded:uint, bytesTotal:uint) : void {
-         if(this._onProgressCallback != null)
-         {
-            this._onProgressCallback(uri,bytesLoaded,bytesTotal);
-         }
+      public function onProgress(uri:Uri, bytesLoaded:uint, bytesTotal:uint) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.mount
    public class ExchangeHandleMountStableAction extends Object implements Action
    {
       
-      public function ExchangeHandleMountStableAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(actionType:uint, mountId:uint) : ExchangeHandleMountStableAction {
-         var act:ExchangeHandleMountStableAction = new ExchangeHandleMountStableAction();
-         act.actionType = actionType;
-         act.rideId = mountId;
-         return act;
+      public function ExchangeHandleMountStableAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(actionType:uint, mountId:uint) : ExchangeHandleMountStableAction
+      {
+         //Décompilation abandonné
       }
       
       public var rideId:uint;

@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.humanVendor
    public class ExchangeOnHumanVendorRequestAction extends Object implements Action
    {
       
-      public function ExchangeOnHumanVendorRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pHumanVendorId:uint, pHumanVendorCell:uint) : ExchangeOnHumanVendorRequestAction {
-         var a:ExchangeOnHumanVendorRequestAction = new ExchangeOnHumanVendorRequestAction();
-         a.humanVendorId = pHumanVendorId;
-         a.humanVendorCell = pHumanVendorCell;
-         return a;
+      public function ExchangeOnHumanVendorRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pHumanVendorId:uint, pHumanVendorCell:uint) : ExchangeOnHumanVendorRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var humanVendorId:int;

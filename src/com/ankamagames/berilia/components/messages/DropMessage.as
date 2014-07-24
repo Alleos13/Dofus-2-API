@@ -6,15 +6,20 @@ package com.ankamagames.berilia.components.messages
    public class DropMessage extends ComponentMessage
    {
       
-      public function DropMessage(target:InteractiveObject, source:ISlotDataHolder) {
-         super(target);
-         this._source = source;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DropMessage(target:InteractiveObject, source:ISlotDataHolder)
+      {
+         //Décompilation abandonné
       }
       
       private var _source:ISlotDataHolder;
       
-      public function get source() : ISlotDataHolder {
-         return this._source;
+      public function get source() : ISlotDataHolder
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -10,37 +10,37 @@ package com.ankamagames.atouin.data.map.elements
    public class BasicElement extends Object
    {
       
-      public function BasicElement(cell:Cell) {
-         super();
-         this._cell = cell;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BasicElement(cell:Cell)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      public static function getElementFromType(type:int, cell:Cell) : BasicElement {
-         switch(type)
-         {
-            case ElementTypesEnum.GRAPHICAL:
-               return new GraphicalElement(cell);
-            case ElementTypesEnum.SOUND:
-               return new SoundElement(cell);
-            default:
-               throw new UnknownElementError("Un élément de type inconnu " + type + " a été trouvé sur la cellule " + cell.cellId + "!");
-         }
+      public static function getElementFromType(type:int, cell:Cell) : BasicElement
+      {
+         //Décompilation abandonné
       }
       
       private var _cell:Cell;
       
-      public function get cell() : Cell {
-         return this._cell;
+      public function get cell() : Cell
+      {
+         //Décompilation abandonné
       }
       
-      public function get elementType() : int {
-         return -1;
+      public function get elementType() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function fromRaw(raw:IDataInput, mapVersion:int) : void {
-         throw new Error("Cette méthode doit être surchargée !");
+      public function fromRaw(raw:IDataInput, mapVersion:int) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

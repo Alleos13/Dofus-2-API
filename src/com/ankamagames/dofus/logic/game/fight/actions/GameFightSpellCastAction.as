@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.fight.actions
    public class GameFightSpellCastAction extends Object implements Action
    {
       
-      public function GameFightSpellCastAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(spellId:uint) : GameFightSpellCastAction {
-         var a:GameFightSpellCastAction = new GameFightSpellCastAction();
-         a.spellId = spellId;
-         return a;
+      public function GameFightSpellCastAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(spellId:uint) : GameFightSpellCastAction
+      {
+         //Décompilation abandonné
       }
       
       public var spellId:uint;

@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.guild
    public class GuildModificationNameValidAction extends Object implements Action
    {
       
-      public function GuildModificationNameValidAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pGuildName:String) : GuildModificationNameValidAction {
-         var action:GuildModificationNameValidAction = new GuildModificationNameValidAction();
-         action.guildName = pGuildName;
-         return action;
+      public function GuildModificationNameValidAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pGuildName:String) : GuildModificationNameValidAction
+      {
+         //Décompilation abandonné
       }
       
       public var guildName:String;

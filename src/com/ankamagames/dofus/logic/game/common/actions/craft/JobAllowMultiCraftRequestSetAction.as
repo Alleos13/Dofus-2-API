@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.craft
    public class JobAllowMultiCraftRequestSetAction extends Object implements Action
    {
       
-      public function JobAllowMultiCraftRequestSetAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pIsPublic:Boolean) : JobAllowMultiCraftRequestSetAction {
-         var action:JobAllowMultiCraftRequestSetAction = new JobAllowMultiCraftRequestSetAction();
-         action.isPublic = pIsPublic;
-         return action;
+      public function JobAllowMultiCraftRequestSetAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pIsPublic:Boolean) : JobAllowMultiCraftRequestSetAction
+      {
+         //Décompilation abandonné
       }
       
       public var isPublic:Boolean;

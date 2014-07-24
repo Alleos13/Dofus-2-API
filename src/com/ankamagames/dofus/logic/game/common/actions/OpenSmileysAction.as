@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class OpenSmileysAction extends Object implements Action
    {
       
-      public function OpenSmileysAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pType:uint, pForceOpen:String = "") : OpenSmileysAction {
-         var a:OpenSmileysAction = new OpenSmileysAction();
-         a.type = pType;
-         a.forceOpen = pForceOpen;
-         return a;
+      public function OpenSmileysAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pType:uint, pForceOpen:String = "") : OpenSmileysAction
+      {
+         //Décompilation abandonné
       }
       
       public var type:uint;

@@ -10,61 +10,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeBidHouseItemAddOkMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeBidHouseItemAddOkMessage() {
-         this.itemInfo = new ObjectItemToSellInBid();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeBidHouseItemAddOkMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5945;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var itemInfo:ObjectItemToSellInBid;
       
-      override public function getMessageId() : uint {
-         return 5945;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeBidHouseItemAddOkMessage(itemInfo:ObjectItemToSellInBid = null) : ExchangeBidHouseItemAddOkMessage {
-         this.itemInfo = itemInfo;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeBidHouseItemAddOkMessage(itemInfo:ObjectItemToSellInBid = null) : ExchangeBidHouseItemAddOkMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.itemInfo = new ObjectItemToSellInBid();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeBidHouseItemAddOkMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeBidHouseItemAddOkMessage(output:IDataOutput) : void {
-         this.itemInfo.serializeAs_ObjectItemToSellInBid(output);
+      public function serializeAs_ExchangeBidHouseItemAddOkMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeBidHouseItemAddOkMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeBidHouseItemAddOkMessage(input:IDataInput) : void {
-         this.itemInfo = new ObjectItemToSellInBid();
-         this.itemInfo.deserialize(input);
+      public function deserializeAs_ExchangeBidHouseItemAddOkMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

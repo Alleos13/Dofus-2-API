@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.tinsel
    public class OrnamentSelectRequestAction extends Object implements Action
    {
       
-      public function OrnamentSelectRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(ornamentId:int) : OrnamentSelectRequestAction {
-         var action:OrnamentSelectRequestAction = new OrnamentSelectRequestAction();
-         action.ornamentId = ornamentId;
-         return action;
+      public function OrnamentSelectRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(ornamentId:int) : OrnamentSelectRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var ornamentId:int;

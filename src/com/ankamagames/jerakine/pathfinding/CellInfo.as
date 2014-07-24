@@ -3,12 +3,13 @@ package com.ankamagames.jerakine.pathfinding
    public class CellInfo extends Object
    {
       
-      public function CellInfo(pHeuristic:Number, pParent:Array, pOpened:Boolean, pClosed:Boolean) {
-         super();
-         this.heuristic = pHeuristic;
-         this.parent = pParent;
-         this.opened = pOpened;
-         this.closed = pClosed;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CellInfo(pHeuristic:Number, pParent:Array, pOpened:Boolean, pClosed:Boolean)
+      {
+         //Décompilation abandonné
       }
       
       public var heuristic:Number;

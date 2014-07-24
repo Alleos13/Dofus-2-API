@@ -5,8 +5,13 @@ package com.ankamagames.tubul.events.LoadingSound
    public class LoadingSoundEvent extends Event
    {
       
-      public function LoadingSoundEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false) {
-         super(type,bubbles,cancelable);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LoadingSoundEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       public static const LOADED:String = "loaded";
@@ -17,10 +22,9 @@ package com.ankamagames.tubul.events.LoadingSound
       
       public var data;
       
-      override public function clone() : Event {
-         var lse:LoadingSoundEvent = new LoadingSoundEvent(type,bubbles,cancelable);
-         lse.data = this.data;
-         return lse;
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
    }
 }

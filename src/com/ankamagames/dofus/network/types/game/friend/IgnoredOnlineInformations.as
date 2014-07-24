@@ -8,8 +8,13 @@ package com.ankamagames.dofus.network.types.game.friend
    public class IgnoredOnlineInformations extends IgnoredInformations implements INetworkType
    {
       
-      public function IgnoredOnlineInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function IgnoredOnlineInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 105;
@@ -22,72 +27,39 @@ package com.ankamagames.dofus.network.types.game.friend
       
       public var sex:Boolean = false;
       
-      override public function getTypeId() : uint {
-         return 105;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initIgnoredOnlineInformations(accountId:uint = 0, accountName:String = "", playerId:uint = 0, playerName:String = "", breed:int = 0, sex:Boolean = false) : IgnoredOnlineInformations {
-         super.initIgnoredInformations(accountId,accountName);
-         this.playerId = playerId;
-         this.playerName = playerName;
-         this.breed = breed;
-         this.sex = sex;
-         return this;
+      public function initIgnoredOnlineInformations(accountId:uint = 0, accountName:String = "", playerId:uint = 0, playerName:String = "", breed:int = 0, sex:Boolean = false) : IgnoredOnlineInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.playerId = 0;
-         this.playerName = "";
-         this.breed = 0;
-         this.sex = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_IgnoredOnlineInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_IgnoredOnlineInformations(output:IDataOutput) : void {
-         super.serializeAs_IgnoredInformations(output);
-         if(this.playerId < 0)
-         {
-            throw new Error("Forbidden value (" + this.playerId + ") on element playerId.");
-         }
-         else
-         {
-            output.writeInt(this.playerId);
-            output.writeUTF(this.playerName);
-            output.writeByte(this.breed);
-            output.writeBoolean(this.sex);
-            return;
-         }
+      public function serializeAs_IgnoredOnlineInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_IgnoredOnlineInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_IgnoredOnlineInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.playerId = input.readInt();
-         if(this.playerId < 0)
-         {
-            throw new Error("Forbidden value (" + this.playerId + ") on element of IgnoredOnlineInformations.playerId.");
-         }
-         else
-         {
-            this.playerName = input.readUTF();
-            this.breed = input.readByte();
-            if((this.breed < PlayableBreedEnum.Feca) || (this.breed > PlayableBreedEnum.Steamer))
-            {
-               throw new Error("Forbidden value (" + this.breed + ") on element of IgnoredOnlineInformations.breed.");
-            }
-            else
-            {
-               this.sex = input.readBoolean();
-               return;
-            }
-         }
+      public function deserializeAs_IgnoredOnlineInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

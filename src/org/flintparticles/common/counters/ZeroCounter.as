@@ -5,22 +5,33 @@ package org.flintparticles.common.counters
    public class ZeroCounter extends Object implements Counter
    {
       
-      public function ZeroCounter() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function startEmitter(param1:Emitter) : uint {
-         return 0;
+      public function ZeroCounter()
+      {
+         //Décompilation abandonné
       }
       
-      public function updateEmitter(param1:Emitter, param2:Number) : uint {
-         return 0;
+      public function startEmitter(emitter:Emitter) : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function stop() : void {
+      public function updateEmitter(emitter:Emitter, time:Number) : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function resume() : void {
+      public function stop() : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public function resume() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

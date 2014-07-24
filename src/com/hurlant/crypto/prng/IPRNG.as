@@ -5,9 +5,13 @@ package com.hurlant.crypto.prng
    public interface IPRNG
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function getPoolSize() : uint;
       
-      function init(param1:ByteArray) : void;
+      function init(key:ByteArray) : void;
       
       function next() : uint;
       

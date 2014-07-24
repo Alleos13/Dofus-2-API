@@ -3,13 +3,13 @@ package com.hurlant.math
    class BarrettReduction extends Object implements IReduction
    {
       
-      function BarrettReduction(m:BigInteger) {
-         super();
-         this.r2 = new BigInteger();
-         this.q3 = new BigInteger();
-         BigInteger.ONE.dlShiftTo(2 * m.t,this.r2);
-         this.mu = this.r2.divide(m);
-         this.m = m;
+      {
+      //Décompilation abandonné
+      }
+      
+      function BarrettReduction(m:BigInteger)
+      {
+         //Décompilation abandonné
       }
       
       private var m:BigInteger;
@@ -20,55 +20,29 @@ package com.hurlant.math
       
       private var mu:BigInteger;
       
-      public function revert(x:BigInteger) : BigInteger {
-         return x;
+      public function revert(x:BigInteger) : BigInteger
+      {
+         //Décompilation abandonné
       }
       
-      public function mulTo(x:BigInteger, y:BigInteger, r:BigInteger) : void {
-         x.multiplyTo(y,r);
-         this.reduce(r);
+      public function mulTo(x:BigInteger, y:BigInteger, r:BigInteger) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function sqrTo(x:BigInteger, r:BigInteger) : void {
-         x.squareTo(r);
-         this.reduce(r);
+      public function sqrTo(x:BigInteger, r:BigInteger) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function convert(x:BigInteger) : BigInteger {
-         var r:BigInteger = null;
-         if((x.s < 0) || (x.t > 2 * this.m.t))
-         {
-            return x.mod(this.m);
-         }
-         if(x.compareTo(this.m) < 0)
-         {
-            return x;
-         }
-         r = new BigInteger();
-         x.copyTo(r);
-         this.reduce(r);
-         return r;
+      public function convert(x:BigInteger) : BigInteger
+      {
+         //Décompilation abandonné
       }
       
-      public function reduce(lx:BigInteger) : void {
-         var x:BigInteger = lx as BigInteger;
-         x.drShiftTo(this.m.t - 1,this.r2);
-         if(x.t > this.m.t + 1)
-         {
-            x.t = this.m.t + 1;
-            x.clamp();
-         }
-         this.mu.multiplyUpperTo(this.r2,this.m.t + 1,this.q3);
-         this.m.multiplyLowerTo(this.q3,this.m.t + 1,this.r2);
-         while(x.compareTo(this.r2) < 0)
-         {
-            x.dAddOffset(1,this.m.t + 1);
-         }
-         x.subTo(this.r2,x);
-         while(x.compareTo(this.m) >= 0)
-         {
-            x.subTo(this.m,x);
-         }
+      public function reduce(lx:BigInteger) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

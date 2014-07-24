@@ -6,22 +6,27 @@ package com.ankamagames.dofus.logic.game.roleplay.messages
    public class InteractiveElementMouseOverMessage extends Object implements Message
    {
       
-      public function InteractiveElementMouseOverMessage(ie:InteractiveElement, sprite:*) {
-         super();
-         this._ie = ie;
-         this._sprite = sprite;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function InteractiveElementMouseOverMessage(ie:InteractiveElement, sprite:*)
+      {
+         //Décompilation abandonné
       }
       
       private var _ie:InteractiveElement;
       
       private var _sprite;
       
-      public function get interactiveElement() : InteractiveElement {
-         return this._ie;
+      public function get interactiveElement() : InteractiveElement
+      {
+         //Décompilation abandonné
       }
       
-      public function get sprite() : * {
-         return this._sprite;
+      public function get sprite() : *
+      {
+         //Décompilation abandonné
       }
    }
 }

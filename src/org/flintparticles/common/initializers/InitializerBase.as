@@ -6,21 +6,33 @@ package org.flintparticles.common.initializers
    public class InitializerBase extends Object implements Initializer
    {
       
-      public function InitializerBase() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function getDefaultPriority() : Number {
-         return 0;
+      public function InitializerBase()
+      {
+         //Décompilation abandonné
       }
       
-      public function addedToEmitter(param1:Emitter) : void {
+      public function getDefaultPriority() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function removedFromEmitter(param1:Emitter) : void {
+      public function addedToEmitter(emitter:Emitter) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function initialize(param1:Emitter, param2:Particle) : void {
+      public function removedFromEmitter(emitter:Emitter) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public function initialize(emitter:Emitter, particle:Particle) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

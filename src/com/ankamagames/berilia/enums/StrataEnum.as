@@ -3,8 +3,13 @@ package com.ankamagames.berilia.enums
    public class StrataEnum extends Object
    {
       
-      public function StrataEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StrataEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const STRATA_WORLD:int = -1;

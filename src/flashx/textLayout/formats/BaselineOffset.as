@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public final class BaselineOffset extends Object
    {
       
-      public function BaselineOffset() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BaselineOffset()
+      {
+         //Décompilation abandonné
       }
       
       public static const AUTO:String = "auto";

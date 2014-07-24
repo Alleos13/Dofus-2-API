@@ -5,11 +5,15 @@ package com.hurlant.crypto.symmetric
    public interface ISymmetricKey
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function getBlockSize() : uint;
       
-      function encrypt(param1:ByteArray, param2:uint = 0) : void;
+      function encrypt(block:ByteArray, index:uint = 0) : void;
       
-      function decrypt(param1:ByteArray, param2:uint = 0) : void;
+      function decrypt(block:ByteArray, index:uint = 0) : void;
       
       function dispose() : void;
       

@@ -10,17 +10,22 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.houses.guil
    public class HouseGuildRightsMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function HouseGuildRightsMessage() {
-         this.guildInfo = new GuildInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HouseGuildRightsMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5703;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var houseId:uint = 0;
@@ -29,83 +34,49 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.houses.guil
       
       public var rights:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5703;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initHouseGuildRightsMessage(houseId:uint = 0, guildInfo:GuildInformations = null, rights:uint = 0) : HouseGuildRightsMessage {
-         this.houseId = houseId;
-         this.guildInfo = guildInfo;
-         this.rights = rights;
-         this._isInitialized = true;
-         return this;
+      public function initHouseGuildRightsMessage(houseId:uint = 0, guildInfo:GuildInformations = null, rights:uint = 0) : HouseGuildRightsMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.houseId = 0;
-         this.guildInfo = new GuildInformations();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_HouseGuildRightsMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_HouseGuildRightsMessage(output:IDataOutput) : void {
-         if(this.houseId < 0)
-         {
-            throw new Error("Forbidden value (" + this.houseId + ") on element houseId.");
-         }
-         else
-         {
-            output.writeShort(this.houseId);
-            this.guildInfo.serializeAs_GuildInformations(output);
-            if((this.rights < 0) || (this.rights > 4.294967295E9))
-            {
-               throw new Error("Forbidden value (" + this.rights + ") on element rights.");
-            }
-            else
-            {
-               output.writeUnsignedInt(this.rights);
-               return;
-            }
-         }
+      public function serializeAs_HouseGuildRightsMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_HouseGuildRightsMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_HouseGuildRightsMessage(input:IDataInput) : void {
-         this.houseId = input.readShort();
-         if(this.houseId < 0)
-         {
-            throw new Error("Forbidden value (" + this.houseId + ") on element of HouseGuildRightsMessage.houseId.");
-         }
-         else
-         {
-            this.guildInfo = new GuildInformations();
-            this.guildInfo.deserialize(input);
-            this.rights = input.readUnsignedInt();
-            if((this.rights < 0) || (this.rights > 4.294967295E9))
-            {
-               throw new Error("Forbidden value (" + this.rights + ") on element of HouseGuildRightsMessage.rights.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_HouseGuildRightsMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

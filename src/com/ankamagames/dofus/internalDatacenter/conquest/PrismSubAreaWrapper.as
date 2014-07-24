@@ -18,93 +18,32 @@ package com.ankamagames.dofus.internalDatacenter.conquest
    public class PrismSubAreaWrapper extends Object implements IDataCenter
    {
       
-      public function PrismSubAreaWrapper() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PrismSubAreaWrapper()
+      {
+         //Décompilation abandonné
       }
       
       private static var _ref:Dictionary;
       
       private static var _cache:Array;
       
-      public static function reset() : void {
-         _ref = new Dictionary();
+      public static function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function get prismList() : Dictionary {
-         return _ref;
+      public static function get prismList() : Dictionary
+      {
+         //Décompilation abandonné
       }
       
-      public static function getFromNetwork(msg:PrismSubareaEmptyInfo, currentPlayerAlliance:AllianceWrapper = null) : PrismSubAreaWrapper {
-         var ind:* = 0;
-         var pgi:PrismGeolocalizedInformation = null;
-         var date:Date = null;
-         var aipi:AllianceInsiderPrismInformation = null;
-         if((!_ref[msg.subAreaId]) || (Object(msg).constructor == PrismSubareaEmptyInfo))
-         {
-            _ref[msg.subAreaId] = new PrismSubAreaWrapper();
-         }
-         var prism:PrismSubAreaWrapper = _ref[msg.subAreaId];
-         prism._subAreaId = msg.subAreaId;
-         if(prism._alliance)
-         {
-            ind = prism._alliance.prismIds.indexOf(msg.subAreaId);
-            if(ind != -1)
-            {
-               prism._alliance.prismIds.splice(ind,1);
-            }
-         }
-         if(msg is PrismGeolocalizedInformation)
-         {
-            pgi = msg as PrismGeolocalizedInformation;
-            prism._mapId = pgi.mapId;
-            prism._worldX = pgi.worldX;
-            prism._worldY = pgi.worldY;
-            prism._state = pgi.prism.state;
-            prism._prismType = pgi.prism.typeId;
-            prism._placementDate = pgi.prism.placementDate;
-            prism._nextVulnerabilityDate = pgi.prism.nextVulnerabilityDate;
-            prism._rewardTokenCount = pgi.prism.rewardTokenCount;
-            date = new Date();
-            date.time = prism.nextVulnerabilityDate * 1000 + TimeManager.getInstance().timezoneOffset;
-            prism._timeSlotHour = date.hoursUTC;
-            prism._timeSlotQuarter = Math.round(date.minutesUTC / 15);
-            if(pgi.prism is AllianceInsiderPrismInformation)
-            {
-               aipi = pgi.prism as AllianceInsiderPrismInformation;
-               currentPlayerAlliance.prismIds.push(msg.subAreaId);
-               prism._alliance = currentPlayerAlliance;
-               prism._lastTimeSlotModificationDate = aipi.lastTimeSlotModificationDate;
-               prism._lastTimeSlotModificationAuthorId = aipi.lastTimeSlotModificationAuthorId;
-               prism._lastTimeSlotModificationAuthorName = aipi.lastTimeSlotModificationAuthorName;
-               prism._lastTimeSlotModificationAuthorGuildId = aipi.lastTimeSlotModificationAuthorGuildId;
-            }
-            else
-            {
-               prism._lastTimeSlotModificationDate = 0;
-               prism._lastTimeSlotModificationAuthorId = 0;
-               prism._lastTimeSlotModificationAuthorName = null;
-               prism._lastTimeSlotModificationAuthorGuildId = 0;
-               if(pgi.prism is AlliancePrismInformation)
-               {
-                  prism._alliance = AllianceWrapper.getFromNetwork(AlliancePrismInformation(pgi.prism).alliance);
-                  prism._alliance.prismIds.push(msg.subAreaId);
-               }
-               else
-               {
-                  prism._alliance = null;
-               }
-            }
-         }
-         else if(msg.allianceId != 0)
-         {
-            prism._alliance = (Kernel.getWorker().getFrame(AllianceFrame) as AllianceFrame).getAllianceById(msg.allianceId);
-         }
-         
-         if((PlayedCharacterManager.getInstance().currentSubArea) && (prism.subAreaId == PlayedCharacterManager.getInstance().currentSubArea.id))
-         {
-            KernelEventsManager.getInstance().processCallback(PrismHookList.KohState,prism);
-         }
-         return prism;
+      public static function getFromNetwork(msg:PrismSubareaEmptyInfo, currentPlayerAlliance:AllianceWrapper = null) : PrismSubAreaWrapper
+      {
+         //Décompilation abandonné
       }
       
       private var _subAreaId:uint;
@@ -143,109 +82,99 @@ package com.ankamagames.dofus.internalDatacenter.conquest
       
       private var _rewardTokenCount:uint;
       
-      public function get subAreaId() : uint {
-         return this._subAreaId;
+      public function get subAreaId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get mapId() : int {
-         return this._mapId;
+      public function get mapId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get worldX() : int {
-         return this._worldX;
+      public function get worldX() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get worldY() : int {
-         return this._worldY;
+      public function get worldY() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get prismType() : uint {
-         return this._prismType;
+      public function get prismType() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get state() : uint {
-         return this._state;
+      public function get state() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get rewardTokenCount() : uint {
-         return this._rewardTokenCount;
+      public function get rewardTokenCount() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get nextVulnerabilityDate() : uint {
-         return this._nextVulnerabilityDate;
+      public function get nextVulnerabilityDate() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get timeSlotHour() : uint {
-         return this._timeSlotHour;
+      public function get timeSlotHour() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get timeSlotQuarter() : uint {
-         return this._timeSlotQuarter;
+      public function get timeSlotQuarter() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get placementDate() : uint {
-         return this._placementDate;
+      public function get placementDate() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get alliance() : AllianceWrapper {
-         return this._alliance;
+      public function get alliance() : AllianceWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function get lastTimeSlotModificationDate() : uint {
-         return this._lastTimeSlotModificationDate;
+      public function get lastTimeSlotModificationDate() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get lastTimeSlotModificationAuthorGuildId() : uint {
-         return this._lastTimeSlotModificationAuthorGuildId;
+      public function get lastTimeSlotModificationAuthorGuildId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get lastTimeSlotModificationAuthorId() : uint {
-         return this._lastTimeSlotModificationAuthorId;
+      public function get lastTimeSlotModificationAuthorId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get lastTimeSlotModificationAuthorName() : String {
-         return this._lastTimeSlotModificationAuthorName;
+      public function get lastTimeSlotModificationAuthorName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get isVillage() : Boolean {
-         if(this._isVillage == -1)
-         {
-            if(!SubArea.getSubAreaById(this.subAreaId))
-            {
-               return false;
-            }
-            this._isVillage = int(SubArea.getSubAreaById(this.subAreaId).isConquestVillage);
-         }
-         return this._isVillage == 1;
+      public function get isVillage() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get subAreaName() : String {
-         if(this._subAreaName == "")
-         {
-            this._subAreaName = SubArea.getSubAreaById(this.subAreaId).name + " (" + SubArea.getSubAreaById(this.subAreaId).area.name + ")";
-         }
-         return this._subAreaName;
+      public function get subAreaName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get vulnerabilityHourString() : String {
-         var sHours:String = null;
-         var sMinutes:String = null;
-         var hour:String = "";
-         if(this._nextVulnerabilityDate != 0)
-         {
-            sHours = this._timeSlotHour.toString();
-            if(sHours.length == 1)
-            {
-               sHours = "0" + sHours;
-            }
-            sMinutes = (this._timeSlotQuarter * 15).toString();
-            if(sMinutes.length == 1)
-            {
-               sMinutes = "0" + sMinutes;
-            }
-            hour = sHours + ":" + sMinutes;
-         }
-         return hour;
+      public function get vulnerabilityHourString() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

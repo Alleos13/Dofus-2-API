@@ -20,24 +20,13 @@ package com.ankamagames.dofus.logic.connection.managers
    public class StoreUserDataManager extends Object
    {
       
-      public function StoreUserDataManager() {
-         super();
-         if(_self != null)
-         {
-            throw new SingletonError("StoreUserDataManager is a singleton and should not be instanciated directly.");
-         }
-         else
-         {
-            if((BuildInfos.BUILD_TYPE == BuildTypeEnum.RELEASE) || (BuildInfos.BUILD_TYPE == BuildTypeEnum.BETA) || (BuildInfos.BUILD_TYPE == BuildTypeEnum.ALPHA))
-            {
-               BASE_URL = BASE_URL + "com";
-            }
-            else
-            {
-               BASE_URL = BASE_URL + "lan";
-            }
-            return;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StoreUserDataManager()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -46,46 +35,31 @@ package com.ankamagames.dofus.logic.connection.managers
       
       private static var _self:StoreUserDataManager;
       
-      public static function getInstance() : StoreUserDataManager {
-         if(_self == null)
-         {
-            _self = new StoreUserDataManager();
-         }
-         return _self;
+      public static function getInstance() : StoreUserDataManager
+      {
+         //Décompilation abandonné
       }
       
       private var _so:CustomSharedObject;
       
-      public function savePlayerData() : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public function savePlayerData() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onDataSavedComplete(pEvt:Event) : void {
-         var rpcService:RpcServiceManager = pEvt.currentTarget as RpcServiceManager;
-         if(this._so != null)
-         {
-            _log.debug("User data saved.");
-            this._so.flush();
-         }
-         this.clearService(rpcService);
+      private function onDataSavedComplete(pEvt:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onDataSavedError(pEvt:Event) : void {
-         _log.error("Can\'t send player\'s data to server !");
-         var rpcService:RpcServiceManager = pEvt.currentTarget as RpcServiceManager;
-         this.clearService(rpcService);
+      private function onDataSavedError(pEvt:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function clearService(rpcService:RpcServiceManager) : void {
-         rpcService.removeEventListener(Event.COMPLETE,this.onDataSavedComplete);
-         rpcService.removeEventListener(IOErrorEvent.IO_ERROR,this.onDataSavedError);
-         rpcService.removeEventListener(RpcServiceManager.SERVER_ERROR,this.onDataSavedError);
-         rpcService.destroy();
+      private function clearService(rpcService:RpcServiceManager) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

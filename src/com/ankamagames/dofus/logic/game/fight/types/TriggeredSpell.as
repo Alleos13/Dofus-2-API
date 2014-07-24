@@ -14,23 +14,18 @@ package com.ankamagames.dofus.logic.game.fight.types
    public class TriggeredSpell extends Object
    {
       
-      public function TriggeredSpell(pCasterId:int, pTargetId:int, pSpell:SpellWrapper, pTriggers:String, pTargets:Vector.<int>, pHasCritical:Boolean) {
-         super();
-         this._casterId = pCasterId;
-         this._targetId = pTargetId;
-         this._spell = pSpell;
-         this._triggers = pTriggers;
-         this._targets = pTargets;
-         this._hasCritical = pHasCritical;
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pTriggers:String, pSpellID:uint, pSpellLevel:int, pCriticalSpellLevel:int, pCasterId:int, pTargetId:int, pUseCache:Boolean = true) : TriggeredSpell {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public function TriggeredSpell(pCasterId:int, pTargetId:int, pSpell:SpellWrapper, pTriggers:String, pTargets:Vector.<int>, pHasCritical:Boolean)
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pTriggers:String, pSpellID:uint, pSpellLevel:int, pCriticalSpellLevel:int, pCasterId:int, pTargetId:int, pUseCache:Boolean = true) : TriggeredSpell
+      {
+         //Décompilation abandonné
       }
       
       private var _casterId:int;
@@ -45,28 +40,34 @@ package com.ankamagames.dofus.logic.game.fight.types
       
       private var _hasCritical:Boolean;
       
-      public function get casterId() : int {
-         return this._casterId;
+      public function get casterId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get targetId() : int {
-         return this._targetId;
+      public function get targetId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get spell() : SpellWrapper {
-         return this._spell;
+      public function get spell() : SpellWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function get triggers() : String {
-         return this._triggers;
+      public function get triggers() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get targets() : Vector.<int> {
-         return this._targets;
+      public function get targets() : Vector.<int>
+      {
+         //Décompilation abandonné
       }
       
-      public function get hasCritical() : Boolean {
-         return this._hasCritical;
+      public function get hasCritical() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

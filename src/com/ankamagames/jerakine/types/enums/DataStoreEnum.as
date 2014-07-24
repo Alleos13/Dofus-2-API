@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.types.enums
    public class DataStoreEnum extends Object
    {
       
-      public function DataStoreEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DataStoreEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static var BIND_COMPUTER:uint = 0;

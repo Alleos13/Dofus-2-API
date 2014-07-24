@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.treasureHunt
    public class TreasureHuntStepFollowDirectionToPOI extends TreasureHuntStep implements INetworkType
    {
       
-      public function TreasureHuntStepFollowDirectionToPOI() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TreasureHuntStepFollowDirectionToPOI()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 461;
@@ -17,62 +22,39 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.treasureHunt
       
       public var poiLabelId:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 461;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initTreasureHuntStepFollowDirectionToPOI(direction:uint = 1, poiLabelId:uint = 0) : TreasureHuntStepFollowDirectionToPOI {
-         this.direction = direction;
-         this.poiLabelId = poiLabelId;
-         return this;
+      public function initTreasureHuntStepFollowDirectionToPOI(direction:uint = 1, poiLabelId:uint = 0) : TreasureHuntStepFollowDirectionToPOI
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.direction = 1;
-         this.poiLabelId = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TreasureHuntStepFollowDirectionToPOI(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_TreasureHuntStepFollowDirectionToPOI(output:IDataOutput) : void {
-         super.serializeAs_TreasureHuntStep(output);
-         output.writeByte(this.direction);
-         if(this.poiLabelId < 0)
-         {
-            throw new Error("Forbidden value (" + this.poiLabelId + ") on element poiLabelId.");
-         }
-         else
-         {
-            output.writeInt(this.poiLabelId);
-            return;
-         }
+      public function serializeAs_TreasureHuntStepFollowDirectionToPOI(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TreasureHuntStepFollowDirectionToPOI(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_TreasureHuntStepFollowDirectionToPOI(input:IDataInput) : void {
-         super.deserialize(input);
-         this.direction = input.readByte();
-         if(this.direction < 0)
-         {
-            throw new Error("Forbidden value (" + this.direction + ") on element of TreasureHuntStepFollowDirectionToPOI.direction.");
-         }
-         else
-         {
-            this.poiLabelId = input.readInt();
-            if(this.poiLabelId < 0)
-            {
-               throw new Error("Forbidden value (" + this.poiLabelId + ") on element of TreasureHuntStepFollowDirectionToPOI.poiLabelId.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_TreasureHuntStepFollowDirectionToPOI(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

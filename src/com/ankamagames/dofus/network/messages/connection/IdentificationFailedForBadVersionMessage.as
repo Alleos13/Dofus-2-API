@@ -9,65 +9,69 @@ package com.ankamagames.dofus.network.messages.connection
    public class IdentificationFailedForBadVersionMessage extends IdentificationFailedMessage implements INetworkMessage
    {
       
-      public function IdentificationFailedForBadVersionMessage() {
-         this.requiredVersion = new Version();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function IdentificationFailedForBadVersionMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 21;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var requiredVersion:Version;
       
-      override public function getMessageId() : uint {
-         return 21;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initIdentificationFailedForBadVersionMessage(reason:uint = 99, requiredVersion:Version = null) : IdentificationFailedForBadVersionMessage {
-         super.initIdentificationFailedMessage(reason);
-         this.requiredVersion = requiredVersion;
-         this._isInitialized = true;
-         return this;
+      public function initIdentificationFailedForBadVersionMessage(reason:uint = 99, requiredVersion:Version = null) : IdentificationFailedForBadVersionMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.requiredVersion = new Version();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_IdentificationFailedForBadVersionMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_IdentificationFailedForBadVersionMessage(output:IDataOutput) : void {
-         super.serializeAs_IdentificationFailedMessage(output);
-         this.requiredVersion.serializeAs_Version(output);
+      public function serializeAs_IdentificationFailedForBadVersionMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_IdentificationFailedForBadVersionMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_IdentificationFailedForBadVersionMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.requiredVersion = new Version();
-         this.requiredVersion.deserialize(input);
+      public function deserializeAs_IdentificationFailedForBadVersionMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

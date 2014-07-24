@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.approach.actions
    public class CharacterRecolorSelectionAction extends Object implements Action
    {
       
-      public function CharacterRecolorSelectionAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(characterId:int, characterColors:Array) : CharacterRecolorSelectionAction {
-         var a:CharacterRecolorSelectionAction = new CharacterRecolorSelectionAction();
-         a.characterId = characterId;
-         a.characterColors = characterColors;
-         return a;
+      public function CharacterRecolorSelectionAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(characterId:int, characterColors:Array) : CharacterRecolorSelectionAction
+      {
+         //Décompilation abandonné
       }
       
       public var characterId:int;

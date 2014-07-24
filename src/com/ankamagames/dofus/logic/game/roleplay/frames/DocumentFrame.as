@@ -19,43 +19,35 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
    public class DocumentFrame extends Object implements Frame
    {
       
-      public function DocumentFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DocumentFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      public function get priority() : int {
-         return Priority.NORMAL;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var ldm:LeaveDialogMessage = null;
-         switch(true)
-         {
-            case msg is LeaveDialogRequestAction:
-               ConnectionsHandler.getConnection().send(new LeaveDialogRequestMessage());
-               return true;
-            case msg is LeaveDialogMessage:
-               ldm = msg as LeaveDialogMessage;
-               if(ldm.dialogType == DialogTypeEnum.DIALOG_BOOK)
-               {
-                  Kernel.getWorker().process(ChangeWorldInteractionAction.create(true));
-                  Kernel.getWorker().removeFrame(this);
-               }
-               return true;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         KernelEventsManager.getInstance().processCallback(HookList.LeaveDialog);
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

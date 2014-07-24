@@ -3,8 +3,13 @@ package com.ankamagames.atouin.enums
    public class MapTypesEnum extends Object
    {
       
-      public function MapTypesEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapTypesEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const OUTDOOR:int = 0;

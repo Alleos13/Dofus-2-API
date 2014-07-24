@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.humanVendor
    public class ExchangeSellAction extends Object implements Action
    {
       
-      public function ExchangeSellAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pObjectUID:uint, pQuantity:uint) : ExchangeSellAction {
-         var a:ExchangeSellAction = new ExchangeSellAction();
-         a.objectUID = pObjectUID;
-         a.quantity = pQuantity;
-         return a;
+      public function ExchangeSellAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pObjectUID:uint, pQuantity:uint) : ExchangeSellAction
+      {
+         //Décompilation abandonné
       }
       
       public var objectUID:uint;

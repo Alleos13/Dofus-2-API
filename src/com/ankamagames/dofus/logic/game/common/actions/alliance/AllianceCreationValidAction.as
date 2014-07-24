@@ -5,19 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.alliance
    public class AllianceCreationValidAction extends Object implements Action
    {
       
-      public function AllianceCreationValidAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pAllianceName:String, pAllianceTag:String, pUpEmblemId:uint, pUpColorEmblem:uint, pBackEmblemId:uint, pBackColorEmblem:uint) : AllianceCreationValidAction {
-         var action:AllianceCreationValidAction = new AllianceCreationValidAction();
-         action.allianceName = pAllianceName;
-         action.allianceTag = pAllianceTag;
-         action.upEmblemId = pUpEmblemId;
-         action.upColorEmblem = pUpColorEmblem;
-         action.backEmblemId = pBackEmblemId;
-         action.backColorEmblem = pBackColorEmblem;
-         return action;
+      public function AllianceCreationValidAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pAllianceName:String, pAllianceTag:String, pUpEmblemId:uint, pUpColorEmblem:uint, pBackEmblemId:uint, pBackColorEmblem:uint) : AllianceCreationValidAction
+      {
+         //Décompilation abandonné
       }
       
       public var allianceName:String;

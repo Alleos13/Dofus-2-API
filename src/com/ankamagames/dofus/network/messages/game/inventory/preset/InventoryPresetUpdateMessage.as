@@ -10,61 +10,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.preset
    public class InventoryPresetUpdateMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function InventoryPresetUpdateMessage() {
-         this.preset = new Preset();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function InventoryPresetUpdateMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6171;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var preset:Preset;
       
-      override public function getMessageId() : uint {
-         return 6171;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initInventoryPresetUpdateMessage(preset:Preset = null) : InventoryPresetUpdateMessage {
-         this.preset = preset;
-         this._isInitialized = true;
-         return this;
+      public function initInventoryPresetUpdateMessage(preset:Preset = null) : InventoryPresetUpdateMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.preset = new Preset();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_InventoryPresetUpdateMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_InventoryPresetUpdateMessage(output:IDataOutput) : void {
-         this.preset.serializeAs_Preset(output);
+      public function serializeAs_InventoryPresetUpdateMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_InventoryPresetUpdateMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_InventoryPresetUpdateMessage(input:IDataInput) : void {
-         this.preset = new Preset();
-         this.preset.deserialize(input);
+      public function deserializeAs_InventoryPresetUpdateMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

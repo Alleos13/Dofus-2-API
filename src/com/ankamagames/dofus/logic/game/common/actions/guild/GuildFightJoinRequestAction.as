@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.guild
    public class GuildFightJoinRequestAction extends Object implements Action
    {
       
-      public function GuildFightJoinRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pTaxCollectorId:uint) : GuildFightJoinRequestAction {
-         var action:GuildFightJoinRequestAction = new GuildFightJoinRequestAction();
-         action.taxCollectorId = pTaxCollectorId;
-         return action;
+      public function GuildFightJoinRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pTaxCollectorId:uint) : GuildFightJoinRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var taxCollectorId:uint;

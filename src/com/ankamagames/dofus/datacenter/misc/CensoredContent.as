@@ -7,14 +7,20 @@ package com.ankamagames.dofus.datacenter.misc
    public class CensoredContent extends Object implements ICensoredDataItem, IDataCenter
    {
       
-      public function CensoredContent() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CensoredContent()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "CensoredContents";
       
-      public static function getCensoredContents() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getCensoredContents() : Array
+      {
+         //Décompilation abandonné
       }
       
       private var _type:int;
@@ -25,36 +31,44 @@ package com.ankamagames.dofus.datacenter.misc
       
       private var _lang:String;
       
-      public function get lang() : String {
-         return this._lang;
+      public function get lang() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function set lang(value:String) : void {
-         this._lang = value;
+      public function set lang(value:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set type(t:int) : void {
-         this._type = t;
+      public function set type(t:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get type() : int {
-         return this._type;
+      public function get type() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set oldValue(ov:int) : void {
-         this._oldValue = ov;
+      public function set oldValue(ov:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get oldValue() : int {
-         return this._oldValue;
+      public function get oldValue() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set newValue(nv:int) : void {
-         this._newValue = nv;
+      public function set newValue(nv:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get newValue() : int {
-         return this._newValue;
+      public function get newValue() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

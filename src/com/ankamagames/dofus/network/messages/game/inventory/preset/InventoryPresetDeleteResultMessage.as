@@ -9,88 +9,71 @@ package com.ankamagames.dofus.network.messages.game.inventory.preset
    public class InventoryPresetDeleteResultMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function InventoryPresetDeleteResultMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function InventoryPresetDeleteResultMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6173;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var presetId:uint = 0;
       
       public var code:uint = 2;
       
-      override public function getMessageId() : uint {
-         return 6173;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initInventoryPresetDeleteResultMessage(presetId:uint = 0, code:uint = 2) : InventoryPresetDeleteResultMessage {
-         this.presetId = presetId;
-         this.code = code;
-         this._isInitialized = true;
-         return this;
+      public function initInventoryPresetDeleteResultMessage(presetId:uint = 0, code:uint = 2) : InventoryPresetDeleteResultMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.presetId = 0;
-         this.code = 2;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_InventoryPresetDeleteResultMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_InventoryPresetDeleteResultMessage(output:IDataOutput) : void {
-         if(this.presetId < 0)
-         {
-            throw new Error("Forbidden value (" + this.presetId + ") on element presetId.");
-         }
-         else
-         {
-            output.writeByte(this.presetId);
-            output.writeByte(this.code);
-            return;
-         }
+      public function serializeAs_InventoryPresetDeleteResultMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_InventoryPresetDeleteResultMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_InventoryPresetDeleteResultMessage(input:IDataInput) : void {
-         this.presetId = input.readByte();
-         if(this.presetId < 0)
-         {
-            throw new Error("Forbidden value (" + this.presetId + ") on element of InventoryPresetDeleteResultMessage.presetId.");
-         }
-         else
-         {
-            this.code = input.readByte();
-            if(this.code < 0)
-            {
-               throw new Error("Forbidden value (" + this.code + ") on element of InventoryPresetDeleteResultMessage.code.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_InventoryPresetDeleteResultMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

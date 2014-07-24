@@ -5,11 +5,13 @@ package com.ankamagames.jerakine.types.events
    public class ErrorReportedEvent extends Event
    {
       
-      public function ErrorReportedEvent(error:Error, text:String, pShowPopup:Boolean = true) {
-         super(ERROR,false,false);
-         this._error = error;
-         this._text = text;
-         this._showPopup = pShowPopup;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ErrorReportedEvent(error:Error, text:String, pShowPopup:Boolean = true)
+      {
+         //Décompilation abandonné
       }
       
       public static const ERROR:String = "ErrorReportedEvent";
@@ -20,25 +22,24 @@ package com.ankamagames.jerakine.types.events
       
       private var _showPopup:Boolean;
       
-      public function get error() : Error {
-         return this._error;
+      public function get error() : Error
+      {
+         //Décompilation abandonné
       }
       
-      public function get text() : String {
-         return this._text;
+      public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get showPopup() : Boolean {
-         return this._showPopup;
+      public function get showPopup() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get errorType() : String {
-         if(this.error == null)
-         {
-            return "";
-         }
-         var tmp1:Array = this.error.toString().split(":");
-         return tmp1[0];
+      public function get errorType() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

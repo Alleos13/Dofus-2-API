@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.fight.actions
    public class TimelineEntityOverAction extends Object implements Action
    {
       
-      public function TimelineEntityOverAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(target:int, showRange:Boolean) : TimelineEntityOverAction {
-         var a:TimelineEntityOverAction = new TimelineEntityOverAction();
-         a.targetId = target;
-         a.showRange = showRange;
-         return a;
+      public function TimelineEntityOverAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(target:int, showRange:Boolean) : TimelineEntityOverAction
+      {
+         //Décompilation abandonné
       }
       
       public var targetId:int;

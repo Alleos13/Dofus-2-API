@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.stats
    public class StatsUpgradeResultMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function StatsUpgradeResultMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StatsUpgradeResultMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5609;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var nbCharacBoost:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5609;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initStatsUpgradeResultMessage(nbCharacBoost:uint = 0) : StatsUpgradeResultMessage {
-         this.nbCharacBoost = nbCharacBoost;
-         this._isInitialized = true;
-         return this;
+      public function initStatsUpgradeResultMessage(nbCharacBoost:uint = 0) : StatsUpgradeResultMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.nbCharacBoost = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_StatsUpgradeResultMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_StatsUpgradeResultMessage(output:IDataOutput) : void {
-         if(this.nbCharacBoost < 0)
-         {
-            throw new Error("Forbidden value (" + this.nbCharacBoost + ") on element nbCharacBoost.");
-         }
-         else
-         {
-            output.writeShort(this.nbCharacBoost);
-            return;
-         }
+      public function serializeAs_StatsUpgradeResultMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_StatsUpgradeResultMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_StatsUpgradeResultMessage(input:IDataInput) : void {
-         this.nbCharacBoost = input.readShort();
-         if(this.nbCharacBoost < 0)
-         {
-            throw new Error("Forbidden value (" + this.nbCharacBoost + ") on element of StatsUpgradeResultMessage.nbCharacBoost.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_StatsUpgradeResultMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

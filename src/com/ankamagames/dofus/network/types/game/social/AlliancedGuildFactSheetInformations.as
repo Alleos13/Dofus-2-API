@@ -10,47 +10,52 @@ package com.ankamagames.dofus.network.types.game.social
    public class AlliancedGuildFactSheetInformations extends GuildInformations implements INetworkType
    {
       
-      public function AlliancedGuildFactSheetInformations() {
-         this.allianceInfos = new BasicNamedAllianceInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AlliancedGuildFactSheetInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 422;
       
       public var allianceInfos:BasicNamedAllianceInformations;
       
-      override public function getTypeId() : uint {
-         return 422;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initAlliancedGuildFactSheetInformations(guildId:uint = 0, guildName:String = "", guildEmblem:GuildEmblem = null, allianceInfos:BasicNamedAllianceInformations = null) : AlliancedGuildFactSheetInformations {
-         super.initGuildInformations(guildId,guildName,guildEmblem);
-         this.allianceInfos = allianceInfos;
-         return this;
+      public function initAlliancedGuildFactSheetInformations(guildId:uint = 0, guildName:String = "", guildEmblem:GuildEmblem = null, allianceInfos:BasicNamedAllianceInformations = null) : AlliancedGuildFactSheetInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.allianceInfos = new BasicNamedAllianceInformations();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AlliancedGuildFactSheetInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_AlliancedGuildFactSheetInformations(output:IDataOutput) : void {
-         super.serializeAs_GuildInformations(output);
-         this.allianceInfos.serializeAs_BasicNamedAllianceInformations(output);
+      public function serializeAs_AlliancedGuildFactSheetInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AlliancedGuildFactSheetInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_AlliancedGuildFactSheetInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.allianceInfos = new BasicNamedAllianceInformations();
-         this.allianceInfos.deserialize(input);
+      public function deserializeAs_AlliancedGuildFactSheetInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

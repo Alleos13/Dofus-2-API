@@ -5,8 +5,13 @@ package com.ankamagames.dofus.scripts
    public class DofusEmbedScript_SCRIPT_3_DATA extends ByteArrayAsset
    {
       
-      public function DofusEmbedScript_SCRIPT_3_DATA() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DofusEmbedScript_SCRIPT_3_DATA()
+      {
+         //Décompilation abandonné
       }
    }
 }

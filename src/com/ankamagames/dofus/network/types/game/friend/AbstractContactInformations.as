@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.friend
    public class AbstractContactInformations extends Object implements INetworkType
    {
       
-      public function AbstractContactInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AbstractContactInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 380;
@@ -17,53 +22,39 @@ package com.ankamagames.dofus.network.types.game.friend
       
       public var accountName:String = "";
       
-      public function getTypeId() : uint {
-         return 380;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initAbstractContactInformations(accountId:uint = 0, accountName:String = "") : AbstractContactInformations {
-         this.accountId = accountId;
-         this.accountName = accountName;
-         return this;
+      public function initAbstractContactInformations(accountId:uint = 0, accountName:String = "") : AbstractContactInformations
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.accountId = 0;
-         this.accountName = "";
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AbstractContactInformations(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_AbstractContactInformations(output:IDataOutput) : void {
-         if(this.accountId < 0)
-         {
-            throw new Error("Forbidden value (" + this.accountId + ") on element accountId.");
-         }
-         else
-         {
-            output.writeInt(this.accountId);
-            output.writeUTF(this.accountName);
-            return;
-         }
+      public function serializeAs_AbstractContactInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AbstractContactInformations(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_AbstractContactInformations(input:IDataInput) : void {
-         this.accountId = input.readInt();
-         if(this.accountId < 0)
-         {
-            throw new Error("Forbidden value (" + this.accountId + ") on element of AbstractContactInformations.accountId.");
-         }
-         else
-         {
-            this.accountName = input.readUTF();
-            return;
-         }
+      public function deserializeAs_AbstractContactInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

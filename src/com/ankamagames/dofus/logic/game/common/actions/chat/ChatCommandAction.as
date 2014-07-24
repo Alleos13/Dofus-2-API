@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.chat
    public class ChatCommandAction extends Object implements Action
    {
       
-      public function ChatCommandAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(command:String) : ChatCommandAction {
-         var a:ChatCommandAction = new ChatCommandAction();
-         a.command = command;
-         return a;
+      public function ChatCommandAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(command:String) : ChatCommandAction
+      {
+         //Décompilation abandonné
       }
       
       public var command:String;

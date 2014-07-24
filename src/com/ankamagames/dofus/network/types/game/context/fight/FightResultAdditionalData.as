@@ -7,33 +7,50 @@ package com.ankamagames.dofus.network.types.game.context.fight
    public class FightResultAdditionalData extends Object implements INetworkType
    {
       
-      public function FightResultAdditionalData() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightResultAdditionalData()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 191;
       
-      public function getTypeId() : uint {
-         return 191;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initFightResultAdditionalData() : FightResultAdditionalData {
-         return this;
+      public function initFightResultAdditionalData() : FightResultAdditionalData
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_FightResultAdditionalData(output:IDataOutput) : void {
+      public function serializeAs_FightResultAdditionalData(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_FightResultAdditionalData(input:IDataInput) : void {
+      public function deserializeAs_FightResultAdditionalData(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

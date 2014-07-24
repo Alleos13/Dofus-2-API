@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class CharacterInventoryPositionEnum extends Object
    {
       
-      public function CharacterInventoryPositionEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterInventoryPositionEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const ACCESSORY_POSITION_HAT:uint = 6;

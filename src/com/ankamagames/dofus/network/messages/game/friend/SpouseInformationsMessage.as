@@ -11,63 +11,69 @@ package com.ankamagames.dofus.network.messages.game.friend
    public class SpouseInformationsMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function SpouseInformationsMessage() {
-         this.spouse = new FriendSpouseInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpouseInformationsMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6356;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var spouse:FriendSpouseInformations;
       
-      override public function getMessageId() : uint {
-         return 6356;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initSpouseInformationsMessage(spouse:FriendSpouseInformations = null) : SpouseInformationsMessage {
-         this.spouse = spouse;
-         this._isInitialized = true;
-         return this;
+      public function initSpouseInformationsMessage(spouse:FriendSpouseInformations = null) : SpouseInformationsMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.spouse = new FriendSpouseInformations();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_SpouseInformationsMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_SpouseInformationsMessage(output:IDataOutput) : void {
-         output.writeShort(this.spouse.getTypeId());
-         this.spouse.serialize(output);
+      public function serializeAs_SpouseInformationsMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_SpouseInformationsMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_SpouseInformationsMessage(input:IDataInput) : void {
-         var _id1:uint = input.readUnsignedShort();
-         this.spouse = ProtocolTypeManager.getInstance(FriendSpouseInformations,_id1);
-         this.spouse.deserialize(input);
+      public function deserializeAs_SpouseInformationsMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

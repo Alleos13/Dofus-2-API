@@ -7,23 +7,27 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightKillStep extends AbstractSequencable implements IFightStep
    {
       
-      public function FightKillStep(fighterId:int, killerId:int) {
-         super();
-         this._killerId = killerId;
-         this._fighterId = fighterId;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightKillStep(fighterId:int, killerId:int)
+      {
+         //Décompilation abandonné
       }
       
       private var _killerId:int;
       
       private var _fighterId:int;
       
-      public function get stepType() : String {
-         return "kill";
+      public function get stepType() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function start() : void {
-         FightEventsHelper.sendFightEvent(FightEventEnum.FIGHTER_GOT_KILLED,[this._killerId,this._fighterId],this._fighterId,castingSpellId);
-         executeCallbacks();
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

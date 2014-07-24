@@ -9,67 +9,69 @@ package com.ankamagames.dofus.network.messages.game.guild
    public class GuildCreationResultMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GuildCreationResultMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildCreationResultMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5554;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var result:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5554;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGuildCreationResultMessage(result:uint = 0) : GuildCreationResultMessage {
-         this.result = result;
-         this._isInitialized = true;
-         return this;
+      public function initGuildCreationResultMessage(result:uint = 0) : GuildCreationResultMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.result = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GuildCreationResultMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GuildCreationResultMessage(output:IDataOutput) : void {
-         output.writeByte(this.result);
+      public function serializeAs_GuildCreationResultMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GuildCreationResultMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildCreationResultMessage(input:IDataInput) : void {
-         this.result = input.readByte();
-         if(this.result < 0)
-         {
-            throw new Error("Forbidden value (" + this.result + ") on element of GuildCreationResultMessage.result.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_GuildCreationResultMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

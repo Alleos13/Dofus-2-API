@@ -6,8 +6,13 @@ package com.ankamagames.atouin.messages
    public class CellInteractionMessage extends MapMessage
    {
       
-      public function CellInteractionMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CellInteractionMessage()
+      {
+         //Décompilation abandonné
       }
       
       private var _cellId:uint;
@@ -18,36 +23,44 @@ package com.ankamagames.atouin.messages
       
       private var _cellCoords:MapPoint;
       
-      public function get cellId() : uint {
-         return this._cellId;
+      public function get cellId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set cellId(nValue:uint) : void {
-         this._cellId = nValue;
+      public function set cellId(nValue:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get cellContainer() : Sprite {
-         return this._cellContainer;
+      public function get cellContainer() : Sprite
+      {
+         //Décompilation abandonné
       }
       
-      public function set cellContainer(sSprite:Sprite) : void {
-         this._cellContainer = sSprite;
+      public function set cellContainer(sSprite:Sprite) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get cellDepth() : uint {
-         return this._cellDepth;
+      public function get cellDepth() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set cellDepth(nValue:uint) : void {
-         this._cellDepth = nValue;
+      public function set cellDepth(nValue:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get cell() : MapPoint {
-         return this._cellCoords;
+      public function get cell() : MapPoint
+      {
+         //Décompilation abandonné
       }
       
-      public function set cell(pValue:MapPoint) : void {
-         this._cellCoords = pValue;
+      public function set cell(pValue:MapPoint) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

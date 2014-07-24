@@ -5,8 +5,12 @@ package com.ankamagames.jerakine.scrambling
    public interface Scramblable
    {
       
-      function scramble(param1:ByteArray) : void;
+      {
+      //Décompilation abandonné
+      }
       
-      function unscramble(param1:ByteArray) : void;
+      function scramble(data:ByteArray) : void;
+      
+      function unscramble(data:ByteArray) : void;
    }
 }

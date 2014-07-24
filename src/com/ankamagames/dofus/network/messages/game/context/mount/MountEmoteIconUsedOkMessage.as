@@ -9,81 +9,71 @@ package com.ankamagames.dofus.network.messages.game.context.mount
    public class MountEmoteIconUsedOkMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function MountEmoteIconUsedOkMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MountEmoteIconUsedOkMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5978;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var mountId:int = 0;
       
       public var reactionType:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5978;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initMountEmoteIconUsedOkMessage(mountId:int = 0, reactionType:uint = 0) : MountEmoteIconUsedOkMessage {
-         this.mountId = mountId;
-         this.reactionType = reactionType;
-         this._isInitialized = true;
-         return this;
+      public function initMountEmoteIconUsedOkMessage(mountId:int = 0, reactionType:uint = 0) : MountEmoteIconUsedOkMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.mountId = 0;
-         this.reactionType = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_MountEmoteIconUsedOkMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_MountEmoteIconUsedOkMessage(output:IDataOutput) : void {
-         output.writeInt(this.mountId);
-         if(this.reactionType < 0)
-         {
-            throw new Error("Forbidden value (" + this.reactionType + ") on element reactionType.");
-         }
-         else
-         {
-            output.writeByte(this.reactionType);
-            return;
-         }
+      public function serializeAs_MountEmoteIconUsedOkMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_MountEmoteIconUsedOkMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_MountEmoteIconUsedOkMessage(input:IDataInput) : void {
-         this.mountId = input.readInt();
-         this.reactionType = input.readByte();
-         if(this.reactionType < 0)
-         {
-            throw new Error("Forbidden value (" + this.reactionType + ") on element of MountEmoteIconUsedOkMessage.reactionType.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_MountEmoteIconUsedOkMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

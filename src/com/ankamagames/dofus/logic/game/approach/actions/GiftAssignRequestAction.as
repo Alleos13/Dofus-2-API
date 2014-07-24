@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.approach.actions
    public class GiftAssignRequestAction extends Object implements Action
    {
       
-      public function GiftAssignRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(giftId:uint, characterId:uint) : GiftAssignRequestAction {
-         var action:GiftAssignRequestAction = new GiftAssignRequestAction();
-         action.giftId = giftId;
-         action.characterId = characterId;
-         return action;
+      public function GiftAssignRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(giftId:uint, characterId:uint) : GiftAssignRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var giftId:uint;

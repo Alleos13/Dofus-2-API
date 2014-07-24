@@ -8,57 +8,67 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
    public class AbstractPartyEventMessage extends AbstractPartyMessage implements INetworkMessage
    {
       
-      public function AbstractPartyEventMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AbstractPartyEventMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6273;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function getMessageId() : uint {
-         return 6273;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initAbstractPartyEventMessage(partyId:uint = 0) : AbstractPartyEventMessage {
-         super.initAbstractPartyMessage(partyId);
-         this._isInitialized = true;
-         return this;
+      public function initAbstractPartyEventMessage(partyId:uint = 0) : AbstractPartyEventMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AbstractPartyEventMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_AbstractPartyEventMessage(output:IDataOutput) : void {
-         super.serializeAs_AbstractPartyMessage(output);
+      public function serializeAs_AbstractPartyEventMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AbstractPartyEventMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_AbstractPartyEventMessage(input:IDataInput) : void {
-         super.deserialize(input);
+      public function deserializeAs_AbstractPartyEventMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

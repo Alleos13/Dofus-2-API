@@ -7,19 +7,13 @@ package com.ankamagames.berilia.components.params
    public class TooltipProperties extends UiProperties
    {
       
-      public function TooltipProperties(tooltip:Tooltip, autoHide:Boolean, position:IRectangle, point:uint, relativePoint:uint, offset:int, data:*, makerParam:Object, zoom:Number = 1, alwaysDisplayed:Boolean = true) {
-         super();
-         this.position = position;
-         this.tooltip = tooltip;
-         this.autoHide = autoHide;
-         this.point = point;
-         this.relativePoint = relativePoint;
-         this.offset = offset;
-         this.data = data;
-         this.makerName = tooltip.makerName;
-         this.makerParam = makerParam;
-         this.zoom = zoom;
-         this.alwaysDisplayed = alwaysDisplayed;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TooltipProperties(tooltip:Tooltip, autoHide:Boolean, position:IRectangle, point:uint, relativePoint:uint, offset:int, data:*, makerParam:Object, zoom:Number = 1, alwaysDisplayed:Boolean = true, target:* = null)
+      {
+         //Décompilation abandonné
       }
       
       public var position:IRectangle;
@@ -43,5 +37,7 @@ package com.ankamagames.berilia.components.params
       public var zoom:Number;
       
       public var alwaysDisplayed:Boolean;
+      
+      public var target;
    }
 }

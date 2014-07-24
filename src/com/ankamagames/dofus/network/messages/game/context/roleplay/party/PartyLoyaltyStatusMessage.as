@@ -8,63 +8,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
    public class PartyLoyaltyStatusMessage extends AbstractPartyMessage implements INetworkMessage
    {
       
-      public function PartyLoyaltyStatusMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PartyLoyaltyStatusMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6270;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var loyal:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 6270;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPartyLoyaltyStatusMessage(partyId:uint = 0, loyal:Boolean = false) : PartyLoyaltyStatusMessage {
-         super.initAbstractPartyMessage(partyId);
-         this.loyal = loyal;
-         this._isInitialized = true;
-         return this;
+      public function initPartyLoyaltyStatusMessage(partyId:uint = 0, loyal:Boolean = false) : PartyLoyaltyStatusMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.loyal = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PartyLoyaltyStatusMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PartyLoyaltyStatusMessage(output:IDataOutput) : void {
-         super.serializeAs_AbstractPartyMessage(output);
-         output.writeBoolean(this.loyal);
+      public function serializeAs_PartyLoyaltyStatusMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PartyLoyaltyStatusMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PartyLoyaltyStatusMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.loyal = input.readBoolean();
+      public function deserializeAs_PartyLoyaltyStatusMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

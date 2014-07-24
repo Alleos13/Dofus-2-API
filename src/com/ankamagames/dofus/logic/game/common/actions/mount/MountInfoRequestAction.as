@@ -8,31 +8,22 @@ package com.ankamagames.dofus.logic.game.common.actions.mount
    public class MountInfoRequestAction extends Object implements Action
    {
       
-      public function MountInfoRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MountInfoRequestAction()
+      {
+         //Décompilation abandonné
       }
       
       public static const EFFECT_ID_MOUNT:int = 995;
       
       public static const EFFECT_ID_VALIDITY:int = 998;
       
-      public static function create(item:ItemWrapper) : MountInfoRequestAction {
-         var effect:EffectInstance = null;
-         var o:MountInfoRequestAction = new MountInfoRequestAction();
-         o.item = item;
-         for each(effect in item.effects)
-         {
-            switch(effect.effectId)
-            {
-               case EFFECT_ID_MOUNT:
-                  o.time = (effect as EffectInstanceMount).date;
-                  o.mountId = (effect as EffectInstanceMount).mountId;
-                  continue;
-               default:
-                  continue;
-            }
-         }
-         return o;
+      public static function create(item:ItemWrapper) : MountInfoRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var item:ItemWrapper;

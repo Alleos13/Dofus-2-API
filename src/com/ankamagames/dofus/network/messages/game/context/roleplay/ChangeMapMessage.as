@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay
    public class ChangeMapMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ChangeMapMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ChangeMapMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 221;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var mapId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 221;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initChangeMapMessage(mapId:uint = 0) : ChangeMapMessage {
-         this.mapId = mapId;
-         this._isInitialized = true;
-         return this;
+      public function initChangeMapMessage(mapId:uint = 0) : ChangeMapMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.mapId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ChangeMapMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ChangeMapMessage(output:IDataOutput) : void {
-         if(this.mapId < 0)
-         {
-            throw new Error("Forbidden value (" + this.mapId + ") on element mapId.");
-         }
-         else
-         {
-            output.writeInt(this.mapId);
-            return;
-         }
+      public function serializeAs_ChangeMapMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ChangeMapMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ChangeMapMessage(input:IDataInput) : void {
-         this.mapId = input.readInt();
-         if(this.mapId < 0)
-         {
-            throw new Error("Forbidden value (" + this.mapId + ") on element of ChangeMapMessage.mapId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_ChangeMapMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

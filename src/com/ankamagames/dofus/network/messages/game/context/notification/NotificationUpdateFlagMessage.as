@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.notification
    public class NotificationUpdateFlagMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function NotificationUpdateFlagMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function NotificationUpdateFlagMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6090;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var index:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6090;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initNotificationUpdateFlagMessage(index:uint = 0) : NotificationUpdateFlagMessage {
-         this.index = index;
-         this._isInitialized = true;
-         return this;
+      public function initNotificationUpdateFlagMessage(index:uint = 0) : NotificationUpdateFlagMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.index = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_NotificationUpdateFlagMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_NotificationUpdateFlagMessage(output:IDataOutput) : void {
-         if(this.index < 0)
-         {
-            throw new Error("Forbidden value (" + this.index + ") on element index.");
-         }
-         else
-         {
-            output.writeShort(this.index);
-            return;
-         }
+      public function serializeAs_NotificationUpdateFlagMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_NotificationUpdateFlagMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_NotificationUpdateFlagMessage(input:IDataInput) : void {
-         this.index = input.readShort();
-         if(this.index < 0)
-         {
-            throw new Error("Forbidden value (" + this.index + ") on element of NotificationUpdateFlagMessage.index.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_NotificationUpdateFlagMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

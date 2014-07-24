@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.secure
    public class TrustCertificate extends Object implements INetworkType
    {
       
-      public function TrustCertificate() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TrustCertificate()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 377;
@@ -17,53 +22,39 @@ package com.ankamagames.dofus.network.types.secure
       
       public var hash:String = "";
       
-      public function getTypeId() : uint {
-         return 377;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initTrustCertificate(id:uint = 0, hash:String = "") : TrustCertificate {
-         this.id = id;
-         this.hash = hash;
-         return this;
+      public function initTrustCertificate(id:uint = 0, hash:String = "") : TrustCertificate
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.id = 0;
-         this.hash = "";
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TrustCertificate(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_TrustCertificate(output:IDataOutput) : void {
-         if(this.id < 0)
-         {
-            throw new Error("Forbidden value (" + this.id + ") on element id.");
-         }
-         else
-         {
-            output.writeInt(this.id);
-            output.writeUTF(this.hash);
-            return;
-         }
+      public function serializeAs_TrustCertificate(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TrustCertificate(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_TrustCertificate(input:IDataInput) : void {
-         this.id = input.readInt();
-         if(this.id < 0)
-         {
-            throw new Error("Forbidden value (" + this.id + ") on element of TrustCertificate.id.");
-         }
-         else
-         {
-            this.hash = input.readUTF();
-            return;
-         }
+      public function deserializeAs_TrustCertificate(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

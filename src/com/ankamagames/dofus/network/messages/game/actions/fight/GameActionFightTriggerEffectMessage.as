@@ -8,57 +8,67 @@ package com.ankamagames.dofus.network.messages.game.actions.fight
    public class GameActionFightTriggerEffectMessage extends GameActionFightDispellEffectMessage implements INetworkMessage
    {
       
-      public function GameActionFightTriggerEffectMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameActionFightTriggerEffectMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6147;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function getMessageId() : uint {
-         return 6147;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameActionFightTriggerEffectMessage(actionId:uint = 0, sourceId:int = 0, targetId:int = 0, boostUID:uint = 0) : GameActionFightTriggerEffectMessage {
-         super.initGameActionFightDispellEffectMessage(actionId,sourceId,targetId,boostUID);
-         this._isInitialized = true;
-         return this;
+      public function initGameActionFightTriggerEffectMessage(actionId:uint = 0, sourceId:int = 0, targetId:int = 0, boostUID:uint = 0) : GameActionFightTriggerEffectMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameActionFightTriggerEffectMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameActionFightTriggerEffectMessage(output:IDataOutput) : void {
-         super.serializeAs_GameActionFightDispellEffectMessage(output);
+      public function serializeAs_GameActionFightTriggerEffectMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameActionFightTriggerEffectMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameActionFightTriggerEffectMessage(input:IDataInput) : void {
-         super.deserialize(input);
+      public function deserializeAs_GameActionFightTriggerEffectMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

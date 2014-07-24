@@ -3,8 +3,13 @@ package com.ankamagames.berilia.enums
    public class XmlAttributesEnum extends Object
    {
       
-      public function XmlAttributesEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function XmlAttributesEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const ATTRIBUTE_NAME:String = "name";

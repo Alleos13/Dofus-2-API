@@ -6,26 +6,28 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class PremiumAccountItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function PremiumAccountItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         var readableCriterion:String = I18n.getUiText("ui.tooltip.possessPremiumAccount");
-         if(_criterionValue == 0)
-         {
-            readableCriterion = I18n.getUiText("ui.tooltip.dontPossessPremiumAccount");
-         }
-         return readableCriterion;
+      public function PremiumAccountItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:PremiumAccountItemCriterion = new PremiumAccountItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getCriterion() : int {
-         return 0;
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getCriterion() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

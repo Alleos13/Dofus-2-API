@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.lists
    public class RoleplayHookList extends Object
    {
       
-      public function RoleplayHookList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RoleplayHookList()
+      {
+         //Décompilation abandonné
       }
       
       public static const PlayerFightRequestSent:Hook;

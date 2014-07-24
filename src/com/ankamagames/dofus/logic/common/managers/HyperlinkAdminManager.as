@@ -7,12 +7,18 @@ package com.ankamagames.dofus.logic.common.managers
    public class HyperlinkAdminManager extends Object
    {
       
-      public function HyperlinkAdminManager() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function addCmd(auto:String, cmd:String) : void {
-         KernelEventsManager.getInstance().processCallback(HookList.ConsoleAddCmd,auto.toLowerCase() == "true",Base64.decode(cmd));
+      public function HyperlinkAdminManager()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function addCmd(auto:String, cmd:String) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

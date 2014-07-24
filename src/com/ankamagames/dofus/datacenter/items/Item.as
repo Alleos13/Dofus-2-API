@@ -20,8 +20,13 @@ package com.ankamagames.dofus.datacenter.items
    public class Item extends Object implements IPostInit, IDataCenter
    {
       
-      public function Item() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Item()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Items";
@@ -48,18 +53,14 @@ package com.ankamagames.dofus.datacenter.items
       
       protected static const _log:Logger;
       
-      public static function getItemById(id:uint, returnDefaultItemIfNull:Boolean = true) : Item {
-         var item:Item = GameData.getObject(MODULE,id) as Item;
-         if((item) || (!returnDefaultItemIfNull))
-         {
-            return item;
-         }
-         _log.error("Impossible de trouver l\'objet " + id + ", remplacement par l\'objet 666");
-         return GameData.getObject(MODULE,666) as Item;
+      public static function getItemById(id:uint, returnDefaultItemIfNull:Boolean = true) : Item
+      {
+         //Décompilation abandonné
       }
       
-      public static function getItems() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getItems() : Array
+      {
+         //Décompilation abandonné
       }
       
       private static var _censoredIcons:Dictionary;
@@ -144,200 +145,89 @@ package com.ankamagames.dofus.datacenter.items
       
       private var _recipes:Array;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get undiatricalName() : String {
-         if(!this._undiatricalName)
-         {
-            this._undiatricalName = StringUtils.noAccent(this.name).toLowerCase();
-         }
-         return this._undiatricalName;
+      public function get undiatricalName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get description() : String {
-         if(!this._description)
-         {
-            if(this.etheral)
-            {
-               this._description = I18n.getUiText("ui.common.etherealWeaponDescription");
-            }
-            else
-            {
-               this._description = I18n.getText(this.descriptionId);
-            }
-         }
-         return this._description;
+      public function get description() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get weight() : uint {
-         return this._weight;
+      public function get weight() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set weight(n:uint) : void {
-         this._weight = n;
+      public function set weight(n:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get type() : Object {
-         if(!this._type)
-         {
-            this._type = ItemType.getItemTypeById(this.typeId);
-         }
-         return this._type;
+      public function get type() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function get isWeapon() : Boolean {
-         return false;
+      public function get isWeapon() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get itemSet() : ItemSet {
-         if(!this._itemSet)
-         {
-            this._itemSet = ItemSet.getItemSetById(this.itemSetId);
-         }
-         return this._itemSet;
+      public function get itemSet() : ItemSet
+      {
+         //Décompilation abandonné
       }
       
-      public function get appearance() : TiphonEntityLook {
-         var appearance:Appearance = null;
-         if(!this._appearance)
-         {
-            appearance = Appearance.getAppearanceById(this.appearanceId);
-            if(appearance)
-            {
-               this._appearance = TiphonEntityLook.fromString(appearance.data);
-            }
-         }
-         return this._appearance;
+      public function get appearance() : TiphonEntityLook
+      {
+         //Décompilation abandonné
       }
       
-      public function get recipes() : Array {
-         var numRecipes:* = 0;
-         var i:* = 0;
-         var recipe:Recipe = null;
-         if(!this._recipes)
-         {
-            numRecipes = this.recipeIds.length;
-            this._recipes = new Array();
-            i = 0;
-            while(i < numRecipes)
-            {
-               recipe = Recipe.getRecipeByResultId(this.recipeIds[i]);
-               if(recipe)
-               {
-                  this._recipes.push(recipe);
-               }
-               i++;
-            }
-         }
-         return this._recipes;
+      public function get recipes() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function get category() : uint {
-         switch(true)
-         {
-            case FILTER_EQUIPEMENT[this.type.superTypeId]:
-               return EQUIPEMENT_CATEGORY;
-            case FILTER_CONSUMABLES[this.type.superTypeId]:
-               return CONSUMABLES_CATEGORY;
-            case FILTER_RESSOURCES[this.type.superTypeId]:
-               return RESSOURCES_CATEGORY;
-            case FILTER_QUEST[this.type.superTypeId]:
-               return QUEST_CATEGORY;
-            default:
-               return OTHER_CATEGORY;
-         }
+      public function get category() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get isEquipable() : Boolean {
-         return SUPERTYPE_NOT_EQUIPABLE[this.type.superTypeId];
+      public function get isEquipable() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get canEquip() : Boolean {
-         var player:PlayedCharacterManager = PlayedCharacterManager.getInstance();
-         if(!this.isEquipable)
-         {
-            return false;
-         }
-         if((player) && (player.infos.level <= this.level))
-         {
-            return false;
-         }
-         return this._conditions.isRespected;
+      public function get canEquip() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get conditions() : GroupItemCriterion {
-         if(!this.criteria)
-         {
-            return null;
-         }
-         if(!this._conditions)
-         {
-            this._conditions = new GroupItemCriterion(this.criteria);
-         }
-         return this._conditions;
+      public function get conditions() : GroupItemCriterion
+      {
+         //Décompilation abandonné
       }
       
-      public function get targetConditions() : GroupItemCriterion {
-         if(!this.criteriaTarget)
-         {
-            return null;
-         }
-         if(!this._conditionsTarget)
-         {
-            this._conditionsTarget = new GroupItemCriterion(this.criteriaTarget);
-         }
-         return this._conditionsTarget;
+      public function get targetConditions() : GroupItemCriterion
+      {
+         //Décompilation abandonné
       }
       
-      public function copy(from:Item, to:Item) : void {
-         to.id = from.id;
-         to.nameId = from.nameId;
-         to.typeId = from.typeId;
-         to.descriptionId = from.descriptionId;
-         to.iconId = from.iconId;
-         to.level = from.level;
-         to.realWeight = from.realWeight;
-         to.weight = from.weight;
-         to.cursed = from.cursed;
-         to.useAnimationId = from.useAnimationId;
-         to.usable = from.usable;
-         to.targetable = from.targetable;
-         to.price = from.price;
-         to.twoHanded = from.twoHanded;
-         to.etheral = from.etheral;
-         to.enhanceable = from.enhanceable;
-         to.nonUsableOnAnother = from.nonUsableOnAnother;
-         to.itemSetId = from.itemSetId;
-         to.criteria = from.criteria;
-         to.criteriaTarget = from.criteriaTarget;
-         to.hideEffects = from.hideEffects;
-         to.appearanceId = from.appearanceId;
-         to.recipeIds = from.recipeIds;
-         to.recipeSlots = from.recipeSlots;
-         to.secretRecipe = from.secretRecipe;
-         to.bonusIsSecret = from.bonusIsSecret;
-         to.possibleEffects = from.possibleEffects;
-         to.favoriteSubAreas = from.favoriteSubAreas;
-         to.favoriteSubAreasBonus = from.favoriteSubAreasBonus;
-         to.dropMonsterIds = from.dropMonsterIds;
-         to.exchangeable = from.exchangeable;
+      public function copy(from:Item, to:Item) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function postInit() : void {
-         if(!_censoredIcons)
-         {
-            _censoredIcons = CensoredContentManager.getInstance().getCensoredIndex(1);
-         }
-         if(_censoredIcons[this.iconId])
-         {
-            this.iconId = _censoredIcons[this.iconId];
-         }
+      public function postInit() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

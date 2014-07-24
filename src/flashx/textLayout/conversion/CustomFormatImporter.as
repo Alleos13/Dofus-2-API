@@ -5,27 +5,30 @@ package flashx.textLayout.conversion
    class CustomFormatImporter extends Object implements IFormatImporter
    {
       
-      function CustomFormatImporter() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      function CustomFormatImporter()
+      {
+         //Décompilation abandonné
       }
       
       private var _rslt:Dictionary = null;
       
-      public function reset() : void {
-         this._rslt = null;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get result() : Object {
-         return this._rslt;
+      public function get result() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function importOneFormat(param1:String, param2:String) : Boolean {
-         if(this._rslt == null)
-         {
-            this._rslt = new Dictionary();
-         }
-         this._rslt[param1] = param2;
-         return true;
+      public function importOneFormat(key:String, val:String) : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

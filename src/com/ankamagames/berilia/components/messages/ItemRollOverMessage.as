@@ -6,15 +6,20 @@ package com.ankamagames.berilia.components.messages
    public class ItemRollOverMessage extends ComponentMessage
    {
       
-      public function ItemRollOverMessage(target:GraphicContainer, gridItem:GridItem) {
-         super(target);
-         this._gridItem = gridItem;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ItemRollOverMessage(target:GraphicContainer, gridItem:GridItem)
+      {
+         //Décompilation abandonné
       }
       
       private var _gridItem:GridItem;
       
-      public function get item() : GridItem {
-         return this._gridItem;
+      public function get item() : GridItem
+      {
+         //Décompilation abandonné
       }
    }
 }

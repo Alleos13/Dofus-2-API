@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.data.items.effects
    public class ObjectEffectDice extends ObjectEffect implements INetworkType
    {
       
-      public function ObjectEffectDice() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ObjectEffectDice()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 73;
@@ -19,89 +24,39 @@ package com.ankamagames.dofus.network.types.game.data.items.effects
       
       public var diceConst:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 73;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initObjectEffectDice(actionId:uint = 0, diceNum:uint = 0, diceSide:uint = 0, diceConst:uint = 0) : ObjectEffectDice {
-         super.initObjectEffect(actionId);
-         this.diceNum = diceNum;
-         this.diceSide = diceSide;
-         this.diceConst = diceConst;
-         return this;
+      public function initObjectEffectDice(actionId:uint = 0, diceNum:uint = 0, diceSide:uint = 0, diceConst:uint = 0) : ObjectEffectDice
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.diceNum = 0;
-         this.diceSide = 0;
-         this.diceConst = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ObjectEffectDice(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectEffectDice(output:IDataOutput) : void {
-         super.serializeAs_ObjectEffect(output);
-         if(this.diceNum < 0)
-         {
-            throw new Error("Forbidden value (" + this.diceNum + ") on element diceNum.");
-         }
-         else
-         {
-            output.writeShort(this.diceNum);
-            if(this.diceSide < 0)
-            {
-               throw new Error("Forbidden value (" + this.diceSide + ") on element diceSide.");
-            }
-            else
-            {
-               output.writeShort(this.diceSide);
-               if(this.diceConst < 0)
-               {
-                  throw new Error("Forbidden value (" + this.diceConst + ") on element diceConst.");
-               }
-               else
-               {
-                  output.writeShort(this.diceConst);
-                  return;
-               }
-            }
-         }
+      public function serializeAs_ObjectEffectDice(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ObjectEffectDice(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectEffectDice(input:IDataInput) : void {
-         super.deserialize(input);
-         this.diceNum = input.readShort();
-         if(this.diceNum < 0)
-         {
-            throw new Error("Forbidden value (" + this.diceNum + ") on element of ObjectEffectDice.diceNum.");
-         }
-         else
-         {
-            this.diceSide = input.readShort();
-            if(this.diceSide < 0)
-            {
-               throw new Error("Forbidden value (" + this.diceSide + ") on element of ObjectEffectDice.diceSide.");
-            }
-            else
-            {
-               this.diceConst = input.readShort();
-               if(this.diceConst < 0)
-               {
-                  throw new Error("Forbidden value (" + this.diceConst + ") on element of ObjectEffectDice.diceConst.");
-               }
-               else
-               {
-                  return;
-               }
-            }
-         }
+      public function deserializeAs_ObjectEffectDice(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

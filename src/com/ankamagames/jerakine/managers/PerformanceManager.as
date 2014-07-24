@@ -7,8 +7,13 @@ package com.ankamagames.jerakine.managers
    public class PerformanceManager extends Object
    {
       
-      public function PerformanceManager() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PerformanceManager()
+      {
+         //Décompilation abandonné
       }
       
       public static const CRITICAL:int = 0;
@@ -33,59 +38,19 @@ package com.ankamagames.jerakine.managers
       
       private static var _lastTime:int = 0;
       
-      public static function init(lowQualityEnabled:Boolean) : void {
-         optimize = lowQualityEnabled;
-         if(optimize)
-         {
-            setFrameRate(50);
-         }
-         StageShareManager.stage.addEventListener(Event.ENTER_FRAME,onEnterFrame);
+      public static function init(lowQualityEnabled:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function setFrameRate(frameRate:int) : void {
-         maxFrameRate = frameRate;
-         frameDuration = 1000 / maxFrameRate;
-         StageShareManager.stage.frameRate = maxFrameRate;
+      public static function setFrameRate(frameRate:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      private static function onEnterFrame(e:Event) : void {
-         var optimalCondition:* = 0;
-         var currentFrameDuration:* = 0;
-         var LAST:int = performance;
-         var time:int = getTimer();
-         if(_totalFrames % 21 == 0)
-         {
-            optimalCondition = frameDuration * 20;
-            if(_framesTime < optimalCondition * 1.05)
-            {
-               performance = NORMAL;
-            }
-            else if(_framesTime < optimalCondition * 1.15)
-            {
-               performance = LIMITED;
-            }
-            else
-            {
-               performance = CRITICAL;
-            }
-            
-            _framesTime = 0;
-         }
-         else
-         {
-            currentFrameDuration = time - _lastTime;
-            if(currentFrameDuration < frameDuration)
-            {
-               currentFrameDuration = frameDuration;
-            }
-            _framesTime = _framesTime + currentFrameDuration;
-            if(currentFrameDuration > 2 * frameDuration)
-            {
-               performance = CRITICAL;
-            }
-         }
-         _totalFrames++;
-         _lastTime = time;
+      private static function onEnterFrame(e:Event) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

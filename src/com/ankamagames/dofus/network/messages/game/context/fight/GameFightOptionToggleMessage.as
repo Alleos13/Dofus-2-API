@@ -9,67 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.fight
    public class GameFightOptionToggleMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameFightOptionToggleMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameFightOptionToggleMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 707;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var option:uint = 3;
       
-      override public function getMessageId() : uint {
-         return 707;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameFightOptionToggleMessage(option:uint = 3) : GameFightOptionToggleMessage {
-         this.option = option;
-         this._isInitialized = true;
-         return this;
+      public function initGameFightOptionToggleMessage(option:uint = 3) : GameFightOptionToggleMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.option = 3;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameFightOptionToggleMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightOptionToggleMessage(output:IDataOutput) : void {
-         output.writeByte(this.option);
+      public function serializeAs_GameFightOptionToggleMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameFightOptionToggleMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightOptionToggleMessage(input:IDataInput) : void {
-         this.option = input.readByte();
-         if(this.option < 0)
-         {
-            throw new Error("Forbidden value (" + this.option + ") on element of GameFightOptionToggleMessage.option.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_GameFightOptionToggleMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

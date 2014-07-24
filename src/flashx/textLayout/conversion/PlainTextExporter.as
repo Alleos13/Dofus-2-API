@@ -5,90 +5,52 @@ package flashx.textLayout.conversion
    import flashx.textLayout.elements.ParagraphElement;
    import flashx.textLayout.elements.FlowLeafElement;
    
-   use namespace tlf_internal;
-   
    public class PlainTextExporter extends ConverterBase implements IPlainTextExporter
    {
       
-      public function PlainTextExporter() {
-         super();
-         this._stripDiscretionaryHyphens = true;
-         this._paragraphSeparator = "\n";
+      {
+      //Décompilation abandonné
       }
       
-      private static var _discretionaryHyphen:String = String.fromCharCode(173);
+      public function PlainTextExporter()
+      {
+         //Décompilation abandonné
+      }
+      
+      private static var _discretionaryHyphen:String;
       
       private var _stripDiscretionaryHyphens:Boolean;
       
       private var _paragraphSeparator:String;
       
-      public function get stripDiscretionaryHyphens() : Boolean {
-         return this._stripDiscretionaryHyphens;
+      public function get stripDiscretionaryHyphens() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set stripDiscretionaryHyphens(param1:Boolean) : void {
-         this._stripDiscretionaryHyphens = param1;
+      public function set stripDiscretionaryHyphens(value:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get paragraphSeparator() : String {
-         return this._paragraphSeparator;
+      public function get paragraphSeparator() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function set paragraphSeparator(param1:String) : void {
-         this._paragraphSeparator = param1;
+      public function set paragraphSeparator(value:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function export(param1:TextFlow, param2:String) : Object {
-         clear();
-         if(param2 == ConversionType.STRING_TYPE)
-         {
-            return this.exportToString(param1);
-         }
-         return null;
+      public function export(source:TextFlow, conversionType:String) : Object
+      {
+         //Décompilation abandonné
       }
       
-      protected function exportToString(param1:TextFlow) : String {
-         var _loc4_:ParagraphElement = null;
-         var _loc5_:String = null;
-         var _loc6_:FlowLeafElement = null;
-         var _loc7_:Array = null;
-         var _loc8_:ParagraphElement = null;
-         var _loc2_:* = "";
-         var _loc3_:FlowLeafElement = param1.getFirstLeaf();
-         while(_loc3_)
-         {
-            _loc4_ = _loc3_.getParagraph();
-            while(true)
-            {
-               _loc5_ = _loc3_.text;
-               if(this._stripDiscretionaryHyphens)
-               {
-                  _loc7_ = _loc5_.split(_discretionaryHyphen);
-                  _loc5_ = _loc7_.join("");
-               }
-               _loc2_ = _loc2_ + _loc5_;
-               _loc6_ = _loc3_.getNextLeaf(_loc4_);
-               if(!_loc6_)
-               {
-                  break;
-               }
-               _loc3_ = _loc6_;
-            }
-            _loc3_ = _loc3_.getNextLeaf();
-            if(_loc3_)
-            {
-               _loc2_ = _loc2_ + this._paragraphSeparator;
-            }
-         }
-         if(useClipboardAnnotations)
-         {
-            _loc8_ = param1.getLastLeaf().getParagraph();
-            if(_loc8_.getStyle(ConverterBase.MERGE_TO_NEXT_ON_PASTE) != "true")
-            {
-               _loc2_ = _loc2_ + this._paragraphSeparator;
-            }
-         }
-         return _loc2_;
+      protected function exportToString(source:TextFlow) : String
+      {
+         //Décompilation abandonné
       }
    }
 }

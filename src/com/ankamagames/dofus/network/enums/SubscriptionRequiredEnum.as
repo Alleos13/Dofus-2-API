@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class SubscriptionRequiredEnum extends Object
    {
       
-      public function SubscriptionRequiredEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SubscriptionRequiredEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const LIMITED_TO_SUBSCRIBER:uint = 0;

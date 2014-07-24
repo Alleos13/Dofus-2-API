@@ -3,30 +3,37 @@ package com.ankamagames.jerakine.utils.display.spellZone
    public class ZoneEffect extends Object implements IZoneShape
    {
       
-      public function ZoneEffect(zsize:uint, zshape:uint) {
-         super();
-         this._zoneSize = zsize;
-         this._zoneShape = zshape;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ZoneEffect(zsize:uint, zshape:uint)
+      {
+         //Décompilation abandonné
       }
       
       private var _zoneSize:uint;
       
       private var _zoneShape:uint;
       
-      public function get zoneSize() : uint {
-         return this._zoneSize;
+      public function get zoneSize() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set zoneSize(pZoneSize:uint) : void {
-         this._zoneSize = pZoneSize;
+      public function set zoneSize(pZoneSize:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get zoneShape() : uint {
-         return this._zoneShape;
+      public function get zoneShape() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set zoneShape(pZoneShape:uint) : void {
-         this._zoneShape = pZoneShape;
+      public function set zoneShape(pZoneShape:uint) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

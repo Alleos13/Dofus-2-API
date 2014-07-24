@@ -11,58 +11,45 @@ package com.ankamagames.berilia.api
    public class ModuleReference extends Proxy implements Secure
    {
       
-      public function ModuleReference(o:Object, accessKey:Object) {
-         super();
-         SecureCenter.checkAccessKey(accessKey);
-         this._object = new WeakReference(o);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ModuleReference(o:Object, accessKey:Object)
+      {
+         //Décompilation abandonné
       }
       
       private var _object:WeakReference;
       
-      public function getObject(accessKey:Object) : * {
-         if(accessKey != SecureCenter.ACCESS_KEY)
-         {
-            throw new IllegalOperationError();
-         }
-         else
-         {
-            return this._object.object;
-         }
+      public function getObject(accessKey:Object) : *
+      {
+         //Décompilation abandonné
       }
       
-      override flash_proxy function callProperty(name:*, ... rest) : * {
-         var result:* = this._object.object[name].apply(this,rest);
-         this.verify(result);
-         return result;
+      override flash_proxy function callProperty(name:*, ... rest) : *
+      {
+         //Décompilation abandonné
       }
       
-      override flash_proxy function getProperty(name:*) : * {
-         var result:* = this._object.object[name];
-         if(result is Function)
-         {
-            return result;
-         }
-         throw new IllegalOperationError("You cannot access to property. You have access only to functions");
+      override flash_proxy function getProperty(name:*) : *
+      {
+         //Décompilation abandonné
       }
       
-      override flash_proxy function setProperty(name:*, value:*) : void {
-         throw new IllegalOperationError("You cannot access to property. You have access only to functions");
+      override flash_proxy function setProperty(name:*, value:*) : void
+      {
+         //Décompilation abandonné
       }
       
-      override flash_proxy function hasProperty(name:*) : Boolean {
-         return this._object.object.hasOwnProperty(name);
+      override flash_proxy function hasProperty(name:*) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function verify(o:*) : void {
-         var pkg:String = getQualifiedClassName(o);
-         if(pkg.indexOf("d2api") == 0)
-         {
-            throw new IllegalOperationError("You cannot get API from an other module");
-         }
-         else
-         {
-            return;
-         }
+      private function verify(o:*) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

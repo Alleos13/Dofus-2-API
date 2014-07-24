@@ -7,14 +7,20 @@ package com.ankamagames.dofus.datacenter.spells
    public class SpellType extends Object implements IDataCenter
    {
       
-      public function SpellType() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpellType()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "SpellTypes";
       
-      public static function getSpellTypeById(id:int) : SpellType {
-         return GameData.getObject(MODULE,id) as SpellType;
+      public static function getSpellTypeById(id:int) : SpellType
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -27,20 +33,14 @@ package com.ankamagames.dofus.datacenter.spells
       
       private var _shortName:String;
       
-      public function get longName() : String {
-         if(!this._longName)
-         {
-            this._longName = I18n.getText(this.longNameId);
-         }
-         return this._longName;
+      public function get longName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get shortName() : String {
-         if(!this._shortName)
-         {
-            this._shortName = I18n.getText(this.shortNameId);
-         }
-         return this._shortName;
+      public function get shortName() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

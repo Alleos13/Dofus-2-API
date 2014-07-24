@@ -6,8 +6,13 @@ package com.ankamagames.dofus.logic.game.fight.types
    public class MarkInstance extends Object
    {
       
-      public function MarkInstance() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MarkInstance()
+      {
+         //Décompilation abandonné
       }
       
       public var markId:int;

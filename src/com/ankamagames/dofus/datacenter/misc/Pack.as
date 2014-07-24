@@ -6,31 +6,30 @@ package com.ankamagames.dofus.datacenter.misc
    public class Pack extends Object implements IDataCenter
    {
       
-      public function Pack() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Pack()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Pack";
       
-      public static function getPackById(id:int) : Pack {
-         return GameData.getObject(MODULE,id) as Pack;
+      public static function getPackById(id:int) : Pack
+      {
+         //Décompilation abandonné
       }
       
-      public static function getPackByName(name:String) : Pack {
-         var pack:Pack = null;
-         var packs:Array = getAllPacks();
-         for each(pack in packs)
-         {
-            if(name == pack.name)
-            {
-               return pack;
-            }
-         }
-         return null;
+      public static function getPackByName(name:String) : Pack
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAllPacks() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAllPacks() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;

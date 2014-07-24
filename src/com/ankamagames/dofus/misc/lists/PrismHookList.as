@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.lists
    public class PrismHookList extends Object
    {
       
-      public function PrismHookList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PrismHookList()
+      {
+         //Décompilation abandonné
       }
       
       public static const PrismsList:Hook;

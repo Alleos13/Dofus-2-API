@@ -3,8 +3,13 @@ package nochump.util.zip
    class ZipConstants extends Object
    {
       
-      function ZipConstants() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      function ZipConstants()
+      {
+         //Décompilation abandonné
       }
       
       static const LOCSIG:uint = 67324752;

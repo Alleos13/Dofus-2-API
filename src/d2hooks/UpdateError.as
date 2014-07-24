@@ -3,8 +3,13 @@ package d2hooks
    public class UpdateError extends Object
    {
       
-      public function UpdateError() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UpdateError()
+      {
+         //Décompilation abandonné
       }
    }
 }

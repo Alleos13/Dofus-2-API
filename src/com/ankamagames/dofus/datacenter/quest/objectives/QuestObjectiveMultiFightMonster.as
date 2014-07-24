@@ -8,44 +8,37 @@ package com.ankamagames.dofus.datacenter.quest.objectives
    public class QuestObjectiveMultiFightMonster extends QuestObjective implements IDataCenter
    {
       
-      public function QuestObjectiveMultiFightMonster() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function QuestObjectiveMultiFightMonster()
+      {
+         //Décompilation abandonné
       }
       
       private var _monster:Monster;
       
       private var _text:String;
       
-      public function get monsterId() : uint {
-         if(!this.parameters)
-         {
-            return 0;
-         }
-         return this.parameters[0];
+      public function get monsterId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get monster() : Monster {
-         if(!this._monster)
-         {
-            this._monster = Monster.getMonsterById(this.monsterId);
-         }
-         return this._monster;
+      public function get monster() : Monster
+      {
+         //Décompilation abandonné
       }
       
-      public function get quantity() : uint {
-         if(!this.parameters)
-         {
-            return 0;
-         }
-         return this.parameters[1];
+      public function get quantity() : uint
+      {
+         //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         if(!this._text)
-         {
-            this._text = PatternDecoder.getDescription(this.type.name,[this.monster.name,this.quantity]);
-         }
-         return this._text;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

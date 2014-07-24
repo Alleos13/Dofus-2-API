@@ -9,95 +9,71 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
    public class InventoryWeightMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function InventoryWeightMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function InventoryWeightMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 3009;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var weight:uint = 0;
       
       public var weightMax:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 3009;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initInventoryWeightMessage(weight:uint = 0, weightMax:uint = 0) : InventoryWeightMessage {
-         this.weight = weight;
-         this.weightMax = weightMax;
-         this._isInitialized = true;
-         return this;
+      public function initInventoryWeightMessage(weight:uint = 0, weightMax:uint = 0) : InventoryWeightMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.weight = 0;
-         this.weightMax = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_InventoryWeightMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_InventoryWeightMessage(output:IDataOutput) : void {
-         if(this.weight < 0)
-         {
-            throw new Error("Forbidden value (" + this.weight + ") on element weight.");
-         }
-         else
-         {
-            output.writeInt(this.weight);
-            if(this.weightMax < 0)
-            {
-               throw new Error("Forbidden value (" + this.weightMax + ") on element weightMax.");
-            }
-            else
-            {
-               output.writeInt(this.weightMax);
-               return;
-            }
-         }
+      public function serializeAs_InventoryWeightMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_InventoryWeightMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_InventoryWeightMessage(input:IDataInput) : void {
-         this.weight = input.readInt();
-         if(this.weight < 0)
-         {
-            throw new Error("Forbidden value (" + this.weight + ") on element of InventoryWeightMessage.weight.");
-         }
-         else
-         {
-            this.weightMax = input.readInt();
-            if(this.weightMax < 0)
-            {
-               throw new Error("Forbidden value (" + this.weightMax + ") on element of InventoryWeightMessage.weightMax.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_InventoryWeightMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

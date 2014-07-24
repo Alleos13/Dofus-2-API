@@ -5,11 +5,15 @@ package com.hurlant.crypto.symmetric
    public interface ICipher
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function getBlockSize() : uint;
       
-      function encrypt(param1:ByteArray) : void;
+      function encrypt(src:ByteArray) : void;
       
-      function decrypt(param1:ByteArray) : void;
+      function decrypt(src:ByteArray) : void;
       
       function dispose() : void;
       

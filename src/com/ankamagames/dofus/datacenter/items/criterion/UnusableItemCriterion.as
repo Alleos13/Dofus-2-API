@@ -6,26 +6,33 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class UnusableItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function UnusableItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         var readableCriterionRef:String = I18n.getUiText("ui.criterion.unusableItem");
-         return readableCriterionRef;
+      public function UnusableItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function get isRespected() : Boolean {
-         return true;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:UnusableItemCriterion = new UnusableItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get isRespected() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getCriterion() : int {
-         return 0;
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getCriterion() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

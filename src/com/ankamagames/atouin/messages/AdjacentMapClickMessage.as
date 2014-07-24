@@ -5,8 +5,13 @@ package com.ankamagames.atouin.messages
    public class AdjacentMapClickMessage extends Object implements Message
    {
       
-      public function AdjacentMapClickMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AdjacentMapClickMessage()
+      {
+         //Décompilation abandonné
       }
       
       public var adjacentMapId:uint;

@@ -8,36 +8,42 @@ package org.flintparticles.twoD.actions
    public class Accelerate extends ActionBase
    {
       
-      public function Accelerate(param1:Number, param2:Number) {
-         super();
-         this._x = param1;
-         this._y = param2;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Accelerate(accelerationX:Number, accelerationY:Number)
+      {
+         //Décompilation abandonné
       }
       
       private var _x:Number;
       
       private var _y:Number;
       
-      public function get x() : Number {
-         return this._x;
+      public function get x() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function set x(param1:Number) : void {
-         this._x = param1;
+      public function set x(value:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get y() : Number {
-         return this._y;
+      public function get y() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function set y(param1:Number) : void {
-         this._y = param1;
+      public function set y(value:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function update(param1:Emitter, param2:Particle, param3:Number) : void {
-         var _loc4_:* = Particle2D(param2);
-         _loc4_.velX = _loc4_.velX + this._x * param3;
-         _loc4_.velY = _loc4_.velY + this._y * param3;
+      override public function update(emitter:Emitter, particle:Particle, time:Number) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

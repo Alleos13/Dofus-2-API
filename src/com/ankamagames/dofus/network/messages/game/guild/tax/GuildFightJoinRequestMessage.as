@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
    public class GuildFightJoinRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GuildFightJoinRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildFightJoinRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5717;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var taxCollectorId:int = 0;
       
-      override public function getMessageId() : uint {
-         return 5717;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGuildFightJoinRequestMessage(taxCollectorId:int = 0) : GuildFightJoinRequestMessage {
-         this.taxCollectorId = taxCollectorId;
-         this._isInitialized = true;
-         return this;
+      public function initGuildFightJoinRequestMessage(taxCollectorId:int = 0) : GuildFightJoinRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.taxCollectorId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GuildFightJoinRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GuildFightJoinRequestMessage(output:IDataOutput) : void {
-         output.writeInt(this.taxCollectorId);
+      public function serializeAs_GuildFightJoinRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GuildFightJoinRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildFightJoinRequestMessage(input:IDataInput) : void {
-         this.taxCollectorId = input.readInt();
+      public function deserializeAs_GuildFightJoinRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

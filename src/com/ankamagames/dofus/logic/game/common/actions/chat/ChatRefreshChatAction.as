@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.chat
    public class ChatRefreshChatAction extends Object implements Action
    {
       
-      public function ChatRefreshChatAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(currentTab:uint) : ChatRefreshChatAction {
-         var a:ChatRefreshChatAction = new ChatRefreshChatAction();
-         a.currentTab = currentTab;
-         return a;
+      public function ChatRefreshChatAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(currentTab:uint) : ChatRefreshChatAction
+      {
+         //Décompilation abandonné
       }
       
       public var currentTab:uint;

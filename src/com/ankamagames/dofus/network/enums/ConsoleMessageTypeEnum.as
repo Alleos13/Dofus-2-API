@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class ConsoleMessageTypeEnum extends Object
    {
       
-      public function ConsoleMessageTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ConsoleMessageTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const CONSOLE_TEXT_MESSAGE:uint = 0;

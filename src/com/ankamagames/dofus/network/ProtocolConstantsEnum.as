@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network
    public class ProtocolConstantsEnum extends Object
    {
       
-      public function ProtocolConstantsEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ProtocolConstantsEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const MAP_CELL_COUNT:int = 560;
@@ -42,6 +47,10 @@ package com.ankamagames.dofus.network
       public static const MIN_ALLIANCETAG_LEN:int = 3;
       
       public static const MAX_ALLIANCETAG_LEN:int = 5;
+      
+      public static const MIN_PARTY_NAME_LEN:int = 0;
+      
+      public static const MAX_PARTY_NAME_LEN:int = 25;
       
       public static const MAX_PLAYER_COLOR:int = 5;
       

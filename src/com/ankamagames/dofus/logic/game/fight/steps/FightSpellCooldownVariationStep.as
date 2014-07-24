@@ -10,12 +10,13 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightSpellCooldownVariationStep extends AbstractSequencable implements IFightStep
    {
       
-      public function FightSpellCooldownVariationStep(fighterId:int, actionId:int, spellId:int, value:int) {
-         super();
-         this._fighterId = fighterId;
-         this._spellId = spellId;
-         this._actionId = actionId;
-         this._value = value;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightSpellCooldownVariationStep(fighterId:int, actionId:int, spellId:int, value:int)
+      {
+         //Décompilation abandonné
       }
       
       private var _fighterId:int;
@@ -26,38 +27,14 @@ package com.ankamagames.dofus.logic.game.fight.steps
       
       private var _value:int;
       
-      public function get stepType() : String {
-         return "spellCooldownVariation";
+      public function get stepType() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function start() : void {
-         var spellCastManager:SpellCastInFightManager = null;
-         var playerManager:PlayedCharacterManager = null;
-         var spellLvl:uint = 0;
-         var spellKnown:SpellWrapper = null;
-         var spellManager:SpellManager = null;
-         if(this._fighterId == CurrentPlayedFighterManager.getInstance().currentFighterId)
-         {
-            spellCastManager = CurrentPlayedFighterManager.getInstance().getSpellCastManagerById(this._fighterId);
-            playerManager = PlayedCharacterManager.getInstance();
-            for each(spellKnown in playerManager.spellsInventory)
-            {
-               if(spellKnown.id == this._spellId)
-               {
-                  spellLvl = spellKnown.spellLevel;
-               }
-            }
-            if((spellCastManager) && (spellLvl > 0))
-            {
-               if(!spellCastManager.getSpellManagerBySpellId(this._spellId))
-               {
-                  spellCastManager.castSpell(this._spellId,spellLvl,[],false);
-               }
-               spellManager = spellCastManager.getSpellManagerBySpellId(this._spellId);
-               spellManager.forceCooldown(this._value);
-            }
-         }
-         executeCallbacks();
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

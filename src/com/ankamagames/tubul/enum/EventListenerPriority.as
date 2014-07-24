@@ -3,8 +3,13 @@ package com.ankamagames.tubul.enum
    public class EventListenerPriority extends Object
    {
       
-      public function EventListenerPriority() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EventListenerPriority()
+      {
+         //Décompilation abandonné
       }
       
       public static const MINIMAL:uint = 0;

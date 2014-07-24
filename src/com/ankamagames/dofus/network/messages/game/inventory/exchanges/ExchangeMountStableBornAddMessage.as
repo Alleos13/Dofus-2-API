@@ -9,57 +9,67 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeMountStableBornAddMessage extends ExchangeMountStableAddMessage implements INetworkMessage
    {
       
-      public function ExchangeMountStableBornAddMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeMountStableBornAddMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5966;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function getMessageId() : uint {
-         return 5966;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeMountStableBornAddMessage(mountDescription:MountClientData = null) : ExchangeMountStableBornAddMessage {
-         super.initExchangeMountStableAddMessage(mountDescription);
-         this._isInitialized = true;
-         return this;
+      public function initExchangeMountStableBornAddMessage(mountDescription:MountClientData = null) : ExchangeMountStableBornAddMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeMountStableBornAddMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeMountStableBornAddMessage(output:IDataOutput) : void {
-         super.serializeAs_ExchangeMountStableAddMessage(output);
+      public function serializeAs_ExchangeMountStableBornAddMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeMountStableBornAddMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeMountStableBornAddMessage(input:IDataInput) : void {
-         super.deserialize(input);
+      public function deserializeAs_ExchangeMountStableBornAddMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

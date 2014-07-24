@@ -12,18 +12,25 @@ package com.ankamagames.dofus.datacenter.misc
    public class Url extends Object implements IDataCenter
    {
       
-      public function Url() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Url()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Url";
       
-      public static function getUrlById(id:int) : Url {
-         return GameData.getObject(MODULE,id) as Url;
+      public static function getUrlById(id:int) : Url
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAllUrl() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAllUrl() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -36,13 +43,9 @@ package com.ankamagames.dofus.datacenter.misc
       
       public var method:String;
       
-      public function get variables() : Object {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public function get variables() : Object
+      {
+         //Décompilation abandonné
       }
    }
 }

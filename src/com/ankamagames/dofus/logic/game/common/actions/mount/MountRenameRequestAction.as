@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.mount
    public class MountRenameRequestAction extends Object implements Action
    {
       
-      public function MountRenameRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(newName:String, mountId:Number) : MountRenameRequestAction {
-         var o:MountRenameRequestAction = new MountRenameRequestAction();
-         o.newName = newName;
-         o.mountId = mountId;
-         return o;
+      public function MountRenameRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(newName:String, mountId:Number) : MountRenameRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var newName:String;

@@ -7,61 +7,52 @@ package com.ankamagames.dofus.network.types.game.context
    public class MapCoordinatesExtended extends MapCoordinatesAndId implements INetworkType
    {
       
-      public function MapCoordinatesExtended() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapCoordinatesExtended()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 176;
       
       public var subAreaId:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 176;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initMapCoordinatesExtended(worldX:int = 0, worldY:int = 0, mapId:int = 0, subAreaId:uint = 0) : MapCoordinatesExtended {
-         super.initMapCoordinatesAndId(worldX,worldY,mapId);
-         this.subAreaId = subAreaId;
-         return this;
+      public function initMapCoordinatesExtended(worldX:int = 0, worldY:int = 0, mapId:int = 0, subAreaId:uint = 0) : MapCoordinatesExtended
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.subAreaId = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_MapCoordinatesExtended(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_MapCoordinatesExtended(output:IDataOutput) : void {
-         super.serializeAs_MapCoordinatesAndId(output);
-         if(this.subAreaId < 0)
-         {
-            throw new Error("Forbidden value (" + this.subAreaId + ") on element subAreaId.");
-         }
-         else
-         {
-            output.writeShort(this.subAreaId);
-            return;
-         }
+      public function serializeAs_MapCoordinatesExtended(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_MapCoordinatesExtended(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_MapCoordinatesExtended(input:IDataInput) : void {
-         super.deserialize(input);
-         this.subAreaId = input.readShort();
-         if(this.subAreaId < 0)
-         {
-            throw new Error("Forbidden value (" + this.subAreaId + ") on element of MapCoordinatesExtended.subAreaId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_MapCoordinatesExtended(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

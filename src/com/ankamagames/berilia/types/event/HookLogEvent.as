@@ -7,11 +7,13 @@ package com.ankamagames.berilia.types.event
    public class HookLogEvent extends LogEvent
    {
       
-      public function HookLogEvent(hookName:String, params:Array) {
-         super(null,null,0);
-         this._hookName = hookName;
-         this._params = params;
-         MEMORY_LOG[this] = 1;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HookLogEvent(hookName:String, params:Array)
+      {
+         //Décompilation abandonné
       }
       
       public static var MEMORY_LOG:Dictionary;
@@ -20,16 +22,19 @@ package com.ankamagames.berilia.types.event
       
       private var _params:Array;
       
-      public function get name() : String {
-         return this._hookName;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get params() : Array {
-         return this._params;
+      public function get params() : Array
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : Event {
-         return new HookLogEvent(this._hookName,this._params);
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
    }
 }

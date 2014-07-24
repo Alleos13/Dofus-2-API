@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public final class TextJustify extends Object
    {
       
-      public function TextJustify() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TextJustify()
+      {
+         //Décompilation abandonné
       }
       
       public static const DISTRIBUTE:String = "distribute";

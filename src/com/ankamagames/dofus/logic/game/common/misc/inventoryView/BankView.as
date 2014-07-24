@@ -8,28 +8,33 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
    public class BankView extends StorageGenericView
    {
       
-      public function BankView(hookLock:HookLock) {
-         super(hookLock);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get name() : String {
-         return "bank";
+      public function BankView(hookLock:HookLock)
+      {
+         //Décompilation abandonné
       }
       
-      override public function updateView() : void {
-         super.updateView();
-         if((StorageOptionManager.getInstance().bankCategory == StorageOptionManager.ALL_CATEGORY) && (!StorageOptionManager.getInstance().hasBankFilter()))
-         {
-            _hookLock.addHook(InventoryHookList.BankViewContent,[content,InventoryManager.getInstance().bankInventory.localKamas]);
-         }
+      override public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function sortFields() : Array {
-         return StorageOptionManager.getInstance().sortBankFields;
+      override public function updateView() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function sortRevert() : Boolean {
-         return StorageOptionManager.getInstance().sortBankRevert;
+      override public function sortFields() : Array
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function sortRevert() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

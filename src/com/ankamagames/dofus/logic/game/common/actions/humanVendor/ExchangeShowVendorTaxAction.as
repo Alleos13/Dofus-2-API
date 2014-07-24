@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.humanVendor
    public class ExchangeShowVendorTaxAction extends Object implements Action
    {
       
-      public function ExchangeShowVendorTaxAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : ExchangeShowVendorTaxAction {
-         var a:ExchangeShowVendorTaxAction = new ExchangeShowVendorTaxAction();
-         return a;
+      public function ExchangeShowVendorTaxAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : ExchangeShowVendorTaxAction
+      {
+         //Décompilation abandonné
       }
    }
 }

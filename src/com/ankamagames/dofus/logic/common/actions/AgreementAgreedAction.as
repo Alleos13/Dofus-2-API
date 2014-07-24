@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.common.actions
    public class AgreementAgreedAction extends Object implements Action
    {
       
-      public function AgreementAgreedAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(fileName:String) : AgreementAgreedAction {
-         var a:AgreementAgreedAction = new AgreementAgreedAction();
-         a.fileName = fileName;
-         return a;
+      public function AgreementAgreedAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(fileName:String) : AgreementAgreedAction
+      {
+         //Décompilation abandonné
       }
       
       public var fileName:String;

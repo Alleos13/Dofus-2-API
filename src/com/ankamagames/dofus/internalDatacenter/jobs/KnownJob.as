@@ -7,8 +7,13 @@ package com.ankamagames.dofus.internalDatacenter.jobs
    public class KnownJob extends Object implements IDataCenter
    {
       
-      public function KnownJob() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function KnownJob()
+      {
+         //Décompilation abandonné
       }
       
       public var jobDescription:JobDescription;

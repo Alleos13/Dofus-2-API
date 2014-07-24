@@ -9,8 +9,13 @@ package com.ankamagames.dofus.network.types.game.character.choice
    public class CharacterBaseInformations extends CharacterMinimalPlusLookInformations implements INetworkType
    {
       
-      public function CharacterBaseInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterBaseInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 45;
@@ -19,41 +24,39 @@ package com.ankamagames.dofus.network.types.game.character.choice
       
       public var sex:Boolean = false;
       
-      override public function getTypeId() : uint {
-         return 45;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCharacterBaseInformations(id:uint = 0, level:uint = 0, name:String = "", entityLook:EntityLook = null, breed:int = 0, sex:Boolean = false) : CharacterBaseInformations {
-         super.initCharacterMinimalPlusLookInformations(id,level,name,entityLook);
-         this.breed = breed;
-         this.sex = sex;
-         return this;
+      public function initCharacterBaseInformations(id:uint = 0, level:uint = 0, name:String = "", entityLook:EntityLook = null, breed:int = 0, sex:Boolean = false) : CharacterBaseInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.breed = 0;
-         this.sex = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharacterBaseInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterBaseInformations(output:IDataOutput) : void {
-         super.serializeAs_CharacterMinimalPlusLookInformations(output);
-         output.writeByte(this.breed);
-         output.writeBoolean(this.sex);
+      public function serializeAs_CharacterBaseInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharacterBaseInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterBaseInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.breed = input.readByte();
-         this.sex = input.readBoolean();
+      public function deserializeAs_CharacterBaseInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

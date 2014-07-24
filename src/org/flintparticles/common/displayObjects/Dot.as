@@ -5,12 +5,13 @@ package org.flintparticles.common.displayObjects
    public class Dot extends Shape
    {
       
-      public function Dot(param1:Number, param2:uint=16777215, param3:String="normal") {
-         super();
-         graphics.beginFill(param2);
-         graphics.drawCircle(0,0,param1);
-         graphics.endFill();
-         blendMode = param3;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Dot(radius:Number, color:uint = 16777215, bm:String = "normal")
+      {
+         //Décompilation abandonné
       }
    }
 }

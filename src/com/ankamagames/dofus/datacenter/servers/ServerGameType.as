@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.servers
    public class ServerGameType extends Object implements IDataCenter
    {
       
-      public function ServerGameType() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ServerGameType()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "ServerGameTypes";
       
       private static var _log:Logger;
       
-      public static function getServerGameTypeById(id:int) : ServerGameType {
-         return GameData.getObject(MODULE,id) as ServerGameType;
+      public static function getServerGameTypeById(id:int) : ServerGameType
+      {
+         //Décompilation abandonné
       }
       
-      public static function getServerGameTypes() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getServerGameTypes() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -32,12 +39,9 @@ package com.ankamagames.dofus.datacenter.servers
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

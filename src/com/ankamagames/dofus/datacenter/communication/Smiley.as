@@ -9,20 +9,27 @@ package com.ankamagames.dofus.datacenter.communication
    public class Smiley extends Object implements IDataCenter
    {
       
-      public function Smiley() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Smiley()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Smileys";
       
       protected static const _log:Logger;
       
-      public static function getSmileyById(id:int) : Smiley {
-         return GameData.getObject(MODULE,id) as Smiley;
+      public static function getSmileyById(id:int) : Smiley
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSmileys() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getSmileys() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;

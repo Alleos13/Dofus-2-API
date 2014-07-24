@@ -3,11 +3,15 @@ package flashx.undo
    public interface IUndoManager
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function clearAll() : void;
       
       function get undoAndRedoItemLimit() : int;
       
-      function set undoAndRedoItemLimit(param1:int) : void;
+      function set undoAndRedoItemLimit(value:int) : void;
       
       function canUndo() : Boolean;
       
@@ -15,7 +19,7 @@ package flashx.undo
       
       function popUndo() : IOperation;
       
-      function pushUndo(param1:IOperation) : void;
+      function pushUndo(operation:IOperation) : void;
       
       function clearRedo() : void;
       
@@ -25,7 +29,7 @@ package flashx.undo
       
       function popRedo() : IOperation;
       
-      function pushRedo(param1:IOperation) : void;
+      function pushRedo(operation:IOperation) : void;
       
       function undo() : void;
       

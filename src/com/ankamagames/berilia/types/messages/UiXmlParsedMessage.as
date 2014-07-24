@@ -5,15 +5,20 @@ package com.ankamagames.berilia.types.messages
    public class UiXmlParsedMessage extends Object implements Message
    {
       
-      public function UiXmlParsedMessage(url:String) {
-         super();
-         this._url = url;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UiXmlParsedMessage(url:String)
+      {
+         //Décompilation abandonné
       }
       
       private var _url:String;
       
-      public function get url() : String {
-         return this._url;
+      public function get url() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.data.items
    public class ObjectItemQuantity extends Item implements INetworkType
    {
       
-      public function ObjectItemQuantity() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ObjectItemQuantity()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 119;
@@ -17,69 +22,39 @@ package com.ankamagames.dofus.network.types.game.data.items
       
       public var quantity:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 119;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initObjectItemQuantity(objectUID:uint = 0, quantity:uint = 0) : ObjectItemQuantity {
-         this.objectUID = objectUID;
-         this.quantity = quantity;
-         return this;
+      public function initObjectItemQuantity(objectUID:uint = 0, quantity:uint = 0) : ObjectItemQuantity
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.objectUID = 0;
-         this.quantity = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ObjectItemQuantity(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectItemQuantity(output:IDataOutput) : void {
-         super.serializeAs_Item(output);
-         if(this.objectUID < 0)
-         {
-            throw new Error("Forbidden value (" + this.objectUID + ") on element objectUID.");
-         }
-         else
-         {
-            output.writeInt(this.objectUID);
-            if(this.quantity < 0)
-            {
-               throw new Error("Forbidden value (" + this.quantity + ") on element quantity.");
-            }
-            else
-            {
-               output.writeInt(this.quantity);
-               return;
-            }
-         }
+      public function serializeAs_ObjectItemQuantity(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ObjectItemQuantity(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectItemQuantity(input:IDataInput) : void {
-         super.deserialize(input);
-         this.objectUID = input.readInt();
-         if(this.objectUID < 0)
-         {
-            throw new Error("Forbidden value (" + this.objectUID + ") on element of ObjectItemQuantity.objectUID.");
-         }
-         else
-         {
-            this.quantity = input.readInt();
-            if(this.quantity < 0)
-            {
-               throw new Error("Forbidden value (" + this.quantity + ") on element of ObjectItemQuantity.quantity.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_ObjectItemQuantity(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

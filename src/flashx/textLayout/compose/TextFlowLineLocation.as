@@ -3,8 +3,13 @@ package flashx.textLayout.compose
    public final class TextFlowLineLocation extends Object
    {
       
-      public function TextFlowLineLocation() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TextFlowLineLocation()
+      {
+         //Décompilation abandonné
       }
       
       public static const FIRST:uint = 1;

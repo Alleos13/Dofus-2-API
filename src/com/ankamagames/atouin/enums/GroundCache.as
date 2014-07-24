@@ -3,8 +3,13 @@ package com.ankamagames.atouin.enums
    public class GroundCache extends Object
    {
       
-      public function GroundCache() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GroundCache()
+      {
+         //Décompilation abandonné
       }
       
       public static const GROUND_CACHE_DISABLED:int = 0;

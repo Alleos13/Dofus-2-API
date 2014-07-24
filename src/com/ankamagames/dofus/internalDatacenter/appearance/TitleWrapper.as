@@ -15,36 +15,27 @@ package com.ankamagames.dofus.internalDatacenter.appearance
    public class TitleWrapper extends Proxy implements IDataCenter, ISlotData
    {
       
-      public function TitleWrapper() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TitleWrapper()
+      {
+         //Décompilation abandonné
       }
       
       private static var _cache:Array;
       
       protected static const _log:Logger;
       
-      public static function create(titleId:uint, position:int = -1, useCache:Boolean = true) : TitleWrapper {
-         var title:TitleWrapper = new TitleWrapper();
-         if((!_cache[titleId]) || (!useCache))
-         {
-            title = new TitleWrapper();
-            title.id = titleId;
-            if(useCache)
-            {
-               _cache[titleId] = title;
-            }
-         }
-         else
-         {
-            title = _cache[titleId];
-         }
-         title.id = titleId;
-         title.text = title.text;
-         return title;
+      public static function create(titleId:uint, position:int = -1, useCache:Boolean = true) : TitleWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public static function getTitleWrapperById(id:uint) : TitleWrapper {
-         return _cache[id];
+      public static function getTitleWrapperById(id:uint) : TitleWrapper
+      {
+         //Décompilation abandonné
       }
       
       private var _uri:Uri;
@@ -57,110 +48,104 @@ package com.ankamagames.dofus.internalDatacenter.appearance
       
       public var quantity:uint = 1;
       
-      public function get iconUri() : Uri {
-         if(!this._uri)
-         {
-            this._uri = new Uri(XmlConfig.getInstance().getEntry("config.content.path").concat("gfx/illusUi/genericTitleIcon.png"));
-         }
-         return this._uri;
+      public function get iconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get fullSizeIconUri() : Uri {
-         if(!this._uri)
-         {
-            this._uri = new Uri(XmlConfig.getInstance().getEntry("config.content.path").concat("gfx/illusUi/genericTitleIcon.png"));
-         }
-         return this._uri;
+      public function get fullSizeIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get backGroundIconUri() : Uri {
-         return null;
+      public function get backGroundIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get errorIconUri() : Uri {
-         return null;
+      public function get errorIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get info1() : String {
-         return null;
+      public function get info1() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get startTime() : int {
-         return 0;
+      public function get startTime() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get endTime() : int {
-         return 0;
+      public function get endTime() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set endTime(t:int) : void {
+      public function set endTime(t:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get timer() : int {
-         return 0;
+      public function get timer() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set timerToStart(t:int) : void {
+      public function set timerToStart(t:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get active() : Boolean {
-         return true;
+      public function get active() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get title() : Title {
-         return Title.getTitleById(this.id);
+      public function get title() : Title
+      {
+         //Décompilation abandonné
       }
       
-      public function get titleId() : uint {
-         return this.id;
+      public function get titleId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get isUsable() : Boolean {
-         return false;
+      public function get isUsable() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override flash_proxy function getProperty(name:*) : * {
-         var t:* = undefined;
-         var r:* = undefined;
-         if(isAttribute(name))
-         {
-            return this[name];
-         }
-         t = this.title;
-         if(!t)
-         {
-            r = "";
-         }
-         try
-         {
-            return t[name];
-         }
-         catch(e:Error)
-         {
-            return "Error_on_item_" + name;
-         }
+      override flash_proxy function getProperty(name:*) : *
+      {
+         //Décompilation abandonné
       }
       
-      override flash_proxy function hasProperty(name:*) : Boolean {
-         return isAttribute(name);
+      override flash_proxy function hasProperty(name:*) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function toString() : String {
-         return "[TitleWrapper#" + this.id + "]";
+      public function toString() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function addHolder(h:ISlotDataHolder) : void {
+      public function addHolder(h:ISlotDataHolder) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeHolder(h:ISlotDataHolder) : void {
+      public function removeHolder(h:ISlotDataHolder) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getIconUri(pngMode:Boolean = true) : Uri {
-         if(!this._uri)
-         {
-            this._uri = new Uri(XmlConfig.getInstance().getEntry("config.content.path").concat("gfx/illusUi/genericTitleIcon.png"));
-         }
-         return this._uri;
+      public function getIconUri(pngMode:Boolean = true) : Uri
+      {
+         //Décompilation abandonné
       }
    }
 }

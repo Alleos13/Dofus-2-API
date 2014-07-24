@@ -7,45 +7,52 @@ package com.ankamagames.dofus.network.types.game.actions.fight
    public class FightTemporaryBoostStateEffect extends FightTemporaryBoostEffect implements INetworkType
    {
       
-      public function FightTemporaryBoostStateEffect() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightTemporaryBoostStateEffect()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 214;
       
       public var stateId:int = 0;
       
-      override public function getTypeId() : uint {
-         return 214;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initFightTemporaryBoostStateEffect(uid:uint = 0, targetId:int = 0, turnDuration:int = 0, dispelable:uint = 1, spellId:uint = 0, parentBoostUid:uint = 0, delta:int = 0, stateId:int = 0) : FightTemporaryBoostStateEffect {
-         super.initFightTemporaryBoostEffect(uid,targetId,turnDuration,dispelable,spellId,parentBoostUid,delta);
-         this.stateId = stateId;
-         return this;
+      public function initFightTemporaryBoostStateEffect(uid:uint = 0, targetId:int = 0, turnDuration:int = 0, dispelable:uint = 1, spellId:uint = 0, parentBoostUid:uint = 0, delta:int = 0, stateId:int = 0) : FightTemporaryBoostStateEffect
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.stateId = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_FightTemporaryBoostStateEffect(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_FightTemporaryBoostStateEffect(output:IDataOutput) : void {
-         super.serializeAs_FightTemporaryBoostEffect(output);
-         output.writeShort(this.stateId);
+      public function serializeAs_FightTemporaryBoostStateEffect(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_FightTemporaryBoostStateEffect(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_FightTemporaryBoostStateEffect(input:IDataInput) : void {
-         super.deserialize(input);
-         this.stateId = input.readShort();
+      public function deserializeAs_FightTemporaryBoostStateEffect(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

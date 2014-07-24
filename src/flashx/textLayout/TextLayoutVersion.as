@@ -1,12 +1,15 @@
 package flashx.textLayout
 {
-   use namespace tlf_internal;
-   
    public class TextLayoutVersion extends Object
    {
       
-      public function TextLayoutVersion() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TextLayoutVersion()
+      {
+         //Décompilation abandonné
       }
       
       public static const CURRENT_VERSION:uint = 33554432;
@@ -23,15 +26,14 @@ package flashx.textLayout
       
       public static const AUDIT_ID:String = "<AdobeIP 0000486>";
       
-      tlf_internal  static function getVersionString(param1:uint) : String {
-         var _loc2_:uint = param1 >> 24 & 255;
-         var _loc3_:uint = param1 >> 16 & 255;
-         var _loc4_:uint = param1 & 65535;
-         return _loc2_.toString() + "." + _loc3_.toString() + "." + _loc4_.toString();
+      tlf_internal  static function getVersionString(version:uint) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function dontStripAuditID() : String {
-         return AUDIT_ID;
+      public function dontStripAuditID() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

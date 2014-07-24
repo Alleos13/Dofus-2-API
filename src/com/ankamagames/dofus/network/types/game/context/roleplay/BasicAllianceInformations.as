@@ -8,8 +8,13 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
    public class BasicAllianceInformations extends AbstractSocialGroupInfos implements INetworkType
    {
       
-      public function BasicAllianceInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BasicAllianceInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 419;
@@ -18,55 +23,39 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
       
       public var allianceTag:String = "";
       
-      override public function getTypeId() : uint {
-         return 419;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initBasicAllianceInformations(allianceId:uint = 0, allianceTag:String = "") : BasicAllianceInformations {
-         this.allianceId = allianceId;
-         this.allianceTag = allianceTag;
-         return this;
+      public function initBasicAllianceInformations(allianceId:uint = 0, allianceTag:String = "") : BasicAllianceInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.allianceId = 0;
-         this.allianceTag = "";
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_BasicAllianceInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_BasicAllianceInformations(output:IDataOutput) : void {
-         super.serializeAs_AbstractSocialGroupInfos(output);
-         if(this.allianceId < 0)
-         {
-            throw new Error("Forbidden value (" + this.allianceId + ") on element allianceId.");
-         }
-         else
-         {
-            output.writeInt(this.allianceId);
-            output.writeUTF(this.allianceTag);
-            return;
-         }
+      public function serializeAs_BasicAllianceInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_BasicAllianceInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_BasicAllianceInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.allianceId = input.readInt();
-         if(this.allianceId < 0)
-         {
-            throw new Error("Forbidden value (" + this.allianceId + ") on element of BasicAllianceInformations.allianceId.");
-         }
-         else
-         {
-            this.allianceTag = input.readUTF();
-            return;
-         }
+      public function deserializeAs_BasicAllianceInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

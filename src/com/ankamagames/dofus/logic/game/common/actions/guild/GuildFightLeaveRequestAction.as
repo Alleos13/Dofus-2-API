@@ -5,16 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.guild
    public class GuildFightLeaveRequestAction extends Object implements Action
    {
       
-      public function GuildFightLeaveRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pTaxCollectorId:uint, pCharacterId:uint, pWarning:Boolean = false) : GuildFightLeaveRequestAction {
-         var action:GuildFightLeaveRequestAction = new GuildFightLeaveRequestAction();
-         action.taxCollectorId = pTaxCollectorId;
-         action.characterId = pCharacterId;
-         action.warning = pWarning;
-         return action;
+      public function GuildFightLeaveRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pTaxCollectorId:uint, pCharacterId:uint, pWarning:Boolean = false) : GuildFightLeaveRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var taxCollectorId:uint;

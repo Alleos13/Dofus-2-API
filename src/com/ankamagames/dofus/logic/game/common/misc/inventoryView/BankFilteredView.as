@@ -9,32 +9,38 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
    public class BankFilteredView extends StorageGenericView
    {
       
-      public function BankFilteredView(hookLock:HookLock) {
-         super(hookLock);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get name() : String {
-         return "bankFiltered";
+      public function BankFilteredView(hookLock:HookLock)
+      {
+         //Décompilation abandonné
       }
       
-      override public function isListening(item:ItemWrapper) : Boolean {
-         return (super.isListening(item)) && (StorageOptionManager.getInstance().hasBankFilter()) && (item.typeId == StorageOptionManager.getInstance().bankFilter);
+      override public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function updateView() : void {
-         super.updateView();
-         if(StorageOptionManager.getInstance().hasBankFilter())
-         {
-            _hookLock.addHook(InventoryHookList.BankViewContent,[content,InventoryManager.getInstance().bankInventory.localKamas]);
-         }
+      override public function isListening(item:ItemWrapper) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function sortFields() : Array {
-         return StorageOptionManager.getInstance().sortBankFields;
+      override public function updateView() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function sortRevert() : Boolean {
-         return StorageOptionManager.getInstance().sortBankRevert;
+      override public function sortFields() : Array
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function sortRevert() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

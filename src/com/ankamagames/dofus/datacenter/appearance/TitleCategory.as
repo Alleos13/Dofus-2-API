@@ -7,18 +7,25 @@ package com.ankamagames.dofus.datacenter.appearance
    public class TitleCategory extends Object implements IDataCenter
    {
       
-      public function TitleCategory() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TitleCategory()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "TitleCategories";
       
-      public static function getTitleCategoryById(id:int) : TitleCategory {
-         return GameData.getObject(MODULE,id) as TitleCategory;
+      public static function getTitleCategoryById(id:int) : TitleCategory
+      {
+         //Décompilation abandonné
       }
       
-      public static function getTitleCategories() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getTitleCategories() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -27,12 +34,9 @@ package com.ankamagames.dofus.datacenter.appearance
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class OpenSocialAction extends Object implements Action
    {
       
-      public function OpenSocialAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(name:String = null) : OpenSocialAction {
-         var a:OpenSocialAction = new OpenSocialAction();
-         a.name = name;
-         return a;
+      public function OpenSocialAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(name:String = null) : OpenSocialAction
+      {
+         //Décompilation abandonné
       }
       
       public var name:String;

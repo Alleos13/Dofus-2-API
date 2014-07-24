@@ -7,10 +7,13 @@ package flashx.textLayout.events
    public class UpdateCompleteEvent extends Event
    {
       
-      public function UpdateCompleteEvent(param1:String, param2:Boolean=false, param3:Boolean=false, param4:TextFlow=null, param5:ContainerController=null) {
-         super(param1,param2,param3);
-         this.controller = param5;
-         this._textFlow = param4;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UpdateCompleteEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, textFlow:TextFlow = null, controller:ContainerController = null)
+      {
+         //Décompilation abandonné
       }
       
       public static const UPDATE_COMPLETE:String = "updateComplete";
@@ -19,24 +22,29 @@ package flashx.textLayout.events
       
       private var _textFlow:TextFlow;
       
-      override public function clone() : Event {
-         return new UpdateCompleteEvent(type,bubbles,cancelable,this._textFlow,this._controller);
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
       
-      public function get controller() : ContainerController {
-         return this._controller;
+      public function get controller() : ContainerController
+      {
+         //Décompilation abandonné
       }
       
-      public function set controller(param1:ContainerController) : void {
-         this._controller = param1;
+      public function set controller(c:ContainerController) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get textFlow() : TextFlow {
-         return this._textFlow;
+      public function get textFlow() : TextFlow
+      {
+         //Décompilation abandonné
       }
       
-      public function set textFlow(param1:TextFlow) : void {
-         this._textFlow = param1;
+      public function set textFlow(value:TextFlow) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

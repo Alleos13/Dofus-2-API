@@ -5,8 +5,13 @@ package com.ankamagames.dofus.console.moduleLogger
    public class ConsoleIcon_I_CAMERA_AUTOFOLLOW extends SpriteAsset
    {
       
-      public function ConsoleIcon_I_CAMERA_AUTOFOLLOW() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ConsoleIcon_I_CAMERA_AUTOFOLLOW()
+      {
+         //Décompilation abandonné
       }
    }
 }

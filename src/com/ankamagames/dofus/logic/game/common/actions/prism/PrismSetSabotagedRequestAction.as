@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.prism
    public class PrismSetSabotagedRequestAction extends Object implements Action
    {
       
-      public function PrismSetSabotagedRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(subAreaId:uint) : PrismSetSabotagedRequestAction {
-         var action:PrismSetSabotagedRequestAction = new PrismSetSabotagedRequestAction();
-         action.subAreaId = subAreaId;
-         return action;
+      public function PrismSetSabotagedRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(subAreaId:uint) : PrismSetSabotagedRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var subAreaId:uint;

@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.bid
    public class ExchangeBidHouseSearchAction extends Object implements Action
    {
       
-      public function ExchangeBidHouseSearchAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pType:uint, pGenId:uint) : ExchangeBidHouseSearchAction {
-         var a:ExchangeBidHouseSearchAction = new ExchangeBidHouseSearchAction();
-         a.type = pType;
-         a.genId = pGenId;
-         return a;
+      public function ExchangeBidHouseSearchAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pType:uint, pGenId:uint) : ExchangeBidHouseSearchAction
+      {
+         //Décompilation abandonné
       }
       
       public var type:uint;

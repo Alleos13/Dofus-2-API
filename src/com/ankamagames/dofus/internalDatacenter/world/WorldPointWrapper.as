@@ -13,58 +13,13 @@ package com.ankamagames.dofus.internalDatacenter.world
    public class WorldPointWrapper extends WorldPoint implements IDataCenter
    {
       
-      public function WorldPointWrapper(mapid:uint, fixedOutdoor:Boolean = false, outx:int = 0, outy:int = 0) {
-         var mapInfo:Object = null;
-         super();
-         mapId = mapid;
-         setFromMapId();
-         if(fixedOutdoor)
-         {
-            this._outdoorX = outx;
-            this._outdoorY = outy;
-         }
-         else
-         {
-            mapInfo = MapPosition.getMapPositionById(mapid);
-            if(!mapInfo)
-            {
-               this._outdoorX = x;
-               this._outdoorY = y;
-            }
-            else
-            {
-               this._outdoorX = mapInfo.posX;
-               this._outdoorY = mapInfo.posY;
-            }
-         }
-         var dmc:DataMapContainer = MapDisplayManager.getInstance().getDataMapContainer();
-         if((dmc) && (dmc.dataMap))
-         {
-            this._topNeighbourId = dmc.dataMap.topNeighbourId;
-            this._bottomNeighbourId = dmc.dataMap.bottomNeighbourId;
-            this._leftNeighbourId = dmc.dataMap.leftNeighbourId;
-            this._rightNeighbourId = dmc.dataMap.rightNeighbourId;
-         }
-         var mapScrollaction:MapScrollAction = MapScrollAction.getMapScrollActionById(mapid);
-         if(mapScrollaction)
-         {
-            if(mapScrollaction.topExists)
-            {
-               this._topNeighbourId = mapScrollaction.topMapId;
-            }
-            if(mapScrollaction.bottomExists)
-            {
-               this._bottomNeighbourId = mapScrollaction.bottomMapId;
-            }
-            if(mapScrollaction.leftExists)
-            {
-               this._leftNeighbourId = mapScrollaction.leftMapId;
-            }
-            if(mapScrollaction.rightExists)
-            {
-               this._rightNeighbourId = mapScrollaction.rightMapId;
-            }
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function WorldPointWrapper(mapid:uint, fixedOutdoor:Boolean = false, outx:int = 0, outy:int = 0)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -83,33 +38,39 @@ package com.ankamagames.dofus.internalDatacenter.world
       
       private var _rightNeighbourId:int;
       
-      public function get outdoorX() : int {
-         return this._outdoorX;
+      public function get outdoorX() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get outdoorY() : int {
-         return this._outdoorY;
+      public function get outdoorY() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get topNeighbourId() : int {
-         return this._topNeighbourId;
+      public function get topNeighbourId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get bottomNeighbourId() : int {
-         return this._bottomNeighbourId;
+      public function get bottomNeighbourId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get leftNeighbourId() : int {
-         return this._leftNeighbourId;
+      public function get leftNeighbourId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get rightNeighbourId() : int {
-         return this._rightNeighbourId;
+      public function get rightNeighbourId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function setOutdoorCoords(x:int, y:int) : void {
-         this._outdoorX = x;
-         this._outdoorY = y;
+      public function setOutdoorCoords(x:int, y:int) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

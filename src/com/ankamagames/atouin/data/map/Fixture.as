@@ -10,9 +10,13 @@ package com.ankamagames.atouin.data.map
    public class Fixture extends Object
    {
       
-      public function Fixture(map:Map) {
-         super();
-         this._map = map;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Fixture(map:Map)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -39,58 +43,14 @@ package com.ankamagames.atouin.data.map
       
       private var _map:Map;
       
-      public function get map() : Map {
-         return this._map;
+      public function get map() : Map
+      {
+         //Décompilation abandonné
       }
       
-      public function fromRaw(raw:IDataInput) : void {
-         try
-         {
-            this.fixtureId = raw.readInt();
-            if(AtouinConstants.DEBUG_FILES_PARSING)
-            {
-               _log.debug("  (Fixture) Id : " + this.fixtureId);
-            }
-            this.offset = new Point();
-            this.offset.x = raw.readShort();
-            this.offset.y = raw.readShort();
-            if(AtouinConstants.DEBUG_FILES_PARSING)
-            {
-               _log.debug("  (Fixture) Offset : (" + this.offset.x + ";" + this.offset.y + ")");
-            }
-            this.rotation = raw.readShort();
-            if(AtouinConstants.DEBUG_FILES_PARSING)
-            {
-               _log.debug("  (Fixture) Rotation : " + this.rotation);
-            }
-            this.xScale = raw.readShort();
-            if(AtouinConstants.DEBUG_FILES_PARSING)
-            {
-               _log.debug("  (Fixture) Scale X : " + this.xScale);
-            }
-            this.yScale = raw.readShort();
-            if(AtouinConstants.DEBUG_FILES_PARSING)
-            {
-               _log.debug("  (Fixture) Scale Y : " + this.yScale);
-            }
-            this.redMultiplier = raw.readByte();
-            this.greenMultiplier = raw.readByte();
-            this.blueMultiplier = raw.readByte();
-            this.hue = this.redMultiplier | this.greenMultiplier | this.blueMultiplier;
-            if(AtouinConstants.DEBUG_FILES_PARSING)
-            {
-               _log.debug("  (Fixture) Hue : 0x" + this.hue.toString(16));
-            }
-            this.alpha = raw.readUnsignedByte();
-            if(AtouinConstants.DEBUG_FILES_PARSING)
-            {
-               _log.debug("  (Fixture) Alpha : " + this.alpha);
-            }
-         }
-         catch(e:*)
-         {
-            throw e;
-         }
+      public function fromRaw(raw:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

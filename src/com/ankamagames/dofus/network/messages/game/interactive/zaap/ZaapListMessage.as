@@ -8,79 +8,69 @@ package com.ankamagames.dofus.network.messages.game.interactive.zaap
    public class ZaapListMessage extends TeleportDestinationsListMessage implements INetworkMessage
    {
       
-      public function ZaapListMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ZaapListMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 1604;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var spawnMapId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 1604;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initZaapListMessage(teleporterType:uint = 0, mapIds:Vector.<uint> = null, subAreaIds:Vector.<uint> = null, costs:Vector.<uint> = null, destTeleporterType:Vector.<uint> = null, spawnMapId:uint = 0) : ZaapListMessage {
-         super.initTeleportDestinationsListMessage(teleporterType,mapIds,subAreaIds,costs,destTeleporterType);
-         this.spawnMapId = spawnMapId;
-         this._isInitialized = true;
-         return this;
+      public function initZaapListMessage(teleporterType:uint = 0, mapIds:Vector.<uint> = null, subAreaIds:Vector.<uint> = null, costs:Vector.<uint> = null, destTeleporterType:Vector.<uint> = null, spawnMapId:uint = 0) : ZaapListMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.spawnMapId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ZaapListMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ZaapListMessage(output:IDataOutput) : void {
-         super.serializeAs_TeleportDestinationsListMessage(output);
-         if(this.spawnMapId < 0)
-         {
-            throw new Error("Forbidden value (" + this.spawnMapId + ") on element spawnMapId.");
-         }
-         else
-         {
-            output.writeInt(this.spawnMapId);
-            return;
-         }
+      public function serializeAs_ZaapListMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ZaapListMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ZaapListMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.spawnMapId = input.readInt();
-         if(this.spawnMapId < 0)
-         {
-            throw new Error("Forbidden value (" + this.spawnMapId + ") on element of ZaapListMessage.spawnMapId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_ZaapListMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

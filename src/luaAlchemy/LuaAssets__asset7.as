@@ -5,8 +5,13 @@ package luaAlchemy
    public class LuaAssets__asset7 extends ByteArrayAsset
    {
       
-      public function LuaAssets__asset7() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LuaAssets__asset7()
+      {
+         //Décompilation abandonné
       }
    }
 }

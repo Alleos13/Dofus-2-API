@@ -3,8 +3,13 @@ package d2network
    public class IgnoredInformations extends AbstractContactInformations
    {
       
-      public function IgnoredInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function IgnoredInformations()
+      {
+         //Décompilation abandonné
       }
    }
 }

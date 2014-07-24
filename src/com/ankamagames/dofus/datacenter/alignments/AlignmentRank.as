@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.alignments
    public class AlignmentRank extends Object implements IDataCenter
    {
       
-      public function AlignmentRank() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AlignmentRank()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "AlignmentRank";
       
       protected static const _log:Logger;
       
-      public static function getAlignmentRankById(id:int) : AlignmentRank {
-         return GameData.getObject(MODULE,id) as AlignmentRank;
+      public static function getAlignmentRankById(id:int) : AlignmentRank
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAlignmentRanks() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAlignmentRanks() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -44,20 +51,14 @@ package com.ankamagames.dofus.datacenter.alignments
       
       private var _description:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get description() : String {
-         if(!this._description)
-         {
-            this._description = I18n.getText(this.descriptionId);
-         }
-         return this._description;
+      public function get description() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -3,24 +3,33 @@ package d2network
    public class IgnoredOnlineInformations extends IgnoredInformations
    {
       
-      public function IgnoredOnlineInformations() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function get playerId() : uint {
-         return new uint();
+      public function IgnoredOnlineInformations()
+      {
+         //Décompilation abandonné
       }
       
-      public function get playerName() : String {
-         return new String();
+      public function get playerId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get breed() : int {
-         return new int();
+      public function get playerName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get sex() : Boolean {
-         return new Boolean();
+      public function get breed() : int
+      {
+         //Décompilation abandonné
+      }
+      
+      public function get sex() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

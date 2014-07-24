@@ -6,25 +6,32 @@ package flashx.textLayout.events
    public class SelectionEvent extends Event
    {
       
-      public function SelectionEvent(param1:String, param2:Boolean=false, param3:Boolean=false, param4:SelectionState=null) {
-         this._selectionState = param4;
-         super(param1,param2,param3);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SelectionEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, selectionState:SelectionState = null)
+      {
+         //Décompilation abandonné
       }
       
       public static const SELECTION_CHANGE:String = "selectionChange";
       
       private var _selectionState:SelectionState;
       
-      public function get selectionState() : SelectionState {
-         return this._selectionState;
+      public function get selectionState() : SelectionState
+      {
+         //Décompilation abandonné
       }
       
-      public function set selectionState(param1:SelectionState) : void {
-         this._selectionState = param1;
+      public function set selectionState(value:SelectionState) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : Event {
-         return new SelectionEvent(type,bubbles,cancelable,this._selectionState);
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
    }
 }

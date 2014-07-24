@@ -3,10 +3,14 @@ package com.ankamagames.jerakine.newCache
    public interface ICacheGarbageCollector
    {
       
-      function set cache(param1:ICache) : void;
+      {
+      //Décompilation abandonné
+      }
       
-      function used(param1:*) : void;
+      function set cache(cache:ICache) : void;
       
-      function purge(param1:uint) : void;
+      function used(ref:*) : void;
+      
+      function purge(bounds:uint) : void;
    }
 }

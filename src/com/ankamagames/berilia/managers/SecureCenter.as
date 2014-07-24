@@ -22,8 +22,13 @@ package com.ankamagames.berilia.managers
    public class SecureCenter extends Object
    {
       
-      public function SecureCenter() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SecureCenter()
+      {
+         //Décompilation abandonné
       }
       
       protected static var SharedSecureComponent:Class;
@@ -36,95 +41,39 @@ package com.ankamagames.berilia.managers
       
       private static const _log:Logger;
       
-      public static function init(sharedSecureComponent:Object, sharedReadOnlyData:Object, directAccessObject:Object) : void {
-         SharedSecureComponent = sharedSecureComponent as Class;
-         SharedReadOnlyData = sharedReadOnlyData as Class;
-         DirectAccessObject = directAccessObject as Class;
-         FocusHandler.getInstance().handler = HumanInputHandler.getInstance().handler;
+      public static function init(sharedSecureComponent:Object, sharedReadOnlyData:Object, directAccessObject:Object) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function destroy(target:*) : void {
-         switch(true)
-         {
-            case target is SharedSecureComponent:
-               SharedSecureComponent["destroy"](target,ACCESS_KEY);
-               break;
-         }
+      public static function destroy(target:*) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function secure(target:*, trusted:Boolean = false) : * {
-         var iDataCenter:* = undefined;
-         var iModuleUtil:* = undefined;
-         switch(true)
-         {
-            case target == null:
-            case target is uint:
-            case target is int:
-            case target is Number:
-            case target is String:
-            case target is Boolean:
-            case target is Point:
-            case target == undefined:
-            case target is Secure:
-               return target;
-         }
+      public static function secure(target:*, trusted:Boolean = false) : *
+      {
+         //Décompilation abandonné
       }
       
-      public static function secureContent(target:Array, trusted:Boolean = false) : Array {
-         var key:* = undefined;
-         var result:Array = [];
-         for(key in target)
-         {
-            result[key] = secure(target[key],trusted);
-         }
-         return result;
+      public static function secureContent(target:Array, trusted:Boolean = false) : Array
+      {
+         //Décompilation abandonné
       }
       
-      public static function unsecure(target:*) : * {
-         switch(null)
-         {
-            case target is Secure && !(target is INoBoxing):
-            case target is SharedSecureComponent:
-            case target is SharedReadOnlyData:
-            case target is DirectAccessObject:
-               return target.getObject(ACCESS_KEY);
-            case target is Function:
-               return function(... args):*
-               {
-                  var nb:* = args.length;
-                  var i:* = 0;
-                  while(i < nb)
-                  {
-                     args[i] = secure(args[i]);
-                     i++;
-                  }
-                  var result:* = CallWithParameters.callR(target,args);
-                  return unsecure(result);
-               };
-            default:
-               return target;
-         }
+      public static function unsecure(target:*) : *
+      {
+         //Décompilation abandonné
       }
       
-      public static function unsecureContent(target:Array) : Array {
-         var key:* = undefined;
-         var result:Array = [];
-         for(key in target)
-         {
-            result[key] = unsecure(target[key]);
-         }
-         return result;
+      public static function unsecureContent(target:Array) : Array
+      {
+         //Décompilation abandonné
       }
       
-      public static function checkAccessKey(accessKey:Object) : void {
-         if(accessKey != ACCESS_KEY)
-         {
-            throw new IllegalOperationError("Wrong access key");
-         }
-         else
-         {
-            return;
-         }
+      public static function checkAccessKey(accessKey:Object) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

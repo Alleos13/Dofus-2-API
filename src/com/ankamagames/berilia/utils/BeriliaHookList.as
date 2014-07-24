@@ -5,8 +5,13 @@ package com.ankamagames.berilia.utils
    public class BeriliaHookList extends Object
    {
       
-      public function BeriliaHookList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BeriliaHookList()
+      {
+         //Décompilation abandonné
       }
       
       public static const MouseClick:Hook;
@@ -26,6 +31,8 @@ package com.ankamagames.berilia.utils
       public static const PostMouseClick:Hook;
       
       public static const KeyUp:Hook;
+      
+      public static const KeyDown:Hook;
       
       public static const FocusChange:Hook;
       

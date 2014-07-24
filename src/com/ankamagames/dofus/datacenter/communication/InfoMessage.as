@@ -10,22 +10,27 @@ package com.ankamagames.dofus.datacenter.communication
    public class InfoMessage extends Object implements IDataCenter
    {
       
-      public function InfoMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function InfoMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "InfoMessages";
       
       private static var _log:Logger;
       
-      public static function getInfoMessageById(id:uint) : InfoMessage {
-         var t:* = GameData.getObject(MODULE,id);
-         var tt:* = GameData.getObject(MODULE,id) as InfoMessage;
-         return GameData.getObject(MODULE,id) as InfoMessage;
+      public static function getInfoMessageById(id:uint) : InfoMessage
+      {
+         //Décompilation abandonné
       }
       
-      public static function getInfoMessages() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getInfoMessages() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var typeId:uint;
@@ -36,12 +41,9 @@ package com.ankamagames.dofus.datacenter.communication
       
       private var _text:String;
       
-      public function get text() : String {
-         if(!this._text)
-         {
-            this._text = I18n.getText(this.textId);
-         }
-         return this._text;
+      public function get text() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

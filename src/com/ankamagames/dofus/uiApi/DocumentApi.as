@@ -10,29 +10,37 @@ package com.ankamagames.dofus.uiApi
    public class DocumentApi extends Object implements IApi
    {
       
-      public function DocumentApi() {
-         this._log = Log.getLogger(getQualifiedClassName(DocumentApi));
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DocumentApi()
+      {
+         //Décompilation abandonné
       }
       
       protected var _log:Logger;
       
       private var _module:UiModule;
       
-      public function set module(value:UiModule) : void {
-         this._module = value;
+      public function set module(value:UiModule) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         this._module = null;
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getDocument(pDocId:uint) : Object {
-         return Document.getDocumentById(pDocId);
+      public function getDocument(pDocId:uint) : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function getType(pDocId:uint) : uint {
-         return Document.getDocumentById(pDocId).typeId;
+      public function getType(pDocId:uint) : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

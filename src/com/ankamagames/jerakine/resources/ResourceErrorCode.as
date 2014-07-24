@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.resources
    public class ResourceErrorCode extends Object
    {
       
-      public function ResourceErrorCode() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ResourceErrorCode()
+      {
+         //Décompilation abandonné
       }
       
       public static const UNKNOWN_ERROR:uint = 255;

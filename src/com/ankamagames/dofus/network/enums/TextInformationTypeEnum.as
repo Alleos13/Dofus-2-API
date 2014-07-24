@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class TextInformationTypeEnum extends Object
    {
       
-      public function TextInformationTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TextInformationTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const TEXT_INFORMATION_MESSAGE:uint = 0;

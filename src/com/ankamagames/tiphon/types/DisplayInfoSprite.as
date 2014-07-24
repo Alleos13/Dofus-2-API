@@ -5,14 +5,18 @@ package com.ankamagames.tiphon.types
    public class DisplayInfoSprite extends DynamicSprite
    {
       
-      public function DisplayInfoSprite() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      override public function init(handler:IAnimationSpriteHandler) : void {
-         alpha = 0;
-         var nViewIndex:String = getQualifiedClassName(this).split("_")[1];
-         handler.registerInfoSprite(this,nViewIndex);
+      public function DisplayInfoSprite()
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function init(handler:IAnimationSpriteHandler) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

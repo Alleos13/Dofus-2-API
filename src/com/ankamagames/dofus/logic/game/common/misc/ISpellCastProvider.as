@@ -6,6 +6,10 @@ package com.ankamagames.dofus.logic.game.common.misc
    public interface ISpellCastProvider
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function get castingSpell() : CastingSpell;
       
       function get stepsBuffer() : Vector.<ISequencable>;

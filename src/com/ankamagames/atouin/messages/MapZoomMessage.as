@@ -5,11 +5,13 @@ package com.ankamagames.atouin.messages
    public class MapZoomMessage extends Object implements Message
    {
       
-      public function MapZoomMessage(value:Number, posX:int, posY:int) {
-         super();
-         this._value = value;
-         this._posX = posX;
-         this._posY = posY;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapZoomMessage(value:Number, posX:int, posY:int)
+      {
+         //Décompilation abandonné
       }
       
       private var _value:Number;
@@ -18,16 +20,19 @@ package com.ankamagames.atouin.messages
       
       private var _posY:int;
       
-      public function get value() : Number {
-         return this._value;
+      public function get value() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function get posX() : int {
-         return this._posX;
+      public function get posX() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get posY() : int {
-         return this._posY;
+      public function get posY() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

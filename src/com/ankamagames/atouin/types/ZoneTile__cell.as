@@ -5,8 +5,13 @@ package com.ankamagames.atouin.types
    public class ZoneTile__cell extends SpriteAsset
    {
       
-      public function ZoneTile__cell() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ZoneTile__cell()
+      {
+         //Décompilation abandonné
       }
    }
 }

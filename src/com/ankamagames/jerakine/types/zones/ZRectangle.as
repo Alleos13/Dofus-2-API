@@ -6,12 +6,13 @@ package com.ankamagames.jerakine.types.zones
    public class ZRectangle extends Object implements IZone
    {
       
-      public function ZRectangle(nMinRadius:uint, nWidth:uint, nHeight:uint, dataMapProvider:IDataMapProvider) {
-         super();
-         this.radius = nWidth;
-         this._radius2 = nHeight?nHeight:nWidth;
-         this.minRadius = nMinRadius;
-         this._dataMapProvider = dataMapProvider;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ZRectangle(nMinRadius:uint, nWidth:uint, nHeight:uint, dataMapProvider:IDataMapProvider)
+      {
+         //Décompilation abandonné
       }
       
       private var _radius:uint = 0;
@@ -24,84 +25,59 @@ package com.ankamagames.jerakine.types.zones
       
       private var _diagonalFree:Boolean = false;
       
-      public function get radius() : uint {
-         return this._radius;
+      public function get radius() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set radius(n:uint) : void {
-         this._radius = n;
+      public function set radius(n:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set minRadius(r:uint) : void {
-         this._minRadius = r;
+      public function set minRadius(r:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get minRadius() : uint {
-         return this._minRadius;
+      public function get minRadius() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set direction(d:uint) : void {
+      public function set direction(d:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get direction() : uint {
-         return null;
+      public function get direction() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set diagonalFree(d:Boolean) : void {
-         this._diagonalFree = d;
+      public function set diagonalFree(d:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get diagonalFree() : Boolean {
-         return this._diagonalFree;
+      public function get diagonalFree() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get surface() : uint {
-         return Math.pow(this._radius + this._radius2 + 1,2);
+      public function get surface() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function getCells(cellId:uint = 0) : Vector.<uint> {
-         var i:* = 0;
-         var j:* = 0;
-         var aCells:Vector.<uint> = new Vector.<uint>();
-         var origin:MapPoint = MapPoint.fromCellId(cellId);
-         var x:int = origin.x;
-         var y:int = origin.y;
-         if((this._radius == 0) || (this._radius2 == 0))
-         {
-            if((this._minRadius == 0) && (!this._diagonalFree))
-            {
-               aCells.push(cellId);
-            }
-            return aCells;
-         }
-         i = x - this._radius;
-         while(i <= x + this._radius)
-         {
-            j = y - this._radius2;
-            while(j <= y + this._radius2)
-            {
-               if((!this._minRadius) || (Math.abs(x - i) + Math.abs(y - j) >= this._minRadius))
-               {
-                  if((!this._diagonalFree) || (!(Math.abs(x - i) == Math.abs(y - j))))
-                  {
-                     if(MapPoint.isInMap(i,j))
-                     {
-                        this.addCell(i,j,aCells);
-                     }
-                  }
-               }
-               j++;
-            }
-            i++;
-         }
-         return aCells;
+      public function getCells(cellId:uint = 0) : Vector.<uint>
+      {
+         //Décompilation abandonné
       }
       
-      private function addCell(x:int, y:int, cellMap:Vector.<uint>) : void {
-         if((this._dataMapProvider == null) || (this._dataMapProvider.pointMov(x,y)))
-         {
-            cellMap.push(MapPoint.fromCoords(x,y).cellId);
-         }
+      private function addCell(x:int, y:int, cellMap:Vector.<uint>) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

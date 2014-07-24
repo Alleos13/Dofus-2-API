@@ -10,61 +10,52 @@ package com.ankamagames.dofus.network.types.game.context.fight
    public class GameFightMutantInformations extends GameFightFighterNamedInformations implements INetworkType
    {
       
-      public function GameFightMutantInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameFightMutantInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 50;
       
       public var powerLevel:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 50;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameFightMutantInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, teamId:uint = 2, wave:uint = 0, alive:Boolean = false, stats:GameFightMinimalStats = null, name:String = "", status:PlayerStatus = null, powerLevel:uint = 0) : GameFightMutantInformations {
-         super.initGameFightFighterNamedInformations(contextualId,look,disposition,teamId,wave,alive,stats,name,status);
-         this.powerLevel = powerLevel;
-         return this;
+      public function initGameFightMutantInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, teamId:uint = 2, wave:uint = 0, alive:Boolean = false, stats:GameFightMinimalStats = null, name:String = "", status:PlayerStatus = null, powerLevel:uint = 0) : GameFightMutantInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.powerLevel = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameFightMutantInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightMutantInformations(output:IDataOutput) : void {
-         super.serializeAs_GameFightFighterNamedInformations(output);
-         if(this.powerLevel < 0)
-         {
-            throw new Error("Forbidden value (" + this.powerLevel + ") on element powerLevel.");
-         }
-         else
-         {
-            output.writeByte(this.powerLevel);
-            return;
-         }
+      public function serializeAs_GameFightMutantInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameFightMutantInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightMutantInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.powerLevel = input.readByte();
-         if(this.powerLevel < 0)
-         {
-            throw new Error("Forbidden value (" + this.powerLevel + ") on element of GameFightMutantInformations.powerLevel.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_GameFightMutantInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

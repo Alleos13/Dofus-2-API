@@ -8,79 +8,69 @@ package com.ankamagames.dofus.network.messages.game.character.stats
    public class LifePointsRegenEndMessage extends UpdateLifePointsMessage implements INetworkMessage
    {
       
-      public function LifePointsRegenEndMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LifePointsRegenEndMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5686;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var lifePointsGained:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5686;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initLifePointsRegenEndMessage(lifePoints:uint = 0, maxLifePoints:uint = 0, lifePointsGained:uint = 0) : LifePointsRegenEndMessage {
-         super.initUpdateLifePointsMessage(lifePoints,maxLifePoints);
-         this.lifePointsGained = lifePointsGained;
-         this._isInitialized = true;
-         return this;
+      public function initLifePointsRegenEndMessage(lifePoints:uint = 0, maxLifePoints:uint = 0, lifePointsGained:uint = 0) : LifePointsRegenEndMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.lifePointsGained = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_LifePointsRegenEndMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_LifePointsRegenEndMessage(output:IDataOutput) : void {
-         super.serializeAs_UpdateLifePointsMessage(output);
-         if(this.lifePointsGained < 0)
-         {
-            throw new Error("Forbidden value (" + this.lifePointsGained + ") on element lifePointsGained.");
-         }
-         else
-         {
-            output.writeInt(this.lifePointsGained);
-            return;
-         }
+      public function serializeAs_LifePointsRegenEndMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_LifePointsRegenEndMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_LifePointsRegenEndMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.lifePointsGained = input.readInt();
-         if(this.lifePointsGained < 0)
-         {
-            throw new Error("Forbidden value (" + this.lifePointsGained + ") on element of LifePointsRegenEndMessage.lifePointsGained.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_LifePointsRegenEndMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

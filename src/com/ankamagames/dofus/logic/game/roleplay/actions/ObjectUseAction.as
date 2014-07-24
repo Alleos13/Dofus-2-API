@@ -5,16 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
    public class ObjectUseAction extends Object implements Action
    {
       
-      public function ObjectUseAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(objectUID:uint, quantity:int = 1, useOnCell:Boolean = false) : ObjectUseAction {
-         var a:ObjectUseAction = new ObjectUseAction();
-         a.objectUID = objectUID;
-         a.quantity = quantity;
-         a.useOnCell = useOnCell;
-         return a;
+      public function ObjectUseAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(objectUID:uint, quantity:int = 1, useOnCell:Boolean = false) : ObjectUseAction
+      {
+         //Décompilation abandonné
       }
       
       public var objectUID:uint;

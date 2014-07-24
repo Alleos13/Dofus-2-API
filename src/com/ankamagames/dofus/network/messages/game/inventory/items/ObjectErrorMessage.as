@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
    public class ObjectErrorMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ObjectErrorMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ObjectErrorMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 3004;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var reason:int = 0;
       
-      override public function getMessageId() : uint {
-         return 3004;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initObjectErrorMessage(reason:int = 0) : ObjectErrorMessage {
-         this.reason = reason;
-         this._isInitialized = true;
-         return this;
+      public function initObjectErrorMessage(reason:int = 0) : ObjectErrorMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.reason = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ObjectErrorMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectErrorMessage(output:IDataOutput) : void {
-         output.writeByte(this.reason);
+      public function serializeAs_ObjectErrorMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ObjectErrorMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectErrorMessage(input:IDataInput) : void {
-         this.reason = input.readByte();
+      public function deserializeAs_ObjectErrorMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

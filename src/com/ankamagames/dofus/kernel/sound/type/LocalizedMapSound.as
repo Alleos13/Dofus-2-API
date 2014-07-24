@@ -5,15 +5,13 @@ package com.ankamagames.dofus.kernel.sound.type
    public class LocalizedMapSound extends Object
    {
       
-      public function LocalizedMapSound(pSoundId:String, pPosition:Point, pRange:int, pSaturationRange:int, pSilenceMin:int, pSilenceMax:int, pVolumeMax:Number) {
-         super();
-         this.soundId = pSoundId;
-         this.position = pPosition;
-         this.range = pRange;
-         this.saturationRange = pSaturationRange;
-         this.silenceMin = pSilenceMin;
-         this.silenceMax = pSilenceMax;
-         this.volumeMax = pVolumeMax;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LocalizedMapSound(pSoundId:String, pPosition:Point, pRange:int, pSaturationRange:int, pSilenceMin:int, pSilenceMax:int, pVolumeMax:Number)
+      {
+         //Décompilation abandonné
       }
       
       public var soundId:String;

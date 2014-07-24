@@ -9,67 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context
    public class GameContextCreateMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameContextCreateMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameContextCreateMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 200;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var context:uint = 1;
       
-      override public function getMessageId() : uint {
-         return 200;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameContextCreateMessage(context:uint = 1) : GameContextCreateMessage {
-         this.context = context;
-         this._isInitialized = true;
-         return this;
+      public function initGameContextCreateMessage(context:uint = 1) : GameContextCreateMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.context = 1;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameContextCreateMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameContextCreateMessage(output:IDataOutput) : void {
-         output.writeByte(this.context);
+      public function serializeAs_GameContextCreateMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameContextCreateMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameContextCreateMessage(input:IDataInput) : void {
-         this.context = input.readByte();
-         if(this.context < 0)
-         {
-            throw new Error("Forbidden value (" + this.context + ") on element of GameContextCreateMessage.context.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_GameContextCreateMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

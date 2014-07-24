@@ -14,36 +14,32 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightTackledStep extends AbstractSequencable implements IFightStep, ISequencableListener
    {
       
-      public function FightTackledStep(fighterId:int) {
-         super();
-         this._fighterId = fighterId;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightTackledStep(fighterId:int)
+      {
+         //Décompilation abandonné
       }
       
       private var _fighterId:int;
       
       private var _animStep:ISequencable;
       
-      public function get stepType() : String {
-         return "tackled";
+      public function get stepType() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function start() : void {
-         var tackledEntity:IEntity = DofusEntities.getEntity(this._fighterId);
-         if(!tackledEntity)
-         {
-            _log.warn("Unable to play tackle of an unexisting fighter " + this._fighterId + ".");
-            this.stepFinished(this);
-            return;
-         }
-         this._animStep = new PlayAnimationStep(tackledEntity as TiphonSprite,AnimationEnum.ANIM_TACLE);
-         this._animStep.addListener(this);
-         this._animStep.start();
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function stepFinished(step:ISequencable, withTimout:Boolean = false) : void {
-         this._animStep.removeListener(this);
-         FightEventsHelper.sendFightEvent(FightEventEnum.FIGHTER_GOT_TACKLED,[this._fighterId],0,castingSpellId);
-         executeCallbacks();
+      public function stepFinished(step:ISequencable, withTimout:Boolean = false) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

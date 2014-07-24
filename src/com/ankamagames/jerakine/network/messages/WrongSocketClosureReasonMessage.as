@@ -5,22 +5,27 @@ package com.ankamagames.jerakine.network.messages
    public class WrongSocketClosureReasonMessage extends Object implements Message
    {
       
-      public function WrongSocketClosureReasonMessage(expectedReason:uint, gotReason:uint) {
-         super();
-         this._expectedReason = expectedReason;
-         this._gotReason = gotReason;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function WrongSocketClosureReasonMessage(expectedReason:uint, gotReason:uint)
+      {
+         //Décompilation abandonné
       }
       
       private var _expectedReason:uint;
       
       private var _gotReason:uint;
       
-      public function get expectedReason() : uint {
-         return this._expectedReason;
+      public function get expectedReason() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get gotReason() : uint {
-         return this._gotReason;
+      public function get gotReason() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

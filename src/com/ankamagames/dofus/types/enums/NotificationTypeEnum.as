@@ -3,8 +3,13 @@ package com.ankamagames.dofus.types.enums
    public class NotificationTypeEnum extends Object
    {
       
-      public function NotificationTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function NotificationTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const TUTORIAL:uint = 0;

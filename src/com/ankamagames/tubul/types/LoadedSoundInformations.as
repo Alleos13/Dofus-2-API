@@ -3,8 +3,13 @@ package com.ankamagames.tubul.types
    public class LoadedSoundInformations extends Object
    {
       
-      public function LoadedSoundInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LoadedSoundInformations()
+      {
+         //Décompilation abandonné
       }
       
       public var infos:MP3Information;

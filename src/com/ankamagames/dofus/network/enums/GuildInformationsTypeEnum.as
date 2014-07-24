@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class GuildInformationsTypeEnum extends Object
    {
       
-      public function GuildInformationsTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildInformationsTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const INFO_GENERAL:uint = 1;

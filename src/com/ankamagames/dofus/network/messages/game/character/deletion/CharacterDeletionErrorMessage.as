@@ -9,67 +9,69 @@ package com.ankamagames.dofus.network.messages.game.character.deletion
    public class CharacterDeletionErrorMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function CharacterDeletionErrorMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterDeletionErrorMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 166;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var reason:uint = 1;
       
-      override public function getMessageId() : uint {
-         return 166;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCharacterDeletionErrorMessage(reason:uint = 1) : CharacterDeletionErrorMessage {
-         this.reason = reason;
-         this._isInitialized = true;
-         return this;
+      public function initCharacterDeletionErrorMessage(reason:uint = 1) : CharacterDeletionErrorMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.reason = 1;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharacterDeletionErrorMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterDeletionErrorMessage(output:IDataOutput) : void {
-         output.writeByte(this.reason);
+      public function serializeAs_CharacterDeletionErrorMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharacterDeletionErrorMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterDeletionErrorMessage(input:IDataInput) : void {
-         this.reason = input.readByte();
-         if(this.reason < 0)
-         {
-            throw new Error("Forbidden value (" + this.reason + ") on element of CharacterDeletionErrorMessage.reason.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_CharacterDeletionErrorMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -12,43 +12,28 @@ package com.ankamagames.atouin.resources.adapters
    public class MapsAdapter extends AbstractUrlLoaderAdapter implements IAdapter
    {
       
-      public function MapsAdapter() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      override protected function getResource(dataFormat:String, data:*) : * {
-         var ba:ByteArray = data as ByteArray;
-         ba.endian = Endian.BIG_ENDIAN;
-         var header:int = ba.readByte();
-         if(header != 77)
-         {
-            ba.position = 0;
-            try
-            {
-               ba.uncompress();
-            }
-            catch(ioe:IOError)
-            {
-               dispatchFailure("Wrong header and non-compressed file.",ResourceErrorCode.MALFORMED_MAP_FILE);
-               return null;
-            }
-            header = ba.readByte();
-            if(header != 77)
-            {
-               dispatchFailure("Wrong header file.",ResourceErrorCode.MALFORMED_MAP_FILE);
-               return null;
-            }
-         }
-         ba.position = 0;
-         return ba;
+      public function MapsAdapter()
+      {
+         //Décompilation abandonné
       }
       
-      override public function getResourceType() : uint {
-         return AtouinResourceType.RESOURCE_MAP;
+      override protected function getResource(dataFormat:String, data:*) : *
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getDataFormat() : String {
-         return URLLoaderDataFormat.BINARY;
+      override public function getResourceType() : uint
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getDataFormat() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

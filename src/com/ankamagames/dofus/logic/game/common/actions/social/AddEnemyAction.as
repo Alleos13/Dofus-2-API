@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.social
    public class AddEnemyAction extends Object implements Action
    {
       
-      public function AddEnemyAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(name:String) : AddEnemyAction {
-         var a:AddEnemyAction = new AddEnemyAction();
-         a.name = name;
-         return a;
+      public function AddEnemyAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(name:String) : AddEnemyAction
+      {
+         //Décompilation abandonné
       }
       
       public var name:String;

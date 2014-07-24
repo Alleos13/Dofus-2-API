@@ -5,16 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.craft
    public class ExchangePlayerMultiCraftRequestAction extends Object implements Action
    {
       
-      public function ExchangePlayerMultiCraftRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pExchangeType:int, pTarget:uint, pSkillId:uint) : ExchangePlayerMultiCraftRequestAction {
-         var action:ExchangePlayerMultiCraftRequestAction = new ExchangePlayerMultiCraftRequestAction();
-         action.exchangeType = pExchangeType;
-         action.target = pTarget;
-         action.skillId = pSkillId;
-         return action;
+      public function ExchangePlayerMultiCraftRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pExchangeType:int, pTarget:uint, pSkillId:uint) : ExchangePlayerMultiCraftRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var exchangeType:int;

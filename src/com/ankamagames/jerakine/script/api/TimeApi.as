@@ -9,36 +9,33 @@ package com.ankamagames.jerakine.script.api
    public class TimeApi extends Object
    {
       
-      public function TimeApi() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function Timeout(delay:uint, fct:Function, ... parameters) : uint {
-         if(!parameters)
-         {
-            parameters = new Array();
-         }
-         parameters.unshift(delay);
-         parameters.unshift(fct);
-         return CallWithParameters.callR(setTimeout,parameters);
+      public function TimeApi()
+      {
+         //Décompilation abandonné
       }
       
-      public static function CancelTimeout(timeoutID:uint) : void {
-         clearTimeout(timeoutID);
+      public static function Timeout(delay:uint, fct:Function, ... parameters) : uint
+      {
+         //Décompilation abandonné
       }
       
-      public static function Repeat(delay:uint, fct:Function, ... parameters) : uint {
-         if(!parameters)
-         {
-            parameters = new Array();
-         }
-         parameters.unshift(delay);
-         parameters.unshift(fct);
-         return CallWithParameters.callR(setInterval,parameters);
+      public static function CancelTimeout(timeoutID:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function CancelRepeat(intervalID:uint) : void {
-         clearInterval(intervalID);
+      public static function Repeat(delay:uint, fct:Function, ... parameters) : uint
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function CancelRepeat(intervalID:uint) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

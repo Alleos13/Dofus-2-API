@@ -6,10 +6,13 @@ package com.ankamagames.tiphon.events
    public class TiphonEvent extends Event implements ITiphonEvent
    {
       
-      public function TiphonEvent(pType:String, pSprite:*, pParams:Object = null) {
-         super(pType,false,false);
-         this._sprite = pSprite;
-         this._params = pParams;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TiphonEvent(pType:String, pSprite:*, pParams:Object = null)
+      {
+         //Décompilation abandonné
       }
       
       public static const SOUND_EVENT:String = "Sound";
@@ -58,53 +61,49 @@ package com.ankamagames.tiphon.events
       
       private var _direction:int = -1;
       
-      public function set label(pLabel:String) : void {
-         this._label = pLabel;
+      public function set label(pLabel:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get label() : String {
-         return this._label;
+      public function get label() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get sprite() : * {
-         return this._sprite;
+      public function get sprite() : *
+      {
+         //Décompilation abandonné
       }
       
-      public function get params() : Object {
-         return this._params;
+      public function get params() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function get animationType() : String {
-         if(this._animationType == null)
-         {
-            return "undefined";
-         }
-         return this._animationType;
+      public function get animationType() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get direction() : int {
-         return this._direction;
+      public function get direction() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get animationName() : String {
-         return this._animationType + "_" + this._direction;
+      public function get animationName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function set animationName(pAnimationName:String) : void {
-         this._animationType = pAnimationName.split("_")[0];
-         this._direction = pAnimationName.split("_")[1];
-         if(this._direction == 3)
-         {
-            this._direction = 1;
-         }
-         if(this._direction == 7)
-         {
-            this._direction = 5;
-         }
+      public function set animationName(pAnimationName:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function duplicate() : TiphonEvent {
-         return new TiphonEvent(this.type,this._sprite,this._params);
+      public function duplicate() : TiphonEvent
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -8,61 +8,52 @@ package com.ankamagames.dofus.network.types.game.character
    public class CharacterMinimalPlusLookAndGradeInformations extends CharacterMinimalPlusLookInformations implements INetworkType
    {
       
-      public function CharacterMinimalPlusLookAndGradeInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterMinimalPlusLookAndGradeInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 193;
       
       public var grade:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 193;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCharacterMinimalPlusLookAndGradeInformations(id:uint = 0, level:uint = 0, name:String = "", entityLook:EntityLook = null, grade:uint = 0) : CharacterMinimalPlusLookAndGradeInformations {
-         super.initCharacterMinimalPlusLookInformations(id,level,name,entityLook);
-         this.grade = grade;
-         return this;
+      public function initCharacterMinimalPlusLookAndGradeInformations(id:uint = 0, level:uint = 0, name:String = "", entityLook:EntityLook = null, grade:uint = 0) : CharacterMinimalPlusLookAndGradeInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.grade = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharacterMinimalPlusLookAndGradeInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterMinimalPlusLookAndGradeInformations(output:IDataOutput) : void {
-         super.serializeAs_CharacterMinimalPlusLookInformations(output);
-         if(this.grade < 0)
-         {
-            throw new Error("Forbidden value (" + this.grade + ") on element grade.");
-         }
-         else
-         {
-            output.writeInt(this.grade);
-            return;
-         }
+      public function serializeAs_CharacterMinimalPlusLookAndGradeInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharacterMinimalPlusLookAndGradeInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterMinimalPlusLookAndGradeInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.grade = input.readInt();
-         if(this.grade < 0)
-         {
-            throw new Error("Forbidden value (" + this.grade + ") on element of CharacterMinimalPlusLookAndGradeInformations.grade.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_CharacterMinimalPlusLookAndGradeInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

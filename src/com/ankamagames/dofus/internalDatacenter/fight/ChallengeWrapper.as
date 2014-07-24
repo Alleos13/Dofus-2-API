@@ -12,12 +12,18 @@ package com.ankamagames.dofus.internalDatacenter.fight
    public class ChallengeWrapper extends Proxy implements IDataCenter
    {
       
-      public function ChallengeWrapper() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : ChallengeWrapper {
-         return new ChallengeWrapper();
+      public function ChallengeWrapper()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : ChallengeWrapper
+      {
+         //Décompilation abandonné
       }
       
       private var _challenge:Challenge;
@@ -38,97 +44,89 @@ package com.ankamagames.dofus.internalDatacenter.fight
       
       private var _uri:Uri;
       
-      public function set id(id:uint) : void {
-         this._challenge = Challenge.getChallengeById(id);
-         this._id = id;
+      public function set id(id:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set targetId(targetId:int) : void {
-         this._targetId = targetId;
-         this._targetName = this.getFightFrame().getFighterName(targetId);
-         this._targetLevel = this.getFightFrame().getFighterLevel(targetId);
+      public function set targetId(targetId:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set xpBonus(xpBonus:uint) : void {
-         this._xpBonus = xpBonus;
+      public function set xpBonus(xpBonus:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set dropBonus(dropBonus:uint) : void {
-         this._dropBonus = dropBonus;
+      public function set dropBonus(dropBonus:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set result(result:uint) : void {
-         this._result = result;
+      public function set result(result:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get id() : uint {
-         return this._id;
+      public function get id() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get targetId() : int {
-         return this._targetId;
+      public function get targetId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get targetName() : String {
-         return this._targetName;
+      public function get targetName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get targetLevel() : int {
-         return this._targetLevel;
+      public function get targetLevel() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get xpBonus() : uint {
-         return this._xpBonus;
+      public function get xpBonus() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get dropBonus() : uint {
-         return this._dropBonus;
+      public function get dropBonus() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get result() : uint {
-         return this._result;
+      public function get result() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get iconUri() : Uri {
-         if(!this._uri)
-         {
-            this._uri = new Uri(XmlConfig.getInstance().getEntry("config.gfx.path.challenges").concat(this.id).concat(".png"));
-         }
-         return this._uri;
+      public function get iconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get description() : String {
-         return this._challenge.description;
+      public function get description() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get name() : String {
-         return this._challenge.name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      override flash_proxy function getProperty(name:*) : * {
-         var l:* = undefined;
-         var r:* = undefined;
-         if(isAttribute(name))
-         {
-            return this[name];
-         }
-         l = Challenge.getChallengeById(this.id);
-         if(!l)
-         {
-            r = "";
-         }
-         try
-         {
-            return l[name];
-         }
-         catch(e:Error)
-         {
-            return "Error_on_challenge_" + name;
-         }
+      override flash_proxy function getProperty(name:*) : *
+      {
+         //Décompilation abandonné
       }
       
-      private function getFightFrame() : FightContextFrame {
-         return Kernel.getWorker().getFrame(FightContextFrame) as FightContextFrame;
+      private function getFightFrame() : FightContextFrame
+      {
+         //Décompilation abandonné
       }
    }
 }

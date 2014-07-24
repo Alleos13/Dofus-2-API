@@ -9,47 +9,65 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.quest
    public class GuidedModeQuitRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GuidedModeQuitRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuidedModeQuitRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6092;
       
-      override public function get isInitialized() : Boolean {
-         return true;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function getMessageId() : uint {
-         return 6092;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGuidedModeQuitRequestMessage() : GuidedModeQuitRequestMessage {
-         return this;
+      public function initGuidedModeQuitRequestMessage() : GuidedModeQuitRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GuidedModeQuitRequestMessage(output:IDataOutput) : void {
+      public function serializeAs_GuidedModeQuitRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GuidedModeQuitRequestMessage(input:IDataInput) : void {
+      public function deserializeAs_GuidedModeQuitRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

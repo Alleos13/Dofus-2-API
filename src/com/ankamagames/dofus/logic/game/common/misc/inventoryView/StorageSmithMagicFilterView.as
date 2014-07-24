@@ -12,10 +12,13 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
    public class StorageSmithMagicFilterView extends StorageGenericView
    {
       
-      public function StorageSmithMagicFilterView(hookLock:HookLock, parentView:IStorageView, skill:Skill) {
-         super(hookLock);
-         this._skill = skill;
-         this._parent = parentView;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StorageSmithMagicFilterView(hookLock:HookLock, parentView:IStorageView, skill:Skill)
+      {
+         //Décompilation abandonné
       }
       
       private static const SMITHMAGIC_RUNE_ID:int = 78;
@@ -28,29 +31,29 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
       
       private var _parent:IStorageView;
       
-      override public function get name() : String {
-         return "storageSmithMagicFilter";
+      override public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function isListening(item:ItemWrapper) : Boolean {
-         var data:Item = Item.getItemById(item.objectGID);
-         return (this._parent.isListening(item)) && (super.isListening(item)) && ((data.typeId == this._skill.modifiableItemType) || (data.typeId == SMITHMAGIC_RUNE_ID) || (data.typeId == SMITHMAGIC_POTION_ID) || (item.objectGID == SIGNATURE_RUNE_ID));
+      override public function isListening(item:ItemWrapper) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function updateView() : void {
-         super.updateView();
-         if(StorageOptionManager.getInstance().currentStorageView == this)
-         {
-            _hookLock.addHook(InventoryHookList.StorageViewContent,[content,InventoryManager.getInstance().inventory.localKamas]);
-         }
+      override public function updateView() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set parent(view:IStorageView) : void {
-         this._parent = view;
+      public function set parent(view:IStorageView) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get parent() : IStorageView {
-         return this._parent;
+      public function get parent() : IStorageView
+      {
+         //Décompilation abandonné
       }
    }
 }

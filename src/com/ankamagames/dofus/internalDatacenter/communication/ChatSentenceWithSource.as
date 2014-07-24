@@ -6,12 +6,13 @@ package com.ankamagames.dofus.internalDatacenter.communication
    public class ChatSentenceWithSource extends BasicChatSentence implements IDataCenter
    {
       
-      public function ChatSentenceWithSource(id:uint, baseMsg:String, msg:String, channel:uint = 0, time:Number = 0, finger:String = "", senderId:uint = 0, senderName:String = "", objects:Vector.<ItemWrapper> = null, admin:Boolean = false) {
-         super(id,baseMsg,msg,channel,time,finger);
-         this._senderId = senderId;
-         this._senderName = senderName;
-         this._objects = objects;
-         this._admin = admin;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ChatSentenceWithSource(id:uint, baseMsg:String, msg:String, channel:uint = 0, time:Number = 0, finger:String = "", senderId:uint = 0, senderName:String = "", objects:Vector.<ItemWrapper> = null, admin:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       private var _senderId:uint;
@@ -22,20 +23,24 @@ package com.ankamagames.dofus.internalDatacenter.communication
       
       private var _admin:Boolean;
       
-      public function get senderId() : uint {
-         return this._senderId;
+      public function get senderId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get senderName() : String {
-         return this._senderName;
+      public function get senderName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get objects() : Vector.<ItemWrapper> {
-         return this._objects;
+      public function get objects() : Vector.<ItemWrapper>
+      {
+         //Décompilation abandonné
       }
       
-      public function get admin() : Boolean {
-         return this._admin;
+      public function get admin() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

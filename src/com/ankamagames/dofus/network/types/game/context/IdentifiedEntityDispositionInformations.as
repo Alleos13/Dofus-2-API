@@ -7,45 +7,52 @@ package com.ankamagames.dofus.network.types.game.context
    public class IdentifiedEntityDispositionInformations extends EntityDispositionInformations implements INetworkType
    {
       
-      public function IdentifiedEntityDispositionInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function IdentifiedEntityDispositionInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 107;
       
       public var id:int = 0;
       
-      override public function getTypeId() : uint {
-         return 107;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initIdentifiedEntityDispositionInformations(cellId:int = 0, direction:uint = 1, id:int = 0) : IdentifiedEntityDispositionInformations {
-         super.initEntityDispositionInformations(cellId,direction);
-         this.id = id;
-         return this;
+      public function initIdentifiedEntityDispositionInformations(cellId:int = 0, direction:uint = 1, id:int = 0) : IdentifiedEntityDispositionInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.id = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_IdentifiedEntityDispositionInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_IdentifiedEntityDispositionInformations(output:IDataOutput) : void {
-         super.serializeAs_EntityDispositionInformations(output);
-         output.writeInt(this.id);
+      public function serializeAs_IdentifiedEntityDispositionInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_IdentifiedEntityDispositionInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_IdentifiedEntityDispositionInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.id = input.readInt();
+      public function deserializeAs_IdentifiedEntityDispositionInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

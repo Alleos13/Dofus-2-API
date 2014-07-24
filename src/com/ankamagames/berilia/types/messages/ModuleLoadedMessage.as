@@ -5,15 +5,20 @@ package com.ankamagames.berilia.types.messages
    public class ModuleLoadedMessage extends Object implements Message
    {
       
-      public function ModuleLoadedMessage(moduleName:String) {
-         super();
-         this._moduleName = moduleName;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ModuleLoadedMessage(moduleName:String)
+      {
+         //Décompilation abandonné
       }
       
       private var _moduleName:String;
       
-      public function get moduleName() : String {
-         return this._moduleName;
+      public function get moduleName() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

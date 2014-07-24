@@ -8,11 +8,13 @@ package com.ankamagames.jerakine.sequencer
    public class ParallelStartSequenceStep extends AbstractSequencable implements ISubSequenceSequencable
    {
       
-      public function ParallelStartSequenceStep(aSequence:Array, waitAllSequenceEnd:Boolean = true, waitFirstEndSequence:Boolean = false) {
-         super();
-         this._aSequence = aSequence;
-         this._waitAllSequenceEnd = waitAllSequenceEnd;
-         this._waitFirstEndSequence = waitFirstEndSequence;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ParallelStartSequenceStep(aSequence:Array, waitAllSequenceEnd:Boolean = true, waitFirstEndSequence:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       private static const _log:Logger;
@@ -25,43 +27,19 @@ package com.ankamagames.jerakine.sequencer
       
       private var _sequenceEndCount:uint = 0;
       
-      override public function start() : void {
-         var i:uint = 0;
-         while(i < this._aSequence.length)
-         {
-            ISequencer(this._aSequence[i]).addEventListener(SequencerEvent.SEQUENCE_END,this.onSequenceEnd);
-            ISequencer(this._aSequence[i]).start();
-            i++;
-         }
-         if((!this._waitAllSequenceEnd) && (!this._waitFirstEndSequence))
-         {
-            _log.debug("first executeCallbacks");
-            executeCallbacks();
-         }
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get sequenceEndCount() : uint {
-         return this._sequenceEndCount;
+      public function get sequenceEndCount() : uint
+      {
+         //Décompilation abandonné
       }
       
-      private function onSequenceEnd(e:SequencerEvent) : void {
-         e.sequencer.removeEventListener(SequencerEvent.SEQUENCE_END,this.onSequenceEnd);
-         this._sequenceEndCount++;
-         _log.debug("onSequenceEnd");
-         if(this._sequenceEndCount == this._aSequence.length)
-         {
-            _log.debug("onSequenceEnd executeCallbacks");
-            executeCallbacks();
-            dispatchEvent(new SequencerEvent(SequencerEvent.SEQUENCE_END));
-         }
-         else if(!this._waitAllSequenceEnd)
-         {
-            if(this._sequenceEndCount == 1)
-            {
-               executeCallbacks();
-            }
-         }
-         
+      private function onSequenceEnd(e:SequencerEvent) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

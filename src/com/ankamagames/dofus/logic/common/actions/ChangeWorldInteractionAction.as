@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.common.actions
    public class ChangeWorldInteractionAction extends Object implements Action
    {
       
-      public function ChangeWorldInteractionAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(enabled:Boolean, total:Boolean = true) : ChangeWorldInteractionAction {
-         var a:ChangeWorldInteractionAction = new ChangeWorldInteractionAction();
-         a.enabled = enabled;
-         a.total = total;
-         return a;
+      public function ChangeWorldInteractionAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(enabled:Boolean, total:Boolean = true) : ChangeWorldInteractionAction
+      {
+         //Décompilation abandonné
       }
       
       public var enabled:Boolean;

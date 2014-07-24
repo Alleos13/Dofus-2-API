@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.spectator
    public class StopToListenRunningFightAction extends Object implements Action
    {
       
-      public function StopToListenRunningFightAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : StopToListenRunningFightAction {
-         return new StopToListenRunningFightAction();
+      public function StopToListenRunningFightAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : StopToListenRunningFightAction
+      {
+         //Décompilation abandonné
       }
    }
 }

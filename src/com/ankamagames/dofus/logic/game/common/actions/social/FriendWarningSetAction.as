@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.social
    public class FriendWarningSetAction extends Object implements Action
    {
       
-      public function FriendWarningSetAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(enable:Boolean) : FriendWarningSetAction {
-         var a:FriendWarningSetAction = new FriendWarningSetAction();
-         a.enable = enable;
-         return a;
+      public function FriendWarningSetAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(enable:Boolean) : FriendWarningSetAction
+      {
+         //Décompilation abandonné
       }
       
       public var enable:Boolean;

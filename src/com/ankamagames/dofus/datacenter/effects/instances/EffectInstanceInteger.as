@@ -6,53 +6,35 @@ package com.ankamagames.dofus.datacenter.effects.instances
    public class EffectInstanceInteger extends EffectInstance implements IDataCenter
    {
       
-      public function EffectInstanceInteger() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EffectInstanceInteger()
+      {
+         //Décompilation abandonné
       }
       
       public var value:int;
       
-      override public function clone() : EffectInstance {
-         var o:EffectInstanceInteger = new EffectInstanceInteger();
-         o.rawZone = rawZone;
-         o.effectId = effectId;
-         o.duration = duration;
-         o.delay = delay;
-         o.value = this.value;
-         o.random = random;
-         o.group = group;
-         o.hidden = hidden;
-         o.targetId = targetId;
-         o.targetMask = targetMask;
-         return o;
+      override public function clone() : EffectInstance
+      {
+         //Décompilation abandonné
       }
       
-      override public function get parameter0() : Object {
-         return this.value;
+      override public function get parameter0() : Object
+      {
+         //Décompilation abandonné
       }
       
-      override public function setParameter(paramIndex:uint, value:*) : void {
-         if(paramIndex == 2)
-         {
-            this.value = int(value);
-         }
+      override public function setParameter(paramIndex:uint, value:*) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function add(term:*) : EffectInstance {
-         if(term is EffectInstanceDice)
-         {
-            return term.add(this);
-         }
-         if(term is EffectInstanceInteger)
-         {
-            this.value = this.value + term.value;
-            forceDescriptionRefresh();
-         }
-         else
-         {
-            _log.error(term + " cannot be added to EffectInstanceInteger.");
-         }
-         return this;
+      override public function add(term:*) : EffectInstance
+      {
+         //Décompilation abandonné
       }
    }
 }

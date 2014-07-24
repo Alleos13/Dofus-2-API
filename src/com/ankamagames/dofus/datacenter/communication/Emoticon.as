@@ -11,20 +11,27 @@ package com.ankamagames.dofus.datacenter.communication
    public class Emoticon extends Object implements IDataCenter
    {
       
-      public function Emoticon() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Emoticon()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Emoticons";
       
       protected static const _log:Logger;
       
-      public static function getEmoticonById(id:int) : Emoticon {
-         return GameData.getObject(MODULE,id) as Emoticon;
+      public static function getEmoticonById(id:int) : Emoticon
+      {
+         //Décompilation abandonné
       }
       
-      public static function getEmoticons() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getEmoticons() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;
@@ -55,69 +62,19 @@ package com.ankamagames.dofus.datacenter.communication
       
       private var _shortcut:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get shortcut() : String {
-         if(!this._shortcut)
-         {
-            this._shortcut = I18n.getText(this.shortcutId);
-         }
-         if((!this._shortcut) || (this._shortcut == ""))
-         {
-            return this.defaultAnim;
-         }
-         return this._shortcut;
+      public function get shortcut() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function getAnimName(look:TiphonEntityLook) : String {
-         var animName:String = null;
-         var anim:String = null;
-         var animCase:Array = null;
-         var caseBoneId:uint = 0;
-         var caseSkins:Array = null;
-         var matchingSkin:uint = 0;
-         var skin:String = null;
-         var skinId:uint = 0;
-         var lookSkin:* = undefined;
-         if(look)
-         {
-            for each (anim in this.anims)
-            {
-               animCase = anim.split(";");
-               caseBoneId = parseInt(animCase[0]);
-               if((look) && (caseBoneId == look.getBone()))
-               {
-                  caseSkins = animCase[1].split(",");
-                  matchingSkin = 0;
-                  for each (skin in caseSkins)
-                  {
-                     skinId = parseInt(skin);
-                     for each (lookSkin in look.skins)
-                     {
-                        if(skinId == lookSkin)
-                        {
-                           matchingSkin++;
-                        }
-                     }
-                  }
-                  if(matchingSkin > 0)
-                  {
-                     animName = "AnimEmote" + animCase[2];
-                  }
-               }
-            }
-         }
-         if(!animName)
-         {
-            animName = "AnimEmote" + this.defaultAnim.charAt(0).toUpperCase() + this.defaultAnim.substr(1).toLowerCase() + "_0";
-         }
-         return animName;
+      public function getAnimName(look:TiphonEntityLook) : String
+      {
+         //Décompilation abandonné
       }
    }
 }

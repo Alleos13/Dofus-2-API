@@ -6,19 +6,25 @@ package com.ankamagames.dofus.datacenter.items
    public class IncarnationLevel extends Object implements IDataCenter
    {
       
-      public function IncarnationLevel() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function IncarnationLevel()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "IncarnationLevels";
       
-      public static function getIncarnationLevelById(id:uint) : IncarnationLevel {
-         return GameData.getObject(MODULE,id) as IncarnationLevel;
+      public static function getIncarnationLevelById(id:uint) : IncarnationLevel
+      {
+         //Décompilation abandonné
       }
       
-      public static function getIncarnationLevelByIdAndLevel(incarnationId:int, level:int) : IncarnationLevel {
-         var id:int = incarnationId * 100 + level;
-         return getIncarnationLevelById(id);
+      public static function getIncarnationLevelByIdAndLevel(incarnationId:int, level:int) : IncarnationLevel
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -29,8 +35,9 @@ package com.ankamagames.dofus.datacenter.items
       
       public var requiredXp:uint;
       
-      public function get incarnation() : Incarnation {
-         return Incarnation.getIncarnationById(this.id);
+      public function get incarnation() : Incarnation
+      {
+         //Décompilation abandonné
       }
    }
 }

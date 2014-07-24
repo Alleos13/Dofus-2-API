@@ -9,67 +9,69 @@ package com.ankamagames.dofus.network.messages.game.dialog
    public class LeaveDialogMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function LeaveDialogMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LeaveDialogMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5502;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var dialogType:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5502;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initLeaveDialogMessage(dialogType:uint = 0) : LeaveDialogMessage {
-         this.dialogType = dialogType;
-         this._isInitialized = true;
-         return this;
+      public function initLeaveDialogMessage(dialogType:uint = 0) : LeaveDialogMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.dialogType = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_LeaveDialogMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_LeaveDialogMessage(output:IDataOutput) : void {
-         output.writeByte(this.dialogType);
+      public function serializeAs_LeaveDialogMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_LeaveDialogMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_LeaveDialogMessage(input:IDataInput) : void {
-         this.dialogType = input.readByte();
-         if(this.dialogType < 0)
-         {
-            throw new Error("Forbidden value (" + this.dialogType + ") on element of LeaveDialogMessage.dialogType.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_LeaveDialogMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.lists
    public class HookList extends Object
    {
       
-      public function HookList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HookList()
+      {
+         //Décompilation abandonné
       }
       
       public static const LangFileLoaded:Hook;
@@ -283,6 +288,8 @@ package com.ankamagames.dofus.misc.lists
       
       public static const PartyMemberFollowUpdate:Hook;
       
+      public static const PartyNameUpdate:Hook;
+      
       public static const LifePointsRegenBegin:Hook;
       
       public static const PlayedCharacterLookChange:Hook;
@@ -320,6 +327,8 @@ package com.ankamagames.dofus.misc.lists
       public static const AddMapFlag:Hook;
       
       public static const RemoveMapFlag:Hook;
+      
+      public static const RemoveAllFlags:Hook;
       
       public static const ContextChanged:Hook;
       
@@ -384,16 +393,6 @@ package com.ankamagames.dofus.misc.lists
       public static const CalendarDate:Hook;
       
       public static const OpenStatusMenu:Hook;
-      
-      public static const KrosmasterAuthTokenError:Hook;
-      
-      public static const KrosmasterAuthToken:Hook;
-      
-      public static const KrosmasterInventoryError:Hook;
-      
-      public static const KrosmasterInventory:Hook;
-      
-      public static const KrosmasterTransfer:Hook;
       
       public static const ShowPlayersNames:Hook;
       

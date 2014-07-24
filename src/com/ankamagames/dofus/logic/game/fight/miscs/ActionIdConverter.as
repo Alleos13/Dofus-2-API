@@ -3,8 +3,13 @@ package com.ankamagames.dofus.logic.game.fight.miscs
    public class ActionIdConverter extends Object
    {
       
-      public function ActionIdConverter() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ActionIdConverter()
+      {
+         //Décompilation abandonné
       }
       
       public static const ACTION_ENCAPSULATE_BINARY_COMMAND:int = 993;
@@ -811,126 +816,19 @@ package com.ankamagames.dofus.logic.game.fight.miscs
       
       private static var _initialized:Boolean = false;
       
-      public static function initialize() : void {
-         if(!_initialized)
-         {
-            _actionInfos = new Array();
-            _actionInfos[ACTION_CHARACTER_BOOST_LIFE_POINTS] = ["lifePoints",true];
-            _actionInfos[ACTION_CHARACTER_MOVEMENT_POINTS_LOST] = ["movementPoints",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_MOVEMENT_POINTS] = ["movementPoints",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_MOVEMENT_POINTS] = ["movementPoints",false];
-            _actionInfos[ACTION_CHARACTER_ACTION_POINTS_LOST] = ["actionPoints",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_ACTION_POINTS] = ["actionPoints",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_ACTION_POINTS] = ["actionPoints",false];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_DAMAGES] = ["allDamagesBonus",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_DAMAGES] = ["allDamagesBonus",true];
-            _actionInfos[ACTION_CHARACTER_BOOST_PHYSICAL_DAMAGES] = ["physicalDamagesBonus",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_DAMAGES_PERCENT] = ["damagesBonusPercent",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_DAMAGES_PERCENT] = ["damagesBonusPercent",true];
-            _actionInfos[ACTION_CHARACTER_BOOST_MAXIMUM_SUMMONED_CREATURES] = ["summonableCreaturesBoost",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_EARTH_ELEMENT_PERCENT] = ["earthElementResistPercent",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_EARTH_ELEMENT_PERCENT] = ["earthElementResistPercent",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_WATER_ELEMENT_PERCENT] = ["waterElementResistPercent",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_WATER_ELEMENT_PERCENT] = ["waterElementResistPercent",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_AIR_ELEMENT_PERCENT] = ["airElementResistPercent",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_AIR_ELEMENT_PERCENT] = ["airElementResistPercent",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_FIRE_ELEMENT_PERCENT] = ["fireElementResistPercent",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_FIRE_ELEMENT_PERCENT] = ["fireElementResistPercent",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_NEUTRAL_ELEMENT_PERCENT] = ["neutralElementResistPercent",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_NEUTRAL_ELEMENT_PERCENT] = ["neutralElementResistPercent",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_EARTH_ELEMENT_PVP_PERCENT] = ["pvpEarthElementResistPercent",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_EARTH_ELEMENT_PVP_PERCENT] = ["pvpEarthElementResistPercent",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_WATER_ELEMENT_PVP_PERCENT] = ["pvpWaterElementResistPercent",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_WATER_ELEMENT_PVP_PERCENT] = ["pvpWaterElementResistPercent",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_AIR_ELEMENT_PVP_PERCENT] = ["pvpAirElementResistPercent",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_AIR_ELEMENT_PVP_PERCENT] = ["pvpAirElementResistPercent",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_FIRE_ELEMENT_PVP_PERCENT] = ["pvpFireElementResistPercent",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_FIRE_ELEMENT_PVP_PERCENT] = ["pvpFireElementResistPercent",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_NEUTRAL_ELEMENT_PVP_PERCENT] = ["pvpNeutralElementResistPercent",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_NEUTRAL_ELEMENT_PVP_PERCENT] = ["pvpNeutralElementResistPercent",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_RANGE] = ["range",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_RANGE] = ["range",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_STRENGTH] = ["strength",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_STRENGTH] = ["strength",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_AGILITY] = ["agility",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_AGILITY] = ["agility",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_CHANCE] = ["chance",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_CHANCE] = ["chance",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_WISDOM] = ["wisdom",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_WISDOM] = ["wisdom",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_VITALITY] = ["vitality",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_VITALITY] = ["vitality",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_INTELLIGENCE] = ["intelligence",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_INTELLIGENCE] = ["intelligence",true];
-            _actionInfos[ACTION_CHARACTER_BOOST_TRAP] = ["trapBonus",true];
-            _actionInfos[ACTION_CHARACTER_BOOST_TRAP_PERCENT] = ["trapBonusPercent",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_EARTH_ELEMENT_RESIST] = ["earthElementReduction",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_EARTH_ELEMENT_RESIST] = ["earthElementReduction",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_WATER_ELEMENT_RESIST] = ["waterElementReduction",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_WATER_ELEMENT_RESIST] = ["waterElementReduction",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_AIR_ELEMENT_RESIST] = ["airElementReduction",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_AIR_ELEMENT_RESIST] = ["airElementReduction",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_FIRE_ELEMENT_RESIST] = ["fireElementReduction",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_FIRE_ELEMENT_RESIST] = ["fireElementReduction",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_NEUTRAL_ELEMENT_RESIST] = ["neutralElementReduction",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_NEUTRAL_ELEMENT_RESIST] = ["neutralElementReduction",true];
-            _actionInfos[ACTION_CHARACTER_BOOST_EARTH_ELEMENT_PVP_RESIST] = ["pvpEarthElementReduction",true];
-            _actionInfos[ACTION_CHARACTER_BOOST_WATER_ELEMENT_PVP_RESIST] = ["pvpWaterElementReduction",true];
-            _actionInfos[ACTION_CHARACTER_BOOST_AIR_ELEMENT_PVP_RESIST] = ["pvpAirElementReduction",true];
-            _actionInfos[ACTION_CHARACTER_BOOST_FIRE_ELEMENT_PVP_RESIST] = ["pvpFireElementReduction",true];
-            _actionInfos[ACTION_CHARACTER_BOOST_NEUTRAL_ELEMENT_PVP_RESIST] = ["pvpNeutralElementReduction",true];
-            _actionInfos[ACTION_CHARACTER_BOOST_CRITICAL_MISS] = ["criticalMiss",true];
-            _actionInfos[ACTION_CHARACTER_BOOST_CRITICAL_HIT] = ["criticalHit",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_CRITICAL_HIT] = ["criticalHit",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_INITIATIVE] = ["initiative",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_INITIATIVE] = ["initiative",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_MAGIC_FIND] = ["prospecting",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_MAGIC_FIND] = ["prospecting",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_HEAL_BONUS] = ["healBonus",true];
-            _actionInfos[ACTION_CHARACTER_BOOST_SHIELD_BASED_ON_CASTER_LIFE] = ["shieldPoints",true];
-            _actionInfos[ACTION_CHARACTER_BOOST_SHIELD] = ["shieldPoints",true];
-            _actionInfos[ACTION_CHARACTER_LIFE_POINTS_MALUS] = ["lifePointsMalus",false];
-            _actionInfos[ACTION_CHARACTER_LIFE_POINTS_MALUS_PERCENT] = ["lifePointsMalus",false];
-            _actionInfos[ACTION_CHARACTER_REFLECTOR_UNBOOSTED] = ["reflectorUnboosted",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_ACTION_POINTS_LOST_DODGE] = ["dodgePALostProbability",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_ACTION_POINTS_LOST_DODGE] = ["dodgePALostProbability",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_MOVEMENT_POINTS_LOST_DODGE] = ["dodgePMLostProbability",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_MOVEMENT_POINTS_LOST_DODGE] = ["dodgePMLostProbability",true];
-            _actionInfos[ACTION_CHARACTER_BOOST_DAMAGES_FOR_ALL_GAME] = ["allDamagesBonus",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_MAXIMUM_WEIGHT] = ["maximumWeight",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_MAXIMUM_WEIGHT] = ["maximumWeight",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_PHYSICAL_REDUCTION] = ["physicalReduction",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_PHYSICAL_REDUCTION] = ["physicalReduction",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_MAGICAL_REDUCTION] = ["magicalReduction",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_MAGICAL_REDUCTION] = ["magicalReduction",true];
-            _actionInfos[ACTION_CHARACTER_BOOST_DODGE] = ["tackleEvade",true];
-            _actionInfos[ACTION_CHARACTER_BOOST_TACKLE] = ["tackleBlock",true];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_DODGE] = ["tackleEvade",false];
-            _actionInfos[ACTION_CHARACTER_DEBOOST_TACKLE] = ["tackleBlock",false];
-            _actionInfos[ACTION_CHARACTER_BOOST_PERMANENT_DAMAGE_PERCENT] = ["permanentDamagePercent",true];
-            _actionInfos[ACTION_BOOST_GLOBAL_RESISTS_BONUS] = ["globalResistPercentBonus",true];
-            _actionInfos[ACTION_BOOST_GLOBAL_RESISTS_MALUS] = ["globalResistPercentMalus",true];
-            _actionInfos[ACTION_BOOST_PUSH_DMG] = ["pushDamageBonus",true];
-            _initialized = true;
-         }
+      public static function initialize() : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function getActionStatName(actionId:int) : String {
-         initialize();
-         if(_actionInfos[actionId])
-         {
-            return _actionInfos[actionId][0];
-         }
-         return null;
+      public static function getActionStatName(actionId:int) : String
+      {
+         //Décompilation abandonné
       }
       
-      public static function getIsABoost(actionId:int) : Boolean {
-         initialize();
-         if(_actionInfos[actionId])
-         {
-            return _actionInfos[actionId][1];
-         }
-         return false;
+      public static function getIsABoost(actionId:int) : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

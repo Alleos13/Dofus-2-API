@@ -9,34 +9,18 @@ package com.ankamagames.dofus.internalDatacenter.jobs
    public class CraftsmanWrapper extends Object implements IDataCenter
    {
       
-      public function CraftsmanWrapper() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(informations:JobCrafterDirectoryListEntry) : CraftsmanWrapper {
-         var obj:CraftsmanWrapper = new CraftsmanWrapper();
-         obj.playerId = informations.playerInfo.playerId;
-         obj.playerName = informations.playerInfo.playerName;
-         obj.alignmentSide = informations.playerInfo.alignmentSide;
-         obj.breed = informations.playerInfo.breed;
-         obj.sex = informations.playerInfo.sex;
-         obj.isInWorkshop = informations.playerInfo.isInWorkshop;
-         obj.mapId = informations.playerInfo.mapId;
-         obj.subAreaId = informations.playerInfo.subAreaId;
-         obj.worldPos = "(" + informations.playerInfo.worldX + ", " + informations.playerInfo.worldY + ")";
-         obj.statusId = informations.playerInfo.status.statusId;
-         if(informations.playerInfo.status is PlayerStatusExtended)
-         {
-            obj.awayMessage = PlayerStatusExtended(informations.playerInfo.status).message;
-         }
-         obj.jobId = informations.jobInfo.jobId;
-         obj.jobLevel = informations.jobInfo.jobLevel;
-         obj.minSlots = informations.jobInfo.minSlots;
-         obj.specialization = Job.getJobById(informations.jobInfo.jobId).specializationOfId > 0;
-         obj.notFree = !((informations.jobInfo.userDefinedParams & CrafterDirectoryParamBitEnum.CRAFT_OPTION_NOT_FREE) == 0);
-         obj.notFreeExceptOnFail = !((informations.jobInfo.userDefinedParams & CrafterDirectoryParamBitEnum.CRAFT_OPTION_NOT_FREE_EXCEPT_ON_FAIL) == 0);
-         obj.resourcesRequired = !((informations.jobInfo.userDefinedParams & CrafterDirectoryParamBitEnum.CRAFT_OPTION_RESOURCES_REQUIRED) == 0);
-         return obj;
+      public function CraftsmanWrapper()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(informations:JobCrafterDirectoryListEntry) : CraftsmanWrapper
+      {
+         //Décompilation abandonné
       }
       
       public var playerId:int;

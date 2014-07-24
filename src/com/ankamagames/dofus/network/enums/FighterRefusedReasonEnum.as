@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class FighterRefusedReasonEnum extends Object
    {
       
-      public function FighterRefusedReasonEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FighterRefusedReasonEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const FIGHTER_REFUSED:int = -1;

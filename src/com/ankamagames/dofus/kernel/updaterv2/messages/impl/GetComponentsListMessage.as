@@ -7,19 +7,20 @@ package com.ankamagames.dofus.kernel.updaterv2.messages.impl
    public class GetComponentsListMessage extends Object implements IUpdaterOutputMessage
    {
       
-      public function GetComponentsListMessage(project:String = "game") {
-         super();
-         this._project = project;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GetComponentsListMessage(project:String = "game")
+      {
+         //Décompilation abandonné
       }
       
       private var _project:String;
       
-      public function serialize() : String {
-         return by.blooddy.crypto.serialization.JSON.encode(
-            {
-               "_msg_id":UpdaterMessageIDEnum.GET_COMPONENTS_LIST,
-               "project":this._project
-            });
+      public function serialize() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

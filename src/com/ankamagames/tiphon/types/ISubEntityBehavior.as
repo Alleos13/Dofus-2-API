@@ -5,7 +5,11 @@ package com.ankamagames.tiphon.types
    public interface ISubEntityBehavior
    {
       
-      function updateFromParentEntity(param1:TiphonSprite, param2:BehaviorData) : void;
+      {
+      //Décompilation abandonné
+      }
+      
+      function updateFromParentEntity(target:TiphonSprite, parentData:BehaviorData) : void;
       
       function remove() : void;
    }

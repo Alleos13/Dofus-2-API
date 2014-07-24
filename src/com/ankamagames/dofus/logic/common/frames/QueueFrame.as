@@ -14,45 +14,35 @@ package com.ankamagames.dofus.logic.common.frames
    public class QueueFrame extends Object implements Frame
    {
       
-      public function QueueFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function QueueFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      public function get priority() : int {
-         return Priority.NORMAL;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var lqsMsg:LoginQueueStatusMessage = null;
-         var qsMsg:QueueStatusMessage = null;
-         switch(true)
-         {
-            case msg is LoginQueueStatusMessage:
-               lqsMsg = msg as LoginQueueStatusMessage;
-               KernelEventsManager.getInstance().processCallback(HookList.LoginQueueStatus,lqsMsg.position,lqsMsg.total);
-               return true;
-            case msg is QueueStatusMessage:
-               qsMsg = msg as QueueStatusMessage;
-               KernelEventsManager.getInstance().processCallback(HookList.QueueStatus,qsMsg.position,qsMsg.total);
-               return true;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: NullPointerException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

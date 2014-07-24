@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
    public class PresetSetPositionAction extends Object implements Action
    {
       
-      public function PresetSetPositionAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(presetId:uint, position:uint) : PresetSetPositionAction {
-         var a:PresetSetPositionAction = new PresetSetPositionAction();
-         a.presetId = presetId;
-         a.position = position;
-         return a;
+      public function PresetSetPositionAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(presetId:uint, position:uint) : PresetSetPositionAction
+      {
+         //Décompilation abandonné
       }
       
       public var presetId:uint;

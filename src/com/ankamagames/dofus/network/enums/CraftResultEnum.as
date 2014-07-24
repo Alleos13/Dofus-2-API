@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class CraftResultEnum extends Object
    {
       
-      public function CraftResultEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CraftResultEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const CRAFT_IMPOSSIBLE:uint = 0;

@@ -9,20 +9,27 @@ package com.ankamagames.dofus.datacenter.guild
    public class EmblemBackground extends Object implements IDataCenter
    {
       
-      public function EmblemBackground() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EmblemBackground()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "EmblemBackgrounds";
       
       protected static const _log:Logger;
       
-      public static function getEmblemBackgroundById(id:int) : EmblemBackground {
-         return GameData.getObject(MODULE,id) as EmblemBackground;
+      public static function getEmblemBackgroundById(id:int) : EmblemBackground
+      {
+         //Décompilation abandonné
       }
       
-      public static function getEmblemBackgrounds() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getEmblemBackgrounds() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;

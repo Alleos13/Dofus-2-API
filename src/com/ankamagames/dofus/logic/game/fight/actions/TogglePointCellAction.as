@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.fight.actions
    public class TogglePointCellAction extends Object implements Action
    {
       
-      public function TogglePointCellAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : TogglePointCellAction {
-         var a:TogglePointCellAction = new TogglePointCellAction();
-         return a;
+      public function TogglePointCellAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : TogglePointCellAction
+      {
+         //Décompilation abandonné
       }
    }
 }

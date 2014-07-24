@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
    public class PlayerFightFriendlyAnswerAction extends Object implements Action
    {
       
-      public function PlayerFightFriendlyAnswerAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(accept:Boolean = true) : PlayerFightFriendlyAnswerAction {
-         var o:PlayerFightFriendlyAnswerAction = new PlayerFightFriendlyAnswerAction();
-         o.accept = accept;
-         return o;
+      public function PlayerFightFriendlyAnswerAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(accept:Boolean = true) : PlayerFightFriendlyAnswerAction
+      {
+         //Décompilation abandonné
       }
       
       public var accept:Boolean;

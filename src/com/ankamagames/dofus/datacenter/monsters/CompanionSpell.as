@@ -6,18 +6,25 @@ package com.ankamagames.dofus.datacenter.monsters
    public class CompanionSpell extends Object implements IDataCenter
    {
       
-      public function CompanionSpell() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CompanionSpell()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "CompanionSpells";
       
-      public static function getCompanionSpellById(id:uint) : CompanionSpell {
-         return GameData.getObject(MODULE,id) as CompanionSpell;
+      public static function getCompanionSpellById(id:uint) : CompanionSpell
+      {
+         //Décompilation abandonné
       }
       
-      public static function getCompanionSpells() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getCompanionSpells() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;

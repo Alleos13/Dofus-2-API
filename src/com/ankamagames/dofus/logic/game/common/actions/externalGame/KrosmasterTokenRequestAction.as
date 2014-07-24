@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.externalGame
    public class KrosmasterTokenRequestAction extends Object implements Action
    {
       
-      public function KrosmasterTokenRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : KrosmasterTokenRequestAction {
-         var action:KrosmasterTokenRequestAction = new KrosmasterTokenRequestAction();
-         return action;
+      public function KrosmasterTokenRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : KrosmasterTokenRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

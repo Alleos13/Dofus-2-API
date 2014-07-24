@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.alignments
    public class AlignmentBalance extends Object implements IDataCenter
    {
       
-      public function AlignmentBalance() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AlignmentBalance()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "AlignmentBalance";
       
       protected static const _log:Logger;
       
-      public static function getAlignmentBalanceById(id:int) : AlignmentBalance {
-         return GameData.getObject(MODULE,id) as AlignmentBalance;
+      public static function getAlignmentBalanceById(id:int) : AlignmentBalance
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAlignmentBalances() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAlignmentBalances() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -40,20 +47,14 @@ package com.ankamagames.dofus.datacenter.alignments
       
       private var _description:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get description() : String {
-         if(!this._description)
-         {
-            this._description = I18n.getText(this.descriptionId);
-         }
-         return this._description;
+      public function get description() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

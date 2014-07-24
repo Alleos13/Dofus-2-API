@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.approach.actions
    public class SubscribersGiftListRequestAction extends Object implements Action
    {
       
-      public function SubscribersGiftListRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : SubscribersGiftListRequestAction {
-         var action:SubscribersGiftListRequestAction = new SubscribersGiftListRequestAction();
-         return action;
+      public function SubscribersGiftListRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : SubscribersGiftListRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

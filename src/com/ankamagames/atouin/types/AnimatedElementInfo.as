@@ -6,12 +6,13 @@ package com.ankamagames.atouin.types
    public final class AnimatedElementInfo extends Object
    {
       
-      public function AnimatedElementInfo(tiphonSprite:TiphonSprite, min:int, max:int) {
-         super();
-         this.tiphonSprite = tiphonSprite;
-         this.min = min;
-         this.max = max;
-         this.setNextAnimation();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AnimatedElementInfo(tiphonSprite:TiphonSprite, min:int, max:int)
+      {
+         //Décompilation abandonné
       }
       
       public var tiphonSprite:TiphonSprite;
@@ -22,8 +23,9 @@ package com.ankamagames.atouin.types
       
       public var nextAnimation:int;
       
-      public function setNextAnimation() : void {
-         this.nextAnimation = getTimer() + this.min + int(Math.random() * (this.max - this.min));
+      public function setNextAnimation() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

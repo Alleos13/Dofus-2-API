@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.social
    public class AddFriendAction extends Object implements Action
    {
       
-      public function AddFriendAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(name:String) : AddFriendAction {
-         var a:AddFriendAction = new AddFriendAction();
-         a.name = name;
-         return a;
+      public function AddFriendAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(name:String) : AddFriendAction
+      {
+         //Décompilation abandonné
       }
       
       public var name:String;

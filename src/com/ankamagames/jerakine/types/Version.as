@@ -7,34 +7,18 @@ package com.ankamagames.jerakine.types
    public class Version extends Object implements IExternalizable
    {
       
-      public function Version(... args) {
-         super();
-         if(args.length == 3)
-         {
-            this._major = uint(args[0]);
-            this._minor = uint(args[1]);
-            this._release = uint(args[2]);
-         }
+      {
+      //Décompilation abandonné
       }
       
-      public static function fromString(version:String) : Version {
-         var a:Array = version.split(".");
-         if(a.length != 3)
-         {
-            throw new ArgumentError("Format de version invalide !");
-         }
-         else
-         {
-            try
-            {
-               return new Version(parseInt(a[0],10),parseInt(a[1],10),parseInt(a[2],10));
-            }
-            catch(e:*)
-            {
-               throw e;
-            }
-            return undefined;
-         }
+      public function Version(... args)
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function fromString(version:String) : Version
+      {
+         //Décompilation abandonné
       }
       
       private var _major:uint;
@@ -49,74 +33,84 @@ package com.ankamagames.jerakine.types
       
       private var _buildType:uint;
       
-      public function get major() : uint {
-         return this._major;
+      public function get major() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set major(value:uint) : void {
-         this._major = value;
+      public function set major(value:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get minor() : uint {
-         return this._minor;
+      public function get minor() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set minor(value:uint) : void {
-         this._minor = value;
+      public function set minor(value:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get release() : uint {
-         return this._release;
+      public function get release() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set release(value:uint) : void {
-         this._release = value;
+      public function set release(value:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get revision() : uint {
-         return this._revision;
+      public function get revision() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set revision(value:uint) : void {
-         this._revision = value;
+      public function set revision(value:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get patch() : uint {
-         return this._patch;
+      public function get patch() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set patch(value:uint) : void {
-         this._patch = value;
+      public function set patch(value:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get buildType() : uint {
-         return this._buildType;
+      public function get buildType() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set buildType(value:uint) : void {
-         this._buildType = value;
+      public function set buildType(value:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function toString() : String {
-         return this._major + "." + this._minor + "." + this._release + "." + this._revision + "." + this._patch;
+      public function toString() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function equals(otherVersion:Version) : Boolean {
-         return (this._major == otherVersion.major) && (this._minor == otherVersion.minor) && (this._release == otherVersion.release) && (this._buildType == otherVersion.buildType);
+      public function equals(otherVersion:Version) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function writeExternal(output:IDataOutput) : void {
-         output.writeByte(this.major);
-         output.writeByte(this.minor);
-         output.writeByte(this.release);
-         output.writeByte(this.buildType);
+      public function writeExternal(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function readExternal(input:IDataInput) : void {
-         this.major = input.readUnsignedByte();
-         this.minor = input.readUnsignedByte();
-         this.release = input.readUnsignedByte();
-         this.buildType = input.readUnsignedByte();
+      public function readExternal(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

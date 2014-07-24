@@ -9,81 +9,71 @@ package com.ankamagames.dofus.network.messages.game.context.fight
    public class GameFightHumanReadyStateMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameFightHumanReadyStateMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameFightHumanReadyStateMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 740;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var characterId:uint = 0;
       
       public var isReady:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 740;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameFightHumanReadyStateMessage(characterId:uint = 0, isReady:Boolean = false) : GameFightHumanReadyStateMessage {
-         this.characterId = characterId;
-         this.isReady = isReady;
-         this._isInitialized = true;
-         return this;
+      public function initGameFightHumanReadyStateMessage(characterId:uint = 0, isReady:Boolean = false) : GameFightHumanReadyStateMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.characterId = 0;
-         this.isReady = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameFightHumanReadyStateMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightHumanReadyStateMessage(output:IDataOutput) : void {
-         if(this.characterId < 0)
-         {
-            throw new Error("Forbidden value (" + this.characterId + ") on element characterId.");
-         }
-         else
-         {
-            output.writeInt(this.characterId);
-            output.writeBoolean(this.isReady);
-            return;
-         }
+      public function serializeAs_GameFightHumanReadyStateMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameFightHumanReadyStateMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightHumanReadyStateMessage(input:IDataInput) : void {
-         this.characterId = input.readInt();
-         if(this.characterId < 0)
-         {
-            throw new Error("Forbidden value (" + this.characterId + ") on element of GameFightHumanReadyStateMessage.characterId.");
-         }
-         else
-         {
-            this.isReady = input.readBoolean();
-            return;
-         }
+      public function deserializeAs_GameFightHumanReadyStateMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

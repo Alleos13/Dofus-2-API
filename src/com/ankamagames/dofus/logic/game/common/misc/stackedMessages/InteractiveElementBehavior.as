@@ -30,13 +30,13 @@ package com.ankamagames.dofus.logic.game.common.misc.stackedMessages
    public class InteractiveElementBehavior extends AbstractBehavior
    {
       
-      public function InteractiveElementBehavior() {
-         super();
-         this._startTime = 0;
-         this._timeOutRecolte = 0;
-         type = ALWAYS;
-         isAvailableToStart = false;
-         this._isMoving = false;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function InteractiveElementBehavior()
+      {
+         //Décompilation abandonné
       }
       
       private static var interactiveElements:Array;
@@ -67,243 +67,69 @@ package com.ankamagames.dofus.logic.game.common.misc.stackedMessages
       
       private var _isFreeMovement:Boolean = false;
       
-      override public function processInputMessage(pMsgToProcess:Message, pMode:String) : Boolean {
-         var msg:InteractiveElementActivationMessage = null;
-         var interactive:Interactive = null;
-         var ieumsg:InteractiveElementUpdatedMessage = null;
-         canBeStacked = true;
-         var entity:IEntity = DofusEntities.getEntity(PlayedCharacterManager.getInstance().id);
-         var returnValue:Boolean = false;
-         if(pMsgToProcess is MouseClickMessage)
-         {
-            this._isFreeMovement = !((pMsgToProcess as MouseClickMessage).target is SpriteWrapper);
-            return false;
-         }
-         if(pMsgToProcess is InteractiveElementActivationMessage)
-         {
-            msg = pMsgToProcess as InteractiveElementActivationMessage;
-            type = ALWAYS;
-            interactive = Interactive.getInteractiveById(msg.interactiveElement.elementTypeId);
-            if(interactive)
-            {
-               switch(interactive.actionId)
-               {
-                  case 3:
-                  case 15:
-                     type = STOP;
-                     break;
-               }
-            }
-            else
-            {
-               type = NORMAL;
-               if(pMode == ALWAYS)
-               {
-                  canBeStacked = false;
-                  return false;
-               }
-            }
-            this.interactiveElement = msg.interactiveElement;
-            this.currentSkillInstanceId = msg.skillInstanceId;
-            position = msg.position;
-            interactiveElements[msg.interactiveElement.elementId] = true;
-            InteractiveElementBehavior.currentElementId = msg.interactiveElement.elementId;
-            pendingMessage = pMsgToProcess;
-            returnValue = true;
-         }
-         else if((pMsgToProcess is GameMapMovementMessage) && ((pMsgToProcess as GameMapMovementMessage).actorId == PlayedCharacterManager.getInstance().id) && ((pMsgToProcess as GameMapMovementMessage).keyMovements[0] == entity.position.cellId))
-         {
-            this._isMoving = true;
-            if(this._isFreeMovement)
-            {
-               this._lastCellExpected = (pMsgToProcess as GameMapMovementMessage).keyMovements[(pMsgToProcess as GameMapMovementMessage).keyMovements.length - 1];
-            }
-            else
-            {
-               this._lastCellExpected = -1;
-            }
-         }
-         else if(pMsgToProcess is CharacterMovementStoppedMessage)
-         {
-            this._lastCellExpected = -1;
-            this._isMoving = false;
-         }
-         else if((pMode == ALWAYS) && (pMsgToProcess is CellClickMessage) && (this._isMoving))
-         {
-            isAvailableToStart = false;
-            returnValue = true;
-            canBeStacked = false;
-         }
-         else if(pMsgToProcess is InteractiveElementUpdatedMessage)
-         {
-            ieumsg = pMsgToProcess as InteractiveElementUpdatedMessage;
-            if(ieumsg.interactiveElement.enabledSkills.length)
-            {
-               interactiveElements[ieumsg.interactiveElement.elementId] = true;
-            }
-            else if((ieumsg.interactiveElement.disabledSkills.length) && (interactiveElements[ieumsg.interactiveElement.elementId]))
-            {
-               interactiveElements[ieumsg.interactiveElement.elementId] = null;
-            }
-            
-         }
-         
-         
-         
-         
-         return returnValue;
+      override public function processInputMessage(pMsgToProcess:Message, pMode:String) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function checkAvailability(pMsgToProcess:Message) : void {
-         if((!(this._startTime == 0)) && (getTimer() >= this._startTime + this._time))
-         {
-            isAvailableToStart = false;
-            this._startTime = 0;
-         }
-         if(PlayedCharacterManager.getInstance().isFighting)
-         {
-            this._startTime = 0;
-            isAvailableToStart = false;
-         }
-         else if((pMsgToProcess is InteractiveUsedMessage) && ((pMsgToProcess as InteractiveUsedMessage).entityId == PlayedCharacterManager.getInstance().id))
-         {
-            isAvailableToStart = true;
-            this._tmpInteractiveElementId = (pMsgToProcess as InteractiveUsedMessage).elemId;
-            this._startTime = 0;
-         }
-         else if((pMsgToProcess is InteractiveUseEndedMessage) && (this._tmpInteractiveElementId == (pMsgToProcess as InteractiveUseEndedMessage).elemId))
-         {
-            this._startTime = getTimer();
-         }
-         
-         
+      override public function checkAvailability(pMsgToProcess:Message) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function processOutputMessage(pMsgToProcess:Message, pMode:String) : Boolean {
-         var returnValue:Boolean = false;
-         if(pMsgToProcess is InteractiveUseEndedMessage)
-         {
-            this.stopAction();
-            returnValue = true;
-         }
-         else if(pMsgToProcess is InteractiveUseErrorMessage)
-         {
-            this.stopAction();
-            returnValue = true;
-            actionStarted = true;
-         }
-         else if(pMsgToProcess is InteractiveUsedMessage)
-         {
-            this.removeIcon();
-            this._duration = (pMsgToProcess as InteractiveUsedMessage).duration * 100;
-            this._timeOutRecolte = getTimer();
-            actionStarted = true;
-            returnValue = this._duration == 0;
-         }
-         else if((this._timeOutRecolte > 0) && (getTimer() > this._timeOutRecolte + this._duration + 1000))
-         {
-            this.stopAction();
-            returnValue = true;
-         }
-         
-         
-         
-         return returnValue;
+      override public function processOutputMessage(pMsgToProcess:Message, pMode:String) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function stopAction() : void {
-         actionStarted = false;
-         InteractiveElementBehavior.currentElementId = -1;
-         this.removeIcon();
+      private function stopAction() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function isAvailableToProcess(pMsg:Message) : Boolean {
-         if(interactiveElements[this.interactiveElement.elementId])
-         {
-            return true;
-         }
-         return false;
+      override public function isAvailableToProcess(pMsg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function addIcon() : void {
-         var skillId:* = 0;
-         var ieskill:InteractiveElementSkill = null;
-         var s:Skill = null;
-         var io:InteractiveObject = null;
-         if(this.interactiveElement == null)
-         {
-            return;
-         }
-         for each(ieskill in this.interactiveElement.enabledSkills)
-         {
-            if(ieskill.skillInstanceUid == this.currentSkillInstanceId)
-            {
-               skillId = ieskill.skillId;
-               break;
-            }
-         }
-         s = Skill.getSkillById(skillId);
-         sprite = RoleplayInteractivesFrame.getCursor(s.cursor,true,false);
-         sprite.y = sprite.y - sprite.height;
-         sprite.x = sprite.x - sprite.width / 2;
-         sprite.transform.colorTransform = new ColorTransform(0.33,0.33,0.33,0.5,0,0,0,0);
-         io = Atouin.getInstance().getIdentifiedElement(this.interactiveElement.elementId);
-         FiltersManager.getInstance().addEffect(io,FILTER_1);
-         FiltersManager.getInstance().addEffect(io,FILTER_2);
-         super.addIcon();
+      override public function addIcon() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function removeIcon() : void {
-         if(this.interactiveElement == null)
-         {
-            return;
-         }
-         var io:InteractiveObject = Atouin.getInstance().getIdentifiedElement(this.interactiveElement.elementId);
-         if(io)
-         {
-            FiltersManager.getInstance().removeEffect(io,FILTER_1);
-            FiltersManager.getInstance().removeEffect(io,FILTER_2);
-         }
-         super.removeIcon();
+      override public function removeIcon() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function remove() : void {
-         InteractiveElementBehavior.currentElementId = -1;
-         super.remove();
+      override public function remove() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function copy() : AbstractBehavior {
-         var cp:InteractiveElementBehavior = new InteractiveElementBehavior();
-         cp.pendingMessage = this.pendingMessage;
-         cp.interactiveElement = this.interactiveElement;
-         cp.position = this.position;
-         cp.sprite = this.sprite;
-         cp.currentSkillInstanceId = this.currentSkillInstanceId;
-         cp.isAvailableToStart = this.isAvailableToStart;
-         cp.type = this.type;
-         return cp;
+      override public function copy() : AbstractBehavior
+      {
+         //Décompilation abandonné
       }
       
-      override public function isMessageCatchable(pMsg:Message) : Boolean {
-         if(pMsg is GameMapMovementMessage)
-         {
-            return !((this._isMoving) || (actionStarted));
-         }
-         return true;
+      override public function isMessageCatchable(pMsg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function get canBeRemoved() : Boolean {
-         return !(this.interactiveElement.elementId == InteractiveElementBehavior.currentElementId);
+      override public function get canBeRemoved() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function get needToWait() : Boolean {
-         return (this._isMoving) && (!(this._lastCellExpected == -1));
+      override public function get needToWait() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function getFakePosition() : MapPoint {
-         var mp:MapPoint = new MapPoint();
-         mp.cellId = this._lastCellExpected;
-         return mp;
+      override public function getFakePosition() : MapPoint
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -7,61 +7,52 @@ package com.ankamagames.dofus.network.types.game.data.items.effects
    public class ObjectEffectLadder extends ObjectEffectCreature implements INetworkType
    {
       
-      public function ObjectEffectLadder() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ObjectEffectLadder()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 81;
       
       public var monsterCount:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 81;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initObjectEffectLadder(actionId:uint = 0, monsterFamilyId:uint = 0, monsterCount:uint = 0) : ObjectEffectLadder {
-         super.initObjectEffectCreature(actionId,monsterFamilyId);
-         this.monsterCount = monsterCount;
-         return this;
+      public function initObjectEffectLadder(actionId:uint = 0, monsterFamilyId:uint = 0, monsterCount:uint = 0) : ObjectEffectLadder
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.monsterCount = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ObjectEffectLadder(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectEffectLadder(output:IDataOutput) : void {
-         super.serializeAs_ObjectEffectCreature(output);
-         if(this.monsterCount < 0)
-         {
-            throw new Error("Forbidden value (" + this.monsterCount + ") on element monsterCount.");
-         }
-         else
-         {
-            output.writeInt(this.monsterCount);
-            return;
-         }
+      public function serializeAs_ObjectEffectLadder(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ObjectEffectLadder(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectEffectLadder(input:IDataInput) : void {
-         super.deserialize(input);
-         this.monsterCount = input.readInt();
-         if(this.monsterCount < 0)
-         {
-            throw new Error("Forbidden value (" + this.monsterCount + ") on element of ObjectEffectLadder.monsterCount.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_ObjectEffectLadder(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

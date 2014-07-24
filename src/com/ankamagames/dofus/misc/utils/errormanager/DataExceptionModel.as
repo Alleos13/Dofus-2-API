@@ -3,8 +3,13 @@ package com.ankamagames.dofus.misc.utils.errormanager
    public class DataExceptionModel extends Object
    {
       
-      public function DataExceptionModel() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DataExceptionModel()
+      {
+         //Décompilation abandonné
       }
       
       public var hash:String;
@@ -47,16 +52,9 @@ package com.ankamagames.dofus.misc.utils.errormanager
       
       public var sent:Boolean = false;
       
-      public function get errorType() : String {
-         if(this.isBlockerAndReboot)
-         {
-            return "reboot";
-         }
-         if(this.isBlockerAndChangeCharacter)
-         {
-            return "changeCharacter";
-         }
-         return "";
+      public function get errorType() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

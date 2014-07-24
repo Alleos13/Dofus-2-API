@@ -9,26 +9,13 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class SoulStoneItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function SoulStoneItemCriterion(pCriterion:String) {
-         super(pCriterion);
-         var arrayParams:Array = String(_criterionValueText).split(",");
-         if((arrayParams) && (arrayParams.length > 0))
-         {
-            if(arrayParams.length > 2)
-            {
-               trace("Les paramètres pour le critère de pierre d\'ame sont mauvais ! (" + _serverCriterionForm + ")");
-            }
-            else
-            {
-               this._monsterId = uint(arrayParams[0]);
-               this._quantityMonster = int(arrayParams[1]);
-            }
-         }
-         else
-         {
-            this._monsterId = uint(_criterionValue);
-         }
-         this._monsterName = Monster.getMonsterById(this._monsterId).name;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SoulStoneItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
       private static const ID_SOUL_STONE:Array;
@@ -39,30 +26,19 @@ package com.ankamagames.dofus.datacenter.items.criterion
       
       private var _monsterName:String;
       
-      override public function get isRespected() : Boolean {
-         var iw:ItemWrapper = null;
-         var soulStoneId:uint = 0;
-         for each(iw in InventoryManager.getInstance().realInventory)
-         {
-            for each(soulStoneId in ID_SOUL_STONE)
-            {
-               if(iw.objectGID == soulStoneId)
-               {
-                  return true;
-               }
-            }
-         }
-         return false;
+      override public function get isRespected() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         var readableCriterion:String = I18n.getUiText("ui.tooltip.possessSoulStone",[this._quantityMonster,this._monsterName]);
-         return readableCriterion;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:SoulStoneItemCriterion = new SoulStoneItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
       }
    }
 }

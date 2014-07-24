@@ -3,8 +3,13 @@ package com.ankamagames.berilia.enums
    public class StatesEnum extends Object
    {
       
-      public function StatesEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StatesEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const STATE_NORMAL:uint = 0;
@@ -35,8 +40,9 @@ package com.ankamagames.berilia.enums
       
       public static const STATE_SELECTED_CLICKED_STRING:String = "SELECTED_PRESSED";
       
-      public static function getStateEnumList() : Vector.<String> {
-         return Vector.<String>([STATE_NORMAL_STRING,STATE_CLICKED_STRING,STATE_DISABLED_STRING,STATE_OVER_STRING,STATE_SELECTED_CLICKED_STRING,STATE_SELECTED_OVER_STRING,STATE_SELECTED_STRING]);
+      public static function getStateEnumList() : Vector.<String>
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.livingObject
    public class MimicryObjectEraseRequestAction extends Object implements Action
    {
       
-      public function MimicryObjectEraseRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(hostUID:uint, hostPos:uint) : MimicryObjectEraseRequestAction {
-         var action:MimicryObjectEraseRequestAction = new MimicryObjectEraseRequestAction();
-         action.hostUID = hostUID;
-         action.hostPos = hostPos;
-         return action;
+      public function MimicryObjectEraseRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(hostUID:uint, hostPos:uint) : MimicryObjectEraseRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var hostUID:uint;

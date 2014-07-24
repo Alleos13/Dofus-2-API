@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.almanach
    public class AlmanachCalendarDateMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function AlmanachCalendarDateMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AlmanachCalendarDateMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6341;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var date:int = 0;
       
-      override public function getMessageId() : uint {
-         return 6341;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initAlmanachCalendarDateMessage(date:int = 0) : AlmanachCalendarDateMessage {
-         this.date = date;
-         this._isInitialized = true;
-         return this;
+      public function initAlmanachCalendarDateMessage(date:int = 0) : AlmanachCalendarDateMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.date = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AlmanachCalendarDateMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_AlmanachCalendarDateMessage(output:IDataOutput) : void {
-         output.writeInt(this.date);
+      public function serializeAs_AlmanachCalendarDateMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AlmanachCalendarDateMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_AlmanachCalendarDateMessage(input:IDataInput) : void {
-         this.date = input.readInt();
+      public function deserializeAs_AlmanachCalendarDateMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

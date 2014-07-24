@@ -13,11 +13,13 @@ package com.ankamagames.dofus.logic.game.common.misc
    public class Inventory extends Object
    {
       
-      public function Inventory() {
-         this._itemsDict = new Dictionary();
-         this._hookLock = new HookLock();
-         super();
-         this._views = new Dictionary();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Inventory()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -38,334 +40,154 @@ package com.ankamagames.dofus.logic.game.common.misc
       
       private var _hiddedKamas:int;
       
-      public function get hookLock() : HookLock {
-         return this._hookLock;
+      public function get hookLock() : HookLock
+      {
+         //Décompilation abandonné
       }
       
-      public function get localKamas() : int {
-         return this._kamas;
+      public function get localKamas() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get kamas() : int {
-         return this._kamas;
+      public function get kamas() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set kamas(value:int) : void {
-         this._kamas = value;
-         StorageOptionManager.getInstance().updateStorageView();
+      public function set kamas(value:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set hiddedKamas(kamas:int) : void {
-         StorageOptionManager.getInstance().updateStorageView();
+      public function set hiddedKamas(kamas:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addView(view:IInventoryView) : void {
-         this._views[view.name] = view;
+      public function addView(view:IInventoryView) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getView(name:String) : IInventoryView {
-         return this._views[name];
+      public function getView(name:String) : IInventoryView
+      {
+         //Décompilation abandonné
       }
       
-      public function removeView(name:String) : void {
-         var view:IInventoryView = this.getView(name);
-         if(view)
-         {
-            delete this._views[name];
-         }
+      public function removeView(name:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getItem(uid:int) : ItemWrapper {
-         if(this._itemsDict[uid])
-         {
-            return (this._itemsDict[uid] as ItemSet).item;
-         }
-         return null;
+      public function getItem(uid:int) : ItemWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function getItemMaskCount(uid:int, mask:String) : int {
-         var itemSet:ItemSet = this._itemsDict[uid];
-         if(!itemSet)
-         {
-            _log.error("Suppression d\'un item qui n\'existe pas");
-            return 0;
-         }
-         if(itemSet.masks.hasOwnProperty(mask))
-         {
-            return itemSet.masks[mask];
-         }
-         return 0;
+      public function getItemMaskCount(uid:int, mask:String) : int
+      {
+         //Décompilation abandonné
       }
       
-      public function initialize(items:Vector.<ItemWrapper>) : void {
-         var item:ItemWrapper = null;
-         var itemSet:ItemSet = null;
-         this._itemsDict = new Dictionary();
-         for each(item in items)
-         {
-            itemSet = new ItemSet(item);
-            this._itemsDict[item.objectUID] = itemSet;
-         }
-         this.initializeViews(items);
+      public function initialize(items:Vector.<ItemWrapper>) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function initializeFromObjectItems(items:Vector.<ObjectItem>) : void {
-         var i:* = 0;
-         var iw:ItemWrapper = null;
-         var itemSet:ItemSet = null;
-         var item:ObjectItem = null;
-         this._itemsDict = new Dictionary();
-         var list:Vector.<ItemWrapper> = new Vector.<ItemWrapper>();
-         var l:int = items.length;
-         i = 0;
-         while(i < l)
-         {
-            item = items[i];
-            iw = ItemWrapper.create(item.position,item.objectUID,item.objectGID,item.quantity,item.effects);
-            this._itemsDict[item.objectUID] = new ItemSet(iw);
-            list.push(iw);
-            i++;
-         }
-         this.initializeViews(list);
+      public function initializeFromObjectItems(items:Vector.<ObjectItem>) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addObjectItem(item:ObjectItem) : void {
-         var iw:ItemWrapper = ItemWrapper.create(item.position,item.objectUID,item.objectGID,item.quantity,item.effects,false);
-         this.addItem(iw);
+      public function addObjectItem(item:ObjectItem) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addItem(item:ItemWrapper) : void {
-         var oldItem:ItemWrapper = null;
-         var itemSet:ItemSet = this._itemsDict[item.objectUID];
-         if(itemSet)
-         {
-            oldItem = item.clone();
-            itemSet.item.quantity = itemSet.item.quantity + item.quantity;
-            itemSet.masks = new Dictionary();
-            this.modifyItemFromViews(itemSet,oldItem);
-         }
-         else
-         {
-            itemSet = new ItemSet(item);
-            this._itemsDict[item.objectUID] = itemSet;
-            this.addItemToViews(itemSet);
-         }
+      public function addItem(item:ItemWrapper) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeItem(itemUID:int, quantity:int = -1) : void {
-         var oldItem:ItemWrapper = null;
-         var itemSet:ItemSet = this._itemsDict[itemUID];
-         if(!itemSet)
-         {
-            _log.error("Suppression d\'un item qui n\'existe pas");
-            return;
-         }
-         if((quantity == -1) || (quantity == itemSet.item.quantity))
-         {
-            delete this._itemsDict[itemUID];
-            this.removeItemFromViews(itemSet);
-         }
-         else
-         {
-            if(itemSet.item.quantity < quantity)
-            {
-               _log.error("On essaye de supprimer de l\'inventaire plus d\'objet qu\'il n\'en existe");
-               return;
-            }
-            oldItem = itemSet.item.clone();
-            itemSet.item.quantity = itemSet.item.quantity - quantity;
-            this.modifyItemFromViews(itemSet,oldItem);
-         }
+      public function removeItem(itemUID:int, quantity:int = -1) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function modifyItemQuantity(itemUID:int, quantity:int) : void {
-         var itemSet:ItemSet = this._itemsDict[itemUID];
-         if(!itemSet)
-         {
-            _log.error("On essaye de modifier la quantité d\'un objet qui n\'existe pas");
-            return;
-         }
-         var iw:ItemWrapper = itemSet.item.clone();
-         iw.quantity = quantity;
-         this.modifyItem(iw);
+      public function modifyItemQuantity(itemUID:int, quantity:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function modifyItemPosition(itemUID:int, position:int) : void {
-         var itemSet:ItemSet = this._itemsDict[itemUID];
-         if(!itemSet)
-         {
-            _log.error("On essaye de modifier la position d\'un objet qui n\'existe pas");
-            return;
-         }
-         var iw:ItemWrapper = itemSet.item.clone();
-         iw.position = position;
-         if(iw.typeId == PETSMOUNT_TYPE_ID)
-         {
-            if(position == CharacterInventoryPositionEnum.ACCESSORY_POSITION_PETS)
-            {
-               PlayedCharacterManager.getInstance().isPetsMounting = true;
-            }
-            else
-            {
-               PlayedCharacterManager.getInstance().isPetsMounting = false;
-            }
-         }
-         else if(iw.typeId == COMPANION_TYPE_ID)
-         {
-            if(position == CharacterInventoryPositionEnum.INVENTORY_POSITION_COMPANION)
-            {
-               PlayedCharacterManager.getInstance().hasCompanion = true;
-            }
-            else
-            {
-               PlayedCharacterManager.getInstance().hasCompanion = false;
-            }
-         }
-         
-         this.modifyItem(iw);
+      public function modifyItemPosition(itemUID:int, position:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function modifyObjectItem(item:ObjectItem) : void {
-         var iw:ItemWrapper = ItemWrapper.create(item.position,item.objectUID,item.objectGID,item.quantity,item.effects,false);
-         this.modifyItem(iw);
+      public function modifyObjectItem(item:ObjectItem) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function modifyItem(item:ItemWrapper) : void {
-         var oldItem:ItemWrapper = null;
-         var itemSet:ItemSet = this._itemsDict[item.objectUID];
-         if(itemSet)
-         {
-            oldItem = itemSet.item.clone();
-            this.copyItem(itemSet.item,item);
-            this.modifyItemFromViews(itemSet,oldItem);
-         }
-         else
-         {
-            this.addItem(item);
-         }
+      public function modifyItem(item:ItemWrapper) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addItemMask(objectUID:int, name:String, size:int) : void {
-         var itemSet:ItemSet = this._itemsDict[objectUID];
-         if(!itemSet)
-         {
-            _log.error("On essaye de masquer un item qui n\'existe pas dans l\'inventaire");
-            return;
-         }
-         itemSet.masks[name] = size;
-         this.modifyItemFromViews(itemSet,itemSet.item);
+      public function addItemMask(objectUID:int, name:String, size:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeItemMask(objectUID:int, name:String) : void {
-         var itemSet:ItemSet = this._itemsDict[objectUID];
-         if(!itemSet)
-         {
-            _log.error("On essaye de retirer le masque d\'un item qui n\'existe pas dans l\'inventaire");
-            return;
-         }
-         delete itemSet.masks[name];
-         this.modifyItemFromViews(itemSet,itemSet.item);
+      public function removeItemMask(objectUID:int, name:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeAllItemMasks(name:String) : void {
-         var itemSet:ItemSet = null;
-         for each(itemSet in this._itemsDict)
-         {
-            if(itemSet.masks[name])
-            {
-               delete itemSet.masks[name];
-               this.modifyItemFromViews(itemSet,itemSet.item);
-            }
-         }
+      public function removeAllItemMasks(name:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeAllItemsMasks() : void {
-         var itemSet:ItemSet = null;
-         for each(itemSet in this._itemsDict)
-         {
-            if(itemSet.masks.length > 0)
-            {
-               itemSet.masks = new Dictionary();
-               this.modifyItemFromViews(itemSet,itemSet.item);
-            }
-         }
+      public function removeAllItemsMasks() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function releaseHooks() : void {
-         this._hookLock.release();
+      public function releaseHooks() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function refillView(from:String, to:String) : void {
-         var fromView:IInventoryView = this.getView(from);
-         var toView:IInventoryView = this.getView(to);
-         if((!fromView) || (!toView))
-         {
-            return;
-         }
-         toView.initialize(fromView.content);
+      public function refillView(from:String, to:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function addItemToViews(itemSet:ItemSet) : void {
-         var view:IInventoryView = null;
-         for each(view in this._views)
-         {
-            if(view.isListening(itemSet.item))
-            {
-               view.addItem(itemSet.item,0);
-            }
-         }
+      protected function addItemToViews(itemSet:ItemSet) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function modifyItemFromViews(itemSet:ItemSet, oldItem:ItemWrapper) : void {
-         var mask:* = 0;
-         var view:IInventoryView = null;
-         var quantity:int = 0;
-         for each(mask in itemSet.masks)
-         {
-            quantity = quantity + mask;
-         }
-         for each(view in this._views)
-         {
-            if(view.isListening(itemSet.item))
-            {
-               if(view.isListening(oldItem))
-               {
-                  view.modifyItem(itemSet.item,oldItem,quantity);
-               }
-               else
-               {
-                  view.addItem(itemSet.item,quantity);
-               }
-            }
-            else if(view.isListening(oldItem))
-            {
-               view.removeItem(oldItem,quantity);
-            }
-            
-         }
+      protected function modifyItemFromViews(itemSet:ItemSet, oldItem:ItemWrapper) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function removeItemFromViews(itemSet:ItemSet) : void {
-         var view:IInventoryView = null;
-         for each(view in this._views)
-         {
-            if(view.isListening(itemSet.item))
-            {
-               view.removeItem(itemSet.item,0);
-            }
-         }
+      protected function removeItemFromViews(itemSet:ItemSet) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function initializeViews(items:Vector.<ItemWrapper>) : void {
-         var view:IInventoryView = null;
-         for each(view in this._views)
-         {
-            view.initialize(items);
-         }
+      protected function initializeViews(items:Vector.<ItemWrapper>) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function copyItem(target:ItemWrapper, source:ItemWrapper) : void {
-         target.update(source.position,source.objectUID,source.objectGID,source.quantity,source.effectsList);
+      protected function copyItem(target:ItemWrapper, source:ItemWrapper) : void
+      {
+         //Décompilation abandonné
       }
    }
 }
@@ -375,24 +197,26 @@ import flash.utils.Dictionary;
 class ItemSet extends Object
 {
    
-   function ItemSet(iw:ItemWrapper) {
-      super();
-      this.item = iw;
+   {
+   //Décompilation abandonné
+   }
+   
+   function ItemSet(iw:ItemWrapper)
+   {
+      //Décompilation abandonné
    }
    
    public var item:ItemWrapper;
    
    private var _masks:Dictionary;
    
-   public function get masks() : Dictionary {
-      if(!this._masks)
-      {
-         this._masks = new Dictionary();
-      }
-      return this._masks;
+   public function get masks() : Dictionary
+   {
+      //Décompilation abandonné
    }
    
-   public function set masks(value:Dictionary) : void {
-      this._masks = value;
+   public function set masks(value:Dictionary) : void
+   {
+      //Décompilation abandonné
    }
 }

@@ -7,6 +7,10 @@ package flashx.textLayout.elements
    public interface IConfiguration
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function clone() : Configuration;
       
       function get manageTabKey() : Boolean;

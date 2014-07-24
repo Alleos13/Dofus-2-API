@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.lists
    public class CustomUiHookList extends Object
    {
       
-      public function CustomUiHookList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CustomUiHookList()
+      {
+         //Décompilation abandonné
       }
       
       public static const FoldAll:Hook;

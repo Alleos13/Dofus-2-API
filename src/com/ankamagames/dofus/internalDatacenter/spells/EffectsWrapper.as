@@ -6,11 +6,13 @@ package com.ankamagames.dofus.internalDatacenter.spells
    public class EffectsWrapper extends Object implements IDataCenter
    {
       
-      public function EffectsWrapper(effect:Array, spell:Spell, name:String) {
-         super();
-         this.effects = effect;
-         this.spellName = spell.name;
-         this.casterName = name;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EffectsWrapper(effect:Array, spell:Spell, name:String)
+      {
+         //Décompilation abandonné
       }
       
       public var effects:Array;

@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.fight.actions
    public class GameFightPlacementPositionRequestAction extends Object implements Action
    {
       
-      public function GameFightPlacementPositionRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(id:int) : GameFightPlacementPositionRequestAction {
-         var a:GameFightPlacementPositionRequestAction = new GameFightPlacementPositionRequestAction();
-         a.cellId = id;
-         return a;
+      public function GameFightPlacementPositionRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(id:int) : GameFightPlacementPositionRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var cellId:int;

@@ -6,8 +6,13 @@ package com.ankamagames.dofus.kernel.sound
    public class TubulSoundConfiguration extends Object
    {
       
-      public function TubulSoundConfiguration() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TubulSoundConfiguration()
+      {
+         //Décompilation abandonné
       }
       
       public static const TIME_FADE_IN_MUSIC:Number = 2;

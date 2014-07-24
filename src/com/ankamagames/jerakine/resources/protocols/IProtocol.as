@@ -8,7 +8,11 @@ package com.ankamagames.jerakine.resources.protocols
    public interface IProtocol extends Poolable
    {
       
-      function load(param1:Uri, param2:IResourceObserver, param3:Boolean, param4:ICache, param5:Class, param6:Boolean) : void;
+      {
+      //Décompilation abandonné
+      }
+      
+      function load(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, cache:ICache, forcedAdapter:Class, singleFile:Boolean) : void;
       
       function cancel() : void;
    }

@@ -9,95 +9,71 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeStartOkMulticraftCrafterMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeStartOkMulticraftCrafterMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeStartOkMulticraftCrafterMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5818;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var maxCase:uint = 0;
       
       public var skillId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5818;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeStartOkMulticraftCrafterMessage(maxCase:uint = 0, skillId:uint = 0) : ExchangeStartOkMulticraftCrafterMessage {
-         this.maxCase = maxCase;
-         this.skillId = skillId;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeStartOkMulticraftCrafterMessage(maxCase:uint = 0, skillId:uint = 0) : ExchangeStartOkMulticraftCrafterMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.maxCase = 0;
-         this.skillId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeStartOkMulticraftCrafterMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeStartOkMulticraftCrafterMessage(output:IDataOutput) : void {
-         if(this.maxCase < 0)
-         {
-            throw new Error("Forbidden value (" + this.maxCase + ") on element maxCase.");
-         }
-         else
-         {
-            output.writeByte(this.maxCase);
-            if(this.skillId < 0)
-            {
-               throw new Error("Forbidden value (" + this.skillId + ") on element skillId.");
-            }
-            else
-            {
-               output.writeInt(this.skillId);
-               return;
-            }
-         }
+      public function serializeAs_ExchangeStartOkMulticraftCrafterMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeStartOkMulticraftCrafterMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeStartOkMulticraftCrafterMessage(input:IDataInput) : void {
-         this.maxCase = input.readByte();
-         if(this.maxCase < 0)
-         {
-            throw new Error("Forbidden value (" + this.maxCase + ") on element of ExchangeStartOkMulticraftCrafterMessage.maxCase.");
-         }
-         else
-         {
-            this.skillId = input.readInt();
-            if(this.skillId < 0)
-            {
-               throw new Error("Forbidden value (" + this.skillId + ") on element of ExchangeStartOkMulticraftCrafterMessage.skillId.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_ExchangeStartOkMulticraftCrafterMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

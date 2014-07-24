@@ -6,30 +6,37 @@ package com.hurlant.util.der
    public class ByteString extends ByteArray implements IAsn1Type
    {
       
-      public function ByteString(type:uint = 4, length:uint = 0) {
-         super();
-         this.type = type;
-         this.len = length;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ByteString(type:uint = 4, length:uint = 0)
+      {
+         //Décompilation abandonné
       }
       
       private var type:uint;
       
       private var len:uint;
       
-      public function getLength() : uint {
-         return this.len;
+      public function getLength() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function getType() : uint {
-         return this.type;
+      public function getType() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function toDER() : ByteArray {
-         return DER.wrapDER(this.type,this);
+      public function toDER() : ByteArray
+      {
+         //Décompilation abandonné
       }
       
-      override public function toString() : String {
-         return DER.indent + "ByteString[" + this.type + "][" + this.len + "][" + Hex.fromArray(this) + "]";
+      override public function toString() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

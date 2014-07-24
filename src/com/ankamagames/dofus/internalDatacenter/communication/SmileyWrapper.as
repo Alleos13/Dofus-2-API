@@ -14,36 +14,27 @@ package com.ankamagames.dofus.internalDatacenter.communication
    public class SmileyWrapper extends Proxy implements IDataCenter, ISlotData
    {
       
-      public function SmileyWrapper() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SmileyWrapper()
+      {
+         //Décompilation abandonné
       }
       
       private static var _cache:Array;
       
       protected static const _log:Logger;
       
-      public static function create(smileyId:uint, iconId:String, order:int, useCache:Boolean = true) : SmileyWrapper {
-         var smiley:SmileyWrapper = null;
-         if((!_cache[smileyId]) || (!useCache))
-         {
-            smiley = new SmileyWrapper();
-            smiley.id = smileyId;
-            if(useCache)
-            {
-               _cache[smileyId] = smiley;
-            }
-         }
-         else
-         {
-            smiley = _cache[smileyId];
-         }
-         smiley.iconId = iconId;
-         smiley.order = order;
-         return smiley;
+      public static function create(smileyId:uint, iconId:String, order:int, useCache:Boolean = true) : SmileyWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSmileyWrapperById(id:uint) : SmileyWrapper {
-         return _cache[id];
+      public static function getSmileyWrapperById(id:uint) : SmileyWrapper
+      {
+         //Décompilation abandonné
       }
       
       private var _uri:Uri;
@@ -58,89 +49,94 @@ package com.ankamagames.dofus.internalDatacenter.communication
       
       public var quantity:uint = 1;
       
-      public function get iconUri() : Uri {
-         if(!this._uri)
-         {
-            this._uri = new Uri(XmlConfig.getInstance().getEntry("config.content.path") + "gfx/smilies/assets.swf|" + this.iconId);
-         }
-         return this._uri;
+      public function get iconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get fullSizeIconUri() : Uri {
-         if(!this._uri)
-         {
-            this._uri = new Uri(XmlConfig.getInstance().getEntry("config.content.path") + "gfx/smilies/assets.swf|" + this.iconId);
-         }
-         return this._uri;
+      public function get fullSizeIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get backGroundIconUri() : Uri {
-         return null;
+      public function get backGroundIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get errorIconUri() : Uri {
-         return null;
+      public function get errorIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get info1() : String {
-         return null;
+      public function get info1() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get startTime() : int {
-         return 0;
+      public function get startTime() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get endTime() : int {
-         return 0;
+      public function get endTime() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set endTime(t:int) : void {
+      public function set endTime(t:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get timer() : int {
-         return 0;
+      public function get timer() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get active() : Boolean {
-         return true;
+      public function get active() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get currentCooldown() : uint {
-         return 0;
+      public function get currentCooldown() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get isUsable() : Boolean {
-         return true;
+      public function get isUsable() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override flash_proxy function getProperty(name:*) : * {
-         if(isAttribute(name))
-         {
-            return this[name];
-         }
-         return "Error on smiley " + name;
+      override flash_proxy function getProperty(name:*) : *
+      {
+         //Décompilation abandonné
       }
       
-      override flash_proxy function hasProperty(name:*) : Boolean {
-         return isAttribute(name);
+      override flash_proxy function hasProperty(name:*) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function toString() : String {
-         return "[SmileyWrapper#" + this.id + "]";
+      public function toString() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function addHolder(h:ISlotDataHolder) : void {
+      public function addHolder(h:ISlotDataHolder) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeHolder(h:ISlotDataHolder) : void {
+      public function removeHolder(h:ISlotDataHolder) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getIconUri(pngMode:Boolean = true) : Uri {
-         if(!this._uri)
-         {
-            this._uri = new Uri(XmlConfig.getInstance().getEntry("config.content.path") + "gfx/smilies/assets.swf|" + this.iconId);
-         }
-         return this._uri;
+      public function getIconUri(pngMode:Boolean = true) : Uri
+      {
+         //Décompilation abandonné
       }
    }
 }

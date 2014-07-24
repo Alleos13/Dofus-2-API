@@ -10,8 +10,13 @@ package com.ankamagames.dofus.misc.lists
    public class ApiCraftActionList extends Object
    {
       
-      public function ApiCraftActionList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ApiCraftActionList()
+      {
+         //Décompilation abandonné
       }
       
       public static const JobCrafterDirectoryDefineSettings:DofusApiAction;

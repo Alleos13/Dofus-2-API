@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.common.actions
    public class OpenPopupAction extends Object implements Action
    {
       
-      public function OpenPopupAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pMsg:String = "") : OpenPopupAction {
-         var s:OpenPopupAction = new OpenPopupAction();
-         s.messageToShow = pMsg;
-         return s;
+      public function OpenPopupAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pMsg:String = "") : OpenPopupAction
+      {
+         //Décompilation abandonné
       }
       
       public var messageToShow:String;

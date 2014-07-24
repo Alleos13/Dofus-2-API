@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class NicknameErrorEnum extends Object
    {
       
-      public function NicknameErrorEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function NicknameErrorEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const ALREADY_USED:uint = 1;

@@ -12,10 +12,13 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
    public class RoleplayBuffView extends Object implements IInventoryView
    {
       
-      public function RoleplayBuffView(hookLock:HookLock) {
-         this._hookLock = new HookLock();
-         super();
-         this._hookLock = hookLock;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RoleplayBuffView(hookLock:HookLock)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -24,56 +27,49 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
       
       private var _hookLock:HookLock;
       
-      public function initialize(items:Vector.<ItemWrapper>) : void {
-         var item:ItemWrapper = null;
-         this._content = new Vector.<ItemWrapper>();
-         for each(item in items)
-         {
-            if(this.isListening(item))
-            {
-               this.addItem(item,0);
-            }
-         }
+      public function initialize(items:Vector.<ItemWrapper>) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get name() : String {
-         return "roleplayBuff";
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get content() : Vector.<ItemWrapper> {
-         return this._content;
+      public function get content() : Vector.<ItemWrapper>
+      {
+         //Décompilation abandonné
       }
       
-      public function addItem(item:ItemWrapper, invisible:int) : void {
-         this._content.unshift(item);
-         this.updateView();
+      public function addItem(item:ItemWrapper, invisible:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeItem(item:ItemWrapper, invisible:int) : void {
-         var idx:int = this.content.indexOf(item);
-         if(idx == -1)
-         {
-            _log.warn("L\'item qui doit être supprimé n\'est pas présent dans la liste");
-         }
-         this.content.splice(idx,1);
-         this.updateView();
+      public function removeItem(item:ItemWrapper, invisible:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function modifyItem(item:ItemWrapper, oldItem:ItemWrapper, invisible:int) : void {
-         this.updateView();
+      public function modifyItem(item:ItemWrapper, oldItem:ItemWrapper, invisible:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function isListening(item:ItemWrapper) : Boolean {
-         return (item.position == CharacterInventoryPositionEnum.INVENTORY_POSITION_MUTATION) || (item.position == CharacterInventoryPositionEnum.INVENTORY_POSITION_BOOST_FOOD) || (item.position == CharacterInventoryPositionEnum.INVENTORY_POSITION_FIRST_BONUS) || (item.position == CharacterInventoryPositionEnum.INVENTORY_POSITION_SECOND_BONUS) || (item.position == CharacterInventoryPositionEnum.INVENTORY_POSITION_FIRST_MALUS) || (item.position == CharacterInventoryPositionEnum.INVENTORY_POSITION_SECOND_MALUS) || (item.position == CharacterInventoryPositionEnum.INVENTORY_POSITION_ROLEPLAY_BUFFER) || (item.position == CharacterInventoryPositionEnum.INVENTORY_POSITION_FOLLOWER);
+      public function isListening(item:ItemWrapper) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function updateView() : void {
-         this._hookLock.addHook(InventoryHookList.RoleplayBuffViewContent,[this.content]);
+      public function updateView() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function empty() : void {
-         this._content = new Vector.<ItemWrapper>();
-         this.updateView();
+      public function empty() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

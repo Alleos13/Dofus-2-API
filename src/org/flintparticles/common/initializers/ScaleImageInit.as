@@ -6,56 +6,52 @@ package org.flintparticles.common.initializers
    public class ScaleImageInit extends InitializerBase
    {
       
-      public function ScaleImageInit(param1:Number, param2:Number=NaN) {
-         super();
-         this._min = param1;
-         if(isNaN(param2))
-         {
-            this._max = this._min;
-         }
-         else
-         {
-            this._max = param2;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ScaleImageInit(minScale:Number, maxScale:Number = NaN)
+      {
+         //Décompilation abandonné
       }
       
       private var _min:Number;
       
       private var _max:Number;
       
-      public function get minScale() : Number {
-         return this._min;
+      public function get minScale() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function set minScale(param1:Number) : void {
-         this._min = param1;
+      public function set minScale(value:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get maxScale() : Number {
-         return this._max;
+      public function get maxScale() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function set maxScale(param1:Number) : void {
-         this._max = param1;
+      public function set maxScale(value:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get scale() : Number {
-         return this._min == this._max?this._min:(this._max + this._min) / 2;
+      public function get scale() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function set scale(param1:Number) : void {
-         this._max = this._min = param1;
+      public function set scale(value:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function initialize(param1:Emitter, param2:Particle) : void {
-         if(this._max == this._min)
-         {
-            param2.scale = this._min;
-         }
-         else
-         {
-            param2.scale = this._min + Math.random() * (this._max - this._min);
-         }
+      override public function initialize(emitter:Emitter, particle:Particle) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

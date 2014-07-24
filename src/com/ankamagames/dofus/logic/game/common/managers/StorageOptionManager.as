@@ -20,10 +20,13 @@ package com.ankamagames.dofus.logic.game.common.managers
    public class StorageOptionManager extends Object
    {
       
-      public function StorageOptionManager() {
-         this._sortFields = [-1];
-         this._sortBankFields = [-1];
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StorageOptionManager()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -64,12 +67,9 @@ package com.ankamagames.dofus.logic.game.common.managers
       
       private static var _singleton:StorageOptionManager;
       
-      public static function getInstance() : StorageOptionManager {
-         if(!_singleton)
-         {
-            _singleton = new StorageOptionManager();
-         }
-         return _singleton;
+      public static function getInstance() : StorageOptionManager
+      {
+         //Décompilation abandonné
       }
       
       private var _inventory:Inventory;
@@ -92,368 +92,224 @@ package com.ankamagames.dofus.logic.game.common.managers
       
       private var _newSort:Boolean;
       
-      public function set category(cat:int) : void {
-         this._categoryFilter = cat;
-         this.updateStorageView();
+      public function set category(cat:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get category() : int {
-         return this._categoryFilter;
+      public function get category() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set bankCategory(cat:int) : void {
-         this._bankCategoryFilter = cat;
-         this.updateBankStorageView();
+      public function set bankCategory(cat:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get bankCategory() : int {
-         return this._bankCategoryFilter;
+      public function get bankCategory() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set filter(filterType:int) : void {
-         this._filterType = filterType;
-         if(this._filterType != -1)
-         {
-            InventoryManager.getInstance().inventory.refillView("storage","storageFiltered");
-         }
-         this.updateStorageView();
+      public function set filter(filterType:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get filter() : int {
-         return this._filterType;
+      public function get filter() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function hasFilter() : Boolean {
-         return !(this._filterType == -1);
+      public function hasFilter() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set bankFilter(bankFilterType:int) : void {
-         this._bankFilterType = bankFilterType;
-         if(this._bankFilterType != -1)
-         {
-            InventoryManager.getInstance().bankInventory.refillView("bank","bankFiltered");
-         }
-         this.updateBankStorageView();
+      public function set bankFilter(bankFilterType:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get bankFilter() : int {
-         return this._bankFilterType;
+      public function get bankFilter() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function hasBankFilter() : Boolean {
-         return !(this._bankFilterType == -1);
+      public function hasBankFilter() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get newSort() : Boolean {
-         return this._newSort;
+      public function get newSort() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set sortField(fieldName:int) : void {
-         if(this._sortFields.indexOf(fieldName) == -1)
-         {
-            if((!(fieldName == SORT_FIELD_NONE)) && (this._sortFields.length > 0))
-            {
-               this._newSort = false;
-            }
-            if(this._sortFields.length <= MAX_SORT_FIELDS - 1)
-            {
-               this._sortFields.push(fieldName);
-            }
-            else
-            {
-               this._sortFields[MAX_SORT_FIELDS - 1] = fieldName;
-            }
-         }
-         else
-         {
-            this._newSort = true;
-         }
-         this.currentStorageView.updateView();
-         this._newSort = false;
+      public function set sortField(fieldName:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get sortFields() : Array {
-         return this._sortFields;
+      public function get sortFields() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function hasSort() : Boolean {
-         return !(this._sortFields[0] == SORT_FIELD_NONE);
+      public function hasSort() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function resetSort() : void {
-         this._newSort = true;
-         this._sortFields = new Array();
+      public function resetSort() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set sortRevert(revert:Boolean) : void {
-         this._sortRevert = revert;
+      public function set sortRevert(revert:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get sortRevert() : Boolean {
-         return this._sortRevert;
+      public function get sortRevert() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set sortBankField(fieldName:int) : void {
-         var currentItems:Vector.<ItemWrapper> = null;
-         var itemsDisplayed:Vector.<ItemWrapper> = null;
-         var iw:ItemWrapper = null;
-         if(this._sortBankFields.indexOf(fieldName) == -1)
-         {
-            if((!(fieldName == SORT_FIELD_NONE)) && (this._sortBankFields.length > 0))
-            {
-               this._newSort = false;
-            }
-            if(this._sortBankFields.length <= MAX_SORT_FIELDS - 1)
-            {
-               this._sortBankFields.push(fieldName);
-            }
-            else
-            {
-               this._sortBankFields[MAX_SORT_FIELDS - 1] = fieldName;
-            }
-         }
-         else
-         {
-            this._newSort = true;
-         }
-         this.currentBankView.updateView();
-         if(this.hasBankFilter())
-         {
-            currentItems = this.currentBankView.content;
-            itemsDisplayed = new Vector.<ItemWrapper>(0);
-            for each(iw in currentItems)
-            {
-               if(iw.typeId == this.bankFilter)
-               {
-                  itemsDisplayed.push(iw.clone());
-               }
-            }
-            KernelEventsManager.getInstance().processCallback(InventoryHookList.BankViewContent,itemsDisplayed,InventoryManager.getInstance().bankInventory.localKamas);
-         }
-         this._newSort = false;
+      public function set sortBankField(fieldName:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get sortBankFields() : Array {
-         return this._sortBankFields;
+      public function get sortBankFields() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function hasBankSort() : Boolean {
-         return !(this._sortBankFields[0] == SORT_FIELD_NONE);
+      public function hasBankSort() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function resetBankSort() : void {
-         this._newSort = true;
-         this._sortBankFields = new Array();
+      public function resetBankSort() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set sortBankRevert(revert:Boolean) : void {
-         this._sortBankRevert = revert;
+      public function set sortBankRevert(revert:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get sortBankRevert() : Boolean {
-         return this._sortBankRevert;
+      public function get sortBankRevert() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get currentStorageView() : IStorageView {
-         var view:IStorageView = null;
-         view = this.inventory.getView("storageBidHouseFilter") as IStorageView;
-         if(view)
-         {
-            return view;
-         }
-         view = this.inventory.getView("storageSmithMagicFilter") as IStorageView;
-         if(view)
-         {
-            return view;
-         }
-         view = this.inventory.getView("storageCraftFilter") as IStorageView;
-         if(view)
-         {
-            return view;
-         }
-         return this.getStorageViewOrFilter();
+      public function get currentStorageView() : IStorageView
+      {
+         //Décompilation abandonné
       }
       
-      private function getStorageViewOrFilter() : IStorageView {
-         if(this.hasFilter())
-         {
-            return this.inventory.getView("storageFiltered") as IStorageView;
-         }
-         return this.getStorageView(this.category);
+      private function getStorageViewOrFilter() : IStorageView
+      {
+         //Décompilation abandonné
       }
       
-      public function get currentBankView() : IStorageView {
-         return this.getBankView(this.bankCategory);
+      public function get currentBankView() : IStorageView
+      {
+         //Décompilation abandonné
       }
       
-      public function enableBidHouseFilter(allowedTypes:Vector.<uint>, maxItemLevel:uint) : void {
-         this.disableBidHouseFilter();
-         var name:String = this.currentStorageView.name;
-         this.inventory.addView(new StorageBidHouseFilterView(this.inventory.hookLock,this.currentStorageView,allowedTypes,maxItemLevel));
-         InventoryManager.getInstance().inventory.refillView(name,"storageBidHouseFilter");
+      public function enableBidHouseFilter(allowedTypes:Vector.<uint>, maxItemLevel:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function disableBidHouseFilter() : void {
-         if(this.inventory.getView("storageBidHouseFilter"))
-         {
-            this.inventory.removeView("storageBidHouseFilter");
-         }
+      public function disableBidHouseFilter() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getIsBidHouseFilterEnabled() : Boolean {
-         return !(this.inventory.getView("storageBidHouseFilter") == null);
+      public function getIsBidHouseFilterEnabled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function enableSmithMagicFilter(skill:Skill) : void {
-         var craftFrame:CraftFrame = null;
-         this.disableSmithMagicFilter();
-         if(!skill)
-         {
-            craftFrame = Kernel.getWorker().getFrame(CraftFrame) as CraftFrame;
-            if(!craftFrame)
-            {
-               _log.error("Activation des filtres de forgemagie alors que la craftFrame n\'est pas active");
-               return;
-            }
-            skill = Skill.getSkillById(craftFrame.skillId);
-         }
-         var name:String = this.currentStorageView.name;
-         this.inventory.addView(new StorageSmithMagicFilterView(this.inventory.hookLock,this.currentStorageView,skill));
-         InventoryManager.getInstance().inventory.refillView(name,"storageSmithMagicFilter");
+      public function enableSmithMagicFilter(skill:Skill) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function disableSmithMagicFilter() : void {
-         if(this.inventory.getView("storageSmithMagicFilter"))
-         {
-            this.inventory.removeView("storageSmithMagicFilter");
-         }
+      public function disableSmithMagicFilter() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function enableCraftFilter(skill:Skill, slotCount:int) : void {
-         var craftFrame:CraftFrame = null;
-         this.disableCraftFilter();
-         if(!skill)
-         {
-            craftFrame = Kernel.getWorker().getFrame(CraftFrame) as CraftFrame;
-            if(!craftFrame)
-            {
-               _log.error("Activation des filtres de forgemagie alors que la craftFrame n\'est pas active");
-               return;
-            }
-            skill = Skill.getSkillById(craftFrame.skillId);
-         }
-         var name:String = this.currentStorageView.name;
-         this.inventory.addView(new StorageCraftFilterView(this.inventory.hookLock,this.currentStorageView,skill.id,slotCount));
-         InventoryManager.getInstance().inventory.refillView(name,"storageCraftFilter");
+      public function enableCraftFilter(skill:Skill, slotCount:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function disableCraftFilter() : void {
-         if(this.inventory.getView("storageCraftFilter"))
-         {
-            this.inventory.removeView("storageCraftFilter");
-         }
+      public function disableCraftFilter() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getIsSmithMagicFilterEnabled() : Boolean {
-         return !(this.inventory.getView("storageSmithMagicFilter") == null);
+      public function getIsSmithMagicFilterEnabled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getIsCraftFilterEnabled() : Boolean {
-         return !(this.inventory.getView("storageCraftFilter") == null);
+      public function getIsCraftFilterEnabled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getStorageView(category:int) : IStorageView {
-         switch(category)
-         {
-            case EQUIPMENT_CATEGORY:
-               return this.inventory.getView("storageEquipment") as IStorageView;
-            case CONSUMABLES_CATEGORY:
-               return this.inventory.getView("storageConsumables") as IStorageView;
-            case RESOURCES_CATEGORY:
-               return this.inventory.getView("storageResources") as IStorageView;
-            case QUEST_CATEGORY:
-               return this.inventory.getView("storageQuest") as IStorageView;
-            case ALL_CATEGORY:
-            default:
-               return this.inventory.getView("storage") as IStorageView;
-         }
+      public function getStorageView(category:int) : IStorageView
+      {
+         //Décompilation abandonné
       }
       
-      public function getBankView(category:int) : IStorageView {
-         switch(category)
-         {
-            case EQUIPMENT_CATEGORY:
-               return InventoryManager.getInstance().bankInventory.getView("bankEquipement") as IStorageView;
-            case CONSUMABLES_CATEGORY:
-               return InventoryManager.getInstance().bankInventory.getView("bankConsumables") as IStorageView;
-            case RESOURCES_CATEGORY:
-               return InventoryManager.getInstance().bankInventory.getView("bankRessources") as IStorageView;
-            case QUEST_CATEGORY:
-               return InventoryManager.getInstance().bankInventory.getView("bankQuest") as IStorageView;
-            case ALL_CATEGORY:
-            default:
-               return InventoryManager.getInstance().bankInventory.getView("bank") as IStorageView;
-         }
+      public function getBankView(category:int) : IStorageView
+      {
+         //Décompilation abandonné
       }
       
-      public function getCategoryTypes(category:uint) : Dictionary {
-         return this.getStorageView(category).types;
+      public function getCategoryTypes(category:uint) : Dictionary
+      {
+         //Décompilation abandonné
       }
       
-      public function getBankCategoryTypes(category:uint) : Dictionary {
-         return this.getBankView(category).types;
+      public function getBankCategoryTypes(category:uint) : Dictionary
+      {
+         //Décompilation abandonné
       }
       
-      public function updateStorageView() : void {
-         this._newSort = false;
-         this.refreshViews();
-         this.currentStorageView.updateView();
+      public function updateStorageView() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function updateBankStorageView() : void {
-         this._newSort = false;
-         this.getBankView(this.bankCategory).updateView();
+      public function updateBankStorageView() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function get inventory() : Inventory {
-         if(!this._inventory)
-         {
-            this._inventory = InventoryManager.getInstance().inventory;
-         }
-         return this._inventory;
+      private function get inventory() : Inventory
+      {
+         //Décompilation abandonné
       }
       
-      private function refreshViews() : void {
-         var bidHouseFilterView:StorageBidHouseFilterView = null;
-         var smithMagicFilterView:StorageSmithMagicFilterView = null;
-         var craftFilterView:StorageCraftFilterView = null;
-         var parentView:IStorageView = this.getStorageViewOrFilter();
-         if(this.getIsBidHouseFilterEnabled())
-         {
-            bidHouseFilterView = this.inventory.getView("storageBidHouseFilter") as StorageBidHouseFilterView;
-            bidHouseFilterView.parent = parentView;
-            this.refreshView("storageBidHouseFilter");
-         }
-         if(this.getIsSmithMagicFilterEnabled())
-         {
-            smithMagicFilterView = this.inventory.getView("storageSmithMagicFilter") as StorageSmithMagicFilterView;
-            smithMagicFilterView.parent = parentView;
-            this.refreshView("storageSmithMagicFilter");
-         }
-         if(this.getIsCraftFilterEnabled())
-         {
-            craftFilterView = this.inventory.getView("storageCraftFilter") as StorageCraftFilterView;
-            craftFilterView.parent = parentView;
-            this.refreshView("storageCraftFilter");
-         }
+      private function refreshViews() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function refreshView(viewName:String) : void {
-         var view:IInventoryView = this.inventory.getView(viewName);
-         this.inventory.removeView(viewName);
-         var name:String = this.currentStorageView.name;
-         this.inventory.addView(view);
-         InventoryManager.getInstance().inventory.refillView(name,viewName);
+      private function refreshView(viewName:String) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

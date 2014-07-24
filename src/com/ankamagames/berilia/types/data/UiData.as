@@ -8,13 +8,13 @@ package com.ankamagames.berilia.types.data
    public class UiData extends Object implements IModuleUtil
    {
       
-      public function UiData(module:UiModule, name:String, file:String, uiClassName:String, uiGroupName:String = null) {
-         super();
-         this._module = module;
-         this._name = name;
-         this._file = file;
-         this._uiClassName = uiClassName;
-         this._uiGroupName = uiGroupName;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function UiData(module:UiModule, name:String, file:String, uiClassName:String, uiGroupName:String = null)
+      {
+         //Décompilation abandonné
       }
       
       private var _name:String;
@@ -31,68 +31,54 @@ package com.ankamagames.berilia.types.data
       
       private var _module:UiModule;
       
-      public function get module() : UiModule {
-         return this._module;
+      public function get module() : UiModule
+      {
+         //Décompilation abandonné
       }
       
-      public function get name() : String {
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get file() : String {
-         return this._file;
+      public function get file() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get uiClassName() : String {
-         return this._uiClassName;
+      public function get uiClassName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get xml() : String {
-         return this._xml;
+      public function get xml() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get uiGroupName() : String {
-         return this._uiGroupName;
+      public function get uiGroupName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function set xml(v:String) : void {
-         if(this._xml)
-         {
-            throw new BeriliaError("xml cannot be set twice");
-         }
-         else
-         {
-            this._xml = v;
-            return;
-         }
+      public function set xml(v:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get uiClass() : Class {
-         return this._uiClass;
+      public function get uiClass() : Class
+      {
+         //Décompilation abandonné
       }
       
-      public function set uiClass(c:Class) : void {
-         if(this._uiClass)
-         {
-            throw new BeriliaError("uiClass cannot be set twice");
-         }
-         else
-         {
-            this._uiClass = c;
-            return;
-         }
+      public function set uiClass(c:Class) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function updateXml(xml:XML, accessKey:Object) : void {
-         if(accessKey != SecureCenter.ACCESS_KEY)
-         {
-            throw new IllegalOperationError("Wrong access key");
-         }
-         else
-         {
-            this._xml = xml;
-            return;
-         }
+      public function updateXml(xml:XML, accessKey:Object) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

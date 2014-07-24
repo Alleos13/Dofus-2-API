@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class AggressableStatusEnum extends Object
    {
       
-      public function AggressableStatusEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AggressableStatusEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const NON_AGGRESSABLE:uint = 0;

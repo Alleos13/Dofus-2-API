@@ -5,29 +5,13 @@ package com.ankamagames.jerakine.types
    public class DataStoreType extends Object
    {
       
-      public function DataStoreType(sCategory:String, bPersistant:Boolean, nLocation:Number = undefined, nBind:Number = undefined) {
-         super();
-         this._sCategory = sCategory;
-         this._bPersistant = bPersistant;
-         if(bPersistant)
-         {
-            if(!isNaN(nLocation))
-            {
-               this._nLocation = nLocation;
-               if(!isNaN(nBind))
-               {
-                  this._nBind = nBind;
-               }
-               else
-               {
-                  throw new JerakineError("When DataStoreType is a persistant data, arg \'nBind\' must be defined.");
-               }
-            }
-            else
-            {
-               throw new JerakineError("When DataStoreType is a persistant data, arg \'nLocation\' must be defined.");
-            }
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DataStoreType(sCategory:String, bPersistant:Boolean, nLocation:Number = NaN, nBind:Number = NaN)
+      {
+         //Décompilation abandonné
       }
       
       private static var _lastIdInitId:int;
@@ -36,22 +20,24 @@ package com.ankamagames.jerakine.types
       
       private static var _CHARACTER_ID:String;
       
-      public static function get CHARACTER_ID() : String {
-         return _CHARACTER_ID;
+      public static function get CHARACTER_ID() : String
+      {
+         //Décompilation abandonné
       }
       
-      public static function set CHARACTER_ID(value:String) : void {
-         _CHARACTER_ID = value;
-         _lastIdInitId++;
+      public static function set CHARACTER_ID(value:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function get ACCOUNT_ID() : String {
-         return _ACCOUNT_ID;
+      public static function get ACCOUNT_ID() : String
+      {
+         //Décompilation abandonné
       }
       
-      public static function set ACCOUNT_ID(value:String) : void {
-         _ACCOUNT_ID = value;
-         _lastIdInitId++;
+      public static function set ACCOUNT_ID(value:String) : void
+      {
+         //Décompilation abandonné
       }
       
       private var _sCategory:String;
@@ -66,24 +52,29 @@ package com.ankamagames.jerakine.types
       
       private var _idInitId:String;
       
-      public function get id() : String {
-         return this._id;
+      public function get id() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get category() : String {
-         return this._sCategory;
+      public function get category() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get persistant() : Boolean {
-         return this._bPersistant;
+      public function get persistant() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get location() : uint {
-         return this._nLocation;
+      public function get location() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get bind() : uint {
-         return this._nBind;
+      public function get bind() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

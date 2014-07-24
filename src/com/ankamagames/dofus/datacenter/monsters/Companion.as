@@ -7,18 +7,25 @@ package com.ankamagames.dofus.datacenter.monsters
    public class Companion extends Object implements IDataCenter
    {
       
-      public function Companion() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Companion()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Companions";
       
-      public static function getCompanionById(id:uint) : Companion {
-         return GameData.getObject(MODULE,id) as Companion;
+      public static function getCompanionById(id:uint) : Companion
+      {
+         //Décompilation abandonné
       }
       
-      public static function getCompanions() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getCompanions() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -45,20 +52,14 @@ package com.ankamagames.dofus.datacenter.monsters
       
       private var _desc:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get description() : String {
-         if(!this._desc)
-         {
-            this._desc = I18n.getText(this.descriptionId);
-         }
-         return this._desc;
+      public function get description() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

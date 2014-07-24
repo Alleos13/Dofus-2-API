@@ -10,22 +10,18 @@ package com.ankamagames.dofus.types.entities
    public class BenchmarkCharacter extends AnimatedCharacter
    {
       
-      public function BenchmarkCharacter(nId:int, look:TiphonEntityLook) {
-         super(nId,look);
-         _displayBehavior = AtouinDisplayBehavior.getInstance();
-         _movementBehavior = BenchmarkMovementBehavior.getInstance();
-         setAnimationAndDirection(AnimationEnum.ANIM_STATIQUE,DirectionsEnum.RIGHT);
-         this.id = nId;
+      {
+      //Décompilation abandonné
       }
       
-      override public function move(path:MovementPath, callback:Function = null) : void {
-         if(!path.start.equals(position))
-         {
-            _log.warn("Unsynchronized position for entity " + id + ", jumping from " + position + " to " + path.start + ".");
-            jump(path.start);
-         }
-         _movementBehavior = BenchmarkMovementBehavior.getInstance();
-         _movementBehavior.move(this,path,callback);
+      public function BenchmarkCharacter(nId:int, look:TiphonEntityLook)
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function move(path:MovementPath, callback:Function = null) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

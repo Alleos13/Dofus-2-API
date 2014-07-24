@@ -13,10 +13,13 @@ package com.ankamagames.dofus.logic.common.utils
    public class Lagometer extends Object implements ILagometer
    {
       
-      public function Lagometer() {
-         super();
-         this._timer = new Timer(SHOW_LAG_DELAY,1);
-         this._timer.addEventListener(TimerEvent.TIMER_COMPLETE,this.onTimerComplete);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Lagometer()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -27,44 +30,39 @@ package com.ankamagames.dofus.logic.common.utils
       
       protected var _lagging:Boolean = false;
       
-      public function ping(msg:INetworkMessage = null) : void {
-         this._timer.start();
+      public function ping(msg:INetworkMessage = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function pong(msg:INetworkMessage = null) : void {
-         if(this._lagging)
-         {
-            this.stopLag();
-         }
-         if(this._timer.running)
-         {
-            this._timer.stop();
-         }
+      public function pong(msg:INetworkMessage = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function stop() : void {
-         if(this._timer.running)
-         {
-            this._timer.stop();
-         }
+      public function stop() : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function onTimerComplete(e:TimerEvent) : void {
-         this.startLag();
+      protected function onTimerComplete(e:TimerEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function startLag() : void {
-         this._lagging = true;
-         this.updateUi();
+      protected function startLag() : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function updateUi() : void {
-         KernelEventsManager.getInstance().processCallback(HookList.LaggingNotification,this._lagging);
+      protected function updateUi() : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function stopLag() : void {
-         this._lagging = false;
-         this.updateUi();
+      protected function stopLag() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

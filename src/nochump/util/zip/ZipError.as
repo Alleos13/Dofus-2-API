@@ -5,8 +5,13 @@ package nochump.util.zip
    public class ZipError extends IOError
    {
       
-      public function ZipError(message:String="", id:int=0) {
-         super(message,id);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ZipError(message:String = "", id:int = 0)
+      {
+         //Décompilation abandonné
       }
    }
 }

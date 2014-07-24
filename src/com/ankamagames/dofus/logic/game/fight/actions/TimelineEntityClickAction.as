@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.fight.actions
    public class TimelineEntityClickAction extends Object implements Action
    {
       
-      public function TimelineEntityClickAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(id:int) : TimelineEntityClickAction {
-         var a:TimelineEntityClickAction = new TimelineEntityClickAction();
-         a.fighterId = id;
-         return a;
+      public function TimelineEntityClickAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(id:int) : TimelineEntityClickAction
+      {
+         //Décompilation abandonné
       }
       
       public var fighterId:int;

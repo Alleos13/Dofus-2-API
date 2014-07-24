@@ -10,33 +10,18 @@ package com.ankamagames.dofus.internalDatacenter.quest
    public class TreasureHuntWrapper extends Object implements IDataCenter
    {
       
-      public function TreasureHuntWrapper() {
-         this.stepList = new Vector.<TreasureHuntStepWrapper>();
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(questType:uint, startMapId:uint, checkPointCurrent:uint, checkPointTotal:uint, availableRetryCount:int, stepList:Vector.<TreasureHuntStep>) : TreasureHuntWrapper {
-         var step:TreasureHuntStep = null;
-         var item:TreasureHuntWrapper = new TreasureHuntWrapper();
-         item.questType = questType;
-         item.checkPointCurrent = checkPointCurrent;
-         item.checkPointTotal = checkPointTotal;
-         item.availableRetryCount = availableRetryCount;
-         var startStep:TreasureHuntStepWrapper = TreasureHuntStepWrapper.create(TreasureHuntStepTypeEnum.START,0,startMapId,0);
-         item.stepList.push(startStep);
-         for each(step in stepList)
-         {
-            if(step is TreasureHuntStepFollowDirectionToPOI)
-            {
-               item.stepList.push(TreasureHuntStepWrapper.create(TreasureHuntStepTypeEnum.DIRECTION_TO_POI,(step as TreasureHuntStepFollowDirectionToPOI).direction,0,(step as TreasureHuntStepFollowDirectionToPOI).poiLabelId));
-            }
-            if(step is TreasureHuntStepFollowDirection)
-            {
-               item.stepList.push(TreasureHuntStepWrapper.create(TreasureHuntStepTypeEnum.DIRECTION,(step as TreasureHuntStepFollowDirection).direction,0,0,(step as TreasureHuntStepFollowDirection).mapCount));
-            }
-         }
-         item.stepList.push(TreasureHuntStepWrapper.create(TreasureHuntStepTypeEnum.FIGHT,0,0,0));
-         return item;
+      public function TreasureHuntWrapper()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(questType:uint, startMapId:uint, checkPointCurrent:uint, checkPointTotal:uint, availableRetryCount:int, stepList:Vector.<TreasureHuntStep>) : TreasureHuntWrapper
+      {
+         //Décompilation abandonné
       }
       
       public var questType:uint;
@@ -49,27 +34,9 @@ package com.ankamagames.dofus.internalDatacenter.quest
       
       public var stepList:Vector.<TreasureHuntStepWrapper>;
       
-      public function update(questType:uint, startMapId:uint, checkPointCurrent:uint, checkPointTotal:uint, availableRetryCount:int, stepList:Vector.<TreasureHuntStep>) : void {
-         var step:TreasureHuntStep = null;
-         this.questType = questType;
-         this.checkPointCurrent = checkPointCurrent;
-         this.checkPointTotal = checkPointTotal;
-         this.availableRetryCount = availableRetryCount;
-         this.stepList = new Vector.<TreasureHuntStepWrapper>();
-         var startStep:TreasureHuntStepWrapper = TreasureHuntStepWrapper.create(TreasureHuntStepTypeEnum.START,0,startMapId,0);
-         this.stepList.push(startStep);
-         for each(step in stepList)
-         {
-            if(step is TreasureHuntStepFollowDirectionToPOI)
-            {
-               this.stepList.push(TreasureHuntStepWrapper.create(TreasureHuntStepTypeEnum.DIRECTION_TO_POI,(step as TreasureHuntStepFollowDirectionToPOI).direction,0,(step as TreasureHuntStepFollowDirectionToPOI).poiLabelId));
-            }
-            else if(step is TreasureHuntStepFight)
-            {
-               this.stepList.push(TreasureHuntStepWrapper.create(TreasureHuntStepTypeEnum.FIGHT,0,0,0));
-            }
-            
-         }
+      public function update(questType:uint, startMapId:uint, checkPointCurrent:uint, checkPointTotal:uint, availableRetryCount:int, stepList:Vector.<TreasureHuntStep>) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

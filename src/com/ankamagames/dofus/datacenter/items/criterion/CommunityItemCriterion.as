@@ -7,41 +7,28 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class CommunityItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function CommunityItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get isRespected() : Boolean {
-         var serverCommunity:int = PlayerManager.getInstance().server.communityId;
-         switch(_operator.text)
-         {
-            case ItemCriterionOperator.EQUAL:
-               return serverCommunity == criterionValue;
-            case ItemCriterionOperator.DIFFERENT:
-               return !(serverCommunity == criterionValue);
-            default:
-               return false;
-         }
+      public function CommunityItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         var readableCriterion:String = null;
-         var readableCriterionValue:String = PlayerManager.getInstance().server.community.name;
-         switch(_operator.text)
-         {
-            case ItemCriterionOperator.EQUAL:
-               readableCriterion = I18n.getUiText("ui.criterion.community",[readableCriterionValue]);
-               break;
-            case ItemCriterionOperator.DIFFERENT:
-               readableCriterion = I18n.getUiText("ui.criterion.notCommunity",[readableCriterionValue]);
-               break;
-         }
-         return readableCriterion;
+      override public function get isRespected() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:CommunityItemCriterion = new CommunityItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
       }
    }
 }

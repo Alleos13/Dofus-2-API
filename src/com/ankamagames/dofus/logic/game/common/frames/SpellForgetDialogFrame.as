@@ -19,48 +19,35 @@ package com.ankamagames.dofus.logic.game.common.frames
    public class SpellForgetDialogFrame extends Object implements Frame
    {
       
-      public function SpellForgetDialogFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpellForgetDialogFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      public function get priority() : int {
-         return Priority.NORMAL;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var vsfa:ValidateSpellForgetAction = null;
-         var vsfmsg:ValidateSpellForgetMessage = null;
-         var ldm:LeaveDialogMessage = null;
-         switch(true)
-         {
-            case msg is ValidateSpellForgetAction:
-               vsfa = msg as ValidateSpellForgetAction;
-               vsfmsg = new ValidateSpellForgetMessage();
-               vsfmsg.initValidateSpellForgetMessage(vsfa.spellId);
-               ConnectionsHandler.getConnection().send(vsfmsg);
-               return true;
-            case msg is LeaveDialogMessage:
-               ldm = msg as LeaveDialogMessage;
-               if(ldm.dialogType == DialogTypeEnum.DIALOG_SPELL_FORGET)
-               {
-                  Kernel.getWorker().process(ChangeWorldInteractionAction.create(true));
-                  Kernel.getWorker().removeFrame(this);
-               }
-               return true;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         KernelEventsManager.getInstance().processCallback(HookList.LeaveDialog);
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

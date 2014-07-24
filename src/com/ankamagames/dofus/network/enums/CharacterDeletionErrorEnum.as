@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class CharacterDeletionErrorEnum extends Object
    {
       
-      public function CharacterDeletionErrorEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterDeletionErrorEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const DEL_ERR_NO_REASON:uint = 1;

@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.quest
    public class QuestStepInfoRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function QuestStepInfoRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function QuestStepInfoRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5622;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var questId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5622;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initQuestStepInfoRequestMessage(questId:uint = 0) : QuestStepInfoRequestMessage {
-         this.questId = questId;
-         this._isInitialized = true;
-         return this;
+      public function initQuestStepInfoRequestMessage(questId:uint = 0) : QuestStepInfoRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.questId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_QuestStepInfoRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_QuestStepInfoRequestMessage(output:IDataOutput) : void {
-         if((this.questId < 0) || (this.questId > 65535))
-         {
-            throw new Error("Forbidden value (" + this.questId + ") on element questId.");
-         }
-         else
-         {
-            output.writeShort(this.questId);
-            return;
-         }
+      public function serializeAs_QuestStepInfoRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_QuestStepInfoRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_QuestStepInfoRequestMessage(input:IDataInput) : void {
-         this.questId = input.readUnsignedShort();
-         if((this.questId < 0) || (this.questId > 65535))
-         {
-            throw new Error("Forbidden value (" + this.questId + ") on element of QuestStepInfoRequestMessage.questId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_QuestStepInfoRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

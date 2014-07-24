@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class OpenBookAction extends Object implements Action
    {
       
-      public function OpenBookAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(name:String = null, param:Object = null) : OpenBookAction {
-         var action:OpenBookAction = new OpenBookAction();
-         action.value = name;
-         action.param = param;
-         return action;
+      public function OpenBookAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(name:String = null, param:Object = null) : OpenBookAction
+      {
+         //Décompilation abandonné
       }
       
       private var _name:String;

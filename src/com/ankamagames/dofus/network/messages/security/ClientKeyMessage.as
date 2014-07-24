@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.security
    public class ClientKeyMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ClientKeyMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ClientKeyMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5607;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var key:String = "";
       
-      override public function getMessageId() : uint {
-         return 5607;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initClientKeyMessage(key:String = "") : ClientKeyMessage {
-         this.key = key;
-         this._isInitialized = true;
-         return this;
+      public function initClientKeyMessage(key:String = "") : ClientKeyMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.key = "";
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ClientKeyMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ClientKeyMessage(output:IDataOutput) : void {
-         output.writeUTF(this.key);
+      public function serializeAs_ClientKeyMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ClientKeyMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ClientKeyMessage(input:IDataInput) : void {
-         this.key = input.readUTF();
+      public function deserializeAs_ClientKeyMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

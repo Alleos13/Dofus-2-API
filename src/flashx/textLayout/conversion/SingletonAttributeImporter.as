@@ -3,30 +3,32 @@ package flashx.textLayout.conversion
    class SingletonAttributeImporter extends Object implements IFormatImporter
    {
       
-      function SingletonAttributeImporter(param1:String) {
-         super();
-         this._keyToMatch = param1;
+      {
+      //Décompilation abandonné
+      }
+      
+      function SingletonAttributeImporter(key:String)
+      {
+         //Décompilation abandonné
       }
       
       private var _keyToMatch:String;
       
       private var _rslt:String = null;
       
-      public function reset() : void {
-         this._rslt = null;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get result() : Object {
-         return this._rslt;
+      public function get result() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function importOneFormat(param1:String, param2:String) : Boolean {
-         if(param1 == this._keyToMatch)
-         {
-            this._rslt = param2;
-            return true;
-         }
-         return false;
+      public function importOneFormat(key:String, val:String) : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

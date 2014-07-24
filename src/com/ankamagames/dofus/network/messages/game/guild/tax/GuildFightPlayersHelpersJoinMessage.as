@@ -10,83 +10,71 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
    public class GuildFightPlayersHelpersJoinMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GuildFightPlayersHelpersJoinMessage() {
-         this.playerInfo = new CharacterMinimalPlusLookInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildFightPlayersHelpersJoinMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5720;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var fightId:Number = 0;
       
       public var playerInfo:CharacterMinimalPlusLookInformations;
       
-      override public function getMessageId() : uint {
-         return 5720;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGuildFightPlayersHelpersJoinMessage(fightId:Number = 0, playerInfo:CharacterMinimalPlusLookInformations = null) : GuildFightPlayersHelpersJoinMessage {
-         this.fightId = fightId;
-         this.playerInfo = playerInfo;
-         this._isInitialized = true;
-         return this;
+      public function initGuildFightPlayersHelpersJoinMessage(fightId:Number = 0, playerInfo:CharacterMinimalPlusLookInformations = null) : GuildFightPlayersHelpersJoinMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.fightId = 0;
-         this.playerInfo = new CharacterMinimalPlusLookInformations();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GuildFightPlayersHelpersJoinMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GuildFightPlayersHelpersJoinMessage(output:IDataOutput) : void {
-         if(this.fightId < 0)
-         {
-            throw new Error("Forbidden value (" + this.fightId + ") on element fightId.");
-         }
-         else
-         {
-            output.writeDouble(this.fightId);
-            this.playerInfo.serializeAs_CharacterMinimalPlusLookInformations(output);
-            return;
-         }
+      public function serializeAs_GuildFightPlayersHelpersJoinMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GuildFightPlayersHelpersJoinMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildFightPlayersHelpersJoinMessage(input:IDataInput) : void {
-         this.fightId = input.readDouble();
-         if(this.fightId < 0)
-         {
-            throw new Error("Forbidden value (" + this.fightId + ") on element of GuildFightPlayersHelpersJoinMessage.fightId.");
-         }
-         else
-         {
-            this.playerInfo = new CharacterMinimalPlusLookInformations();
-            this.playerInfo.deserialize(input);
-            return;
-         }
+      public function deserializeAs_GuildFightPlayersHelpersJoinMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -3,16 +3,23 @@ package flashx.textLayout.property
    public class UndefinedPropertyHandler extends PropertyHandler
    {
       
-      public function UndefinedPropertyHandler() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      override public function owningHandlerCheck(param1:*) : * {
-         return param1 === null || param1 === undefined?true:undefined;
+      public function UndefinedPropertyHandler()
+      {
+         //Décompilation abandonné
       }
       
-      override public function setHelper(param1:*) : * {
-         return undefined;
+      override public function owningHandlerCheck(newVal:*) : *
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function setHelper(newVal:*) : *
+      {
+         //Décompilation abandonné
       }
    }
 }

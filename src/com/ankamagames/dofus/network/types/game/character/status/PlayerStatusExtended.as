@@ -7,45 +7,52 @@ package com.ankamagames.dofus.network.types.game.character.status
    public class PlayerStatusExtended extends PlayerStatus implements INetworkType
    {
       
-      public function PlayerStatusExtended() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PlayerStatusExtended()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 414;
       
       public var message:String = "";
       
-      override public function getTypeId() : uint {
-         return 414;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPlayerStatusExtended(statusId:uint = 1, message:String = "") : PlayerStatusExtended {
-         super.initPlayerStatus(statusId);
-         this.message = message;
-         return this;
+      public function initPlayerStatusExtended(statusId:uint = 1, message:String = "") : PlayerStatusExtended
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.message = "";
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PlayerStatusExtended(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PlayerStatusExtended(output:IDataOutput) : void {
-         super.serializeAs_PlayerStatus(output);
-         output.writeUTF(this.message);
+      public function serializeAs_PlayerStatusExtended(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PlayerStatusExtended(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PlayerStatusExtended(input:IDataInput) : void {
-         super.deserialize(input);
-         this.message = input.readUTF();
+      public function deserializeAs_PlayerStatusExtended(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

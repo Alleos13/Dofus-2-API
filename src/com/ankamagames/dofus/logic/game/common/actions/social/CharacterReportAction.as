@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.social
    public class CharacterReportAction extends Object implements Action
    {
       
-      public function CharacterReportAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(reportedId:uint, reason:uint) : CharacterReportAction {
-         var a:CharacterReportAction = new CharacterReportAction();
-         a.reportedId = reportedId;
-         a.reason = reason;
-         return a;
+      public function CharacterReportAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(reportedId:uint, reason:uint) : CharacterReportAction
+      {
+         //Décompilation abandonné
       }
       
       public var reportedId:uint;

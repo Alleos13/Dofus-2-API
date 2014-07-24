@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.mount
    public class ItemDurability extends Object implements INetworkType
    {
       
-      public function ItemDurability() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ItemDurability()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 168;
@@ -17,37 +22,39 @@ package com.ankamagames.dofus.network.types.game.mount
       
       public var durabilityMax:int = 0;
       
-      public function getTypeId() : uint {
-         return 168;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initItemDurability(durability:int = 0, durabilityMax:int = 0) : ItemDurability {
-         this.durability = durability;
-         this.durabilityMax = durabilityMax;
-         return this;
+      public function initItemDurability(durability:int = 0, durabilityMax:int = 0) : ItemDurability
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.durability = 0;
-         this.durabilityMax = 0;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ItemDurability(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ItemDurability(output:IDataOutput) : void {
-         output.writeShort(this.durability);
-         output.writeShort(this.durabilityMax);
+      public function serializeAs_ItemDurability(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ItemDurability(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ItemDurability(input:IDataInput) : void {
-         this.durability = input.readShort();
-         this.durabilityMax = input.readShort();
+      public function deserializeAs_ItemDurability(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

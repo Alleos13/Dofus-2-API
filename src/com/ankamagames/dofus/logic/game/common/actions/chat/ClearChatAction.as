@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.chat
    public class ClearChatAction extends Object implements Action
    {
       
-      public function ClearChatAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(channel:Array) : ClearChatAction {
-         var a:ClearChatAction = new ClearChatAction();
-         a.channel = channel;
-         return a;
+      public function ClearChatAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(channel:Array) : ClearChatAction
+      {
+         //Décompilation abandonné
       }
       
       public var channel:Array;

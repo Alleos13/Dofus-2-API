@@ -6,22 +6,27 @@ package com.ankamagames.jerakine.network.messages
    public class ServerConnectionFailedMessage extends Object implements Message
    {
       
-      public function ServerConnectionFailedMessage(failedConnection:ServerConnection, errorMessage:String) {
-         super();
-         this._errorMessage = errorMessage;
-         this._failedConnection = failedConnection;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ServerConnectionFailedMessage(failedConnection:ServerConnection, errorMessage:String)
+      {
+         //Décompilation abandonné
       }
       
       private var _failedConnection:ServerConnection;
       
       private var _errorMessage:String;
       
-      public function get failedConnection() : ServerConnection {
-         return this._failedConnection;
+      public function get failedConnection() : ServerConnection
+      {
+         //Décompilation abandonné
       }
       
-      public function get errorMessage() : String {
-         return this._errorMessage;
+      public function get errorMessage() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

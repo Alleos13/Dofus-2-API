@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class DelayedActionTypeEnum extends Object
    {
       
-      public function DelayedActionTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DelayedActionTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const DELAYED_ACTION_DISCONNECT:uint = 0;

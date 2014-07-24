@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class HouseGuildShareAction extends Object implements Action
    {
       
-      public function HouseGuildShareAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(enabled:Boolean, rights:int = 0) : HouseGuildShareAction {
-         var action:HouseGuildShareAction = new HouseGuildShareAction();
-         action.enabled = enabled;
-         action.rights = rights;
-         return action;
+      public function HouseGuildShareAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(enabled:Boolean, rights:int = 0) : HouseGuildShareAction
+      {
+         //Décompilation abandonné
       }
       
       public var enabled:Boolean;

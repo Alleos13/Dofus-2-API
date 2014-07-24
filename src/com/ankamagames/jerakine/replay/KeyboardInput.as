@@ -3,10 +3,13 @@ package com.ankamagames.jerakine.replay
    public class KeyboardInput extends Object
    {
       
-      public function KeyboardInput(target:String = null, content:String = null) {
-         super();
-         this.target = target;
-         this.content = content;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function KeyboardInput(target:String = null, content:String = null)
+      {
+         //Décompilation abandonné
       }
       
       public var target:String;

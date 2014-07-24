@@ -3,8 +3,13 @@ package flashx.textLayout.edit
    public final class EditingMode extends Object
    {
       
-      public function EditingMode() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EditingMode()
+      {
+         //Décompilation abandonné
       }
       
       public static const READ_ONLY:String = "readOnly";

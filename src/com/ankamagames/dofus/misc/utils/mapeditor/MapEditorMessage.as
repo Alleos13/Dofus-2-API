@@ -6,9 +6,13 @@ package com.ankamagames.dofus.misc.utils.mapeditor
    public class MapEditorMessage extends Object
    {
       
-      public function MapEditorMessage(type:uint) {
-         super();
-         this.type = type;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapEditorMessage(type:uint)
+      {
+         //Décompilation abandonné
       }
       
       public static const MESSAGE_TYPE_HELLO:uint = 1;
@@ -23,19 +27,9 @@ package com.ankamagames.dofus.misc.utils.mapeditor
       
       public var data:ByteArray;
       
-      public function serialize(target:IDataOutput) : void {
-         if(!this.data)
-         {
-            target.writeInt(4);
-            target.writeInt(this.type);
-         }
-         else
-         {
-            target.writeInt(4 + this.data.length);
-            target.writeInt(this.type);
-            this.data.position = 0;
-            target.writeBytes(this.data);
-         }
+      public function serialize(target:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

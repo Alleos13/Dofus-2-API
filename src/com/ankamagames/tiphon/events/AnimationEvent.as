@@ -5,9 +5,13 @@ package com.ankamagames.tiphon.events
    public class AnimationEvent extends Event
    {
       
-      public function AnimationEvent(type:String, pId:String, bubbles:Boolean = false, cancelable:Boolean = false) {
-         super(type,bubbles,cancelable);
-         this._id = pId;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AnimationEvent(type:String, pId:String, bubbles:Boolean = false, cancelable:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       public static const EVENT:String = "animationEventEvent";
@@ -16,12 +20,14 @@ package com.ankamagames.tiphon.events
       
       private var _id:String;
       
-      public function get id() : String {
-         return this._id;
+      public function get id() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : Event {
-         return new AnimationEvent(type,this.id,bubbles,cancelable);
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
    }
 }

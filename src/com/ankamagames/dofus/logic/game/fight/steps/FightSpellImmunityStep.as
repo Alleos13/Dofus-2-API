@@ -7,20 +7,25 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightSpellImmunityStep extends AbstractSequencable implements IFightStep
    {
       
-      public function FightSpellImmunityStep(fighterId:int) {
-         super();
-         this._fighterId = fighterId;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightSpellImmunityStep(fighterId:int)
+      {
+         //Décompilation abandonné
       }
       
       private var _fighterId:int;
       
-      public function get stepType() : String {
-         return "spellImmunity";
+      public function get stepType() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function start() : void {
-         FightEventsHelper.sendFightEvent(FightEventEnum.FIGHTER_SPELL_IMMUNITY,[this._fighterId],0,castingSpellId);
-         executeCallbacks();
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,6 +5,10 @@ package com.ankamagames.tubul.interfaces
    public interface IEventDispatcher
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function get eventDispatcher() : EventDispatcher;
    }
 }

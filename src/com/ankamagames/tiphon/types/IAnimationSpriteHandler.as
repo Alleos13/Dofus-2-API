@@ -8,15 +8,19 @@ package com.ankamagames.tiphon.types
    public interface IAnimationSpriteHandler extends ISubEntityContainer
    {
       
-      function registerColoredSprite(param1:ColoredSprite, param2:uint) : void;
+      {
+      //Décompilation abandonné
+      }
       
-      function registerInfoSprite(param1:DisplayInfoSprite, param2:String) : void;
+      function registerColoredSprite(sprite:ColoredSprite, nColorIndex:uint) : void;
       
-      function getSkinSprite(param1:EquipmentSprite) : Sprite;
+      function registerInfoSprite(sprite:DisplayInfoSprite, nViewIndex:String) : void;
       
-      function onAnimationEvent(param1:String, param2:String = "") : void;
+      function getSkinSprite(sprite:EquipmentSprite) : Sprite;
       
-      function getColorTransform(param1:uint) : ColorTransform;
+      function onAnimationEvent(eventName:String, params:String = "") : void;
+      
+      function getColorTransform(index:uint) : ColorTransform;
       
       function get tiphonEventManager() : TiphonEventsManager;
       

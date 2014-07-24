@@ -11,26 +11,28 @@ package com.ankamagames.dofus.uiApi
    public class ContextMenuApi extends Object implements IApi
    {
       
-      public function ContextMenuApi() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function registerMenuMaker(makerName:String, makerClass:Class) : void {
-         if(CheckCompatibility.isCompatible(IMenuMaker,makerClass))
-         {
-            MenusFactory.registerMaker(makerName,makerClass);
-            return;
-         }
-         throw new ApiError(makerName + " maker class is not compatible with IMenuMaker");
+      public function ContextMenuApi()
+      {
+         //Décompilation abandonné
       }
       
-      public function create(data:*, makerName:String = null, makerParams:Array = null) : ContextMenuData {
-         var menu:ContextMenuData = MenusFactory.create(SecureCenter.unsecure(data),makerName,SecureCenter.unsecure(makerParams));
-         return menu;
+      public function registerMenuMaker(makerName:String, makerClass:Class) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getMenuMaker(makerName:String) : Object {
-         return MenusFactory.getMenuMaker(makerName);
+      public function create(data:*, makerName:String = null, makerParams:Array = null) : ContextMenuData
+      {
+         //Décompilation abandonné
+      }
+      
+      public function getMenuMaker(makerName:String) : Object
+      {
+         //Décompilation abandonné
       }
    }
 }

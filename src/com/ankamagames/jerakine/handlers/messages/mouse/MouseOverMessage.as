@@ -6,16 +6,18 @@ package com.ankamagames.jerakine.handlers.messages.mouse
    public class MouseOverMessage extends MouseMessage
    {
       
-      public function MouseOverMessage() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(target:InteractiveObject, mouseEvent:MouseEvent, instance:MouseMessage = null) : MouseOverMessage {
-         if(!instance)
-         {
-            instance = new MouseOverMessage();
-         }
-         return MouseMessage.create(target,mouseEvent,instance) as MouseOverMessage;
+      public function MouseOverMessage()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(target:InteractiveObject, mouseEvent:MouseEvent, instance:MouseMessage = null) : MouseOverMessage
+      {
+         //Décompilation abandonné
       }
    }
 }

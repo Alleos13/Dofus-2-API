@@ -5,18 +5,22 @@ package com.ankamagames.tubul.events
    public class AudioBusVolumeEvent extends Event
    {
       
-      public function AudioBusVolumeEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false) {
-         super(type,bubbles,cancelable);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AudioBusVolumeEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       public static const VOLUME_CHANGED:String = "volume_changed";
       
       public var newVolume:Number;
       
-      override public function clone() : Event {
-         var abve:AudioBusVolumeEvent = new AudioBusVolumeEvent(type,bubbles,cancelable);
-         abve.newVolume = this.newVolume;
-         return abve;
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
    }
 }

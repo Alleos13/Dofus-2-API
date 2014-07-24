@@ -29,11 +29,13 @@ package com.ankamagames.dofus.scripts
    public class ScriptEntity extends Object implements LuaPackage
    {
       
-      public function ScriptEntity(pId:int, pLook:String, pEntity:TiphonSprite = null) {
-         super();
-         this._id = pId;
-         this._look = pLook;
-         this._entity = pEntity;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ScriptEntity(pId:int, pLook:String, pEntity:TiphonSprite = null)
+      {
+         //Décompilation abandonné
       }
       
       private var _id:int;
@@ -52,246 +54,174 @@ package com.ankamagames.dofus.scripts
       
       private var _scaleY:Number;
       
-      public function get x() : int {
-         if(this.getEntitySprite())
-         {
-            this._x = AnimatedCharacter(this._entity).position.x;
-         }
-         return this._x;
+      public function get x() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get y() : int {
-         if(this.getEntitySprite())
-         {
-            this._y = AnimatedCharacter(this._entity).position.y;
-         }
-         return this._y;
+      public function get y() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set x(pX:int) : void {
-         this._x = pX;
-         if(this.getEntitySprite())
-         {
-            this.teleport(this._x,this._y).start();
-         }
+      public function set x(pX:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set y(pY:int) : void {
-         this._y = pY;
-         if(this.getEntitySprite())
-         {
-            this.teleport(this._x,this._y).start();
-         }
+      public function set y(pY:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get cellId() : uint {
-         return MapPoint.fromCoords(this._x,this._y).cellId;
+      public function get cellId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set cellId(pCellId:uint) : void {
-         if(this.getEntitySprite())
-         {
-            this.teleport(pCellId).start();
-         }
+      public function set cellId(pCellId:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get id() : int {
-         return this._id;
+      public function get id() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get look() : String {
-         return this._look;
+      public function get look() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function set look(pLook:String) : void {
-         if(this.getEntitySprite())
-         {
-            this._look = pLook;
-            this._entity.look.updateFrom(EntityLookParser.fromString(pLook));
-         }
+      public function set look(pLook:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get direction() : int {
-         return this._direction;
+      public function get direction() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set direction(pDirection:int) : void {
-         this._direction = pDirection;
-         if(this.getEntitySprite())
-         {
-            this._entity.setDirection(pDirection);
-         }
+      public function set direction(pDirection:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get scaleX() : Number {
-         return this.getEntitySprite()?this._entity.scaleX:NaN;
+      public function get scaleX() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function set scaleX(pScaleX:Number) : void {
-         if(this.getEntitySprite())
-         {
-            this._entity.scaleX = pScaleX;
-         }
+      public function set scaleX(pScaleX:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get scaleY() : Number {
-         return this.getEntitySprite()?this._entity.scaleY:NaN;
+      public function get scaleY() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function set scaleY(pScaleY:Number) : void {
-         if(this.getEntitySprite())
-         {
-            this._entity.scaleY = pScaleY;
-         }
+      public function set scaleY(pScaleY:Number) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function move(... pArgs) : ISequencable {
-         var step:ISequencable = null;
-         if(this.getEntitySprite())
-         {
-            step = new MoveStep(AnimatedCharacter(this._entity),pArgs);
-         }
-         return step;
+      public function move(... pArgs) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function walk(... pArgs) : ISequencable {
-         var step:ISequencable = null;
-         if(this.getEntitySprite())
-         {
-            step = new MoveStep(AnimatedCharacter(this._entity),pArgs,WalkingMovementBehavior.getInstance());
-         }
-         return step;
+      public function walk(... pArgs) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function run(... pArgs) : ISequencable {
-         var step:ISequencable = null;
-         if(this.getEntitySprite())
-         {
-            step = new MoveStep(AnimatedCharacter(this._entity),pArgs,RunningMovementBehavior.getInstance());
-         }
-         return step;
+      public function run(... pArgs) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function slide(... pArgs) : ISequencable {
-         var step:ISequencable = null;
-         if(this.getEntitySprite())
-         {
-            step = new MoveStep(AnimatedCharacter(this._entity),pArgs,SlideMovementBehavior.getInstance());
-         }
-         return step;
+      public function slide(... pArgs) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function teleport(... pArgs) : ISequencable {
-         var step:ISequencable = null;
-         if(this.getEntitySprite())
-         {
-            step = new TeleportStep(AnimatedCharacter(this._entity),pArgs);
-         }
-         return step;
+      public function teleport(... pArgs) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function lookAt(... pArgs) : ISequencable {
-         var step:ISequencable = null;
-         if(this.getEntitySprite())
-         {
-            step = new LookAtStep(AnimatedCharacter(this._entity),pArgs);
-         }
-         return step;
+      public function lookAt(... pArgs) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function wait(pMilliseconds:int) : ISequencable {
-         return new WaitStep(pMilliseconds);
+      public function wait(pMilliseconds:int) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function stop() : ISequencable {
-         var step:ISequencable = null;
-         if(this.getEntitySprite())
-         {
-            step = new CallbackStep(new Callback(AnimatedCharacter(this._entity).stop));
-         }
-         return step;
+      public function stop() : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function setDirection(pDirection:int) : ISequencable {
-         var step:ISequencable = null;
-         if(this.getEntitySprite())
-         {
-            step = new SetDirectionStep(this._entity,pDirection);
-         }
-         return step;
+      public function setDirection(pDirection:int) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function setAnimation(pAnimation:String, pLoop:int = 1, pEndAnimation:String = "") : ISequencable {
-         var step:ISequencable = null;
-         if(this.getEntitySprite())
-         {
-            step = new PlayAnimationStep(this._entity,pAnimation,true,true,"animation_event_end",pLoop,pEndAnimation);
-         }
-         return step;
+      public function setAnimation(pAnimation:String, pLoop:int = 1, pEndAnimation:String = "") : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function playEmote(pEmoteId:int, pWaitForEnd:Boolean = true) : ISequencable {
-         var step:ISequencable = null;
-         if(this.getEntitySprite())
-         {
-            step = new PlayEmoteStep(this._entity as AnimatedCharacter,pEmoteId,pWaitForEnd);
-         }
-         return step;
+      public function playEmote(pEmoteId:int, pWaitForEnd:Boolean = true) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function playSmiley(pSmileyId:int, pWaitForEnd:Boolean = true) : ISequencable {
-         var step:ISequencable = null;
-         if(this.getEntitySprite())
-         {
-            step = new PlaySmileyStep(this._entity as AnimatedCharacter,pSmileyId,pWaitForEnd);
-         }
-         return step;
+      public function playSmiley(pSmileyId:int, pWaitForEnd:Boolean = true) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function think(pText:String, pWaitForEnd:Boolean = true) : ISequencable {
-         var step:ISequencable = null;
-         if(this.getEntitySprite())
-         {
-            step = new TextBubbleStep(this._entity as AnimatedCharacter,new ThinkBubble(pText),pWaitForEnd);
-         }
-         return step;
+      public function think(pText:String, pWaitForEnd:Boolean = true) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function speak(pText:String, pWaitForEnd:Boolean = true) : ISequencable {
-         var step:ISequencable = null;
-         if(this.getEntitySprite())
-         {
-            step = new TextBubbleStep(this._entity as AnimatedCharacter,new ChatBubble(pText),pWaitForEnd);
-         }
-         return step;
+      public function speak(pText:String, pWaitForEnd:Boolean = true) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function setLook(pLook:String) : ISequencable {
-         var step:ISequencable = null;
-         if(this.getEntitySprite())
-         {
-            step = CallbackStep(new Callback(this._entity.look.updateFrom,EntityLookParser.fromString(pLook)));
-         }
-         return step;
+      public function setLook(pLook:String) : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function display() : ISequencable {
-         return new DisplayEntityStep(this._id,this._look,MapPoint.fromCoords(this._x,this._y).cellId,this._direction);
+      public function display() : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function remove() : ISequencable {
-         return new RemoveEntityStep(this._id);
+      public function remove() : ISequencable
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function getEntitySprite() : TiphonSprite {
-         if(!this._entity)
-         {
-            this._entity = DofusEntities.getEntity(this._id) as TiphonSprite;
-         }
-         return this._entity;
+      private function getEntitySprite() : TiphonSprite
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -9,65 +9,71 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
    public class TaxCollectorStateUpdateMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function TaxCollectorStateUpdateMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TaxCollectorStateUpdateMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6455;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var uniqueId:int = 0;
       
       public var state:int = 0;
       
-      override public function getMessageId() : uint {
-         return 6455;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initTaxCollectorStateUpdateMessage(uniqueId:int = 0, state:int = 0) : TaxCollectorStateUpdateMessage {
-         this.uniqueId = uniqueId;
-         this.state = state;
-         this._isInitialized = true;
-         return this;
+      public function initTaxCollectorStateUpdateMessage(uniqueId:int = 0, state:int = 0) : TaxCollectorStateUpdateMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.uniqueId = 0;
-         this.state = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TaxCollectorStateUpdateMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_TaxCollectorStateUpdateMessage(output:IDataOutput) : void {
-         output.writeInt(this.uniqueId);
-         output.writeByte(this.state);
+      public function serializeAs_TaxCollectorStateUpdateMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TaxCollectorStateUpdateMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_TaxCollectorStateUpdateMessage(input:IDataInput) : void {
-         this.uniqueId = input.readInt();
-         this.state = input.readByte();
+      public function deserializeAs_TaxCollectorStateUpdateMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

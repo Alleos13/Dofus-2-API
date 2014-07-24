@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class PlaySoundAction extends Object implements Action
    {
       
-      public function PlaySoundAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pSoundId:String) : PlaySoundAction {
-         var action:PlaySoundAction = new PlaySoundAction();
-         action.soundId = pSoundId;
-         return action;
+      public function PlaySoundAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pSoundId:String) : PlaySoundAction
+      {
+         //Décompilation abandonné
       }
       
       public var soundId:String;

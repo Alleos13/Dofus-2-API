@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.interactive
    public class InteractiveElementSkill extends Object implements INetworkType
    {
       
-      public function InteractiveElementSkill() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function InteractiveElementSkill()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 219;
@@ -17,67 +22,39 @@ package com.ankamagames.dofus.network.types.game.interactive
       
       public var skillInstanceUid:uint = 0;
       
-      public function getTypeId() : uint {
-         return 219;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initInteractiveElementSkill(skillId:uint = 0, skillInstanceUid:uint = 0) : InteractiveElementSkill {
-         this.skillId = skillId;
-         this.skillInstanceUid = skillInstanceUid;
-         return this;
+      public function initInteractiveElementSkill(skillId:uint = 0, skillInstanceUid:uint = 0) : InteractiveElementSkill
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.skillId = 0;
-         this.skillInstanceUid = 0;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_InteractiveElementSkill(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_InteractiveElementSkill(output:IDataOutput) : void {
-         if(this.skillId < 0)
-         {
-            throw new Error("Forbidden value (" + this.skillId + ") on element skillId.");
-         }
-         else
-         {
-            output.writeInt(this.skillId);
-            if(this.skillInstanceUid < 0)
-            {
-               throw new Error("Forbidden value (" + this.skillInstanceUid + ") on element skillInstanceUid.");
-            }
-            else
-            {
-               output.writeInt(this.skillInstanceUid);
-               return;
-            }
-         }
+      public function serializeAs_InteractiveElementSkill(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_InteractiveElementSkill(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_InteractiveElementSkill(input:IDataInput) : void {
-         this.skillId = input.readInt();
-         if(this.skillId < 0)
-         {
-            throw new Error("Forbidden value (" + this.skillId + ") on element of InteractiveElementSkill.skillId.");
-         }
-         else
-         {
-            this.skillInstanceUid = input.readInt();
-            if(this.skillInstanceUid < 0)
-            {
-               throw new Error("Forbidden value (" + this.skillInstanceUid + ") on element of InteractiveElementSkill.skillInstanceUid.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_InteractiveElementSkill(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

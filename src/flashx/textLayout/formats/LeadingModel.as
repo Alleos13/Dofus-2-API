@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public final class LeadingModel extends Object
    {
       
-      public function LeadingModel() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LeadingModel()
+      {
+         //Décompilation abandonné
       }
       
       public static const ROMAN_UP:String = "romanUp";

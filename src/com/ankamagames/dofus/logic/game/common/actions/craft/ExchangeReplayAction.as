@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.craft
    public class ExchangeReplayAction extends Object implements Action
    {
       
-      public function ExchangeReplayAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pCount:int) : ExchangeReplayAction {
-         var action:ExchangeReplayAction = new ExchangeReplayAction();
-         action.count = pCount;
-         return action;
+      public function ExchangeReplayAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pCount:int) : ExchangeReplayAction
+      {
+         //Décompilation abandonné
       }
       
       public var count:int;

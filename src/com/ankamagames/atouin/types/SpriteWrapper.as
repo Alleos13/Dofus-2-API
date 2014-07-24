@@ -7,16 +7,20 @@ package com.ankamagames.atouin.types
    public class SpriteWrapper extends Sprite implements ICustomUnicNameGetter
    {
       
-      public function SpriteWrapper(content:DisplayObject, identifier:uint) {
-         super();
-         addChild(content);
-         this._name = "mapGfx::" + identifier;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpriteWrapper(content:DisplayObject, identifier:uint)
+      {
+         //Décompilation abandonné
       }
       
       private var _name:String;
       
-      public function get customUnicName() : String {
-         return this._name;
+      public function get customUnicName() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

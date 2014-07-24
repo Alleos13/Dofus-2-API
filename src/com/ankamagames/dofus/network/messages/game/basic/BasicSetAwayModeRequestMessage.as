@@ -10,68 +10,71 @@ package com.ankamagames.dofus.network.messages.game.basic
    public class BasicSetAwayModeRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function BasicSetAwayModeRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BasicSetAwayModeRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5665;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var enable:Boolean = false;
       
       public var invisible:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 5665;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initBasicSetAwayModeRequestMessage(enable:Boolean = false, invisible:Boolean = false) : BasicSetAwayModeRequestMessage {
-         this.enable = enable;
-         this.invisible = invisible;
-         this._isInitialized = true;
-         return this;
+      public function initBasicSetAwayModeRequestMessage(enable:Boolean = false, invisible:Boolean = false) : BasicSetAwayModeRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.enable = false;
-         this.invisible = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_BasicSetAwayModeRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_BasicSetAwayModeRequestMessage(output:IDataOutput) : void {
-         var _box0:uint = 0;
-         _box0 = BooleanByteWrapper.setFlag(_box0,0,this.enable);
-         _box0 = BooleanByteWrapper.setFlag(_box0,1,this.invisible);
-         output.writeByte(_box0);
+      public function serializeAs_BasicSetAwayModeRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_BasicSetAwayModeRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_BasicSetAwayModeRequestMessage(input:IDataInput) : void {
-         var _box0:uint = input.readByte();
-         this.enable = BooleanByteWrapper.getFlag(_box0,0);
-         this.invisible = BooleanByteWrapper.getFlag(_box0,1);
+      public function deserializeAs_BasicSetAwayModeRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

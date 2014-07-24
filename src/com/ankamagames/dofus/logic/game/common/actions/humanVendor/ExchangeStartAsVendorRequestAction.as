@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.humanVendor
    public class ExchangeStartAsVendorRequestAction extends Object implements Action
    {
       
-      public function ExchangeStartAsVendorRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : ExchangeStartAsVendorRequestAction {
-         var a:ExchangeStartAsVendorRequestAction = new ExchangeStartAsVendorRequestAction();
-         return a;
+      public function ExchangeStartAsVendorRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : ExchangeStartAsVendorRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
    public class DeleteObjectAction extends Object implements Action
    {
       
-      public function DeleteObjectAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(objectUID:uint, quantity:uint) : DeleteObjectAction {
-         var a:DeleteObjectAction = new DeleteObjectAction();
-         a.objectUID = objectUID;
-         a.quantity = quantity;
-         return a;
+      public function DeleteObjectAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(objectUID:uint, quantity:uint) : DeleteObjectAction
+      {
+         //Décompilation abandonné
       }
       
       public var objectUID:uint;

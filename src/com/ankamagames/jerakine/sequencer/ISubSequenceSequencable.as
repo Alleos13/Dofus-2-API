@@ -4,5 +4,9 @@ package com.ankamagames.jerakine.sequencer
    
    public interface ISubSequenceSequencable extends ISequencable, IEventDispatcher
    {
+      
+      {
+      //Décompilation abandonné
+      }
    }
 }

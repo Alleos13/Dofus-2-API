@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.guild
    public class GuildLevelUpMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GuildLevelUpMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildLevelUpMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6062;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var newLevel:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6062;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGuildLevelUpMessage(newLevel:uint = 0) : GuildLevelUpMessage {
-         this.newLevel = newLevel;
-         this._isInitialized = true;
-         return this;
+      public function initGuildLevelUpMessage(newLevel:uint = 0) : GuildLevelUpMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.newLevel = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GuildLevelUpMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GuildLevelUpMessage(output:IDataOutput) : void {
-         if((this.newLevel < 2) || (this.newLevel > 200))
-         {
-            throw new Error("Forbidden value (" + this.newLevel + ") on element newLevel.");
-         }
-         else
-         {
-            output.writeByte(this.newLevel);
-            return;
-         }
+      public function serializeAs_GuildLevelUpMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GuildLevelUpMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildLevelUpMessage(input:IDataInput) : void {
-         this.newLevel = input.readUnsignedByte();
-         if((this.newLevel < 2) || (this.newLevel > 200))
-         {
-            throw new Error("Forbidden value (" + this.newLevel + ") on element of GuildLevelUpMessage.newLevel.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_GuildLevelUpMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

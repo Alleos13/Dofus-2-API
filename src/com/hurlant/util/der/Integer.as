@@ -6,30 +6,37 @@ package com.hurlant.util.der
    public class Integer extends BigInteger implements IAsn1Type
    {
       
-      public function Integer(type:uint, length:uint, b:ByteArray) {
-         this.type = type;
-         this.len = length;
-         super(b);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Integer(type:uint, length:uint, b:ByteArray)
+      {
+         //Décompilation abandonné
       }
       
       private var type:uint;
       
       private var len:uint;
       
-      public function getLength() : uint {
-         return this.len;
+      public function getLength() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function getType() : uint {
-         return this.type;
+      public function getType() : uint
+      {
+         //Décompilation abandonné
       }
       
-      override public function toString(radix:Number = 0) : String {
-         return DER.indent + "Integer[" + this.type + "][" + this.len + "][" + super.toString(16) + "]";
+      override public function toString(radix:Number = 0) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function toDER() : ByteArray {
-         return null;
+      public function toDER() : ByteArray
+      {
+         //Décompilation abandonné
       }
    }
 }

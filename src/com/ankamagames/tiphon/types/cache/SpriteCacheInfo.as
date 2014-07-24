@@ -6,10 +6,13 @@ package com.ankamagames.tiphon.types.cache
    public class SpriteCacheInfo extends Object
    {
       
-      public function SpriteCacheInfo(tiphonSprite:TiphonSprite, tiphonEntityLook:TiphonEntityLook) {
-         super();
-         this.sprite = tiphonSprite;
-         this.look = tiphonEntityLook;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpriteCacheInfo(tiphonSprite:TiphonSprite, tiphonEntityLook:TiphonEntityLook)
+      {
+         //Décompilation abandonné
       }
       
       public var sprite:TiphonSprite;

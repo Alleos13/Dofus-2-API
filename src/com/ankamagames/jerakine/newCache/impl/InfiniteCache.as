@@ -6,43 +6,47 @@ package com.ankamagames.jerakine.newCache.impl
    public class InfiniteCache extends Object implements ICache
    {
       
-      public function InfiniteCache() {
-         this._cache = new Dictionary(true);
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function InfiniteCache()
+      {
+         //Décompilation abandonné
       }
       
       protected var _cache:Dictionary;
       
       protected var _size:uint;
       
-      public function get size() : uint {
-         return this._size;
+      public function get size() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function contains(ref:*) : Boolean {
-         return !(this._cache[ref] == null);
+      public function contains(ref:*) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function extract(ref:*) : * {
-         var obj:* = this._cache[ref];
-         delete this._cache[ref];
-         this._size--;
-         return obj;
+      public function extract(ref:*) : *
+      {
+         //Décompilation abandonné
       }
       
-      public function peek(ref:*) : * {
-         return this._cache[ref];
+      public function peek(ref:*) : *
+      {
+         //Décompilation abandonné
       }
       
-      public function store(ref:*, obj:*) : Boolean {
-         this._cache[ref] = obj;
-         this._size++;
-         return true;
+      public function store(ref:*, obj:*) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         this._cache = new Dictionary(true);
-         this._size = 0;
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

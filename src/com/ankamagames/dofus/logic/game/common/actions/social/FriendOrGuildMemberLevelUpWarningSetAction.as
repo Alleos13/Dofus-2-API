@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.social
    public class FriendOrGuildMemberLevelUpWarningSetAction extends Object implements Action
    {
       
-      public function FriendOrGuildMemberLevelUpWarningSetAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(enable:Boolean) : FriendOrGuildMemberLevelUpWarningSetAction {
-         var a:FriendOrGuildMemberLevelUpWarningSetAction = new FriendOrGuildMemberLevelUpWarningSetAction();
-         a.enable = enable;
-         return a;
+      public function FriendOrGuildMemberLevelUpWarningSetAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(enable:Boolean) : FriendOrGuildMemberLevelUpWarningSetAction
+      {
+         //Décompilation abandonné
       }
       
       public var enable:Boolean;

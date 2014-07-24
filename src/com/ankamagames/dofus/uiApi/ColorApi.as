@@ -7,30 +7,40 @@ package com.ankamagames.dofus.uiApi
    public class ColorApi extends Object implements IApi
    {
       
-      public function ColorApi() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ColorApi()
+      {
+         //Décompilation abandonné
       }
       
       private var _module:UiModule;
       
-      public function set module(value:UiModule) : void {
-         this._module = value;
+      public function set module(value:UiModule) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         this._module = null;
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function changeLightness(c:uint, value:Number) : uint {
-         return Color.setHSLlightness(c,value);
+      public function changeLightness(c:uint, value:Number) : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function changeSaturation(c:uint, saturation:Number) : uint {
-         return Color.setHSVSaturation(c,saturation);
+      public function changeSaturation(c:uint, saturation:Number) : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function generateColorList(methode:int) : Array {
-         return Color.generateColorList(methode);
+      public function generateColorList(methode:int) : Array
+      {
+         //Décompilation abandonné
       }
    }
 }

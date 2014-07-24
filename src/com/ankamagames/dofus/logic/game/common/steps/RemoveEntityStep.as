@@ -10,28 +10,20 @@ package com.ankamagames.dofus.logic.game.common.steps
    public class RemoveEntityStep extends AbstractSequencable
    {
       
-      public function RemoveEntityStep(pEntityId:int) {
-         super();
-         this._id = pEntityId;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RemoveEntityStep(pEntityId:int)
+      {
+         //Décompilation abandonné
       }
       
       private var _id:int;
       
-      override public function start() : void {
-         var luaEntityApi:EntityApi = null;
-         var gcrem:GameContextRemoveElementMessage = new GameContextRemoveElementMessage();
-         gcrem.initGameContextRemoveElementMessage(this._id);
-         Kernel.getWorker().process(gcrem);
-         var luaPlayer:LuaPlayer = ScriptsManager.getInstance().getPlayer(ScriptsManager.LUA_PLAYER) as LuaPlayer;
-         if(luaPlayer)
-         {
-            luaEntityApi = ScriptsManager.getInstance().getPlayerApi(luaPlayer,"EntityApi") as EntityApi;
-            if(luaEntityApi)
-            {
-               luaEntityApi.removeEntity(this._id);
-            }
-         }
-         executeCallbacks();
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

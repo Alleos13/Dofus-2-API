@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class GameActionMarkTypeEnum extends Object
    {
       
-      public function GameActionMarkTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameActionMarkTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const GLYPH:int = 1;

@@ -16,53 +16,42 @@ package com.ankamagames.dofus.logic.game.common.frames
    public class AlignmentFrame extends Object implements Frame
    {
       
-      public function AlignmentFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AlignmentFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       private var _alignmentRank:int = -1;
       
-      public function get priority() : int {
-         return Priority.NORMAL;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get playerRank() : int {
-         return this._alignmentRank;
+      public function get playerRank() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var sepract:SetEnablePVPRequestAction = null;
-         var seprmsg:SetEnablePVPRequestMessage = null;
-         var arumsg:AlignmentRankUpdateMessage = null;
-         switch(true)
-         {
-            case msg is SetEnablePVPRequestAction:
-               sepract = msg as SetEnablePVPRequestAction;
-               seprmsg = new SetEnablePVPRequestMessage();
-               seprmsg.initSetEnablePVPRequestMessage(sepract.enable);
-               ConnectionsHandler.getConnection().send(seprmsg);
-               return true;
-            case msg is AlignmentRankUpdateMessage:
-               arumsg = msg as AlignmentRankUpdateMessage;
-               this._alignmentRank = arumsg.alignmentRank;
-               if(arumsg.verbose)
-               {
-                  KernelEventsManager.getInstance().processCallback(AlignmentHookList.AlignmentRankUpdate,arumsg.alignmentRank);
-               }
-               return true;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.quest
    public class QuestStartRequestAction extends Object implements Action
    {
       
-      public function QuestStartRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(questId:int) : QuestStartRequestAction {
-         var a:QuestStartRequestAction = new QuestStartRequestAction();
-         a.questId = questId;
-         return a;
+      public function QuestStartRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(questId:int) : QuestStartRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var questId:int;

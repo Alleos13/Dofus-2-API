@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.lists
    public class InventoryHookList extends Object
    {
       
-      public function InventoryHookList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function InventoryHookList()
+      {
+         //Décompilation abandonné
       }
       
       public static const StorageInventoryContent:Hook;

@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public final class BlockProgression extends Object
    {
       
-      public function BlockProgression() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BlockProgression()
+      {
+         //Décompilation abandonné
       }
       
       public static const RL:String = "rl";

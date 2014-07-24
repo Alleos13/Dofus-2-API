@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.alliance
    public class AllianceInsiderInfoRequestAction extends Object implements Action
    {
       
-      public function AllianceInsiderInfoRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : AllianceInsiderInfoRequestAction {
-         var action:AllianceInsiderInfoRequestAction = new AllianceInsiderInfoRequestAction();
-         return action;
+      public function AllianceInsiderInfoRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : AllianceInsiderInfoRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

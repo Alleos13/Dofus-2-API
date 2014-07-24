@@ -11,46 +11,20 @@ package com.ankamagames.dofus.internalDatacenter.guild
    public class GuildFactSheetWrapper extends Object implements IDataCenter
    {
       
-      public function GuildFactSheetWrapper() {
-         this.members = new Vector.<CharacterMinimalInformations>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildFactSheetWrapper()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      public static function create(guildId:uint, guildName:String, guildEmblem:GuildEmblem, leaderId:uint, leaderName:String, guildLevel:uint, nbMembers:uint, creationDate:Number, members:Vector.<CharacterMinimalInformations>, nbConnectedMembers:uint = 0, nbTaxCollectors:uint = 0, lastActivity:Number = 0, enabled:Boolean = true, allianceId:uint = 0, allianceName:String = "", allianceLeader:Boolean = false) : GuildFactSheetWrapper {
-         var nowDate:Date = null;
-         var item:GuildFactSheetWrapper = new GuildFactSheetWrapper();
-         item.guildId = guildId;
-         item._guildName = guildName;
-         if(guildEmblem != null)
-         {
-            item.upEmblem = EmblemWrapper.create(guildEmblem.symbolShape,EmblemWrapper.UP,guildEmblem.symbolColor);
-            item.backEmblem = EmblemWrapper.create(guildEmblem.backgroundShape,EmblemWrapper.BACK,guildEmblem.backgroundColor);
-         }
-         item.leaderId = leaderId;
-         item.guildLevel = guildLevel;
-         item.nbMembers = nbMembers;
-         item.creationDate = creationDate;
-         item.members = members;
-         item._leaderName = leaderName;
-         item.allianceId = allianceId;
-         item._allianceName = allianceName;
-         item.allianceLeader = allianceLeader;
-         item.nbConnectedMembers = nbConnectedMembers;
-         item.nbTaxCollectors = nbTaxCollectors;
-         item.lastActivity = lastActivity;
-         if(lastActivity == 0)
-         {
-            item.hoursSinceLastConnection = 0;
-         }
-         else
-         {
-            nowDate = new Date();
-            item.hoursSinceLastConnection = (nowDate.time - lastActivity * 1000) / 3600000;
-         }
-         item.enabled = enabled;
-         return item;
+      public static function create(guildId:uint, guildName:String, guildEmblem:GuildEmblem, leaderId:uint, leaderName:String, guildLevel:uint, nbMembers:uint, creationDate:Number, members:Vector.<CharacterMinimalInformations>, nbConnectedMembers:uint = 0, nbTaxCollectors:uint = 0, lastActivity:Number = 0, enabled:Boolean = true, allianceId:uint = 0, allianceName:String = "", allianceTag:String = "", allianceLeader:Boolean = false) : GuildFactSheetWrapper
+      {
+         //Décompilation abandonné
       }
       
       private var _guildName:String;
@@ -58,6 +32,8 @@ package com.ankamagames.dofus.internalDatacenter.guild
       private var _leaderName:String = "";
       
       private var _allianceName:String;
+      
+      private var _allianceTag:String;
       
       public var guildId:uint;
       
@@ -89,62 +65,34 @@ package com.ankamagames.dofus.internalDatacenter.guild
       
       public var hoursSinceLastConnection:Number;
       
-      public function get guildName() : String {
-         if(this._guildName == "#NONAME#")
-         {
-            return I18n.getUiText("ui.guild.noName");
-         }
-         return this._guildName;
+      public function get guildName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get realGuildName() : String {
-         return this._guildName;
+      public function get realGuildName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get allianceName() : String {
-         if(this._allianceName == "#NONAME#")
-         {
-            return I18n.getUiText("ui.guild.noName");
-         }
-         return this._allianceName;
+      public function get allianceName() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get leaderName() : String {
-         if((this._leaderName == "") && (this.members) && (this.members.length > 0))
-         {
-            return this.members[0].name;
-         }
-         return this._leaderName;
+      public function get allianceTag() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function update(guildId:uint, guildName:String, guildEmblem:GuildEmblem, leaderId:uint, leaderName:String, guildLevel:uint, nbMembers:uint, creationDate:Number, members:Vector.<CharacterMinimalInformations>, nbConnectedMembers:uint = 0, nbTaxCollectors:uint = 0, lastActivity:Number = 0, enabled:Boolean = true, allianceId:uint = 0, allianceName:String = "", allianceLeader:Boolean = false) : void {
-         var nowDate:Date = null;
-         this.guildId = guildId;
-         this._guildName = guildName;
-         this.upEmblem.update(guildEmblem.symbolShape,EmblemWrapper.UP,guildEmblem.symbolColor);
-         this.backEmblem.update(guildEmblem.backgroundShape,EmblemWrapper.BACK,guildEmblem.backgroundColor);
-         this.leaderId = leaderId;
-         this.guildLevel = guildLevel;
-         this.nbMembers = nbMembers;
-         this.creationDate = creationDate;
-         this.members = members;
-         this._leaderName = leaderName;
-         this.allianceId = allianceId;
-         this._allianceName = allianceName;
-         this.allianceLeader = allianceLeader;
-         this.nbConnectedMembers = nbConnectedMembers;
-         this.nbTaxCollectors = nbTaxCollectors;
-         this.lastActivity = lastActivity;
-         if(lastActivity == 0)
-         {
-            this.hoursSinceLastConnection = 0;
-         }
-         else
-         {
-            nowDate = new Date();
-            this.hoursSinceLastConnection = (nowDate.time - lastActivity * 1000) / 3600000;
-         }
-         this.enabled = enabled;
+      public function get leaderName() : String
+      {
+         //Décompilation abandonné
+      }
+      
+      public function update(guildId:uint, guildName:String, guildEmblem:GuildEmblem, leaderId:uint, leaderName:String, guildLevel:uint, nbMembers:uint, creationDate:Number, members:Vector.<CharacterMinimalInformations>, nbConnectedMembers:uint = 0, nbTaxCollectors:uint = 0, lastActivity:Number = 0, enabled:Boolean = true, allianceId:uint = 0, allianceName:String = "", allianceTag:String = "", allianceLeader:Boolean = false) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

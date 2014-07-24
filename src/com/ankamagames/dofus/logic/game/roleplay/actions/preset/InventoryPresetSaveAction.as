@@ -5,16 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions.preset
    public class InventoryPresetSaveAction extends Object implements Action
    {
       
-      public function InventoryPresetSaveAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(presetId:uint, symbolId:uint, saveEquipment:Boolean) : InventoryPresetSaveAction {
-         var a:InventoryPresetSaveAction = new InventoryPresetSaveAction();
-         a.presetId = presetId;
-         a.symbolId = symbolId;
-         a.saveEquipment = saveEquipment;
-         return a;
+      public function InventoryPresetSaveAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(presetId:uint, symbolId:uint, saveEquipment:Boolean) : InventoryPresetSaveAction
+      {
+         //Décompilation abandonné
       }
       
       public var presetId:uint;

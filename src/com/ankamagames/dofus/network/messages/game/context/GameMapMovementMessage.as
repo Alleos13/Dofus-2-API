@@ -9,96 +9,71 @@ package com.ankamagames.dofus.network.messages.game.context
    public class GameMapMovementMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameMapMovementMessage() {
-         this.keyMovements = new Vector.<uint>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameMapMovementMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 951;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var keyMovements:Vector.<uint>;
       
       public var actorId:int = 0;
       
-      override public function getMessageId() : uint {
-         return 951;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameMapMovementMessage(keyMovements:Vector.<uint> = null, actorId:int = 0) : GameMapMovementMessage {
-         this.keyMovements = keyMovements;
-         this.actorId = actorId;
-         this._isInitialized = true;
-         return this;
+      public function initGameMapMovementMessage(keyMovements:Vector.<uint> = null, actorId:int = 0) : GameMapMovementMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.keyMovements = new Vector.<uint>();
-         this.actorId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameMapMovementMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameMapMovementMessage(output:IDataOutput) : void {
-         output.writeShort(this.keyMovements.length);
-         var _i1:uint = 0;
-         while(_i1 < this.keyMovements.length)
-         {
-            if(this.keyMovements[_i1] < 0)
-            {
-               throw new Error("Forbidden value (" + this.keyMovements[_i1] + ") on element 1 (starting at 1) of keyMovements.");
-            }
-            else
-            {
-               output.writeShort(this.keyMovements[_i1]);
-               _i1++;
-               continue;
-            }
-         }
-         output.writeInt(this.actorId);
+      public function serializeAs_GameMapMovementMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameMapMovementMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameMapMovementMessage(input:IDataInput) : void {
-         var _val1:uint = 0;
-         var _keyMovementsLen:uint = input.readUnsignedShort();
-         var _i1:uint = 0;
-         while(_i1 < _keyMovementsLen)
-         {
-            _val1 = input.readShort();
-            if(_val1 < 0)
-            {
-               throw new Error("Forbidden value (" + _val1 + ") on elements of keyMovements.");
-            }
-            else
-            {
-               this.keyMovements.push(_val1);
-               _i1++;
-               continue;
-            }
-         }
-         this.actorId = input.readInt();
+      public function deserializeAs_GameMapMovementMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

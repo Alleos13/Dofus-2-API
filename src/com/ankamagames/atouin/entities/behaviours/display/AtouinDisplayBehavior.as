@@ -14,41 +14,37 @@ package com.ankamagames.atouin.entities.behaviours.display
    public class AtouinDisplayBehavior extends Object implements IDisplayBehavior
    {
       
-      public function AtouinDisplayBehavior() {
-         super();
-         if(_self != null)
-         {
-            throw new SingletonError("A singleton class shouldn\'t be instancied directly!");
-         }
-         else
-         {
-            return;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AtouinDisplayBehavior()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       private static var _self:AtouinDisplayBehavior;
       
-      public static function getInstance() : AtouinDisplayBehavior {
-         if(_self == null)
-         {
-            _self = new AtouinDisplayBehavior();
-         }
-         return _self;
+      public static function getInstance() : AtouinDisplayBehavior
+      {
+         //Décompilation abandonné
       }
       
-      public function display(displayable:IDisplayable, strata:uint = 0) : void {
-         var entity:IEntity = displayable as IEntity;
-         EntitiesManager.getInstance().addAnimatedEntity(entity.id,entity,strata);
+      public function display(displayable:IDisplayable, strata:uint = 0) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function remove(entity:IDisplayable) : void {
-         EntitiesManager.getInstance().removeEntity((entity as IEntity).id);
+      public function remove(entity:IDisplayable) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getAbsoluteBounds(entity:IDisplayable) : IRectangle {
-         return EntitiesDisplayManager.getInstance().getAbsoluteBounds(entity);
+      public function getAbsoluteBounds(entity:IDisplayable) : IRectangle
+      {
+         //Décompilation abandonné
       }
    }
 }

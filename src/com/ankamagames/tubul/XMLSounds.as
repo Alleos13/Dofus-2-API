@@ -6,8 +6,13 @@ package com.ankamagames.tubul
    public class XMLSounds extends Object
    {
       
-      public function XMLSounds() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function XMLSounds()
+      {
+         //Décompilation abandonné
       }
       
       private static const BREED_BONES_FILENAME:String = "2100000000.xml";

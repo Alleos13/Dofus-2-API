@@ -28,102 +28,42 @@ package com.ankamagames.dofus.logic.game.common.frames
    public class GuildDialogFrame extends Object implements Frame
    {
       
-      public function GuildDialogFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildDialogFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       private var guildEmblem:GuildEmblem;
       
-      public function get priority() : int {
-         return Priority.NORMAL;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var gcva:GuildCreationValidAction = null;
-         var gcvmsg:GuildCreationValidMessage = null;
-         var gmva:GuildModificationValidAction = null;
-         var gmvmsg:GuildModificationValidMessage = null;
-         var gmnva:GuildModificationNameValidAction = null;
-         var gmnvmsg:GuildModificationNameValidMessage = null;
-         var gmeva:GuildModificationEmblemValidAction = null;
-         var gmevmsg:GuildModificationEmblemValidMessage = null;
-         var giaa:GuildInvitationAnswerAction = null;
-         var giamsg:GuildInvitationAnswerMessage = null;
-         var ldm:LeaveDialogMessage = null;
-         switch(true)
-         {
-            case msg is GuildCreationValidAction:
-               gcva = msg as GuildCreationValidAction;
-               this.guildEmblem = new GuildEmblem();
-               this.guildEmblem.symbolShape = gcva.upEmblemId;
-               this.guildEmblem.symbolColor = gcva.upColorEmblem;
-               this.guildEmblem.backgroundShape = gcva.backEmblemId;
-               this.guildEmblem.backgroundColor = gcva.backColorEmblem;
-               gcvmsg = new GuildCreationValidMessage();
-               gcvmsg.initGuildCreationValidMessage(gcva.guildName,this.guildEmblem);
-               ConnectionsHandler.getConnection().send(gcvmsg);
-               return true;
-            case msg is GuildModificationValidAction:
-               gmva = msg as GuildModificationValidAction;
-               this.guildEmblem = new GuildEmblem();
-               this.guildEmblem.symbolShape = gmva.upEmblemId;
-               this.guildEmblem.symbolColor = gmva.upColorEmblem;
-               this.guildEmblem.backgroundShape = gmva.backEmblemId;
-               this.guildEmblem.backgroundColor = gmva.backColorEmblem;
-               gmvmsg = new GuildModificationValidMessage();
-               gmvmsg.initGuildModificationValidMessage(gmva.guildName,this.guildEmblem);
-               ConnectionsHandler.getConnection().send(gmvmsg);
-               return true;
-            case msg is GuildModificationNameValidAction:
-               gmnva = msg as GuildModificationNameValidAction;
-               gmnvmsg = new GuildModificationNameValidMessage();
-               gmnvmsg.initGuildModificationNameValidMessage(gmnva.guildName);
-               ConnectionsHandler.getConnection().send(gmnvmsg);
-               return true;
-            case msg is GuildModificationEmblemValidAction:
-               gmeva = msg as GuildModificationEmblemValidAction;
-               this.guildEmblem = new GuildEmblem();
-               this.guildEmblem.symbolShape = gmeva.upEmblemId;
-               this.guildEmblem.symbolColor = gmeva.upColorEmblem;
-               this.guildEmblem.backgroundShape = gmeva.backEmblemId;
-               this.guildEmblem.backgroundColor = gmeva.backColorEmblem;
-               gmevmsg = new GuildModificationEmblemValidMessage();
-               gmevmsg.initGuildModificationEmblemValidMessage(this.guildEmblem);
-               ConnectionsHandler.getConnection().send(gmevmsg);
-               return true;
-            case msg is GuildInvitationAnswerAction:
-               giaa = msg as GuildInvitationAnswerAction;
-               giamsg = new GuildInvitationAnswerMessage();
-               giamsg.initGuildInvitationAnswerMessage(giaa.accept);
-               ConnectionsHandler.getConnection().send(giamsg);
-               this.leaveDialog();
-               return true;
-            case msg is LeaveDialogMessage:
-               ldm = msg as LeaveDialogMessage;
-               if((ldm.dialogType == DialogTypeEnum.DIALOG_GUILD_CREATE) || (ldm.dialogType == DialogTypeEnum.DIALOG_GUILD_INVITATION) || (ldm.dialogType == DialogTypeEnum.DIALOG_GUILD_RENAME))
-               {
-                  this.leaveDialog();
-               }
-               return true;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         KernelEventsManager.getInstance().processCallback(HookList.LeaveDialog);
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function leaveDialog() : void {
-         Kernel.getWorker().process(ChangeWorldInteractionAction.create(true));
-         Kernel.getWorker().removeFrame(this);
+      private function leaveDialog() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

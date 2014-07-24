@@ -5,8 +5,13 @@ package com.ankamagames.berilia.types.messages
    public class NoThemeErrorMessage extends Object implements Message
    {
       
-      public function NoThemeErrorMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function NoThemeErrorMessage()
+      {
+         //Décompilation abandonné
       }
    }
 }

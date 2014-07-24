@@ -9,16 +9,22 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
    public class ObjectFoundWhileRecoltingMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ObjectFoundWhileRecoltingMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ObjectFoundWhileRecoltingMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6017;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var genericId:uint = 0;
@@ -27,97 +33,49 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
       
       public var ressourceGenericId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6017;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initObjectFoundWhileRecoltingMessage(genericId:uint = 0, quantity:uint = 0, ressourceGenericId:uint = 0) : ObjectFoundWhileRecoltingMessage {
-         this.genericId = genericId;
-         this.quantity = quantity;
-         this.ressourceGenericId = ressourceGenericId;
-         this._isInitialized = true;
-         return this;
+      public function initObjectFoundWhileRecoltingMessage(genericId:uint = 0, quantity:uint = 0, ressourceGenericId:uint = 0) : ObjectFoundWhileRecoltingMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.genericId = 0;
-         this.quantity = 0;
-         this.ressourceGenericId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ObjectFoundWhileRecoltingMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectFoundWhileRecoltingMessage(output:IDataOutput) : void {
-         if(this.genericId < 0)
-         {
-            throw new Error("Forbidden value (" + this.genericId + ") on element genericId.");
-         }
-         else
-         {
-            output.writeInt(this.genericId);
-            if(this.quantity < 0)
-            {
-               throw new Error("Forbidden value (" + this.quantity + ") on element quantity.");
-            }
-            else
-            {
-               output.writeInt(this.quantity);
-               if(this.ressourceGenericId < 0)
-               {
-                  throw new Error("Forbidden value (" + this.ressourceGenericId + ") on element ressourceGenericId.");
-               }
-               else
-               {
-                  output.writeInt(this.ressourceGenericId);
-                  return;
-               }
-            }
-         }
+      public function serializeAs_ObjectFoundWhileRecoltingMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ObjectFoundWhileRecoltingMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectFoundWhileRecoltingMessage(input:IDataInput) : void {
-         this.genericId = input.readInt();
-         if(this.genericId < 0)
-         {
-            throw new Error("Forbidden value (" + this.genericId + ") on element of ObjectFoundWhileRecoltingMessage.genericId.");
-         }
-         else
-         {
-            this.quantity = input.readInt();
-            if(this.quantity < 0)
-            {
-               throw new Error("Forbidden value (" + this.quantity + ") on element of ObjectFoundWhileRecoltingMessage.quantity.");
-            }
-            else
-            {
-               this.ressourceGenericId = input.readInt();
-               if(this.ressourceGenericId < 0)
-               {
-                  throw new Error("Forbidden value (" + this.ressourceGenericId + ") on element of ObjectFoundWhileRecoltingMessage.ressourceGenericId.");
-               }
-               else
-               {
-                  return;
-               }
-            }
-         }
+      public function deserializeAs_ObjectFoundWhileRecoltingMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

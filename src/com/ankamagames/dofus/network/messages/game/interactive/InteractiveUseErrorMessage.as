@@ -9,95 +9,71 @@ package com.ankamagames.dofus.network.messages.game.interactive
    public class InteractiveUseErrorMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function InteractiveUseErrorMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function InteractiveUseErrorMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6384;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var elemId:uint = 0;
       
       public var skillInstanceUid:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6384;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initInteractiveUseErrorMessage(elemId:uint = 0, skillInstanceUid:uint = 0) : InteractiveUseErrorMessage {
-         this.elemId = elemId;
-         this.skillInstanceUid = skillInstanceUid;
-         this._isInitialized = true;
-         return this;
+      public function initInteractiveUseErrorMessage(elemId:uint = 0, skillInstanceUid:uint = 0) : InteractiveUseErrorMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.elemId = 0;
-         this.skillInstanceUid = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_InteractiveUseErrorMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_InteractiveUseErrorMessage(output:IDataOutput) : void {
-         if(this.elemId < 0)
-         {
-            throw new Error("Forbidden value (" + this.elemId + ") on element elemId.");
-         }
-         else
-         {
-            output.writeInt(this.elemId);
-            if(this.skillInstanceUid < 0)
-            {
-               throw new Error("Forbidden value (" + this.skillInstanceUid + ") on element skillInstanceUid.");
-            }
-            else
-            {
-               output.writeInt(this.skillInstanceUid);
-               return;
-            }
-         }
+      public function serializeAs_InteractiveUseErrorMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_InteractiveUseErrorMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_InteractiveUseErrorMessage(input:IDataInput) : void {
-         this.elemId = input.readInt();
-         if(this.elemId < 0)
-         {
-            throw new Error("Forbidden value (" + this.elemId + ") on element of InteractiveUseErrorMessage.elemId.");
-         }
-         else
-         {
-            this.skillInstanceUid = input.readInt();
-            if(this.skillInstanceUid < 0)
-            {
-               throw new Error("Forbidden value (" + this.skillInstanceUid + ") on element of InteractiveUseErrorMessage.skillInstanceUid.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_InteractiveUseErrorMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

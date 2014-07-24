@@ -9,16 +9,22 @@ package com.ankamagames.dofus.network.messages.game.actions.sequence
    public class SequenceEndMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function SequenceEndMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SequenceEndMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 956;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var actionId:uint = 0;
@@ -27,69 +33,49 @@ package com.ankamagames.dofus.network.messages.game.actions.sequence
       
       public var sequenceType:int = 0;
       
-      override public function getMessageId() : uint {
-         return 956;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initSequenceEndMessage(actionId:uint = 0, authorId:int = 0, sequenceType:int = 0) : SequenceEndMessage {
-         this.actionId = actionId;
-         this.authorId = authorId;
-         this.sequenceType = sequenceType;
-         this._isInitialized = true;
-         return this;
+      public function initSequenceEndMessage(actionId:uint = 0, authorId:int = 0, sequenceType:int = 0) : SequenceEndMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.actionId = 0;
-         this.authorId = 0;
-         this.sequenceType = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_SequenceEndMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_SequenceEndMessage(output:IDataOutput) : void {
-         if(this.actionId < 0)
-         {
-            throw new Error("Forbidden value (" + this.actionId + ") on element actionId.");
-         }
-         else
-         {
-            output.writeShort(this.actionId);
-            output.writeInt(this.authorId);
-            output.writeByte(this.sequenceType);
-            return;
-         }
+      public function serializeAs_SequenceEndMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_SequenceEndMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_SequenceEndMessage(input:IDataInput) : void {
-         this.actionId = input.readShort();
-         if(this.actionId < 0)
-         {
-            throw new Error("Forbidden value (" + this.actionId + ") on element of SequenceEndMessage.actionId.");
-         }
-         else
-         {
-            this.authorId = input.readInt();
-            this.sequenceType = input.readByte();
-            return;
-         }
+      public function deserializeAs_SequenceEndMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

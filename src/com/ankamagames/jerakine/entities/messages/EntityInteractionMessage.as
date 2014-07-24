@@ -6,15 +6,20 @@ package com.ankamagames.jerakine.entities.messages
    public class EntityInteractionMessage extends Object implements Message
    {
       
-      public function EntityInteractionMessage(entity:IInteractive) {
-         super();
-         this._entity = entity;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EntityInteractionMessage(entity:IInteractive)
+      {
+         //Décompilation abandonné
       }
       
       private var _entity:IInteractive;
       
-      public function get entity() : IInteractive {
-         return this._entity;
+      public function get entity() : IInteractive
+      {
+         //Décompilation abandonné
       }
    }
 }

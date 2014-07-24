@@ -7,18 +7,25 @@ package com.ankamagames.dofus.datacenter.world
    public class HintCategory extends Object implements IDataCenter
    {
       
-      public function HintCategory() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HintCategory()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "HintCategory";
       
-      public static function getHintCategoryById(id:int) : HintCategory {
-         return GameData.getObject(MODULE,id) as HintCategory;
+      public static function getHintCategoryById(id:int) : HintCategory
+      {
+         //Décompilation abandonné
       }
       
-      public static function getHintCategories() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getHintCategories() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -27,12 +34,9 @@ package com.ankamagames.dofus.datacenter.world
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

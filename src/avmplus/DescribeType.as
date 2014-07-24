@@ -3,8 +3,13 @@ package avmplus
    public final class DescribeType extends Object
    {
       
-      public function DescribeType() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DescribeType()
+      {
+         //Décompilation abandonné
       }
       
       public static const HIDE_NSURI_METHODS:uint = 1.0;
@@ -43,15 +48,9 @@ package avmplus
       
       public static const GET_CLASS_INFO:uint;
       
-      public static function getJSONFunction() : Function {
-         try
-         {
-            return describeTypeJSON;
-         }
-         catch(e:*)
-         {
-         }
-         return null;
+      public static function getJSONFunction() : Function
+      {
+         //Décompilation abandonné
       }
    }
 }

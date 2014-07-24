@@ -6,8 +6,13 @@ package com.ankamagames.jerakine.utils.system
    public class AirScanner extends Object
    {
       
-      public function AirScanner() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AirScanner()
+      {
+         //Décompilation abandonné
       }
       
       private static var _initialized:Boolean = false;
@@ -16,59 +21,29 @@ package com.ankamagames.jerakine.utils.system
       
       private static var _isStreaming:Boolean;
       
-      public static function init(pIsStreaming:Boolean = false) : void {
-         if(!_initialized)
-         {
-            initialize();
-            _isStreaming = pIsStreaming;
-         }
+      public static function init(pIsStreaming:Boolean = false) : void
+      {
+         //Décompilation abandonné
       }
       
-      private static function initialize() : void {
-         _initialized = true;
-         var lc:LoaderContext = new LoaderContext();
-         if(lc.hasOwnProperty("allowLoadBytesCodeExecution"))
-         {
-            _hasAir = true;
-         }
-         else
-         {
-            _hasAir = false;
-         }
-         var ver:String = Capabilities.version.substr(0,3);
-         if((!(ver == "LNX")) && (!(ver == "WIN")) && (!(ver == "MAC")))
-         {
-            _hasAir = false;
-         }
+      private static function initialize() : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function hasAir() : Boolean {
-         if(!_initialized)
-         {
-            initialize();
-            _isStreaming = false;
-         }
-         return _hasAir;
+      public static function hasAir() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function isStreamingVersion() : Boolean {
-         if(!_initialized)
-         {
-            initialize();
-            _isStreaming = false;
-         }
-         return _isStreaming;
+      public static function isStreamingVersion() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public static function allowByteCodeExecution(pContext:LoaderContext, pVal:Boolean) : void {
-         if(pContext.hasOwnProperty("allowCodeImport"))
-         {
-            pContext["allowCodeImport"] = pVal;
-         }
-         else
-         {
-            pContext["allowLoadBytesCodeExecution"] = pVal;
-         }
+      public static function allowByteCodeExecution(pContext:LoaderContext, pVal:Boolean) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

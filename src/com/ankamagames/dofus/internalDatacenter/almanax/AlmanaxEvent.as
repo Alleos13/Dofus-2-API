@@ -5,8 +5,13 @@ package com.ankamagames.dofus.internalDatacenter.almanax
    public class AlmanaxEvent extends Object implements IDataCenter
    {
       
-      public function AlmanaxEvent() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AlmanaxEvent()
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;

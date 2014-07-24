@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class PlayerStateEnum extends Object
    {
       
-      public function PlayerStateEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PlayerStateEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const NOT_CONNECTED:uint = 0;

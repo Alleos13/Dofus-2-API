@@ -3,9 +3,13 @@ package com.ankamagames.dofus.logic.game.fight.types
    public class EffectModification extends Object
    {
       
-      public function EffectModification(pEffectId:int) {
-         super();
-         this._effectId = pEffectId;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EffectModification(pEffectId:int)
+      {
+         //Décompilation abandonné
       }
       
       private var _effectId:int;
@@ -14,8 +18,9 @@ package com.ankamagames.dofus.logic.game.fight.types
       
       public var shieldPoints:int;
       
-      public function get effectId() : int {
-         return this._effectId;
+      public function get effectId() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

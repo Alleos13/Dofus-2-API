@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.lists
    public class QuestHookList extends Object
    {
       
-      public function QuestHookList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function QuestHookList()
+      {
+         //Décompilation abandonné
       }
       
       public static const QuestListUpdated:Hook;
@@ -44,6 +49,8 @@ package com.ankamagames.dofus.misc.lists
       public static const TitleUpdated:Hook;
       
       public static const OrnamentUpdated:Hook;
+      
+      public static const TreasureHuntLegendaryUiUpdate:Hook;
       
       public static const TreasureHuntUpdate:Hook;
       

@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.guild
    public class GuildInvitationAction extends Object implements Action
    {
       
-      public function GuildInvitationAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pTargetId:uint) : GuildInvitationAction {
-         var action:GuildInvitationAction = new GuildInvitationAction();
-         action.targetId = pTargetId;
-         return action;
+      public function GuildInvitationAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pTargetId:uint) : GuildInvitationAction
+      {
+         //Décompilation abandonné
       }
       
       public var targetId:uint;

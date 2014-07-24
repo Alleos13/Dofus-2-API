@@ -12,9 +12,13 @@ package com.ankamagames.berilia.components.messages
    public class ComponentMessage extends Object implements Message
    {
       
-      public function ComponentMessage(target:InteractiveObject) {
-         super();
-         this._target = target;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ComponentMessage(target:InteractiveObject)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -27,41 +31,29 @@ package com.ankamagames.berilia.components.messages
       
       public var bubbling:Boolean;
       
-      public function get target() : DisplayObject {
-         return this._target;
+      public function get target() : DisplayObject
+      {
+         //Décompilation abandonné
       }
       
-      public function get canceled() : Boolean {
-         return this._canceled;
+      public function get canceled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set canceled(value:Boolean) : void {
-         if(this.bubbling)
-         {
-            throw new InvalidCancelError("Can\'t cancel a bubbling message.");
-         }
-         else if((this._canceled) && (!value))
-         {
-            throw new InvalidCancelError("Can\'t uncancel a canceled message.");
-         }
-         else
-         {
-            this._canceled = value;
-            return;
-         }
-         
+      public function set canceled(value:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get actions() : Array {
-         return this._actions;
+      public function get actions() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function addAction(action:Action) : void {
-         if(this._actions == null)
-         {
-            this._actions = new Array();
-         }
-         this._actions.push(action);
+      public function addAction(action:Action) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

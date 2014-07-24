@@ -6,11 +6,13 @@ package com.ankamagames.berilia.types.data
    public class GridItem extends Object implements IDataCenter
    {
       
-      public function GridItem(id:uint, c:DisplayObject, d:*) {
-         super();
-         this.index = id;
-         this.container = c;
-         this.data = d;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GridItem(id:uint, c:DisplayObject, d:*)
+      {
+         //Décompilation abandonné
       }
       
       public var index:uint;

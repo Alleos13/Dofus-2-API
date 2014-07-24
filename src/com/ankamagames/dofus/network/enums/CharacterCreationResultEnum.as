@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class CharacterCreationResultEnum extends Object
    {
       
-      public function CharacterCreationResultEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterCreationResultEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const OK:uint = 0;

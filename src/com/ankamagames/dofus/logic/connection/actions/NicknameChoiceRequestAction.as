@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.connection.actions
    public class NicknameChoiceRequestAction extends Object implements Action
    {
       
-      public function NicknameChoiceRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(nickname:String) : NicknameChoiceRequestAction {
-         var a:NicknameChoiceRequestAction = new NicknameChoiceRequestAction();
-         a.nickname = nickname;
-         return a;
+      public function NicknameChoiceRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(nickname:String) : NicknameChoiceRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var nickname:String;

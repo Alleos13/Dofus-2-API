@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.connection.actions
    public class AcquaintanceSearchAction extends Object implements Action
    {
       
-      public function AcquaintanceSearchAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(friendName:String) : AcquaintanceSearchAction {
-         var a:AcquaintanceSearchAction = new AcquaintanceSearchAction();
-         a.friendName = friendName;
-         return a;
+      public function AcquaintanceSearchAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(friendName:String) : AcquaintanceSearchAction
+      {
+         //Décompilation abandonné
       }
       
       public var friendName:String;

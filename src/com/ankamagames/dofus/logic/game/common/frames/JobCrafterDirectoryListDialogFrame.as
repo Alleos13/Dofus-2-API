@@ -34,120 +34,37 @@ package com.ankamagames.dofus.logic.game.common.frames
    public class JobCrafterDirectoryListDialogFrame extends Object implements Frame
    {
       
-      public function JobCrafterDirectoryListDialogFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function JobCrafterDirectoryListDialogFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       private var _crafterList:Array = null;
       
-      public function get priority() : int {
-         return Priority.NORMAL;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var jcdlra:JobCrafterDirectoryListRequestAction = null;
-         var jcdlrmsg:JobCrafterDirectoryListRequestMessage = null;
-         var jcdera:JobCrafterDirectoryEntryRequestAction = null;
-         var jcdermsg:JobCrafterDirectoryEntryRequestMessage = null;
-         var jcclra:JobCrafterContactLookRequestAction = null;
-         var jcdlmsg:JobCrafterDirectoryListMessage = null;
-         var jcdrmsg:JobCrafterDirectoryRemoveMessage = null;
-         var jcdamsg:JobCrafterDirectoryAddMessage = null;
-         var elm:ExchangeLeaveMessage = null;
-         var clrbimsg:ContactLookRequestByIdMessage = null;
-         var entry:JobCrafterDirectoryListEntry = null;
-         var i:uint = 0;
-         var jobInfo:Object = null;
-         var iCrafter:Object = null;
-         switch(true)
-         {
-            case msg is JobCrafterDirectoryListRequestAction:
-               jcdlra = msg as JobCrafterDirectoryListRequestAction;
-               jcdlrmsg = new JobCrafterDirectoryListRequestMessage();
-               jcdlrmsg.initJobCrafterDirectoryListRequestMessage(jcdlra.jobId);
-               ConnectionsHandler.getConnection().send(jcdlrmsg);
-               return true;
-            case msg is JobCrafterDirectoryEntryRequestAction:
-               jcdera = msg as JobCrafterDirectoryEntryRequestAction;
-               jcdermsg = new JobCrafterDirectoryEntryRequestMessage();
-               jcdermsg.initJobCrafterDirectoryEntryRequestMessage(jcdera.playerId);
-               ConnectionsHandler.getConnection().send(jcdermsg);
-               return true;
-            case msg is JobCrafterContactLookRequestAction:
-               jcclra = msg as JobCrafterContactLookRequestAction;
-               if(jcclra.crafterId == PlayedCharacterManager.getInstance().id)
-               {
-                  KernelEventsManager.getInstance().processCallback(CraftHookList.JobCrafterContactLook,jcclra.crafterId,PlayedCharacterManager.getInstance().infos.name,EntityLookAdapter.fromNetwork(PlayedCharacterManager.getInstance().infos.entityLook));
-               }
-               else
-               {
-                  clrbimsg = new ContactLookRequestByIdMessage();
-                  clrbimsg.initContactLookRequestByIdMessage(0,SocialContactCategoryEnum.SOCIAL_CONTACT_CRAFTER,jcclra.crafterId);
-                  ConnectionsHandler.getConnection().send(clrbimsg);
-               }
-               return true;
-            case msg is JobCrafterDirectoryListMessage:
-               jcdlmsg = msg as JobCrafterDirectoryListMessage;
-               this._crafterList = new Array();
-               for each(entry in jcdlmsg.listEntries)
-               {
-                  this._crafterList.push(CraftsmanWrapper.create(entry));
-               }
-               KernelEventsManager.getInstance().processCallback(CraftHookList.CrafterDirectoryListUpdate,this._crafterList);
-               return true;
-            case msg is JobCrafterDirectoryRemoveMessage:
-               jcdrmsg = msg as JobCrafterDirectoryRemoveMessage;
-               i = 0;
-               while(i < this._crafterList.length)
-               {
-                  jobInfo = this._crafterList[i];
-                  if((jobInfo.jobId == jcdrmsg.jobId) && (jobInfo.playerId == jcdrmsg.playerId))
-                  {
-                     this._crafterList.splice(i,1);
-                     break;
-                  }
-                  i++;
-               }
-               KernelEventsManager.getInstance().processCallback(CraftHookList.CrafterDirectoryListUpdate,this._crafterList);
-               return true;
-            case msg is JobCrafterDirectoryAddMessage:
-               jcdamsg = msg as JobCrafterDirectoryAddMessage;
-               for(iCrafter in this._crafterList)
-               {
-                  if(jcdamsg.listEntry.playerInfo.playerId == this._crafterList[iCrafter].playerId)
-                  {
-                     this._crafterList.splice(iCrafter,1);
-                  }
-               }
-               this._crafterList.push(CraftsmanWrapper.create(jcdamsg.listEntry));
-               KernelEventsManager.getInstance().processCallback(CraftHookList.CrafterDirectoryListUpdate,this._crafterList);
-               return true;
-            case msg is JobCrafterDirectoryEntryMessage:
-               return false;
-            case msg is LeaveDialogRequestAction:
-               ConnectionsHandler.getConnection().send(new LeaveDialogRequestMessage());
-               return true;
-            case msg is ExchangeLeaveMessage:
-               elm = msg as ExchangeLeaveMessage;
-               if(elm.dialogType == DialogTypeEnum.DIALOG_EXCHANGE)
-               {
-                  Kernel.getWorker().removeFrame(this);
-               }
-               return true;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         KernelEventsManager.getInstance().processCallback(HookList.LeaveDialog);
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

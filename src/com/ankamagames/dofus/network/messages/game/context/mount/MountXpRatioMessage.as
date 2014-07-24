@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.mount
    public class MountXpRatioMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function MountXpRatioMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MountXpRatioMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5970;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var ratio:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5970;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initMountXpRatioMessage(ratio:uint = 0) : MountXpRatioMessage {
-         this.ratio = ratio;
-         this._isInitialized = true;
-         return this;
+      public function initMountXpRatioMessage(ratio:uint = 0) : MountXpRatioMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.ratio = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_MountXpRatioMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_MountXpRatioMessage(output:IDataOutput) : void {
-         if(this.ratio < 0)
-         {
-            throw new Error("Forbidden value (" + this.ratio + ") on element ratio.");
-         }
-         else
-         {
-            output.writeByte(this.ratio);
-            return;
-         }
+      public function serializeAs_MountXpRatioMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_MountXpRatioMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_MountXpRatioMessage(input:IDataInput) : void {
-         this.ratio = input.readByte();
-         if(this.ratio < 0)
-         {
-            throw new Error("Forbidden value (" + this.ratio + ") on element of MountXpRatioMessage.ratio.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_MountXpRatioMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.paddock
    public class PaddockToSellListRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function PaddockToSellListRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PaddockToSellListRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6141;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var pageIndex:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6141;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPaddockToSellListRequestMessage(pageIndex:uint = 0) : PaddockToSellListRequestMessage {
-         this.pageIndex = pageIndex;
-         this._isInitialized = true;
-         return this;
+      public function initPaddockToSellListRequestMessage(pageIndex:uint = 0) : PaddockToSellListRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.pageIndex = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PaddockToSellListRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PaddockToSellListRequestMessage(output:IDataOutput) : void {
-         if(this.pageIndex < 0)
-         {
-            throw new Error("Forbidden value (" + this.pageIndex + ") on element pageIndex.");
-         }
-         else
-         {
-            output.writeShort(this.pageIndex);
-            return;
-         }
+      public function serializeAs_PaddockToSellListRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PaddockToSellListRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PaddockToSellListRequestMessage(input:IDataInput) : void {
-         this.pageIndex = input.readShort();
-         if(this.pageIndex < 0)
-         {
-            throw new Error("Forbidden value (" + this.pageIndex + ") on element of PaddockToSellListRequestMessage.pageIndex.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_PaddockToSellListRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -6,26 +6,32 @@ package com.ankamagames.jerakine.network
    public class NetworkLogEvent extends LogEvent
    {
       
-      public function NetworkLogEvent(msg:INetworkMessage, isServerMsg:Boolean) {
-         super(null,null,0);
-         this._msg = msg;
-         this._isServerMsg = isServerMsg;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function NetworkLogEvent(msg:INetworkMessage, isServerMsg:Boolean)
+      {
+         //Décompilation abandonné
       }
       
       private var _msg:INetworkMessage;
       
       private var _isServerMsg:Boolean;
       
-      public function get networkMessage() : INetworkMessage {
-         return this._msg;
+      public function get networkMessage() : INetworkMessage
+      {
+         //Décompilation abandonné
       }
       
-      public function get isServerMsg() : Boolean {
-         return this._isServerMsg;
+      public function get isServerMsg() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : Event {
-         return new NetworkLogEvent(this._msg,this._isServerMsg);
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
    }
 }

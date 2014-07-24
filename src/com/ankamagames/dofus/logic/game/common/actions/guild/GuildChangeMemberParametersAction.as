@@ -5,17 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.guild
    public class GuildChangeMemberParametersAction extends Object implements Action
    {
       
-      public function GuildChangeMemberParametersAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pMemberId:uint, pRank:uint, pExperienceGivenPercent:uint, pRights:Array) : GuildChangeMemberParametersAction {
-         var action:GuildChangeMemberParametersAction = new GuildChangeMemberParametersAction();
-         action.memberId = pMemberId;
-         action.rank = pRank;
-         action.experienceGivenPercent = pExperienceGivenPercent;
-         action.rights = pRights;
-         return action;
+      public function GuildChangeMemberParametersAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pMemberId:uint, pRank:uint, pExperienceGivenPercent:uint, pRights:Array) : GuildChangeMemberParametersAction
+      {
+         //Décompilation abandonné
       }
       
       public var memberId:uint;

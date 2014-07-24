@@ -6,45 +6,35 @@ package com.ankamagames.dofus.datacenter.effects.instances
    public class EffectInstanceLadder extends EffectInstanceCreature implements IDataCenter
    {
       
-      public function EffectInstanceLadder() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EffectInstanceLadder()
+      {
+         //Décompilation abandonné
       }
       
       public var monsterCount:uint;
       
-      override public function clone() : EffectInstance {
-         var o:EffectInstanceLadder = new EffectInstanceLadder();
-         o.rawZone = rawZone;
-         o.effectId = effectId;
-         o.duration = duration;
-         o.delay = delay;
-         o.monsterFamilyId = monsterFamilyId;
-         o.monsterCount = this.monsterCount;
-         o.random = random;
-         o.group = group;
-         o.targetId = targetId;
-         o.targetMask = targetMask;
-         return o;
+      override public function clone() : EffectInstance
+      {
+         //Décompilation abandonné
       }
       
-      override public function get parameter0() : Object {
-         return monsterFamilyId;
+      override public function get parameter0() : Object
+      {
+         //Décompilation abandonné
       }
       
-      override public function get parameter2() : Object {
-         return this.monsterCount;
+      override public function get parameter2() : Object
+      {
+         //Décompilation abandonné
       }
       
-      override public function setParameter(paramIndex:uint, value:*) : void {
-         switch(paramIndex)
-         {
-            case 0:
-               monsterFamilyId = uint(value);
-               break;
-            case 2:
-               this.monsterCount = uint(value);
-               break;
-         }
+      override public function setParameter(paramIndex:uint, value:*) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

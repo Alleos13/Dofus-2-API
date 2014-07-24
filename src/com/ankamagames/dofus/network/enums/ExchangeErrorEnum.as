@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class ExchangeErrorEnum extends Object
    {
       
-      public function ExchangeErrorEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeErrorEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const REQUEST_IMPOSSIBLE:int = 1;

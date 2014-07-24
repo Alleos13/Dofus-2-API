@@ -8,27 +8,23 @@ package com.ankamagames.jerakine.resources.adapters.impl
    public class XmlAdapter extends AbstractUrlLoaderAdapter implements IAdapter
    {
       
-      public function XmlAdapter() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      override protected function getResource(dataFormat:String, data:*) : * {
-         var str:String = null;
-         var xml:XML = null;
-         try
-         {
-            str = data.toString();
-            xml = new XML(data);
-         }
-         catch(te:TypeError)
-         {
-            this.dispatchFailure(te.message,ResourceErrorCode.XML_MALFORMED_FILE);
-         }
-         return xml;
+      public function XmlAdapter()
+      {
+         //Décompilation abandonné
       }
       
-      override public function getResourceType() : uint {
-         return ResourceType.RESOURCE_XML;
+      override protected function getResource(dataFormat:String, data:*) : *
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function getResourceType() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

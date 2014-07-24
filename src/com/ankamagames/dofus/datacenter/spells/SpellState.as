@@ -7,18 +7,25 @@ package com.ankamagames.dofus.datacenter.spells
    public class SpellState extends Object implements IDataCenter
    {
       
-      public function SpellState() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpellState()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "SpellStates";
       
-      public static function getSpellStateById(id:int) : SpellState {
-         return GameData.getObject(MODULE,id) as SpellState;
+      public static function getSpellStateById(id:int) : SpellState
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSpellStates() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getSpellStates() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -33,12 +40,9 @@ package com.ankamagames.dofus.datacenter.spells
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

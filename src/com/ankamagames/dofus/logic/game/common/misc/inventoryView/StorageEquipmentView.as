@@ -9,24 +9,28 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
    public class StorageEquipmentView extends StorageGenericView
    {
       
-      public function StorageEquipmentView(hookLock:HookLock) {
-         super(hookLock);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get name() : String {
-         return "storageEquipment";
+      public function StorageEquipmentView(hookLock:HookLock)
+      {
+         //Décompilation abandonné
       }
       
-      override public function isListening(item:ItemWrapper) : Boolean {
-         return (super.isListening(item)) && (item.category == StorageOptionManager.EQUIPMENT_CATEGORY);
+      override public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function updateView() : void {
-         super.updateView();
-         if(StorageOptionManager.getInstance().currentStorageView == this)
-         {
-            _hookLock.addHook(InventoryHookList.StorageViewContent,[content,InventoryManager.getInstance().inventory.localKamas]);
-         }
+      override public function isListening(item:ItemWrapper) : Boolean
+      {
+         //Décompilation abandonné
+      }
+      
+      override public function updateView() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

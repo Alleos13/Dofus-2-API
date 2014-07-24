@@ -5,8 +5,13 @@ package com.ankamagames.berilia.components.messages
    public class VideoConnectSuccessMessage extends ComponentMessage
    {
       
-      public function VideoConnectSuccessMessage(target:InteractiveObject) {
-         super(target);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function VideoConnectSuccessMessage(target:InteractiveObject)
+      {
+         //Décompilation abandonné
       }
    }
 }

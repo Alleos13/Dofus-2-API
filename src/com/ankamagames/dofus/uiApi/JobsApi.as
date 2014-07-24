@@ -35,9 +35,13 @@ package com.ankamagames.dofus.uiApi
    public class JobsApi extends Object implements IApi
    {
       
-      public function JobsApi() {
-         this._log = Log.getLogger(getQualifiedClassName(JobsApi));
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function JobsApi()
+      {
+         //Décompilation abandonné
       }
       
       protected var _log:Logger;
@@ -46,378 +50,154 @@ package com.ankamagames.dofus.uiApi
       
       private var _stringSorter:Collator;
       
-      public function set module(value:UiModule) : void {
-         this._module = value;
+      public function set module(value:UiModule) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function get jobsFrame() : JobsFrame {
-         return Kernel.getWorker().getFrame(JobsFrame) as JobsFrame;
+      private function get jobsFrame() : JobsFrame
+      {
+         //Décompilation abandonné
       }
       
-      private function get averagePricesFrame() : AveragePricesFrame {
-         return Kernel.getWorker().getFrame(AveragePricesFrame) as AveragePricesFrame;
+      private function get averagePricesFrame() : AveragePricesFrame
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         this._module = null;
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getKnownJobs() : Array {
-         var kj:KnownJob = null;
-         var incr:uint = 0;
-         var iJ:uint = 0;
-         if(!PlayedCharacterManager.getInstance().jobs)
-         {
-            return null;
-         }
-         var knownJobs:Array = new Array();
-         var result:Array = new Array();
-         for each(kj in PlayedCharacterManager.getInstance().jobs)
-         {
-            if(kj != null)
-            {
-               knownJobs[kj.jobPosition] = Job.getJobById(kj.jobDescription.jobId);
-            }
-         }
-         incr = 0;
-         iJ = 0;
-         while(iJ < 6)
-         {
-            if((knownJobs[iJ]) && (knownJobs[iJ].specializationOfId == 0))
-            {
-               result.push(knownJobs[iJ]);
-            }
-            iJ++;
-         }
-         var iJ2:uint = 0;
-         while(iJ2 < 6)
-         {
-            if((knownJobs[iJ2]) && (knownJobs[iJ2].specializationOfId > 0))
-            {
-               result[3 + incr] = knownJobs[iJ2];
-               incr++;
-            }
-            iJ2++;
-         }
-         return result;
+      public function getKnownJobs() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getJobSkills(job:Job) : Array {
-         var sd:SkillActionDescription = null;
-         var jd:JobDescription = this.getJobDescription(job.id);
-         if(!jd)
-         {
-            return null;
-         }
-         var jobSkills:Array = new Array(jd.skills.length);
-         var index:uint = 0;
-         for each(sd in jd.skills)
-         {
-            jobSkills[index++] = Skill.getSkillById(sd.skillId);
-         }
-         return jobSkills;
+      public function getJobSkills(job:Job) : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getJobSkillType(job:Job, skill:Skill) : String {
-         var jd:JobDescription = this.getJobDescription(job.id);
-         if(!jd)
-         {
-            return "unknown";
-         }
-         var sd:SkillActionDescription = this.getSkillActionDescription(jd,skill.id);
-         if(!sd)
-         {
-            return "unknown";
-         }
-         switch(true)
-         {
-            case sd is SkillActionDescriptionCollect:
-               return "collect";
-            case sd is SkillActionDescriptionCraft:
-               return "craft";
-            default:
-               this._log.warn("Unknown SkillActionDescription type : " + sd);
-               return "unknown";
-         }
+      public function getJobSkillType(job:Job, skill:Skill) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function getJobCollectSkillInfos(job:Job, skill:Skill) : Object {
-         var jd:JobDescription = this.getJobDescription(job.id);
-         if(!jd)
-         {
-            return null;
-         }
-         var sd:SkillActionDescription = this.getSkillActionDescription(jd,skill.id);
-         if(!sd)
-         {
-            return null;
-         }
-         if(!(sd is SkillActionDescriptionCollect))
-         {
-            return null;
-         }
-         var sdc:SkillActionDescriptionCollect = sd as SkillActionDescriptionCollect;
-         var infos:Object = new Object();
-         infos.time = sdc.time / 10;
-         infos.minResources = sdc.min;
-         infos.maxResources = sdc.max;
-         infos.resourceItem = Item.getItemById(skill.gatheredRessourceItem);
-         return infos;
+      public function getJobCollectSkillInfos(job:Job, skill:Skill) : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function getMaxSlotsByJobId(jobId:int) : int {
-         var sd:SkillActionDescription = null;
-         var sdc:SkillActionDescriptionCraft = null;
-         var jd:JobDescription = this.getJobDescription(jobId);
-         var max:int = 0;
-         if(!jd)
-         {
-            return 0;
-         }
-         for each(sd in jd.skills)
-         {
-            if(sd is SkillActionDescriptionCraft)
-            {
-               sdc = sd as SkillActionDescriptionCraft;
-               if(sdc.maxSlots > max)
-               {
-                  max = sdc.maxSlots;
-               }
-            }
-         }
-         return max;
+      public function getMaxSlotsByJobId(jobId:int) : int
+      {
+         //Décompilation abandonné
       }
       
-      public function getJobCraftSkillInfos(job:Job, skill:Skill) : Object {
-         var jd:JobDescription = this.getJobDescription(job.id);
-         if(!jd)
-         {
-            return null;
-         }
-         var sd:SkillActionDescription = this.getSkillActionDescription(jd,skill.id);
-         if(!sd)
-         {
-            return null;
-         }
-         if(!(sd is SkillActionDescriptionCraft))
-         {
-            return null;
-         }
-         var sdc:SkillActionDescriptionCraft = sd as SkillActionDescriptionCraft;
-         var infos:Object = new Object();
-         infos.maxSlots = sdc.maxSlots;
-         infos.probability = sdc.probability;
-         if(skill.modifiableItemType > -1)
-         {
-            infos.modifiableItemType = ItemType.getItemTypeById(skill.modifiableItemType);
-         }
-         return infos;
+      public function getJobCraftSkillInfos(job:Job, skill:Skill) : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function getJobExperience(job:Job) : Object {
-         var je:JobExperience = this.getJobExp(job.id);
-         if(!je)
-         {
-            return null;
-         }
-         var xp:Object = new Object();
-         xp.currentLevel = je.jobLevel;
-         xp.currentExperience = je.jobXP;
-         xp.levelExperienceFloor = je.jobXpLevelFloor;
-         xp.levelExperienceCeil = je.jobXpNextLevelFloor;
-         return xp;
+      public function getJobExperience(job:Job) : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function getSkillFromId(skillId:int) : Object {
-         return Skill.getSkillById(skillId);
+      public function getSkillFromId(skillId:int) : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function getJobRecipes(job:Job, validSlotsCount:Array = null, skill:Skill = null, search:String = null) : Array {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public function getJobRecipes(job:Job, validSlotsCount:Array = null, skill:Skill = null, search:String = null) : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getRecipe(objectId:uint) : Recipe {
-         return Recipe.getRecipeByResultId(objectId);
+      public function getRecipe(objectId:uint) : Recipe
+      {
+         //Décompilation abandonné
       }
       
-      public function getRecipesList(objectId:uint) : Array {
-         var recipeList:Array = Item.getItemById(objectId).recipes;
-         if(recipeList)
-         {
-            return recipeList;
-         }
-         return new Array();
+      public function getRecipesList(objectId:uint) : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getJobName(pJobId:uint) : String {
-         return Job.getJobById(pJobId).name;
+      public function getJobName(pJobId:uint) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function getJob(pJobId:uint) : Object {
-         return Job.getJobById(pJobId);
+      public function getJob(pJobId:uint) : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function getJobCrafterDirectorySettingsById(jobId:uint) : Object {
-         var job:Object = null;
-         for each(job in this.jobsFrame.settings)
-         {
-            if((job) && (jobId == job.jobId))
-            {
-               return job;
-            }
-         }
-         return null;
+      public function getJobCrafterDirectorySettingsById(jobId:uint) : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function getJobCrafterDirectorySettingsByIndex(jobIndex:uint) : Object {
-         return this.jobsFrame.settings[jobIndex];
+      public function getJobCrafterDirectorySettingsByIndex(jobIndex:uint) : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function getUsableSkillsInMap(playerId:int) : Array {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public function getUsableSkillsInMap(playerId:int) : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getKnownJob(jobId:uint) : KnownJob {
-         if(!PlayedCharacterManager.getInstance().jobs)
-         {
-            return null;
-         }
-         var kj:KnownJob = PlayedCharacterManager.getInstance().jobs[jobId] as KnownJob;
-         if(!kj)
-         {
-            return null;
-         }
-         return kj;
+      public function getKnownJob(jobId:uint) : KnownJob
+      {
+         //Décompilation abandonné
       }
       
-      public function getRecipesByJob(details:Array, jobMaxSlots:Array, jobId:int = 0, fromBank:Boolean = false, onlyRecipeWithXP:Boolean = false, onlyKnownJobs:Boolean = false, missingIngredientsTolerance:int = 0, sortCriteria:String = "level", sortDescending:Boolean = true, filterTypes:Array = null) : Vector.<Recipe> {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public function getRecipesByJob(details:Array, jobMaxSlots:Array, jobId:int = 0, fromBank:Boolean = false, onlyRecipeWithXP:Boolean = false, onlyKnownJobs:Boolean = false, missingIngredientsTolerance:int = 0, sortCriteria:String = "level", sortDescending:Boolean = true, filterTypes:Array = null) : Vector.<Recipe>
+      {
+         //Décompilation abandonné
       }
       
-      public function sortRecipesByCriteria(recipes:Object, sortCriteria:String, sortDescending:Boolean) : Object {
-         this.sortRecipes(recipes,sortCriteria,sortDescending?1:-1);
-         return recipes;
+      public function sortRecipesByCriteria(recipes:Object, sortCriteria:String, sortDescending:Boolean) : Object
+      {
+         //Décompilation abandonné
       }
       
-      private function sortRecipes(recipes:Object, criteria:String, way:int = 1) : void {
-         if(!this._stringSorter)
-         {
-            this._stringSorter = new Collator(XmlConfig.getInstance().getEntry("config.lang.current"));
-         }
-         switch(criteria)
-         {
-            case "ingredients":
-               recipes.sort(this.compareIngredients(way));
-               break;
-            case "level":
-               recipes.sort(this.compareLevel(way));
-               break;
-            case "price":
-               recipes.sort(this.comparePrice(way));
-               break;
-         }
+      private function sortRecipes(recipes:Object, criteria:String, way:int = 1) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function compareIngredients(way:int = 1) : Function {
-         return function(a:Recipe, b:Recipe):Number
-         {
-            var aL:* = a.ingredientIds.length;
-            var bL:* = b.ingredientIds.length;
-            if(aL < bL)
-            {
-               return -way;
-            }
-            if(aL > bL)
-            {
-               return way;
-            }
-            return _stringSorter.compare(a.resultName,b.resultName);
-         };
+      private function compareIngredients(way:int = 1) : Function
+      {
+         //Décompilation abandonné
       }
       
-      private function compareLevel(way:int = 1) : Function {
-         return function(a:Recipe, b:Recipe):Number
-         {
-            if(a.resultLevel < b.resultLevel)
-            {
-               return -way;
-            }
-            if(a.resultLevel > b.resultLevel)
-            {
-               return way;
-            }
-            return _stringSorter.compare(a.resultName,b.resultName);
-         };
+      private function compareLevel(way:int = 1) : Function
+      {
+         //Décompilation abandonné
       }
       
-      private function comparePrice(way:int = 1) : Function {
-         return function(a:Recipe, b:Recipe):Number
-         {
-            var aL:* = averagePricesFrame.pricesData.items["item" + a.resultId];
-            var bL:* = averagePricesFrame.pricesData.items["item" + b.resultId];
-            if(!aL)
-            {
-               aL = way == 1?int.MAX_VALUE:0;
-            }
-            if(!bL)
-            {
-               bL = way == 1?int.MAX_VALUE:0;
-            }
-            if(aL < bL)
-            {
-               return -way;
-            }
-            if(aL > bL)
-            {
-               return way;
-            }
-            return _stringSorter.compare(a.resultName,b.resultName);
-         };
+      private function comparePrice(way:int = 1) : Function
+      {
+         //Décompilation abandonné
       }
       
-      private function getJobDescription(jobId:uint) : JobDescription {
-         var kj:KnownJob = this.getKnownJob(jobId);
-         if(!kj)
-         {
-            return null;
-         }
-         return kj.jobDescription;
+      private function getJobDescription(jobId:uint) : JobDescription
+      {
+         //Décompilation abandonné
       }
       
-      private function getJobExp(jobId:uint) : JobExperience {
-         var kj:KnownJob = this.getKnownJob(jobId);
-         if(!kj)
-         {
-            return null;
-         }
-         return kj.jobExperience;
+      private function getJobExp(jobId:uint) : JobExperience
+      {
+         //Décompilation abandonné
       }
       
-      private function getSkillActionDescription(jd:JobDescription, skillId:uint) : SkillActionDescription {
-         var sd:SkillActionDescription = null;
-         for each(sd in jd.skills)
-         {
-            if(sd.skillId == skillId)
-            {
-               return sd;
-            }
-         }
-         return null;
+      private function getSkillActionDescription(jd:JobDescription, skillId:uint) : SkillActionDescription
+      {
+         //Décompilation abandonné
       }
    }
 }

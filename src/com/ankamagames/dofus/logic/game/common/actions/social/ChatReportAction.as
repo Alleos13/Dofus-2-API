@@ -5,20 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.social
    public class ChatReportAction extends Object implements Action
    {
       
-      public function ChatReportAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(reportedId:uint, reason:uint, name:String, channel:uint, fingerprint:String, message:String, timestamp:Number) : ChatReportAction {
-         var a:ChatReportAction = new ChatReportAction();
-         a.reportedId = reportedId;
-         a.reason = reason;
-         a.channel = channel;
-         a.timestamp = timestamp;
-         a.fingerprint = fingerprint;
-         a.message = message;
-         a.name = name;
-         return a;
+      public function ChatReportAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(reportedId:uint, reason:uint, name:String, channel:uint, fingerprint:String, message:String, timestamp:Number) : ChatReportAction
+      {
+         //Décompilation abandonné
       }
       
       public var reportedId:uint;

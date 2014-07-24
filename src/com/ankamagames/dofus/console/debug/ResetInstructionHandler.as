@@ -8,31 +8,28 @@ package com.ankamagames.dofus.console.debug
    public class ResetInstructionHandler extends Object implements ConsoleInstructionHandler
    {
       
-      public function ResetInstructionHandler() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void {
-         switch(cmd)
-         {
-            case "reset":
-               Kernel.getWorker().process(new ResetGameAction());
-               break;
-         }
+      public function ResetInstructionHandler()
+      {
+         //Décompilation abandonné
       }
       
-      public function getHelp(cmd:String) : String {
-         switch(cmd)
-         {
-            case "reset":
-               return "Resets the Kernel and restart the game.";
-            default:
-               return "Unknown command \'" + cmd + "\'.";
-         }
+      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array {
-         return [];
+      public function getHelp(cmd:String) : String
+      {
+         //Décompilation abandonné
+      }
+      
+      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array
+      {
+         //Décompilation abandonné
       }
    }
 }

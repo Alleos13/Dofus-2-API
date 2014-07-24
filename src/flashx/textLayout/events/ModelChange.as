@@ -3,8 +3,13 @@ package flashx.textLayout.events
    public final class ModelChange extends Object
    {
       
-      public function ModelChange() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ModelChange()
+      {
+         //Décompilation abandonné
       }
       
       public static const ELEMENT_ADDED:String = "elementAdded";

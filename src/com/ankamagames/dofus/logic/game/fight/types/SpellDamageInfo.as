@@ -1,7 +1,7 @@
 package com.ankamagames.dofus.logic.game.fight.types
 {
    import com.ankamagames.jerakine.logger.Logger;
-   import com.ankamagames.jerakine.entities.interfaces.IEntity;
+   import com.ankamagames.dofus.types.entities.AnimatedCharacter;
    import com.ankamagames.dofus.network.types.game.character.characteristic.CharacterCharacteristicsInformations;
    import com.ankamagames.dofus.datacenter.effects.EffectInstance;
    import com.ankamagames.dofus.datacenter.effects.instances.EffectInstanceDice;
@@ -14,93 +14,51 @@ package com.ankamagames.dofus.logic.game.fight.types
    import com.ankamagames.dofus.logic.game.fight.managers.SpellZoneManager;
    import com.ankamagames.jerakine.types.zones.IZone;
    import com.ankamagames.jerakine.types.positions.MapPoint;
+   import com.ankamagames.dofus.network.types.game.context.fight.GameFightFighterInformations;
    import com.ankamagames.atouin.managers.EntitiesManager;
-   import com.ankamagames.dofus.types.entities.AnimatedCharacter;
    import com.ankamagames.dofus.logic.game.fight.miscs.DamageUtil;
    import com.ankamagames.dofus.logic.game.common.managers.PlayedCharacterManager;
    import com.ankamagames.dofus.logic.game.fight.managers.BuffManager;
+   import com.ankamagames.dofus.datacenter.effects.Effect;
+   import com.ankamagames.dofus.datacenter.effects.instances.EffectInstanceInteger;
+   import com.ankamagames.dofus.datacenter.effects.instances.EffectInstanceMinMax;
    import com.ankamagames.jerakine.logger.Log;
    import flash.utils.getQualifiedClassName;
-   import com.ankamagames.dofus.network.types.game.context.fight.GameFightFighterInformations;
    import com.ankamagames.dofus.logic.game.fight.managers.FightersStateManager;
-   import com.ankamagames.dofus.datacenter.effects.Effect;
    import com.ankamagames.dofus.logic.game.fight.frames.FightEntitiesFrame;
    
    public class SpellDamageInfo extends Object
    {
       
-      public function SpellDamageInfo() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpellDamageInfo()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      public static function fromCurrentPlayer(pSpell:Object, pTargetId:int) : SpellDamageInfo {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public static function fromCurrentPlayer(pSpell:Object, pTargetId:int) : SpellDamageInfo
+      {
+         //Décompilation abandonné
       }
       
-      private static function applyBuffModification(pSpellInfo:SpellDamageInfo, pBuffActionId:int, pModif:int) : void {
-         switch(pBuffActionId)
-         {
-            case 118:
-               pSpellInfo.casterStrength = pSpellInfo.casterStrength + pModif;
-               break;
-            case 119:
-               pSpellInfo.casterAgility = pSpellInfo.casterAgility + pModif;
-               break;
-            case 123:
-               pSpellInfo.casterChance = pSpellInfo.casterChance + pModif;
-               break;
-            case 126:
-               pSpellInfo.casterIntelligence = pSpellInfo.casterIntelligence + pModif;
-               break;
-            case 414:
-               pSpellInfo.casterPushDamageBonus = pSpellInfo.casterPushDamageBonus + pModif;
-               break;
-         }
+      private static function applyBuffModification(pSpellInfo:SpellDamageInfo, pBuffActionId:int, pModif:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      private static function groupBuffsBySpell(pBuffs:Array) : Dictionary {
-         var spellBuffs:Dictionary = null;
-         var buff:BasicBuff = null;
-         for each(buff in pBuffs)
-         {
-            if(!spellBuffs)
-            {
-               spellBuffs = new Dictionary();
-            }
-            if(!spellBuffs[buff.castingSpell.spell.id])
-            {
-               spellBuffs[buff.castingSpell.spell.id] = new Vector.<BasicBuff>(0);
-            }
-            spellBuffs[buff.castingSpell.spell.id].push(buff);
-         }
-         return spellBuffs;
+      private static function groupBuffsBySpell(pBuffs:Array) : Dictionary
+      {
+         //Décompilation abandonné
       }
       
-      private static function getMinimumDamageEffectOrder(pCasterId:int, pTargetId:int, pEffects:Vector.<EffectInstance>) : int {
-         var effi:EffectInstance = null;
-         var minOrder:int = -1;
-         for each(effi in pEffects)
-         {
-            if(((effi.category == 2) || (!(DamageUtil.HEALING_EFFECTS_IDS.indexOf(effi.effectId) == -1)) || (effi.effectId == 5)) && (DamageUtil.verifySpellEffectMask(pCasterId,pTargetId,effi)))
-            {
-               if(minOrder == -1)
-               {
-                  minOrder = effi.order;
-               }
-               else
-               {
-                  minOrder = effi.order < minOrder?effi.order:minOrder;
-               }
-            }
-         }
-         return minOrder;
+      private static function getMinimumDamageEffectOrder(pCasterId:int, pTargetId:int, pEffects:Vector.<EffectInstance>) : int
+      {
+         //Décompilation abandonné
       }
       
       private var _targetId:int;
@@ -130,6 +88,14 @@ package com.ankamagames.dofus.logic.game.fight.types
       public var casterAgility:int;
       
       public var casterIntelligence:int;
+      
+      public var casterLifePointsAfterNormalMinDamage:uint;
+      
+      public var casterLifePointsAfterNormalMaxDamage:uint;
+      
+      public var casterLifePointsAfterCriticalMinDamage:uint;
+      
+      public var casterLifePointsAfterCriticalMaxDamage:uint;
       
       public var casterStrengthBonus:int;
       
@@ -171,6 +137,8 @@ package com.ankamagames.dofus.logic.game.fight.types
       
       public var casterPushDamageBonus:int;
       
+      public var casterCriticalPushDamageBonus:int;
+      
       public var casterCriticalDamageBonus:int;
       
       public var casterNeutralDamageBonus:int;
@@ -202,6 +170,10 @@ package com.ankamagames.dofus.logic.game.fight.types
       public var waterDamage:SpellDamage;
       
       public var airDamage:SpellDamage;
+      
+      public var buffDamage:SpellDamage;
+      
+      public var fixedDamage:SpellDamage;
       
       public var spellWeaponCriticalBonus:int;
       
@@ -283,131 +255,49 @@ package com.ankamagames.dofus.logic.game.fight.types
       
       public var damageSharingTargets:Vector.<int>;
       
-      public function getEffectModification(pEffectId:int, pEffectOrder:int, pHasCritical:Boolean) : EffectModification {
-         var i:* = 0;
-         var numEffectsModifications:int = this._effectsModifications?this._effectsModifications.length:0;
-         var numCriticalEffectsModifications:int = this._criticalEffectsModifications?this._criticalEffectsModifications.length:0;
-         var remainingEffects:int = pEffectOrder;
-         if((!pHasCritical) && (this._effectsModifications))
-         {
-            i = 0;
-            while(i < numEffectsModifications)
-            {
-               if(this._effectsModifications[i].effectId == pEffectId)
-               {
-                  if(remainingEffects == 0)
-                  {
-                     return this._effectsModifications[i];
-                  }
-                  remainingEffects--;
-               }
-               i++;
-            }
-         }
-         else if(this._criticalEffectsModifications)
-         {
-            i = 0;
-            while(i < numCriticalEffectsModifications)
-            {
-               if(this._criticalEffectsModifications[i].effectId == pEffectId)
-               {
-                  if(remainingEffects == 0)
-                  {
-                     return this._criticalEffectsModifications[i];
-                  }
-                  remainingEffects--;
-               }
-               i++;
-            }
-         }
-         
-         return null;
+      public function getEffectModification(pEffectId:int, pEffectOrder:int, pHasCritical:Boolean) : EffectModification
+      {
+         //Décompilation abandonné
       }
       
-      public function get targetId() : int {
-         return this._targetId;
+      public function get targetId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set targetId(pTargetId:int) : void {
-         var fightContextFrame:FightContextFrame = Kernel.getWorker().getFrame(FightContextFrame) as FightContextFrame;
-         if(!fightContextFrame)
-         {
-            return;
-         }
-         this._targetId = pTargetId;
-         this.targetLevel = fightContextFrame.getFighterLevel(this._targetId);
-         this._targetInfos = fightContextFrame.entitiesFrame.getEntityInfos(this._targetId) as GameFightFighterInformations;
-         if(this.targetInfos)
-         {
-            this.targetShieldPoints = this.targetInfos.stats.shieldPoints;
-            this.targetNeutralElementResistPercent = this.targetInfos.stats.neutralElementResistPercent;
-            this.targetEarthElementResistPercent = this.targetInfos.stats.earthElementResistPercent;
-            this.targetWaterElementResistPercent = this.targetInfos.stats.waterElementResistPercent;
-            this.targetAirElementResistPercent = this.targetInfos.stats.airElementResistPercent;
-            this.targetFireElementResistPercent = this.targetInfos.stats.fireElementResistPercent;
-            this.targetNeutralElementReduction = this.targetInfos.stats.neutralElementReduction;
-            this.targetEarthElementReduction = this.targetInfos.stats.earthElementReduction;
-            this.targetWaterElementReduction = this.targetInfos.stats.waterElementReduction;
-            this.targetAirElementReduction = this.targetInfos.stats.airElementReduction;
-            this.targetFireElementReduction = this.targetInfos.stats.fireElementReduction;
-            this.targetCriticalDamageFixedResist = this.targetInfos.stats.criticalDamageFixedResist;
-            this.targetPushDamageFixedResist = this.targetInfos.stats.pushDamageFixedResist;
-            this.targetErosionLifePoints = this.targetInfos.stats.baseMaxLifePoints - this.targetInfos.stats.maxLifePoints;
-            this.targetCell = this.targetInfos.disposition.cellId;
-         }
-         this.targetBuffs = BuffManager.getInstance().getAllBuff(this._targetId);
-         this.targetIsInvulnerable = false;
-         this.targetIsUnhealable = false;
-         this.targetStates = FightersStateManager.getInstance().getStates(pTargetId);
-         if(this.targetStates)
-         {
-            this.targetIsInvulnerable = !(this.targetStates.indexOf(56) == -1);
-            this.targetIsUnhealable = !(this.targetStates.indexOf(76) == -1);
-         }
+      public function set targetId(pTargetId:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get targetInfos() : GameFightFighterInformations {
-         return this._targetInfos;
+      public function get targetInfos() : GameFightFighterInformations
+      {
+         //Décompilation abandonné
       }
       
-      public function get originalTargetsIds() : Vector.<int> {
-         return this._originalTargetsIds;
+      public function get originalTargetsIds() : Vector.<int>
+      {
+         //Décompilation abandonné
       }
       
-      public function get triggeredSpellsByCasterOnTarget() : Vector.<TriggeredSpell> {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public function get triggeredSpellsByCasterOnTarget() : Vector.<TriggeredSpell>
+      {
+         //Décompilation abandonné
       }
       
-      public function get targetTriggeredSpells() : Vector.<TriggeredSpell> {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public function get targetTriggeredSpells() : Vector.<TriggeredSpell>
+      {
+         //Décompilation abandonné
       }
       
-      public function addTriggeredSpellsEffects(pTriggeredSpells:Vector.<TriggeredSpell>) : Boolean {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public function addTriggeredSpellsEffects(pTriggeredSpells:Vector.<TriggeredSpell>) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getDamageSharingTargets() : Vector.<int> {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public function getDamageSharingTargets() : Vector.<int>
+      {
+         //Décompilation abandonné
       }
    }
 }

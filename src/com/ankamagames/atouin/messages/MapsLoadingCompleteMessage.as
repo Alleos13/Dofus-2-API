@@ -6,22 +6,27 @@ package com.ankamagames.atouin.messages
    public class MapsLoadingCompleteMessage extends MapMessage
    {
       
-      public function MapsLoadingCompleteMessage(mapPoint:WorldPoint, mapData:Map) {
-         super();
-         this._map = mapPoint;
-         this._mapData = mapData;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapsLoadingCompleteMessage(mapPoint:WorldPoint, mapData:Map)
+      {
+         //Décompilation abandonné
       }
       
       private var _map:WorldPoint;
       
       private var _mapData:Map;
       
-      public function get mapPoint() : WorldPoint {
-         return this._map;
+      public function get mapPoint() : WorldPoint
+      {
+         //Décompilation abandonné
       }
       
-      public function get mapData() : Map {
-         return this._mapData;
+      public function get mapData() : Map
+      {
+         //Décompilation abandonné
       }
    }
 }

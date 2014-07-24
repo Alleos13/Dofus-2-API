@@ -6,11 +6,13 @@ package flashx.textLayout.events
    public class DamageEvent extends Event
    {
       
-      public function DamageEvent(param1:String, param2:Boolean=false, param3:Boolean=false, param4:TextFlow=null, param5:int=0, param6:int=0) {
-         this._textFlow = param4;
-         this._damageAbsoluteStart = param5;
-         this._damageLength = param6;
-         super(param1,param2,param3);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DamageEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, textFlow:TextFlow = null, damageAbsoluteStart:int = 0, damageLength:int = 0)
+      {
+         //Décompilation abandonné
       }
       
       public static const DAMAGE:String = "damage";
@@ -21,20 +23,24 @@ package flashx.textLayout.events
       
       private var _damageLength:int;
       
-      override public function clone() : Event {
-         return new DamageEvent(type,bubbles,cancelable,this._textFlow,this._damageAbsoluteStart,this._damageLength);
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
       
-      public function get textFlow() : TextFlow {
-         return this._textFlow;
+      public function get textFlow() : TextFlow
+      {
+         //Décompilation abandonné
       }
       
-      public function get damageAbsoluteStart() : int {
-         return this._damageAbsoluteStart;
+      public function get damageAbsoluteStart() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get damageLength() : int {
-         return this._damageLength;
+      public function get damageLength() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

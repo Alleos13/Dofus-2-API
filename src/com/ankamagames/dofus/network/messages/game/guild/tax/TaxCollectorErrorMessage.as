@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
    public class TaxCollectorErrorMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function TaxCollectorErrorMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TaxCollectorErrorMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5634;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var reason:int = 0;
       
-      override public function getMessageId() : uint {
-         return 5634;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initTaxCollectorErrorMessage(reason:int = 0) : TaxCollectorErrorMessage {
-         this.reason = reason;
-         this._isInitialized = true;
-         return this;
+      public function initTaxCollectorErrorMessage(reason:int = 0) : TaxCollectorErrorMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.reason = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TaxCollectorErrorMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_TaxCollectorErrorMessage(output:IDataOutput) : void {
-         output.writeByte(this.reason);
+      public function serializeAs_TaxCollectorErrorMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TaxCollectorErrorMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_TaxCollectorErrorMessage(input:IDataInput) : void {
-         this.reason = input.readByte();
+      public function deserializeAs_TaxCollectorErrorMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

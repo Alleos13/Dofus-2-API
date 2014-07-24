@@ -8,18 +8,18 @@ package com.ankamagames.dofus.internalDatacenter.conquest
    public class PrismFightersWrapper extends Object implements IDataCenter
    {
       
-      public function PrismFightersWrapper() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pFightersInformations:CharacterMinimalPlusLookInformations) : PrismFightersWrapper {
-         var item:PrismFightersWrapper = new PrismFightersWrapper();
-         item.playerCharactersInformations = pFightersInformations;
-         if(pFightersInformations.entityLook != null)
-         {
-            item.entityLook = EntityLookAdapter.getRiderLook(pFightersInformations.entityLook);
-         }
-         return item;
+      public function PrismFightersWrapper()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pFightersInformations:CharacterMinimalPlusLookInformations) : PrismFightersWrapper
+      {
+         //Décompilation abandonné
       }
       
       public var playerCharactersInformations:CharacterMinimalPlusLookInformations;

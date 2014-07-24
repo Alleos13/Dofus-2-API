@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.json
    public class JSONTokenType extends Object
    {
       
-      public function JSONTokenType() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function JSONTokenType()
+      {
+         //Décompilation abandonné
       }
       
       public static const UNKNOWN:int = -1;

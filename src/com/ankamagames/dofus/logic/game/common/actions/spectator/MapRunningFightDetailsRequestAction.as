@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.spectator
    public class MapRunningFightDetailsRequestAction extends Object implements Action
    {
       
-      public function MapRunningFightDetailsRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(fightId:uint) : MapRunningFightDetailsRequestAction {
-         var a:MapRunningFightDetailsRequestAction = new MapRunningFightDetailsRequestAction();
-         a.fightId = fightId;
-         return a;
+      public function MapRunningFightDetailsRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(fightId:uint) : MapRunningFightDetailsRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var fightId:uint;

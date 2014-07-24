@@ -7,26 +7,33 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class KamaItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function KamaItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         var readableCriterionRef:String = I18n.getUiText("ui.common.kamas");
-         return readableCriterionRef + " " + _operator.text + " " + _criterionValue;
+      public function KamaItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function get isRespected() : Boolean {
-         return _operator.compare(uint(this.getCriterion()),_criterionValue);
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:KamaItemCriterion = new KamaItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get isRespected() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getCriterion() : int {
-         return PlayedCharacterManager.getInstance().characteristics.kamas;
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getCriterion() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

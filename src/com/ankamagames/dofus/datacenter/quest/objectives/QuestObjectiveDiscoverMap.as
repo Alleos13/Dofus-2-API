@@ -8,36 +8,32 @@ package com.ankamagames.dofus.datacenter.quest.objectives
    public class QuestObjectiveDiscoverMap extends QuestObjective implements IDataCenter
    {
       
-      public function QuestObjectiveDiscoverMap() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function QuestObjectiveDiscoverMap()
+      {
+         //Décompilation abandonné
       }
       
       private var _mapDescriptionText:String;
       
       private var _text:String;
       
-      public function get mapDescriptionTextId() : uint {
-         if(!this.parameters)
-         {
-            return 0;
-         }
-         return this.parameters[0];
+      public function get mapDescriptionTextId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get mapDescriptionText() : String {
-         if(!this._mapDescriptionText)
-         {
-            this._mapDescriptionText = I18n.getText(this.mapDescriptionTextId);
-         }
-         return this._mapDescriptionText;
+      public function get mapDescriptionText() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         if(!this._text)
-         {
-            this._text = PatternDecoder.getDescription(this.type.name,[this.mapDescriptionText]);
-         }
-         return this._text;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

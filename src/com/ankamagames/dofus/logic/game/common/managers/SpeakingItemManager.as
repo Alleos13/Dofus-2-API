@@ -19,17 +19,13 @@ package com.ankamagames.dofus.logic.game.common.managers
    public class SpeakingItemManager extends Object implements IDestroyable
    {
       
-      public function SpeakingItemManager() {
-         super();
-         if(_self != null)
-         {
-            throw new SingletonError("TimeManager is a singleton and should not be instanciated directly.");
-         }
-         else
-         {
-            this.init();
-            return;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpeakingItemManager()
+      {
+         //Décompilation abandonné
       }
       
       private static const SPEAKING_ITEMS_MSG_COUNT:Number = 30;
@@ -90,159 +86,46 @@ package com.ankamagames.dofus.logic.game.common.managers
       
       private static var _self:SpeakingItemManager;
       
-      public static function getInstance() : SpeakingItemManager {
-         if(_self == null)
-         {
-            _self = new SpeakingItemManager();
-         }
-         return _self;
+      public static function getInstance() : SpeakingItemManager
+      {
+         //Décompilation abandonné
       }
       
       private var _nextMessageCount:int;
       
-      public function get speakTimerMinuteDelay() : int {
-         return _timer.delay;
+      public function get speakTimerMinuteDelay() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set speakTimerMinuteDelay(delay:int) : void {
-         _timer.delay = delay;
-         _timer.stop();
-         _timer.start();
+      public function set speakTimerMinuteDelay(delay:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function triggerEvent(nEvent:int) : void {
-         var item:ItemWrapper = null;
-         var strId:String = null;
-         var i:* = 0;
-         var msgId:* = NaN;
-         var ok:* = false;
-         var media:* = NaN;
-         var speakingText:SpeakingItemText = null;
-         var restriction:Array = null;
-         var msg:LivingObjectMessageRequestMessage = null;
-         if(!Kernel.getWorker().getFrame(ChatFrame))
-         {
-            return;
-         }
-         var opt:Boolean = OptionManager.getOptionManager("chat").letLivingObjectTalk;
-         if(!opt)
-         {
-            return;
-         }
-         var items:Array = new Array();
-         for each(item in InventoryManager.getInstance().inventory.getView("equipment").content)
-         {
-            if((item) && (item.isSpeakingObject))
-            {
-               items.push(item);
-            }
-         }
-         if(items.length == 0)
-         {
-            return;
-         }
-         this._nextMessageCount--;
-         this._nextMessageCount = this._nextMessageCount - (items.length - 1) / 4;
-         if(this._nextMessageCount > 0)
-         {
-            return;
-         }
-         var triggersAssoc:SpeakingItemsTrigger = SpeakingItemsTrigger.getSpeakingItemsTriggerById(nEvent);
-         var itemWrapper:ItemWrapper = items[Math.floor(Math.random() * items.length)];
-         var tmpTriggersAssoc:Array = new Array();
-         if(triggersAssoc)
-         {
-            strId = itemWrapper.objectGID.toString();
-            i = 0;
-            while(i < triggersAssoc.textIds.length)
-            {
-               if(!((itemWrapper.isLivingObject) && (!(triggersAssoc.states[i] == itemWrapper.livingObjectMood))))
-               {
-                  speakingText = SpeakingItemText.getSpeakingItemTextById(triggersAssoc.textIds[i]);
-                  if(speakingText)
-                  {
-                     if(!((speakingText.textLevel > itemWrapper.livingObjectLevel) && (itemWrapper.isLivingObject)))
-                     {
-                        restriction = speakingText.textRestriction.split(",");
-                        if(!((!(speakingText.textRestriction == "")) && (restriction.indexOf(strId) == -1)))
-                        {
-                           tmpTriggersAssoc.push(triggersAssoc.textIds[i]);
-                        }
-                     }
-                  }
-               }
-               i++;
-            }
-            if(tmpTriggersAssoc.length == 0)
-            {
-               return;
-            }
-            ok = false;
-            i = 0;
-            while(i < 10)
-            {
-               msgId = tmpTriggersAssoc[Math.floor(Math.random() * tmpTriggersAssoc.length)];
-               speakingText = SpeakingItemText.getSpeakingItemTextById(msgId);
-               if(Math.random() < speakingText.textProba)
-               {
-                  ok = true;
-               }
-               i++;
-            }
-            if(!ok)
-            {
-               return;
-            }
-            if(speakingText.textSound != -1)
-            {
-               media = Math.floor(Math.random() * 3);
-            }
-            else
-            {
-               media = 1;
-            }
-            if(Math.random() < SPEAKING_ITEMS_CHAT_PROBA)
-            {
-               msg = new LivingObjectMessageRequestMessage();
-               msg.msgId = speakingText.textId;
-               msg.livingObject = itemWrapper.objectUID;
-               ConnectionsHandler.getConnection().send(msg);
-            }
-            else
-            {
-               KernelEventsManager.getInstance().processCallback(ChatHookList.ChatSpeakingItem,ChatActivableChannelsEnum.PSEUDO_CHANNEL_PRIVATE,itemWrapper,speakingText.textString,TimeManager.getInstance().getTimestamp());
-            }
-         }
-         this.generateNextMsgCount(false);
+      public function triggerEvent(nEvent:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         _self = null;
-         _timer.removeEventListener("timer",this.onTimer);
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function init() : void {
-         _timer = new Timer(MINUTE_DELAY);
-         _timer.addEventListener(TimerEvent.TIMER,this.onTimer);
-         _timer.start();
-         this.generateNextMsgCount(true);
+      private function init() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function generateNextMsgCount(noMin:Boolean) : void {
-         var msgCount:Number = SPEAKING_ITEMS_MSG_COUNT;
-         var delta:Number = SPEAKING_ITEMS_MSG_COUNT_DELTA;
-         if(noMin)
-         {
-            this._nextMessageCount = Math.floor(msgCount * Math.random());
-         }
-         else
-         {
-            this._nextMessageCount = msgCount + Math.floor(2 * delta * Math.random());
-         }
+      private function generateNextMsgCount(noMin:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onTimer(event:TimerEvent) : void {
-         this.triggerEvent(SPEAK_TRIGGER_MINUTE);
+      private function onTimer(event:TimerEvent) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

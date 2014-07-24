@@ -6,11 +6,18 @@ package com.ankamagames.berilia.pools
    public class PoolableXmlParsor extends XmlParsor implements Poolable
    {
       
-      public function PoolableXmlParsor() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function free() : void {
+      public function PoolableXmlParsor()
+      {
+         //Décompilation abandonné
+      }
+      
+      public function free() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

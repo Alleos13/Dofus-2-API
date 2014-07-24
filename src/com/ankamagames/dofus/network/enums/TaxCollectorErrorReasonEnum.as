@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class TaxCollectorErrorReasonEnum extends Object
    {
       
-      public function TaxCollectorErrorReasonEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TaxCollectorErrorReasonEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const TAX_COLLECTOR_ERROR_UNKNOWN:int = 0;

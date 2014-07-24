@@ -13,11 +13,13 @@ package com.ankamagames.atouin.types
    public class CellReference extends Object
    {
       
-      public function CellReference(nId:uint) {
-         super();
-         this.id = nId;
-         this.listSprites = new Array();
-         this.gfxId = new Array();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CellReference(nId:uint)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -50,76 +52,44 @@ package com.ankamagames.atouin.types
       
       public var gfxId:Array;
       
-      public function addSprite(d:DisplayObject) : void {
-         this.listSprites.push(d);
+      public function addSprite(d:DisplayObject) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addGfx(nGfxId:int) : void {
-         this.gfxId.push(nGfxId);
+      public function addGfx(nGfxId:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function lock() : void {
-         this._lock = true;
+      public function lock() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get locked() : Boolean {
-         return this._lock;
+      public function get locked() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get visible() : Boolean {
-         return this._visible;
+      public function get visible() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set visible(bValue:Boolean) : void {
-         var i:uint = 0;
-         if(this._visible != bValue)
-         {
-            this._visible = bValue;
-            i = 0;
-            while(i < this.listSprites.length)
-            {
-               if(this.listSprites[i] != null)
-               {
-                  this.listSprites[i].visible = bValue;
-               }
-               i++;
-            }
-         }
+      public function set visible(bValue:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get bounds() : Rectangle {
-         var sprite:DisplayObject = null;
-         var rectangle:PoolableRectangle = (PoolsManager.getInstance().getRectanglePool().checkOut() as PoolableRectangle).renew();
-         var boundRect:PoolableRectangle = PoolsManager.getInstance().getRectanglePool().checkOut() as PoolableRectangle;
-         for each(sprite in this.listSprites)
-         {
-            rectangle.extend(boundRect.renew(sprite.x,sprite.y,sprite.width,sprite.height));
-         }
-         PoolsManager.getInstance().getRectanglePool().checkIn(boundRect);
-         PoolsManager.getInstance().getRectanglePool().checkIn(rectangle);
-         return rectangle as Rectangle;
+      public function get bounds() : Rectangle
+      {
+         //Décompilation abandonné
       }
       
-      public function getAvgColor() : uint {
-         var t:ColorTransform = null;
-         var i:* = 0;
-         var red:Number = 0;
-         var green:Number = 0;
-         var blue:Number = 0;
-         var len:int = this.listSprites.length;
-         i = 0;
-         while(i < len)
-         {
-            t = (this.listSprites[i] as DisplayObject).transform.colorTransform;
-            red = red + t.redOffset * t.redMultiplier;
-            green = green + t.greenOffset * t.greenMultiplier;
-            blue = blue + t.blueOffset * t.blueMultiplier;
-            i = i + 1;
-         }
-         red = red / len;
-         green = green / len;
-         blue = blue / len;
-         return red << 16 | green << 8 | blue;
+      public function getAvgColor() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

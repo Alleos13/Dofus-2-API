@@ -7,45 +7,52 @@ package com.ankamagames.dofus.network.types.game.context
    public class MapCoordinatesAndId extends MapCoordinates implements INetworkType
    {
       
-      public function MapCoordinatesAndId() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapCoordinatesAndId()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 392;
       
       public var mapId:int = 0;
       
-      override public function getTypeId() : uint {
-         return 392;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initMapCoordinatesAndId(worldX:int = 0, worldY:int = 0, mapId:int = 0) : MapCoordinatesAndId {
-         super.initMapCoordinates(worldX,worldY);
-         this.mapId = mapId;
-         return this;
+      public function initMapCoordinatesAndId(worldX:int = 0, worldY:int = 0, mapId:int = 0) : MapCoordinatesAndId
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.mapId = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_MapCoordinatesAndId(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_MapCoordinatesAndId(output:IDataOutput) : void {
-         super.serializeAs_MapCoordinates(output);
-         output.writeInt(this.mapId);
+      public function serializeAs_MapCoordinatesAndId(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_MapCoordinatesAndId(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_MapCoordinatesAndId(input:IDataInput) : void {
-         super.deserialize(input);
-         this.mapId = input.readInt();
+      public function deserializeAs_MapCoordinatesAndId(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

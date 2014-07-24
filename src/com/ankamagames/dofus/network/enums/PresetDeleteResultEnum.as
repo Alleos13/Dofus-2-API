@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class PresetDeleteResultEnum extends Object
    {
       
-      public function PresetDeleteResultEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PresetDeleteResultEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const PRESET_DEL_OK:uint = 1;

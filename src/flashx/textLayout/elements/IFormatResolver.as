@@ -5,14 +5,18 @@ package flashx.textLayout.elements
    public interface IFormatResolver
    {
       
-      function invalidateAll(param1:TextFlow) : void;
+      {
+      //Décompilation abandonné
+      }
       
-      function invalidate(param1:Object) : void;
+      function invalidateAll(textFlow:TextFlow) : void;
       
-      function resolveFormat(param1:Object) : ITextLayoutFormat;
+      function invalidate(target:Object) : void;
       
-      function resolveUserFormat(param1:Object, param2:String) : *;
+      function resolveFormat(target:Object) : ITextLayoutFormat;
       
-      function getResolverForNewFlow(param1:TextFlow, param2:TextFlow) : IFormatResolver;
+      function resolveUserFormat(target:Object, userFormat:String) : *;
+      
+      function getResolverForNewFlow(oldFlow:TextFlow, newFlow:TextFlow) : IFormatResolver;
    }
 }

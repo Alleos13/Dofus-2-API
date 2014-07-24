@@ -11,8 +11,13 @@ package com.ankamagames.dofus.datacenter.world
    public class Area extends Object implements IDataCenter
    {
       
-      public function Area() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Area()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Areas";
@@ -21,22 +26,14 @@ package com.ankamagames.dofus.datacenter.world
       
       private static var _allAreas:Array;
       
-      public static function getAreaById(id:int) : Area {
-         var area:Area = GameData.getObject(MODULE,id) as Area;
-         if((!area) || (!area.superArea) || (!area.hasVisibleSubAreas))
-         {
-            return null;
-         }
-         return area;
+      public static function getAreaById(id:int) : Area
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAllArea() : Array {
-         if(_allAreas)
-         {
-            return _allAreas;
-         }
-         _allAreas = GameData.getObjects(MODULE) as Array;
-         return _allAreas;
+      public static function getAllArea() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -59,29 +56,19 @@ package com.ankamagames.dofus.datacenter.world
       
       private var _hasVisibleSubAreasInitialized:Boolean;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get superArea() : SuperArea {
-         if(!this._superArea)
-         {
-            this._superArea = SuperArea.getSuperAreaById(this.superAreaId);
-         }
-         return this._superArea;
+      public function get superArea() : SuperArea
+      {
+         //Décompilation abandonné
       }
       
-      public function get hasVisibleSubAreas() : Boolean {
-         if(!this._hasVisibleSubAreasInitialized)
-         {
-            this._hasVisibleSubAreas = true;
-            this._hasVisibleSubAreasInitialized = true;
-         }
-         return this._hasVisibleSubAreas;
+      public function get hasVisibleSubAreas() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

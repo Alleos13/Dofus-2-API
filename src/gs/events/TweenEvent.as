@@ -5,9 +5,13 @@ package gs.events
    public class TweenEvent extends Event
    {
       
-      public function TweenEvent(param1:String, param2:Object=null, param3:Boolean=false, param4:Boolean=false) {
-         super(param1,param3,param4);
-         this.info = param2;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TweenEvent($type:String, $info:Object = null, $bubbles:Boolean = false, $cancelable:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       public static const version:Number = 0.9;
@@ -20,8 +24,9 @@ package gs.events
       
       public var info:Object;
       
-      override public function clone() : Event {
-         return new TweenEvent(this.type,this.info,this.bubbles,this.cancelable);
+      override public function clone() : Event
+      {
+         //Décompilation abandonné
       }
    }
 }

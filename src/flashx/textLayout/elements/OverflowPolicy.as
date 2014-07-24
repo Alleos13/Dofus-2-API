@@ -3,8 +3,13 @@ package flashx.textLayout.elements
    public final class OverflowPolicy extends Object
    {
       
-      public function OverflowPolicy() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function OverflowPolicy()
+      {
+         //Décompilation abandonné
       }
       
       public static const FIT_ANY:String = "fitAny";

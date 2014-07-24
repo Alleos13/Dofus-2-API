@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.friend
    public class GuildMemberWarnOnConnectionStateMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GuildMemberWarnOnConnectionStateMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildMemberWarnOnConnectionStateMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6160;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var enable:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 6160;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGuildMemberWarnOnConnectionStateMessage(enable:Boolean = false) : GuildMemberWarnOnConnectionStateMessage {
-         this.enable = enable;
-         this._isInitialized = true;
-         return this;
+      public function initGuildMemberWarnOnConnectionStateMessage(enable:Boolean = false) : GuildMemberWarnOnConnectionStateMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.enable = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GuildMemberWarnOnConnectionStateMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GuildMemberWarnOnConnectionStateMessage(output:IDataOutput) : void {
-         output.writeBoolean(this.enable);
+      public function serializeAs_GuildMemberWarnOnConnectionStateMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GuildMemberWarnOnConnectionStateMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildMemberWarnOnConnectionStateMessage(input:IDataInput) : void {
-         this.enable = input.readBoolean();
+      public function deserializeAs_GuildMemberWarnOnConnectionStateMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

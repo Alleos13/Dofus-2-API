@@ -9,47 +9,65 @@ package com.ankamagames.dofus.network.messages.game.initialization
    public class CharacterLoadingCompleteMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function CharacterLoadingCompleteMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterLoadingCompleteMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6471;
       
-      override public function get isInitialized() : Boolean {
-         return true;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function getMessageId() : uint {
-         return 6471;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCharacterLoadingCompleteMessage() : CharacterLoadingCompleteMessage {
-         return this;
+      public function initCharacterLoadingCompleteMessage() : CharacterLoadingCompleteMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterLoadingCompleteMessage(output:IDataOutput) : void {
+      public function serializeAs_CharacterLoadingCompleteMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterLoadingCompleteMessage(input:IDataInput) : void {
+      public function deserializeAs_CharacterLoadingCompleteMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

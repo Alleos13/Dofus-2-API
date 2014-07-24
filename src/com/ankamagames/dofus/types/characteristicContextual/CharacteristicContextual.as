@@ -7,24 +7,30 @@ package com.ankamagames.dofus.types.characteristicContextual
    public class CharacteristicContextual extends Sprite
    {
       
-      public function CharacteristicContextual() {
-         super();
-         mouseChildren = false;
-         mouseEnabled = false;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacteristicContextual()
+      {
+         //Décompilation abandonné
       }
       
       private var _referedEntity:IEntity;
       
-      public function get referedEntity() : IEntity {
-         return this._referedEntity;
+      public function get referedEntity() : IEntity
+      {
+         //Décompilation abandonné
       }
       
-      public function set referedEntity(oEntity:IEntity) : void {
-         this._referedEntity = oEntity;
+      public function set referedEntity(oEntity:IEntity) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function remove() : void {
-         dispatchEvent(new BeriliaEvent(BeriliaEvent.REMOVE_COMPONENT));
+      public function remove() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

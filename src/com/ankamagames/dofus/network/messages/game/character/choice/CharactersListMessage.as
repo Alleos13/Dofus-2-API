@@ -9,63 +9,69 @@ package com.ankamagames.dofus.network.messages.game.character.choice
    public class CharactersListMessage extends BasicCharactersListMessage implements INetworkMessage
    {
       
-      public function CharactersListMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharactersListMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 151;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var hasStartupActions:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 151;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCharactersListMessage(characters:Vector.<CharacterBaseInformations> = null, hasStartupActions:Boolean = false) : CharactersListMessage {
-         super.initBasicCharactersListMessage(characters);
-         this.hasStartupActions = hasStartupActions;
-         this._isInitialized = true;
-         return this;
+      public function initCharactersListMessage(characters:Vector.<CharacterBaseInformations> = null, hasStartupActions:Boolean = false) : CharactersListMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.hasStartupActions = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharactersListMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CharactersListMessage(output:IDataOutput) : void {
-         super.serializeAs_BasicCharactersListMessage(output);
-         output.writeBoolean(this.hasStartupActions);
+      public function serializeAs_CharactersListMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharactersListMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CharactersListMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.hasStartupActions = input.readBoolean();
+      public function deserializeAs_CharactersListMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

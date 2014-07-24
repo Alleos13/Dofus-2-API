@@ -9,9 +9,13 @@ package com.ankamagames.dofus.logic.game.roleplay.types
    public class EntityIcon extends Sprite
    {
       
-      public function EntityIcon() {
-         super();
-         this._icons = new Dictionary(true);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EntityIcon()
+      {
+         //Décompilation abandonné
       }
       
       private var _icons:Dictionary;
@@ -22,60 +26,34 @@ package com.ankamagames.dofus.logic.game.roleplay.types
       
       public var rendering:Boolean;
       
-      public function addIcon(pIconUri:String, pIconName:String) : void {
-         this._icons[pIconName] = new Texture();
-         var icon:Texture = this._icons[pIconName];
-         icon.uri = new Uri(pIconUri);
-         icon.dispatchMessages = true;
-         icon.addEventListener(Event.COMPLETE,this.iconRendered);
-         icon.finalize();
-         this._nbIcons++;
+      public function addIcon(pIconUri:String, pIconName:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeIcon(pIconName:String) : void {
-         var icon:Texture = this._icons[pIconName];
-         if(icon)
-         {
-            if(icon.parent == this)
-            {
-               removeChild(icon);
-            }
-            delete this._icons[pIconName];
-            this._nbIcons--;
-            if(numChildren == this._nbIcons)
-            {
-               for each(icon in this._icons)
-               {
-                  removeChild(icon);
-               }
-               for each(icon in this._icons)
-               {
-                  icon.x = width == 0?icon.width / 2:width + 5 + icon.width / 2;
-                  addChild(icon);
-               }
-               this.needUpdate = true;
-            }
-         }
+      public function removeIcon(pIconName:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function hasIcon(pIconName:String) : Boolean {
-         return this._icons[pIconName];
+      public function hasIcon(pIconName:String) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get length() : int {
-         return this._nbIcons;
+      public function get length() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function remove() : void {
-         parent.removeChild(this);
+      public function remove() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function iconRendered(pEvent:Event) : void {
-         var icon:Texture = pEvent.currentTarget as Texture;
-         icon.removeEventListener(Event.COMPLETE,this.iconRendered);
-         icon.x = width == 0?icon.width / 2:width + 5 + icon.width / 2;
-         addChild(icon);
-         this.needUpdate = true;
+      private function iconRendered(pEvent:Event) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

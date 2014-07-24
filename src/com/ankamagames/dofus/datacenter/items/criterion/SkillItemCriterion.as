@@ -5,21 +5,28 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class SkillItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function SkillItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         return _criterionRef + " " + _operator.text + " " + _criterionValue;
+      public function SkillItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:SkillItemCriterion = new SkillItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getCriterion() : int {
-         return 0;
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getCriterion() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class TaxCollectorStateEnum extends Object
    {
       
-      public function TaxCollectorStateEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TaxCollectorStateEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const STATE_COLLECTING:uint = 0;

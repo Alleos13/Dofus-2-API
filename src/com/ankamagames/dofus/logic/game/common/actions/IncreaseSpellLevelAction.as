@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class IncreaseSpellLevelAction extends Object implements Action
    {
       
-      public function IncreaseSpellLevelAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pSpellId:uint, pSpellLevel:uint) : IncreaseSpellLevelAction {
-         var a:IncreaseSpellLevelAction = new IncreaseSpellLevelAction();
-         a.spellId = pSpellId;
-         a.spellLevel = pSpellLevel;
-         return a;
+      public function IncreaseSpellLevelAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pSpellId:uint, pSpellLevel:uint) : IncreaseSpellLevelAction
+      {
+         //Décompilation abandonné
       }
       
       public var spellId:uint;

@@ -23,54 +23,35 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
    public class PaddockFrame extends Object implements Frame
    {
       
-      public function PaddockFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PaddockFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      public function get priority() : int {
-         return Priority.NORMAL;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var psra:PaddockSellRequestAction = null;
-         var psrmsg:PaddockSellRequestMessage = null;
-         var ldm:LeaveDialogMessage = null;
-         switch(true)
-         {
-            case msg is PaddockBuyRequestAction:
-               ConnectionsHandler.getConnection().send(new PaddockBuyRequestMessage());
-               return true;
-            case msg is PaddockSellRequestAction:
-               psra = msg as PaddockSellRequestAction;
-               psrmsg = new PaddockSellRequestMessage();
-               psrmsg.initPaddockSellRequestMessage(psra.price);
-               ConnectionsHandler.getConnection().send(psrmsg);
-               return true;
-            case msg is LeaveDialogRequestAction:
-               ConnectionsHandler.getConnection().send(new LeaveDialogRequestMessage());
-               return true;
-            case msg is LeaveDialogMessage:
-               ldm = msg as LeaveDialogMessage;
-               if(ldm.dialogType == DialogTypeEnum.DIALOG_PURCHASABLE)
-               {
-                  Kernel.getWorker().process(ChangeWorldInteractionAction.create(true));
-                  Kernel.getWorker().removeFrame(this);
-               }
-               return true;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         KernelEventsManager.getInstance().processCallback(HookList.LeaveDialog);
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

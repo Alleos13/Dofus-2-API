@@ -16,8 +16,13 @@ package com.ankamagames.dofus.internalDatacenter.guild
    public class EmblemWrapper extends Proxy implements IDataCenter, ISlotData
    {
       
-      public function EmblemWrapper() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EmblemWrapper()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -28,46 +33,19 @@ package com.ankamagames.dofus.internalDatacenter.guild
       
       public static const BACK:uint = 2;
       
-      public static function fromNetwork(msg:GuildEmblem, background:Boolean) : EmblemWrapper {
-         var o:EmblemWrapper = new EmblemWrapper();
-         if(background)
-         {
-            o.idEmblem = msg.backgroundShape;
-            o._color = msg.backgroundColor;
-            o._type = BACK;
-         }
-         else
-         {
-            o.idEmblem = msg.symbolShape;
-            o._color = msg.symbolColor;
-            o._type = UP;
-         }
-         return o;
+      public static function fromNetwork(msg:GuildEmblem, background:Boolean) : EmblemWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public static function create(pIdEmblem:uint, pType:uint, pColor:uint = 0, useCache:Boolean = false) : EmblemWrapper {
-         var emblem:EmblemWrapper = null;
-         if((!_cache[pIdEmblem]) || (!useCache))
-         {
-            emblem = new EmblemWrapper();
-            emblem.idEmblem = pIdEmblem;
-            if(useCache)
-            {
-               _cache[pIdEmblem] = emblem;
-            }
-         }
-         else
-         {
-            emblem = _cache[pIdEmblem];
-         }
-         emblem._type = pType;
-         emblem._color = pColor;
-         emblem._isInit = false;
-         return emblem;
+      public static function create(pIdEmblem:uint, pType:uint, pColor:uint = 0, useCache:Boolean = false) : EmblemWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public static function getEmblemFromId(emblemId:uint) : EmblemWrapper {
-         return _cache[emblemId];
+      public static function getEmblemFromId(emblemId:uint) : EmblemWrapper
+      {
+         //Décompilation abandonné
       }
       
       private var _uri:Uri;
@@ -86,112 +64,99 @@ package com.ankamagames.dofus.internalDatacenter.guild
       
       public var idEmblem:uint;
       
-      public function get category() : int {
-         this.init();
-         return this._category;
+      public function get category() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get order() : int {
-         this.init();
-         return this._order;
+      public function get order() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get iconUri() : Uri {
-         this.init();
-         return this._uri;
+      public function get iconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get fullSizeIconUri() : Uri {
-         this.init();
-         return this._fullSizeUri;
+      public function get fullSizeIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get backGroundIconUri() : Uri {
-         return new Uri(XmlConfig.getInstance().getEntry("config.ui.skin").concat("bitmap/emptySlot.png"));
+      public function get backGroundIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function set backGroundIconUri(bgUri:Uri) : void {
+      public function set backGroundIconUri(bgUri:Uri) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get info1() : String {
-         return null;
+      public function get info1() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get startTime() : int {
-         return 0;
+      public function get startTime() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get endTime() : int {
-         return 0;
+      public function get endTime() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set endTime(t:int) : void {
+      public function set endTime(t:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get timer() : int {
-         return 0;
+      public function get timer() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get active() : Boolean {
-         return true;
+      public function get active() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get type() : uint {
-         return this._type;
+      public function get type() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get color() : uint {
-         return this._color;
+      public function get color() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get errorIconUri() : Uri {
-         return null;
+      public function get errorIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function update(pIdEmblem:uint, pType:uint, pColor:uint = 0) : void {
-         this.idEmblem = pIdEmblem;
-         this._type = pType;
-         this._color = pColor;
-         this._isInit = false;
+      public function update(pIdEmblem:uint, pType:uint, pColor:uint = 0) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addHolder(h:ISlotDataHolder) : void {
+      public function addHolder(h:ISlotDataHolder) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeHolder(h:ISlotDataHolder) : void {
+      public function removeHolder(h:ISlotDataHolder) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function init() : void {
-         var path:String = null;
-         var pathFullSize:String = null;
-         var iconId:* = 0;
-         var symbol:EmblemSymbol = null;
-         var back:EmblemBackground = null;
-         if(this._isInit)
-         {
-            return;
-         }
-         switch(this._type)
-         {
-            case UP:
-               symbol = EmblemSymbol.getEmblemSymbolById(this.idEmblem);
-               iconId = symbol.iconId;
-               this._order = symbol.order;
-               this._category = symbol.categoryId;
-               path = XmlConfig.getInstance().getEntry("config.gfx.path.emblem_icons.small") + "up/";
-               pathFullSize = XmlConfig.getInstance().getEntry("config.gfx.path.emblem_icons.large") + "up/";
-               break;
-            case BACK:
-               back = EmblemBackground.getEmblemBackgroundById(this.idEmblem);
-               this._order = back.order;
-               iconId = this.idEmblem;
-               path = XmlConfig.getInstance().getEntry("config.gfx.path.emblem_icons.small") + "back/";
-               pathFullSize = XmlConfig.getInstance().getEntry("config.gfx.path.emblem_icons.large") + "back/";
-               break;
-         }
-         this._uri = new Uri(path + iconId + ".png");
-         this._fullSizeUri = new Uri(pathFullSize + iconId + ".swf");
-         this._isInit = true;
+      private function init() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

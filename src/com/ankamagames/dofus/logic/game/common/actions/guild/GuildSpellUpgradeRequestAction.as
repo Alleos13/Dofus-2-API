@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.guild
    public class GuildSpellUpgradeRequestAction extends Object implements Action
    {
       
-      public function GuildSpellUpgradeRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pSpellId:uint) : GuildSpellUpgradeRequestAction {
-         var action:GuildSpellUpgradeRequestAction = new GuildSpellUpgradeRequestAction();
-         action.spellId = pSpellId;
-         return action;
+      public function GuildSpellUpgradeRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pSpellId:uint) : GuildSpellUpgradeRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var spellId:uint;

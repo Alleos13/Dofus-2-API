@@ -7,33 +7,50 @@ package com.ankamagames.dofus.network.types.game.data.items
    public class Item extends Object implements INetworkType
    {
       
-      public function Item() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Item()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 7;
       
-      public function getTypeId() : uint {
-         return 7;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initItem() : Item {
-         return this;
+      public function initItem() : Item
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_Item(output:IDataOutput) : void {
+      public function serializeAs_Item(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_Item(input:IDataInput) : void {
+      public function deserializeAs_Item(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

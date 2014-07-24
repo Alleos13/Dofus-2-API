@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.mount
    public class PaddockMoveItemRequestAction extends Object implements Action
    {
       
-      public function PaddockMoveItemRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(object:Object) : PaddockMoveItemRequestAction {
-         var o:PaddockMoveItemRequestAction = new PaddockMoveItemRequestAction();
-         o.object = object;
-         return o;
+      public function PaddockMoveItemRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(object:Object) : PaddockMoveItemRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var object:Object;

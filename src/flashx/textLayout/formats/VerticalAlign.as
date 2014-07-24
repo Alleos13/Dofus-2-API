@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public final class VerticalAlign extends Object
    {
       
-      public function VerticalAlign() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function VerticalAlign()
+      {
+         //Décompilation abandonné
       }
       
       public static const TOP:String = "top";

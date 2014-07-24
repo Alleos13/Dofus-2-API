@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.tinsel
    public class TitlesAndOrnamentsListRequestAction extends Object implements Action
    {
       
-      public function TitlesAndOrnamentsListRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : TitlesAndOrnamentsListRequestAction {
-         var action:TitlesAndOrnamentsListRequestAction = new TitlesAndOrnamentsListRequestAction();
-         return action;
+      public function TitlesAndOrnamentsListRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : TitlesAndOrnamentsListRequestAction
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.challenges
    public class Challenge extends Object implements IDataCenter
    {
       
-      public function Challenge() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Challenge()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Challenge";
       
       protected static const _log:Logger;
       
-      public static function getChallengeById(id:int) : Challenge {
-         return GameData.getObject(MODULE,id) as Challenge;
+      public static function getChallengeById(id:int) : Challenge
+      {
+         //Décompilation abandonné
       }
       
-      public static function getChallenges() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getChallenges() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -36,20 +43,14 @@ package com.ankamagames.dofus.datacenter.challenges
       
       private var _description:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get description() : String {
-         if(!this._description)
-         {
-            this._description = I18n.getText(this.descriptionId);
-         }
-         return this._description;
+      public function get description() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

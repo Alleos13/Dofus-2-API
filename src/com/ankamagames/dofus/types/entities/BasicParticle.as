@@ -5,12 +5,13 @@ package com.ankamagames.dofus.types.entities
    public class BasicParticle extends Object implements IParticule
    {
       
-      public function BasicParticle(sprite:DisplayObject, life:uint, subExplosion:Boolean, deathCallback:Function) {
-         super();
-         this._sprite = sprite;
-         this._life = this._initialLife = life;
-         this._subExplosion = subExplosion;
-         this._deathCallback = deathCallback;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BasicParticle(sprite:DisplayObject, life:uint, subExplosion:Boolean, deathCallback:Function)
+      {
+         //Décompilation abandonné
       }
       
       protected var _sprite:DisplayObject;
@@ -25,38 +26,29 @@ package com.ankamagames.dofus.types.entities
       
       protected var _deathCallback:Function;
       
-      public function update() : void {
-         var explode:* = false;
-         var prcLife:Number = this._life / this._initialLife;
-         if((this._subExplosion) && (Math.random() > prcLife))
-         {
-            explode = true;
-         }
-         if(((!this._life) || (explode)) && (!this._deathDispatched))
-         {
-            this._deathCallback(this,explode);
-         }
-         this._sprite.alpha = prcLife > 1 / 2?1:prcLife * 2;
-         if(this._life)
-         {
-            this._life--;
-         }
+      public function update() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get sprite() : DisplayObject {
-         return this._sprite;
+      public function get sprite() : DisplayObject
+      {
+         //Décompilation abandonné
       }
       
-      public function get life() : uint {
-         return this._life;
+      public function get life() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get subExplosion() : Boolean {
-         return this._subExplosion;
+      public function get subExplosion() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set subExplosion(v:Boolean) : void {
-         this._subExplosion = v;
+      public function set subExplosion(v:Boolean) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

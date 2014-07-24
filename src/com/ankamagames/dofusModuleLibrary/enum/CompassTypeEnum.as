@@ -3,8 +3,13 @@ package com.ankamagames.dofusModuleLibrary.enum
    public class CompassTypeEnum extends Object
    {
       
-      public function CompassTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CompassTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const COMPASS_TYPE_SIMPLE:uint = 0;

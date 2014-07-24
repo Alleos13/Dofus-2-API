@@ -6,13 +6,18 @@ package com.ankamagames.berilia.pools
    public class PoolableUiRenderer extends UiRenderer implements Poolable
    {
       
-      public function PoolableUiRenderer() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function free() : void {
-         _nTimeStamp = 0;
-         _scUi = null;
+      public function PoolableUiRenderer()
+      {
+         //Décompilation abandonné
+      }
+      
+      public function free() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

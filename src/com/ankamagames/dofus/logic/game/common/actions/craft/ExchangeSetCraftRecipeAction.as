@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.craft
    public class ExchangeSetCraftRecipeAction extends Object implements Action
    {
       
-      public function ExchangeSetCraftRecipeAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(recipeId:uint) : ExchangeSetCraftRecipeAction {
-         var action:ExchangeSetCraftRecipeAction = new ExchangeSetCraftRecipeAction();
-         action.recipeId = recipeId;
-         return action;
+      public function ExchangeSetCraftRecipeAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(recipeId:uint) : ExchangeSetCraftRecipeAction
+      {
+         //Décompilation abandonné
       }
       
       public var recipeId:uint;

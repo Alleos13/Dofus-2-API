@@ -10,75 +10,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeShopStockStartedMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeShopStockStartedMessage() {
-         this.objectsInfos = new Vector.<ObjectItemToSell>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeShopStockStartedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5910;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var objectsInfos:Vector.<ObjectItemToSell>;
       
-      override public function getMessageId() : uint {
-         return 5910;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeShopStockStartedMessage(objectsInfos:Vector.<ObjectItemToSell> = null) : ExchangeShopStockStartedMessage {
-         this.objectsInfos = objectsInfos;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeShopStockStartedMessage(objectsInfos:Vector.<ObjectItemToSell> = null) : ExchangeShopStockStartedMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.objectsInfos = new Vector.<ObjectItemToSell>();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeShopStockStartedMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeShopStockStartedMessage(output:IDataOutput) : void {
-         output.writeShort(this.objectsInfos.length);
-         var _i1:uint = 0;
-         while(_i1 < this.objectsInfos.length)
-         {
-            (this.objectsInfos[_i1] as ObjectItemToSell).serializeAs_ObjectItemToSell(output);
-            _i1++;
-         }
+      public function serializeAs_ExchangeShopStockStartedMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeShopStockStartedMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeShopStockStartedMessage(input:IDataInput) : void {
-         var _item1:ObjectItemToSell = null;
-         var _objectsInfosLen:uint = input.readUnsignedShort();
-         var _i1:uint = 0;
-         while(_i1 < _objectsInfosLen)
-         {
-            _item1 = new ObjectItemToSell();
-            _item1.deserialize(input);
-            this.objectsInfos.push(_item1);
-            _i1++;
-         }
+      public function deserializeAs_ExchangeShopStockStartedMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

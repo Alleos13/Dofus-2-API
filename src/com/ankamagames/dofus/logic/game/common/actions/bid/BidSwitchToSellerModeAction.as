@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.bid
    public class BidSwitchToSellerModeAction extends Object implements Action
    {
       
-      public function BidSwitchToSellerModeAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : BidSwitchToSellerModeAction {
-         var a:BidSwitchToSellerModeAction = new BidSwitchToSellerModeAction();
-         return a;
+      public function BidSwitchToSellerModeAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : BidSwitchToSellerModeAction
+      {
+         //Décompilation abandonné
       }
    }
 }

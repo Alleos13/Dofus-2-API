@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.alignments
    public class AlignmentSide extends Object implements IDataCenter
    {
       
-      public function AlignmentSide() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AlignmentSide()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "AlignmentSides";
       
       protected static const _log:Logger;
       
-      public static function getAlignmentSideById(id:int) : AlignmentSide {
-         return GameData.getObject(MODULE,id) as AlignmentSide;
+      public static function getAlignmentSideById(id:int) : AlignmentSide
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAlignmentSides() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAlignmentSides() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -34,12 +41,9 @@ package com.ankamagames.dofus.datacenter.alignments
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

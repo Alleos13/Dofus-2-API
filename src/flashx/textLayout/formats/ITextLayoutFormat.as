@@ -3,7 +3,11 @@ package flashx.textLayout.formats
    public interface ITextLayoutFormat
    {
       
-      function getStyle(param1:String) : *;
+      {
+      //Décompilation abandonné
+      }
+      
+      function getStyle(styleName:String) : *;
       
       function get color() : *;
       

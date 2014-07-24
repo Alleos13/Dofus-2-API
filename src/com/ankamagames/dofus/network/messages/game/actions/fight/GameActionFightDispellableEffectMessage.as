@@ -11,67 +11,69 @@ package com.ankamagames.dofus.network.messages.game.actions.fight
    public class GameActionFightDispellableEffectMessage extends AbstractGameActionMessage implements INetworkMessage
    {
       
-      public function GameActionFightDispellableEffectMessage() {
-         this.effect = new AbstractFightDispellableEffect();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameActionFightDispellableEffectMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6070;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var effect:AbstractFightDispellableEffect;
       
-      override public function getMessageId() : uint {
-         return 6070;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameActionFightDispellableEffectMessage(actionId:uint = 0, sourceId:int = 0, effect:AbstractFightDispellableEffect = null) : GameActionFightDispellableEffectMessage {
-         super.initAbstractGameActionMessage(actionId,sourceId);
-         this.effect = effect;
-         this._isInitialized = true;
-         return this;
+      public function initGameActionFightDispellableEffectMessage(actionId:uint = 0, sourceId:int = 0, effect:AbstractFightDispellableEffect = null) : GameActionFightDispellableEffectMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.effect = new AbstractFightDispellableEffect();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameActionFightDispellableEffectMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameActionFightDispellableEffectMessage(output:IDataOutput) : void {
-         super.serializeAs_AbstractGameActionMessage(output);
-         output.writeShort(this.effect.getTypeId());
-         this.effect.serialize(output);
+      public function serializeAs_GameActionFightDispellableEffectMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameActionFightDispellableEffectMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameActionFightDispellableEffectMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         var _id1:uint = input.readUnsignedShort();
-         this.effect = ProtocolTypeManager.getInstance(AbstractFightDispellableEffect,_id1);
-         this.effect.deserialize(input);
+      public function deserializeAs_GameActionFightDispellableEffectMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

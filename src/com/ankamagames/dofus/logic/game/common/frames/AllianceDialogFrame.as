@@ -28,102 +28,42 @@ package com.ankamagames.dofus.logic.game.common.frames
    public class AllianceDialogFrame extends Object implements Frame
    {
       
-      public function AllianceDialogFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AllianceDialogFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       private var allianceEmblem:GuildEmblem;
       
-      public function get priority() : int {
-         return Priority.NORMAL;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var acva:AllianceCreationValidAction = null;
-         var acvmsg:AllianceCreationValidMessage = null;
-         var amva:AllianceModificationValidAction = null;
-         var amvmsg:AllianceModificationValidMessage = null;
-         var amnva:AllianceModificationNameAndTagValidAction = null;
-         var amnvmsg:AllianceModificationNameAndTagValidMessage = null;
-         var ameva:AllianceModificationEmblemValidAction = null;
-         var amevmsg:AllianceModificationEmblemValidMessage = null;
-         var aiaa:AllianceInvitationAnswerAction = null;
-         var aiamsg:AllianceInvitationAnswerMessage = null;
-         var ldm:LeaveDialogMessage = null;
-         switch(true)
-         {
-            case msg is AllianceCreationValidAction:
-               acva = msg as AllianceCreationValidAction;
-               this.allianceEmblem = new GuildEmblem();
-               this.allianceEmblem.symbolShape = acva.upEmblemId;
-               this.allianceEmblem.symbolColor = acva.upColorEmblem;
-               this.allianceEmblem.backgroundShape = acva.backEmblemId;
-               this.allianceEmblem.backgroundColor = acva.backColorEmblem;
-               acvmsg = new AllianceCreationValidMessage();
-               acvmsg.initAllianceCreationValidMessage(acva.allianceName,acva.allianceTag,this.allianceEmblem);
-               ConnectionsHandler.getConnection().send(acvmsg);
-               return true;
-            case msg is AllianceModificationValidAction:
-               amva = msg as AllianceModificationValidAction;
-               this.allianceEmblem = new GuildEmblem();
-               this.allianceEmblem.symbolShape = amva.upEmblemId;
-               this.allianceEmblem.symbolColor = amva.upColorEmblem;
-               this.allianceEmblem.backgroundShape = amva.backEmblemId;
-               this.allianceEmblem.backgroundColor = amva.backColorEmblem;
-               amvmsg = new AllianceModificationValidMessage();
-               amvmsg.initAllianceModificationValidMessage(amva.name,amva.tag,this.allianceEmblem);
-               ConnectionsHandler.getConnection().send(amvmsg);
-               return true;
-            case msg is AllianceModificationNameAndTagValidAction:
-               amnva = msg as AllianceModificationNameAndTagValidAction;
-               amnvmsg = new AllianceModificationNameAndTagValidMessage();
-               amnvmsg.initAllianceModificationNameAndTagValidMessage(amnva.name,amnva.tag);
-               ConnectionsHandler.getConnection().send(amnvmsg);
-               return true;
-            case msg is AllianceModificationEmblemValidAction:
-               ameva = msg as AllianceModificationEmblemValidAction;
-               this.allianceEmblem = new GuildEmblem();
-               this.allianceEmblem.symbolShape = ameva.upEmblemId;
-               this.allianceEmblem.symbolColor = ameva.upColorEmblem;
-               this.allianceEmblem.backgroundShape = ameva.backEmblemId;
-               this.allianceEmblem.backgroundColor = ameva.backColorEmblem;
-               amevmsg = new AllianceModificationEmblemValidMessage();
-               amevmsg.initAllianceModificationEmblemValidMessage(this.allianceEmblem);
-               ConnectionsHandler.getConnection().send(amevmsg);
-               return true;
-            case msg is AllianceInvitationAnswerAction:
-               aiaa = msg as AllianceInvitationAnswerAction;
-               aiamsg = new AllianceInvitationAnswerMessage();
-               aiamsg.initAllianceInvitationAnswerMessage(aiaa.accept);
-               ConnectionsHandler.getConnection().send(aiamsg);
-               this.leaveDialog();
-               return true;
-            case msg is LeaveDialogMessage:
-               ldm = msg as LeaveDialogMessage;
-               if((ldm.dialogType == DialogTypeEnum.DIALOG_ALLIANCE_CREATE) || (ldm.dialogType == DialogTypeEnum.DIALOG_ALLIANCE_INVITATION) || (ldm.dialogType == DialogTypeEnum.DIALOG_ALLIANCE_RENAME))
-               {
-                  this.leaveDialog();
-               }
-               return true;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         KernelEventsManager.getInstance().processCallback(HookList.LeaveDialog);
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function leaveDialog() : void {
-         Kernel.getWorker().process(ChangeWorldInteractionAction.create(true));
-         Kernel.getWorker().removeFrame(this);
+      private function leaveDialog() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

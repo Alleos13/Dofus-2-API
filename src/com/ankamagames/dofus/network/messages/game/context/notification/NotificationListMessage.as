@@ -9,74 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.notification
    public class NotificationListMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function NotificationListMessage() {
-         this.flags = new Vector.<int>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function NotificationListMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6087;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var flags:Vector.<int>;
       
-      override public function getMessageId() : uint {
-         return 6087;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initNotificationListMessage(flags:Vector.<int> = null) : NotificationListMessage {
-         this.flags = flags;
-         this._isInitialized = true;
-         return this;
+      public function initNotificationListMessage(flags:Vector.<int> = null) : NotificationListMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.flags = new Vector.<int>();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_NotificationListMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_NotificationListMessage(output:IDataOutput) : void {
-         output.writeShort(this.flags.length);
-         var _i1:uint = 0;
-         while(_i1 < this.flags.length)
-         {
-            output.writeInt(this.flags[_i1]);
-            _i1++;
-         }
+      public function serializeAs_NotificationListMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_NotificationListMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_NotificationListMessage(input:IDataInput) : void {
-         var _val1:* = 0;
-         var _flagsLen:uint = input.readUnsignedShort();
-         var _i1:uint = 0;
-         while(_i1 < _flagsLen)
-         {
-            _val1 = input.readInt();
-            this.flags.push(_val1);
-            _i1++;
-         }
+      public function deserializeAs_NotificationListMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

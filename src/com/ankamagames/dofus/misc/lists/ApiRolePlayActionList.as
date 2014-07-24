@@ -23,8 +23,13 @@ package com.ankamagames.dofus.misc.lists
    public class ApiRolePlayActionList extends Object
    {
       
-      public function ApiRolePlayActionList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ApiRolePlayActionList()
+      {
+         //Décompilation abandonné
       }
       
       public static const PlayerFightRequest:DofusApiAction;

@@ -9,16 +9,22 @@ package com.ankamagames.dofus.network.messages.game.prism
    public class PrismFightDefenderLeaveMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function PrismFightDefenderLeaveMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PrismFightDefenderLeaveMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5892;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var subAreaId:uint = 0;
@@ -27,83 +33,49 @@ package com.ankamagames.dofus.network.messages.game.prism
       
       public var fighterToRemoveId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5892;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPrismFightDefenderLeaveMessage(subAreaId:uint = 0, fightId:Number = 0, fighterToRemoveId:uint = 0) : PrismFightDefenderLeaveMessage {
-         this.subAreaId = subAreaId;
-         this.fightId = fightId;
-         this.fighterToRemoveId = fighterToRemoveId;
-         this._isInitialized = true;
-         return this;
+      public function initPrismFightDefenderLeaveMessage(subAreaId:uint = 0, fightId:Number = 0, fighterToRemoveId:uint = 0) : PrismFightDefenderLeaveMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.subAreaId = 0;
-         this.fightId = 0;
-         this.fighterToRemoveId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PrismFightDefenderLeaveMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PrismFightDefenderLeaveMessage(output:IDataOutput) : void {
-         if(this.subAreaId < 0)
-         {
-            throw new Error("Forbidden value (" + this.subAreaId + ") on element subAreaId.");
-         }
-         else
-         {
-            output.writeShort(this.subAreaId);
-            output.writeDouble(this.fightId);
-            if(this.fighterToRemoveId < 0)
-            {
-               throw new Error("Forbidden value (" + this.fighterToRemoveId + ") on element fighterToRemoveId.");
-            }
-            else
-            {
-               output.writeInt(this.fighterToRemoveId);
-               return;
-            }
-         }
+      public function serializeAs_PrismFightDefenderLeaveMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PrismFightDefenderLeaveMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PrismFightDefenderLeaveMessage(input:IDataInput) : void {
-         this.subAreaId = input.readShort();
-         if(this.subAreaId < 0)
-         {
-            throw new Error("Forbidden value (" + this.subAreaId + ") on element of PrismFightDefenderLeaveMessage.subAreaId.");
-         }
-         else
-         {
-            this.fightId = input.readDouble();
-            this.fighterToRemoveId = input.readInt();
-            if(this.fighterToRemoveId < 0)
-            {
-               throw new Error("Forbidden value (" + this.fighterToRemoveId + ") on element of PrismFightDefenderLeaveMessage.fighterToRemoveId.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_PrismFightDefenderLeaveMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

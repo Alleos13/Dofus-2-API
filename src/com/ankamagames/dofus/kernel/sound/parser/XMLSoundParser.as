@@ -5,31 +5,25 @@ package com.ankamagames.dofus.kernel.sound.parser
    public class XMLSoundParser extends Object
    {
       
-      public function XMLSoundParser() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function XMLSoundParser()
+      {
+         //Décompilation abandonné
       }
       
       private static const _IDS_UNLOCALIZED:Array;
       
-      public static function parseXMLSoundFile(pXMLFile:XML, pSkins:Vector.<uint>) : SoundEventParamWrapper {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public static function parseXMLSoundFile(pXMLFile:XML, pSkins:Vector.<uint>) : SoundEventParamWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public static function isLocalized(pSoundId:String) : Boolean {
-         var patternBegin:String = null;
-         for each(patternBegin in _IDS_UNLOCALIZED)
-         {
-            if(pSoundId.split(patternBegin)[0] == "")
-            {
-               return false;
-            }
-         }
-         return true;
+      public static function isLocalized(pSoundId:String) : Boolean
+      {
+         //Décompilation abandonné
       }
       
       private var _xmlBreed:XML;

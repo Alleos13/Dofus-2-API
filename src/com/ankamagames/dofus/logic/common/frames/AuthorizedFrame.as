@@ -34,8 +34,13 @@ package com.ankamagames.dofus.logic.common.frames
    public class AuthorizedFrame extends RegisteringFrame
    {
       
-      public function AuthorizedFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AuthorizedFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -46,121 +51,64 @@ package com.ankamagames.dofus.logic.common.frames
       
       private var _loader:IResourceLoader;
       
-      override public function get priority() : int {
-         return Priority.LOW;
+      override public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      override public function pushed() : Boolean {
-         this.hasRights = false;
-         this._loader = ResourceLoaderFactory.getLoader(ResourceLoaderType.SINGLE_LOADER);
-         this._loader.addEventListener(ResourceLoadedEvent.LOADED,this.objectLoaded);
-         this._loader.addEventListener(ResourceErrorEvent.ERROR,this.objectLoadedFailed);
-         this._loader.load(new Uri(File.applicationDirectory.nativePath + File.separator + "uplauncher.xml"));
-         return true;
+      override public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function pulled() : Boolean {
-         return true;
+      override public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set hasRights(b:Boolean) : void {
-         this._hasRights = b;
-         if(b)
-         {
-            HyperlinkFactory.registerProtocol("admin",HyperlinkAdminManager.addCmd);
-            ConsolesManager.registerConsole("debug",new ConsoleHandler(Kernel.getWorker()),new DebugConsoleInstructionRegistar());
-         }
-         else
-         {
-            ConsolesManager.registerConsole("debug",new ConsoleHandler(Kernel.getWorker()),new BasicConsoleInstructionRegistar());
-         }
+      public function set hasRights(b:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function isFantomas() : Boolean {
-         return this._isFantomas;
+      public function isFantomas() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override protected function registerMessages() : void {
-         register(ConsoleMessage,this.onConsoleMessage);
-         register(AuthorizedCommandAction,this.onAuthorizedCommandAction);
-         register(ConsoleOutputMessage,this.onConsoleOutputMessage);
-         register(QuitGameAction,this.onQuitGameAction);
+      override protected function registerMessages() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onConsoleMessage(cmsg:ConsoleMessage) : Boolean {
-         ConsolesManager.getConsole("debug").output(cmsg.content,cmsg.type);
-         return true;
+      private function onConsoleMessage(cmsg:ConsoleMessage) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function onAuthorizedCommandAction(aca:AuthorizedCommandAction) : Boolean {
-         var acmsg:AdminCommandMessage = null;
-         if(aca.command.substr(0,1) == "/")
-         {
-            try
-            {
-               ConsolesManager.getConsole("debug").process(ConsolesManager.getMessage(aca.command));
-            }
-            catch(ucie:UnhandledConsoleInstructionError)
-            {
-               ConsolesManager.getConsole("debug").output("Unknown command: " + aca.command + "\n");
-            }
-         }
-         else if(ConnectionsHandler.connectionType != ConnectionType.DISCONNECTED)
-         {
-            if(this._hasRights)
-            {
-               if((aca.command.length >= 1) && (aca.command.length <= ProtocolConstantsEnum.MAX_CHAT_LEN))
-               {
-                  acmsg = new AdminCommandMessage();
-                  acmsg.initAdminCommandMessage(aca.command);
-                  ConnectionsHandler.getConnection().send(acmsg);
-               }
-               else
-               {
-                  ConsolesManager.getConsole("debug").output("Too long command is too long, try again.");
-               }
-            }
-            else
-            {
-               ConsolesManager.getConsole("debug").output("You have no admin rights, please use only client side commands. (/help)");
-            }
-         }
-         else
-         {
-            ConsolesManager.getConsole("debug").output("You are disconnected, use only client side commands.");
-         }
-         
-         return true;
+      private function onAuthorizedCommandAction(aca:AuthorizedCommandAction) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function onConsoleOutputMessage(comsg:ConsoleOutputMessage) : Boolean {
-         if(comsg.consoleId != "debug")
-         {
-            return false;
-         }
-         KernelEventsManager.getInstance().processCallback(HookList.ConsoleOutput,comsg.text,comsg.type);
-         return true;
+      private function onConsoleOutputMessage(comsg:ConsoleOutputMessage) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function onQuitGameAction(qga:QuitGameAction) : Boolean {
-         Dofus.getInstance().quit();
-         return true;
+      private function onQuitGameAction(qga:QuitGameAction) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function objectLoaded(e:ResourceLoadedEvent) : void {
-         var uplauncher:XML = new XML(e.resource);
-         if(uplauncher.Debug.fantomas.contains("1"))
-         {
-            this._isFantomas = true;
-         }
-         else
-         {
-            this._isFantomas = false;
-         }
+      public function objectLoaded(e:ResourceLoadedEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function objectLoadedFailed(e:ResourceErrorEvent) : void {
-         _log.debug("Uplauncher loading failed : " + e.uri + ", " + e.errorMsg);
+      public function objectLoadedFailed(e:ResourceErrorEvent) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

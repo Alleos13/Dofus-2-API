@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.fight.actions
    public class ToggleLockPartyAction extends Object implements Action
    {
       
-      public function ToggleLockPartyAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : ToggleLockPartyAction {
-         var a:ToggleLockPartyAction = new ToggleLockPartyAction();
-         return a;
+      public function ToggleLockPartyAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : ToggleLockPartyAction
+      {
+         //Décompilation abandonné
       }
    }
 }

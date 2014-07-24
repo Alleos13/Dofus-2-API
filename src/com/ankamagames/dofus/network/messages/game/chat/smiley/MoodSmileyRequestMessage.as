@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.chat.smiley
    public class MoodSmileyRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function MoodSmileyRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MoodSmileyRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6192;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var smileyId:int = 0;
       
-      override public function getMessageId() : uint {
-         return 6192;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initMoodSmileyRequestMessage(smileyId:int = 0) : MoodSmileyRequestMessage {
-         this.smileyId = smileyId;
-         this._isInitialized = true;
-         return this;
+      public function initMoodSmileyRequestMessage(smileyId:int = 0) : MoodSmileyRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.smileyId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_MoodSmileyRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_MoodSmileyRequestMessage(output:IDataOutput) : void {
-         output.writeByte(this.smileyId);
+      public function serializeAs_MoodSmileyRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_MoodSmileyRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_MoodSmileyRequestMessage(input:IDataInput) : void {
-         this.smileyId = input.readByte();
+      public function deserializeAs_MoodSmileyRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

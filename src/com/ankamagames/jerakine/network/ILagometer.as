@@ -3,9 +3,13 @@ package com.ankamagames.jerakine.network
    public interface ILagometer
    {
       
-      function ping(param1:INetworkMessage = null) : void;
+      {
+      //Décompilation abandonné
+      }
       
-      function pong(param1:INetworkMessage = null) : void;
+      function ping(msg:INetworkMessage = null) : void;
+      
+      function pong(msg:INetworkMessage = null) : void;
       
       function stop() : void;
    }

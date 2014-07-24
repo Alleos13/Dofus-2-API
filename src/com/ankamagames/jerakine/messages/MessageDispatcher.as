@@ -3,12 +3,18 @@ package com.ankamagames.jerakine.messages
    public class MessageDispatcher extends Object implements IMessageDispatcher
    {
       
-      public function MessageDispatcher() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function dispatchMessage(handler:MessageHandler, message:Message) : void {
-         handler.process(message);
+      public function MessageDispatcher()
+      {
+         //Décompilation abandonné
+      }
+      
+      public function dispatchMessage(handler:MessageHandler, message:Message) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

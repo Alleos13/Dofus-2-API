@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.quest.treasureHunt
    public class TreasureHuntGiveUpRequestAction extends Object implements Action
    {
       
-      public function TreasureHuntGiveUpRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(questType:int) : TreasureHuntGiveUpRequestAction {
-         var action:TreasureHuntGiveUpRequestAction = new TreasureHuntGiveUpRequestAction();
-         action.questType = questType;
-         return action;
+      public function TreasureHuntGiveUpRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(questType:int) : TreasureHuntGiveUpRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var questType:int;

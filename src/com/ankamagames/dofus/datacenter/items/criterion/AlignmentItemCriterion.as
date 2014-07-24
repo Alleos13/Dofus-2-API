@@ -8,28 +8,28 @@ package com.ankamagames.dofus.datacenter.items.criterion
    public class AlignmentItemCriterion extends ItemCriterion implements IDataCenter
    {
       
-      public function AlignmentItemCriterion(pCriterion:String) {
-         super(pCriterion);
+      {
+      //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         var readableCriterionValue:String = AlignmentSide.getAlignmentSideById(int(_criterionValue)).name;
-         var readableCriterionRef:String = I18n.getUiText("ui.common.alignment");
-         var readableOperator:String = ":";
-         if(_operator.text == ItemCriterionOperator.DIFFERENT)
-         {
-            readableOperator = I18n.getUiText("ui.common.differentFrom") + I18n.getUiText("ui.common.colon");
-         }
-         return readableCriterionRef + " " + readableOperator + " " + readableCriterionValue;
+      public function AlignmentItemCriterion(pCriterion:String)
+      {
+         //Décompilation abandonné
       }
       
-      override public function clone() : IItemCriterion {
-         var clonedCriterion:AlignmentItemCriterion = new AlignmentItemCriterion(this.basicText);
-         return clonedCriterion;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getCriterion() : int {
-         return PlayedCharacterManager.getInstance().characteristics.alignmentInfos.alignmentSide;
+      override public function clone() : IItemCriterion
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function getCriterion() : int
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -10,61 +10,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.job
    public class JobCrafterDirectoryDefineSettingsMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function JobCrafterDirectoryDefineSettingsMessage() {
-         this.settings = new JobCrafterDirectorySettings();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function JobCrafterDirectoryDefineSettingsMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5649;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var settings:JobCrafterDirectorySettings;
       
-      override public function getMessageId() : uint {
-         return 5649;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initJobCrafterDirectoryDefineSettingsMessage(settings:JobCrafterDirectorySettings = null) : JobCrafterDirectoryDefineSettingsMessage {
-         this.settings = settings;
-         this._isInitialized = true;
-         return this;
+      public function initJobCrafterDirectoryDefineSettingsMessage(settings:JobCrafterDirectorySettings = null) : JobCrafterDirectoryDefineSettingsMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.settings = new JobCrafterDirectorySettings();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_JobCrafterDirectoryDefineSettingsMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_JobCrafterDirectoryDefineSettingsMessage(output:IDataOutput) : void {
-         this.settings.serializeAs_JobCrafterDirectorySettings(output);
+      public function serializeAs_JobCrafterDirectoryDefineSettingsMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_JobCrafterDirectoryDefineSettingsMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_JobCrafterDirectoryDefineSettingsMessage(input:IDataInput) : void {
-         this.settings = new JobCrafterDirectorySettings();
-         this.settings.deserialize(input);
+      public function deserializeAs_JobCrafterDirectoryDefineSettingsMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

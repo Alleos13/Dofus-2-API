@@ -7,39 +7,50 @@ package com.ankamagames.dofus.network.types.game.friend
    public class IgnoredInformations extends AbstractContactInformations implements INetworkType
    {
       
-      public function IgnoredInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function IgnoredInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 106;
       
-      override public function getTypeId() : uint {
-         return 106;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initIgnoredInformations(accountId:uint = 0, accountName:String = "") : IgnoredInformations {
-         super.initAbstractContactInformations(accountId,accountName);
-         return this;
+      public function initIgnoredInformations(accountId:uint = 0, accountName:String = "") : IgnoredInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_IgnoredInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_IgnoredInformations(output:IDataOutput) : void {
-         super.serializeAs_AbstractContactInformations(output);
+      public function serializeAs_IgnoredInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_IgnoredInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_IgnoredInformations(input:IDataInput) : void {
-         super.deserialize(input);
+      public function deserializeAs_IgnoredInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

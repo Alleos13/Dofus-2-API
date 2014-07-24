@@ -7,8 +7,13 @@ package com.hurlant.util.der
    public class PEM extends Object
    {
       
-      public function PEM() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PEM()
+      {
+         //Décompilation abandonné
       }
       
       private static const RSA_PRIVATE_KEY_HEADER:String = "-----BEGIN RSA PRIVATE KEY-----";
@@ -23,69 +28,24 @@ package com.hurlant.util.der
       
       private static const CERTIFICATE_FOOTER:String = "-----END CERTIFICATE-----";
       
-      public static function readRSAPrivateKey(str:String) : RSAKey {
-         var arr:Array = null;
-         var der:ByteArray = extractBinary(RSA_PRIVATE_KEY_HEADER,RSA_PRIVATE_KEY_FOOTER,str);
-         if(der == null)
-         {
-            return null;
-         }
-         var obj:* = DER.parse(der);
-         if(obj is Array)
-         {
-            arr = obj as Array;
-            return new RSAKey(arr[1],arr[2].valueOf(),arr[3],arr[4],arr[5],arr[6],arr[7],arr[8]);
-         }
-         return null;
+      public static function readRSAPrivateKey(str:String) : RSAKey
+      {
+         //Décompilation abandonné
       }
       
-      public static function readRSAPublicKey(str:String) : RSAKey {
-         var arr:Array = null;
-         var der:ByteArray = extractBinary(RSA_PUBLIC_KEY_HEADER,RSA_PUBLIC_KEY_FOOTER,str);
-         if(der == null)
-         {
-            return null;
-         }
-         var obj:* = DER.parse(der);
-         if(obj is Array)
-         {
-            arr = obj as Array;
-            if(arr[0][0].toString() != OID.RSA_ENCRYPTION)
-            {
-               return null;
-            }
-            arr[1].position = 0;
-            obj = DER.parse(arr[1]);
-            if(obj is Array)
-            {
-               arr = obj as Array;
-               return new RSAKey(arr[0],arr[1]);
-            }
-            return null;
-         }
-         return null;
+      public static function readRSAPublicKey(str:String) : RSAKey
+      {
+         //Décompilation abandonné
       }
       
-      public static function readCertIntoArray(str:String) : ByteArray {
-         var tmp:ByteArray = extractBinary(CERTIFICATE_HEADER,CERTIFICATE_FOOTER,str);
-         return tmp;
+      public static function readCertIntoArray(str:String) : ByteArray
+      {
+         //Décompilation abandonné
       }
       
-      private static function extractBinary(header:String, footer:String, str:String) : ByteArray {
-         var i:int = str.indexOf(header);
-         if(i == -1)
-         {
-            return null;
-         }
-         i = i + header.length;
-         var j:int = str.indexOf(footer);
-         if(j == -1)
-         {
-            return null;
-         }
-         var b64:String = str.substring(i,j);
-         b64 = b64.replace(new RegExp("\\s","mg"),"");
-         return Base64.decodeToByteArray(b64);
+      private static function extractBinary(header:String, footer:String, str:String) : ByteArray
+      {
+         //Décompilation abandonné
       }
    }
 }

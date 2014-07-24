@@ -3,8 +3,13 @@ package com.ankamagames.berilia.enums
    public class LocationTypeEnum extends Object
    {
       
-      public function LocationTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LocationTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const LOCATION_TYPE_RELATIVE:uint = 1;

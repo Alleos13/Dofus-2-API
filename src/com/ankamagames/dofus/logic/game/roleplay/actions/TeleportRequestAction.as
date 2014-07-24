@@ -5,16 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
    public class TeleportRequestAction extends Object implements Action
    {
       
-      public function TeleportRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(teleportType:uint, mapId:uint, cost:uint) : TeleportRequestAction {
-         var action:TeleportRequestAction = new TeleportRequestAction();
-         action.teleportType = teleportType;
-         action.mapId = mapId;
-         action.cost = cost;
-         return action;
+      public function TeleportRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(teleportType:uint, mapId:uint, cost:uint) : TeleportRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var mapId:uint;

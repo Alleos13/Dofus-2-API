@@ -23,130 +23,127 @@ package com.ankamagames.dofus.uiApi
    public class RoleplayApi extends Object implements IApi
    {
       
-      public function RoleplayApi() {
-         this._log = Log.getLogger(getQualifiedClassName(RoleplayApi));
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RoleplayApi()
+      {
+         //Décompilation abandonné
       }
       
       private var _module:UiModule;
       
       protected var _log:Logger;
       
-      private function get roleplayEntitiesFrame() : RoleplayEntitiesFrame {
-         return Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame;
+      private function get roleplayEntitiesFrame() : RoleplayEntitiesFrame
+      {
+         //Décompilation abandonné
       }
       
-      private function get roleplayInteractivesFrame() : RoleplayInteractivesFrame {
-         return Kernel.getWorker().getFrame(RoleplayInteractivesFrame) as RoleplayInteractivesFrame;
+      private function get roleplayInteractivesFrame() : RoleplayInteractivesFrame
+      {
+         //Décompilation abandonné
       }
       
-      private function get spellInventoryManagementFrame() : SpellInventoryManagementFrame {
-         return Kernel.getWorker().getFrame(SpellInventoryManagementFrame) as SpellInventoryManagementFrame;
+      private function get spellInventoryManagementFrame() : SpellInventoryManagementFrame
+      {
+         //Décompilation abandonné
       }
       
-      private function get roleplayEmoticonFrame() : EmoticonFrame {
-         return Kernel.getWorker().getFrame(EmoticonFrame) as EmoticonFrame;
+      private function get roleplayEmoticonFrame() : EmoticonFrame
+      {
+         //Décompilation abandonné
       }
       
-      private function get zaapFrame() : ZaapFrame {
-         return Kernel.getWorker().getFrame(ZaapFrame) as ZaapFrame;
+      private function get zaapFrame() : ZaapFrame
+      {
+         //Décompilation abandonné
       }
       
-      public function set module(value:UiModule) : void {
-         this._module = value;
+      public function set module(value:UiModule) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         this._module = null;
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getTotalFightOnCurrentMap() : uint {
-         return this.roleplayEntitiesFrame.fightNumber;
+      public function getTotalFightOnCurrentMap() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function getSpellToForgetList() : Array {
-         var spell:SpellWrapper = null;
-         var spellList:Array = new Array();
-         for each(spell in PlayedCharacterManager.getInstance().spellsInventory)
-         {
-            if(spell.spellLevel > 1)
-            {
-               spellList.push(spell);
-            }
-         }
-         return spellList;
+      public function getSpellToForgetList() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getEmotesList() : Array {
-         var emotes:Array = this.roleplayEmoticonFrame.emotesList;
-         return emotes;
+      public function getEmotesList() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getUsableEmotesList() : Array {
-         return this.roleplayEmoticonFrame.emotes;
+      public function getUsableEmotesList() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getSpawnMap() : uint {
-         return this.zaapFrame.spawnMapId;
+      public function getSpawnMap() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function getEntitiesOnCell(cellId:int) : Array {
-         return EntitiesManager.getInstance().getEntitiesOnCell(cellId);
+      public function getEntitiesOnCell(cellId:int) : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getPlayersIdOnCurrentMap() : Array {
-         return this.roleplayEntitiesFrame.playersId;
+      public function getPlayersIdOnCurrentMap() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getPlayerIsInCurrentMap(playerId:int) : Boolean {
-         return !(this.roleplayEntitiesFrame.playersId.indexOf(playerId) == -1);
+      public function getPlayerIsInCurrentMap(playerId:int) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function isUsingInteractive() : Boolean {
-         if(!this.roleplayInteractivesFrame)
-         {
-            return false;
-         }
-         return this.roleplayInteractivesFrame.usingInteractive;
+      public function isUsingInteractive() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getFight(id:int) : Object {
-         return this.roleplayEntitiesFrame.fights[id];
+      public function getFight(id:int) : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function putEntityOnTop(entity:AnimatedCharacter) : void {
-         RoleplayManager.getInstance().putEntityOnTop(entity);
+      public function putEntityOnTop(entity:AnimatedCharacter) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getEntityInfos(entity:Object) : Object {
-         var roleplayContextFrame:RoleplayContextFrame = Kernel.getWorker().getFrame(RoleplayContextFrame) as RoleplayContextFrame;
-         return roleplayContextFrame.entitiesFrame.getEntityInfos(entity.id);
+      public function getEntityInfos(entity:Object) : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function getEntityByName(name:String) : Object {
-         var entity:IEntity = null;
-         var infos:GameRolePlayNamedActorInformations = null;
-         var roleplayContextFrame:RoleplayContextFrame = Kernel.getWorker().getFrame(RoleplayContextFrame) as RoleplayContextFrame;
-         for each(entity in EntitiesManager.getInstance().entities)
-         {
-            infos = roleplayContextFrame.entitiesFrame.getEntityInfos(entity.id) as GameRolePlayNamedActorInformations;
-            if((infos) && (name == infos.name))
-            {
-               return entity;
-            }
-         }
-         return null;
+      public function getEntityByName(name:String) : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function switchButtonWrappers(btnWrapper1:Object, btnWrapper2:Object) : void {
-         var indexT:int = btnWrapper2.position;
-         var indexS:int = btnWrapper1.position;
-         btnWrapper2.setPosition(indexS);
-         btnWrapper1.setPosition(indexT);
+      public function switchButtonWrappers(btnWrapper1:Object, btnWrapper2:Object) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setButtonWrapperActivation(btnWrapper:Object, active:Boolean) : void {
-         btnWrapper.active = active;
+      public function setButtonWrapperActivation(btnWrapper:Object, active:Boolean) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

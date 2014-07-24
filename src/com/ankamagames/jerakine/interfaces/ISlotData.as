@@ -5,6 +5,10 @@ package com.ankamagames.jerakine.interfaces
    public interface ISlotData
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function get iconUri() : Uri;
       
       function get fullSizeIconUri() : Uri;
@@ -21,10 +25,10 @@ package com.ankamagames.jerakine.interfaces
       
       function get endTime() : int;
       
-      function set endTime(param1:int) : void;
+      function set endTime(t:int) : void;
       
-      function addHolder(param1:ISlotDataHolder) : void;
+      function addHolder(h:ISlotDataHolder) : void;
       
-      function removeHolder(param1:ISlotDataHolder) : void;
+      function removeHolder(h:ISlotDataHolder) : void;
    }
 }

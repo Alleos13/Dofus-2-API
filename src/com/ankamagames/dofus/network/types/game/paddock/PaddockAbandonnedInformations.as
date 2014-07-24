@@ -7,45 +7,52 @@ package com.ankamagames.dofus.network.types.game.paddock
    public class PaddockAbandonnedInformations extends PaddockBuyableInformations implements INetworkType
    {
       
-      public function PaddockAbandonnedInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PaddockAbandonnedInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 133;
       
       public var guildId:int = 0;
       
-      override public function getTypeId() : uint {
-         return 133;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPaddockAbandonnedInformations(maxOutdoorMount:uint = 0, maxItems:uint = 0, price:uint = 0, locked:Boolean = false, guildId:int = 0) : PaddockAbandonnedInformations {
-         super.initPaddockBuyableInformations(maxOutdoorMount,maxItems,price,locked);
-         this.guildId = guildId;
-         return this;
+      public function initPaddockAbandonnedInformations(maxOutdoorMount:uint = 0, maxItems:uint = 0, price:uint = 0, locked:Boolean = false, guildId:int = 0) : PaddockAbandonnedInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.guildId = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PaddockAbandonnedInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PaddockAbandonnedInformations(output:IDataOutput) : void {
-         super.serializeAs_PaddockBuyableInformations(output);
-         output.writeInt(this.guildId);
+      public function serializeAs_PaddockAbandonnedInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PaddockAbandonnedInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PaddockAbandonnedInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.guildId = input.readInt();
+      public function deserializeAs_PaddockAbandonnedInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

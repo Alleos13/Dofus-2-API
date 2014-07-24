@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
    public class NpcGenericActionRequestAction extends Object implements Action
    {
       
-      public function NpcGenericActionRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(npcId:int, actionId:int) : NpcGenericActionRequestAction {
-         var a:NpcGenericActionRequestAction = new NpcGenericActionRequestAction();
-         a.npcId = npcId;
-         a.actionId = actionId;
-         return a;
+      public function NpcGenericActionRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(npcId:int, actionId:int) : NpcGenericActionRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var npcId:int;

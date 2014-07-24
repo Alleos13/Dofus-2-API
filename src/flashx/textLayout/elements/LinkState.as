@@ -2,13 +2,16 @@ package flashx.textLayout.elements
 {
    import flashx.textLayout.tlf_internal;
    
-   use namespace tlf_internal;
-   
    public final class LinkState extends Object
    {
       
-      public function LinkState() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LinkState()
+      {
+         //Décompilation abandonné
       }
       
       public static const LINK:String = "link";

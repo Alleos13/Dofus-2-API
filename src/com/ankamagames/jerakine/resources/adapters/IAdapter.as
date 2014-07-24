@@ -8,9 +8,13 @@ package com.ankamagames.jerakine.resources.adapters
    public interface IAdapter extends Poolable
    {
       
-      function loadDirectly(param1:Uri, param2:String, param3:IResourceObserver, param4:Boolean) : void;
+      {
+      //Décompilation abandonné
+      }
       
-      function loadFromData(param1:Uri, param2:ByteArray, param3:IResourceObserver, param4:Boolean) : void;
+      function loadDirectly(uri:Uri, path:String, observer:IResourceObserver, dispatchProgress:Boolean) : void;
+      
+      function loadFromData(uri:Uri, data:ByteArray, observer:IResourceObserver, dispatchProgress:Boolean) : void;
       
       function getResourceType() : uint;
    }

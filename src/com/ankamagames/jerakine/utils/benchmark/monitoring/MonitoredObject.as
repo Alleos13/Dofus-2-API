@@ -5,14 +5,13 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring
    public class MonitoredObject extends Object
    {
       
-      public function MonitoredObject(pName:String, pColor:uint, pParentList:List = null) {
-         super();
-         this.name = pName;
-         this.list = new Dictionary(true);
-         this.data = new Vector.<Number>();
-         this.limits = new Vector.<Number>();
-         this.color = pColor;
-         this._extendsClass = pParentList;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MonitoredObject(pName:String, pColor:uint, pParentList:List = null)
+      {
+         //Décompilation abandonné
       }
       
       public var name:String;
@@ -29,22 +28,19 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring
       
       private var _extendsClass:List;
       
-      public function addNewValue(o:Object) : void {
-         this.list[o] = null;
+      public function addNewValue(o:Object) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function update() : void {
-         this.data.push(FpsManagerUtils.countKeys(this.list));
-         this.limits.push(FpsManagerUtils.getVectorMaxValue(this.data));
-         if(this.data.length > FpsManagerConst.BOX_WIDTH)
-         {
-            this.data.shift();
-            this.limits.shift();
-         }
+      public function update() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get extendsClass() : List {
-         return this._extendsClass;
+      public function get extendsClass() : List
+      {
+         //Décompilation abandonné
       }
    }
 }

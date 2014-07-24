@@ -17,10 +17,13 @@ package com.ankamagames.dofus.logic.game.approach.managers
    public class PartManager extends Object
    {
       
-      public function PartManager() {
-         this._downloadList = new Array();
-         super();
-         DownloadMonitoring.getInstance().initialize();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PartManager()
+      {
+         //Décompilation abandonné
       }
       
       public static const STATE_WAITING:int = 0;
@@ -33,12 +36,9 @@ package com.ankamagames.dofus.logic.game.approach.managers
       
       private static var _singleton:PartManager;
       
-      public static function getInstance() : PartManager {
-         if(!_singleton)
-         {
-            _singleton = new PartManager();
-         }
-         return _singleton;
+      public static function getInstance() : PartManager
+      {
+         //Décompilation abandonné
       }
       
       private var _parts:Dictionary = null;
@@ -55,218 +55,59 @@ package com.ankamagames.dofus.logic.game.approach.managers
       
       private var _state:int = 0;
       
-      public function initialize() : void {
-         var gplmsg:GetPartsListMessage = new GetPartsListMessage();
-         gplmsg.initGetPartsListMessage();
-         UpdaterConnexionHandler.getConnection().send(gplmsg);
+      public function initialize() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function receiveParts(parts:Vector.<ContentPart>) : void {
-         var part:ContentPart = null;
-         var key:String = null;
-         this._parts = new Dictionary();
-         for each(part in parts)
-         {
-            this.updatePart(part);
-         }
-         if(!this._firstParts)
-         {
-            this._firstParts = new Dictionary();
-            for(key in this._parts)
-            {
-               this._firstParts[key] = this._parts[key];
-            }
-         }
+      public function receiveParts(parts:Vector.<ContentPart>) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function checkAndDownload(partName:String) : void {
-         var part:String = null;
-         if(!this._parts)
-         {
-            _log.warn("checkAndDownload \'" + partName + "\' but can\'t got part list (updater is down ?)");
-            return;
-         }
-         if(!this._parts.hasOwnProperty(partName))
-         {
-            _log.error("Unknow part id : " + partName);
-            return;
-         }
-         if(this._parts[partName].state == PartStateEnum.PART_NOT_INSTALLED)
-         {
-            for each(part in this._downloadList)
-            {
-               if(part == partName)
-               {
-                  return;
-               }
-            }
-            this._downloadCount++;
-            this.download(partName);
-         }
+      public function checkAndDownload(partName:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function updatePart(part:ContentPart) : void {
-         var isDownloading:* = false;
-         var p:ContentPart = null;
-         var partName:String = null;
-         if(!this._parts)
-         {
-            _log.error("updatePart \'" + part.id + "\' but can\'t got part liste (updater is down ?)");
-            return;
-         }
-         var oldPart:ContentPart = this._parts[part.id];
-         this._parts[part.id] = part;
-         switch(part.state)
-         {
-            case PartStateEnum.PART_BEING_UPDATER:
-               DownloadMonitoring.getInstance().start();
-               if(part.id != this._downloadingPart)
-               {
-                  if(this._downloadingPart)
-                  {
-                     _log.error("On reçoit des informations de téléchargement d\'une partie de contenu " + part.id + ", alors qu\'on a pour demande de récupérer " + this._downloadingPart + ". Ce téléchargement risque de provoquer un conflit (téléchargements simultanés");
-                  }
-                  else
-                  {
-                     this._downloadingPart = part.id;
-                  }
-               }
-               break;
-            case PartStateEnum.PART_UP_TO_DATE:
-               if(part.id == this._downloadingPart)
-               {
-                  isDownloading = false;
-                  for each(p in this._parts)
-                  {
-                     if(p.state == PartStateEnum.PART_BEING_UPDATER)
-                     {
-                        isDownloading = true;
-                        _log.error(p.id + " en cours de téléchargement alors qu\'une autre part vient juste de se terminer...");
-                        throw new Error(p.id + " en cours de téléchargement alors qu\'une autre part vient juste de se terminer...");
-                     }
-                     else
-                     {
-                        continue;
-                     }
-                  }
-                  if(!isDownloading)
-                  {
-                     this._downloadSuccess++;
-                     _log.info("Updater download is terminated.");
-                     this._downloadingPart = null;
-                     if(this._downloadList.length == 0)
-                     {
-                        DownloadMonitoring.getInstance().stop();
-                        this._state = STATE_FINISHED;
-                        KernelEventsManager.getInstance().processCallback(HookList.AllDownloadTerminated);
-                     }
-                     else
-                     {
-                        partName = this._downloadList.pop();
-                        _log.info(partName + " found in download queue");
-                        this.download(partName);
-                     }
-                  }
-               }
-               break;
-         }
+      public function updatePart(part:ContentPart) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getServerPartList() : Vector.<uint> {
-         var pack:Pack = null;
-         var found:* = false;
-         var part:ContentPart = null;
-         if(this._firstParts == null)
-         {
-            return null;
-         }
-         var count:uint = 0;
-         var packs:Array = Pack.getAllPacks();
-         var list:Vector.<uint> = new Vector.<uint>();
-         for each(pack in packs)
-         {
-            if(pack.hasSubAreas)
-            {
-               count++;
-               found = false;
-               for each(part in this._firstParts)
-               {
-                  if((part.id == pack.name) && (part.state == 2))
-                  {
-                     found = true;
-                     break;
-                  }
-               }
-               if(found)
-               {
-                  list.push(pack.id);
-               }
-            }
-         }
-         if(list.length == count)
-         {
-            return null;
-         }
-         return list;
+      public function getServerPartList() : Vector.<uint>
+      {
+         //Décompilation abandonné
       }
       
-      public function getPart(partName:String) : ContentPart {
-         var part:ContentPart = null;
-         for each(part in this._parts)
-         {
-            if(part.id == partName)
-            {
-               return part;
-            }
-         }
-         return null;
+      public function getPart(partName:String) : ContentPart
+      {
+         //Décompilation abandonné
       }
       
-      public function createEmptyPartList() : void {
-         this._parts = new Dictionary();
+      public function createEmptyPartList() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getDownloadPercent(base:int) : int {
-         var percent:int = 100 * this._downloadSuccess / this._downloadCount + base / this._downloadCount;
-         if(percent < 0)
-         {
-            return 0;
-         }
-         if(percent > 100)
-         {
-            return 100;
-         }
-         return percent;
+      public function getDownloadPercent(base:int) : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get isDownloading() : Boolean {
-         return this._state == STATE_DOWNLOADING;
+      public function get isDownloading() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get isFinished() : Boolean {
-         return this._state == STATE_FINISHED;
+      public function get isFinished() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function download(partName:String) : void {
-         var dpmsg:DownloadPartMessage = null;
-         this._state = STATE_DOWNLOADING;
-         if(this._parts[partName].state == PartStateEnum.PART_NOT_INSTALLED)
-         {
-            if(!this._downloadingPart)
-            {
-               _log.info("Send download request for " + partName + " to updater");
-               dpmsg = new DownloadPartMessage();
-               dpmsg.initDownloadPartMessage(partName);
-               UpdaterConnexionHandler.getConnection().send(dpmsg);
-               this._downloadingPart = partName;
-            }
-            else if(this._downloadList.indexOf(partName) == -1)
-            {
-               _log.info("A download is running. Add " + partName + " to download queue");
-               this._downloadList.push(partName);
-            }
-            
-         }
+      private function download(partName:String) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

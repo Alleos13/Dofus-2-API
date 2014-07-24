@@ -3,8 +3,13 @@ package com
    public class TubulConstants extends Object
    {
       
-      public function TubulConstants() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TubulConstants()
+      {
+         //Décompilation abandonné
       }
       
       public static const PREFIXE_LOADER:String = "RES_";

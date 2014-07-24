@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.servers
    public class ServerCommunity extends Object implements IDataCenter
    {
       
-      public function ServerCommunity() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ServerCommunity()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "ServerCommunities";
       
       private static var _log:Logger;
       
-      public static function getServerCommunityById(id:int) : ServerCommunity {
-         return GameData.getObject(MODULE,id) as ServerCommunity;
+      public static function getServerCommunityById(id:int) : ServerCommunity
+      {
+         //Décompilation abandonné
       }
       
-      public static function getServerCommunities() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getServerCommunities() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -36,12 +43,9 @@ package com.ankamagames.dofus.datacenter.servers
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

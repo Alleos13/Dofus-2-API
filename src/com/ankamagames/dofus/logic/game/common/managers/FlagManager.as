@@ -5,36 +5,32 @@ package com.ankamagames.dofus.logic.game.common.managers
    public class FlagManager extends Object
    {
       
-      public function FlagManager() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FlagManager()
+      {
+         //Décompilation abandonné
       }
       
       private static var _self:FlagManager;
       
-      public static function getInstance() : FlagManager {
-         var phoenixes:Array = null;
-         var phoenix:Phoenix = null;
-         if(!_self)
-         {
-            _self = new FlagManager();
-            phoenixes = Phoenix.getAllPhoenixes();
-            _self.phoenixs = new Array();
-            for each(phoenix in phoenixes)
-            {
-               _self.phoenixs.push(phoenix.mapId);
-            }
-         }
-         return _self;
+      public static function getInstance() : FlagManager
+      {
+         //Décompilation abandonné
       }
       
       private var _phoenixs:Array;
       
-      public function get phoenixs() : Array {
-         return this._phoenixs;
+      public function get phoenixs() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function set phoenixs(value:Array) : void {
-         this._phoenixs = value;
+      public function set phoenixs(value:Array) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -7,61 +7,52 @@ package com.ankamagames.dofus.network.types.game.interactive.skill
    public class SkillActionDescriptionTimed extends SkillActionDescription implements INetworkType
    {
       
-      public function SkillActionDescriptionTimed() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SkillActionDescriptionTimed()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 103;
       
       public var time:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 103;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initSkillActionDescriptionTimed(skillId:uint = 0, time:uint = 0) : SkillActionDescriptionTimed {
-         super.initSkillActionDescription(skillId);
-         this.time = time;
-         return this;
+      public function initSkillActionDescriptionTimed(skillId:uint = 0, time:uint = 0) : SkillActionDescriptionTimed
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.time = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_SkillActionDescriptionTimed(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_SkillActionDescriptionTimed(output:IDataOutput) : void {
-         super.serializeAs_SkillActionDescription(output);
-         if((this.time < 0) || (this.time > 255))
-         {
-            throw new Error("Forbidden value (" + this.time + ") on element time.");
-         }
-         else
-         {
-            output.writeByte(this.time);
-            return;
-         }
+      public function serializeAs_SkillActionDescriptionTimed(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_SkillActionDescriptionTimed(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_SkillActionDescriptionTimed(input:IDataInput) : void {
-         super.deserialize(input);
-         this.time = input.readUnsignedByte();
-         if((this.time < 0) || (this.time > 255))
-         {
-            throw new Error("Forbidden value (" + this.time + ") on element of SkillActionDescriptionTimed.time.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_SkillActionDescriptionTimed(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

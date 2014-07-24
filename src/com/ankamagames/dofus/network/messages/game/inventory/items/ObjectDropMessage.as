@@ -9,95 +9,71 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
    public class ObjectDropMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ObjectDropMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ObjectDropMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 3005;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var objectUID:uint = 0;
       
       public var quantity:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 3005;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initObjectDropMessage(objectUID:uint = 0, quantity:uint = 0) : ObjectDropMessage {
-         this.objectUID = objectUID;
-         this.quantity = quantity;
-         this._isInitialized = true;
-         return this;
+      public function initObjectDropMessage(objectUID:uint = 0, quantity:uint = 0) : ObjectDropMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.objectUID = 0;
-         this.quantity = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ObjectDropMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectDropMessage(output:IDataOutput) : void {
-         if(this.objectUID < 0)
-         {
-            throw new Error("Forbidden value (" + this.objectUID + ") on element objectUID.");
-         }
-         else
-         {
-            output.writeInt(this.objectUID);
-            if(this.quantity < 0)
-            {
-               throw new Error("Forbidden value (" + this.quantity + ") on element quantity.");
-            }
-            else
-            {
-               output.writeInt(this.quantity);
-               return;
-            }
-         }
+      public function serializeAs_ObjectDropMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ObjectDropMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectDropMessage(input:IDataInput) : void {
-         this.objectUID = input.readInt();
-         if(this.objectUID < 0)
-         {
-            throw new Error("Forbidden value (" + this.objectUID + ") on element of ObjectDropMessage.objectUID.");
-         }
-         else
-         {
-            this.quantity = input.readInt();
-            if(this.quantity < 0)
-            {
-               throw new Error("Forbidden value (" + this.quantity + ") on element of ObjectDropMessage.quantity.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_ObjectDropMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

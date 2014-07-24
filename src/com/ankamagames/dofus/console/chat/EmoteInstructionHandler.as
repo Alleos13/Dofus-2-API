@@ -12,46 +12,35 @@ package com.ankamagames.dofus.console.chat
    public class EmoteInstructionHandler extends Object implements ConsoleInstructionHandler
    {
       
-      public function EmoteInstructionHandler() {
-         this.sysApi = new SystemApi();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EmoteInstructionHandler()
+      {
+         //Décompilation abandonné
       }
       
       private var sysApi:SystemApi;
       
-      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void {
-         var epra:EmotePlayRequestAction = null;
-         var emoteId:uint = this.getEmoteId(cmd);
-         var playerManager:PlayedCharacterManager = PlayedCharacterManager.getInstance();
-         if((emoteId > 0) && (playerManager.state == PlayerLifeStatusEnum.STATUS_ALIVE_AND_KICKING) && (playerManager.isRidding) || (playerManager.isPetsMounting) || (playerManager.infos.entityLook.bonesId == 1))
-         {
-            epra = EmotePlayRequestAction.create(emoteId);
-            Kernel.getWorker().process(epra);
-         }
+      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getHelp(cmd:String) : String {
-         return null;
+      public function getHelp(cmd:String) : String
+      {
+         //Décompilation abandonné
       }
       
-      private function getEmoteId(cmd:String) : uint {
-         var emote:Emoticon = null;
-         for each(emote in Emoticon.getEmoticons())
-         {
-            if(emote.shortcut == cmd)
-            {
-               return emote.id;
-            }
-            if(emote.defaultAnim == cmd)
-            {
-               return emote.id;
-            }
-         }
-         return 0;
+      private function getEmoteId(cmd:String) : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array {
-         return [];
+      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array
+      {
+         //Décompilation abandonné
       }
    }
 }

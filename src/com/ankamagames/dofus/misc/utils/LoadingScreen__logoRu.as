@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.utils
    public class LoadingScreen__logoRu extends BitmapAsset
    {
       
-      public function LoadingScreen__logoRu() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LoadingScreen__logoRu()
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -8,13 +8,13 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring.ui
    public class ExtensionPanel extends Sprite
    {
       
-      public function ExtensionPanel(pRoot:Sprite) {
-         super();
-         this._parent = pRoot;
-         y = FpsManagerConst.BOX_HEIGHT;
-         this._memoryState = new MemoryPanel();
-         this._leakState = new LeakDetectionPanel();
-         this._leakState.addEventListener("follow",this.addGraphToMemory);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExtensionPanel(pRoot:Sprite)
+      {
+         //Décompilation abandonné
       }
       
       private var _parent:Sprite;
@@ -25,59 +25,39 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring.ui
       
       private var _leakState:LeakDetectionPanel;
       
-      public function get lastGc() : int {
-         return this._memoryState.lastGc;
+      public function get lastGc() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function changeState() : void {
-         switch(this._currentState)
-         {
-            case 0:
-               this._parent.addChild(this);
-               this._memoryState.initMemGraph();
-               this._memoryState.y = 5;
-               addChild(this._memoryState);
-               this._currentState++;
-               break;
-            case 1:
-               this._currentState++;
-               this._leakState.y = this._memoryState.y + FpsManagerConst.BOX_HEIGHT + 5;
-               addChild(this._leakState);
-               break;
-            case 2:
-               this._parent.removeChild(this);
-               removeChild(this._memoryState);
-               removeChild(this._leakState);
-               this._memoryState.clearOtherGraph();
-               this._currentState = 0;
-               break;
-         }
+      public function changeState() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function update() : void {
-         this._memoryState.updateData();
-         this._leakState.updateData();
-         if((this._currentState == 1) || (this._currentState == 2))
-         {
-            this._memoryState.render();
-         }
+      public function update() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function addGraphToMemory(pEvt:FpsManagerEvent) : void {
-         var mo:MonitoredObject = pEvt.data as MonitoredObject;
-         this._memoryState.addNewGraph(mo);
+      private function addGraphToMemory(pEvt:FpsManagerEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set lastGc(val:int) : void {
-         this._memoryState.lastGc = val;
+      public function set lastGc(val:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function watchObject(o:Object, pColor:uint, pIncrementParents:Boolean = false) : void {
-         this._leakState.watchObject(o,pColor,pIncrementParents);
+      public function watchObject(o:Object, pColor:uint, pIncrementParents:Boolean = false) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function updateGc(max_memory:Number = 0) : void {
-         this._memoryState.updateGc(max_memory);
+      public function updateGc(max_memory:Number = 0) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

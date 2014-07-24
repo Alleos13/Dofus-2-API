@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.treasureHunt
    public class TreasureHuntStepFollowDirection extends TreasureHuntStep implements INetworkType
    {
       
-      public function TreasureHuntStepFollowDirection() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TreasureHuntStepFollowDirection()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 468;
@@ -17,62 +22,39 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.treasureHunt
       
       public var mapCount:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 468;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initTreasureHuntStepFollowDirection(direction:uint = 1, mapCount:uint = 0) : TreasureHuntStepFollowDirection {
-         this.direction = direction;
-         this.mapCount = mapCount;
-         return this;
+      public function initTreasureHuntStepFollowDirection(direction:uint = 1, mapCount:uint = 0) : TreasureHuntStepFollowDirection
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.direction = 1;
-         this.mapCount = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TreasureHuntStepFollowDirection(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_TreasureHuntStepFollowDirection(output:IDataOutput) : void {
-         super.serializeAs_TreasureHuntStep(output);
-         output.writeByte(this.direction);
-         if(this.mapCount < 0)
-         {
-            throw new Error("Forbidden value (" + this.mapCount + ") on element mapCount.");
-         }
-         else
-         {
-            output.writeInt(this.mapCount);
-            return;
-         }
+      public function serializeAs_TreasureHuntStepFollowDirection(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TreasureHuntStepFollowDirection(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_TreasureHuntStepFollowDirection(input:IDataInput) : void {
-         super.deserialize(input);
-         this.direction = input.readByte();
-         if(this.direction < 0)
-         {
-            throw new Error("Forbidden value (" + this.direction + ") on element of TreasureHuntStepFollowDirection.direction.");
-         }
-         else
-         {
-            this.mapCount = input.readInt();
-            if(this.mapCount < 0)
-            {
-               throw new Error("Forbidden value (" + this.mapCount + ") on element of TreasureHuntStepFollowDirection.mapCount.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_TreasureHuntStepFollowDirection(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

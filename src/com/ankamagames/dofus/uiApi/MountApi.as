@@ -14,52 +14,63 @@ package com.ankamagames.dofus.uiApi
    public class MountApi extends Object implements IApi
    {
       
-      public function MountApi() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      private function get mountFrame() : MountFrame {
-         return Kernel.getWorker().getFrame(MountFrame) as MountFrame;
+      public function MountApi()
+      {
+         //Décompilation abandonné
       }
       
-      private function get inventoryFrame() : InventoryManagementFrame {
-         return Kernel.getWorker().getFrame(InventoryManagementFrame) as InventoryManagementFrame;
+      private function get mountFrame() : MountFrame
+      {
+         //Décompilation abandonné
       }
       
-      private function get roleplayContextFrame() : RoleplayContextFrame {
-         return Kernel.getWorker().getFrame(RoleplayContextFrame) as RoleplayContextFrame;
+      private function get inventoryFrame() : InventoryManagementFrame
+      {
+         //Décompilation abandonné
       }
       
-      public function getRiderEntityLook(look:*) : TiphonEntityLook {
-         return EntityLookAdapter.getRiderLook(look).clone();
+      private function get roleplayContextFrame() : RoleplayContextFrame
+      {
+         //Décompilation abandonné
       }
       
-      public function getMount(modelId:uint) : Mount {
-         return Mount.getMountById(modelId);
+      public function getRiderEntityLook(look:*) : TiphonEntityLook
+      {
+         //Décompilation abandonné
       }
       
-      public function getStableList() : Array {
-         return this.mountFrame.stableList;
+      public function getMount(modelId:uint) : Mount
+      {
+         //Décompilation abandonné
       }
       
-      public function getPaddockList() : Array {
-         return this.mountFrame.paddockList;
+      public function getStableList() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getInventoryList() : Vector.<ItemWrapper> {
-         return InventoryManager.getInstance().inventory.getView("certificate").content;
+      public function getPaddockList() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getCurrentPaddock() : Object {
-         return this.roleplayContextFrame.currentPaddock;
+      public function getInventoryList() : Vector.<ItemWrapper>
+      {
+         //Décompilation abandonné
       }
       
-      public function isCertificateValid(certificate:ItemWrapper) : Boolean {
-         if(certificate.effects.length > 1)
-         {
-            return true;
-         }
-         return false;
+      public function getCurrentPaddock() : Object
+      {
+         //Décompilation abandonné
+      }
+      
+      public function isCertificateValid(certificate:ItemWrapper) : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -9,81 +9,71 @@ package com.ankamagames.dofus.network.messages.game.character.deletion
    public class CharacterDeletionRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function CharacterDeletionRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterDeletionRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 165;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var characterId:uint = 0;
       
       public var secretAnswerHash:String = "";
       
-      override public function getMessageId() : uint {
-         return 165;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCharacterDeletionRequestMessage(characterId:uint = 0, secretAnswerHash:String = "") : CharacterDeletionRequestMessage {
-         this.characterId = characterId;
-         this.secretAnswerHash = secretAnswerHash;
-         this._isInitialized = true;
-         return this;
+      public function initCharacterDeletionRequestMessage(characterId:uint = 0, secretAnswerHash:String = "") : CharacterDeletionRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.characterId = 0;
-         this.secretAnswerHash = "";
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharacterDeletionRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterDeletionRequestMessage(output:IDataOutput) : void {
-         if(this.characterId < 0)
-         {
-            throw new Error("Forbidden value (" + this.characterId + ") on element characterId.");
-         }
-         else
-         {
-            output.writeInt(this.characterId);
-            output.writeUTF(this.secretAnswerHash);
-            return;
-         }
+      public function serializeAs_CharacterDeletionRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharacterDeletionRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterDeletionRequestMessage(input:IDataInput) : void {
-         this.characterId = input.readInt();
-         if(this.characterId < 0)
-         {
-            throw new Error("Forbidden value (" + this.characterId + ") on element of CharacterDeletionRequestMessage.characterId.");
-         }
-         else
-         {
-            this.secretAnswerHash = input.readUTF();
-            return;
-         }
+      public function deserializeAs_CharacterDeletionRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

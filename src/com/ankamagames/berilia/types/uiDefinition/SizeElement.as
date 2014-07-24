@@ -8,8 +8,13 @@ package com.ankamagames.berilia.types.uiDefinition
    public class SizeElement extends Object
    {
       
-      public function SizeElement() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SizeElement()
+      {
+         //Décompilation abandonné
       }
       
       public static const SIZE_PIXEL:uint = 0;
@@ -26,17 +31,9 @@ package com.ankamagames.berilia.types.uiDefinition
       
       public var y:Number;
       
-      public function toGraphicSize() : GraphicSize {
-         var graphicSize:GraphicSize = new GraphicSize();
-         if(!isNaN(this.xUnit))
-         {
-            graphicSize.setX(this.x,this.xUnit);
-         }
-         if(!isNaN(this.yUnit))
-         {
-            graphicSize.setY(this.y,this.yUnit);
-         }
-         return graphicSize;
+      public function toGraphicSize() : GraphicSize
+      {
+         //Décompilation abandonné
       }
    }
 }

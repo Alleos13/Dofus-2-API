@@ -6,106 +6,131 @@ package com.ankamagames.atouin.types
    public class BitmapCellContainer extends Object implements ICellContainer
    {
       
-      public function BitmapCellContainer(id:uint) {
-         this.datas = new Array();
-         this.bitmaps = new Array();
-         this.colorTransforms = new Array();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BitmapCellContainer(id:uint)
+      {
+         //Décompilation abandonné
       }
       
       private var _destPoint:Point;
       
       private var _srcRect:Rectangle;
       
-      public function get cacheAsBitmap() : Boolean {
-         return false;
+      public function get cacheAsBitmap() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set cacheAsBitmap(val:Boolean) : void {
+      public function set cacheAsBitmap(val:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get mouseChildren() : Boolean {
-         return false;
+      public function get mouseChildren() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set mouseChildren(val:Boolean) : void {
+      public function set mouseChildren(val:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get mouseEnabled() : Boolean {
-         return false;
+      public function get mouseEnabled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function set mouseEnabled(val:Boolean) : void {
+      public function set mouseEnabled(val:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
       private var _cellId:int = 0;
       
-      public function get cellId() : uint {
-         return this._cellId;
+      public function get cellId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set cellId(val:uint) : void {
-         this._cellId = val;
+      public function set cellId(val:uint) : void
+      {
+         //Décompilation abandonné
       }
       
       private var _layerId:int = 0;
       
-      public function get layerId() : int {
-         return this._layerId;
+      public function get layerId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set layerId(val:int) : void {
-         this._layerId = val;
+      public function set layerId(val:int) : void
+      {
+         //Décompilation abandonné
       }
       
       private var _startX:int = 0;
       
-      public function get startX() : int {
-         return this._startX;
+      public function get startX() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set startX(val:int) : void {
-         this._startX = val;
+      public function set startX(val:int) : void
+      {
+         //Décompilation abandonné
       }
       
       private var _startY:int = 0;
       
-      public function get startY() : int {
-         return this._startY;
+      public function get startY() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set startY(val:int) : void {
-         this._startY = val;
+      public function set startY(val:int) : void
+      {
+         //Décompilation abandonné
       }
       
       private var _x:Number = 0;
       
-      public function get x() : Number {
-         return this._x;
+      public function get x() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function set x(val:Number) : void {
-         this._x = val;
+      public function set x(val:Number) : void
+      {
+         //Décompilation abandonné
       }
       
       private var _y:Number = 0;
       
-      public function get y() : Number {
-         return this._y;
+      public function get y() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function set y(val:Number) : void {
-         this._y = val;
+      public function set y(val:Number) : void
+      {
+         //Décompilation abandonné
       }
       
       private var _depth:int = 0;
       
-      public function get depth() : int {
-         return this._depth;
+      public function get depth() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set depth(val:int) : void {
-         this._depth = val;
+      public function set depth(val:int) : void
+      {
+         //Décompilation abandonné
       }
       
       public var datas:Array;
@@ -116,15 +141,14 @@ package com.ankamagames.atouin.types
       
       private var _numChildren:int = 0;
       
-      public function get numChildren() : int {
-         return this._numChildren;
+      public function get numChildren() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function addFakeChild(child:Object, data:Object, colors:Object) : void {
-         this.colorTransforms[this._numChildren] = colors;
-         this.datas[this._numChildren] = data;
-         var _loc4_:* = this._numChildren++;
-         this.bitmaps[_loc4_] = child;
+      public function addFakeChild(child:Object, data:Object, colors:Object) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

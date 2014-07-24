@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.character.creation
    public class CharacterNameSuggestionSuccessMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function CharacterNameSuggestionSuccessMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CharacterNameSuggestionSuccessMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5544;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var suggestion:String = "";
       
-      override public function getMessageId() : uint {
-         return 5544;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initCharacterNameSuggestionSuccessMessage(suggestion:String = "") : CharacterNameSuggestionSuccessMessage {
-         this.suggestion = suggestion;
-         this._isInitialized = true;
-         return this;
+      public function initCharacterNameSuggestionSuccessMessage(suggestion:String = "") : CharacterNameSuggestionSuccessMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.suggestion = "";
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_CharacterNameSuggestionSuccessMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterNameSuggestionSuccessMessage(output:IDataOutput) : void {
-         output.writeUTF(this.suggestion);
+      public function serializeAs_CharacterNameSuggestionSuccessMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_CharacterNameSuggestionSuccessMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterNameSuggestionSuccessMessage(input:IDataInput) : void {
-         this.suggestion = input.readUTF();
+      public function deserializeAs_CharacterNameSuggestionSuccessMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class HardcoreDeathStateEnum extends Object
    {
       
-      public function HardcoreDeathStateEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HardcoreDeathStateEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const DEATH_STATE_ALIVE:uint = 0;

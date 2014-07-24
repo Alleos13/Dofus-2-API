@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.craft
    public class ExchangeItemGoldAddAsPaymentAction extends Object implements Action
    {
       
-      public function ExchangeItemGoldAddAsPaymentAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pOnlySuccess:Boolean, pKamas:uint) : ExchangeItemGoldAddAsPaymentAction {
-         var action:ExchangeItemGoldAddAsPaymentAction = new ExchangeItemGoldAddAsPaymentAction();
-         action.onlySuccess = pOnlySuccess;
-         action.kamas = pKamas;
-         return action;
+      public function ExchangeItemGoldAddAsPaymentAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pOnlySuccess:Boolean, pKamas:uint) : ExchangeItemGoldAddAsPaymentAction
+      {
+         //Décompilation abandonné
       }
       
       public var onlySuccess:Boolean;

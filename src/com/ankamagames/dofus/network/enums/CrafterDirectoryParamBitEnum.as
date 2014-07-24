@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class CrafterDirectoryParamBitEnum extends Object
    {
       
-      public function CrafterDirectoryParamBitEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CrafterDirectoryParamBitEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const CRAFT_OPTION_NONE:uint = 0;

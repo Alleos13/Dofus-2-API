@@ -13,31 +13,18 @@ package com.ankamagames.dofus.logic.common.managers
    public class HyperlinkShowNpcManager extends Object
    {
       
-      public function HyperlinkShowNpcManager() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function showNpc(npcId:int, loop:int = 0) : MovieClip {
-         var list:Dictionary = null;
-         var npc:Object = null;
-         var graphicCell:GraphicCell = null;
-         var rect:Rectangle = null;
-         var abstractEntitiesFrame:RoleplayEntitiesFrame = Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame;
-         if(abstractEntitiesFrame)
-         {
-            list = abstractEntitiesFrame.getEntitiesDictionnary();
-            for each(npc in list)
-            {
-               if((npc is GameRolePlayNpcInformations) && ((npc.npcId == npcId) || (npcId == -1)))
-               {
-                  graphicCell = InteractiveCellManager.getInstance().getCell(npc.disposition.cellId);
-                  rect = graphicCell.getRect(Berilia.getInstance().docMain);
-                  rect.y = rect.y - 80;
-                  return HyperlinkDisplayArrowManager.showAbsoluteArrow(rect,0,0,1,loop);
-               }
-            }
-         }
-         return null;
+      public function HyperlinkShowNpcManager()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function showNpc(npcId:int, loop:int = 0) : MovieClip
+      {
+         //Décompilation abandonné
       }
    }
 }

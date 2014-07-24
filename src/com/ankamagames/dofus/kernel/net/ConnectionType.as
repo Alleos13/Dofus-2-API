@@ -3,8 +3,13 @@ package com.ankamagames.dofus.kernel.net
    public final class ConnectionType extends Object
    {
       
-      public function ConnectionType() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ConnectionType()
+      {
+         //Décompilation abandonné
       }
       
       public static const DISCONNECTED:String = "disconnected";

@@ -9,65 +9,71 @@ package com.ankamagames.dofus.network.messages.game.approach
    public class AuthenticationTicketMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function AuthenticationTicketMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AuthenticationTicketMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 110;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var lang:String = "";
       
       public var ticket:String = "";
       
-      override public function getMessageId() : uint {
-         return 110;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initAuthenticationTicketMessage(lang:String = "", ticket:String = "") : AuthenticationTicketMessage {
-         this.lang = lang;
-         this.ticket = ticket;
-         this._isInitialized = true;
-         return this;
+      public function initAuthenticationTicketMessage(lang:String = "", ticket:String = "") : AuthenticationTicketMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.lang = "";
-         this.ticket = "";
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AuthenticationTicketMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_AuthenticationTicketMessage(output:IDataOutput) : void {
-         output.writeUTF(this.lang);
-         output.writeUTF(this.ticket);
+      public function serializeAs_AuthenticationTicketMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AuthenticationTicketMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_AuthenticationTicketMessage(input:IDataInput) : void {
-         this.lang = input.readUTF();
-         this.ticket = input.readUTF();
+      public function deserializeAs_AuthenticationTicketMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

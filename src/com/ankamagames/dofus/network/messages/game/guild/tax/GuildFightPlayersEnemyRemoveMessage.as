@@ -9,95 +9,71 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
    public class GuildFightPlayersEnemyRemoveMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GuildFightPlayersEnemyRemoveMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildFightPlayersEnemyRemoveMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5929;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var fightId:Number = 0;
       
       public var playerId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5929;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGuildFightPlayersEnemyRemoveMessage(fightId:Number = 0, playerId:uint = 0) : GuildFightPlayersEnemyRemoveMessage {
-         this.fightId = fightId;
-         this.playerId = playerId;
-         this._isInitialized = true;
-         return this;
+      public function initGuildFightPlayersEnemyRemoveMessage(fightId:Number = 0, playerId:uint = 0) : GuildFightPlayersEnemyRemoveMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.fightId = 0;
-         this.playerId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GuildFightPlayersEnemyRemoveMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GuildFightPlayersEnemyRemoveMessage(output:IDataOutput) : void {
-         if(this.fightId < 0)
-         {
-            throw new Error("Forbidden value (" + this.fightId + ") on element fightId.");
-         }
-         else
-         {
-            output.writeDouble(this.fightId);
-            if(this.playerId < 0)
-            {
-               throw new Error("Forbidden value (" + this.playerId + ") on element playerId.");
-            }
-            else
-            {
-               output.writeInt(this.playerId);
-               return;
-            }
-         }
+      public function serializeAs_GuildFightPlayersEnemyRemoveMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GuildFightPlayersEnemyRemoveMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildFightPlayersEnemyRemoveMessage(input:IDataInput) : void {
-         this.fightId = input.readDouble();
-         if(this.fightId < 0)
-         {
-            throw new Error("Forbidden value (" + this.fightId + ") on element of GuildFightPlayersEnemyRemoveMessage.fightId.");
-         }
-         else
-         {
-            this.playerId = input.readInt();
-            if(this.playerId < 0)
-            {
-               throw new Error("Forbidden value (" + this.playerId + ") on element of GuildFightPlayersEnemyRemoveMessage.playerId.");
-            }
-            else
-            {
-               return;
-            }
-         }
+      public function deserializeAs_GuildFightPlayersEnemyRemoveMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

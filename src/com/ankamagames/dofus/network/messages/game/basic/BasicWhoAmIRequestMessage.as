@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.basic
    public class BasicWhoAmIRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function BasicWhoAmIRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BasicWhoAmIRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5664;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var verbose:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 5664;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initBasicWhoAmIRequestMessage(verbose:Boolean = false) : BasicWhoAmIRequestMessage {
-         this.verbose = verbose;
-         this._isInitialized = true;
-         return this;
+      public function initBasicWhoAmIRequestMessage(verbose:Boolean = false) : BasicWhoAmIRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.verbose = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_BasicWhoAmIRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_BasicWhoAmIRequestMessage(output:IDataOutput) : void {
-         output.writeBoolean(this.verbose);
+      public function serializeAs_BasicWhoAmIRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_BasicWhoAmIRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_BasicWhoAmIRequestMessage(input:IDataInput) : void {
-         this.verbose = input.readBoolean();
+      public function deserializeAs_BasicWhoAmIRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

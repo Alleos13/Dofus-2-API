@@ -7,14 +7,13 @@ package com.ankamagames.dofus.types.data
    public dynamic class GenericSlotData extends Object implements ISlotData
    {
       
-      public function GenericSlotData(iconUri:Uri = null, fullSizeIconUri:Uri = null, errorIconUri:Uri = null, info1:String = null, active:Boolean = true, timer:int = 0) {
-         super();
-         this._iconUri = iconUri;
-         this._fullSizeIconUri = fullSizeIconUri;
-         this._errorIconUri = errorIconUri;
-         this._info1 = info1;
-         this._active = active;
-         this._timer = timer;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GenericSlotData(iconUri:Uri = null, fullSizeIconUri:Uri = null, errorIconUri:Uri = null, info1:String = null, active:Boolean = true, timer:int = 0)
+      {
+         //Décompilation abandonné
       }
       
       private var _iconUri:Uri;
@@ -29,69 +28,89 @@ package com.ankamagames.dofus.types.data
       
       private var _timer:int;
       
-      public function set fullSizeIconUri(value:Uri) : void {
-         this._fullSizeIconUri = value;
+      public function set fullSizeIconUri(value:Uri) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set errorIconUri(value:Uri) : void {
-         this._errorIconUri = value;
+      public function set errorIconUri(value:Uri) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set info1(value:String) : void {
-         this._info1 = value;
+      public function set info1(value:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set timer(value:int) : void {
-         this._timer = value;
+      public function set timer(value:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set active(value:Boolean) : void {
-         this._active = value;
+      public function set active(value:Boolean) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set iconUri(value:Uri) : void {
-         this._iconUri = value;
+      public function set iconUri(value:Uri) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get iconUri() : Uri {
-         return this._iconUri;
+      public function get iconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get fullSizeIconUri() : Uri {
-         return this._fullSizeIconUri;
+      public function get fullSizeIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get errorIconUri() : Uri {
-         return this._errorIconUri;
+      public function get errorIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get info1() : String {
-         return this._info1;
+      public function get info1() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get startTime() : int {
-         return 0;
+      public function get startTime() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get endTime() : int {
-         return 0;
+      public function get endTime() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set endTime(t:int) : void {
+      public function set endTime(t:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get timer() : int {
-         return this._timer;
+      public function get timer() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get active() : Boolean {
-         return this._active;
+      public function get active() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function addHolder(h:ISlotDataHolder) : void {
+      public function addHolder(h:ISlotDataHolder) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeHolder(h:ISlotDataHolder) : void {
+      public function removeHolder(h:ISlotDataHolder) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -7,14 +7,20 @@ package com.ankamagames.dofus.datacenter.interactives
    public class SkillName extends Object implements IDataCenter
    {
       
-      public function SkillName() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SkillName()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "SkillNames";
       
-      public static function getSkillNameById(id:int) : SkillName {
-         return GameData.getObject(MODULE,id) as SkillName;
+      public static function getSkillNameById(id:int) : SkillName
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -23,12 +29,9 @@ package com.ankamagames.dofus.datacenter.interactives
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

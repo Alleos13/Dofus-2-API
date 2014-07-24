@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.fight.actions
    public class GameFightReadyAction extends Object implements Action
    {
       
-      public function GameFightReadyAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(isReady:Boolean) : GameFightReadyAction {
-         var a:GameFightReadyAction = new GameFightReadyAction();
-         a.isReady = isReady;
-         return a;
+      public function GameFightReadyAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(isReady:Boolean) : GameFightReadyAction
+      {
+         //Décompilation abandonné
       }
       
       public var isReady:Boolean;

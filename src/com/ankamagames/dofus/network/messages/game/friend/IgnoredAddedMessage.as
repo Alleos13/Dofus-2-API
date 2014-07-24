@@ -11,68 +11,71 @@ package com.ankamagames.dofus.network.messages.game.friend
    public class IgnoredAddedMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function IgnoredAddedMessage() {
-         this.ignoreAdded = new IgnoredInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function IgnoredAddedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5678;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var ignoreAdded:IgnoredInformations;
       
       public var session:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 5678;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initIgnoredAddedMessage(ignoreAdded:IgnoredInformations = null, session:Boolean = false) : IgnoredAddedMessage {
-         this.ignoreAdded = ignoreAdded;
-         this.session = session;
-         this._isInitialized = true;
-         return this;
+      public function initIgnoredAddedMessage(ignoreAdded:IgnoredInformations = null, session:Boolean = false) : IgnoredAddedMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.ignoreAdded = new IgnoredInformations();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_IgnoredAddedMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_IgnoredAddedMessage(output:IDataOutput) : void {
-         output.writeShort(this.ignoreAdded.getTypeId());
-         this.ignoreAdded.serialize(output);
-         output.writeBoolean(this.session);
+      public function serializeAs_IgnoredAddedMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_IgnoredAddedMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_IgnoredAddedMessage(input:IDataInput) : void {
-         var _id1:uint = input.readUnsignedShort();
-         this.ignoreAdded = ProtocolTypeManager.getInstance(IgnoredInformations,_id1);
-         this.ignoreAdded.deserialize(input);
-         this.session = input.readBoolean();
+      public function deserializeAs_IgnoredAddedMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

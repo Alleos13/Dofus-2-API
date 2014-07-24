@@ -8,30 +8,35 @@ package com.ankamagames.jerakine.tasking
    public class SplittedTask extends EventDispatcher implements Prioritizable
    {
       
-      public function SplittedTask() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SplittedTask()
+      {
+         //Décompilation abandonné
       }
       
       private var _nPriority:int;
       
-      public function step() : Boolean {
-         throw new AbstractMethodCallError("step() must be redefined");
+      public function step() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function stepsPerFrame() : uint {
-         throw new AbstractMethodCallError("stepsPerFrame() must be redefined");
+      public function stepsPerFrame() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get priority() : int {
-         if(isNaN(this._nPriority))
-         {
-            return Priority.NORMAL;
-         }
-         return this._nPriority;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set priority(p:int) : void {
-         this._nPriority = p;
+      public function set priority(p:int) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

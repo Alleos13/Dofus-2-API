@@ -3,24 +3,33 @@ package gs.easing
    public class Linear extends Object
    {
       
-      public function Linear() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function easeNone(param1:Number, param2:Number, param3:Number, param4:Number) : Number {
-         return param3 * param1 / param4 + param2;
+      public function Linear()
+      {
+         //Décompilation abandonné
       }
       
-      public static function easeIn(param1:Number, param2:Number, param3:Number, param4:Number) : Number {
-         return param3 * param1 / param4 + param2;
+      public static function easeNone(t:Number, b:Number, c:Number, d:Number) : Number
+      {
+         //Décompilation abandonné
       }
       
-      public static function easeOut(param1:Number, param2:Number, param3:Number, param4:Number) : Number {
-         return param3 * param1 / param4 + param2;
+      public static function easeIn(t:Number, b:Number, c:Number, d:Number) : Number
+      {
+         //Décompilation abandonné
       }
       
-      public static function easeInOut(param1:Number, param2:Number, param3:Number, param4:Number) : Number {
-         return param3 * param1 / param4 + param2;
+      public static function easeOut(t:Number, b:Number, c:Number, d:Number) : Number
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function easeInOut(t:Number, b:Number, c:Number, d:Number) : Number
+      {
+         //Décompilation abandonné
       }
    }
 }

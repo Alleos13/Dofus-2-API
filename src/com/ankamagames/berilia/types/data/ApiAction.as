@@ -6,41 +6,27 @@ package com.ankamagames.berilia.types.data
    public class ApiAction extends Object
    {
       
-      public function ApiAction(name:String, actionClass:Class, trusted:Boolean, needInteraction:Boolean, maxUsePerFrame:uint, minimalUseInterval:uint, needConfirmation:Boolean) {
-         super();
-         if(!_apiActionNameList)
-         {
-            _apiActionNameList = new Array();
-         }
-         if(_apiActionNameList[name])
-         {
-            throw new BeriliaError("ApiAction name (" + name + ") aleardy used, please rename it.");
-         }
-         else
-         {
-            _apiActionNameList[name] = this;
-            this._name = name;
-            this._actionClass = actionClass;
-            this._trusted = trusted;
-            this._needInteraction = needInteraction;
-            this._maxUsePerFrame = maxUsePerFrame;
-            this._minimalUseInterval = minimalUseInterval;
-            this._needConfirmation = needConfirmation;
-            MEMORY_LOG[this] = 1;
-            return;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ApiAction(name:String, actionClass:Class, trusted:Boolean, needInteraction:Boolean, maxUsePerFrame:uint, minimalUseInterval:uint, needConfirmation:Boolean)
+      {
+         //Décompilation abandonné
       }
       
       public static var MEMORY_LOG:Dictionary;
       
       protected static var _apiActionNameList:Array;
       
-      public static function getApiActionByName(name:String) : ApiAction {
-         return _apiActionNameList[name];
+      public static function getApiActionByName(name:String) : ApiAction
+      {
+         //Décompilation abandonné
       }
       
-      public static function getApiActionsList() : Array {
-         return _apiActionNameList;
+      public static function getApiActionsList() : Array
+      {
+         //Décompilation abandonné
       }
       
       protected var _trusted:Boolean;
@@ -57,32 +43,39 @@ package com.ankamagames.berilia.types.data
       
       protected var _needConfirmation:Boolean;
       
-      public function get trusted() : Boolean {
-         return this._trusted;
+      public function get trusted() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get name() : String {
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get needInteraction() : Boolean {
-         return this._needInteraction;
+      public function get needInteraction() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get maxUsePerFrame() : uint {
-         return this._maxUsePerFrame;
+      public function get maxUsePerFrame() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get minimalUseInterval() : uint {
-         return this._minimalUseInterval;
+      public function get minimalUseInterval() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get needConfirmation() : Boolean {
-         return this._needConfirmation;
+      public function get needConfirmation() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get actionClass() : Class {
-         return this._actionClass;
+      public function get actionClass() : Class
+      {
+         //Décompilation abandonné
       }
    }
 }

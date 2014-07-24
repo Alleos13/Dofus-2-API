@@ -8,36 +8,32 @@ package com.ankamagames.dofus.datacenter.quest.objectives
    public class QuestObjectiveGoToNpc extends QuestObjective implements IDataCenter
    {
       
-      public function QuestObjectiveGoToNpc() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function QuestObjectiveGoToNpc()
+      {
+         //Décompilation abandonné
       }
       
       private var _npc:Npc;
       
       private var _text:String;
       
-      public function get npcId() : uint {
-         if(!this.parameters)
-         {
-            return 0;
-         }
-         return this.parameters[0];
+      public function get npcId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get npc() : Npc {
-         if(!this._npc)
-         {
-            this._npc = Npc.getNpcById(this.npcId);
-         }
-         return this._npc;
+      public function get npc() : Npc
+      {
+         //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         if(!this._text)
-         {
-            this._text = PatternDecoder.getDescription(this.type.name,[this.npc.name]);
-         }
-         return this._text;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

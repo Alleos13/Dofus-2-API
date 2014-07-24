@@ -3,8 +3,13 @@ package flashx.textLayout.edit
    public final class SelectionFormatState extends Object
    {
       
-      public function SelectionFormatState() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SelectionFormatState()
+      {
+         //Décompilation abandonné
       }
       
       public static const FOCUSED:String = "focused";

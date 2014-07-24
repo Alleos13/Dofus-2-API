@@ -5,8 +5,13 @@ package com.ankamagames.dofus.datacenter.npcs
    public final class AnimFunNpcData extends AnimFunData
    {
       
-      public function AnimFunNpcData() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AnimFunNpcData()
+      {
+         //Décompilation abandonné
       }
    }
 }

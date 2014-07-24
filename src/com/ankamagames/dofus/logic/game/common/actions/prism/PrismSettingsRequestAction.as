@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.prism
    public class PrismSettingsRequestAction extends Object implements Action
    {
       
-      public function PrismSettingsRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(subAreaId:uint, startDefenseTime:uint) : PrismSettingsRequestAction {
-         var action:PrismSettingsRequestAction = new PrismSettingsRequestAction();
-         action.subAreaId = subAreaId;
-         action.startDefenseTime = startDefenseTime;
-         return action;
+      public function PrismSettingsRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(subAreaId:uint, startDefenseTime:uint) : PrismSettingsRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var subAreaId:uint;

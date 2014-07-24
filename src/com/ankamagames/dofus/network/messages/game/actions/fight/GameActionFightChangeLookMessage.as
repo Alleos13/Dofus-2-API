@@ -10,71 +10,71 @@ package com.ankamagames.dofus.network.messages.game.actions.fight
    public class GameActionFightChangeLookMessage extends AbstractGameActionMessage implements INetworkMessage
    {
       
-      public function GameActionFightChangeLookMessage() {
-         this.entityLook = new EntityLook();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameActionFightChangeLookMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5532;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var targetId:int = 0;
       
       public var entityLook:EntityLook;
       
-      override public function getMessageId() : uint {
-         return 5532;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameActionFightChangeLookMessage(actionId:uint = 0, sourceId:int = 0, targetId:int = 0, entityLook:EntityLook = null) : GameActionFightChangeLookMessage {
-         super.initAbstractGameActionMessage(actionId,sourceId);
-         this.targetId = targetId;
-         this.entityLook = entityLook;
-         this._isInitialized = true;
-         return this;
+      public function initGameActionFightChangeLookMessage(actionId:uint = 0, sourceId:int = 0, targetId:int = 0, entityLook:EntityLook = null) : GameActionFightChangeLookMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.targetId = 0;
-         this.entityLook = new EntityLook();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameActionFightChangeLookMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameActionFightChangeLookMessage(output:IDataOutput) : void {
-         super.serializeAs_AbstractGameActionMessage(output);
-         output.writeInt(this.targetId);
-         this.entityLook.serializeAs_EntityLook(output);
+      public function serializeAs_GameActionFightChangeLookMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameActionFightChangeLookMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameActionFightChangeLookMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.targetId = input.readInt();
-         this.entityLook = new EntityLook();
-         this.entityLook.deserialize(input);
+      public function deserializeAs_GameActionFightChangeLookMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

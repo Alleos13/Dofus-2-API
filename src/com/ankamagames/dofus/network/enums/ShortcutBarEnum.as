@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class ShortcutBarEnum extends Object
    {
       
-      public function ShortcutBarEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ShortcutBarEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const GENERAL_SHORTCUT_BAR:uint = 0;

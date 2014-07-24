@@ -3,14 +3,18 @@ package com.ankamagames.jerakine.utils.prng
    public interface PRNG
    {
       
-      function seed(param1:uint) : void;
+      {
+      //Décompilation abandonné
+      }
+      
+      function seed(value:uint) : void;
       
       function nextInt() : uint;
       
       function nextDouble() : Number;
       
-      function nextIntR(param1:Number, param2:Number) : uint;
+      function nextIntR(min:Number, max:Number) : uint;
       
-      function nextDoubleR(param1:Number, param2:Number) : Number;
+      function nextDoubleR(min:Number, max:Number) : Number;
    }
 }

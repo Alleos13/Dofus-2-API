@@ -10,75 +10,69 @@ package com.ankamagames.dofus.network.messages.game.interactive
    public class StatedMapUpdateMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function StatedMapUpdateMessage() {
-         this.statedElements = new Vector.<StatedElement>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StatedMapUpdateMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5716;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var statedElements:Vector.<StatedElement>;
       
-      override public function getMessageId() : uint {
-         return 5716;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initStatedMapUpdateMessage(statedElements:Vector.<StatedElement> = null) : StatedMapUpdateMessage {
-         this.statedElements = statedElements;
-         this._isInitialized = true;
-         return this;
+      public function initStatedMapUpdateMessage(statedElements:Vector.<StatedElement> = null) : StatedMapUpdateMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.statedElements = new Vector.<StatedElement>();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_StatedMapUpdateMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_StatedMapUpdateMessage(output:IDataOutput) : void {
-         output.writeShort(this.statedElements.length);
-         var _i1:uint = 0;
-         while(_i1 < this.statedElements.length)
-         {
-            (this.statedElements[_i1] as StatedElement).serializeAs_StatedElement(output);
-            _i1++;
-         }
+      public function serializeAs_StatedMapUpdateMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_StatedMapUpdateMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_StatedMapUpdateMessage(input:IDataInput) : void {
-         var _item1:StatedElement = null;
-         var _statedElementsLen:uint = input.readUnsignedShort();
-         var _i1:uint = 0;
-         while(_i1 < _statedElementsLen)
-         {
-            _item1 = new StatedElement();
-            _item1.deserialize(input);
-            this.statedElements.push(_item1);
-            _i1++;
-         }
+      public function deserializeAs_StatedMapUpdateMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

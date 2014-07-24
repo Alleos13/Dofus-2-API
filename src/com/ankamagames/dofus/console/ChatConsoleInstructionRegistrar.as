@@ -19,33 +19,18 @@ package com.ankamagames.dofus.console
    public class ChatConsoleInstructionRegistrar extends Object implements ConsoleInstructionRegistar
    {
       
-      public function ChatConsoleInstructionRegistrar() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function registerInstructions(console:ConsoleHandler) : void {
-         var emote:* = undefined;
-         var emoteShortcuts:Array = new Array();
-         for each(emote in Emoticon.getEmoticons())
-         {
-            emoteShortcuts.push(emote.shortcut);
-         }
-         console.addHandler(["whois","version","ver","about","whoami","mapid","cellid","time","mlog"],new InfoInstructionHandler());
-         console.addHandler(["aping","ping"],new LatencyInstructionHandler());
-         console.addHandler(["f","ignore","invite"],new SocialInstructionHandler());
-         console.addHandler(["w","whisper","msg","t","g","p","a","r","b","m"],new MessagingInstructionHandler());
-         console.addHandler(["s","spectator","list","players","kick"],new FightInstructionHandler());
-         console.addHandler(emoteShortcuts,new EmoteInstructionHandler());
-         console.addHandler(["tab","clear"],new OptionsInstructionHandler());
-         if(BuildInfos.BUILD_TYPE != BuildTypeEnum.RELEASE)
-         {
-            console.addHandler(["savereplaylog","sd","showsmilies","shieldmax","shieldmoy","shieldmin"],new MiscInstructionHandler());
-         }
-         else
-         {
-            console.addHandler(["savereplaylog","showsmilies","shieldmax","shieldmoy","shieldmin"],new MiscInstructionHandler());
-         }
-         console.addHandler(["away",I18n.getUiText("ui.chat.status.away").toLocaleLowerCase(),I18n.getUiText("ui.chat.status.solo").toLocaleLowerCase(),I18n.getUiText("ui.chat.status.private").toLocaleLowerCase(),I18n.getUiText("ui.chat.status.availiable").toLocaleLowerCase(),"invisible","release"],new StatusInstructionHandler());
+      public function ChatConsoleInstructionRegistrar()
+      {
+         //Décompilation abandonné
+      }
+      
+      public function registerInstructions(console:ConsoleHandler) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

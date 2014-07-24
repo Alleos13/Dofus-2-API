@@ -13,12 +13,13 @@ package com.ankamagames.dofus.logic.game.fight.steps.abstract
    public class AbstractStatContextualStep extends AbstractSequencable
    {
       
-      public function AbstractStatContextualStep(color:uint, value:String, targetId:int, blocking:Boolean = true) {
-         super();
-         this._color = color;
-         this._value = value;
-         this._targetId = targetId;
-         this._blocking = blocking;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AbstractStatContextualStep(color:uint, value:String, targetId:int, blocking:Boolean = true)
+      {
+         //Décompilation abandonné
       }
       
       protected var _color:uint;
@@ -33,33 +34,19 @@ package com.ankamagames.dofus.logic.game.fight.steps.abstract
       
       private var _ccm:CharacteristicContextual;
       
-      override public function start() : void {
-         if((!this._virtual) && (!(this._value == "0")) && (!(OptionManager.getOptionManager("tiphon").pointsOverhead == 0)))
-         {
-            this._ccm = CharacteristicContextualManager.getInstance().addStatContextual(this._value,DofusEntities.getEntity(this._targetId),new TextFormat("Verdana",24,this._color,true),OptionManager.getOptionManager("tiphon").pointsOverhead);
-         }
-         if(!this._ccm)
-         {
-            executeCallbacks();
-            return;
-         }
-         if(!this._blocking)
-         {
-            executeCallbacks();
-         }
-         else
-         {
-            this._ccm.addEventListener(BeriliaEvent.REMOVE_COMPONENT,this.remove);
-         }
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get target() : IEntity {
-         return DofusEntities.getEntity(this._targetId);
+      public function get target() : IEntity
+      {
+         //Décompilation abandonné
       }
       
-      private function remove(e:Event) : void {
-         this._ccm.removeEventListener(BeriliaEvent.REMOVE_COMPONENT,this.remove);
-         executeCallbacks();
+      private function remove(e:Event) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

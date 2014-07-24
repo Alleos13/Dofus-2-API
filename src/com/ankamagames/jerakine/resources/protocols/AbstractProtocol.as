@@ -11,9 +11,13 @@ package com.ankamagames.jerakine.resources.protocols
    public class AbstractProtocol extends Object
    {
       
-      public function AbstractProtocol() {
-         super();
-         MEMORY_LOG[this] = 1;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AbstractProtocol()
+      {
+         //Décompilation abandonné
       }
       
       public static var MEMORY_LOG:Dictionary;
@@ -22,39 +26,34 @@ package com.ankamagames.jerakine.resources.protocols
       
       protected var _adapter:IAdapter;
       
-      public function free() : void {
-         this.release();
-         this._observer = null;
-         this._adapter = null;
-         trace("Protocol " + this + " freed.");
+      public function free() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function cancel() : void {
+      public function cancel() : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function release() : void {
-         throw new AbstractMethodCallError("AbstractProtocol childs must override the release method in order to free their resources.");
+      protected function release() : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
-         this.getAdapter(uri,forcedAdapter);
-         this._adapter.loadDirectly(uri,uri.path,observer,dispatchProgress);
+      protected function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function loadFromData(uri:Uri, data:ByteArray, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void {
-         this.getAdapter(uri,forcedAdapter);
-         this._adapter.loadFromData(uri,data,observer,dispatchProgress);
+      protected function loadFromData(uri:Uri, data:ByteArray, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function getAdapter(uri:Uri, forcedAdapter:Class) : void {
-         if(forcedAdapter == null)
-         {
-            this._adapter = AdapterFactory.getAdapter(uri);
-         }
-         else
-         {
-            this._adapter = new forcedAdapter();
-         }
+      protected function getAdapter(uri:Uri, forcedAdapter:Class) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

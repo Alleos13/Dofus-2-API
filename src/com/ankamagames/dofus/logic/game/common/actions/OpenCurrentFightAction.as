@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class OpenCurrentFightAction extends Object implements Action
    {
       
-      public function OpenCurrentFightAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : OpenCurrentFightAction {
-         return new OpenCurrentFightAction();
+      public function OpenCurrentFightAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : OpenCurrentFightAction
+      {
+         //Décompilation abandonné
       }
       
       private var _name:String;

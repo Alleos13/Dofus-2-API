@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.guild
    public class GuildHouseTeleportRequestAction extends Object implements Action
    {
       
-      public function GuildHouseTeleportRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pHouseId:uint) : GuildHouseTeleportRequestAction {
-         var action:GuildHouseTeleportRequestAction = new GuildHouseTeleportRequestAction();
-         action.houseId = pHouseId;
-         return action;
+      public function GuildHouseTeleportRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pHouseId:uint) : GuildHouseTeleportRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var houseId:uint;

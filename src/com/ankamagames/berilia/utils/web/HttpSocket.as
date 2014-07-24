@@ -9,13 +9,13 @@ package com.ankamagames.berilia.utils.web
    public class HttpSocket extends EventDispatcher
    {
       
-      public function HttpSocket(socket:Socket, rootPath:String) {
-         super();
-         this.requestSocket = socket;
-         this.requestBuffer = new ByteArray();
-         this.requestSocket.addEventListener(ProgressEvent.SOCKET_DATA,this.onRequestSocketData);
-         this.requestSocket.addEventListener(Event.CLOSE,this.onRequestSocketClose);
-         this._rootPath = rootPath;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HttpSocket(socket:Socket, rootPath:String)
+      {
+         //Décompilation abandonné
       }
       
       private static const SEPERATOR:RegExp;
@@ -28,59 +28,34 @@ package com.ankamagames.berilia.utils.web
       
       private var _rootPath:String;
       
-      public function get rootPath() : String {
-         return this._rootPath;
+      public function get rootPath() : String
+      {
+         //Décompilation abandonné
       }
       
-      private function onRequestSocketData(e:ProgressEvent) : void {
-         var headerString:String = null;
-         var initialRequestSignature:String = null;
-         var initialRequestSignatureComponents:Array = null;
-         var method:String = null;
-         var serverAndPath:String = null;
-         var path:String = null;
-         var httpResponser:HttpResponder = null;
-         this.requestSocket.readBytes(this.requestBuffer,this.requestBuffer.length,this.requestSocket.bytesAvailable);
-         var bufferString:String = this.requestBuffer.toString();
-         var headerCheck:Number = bufferString.search(SEPERATOR);
-         if(headerCheck != -1)
-         {
-            headerString = bufferString.substring(0,headerCheck);
-            initialRequestSignature = headerString.substring(0,headerString.search(NL));
-            initialRequestSignatureComponents = initialRequestSignature.split(" ");
-            method = initialRequestSignatureComponents[0];
-            serverAndPath = initialRequestSignatureComponents[1];
-            serverAndPath = serverAndPath.replace(new RegExp("^http(s)?:\\/\\/"),"");
-            path = serverAndPath.substring(serverAndPath.indexOf("/"),serverAndPath.length);
-            httpResponser = new HttpResponder(this.requestSocket,method,path,this._rootPath);
-         }
+      private function onRequestSocketData(e:ProgressEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onRequestSocketClose(e:Event) : void {
-         this.done();
+      private function onRequestSocketClose(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function done() : void {
-         this.tearDown();
-         var completeEvent:Event = new Event(Event.COMPLETE);
-         this.dispatchEvent(completeEvent);
+      private function done() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function testSocket(socket:Socket) : Boolean {
-         if(!socket.connected)
-         {
-            this.done();
-            return false;
-         }
-         return true;
+      private function testSocket(socket:Socket) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function tearDown() : void {
-         if((!(this.requestSocket == null)) && (this.requestSocket.connected))
-         {
-            this.requestSocket.flush();
-            this.requestSocket.close();
-         }
+      public function tearDown() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

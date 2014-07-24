@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.alignments
    public class AlignmentEffect extends Object implements IDataCenter
    {
       
-      public function AlignmentEffect() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AlignmentEffect()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "AlignmentEffect";
       
       protected static const _log:Logger;
       
-      public static function getAlignmentEffectById(id:int) : AlignmentEffect {
-         return GameData.getObject(MODULE,id) as AlignmentEffect;
+      public static function getAlignmentEffectById(id:int) : AlignmentEffect
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAlignmentEffects() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAlignmentEffects() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -34,12 +41,9 @@ package com.ankamagames.dofus.datacenter.alignments
       
       private var _description:String;
       
-      public function get description() : String {
-         if(!this._description)
-         {
-            this._description = I18n.getText(this.descriptionId);
-         }
-         return this._description;
+      public function get description() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

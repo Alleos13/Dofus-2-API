@@ -9,16 +9,22 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeMountTakenFromPaddockMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeMountTakenFromPaddockMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeMountTakenFromPaddockMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5994;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var name:String = "";
@@ -29,87 +35,49 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
       
       public var ownername:String = "";
       
-      override public function getMessageId() : uint {
-         return 5994;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeMountTakenFromPaddockMessage(name:String = "", worldX:int = 0, worldY:int = 0, ownername:String = "") : ExchangeMountTakenFromPaddockMessage {
-         this.name = name;
-         this.worldX = worldX;
-         this.worldY = worldY;
-         this.ownername = ownername;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeMountTakenFromPaddockMessage(name:String = "", worldX:int = 0, worldY:int = 0, ownername:String = "") : ExchangeMountTakenFromPaddockMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.name = "";
-         this.worldX = 0;
-         this.worldY = 0;
-         this.ownername = "";
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeMountTakenFromPaddockMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeMountTakenFromPaddockMessage(output:IDataOutput) : void {
-         output.writeUTF(this.name);
-         if((this.worldX < -255) || (this.worldX > 255))
-         {
-            throw new Error("Forbidden value (" + this.worldX + ") on element worldX.");
-         }
-         else
-         {
-            output.writeShort(this.worldX);
-            if((this.worldY < -255) || (this.worldY > 255))
-            {
-               throw new Error("Forbidden value (" + this.worldY + ") on element worldY.");
-            }
-            else
-            {
-               output.writeShort(this.worldY);
-               output.writeUTF(this.ownername);
-               return;
-            }
-         }
+      public function serializeAs_ExchangeMountTakenFromPaddockMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeMountTakenFromPaddockMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeMountTakenFromPaddockMessage(input:IDataInput) : void {
-         this.name = input.readUTF();
-         this.worldX = input.readShort();
-         if((this.worldX < -255) || (this.worldX > 255))
-         {
-            throw new Error("Forbidden value (" + this.worldX + ") on element of ExchangeMountTakenFromPaddockMessage.worldX.");
-         }
-         else
-         {
-            this.worldY = input.readShort();
-            if((this.worldY < -255) || (this.worldY > 255))
-            {
-               throw new Error("Forbidden value (" + this.worldY + ") on element of ExchangeMountTakenFromPaddockMessage.worldY.");
-            }
-            else
-            {
-               this.ownername = input.readUTF();
-               return;
-            }
-         }
+      public function deserializeAs_ExchangeMountTakenFromPaddockMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

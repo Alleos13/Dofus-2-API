@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.tinsel
    public class TitleSelectRequestAction extends Object implements Action
    {
       
-      public function TitleSelectRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(titleId:int) : TitleSelectRequestAction {
-         var action:TitleSelectRequestAction = new TitleSelectRequestAction();
-         action.titleId = titleId;
-         return action;
+      public function TitleSelectRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(titleId:int) : TitleSelectRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var titleId:int;

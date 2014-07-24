@@ -5,8 +5,13 @@ package com.ankamagames.dofus.console.moduleLogger
    public class ConsoleIcon_I_CANCEL extends SpriteAsset
    {
       
-      public function ConsoleIcon_I_CANCEL() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ConsoleIcon_I_CANCEL()
+      {
+         //Décompilation abandonné
       }
    }
 }

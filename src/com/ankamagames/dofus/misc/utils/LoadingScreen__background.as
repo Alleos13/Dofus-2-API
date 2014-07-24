@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.utils
    public class LoadingScreen__background extends BitmapAsset
    {
       
-      public function LoadingScreen__background() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LoadingScreen__background()
+      {
+         //Décompilation abandonné
       }
    }
 }

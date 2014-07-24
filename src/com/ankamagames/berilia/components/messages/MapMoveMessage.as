@@ -5,8 +5,13 @@ package com.ankamagames.berilia.components.messages
    public class MapMoveMessage extends ComponentMessage
    {
       
-      public function MapMoveMessage(map:MapViewer) {
-         super(map);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapMoveMessage(map:MapViewer)
+      {
+         //Décompilation abandonné
       }
       
       private var _map:MapViewer;

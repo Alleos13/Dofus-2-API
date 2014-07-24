@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class SocialGroupCreationResultEnum extends Object
    {
       
-      public function SocialGroupCreationResultEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SocialGroupCreationResultEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const SOCIAL_GROUP_CREATE_OK:uint = 1;

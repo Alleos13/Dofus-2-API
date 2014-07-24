@@ -3,7 +3,11 @@ package flashx.textLayout.formats
    public interface ITabStopFormat
    {
       
-      function getStyle(param1:String) : *;
+      {
+      //Décompilation abandonné
+      }
+      
+      function getStyle(styleName:String) : *;
       
       function get position() : *;
       

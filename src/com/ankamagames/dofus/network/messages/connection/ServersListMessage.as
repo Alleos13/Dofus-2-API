@@ -10,75 +10,69 @@ package com.ankamagames.dofus.network.messages.connection
    public class ServersListMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ServersListMessage() {
-         this.servers = new Vector.<GameServerInformations>();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ServersListMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 30;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var servers:Vector.<GameServerInformations>;
       
-      override public function getMessageId() : uint {
-         return 30;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initServersListMessage(servers:Vector.<GameServerInformations> = null) : ServersListMessage {
-         this.servers = servers;
-         this._isInitialized = true;
-         return this;
+      public function initServersListMessage(servers:Vector.<GameServerInformations> = null) : ServersListMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.servers = new Vector.<GameServerInformations>();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ServersListMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ServersListMessage(output:IDataOutput) : void {
-         output.writeShort(this.servers.length);
-         var _i1:uint = 0;
-         while(_i1 < this.servers.length)
-         {
-            (this.servers[_i1] as GameServerInformations).serializeAs_GameServerInformations(output);
-            _i1++;
-         }
+      public function serializeAs_ServersListMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ServersListMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ServersListMessage(input:IDataInput) : void {
-         var _item1:GameServerInformations = null;
-         var _serversLen:uint = input.readUnsignedShort();
-         var _i1:uint = 0;
-         while(_i1 < _serversLen)
-         {
-            _item1 = new GameServerInformations();
-            _item1.deserialize(input);
-            this.servers.push(_item1);
-            _i1++;
-         }
+      public function deserializeAs_ServersListMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

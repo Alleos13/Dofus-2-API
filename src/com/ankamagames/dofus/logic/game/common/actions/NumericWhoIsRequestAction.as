@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class NumericWhoIsRequestAction extends Object implements Action
    {
       
-      public function NumericWhoIsRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(playerId:uint) : NumericWhoIsRequestAction {
-         var a:NumericWhoIsRequestAction = new NumericWhoIsRequestAction();
-         a.playerId = playerId;
-         return a;
+      public function NumericWhoIsRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(playerId:uint) : NumericWhoIsRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var playerId:uint;

@@ -3,8 +3,13 @@ package com.ankamagames.dofus.externalnotification.enums
    public class ExternalNotificationTypeEnum extends Object
    {
       
-      public function ExternalNotificationTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExternalNotificationTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const ACHIEVEMENT_UNLOCKED:int = 777;

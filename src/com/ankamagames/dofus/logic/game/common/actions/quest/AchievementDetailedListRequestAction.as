@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.quest
    public class AchievementDetailedListRequestAction extends Object implements Action
    {
       
-      public function AchievementDetailedListRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(categoryId:int) : AchievementDetailedListRequestAction {
-         var action:AchievementDetailedListRequestAction = new AchievementDetailedListRequestAction();
-         action.categoryId = categoryId;
-         return action;
+      public function AchievementDetailedListRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(categoryId:int) : AchievementDetailedListRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var categoryId:int;

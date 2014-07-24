@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class NotificationUpdateFlagAction extends Object implements Action
    {
       
-      public function NotificationUpdateFlagAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(index:uint) : NotificationUpdateFlagAction {
-         var action:NotificationUpdateFlagAction = new NotificationUpdateFlagAction();
-         action.index = index;
-         return action;
+      public function NotificationUpdateFlagAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(index:uint) : NotificationUpdateFlagAction
+      {
+         //Décompilation abandonné
       }
       
       public var index:uint;

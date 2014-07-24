@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class GameActionFightInvisibilityStateEnum extends Object
    {
       
-      public function GameActionFightInvisibilityStateEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameActionFightInvisibilityStateEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const INVISIBLE:int = 1;

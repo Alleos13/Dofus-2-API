@@ -7,49 +7,52 @@ package com.ankamagames.dofus.network.types.game.character.status
    public class PlayerStatus extends Object implements INetworkType
    {
       
-      public function PlayerStatus() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PlayerStatus()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 415;
       
       public var statusId:uint = 1;
       
-      public function getTypeId() : uint {
-         return 415;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPlayerStatus(statusId:uint = 1) : PlayerStatus {
-         this.statusId = statusId;
-         return this;
+      public function initPlayerStatus(statusId:uint = 1) : PlayerStatus
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.statusId = 1;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PlayerStatus(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PlayerStatus(output:IDataOutput) : void {
-         output.writeByte(this.statusId);
+      public function serializeAs_PlayerStatus(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PlayerStatus(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PlayerStatus(input:IDataInput) : void {
-         this.statusId = input.readByte();
-         if(this.statusId < 0)
-         {
-            throw new Error("Forbidden value (" + this.statusId + ") on element of PlayerStatus.statusId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_PlayerStatus(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

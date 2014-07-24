@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.utils
    public class EmbedAssets_DefaultBeriliaSlotIcon extends BitmapAsset
    {
       
-      public function EmbedAssets_DefaultBeriliaSlotIcon() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EmbedAssets_DefaultBeriliaSlotIcon()
+      {
+         //Décompilation abandonné
       }
    }
 }

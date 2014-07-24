@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class PartyJoinErrorEnum extends Object
    {
       
-      public function PartyJoinErrorEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PartyJoinErrorEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const PARTY_JOIN_ERROR_UNKNOWN:uint = 0;

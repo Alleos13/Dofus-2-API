@@ -9,79 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay
    public class GameRolePlayShowActorWithEventMessage extends GameRolePlayShowActorMessage implements INetworkMessage
    {
       
-      public function GameRolePlayShowActorWithEventMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameRolePlayShowActorWithEventMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6407;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var actorEventId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6407;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameRolePlayShowActorWithEventMessage(informations:GameRolePlayActorInformations = null, actorEventId:uint = 0) : GameRolePlayShowActorWithEventMessage {
-         super.initGameRolePlayShowActorMessage(informations);
-         this.actorEventId = actorEventId;
-         this._isInitialized = true;
-         return this;
+      public function initGameRolePlayShowActorWithEventMessage(informations:GameRolePlayActorInformations = null, actorEventId:uint = 0) : GameRolePlayShowActorWithEventMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.actorEventId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameRolePlayShowActorWithEventMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayShowActorWithEventMessage(output:IDataOutput) : void {
-         super.serializeAs_GameRolePlayShowActorMessage(output);
-         if(this.actorEventId < 0)
-         {
-            throw new Error("Forbidden value (" + this.actorEventId + ") on element actorEventId.");
-         }
-         else
-         {
-            output.writeByte(this.actorEventId);
-            return;
-         }
+      public function serializeAs_GameRolePlayShowActorWithEventMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameRolePlayShowActorWithEventMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayShowActorWithEventMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.actorEventId = input.readByte();
-         if(this.actorEventId < 0)
-         {
-            throw new Error("Forbidden value (" + this.actorEventId + ") on element of GameRolePlayShowActorWithEventMessage.actorEventId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_GameRolePlayShowActorWithEventMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

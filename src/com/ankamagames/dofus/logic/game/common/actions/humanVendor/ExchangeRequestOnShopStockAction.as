@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.humanVendor
    public class ExchangeRequestOnShopStockAction extends Object implements Action
    {
       
-      public function ExchangeRequestOnShopStockAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : ExchangeRequestOnShopStockAction {
-         var a:ExchangeRequestOnShopStockAction = new ExchangeRequestOnShopStockAction();
-         return a;
+      public function ExchangeRequestOnShopStockAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : ExchangeRequestOnShopStockAction
+      {
+         //Décompilation abandonné
       }
    }
 }

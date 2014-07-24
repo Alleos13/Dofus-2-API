@@ -26,49 +26,13 @@ package com.ankamagames.berilia.components.gridRenderer
    public class XmlUiGridRenderer extends Object implements IGridRenderer
    {
       
-      public function XmlUiGridRenderer(args:String) {
-         var tmp:Array = null;
-         this._log = Log.getLogger(getQualifiedClassName(XmlUiGridRenderer));
-         this._berilia = Berilia.getInstance();
-         this._shapeIndex = new Dictionary(true);
-         this._dWaitingUpdate = new Dictionary(true);
-         super();
-         var params:Array = args.split(",");
-         var uiName:String = params[0];
-         if(params[1])
-         {
-            this._bgColor1 = new ColorTransform();
-            this._bgColor1.color = parseInt(params[1],16);
-         }
-         if(params[2])
-         {
-            this._bgColor2 = new ColorTransform();
-            this._bgColor2.color = parseInt(params[2],16);
-         }
-         if(uiName.indexOf("::") != -1)
-         {
-            tmp = uiName.split("::");
-            if(UiModuleManager.getInstance().getModules()[tmp[0]])
-            {
-               this._sUiModule = tmp[0];
-               if(UiModule(UiModuleManager.getInstance().getModules()[tmp[0]]).uis[tmp[1]])
-               {
-                  this._sUiName = tmp[1];
-               }
-               else
-               {
-                  throw new BeriliaError("Ui [" + tmp[1] + "] does not exit in module [" + tmp[0] + "] (grid parameter name [" + uiName + "])");
-               }
-            }
-            else
-            {
-               throw new BeriliaError("Module [" + tmp[0] + "] does not exit (grid parameter name [" + uiName + "])");
-            }
-         }
-         else
-         {
-            this._sUiName = uiName;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function XmlUiGridRenderer(args:String)
+      {
+         //Décompilation abandonné
       }
       
       protected var _log:Logger;
@@ -93,109 +57,54 @@ package com.ankamagames.berilia.components.gridRenderer
       
       private var _dWaitingUpdate:Dictionary;
       
-      public function set grid(g:Grid) : void {
-         this._grid = g;
+      public function set grid(g:Grid) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function render(data:*, index:uint, selected:Boolean, subIndex:uint = 0) : DisplayObject {
-         var mainUi:UiRootContainer = this._grid.getUi();
-         this._uiCtr = new UiRootContainer(StageShareManager.stage,mainUi.uiModule.uis[this._sUiName],this._ctr);
-         this._uiCtr.uiModule = mainUi.uiModule;
-         this._uiCtr.addEventListener(UiRenderEvent.UIRenderComplete,this.onItemUiLoaded);
-         this._uiCtr.mouseEnabled = true;
-         if(!mainUi.uiModule.uis[this._sUiName])
-         {
-            throw new BeriliaError("Ui [" + this._sUiName + "] does not exit in module [" + this._uiCtr.uiModule.id + "] (grid parameter name [" + this._sUiName + "])");
-         }
-         else
-         {
-            this.updateBackground(this._uiCtr,index);
-            this._berilia.loadUiInside(mainUi.uiModule.uis[this._sUiName],this._uiCtr.name,this._uiCtr,new GridScriptProperties(data,selected,this._grid));
-            return this._uiCtr;
-         }
+      public function render(data:*, index:uint, selected:Boolean, subIndex:uint = 0) : DisplayObject
+      {
+         //Décompilation abandonné
       }
       
-      public function update(data:*, index:uint, dispObj:DisplayObject, selected:Boolean, subIndex:uint = 0) : void {
-         if(dispObj is UiRootContainer)
-         {
-            if((UiRootContainer(dispObj).ready) && (Object(UiRootContainer(dispObj).uiClass)))
-            {
-               if((!(Object(UiRootContainer(dispObj).uiClass).data == null)) || (!(data == null)))
-               {
-                  this.updateBackground(UiRootContainer(dispObj),index);
-                  Object(UiRootContainer(dispObj).uiClass).update(SecureCenter.secure(data),selected);
-               }
-            }
-            else
-            {
-               this._dWaitingUpdate[dispObj] = new WaitingUpdate(data,index,dispObj,selected,true);
-            }
-         }
-         else
-         {
-            this._log.warn("Can\'t update, " + dispObj.name + " is not a SecureUi");
-         }
+      public function update(data:*, index:uint, dispObj:DisplayObject, selected:Boolean, subIndex:uint = 0) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getDataLength(data:*, selected:Boolean) : uint {
-         return 1;
+      public function getDataLength(data:*, selected:Boolean) : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function remove(dispObj:DisplayObject) : void {
-         if(dispObj is UiRootContainer)
-         {
-            Berilia.getInstance().unloadUi(UiRootContainer(dispObj).name);
-         }
+      public function remove(dispObj:DisplayObject) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         this._berilia = null;
-         this._uiCtr = null;
-         this._grid = null;
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function renderModificator(childs:Array) : Array {
-         return childs;
+      public function renderModificator(childs:Array) : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function eventModificator(msg:Message, functionName:String, args:Array, target:UIComponent) : String {
-         return functionName;
+      public function eventModificator(msg:Message, functionName:String, args:Array, target:UIComponent) : String
+      {
+         //Décompilation abandonné
       }
       
-      private function onItemUiLoaded(e:UiRenderEvent) : void {
-         var data:WaitingUpdate = null;
-         if(this._dWaitingUpdate[e.uiTarget])
-         {
-            data = this._dWaitingUpdate[e.uiTarget];
-            this.update(data.data,data.index,data.dispObj,data.selected);
-            this._dWaitingUpdate[e.uiTarget] = null;
-         }
+      private function onItemUiLoaded(e:UiRenderEvent) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function updateBackground(uiContainer:UiRootContainer, index:uint) : void {
-         var t:ColorTransform = null;
-         var shape:Shape = null;
-         if((this._bgColor1) || (this._bgColor2))
-         {
-            if(!this._shapeIndex[uiContainer])
-            {
-               shape = new Shape();
-               shape.graphics.beginFill(16777215);
-               shape.graphics.drawRect(0,0,this._grid.slotWidth,this._grid.slotHeight);
-               this._uiCtr.getStrata(0).addChild(shape);
-               this._shapeIndex[uiContainer] = 
-                  {
-                     "trans":new Transform(shape),
-                     "shape":shape
-                  };
-            }
-            t = index % 2?this._bgColor1:this._bgColor2;
-            DisplayObject(this._shapeIndex[uiContainer].shape).visible = !(t == null);
-            if(t)
-            {
-               Transform(this._shapeIndex[uiContainer].trans).colorTransform = t;
-            }
-         }
+      private function updateBackground(uiContainer:UiRootContainer, index:uint) : void
+      {
+         //Décompilation abandonné
       }
    }
 }
@@ -204,13 +113,13 @@ import flash.display.DisplayObject;
 class WaitingUpdate extends Object
 {
    
-   function WaitingUpdate(data:*, index:uint, dispObj:DisplayObject, selected:Boolean, drawBackground:Boolean) {
-      super();
-      this.data = data;
-      this.selected = selected;
-      this.drawBackground = drawBackground;
-      this.dispObj = dispObj;
-      this.index = index;
+   {
+   //Décompilation abandonné
+   }
+   
+   function WaitingUpdate(data:*, index:uint, dispObj:DisplayObject, selected:Boolean, drawBackground:Boolean)
+   {
+      //Décompilation abandonné
    }
    
    public var data;

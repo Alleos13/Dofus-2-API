@@ -9,65 +9,71 @@ package com.ankamagames.dofus.network.messages.game.alliance
    public class AllianceGuildLeavingMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function AllianceGuildLeavingMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AllianceGuildLeavingMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6399;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var kicked:Boolean = false;
       
       public var guildId:int = 0;
       
-      override public function getMessageId() : uint {
-         return 6399;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initAllianceGuildLeavingMessage(kicked:Boolean = false, guildId:int = 0) : AllianceGuildLeavingMessage {
-         this.kicked = kicked;
-         this.guildId = guildId;
-         this._isInitialized = true;
-         return this;
+      public function initAllianceGuildLeavingMessage(kicked:Boolean = false, guildId:int = 0) : AllianceGuildLeavingMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.kicked = false;
-         this.guildId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_AllianceGuildLeavingMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_AllianceGuildLeavingMessage(output:IDataOutput) : void {
-         output.writeBoolean(this.kicked);
-         output.writeInt(this.guildId);
+      public function serializeAs_AllianceGuildLeavingMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_AllianceGuildLeavingMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_AllianceGuildLeavingMessage(input:IDataInput) : void {
-         this.kicked = input.readBoolean();
-         this.guildId = input.readInt();
+      public function deserializeAs_AllianceGuildLeavingMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

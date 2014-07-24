@@ -5,9 +5,13 @@ package org.flintparticles.common.counters
    public interface Counter
    {
       
-      function startEmitter(param1:Emitter) : uint;
+      {
+      //Décompilation abandonné
+      }
       
-      function updateEmitter(param1:Emitter, param2:Number) : uint;
+      function startEmitter(emitter:Emitter) : uint;
+      
+      function updateEmitter(emitter:Emitter, time:Number) : uint;
       
       function stop() : void;
       

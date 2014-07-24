@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class FightSpellCastCriticalEnum extends Object
    {
       
-      public function FightSpellCastCriticalEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightSpellCastCriticalEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const NORMAL:uint = 1;

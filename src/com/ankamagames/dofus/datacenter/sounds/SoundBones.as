@@ -7,19 +7,25 @@ package com.ankamagames.dofus.datacenter.sounds
    public class SoundBones extends Object implements IDataCenter
    {
       
-      public function SoundBones() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SoundBones()
+      {
+         //Décompilation abandonné
       }
       
       public static var MODULE:String = "SoundBones";
       
-      public static function getSoundBonesById(id:uint) : SoundBones {
-         var sb:SoundBones = GameData.getObject(MODULE,id) as SoundBones;
-         return sb;
+      public static function getSoundBonesById(id:uint) : SoundBones
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSoundBones() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getSoundBones() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;
@@ -30,53 +36,29 @@ package com.ankamagames.dofus.datacenter.sounds
       
       private var _cacheDictionary:Dictionary;
       
-      public function getSoundAnimations(animationName:String) : Vector.<SoundAnimation> {
-         if(this._cacheDictionary == null)
-         {
-            this.makeCacheDictionary();
-         }
-         return this._cacheDictionary[animationName];
+      public function getSoundAnimations(animationName:String) : Vector.<SoundAnimation>
+      {
+         //Décompilation abandonné
       }
       
-      public function getSoundAnimationByFrame(animationName:String, label:String, frame:uint) : Vector.<SoundAnimation> {
-         var animationList:Vector.<SoundAnimation> = this.getSoundAnimations(animationName);
-         return animationList.filter(function(a:SoundAnimation):Boolean
-         {
-            return (a.label == label) && (a.startFrame == frame);
-         });
+      public function getSoundAnimationByFrame(animationName:String, label:String, frame:uint) : Vector.<SoundAnimation>
+      {
+         //Décompilation abandonné
       }
       
-      public function getSoundAnimationByLabel(animationName:String, label:String = null) : Vector.<SoundAnimation> {
-         var sa:SoundAnimation = null;
-         if(this._cacheDictionary == null)
-         {
-            this.makeCacheDictionary();
-         }
-         var ret:Vector.<SoundAnimation> = new Vector.<SoundAnimation>();
-         for each(sa in this._cacheDictionary[animationName])
-         {
-            if((sa.label == label) || (label == null) && (sa.label == "null"))
-            {
-               ret.push(sa);
-            }
-         }
-         return ret;
+      public function getSoundAnimationByLabel(animationName:String, label:String = null) : Vector.<SoundAnimation>
+      {
+         //Décompilation abandonné
       }
       
-      public function getRandomSoundAnimation(animationName:String, label:String = null) : SoundAnimation {
-         var list:Vector.<SoundAnimation> = this.getSoundAnimationByLabel(animationName,label);
-         var rnd:int = int(Math.random() % list.length);
-         var sa:SoundAnimation = list[rnd];
-         return sa;
+      public function getRandomSoundAnimation(animationName:String, label:String = null) : SoundAnimation
+      {
+         //Décompilation abandonné
       }
       
-      private function makeCacheDictionary() : void {
-         var i:String = null;
-         this._cacheDictionary = new Dictionary();
-         for(i in this.keys)
-         {
-            this._cacheDictionary[this.keys[i]] = this.values[i];
-         }
+      private function makeCacheDictionary() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

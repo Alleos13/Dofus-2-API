@@ -9,9 +9,13 @@ package com.ankamagames.dofus.logic.game.roleplay.types
    public class GroundObject extends GameRolePlayActorInformations
    {
       
-      public function GroundObject(pObject:Item) {
-         super();
-         this.object = pObject;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GroundObject(pObject:Item)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;

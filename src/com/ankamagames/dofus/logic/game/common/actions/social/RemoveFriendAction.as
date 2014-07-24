@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.social
    public class RemoveFriendAction extends Object implements Action
    {
       
-      public function RemoveFriendAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(accountId:int) : RemoveFriendAction {
-         var a:RemoveFriendAction = new RemoveFriendAction();
-         a.accountId = accountId;
-         return a;
+      public function RemoveFriendAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(accountId:int) : RemoveFriendAction
+      {
+         //Décompilation abandonné
       }
       
       public var accountId:int;

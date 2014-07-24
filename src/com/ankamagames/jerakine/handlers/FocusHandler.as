@@ -14,17 +14,13 @@ package com.ankamagames.jerakine.handlers
    public class FocusHandler extends Object
    {
       
-      public function FocusHandler() {
-         super();
-         if(_self != null)
-         {
-            throw new SingletonError("FocusHandler constructor should not be called directly.");
-         }
-         else
-         {
-            StageShareManager.stage.stageFocusRect = false;
-            return;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FocusHandler()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -33,42 +29,36 @@ package com.ankamagames.jerakine.handlers
       
       private static var _currentFocus:WeakReference;
       
-      public static function getInstance() : FocusHandler {
-         if(_self == null)
-         {
-            _self = new FocusHandler();
-         }
-         return _self;
+      public static function getInstance() : FocusHandler
+      {
+         //Décompilation abandonné
       }
       
       private var _handler:MessageHandler;
       
-      public function get handler() : MessageHandler {
-         return this._handler;
+      public function get handler() : MessageHandler
+      {
+         //Décompilation abandonné
       }
       
-      public function set handler(value:MessageHandler) : void {
-         this._handler = value;
+      public function set handler(value:MessageHandler) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setFocus(target:InteractiveObject) : void {
-         if(this._handler)
-         {
-            _currentFocus = new WeakReference(target);
-            this._handler.process(GenericPool.get(FocusChangeMessage,_currentFocus?_currentFocus.object as InteractiveObject:null));
-         }
+      public function setFocus(target:InteractiveObject) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getFocus() : InteractiveObject {
-         return _currentFocus?_currentFocus.object as InteractiveObject:null;
+      public function getFocus() : InteractiveObject
+      {
+         //Décompilation abandonné
       }
       
-      public function hasFocus(io:InteractiveObject) : Boolean {
-         if(_currentFocus)
-         {
-            return _currentFocus.object == io;
-         }
-         return false;
+      public function hasFocus(io:InteractiveObject) : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

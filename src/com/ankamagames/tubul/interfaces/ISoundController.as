@@ -5,22 +5,26 @@ package com.ankamagames.tubul.interfaces
    public interface ISoundController extends IEventDispatcher
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function get effects() : Vector.<IEffect>;
       
       function get volume() : Number;
       
-      function set volume(param1:Number) : void;
+      function set volume(pVolume:Number) : void;
       
       function get currentFadeVolume() : Number;
       
-      function set currentFadeVolume(param1:Number) : void;
+      function set currentFadeVolume(pFadeVolume:Number) : void;
       
       function get effectiveVolume() : Number;
       
-      function addEffect(param1:IEffect) : void;
+      function addEffect(pEffect:IEffect) : void;
       
-      function removeEffect(param1:IEffect) : void;
+      function removeEffect(pEffect:IEffect) : void;
       
-      function applyDynamicMix(param1:VolumeFadeEffect, param2:uint, param3:VolumeFadeEffect) : void;
+      function applyDynamicMix(pFadeIn:VolumeFadeEffect, pWaitingTime:uint, pFadeOut:VolumeFadeEffect) : void;
    }
 }

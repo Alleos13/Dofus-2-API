@@ -52,32 +52,20 @@ package com.ankamagames.dofus.logic.common.frames
    public class FightBotFrame extends Object implements Frame
    {
       
-      public function FightBotFrame() {
-         this._rollOverTimer = new Timer(2000);
-         this._actionTimer = new Timer(5000);
-         this._turnAction = [];
-         super();
-         if(_self)
-         {
-            throw new SingletonError();
-         }
-         else
-         {
-            this.initRight();
-            this._actionTimer.addEventListener(TimerEvent.TIMER,this.onAction);
-            this._rollOverTimer.addEventListener(TimerEvent.TIMER,this.randomOver);
-            return;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightBotFrame()
+      {
+         //Décompilation abandonné
       }
       
       private static var _self:FightBotFrame;
       
-      public static function getInstance() : FightBotFrame {
-         if(!_self)
-         {
-            _self = new FightBotFrame();
-         }
-         return _self;
+      public static function getInstance() : FightBotFrame
+      {
+         //Décompilation abandonné
       }
       
       private var _frameFightListRequest:Boolean;
@@ -104,312 +92,96 @@ package com.ankamagames.dofus.logic.common.frames
       
       private var _myTurn:Boolean;
       
-      public function pushed() : Boolean {
-         this._enabled = true;
-         this.fakeActivity();
-         this._myTurn = false;
-         this._actionTimer.start();
-         this._rollOverTimer.start();
-         this._mapPos = MapPosition.getMapPositions();
-         var mfcMsg:MapFightCountMessage = new MapFightCountMessage();
-         mfcMsg.initMapFightCountMessage(1);
-         this.process(mfcMsg);
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         this._rollOverTimer.stop();
-         this._actionTimer.stop();
-         this._enabled = false;
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get priority() : int {
-         return Priority.ULTIMATE_HIGHEST_DEPTH_OF_DOOM;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get fightCount() : uint {
-         return this._fightCount;
+      public function get fightCount() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var startFightMsg:GameFightReadyMessage = null;
-         var turnStartMsg:GameFightTurnStartMessage = null;
-         switch(true)
-         {
-            case msg is GameFightJoinMessage:
-               this._fightCount++;
-               this._inFight = true;
-               break;
-            case msg is GameFightEndMessage:
-               this._inFight = false;
-               break;
-            case msg is MapComplementaryInformationsDataMessage:
-               this._wait = false;
-               break;
-            case msg is MapsLoadingStartedMessage:
-               this._wait = true;
-               break;
-            case msg is GameFightShowFighterMessage:
-               this.sendAdminCmd("givelife *");
-               this.sendAdminCmd("giveenergy *");
-               this._turnPlayed = 0;
-               this._myTurn = false;
-               startFightMsg = new GameFightReadyMessage();
-               startFightMsg.initGameFightReadyMessage(true);
-               ConnectionsHandler.getConnection().send(startFightMsg);
-               break;
-            case msg is GameFightTurnStartMessage:
-               turnStartMsg = msg as GameFightTurnStartMessage;
-               this._turnAction = [];
-               if(turnStartMsg.id == PlayedCharacterManager.getInstance().id)
-               {
-                  this._myTurn = true;
-                  this._turnPlayed++;
-                  if(this._turnPlayed > 2)
-                  {
-                     this.castSpell(411,true);
-                  }
-                  else
-                  {
-                     this.addTurnAction(this.fightRandomMove,[]);
-                     this.addTurnAction(this.castSpell,[173,false]);
-                     this.addTurnAction(this.castSpell,[173,false]);
-                     this.addTurnAction(this.castSpell,[173,false]);
-                     this.addTurnAction(this.turnEnd,[]);
-                     this.nextTurnAction();
-                  }
-               }
-               else
-               {
-                  this._myTurn = false;
-               }
-               break;
-            case msg is SequenceEndMessage:
-               this.nextTurnAction();
-               break;
-         }
-         return false;
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function initRight() : void {
-         this.sendAdminCmd("adminaway");
-         this.sendAdminCmd("givelevel * 200");
-         this.sendAdminCmd("givespell * 173 6");
-         this.sendAdminCmd("givespell * 411 6");
-         this.sendAdminCmd("dring po=63,vita=8000,pa=100,agi=150 true");
+      private function initRight() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function sendAdminCmd(cmd:String) : void {
-         var aqcmsg:AdminQuietCommandMessage = new AdminQuietCommandMessage();
-         aqcmsg.initAdminQuietCommandMessage(cmd);
-         ConnectionsHandler.getConnection().send(aqcmsg);
+      private function sendAdminCmd(cmd:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onAction(e:Event) : void {
-         if(Math.random() < 0.9)
-         {
-            this.randomWalk();
-         }
-         else
-         {
-            this.randomMove();
-         }
+      private function onAction(e:Event) : void
+      {
+         //Décompilation abandonné
       }
       
       private var _turnAction:Array;
       
-      private function nextTurnAction() : void {
-         var action:Object = null;
-         if(this._turnAction.length)
-         {
-            action = this._turnAction.shift();
-            action.fct.apply(this,action.args);
-         }
+      private function nextTurnAction() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function addTurnAction(fct:Function, args:Array) : void {
-         this._turnAction.push(
-            {
-               "fct":fct,
-               "args":args
-            });
+      private function addTurnAction(fct:Function, args:Array) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function turnEnd() : void {
-         var finDeTourMsg:GameFightTurnFinishMessage = new GameFightTurnFinishMessage();
-         finDeTourMsg.initGameFightTurnFinishMessage();
-         ConnectionsHandler.getConnection().send(finDeTourMsg);
+      private function turnEnd() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function join(name:String) : void {
-         if((this._inFight) || (this._wait))
-         {
-            return;
-         }
-         var aqcmsg:AdminQuietCommandMessage = new AdminQuietCommandMessage();
-         aqcmsg.initAdminQuietCommandMessage("join " + name);
-         ConnectionsHandler.getConnection().send(aqcmsg);
-         this._actionTimer.reset();
-         this._actionTimer.start();
+      private function join(name:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function randomMove() : void {
-         if((this._inFight) || (this._wait))
-         {
-            return;
-         }
-         var mapPos:MapPosition = this._mapPos[int(Math.random() * this._mapPos.length)];
-         var aqcmsg:AdminQuietCommandMessage = new AdminQuietCommandMessage();
-         aqcmsg.initAdminQuietCommandMessage("moveto " + mapPos.id);
-         ConnectionsHandler.getConnection().send(aqcmsg);
-         this._actionTimer.reset();
-         this._actionTimer.start();
+      private function randomMove() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function fakeActivity() : void {
-         if(!this._enabled)
-         {
-            return;
-         }
-         setTimeout(this.fakeActivity,1000 * 60 * 5);
-         var bpmgs:BasicPingMessage = new BasicPingMessage();
-         bpmgs.initBasicPingMessage(false);
-         ConnectionsHandler.getConnection().send(bpmgs);
+      private function fakeActivity() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function randomWalk() : void {
-         var entity:* = undefined;
-         var groupEntity:IEntity = null;
-         if((this._inFight) || (this._wait))
-         {
-            return;
-         }
-         var rpEF:RoleplayEntitiesFrame = Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame;
-         if(!rpEF)
-         {
-            return;
-         }
-         var avaibleCells:Array = [];
-         for each(entity in rpEF.getEntitiesDictionnary())
-         {
-            if(entity is GameRolePlayGroupMonsterInformations)
-            {
-               groupEntity = DofusEntities.getEntity(GameRolePlayGroupMonsterInformations(entity).contextualId);
-               avaibleCells.push(MapPoint.fromCellId(groupEntity.position.cellId));
-            }
-         }
-         if((!avaibleCells) || (!avaibleCells.length))
-         {
-            return;
-         }
-         var ccmsg:CellClickMessage = new CellClickMessage();
-         ccmsg.cell = avaibleCells[Math.floor(avaibleCells.length * Math.random())];
-         ccmsg.cellId = ccmsg.cell.cellId;
-         ccmsg.id = MapDisplayManager.getInstance().currentMapPoint.mapId;
-         Kernel.getWorker().process(ccmsg);
+      private function randomWalk() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function fightRandomMove() : void {
-         var reachableCells:FightReachableCellsMaker = new FightReachableCellsMaker(FightEntitiesFrame.getCurrentInstance().getEntityInfos(PlayedCharacterManager.getInstance().id) as GameFightFighterInformations);
-         if(!reachableCells.reachableCells.length)
-         {
-            this.nextTurnAction();
-            return;
-         }
-         var ccmsg:CellClickMessage = new CellClickMessage();
-         ccmsg.cell = MapPoint.fromCellId(reachableCells.reachableCells[Math.floor(reachableCells.reachableCells.length * Math.random())]);
-         ccmsg.cellId = ccmsg.cell.cellId;
-         ccmsg.id = MapDisplayManager.getInstance().currentMapPoint.mapId;
-         Kernel.getWorker().process(ccmsg);
+      private function fightRandomMove() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function randomOver(... foo) : void {
-         var e:IEntity = null;
-         var entity:IInteractive = null;
-         var ui:UiRootContainer = null;
-         var emomsg2:EntityMouseOutMessage = null;
-         var elem:GraphicContainer = null;
-         var momsg2:MouseOutMessage = null;
-         if(this._wait)
-         {
-            return;
-         }
-         var avaibleEntities:Array = [];
-         for each(e in EntitiesManager.getInstance().entities)
-         {
-            if(e is IInteractive)
-            {
-               avaibleEntities.push(e);
-            }
-         }
-         entity = avaibleEntities[Math.floor(avaibleEntities.length * Math.random())];
-         if(!entity)
-         {
-            return;
-         }
-         if(this._lastEntityOver)
-         {
-            emomsg2 = new EntityMouseOutMessage(this._lastEntityOver);
-            Kernel.getWorker().process(emomsg2);
-         }
-         this._lastEntityOver = entity;
-         var emomsg:EntityMouseOverMessage = new EntityMouseOverMessage(entity);
-         Kernel.getWorker().process(emomsg);
-         var avaibleElem:Array = [];
-         for each(ui in Berilia.getInstance().uiList)
-         {
-            for each(elem in ui.getElements())
-            {
-               if((elem.mouseChildren) || (elem.mouseEnabled))
-               {
-                  avaibleElem.push(elem);
-               }
-            }
-         }
-         if(!avaibleElem.length)
-         {
-            return;
-         }
-         if(this._lastElemOver)
-         {
-            momsg2 = GenericPool.get(MouseOutMessage,this._lastElemOver,new MouseEvent(MouseEvent.MOUSE_OUT));
-            Kernel.getWorker().process(momsg2);
-         }
-         var target:GraphicContainer = avaibleElem[Math.floor(avaibleElem.length * Math.random())];
-         var momsg:MouseOverMessage = GenericPool.get(MouseOverMessage,target,new MouseEvent(MouseEvent.MOUSE_OVER));
-         Kernel.getWorker().process(momsg);
-         this._lastElemOver = target;
+      private function randomOver(... foo) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function castSpell(spellId:uint, onMySelf:Boolean) : void {
-         var cellId:uint = 0;
-         var avaibleCells:Array = null;
-         var entity:* = undefined;
-         var monster:GameFightMonsterInformations = null;
-         var gafcrmsg:GameActionFightCastRequestMessage = new GameActionFightCastRequestMessage();
-         if(onMySelf)
-         {
-            cellId = FightEntitiesFrame.getCurrentInstance().getEntityInfos(PlayedCharacterManager.getInstance().id).disposition.cellId;
-         }
-         else
-         {
-            avaibleCells = [];
-            for each(entity in FightEntitiesFrame.getCurrentInstance().getEntitiesDictionnary())
-            {
-               if((entity.contextualId < 0) && (entity is GameFightMonsterInformations))
-               {
-                  monster = entity as GameFightMonsterInformations;
-                  if(monster.alive)
-                  {
-                     avaibleCells.push(entity.disposition.cellId);
-                  }
-               }
-            }
-            cellId = avaibleCells[Math.floor(avaibleCells.length * Math.random())];
-         }
-         gafcrmsg.initGameActionFightCastRequestMessage(spellId,cellId);
-         ConnectionsHandler.getConnection().send(gafcrmsg);
+      private function castSpell(spellId:uint, onMySelf:Boolean) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

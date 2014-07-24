@@ -11,11 +11,13 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
    public class StorageBidHouseFilterView extends StorageGenericView
    {
       
-      public function StorageBidHouseFilterView(hookLock:HookLock, parentView:IStorageView, allowedTypes:Vector.<uint>, maxItemLevel:uint) {
-         super(hookLock);
-         this._allowedTypes = allowedTypes;
-         this._maxItemLevel = maxItemLevel;
-         this._parent = parentView;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StorageBidHouseFilterView(hookLock:HookLock, parentView:IStorageView, allowedTypes:Vector.<uint>, maxItemLevel:uint)
+      {
+         //Décompilation abandonné
       }
       
       private var _allowedTypes:Vector.<uint>;
@@ -24,29 +26,29 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
       
       private var _parent:IStorageView;
       
-      override public function get name() : String {
-         return "storageBidHouseFilter";
+      override public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function isListening(item:ItemWrapper) : Boolean {
-         var data:Item = Item.getItemById(item.objectGID);
-         return (this._parent.isListening(item)) && (super.isListening(item)) && (data.level <= this._maxItemLevel) && (!(this._allowedTypes.indexOf(data.typeId) == -1));
+      override public function isListening(item:ItemWrapper) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function updateView() : void {
-         super.updateView();
-         if(StorageOptionManager.getInstance().currentStorageView == this)
-         {
-            _hookLock.addHook(InventoryHookList.StorageViewContent,[content,InventoryManager.getInstance().inventory.localKamas]);
-         }
+      override public function updateView() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set parent(view:IStorageView) : void {
-         this._parent = view;
+      public function set parent(view:IStorageView) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get parent() : IStorageView {
-         return this._parent;
+      public function get parent() : IStorageView
+      {
+         //Décompilation abandonné
       }
    }
 }

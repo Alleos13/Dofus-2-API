@@ -10,32 +10,13 @@ package com.ankamagames.dofus.internalDatacenter.people
    public class SpouseWrapper extends Object implements IDataCenter
    {
       
-      public function SpouseWrapper(o:FriendSpouseInformations) {
-         super();
-         this._item = o;
-         this.name = o.spouseName;
-         this.id = o.spouseId;
-         this.entityLook = EntityLookAdapter.getRiderLook(o.spouseEntityLook);
-         this.level = o.spouseLevel;
-         this.breed = o.breed;
-         this.sex = o.sex;
-         if(o.guildInfo.guildName == "#NONAME#")
-         {
-            this.guildName = I18n.getUiText("ui.guild.noName");
-         }
-         else
-         {
-            this.guildName = o.guildInfo.guildName;
-         }
-         this.alignmentSide = o.alignmentSide;
-         if(o is FriendSpouseOnlineInformations)
-         {
-            this.mapId = FriendSpouseOnlineInformations(o).mapId;
-            this.subareaId = FriendSpouseOnlineInformations(o).subAreaId;
-            this.inFight = FriendSpouseOnlineInformations(o).inFight;
-            this.followSpouse = FriendSpouseOnlineInformations(o).followSpouse;
-            this.online = true;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpouseWrapper(o:FriendSpouseInformations)
+      {
+         //Décompilation abandonné
       }
       
       private var _item:FriendSpouseInformations;

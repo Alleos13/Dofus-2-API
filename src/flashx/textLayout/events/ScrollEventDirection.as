@@ -3,8 +3,13 @@ package flashx.textLayout.events
    public final class ScrollEventDirection extends Object
    {
       
-      public function ScrollEventDirection() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ScrollEventDirection()
+      {
+         //Décompilation abandonné
       }
       
       public static const HORIZONTAL:String = "horizontal";

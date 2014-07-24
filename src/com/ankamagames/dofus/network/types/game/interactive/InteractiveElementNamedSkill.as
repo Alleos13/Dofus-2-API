@@ -7,61 +7,52 @@ package com.ankamagames.dofus.network.types.game.interactive
    public class InteractiveElementNamedSkill extends InteractiveElementSkill implements INetworkType
    {
       
-      public function InteractiveElementNamedSkill() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function InteractiveElementNamedSkill()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 220;
       
       public var nameId:uint = 0;
       
-      override public function getTypeId() : uint {
-         return 220;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initInteractiveElementNamedSkill(skillId:uint = 0, skillInstanceUid:uint = 0, nameId:uint = 0) : InteractiveElementNamedSkill {
-         super.initInteractiveElementSkill(skillId,skillInstanceUid);
-         this.nameId = nameId;
-         return this;
+      public function initInteractiveElementNamedSkill(skillId:uint = 0, skillInstanceUid:uint = 0, nameId:uint = 0) : InteractiveElementNamedSkill
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.nameId = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_InteractiveElementNamedSkill(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_InteractiveElementNamedSkill(output:IDataOutput) : void {
-         super.serializeAs_InteractiveElementSkill(output);
-         if(this.nameId < 0)
-         {
-            throw new Error("Forbidden value (" + this.nameId + ") on element nameId.");
-         }
-         else
-         {
-            output.writeInt(this.nameId);
-            return;
-         }
+      public function serializeAs_InteractiveElementNamedSkill(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_InteractiveElementNamedSkill(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_InteractiveElementNamedSkill(input:IDataInput) : void {
-         super.deserialize(input);
-         this.nameId = input.readInt();
-         if(this.nameId < 0)
-         {
-            throw new Error("Forbidden value (" + this.nameId + ") on element of InteractiveElementNamedSkill.nameId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_InteractiveElementNamedSkill(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

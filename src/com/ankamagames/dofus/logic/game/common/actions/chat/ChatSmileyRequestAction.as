@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.chat
    public class ChatSmileyRequestAction extends Object implements Action
    {
       
-      public function ChatSmileyRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(id:int) : ChatSmileyRequestAction {
-         var a:ChatSmileyRequestAction = new ChatSmileyRequestAction();
-         a.smileyId = id;
-         return a;
+      public function ChatSmileyRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(id:int) : ChatSmileyRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var smileyId:int;

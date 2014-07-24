@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.guild
    public class EmblemSymbolCategory extends Object implements IDataCenter
    {
       
-      public function EmblemSymbolCategory() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EmblemSymbolCategory()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "EmblemSymbolCategories";
       
       protected static const _log:Logger;
       
-      public static function getEmblemSymbolCategoryById(id:int) : EmblemSymbolCategory {
-         return GameData.getObject(MODULE,id) as EmblemSymbolCategory;
+      public static function getEmblemSymbolCategoryById(id:int) : EmblemSymbolCategory
+      {
+         //Décompilation abandonné
       }
       
-      public static function getEmblemSymbolCategories() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getEmblemSymbolCategories() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -32,12 +39,9 @@ package com.ankamagames.dofus.datacenter.guild
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

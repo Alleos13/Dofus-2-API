@@ -5,15 +5,23 @@ package com.ankamagames.jerakine.pools
    public class PoolableSound extends Sound implements Poolable
    {
       
-      public function PoolableSound() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function renew() : Sound {
-         return this;
+      public function PoolableSound()
+      {
+         //Décompilation abandonné
       }
       
-      public function free() : void {
+      public function renew() : Sound
+      {
+         //Décompilation abandonné
+      }
+      
+      public function free() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

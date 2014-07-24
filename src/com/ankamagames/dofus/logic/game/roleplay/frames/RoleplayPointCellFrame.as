@@ -39,21 +39,13 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
    public class RoleplayPointCellFrame extends Object implements Frame
    {
       
-      public function RoleplayPointCellFrame(callBack:Function = null, cursorIcon:Sprite = null, freeCellOnly:Boolean = false, customCellValidatorFct:Function = null, untargetableEntities:Boolean = false) {
-         var lkd:LinkedCursorData = null;
-         super();
-         this._entitiesFrame = Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame;
-         this._callBack = callBack;
-         this._freeCellOnly = freeCellOnly;
-         this._customCellValidatorFct = customCellValidatorFct;
-         this._untargetableEntities = untargetableEntities;
-         if(cursorIcon)
-         {
-            lkd = new LinkedCursorData();
-            lkd.sprite = cursorIcon;
-            lkd.offset = new Point(-20,-20);
-            LinkedCursorSpriteManager.getInstance().addItem(LINKED_CURSOR_NAME,lkd);
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RoleplayPointCellFrame(callBack:Function = null, cursorIcon:Sprite = null, freeCellOnly:Boolean = false, customCellValidatorFct:Function = null, untargetableEntities:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -84,138 +76,49 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
       
       private var _untargetableEntitiesBackup:Boolean;
       
-      public function get priority() : int {
-         return Priority.ULTIMATE_HIGHEST_DEPTH_OF_DOOM;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         this._InteractiveCellManager_click = InteractiveCellManager.getInstance().cellClickEnabled;
-         this._InteractiveCellManager_over = InteractiveCellManager.getInstance().cellOverEnabled;
-         this._InteractiveCellManager_out = InteractiveCellManager.getInstance().cellOutEnabled;
-         InteractiveCellManager.getInstance().setInteraction(true,true,true);
-         this._untargetableEntitiesBackup = this._entitiesFrame.untargetableEntities;
-         this._entitiesFrame.untargetableEntities = this._untargetableEntities;
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var conmsg:CellOverMessage = null;
-         var coutmsg:CellOutMessage = null;
-         var emomsg:EntityMouseOverMessage = null;
-         var ccmsg:CellClickMessage = null;
-         var ecmsg:EntityClickMessage = null;
-         switch(true)
-         {
-            case msg is CellOverMessage:
-               conmsg = msg as CellOverMessage;
-               this.refreshTarget(conmsg.cellId);
-               return true;
-            case msg is CellOutMessage:
-               coutmsg = msg as CellOutMessage;
-               this.refreshTarget(-1);
-               return true;
-            case msg is EntityMouseOverMessage:
-               emomsg = msg as EntityMouseOverMessage;
-               this.refreshTarget(emomsg.entity.position.cellId);
-               return false;
-            case msg is CellClickMessage:
-               ccmsg = msg as CellClickMessage;
-               this.showCell(ccmsg.cellId);
-               return true;
-            case msg is EntityClickMessage:
-               ecmsg = msg as EntityClickMessage;
-               this.showCell(ecmsg.entity.position.cellId,ecmsg.entity.id);
-               return true;
-            case msg is AdjacentMapClickMessage:
-               this.cancelShow();
-               if(this._callBack != null)
-               {
-                  this._callBack(false,0,-1);
-               }
-               return true;
-            case msg is MouseClickMessage:
-               if((MouseClickMessage(msg).target is GraphicCell) || (MouseClickMessage(msg).target is IEntity))
-               {
-                  return false;
-               }
-               this.cancelShow();
-               if(this._callBack != null)
-               {
-                  this._callBack(false,0,-1);
-               }
-               return false;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         this.removeTarget();
-         LinkedCursorSpriteManager.getInstance().removeItem(LINKED_CURSOR_NAME);
-         InteractiveCellManager.getInstance().setInteraction(this._InteractiveCellManager_click,this._InteractiveCellManager_over,this._InteractiveCellManager_out);
-         this._entitiesFrame.untargetableEntities = this._untargetableEntitiesBackup;
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function refreshTarget(target:int) : void {
-         var entity:IEntity = null;
-         if((!(target == -1)) && (this.isValidCell(target)))
-         {
-            if(!this._targetSelection)
-            {
-               this._targetSelection = new Selection();
-               this._targetSelection.renderer = new ZoneDARenderer(PlacementStrataEnums.STRATA_NO_Z_ORDER);
-               this._targetSelection.color = TARGET_COLOR;
-               this._targetSelection.zone = new Cross(0,0,DataMapProvider.getInstance());
-               SelectionManager.getInstance().addSelection(this._targetSelection,SELECTION_TARGET);
-            }
-            entity = DofusEntities.getEntity(PlayedCharacterManager.getInstance().id);
-            if(!entity)
-            {
-               return;
-            }
-            this._targetSelection.zone.direction = MapPoint(entity.position).advancedOrientationTo(MapPoint.fromCellId(target));
-            SelectionManager.getInstance().update(SELECTION_TARGET,target);
-         }
-         else
-         {
-            this.removeTarget();
-         }
+      private function refreshTarget(target:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function removeTarget() : void {
-         var s:Selection = SelectionManager.getInstance().getSelection(SELECTION_TARGET);
-         if(s)
-         {
-            s.remove();
-            this._targetSelection = null;
-         }
+      private function removeTarget() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function showCell(cell:uint, entityId:int = -1) : void {
-         if(this.isValidCell(cell))
-         {
-            if(this._callBack != null)
-            {
-               this._callBack(true,cell,entityId);
-            }
-         }
-         this.cancelShow();
+      private function showCell(cell:uint, entityId:int = -1) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function cancelShow() : void {
-         KernelEventsManager.getInstance().processCallback(HookList.ShowCell);
-         var frm:InventoryManagementFrame = Kernel.getWorker().getFrame(InventoryManagementFrame) as InventoryManagementFrame;
-         frm.roleplayPointCellFrame = null;
-         Kernel.getWorker().removeFrame(this);
+      public function cancelShow() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function isValidCell(cell:uint) : Boolean {
-         if(this._customCellValidatorFct != null)
-         {
-            return this._customCellValidatorFct(cell);
-         }
-         return (DataMapProvider.getInstance().pointMov(MapPoint.fromCellId(cell).x,MapPoint.fromCellId(cell).y,true)) && ((!this._freeCellOnly) || (EntitiesManager.getInstance().getEntityOnCell(cell) == null));
+      private function isValidCell(cell:uint) : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

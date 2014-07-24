@@ -10,68 +10,71 @@ package com.ankamagames.dofus.network.messages.game.guild
    public class GuildModificationStartedMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GuildModificationStartedMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildModificationStartedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6324;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var canChangeName:Boolean = false;
       
       public var canChangeEmblem:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 6324;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGuildModificationStartedMessage(canChangeName:Boolean = false, canChangeEmblem:Boolean = false) : GuildModificationStartedMessage {
-         this.canChangeName = canChangeName;
-         this.canChangeEmblem = canChangeEmblem;
-         this._isInitialized = true;
-         return this;
+      public function initGuildModificationStartedMessage(canChangeName:Boolean = false, canChangeEmblem:Boolean = false) : GuildModificationStartedMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.canChangeName = false;
-         this.canChangeEmblem = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GuildModificationStartedMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GuildModificationStartedMessage(output:IDataOutput) : void {
-         var _box0:uint = 0;
-         _box0 = BooleanByteWrapper.setFlag(_box0,0,this.canChangeName);
-         _box0 = BooleanByteWrapper.setFlag(_box0,1,this.canChangeEmblem);
-         output.writeByte(_box0);
+      public function serializeAs_GuildModificationStartedMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GuildModificationStartedMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildModificationStartedMessage(input:IDataInput) : void {
-         var _box0:uint = input.readByte();
-         this.canChangeName = BooleanByteWrapper.getFlag(_box0,0);
-         this.canChangeEmblem = BooleanByteWrapper.getFlag(_box0,1);
+      public function deserializeAs_GuildModificationStartedMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

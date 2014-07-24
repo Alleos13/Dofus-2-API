@@ -5,8 +5,13 @@ package com.ankamagames.berilia.types.event
    public class BeriliaEvent extends Event
    {
       
-      public function BeriliaEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false) {
-         super(type,bubbles,cancelable);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BeriliaEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       public static const REMOVE_COMPONENT:String = "Berilia_remove_component";

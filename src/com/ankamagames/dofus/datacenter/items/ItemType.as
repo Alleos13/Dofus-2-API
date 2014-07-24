@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.items
    public class ItemType extends Object implements IDataCenter
    {
       
-      public function ItemType() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ItemType()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "ItemTypes";
       
       protected static const _log:Logger;
       
-      public static function getItemTypeById(id:uint) : ItemType {
-         return GameData.getObject(MODULE,id) as ItemType;
+      public static function getItemTypeById(id:uint) : ItemType
+      {
+         //Décompilation abandonné
       }
       
-      public static function getItemTypes() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getItemTypes() : Array
+      {
+         //Décompilation abandonné
       }
       
       private var _zoneSize:uint = 4.294967295E9;
@@ -48,65 +55,29 @@ package com.ankamagames.dofus.datacenter.items
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get zoneSize() : uint {
-         if(this._zoneSize == uint.MAX_VALUE)
-         {
-            this.parseZone();
-         }
-         return this._zoneSize;
+      public function get zoneSize() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get zoneShape() : uint {
-         if(this._zoneShape == uint.MAX_VALUE)
-         {
-            this.parseZone();
-         }
-         return this._zoneShape;
+      public function get zoneShape() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get zoneMinSize() : uint {
-         if(this._zoneMinSize == uint.MAX_VALUE)
-         {
-            this.parseZone();
-         }
-         return this._zoneMinSize;
+      public function get zoneMinSize() : uint
+      {
+         //Décompilation abandonné
       }
       
-      private function parseZone() : void {
-         var params:Array = null;
-         if((this.rawZone) && (this.rawZone.length))
-         {
-            this._zoneShape = this.rawZone.charCodeAt(0);
-            params = this.rawZone.substr(1).split(",");
-            if(params.length > 0)
-            {
-               this._zoneSize = parseInt(params[0]);
-            }
-            else
-            {
-               this._zoneSize = 0;
-            }
-            if(params.length > 1)
-            {
-               this._zoneMinSize = parseInt(params[1]);
-            }
-            else
-            {
-               this._zoneMinSize = 0;
-            }
-         }
-         else
-         {
-            _log.error("Zone incorrect (" + this.rawZone + ")");
-         }
+      private function parseZone() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

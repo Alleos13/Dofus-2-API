@@ -9,16 +9,23 @@ package com.ankamagames.jerakine.resources.protocols.impl
    public class UpdaterProtocol extends AbstractProtocol implements IProtocol
    {
       
-      public function UpdaterProtocol() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function load(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, cache:ICache, forcedAdapter:Class, uniqueFile:Boolean) : void {
-         throw new Error("Unimplemented stub.");
+      public function UpdaterProtocol()
+      {
+         //Décompilation abandonné
       }
       
-      override protected function release() : void {
-         throw new Error("Unimplemented stub.");
+      public function load(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, cache:ICache, forcedAdapter:Class, uniqueFile:Boolean) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      override protected function release() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

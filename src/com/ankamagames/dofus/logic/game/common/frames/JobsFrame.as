@@ -44,198 +44,59 @@ package com.ankamagames.dofus.logic.game.common.frames
    public class JobsFrame extends Object implements Frame
    {
       
-      public function JobsFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function JobsFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      private static function updateJobExperience(je:JobExperience) : void {
-         var kj:KnownJob = PlayedCharacterManager.getInstance().jobs[je.jobId];
-         if(!kj)
-         {
-            kj = new KnownJob();
-            PlayedCharacterManager.getInstance().jobs[je.jobId] = kj;
-         }
-         kj.jobExperience = je;
+      private static function updateJobExperience(je:JobExperience) : void
+      {
+         //Décompilation abandonné
       }
       
-      private static function updateJob(pJobId:uint, pJobDescription:JobDescription) : void {
-         var kj:KnownJob = PlayedCharacterManager.getInstance().jobs[pJobId];
-         kj.jobDescription = pJobDescription;
+      private static function updateJob(pJobId:uint, pJobDescription:JobDescription) : void
+      {
+         //Décompilation abandonné
       }
       
-      private static function createCrafterDirectorySettings(settings:JobCrafterDirectorySettings) : Object {
-         var obj:Object = new Object();
-         obj.jobId = settings.jobId;
-         obj.minSlots = settings.minSlot;
-         obj.notFree = !((settings.userDefinedParams & CrafterDirectoryParamBitEnum.CRAFT_OPTION_NOT_FREE) == 0);
-         obj.notFreeExceptOnFail = !((settings.userDefinedParams & CrafterDirectoryParamBitEnum.CRAFT_OPTION_NOT_FREE_EXCEPT_ON_FAIL) == 0);
-         obj.resourcesRequired = !((settings.userDefinedParams & CrafterDirectoryParamBitEnum.CRAFT_OPTION_RESOURCES_REQUIRED) == 0);
-         return obj;
+      private static function createCrafterDirectorySettings(settings:JobCrafterDirectorySettings) : Object
+      {
+         //Décompilation abandonné
       }
       
       private var _jobCrafterDirectoryListDialogFrame:JobCrafterDirectoryListDialogFrame;
       
       private var _settings:Array = null;
       
-      public function get priority() : int {
-         return Priority.NORMAL;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get settings() : Array {
-         return this._settings;
+      public function get settings() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         this._jobCrafterDirectoryListDialogFrame = new JobCrafterDirectoryListDialogFrame();
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var jdmsg:JobDescriptionMessage = null;
-         var n:* = 0;
-         var jcdsmsg:JobCrafterDirectorySettingsMessage = null;
-         var jcddsa:JobCrafterDirectoryDefineSettingsAction = null;
-         var jcddsmsg:JobCrafterDirectoryDefineSettingsMessage = null;
-         var jeumsg:JobExperienceUpdateMessage = null;
-         var jemumsg:JobExperienceMultiUpdateMessage = null;
-         var julmsg:JobUnlearntMessage = null;
-         var jlumsg:JobLevelUpMessage = null;
-         var jobName:String = null;
-         var levelUpTextMessage:String = null;
-         var jldumsg:JobListedUpdateMessage = null;
-         var text:String = null;
-         var job:Job = null;
-         var jcdlra:JobCrafterDirectoryListRequestAction = null;
-         var jcdlrmsg:JobCrafterDirectoryListRequestMessage = null;
-         var jcdera:JobCrafterDirectoryEntryRequestAction = null;
-         var jcdermsg:JobCrafterDirectoryEntryRequestMessage = null;
-         var jcclra:JobCrafterContactLookRequestAction = null;
-         var esokimsg:ExchangeStartOkJobIndexMessage = null;
-         var array:Array = null;
-         var jd:JobDescription = null;
-         var kj:KnownJob = null;
-         var setting:JobCrafterDirectorySettings = null;
-         var je:JobExperience = null;
-         var clrbimsg:ContactLookRequestByIdMessage = null;
-         var esojijob:uint = 0;
-         switch(true)
-         {
-            case msg is JobDescriptionMessage:
-               jdmsg = msg as JobDescriptionMessage;
-               PlayedCharacterManager.getInstance().jobs = [];
-               n = 0;
-               for each(jd in jdmsg.jobsDescription)
-               {
-                  kj = PlayedCharacterManager.getInstance().jobs[jd.jobId];
-                  if(!kj)
-                  {
-                     kj = new KnownJob();
-                     PlayedCharacterManager.getInstance().jobs[jd.jobId] = kj;
-                  }
-                  kj.jobDescription = jd;
-                  kj.jobPosition = n;
-                  n++;
-               }
-               KernelEventsManager.getInstance().processCallback(HookList.JobsListUpdated);
-               return true;
-            case msg is JobCrafterDirectorySettingsMessage:
-               jcdsmsg = msg as JobCrafterDirectorySettingsMessage;
-               this._settings = new Array();
-               for each(setting in jcdsmsg.craftersSettings)
-               {
-                  this._settings.push(createCrafterDirectorySettings(setting));
-               }
-               KernelEventsManager.getInstance().processCallback(CraftHookList.CrafterDirectorySettings,this._settings);
-               return true;
-            case msg is JobCrafterDirectoryDefineSettingsAction:
-               jcddsa = msg as JobCrafterDirectoryDefineSettingsAction;
-               jcddsmsg = new JobCrafterDirectoryDefineSettingsMessage();
-               jcddsmsg.initJobCrafterDirectoryDefineSettingsMessage(jcddsa.settings);
-               ConnectionsHandler.getConnection().send(jcddsmsg);
-               return true;
-            case msg is JobExperienceUpdateMessage:
-               jeumsg = msg as JobExperienceUpdateMessage;
-               updateJobExperience(jeumsg.experiencesUpdate);
-               KernelEventsManager.getInstance().processCallback(CraftHookList.JobsExpUpdated,jeumsg.experiencesUpdate.jobId);
-               return true;
-            case msg is JobExperienceMultiUpdateMessage:
-               jemumsg = msg as JobExperienceMultiUpdateMessage;
-               for each(je in jemumsg.experiencesUpdate)
-               {
-                  updateJobExperience(je);
-               }
-               KernelEventsManager.getInstance().processCallback(CraftHookList.JobsExpUpdated,0);
-               return true;
-            case msg is JobUnlearntMessage:
-               julmsg = msg as JobUnlearntMessage;
-               delete PlayedCharacterManager.getInstance().jobs[julmsg.jobId];
-               KernelEventsManager.getInstance().processCallback(HookList.JobsListUpdated);
-               return true;
-            case msg is JobLevelUpMessage:
-               jlumsg = msg as JobLevelUpMessage;
-               jobName = Job.getJobById(jlumsg.jobsDescription.jobId).name;
-               levelUpTextMessage = I18n.getUiText("ui.craft.newJobLevel",[jobName,jlumsg.newLevel]);
-               KernelEventsManager.getInstance().processCallback(ChatHookList.TextInformation,levelUpTextMessage,ChatActivableChannelsEnum.PSEUDO_CHANNEL_INFO,TimeManager.getInstance().getTimestamp());
-               updateJob(jlumsg.jobsDescription.jobId,jlumsg.jobsDescription);
-               KernelEventsManager.getInstance().processCallback(CraftHookList.JobLevelUp,jobName,jlumsg.newLevel);
-               return true;
-            case msg is JobListedUpdateMessage:
-               jldumsg = msg as JobListedUpdateMessage;
-               job = Job.getJobById(jldumsg.jobId);
-               if(jldumsg.addedOrDeleted)
-               {
-                  text = I18n.getUiText("ui.craft.referenceAdd",[job.name]);
-               }
-               else
-               {
-                  text = I18n.getUiText("ui.craft.referenceRemove",[job.name]);
-               }
-               KernelEventsManager.getInstance().processCallback(ChatHookList.TextInformation,text,ChatActivableChannelsEnum.PSEUDO_CHANNEL_INFO,TimeManager.getInstance().getTimestamp());
-               return true;
-            case msg is JobCrafterDirectoryListRequestAction:
-               jcdlra = msg as JobCrafterDirectoryListRequestAction;
-               jcdlrmsg = new JobCrafterDirectoryListRequestMessage();
-               jcdlrmsg.initJobCrafterDirectoryListRequestMessage(jcdlra.jobId);
-               ConnectionsHandler.getConnection().send(jcdlrmsg);
-               return true;
-            case msg is JobCrafterDirectoryEntryRequestAction:
-               jcdera = msg as JobCrafterDirectoryEntryRequestAction;
-               jcdermsg = new JobCrafterDirectoryEntryRequestMessage();
-               jcdermsg.initJobCrafterDirectoryEntryRequestMessage(jcdera.playerId);
-               ConnectionsHandler.getConnection().send(jcddsmsg);
-               return true;
-            case msg is JobCrafterContactLookRequestAction:
-               jcclra = msg as JobCrafterContactLookRequestAction;
-               if(jcclra.crafterId == PlayedCharacterManager.getInstance().id)
-               {
-                  KernelEventsManager.getInstance().processCallback(CraftHookList.JobCrafterContactLook,jcclra.crafterId,PlayedCharacterManager.getInstance().infos.name,EntityLookAdapter.fromNetwork(PlayedCharacterManager.getInstance().infos.entityLook));
-               }
-               else
-               {
-                  clrbimsg = new ContactLookRequestByIdMessage();
-                  clrbimsg.initContactLookRequestByIdMessage(0,SocialContactCategoryEnum.SOCIAL_CONTACT_CRAFTER,jcclra.crafterId);
-                  ConnectionsHandler.getConnection().send(clrbimsg);
-               }
-               return true;
-            case msg is ExchangeStartOkJobIndexMessage:
-               esokimsg = msg as ExchangeStartOkJobIndexMessage;
-               array = new Array();
-               for each(esojijob in esokimsg.jobs)
-               {
-                  array.push(esojijob);
-               }
-               Kernel.getWorker().addFrame(this._jobCrafterDirectoryListDialogFrame);
-               KernelEventsManager.getInstance().processCallback(CraftHookList.ExchangeStartOkJobIndex,array);
-               return true;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

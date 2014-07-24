@@ -5,8 +5,13 @@ package com.ankamagames.jerakine.utils.display.spellZone
    public class SpellZoneEvent extends Event
    {
       
-      public function SpellZoneEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false) {
-         super(type,bubbles,cancelable);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpellZoneEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
+      {
+         //Décompilation abandonné
       }
       
       public static const CELL_ROLLOVER:String = "cell_rollover";

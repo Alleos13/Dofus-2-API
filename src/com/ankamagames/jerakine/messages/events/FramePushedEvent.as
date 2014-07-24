@@ -6,17 +6,22 @@ package com.ankamagames.jerakine.messages.events
    public class FramePushedEvent extends Event
    {
       
-      public function FramePushedEvent(frame:Frame) {
-         super(EVENT_FRAME_PUSHED,false,false);
-         this._frame = frame;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FramePushedEvent(frame:Frame)
+      {
+         //Décompilation abandonné
       }
       
       public static const EVENT_FRAME_PUSHED:String = "event_frame_pushed";
       
       private var _frame:Frame;
       
-      public function get frame() : Frame {
-         return this._frame;
+      public function get frame() : Frame
+      {
+         //Décompilation abandonné
       }
    }
 }

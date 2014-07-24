@@ -24,13 +24,13 @@ package com.ankamagames.dofus.logic.game.common.frames
    public class AveragePricesFrame extends Object implements Frame
    {
       
-      public function AveragePricesFrame() {
-         super();
-         this._serverName = PlayerManager.getInstance().server.name;
-         if(!_dataStoreType)
-         {
-            _dataStoreType = new DataStoreType("averagePrices",true,DataStoreEnum.LOCATION_LOCAL,DataStoreEnum.BIND_COMPUTER);
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AveragePricesFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -41,93 +41,49 @@ package com.ankamagames.dofus.logic.game.common.frames
       
       private var _pricesData:Object;
       
-      public function get priority() : int {
-         return Priority.NORMAL;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get dataAvailable() : Boolean {
-         return this._pricesData;
+      public function get dataAvailable() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get pricesData() : Object {
-         return this._pricesData;
+      public function get pricesData() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         this._pricesData = StoreDataManager.getInstance().getData(_dataStoreType,this._serverName);
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(pMsg:Message) : Boolean {
-         var gccm:GameContextCreateMessage = null;
-         var oapm:ObjectAveragePricesMessage = null;
-         var oapem:ObjectAveragePricesErrorMessage = null;
-         switch(true)
-         {
-            case pMsg is GameContextCreateMessage:
-               gccm = pMsg as GameContextCreateMessage;
-               if((gccm.context == GameContextEnum.ROLE_PLAY) && (this.updateAllowed()))
-               {
-                  this.askPricesData();
-               }
-               return false;
-            case pMsg is ObjectAveragePricesMessage:
-               oapm = pMsg as ObjectAveragePricesMessage;
-               this.updatePricesData(oapm.ids,oapm.avgPrices);
-               return true;
-            case pMsg is ObjectAveragePricesErrorMessage:
-               oapem = pMsg as ObjectAveragePricesErrorMessage;
-               return true;
-            default:
-               return false;
-         }
+      public function process(pMsg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function updatePricesData(pItemsIds:Vector.<uint>, pItemsAvgPrices:Vector.<uint>) : void {
-         var nbItems:int = pItemsIds.length;
-         this._pricesData = 
-            {
-               "lastUpdate":new Date(),
-               "items":{}
-            };
-         var i:int = 0;
-         while(i < nbItems)
-         {
-            this._pricesData.items["item" + pItemsIds[i]] = pItemsAvgPrices[i];
-            i++;
-         }
-         StoreDataManager.getInstance().setData(_dataStoreType,this._serverName,this._pricesData);
+      private function updatePricesData(pItemsIds:Vector.<uint>, pItemsAvgPrices:Vector.<uint>) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function updateAllowed() : Boolean {
-         var now:Date = null;
-         var lastUpdateHour:String = null;
-         var misc:MiscFrame = Kernel.getWorker().getFrame(MiscFrame) as MiscFrame;
-         var feature:OptionalFeature = OptionalFeature.getOptionalFeatureByKeyword("biz.prices");
-         if(!misc.isOptionalFeatureActive(feature.id))
-         {
-            return false;
-         }
-         if(this.dataAvailable)
-         {
-            now = new Date();
-            lastUpdateHour = TimeManager.getInstance().formatClock(this._pricesData.lastUpdate.getTime());
-            if((now.getFullYear() == this._pricesData.lastUpdate.getFullYear()) && (now.getMonth() == this._pricesData.lastUpdate.getMonth()) && (now.getDate() == this._pricesData.lastUpdate.getDate()))
-            {
-               return false;
-            }
-         }
-         return true;
+      private function updateAllowed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      private function askPricesData() : void {
-         var oapgm:ObjectAveragePricesGetMessage = new ObjectAveragePricesGetMessage();
-         oapgm.initObjectAveragePricesGetMessage();
-         ConnectionsHandler.getConnection().send(oapgm);
+      private function askPricesData() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

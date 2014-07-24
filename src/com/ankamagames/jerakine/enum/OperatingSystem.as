@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.enum
    public class OperatingSystem extends Object
    {
       
-      public function OperatingSystem() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function OperatingSystem()
+      {
+         //Décompilation abandonné
       }
       
       public static var WINDOWS:String = "Windows";

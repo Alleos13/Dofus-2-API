@@ -7,15 +7,20 @@ package com.ankamagames.jerakine.script.api
    public class LoggingApi extends Object
    {
       
-      public function LoggingApi() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LoggingApi()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      public static function Trace(msg:*, level:uint = 0) : void {
-         var str:String = "" + (!(msg == null)?msg:"NULL");
-         _log.log(level,str);
+      public static function Trace(msg:*, level:uint = 0) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay
    public class MapRunningFightDetailsRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function MapRunningFightDetailsRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function MapRunningFightDetailsRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5750;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var fightId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5750;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initMapRunningFightDetailsRequestMessage(fightId:uint = 0) : MapRunningFightDetailsRequestMessage {
-         this.fightId = fightId;
-         this._isInitialized = true;
-         return this;
+      public function initMapRunningFightDetailsRequestMessage(fightId:uint = 0) : MapRunningFightDetailsRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.fightId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_MapRunningFightDetailsRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_MapRunningFightDetailsRequestMessage(output:IDataOutput) : void {
-         if(this.fightId < 0)
-         {
-            throw new Error("Forbidden value (" + this.fightId + ") on element fightId.");
-         }
-         else
-         {
-            output.writeInt(this.fightId);
-            return;
-         }
+      public function serializeAs_MapRunningFightDetailsRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_MapRunningFightDetailsRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_MapRunningFightDetailsRequestMessage(input:IDataInput) : void {
-         this.fightId = input.readInt();
-         if(this.fightId < 0)
-         {
-            throw new Error("Forbidden value (" + this.fightId + ") on element of MapRunningFightDetailsRequestMessage.fightId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_MapRunningFightDetailsRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,8 +5,13 @@ package com.ankamagames.dofus.misc.lists
    public class CraftHookList extends Object
    {
       
-      public function CraftHookList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CraftHookList()
+      {
+         //Décompilation abandonné
       }
       
       public static const DoNothing:Hook;

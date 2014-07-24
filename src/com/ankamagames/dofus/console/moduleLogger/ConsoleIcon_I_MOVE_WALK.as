@@ -5,8 +5,13 @@ package com.ankamagames.dofus.console.moduleLogger
    public class ConsoleIcon_I_MOVE_WALK extends SpriteAsset
    {
       
-      public function ConsoleIcon_I_MOVE_WALK() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ConsoleIcon_I_MOVE_WALK()
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,9 +5,13 @@ package com.ankamagames.berilia.types.uiDefinition
    public class GridElement extends ContainerElement
    {
       
-      public function GridElement() {
-         super();
-         MEMORY_LOG[this] = 1;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GridElement()
+      {
+         //Décompilation abandonné
       }
       
       public static var MEMORY_LOG:Dictionary;

@@ -7,10 +7,13 @@ package com.ankamagames.jerakine.types.events
    public class SequencerEvent extends Event
    {
       
-      public function SequencerEvent(type:String, sequencer:ISequencer = null, step:ISequencable = null) {
-         super(type,false,false);
-         this._sequencer = sequencer;
-         this._step = step;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SequencerEvent(type:String, sequencer:ISequencer = null, step:ISequencable = null)
+      {
+         //Décompilation abandonné
       }
       
       public static const SEQUENCE_END:String = "onSequenceEnd";
@@ -25,12 +28,14 @@ package com.ankamagames.jerakine.types.events
       
       private var _step:ISequencable;
       
-      public function get sequencer() : ISequencer {
-         return this._sequencer;
+      public function get sequencer() : ISequencer
+      {
+         //Décompilation abandonné
       }
       
-      public function get step() : ISequencable {
-         return this._step;
+      public function get step() : ISequencable
+      {
+         //Décompilation abandonné
       }
    }
 }

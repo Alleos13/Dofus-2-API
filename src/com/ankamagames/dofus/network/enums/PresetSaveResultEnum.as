@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class PresetSaveResultEnum extends Object
    {
       
-      public function PresetSaveResultEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PresetSaveResultEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const PRESET_SAVE_OK:uint = 1;

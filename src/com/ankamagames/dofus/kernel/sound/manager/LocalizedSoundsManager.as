@@ -23,9 +23,13 @@ package com.ankamagames.dofus.kernel.sound.manager
    public class LocalizedSoundsManager extends Object
    {
       
-      public function LocalizedSoundsManager() {
-         super();
-         this._isInitialized = false;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LocalizedSoundsManager()
+      {
+         //Décompilation abandonné
       }
       
       private static const _log:Logger;
@@ -36,70 +40,29 @@ package com.ankamagames.dofus.kernel.sound.manager
       
       private var _isInitialized:Boolean;
       
-      public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function setMap(pMap:Map) : void {
-         /*
-          * Decompilation error
-          * Code may be obfuscated
-          * Error type: TranslateException
-          */
-         throw new IllegalOperationError("Not decompiled due to error");
+      public function setMap(pMap:Map) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function playLocalizedSounds() : void {
-         var lms:LocalizedMapSound = null;
-         var busId:uint = 0;
-         var soundPath:String = null;
-         var soundUri:Uri = null;
-         var localizedSound:ISound = null;
-         for each(lms in this._localizedSounds)
-         {
-            busId = SoundUtil.getBusIdBySoundId(lms.soundId);
-            soundPath = SoundUtil.getConfigEntryByBusId(busId);
-            soundUri = new Uri(soundPath + lms.soundId + ".mp3");
-            if(SoundManager.getInstance().manager is ClassicSoundManager)
-            {
-               localizedSound = SoundFactory.getSound(EnumSoundType.LOCALIZED_SOUND,soundUri);
-               localizedSound.busId = busId;
-               (localizedSound as LocalizedSound).saturationRange = lms.saturationRange;
-               (localizedSound as LocalizedSound).silence = new SoundSilence(lms.silenceMin,lms.silenceMax);
-               (localizedSound as LocalizedSound).range = lms.range;
-               (localizedSound as LocalizedSound).volumeMax = lms.volumeMax;
-               (localizedSound as LocalizedSound).position = lms.position;
-               (localizedSound as LocalizedSound).updateObserverPosition(Tubul.getInstance().earPosition);
-               SoundManager.getInstance().manager.playSound(localizedSound);
-            }
-            if(SoundManager.getInstance().manager is RegSoundManager)
-            {
-               localizedSound = new SoundDofus(lms.soundId);
-               localizedSound.busId = busId;
-               (localizedSound as SoundDofus).saturationRange = lms.saturationRange;
-               (localizedSound as SoundDofus).silence = new SoundSilence(lms.silenceMin,lms.silenceMax);
-               (localizedSound as SoundDofus).range = lms.range;
-               (localizedSound as SoundDofus).volumeMax = lms.volumeMax;
-               (localizedSound as SoundDofus).position = lms.position;
-               localizedSound.play();
-            }
-            this._sounds.push(localizedSound);
-         }
+      public function playLocalizedSounds() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function stopLocalizedSounds() : void {
-         var sound:ISound = null;
-         for each(sound in this._sounds)
-         {
-            sound.stop();
-            sound = null;
-         }
-         this._sounds = new Vector.<ISound>();
+      public function stopLocalizedSounds() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function removeLocalizedSounds() : void {
-         this.stopLocalizedSounds();
-         this._localizedSounds = new Vector.<LocalizedMapSound>();
+      private function removeLocalizedSounds() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

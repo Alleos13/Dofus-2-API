@@ -9,81 +9,71 @@ package com.ankamagames.dofus.network.messages.game.context.fight
    public class GameFightTurnStartMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameFightTurnStartMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameFightTurnStartMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 714;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var id:int = 0;
       
       public var waitTime:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 714;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameFightTurnStartMessage(id:int = 0, waitTime:uint = 0) : GameFightTurnStartMessage {
-         this.id = id;
-         this.waitTime = waitTime;
-         this._isInitialized = true;
-         return this;
+      public function initGameFightTurnStartMessage(id:int = 0, waitTime:uint = 0) : GameFightTurnStartMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.id = 0;
-         this.waitTime = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameFightTurnStartMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightTurnStartMessage(output:IDataOutput) : void {
-         output.writeInt(this.id);
-         if(this.waitTime < 0)
-         {
-            throw new Error("Forbidden value (" + this.waitTime + ") on element waitTime.");
-         }
-         else
-         {
-            output.writeInt(this.waitTime);
-            return;
-         }
+      public function serializeAs_GameFightTurnStartMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameFightTurnStartMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightTurnStartMessage(input:IDataInput) : void {
-         this.id = input.readInt();
-         this.waitTime = input.readInt();
-         if(this.waitTime < 0)
-         {
-            throw new Error("Forbidden value (" + this.waitTime + ") on element of GameFightTurnStartMessage.waitTime.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_GameFightTurnStartMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

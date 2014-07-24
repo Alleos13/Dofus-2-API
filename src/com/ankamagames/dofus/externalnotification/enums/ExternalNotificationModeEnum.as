@@ -3,8 +3,13 @@ package com.ankamagames.dofus.externalnotification.enums
    public class ExternalNotificationModeEnum extends Object
    {
       
-      public function ExternalNotificationModeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExternalNotificationModeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const DISABLED:int = 0;

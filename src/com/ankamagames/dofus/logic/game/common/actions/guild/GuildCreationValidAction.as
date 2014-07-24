@@ -5,18 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.guild
    public class GuildCreationValidAction extends Object implements Action
    {
       
-      public function GuildCreationValidAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pGuildName:String, pUpEmblemId:uint, pUpColorEmblem:uint, pBackEmblemId:uint, pBackColorEmblem:uint) : GuildCreationValidAction {
-         var action:GuildCreationValidAction = new GuildCreationValidAction();
-         action.guildName = pGuildName;
-         action.upEmblemId = pUpEmblemId;
-         action.upColorEmblem = pUpColorEmblem;
-         action.backEmblemId = pBackEmblemId;
-         action.backColorEmblem = pBackColorEmblem;
-         return action;
+      public function GuildCreationValidAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pGuildName:String, pUpEmblemId:uint, pUpColorEmblem:uint, pBackEmblemId:uint, pBackColorEmblem:uint) : GuildCreationValidAction
+      {
+         //Décompilation abandonné
       }
       
       public var guildName:String;

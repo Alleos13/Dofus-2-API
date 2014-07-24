@@ -9,67 +9,69 @@ package com.ankamagames.dofus.network.messages.game.ui
    public class ClientUIOpenedMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ClientUIOpenedMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ClientUIOpenedMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6459;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var type:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6459;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initClientUIOpenedMessage(type:uint = 0) : ClientUIOpenedMessage {
-         this.type = type;
-         this._isInitialized = true;
-         return this;
+      public function initClientUIOpenedMessage(type:uint = 0) : ClientUIOpenedMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.type = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ClientUIOpenedMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ClientUIOpenedMessage(output:IDataOutput) : void {
-         output.writeByte(this.type);
+      public function serializeAs_ClientUIOpenedMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ClientUIOpenedMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ClientUIOpenedMessage(input:IDataInput) : void {
-         this.type = input.readByte();
-         if(this.type < 0)
-         {
-            throw new Error("Forbidden value (" + this.type + ") on element of ClientUIOpenedMessage.type.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_ClientUIOpenedMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

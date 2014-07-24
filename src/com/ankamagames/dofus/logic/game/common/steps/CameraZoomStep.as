@@ -14,12 +14,13 @@ package com.ankamagames.dofus.logic.game.common.steps
    public class CameraZoomStep extends AbstractSequencable
    {
       
-      public function CameraZoomStep(pCamera:Camera, pArgs:Array, pInstant:Boolean) {
-         super();
-         this._camera = pCamera;
-         this._args = pArgs;
-         this._instant = pInstant;
-         this._container = Atouin.getInstance().rootContainer;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CameraZoomStep(pCamera:Camera, pArgs:Array, pInstant:Boolean)
+      {
+         //Décompilation abandonné
       }
       
       private var _camera:Camera;
@@ -32,37 +33,19 @@ package com.ankamagames.dofus.logic.game.common.steps
       
       private var _container:DisplayObjectContainer;
       
-      override public function start() : void {
-         var zoomObj:Object = null;
-         var t:TweenLite = null;
-         var mp:MapPoint = ScriptsUtil.getMapPoint(this._args);
-         var cell:GraphicCell = InteractiveCellManager.getInstance().getCell(mp.cellId);
-         var cellPos:Point = cell.parent.localToGlobal(new Point(cell.x + cell.width / 2,cell.y + cell.height / 2));
-         this._targetPos = this._container.globalToLocal(cellPos);
-         if(this._instant)
-         {
-            this._camera.zoomOnPos(this._camera.currentZoom,this._targetPos.x,this._targetPos.y);
-            executeCallbacks();
-         }
-         else
-         {
-            zoomObj = {"zoom":Atouin.getInstance().currentZoom};
-            t = new TweenLite(zoomObj,1,
-               {
-                  "zoom":this._camera.currentZoom,
-                  "onUpdate":this.updateZoom,
-                  "onUpdateParams":[zoomObj],
-                  "onComplete":this.zoomComplete
-               });
-         }
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function updateZoom(pZoomObj:Object) : void {
-         this._camera.zoomOnPos(pZoomObj.zoom,this._targetPos.x,this._targetPos.y);
+      private function updateZoom(pZoomObj:Object) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function zoomComplete() : void {
-         executeCallbacks();
+      private function zoomComplete() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

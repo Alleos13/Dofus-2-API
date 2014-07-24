@@ -15,8 +15,13 @@ package com.ankamagames.dofus.misc.lists
    public class ApiList extends Object
    {
       
-      public function ApiList() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ApiList()
+      {
+         //Décompilation abandonné
       }
       
       protected static var include_FxApi:FxApi = null;

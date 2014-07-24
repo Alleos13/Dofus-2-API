@@ -9,81 +9,71 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeBidHouseBuyResultMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeBidHouseBuyResultMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeBidHouseBuyResultMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6272;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var uid:uint = 0;
       
       public var bought:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 6272;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeBidHouseBuyResultMessage(uid:uint = 0, bought:Boolean = false) : ExchangeBidHouseBuyResultMessage {
-         this.uid = uid;
-         this.bought = bought;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeBidHouseBuyResultMessage(uid:uint = 0, bought:Boolean = false) : ExchangeBidHouseBuyResultMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.uid = 0;
-         this.bought = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeBidHouseBuyResultMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeBidHouseBuyResultMessage(output:IDataOutput) : void {
-         if(this.uid < 0)
-         {
-            throw new Error("Forbidden value (" + this.uid + ") on element uid.");
-         }
-         else
-         {
-            output.writeInt(this.uid);
-            output.writeBoolean(this.bought);
-            return;
-         }
+      public function serializeAs_ExchangeBidHouseBuyResultMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeBidHouseBuyResultMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeBidHouseBuyResultMessage(input:IDataInput) : void {
-         this.uid = input.readInt();
-         if(this.uid < 0)
-         {
-            throw new Error("Forbidden value (" + this.uid + ") on element of ExchangeBidHouseBuyResultMessage.uid.");
-         }
-         else
-         {
-            this.bought = input.readBoolean();
-            return;
-         }
+      public function deserializeAs_ExchangeBidHouseBuyResultMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

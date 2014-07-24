@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.logger.targets
    public class TargetsPreparator extends Object
    {
       
-      public function TargetsPreparator() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TargetsPreparator()
+      {
+         //Décompilation abandonné
       }
       
       protected static const sosTarget:SOSTarget = null;

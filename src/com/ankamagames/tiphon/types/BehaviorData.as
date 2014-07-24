@@ -5,13 +5,13 @@ package com.ankamagames.tiphon.types
    public class BehaviorData extends Object
    {
       
-      public function BehaviorData(animation:String, direction:int, parent:TiphonSprite) {
-         super();
-         this._animation = animation;
-         this._animationStartValue = animation;
-         this._parent = parent;
-         this._direction = direction;
-         this._directionStartValue = direction;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function BehaviorData(animation:String, direction:int, parent:TiphonSprite)
+      {
+         //Décompilation abandonné
       }
       
       private var _animation:String;
@@ -26,31 +26,34 @@ package com.ankamagames.tiphon.types
       
       public var lock:Boolean = false;
       
-      public function get animation() : String {
-         return this._animation;
+      public function get animation() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get direction() : int {
-         return this._direction;
+      public function get direction() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set animation(v:String) : void {
-         if(!this.lock)
-         {
-            this._animation = v;
-         }
+      public function set animation(v:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get animationStartValue() : String {
-         return this._animationStartValue;
+      public function get animationStartValue() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get directionStartValue() : int {
-         return this._directionStartValue;
+      public function get directionStartValue() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get parent() : TiphonSprite {
-         return this._parent;
+      public function get parent() : TiphonSprite
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,19 +5,23 @@ package com.ankamagames.dofus.logic.game.common.misc
    public interface IInventoryView
    {
       
-      function initialize(param1:Vector.<ItemWrapper>) : void;
+      {
+      //Décompilation abandonné
+      }
+      
+      function initialize(items:Vector.<ItemWrapper>) : void;
       
       function get name() : String;
       
       function get content() : Vector.<ItemWrapper>;
       
-      function addItem(param1:ItemWrapper, param2:int) : void;
+      function addItem(item:ItemWrapper, invisible:int) : void;
       
-      function removeItem(param1:ItemWrapper, param2:int) : void;
+      function removeItem(item:ItemWrapper, invisible:int) : void;
       
-      function modifyItem(param1:ItemWrapper, param2:ItemWrapper, param3:int) : void;
+      function modifyItem(item:ItemWrapper, oldItem:ItemWrapper, invisible:int) : void;
       
-      function isListening(param1:ItemWrapper) : Boolean;
+      function isListening(item:ItemWrapper) : Boolean;
       
       function updateView() : void;
       

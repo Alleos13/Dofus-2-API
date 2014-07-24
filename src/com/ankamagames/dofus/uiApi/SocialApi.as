@@ -30,333 +30,257 @@ package com.ankamagames.dofus.uiApi
    public class SocialApi extends Object implements IApi
    {
       
-      public function SocialApi() {
-         this._log = Log.getLogger(getQualifiedClassName(SocialApi));
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SocialApi()
+      {
+         //Décompilation abandonné
       }
       
       protected var _log:Logger;
       
       private var _module:UiModule;
       
-      public function set module(value:UiModule) : void {
-         this._module = value;
+      public function set module(value:UiModule) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get socialFrame() : SocialFrame {
-         return Kernel.getWorker().getFrame(SocialFrame) as SocialFrame;
+      public function get socialFrame() : SocialFrame
+      {
+         //Décompilation abandonné
       }
       
-      public function get allianceFrame() : AllianceFrame {
-         return Kernel.getWorker().getFrame(AllianceFrame) as AllianceFrame;
+      public function get allianceFrame() : AllianceFrame
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         this._module = null;
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getFriendsList() : Array {
-         var friend:FriendWrapper = null;
-         var fl:Array = new Array();
-         var friendsList:Array = this.socialFrame.friendsList;
-         for each(friend in friendsList)
-         {
-            fl.push(friend);
-         }
-         fl.sortOn("name",Array.CASEINSENSITIVE);
-         return fl;
+      public function getFriendsList() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function isFriend(playerName:String) : Boolean {
-         var friend:* = undefined;
-         var friendsList:Array = this.socialFrame.friendsList;
-         for each(friend in friendsList)
-         {
-            if(friend.playerName == playerName)
-            {
-               return true;
-            }
-         }
-         return false;
+      public function isFriend(playerName:String) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getEnemiesList() : Array {
-         var enemy:EnemyWrapper = null;
-         var el:Array = new Array();
-         for each(enemy in this.socialFrame.enemiesList)
-         {
-            el.push(enemy);
-         }
-         el.sortOn("name",Array.CASEINSENSITIVE);
-         return el;
+      public function getEnemiesList() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function isEnemy(playerName:String) : Boolean {
-         var enemy:* = undefined;
-         for each(enemy in this.socialFrame.enemiesList)
-         {
-            if(enemy.playerName == playerName)
-            {
-               return true;
-            }
-         }
-         return false;
+      public function isEnemy(playerName:String) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getIgnoredList() : Array {
-         var ignored:IgnoredWrapper = null;
-         var il:Array = new Array();
-         for each(ignored in this.socialFrame.ignoredList)
-         {
-            il.push(ignored);
-         }
-         il.sortOn("name",Array.CASEINSENSITIVE);
-         return il;
+      public function getIgnoredList() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function isIgnored(name:String, accountId:int = 0) : Boolean {
-         return this.socialFrame.isIgnored(name,accountId);
+      public function isIgnored(name:String, accountId:int = 0) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getAccountName(name:String) : String {
-         return name;
+      public function getAccountName(name:String) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function getWarnOnFriendConnec() : Boolean {
-         return this.socialFrame.warnFriendConnec;
+      public function getWarnOnFriendConnec() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getWarnOnMemberConnec() : Boolean {
-         return this.socialFrame.warnMemberConnec;
+      public function getWarnOnMemberConnec() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getWarnWhenFriendOrGuildMemberLvlUp() : Boolean {
-         return this.socialFrame.warnWhenFriendOrGuildMemberLvlUp;
+      public function getWarnWhenFriendOrGuildMemberLvlUp() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getWarnWhenFriendOrGuildMemberAchieve() : Boolean {
-         return this.socialFrame.warnWhenFriendOrGuildMemberAchieve;
+      public function getWarnWhenFriendOrGuildMemberAchieve() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getSpouse() : SpouseWrapper {
-         return this.socialFrame.spouse;
+      public function getSpouse() : SpouseWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function hasSpouse() : Boolean {
-         return this.socialFrame.hasSpouse;
+      public function hasSpouse() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getAllowedGuildEmblemSymbolCategories() : int {
-         var playerFrame:PlayedCharacterUpdatesFrame = Kernel.getWorker().getFrame(PlayedCharacterUpdatesFrame) as PlayedCharacterUpdatesFrame;
-         return playerFrame.guildEmblemSymbolCategories;
+      public function getAllowedGuildEmblemSymbolCategories() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function hasGuild() : Boolean {
-         return this.socialFrame.hasGuild;
+      public function hasGuild() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getGuild() : GuildWrapper {
-         return this.socialFrame.guild;
+      public function getGuild() : GuildWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function getGuildMembers() : Vector.<GuildMember> {
-         return this.socialFrame.guildmembers;
+      public function getGuildMembers() : Vector.<GuildMember>
+      {
+         //Décompilation abandonné
       }
       
-      public function getGuildRights() : Array {
-         return GuildWrapper.guildRights;
+      public function getGuildRights() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getGuildByid(id:int) : GuildFactSheetWrapper {
-         return this.socialFrame.getGuildById(id);
+      public function getGuildByid(id:int) : GuildFactSheetWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function hasGuildRight(pPlayerId:uint, pRightId:String) : Boolean {
-         var member:GuildMember = null;
-         var temporaryWrapper:GuildWrapper = null;
-         if(!this.socialFrame.hasGuild)
-         {
-            return false;
-         }
-         if(pPlayerId == PlayedCharacterManager.getInstance().id)
-         {
-            return this.socialFrame.guild.hasRight(pRightId);
-         }
-         for each(member in this.socialFrame.guildmembers)
-         {
-            if(member.id == pPlayerId)
-            {
-               temporaryWrapper = GuildWrapper.create(0,"",null,member.rights,true);
-               return temporaryWrapper.hasRight(pRightId);
-            }
-         }
-         return false;
+      public function hasGuildRight(pPlayerId:uint, pRightId:String) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getGuildHouses() : Object {
-         return this.socialFrame.guildHouses;
+      public function getGuildHouses() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function guildHousesUpdateNeeded() : Boolean {
-         return this.socialFrame.guildHousesUpdateNeeded;
+      public function guildHousesUpdateNeeded() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getGuildPaddocks() : Object {
-         return this.socialFrame.guildPaddocks;
+      public function getGuildPaddocks() : Object
+      {
+         //Décompilation abandonné
       }
       
-      public function getMaxGuildPaddocks() : int {
-         return this.socialFrame.maxGuildPaddocks;
+      public function getMaxGuildPaddocks() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function isGuildNameInvalid() : Boolean {
-         if(this.socialFrame.guild)
-         {
-            return this.socialFrame.guild.realGuildName == "#NONAME#";
-         }
-         return false;
+      public function isGuildNameInvalid() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getMaxCollectorCount() : uint {
-         return TaxCollectorsManager.getInstance().maxTaxCollectorsCount;
+      public function getMaxCollectorCount() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function getTaxCollectors() : Dictionary {
-         return TaxCollectorsManager.getInstance().taxCollectors;
+      public function getTaxCollectors() : Dictionary
+      {
+         //Décompilation abandonné
       }
       
-      public function getTaxCollector(id:int) : TaxCollectorWrapper {
-         return TaxCollectorsManager.getInstance().taxCollectors[id];
+      public function getTaxCollector(id:int) : TaxCollectorWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function getGuildFightingTaxCollectors() : Dictionary {
-         return TaxCollectorsManager.getInstance().guildTaxCollectorsFighters;
+      public function getGuildFightingTaxCollectors() : Dictionary
+      {
+         //Décompilation abandonné
       }
       
-      public function getGuildFightingTaxCollector(pFightId:uint) : SocialEntityInFightWrapper {
-         return TaxCollectorsManager.getInstance().guildTaxCollectorsFighters[pFightId];
+      public function getGuildFightingTaxCollector(pFightId:uint) : SocialEntityInFightWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function getAllFightingTaxCollectors() : Dictionary {
-         return TaxCollectorsManager.getInstance().allTaxCollectorsInPreFight;
+      public function getAllFightingTaxCollectors() : Dictionary
+      {
+         //Décompilation abandonné
       }
       
-      public function getAllFightingTaxCollector(pFightId:uint) : SocialEntityInFightWrapper {
-         return TaxCollectorsManager.getInstance().allTaxCollectorsInPreFight[pFightId];
+      public function getAllFightingTaxCollector(pFightId:uint) : SocialEntityInFightWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function isPlayerDefender(pType:int, pPlayerId:uint, pSocialFightId:int) : Boolean {
-         var seifw:SocialEntityInFightWrapper = null;
-         var defender:SocialFightersWrapper = null;
-         if(pType == 0)
-         {
-            seifw = TaxCollectorsManager.getInstance().guildTaxCollectorsFighters[pSocialFightId];
-            if(!seifw)
-            {
-               seifw = TaxCollectorsManager.getInstance().allTaxCollectorsInPreFight[pSocialFightId];
-            }
-         }
-         else if(pType == 1)
-         {
-            seifw = TaxCollectorsManager.getInstance().prismsFighters[pSocialFightId];
-         }
-         
-         if(seifw)
-         {
-            for each(defender in seifw.allyCharactersInformations)
-            {
-               if(defender.playerCharactersInformations.id == pPlayerId)
-               {
-                  return true;
-               }
-            }
-         }
-         return false;
+      public function isPlayerDefender(pType:int, pPlayerId:uint, pSocialFightId:int) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function hasAlliance() : Boolean {
-         return this.allianceFrame.hasAlliance;
+      public function hasAlliance() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getAlliance() : AllianceWrapper {
-         return this.allianceFrame.alliance;
+      public function getAlliance() : AllianceWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function getAllianceById(id:int) : AllianceWrapper {
-         return this.allianceFrame.getAllianceById(id);
+      public function getAllianceById(id:int) : AllianceWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function getAllianceGuilds() : Vector.<GuildFactSheetWrapper> {
-         return this.allianceFrame.alliance.guilds;
+      public function getAllianceGuilds() : Vector.<GuildFactSheetWrapper>
+      {
+         //Décompilation abandonné
       }
       
-      public function isAllianceNameInvalid() : Boolean {
-         if(this.allianceFrame.alliance)
-         {
-            return this.allianceFrame.alliance.realAllianceName == "#NONAME#";
-         }
-         return false;
+      public function isAllianceNameInvalid() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function isAllianceTagInvalid() : Boolean {
-         if(this.allianceFrame.alliance)
-         {
-            return this.allianceFrame.alliance.realAllianceTag == "#TAG#";
-         }
-         return false;
+      public function isAllianceTagInvalid() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getPrismSubAreaById(id:int) : PrismSubAreaWrapper {
-         return this.allianceFrame.getPrismSubAreaById(id);
+      public function getPrismSubAreaById(id:int) : PrismSubAreaWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function getFightingPrisms() : Dictionary {
-         return TaxCollectorsManager.getInstance().prismsFighters;
+      public function getFightingPrisms() : Dictionary
+      {
+         //Décompilation abandonné
       }
       
-      public function getFightingPrism(pFightId:uint) : SocialEntityInFightWrapper {
-         return TaxCollectorsManager.getInstance().prismsFighters[pFightId];
+      public function getFightingPrism(pFightId:uint) : SocialEntityInFightWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public function isPlayerPrismDefender(pPlayerId:uint, pSubAreaId:int) : Boolean {
-         var defender:SocialFightersWrapper = null;
-         var p:SocialEntityInFightWrapper = TaxCollectorsManager.getInstance().prismsFighters[pSubAreaId];
-         if(p)
-         {
-            for each(defender in p.allyCharactersInformations)
-            {
-               if(defender.playerCharactersInformations.id == pPlayerId)
-               {
-                  return true;
-               }
-            }
-         }
-         return false;
+      public function isPlayerPrismDefender(pPlayerId:uint, pSubAreaId:int) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function getChatSentence(timestamp:Number, fingerprint:String) : BasicChatSentence {
-         var channel:Array = null;
-         var sentence:BasicChatSentence = null;
-         var found:Boolean = false;
-         var se:BasicChatSentence = null;
-         var chatFrame:ChatFrame = Kernel.getWorker().getFrame(ChatFrame) as ChatFrame;
-         for each(channel in chatFrame.getMessages())
-         {
-            for each(sentence in channel)
-            {
-               if((sentence.fingerprint == fingerprint) && (sentence.timestamp == timestamp))
-               {
-                  se = sentence;
-                  found = true;
-                  break;
-               }
-            }
-            if(found)
-            {
-               break;
-            }
-         }
-         return se;
+      public function getChatSentence(timestamp:Number, fingerprint:String) : BasicChatSentence
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -15,99 +15,37 @@ package com.ankamagames.dofus.console.debug
    public class TiphonInstructionHandler extends Object implements ConsoleInstructionHandler
    {
       
-      public function TiphonInstructionHandler() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TiphonInstructionHandler()
+      {
+         //Décompilation abandonné
       }
       
       private static var _monsters:Dictionary;
       
       private static var _monsterNameList:Array;
       
-      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void {
-         var monsterName:String = null;
-         var aqcmsg:AdminQuietCommandMessage = null;
-         switch(cmd)
-         {
-            case "additem":
-               if(args.length != 0)
-               {
-                  console.output("need 1 parameter (item ID)");
-               }
-               (DofusEntities.getEntity(PlayedCharacterManager.getInstance().id) as TiphonSprite).look.addSkin(parseInt(args[0]));
-               break;
-            case "looklike":
-               if(!_monsters)
-               {
-                  this.parseMonster();
-               }
-               monsterName = args.join(" ").toLowerCase().split(" {npc}").join("").split(" {monster}").join("");
-               if(_monsters[monsterName])
-               {
-                  console.output("look like " + _monsters[monsterName]);
-                  aqcmsg = new AdminQuietCommandMessage();
-                  aqcmsg.initAdminQuietCommandMessage("look * " + _monsters[monsterName]);
-                  if(PlayerManager.getInstance().hasRights)
-                  {
-                     ConnectionsHandler.getConnection().send(aqcmsg);
-                  }
-               }
-               break;
-         }
+      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getHelp(cmd:String) : String {
-         switch(cmd)
-         {
-            case "looklike":
-               return "look a npc or monster, param is monser\'s or pnc\'s name, you can use autocompletion";
-            default:
-               return null;
-         }
+      public function getHelp(cmd:String) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array {
-         var result:Array = null;
-         var searchTerm:String = null;
-         var name:String = null;
-         switch(cmd)
-         {
-            case "looklike":
-               if(!_monsters)
-               {
-                  this.parseMonster();
-               }
-               result = [];
-               searchTerm = currentParams.join(" ").toLowerCase();
-               for each(name in _monsterNameList)
-               {
-                  if(name.indexOf(searchTerm) != -1)
-                  {
-                     result.push(name);
-                  }
-               }
-               return result;
-            default:
-               return [];
-         }
+      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array
+      {
+         //Décompilation abandonné
       }
       
-      private function parseMonster() : void {
-         var monster:Monster = null;
-         var npc:Npc = null;
-         _monsters = new Dictionary();
-         _monsterNameList = [];
-         var monsters:Array = Monster.getMonsters();
-         for each(monster in monsters)
-         {
-            _monsterNameList.push(monster.name.toLowerCase() + " {monster}");
-            _monsters[monster.name.toLowerCase()] = monster.look;
-         }
-         monsters = Npc.getNpcs();
-         for each(npc in monsters)
-         {
-            _monsterNameList.push(npc.name.toLowerCase() + " {npc}");
-            _monsters[npc.name.toLowerCase()] = npc.look;
-         }
+      private function parseMonster() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

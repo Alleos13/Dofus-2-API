@@ -5,16 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.chat
    public class SaveMessageAction extends Object implements Action
    {
       
-      public function SaveMessageAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(msg:String, channel:uint, timestamp:Number) : SaveMessageAction {
-         var a:SaveMessageAction = new SaveMessageAction();
-         a.content = msg;
-         a.channel = channel;
-         a.timestamp = timestamp;
-         return a;
+      public function SaveMessageAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(msg:String, channel:uint, timestamp:Number) : SaveMessageAction
+      {
+         //Décompilation abandonné
       }
       
       public var content:String;

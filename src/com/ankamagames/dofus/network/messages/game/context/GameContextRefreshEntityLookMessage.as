@@ -10,67 +10,71 @@ package com.ankamagames.dofus.network.messages.game.context
    public class GameContextRefreshEntityLookMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameContextRefreshEntityLookMessage() {
-         this.look = new EntityLook();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameContextRefreshEntityLookMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5637;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var id:int = 0;
       
       public var look:EntityLook;
       
-      override public function getMessageId() : uint {
-         return 5637;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameContextRefreshEntityLookMessage(id:int = 0, look:EntityLook = null) : GameContextRefreshEntityLookMessage {
-         this.id = id;
-         this.look = look;
-         this._isInitialized = true;
-         return this;
+      public function initGameContextRefreshEntityLookMessage(id:int = 0, look:EntityLook = null) : GameContextRefreshEntityLookMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.id = 0;
-         this.look = new EntityLook();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameContextRefreshEntityLookMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameContextRefreshEntityLookMessage(output:IDataOutput) : void {
-         output.writeInt(this.id);
-         this.look.serializeAs_EntityLook(output);
+      public function serializeAs_GameContextRefreshEntityLookMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameContextRefreshEntityLookMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameContextRefreshEntityLookMessage(input:IDataInput) : void {
-         this.id = input.readInt();
-         this.look = new EntityLook();
-         this.look.deserialize(input);
+      public function deserializeAs_GameContextRefreshEntityLookMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

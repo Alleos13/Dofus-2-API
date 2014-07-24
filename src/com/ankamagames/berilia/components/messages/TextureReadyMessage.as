@@ -5,15 +5,20 @@ package com.ankamagames.berilia.components.messages
    public class TextureReadyMessage extends ComponentMessage
    {
       
-      public function TextureReadyMessage(texture:Texture) {
-         super(texture);
-         this._texture = texture;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TextureReadyMessage(texture:Texture)
+      {
+         //Décompilation abandonné
       }
       
       private var _texture:Texture;
       
-      public function get texture() : Texture {
-         return this._texture;
+      public function get texture() : Texture
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -9,8 +9,13 @@ package com.ankamagames.dofus.datacenter.quest.objectives
    public class QuestObjectiveBringItemToNpc extends QuestObjective implements IDataCenter
    {
       
-      public function QuestObjectiveBringItemToNpc() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function QuestObjectiveBringItemToNpc()
+      {
+         //Décompilation abandonné
       }
       
       private var _npc:Npc;
@@ -19,52 +24,34 @@ package com.ankamagames.dofus.datacenter.quest.objectives
       
       private var _text:String;
       
-      public function get npcId() : uint {
-         if(!this.parameters)
-         {
-            return 0;
-         }
-         return this.parameters[0];
+      public function get npcId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get npc() : Npc {
-         if(!this._npc)
-         {
-            this._npc = Npc.getNpcById(this.npcId);
-         }
-         return this._npc;
+      public function get npc() : Npc
+      {
+         //Décompilation abandonné
       }
       
-      public function get itemId() : uint {
-         if(!this.parameters)
-         {
-            return 0;
-         }
-         return this.parameters[1];
+      public function get itemId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get item() : Item {
-         if(!this._item)
-         {
-            this._item = Item.getItemById(this.itemId);
-         }
-         return this._item;
+      public function get item() : Item
+      {
+         //Décompilation abandonné
       }
       
-      public function get quantity() : uint {
-         if(!this.parameters)
-         {
-            return 0;
-         }
-         return this.parameters[2];
+      public function get quantity() : uint
+      {
+         //Décompilation abandonné
       }
       
-      override public function get text() : String {
-         if(!this._text)
-         {
-            this._text = PatternDecoder.getDescription(this.type.name,[this.npc.name,this.item.name,this.quantity]);
-         }
-         return this._text;
+      override public function get text() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

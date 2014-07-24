@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class ObjectErrorEnum extends Object
    {
       
-      public function ObjectErrorEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ObjectErrorEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const INVENTORY_FULL:int = 1;

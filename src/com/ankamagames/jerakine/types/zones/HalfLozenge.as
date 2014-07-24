@@ -10,11 +10,13 @@ package com.ankamagames.jerakine.types.zones
    public class HalfLozenge extends Object implements IZone
    {
       
-      public function HalfLozenge(minRadius:uint, nRadius:uint, dataMapProvider:IDataMapProvider) {
-         super();
-         this.radius = nRadius;
-         this._minRadius = minRadius;
-         this._dataMapProvider = dataMapProvider;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HalfLozenge(minRadius:uint, nRadius:uint, dataMapProvider:IDataMapProvider)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -27,79 +29,49 @@ package com.ankamagames.jerakine.types.zones
       
       private var _dataMapProvider:IDataMapProvider;
       
-      public function get radius() : uint {
-         return this._radius;
+      public function get radius() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set radius(n:uint) : void {
-         this._radius = n;
+      public function set radius(n:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function set minRadius(r:uint) : void {
-         this._minRadius = r;
+      public function set minRadius(r:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get minRadius() : uint {
-         return this._minRadius;
+      public function get minRadius() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function set direction(d:uint) : void {
-         this._direction = d;
+      public function set direction(d:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get direction() : uint {
-         return this._direction;
+      public function get direction() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get surface() : uint {
-         return this._radius * 2 + 1;
+      public function get surface() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function getCells(cellId:uint = 0) : Vector.<uint> {
-         var i:* = 0;
-         var j:* = 0;
-         var aCells:Vector.<uint> = new Vector.<uint>();
-         var origin:MapPoint = MapPoint.fromCellId(cellId);
-         var x:int = origin.x;
-         var y:int = origin.y;
-         if(this._minRadius == 0)
-         {
-            aCells.push(cellId);
-         }
-         var inc:int = 1;
-         var step:uint = 0;
-         i = 1;
-         while(i <= this._radius)
-         {
-            switch(this._direction)
-            {
-               case DirectionsEnum.UP_LEFT:
-                  this.addCell(x + i,y + i,aCells);
-                  this.addCell(x + i,y - i,aCells);
-                  break;
-               case DirectionsEnum.UP_RIGHT:
-                  this.addCell(x - i,y - i,aCells);
-                  this.addCell(x + i,y - i,aCells);
-                  break;
-               case DirectionsEnum.DOWN_RIGHT:
-                  this.addCell(x - i,y + i,aCells);
-                  this.addCell(x - i,y - i,aCells);
-                  break;
-               case DirectionsEnum.DOWN_LEFT:
-                  this.addCell(x - i,y + i,aCells);
-                  this.addCell(x + i,y + i,aCells);
-                  break;
-            }
-            i++;
-         }
-         return aCells;
+      public function getCells(cellId:uint = 0) : Vector.<uint>
+      {
+         //Décompilation abandonné
       }
       
-      private function addCell(x:int, y:int, cellMap:Vector.<uint>) : void {
-         if((this._dataMapProvider == null) || (this._dataMapProvider.pointMov(x,y)))
-         {
-            cellMap.push(MapPoint.fromCoords(x,y).cellId);
-         }
+      private function addCell(x:int, y:int, cellMap:Vector.<uint>) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

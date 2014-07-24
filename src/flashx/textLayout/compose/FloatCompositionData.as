@@ -7,19 +7,13 @@ package flashx.textLayout.compose
    public class FloatCompositionData extends Object
    {
       
-      public function FloatCompositionData(param1:int, param2:DisplayObject, param3:String, param4:Number, param5:Number, param6:Number, param7:Matrix, param8:Number, param9:Number, param10:int, param11:DisplayObjectContainer) {
-         super();
-         this.absolutePosition = param1;
-         this.graphic = param2;
-         this.floatType = param3;
-         this.x = param4;
-         this.y = param5;
-         this.alpha = param6;
-         this.matrix = param7;
-         this.depth = param8;
-         this.knockOutWidth = param9;
-         this.columnIndex = param10;
-         this.parent = param11;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FloatCompositionData(absolutePosition:int, graphic:DisplayObject, floatType:String, x:Number, y:Number, alpha:Number, matrix:Matrix, depth:Number, knockOutWidth:Number, columnIndex:int, parent:DisplayObjectContainer)
+      {
+         //Décompilation abandonné
       }
       
       public var graphic:DisplayObject;

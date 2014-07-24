@@ -9,81 +9,71 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.spell
    public class SpellUpgradeSuccessMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function SpellUpgradeSuccessMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SpellUpgradeSuccessMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 1201;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var spellId:int = 0;
       
       public var spellLevel:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 1201;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initSpellUpgradeSuccessMessage(spellId:int = 0, spellLevel:uint = 0) : SpellUpgradeSuccessMessage {
-         this.spellId = spellId;
-         this.spellLevel = spellLevel;
-         this._isInitialized = true;
-         return this;
+      public function initSpellUpgradeSuccessMessage(spellId:int = 0, spellLevel:uint = 0) : SpellUpgradeSuccessMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.spellId = 0;
-         this.spellLevel = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_SpellUpgradeSuccessMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_SpellUpgradeSuccessMessage(output:IDataOutput) : void {
-         output.writeInt(this.spellId);
-         if((this.spellLevel < 1) || (this.spellLevel > 6))
-         {
-            throw new Error("Forbidden value (" + this.spellLevel + ") on element spellLevel.");
-         }
-         else
-         {
-            output.writeByte(this.spellLevel);
-            return;
-         }
+      public function serializeAs_SpellUpgradeSuccessMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_SpellUpgradeSuccessMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_SpellUpgradeSuccessMessage(input:IDataInput) : void {
-         this.spellId = input.readInt();
-         this.spellLevel = input.readByte();
-         if((this.spellLevel < 1) || (this.spellLevel > 6))
-         {
-            throw new Error("Forbidden value (" + this.spellLevel + ") on element of SpellUpgradeSuccessMessage.spellLevel.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_SpellUpgradeSuccessMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

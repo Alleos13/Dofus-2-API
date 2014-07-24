@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class CloseInventoryAction extends Object implements Action
    {
       
-      public function CloseInventoryAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : CloseInventoryAction {
-         var a:CloseInventoryAction = new CloseInventoryAction();
-         return a;
+      public function CloseInventoryAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : CloseInventoryAction
+      {
+         //Décompilation abandonné
       }
    }
 }

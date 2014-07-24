@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.spectator
    public class GameFightSpectatePlayerRequestAction extends Object implements Action
    {
       
-      public function GameFightSpectatePlayerRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(playerId:uint) : GameFightSpectatePlayerRequestAction {
-         var a:GameFightSpectatePlayerRequestAction = new GameFightSpectatePlayerRequestAction();
-         a.playerId = playerId;
-         return a;
+      public function GameFightSpectatePlayerRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(playerId:uint) : GameFightSpectatePlayerRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var playerId:uint;

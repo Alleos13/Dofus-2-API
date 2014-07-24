@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.chat
    public class ChannelEnablingAction extends Object implements Action
    {
       
-      public function ChannelEnablingAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(channel:uint, enable:Boolean = true) : ChannelEnablingAction {
-         var a:ChannelEnablingAction = new ChannelEnablingAction();
-         a.channel = channel;
-         a.enable = enable;
-         return a;
+      public function ChannelEnablingAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(channel:uint, enable:Boolean = true) : ChannelEnablingAction
+      {
+         //Décompilation abandonné
       }
       
       public var channel:uint;

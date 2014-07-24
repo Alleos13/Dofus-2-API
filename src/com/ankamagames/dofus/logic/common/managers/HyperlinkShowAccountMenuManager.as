@@ -6,17 +6,18 @@ package com.ankamagames.dofus.logic.common.managers
    public class HyperlinkShowAccountMenuManager extends Object
    {
       
-      public function HyperlinkShowAccountMenuManager() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function showAccountMenu(accountName:String, accountId:int) : void {
-         var _modContextMenu:Object = UiModuleManager.getInstance().getModule("Ankama_ContextMenu").mainClass;
-         _modContextMenu.createContextMenu(MenusFactory.create(
-            {
-               "name":accountName,
-               "id":accountId
-            },"account"));
+      public function HyperlinkShowAccountMenuManager()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function showAccountMenu(accountName:String, accountId:int) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

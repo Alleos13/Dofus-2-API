@@ -21,16 +21,13 @@ package com.ankamagames.dofus.types.entities
    public class Projectile extends TiphonSprite implements IDisplayable, IMovable, IEntity
    {
       
-      public function Projectile(nId:int, look:TiphonEntityLook, postInit:Boolean = false, startPlayingOnlyWhenDisplayed:Boolean = true) {
-         super(look);
-         this.startPlayingOnlyWhenDisplayed = startPlayingOnlyWhenDisplayed;
-         this.id = nId;
-         if(!postInit)
-         {
-            this.init();
-         }
-         mouseChildren = false;
-         mouseEnabled = false;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Projectile(nId:int, look:TiphonEntityLook, postInit:Boolean = false, startPlayingOnlyWhenDisplayed:Boolean = true)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
@@ -45,101 +42,106 @@ package com.ankamagames.dofus.types.entities
       
       private var _movementBehavior:IMovementBehavior;
       
-      public function get displayBehaviors() : IDisplayBehavior {
-         return this._displayBehavior;
+      public function get displayBehaviors() : IDisplayBehavior
+      {
+         //Décompilation abandonné
       }
       
-      public function set displayBehaviors(oValue:IDisplayBehavior) : void {
-         this._displayBehavior = oValue;
+      public function set displayBehaviors(oValue:IDisplayBehavior) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get movementBehavior() : IMovementBehavior {
-         return this._movementBehavior;
+      public function get movementBehavior() : IMovementBehavior
+      {
+         //Décompilation abandonné
       }
       
-      public function set movementBehavior(oValue:IMovementBehavior) : void {
-         this._movementBehavior = oValue;
+      public function set movementBehavior(oValue:IMovementBehavior) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get id() : int {
-         return this._id;
+      public function get id() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set id(nValue:int) : void {
-         this._id = nValue;
+      public function set id(nValue:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get position() : MapPoint {
-         return this._position;
+      public function get position() : MapPoint
+      {
+         //Décompilation abandonné
       }
       
-      public function set position(oValue:MapPoint) : void {
-         this._position = oValue;
+      public function set position(oValue:MapPoint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get isMoving() : Boolean {
-         return this._movementBehavior.isMoving(this);
+      public function get isMoving() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get absoluteBounds() : IRectangle {
-         return this._displayBehavior.getAbsoluteBounds(this);
+      public function get absoluteBounds() : IRectangle
+      {
+         //Décompilation abandonné
       }
       
-      public function get displayed() : Boolean {
-         return this._displayed;
+      public function get displayed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var startPlayingOnlyWhenDisplayed:Boolean;
       
-      public function init(direction:int = -1) : void {
-         this._displayBehavior = AtouinDisplayBehavior.getInstance();
-         this._movementBehavior = ParableMovementBehavior.getInstance();
-         setDirection(direction == -1?DirectionsEnum.RIGHT:direction);
-         if((!this.startPlayingOnlyWhenDisplayed) || (parent))
-         {
-            this.setAnim();
-         }
-         else
-         {
-            addEventListener(Event.ADDED_TO_STAGE,this.onProjectileAdded);
-         }
+      public function init(direction:int = -1) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function display(strata:uint = 0) : void {
-         this._displayBehavior.display(this,strata);
-         this._displayed = true;
+      public function display(strata:uint = 0) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function remove() : void {
-         this._displayed = false;
-         this._displayBehavior.remove(this);
-         clearAnimation();
+      public function remove() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function destroy() : void {
-         this.remove();
-         super.destroy();
+      override public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function move(path:MovementPath, callback:Function = null) : void {
-         this._movementBehavior.move(this,path,callback);
+      public function move(path:MovementPath, callback:Function = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function jump(newPosition:MapPoint) : void {
-         this._movementBehavior.jump(this,newPosition);
+      public function jump(newPosition:MapPoint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function stop(forceStop:Boolean = false) : void {
-         this._movementBehavior.stop(this);
+      public function stop(forceStop:Boolean = false) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function setAnim() : void {
-         setAnimation("FX");
+      private function setAnim() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function onProjectileAdded(e:Event) : void {
-         removeEventListener(Event.ADDED_TO_STAGE,this.onProjectileAdded);
-         this.setAnim();
+      private function onProjectileAdded(e:Event) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

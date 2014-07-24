@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.quest
    public class QuestInfosRequestAction extends Object implements Action
    {
       
-      public function QuestInfosRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(questId:int) : QuestInfosRequestAction {
-         var a:QuestInfosRequestAction = new QuestInfosRequestAction();
-         a.questId = questId;
-         return a;
+      public function QuestInfosRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(questId:int) : QuestInfosRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var questId:int;

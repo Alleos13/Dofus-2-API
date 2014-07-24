@@ -6,18 +6,25 @@ package com.ankamagames.dofus.datacenter.sounds
    public class SoundAnimation extends Object implements IDataCenter
    {
       
-      public function SoundAnimation() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SoundAnimation()
+      {
+         //Décompilation abandonné
       }
       
       public static var MODULE:String = "SoundAnimations";
       
-      public static function getSoundAnimationById(id:uint) : SoundAnimation {
-         return GameData.getObject(MODULE,id) as SoundAnimation;
+      public static function getSoundAnimationById(id:uint) : SoundAnimation
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSoundAnimations() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getSoundAnimations() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;

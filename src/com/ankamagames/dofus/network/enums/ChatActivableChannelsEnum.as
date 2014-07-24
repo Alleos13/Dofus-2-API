@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class ChatActivableChannelsEnum extends Object
    {
       
-      public function ChatActivableChannelsEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ChatActivableChannelsEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const CHANNEL_GLOBAL:uint = 0;

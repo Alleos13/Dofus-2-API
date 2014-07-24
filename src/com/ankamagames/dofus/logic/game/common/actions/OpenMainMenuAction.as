@@ -5,12 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class OpenMainMenuAction extends Object implements Action
    {
       
-      public function OpenMainMenuAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : OpenMainMenuAction {
-         return new OpenMainMenuAction();
+      public function OpenMainMenuAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : OpenMainMenuAction
+      {
+         //Décompilation abandonné
       }
    }
 }

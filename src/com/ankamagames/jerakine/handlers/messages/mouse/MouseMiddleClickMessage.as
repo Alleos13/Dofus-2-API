@@ -6,16 +6,18 @@ package com.ankamagames.jerakine.handlers.messages.mouse
    public class MouseMiddleClickMessage extends MouseMessage
    {
       
-      public function MouseMiddleClickMessage() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(target:InteractiveObject, mouseEvent:MouseEvent, instance:MouseMessage = null) : MouseMiddleClickMessage {
-         if(!instance)
-         {
-            instance = new MouseMiddleClickMessage();
-         }
-         return MouseMessage.create(target,mouseEvent,instance) as MouseMiddleClickMessage;
+      public function MouseMiddleClickMessage()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(target:InteractiveObject, mouseEvent:MouseEvent, instance:MouseMessage = null) : MouseMiddleClickMessage
+      {
+         //Décompilation abandonné
       }
    }
 }

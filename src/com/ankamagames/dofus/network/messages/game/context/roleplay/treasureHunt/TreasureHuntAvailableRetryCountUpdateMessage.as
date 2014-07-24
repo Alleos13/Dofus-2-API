@@ -9,73 +9,71 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.treasureHun
    public class TreasureHuntAvailableRetryCountUpdateMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function TreasureHuntAvailableRetryCountUpdateMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TreasureHuntAvailableRetryCountUpdateMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6491;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var questType:uint = 0;
       
       public var availableRetryCount:int = 0;
       
-      override public function getMessageId() : uint {
-         return 6491;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initTreasureHuntAvailableRetryCountUpdateMessage(questType:uint = 0, availableRetryCount:int = 0) : TreasureHuntAvailableRetryCountUpdateMessage {
-         this.questType = questType;
-         this.availableRetryCount = availableRetryCount;
-         this._isInitialized = true;
-         return this;
+      public function initTreasureHuntAvailableRetryCountUpdateMessage(questType:uint = 0, availableRetryCount:int = 0) : TreasureHuntAvailableRetryCountUpdateMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.questType = 0;
-         this.availableRetryCount = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TreasureHuntAvailableRetryCountUpdateMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_TreasureHuntAvailableRetryCountUpdateMessage(output:IDataOutput) : void {
-         output.writeByte(this.questType);
-         output.writeInt(this.availableRetryCount);
+      public function serializeAs_TreasureHuntAvailableRetryCountUpdateMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TreasureHuntAvailableRetryCountUpdateMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_TreasureHuntAvailableRetryCountUpdateMessage(input:IDataInput) : void {
-         this.questType = input.readByte();
-         if(this.questType < 0)
-         {
-            throw new Error("Forbidden value (" + this.questType + ") on element of TreasureHuntAvailableRetryCountUpdateMessage.questType.");
-         }
-         else
-         {
-            this.availableRetryCount = input.readInt();
-            return;
-         }
+      public function deserializeAs_TreasureHuntAvailableRetryCountUpdateMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

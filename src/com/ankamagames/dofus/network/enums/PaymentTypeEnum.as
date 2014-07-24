@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class PaymentTypeEnum extends Object
    {
       
-      public function PaymentTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PaymentTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const PAYMENT_ON_SUCCESS_ONLY:int = 0;

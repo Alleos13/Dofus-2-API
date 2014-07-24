@@ -3,8 +3,13 @@ package com.ankamagames.atouin.resources
    public class AtouinResourceType extends Object
    {
       
-      public function AtouinResourceType() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AtouinResourceType()
+      {
+         //Décompilation abandonné
       }
       
       public static const RESOURCE_ELEMENTS:uint = 256;

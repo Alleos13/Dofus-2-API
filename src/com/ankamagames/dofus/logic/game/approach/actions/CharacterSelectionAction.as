@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.approach.actions
    public class CharacterSelectionAction extends Object implements Action
    {
       
-      public function CharacterSelectionAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(characterId:int, btutoriel:Boolean) : CharacterSelectionAction {
-         var a:CharacterSelectionAction = new CharacterSelectionAction();
-         a.characterId = characterId;
-         a.btutoriel = btutoriel;
-         return a;
+      public function CharacterSelectionAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(characterId:int, btutoriel:Boolean) : CharacterSelectionAction
+      {
+         //Décompilation abandonné
       }
       
       public var characterId:int;

@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.social
    public class FriendGuildSetWarnOnAchievementCompleteAction extends Object implements Action
    {
       
-      public function FriendGuildSetWarnOnAchievementCompleteAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(enable:Boolean) : FriendGuildSetWarnOnAchievementCompleteAction {
-         var a:FriendGuildSetWarnOnAchievementCompleteAction = new FriendGuildSetWarnOnAchievementCompleteAction();
-         a.enable = enable;
-         return a;
+      public function FriendGuildSetWarnOnAchievementCompleteAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(enable:Boolean) : FriendGuildSetWarnOnAchievementCompleteAction
+      {
+         //Décompilation abandonné
       }
       
       public var enable:Boolean;

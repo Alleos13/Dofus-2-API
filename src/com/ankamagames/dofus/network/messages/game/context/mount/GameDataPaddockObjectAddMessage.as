@@ -10,61 +10,69 @@ package com.ankamagames.dofus.network.messages.game.context.mount
    public class GameDataPaddockObjectAddMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameDataPaddockObjectAddMessage() {
-         this.paddockItemDescription = new PaddockItem();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameDataPaddockObjectAddMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5990;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var paddockItemDescription:PaddockItem;
       
-      override public function getMessageId() : uint {
-         return 5990;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameDataPaddockObjectAddMessage(paddockItemDescription:PaddockItem = null) : GameDataPaddockObjectAddMessage {
-         this.paddockItemDescription = paddockItemDescription;
-         this._isInitialized = true;
-         return this;
+      public function initGameDataPaddockObjectAddMessage(paddockItemDescription:PaddockItem = null) : GameDataPaddockObjectAddMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.paddockItemDescription = new PaddockItem();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameDataPaddockObjectAddMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameDataPaddockObjectAddMessage(output:IDataOutput) : void {
-         this.paddockItemDescription.serializeAs_PaddockItem(output);
+      public function serializeAs_GameDataPaddockObjectAddMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameDataPaddockObjectAddMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameDataPaddockObjectAddMessage(input:IDataInput) : void {
-         this.paddockItemDescription = new PaddockItem();
-         this.paddockItemDescription.deserialize(input);
+      public function deserializeAs_GameDataPaddockObjectAddMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

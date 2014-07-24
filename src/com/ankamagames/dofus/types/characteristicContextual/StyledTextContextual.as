@@ -6,9 +6,13 @@ package com.ankamagames.dofus.types.characteristicContextual
    public class StyledTextContextual extends CharacteristicContextual
    {
       
-      public function StyledTextContextual(value:String, style:uint) {
-         super();
-         this.init(value,style);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StyledTextContextual(value:String, style:uint)
+      {
+         //Décompilation abandonné
       }
       
       private static const STYLE_0_NUMBER_0:Class;
@@ -107,37 +111,9 @@ package com.ankamagames.dofus.types.characteristicContextual
       
       private static const STYLE_3_NUMBER_PLUS:Class;
       
-      private function init(value:String, style:uint) : void {
-         var last:DisplayObject = null;
-         var char:String = null;
-         var n:Sprite = null;
-         var i:uint = 0;
-         while(i < value.length)
-         {
-            char = value.charAt(i);
-            switch(char)
-            {
-               case "-":
-                  char = "MOINS";
-                  break;
-               case "+":
-                  char = "PLUS";
-                  break;
-            }
-            n = new StyledTextContextual["STYLE_" + style + "_NUMBER_" + char]() as Sprite;
-            n.scaleX = 0.7;
-            n.scaleY = 0.7;
-            if(last)
-            {
-               n.x = last.x + last.width + 5;
-            }
-            addChild(n);
-            last = n;
-            i++;
-         }
-         mouseEnabled = false;
-         mouseChildren = false;
-         cacheAsBitmap = true;
+      private function init(value:String, style:uint) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

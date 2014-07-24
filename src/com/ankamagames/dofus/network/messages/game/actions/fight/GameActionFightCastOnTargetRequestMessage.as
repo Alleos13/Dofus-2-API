@@ -9,81 +9,71 @@ package com.ankamagames.dofus.network.messages.game.actions.fight
    public class GameActionFightCastOnTargetRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function GameActionFightCastOnTargetRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameActionFightCastOnTargetRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6330;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var spellId:uint = 0;
       
       public var targetId:int = 0;
       
-      override public function getMessageId() : uint {
-         return 6330;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameActionFightCastOnTargetRequestMessage(spellId:uint = 0, targetId:int = 0) : GameActionFightCastOnTargetRequestMessage {
-         this.spellId = spellId;
-         this.targetId = targetId;
-         this._isInitialized = true;
-         return this;
+      public function initGameActionFightCastOnTargetRequestMessage(spellId:uint = 0, targetId:int = 0) : GameActionFightCastOnTargetRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.spellId = 0;
-         this.targetId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameActionFightCastOnTargetRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameActionFightCastOnTargetRequestMessage(output:IDataOutput) : void {
-         if(this.spellId < 0)
-         {
-            throw new Error("Forbidden value (" + this.spellId + ") on element spellId.");
-         }
-         else
-         {
-            output.writeShort(this.spellId);
-            output.writeInt(this.targetId);
-            return;
-         }
+      public function serializeAs_GameActionFightCastOnTargetRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameActionFightCastOnTargetRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameActionFightCastOnTargetRequestMessage(input:IDataInput) : void {
-         this.spellId = input.readShort();
-         if(this.spellId < 0)
-         {
-            throw new Error("Forbidden value (" + this.spellId + ") on element of GameActionFightCastOnTargetRequestMessage.spellId.");
-         }
-         else
-         {
-            this.targetId = input.readInt();
-            return;
-         }
+      public function deserializeAs_GameActionFightCastOnTargetRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

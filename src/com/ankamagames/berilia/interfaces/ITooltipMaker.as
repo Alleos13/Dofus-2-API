@@ -3,6 +3,10 @@ package com.ankamagames.berilia.interfaces
    public interface ITooltipMaker
    {
       
-      function createTooltip(param1:*, param2:Object) : Object;
+      {
+      //Décompilation abandonné
+      }
+      
+      function createTooltip(data:*, param:Object) : Object;
    }
 }

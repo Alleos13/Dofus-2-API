@@ -5,6 +5,10 @@ package com.ankamagames.berilia
    public interface UIComponent extends MessageHandler
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function remove() : void;
    }
 }

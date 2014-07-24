@@ -5,14 +5,23 @@ package com.ankamagames.jerakine.scrambling
    public class ScramblableElement extends Object implements Scramblable
    {
       
-      public function ScramblableElement() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function scramble(data:ByteArray) : void {
+      public function ScramblableElement()
+      {
+         //Décompilation abandonné
       }
       
-      public function unscramble(data:ByteArray) : void {
+      public function scramble(data:ByteArray) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public function unscramble(data:ByteArray) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

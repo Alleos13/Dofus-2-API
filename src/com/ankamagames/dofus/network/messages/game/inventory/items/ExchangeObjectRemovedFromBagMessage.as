@@ -9,79 +9,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
    public class ExchangeObjectRemovedFromBagMessage extends ExchangeObjectMessage implements INetworkMessage
    {
       
-      public function ExchangeObjectRemovedFromBagMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeObjectRemovedFromBagMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6010;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var objectUID:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 6010;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeObjectRemovedFromBagMessage(remote:Boolean = false, objectUID:uint = 0) : ExchangeObjectRemovedFromBagMessage {
-         super.initExchangeObjectMessage(remote);
-         this.objectUID = objectUID;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeObjectRemovedFromBagMessage(remote:Boolean = false, objectUID:uint = 0) : ExchangeObjectRemovedFromBagMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.objectUID = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeObjectRemovedFromBagMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeObjectRemovedFromBagMessage(output:IDataOutput) : void {
-         super.serializeAs_ExchangeObjectMessage(output);
-         if(this.objectUID < 0)
-         {
-            throw new Error("Forbidden value (" + this.objectUID + ") on element objectUID.");
-         }
-         else
-         {
-            output.writeInt(this.objectUID);
-            return;
-         }
+      public function serializeAs_ExchangeObjectRemovedFromBagMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeObjectRemovedFromBagMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeObjectRemovedFromBagMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.objectUID = input.readInt();
-         if(this.objectUID < 0)
-         {
-            throw new Error("Forbidden value (" + this.objectUID + ") on element of ExchangeObjectRemovedFromBagMessage.objectUID.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_ExchangeObjectRemovedFromBagMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

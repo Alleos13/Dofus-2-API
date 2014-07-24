@@ -7,22 +7,23 @@ package com.ankamagames.dofus.logic.common.managers
    public class HyperlinkShowSubArea extends Object
    {
       
-      public function HyperlinkShowSubArea() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function showSubArea(pSubAreaId:int) : void {
-         var subArea:SubArea = SubArea.getSubAreaById(pSubAreaId);
-         if(subArea)
-         {
-            KernelEventsManager.getInstance().processCallback(HookList.OpenCartographyPopup,subArea.name,subArea.id,null,null);
-         }
+      public function HyperlinkShowSubArea()
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSubAreaName(pSubAreaId:int) : String {
-         var subArea:SubArea = SubArea.getSubAreaById(pSubAreaId);
-         var subAreaName:String = subArea?"[" + subArea.name + "]":"";
-         return subAreaName;
+      public static function showSubArea(pSubAreaId:int) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function getSubAreaName(pSubAreaId:int) : String
+      {
+         //Décompilation abandonné
       }
    }
 }

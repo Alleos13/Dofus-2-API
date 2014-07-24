@@ -7,16 +7,18 @@ package com.ankamagames.dofus.logic.game.common.actions
    public class InteractiveElementActivationAction extends Object implements Action
    {
       
-      public function InteractiveElementActivationAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(ie:InteractiveElement, position:MapPoint, skillInstanceId:uint) : InteractiveElementActivationAction {
-         var a:InteractiveElementActivationAction = new InteractiveElementActivationAction();
-         a.interactiveElement = ie;
-         a.position = position;
-         a.skillInstanceId = skillInstanceId;
-         return a;
+      public function InteractiveElementActivationAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(ie:InteractiveElement, position:MapPoint, skillInstanceId:uint) : InteractiveElementActivationAction
+      {
+         //Décompilation abandonné
       }
       
       public var interactiveElement:InteractiveElement;

@@ -3,19 +3,25 @@ package flashx.textLayout.property
    public class EnumPropertyHandler extends PropertyHandler
    {
       
-      public function EnumPropertyHandler(param1:Array) {
-         super();
-         this._range = PropertyHandler.createRange(param1);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EnumPropertyHandler(propArray:Array)
+      {
+         //Décompilation abandonné
       }
       
       private var _range:Object;
       
-      public function get range() : Object {
-         return Property.shallowCopy(this._range);
+      public function get range() : Object
+      {
+         //Décompilation abandonné
       }
       
-      override public function owningHandlerCheck(param1:*) : * {
-         return this._range.hasOwnProperty(param1)?param1:undefined;
+      override public function owningHandlerCheck(newVal:*) : *
+      {
+         //Décompilation abandonné
       }
    }
 }

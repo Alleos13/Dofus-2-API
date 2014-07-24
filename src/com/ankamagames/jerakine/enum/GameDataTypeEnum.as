@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.enum
    public class GameDataTypeEnum extends Object
    {
       
-      public function GameDataTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameDataTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const INT:int = -1;

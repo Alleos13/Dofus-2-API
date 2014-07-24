@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.party
    public class ArenaRegisterAction extends Object implements Action
    {
       
-      public function ArenaRegisterAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(fightTypeId:uint) : ArenaRegisterAction {
-         var a:ArenaRegisterAction = new ArenaRegisterAction();
-         a.fightTypeId = fightTypeId;
-         return a;
+      public function ArenaRegisterAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(fightTypeId:uint) : ArenaRegisterAction
+      {
+         //Décompilation abandonné
       }
       
       public var fightTypeId:uint;

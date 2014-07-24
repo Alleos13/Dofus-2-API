@@ -20,164 +20,72 @@ package flashx.textLayout.conversion
    import flashx.textLayout.elements.FlowElement;
    import flashx.textLayout.elements.ParagraphFormattedElement;
    
-   use namespace tlf_internal;
-   
    class BaseTextLayoutImporter extends ConverterBase implements ITextImporter
    {
       
-      function BaseTextLayoutImporter(param1:Namespace, param2:ImportExportConfiguration) {
-         super();
-         this._ns = param1;
-         this._config = param2;
+      {
+      //Décompilation abandonné
       }
       
-      private static const anyPrintChar:RegExp = new RegExp("[^\t\n\r ]","g");
-      
-      private static const dblSpacePattern:RegExp = new RegExp("[ ]{2,}","g");
-      
-      private static const tabNewLinePattern:RegExp = new RegExp("[\t\n\r]","g");
-      
-      protected static function stripWhitespace(param1:String) : String {
-         return param1.replace(tabNewLinePattern," ");
+      function BaseTextLayoutImporter(nsValue:Namespace, config:ImportExportConfiguration)
+      {
+         //Décompilation abandonné
       }
       
-      public static function parseTextFlow(param1:BaseTextLayoutImporter, param2:XML, param3:Object=null) : TextFlow {
-         return param1.createTextFlowFromXML(param2,null);
+      private static const anyPrintChar:RegExp;
+      
+      private static const dblSpacePattern:RegExp;
+      
+      private static const tabNewLinePattern:RegExp;
+      
+      protected static function stripWhitespace(insertString:String) : String
+      {
+         //Décompilation abandonné
       }
       
-      public static function parsePara(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void {
-         var _loc4_:ParagraphElement = param1.createParagraphFromXML(param2);
-         if(param1.addChild(param3,_loc4_))
-         {
-            param1.parseFlowGroupElementChildren(param2,_loc4_);
-            if(_loc4_.numChildren == 0)
-            {
-               _loc4_.addChild(new SpanElement());
-            }
-         }
+      public static function parseTextFlow(importer:BaseTextLayoutImporter, xmlToParse:XML, parent:Object = null) : TextFlow
+      {
+         //Décompilation abandonné
       }
       
-      protected static function copyAllStyleProps(param1:FlowLeafElement, param2:FlowLeafElement) : void {
-         param1.format = param2.format;
-         param1.typeName = param2.typeName;
-         param1.id = param2.id;
+      public static function parsePara(importer:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function parseSpan(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void {
-         var _loc6_:XML = null;
-         var _loc7_:String = null;
-         var _loc8_:SpanElement = null;
-         var _loc9_:BreakElement = null;
-         var _loc10_:TabElement = null;
-         var _loc4_:SpanElement = param1.createSpanFromXML(param2);
-         var _loc5_:XMLList = param2[0].children();
-         if(_loc5_.length() == 0)
-         {
-            param1.addChild(param3,_loc4_);
-            return;
-         }
-         for each (_loc6_ in _loc5_)
-         {
-            _loc7_ = _loc6_.name()?_loc6_.name().localName:null;
-            if(_loc7_ == null)
-            {
-               if(_loc4_.parent == null)
-               {
-                  _loc4_.text = _loc6_.toString();
-                  param1.addChild(param3,_loc4_);
-               }
-               else
-               {
-                  _loc8_ = new SpanElement();
-                  copyAllStyleProps(_loc8_,_loc4_);
-                  _loc8_.text = _loc6_.toString();
-                  param1.addChild(param3,_loc8_);
-               }
-            }
-            else
-            {
-               if(_loc7_ == "br")
-               {
-                  _loc9_ = param1.createBreakFromXML(_loc6_);
-                  if(_loc9_)
-                  {
-                     copyAllStyleProps(_loc9_,_loc4_);
-                     param1.addChild(param3,_loc9_);
-                  }
-                  else
-                  {
-                     param1.reportError(GlobalSettings.resourceStringFunction("unexpectedXMLElementInSpan",[_loc7_]));
-                  }
-               }
-               else
-               {
-                  if(_loc7_ == "tab")
-                  {
-                     _loc10_ = param1.createTabFromXML(_loc6_);
-                     if(_loc10_)
-                     {
-                        copyAllStyleProps(_loc10_,_loc4_);
-                        param1.addChild(param3,_loc10_);
-                     }
-                     else
-                     {
-                        param1.reportError(GlobalSettings.resourceStringFunction("unexpectedXMLElementInSpan",[_loc7_]));
-                     }
-                  }
-                  else
-                  {
-                     param1.reportError(GlobalSettings.resourceStringFunction("unexpectedXMLElementInSpan",[_loc7_]));
-                  }
-               }
-            }
-         }
+      protected static function copyAllStyleProps(dst:FlowLeafElement, src:FlowLeafElement) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function parseBreak(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void {
-         var _loc4_:BreakElement = param1.createBreakFromXML(param2);
-         param1.addChild(param3,_loc4_);
+      public static function parseSpan(importer:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function parseTab(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void {
-         var _loc4_:TabElement = param1.createTabFromXML(param2);
-         if(_loc4_)
-         {
-            param1.addChild(param3,_loc4_);
-         }
+      public static function parseBreak(importer:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function parseList(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void {
-         var _loc4_:ListElement = param1.createListFromXML(param2);
-         if(param1.addChild(param3,_loc4_))
-         {
-            param1.parseFlowGroupElementChildren(param2,_loc4_);
-         }
+      public static function parseTab(importer:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function parseListItem(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void {
-         var _loc4_:ListItemElement = param1.createListItemFromXML(param2);
-         if(param1.addChild(param3,_loc4_))
-         {
-            param1.parseFlowGroupElementChildren(param2,_loc4_);
-            if(_loc4_.numChildren == 0)
-            {
-               _loc4_.addChild(new ParagraphElement());
-            }
-         }
+      public static function parseList(importer:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected static function extractAttributesHelper(param1:Object, param2:TLFormatImporter) : Object {
-         if(param1 == null)
-         {
-            return param2.result;
-         }
-         if(param2.result == null)
-         {
-            return param1;
-         }
-         var _loc3_:Object = new param2.classType(param1);
-         _loc3_.apply(param2.result);
-         return _loc3_;
+      public static function parseListItem(importer:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      protected static function extractAttributesHelper(curAttrs:Object, importer:TLFormatImporter) : Object
+      {
+         //Décompilation abandonné
       }
       
       private var _ns:Namespace;
@@ -190,320 +98,166 @@ package flashx.textLayout.conversion
       
       protected var _importVersion:uint;
       
-      override tlf_internal function clear() : void {
-         super.clear();
-         this._textFlowNamespace = null;
-         this._impliedPara = null;
+      override tlf_internal function clear() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function importToFlow(param1:Object) : TextFlow {
-         var source:Object = param1;
-         this.clear();
-         if(throwOnError)
-         {
-            return this.importToFlowCanThrow(source);
-         }
-         var rslt:TextFlow = null;
-         var savedErrorHandler:Function = Property.errorHandler;
-         try
-         {
-            Property.errorHandler = this.importPropertyErrorHandler;
-            rslt = this.importToFlowCanThrow(source);
-         }
-         catch(e:Error)
-         {
-            reportError(e.toString());
-         }
-         Property.errorHandler = savedErrorHandler;
-         return rslt;
+      public function importToFlow(source:Object) : TextFlow
+      {
+         //Décompilation abandonné
       }
       
-      public function get configuration() : IConfiguration {
-         return this._textFlowConfiguration;
+      public function get configuration() : IConfiguration
+      {
+         //Décompilation abandonné
       }
       
-      public function set configuration(param1:IConfiguration) : void {
-         this._textFlowConfiguration = param1;
+      public function set configuration(value:IConfiguration) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function importPropertyErrorHandler(param1:Property, param2:Object) : void {
-         reportError(Property.createErrorString(param1,param2));
+      protected function importPropertyErrorHandler(p:Property, value:Object) : void
+      {
+         //Décompilation abandonné
       }
       
-      private function importToFlowCanThrow(param1:Object) : TextFlow {
-         if(param1 is String)
-         {
-            return this.importFromString(String(param1));
-         }
-         if(param1 is XML)
-         {
-            return this.importFromXML(XML(param1));
-         }
-         return null;
+      private function importToFlowCanThrow(source:Object) : TextFlow
+      {
+         //Décompilation abandonné
       }
       
-      protected function importFromString(param1:String) : TextFlow {
-         var xmlTree:XML = null;
-         var source:String = param1;
-         var originalSettings:Object = XML.settings();
-         XML.ignoreProcessingInstructions = false;
-         XML.ignoreWhitespace = false;
-         xmlTree = new XML(source);
+      protected function importFromString(source:String) : TextFlow
+      {
+         //Décompilation abandonné
       }
       
-      protected function importFromXML(param1:XML) : TextFlow {
-         return this.parseContent(param1[0]);
+      protected function importFromXML(xmlSource:XML) : TextFlow
+      {
+         //Décompilation abandonné
       }
       
-      protected function parseContent(param1:XML) : TextFlow {
-         var _loc2_:XML = param1..TextFlow[0];
-         if(_loc2_)
-         {
-            return parseTextFlow(this,param1);
-         }
-         return null;
+      protected function parseContent(rootStory:XML) : TextFlow
+      {
+         //Décompilation abandonné
       }
       
-      public function get ns() : Namespace {
-         return this._ns;
+      public function get ns() : Namespace
+      {
+         //Décompilation abandonné
       }
       
-      protected function checkNamespace(param1:XML) : Boolean {
-         var _loc2_:Namespace = param1.namespace();
-         if(!this._textFlowNamespace)
-         {
-            if(_loc2_ != this.ns)
-            {
-               reportError(GlobalSettings.resourceStringFunction("unexpectedNamespace",[_loc2_.toString()]));
-               return false;
-            }
-            this._textFlowNamespace = _loc2_;
-         }
-         else
-         {
-            if(_loc2_ != this._textFlowNamespace)
-            {
-               reportError(GlobalSettings.resourceStringFunction("unexpectedNamespace",[_loc2_.toString()]));
-               return false;
-            }
-         }
-         return true;
+      protected function checkNamespace(xmlToParse:XML) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function parseAttributes(param1:XML, param2:Array) : void {
-         var _loc3_:IFormatImporter = null;
-         var _loc4_:XML = null;
-         var _loc5_:String = null;
-         var _loc6_:String = null;
-         var _loc7_:* = false;
-         for each (_loc3_ in param2)
-         {
-            _loc3_.reset();
-         }
-         if(!param1)
-         {
-            return;
-         }
-         for each (_loc4_ in param1.attributes())
-         {
-            _loc5_ = _loc4_.name().localName;
-            _loc6_ = _loc4_.toString();
-            _loc7_ = false;
-            if(param1.localName() == "TextFlow")
-            {
-               if(_loc5_ == "version")
-               {
-                  continue;
-               }
-            }
-            else
-            {
-               if(this._importVersion < TextLayoutVersion.VERSION_2_0 && (_loc5_ == "paddingLeft" || _loc5_ == "paddingTop" || _loc5_ == "paddingRight" || _loc5_ == "paddingBottom"))
-               {
-                  continue;
-               }
-            }
-            for each (_loc3_ in param2)
-            {
-               if(_loc3_.importOneFormat(_loc5_,_loc6_))
-               {
-                  _loc7_ = true;
-                  break;
-               }
-            }
-            if(!_loc7_)
-            {
-               this.handleUnknownAttribute(param1.name().localName,_loc5_);
-            }
-         }
+      public function parseAttributes(xmlToParse:XML, formatImporters:Array) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function createTextFlowFromXML(param1:XML, param2:TextFlow=null) : TextFlow {
-         return null;
+      public function createTextFlowFromXML(xmlToParse:XML, newFlow:TextFlow = null) : TextFlow
+      {
+         //Décompilation abandonné
       }
       
-      public function createParagraphFromXML(param1:XML) : ParagraphElement {
-         return null;
+      public function createParagraphFromXML(xmlToParse:XML) : ParagraphElement
+      {
+         //Décompilation abandonné
       }
       
-      public function createSpanFromXML(param1:XML) : SpanElement {
-         return null;
+      public function createSpanFromXML(xmlToParse:XML) : SpanElement
+      {
+         //Décompilation abandonné
       }
       
-      public function createBreakFromXML(param1:XML) : BreakElement {
-         this.parseAttributes(param1,null);
-         return new BreakElement();
+      public function createBreakFromXML(xmlToParse:XML) : BreakElement
+      {
+         //Décompilation abandonné
       }
       
-      public function createListFromXML(param1:XML) : ListElement {
-         return null;
+      public function createListFromXML(xmlToParse:XML) : ListElement
+      {
+         //Décompilation abandonné
       }
       
-      public function createListItemFromXML(param1:XML) : ListItemElement {
-         return null;
+      public function createListItemFromXML(xmlToParse:XML) : ListItemElement
+      {
+         //Décompilation abandonné
       }
       
-      public function createTabFromXML(param1:XML) : TabElement {
-         this.parseAttributes(param1,null);
-         return new TabElement();
+      public function createTabFromXML(xmlToParse:XML) : TabElement
+      {
+         //Décompilation abandonné
       }
       
-      public function parseFlowChildren(param1:XML, param2:FlowGroupElement) : void {
-         this.parseFlowGroupElementChildren(param1,param2);
+      public function parseFlowChildren(xmlToParse:XML, parent:FlowGroupElement) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function parseFlowGroupElementChildren(param1:XML, param2:FlowGroupElement, param3:Object=null, param4:Boolean=false) : void {
-         var _loc5_:XML = null;
-         var _loc6_:String = null;
-         var _loc7_:* = false;
-         for each (_loc5_ in param1.children())
-         {
-            if(_loc5_.nodeKind() == "element")
-            {
-               this.parseObject(_loc5_.name().localName,_loc5_,param2,param3);
-            }
-            else
-            {
-               if(_loc5_.nodeKind() == "text")
-               {
-                  _loc6_ = _loc5_.toString();
-                  _loc7_ = false;
-                  if(param2 is ContainerFormattedElement)
-                  {
-                     _loc7_ = _loc6_.search(anyPrintChar) == -1;
-                  }
-                  if(!_loc7_)
-                  {
-                     this.addChild(param2,this.createImpliedSpan(_loc6_));
-                  }
-               }
-            }
-         }
-         if(!param4 && param2 is ContainerFormattedElement)
-         {
-            this.resetImpliedPara();
-         }
+      public function parseFlowGroupElementChildren(xmlToParse:XML, parent:FlowGroupElement, exceptionElements:Object = null, chainedParent:Boolean = false) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function createImpliedSpan(param1:String) : SpanElement {
-         var _loc2_:SpanElement = new SpanElement();
-         _loc2_.text = param1;
-         return _loc2_;
+      public function createImpliedSpan(text:String) : SpanElement
+      {
+         //Décompilation abandonné
       }
       
-      public function createParagraphFlowFromXML(param1:XML, param2:TextFlow=null) : TextFlow {
-         return null;
+      public function createParagraphFlowFromXML(xmlToParse:XML, newFlow:TextFlow = null) : TextFlow
+      {
+         //Décompilation abandonné
       }
       
-      tlf_internal function parseObject(param1:String, param2:XML, param3:FlowGroupElement, param4:Object=null) : void {
-         if(!this.checkNamespace(param2))
-         {
-            return;
-         }
-         var _loc5_:FlowElementInfo = this._config.lookup(param1);
-         if(!_loc5_)
-         {
-            if(param4 == null || param4[param1] === undefined)
-            {
-               this.handleUnknownElement(param1,param2,param3);
-            }
-         }
-         else
-         {
-            _loc5_.parser(this,param2,param3);
-         }
+      tlf_internal function parseObject(name:String, xmlToParse:XML, parent:FlowGroupElement, exceptionElements:Object = null) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function handleUnknownElement(param1:String, param2:XML, param3:FlowGroupElement) : void {
-         reportError(GlobalSettings.resourceStringFunction("unknownElement",[param1]));
+      protected function handleUnknownElement(name:String, xmlToParse:XML, parent:FlowGroupElement) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function handleUnknownAttribute(param1:String, param2:String) : void {
-         reportError(GlobalSettings.resourceStringFunction("unknownAttribute",[param2,param1]));
+      protected function handleUnknownAttribute(elementName:String, propertyName:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function getElementInfo(param1:XML) : FlowElementInfo {
-         return this._config.lookup(param1.name().localName);
+      protected function getElementInfo(xmlToParse:XML) : FlowElementInfo
+      {
+         //Décompilation abandonné
       }
       
-      protected function GetClass(param1:XML) : Class {
-         var _loc2_:FlowElementInfo = this._config.lookup(param1.name().localName);
-         return _loc2_?_loc2_.flowClass:null;
+      protected function GetClass(xmlToParse:XML) : Class
+      {
+         //Décompilation abandonné
       }
       
       private var _impliedPara:ParagraphElement = null;
       
-      tlf_internal function createImpliedParagraph() : ParagraphElement {
-         return this.createParagraphFromXML(<p/>);
+      tlf_internal function createImpliedParagraph() : ParagraphElement
+      {
+         //Décompilation abandonné
       }
       
-      tlf_internal function addChild(param1:FlowGroupElement, param2:FlowElement) : Boolean {
-         var parent:FlowGroupElement = param1;
-         var child:FlowElement = param2;
-         if(child is ParagraphFormattedElement)
-         {
-            this.resetImpliedPara();
-         }
-         else
-         {
-            if(parent is ContainerFormattedElement)
-            {
-               if(!this._impliedPara)
-               {
-                  this._impliedPara = this.createImpliedParagraph();
-                  parent.addChild(this._impliedPara);
-               }
-               parent = this._impliedPara;
-            }
-         }
-         if(throwOnError)
-         {
-            parent.addChild(child);
-         }
-         else
-         {
-            try
-            {
-               parent.addChild(child);
-            }
-            catch(e:*)
-            {
-               reportError(e);
-               return false;
-            }
-         }
-         return true;
+      tlf_internal function addChild(parent:FlowGroupElement, child:FlowElement) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      tlf_internal function resetImpliedPara() : void {
-         if(this._impliedPara)
-         {
-            this.onResetImpliedPara(this._impliedPara);
-            this._impliedPara = null;
-         }
+      tlf_internal function resetImpliedPara() : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function onResetImpliedPara(param1:ParagraphElement) : void {
+      protected function onResetImpliedPara(para:ParagraphElement) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

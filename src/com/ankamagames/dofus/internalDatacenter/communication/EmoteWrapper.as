@@ -19,49 +19,32 @@ package com.ankamagames.dofus.internalDatacenter.communication
    public class EmoteWrapper extends Proxy implements IDataCenter, ISlotData
    {
       
-      public function EmoteWrapper() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EmoteWrapper()
+      {
+         //Décompilation abandonné
       }
       
       private static var _cache:Array;
       
       protected static const _log:Logger;
       
-      public static function create(emoteID:uint, position:int = -1, useCache:Boolean = true) : EmoteWrapper {
-         var emote:EmoteWrapper = new EmoteWrapper();
-         if((!_cache[emoteID]) || (!useCache))
-         {
-            emote = new EmoteWrapper();
-            emote.id = emoteID;
-            if(useCache)
-            {
-               _cache[emoteID] = emote;
-            }
-            emote._slotDataHolderManager = new SlotDataHolderManager(emote);
-         }
-         else
-         {
-            emote = _cache[emoteID];
-         }
-         emote.id = emoteID;
-         emote.gfxId = emoteID;
-         if(position >= 0)
-         {
-            emote.position = position;
-         }
-         return emote;
+      public static function create(emoteID:uint, position:int = -1, useCache:Boolean = true) : EmoteWrapper
+      {
+         //Décompilation abandonné
       }
       
-      public static function refreshAllEmoteHolders() : void {
-         var wrapper:EmoteWrapper = null;
-         for each(wrapper in _cache)
-         {
-            wrapper._slotDataHolderManager.refreshAll();
-         }
+      public static function refreshAllEmoteHolders() : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function getEmoteWrapperById(id:uint) : EmoteWrapper {
-         return _cache[id];
+      public static function getEmoteWrapperById(id:uint) : EmoteWrapper
+      {
+         //Décompilation abandonné
       }
       
       private var _uri:Uri;
@@ -84,126 +67,109 @@ package com.ankamagames.dofus.internalDatacenter.communication
       
       public var quantity:uint = 1;
       
-      public function get iconUri() : Uri {
-         if(!this._uri)
-         {
-            this._uri = new Uri(XmlConfig.getInstance().getEntry("config.content.path").concat("gfx/emotes/").concat(this.id).concat(".png"));
-         }
-         return this._uri;
+      public function get iconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get fullSizeIconUri() : Uri {
-         if(!this._uri)
-         {
-            this._uri = new Uri(XmlConfig.getInstance().getEntry("config.content.path").concat("gfx/emotes/").concat(this.id).concat(".png"));
-         }
-         return this._uri;
+      public function get fullSizeIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get backGroundIconUri() : Uri {
-         return null;
+      public function get backGroundIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get errorIconUri() : Uri {
-         return null;
+      public function get errorIconUri() : Uri
+      {
+         //Décompilation abandonné
       }
       
-      public function get info1() : String {
-         return null;
+      public function get info1() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get startTime() : int {
-         return this._timerStartTime;
+      public function get startTime() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function get endTime() : int {
-         return this._timerEndTime;
+      public function get endTime() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set endTime(t:int) : void {
-         this._timerEndTime = t;
+      public function set endTime(t:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get timer() : int {
-         var remainingTime:int = this._timerStartTime + this._timerDuration - getTimer();
-         if(remainingTime > 0)
-         {
-            return remainingTime;
-         }
-         return 0;
+      public function get timer() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set timerToStart(t:int) : void {
-         this._timerDuration = t;
-         this._timerStartTime = getTimer();
-         this._slotDataHolderManager.refreshAll();
+      public function set timerToStart(t:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get active() : Boolean {
-         var rpEmoticonFrame:EmoticonFrame = Kernel.getWorker().getFrame(EmoticonFrame) as EmoticonFrame;
-         return rpEmoticonFrame.isKnownEmote(this.id);
+      public function get active() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get emote() : Emoticon {
-         return Emoticon.getEmoticonById(this.id);
+      public function get emote() : Emoticon
+      {
+         //Décompilation abandonné
       }
       
-      public function get emoteId() : uint {
-         return this.id;
+      public function get emoteId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get isUsable() : Boolean {
-         return true;
+      public function get isUsable() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override flash_proxy function getProperty(name:*) : * {
-         var l:* = undefined;
-         var r:* = undefined;
-         if(isAttribute(name))
-         {
-            return this[name];
-         }
-         l = this.emote;
-         if(!l)
-         {
-            r = "";
-         }
-         try
-         {
-            return l[name];
-         }
-         catch(e:Error)
-         {
-            return "Error_on_item_" + name;
-         }
+      override flash_proxy function getProperty(name:*) : *
+      {
+         //Décompilation abandonné
       }
       
-      override flash_proxy function hasProperty(name:*) : Boolean {
-         return isAttribute(name);
+      override flash_proxy function hasProperty(name:*) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function toString() : String {
-         return "[EmoteWrapper#" + this.id + "]";
+      public function toString() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function addHolder(h:ISlotDataHolder) : void {
-         this._slotDataHolderManager.addHolder(h);
+      public function addHolder(h:ISlotDataHolder) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeHolder(h:ISlotDataHolder) : void {
-         this._slotDataHolderManager.removeHolder(h);
+      public function removeHolder(h:ISlotDataHolder) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setLinkedSlotData(slotData:ISlotData) : void {
-         this._slotDataHolderManager.setLinkedSlotData(slotData);
+      public function setLinkedSlotData(slotData:ISlotData) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getIconUri(pngMode:Boolean = true) : Uri {
-         if(!this._uri)
-         {
-            this._uri = new Uri(XmlConfig.getInstance().getEntry("config.content.path").concat("gfx/emotes/").concat(this.id).concat(".png"));
-         }
-         return this._uri;
+      public function getIconUri(pngMode:Boolean = true) : Uri
+      {
+         //Décompilation abandonné
       }
    }
 }

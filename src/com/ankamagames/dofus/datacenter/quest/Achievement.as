@@ -6,28 +6,32 @@ package com.ankamagames.dofus.datacenter.quest
    import com.ankamagames.jerakine.logger.Log;
    import flash.utils.getQualifiedClassName;
    import com.ankamagames.jerakine.data.I18n;
+   import com.ankamagames.dofus.logic.game.roleplay.managers.RoleplayManager;
    
    public class Achievement extends Object implements IDataCenter
    {
       
-      public function Achievement() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Achievement()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       public static const MODULE:String = "Achievements";
       
-      private static const REWARD_SCALE_CAP:Number = 1.5;
-      
-      private static const REWARD_REDUCED_SCALE:Number = 0.7;
-      
-      public static function getAchievementById(id:int) : Achievement {
-         return GameData.getObject(MODULE,id) as Achievement;
+      public static function getAchievementById(id:int) : Achievement
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAchievements() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getAchievements() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;
@@ -62,48 +66,29 @@ package com.ankamagames.dofus.datacenter.quest
       
       private var _category:AchievementCategory;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get description() : String {
-         if(!this._desc)
-         {
-            this._desc = I18n.getText(this.descriptionId);
-         }
-         return this._desc;
+      public function get description() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get category() : AchievementCategory {
-         if(!this._category)
-         {
-            this._category = AchievementCategory.getAchievementCategoryById(this.categoryId);
-         }
-         return this._category;
+      public function get category() : AchievementCategory
+      {
+         //Décompilation abandonné
       }
       
-      public function getKamasReward(pPlayerLevel:int) : Number {
-         var lvl:int = this.kamasScaleWithPlayerLevel?pPlayerLevel:this.level;
-         return (Math.pow(lvl,2) + 20 * lvl - 20) * this.kamasRatio;
+      public function getKamasReward(pPlayerLevel:int) : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function getExperienceReward(pPlayerLevel:int, nXpBonus:int) : Number {
-         var rewLevel:* = 0;
-         var xpBonus:Number = 1 + nXpBonus / 100;
-         if(pPlayerLevel > this.level)
-         {
-            rewLevel = Math.min(pPlayerLevel,this.level * REWARD_SCALE_CAP);
-            return ((1 - REWARD_REDUCED_SCALE) * this.getFixeExperienceReward(this.level) + REWARD_REDUCED_SCALE * this.getFixeExperienceReward(rewLevel)) * xpBonus;
-         }
-         return this.getFixeExperienceReward(pPlayerLevel) * xpBonus;
-      }
-      
-      private function getFixeExperienceReward(level:int) : int {
-         return level * Math.pow(100 + 2 * level,2) / 20 * this.experienceRatio;
+      public function getExperienceReward(pPlayerLevel:int, pXpBonus:int) : Number
+      {
+         //Décompilation abandonné
       }
    }
 }

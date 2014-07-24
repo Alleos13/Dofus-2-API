@@ -7,30 +7,27 @@ package com.ankamagames.dofus.datacenter.world
    public class SuperArea extends Object implements IDataCenter
    {
       
-      public function SuperArea() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SuperArea()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "SuperAreas";
       
       private static var _allSuperAreas:Array;
       
-      public static function getSuperAreaById(id:int) : SuperArea {
-         var superArea:SuperArea = GameData.getObject(MODULE,id) as SuperArea;
-         if(!superArea)
-         {
-            return null;
-         }
-         return superArea;
+      public static function getSuperAreaById(id:int) : SuperArea
+      {
+         //Décompilation abandonné
       }
       
-      public static function getAllSuperArea() : Array {
-         if(_allSuperAreas)
-         {
-            return _allSuperAreas;
-         }
-         _allSuperAreas = GameData.getObjects(MODULE) as Array;
-         return _allSuperAreas;
+      public static function getAllSuperArea() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -39,28 +36,20 @@ package com.ankamagames.dofus.datacenter.world
       
       public var worldmapId:uint;
       
+      public var hasWorldMap:Boolean;
+      
       private var _name:String;
       
       private var _worldmap:WorldMap;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function get worldmap() : WorldMap {
-         if(!this._worldmap)
-         {
-            if(!this.worldmapId)
-            {
-               this.worldmapId = 1;
-            }
-            this._worldmap = WorldMap.getWorldMapById(this.worldmapId);
-         }
-         return this._worldmap;
+      public function get worldmap() : WorldMap
+      {
+         //Décompilation abandonné
       }
    }
 }

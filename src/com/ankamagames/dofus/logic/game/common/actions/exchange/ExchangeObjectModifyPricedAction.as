@@ -5,16 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.exchange
    public class ExchangeObjectModifyPricedAction extends Object implements Action
    {
       
-      public function ExchangeObjectModifyPricedAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(pObjectUID:uint, pQuantity:int, pPrice:int) : ExchangeObjectModifyPricedAction {
-         var a:ExchangeObjectModifyPricedAction = new ExchangeObjectModifyPricedAction();
-         a.objectUID = pObjectUID;
-         a.quantity = pQuantity;
-         a.price = pPrice;
-         return a;
+      public function ExchangeObjectModifyPricedAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(pObjectUID:uint, pQuantity:int, pPrice:int) : ExchangeObjectModifyPricedAction
+      {
+         //Décompilation abandonné
       }
       
       public var objectUID:uint;

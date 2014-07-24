@@ -3,11 +3,13 @@ package com.ankamagames.tubul.types
    public class RollOffPreset extends Object
    {
       
-      public function RollOffPreset(pMaxVolume:uint, pRange:uint, pMaxSaturationRange:uint) {
-         super();
-         this._maxVolume = pMaxVolume;
-         this._maxRange = pRange;
-         this._maxSaturationRange = pMaxSaturationRange;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RollOffPreset(pMaxVolume:uint, pRange:uint, pMaxSaturationRange:uint)
+      {
+         //Décompilation abandonné
       }
       
       private var _maxVolume:uint;
@@ -16,16 +18,19 @@ package com.ankamagames.tubul.types
       
       private var _maxSaturationRange:uint;
       
-      public function get maxVolume() : uint {
-         return this._maxVolume;
+      public function get maxVolume() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get maxRange() : uint {
-         return this._maxRange;
+      public function get maxRange() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function get maxSaturationRange() : uint {
-         return this._maxSaturationRange;
+      public function get maxSaturationRange() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

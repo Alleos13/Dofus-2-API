@@ -14,191 +14,200 @@ package com.ankamagames.dofus.uiApi
    import com.ankamagames.berilia.factories.HyperlinkFactory;
    import com.ankamagames.dofus.logic.common.managers.HyperlinkItemManager;
    import com.ankamagames.dofus.logic.game.common.managers.ChatAutocompleteNameManager;
+   import com.ankamagames.dofus.logic.common.managers.HyperlinkShowGuildManager;
+   import com.ankamagames.dofus.logic.common.managers.HyperlinkShowAllianceManager;
    import com.ankamagames.berilia.managers.HtmlManager;
    import com.ankamagames.jerakine.logger.ModuleLogger;
    import com.ankamagames.dofus.console.moduleLogger.TypeMessage;
+   import com.ankamagames.jerakine.managers.OptionManager;
+   import com.ankamagames.dofus.console.moduleLogger.Console;
    import com.ankamagames.jerakine.logger.Log;
    import flash.utils.getQualifiedClassName;
    
    public class ChatApi extends Object implements IApi
    {
       
-      public function ChatApi() {
-         this._log = Log.getLogger(getQualifiedClassName(ChatApi));
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ChatApi()
+      {
+         //Décompilation abandonné
       }
       
       protected var _log:Logger;
       
       private var _module:UiModule;
       
-      private function get chatFrame() : ChatFrame {
-         return Kernel.getWorker().getFrame(ChatFrame) as ChatFrame;
+      private function get chatFrame() : ChatFrame
+      {
+         //Décompilation abandonné
       }
       
-      public function set module(value:UiModule) : void {
-         this._module = value;
+      public function set module(value:UiModule) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         this._module = null;
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getChannelsId() : Array {
-         var chan:* = undefined;
-         var disallowed:Array = this.chatFrame.disallowedChannels;
-         var list:Array = new Array();
-         for each(chan in ChatChannel.getChannels())
-         {
-            if(disallowed.indexOf(chan.id) == -1)
-            {
-               list.push(chan.id);
-            }
-         }
-         return list;
+      public function getChannelsId() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getDisallowedChannelsId() : Array {
-         return this.chatFrame.disallowedChannels;
+      public function getDisallowedChannelsId() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getChatColors() : Array {
-         return this.chatFrame.chatColors;
+      public function getChatColors() : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getSmileyMood() : int {
-         return this.chatFrame.smileyMood;
+      public function getSmileyMood() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function getMessagesByChannel(channel:uint) : Array {
-         var list:Array = this.chatFrame.getMessages();
-         return list[channel];
+      public function getMessagesByChannel(channel:uint) : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getParagraphByChannel(channel:uint) : Array {
-         var list:Array = this.chatFrame.getParagraphes();
-         return list[channel];
+      public function getParagraphByChannel(channel:uint) : Array
+      {
+         //Décompilation abandonné
       }
       
-      public function getMessagesStoredMax() : uint {
-         return this.chatFrame.maxMessagesStored;
+      public function getMessagesStoredMax() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function addParagraphToHistory(id:int, p:Object) : void {
-         this.chatFrame.addParagraphToHistory(id,p);
+      public function addParagraphToHistory(id:int, p:Object) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeLinesFromHistory(value:int, channel:int) : void {
-         this.chatFrame.removeLinesFromHistory(value,channel);
+      public function removeLinesFromHistory(value:int, channel:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function setMaxMessagesStored(val:int) : void {
-         this.chatFrame.maxMessagesStored = val;
+      public function setMaxMessagesStored(val:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getMaxMessagesStored() : int {
-         return this.chatFrame.maxMessagesStored;
+      public function getMaxMessagesStored() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function newBasicChatSentence(id:uint, msg:String, channel:uint = 0, time:Number = 0, finger:String = "") : BasicChatSentence {
-         var bsc:BasicChatSentence = new BasicChatSentence(id,msg,msg,channel,time,finger);
-         return bsc;
+      public function newBasicChatSentence(id:uint, msg:String, channel:uint = 0, time:Number = 0, finger:String = "") : BasicChatSentence
+      {
+         //Décompilation abandonné
       }
       
-      public function newChatSentenceWithSource(id:uint, msg:String, channel:uint = 0, time:Number = 0, finger:String = "", senderId:uint = 0, senderName:String = "", objects:Vector.<ItemWrapper> = null) : ChatSentenceWithSource {
-         var csws:ChatSentenceWithSource = new ChatSentenceWithSource(id,msg,msg,channel,time,finger,senderId,senderName,objects);
-         return csws;
+      public function newChatSentenceWithSource(id:uint, msg:String, channel:uint = 0, time:Number = 0, finger:String = "", senderId:uint = 0, senderName:String = "", objects:Vector.<ItemWrapper> = null) : ChatSentenceWithSource
+      {
+         //Décompilation abandonné
       }
       
-      public function newChatSentenceWithRecipient(id:uint, msg:String, channel:uint = 0, time:Number = 0, finger:String = "", senderId:uint = 0, senderName:String = "", receiverName:String = "", receiverId:uint = 0, objects:Vector.<ItemWrapper> = null) : ChatSentenceWithRecipient {
-         var cswr:ChatSentenceWithRecipient = new ChatSentenceWithRecipient(id,msg,msg,channel,time,finger,senderId,senderName,receiverName,receiverId,objects);
-         return cswr;
+      public function newChatSentenceWithRecipient(id:uint, msg:String, channel:uint = 0, time:Number = 0, finger:String = "", senderId:uint = 0, senderName:String = "", receiverName:String = "", receiverId:uint = 0, objects:Vector.<ItemWrapper> = null) : ChatSentenceWithRecipient
+      {
+         //Décompilation abandonné
       }
       
-      public function getTypeOfChatSentence(msg:Object) : String {
-         if(msg is ChatSentenceWithRecipient)
-         {
-            return "recipientSentence";
-         }
-         if(msg is ChatSentenceWithSource)
-         {
-            return "sourceSentence";
-         }
-         if(msg is ChatInformationSentence)
-         {
-            return "informationSentence";
-         }
-         return "basicSentence";
+      public function getTypeOfChatSentence(msg:Object) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function searchChannel(chan:String) : int {
-         var i:* = undefined;
-         var channels:Array = ChatChannel.getChannels();
-         for(i in channels)
-         {
-            if(chan == channels[i].shortcut)
-            {
-               return channels[i].id;
-            }
-         }
-         return -1;
+      public function searchChannel(chan:String) : int
+      {
+         //Décompilation abandonné
       }
       
-      public function getHistoryByIndex(name:String, index:uint) : String {
-         return "";
+      public function getHistoryByIndex(name:String, index:uint) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function getRedChannelId() : uint {
-         return this.chatFrame.getRedId();
+      public function getRedChannelId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function getStaticHyperlink(string:String) : String {
-         return HyperlinkFactory.decode(string,false);
+      public function getStaticHyperlink(string:String) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function newChatItem(item:ItemWrapper) : String {
-         return HyperlinkItemManager.newChatItem(item);
+      public function newChatItem(item:ItemWrapper) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function addAutocompletionNameEntry(name:String, priority:int) : void {
-         ChatAutocompleteNameManager.getInstance().addEntry(name,priority);
+      public function addAutocompletionNameEntry(name:String, priority:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getAutocompletion(subString:String, count:int) : String {
-         return ChatAutocompleteNameManager.getInstance().autocomplete(subString,count);
+      public function getAutocompletion(subString:String, count:int) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function changeCssHandler(val:String) : void {
-         HtmlManager.changeCssHandler(val);
+      public function getGuildLink(pGuild:*, pText:String = null) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function logChat(text:String) : void {
-         ModuleLogger.log(text,TypeMessage.LOG_CHAT);
+      public function getAllianceLink(pAlliance:*, pText:String = null, pLinkColor:String = null, pHoverColor:String = null) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function addHtmlLink(pText:String, pHref:String) : String {
-         return HtmlManager.addLink(pText,pHref);
+      public function changeCssHandler(val:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addSpan(pText:String, pStyle:Object) : void {
-         HtmlManager.addTag(pText,HtmlManager.SPAN,pStyle);
+      public function logChat(text:String) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function escapeChatString(inStr:String) : String {
-         var pattern:RegExp = new RegExp("&","g");
-         var inStr:String = inStr.replace(pattern,"&amp;");
-         pattern = new RegExp("{","g");
-         inStr = inStr.replace(pattern,"&#123;");
-         pattern = new RegExp("}","g");
-         inStr = inStr.replace(pattern,"&#125;");
-         return inStr;
+      public function launchExternalChat() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function unEscapeChatString(inStr:String) : String {
-         var inStr:String = inStr.split("&amp;#123;").join("&#123;");
-         inStr = inStr.split("&amp;#125;").join("&#125;");
-         inStr = inStr.split("&amp;amp;").join("&amp;");
-         return inStr;
+      public function addHtmlLink(pText:String, pHref:String) : String
+      {
+         //Décompilation abandonné
+      }
+      
+      public function addSpan(pText:String, pStyle:Object) : void
+      {
+         //Décompilation abandonné
+      }
+      
+      public function escapeChatString(inStr:String) : String
+      {
+         //Décompilation abandonné
+      }
+      
+      public function unEscapeChatString(inStr:String) : String
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,6 +5,10 @@ package com.ankamagames.tiphon.types
    public interface ISkinModifier
    {
       
-      function getModifiedSkin(param1:Skin, param2:String, param3:TiphonEntityLook) : String;
+      {
+      //Décompilation abandonné
+      }
+      
+      function getModifiedSkin(skin:Skin, requestedPart:String, look:TiphonEntityLook) : String;
    }
 }

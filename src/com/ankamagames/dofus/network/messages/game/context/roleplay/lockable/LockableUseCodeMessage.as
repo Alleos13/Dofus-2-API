@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.lockable
    public class LockableUseCodeMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function LockableUseCodeMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LockableUseCodeMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5667;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var code:String = "";
       
-      override public function getMessageId() : uint {
-         return 5667;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initLockableUseCodeMessage(code:String = "") : LockableUseCodeMessage {
-         this.code = code;
-         this._isInitialized = true;
-         return this;
+      public function initLockableUseCodeMessage(code:String = "") : LockableUseCodeMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.code = "";
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_LockableUseCodeMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_LockableUseCodeMessage(output:IDataOutput) : void {
-         output.writeUTF(this.code);
+      public function serializeAs_LockableUseCodeMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_LockableUseCodeMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_LockableUseCodeMessage(input:IDataInput) : void {
-         this.code = input.readUTF();
+      public function deserializeAs_LockableUseCodeMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -7,45 +7,52 @@ package com.ankamagames.dofus.network.types.game.actions.fight
    public class FightTemporaryBoostWeaponDamagesEffect extends FightTemporaryBoostEffect implements INetworkType
    {
       
-      public function FightTemporaryBoostWeaponDamagesEffect() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightTemporaryBoostWeaponDamagesEffect()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 211;
       
       public var weaponTypeId:int = 0;
       
-      override public function getTypeId() : uint {
-         return 211;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initFightTemporaryBoostWeaponDamagesEffect(uid:uint = 0, targetId:int = 0, turnDuration:int = 0, dispelable:uint = 1, spellId:uint = 0, parentBoostUid:uint = 0, delta:int = 0, weaponTypeId:int = 0) : FightTemporaryBoostWeaponDamagesEffect {
-         super.initFightTemporaryBoostEffect(uid,targetId,turnDuration,dispelable,spellId,parentBoostUid,delta);
-         this.weaponTypeId = weaponTypeId;
-         return this;
+      public function initFightTemporaryBoostWeaponDamagesEffect(uid:uint = 0, targetId:int = 0, turnDuration:int = 0, dispelable:uint = 1, spellId:uint = 0, parentBoostUid:uint = 0, delta:int = 0, weaponTypeId:int = 0) : FightTemporaryBoostWeaponDamagesEffect
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.weaponTypeId = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_FightTemporaryBoostWeaponDamagesEffect(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_FightTemporaryBoostWeaponDamagesEffect(output:IDataOutput) : void {
-         super.serializeAs_FightTemporaryBoostEffect(output);
-         output.writeShort(this.weaponTypeId);
+      public function serializeAs_FightTemporaryBoostWeaponDamagesEffect(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_FightTemporaryBoostWeaponDamagesEffect(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_FightTemporaryBoostWeaponDamagesEffect(input:IDataInput) : void {
-         super.deserialize(input);
-         this.weaponTypeId = input.readShort();
+      public function deserializeAs_FightTemporaryBoostWeaponDamagesEffect(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -3,6 +3,10 @@ package com.ankamagames.jerakine.messages
    public interface IMessageDispatcher
    {
       
-      function dispatchMessage(param1:MessageHandler, param2:Message) : void;
+      {
+      //Décompilation abandonné
+      }
+      
+      function dispatchMessage(handler:MessageHandler, message:Message) : void;
    }
 }

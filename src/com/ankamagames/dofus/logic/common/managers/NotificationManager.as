@@ -9,113 +9,95 @@ package com.ankamagames.dofus.logic.common.managers
    public class NotificationManager extends Object
    {
       
-      public function NotificationManager(pvt:PrivateClass) {
-         super();
-         this._notificationList = new Vector.<NotificationManager>();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function NotificationManager(pvt:PrivateClass)
+      {
+         //Décompilation abandonné
       }
       
       private static var _self:NotificationManager;
       
-      public static function getInstance() : NotificationManager {
-         if(_self == null)
-         {
-            _self = new NotificationManager(new PrivateClass());
-         }
-         return _self;
+      public static function getInstance() : NotificationManager
+      {
+         //Décompilation abandonné
       }
       
       private var _notificationList:Vector.<Notification>;
       
-      public function showNotification(pTitle:String, pContent:String, pType:uint = 0) : void {
-         var notif:Notification = new Notification();
-         notif.title = pTitle;
-         notif.contentText = pContent;
-         notif.type = pType;
-         this.openNotification(notif);
+      public function showNotification(pTitle:String, pContent:String, pType:uint = 0) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function prepareNotification(pTitle:String, pContent:String, pType:uint = 0, pNotificationName:String = "", pNotifyUser:Boolean = false) : uint {
-         var notif:Notification = new Notification();
-         notif.title = pTitle;
-         notif.contentText = pContent;
-         notif.type = pType;
-         notif.name = pNotificationName;
-         return this._notificationList.push(notif) - 1;
+      public function prepareNotification(pTitle:String, pContent:String, pType:uint = 0, pNotificationName:String = "", pNotifyUser:Boolean = false) : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function addButtonToNotification(pId:uint, pTitle:String, pAction:String, pParams:Object = null, pForceClose:Boolean = false, pWidth:Number = 0, pHeight:Number = 0, pType:String = "action") : void {
-         var notif:Notification = this.getNotification(pId);
-         notif.addButton(pTitle,pAction,pParams,pForceClose,pWidth,pHeight,pType);
+      public function addButtonToNotification(pId:uint, pTitle:String, pAction:String, pParams:Object = null, pForceClose:Boolean = false, pWidth:Number = 0, pHeight:Number = 0, pType:String = "action") : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addCallbackToNotification(pId:uint, pAction:String, pParams:Object = null, pType:String = "action") : void {
-         var notif:Notification = this.getNotification(pId);
-         notif.callback = pAction;
-         notif.callbackParams = pParams;
-         notif.callbackType = pType;
+      public function addCallbackToNotification(pId:uint, pAction:String, pParams:Object = null, pType:String = "action") : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addImageToNotification(pId:uint, pClip:Uri, pX:Number = 0, pY:Number = 0, pWidth:Number = -1, pHeight:Number = -1, pLabel:String = "", pTips:String = "") : void {
-         var notif:Notification = this.getNotification(pId);
-         notif.addImage(pClip,pLabel,pTips,pX,pY,pWidth,pHeight);
+      public function addImageToNotification(pId:uint, pClip:Uri, pX:Number = 0, pY:Number = 0, pWidth:Number = -1, pHeight:Number = -1, pLabel:String = "", pTips:String = "") : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addTimerToNotification(pId:uint, pTime:uint, pPauseOnOver:Boolean = false, pBlockCallbackOnClose:Boolean = false, pNotify:Boolean = true) : void {
-         var notif:Notification = this.getNotification(pId);
-         notif.setTimer(pTime,pPauseOnOver,pBlockCallbackOnClose,pNotify);
+      public function addTimerToNotification(pId:uint, pTime:uint, pPauseOnOver:Boolean = false, pBlockCallbackOnClose:Boolean = false, pNotify:Boolean = true) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function sendNotification(notificationId:int = -1) : void {
-         var n:Notification = null;
-         if(notificationId == -1)
-         {
-            for each(n in this._notificationList)
-            {
-               if(n)
-               {
-                  this.openNotification(n);
-               }
-            }
-            this._notificationList = new Vector.<NotificationManager>();
-         }
-         else if((notificationId >= 0) && (notificationId < this._notificationList.length) && (!(this._notificationList[notificationId] == null)))
-         {
-            this.openNotification(this._notificationList[notificationId] as NotificationManager);
-            this._notificationList.splice(notificationId,1);
-         }
-         
+      public function sendNotification(notificationId:int = -1) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function clearAllNotification() : void {
-         this._notificationList = new Vector.<NotificationManager>();
+      public function clearAllNotification() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function getNotification(pId:uint) : Notification {
-         return this._notificationList[pId];
+      private function getNotification(pId:uint) : Notification
+      {
+         //Décompilation abandonné
       }
       
-      private function openNotification(pNotif:Object) : void {
-         KernelEventsManager.getInstance().processCallback(ChatHookList.Notification,pNotif);
-         if(pNotif.notifyUser)
-         {
-            SystemManager.getSingleton().notifyUser();
-         }
+      private function openNotification(pNotif:Object) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function closeNotification(pName:String, pBlockCallback:Boolean = false) : void {
-         KernelEventsManager.getInstance().processCallback(HookList.CloseNotification,pName,pBlockCallback);
+      public function closeNotification(pName:String, pBlockCallback:Boolean = false) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function hideNotification(pName:String) : void {
-         KernelEventsManager.getInstance().processCallback(HookList.HideNotification,pName);
+      public function hideNotification(pName:String) : void
+      {
+         //Décompilation abandonné
       }
    }
 }
 class PrivateClass extends Object
 {
    
-   function PrivateClass() {
-      super();
+   {
+   //Décompilation abandonné
+   }
+   
+   function PrivateClass()
+   {
+      //Décompilation abandonné
    }
 }
 import com.ankamagames.jerakine.types.Uri;
@@ -123,10 +105,13 @@ import com.ankamagames.jerakine.types.Uri;
 class Notification extends Object
 {
    
-   function Notification() {
-      this._buttonList = new Array();
-      this._imageList = new Array();
-      super();
+   {
+   //Décompilation abandonné
+   }
+   
+   function Notification()
+   {
+      //Décompilation abandonné
    }
    
    public var title:String;
@@ -143,8 +128,9 @@ class Notification extends Object
    
    public var pauseOnOver:Boolean;
    
-   public function get duration() : int {
-      return this._duration;
+   public function get duration() : int
+   {
+      //Décompilation abandonné
    }
    
    public var callback:String;
@@ -163,54 +149,37 @@ class Notification extends Object
    
    public var blockCallbackOnTimerEnds:Boolean = false;
    
-   public function get displayText() : String {
-      return this.title + "\n\n" + this.contentText;
+   public function get displayText() : String
+   {
+      //Décompilation abandonné
    }
    
    private var _buttonList:Array;
    
-   public function get buttonList() : Array {
-      return this._buttonList;
+   public function get buttonList() : Array
+   {
+      //Décompilation abandonné
    }
    
    private var _imageList:Array;
    
-   public function get imageList() : Array {
-      return this._imageList;
+   public function get imageList() : Array
+   {
+      //Décompilation abandonné
    }
    
-   public function addButton(pTitle:String, pAction:String, pParams:Object = null, pForceClose:Boolean = false, pWidth:Number = 0, pHeight:Number = 0, pType:String = "action") : void {
-      var btn:Object = new Object();
-      btn.label = pTitle;
-      btn.action = pAction;
-      btn.actionType = pType;
-      btn.params = pParams;
-      btn.width = pWidth <= 0?130:pWidth;
-      btn.height = pHeight <= 0?32:pHeight;
-      btn.forceClose = pForceClose;
-      btn.name = "btn" + (this._buttonList.length + 1).toString();
-      this._buttonList.push(btn);
+   public function addButton(pTitle:String, pAction:String, pParams:Object = null, pForceClose:Boolean = false, pWidth:Number = 0, pHeight:Number = 0, pType:String = "action") : void
+   {
+      //Décompilation abandonné
    }
    
-   public function addImage(pClip:Uri, pLabel:String = "", pTips:String = "", pX:Number = -1, pY:Number = -1, pWidth:Number = -1, pHeight:Number = -1) : void {
-      var img:Object = new Object();
-      img.uri = pClip;
-      img.label = pLabel;
-      img.tips = pTips;
-      img.x = pX;
-      img.y = pY;
-      img.width = pWidth;
-      img.height = pHeight;
-      img.verticalAlign = pY == -1;
-      img.horizontalAlign = false;
-      this._imageList.push(img);
+   public function addImage(pClip:Uri, pLabel:String = "", pTips:String = "", pX:Number = -1, pY:Number = -1, pWidth:Number = -1, pHeight:Number = -1) : void
+   {
+      //Décompilation abandonné
    }
    
-   public function setTimer(val:uint, pause:Boolean = false, pBlockCallbackOnClose:Boolean = false, pNotify:Boolean = true) : void {
-      this._duration = val * 1000;
-      this.startTime = 0;
-      this.pauseOnOver = pause;
-      this.blockCallbackOnTimerEnds = pBlockCallbackOnClose;
-      this.notifyUser = pNotify;
+   public function setTimer(val:uint, pause:Boolean = false, pBlockCallbackOnClose:Boolean = false, pNotify:Boolean = true) : void
+   {
+      //Décompilation abandonné
    }
 }

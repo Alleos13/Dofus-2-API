@@ -5,8 +5,13 @@ package com.ankamagames.dofus.kernel.updaterv2.messages.impl
    public class ProgressMessage extends Object implements IUpdaterInputMessage
    {
       
-      public function ProgressMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ProgressMessage()
+      {
+         //Décompilation abandonné
       }
       
       private var _step:String;
@@ -23,46 +28,49 @@ package com.ankamagames.dofus.kernel.updaterv2.messages.impl
       
       private var _totalSize:Number;
       
-      public function deserialize(data:Object) : void {
-         this._step = data["step"];
-         this._progress = data["progress"];
-         this._smooth = data["smooth"];
-         this._eta = data["eta"];
-         this._speed = data["speed"];
-         this._currentSize = data["currentSize"];
-         this._totalSize = data["totalSize"];
+      public function deserialize(data:Object) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get progress() : Number {
-         return this._progress;
+      public function get progress() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function get smooth() : Number {
-         return this._smooth;
+      public function get smooth() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function get eta() : Number {
-         return this._eta;
+      public function get eta() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function get speed() : Number {
-         return this._speed;
+      public function get speed() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function get currentSize() : Number {
-         return this._currentSize;
+      public function get currentSize() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function get totalSize() : Number {
-         return this._totalSize;
+      public function get totalSize() : Number
+      {
+         //Décompilation abandonné
       }
       
-      public function get step() : String {
-         return this._step;
+      public function get step() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function toString() : String {
-         return "[ProgressMessage step=" + this._step + " progress=" + this._progress + ", smooth=" + this._smooth + ", eta=" + this._eta + ", speed=" + this._speed + ", currentSize=" + this._currentSize + ", totalSize=" + this._totalSize + "]";
+      public function toString() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

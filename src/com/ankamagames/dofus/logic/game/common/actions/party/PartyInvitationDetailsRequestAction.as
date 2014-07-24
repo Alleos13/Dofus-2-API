@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.party
    public class PartyInvitationDetailsRequestAction extends Object implements Action
    {
       
-      public function PartyInvitationDetailsRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(partyId:int) : PartyInvitationDetailsRequestAction {
-         var a:PartyInvitationDetailsRequestAction = new PartyInvitationDetailsRequestAction();
-         a.partyId = partyId;
-         return a;
+      public function PartyInvitationDetailsRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(partyId:int) : PartyInvitationDetailsRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var partyId:int;

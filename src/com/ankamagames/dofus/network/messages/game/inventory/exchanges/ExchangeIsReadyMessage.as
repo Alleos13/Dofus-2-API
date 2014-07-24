@@ -9,81 +9,71 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeIsReadyMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeIsReadyMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeIsReadyMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5509;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint = 0;
       
       public var ready:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 5509;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeIsReadyMessage(id:uint = 0, ready:Boolean = false) : ExchangeIsReadyMessage {
-         this.id = id;
-         this.ready = ready;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeIsReadyMessage(id:uint = 0, ready:Boolean = false) : ExchangeIsReadyMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.id = 0;
-         this.ready = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeIsReadyMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeIsReadyMessage(output:IDataOutput) : void {
-         if(this.id < 0)
-         {
-            throw new Error("Forbidden value (" + this.id + ") on element id.");
-         }
-         else
-         {
-            output.writeInt(this.id);
-            output.writeBoolean(this.ready);
-            return;
-         }
+      public function serializeAs_ExchangeIsReadyMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeIsReadyMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeIsReadyMessage(input:IDataInput) : void {
-         this.id = input.readInt();
-         if(this.id < 0)
-         {
-            throw new Error("Forbidden value (" + this.id + ") on element of ExchangeIsReadyMessage.id.");
-         }
-         else
-         {
-            this.ready = input.readBoolean();
-            return;
-         }
+      public function deserializeAs_ExchangeIsReadyMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

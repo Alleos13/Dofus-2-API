@@ -5,8 +5,13 @@ package com.ankamagames.berilia.types.uiDefinition
    public class LocationELement extends Object
    {
       
-      public function LocationELement() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LocationELement()
+      {
+         //Décompilation abandonné
       }
       
       public var point:uint;
@@ -25,19 +30,9 @@ package com.ankamagames.berilia.types.uiDefinition
       
       public var offsetYType:uint;
       
-      public function toGraphicLocation() : GraphicLocation {
-         var gl:GraphicLocation = new GraphicLocation(this.point,this.relativePoint,this.relativeTo);
-         gl.offsetXType = this.offsetXType;
-         gl.offsetYType = this.offsetYType;
-         if(!isNaN(this.offsetX))
-         {
-            gl.setOffsetX(this.offsetX);
-         }
-         if(!isNaN(this.offsetY))
-         {
-            gl.setOffsetY(this.offsetY);
-         }
-         return gl;
+      public function toGraphicLocation() : GraphicLocation
+      {
+         //Décompilation abandonné
       }
    }
 }

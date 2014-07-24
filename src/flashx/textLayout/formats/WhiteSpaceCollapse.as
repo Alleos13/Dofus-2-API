@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public final class WhiteSpaceCollapse extends Object
    {
       
-      public function WhiteSpaceCollapse() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function WhiteSpaceCollapse()
+      {
+         //Décompilation abandonné
       }
       
       public static const COLLAPSE:String = "collapse";

@@ -8,9 +8,13 @@ package com.ankamagames.jerakine.network
    public interface INetworkMessage extends IdentifiedMessage, QueueableMessage
    {
       
-      function pack(param1:IDataOutput) : void;
+      {
+      //Décompilation abandonné
+      }
       
-      function unpack(param1:IDataInput, param2:uint) : void;
+      function pack(output:IDataOutput) : void;
+      
+      function unpack(input:IDataInput, length:uint) : void;
       
       function get isInitialized() : Boolean;
    }

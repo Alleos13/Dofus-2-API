@@ -21,52 +21,35 @@ package com.ankamagames.dofus.logic.game.common.frames
    public class ContextChangeFrame extends Object implements Frame
    {
       
-      public function ContextChangeFrame() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ContextChangeFrame()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      public function get priority() : int {
-         return Priority.LOW;
+      public function get priority() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function pushed() : Boolean {
-         return true;
+      public function pushed() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function process(msg:Message) : Boolean {
-         var gccmsg:GameContextCreateMessage = null;
-         var gcqmsg:GameContextQuitMessage = null;
-         switch(true)
-         {
-            case msg is GameContextCreateMessage:
-               gccmsg = msg as GameContextCreateMessage;
-               switch(gccmsg.context)
-               {
-                  case GameContextEnum.ROLE_PLAY:
-                     Kernel.getWorker().addFrame(new RoleplayContextFrame());
-                     KernelEventsManager.getInstance().processCallback(HookList.ContextChanged,GameContextEnum.ROLE_PLAY);
-                     break;
-                  case GameContextEnum.FIGHT:
-                     Kernel.getWorker().addFrame(new FightContextFrame());
-                     KernelEventsManager.getInstance().processCallback(HookList.ContextChanged,GameContextEnum.FIGHT);
-                     break;
-                  default:
-                     Kernel.panic(PanicMessages.WRONG_CONTEXT_CREATED,[gccmsg.context]);
-               }
-               return true;
-            case msg is GameContextQuitAction:
-               gcqmsg = new GameContextQuitMessage();
-               ConnectionsHandler.getConnection().send(gcqmsg);
-               return true;
-            default:
-               return false;
-         }
+      public function process(msg:Message) : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pulled() : Boolean {
-         return true;
+      public function pulled() : Boolean
+      {
+         //Décompilation abandonné
       }
    }
 }

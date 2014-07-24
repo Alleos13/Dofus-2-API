@@ -5,8 +5,13 @@ package com.ankamagames.berilia.components.messages
    public class CreateTabMessage extends ComponentMessage
    {
       
-      public function CreateTabMessage(target:InteractiveObject) {
-         super(target);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CreateTabMessage(target:InteractiveObject)
+      {
+         //Décompilation abandonné
       }
    }
 }

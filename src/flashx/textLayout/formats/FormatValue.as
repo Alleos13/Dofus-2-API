@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public final class FormatValue extends Object
    {
       
-      public function FormatValue() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FormatValue()
+      {
+         //Décompilation abandonné
       }
       
       public static const AUTO:String = "auto";

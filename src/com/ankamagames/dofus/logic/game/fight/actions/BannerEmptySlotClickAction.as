@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.fight.actions
    public class BannerEmptySlotClickAction extends Object implements Action
    {
       
-      public function BannerEmptySlotClickAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : BannerEmptySlotClickAction {
-         var a:BannerEmptySlotClickAction = new BannerEmptySlotClickAction();
-         return a;
+      public function BannerEmptySlotClickAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : BannerEmptySlotClickAction
+      {
+         //Décompilation abandonné
       }
    }
 }

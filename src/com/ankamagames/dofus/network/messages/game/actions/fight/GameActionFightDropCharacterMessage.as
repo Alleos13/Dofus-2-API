@@ -9,85 +9,71 @@ package com.ankamagames.dofus.network.messages.game.actions.fight
    public class GameActionFightDropCharacterMessage extends AbstractGameActionMessage implements INetworkMessage
    {
       
-      public function GameActionFightDropCharacterMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameActionFightDropCharacterMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5826;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var targetId:int = 0;
       
       public var cellId:int = 0;
       
-      override public function getMessageId() : uint {
-         return 5826;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameActionFightDropCharacterMessage(actionId:uint = 0, sourceId:int = 0, targetId:int = 0, cellId:int = 0) : GameActionFightDropCharacterMessage {
-         super.initAbstractGameActionMessage(actionId,sourceId);
-         this.targetId = targetId;
-         this.cellId = cellId;
-         this._isInitialized = true;
-         return this;
+      public function initGameActionFightDropCharacterMessage(actionId:uint = 0, sourceId:int = 0, targetId:int = 0, cellId:int = 0) : GameActionFightDropCharacterMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.targetId = 0;
-         this.cellId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameActionFightDropCharacterMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameActionFightDropCharacterMessage(output:IDataOutput) : void {
-         super.serializeAs_AbstractGameActionMessage(output);
-         output.writeInt(this.targetId);
-         if((this.cellId < -1) || (this.cellId > 559))
-         {
-            throw new Error("Forbidden value (" + this.cellId + ") on element cellId.");
-         }
-         else
-         {
-            output.writeShort(this.cellId);
-            return;
-         }
+      public function serializeAs_GameActionFightDropCharacterMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameActionFightDropCharacterMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameActionFightDropCharacterMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.targetId = input.readInt();
-         this.cellId = input.readShort();
-         if((this.cellId < -1) || (this.cellId > 559))
-         {
-            throw new Error("Forbidden value (" + this.cellId + ") on element of GameActionFightDropCharacterMessage.cellId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_GameActionFightDropCharacterMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

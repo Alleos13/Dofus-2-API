@@ -9,75 +9,69 @@ package com.ankamagames.dofus.network.messages.game.friend
    public class FriendDeleteRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function FriendDeleteRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FriendDeleteRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5603;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var accountId:uint = 0;
       
-      override public function getMessageId() : uint {
-         return 5603;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initFriendDeleteRequestMessage(accountId:uint = 0) : FriendDeleteRequestMessage {
-         this.accountId = accountId;
-         this._isInitialized = true;
-         return this;
+      public function initFriendDeleteRequestMessage(accountId:uint = 0) : FriendDeleteRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.accountId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_FriendDeleteRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_FriendDeleteRequestMessage(output:IDataOutput) : void {
-         if(this.accountId < 0)
-         {
-            throw new Error("Forbidden value (" + this.accountId + ") on element accountId.");
-         }
-         else
-         {
-            output.writeInt(this.accountId);
-            return;
-         }
+      public function serializeAs_FriendDeleteRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_FriendDeleteRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_FriendDeleteRequestMessage(input:IDataInput) : void {
-         this.accountId = input.readInt();
-         if(this.accountId < 0)
-         {
-            throw new Error("Forbidden value (" + this.accountId + ") on element of FriendDeleteRequestMessage.accountId.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_FriendDeleteRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

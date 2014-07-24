@@ -11,12 +11,13 @@ package com.ankamagames.dofus.logic.game.common.steps
    public class DisplayEntityStep extends AbstractSequencable
    {
       
-      public function DisplayEntityStep(pEntityId:int, pLook:String, pCellId:uint, pDirection:int) {
-         super();
-         this._id = pEntityId;
-         this._look = pLook;
-         this._cellId = pCellId;
-         this._direction = pDirection;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DisplayEntityStep(pEntityId:int, pLook:String, pCellId:uint, pDirection:int)
+      {
+         //Décompilation abandonné
       }
       
       private var _id:int;
@@ -27,14 +28,9 @@ package com.ankamagames.dofus.logic.game.common.steps
       
       private var _direction:int;
       
-      override public function start() : void {
-         var rpef:RoleplayEntitiesFrame = Kernel.getWorker().getFrame(RoleplayEntitiesFrame) as RoleplayEntitiesFrame;
-         var gci:GameContextActorInformations = new GameContextActorInformations();
-         var disposition:EntityDispositionInformations = new EntityDispositionInformations();
-         disposition.initEntityDispositionInformations(this._cellId,this._direction);
-         gci.initGameContextActorInformations(this._id,EntityLookAdapter.toNetwork(EntityLookParser.fromString(this._look)),disposition);
-         rpef.addOrUpdateActor(gci);
-         executeCallbacks();
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

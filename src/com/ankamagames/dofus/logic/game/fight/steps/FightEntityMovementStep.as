@@ -11,40 +11,32 @@ package com.ankamagames.dofus.logic.game.fight.steps
    public class FightEntityMovementStep extends AbstractSequencable implements IFightStep
    {
       
-      public function FightEntityMovementStep(entityId:int, path:MovementPath) {
-         super();
-         this._entityId = entityId;
-         this._path = path;
-         timeout = path.length * 1000;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightEntityMovementStep(entityId:int, path:MovementPath)
+      {
+         //Décompilation abandonné
       }
       
       private var _entityId:int;
       
       private var _path:MovementPath;
       
-      public function get stepType() : String {
-         return "entityMovement";
+      public function get stepType() : String
+      {
+         //Décompilation abandonné
       }
       
-      override public function start() : void {
-         var fighterInfos:GameFightFighterInformations = null;
-         var entity:IMovable = DofusEntities.getEntity(this._entityId) as IMovable;
-         if(entity)
-         {
-            fighterInfos = FightEntitiesFrame.getCurrentInstance().getEntityInfos(this._entityId) as GameFightFighterInformations;
-            fighterInfos.disposition.cellId = this._path.end.cellId;
-            entity.move(this._path,this.movementEnd);
-         }
-         else
-         {
-            _log.warn("Unable to move unknown entity " + this._entityId + ".");
-            this.movementEnd();
-         }
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
       
-      private function movementEnd() : void {
-         FightSpellCastFrame.updateRangeAndTarget();
-         executeCallbacks();
+      private function movementEnd() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

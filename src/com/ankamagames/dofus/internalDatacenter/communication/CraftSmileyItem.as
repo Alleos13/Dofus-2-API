@@ -5,11 +5,13 @@ package com.ankamagames.dofus.internalDatacenter.communication
    public class CraftSmileyItem extends Object implements IDataCenter
    {
       
-      public function CraftSmileyItem(pPlayerId:uint, pIconId:int, pCraftResult:uint) {
-         super();
-         this.playerId = pPlayerId;
-         this.iconId = pIconId;
-         this.craftResult = pCraftResult;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CraftSmileyItem(pPlayerId:uint, pIconId:int, pCraftResult:uint)
+      {
+         //Décompilation abandonné
       }
       
       public var playerId:int;

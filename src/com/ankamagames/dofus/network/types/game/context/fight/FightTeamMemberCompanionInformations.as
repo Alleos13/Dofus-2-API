@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.context.fight
    public class FightTeamMemberCompanionInformations extends FightTeamMemberInformations implements INetworkType
    {
       
-      public function FightTeamMemberCompanionInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightTeamMemberCompanionInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 451;
@@ -19,61 +24,39 @@ package com.ankamagames.dofus.network.types.game.context.fight
       
       public var masterId:int = 0;
       
-      override public function getTypeId() : uint {
-         return 451;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initFightTeamMemberCompanionInformations(id:int = 0, companionId:int = 0, level:uint = 0, masterId:int = 0) : FightTeamMemberCompanionInformations {
-         super.initFightTeamMemberInformations(id);
-         this.companionId = companionId;
-         this.level = level;
-         this.masterId = masterId;
-         return this;
+      public function initFightTeamMemberCompanionInformations(id:int = 0, companionId:int = 0, level:uint = 0, masterId:int = 0) : FightTeamMemberCompanionInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.companionId = 0;
-         this.level = 0;
-         this.masterId = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_FightTeamMemberCompanionInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_FightTeamMemberCompanionInformations(output:IDataOutput) : void {
-         super.serializeAs_FightTeamMemberInformations(output);
-         output.writeInt(this.companionId);
-         if(this.level < 0)
-         {
-            throw new Error("Forbidden value (" + this.level + ") on element level.");
-         }
-         else
-         {
-            output.writeShort(this.level);
-            output.writeInt(this.masterId);
-            return;
-         }
+      public function serializeAs_FightTeamMemberCompanionInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_FightTeamMemberCompanionInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_FightTeamMemberCompanionInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.companionId = input.readInt();
-         this.level = input.readShort();
-         if(this.level < 0)
-         {
-            throw new Error("Forbidden value (" + this.level + ") on element of FightTeamMemberCompanionInformations.level.");
-         }
-         else
-         {
-            this.masterId = input.readInt();
-            return;
-         }
+      public function deserializeAs_FightTeamMemberCompanionInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,16 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
    public class ObjectSetPositionAction extends Object implements Action
    {
       
-      public function ObjectSetPositionAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(objectUID:uint, position:uint, quantity:uint = 1) : ObjectSetPositionAction {
-         var a:ObjectSetPositionAction = new ObjectSetPositionAction();
-         a.objectUID = objectUID;
-         a.quantity = quantity;
-         a.position = position;
-         return a;
+      public function ObjectSetPositionAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(objectUID:uint, position:uint, quantity:uint = 1) : ObjectSetPositionAction
+      {
+         //Décompilation abandonné
       }
       
       public var objectUID:uint;

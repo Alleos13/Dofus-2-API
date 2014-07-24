@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.chat
    public class TabsUpdateAction extends Object implements Action
    {
       
-      public function TabsUpdateAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(tabs:Array = null, tabsNames:Array = null) : TabsUpdateAction {
-         var a:TabsUpdateAction = new TabsUpdateAction();
-         a.tabs = tabs;
-         a.tabsNames = tabsNames;
-         return a;
+      public function TabsUpdateAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(tabs:Array = null, tabsNames:Array = null) : TabsUpdateAction
+      {
+         //Décompilation abandonné
       }
       
       public var tabs:Array;

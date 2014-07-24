@@ -8,8 +8,13 @@ package com.ankamagames.dofus.network.types.game.social
    public class GuildInsiderFactSheetInformations extends GuildFactSheetInformations implements INetworkType
    {
       
-      public function GuildInsiderFactSheetInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GuildInsiderFactSheetInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 423;
@@ -24,97 +29,39 @@ package com.ankamagames.dofus.network.types.game.social
       
       public var enabled:Boolean = false;
       
-      override public function getTypeId() : uint {
-         return 423;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGuildInsiderFactSheetInformations(guildId:uint = 0, guildName:String = "", guildEmblem:GuildEmblem = null, leaderId:uint = 0, guildLevel:uint = 0, nbMembers:uint = 0, leaderName:String = "", nbConnectedMembers:uint = 0, nbTaxCollectors:uint = 0, lastActivity:uint = 0, enabled:Boolean = false) : GuildInsiderFactSheetInformations {
-         super.initGuildFactSheetInformations(guildId,guildName,guildEmblem,leaderId,guildLevel,nbMembers);
-         this.leaderName = leaderName;
-         this.nbConnectedMembers = nbConnectedMembers;
-         this.nbTaxCollectors = nbTaxCollectors;
-         this.lastActivity = lastActivity;
-         this.enabled = enabled;
-         return this;
+      public function initGuildInsiderFactSheetInformations(guildId:uint = 0, guildName:String = "", guildEmblem:GuildEmblem = null, leaderId:uint = 0, guildLevel:uint = 0, nbMembers:uint = 0, leaderName:String = "", nbConnectedMembers:uint = 0, nbTaxCollectors:uint = 0, lastActivity:uint = 0, enabled:Boolean = false) : GuildInsiderFactSheetInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.leaderName = "";
-         this.nbConnectedMembers = 0;
-         this.nbTaxCollectors = 0;
-         this.lastActivity = 0;
-         this.enabled = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GuildInsiderFactSheetInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GuildInsiderFactSheetInformations(output:IDataOutput) : void {
-         super.serializeAs_GuildFactSheetInformations(output);
-         output.writeUTF(this.leaderName);
-         if(this.nbConnectedMembers < 0)
-         {
-            throw new Error("Forbidden value (" + this.nbConnectedMembers + ") on element nbConnectedMembers.");
-         }
-         else
-         {
-            output.writeShort(this.nbConnectedMembers);
-            if(this.nbTaxCollectors < 0)
-            {
-               throw new Error("Forbidden value (" + this.nbTaxCollectors + ") on element nbTaxCollectors.");
-            }
-            else
-            {
-               output.writeByte(this.nbTaxCollectors);
-               if(this.lastActivity < 0)
-               {
-                  throw new Error("Forbidden value (" + this.lastActivity + ") on element lastActivity.");
-               }
-               else
-               {
-                  output.writeInt(this.lastActivity);
-                  output.writeBoolean(this.enabled);
-                  return;
-               }
-            }
-         }
+      public function serializeAs_GuildInsiderFactSheetInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GuildInsiderFactSheetInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildInsiderFactSheetInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.leaderName = input.readUTF();
-         this.nbConnectedMembers = input.readShort();
-         if(this.nbConnectedMembers < 0)
-         {
-            throw new Error("Forbidden value (" + this.nbConnectedMembers + ") on element of GuildInsiderFactSheetInformations.nbConnectedMembers.");
-         }
-         else
-         {
-            this.nbTaxCollectors = input.readByte();
-            if(this.nbTaxCollectors < 0)
-            {
-               throw new Error("Forbidden value (" + this.nbTaxCollectors + ") on element of GuildInsiderFactSheetInformations.nbTaxCollectors.");
-            }
-            else
-            {
-               this.lastActivity = input.readInt();
-               if(this.lastActivity < 0)
-               {
-                  throw new Error("Forbidden value (" + this.lastActivity + ") on element of GuildInsiderFactSheetInformations.lastActivity.");
-               }
-               else
-               {
-                  this.enabled = input.readBoolean();
-                  return;
-               }
-            }
-         }
+      public function deserializeAs_GuildInsiderFactSheetInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

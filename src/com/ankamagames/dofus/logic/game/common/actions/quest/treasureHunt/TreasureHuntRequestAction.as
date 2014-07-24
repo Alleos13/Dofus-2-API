@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.quest.treasureHunt
    public class TreasureHuntRequestAction extends Object implements Action
    {
       
-      public function TreasureHuntRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(level:int, questType:int) : TreasureHuntRequestAction {
-         var action:TreasureHuntRequestAction = new TreasureHuntRequestAction();
-         action.level = level;
-         action.questType = questType;
-         return action;
+      public function TreasureHuntRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(level:int, questType:int) : TreasureHuntRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var level:int;

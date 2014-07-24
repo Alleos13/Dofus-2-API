@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeObjectMoveKamaMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeObjectMoveKamaMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeObjectMoveKamaMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5520;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var quantity:int = 0;
       
-      override public function getMessageId() : uint {
-         return 5520;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeObjectMoveKamaMessage(quantity:int = 0) : ExchangeObjectMoveKamaMessage {
-         this.quantity = quantity;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeObjectMoveKamaMessage(quantity:int = 0) : ExchangeObjectMoveKamaMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.quantity = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeObjectMoveKamaMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeObjectMoveKamaMessage(output:IDataOutput) : void {
-         output.writeInt(this.quantity);
+      public function serializeAs_ExchangeObjectMoveKamaMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeObjectMoveKamaMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeObjectMoveKamaMessage(input:IDataInput) : void {
-         this.quantity = input.readInt();
+      public function deserializeAs_ExchangeObjectMoveKamaMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

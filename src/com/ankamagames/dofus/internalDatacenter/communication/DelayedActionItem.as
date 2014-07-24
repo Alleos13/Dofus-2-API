@@ -5,12 +5,13 @@ package com.ankamagames.dofus.internalDatacenter.communication
    public class DelayedActionItem extends Object implements IDataCenter
    {
       
-      public function DelayedActionItem(pPlayerId:uint, type:uint, dataId:int, endTime:Number) {
-         super();
-         this.playerId = pPlayerId;
-         this.type = type;
-         this.dataId = dataId;
-         this.endTime = endTime;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DelayedActionItem(pPlayerId:uint, type:uint, dataId:int, endTime:Number)
+      {
+         //Décompilation abandonné
       }
       
       public var playerId:uint;

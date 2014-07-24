@@ -5,17 +5,22 @@ package com.ankamagames.jerakine.network
    public class NetworkSentEvent extends Event
    {
       
-      public function NetworkSentEvent(type:String, msg:INetworkMessage) {
-         super(type,false,false);
-         this._message = msg;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function NetworkSentEvent(type:String, msg:INetworkMessage)
+      {
+         //Décompilation abandonné
       }
       
       public static const EVENT_SENT:String = "messageSent";
       
       private var _message:INetworkMessage;
       
-      public function get message() : INetworkMessage {
-         return this._message;
+      public function get message() : INetworkMessage
+      {
+         //Décompilation abandonné
       }
    }
 }

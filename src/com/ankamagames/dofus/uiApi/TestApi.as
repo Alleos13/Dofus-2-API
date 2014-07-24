@@ -12,42 +12,37 @@ package com.ankamagames.dofus.uiApi
    public class TestApi extends Object implements IApi
    {
       
-      public function TestApi() {
-         this._log = Log.getLogger(getQualifiedClassName(DataApi));
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TestApi()
+      {
+         //Décompilation abandonné
       }
       
       protected var _log:Logger;
       
       private var _module:UiModule;
       
-      public function set module(value:UiModule) : void {
-         this._module = value;
+      public function set module(value:UiModule) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         this._module = null;
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getTestInventory(len:uint) : Vector.<ItemWrapper> {
-         var item:Item = null;
-         var inventory:Vector.<ItemWrapper> = new Vector.<ItemWrapper>();
-         var i:uint = 0;
-         while(i < len)
-         {
-            item = null;
-            while(!item)
-            {
-               item = Item.getItemById(Math.floor(Math.random() * 1000));
-            }
-            inventory.push(ItemWrapper.create(63,i,item.id,0,null));
-            i++;
-         }
-         return inventory;
+      public function getTestInventory(len:uint) : Vector.<ItemWrapper>
+      {
+         //Décompilation abandonné
       }
       
-      public function showTrace(active:Boolean = true) : void {
-         showRedrawRegions(active,40349);
+      public function showTrace(active:Boolean = true) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

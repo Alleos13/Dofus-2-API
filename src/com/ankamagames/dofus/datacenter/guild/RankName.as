@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.guild
    public class RankName extends Object implements IDataCenter
    {
       
-      public function RankName() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function RankName()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "RankNames";
       
       protected static const _log:Logger;
       
-      public static function getRankNameById(id:int) : RankName {
-         return GameData.getObject(MODULE,id) as RankName;
+      public static function getRankNameById(id:int) : RankName
+      {
+         //Décompilation abandonné
       }
       
-      public static function getRankNames() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getRankNames() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -34,12 +41,9 @@ package com.ankamagames.dofus.datacenter.guild
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

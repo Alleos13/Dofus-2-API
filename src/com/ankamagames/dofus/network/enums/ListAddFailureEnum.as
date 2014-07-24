@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class ListAddFailureEnum extends Object
    {
       
-      public function ListAddFailureEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ListAddFailureEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const LIST_ADD_FAILURE_UNKNOWN:uint = 0;

@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public final class Float extends Object
    {
       
-      public function Float() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Float()
+      {
+         //Décompilation abandonné
       }
       
       public static const NONE:String = "none";

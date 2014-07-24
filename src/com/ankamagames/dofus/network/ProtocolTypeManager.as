@@ -167,227 +167,25 @@ package com.ankamagames.dofus.network
    public class ProtocolTypeManager extends Object
    {
       
-      public function ProtocolTypeManager() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ProtocolTypeManager()
+      {
+         //Décompilation abandonné
       }
       
       private static const _typesTypes:Dictionary;
       
-      public static function getInstance(base:Class, typeId:uint) : * {
-         var objType:Class = _typesTypes[typeId];
-         if(!objType)
-         {
-            throw new Error("Type with id " + typeId + " is unknown.");
-         }
-         else
-         {
-            obj = new objType();
-            if(!(obj is base))
-            {
-               throw new Error("Type " + typeId + " is not a " + base + ".");
-            }
-            else
-            {
-               return obj;
-            }
-         }
+      public static function getInstance(base:Class, typeId:uint) : *
+      {
+         //Décompilation abandonné
       }
       
-      public static function register() : void {
-         StoreDataManager.getInstance().registerClass(new CharacterMinimalPlusLookInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new CharacterBaseInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new PartyMemberInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new PartyMemberArenaInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new CharacterHardcoreInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new PartyInvitationMemberInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new CharacterMinimalGuildInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new CharacterMinimalAllianceInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new CharacterMinimalPlusLookAndGradeInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new CharacterBaseInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new PartyMemberInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new PartyMemberArenaInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new CharacterHardcoreInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new PartyInvitationMemberInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new EntityDispositionInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new IdentifiedEntityDispositionInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightEntityDispositionInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new AbstractSocialGroupInfos(),true,true);
-         StoreDataManager.getInstance().registerClass(new BasicAllianceInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new BasicNamedAllianceInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new AllianceInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new AllianceFactSheetInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new BasicGuildInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GuildInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GuildFactSheetInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GuildInsiderFactSheetInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new AlliancedGuildFactSheetInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GuildInAllianceInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GuildVersatileInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GuildInAllianceVersatileInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GuildFactSheetInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GuildInsiderFactSheetInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new AllianceFactSheetInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new PrismSubareaEmptyInfo(),true,true);
-         StoreDataManager.getInstance().registerClass(new PrismGeolocalizedInformation(),true,true);
-         StoreDataManager.getInstance().registerClass(new PrismInformation(),true,true);
-         StoreDataManager.getInstance().registerClass(new AllianceInsiderPrismInformation(),true,true);
-         StoreDataManager.getInstance().registerClass(new AlliancePrismInformation(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightTeamMemberInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightTeamMemberCharacterInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightTeamMemberWithAllianceCharacterInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightTeamMemberCompanionInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightTeamMemberMonsterInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightTeamMemberTaxCollectorInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightTeamInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightAllianceTeamInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightMinimalStats(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightMinimalStatsPreparation(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightResultListEntry(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightResultFighterListEntry(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightResultMutantListEntry(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightResultPlayerListEntry(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightResultTaxCollectorListEntry(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightResultAdditionalData(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightResultPvpData(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightResultExperienceData(),true,true);
-         StoreDataManager.getInstance().registerClass(new AbstractFightDispellableEffect(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightTemporaryBoostEffect(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightTemporaryBoostStateEffect(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightTemporaryBoostWeaponDamagesEffect(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightTemporarySpellBoostEffect(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightTemporarySpellImmunityEffect(),true,true);
-         StoreDataManager.getInstance().registerClass(new FightTriggeredEffect(),true,true);
-         StoreDataManager.getInstance().registerClass(new ObjectEffect(),true,true);
-         StoreDataManager.getInstance().registerClass(new ObjectEffectInteger(),true,true);
-         StoreDataManager.getInstance().registerClass(new ObjectEffectCreature(),true,true);
-         StoreDataManager.getInstance().registerClass(new ObjectEffectLadder(),true,true);
-         StoreDataManager.getInstance().registerClass(new ObjectEffectDuration(),true,true);
-         StoreDataManager.getInstance().registerClass(new ObjectEffectDice(),true,true);
-         StoreDataManager.getInstance().registerClass(new ObjectEffectMinMax(),true,true);
-         StoreDataManager.getInstance().registerClass(new ObjectEffectString(),true,true);
-         StoreDataManager.getInstance().registerClass(new ObjectEffectMount(),true,true);
-         StoreDataManager.getInstance().registerClass(new ObjectEffectDate(),true,true);
-         StoreDataManager.getInstance().registerClass(new UpdateMountBoost(),true,true);
-         StoreDataManager.getInstance().registerClass(new UpdateMountIntBoost(),true,true);
-         StoreDataManager.getInstance().registerClass(new Shortcut(),true,true);
-         StoreDataManager.getInstance().registerClass(new ShortcutObject(),true,true);
-         StoreDataManager.getInstance().registerClass(new ShortcutObjectItem(),true,true);
-         StoreDataManager.getInstance().registerClass(new ShortcutObjectPreset(),true,true);
-         StoreDataManager.getInstance().registerClass(new ShortcutSpell(),true,true);
-         StoreDataManager.getInstance().registerClass(new ShortcutEmote(),true,true);
-         StoreDataManager.getInstance().registerClass(new ShortcutSmiley(),true,true);
-         StoreDataManager.getInstance().registerClass(new IgnoredInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new IgnoredOnlineInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new FriendInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new FriendOnlineInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new FriendSpouseInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new FriendSpouseOnlineInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new InteractiveElementSkill(),true,true);
-         StoreDataManager.getInstance().registerClass(new InteractiveElementNamedSkill(),true,true);
-         StoreDataManager.getInstance().registerClass(new InteractiveElement(),true,true);
-         StoreDataManager.getInstance().registerClass(new InteractiveElementWithAgeBonus(),true,true);
-         StoreDataManager.getInstance().registerClass(new PartyMemberInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new PartyMemberArenaInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new SkillActionDescription(),true,true);
-         StoreDataManager.getInstance().registerClass(new SkillActionDescriptionTimed(),true,true);
-         StoreDataManager.getInstance().registerClass(new SkillActionDescriptionCollect(),true,true);
-         StoreDataManager.getInstance().registerClass(new SkillActionDescriptionCraft(),true,true);
-         StoreDataManager.getInstance().registerClass(new HouseInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new HouseInformationsExtended(),true,true);
-         StoreDataManager.getInstance().registerClass(new PaddockInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new PaddockBuyableInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new PaddockAbandonnedInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new PaddockPrivateInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new PaddockContentInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameContextActorInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightFighterInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightAIInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightMonsterInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightMonsterWithAlignmentInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightTaxCollectorInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightFighterNamedInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightMutantInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightCharacterInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightCompanionInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayActorInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayNamedActorInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayHumanoidInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayMutantInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayCharacterInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayMerchantInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayMountInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayNpcInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayNpcWithQuestInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayGroupMonsterInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayGroupMonsterWaveInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayTaxCollectorInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayPrismInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayPortalInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayActorInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayNamedActorInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayHumanoidInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayMutantInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayCharacterInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayMerchantInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayMountInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayNpcInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayNpcWithQuestInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayGroupMonsterInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayGroupMonsterWaveInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayTaxCollectorInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayPrismInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameRolePlayPortalInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new HumanInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new HumanOption(),true,true);
-         StoreDataManager.getInstance().registerClass(new HumanOptionAlliance(),true,true);
-         StoreDataManager.getInstance().registerClass(new HumanOptionOrnament(),true,true);
-         StoreDataManager.getInstance().registerClass(new HumanOptionFollowers(),true,true);
-         StoreDataManager.getInstance().registerClass(new HumanOptionObjectUse(),true,true);
-         StoreDataManager.getInstance().registerClass(new HumanOptionGuild(),true,true);
-         StoreDataManager.getInstance().registerClass(new HumanOptionTitle(),true,true);
-         StoreDataManager.getInstance().registerClass(new HumanOptionEmote(),true,true);
-         StoreDataManager.getInstance().registerClass(new TaxCollectorStaticInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new TaxCollectorStaticExtendedInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new TaxCollectorInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new TaxCollectorComplementaryInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new TaxCollectorLootInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new TaxCollectorWaitingForHelpInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new TaxCollectorGuildInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GroupMonsterStaticInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GroupMonsterStaticInformationsWithAlternatives(),true,true);
-         StoreDataManager.getInstance().registerClass(new QuestActiveInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new QuestActiveDetailedInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new QuestObjectiveInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new QuestObjectiveInformationsWithCompletion(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightFighterInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightAIInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightMonsterInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightMonsterWithAlignmentInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightTaxCollectorInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightFighterNamedInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightMutantInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightCharacterInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightCompanionInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightFighterLightInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightFighterNamedLightInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightFighterMonsterLightInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightFighterCompanionLightInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new GameFightFighterTaxCollectorLightInformations(),true,true);
-         StoreDataManager.getInstance().registerClass(new MapCoordinates(),true,true);
-         StoreDataManager.getInstance().registerClass(new MapCoordinatesAndId(),true,true);
-         StoreDataManager.getInstance().registerClass(new MapCoordinatesExtended(),true,true);
-         StoreDataManager.getInstance().registerClass(new TreasureHuntStep(),true,true);
-         StoreDataManager.getInstance().registerClass(new TreasureHuntStepFight(),true,true);
-         StoreDataManager.getInstance().registerClass(new TreasureHuntStepFollowDirection(),true,true);
-         StoreDataManager.getInstance().registerClass(new TreasureHuntStepDig(),true,true);
-         StoreDataManager.getInstance().registerClass(new TreasureHuntStepFollowDirectionToPOI(),true,true);
-         StoreDataManager.getInstance().registerClass(new PortalInformation(),true,true);
-         StoreDataManager.getInstance().registerClass(new PlayerStatus(),true,true);
-         StoreDataManager.getInstance().registerClass(new PlayerStatusExtended(),true,true);
-         StoreDataManager.getInstance().registerClass(new ServerSessionConstant(),true,true);
-         StoreDataManager.getInstance().registerClass(new ServerSessionConstantString(),true,true);
-         StoreDataManager.getInstance().registerClass(new ServerSessionConstantInteger(),true,true);
-         StoreDataManager.getInstance().registerClass(new ServerSessionConstantLong(),true,true);
+      public static function register() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

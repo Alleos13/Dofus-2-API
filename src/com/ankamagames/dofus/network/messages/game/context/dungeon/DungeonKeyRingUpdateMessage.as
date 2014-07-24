@@ -9,81 +9,71 @@ package com.ankamagames.dofus.network.messages.game.context.dungeon
    public class DungeonKeyRingUpdateMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function DungeonKeyRingUpdateMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DungeonKeyRingUpdateMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6296;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var dungeonId:uint = 0;
       
       public var available:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 6296;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initDungeonKeyRingUpdateMessage(dungeonId:uint = 0, available:Boolean = false) : DungeonKeyRingUpdateMessage {
-         this.dungeonId = dungeonId;
-         this.available = available;
-         this._isInitialized = true;
-         return this;
+      public function initDungeonKeyRingUpdateMessage(dungeonId:uint = 0, available:Boolean = false) : DungeonKeyRingUpdateMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.dungeonId = 0;
-         this.available = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_DungeonKeyRingUpdateMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_DungeonKeyRingUpdateMessage(output:IDataOutput) : void {
-         if(this.dungeonId < 0)
-         {
-            throw new Error("Forbidden value (" + this.dungeonId + ") on element dungeonId.");
-         }
-         else
-         {
-            output.writeShort(this.dungeonId);
-            output.writeBoolean(this.available);
-            return;
-         }
+      public function serializeAs_DungeonKeyRingUpdateMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_DungeonKeyRingUpdateMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_DungeonKeyRingUpdateMessage(input:IDataInput) : void {
-         this.dungeonId = input.readShort();
-         if(this.dungeonId < 0)
-         {
-            throw new Error("Forbidden value (" + this.dungeonId + ") on element of DungeonKeyRingUpdateMessage.dungeonId.");
-         }
-         else
-         {
-            this.available = input.readBoolean();
-            return;
-         }
+      public function deserializeAs_DungeonKeyRingUpdateMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.communication
    public class ChatChannel extends Object implements IDataCenter
    {
       
-      public function ChatChannel() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ChatChannel()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "ChatChannels";
       
       protected static const _log:Logger;
       
-      public static function getChannelById(id:int) : ChatChannel {
-         return GameData.getObject(MODULE,id) as ChatChannel;
+      public static function getChannelById(id:int) : ChatChannel
+      {
+         //Décompilation abandonné
       }
       
-      public static function getChannels() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getChannels() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;
@@ -42,12 +49,9 @@ package com.ankamagames.dofus.datacenter.communication
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

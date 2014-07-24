@@ -3,6 +3,10 @@ package com.ankamagames.jerakine.utils.display.spellZone
    public interface ICellZoneProvider
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function get minimalRange() : uint;
       
       function get maximalRange() : uint;

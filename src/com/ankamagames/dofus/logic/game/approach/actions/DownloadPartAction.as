@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.approach.actions
    public class DownloadPartAction extends Object implements Action
    {
       
-      public function DownloadPartAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(id:String) : DownloadPartAction {
-         var a:DownloadPartAction = new DownloadPartAction();
-         a.id = id;
-         return a;
+      public function DownloadPartAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(id:String) : DownloadPartAction
+      {
+         //Décompilation abandonné
       }
       
       public var id:String;

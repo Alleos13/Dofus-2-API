@@ -5,6 +5,10 @@ package com.hurlant.util.der
    public interface IAsn1Type
    {
       
+      {
+      //Décompilation abandonné
+      }
+      
       function getType() : uint;
       
       function getLength() : uint;

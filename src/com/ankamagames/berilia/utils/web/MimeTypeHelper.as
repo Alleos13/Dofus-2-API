@@ -3,18 +3,18 @@ package com.ankamagames.berilia.utils.web
    public class MimeTypeHelper extends Object
    {
       
-      public function MimeTypeHelper() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function getMimeType(fileExtension:String) : String {
-         var mimeNode:XML = null;
-         mimeNode = MimeTypeHelper.mimetypeXml.mimeType.(attribute("fileExtension") == fileExtension)[0];
-         if(mimeNode)
-         {
-            return mimeNode.@type;
-         }
-         return null;
+      public function MimeTypeHelper()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function getMimeType(fileExtension:String) : String
+      {
+         //Décompilation abandonné
       }
       
       public static const mimetypeXml:XML;

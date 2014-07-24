@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public final class ListStyleType extends Object
    {
       
-      public function ListStyleType() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ListStyleType()
+      {
+         //Décompilation abandonné
       }
       
       public static const UPPER_ALPHA:String = "upperAlpha";

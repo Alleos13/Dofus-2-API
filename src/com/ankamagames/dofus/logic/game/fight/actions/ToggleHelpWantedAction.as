@@ -5,13 +5,18 @@ package com.ankamagames.dofus.logic.game.fight.actions
    public class ToggleHelpWantedAction extends Object implements Action
    {
       
-      public function ToggleHelpWantedAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create() : ToggleHelpWantedAction {
-         var a:ToggleHelpWantedAction = new ToggleHelpWantedAction();
-         return a;
+      public function ToggleHelpWantedAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create() : ToggleHelpWantedAction
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.secure
    public class TrustStatusMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function TrustStatusMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TrustStatusMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6267;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var trusted:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 6267;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initTrustStatusMessage(trusted:Boolean = false) : TrustStatusMessage {
-         this.trusted = trusted;
-         this._isInitialized = true;
-         return this;
+      public function initTrustStatusMessage(trusted:Boolean = false) : TrustStatusMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.trusted = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_TrustStatusMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_TrustStatusMessage(output:IDataOutput) : void {
-         output.writeBoolean(this.trusted);
+      public function serializeAs_TrustStatusMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_TrustStatusMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_TrustStatusMessage(input:IDataInput) : void {
-         this.trusted = input.readBoolean();
+      public function deserializeAs_TrustStatusMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

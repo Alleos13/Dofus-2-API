@@ -3,8 +3,13 @@ package com.ankamagames.tiphon.types
    public class TransformData extends Object
    {
       
-      public function TransformData() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TransformData()
+      {
+         //Décompilation abandonné
       }
       
       public var overrideClip:String;

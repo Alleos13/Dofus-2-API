@@ -3,8 +3,13 @@ package flashx.textLayout.compose
    public class Slug extends Object
    {
       
-      public function Slug() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Slug()
+      {
+         //Décompilation abandonné
       }
       
       public var leftMargin:Number;

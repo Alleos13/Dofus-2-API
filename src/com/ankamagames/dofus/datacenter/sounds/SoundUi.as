@@ -6,19 +6,25 @@ package com.ankamagames.dofus.datacenter.sounds
    public class SoundUi extends Object implements IDataCenter
    {
       
-      public function SoundUi() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SoundUi()
+      {
+         //Décompilation abandonné
       }
       
       public static var MODULE:String = "SoundUi";
       
-      public static function getSoundUiById(id:uint) : SoundUi {
-         var sb:SoundUi = GameData.getObject(MODULE,id) as SoundUi;
-         return sb;
+      public static function getSoundUiById(id:uint) : SoundUi
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSoundUis() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getSoundUis() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;

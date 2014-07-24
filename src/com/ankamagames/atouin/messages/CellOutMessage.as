@@ -3,8 +3,13 @@ package com.ankamagames.atouin.messages
    public class CellOutMessage extends CellInteractionMessage
    {
       
-      public function CellOutMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CellOutMessage()
+      {
+         //Décompilation abandonné
       }
    }
 }

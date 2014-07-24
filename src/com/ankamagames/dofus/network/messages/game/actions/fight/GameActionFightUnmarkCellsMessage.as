@@ -9,63 +9,69 @@ package com.ankamagames.dofus.network.messages.game.actions.fight
    public class GameActionFightUnmarkCellsMessage extends AbstractGameActionMessage implements INetworkMessage
    {
       
-      public function GameActionFightUnmarkCellsMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameActionFightUnmarkCellsMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5570;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return (super.isInitialized) && (this._isInitialized);
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var markId:int = 0;
       
-      override public function getMessageId() : uint {
-         return 5570;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameActionFightUnmarkCellsMessage(actionId:uint = 0, sourceId:int = 0, markId:int = 0) : GameActionFightUnmarkCellsMessage {
-         super.initAbstractGameActionMessage(actionId,sourceId);
-         this.markId = markId;
-         this._isInitialized = true;
-         return this;
+      public function initGameActionFightUnmarkCellsMessage(actionId:uint = 0, sourceId:int = 0, markId:int = 0) : GameActionFightUnmarkCellsMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.markId = 0;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameActionFightUnmarkCellsMessage(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameActionFightUnmarkCellsMessage(output:IDataOutput) : void {
-         super.serializeAs_AbstractGameActionMessage(output);
-         output.writeShort(this.markId);
+      public function serializeAs_GameActionFightUnmarkCellsMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameActionFightUnmarkCellsMessage(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameActionFightUnmarkCellsMessage(input:IDataInput) : void {
-         super.deserialize(input);
-         this.markId = input.readShort();
+      public function deserializeAs_GameActionFightUnmarkCellsMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

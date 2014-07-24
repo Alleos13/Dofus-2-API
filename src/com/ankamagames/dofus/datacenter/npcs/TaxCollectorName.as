@@ -10,20 +10,27 @@ package com.ankamagames.dofus.datacenter.npcs
    public class TaxCollectorName extends Object implements IDataCenter
    {
       
-      public function TaxCollectorName() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TaxCollectorName()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       public static const MODULE:String = "TaxCollectorNames";
       
-      public static function getTaxCollectorNameById(id:int) : TaxCollectorName {
-         return GameData.getObject(MODULE,id) as TaxCollectorName;
+      public static function getTaxCollectorNameById(id:int) : TaxCollectorName
+      {
+         //Décompilation abandonné
       }
       
-      public static function getTaxCollectorNames() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getTaxCollectorNames() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;
@@ -32,12 +39,9 @@ package com.ankamagames.dofus.datacenter.npcs
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

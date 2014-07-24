@@ -5,8 +5,13 @@ package com.ankamagames.dofus.types.characteristicContextual
    public class StyledTextContextual_STYLE_3_NUMBER_MOINS extends SpriteAsset
    {
       
-      public function StyledTextContextual_STYLE_3_NUMBER_MOINS() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StyledTextContextual_STYLE_3_NUMBER_MOINS()
+      {
+         //Décompilation abandonné
       }
    }
 }

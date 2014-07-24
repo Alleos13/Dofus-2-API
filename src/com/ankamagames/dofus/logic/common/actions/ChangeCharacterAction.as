@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.common.actions
    public class ChangeCharacterAction extends Object implements Action
    {
       
-      public function ChangeCharacterAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(serverId:uint) : ChangeCharacterAction {
-         var a:ChangeCharacterAction = new ChangeCharacterAction();
-         a.serverId = serverId;
-         return a;
+      public function ChangeCharacterAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(serverId:uint) : ChangeCharacterAction
+      {
+         //Décompilation abandonné
       }
       
       public var serverId:uint;

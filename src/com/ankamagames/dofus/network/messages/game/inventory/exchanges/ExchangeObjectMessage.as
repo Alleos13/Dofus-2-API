@@ -9,59 +9,69 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
    public class ExchangeObjectMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ExchangeObjectMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ExchangeObjectMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5515;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var remote:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 5515;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initExchangeObjectMessage(remote:Boolean = false) : ExchangeObjectMessage {
-         this.remote = remote;
-         this._isInitialized = true;
-         return this;
+      public function initExchangeObjectMessage(remote:Boolean = false) : ExchangeObjectMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.remote = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ExchangeObjectMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeObjectMessage(output:IDataOutput) : void {
-         output.writeBoolean(this.remote);
+      public function serializeAs_ExchangeObjectMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ExchangeObjectMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeObjectMessage(input:IDataInput) : void {
-         this.remote = input.readBoolean();
+      public function deserializeAs_ExchangeObjectMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

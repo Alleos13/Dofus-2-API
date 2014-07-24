@@ -7,36 +7,28 @@ package com.ankamagames.dofus.console.debug
    public class ClearTextureCacheInstructionHandler extends Object implements ConsoleInstructionHandler
    {
       
-      public function ClearTextureCacheInstructionHandler() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void {
-         switch(cmd)
-         {
-            case "cleartexturecache":
-               if(args.length > 0)
-               {
-                  console.output("No arguments needed.");
-               }
-               Berilia.getInstance().cache.clear();
-               console.output("Texture cache cleared.");
-               break;
-         }
+      public function ClearTextureCacheInstructionHandler()
+      {
+         //Décompilation abandonné
       }
       
-      public function getHelp(cmd:String) : String {
-         switch(cmd)
-         {
-            case "cleartexturecache":
-               return "Empty the textures cache.";
-            default:
-               return "No help for command \'" + cmd + "\'";
-         }
+      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array {
-         return [];
+      public function getHelp(cmd:String) : String
+      {
+         //Décompilation abandonné
+      }
+      
+      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array
+      {
+         //Décompilation abandonné
       }
    }
 }

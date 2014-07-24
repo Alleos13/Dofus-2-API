@@ -10,61 +10,69 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.job
    public class JobExperienceUpdateMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function JobExperienceUpdateMessage() {
-         this.experiencesUpdate = new JobExperience();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function JobExperienceUpdateMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5654;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var experiencesUpdate:JobExperience;
       
-      override public function getMessageId() : uint {
-         return 5654;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initJobExperienceUpdateMessage(experiencesUpdate:JobExperience = null) : JobExperienceUpdateMessage {
-         this.experiencesUpdate = experiencesUpdate;
-         this._isInitialized = true;
-         return this;
+      public function initJobExperienceUpdateMessage(experiencesUpdate:JobExperience = null) : JobExperienceUpdateMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.experiencesUpdate = new JobExperience();
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_JobExperienceUpdateMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_JobExperienceUpdateMessage(output:IDataOutput) : void {
-         this.experiencesUpdate.serializeAs_JobExperience(output);
+      public function serializeAs_JobExperienceUpdateMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_JobExperienceUpdateMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_JobExperienceUpdateMessage(input:IDataInput) : void {
-         this.experiencesUpdate = new JobExperience();
-         this.experiencesUpdate.deserialize(input);
+      public function deserializeAs_JobExperienceUpdateMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

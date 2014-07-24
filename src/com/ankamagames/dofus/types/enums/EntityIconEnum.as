@@ -3,8 +3,13 @@ package com.ankamagames.dofus.types.enums
    public class EntityIconEnum extends Object
    {
       
-      public function EntityIconEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function EntityIconEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const DEFAULT_CATEGORY:int = 0;

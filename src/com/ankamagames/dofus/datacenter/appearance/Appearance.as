@@ -6,14 +6,20 @@ package com.ankamagames.dofus.datacenter.appearance
    public class Appearance extends Object implements IDataCenter
    {
       
-      public function Appearance() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function Appearance()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "Appearances";
       
-      public static function getAppearanceById(id:uint) : Appearance {
-         return GameData.getObject(MODULE,id) as Appearance;
+      public static function getAppearanceById(id:uint) : Appearance
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;

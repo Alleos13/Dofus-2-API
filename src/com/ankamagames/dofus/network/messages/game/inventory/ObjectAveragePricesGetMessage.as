@@ -9,47 +9,65 @@ package com.ankamagames.dofus.network.messages.game.inventory
    public class ObjectAveragePricesGetMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function ObjectAveragePricesGetMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ObjectAveragePricesGetMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 6334;
       
-      override public function get isInitialized() : Boolean {
-         return true;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      override public function getMessageId() : uint {
-         return 6334;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initObjectAveragePricesGetMessage() : ObjectAveragePricesGetMessage {
-         return this;
+      public function initObjectAveragePricesGetMessage() : ObjectAveragePricesGetMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectAveragePricesGetMessage(output:IDataOutput) : void {
+      public function serializeAs_ObjectAveragePricesGetMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectAveragePricesGetMessage(input:IDataInput) : void {
+      public function deserializeAs_ObjectAveragePricesGetMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

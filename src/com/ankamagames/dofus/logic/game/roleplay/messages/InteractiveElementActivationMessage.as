@@ -7,11 +7,13 @@ package com.ankamagames.dofus.logic.game.roleplay.messages
    public class InteractiveElementActivationMessage extends Object implements Message
    {
       
-      public function InteractiveElementActivationMessage(ie:InteractiveElement, position:MapPoint, skillInstanceId:uint) {
-         super();
-         this._ie = ie;
-         this._position = position;
-         this._skillInstanceId = skillInstanceId;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function InteractiveElementActivationMessage(ie:InteractiveElement, position:MapPoint, skillInstanceId:uint)
+      {
+         //Décompilation abandonné
       }
       
       private var _ie:InteractiveElement;
@@ -20,16 +22,19 @@ package com.ankamagames.dofus.logic.game.roleplay.messages
       
       private var _skillInstanceId:uint;
       
-      public function get interactiveElement() : InteractiveElement {
-         return this._ie;
+      public function get interactiveElement() : InteractiveElement
+      {
+         //Décompilation abandonné
       }
       
-      public function get position() : MapPoint {
-         return this._position;
+      public function get position() : MapPoint
+      {
+         //Décompilation abandonné
       }
       
-      public function get skillInstanceId() : uint {
-         return this._skillInstanceId;
+      public function get skillInstanceId() : uint
+      {
+         //Décompilation abandonné
       }
    }
 }

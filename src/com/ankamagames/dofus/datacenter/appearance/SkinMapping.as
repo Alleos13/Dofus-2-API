@@ -9,20 +9,27 @@ package com.ankamagames.dofus.datacenter.appearance
    public class SkinMapping extends Object implements IDataCenter
    {
       
-      public function SkinMapping() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function SkinMapping()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "SkinMappings";
       
       private static var _log:Logger;
       
-      public static function getSkinMappingById(id:int) : SkinMapping {
-         return GameData.getObject(MODULE,id) as SkinMapping;
+      public static function getSkinMappingById(id:int) : SkinMapping
+      {
+         //Décompilation abandonné
       }
       
-      public static function getSkinMappings() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getSkinMappings() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:int;

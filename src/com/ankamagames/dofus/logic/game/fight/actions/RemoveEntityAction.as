@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.fight.actions
    public class RemoveEntityAction extends Object implements Action
    {
       
-      public function RemoveEntityAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(actorId:int) : RemoveEntityAction {
-         var o:RemoveEntityAction = new RemoveEntityAction();
-         o.actorId = actorId;
-         return o;
+      public function RemoveEntityAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(actorId:int) : RemoveEntityAction
+      {
+         //Décompilation abandonné
       }
       
       public var actorId:int;

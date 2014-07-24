@@ -7,12 +7,13 @@ package com.ankamagames.dofus.logic.game.fight.types
    public class CastingSpell extends Object
    {
       
-      public function CastingSpell(updateCastingId:Boolean = true) {
-         super();
-         if(updateCastingId)
-         {
-            this.castingSpellId = _unicID++;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function CastingSpell(updateCastingId:Boolean = true)
+      {
+         //Décompilation abandonné
       }
       
       private static var _unicID:uint = 0;

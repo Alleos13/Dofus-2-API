@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.updater
    public class ContentPart extends Object implements INetworkType
    {
       
-      public function ContentPart() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ContentPart()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 350;
@@ -17,45 +22,39 @@ package com.ankamagames.dofus.network.types.updater
       
       public var state:uint = 0;
       
-      public function getTypeId() : uint {
-         return 350;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initContentPart(id:String = "", state:uint = 0) : ContentPart {
-         this.id = id;
-         this.state = state;
-         return this;
+      public function initContentPart(id:String = "", state:uint = 0) : ContentPart
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.id = "";
-         this.state = 0;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_ContentPart(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_ContentPart(output:IDataOutput) : void {
-         output.writeUTF(this.id);
-         output.writeByte(this.state);
+      public function serializeAs_ContentPart(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_ContentPart(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_ContentPart(input:IDataInput) : void {
-         this.id = input.readUTF();
-         this.state = input.readByte();
-         if(this.state < 0)
-         {
-            throw new Error("Forbidden value (" + this.state + ") on element of ContentPart.state.");
-         }
-         else
-         {
-            return;
-         }
+      public function deserializeAs_ContentPart(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

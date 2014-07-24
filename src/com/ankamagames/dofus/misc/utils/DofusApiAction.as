@@ -9,49 +9,39 @@ package com.ankamagames.dofus.misc.utils
    public class DofusApiAction extends ApiAction
    {
       
-      public function DofusApiAction(name:String, actionClass:Class) {
-         _actionList.push(this);
-         super(name,actionClass,true,false,0,0,false);
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DofusApiAction(name:String, actionClass:Class)
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
       private static var _actionList:Vector.<DofusApiAction>;
       
-      public static function updateInfo() : void {
-         var action:DofusApiAction = null;
-         var actiondesc:ActionDescription = null;
-         for each(action in _actionList)
-         {
-            actiondesc = ActionDescription.getActionDescriptionByName(action.name);
-            if(actiondesc)
-            {
-               action._trusted = actiondesc.trusted;
-               action._needInteraction = actiondesc.needInteraction;
-               action._maxUsePerFrame = actiondesc.maxUsePerFrame;
-               action._minimalUseInterval = actiondesc.minimalUseInterval;
-               action._needConfirmation = actiondesc.needConfirmation;
-               action._description = actiondesc.description;
-            }
-            else
-            {
-               _log.warn("No data for Action \'" + action.name + "\'");
-            }
-         }
+      public static function updateInfo() : void
+      {
+         //Décompilation abandonné
       }
       
-      public static function getApiActionByName(name:String) : DofusApiAction {
-         return _apiActionNameList[name];
+      public static function getApiActionByName(name:String) : DofusApiAction
+      {
+         //Décompilation abandonné
       }
       
-      public static function getApiActionsList() : Array {
-         return _apiActionNameList;
+      public static function getApiActionsList() : Array
+      {
+         //Décompilation abandonné
       }
       
       private var _description:String;
       
-      public function get description() : String {
-         return this._description;
+      public function get description() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

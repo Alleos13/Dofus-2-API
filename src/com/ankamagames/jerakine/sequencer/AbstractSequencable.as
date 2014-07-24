@@ -12,9 +12,13 @@ package com.ankamagames.jerakine.sequencer
    public class AbstractSequencable extends EventDispatcher implements IPausableSequencable
    {
       
-      public function AbstractSequencable() {
-         this._listeners = new Dictionary();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AbstractSequencable()
+      {
+         //Décompilation abandonné
       }
       
       public static const DEFAULT_TIMEOUT:uint = 5000;
@@ -33,120 +37,84 @@ package com.ankamagames.jerakine.sequencer
       
       private var _paused:Boolean;
       
-      public function get paused() : Boolean {
-         return this._paused;
+      public function get paused() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function get timeout() : int {
-         return this._timeoutMax;
+      public function get timeout() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set timeout(value:int) : void {
-         this._timeoutMax = value;
-         if((this._timeOut) && (!(value == -1)))
-         {
-            this._timeOut.delay = value;
-         }
+      public function set timeout(value:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get hasDefaultTimeout() : Boolean {
-         return this._timeoutMax == DEFAULT_TIMEOUT;
+      public function get hasDefaultTimeout() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      public function pause() : void {
-         if(this._timeOut)
-         {
-            this._timeOut.stop();
-         }
-         this._paused = true;
+      public function pause() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function resume() : void {
-         this._paused = false;
-         if(this._timeOut)
-         {
-            this._timeOut.start();
-         }
+      public function resume() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function start() : void {
+      public function start() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function addListener(listener:ISequencableListener) : void {
-         if((!this._timeOut) && (!(this._timeoutMax == -1)))
-         {
-            this._timeOut = new Timer(this._timeoutMax,1);
-            this._timeOut.addEventListener(TimerEvent.TIMER,this.onTimeOut);
-            this._timeOut.start();
-         }
-         if(!this._listeners)
-         {
-            this._listeners = new Dictionary();
-         }
-         this._listeners[listener] = listener;
+      public function addListener(listener:ISequencableListener) : void
+      {
+         //Décompilation abandonné
       }
       
-      protected function executeCallbacks() : void {
-         var listener:ISequencableListener = null;
-         FightProfiler.getInstance().stop();
-         if(this._timeOut)
-         {
-            this._timeOut.removeEventListener(TimerEvent.TIMER,this.onTimeOut);
-            this._timeOut.reset();
-            this._timeOut = null;
-         }
-         for each(listener in this._listeners)
-         {
-            if(listener)
-            {
-               listener.stepFinished(this,this._withTimeOut);
-            }
-         }
+      protected function executeCallbacks() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function removeListener(listener:ISequencableListener) : void {
-         if(!this._listeners)
-         {
-            return;
-         }
-         delete this._listeners[listener];
+      public function removeListener(listener:ISequencableListener) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function toString() : String {
-         return getQualifiedClassName(this);
+      override public function toString() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function clear() : void {
-         if(this._timeOut)
-         {
-            this._timeOut.stop();
-         }
-         this._timeOut = null;
-         this._listeners = null;
+      public function clear() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get castingSpellId() : int {
-         return this._castingSpellId;
+      public function get castingSpellId() : int
+      {
+         //Décompilation abandonné
       }
       
-      public function set castingSpellId(val:int) : void {
-         this._castingSpellId = val;
+      public function set castingSpellId(val:int) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get isTimeout() : Boolean {
-         return this._withTimeOut;
+      public function get isTimeout() : Boolean
+      {
+         //Décompilation abandonné
       }
       
-      protected function onTimeOut(e:TimerEvent) : void {
-         _log.error("Time out sur la step " + this + " (" + this._timeOut.delay + ")");
-         this._withTimeOut = true;
-         if(this._timeOut)
-         {
-            this._timeOut.stop();
-         }
-         this._timeOut = null;
-         this.executeCallbacks();
-         this._listeners = null;
+      protected function onTimeOut(e:TimerEvent) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

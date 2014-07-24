@@ -3,27 +3,38 @@ package com.hurlant.math
    public class NullReduction extends Object implements IReduction
    {
       
-      public function NullReduction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public function revert(x:BigInteger) : BigInteger {
-         return x;
+      public function NullReduction()
+      {
+         //Décompilation abandonné
       }
       
-      public function mulTo(x:BigInteger, y:BigInteger, r:BigInteger) : void {
-         x.multiplyTo(y,r);
+      public function revert(x:BigInteger) : BigInteger
+      {
+         //Décompilation abandonné
       }
       
-      public function sqrTo(x:BigInteger, r:BigInteger) : void {
-         x.squareTo(r);
+      public function mulTo(x:BigInteger, y:BigInteger, r:BigInteger) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function convert(x:BigInteger) : BigInteger {
-         return x;
+      public function sqrTo(x:BigInteger, r:BigInteger) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function reduce(x:BigInteger) : void {
+      public function convert(x:BigInteger) : BigInteger
+      {
+         //Décompilation abandonné
+      }
+      
+      public function reduce(x:BigInteger) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -5,8 +5,13 @@ package com.ankamagames.dofus.logic.common.managers
    public class HyperlinkDisplayArrowManager_ARROW_CLIP extends MovieClipAsset
    {
       
-      public function HyperlinkDisplayArrowManager_ARROW_CLIP() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function HyperlinkDisplayArrowManager_ARROW_CLIP()
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -8,18 +8,25 @@ package com.ankamagames.dofus.datacenter.items
    public class ItemSet extends Object implements IDataCenter
    {
       
-      public function ItemSet() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ItemSet()
+      {
+         //Décompilation abandonné
       }
       
       public static const MODULE:String = "ItemSets";
       
-      public static function getItemSetById(id:uint) : ItemSet {
-         return GameData.getObject(MODULE,id) as ItemSet;
+      public static function getItemSetById(id:uint) : ItemSet
+      {
+         //Décompilation abandonné
       }
       
-      public static function getItemSets() : Array {
-         return GameData.getObjects(MODULE);
+      public static function getItemSets() : Array
+      {
+         //Décompilation abandonné
       }
       
       public var id:uint;
@@ -34,12 +41,9 @@ package com.ankamagames.dofus.datacenter.items
       
       private var _name:String;
       
-      public function get name() : String {
-         if(!this._name)
-         {
-            this._name = I18n.getText(this.nameId);
-         }
-         return this._name;
+      public function get name() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

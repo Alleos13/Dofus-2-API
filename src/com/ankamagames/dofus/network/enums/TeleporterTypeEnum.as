@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class TeleporterTypeEnum extends Object
    {
       
-      public function TeleporterTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function TeleporterTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const TELEPORTER_ZAAP:uint = 0;

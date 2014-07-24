@@ -3,8 +3,13 @@ package com.ankamagames.atouin.entities.behaviours.movements
    public class WalkingMovementBehavior extends AnimatedMovementBehavior
    {
       
-      public function WalkingMovementBehavior() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function WalkingMovementBehavior()
+      {
+         //Décompilation abandonné
       }
       
       private static const WALK_LINEAR_VELOCITY:Number = 0.0020833333333333333;
@@ -15,24 +20,29 @@ package com.ankamagames.atouin.entities.behaviours.movements
       
       private static const WALK_ANIMATION:String = "AnimMarche";
       
-      public static function getInstance(speedAdjust:Number = 0.0) : WalkingMovementBehavior {
-         return getFromCache(speedAdjust,WalkingMovementBehavior) as WalkingMovementBehavior;
+      public static function getInstance(speedAdjust:Number = 0.0) : WalkingMovementBehavior
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getLinearVelocity() : Number {
-         return WALK_LINEAR_VELOCITY;
+      override protected function getLinearVelocity() : Number
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getHorizontalDiagonalVelocity() : Number {
-         return WALK_HORIZONTAL_DIAGONAL_VELOCITY;
+      override protected function getHorizontalDiagonalVelocity() : Number
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getVerticalDiagonalVelocity() : Number {
-         return WALK_VERTICAL_DIAGONAL_VELOCITY;
+      override protected function getVerticalDiagonalVelocity() : Number
+      {
+         //Décompilation abandonné
       }
       
-      override protected function getAnimation() : String {
-         return WALK_ANIMATION;
+      override protected function getAnimation() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

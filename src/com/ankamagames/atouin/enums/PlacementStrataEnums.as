@@ -3,8 +3,13 @@ package com.ankamagames.atouin.enums
    public class PlacementStrataEnums extends Object
    {
       
-      public function PlacementStrataEnums() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PlacementStrataEnums()
+      {
+         //Décompilation abandonné
       }
       
       public static const STRATA_NO_Z_ORDER:uint = 0;

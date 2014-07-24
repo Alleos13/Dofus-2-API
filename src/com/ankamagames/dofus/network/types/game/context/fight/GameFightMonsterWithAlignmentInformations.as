@@ -10,47 +10,52 @@ package com.ankamagames.dofus.network.types.game.context.fight
    public class GameFightMonsterWithAlignmentInformations extends GameFightMonsterInformations implements INetworkType
    {
       
-      public function GameFightMonsterWithAlignmentInformations() {
-         this.alignmentInfos = new ActorAlignmentInformations();
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function GameFightMonsterWithAlignmentInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 203;
       
       public var alignmentInfos:ActorAlignmentInformations;
       
-      override public function getTypeId() : uint {
-         return 203;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initGameFightMonsterWithAlignmentInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, teamId:uint = 2, wave:uint = 0, alive:Boolean = false, stats:GameFightMinimalStats = null, creatureGenericId:uint = 0, creatureGrade:uint = 0, alignmentInfos:ActorAlignmentInformations = null) : GameFightMonsterWithAlignmentInformations {
-         super.initGameFightMonsterInformations(contextualId,look,disposition,teamId,wave,alive,stats,creatureGenericId,creatureGrade);
-         this.alignmentInfos = alignmentInfos;
-         return this;
+      public function initGameFightMonsterWithAlignmentInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, teamId:uint = 2, wave:uint = 0, alive:Boolean = false, stats:GameFightMinimalStats = null, creatureGenericId:uint = 0, creatureGrade:uint = 0, alignmentInfos:ActorAlignmentInformations = null) : GameFightMonsterWithAlignmentInformations
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         super.reset();
-         this.alignmentInfos = new ActorAlignmentInformations();
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_GameFightMonsterWithAlignmentInformations(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightMonsterWithAlignmentInformations(output:IDataOutput) : void {
-         super.serializeAs_GameFightMonsterInformations(output);
-         this.alignmentInfos.serializeAs_ActorAlignmentInformations(output);
+      public function serializeAs_GameFightMonsterWithAlignmentInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_GameFightMonsterWithAlignmentInformations(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightMonsterWithAlignmentInformations(input:IDataInput) : void {
-         super.deserialize(input);
-         this.alignmentInfos = new ActorAlignmentInformations();
-         this.alignmentInfos.deserialize(input);
+      public function deserializeAs_GameFightMonsterWithAlignmentInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

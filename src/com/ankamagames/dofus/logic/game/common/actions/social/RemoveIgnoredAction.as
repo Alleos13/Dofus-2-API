@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.social
    public class RemoveIgnoredAction extends Object implements Action
    {
       
-      public function RemoveIgnoredAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(accountId:int) : RemoveIgnoredAction {
-         var a:RemoveIgnoredAction = new RemoveIgnoredAction();
-         a.accountId = accountId;
-         return a;
+      public function RemoveIgnoredAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(accountId:int) : RemoveIgnoredAction
+      {
+         //Décompilation abandonné
       }
       
       public var accountId:int;

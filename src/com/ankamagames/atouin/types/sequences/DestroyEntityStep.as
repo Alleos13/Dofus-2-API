@@ -8,23 +8,20 @@ package com.ankamagames.atouin.types.sequences
    public class DestroyEntityStep extends AbstractSequencable
    {
       
-      public function DestroyEntityStep(entity:IEntity) {
-         super();
-         this._entity = entity;
+      {
+      //Décompilation abandonné
+      }
+      
+      public function DestroyEntityStep(entity:IEntity)
+      {
+         //Décompilation abandonné
       }
       
       private var _entity:IEntity;
       
-      override public function start() : void {
-         if(this._entity is IDisplayable)
-         {
-            (this._entity as IDisplayable).remove();
-         }
-         if(this._entity is TiphonSprite)
-         {
-            (this._entity as TiphonSprite).destroy();
-         }
-         executeCallbacks();
+      override public function start() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

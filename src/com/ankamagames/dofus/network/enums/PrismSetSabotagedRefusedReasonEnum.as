@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class PrismSetSabotagedRefusedReasonEnum extends Object
    {
       
-      public function PrismSetSabotagedRefusedReasonEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PrismSetSabotagedRefusedReasonEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const SABOTAGE_REFUSED:int = -1;

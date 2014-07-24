@@ -5,15 +5,18 @@ package com.ankamagames.dofus.logic.game.common.actions.party
    public class PartyPledgeLoyaltyRequestAction extends Object implements Action
    {
       
-      public function PartyPledgeLoyaltyRequestAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(partyId:int, loyal:Boolean) : PartyPledgeLoyaltyRequestAction {
-         var a:PartyPledgeLoyaltyRequestAction = new PartyPledgeLoyaltyRequestAction();
-         a.partyId = partyId;
-         a.loyal = loyal;
-         return a;
+      public function PartyPledgeLoyaltyRequestAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(partyId:int, loyal:Boolean) : PartyPledgeLoyaltyRequestAction
+      {
+         //Décompilation abandonné
       }
       
       public var loyal:Boolean;

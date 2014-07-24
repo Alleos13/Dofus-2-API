@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class PartyTypeEnum extends Object
    {
       
-      public function PartyTypeEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PartyTypeEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const PARTY_TYPE_UNDEFINED:uint = 0;

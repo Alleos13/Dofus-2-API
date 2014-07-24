@@ -5,8 +5,13 @@ package com.ankamagames.dofus.kernel.updaterv2.messages.impl
    public class StepMessage extends Object implements IUpdaterInputMessage
    {
       
-      public function StepMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function StepMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const CHECKING_UPDATE_STEP:String = "CheckingUpdate";
@@ -17,16 +22,19 @@ package com.ankamagames.dofus.kernel.updaterv2.messages.impl
       
       private var _step:String;
       
-      public function get step() : String {
-         return this._step;
+      public function get step() : String
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(data:Object) : void {
-         this._step = data["step"];
+      public function deserialize(data:Object) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function toString() : String {
-         return "[StepMessage step=" + this._step + "]";
+      public function toString() : String
+      {
+         //Décompilation abandonné
       }
    }
 }

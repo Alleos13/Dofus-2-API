@@ -3,8 +3,13 @@ package flashx.textLayout.formats
    public final class IMEStatus extends Object
    {
       
-      public function IMEStatus() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function IMEStatus()
+      {
+         //Décompilation abandonné
       }
       
       public static const IME_CLAUSE:String = "imeClause";

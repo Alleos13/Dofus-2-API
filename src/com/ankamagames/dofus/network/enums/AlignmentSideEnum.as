@@ -3,8 +3,13 @@ package com.ankamagames.dofus.network.enums
    public class AlignmentSideEnum extends Object
    {
       
-      public function AlignmentSideEnum() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function AlignmentSideEnum()
+      {
+         //Décompilation abandonné
       }
       
       public static const ALIGNMENT_UNKNOWN:int = -2;

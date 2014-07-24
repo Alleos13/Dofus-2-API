@@ -8,26 +8,20 @@ package com.ankamagames.dofus.logic.common.managers
    public class PlayerManager extends Object implements IDestroyable
    {
       
-      public function PlayerManager() {
-         super();
-         if(_self != null)
-         {
-            throw new SingletonError("PlayerManager is a singleton and should not be instanciated directly.");
-         }
-         else
-         {
-            return;
-         }
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PlayerManager()
+      {
+         //Décompilation abandonné
       }
       
       private static var _self:PlayerManager;
       
-      public static function getInstance() : PlayerManager {
-         if(_self == null)
-         {
-            _self = new PlayerManager();
-         }
-         return _self;
+      public static function getInstance() : PlayerManager
+      {
+         //Décompilation abandonné
       }
       
       public var accountId:uint;
@@ -64,31 +58,19 @@ package com.ankamagames.dofus.logic.common.managers
       
       public var autoConnectOfASpecificCharacterId:int = -1;
       
-      public function set server(s:Server) : void {
-         this._server = s;
+      public function set server(s:Server) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function get server() : Server {
-         if(this._server)
-         {
-            if(this.serverCommunityId > -1)
-            {
-               this._server.communityId = this.serverCommunityId;
-            }
-            if(this.serverGameType > -1)
-            {
-               this._server.gameTypeId = this.serverGameType;
-            }
-            if(this.serverLang != "")
-            {
-               this._server.language = this.serverLang;
-            }
-         }
-         return this._server;
+      public function get server() : Server
+      {
+         //Décompilation abandonné
       }
       
-      public function destroy() : void {
-         _self = null;
+      public function destroy() : void
+      {
+         //Décompilation abandonné
       }
    }
 }

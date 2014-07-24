@@ -5,14 +5,18 @@ package com.ankamagames.dofus.logic.game.roleplay.actions.preset
    public class InventoryPresetUseAction extends Object implements Action
    {
       
-      public function InventoryPresetUseAction() {
-         super();
+      {
+      //Décompilation abandonné
       }
       
-      public static function create(presetId:uint) : InventoryPresetUseAction {
-         var a:InventoryPresetUseAction = new InventoryPresetUseAction();
-         a.presetId = presetId;
-         return a;
+      public function InventoryPresetUseAction()
+      {
+         //Décompilation abandonné
+      }
+      
+      public static function create(presetId:uint) : InventoryPresetUseAction
+      {
+         //Décompilation abandonné
       }
       
       public var presetId:uint;

@@ -7,8 +7,13 @@ package com.ankamagames.dofus.network.types.game.context.fight
    public class FightResultPvpData extends FightResultAdditionalData implements INetworkType
    {
       
-      public function FightResultPvpData() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightResultPvpData()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 190;
@@ -23,109 +28,39 @@ package com.ankamagames.dofus.network.types.game.context.fight
       
       public var honorDelta:int = 0;
       
-      override public function getTypeId() : uint {
-         return 190;
+      override public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initFightResultPvpData(grade:uint = 0, minHonorForGrade:uint = 0, maxHonorForGrade:uint = 0, honor:uint = 0, honorDelta:int = 0) : FightResultPvpData {
-         this.grade = grade;
-         this.minHonorForGrade = minHonorForGrade;
-         this.maxHonorForGrade = maxHonorForGrade;
-         this.honor = honor;
-         this.honorDelta = honorDelta;
-         return this;
+      public function initFightResultPvpData(grade:uint = 0, minHonorForGrade:uint = 0, maxHonorForGrade:uint = 0, honor:uint = 0, honorDelta:int = 0) : FightResultPvpData
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.grade = 0;
-         this.minHonorForGrade = 0;
-         this.maxHonorForGrade = 0;
-         this.honor = 0;
-         this.honorDelta = 0;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function serialize(output:IDataOutput) : void {
-         this.serializeAs_FightResultPvpData(output);
+      override public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_FightResultPvpData(output:IDataOutput) : void {
-         super.serializeAs_FightResultAdditionalData(output);
-         if((this.grade < 0) || (this.grade > 255))
-         {
-            throw new Error("Forbidden value (" + this.grade + ") on element grade.");
-         }
-         else
-         {
-            output.writeByte(this.grade);
-            if((this.minHonorForGrade < 0) || (this.minHonorForGrade > 20000))
-            {
-               throw new Error("Forbidden value (" + this.minHonorForGrade + ") on element minHonorForGrade.");
-            }
-            else
-            {
-               output.writeShort(this.minHonorForGrade);
-               if((this.maxHonorForGrade < 0) || (this.maxHonorForGrade > 20000))
-               {
-                  throw new Error("Forbidden value (" + this.maxHonorForGrade + ") on element maxHonorForGrade.");
-               }
-               else
-               {
-                  output.writeShort(this.maxHonorForGrade);
-                  if((this.honor < 0) || (this.honor > 20000))
-                  {
-                     throw new Error("Forbidden value (" + this.honor + ") on element honor.");
-                  }
-                  else
-                  {
-                     output.writeShort(this.honor);
-                     output.writeShort(this.honorDelta);
-                     return;
-                  }
-               }
-            }
-         }
+      public function serializeAs_FightResultPvpData(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_FightResultPvpData(input);
+      override public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_FightResultPvpData(input:IDataInput) : void {
-         super.deserialize(input);
-         this.grade = input.readUnsignedByte();
-         if((this.grade < 0) || (this.grade > 255))
-         {
-            throw new Error("Forbidden value (" + this.grade + ") on element of FightResultPvpData.grade.");
-         }
-         else
-         {
-            this.minHonorForGrade = input.readUnsignedShort();
-            if((this.minHonorForGrade < 0) || (this.minHonorForGrade > 20000))
-            {
-               throw new Error("Forbidden value (" + this.minHonorForGrade + ") on element of FightResultPvpData.minHonorForGrade.");
-            }
-            else
-            {
-               this.maxHonorForGrade = input.readUnsignedShort();
-               if((this.maxHonorForGrade < 0) || (this.maxHonorForGrade > 20000))
-               {
-                  throw new Error("Forbidden value (" + this.maxHonorForGrade + ") on element of FightResultPvpData.maxHonorForGrade.");
-               }
-               else
-               {
-                  this.honor = input.readUnsignedShort();
-                  if((this.honor < 0) || (this.honor > 20000))
-                  {
-                     throw new Error("Forbidden value (" + this.honor + ") on element of FightResultPvpData.honor.");
-                  }
-                  else
-                  {
-                     this.honorDelta = input.readShort();
-                     return;
-                  }
-               }
-            }
-         }
+      public function deserializeAs_FightResultPvpData(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

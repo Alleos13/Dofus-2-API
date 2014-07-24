@@ -7,41 +7,52 @@ package com.ankamagames.dofus.network.types.game.context.fight
    public class FightTeamMemberInformations extends Object implements INetworkType
    {
       
-      public function FightTeamMemberInformations() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function FightTeamMemberInformations()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 44;
       
       public var id:int = 0;
       
-      public function getTypeId() : uint {
-         return 44;
+      public function getTypeId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initFightTeamMemberInformations(id:int = 0) : FightTeamMemberInformations {
-         this.id = id;
-         return this;
+      public function initFightTeamMemberInformations(id:int = 0) : FightTeamMemberInformations
+      {
+         //Décompilation abandonné
       }
       
-      public function reset() : void {
-         this.id = 0;
+      public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_FightTeamMemberInformations(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_FightTeamMemberInformations(output:IDataOutput) : void {
-         output.writeInt(this.id);
+      public function serializeAs_FightTeamMemberInformations(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_FightTeamMemberInformations(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_FightTeamMemberInformations(input:IDataInput) : void {
-         this.id = input.readInt();
+      public function deserializeAs_FightTeamMemberInformations(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

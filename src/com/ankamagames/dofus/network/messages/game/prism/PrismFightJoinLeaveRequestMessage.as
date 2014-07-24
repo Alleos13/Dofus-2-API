@@ -9,81 +9,71 @@ package com.ankamagames.dofus.network.messages.game.prism
    public class PrismFightJoinLeaveRequestMessage extends NetworkMessage implements INetworkMessage
    {
       
-      public function PrismFightJoinLeaveRequestMessage() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function PrismFightJoinLeaveRequestMessage()
+      {
+         //Décompilation abandonné
       }
       
       public static const protocolId:uint = 5843;
       
       private var _isInitialized:Boolean = false;
       
-      override public function get isInitialized() : Boolean {
-         return this._isInitialized;
+      override public function get isInitialized() : Boolean
+      {
+         //Décompilation abandonné
       }
       
       public var subAreaId:uint = 0;
       
       public var join:Boolean = false;
       
-      override public function getMessageId() : uint {
-         return 5843;
+      override public function getMessageId() : uint
+      {
+         //Décompilation abandonné
       }
       
-      public function initPrismFightJoinLeaveRequestMessage(subAreaId:uint = 0, join:Boolean = false) : PrismFightJoinLeaveRequestMessage {
-         this.subAreaId = subAreaId;
-         this.join = join;
-         this._isInitialized = true;
-         return this;
+      public function initPrismFightJoinLeaveRequestMessage(subAreaId:uint = 0, join:Boolean = false) : PrismFightJoinLeaveRequestMessage
+      {
+         //Décompilation abandonné
       }
       
-      override public function reset() : void {
-         this.subAreaId = 0;
-         this.join = false;
-         this._isInitialized = false;
+      override public function reset() : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function pack(output:IDataOutput) : void {
-         var data:ByteArray = new ByteArray();
-         this.serialize(data);
-         writePacket(output,this.getMessageId(),data);
+      override public function pack(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      override public function unpack(input:IDataInput, length:uint) : void {
-         this.deserialize(input);
+      override public function unpack(input:IDataInput, length:uint) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serialize(output:IDataOutput) : void {
-         this.serializeAs_PrismFightJoinLeaveRequestMessage(output);
+      public function serialize(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function serializeAs_PrismFightJoinLeaveRequestMessage(output:IDataOutput) : void {
-         if(this.subAreaId < 0)
-         {
-            throw new Error("Forbidden value (" + this.subAreaId + ") on element subAreaId.");
-         }
-         else
-         {
-            output.writeShort(this.subAreaId);
-            output.writeBoolean(this.join);
-            return;
-         }
+      public function serializeAs_PrismFightJoinLeaveRequestMessage(output:IDataOutput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserialize(input:IDataInput) : void {
-         this.deserializeAs_PrismFightJoinLeaveRequestMessage(input);
+      public function deserialize(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function deserializeAs_PrismFightJoinLeaveRequestMessage(input:IDataInput) : void {
-         this.subAreaId = input.readShort();
-         if(this.subAreaId < 0)
-         {
-            throw new Error("Forbidden value (" + this.subAreaId + ") on element of PrismFightJoinLeaveRequestMessage.subAreaId.");
-         }
-         else
-         {
-            this.join = input.readBoolean();
-            return;
-         }
+      public function deserializeAs_PrismFightJoinLeaveRequestMessage(input:IDataInput) : void
+      {
+         //Décompilation abandonné
       }
    }
 }

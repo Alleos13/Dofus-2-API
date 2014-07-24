@@ -10,40 +10,30 @@ package com.ankamagames.dofus.console.debug
    public class LivingObjectInstructionHandler extends Object implements ConsoleInstructionHandler
    {
       
-      public function LivingObjectInstructionHandler() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function LivingObjectInstructionHandler()
+      {
+         //Décompilation abandonné
       }
       
       protected static const _log:Logger;
       
-      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void {
-         switch(cmd)
-         {
-            case "floodlivingobject":
-               if(SpeakingItemManager.getInstance().speakTimerMinuteDelay != SpeakingItemManager.MINUTE_DELAY)
-               {
-                  SpeakingItemManager.getInstance().speakTimerMinuteDelay = SpeakingItemManager.MINUTE_DELAY;
-               }
-               else
-               {
-                  SpeakingItemManager.getInstance().speakTimerMinuteDelay = 100;
-               }
-               break;
-         }
+      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void
+      {
+         //Décompilation abandonné
       }
       
-      public function getHelp(cmd:String) : String {
-         switch(cmd)
-         {
-            case "floodlivingobject":
-               return "Make a flood of talk from living objects.";
-            default:
-               return "Unknown command \'" + cmd + "\'.";
-         }
+      public function getHelp(cmd:String) : String
+      {
+         //Décompilation abandonné
       }
       
-      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array {
-         return [];
+      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array
+      {
+         //Décompilation abandonné
       }
    }
 }

@@ -3,8 +3,13 @@ package com.ankamagames.jerakine.resources.loaders
    public class ResourceLoaderType extends Object
    {
       
-      public function ResourceLoaderType() {
-         super();
+      {
+      //Décompilation abandonné
+      }
+      
+      public function ResourceLoaderType()
+      {
+         //Décompilation abandonné
       }
       
       public static const SINGLE_LOADER:uint = 0;
