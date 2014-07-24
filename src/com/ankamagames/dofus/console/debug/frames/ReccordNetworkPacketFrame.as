@@ -46,17 +46,17 @@ package com.ankamagames.dofus.console.debug.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onFileSelected(param1:Event) : void
+      private function onFileSelected(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onFileSelectionCancel(param1:Event) : void
+      private function onFileSelectionCancel(e:Event) : void
       {
          //Décompilation abandonné
       }

@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.interfaces
       
       function refresh() : void;
       
-      function set data(param1:*) : void;
+      function set data(o:*) : void;
       
       function get data() : *;
    }

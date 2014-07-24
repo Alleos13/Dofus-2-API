@@ -55,17 +55,17 @@ package com.ankamagames.dofus.logic.game.common.frames
       
       protected static const _log:Logger;
       
-      private static function updateJobExperience(param1:JobExperience) : void
+      private static function updateJobExperience(je:JobExperience) : void
       {
          //Décompilation abandonné
       }
       
-      private static function updateJob(param1:uint, param2:JobDescription) : void
+      private static function updateJob(pJobId:uint, pJobDescription:JobDescription) : void
       {
          //Décompilation abandonné
       }
       
-      private static function createCrafterDirectorySettings(param1:JobCrafterDirectorySettings) : Object
+      private static function createCrafterDirectorySettings(settings:JobCrafterDirectorySettings) : Object
       {
          //Décompilation abandonné
       }
@@ -89,7 +89,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }

@@ -29,7 +29,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initGameRolePlayMutantInformations(param1:int = 0, param2:EntityLook = null, param3:EntityDispositionInformations = null, param4:String = "", param5:HumanInformations = null, param6:uint = 0, param7:int = 0, param8:int = 0) : GameRolePlayMutantInformations
+      public function initGameRolePlayMutantInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, name:String = "", humanoidInfo:HumanInformations = null, accountId:uint = 0, monsterId:int = 0, powerLevel:int = 0) : GameRolePlayMutantInformations
       {
          //Décompilation abandonné
       }
@@ -39,22 +39,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayMutantInformations(param1:IDataOutput) : void
+      public function serializeAs_GameRolePlayMutantInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayMutantInformations(param1:IDataInput) : void
+      public function deserializeAs_GameRolePlayMutantInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

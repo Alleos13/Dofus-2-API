@@ -9,7 +9,7 @@ package com.ankamagames.tubul.events
       //Décompilation abandonné
       }
       
-      public function SoundSilenceEvent(param1:String, param2:Boolean = false, param3:Boolean = false)
+      public function SoundSilenceEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
       {
          //Décompilation abandonné
       }

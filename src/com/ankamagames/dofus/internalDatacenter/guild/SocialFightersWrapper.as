@@ -17,7 +17,7 @@ package com.ankamagames.dofus.internalDatacenter.guild
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:CharacterMinimalPlusLookInformations) : SocialFightersWrapper
+      public static function create(pAlly:uint, pFightersInformations:CharacterMinimalPlusLookInformations) : SocialFightersWrapper
       {
          //Décompilation abandonné
       }
@@ -28,7 +28,7 @@ package com.ankamagames.dofus.internalDatacenter.guild
       
       public var entityLook:TiphonEntityLook;
       
-      public function update(param1:uint, param2:CharacterMinimalPlusLookInformations) : void
+      public function update(pAlly:uint, pFightersInformations:CharacterMinimalPlusLookInformations) : void
       {
          //Décompilation abandonné
       }

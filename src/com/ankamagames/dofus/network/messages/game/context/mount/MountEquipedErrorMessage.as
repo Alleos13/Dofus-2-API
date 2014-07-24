@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.context.mount
          //Décompilation abandonné
       }
       
-      public function initMountEquipedErrorMessage(param1:uint = 0) : MountEquipedErrorMessage
+      public function initMountEquipedErrorMessage(errorType:uint = 0) : MountEquipedErrorMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.context.mount
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_MountEquipedErrorMessage(param1:IDataOutput) : void
+      public function serializeAs_MountEquipedErrorMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_MountEquipedErrorMessage(param1:IDataInput) : void
+      public function deserializeAs_MountEquipedErrorMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

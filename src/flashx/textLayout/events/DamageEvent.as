@@ -10,7 +10,7 @@ package flashx.textLayout.events
       //Décompilation abandonné
       }
       
-      public function DamageEvent(param1:String, param2:Boolean = false, param3:Boolean = false, param4:TextFlow = null, param5:int = 0, param6:int = 0)
+      public function DamageEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, textFlow:TextFlow = null, damageAbsoluteStart:int = 0, damageLength:int = 0)
       {
          //Décompilation abandonné
       }

@@ -32,7 +32,7 @@ package com.ankamagames.dofus.types.characteristicContextual
          //Décompilation abandonné
       }
       
-      public function set text(param1:String) : void
+      public function set text(sValue:String) : void
       {
          //Décompilation abandonné
       }
@@ -42,7 +42,7 @@ package com.ankamagames.dofus.types.characteristicContextual
          //Décompilation abandonné
       }
       
-      public function set textFormat(param1:TextFormat) : void
+      public function set textFormat(tfFormat:TextFormat) : void
       {
          //Décompilation abandonné
       }

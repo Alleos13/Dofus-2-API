@@ -10,7 +10,7 @@ package com.ankamagames.berilia.types.data
       //Décompilation abandonné
       }
       
-      public function Map(param1:Number, param2:String, param3:DisplayObjectContainer, param4:uint, param5:uint, param6:uint, param7:uint)
+      public function Map(zoom:Number, srcFolder:String, container:DisplayObjectContainer, initialWidth:uint, initialHeight:uint, chunckWidth:uint, chunckHeight:uint)
       {
          //Décompilation abandonné
       }

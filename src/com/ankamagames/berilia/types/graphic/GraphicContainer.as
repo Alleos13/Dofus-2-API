@@ -136,7 +136,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set dropValidator(param1:Function) : void
+      public function set dropValidator(dv:Function) : void
       {
          //Décompilation abandonné
       }
@@ -146,7 +146,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set removeDropSource(param1:Function) : void
+      public function set removeDropSource(rds:Function) : void
       {
          //Décompilation abandonné
       }
@@ -156,7 +156,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set processDrop(param1:Function) : void
+      public function set processDrop(pd:Function) : void
       {
          //Décompilation abandonné
       }
@@ -181,17 +181,17 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set scale(param1:Number) : void
+      public function set scale(nScale:Number) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set width(param1:Number) : void
+      override public function set width(nW:Number) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set height(param1:Number) : void
+      override public function set height(nH:Number) : void
       {
          //Décompilation abandonné
       }
@@ -216,12 +216,12 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      override public function set x(param1:Number) : void
+      override public function set x(value:Number) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set y(param1:Number) : void
+      override public function set y(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -236,7 +236,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set bgColor(param1:int) : void
+      public function set bgColor(nColor:int) : void
       {
          //Décompilation abandonné
       }
@@ -246,7 +246,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set bgAlpha(param1:Number) : void
+      public function set bgAlpha(nAlpha:Number) : void
       {
          //Décompilation abandonné
       }
@@ -256,7 +256,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set borderColor(param1:int) : void
+      public function set borderColor(color:int) : void
       {
          //Décompilation abandonné
       }
@@ -266,7 +266,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set bgCornerRadius(param1:uint) : void
+      public function set bgCornerRadius(value:uint) : void
       {
          //Décompilation abandonné
       }
@@ -276,7 +276,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set luminosity(param1:Number) : void
+      public function set luminosity(nColor:Number) : void
       {
          //Décompilation abandonné
       }
@@ -286,7 +286,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set linkedTo(param1:String) : void
+      public function set linkedTo(sUiComponent:String) : void
       {
          //Décompilation abandonné
       }
@@ -296,7 +296,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set shadowColor(param1:int) : void
+      public function set shadowColor(nColor:int) : void
       {
          //Décompilation abandonné
       }
@@ -311,7 +311,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function setAdvancedGlow(param1:uint, param2:Number = 1, param3:Number = 6.0, param4:Number = 6.0, param5:Number = 2) : void
+      public function setAdvancedGlow(nColor:uint, nAlpha:Number = 1, nBlurX:Number = 6.0, nBlurY:Number = 6.0, nStrength:Number = 2) : void
       {
          //Décompilation abandonné
       }
@@ -321,12 +321,12 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function getStrata(param1:uint) : Sprite
+      public function getStrata(nStrata:uint) : Sprite
       {
          //Décompilation abandonné
       }
       
-      public function set dynamicPosition(param1:Boolean) : void
+      public function set dynamicPosition(bool:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -336,7 +336,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set disabled(param1:Boolean) : void
+      public function set disabled(bool:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -346,7 +346,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set softDisabled(param1:Boolean) : void
+      public function set softDisabled(bool:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -356,7 +356,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set greyedOut(param1:Boolean) : void
+      public function set greyedOut(bool:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -371,17 +371,17 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set handCursor(param1:Boolean) : void
+      public function set handCursor(bValue:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set mouseEnabled(param1:Boolean) : void
+      override public function set mouseEnabled(v:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -401,7 +401,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function addContent(param1:GraphicContainer, param2:int = -1) : GraphicContainer
+      public function addContent(child:GraphicContainer, index:int = -1) : GraphicContainer
       {
          //Décompilation abandonné
       }
@@ -421,12 +421,12 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function setUi(param1:UiRootContainer, param2:Object) : void
+      public function setUi(ui:UiRootContainer, key:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function getTopParent(param1:DisplayObject) : DisplayObject
+      public function getTopParent(d:DisplayObject) : DisplayObject
       {
          //Décompilation abandonné
       }
@@ -441,32 +441,32 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function slide(param1:int, param2:int, param3:int) : void
+      public function slide(endX:int, endY:int, time:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function defaultDropValidatorFunction(param1:*, param2:*, param3:*) : Boolean
+      private function defaultDropValidatorFunction(target:*, data:*, source:*) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function defaultProcessDropFunction(param1:*, param2:*, param3:*) : void
+      private function defaultProcessDropFunction(target:*, data:*, source:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function defaultRemoveDropSourceFunction(param1:*) : void
+      private function defaultRemoveDropSourceFunction(target:*) : void
       {
          //Décompilation abandonné
       }
       
-      override public function localToGlobal(param1:Point) : Point
+      override public function localToGlobal(point:Point) : Point
       {
          //Décompilation abandonné
       }
       
-      protected function destroy(param1:DisplayObjectContainer) : void
+      protected function destroy(target:DisplayObjectContainer) : void
       {
          //Décompilation abandonné
       }
@@ -476,17 +476,17 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      override public function contains(param1:DisplayObject) : Boolean
+      override public function contains(child:DisplayObject) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onEnterFrame(param1:Event) : void
+      private function onEnterFrame(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      protected function canProcessMessage(param1:Message) : Boolean
+      protected function canProcessMessage(pMsg:Message) : Boolean
       {
          //Décompilation abandonné
       }

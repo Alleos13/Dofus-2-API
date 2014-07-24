@@ -27,12 +27,12 @@ package com.ankamagames.dofus.misc.utils
       
       protected static const _log:Logger;
       
-      public static function recover(param1:DataStoreType, param2:String) : CustomLoadingScreen
+      public static function recover(dataStore:DataStoreType, name:String) : CustomLoadingScreen
       {
          //Décompilation abandonné
       }
       
-      public static function loadFromXml(param1:XML) : CustomLoadingScreen
+      public static function loadFromXml(xml:XML) : CustomLoadingScreen
       {
          //Décompilation abandonné
       }
@@ -72,7 +72,7 @@ package com.ankamagames.dofus.misc.utils
          //Décompilation abandonné
       }
       
-      public function store(param1:Boolean = false) : void
+      public function store(storeAsCurrent:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -87,17 +87,17 @@ package com.ankamagames.dofus.misc.utils
          //Décompilation abandonné
       }
       
-      public function canBeReadOnScreen(param1:Boolean) : Boolean
+      public function canBeReadOnScreen(beforeLogin:Boolean) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onComplete(param1:Event) : void
+      private function onComplete(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onIOError(param1:IOErrorEvent) : void
+      private function onIOError(e:IOErrorEvent) : void
       {
          //Décompilation abandonné
       }

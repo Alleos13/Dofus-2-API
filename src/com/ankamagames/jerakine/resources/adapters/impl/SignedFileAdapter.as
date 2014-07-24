@@ -20,14 +20,14 @@ package com.ankamagames.jerakine.resources.adapters.impl
       //Décompilation abandonné
       }
       
-      public function SignedFileAdapter(param1:SignatureKey = null, param2:Boolean = false)
+      public function SignedFileAdapter(signatureKey:SignatureKey = null, rawContent:Boolean = false)
       {
          //Décompilation abandonné
       }
       
       private static var _defaultSignatureKey:SignatureKey;
       
-      public static function set defaultSignatureKey(param1:SignatureKey) : void
+      public static function set defaultSignatureKey(v:SignatureKey) : void
       {
          //Décompilation abandonné
       }
@@ -47,12 +47,12 @@ package com.ankamagames.jerakine.resources.adapters.impl
       
       private var _rawContent:Boolean;
       
-      override public function loadDirectly(param1:Uri, param2:String, param3:IResourceObserver, param4:Boolean) : void
+      override public function loadDirectly(uri:Uri, path:String, observer:IResourceObserver, dispatchProgress:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override public function loadFromData(param1:Uri, param2:ByteArray, param3:IResourceObserver, param4:Boolean) : void
+      override public function loadFromData(uri:Uri, data:ByteArray, observer:IResourceObserver, dispatchProgress:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -62,7 +62,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          //Décompilation abandonné
       }
       
-      override protected function getResource(param1:String, param2:*) : *
+      override protected function getResource(dataFormat:String, data:*) : *
       {
          //Décompilation abandonné
       }
@@ -72,7 +72,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          //Décompilation abandonné
       }
       
-      override protected function process(param1:String, param2:*) : void
+      override protected function process(dataFormat:String, data:*) : void
       {
          //Décompilation abandonné
       }
@@ -82,12 +82,12 @@ package com.ankamagames.jerakine.resources.adapters.impl
          //Décompilation abandonné
       }
       
-      private function onContentLoad(param1:Uri, param2:uint, param3:*) : void
+      private function onContentLoad(uri:Uri, resourceType:uint, resource:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function onContentLoadFailed(param1:Uri, param2:String, param3:uint) : void
+      private function onContentLoadFailed(uri:Uri, errorMsg:String, errorCode:uint) : void
       {
          //Décompilation abandonné
       }

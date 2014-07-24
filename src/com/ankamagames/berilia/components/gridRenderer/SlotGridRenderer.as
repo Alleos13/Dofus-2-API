@@ -28,7 +28,7 @@ package com.ankamagames.berilia.components.gridRenderer
       //Décompilation abandonné
       }
       
-      public function SlotGridRenderer(param1:String)
+      public function SlotGridRenderer(strParams:String)
       {
          //Décompilation abandonné
       }
@@ -65,7 +65,7 @@ package com.ankamagames.berilia.components.gridRenderer
       
       public var removeDropSourceFunction:Function;
       
-      public function set allowDrop(param1:Boolean) : void
+      public function set allowDrop(pAllow:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -75,7 +75,7 @@ package com.ankamagames.berilia.components.gridRenderer
          //Décompilation abandonné
       }
       
-      public function set isButton(param1:Boolean) : void
+      public function set isButton(pButton:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -85,7 +85,7 @@ package com.ankamagames.berilia.components.gridRenderer
          //Décompilation abandonné
       }
       
-      public function set hideQuantities(param1:Boolean) : void
+      public function set hideQuantities(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -100,7 +100,7 @@ package com.ankamagames.berilia.components.gridRenderer
          //Décompilation abandonné
       }
       
-      public function set acceptDragTexture(param1:Uri) : void
+      public function set acceptDragTexture(uri:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -110,7 +110,7 @@ package com.ankamagames.berilia.components.gridRenderer
          //Décompilation abandonné
       }
       
-      public function set refuseDragTexture(param1:Uri) : void
+      public function set refuseDragTexture(uri:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -120,42 +120,42 @@ package com.ankamagames.berilia.components.gridRenderer
          //Décompilation abandonné
       }
       
-      public function set customTexture(param1:Uri) : void
+      public function set customTexture(uri:Uri) : void
       {
          //Décompilation abandonné
       }
       
-      public function set grid(param1:Grid) : void
+      public function set grid(g:Grid) : void
       {
          //Décompilation abandonné
       }
       
-      public function render(param1:*, param2:uint, param3:Boolean, param4:uint = 0) : DisplayObject
+      public function render(data:*, index:uint, selected:Boolean, subIndex:uint = 0) : DisplayObject
       {
          //Décompilation abandonné
       }
       
-      public function _removeDropSourceFunction(param1:*) : void
+      public function _removeDropSourceFunction(target:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function _dropValidatorFunction(param1:Object, param2:*, param3:Object) : Boolean
+      public function _dropValidatorFunction(target:Object, iSlotData:*, source:Object) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function update(param1:*, param2:uint, param3:DisplayObject, param4:Boolean, param5:uint = 0) : void
+      public function update(data:*, index:uint, dispObj:DisplayObject, selected:Boolean, subIndex:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function getDataLength(param1:*, param2:Boolean) : uint
+      public function getDataLength(data:*, selected:Boolean) : uint
       {
          //Décompilation abandonné
       }
       
-      public function remove(param1:DisplayObject) : void
+      public function remove(dispObj:DisplayObject) : void
       {
          //Décompilation abandonné
       }
@@ -165,22 +165,22 @@ package com.ankamagames.berilia.components.gridRenderer
          //Décompilation abandonné
       }
       
-      public function _processDrop(param1:*, param2:*, param3:*) : void
+      public function _processDrop(target:*, data:*, source:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function renderModificator(param1:Array) : Array
+      public function renderModificator(childs:Array) : Array
       {
          //Décompilation abandonné
       }
       
-      public function eventModificator(param1:Message, param2:String, param3:Array, param4:UIComponent) : String
+      public function eventModificator(msg:Message, functionName:String, args:Array, target:UIComponent) : String
       {
          //Décompilation abandonné
       }
       
-      private function onTweenEnd(param1:TweenEvent) : void
+      private function onTweenEnd(e:TweenEvent) : void
       {
          //Décompilation abandonné
       }

@@ -20,17 +20,17 @@ package com.ankamagames.jerakine.resources.adapters
       
       private static var _customAdapters:Dictionary;
       
-      public static function getAdapter(param1:Uri) : IAdapter
+      public static function getAdapter(uri:Uri) : IAdapter
       {
          //Décompilation abandonné
       }
       
-      public static function addAdapter(param1:String, param2:Class) : void
+      public static function addAdapter(extension:String, adapter:Class) : void
       {
          //Décompilation abandonné
       }
       
-      public static function removeAdapter(param1:String) : void
+      public static function removeAdapter(extension:String) : void
       {
          //Décompilation abandonné
       }

@@ -17,7 +17,7 @@ package com.ankamagames.tiphon.sequence
       //Décompilation abandonné
       }
       
-      public function PlayAnimationStep(param1:TiphonSprite, param2:String, param3:Boolean = true, param4:Boolean = true, param5:String = "animation_event_end", param6:int = 1, param7:String = "")
+      public function PlayAnimationStep(target:TiphonSprite, animationName:String, backToLastAnimationAtEnd:Boolean = true, waitEvent:Boolean = true, eventEnd:String = "animation_event_end", loop:int = 1, endAnimationName:String = "")
       {
          //Décompilation abandonné
       }
@@ -54,17 +54,17 @@ package com.ankamagames.tiphon.sequence
          //Décompilation abandonné
       }
       
-      public function set animation(param1:String) : void
+      public function set animation(anim:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function set waitEvent(param1:Boolean) : void
+      public function set waitEvent(v:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function set startFrame(param1:int) : void
+      public function set startFrame(frame:int) : void
       {
          //Décompilation abandonné
       }
@@ -74,22 +74,22 @@ package com.ankamagames.tiphon.sequence
          //Décompilation abandonné
       }
       
-      private function onCustomEvent(param1:TiphonEvent) : void
+      private function onCustomEvent(e:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAnimationFail(param1:TiphonEvent) : void
+      private function onAnimationFail(e:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onRemoveFromStage(param1:Event) : void
+      private function onRemoveFromStage(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAnimationEnd(param1:Event) : void
+      private function onAnimationEnd(e:Event) : void
       {
          //Décompilation abandonné
       }
@@ -99,7 +99,7 @@ package com.ankamagames.tiphon.sequence
          //Décompilation abandonné
       }
       
-      override protected function onTimeOut(param1:TimerEvent) : void
+      override protected function onTimeOut(e:TimerEvent) : void
       {
          //Décompilation abandonné
       }

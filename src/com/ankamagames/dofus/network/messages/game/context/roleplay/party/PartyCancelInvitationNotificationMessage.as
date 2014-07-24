@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      public function initPartyCancelInvitationNotificationMessage(param1:uint = 0, param2:uint = 0, param3:uint = 0) : PartyCancelInvitationNotificationMessage
+      public function initPartyCancelInvitationNotificationMessage(partyId:uint = 0, cancelerId:uint = 0, guestId:uint = 0) : PartyCancelInvitationNotificationMessage
       {
          //Décompilation abandonné
       }
@@ -45,32 +45,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PartyCancelInvitationNotificationMessage(param1:IDataOutput) : void
+      public function serializeAs_PartyCancelInvitationNotificationMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PartyCancelInvitationNotificationMessage(param1:IDataInput) : void
+      public function deserializeAs_PartyCancelInvitationNotificationMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

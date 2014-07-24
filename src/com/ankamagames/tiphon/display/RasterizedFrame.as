@@ -12,7 +12,7 @@ package com.ankamagames.tiphon.display
       //Décompilation abandonné
       }
       
-      public function RasterizedFrame(param1:MovieClip, param2:int)
+      public function RasterizedFrame(target:MovieClip, index:int)
       {
          //Décompilation abandonné
       }

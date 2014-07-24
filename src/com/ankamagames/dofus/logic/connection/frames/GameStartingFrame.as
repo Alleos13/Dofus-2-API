@@ -55,7 +55,7 @@ package com.ankamagames.dofus.logic.connection.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -65,7 +65,7 @@ package com.ankamagames.dofus.logic.connection.frames
          //Décompilation abandonné
       }
       
-      private function systemMessageDisplay(param1:SystemMessageDisplayMessage) : void
+      private function systemMessageDisplay(msg:SystemMessageDisplayMessage) : void
       {
          //Décompilation abandonné
       }

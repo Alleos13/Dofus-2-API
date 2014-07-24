@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.fight.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:Boolean) : GameFightReadyAction
+      public static function create(isReady:Boolean) : GameFightReadyAction
       {
          //Décompilation abandonné
       }

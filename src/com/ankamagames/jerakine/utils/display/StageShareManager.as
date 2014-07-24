@@ -48,7 +48,7 @@ package com.ankamagames.jerakine.utils.display
       
       public static var chromeHeight:uint;
       
-      public static function set rootContainer(param1:DisplayObjectContainer) : void
+      public static function set rootContainer(d:DisplayObjectContainer) : void
       {
          //Décompilation abandonné
       }
@@ -68,7 +68,7 @@ package com.ankamagames.jerakine.utils.display
          //Décompilation abandonné
       }
       
-      public static function set stage(param1:Stage) : void
+      public static function set stage(value:Stage) : void
       {
          //Décompilation abandonné
       }
@@ -78,7 +78,7 @@ package com.ankamagames.jerakine.utils.display
          //Décompilation abandonné
       }
       
-      public static function setFullScreen(param1:Boolean, param2:Boolean = false) : void
+      public static function setFullScreen(enabled:Boolean, onlyMaximize:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -103,7 +103,7 @@ package com.ankamagames.jerakine.utils.display
          //Décompilation abandonné
       }
       
-      public static function set mouseX(param1:int) : void
+      public static function set mouseX(v:int) : void
       {
          //Décompilation abandonné
       }
@@ -113,7 +113,7 @@ package com.ankamagames.jerakine.utils.display
          //Décompilation abandonné
       }
       
-      public static function set mouseY(param1:int) : void
+      public static function set mouseY(v:int) : void
       {
          //Décompilation abandonné
       }
@@ -138,7 +138,7 @@ package com.ankamagames.jerakine.utils.display
          //Décompilation abandonné
       }
       
-      private static function displayStateChangeHandler(param1:NativeWindowDisplayStateEvent) : void
+      private static function displayStateChangeHandler(event:NativeWindowDisplayStateEvent) : void
       {
          //Décompilation abandonné
       }
@@ -148,7 +148,7 @@ package com.ankamagames.jerakine.utils.display
          //Décompilation abandonné
       }
       
-      public static function set chrome(param1:Point) : void
+      public static function set chrome(value:Point) : void
       {
          //Décompilation abandonné
       }

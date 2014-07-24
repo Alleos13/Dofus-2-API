@@ -11,7 +11,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightInvisibleObstacleStep(param1:int, param2:int)
+      public function FightInvisibleObstacleStep(fighterId:int, spellLevelId:int)
       {
          //Décompilation abandonné
       }

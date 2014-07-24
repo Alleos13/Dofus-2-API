@@ -168,12 +168,12 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function getAllianceById(param1:uint) : AllianceWrapper
+      public function getAllianceById(id:uint) : AllianceWrapper
       {
          //Décompilation abandonné
       }
       
-      public function getPrismSubAreaById(param1:uint) : PrismSubAreaWrapper
+      public function getPrismSubAreaById(id:uint) : PrismSubAreaWrapper
       {
          //Décompilation abandonné
       }
@@ -183,7 +183,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function _pickup_fighter(param1:Array, param2:uint) : PrismFightersWrapper
+      public function _pickup_fighter(vec:Array, defenderId:uint) : PrismFightersWrapper
       {
          //Décompilation abandonné
       }
@@ -198,7 +198,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }

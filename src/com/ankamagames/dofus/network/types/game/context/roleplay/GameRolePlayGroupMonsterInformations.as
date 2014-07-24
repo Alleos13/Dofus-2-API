@@ -41,7 +41,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initGameRolePlayGroupMonsterInformations(param1:int = 0, param2:EntityLook = null, param3:EntityDispositionInformations = null, param4:GroupMonsterStaticInformations = null, param5:int = 0, param6:int = 0, param7:int = 0, param8:Boolean = false, param9:Boolean = false, param10:Boolean = false) : GameRolePlayGroupMonsterInformations
+      public function initGameRolePlayGroupMonsterInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, staticInfos:GroupMonsterStaticInformations = null, ageBonus:int = 0, lootShare:int = 0, alignmentSide:int = 0, keyRingBonus:Boolean = false, hasHardcoreDrop:Boolean = false, hasAVARewardToken:Boolean = false) : GameRolePlayGroupMonsterInformations
       {
          //Décompilation abandonné
       }
@@ -51,22 +51,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayGroupMonsterInformations(param1:IDataOutput) : void
+      public function serializeAs_GameRolePlayGroupMonsterInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayGroupMonsterInformations(param1:IDataInput) : void
+      public function deserializeAs_GameRolePlayGroupMonsterInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

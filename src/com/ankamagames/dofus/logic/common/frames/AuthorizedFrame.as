@@ -66,7 +66,7 @@ package com.ankamagames.dofus.logic.common.frames
          //Décompilation abandonné
       }
       
-      public function set hasRights(param1:Boolean) : void
+      public function set hasRights(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -81,32 +81,32 @@ package com.ankamagames.dofus.logic.common.frames
          //Décompilation abandonné
       }
       
-      private function onConsoleMessage(param1:ConsoleMessage) : Boolean
+      private function onConsoleMessage(cmsg:ConsoleMessage) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onAuthorizedCommandAction(param1:AuthorizedCommandAction) : Boolean
+      private function onAuthorizedCommandAction(aca:AuthorizedCommandAction) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onConsoleOutputMessage(param1:ConsoleOutputMessage) : Boolean
+      private function onConsoleOutputMessage(comsg:ConsoleOutputMessage) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onQuitGameAction(param1:QuitGameAction) : Boolean
+      private function onQuitGameAction(qga:QuitGameAction) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function objectLoaded(param1:ResourceLoadedEvent) : void
+      public function objectLoaded(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function objectLoadedFailed(param1:ResourceErrorEvent) : void
+      public function objectLoadedFailed(e:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }

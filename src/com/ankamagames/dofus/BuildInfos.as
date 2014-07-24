@@ -17,12 +17,12 @@ package com.ankamagames.dofus
       
       public static var BUILD_VERSION:Version;
       
-      public static var BUILD_TYPE:uint = 0;
+      public static var BUILD_TYPE:uint = 1;
       
-      public static var BUILD_REVISION:int = 85793;
+      public static var BUILD_REVISION:int = 85461;
       
       public static var BUILD_PATCH:int = 0;
       
-      public static const BUILD_DATE:String = "Jun 23, 2014 - 16:06:25 CEST";
+      public static const BUILD_DATE:String = "Jun 11, 2014 - 11:37:59 CEST";
    }
 }

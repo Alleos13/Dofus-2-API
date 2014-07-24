@@ -37,7 +37,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
       
       private var _swl:Swl;
       
-      override protected function getResource(param1:String, param2:*) : *
+      override protected function getResource(dataFormat:String, data:*) : *
       {
          //Décompilation abandonné
       }
@@ -47,7 +47,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          //Décompilation abandonné
       }
       
-      override protected function process(param1:String, param2:*) : void
+      override protected function process(dataFormat:String, data:*) : void
       {
          //Décompilation abandonné
       }
@@ -57,7 +57,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          //Décompilation abandonné
       }
       
-      private function createResource(param1:uint, param2:Array, param3:ApplicationDomain) : void
+      private function createResource(frameRate:uint, classesList:Array, appDomain:ApplicationDomain) : void
       {
          //Décompilation abandonné
       }
@@ -67,12 +67,12 @@ package com.ankamagames.jerakine.resources.adapters.impl
          //Décompilation abandonné
       }
       
-      private function onLibraryInit(param1:uint, param2:Array) : Function
+      private function onLibraryInit(frameRate:uint, classesList:Array) : Function
       {
          //Décompilation abandonné
       }
       
-      private function onLibraryError(param1:ErrorEvent) : void
+      private function onLibraryError(ee:ErrorEvent) : void
       {
          //Décompilation abandonné
       }

@@ -48,7 +48,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      public function initPartyJoinMessage(param1:uint = 0, param2:uint = 0, param3:uint = 0, param4:uint = 0, param5:Vector.<PartyMemberInformations> = null, param6:Vector.<PartyGuestInformations> = null, param7:Boolean = false, param8:String = "") : PartyJoinMessage
+      public function initPartyJoinMessage(partyId:uint = 0, partyType:uint = 0, partyLeaderId:uint = 0, maxParticipants:uint = 0, members:Vector.<PartyMemberInformations> = null, guests:Vector.<PartyGuestInformations> = null, restricted:Boolean = false, partyName:String = "") : PartyJoinMessage
       {
          //Décompilation abandonné
       }
@@ -58,32 +58,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PartyJoinMessage(param1:IDataOutput) : void
+      public function serializeAs_PartyJoinMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PartyJoinMessage(param1:IDataInput) : void
+      public function deserializeAs_PartyJoinMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

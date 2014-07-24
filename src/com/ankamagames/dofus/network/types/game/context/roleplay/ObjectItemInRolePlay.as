@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initObjectItemInRolePlay(param1:uint = 0, param2:uint = 0) : ObjectItemInRolePlay
+      public function initObjectItemInRolePlay(cellId:uint = 0, objectGID:uint = 0) : ObjectItemInRolePlay
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectItemInRolePlay(param1:IDataOutput) : void
+      public function serializeAs_ObjectItemInRolePlay(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectItemInRolePlay(param1:IDataInput) : void
+      public function deserializeAs_ObjectItemInRolePlay(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -11,7 +11,7 @@ package com.ankamagames.berilia.types.tooltip
       //Décompilation abandonné
       }
       
-      public function TooltipPosition(param1:UiRootContainer, param2:IRectangle, param3:uint)
+      public function TooltipPosition(pTooltip:UiRootContainer, pTarget:IRectangle, pCellId:uint)
       {
          //Décompilation abandonné
       }
@@ -38,7 +38,7 @@ package com.ankamagames.berilia.types.tooltip
          //Décompilation abandonné
       }
       
-      public function set target(param1:IRectangle) : void
+      public function set target(pTarget:IRectangle) : void
       {
          //Décompilation abandonné
       }

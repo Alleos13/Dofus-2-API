@@ -41,7 +41,7 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
          //Décompilation abandonné
       }
       
-      public function initTaxCollectorMovementMessage(param1:Boolean = false, param2:TaxCollectorBasicInformations = null, param3:uint = 0, param4:String = "") : TaxCollectorMovementMessage
+      public function initTaxCollectorMovementMessage(hireOrFire:Boolean = false, basicInfos:TaxCollectorBasicInformations = null, playerId:uint = 0, playerName:String = "") : TaxCollectorMovementMessage
       {
          //Décompilation abandonné
       }
@@ -51,32 +51,32 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_TaxCollectorMovementMessage(param1:IDataOutput) : void
+      public function serializeAs_TaxCollectorMovementMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_TaxCollectorMovementMessage(param1:IDataInput) : void
+      public function deserializeAs_TaxCollectorMovementMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -82,7 +82,7 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      override public function getIconUri(param1:Boolean = true) : Uri
+      override public function getIconUri(pngMode:Boolean = true) : Uri
       {
          //Décompilation abandonné
       }
@@ -102,7 +102,7 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      override public function update(param1:uint, param2:uint, param3:uint, param4:uint, param5:Vector.<ObjectEffect>) : void
+      override public function update(position:uint, objectUID:uint, objectGID:uint, quantity:uint, newEffects:Vector.<ObjectEffect>) : void
       {
          //Décompilation abandonné
       }

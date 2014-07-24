@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.interactive
          //Décompilation abandonné
       }
       
-      public function initInteractiveElementWithAgeBonus(param1:uint = 0, param2:int = 0, param3:Vector.<InteractiveElementSkill> = null, param4:Vector.<InteractiveElementSkill> = null, param5:int = 0) : InteractiveElementWithAgeBonus
+      public function initInteractiveElementWithAgeBonus(elementId:uint = 0, elementTypeId:int = 0, enabledSkills:Vector.<InteractiveElementSkill> = null, disabledSkills:Vector.<InteractiveElementSkill> = null, ageBonus:int = 0) : InteractiveElementWithAgeBonus
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.interactive
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_InteractiveElementWithAgeBonus(param1:IDataOutput) : void
+      public function serializeAs_InteractiveElementWithAgeBonus(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_InteractiveElementWithAgeBonus(param1:IDataInput) : void
+      public function deserializeAs_InteractiveElementWithAgeBonus(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

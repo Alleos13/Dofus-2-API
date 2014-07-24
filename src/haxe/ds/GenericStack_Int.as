@@ -17,7 +17,7 @@ package haxe.ds
          //Décompilation abandonné
       }
       
-      public function remove(param1:int) : Boolean
+      public function remove(v:int) : Boolean
       {
          //Décompilation abandonné
       }
@@ -44,7 +44,7 @@ package haxe.ds
          //Décompilation abandonné
       }
       
-      public function add(param1:int) : void
+      public function add(item:int) : void
       {
          //Décompilation abandonné
       }

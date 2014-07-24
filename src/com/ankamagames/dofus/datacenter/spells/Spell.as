@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.spells
       
       public static const MODULE:String = "Spells";
       
-      public static function getSpellById(param1:int) : Spell
+      public static function getSpellById(id:int) : Spell
       {
          //Décompilation abandonné
       }
@@ -82,22 +82,22 @@ package com.ankamagames.dofus.datacenter.spells
          //Décompilation abandonné
       }
       
-      public function getSpellLevel(param1:int) : SpellLevel
+      public function getSpellLevel(level:int) : SpellLevel
       {
          //Décompilation abandonné
       }
       
-      public function getScriptId(param1:Boolean = false) : int
+      public function getScriptId(critical:Boolean = false) : int
       {
          //Décompilation abandonné
       }
       
-      public function getParamByName(param1:String, param2:Boolean = false) : *
+      public function getParamByName(name:String, critical:Boolean = false) : *
       {
          //Décompilation abandonné
       }
       
-      private function getValue(param1:String) : *
+      private function getValue(str:String) : *
       {
          //Décompilation abandonné
       }

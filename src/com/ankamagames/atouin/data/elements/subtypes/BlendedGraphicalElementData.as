@@ -13,7 +13,7 @@ package com.ankamagames.atouin.data.elements.subtypes
       //Décompilation abandonné
       }
       
-      public function BlendedGraphicalElementData(param1:int, param2:int)
+      public function BlendedGraphicalElementData(elementId:int, elementType:int)
       {
          //Décompilation abandonné
       }
@@ -22,7 +22,7 @@ package com.ankamagames.atouin.data.elements.subtypes
       
       public var blendMode:String;
       
-      override public function fromRaw(param1:IDataInput, param2:int) : void
+      override public function fromRaw(raw:IDataInput, version:int) : void
       {
          //Décompilation abandonné
       }

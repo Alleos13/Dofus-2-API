@@ -66,17 +66,17 @@ package com.ankamagames.dofus.misc.utils.mapeditor
          //Décompilation abandonné
       }
       
-      private function displayPopup(param1:String, param2:uint, param3:Boolean = false) : void
+      private function displayPopup(txt:String, color:uint, autoClose:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private function closePopup(param1:Event = null, param2:Sprite = null) : void
+      private function closePopup(e:Event = null, currentPopup:Sprite = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function onNewData(param1:MapEditorDataEvent) : void
+      private function onNewData(e:MapEditorDataEvent) : void
       {
          //Décompilation abandonné
       }
@@ -85,27 +85,27 @@ package com.ankamagames.dofus.misc.utils.mapeditor
       
       private var _lastRenderedId:uint;
       
-      private function onMapRenderEnd(param1:RenderMapEvent) : void
+      private function onMapRenderEnd(e:RenderMapEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onDmlLoaded(param1:Uri, param2:uint, param3:*) : void
+      private function onDmlLoaded(uri:Uri, resourceType:uint, resource:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function onConnect(param1:Event) : void
+      private function onConnect(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onDataProgress(param1:Event) : void
+      private function onDataProgress(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onClose(param1:Event) : void
+      private function onClose(e:Event) : void
       {
          //Décompilation abandonné
       }

@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.tinsel
          //Décompilation abandonné
       }
       
-      public static function create(param1:int) : TitleSelectRequestAction
+      public static function create(titleId:int) : TitleSelectRequestAction
       {
          //Décompilation abandonné
       }

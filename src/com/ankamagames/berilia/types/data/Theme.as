@@ -7,7 +7,7 @@ package com.ankamagames.berilia.types.data
       //Décompilation abandonné
       }
       
-      public function Theme(param1:String, param2:String, param3:String = "", param4:String = "")
+      public function Theme(fileName:String, name:String, description:String = "", previewUri:String = "")
       {
          //Décompilation abandonné
       }

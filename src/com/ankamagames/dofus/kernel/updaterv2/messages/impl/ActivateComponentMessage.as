@@ -11,7 +11,7 @@ package com.ankamagames.dofus.kernel.updaterv2.messages.impl
       //Décompilation abandonné
       }
       
-      public function ActivateComponentMessage(param1:String, param2:Boolean = true, param3:String = "game")
+      public function ActivateComponentMessage(component:String, activate:Boolean = true, project:String = "game")
       {
          //Décompilation abandonné
       }

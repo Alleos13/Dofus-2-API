@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.utils.errors
       //Décompilation abandonné
       }
       
-      public function SignatureError(param1:* = "", param2:* = 0)
+      public function SignatureError(message:* = "", id:* = 0)
       {
          //Décompilation abandonné
       }

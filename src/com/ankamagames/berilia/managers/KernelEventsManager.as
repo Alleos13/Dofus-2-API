@@ -54,22 +54,22 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      public function isRegisteredEvent(param1:String) : Boolean
+      public function isRegisteredEvent(name:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function processCallback(param1:Hook, ... rest) : void
+      public function processCallback(hook:Hook, ... args) : void
       {
          //Décompilation abandonné
       }
       
-      private function processOldMessage(param1:UiRenderEvent) : void
+      private function processOldMessage(e:UiRenderEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function throwAsyncError(param1:TimerEvent) : void
+      private function throwAsyncError(e:TimerEvent) : void
       {
          //Décompilation abandonné
       }

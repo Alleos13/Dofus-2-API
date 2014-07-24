@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.messages.game.actions.fight
          //Décompilation abandonné
       }
       
-      public function initGameActionFightCloseCombatMessage(param1:uint = 0, param2:int = 0, param3:int = 0, param4:int = 0, param5:uint = 1, param6:Boolean = false, param7:uint = 0) : GameActionFightCloseCombatMessage
+      public function initGameActionFightCloseCombatMessage(actionId:uint = 0, sourceId:int = 0, targetId:int = 0, destinationCellId:int = 0, critical:uint = 1, silentCast:Boolean = false, weaponGenericId:uint = 0) : GameActionFightCloseCombatMessage
       {
          //Décompilation abandonné
       }
@@ -43,32 +43,32 @@ package com.ankamagames.dofus.network.messages.game.actions.fight
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameActionFightCloseCombatMessage(param1:IDataOutput) : void
+      public function serializeAs_GameActionFightCloseCombatMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameActionFightCloseCombatMessage(param1:IDataInput) : void
+      public function deserializeAs_GameActionFightCloseCombatMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

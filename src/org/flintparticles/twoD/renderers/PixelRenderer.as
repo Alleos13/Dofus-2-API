@@ -10,12 +10,12 @@ package org.flintparticles.twoD.renderers
       //Décompilation abandonné
       }
       
-      public function PixelRenderer(param1:Rectangle)
+      public function PixelRenderer(canvas:Rectangle)
       {
          //Décompilation abandonné
       }
       
-      override protected function drawParticle(param1:Particle2D) : void
+      override protected function drawParticle(particle:Particle2D) : void
       {
          //Décompilation abandonné
       }

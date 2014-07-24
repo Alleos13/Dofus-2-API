@@ -38,7 +38,7 @@ package com.ankamagames.dofus.network.messages.game.context.notification
          //Décompilation abandonné
       }
       
-      public function initNotificationByServerMessage(param1:uint = 0, param2:Vector.<String> = null, param3:Boolean = false) : NotificationByServerMessage
+      public function initNotificationByServerMessage(id:uint = 0, parameters:Vector.<String> = null, forceOpen:Boolean = false) : NotificationByServerMessage
       {
          //Décompilation abandonné
       }
@@ -48,32 +48,32 @@ package com.ankamagames.dofus.network.messages.game.context.notification
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_NotificationByServerMessage(param1:IDataOutput) : void
+      public function serializeAs_NotificationByServerMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_NotificationByServerMessage(param1:IDataInput) : void
+      public function deserializeAs_NotificationByServerMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -7,7 +7,7 @@ package flashx.textLayout.edit
       //Décompilation abandonné
       }
       
-      public function SelectionFormat(param1:uint = 16777215, param2:Number = 1.0, param3:String = "difference", param4:uint = 16777215, param5:Number = 1.0, param6:String = "difference", param7:Number = 500)
+      public function SelectionFormat(rangeColor:uint = 16777215, rangeAlpha:Number = 1.0, rangeBlendMode:String = "difference", pointColor:uint = 16777215, pointAlpha:Number = 1.0, pointBlendMode:String = "difference", pointBlinkRate:Number = 500)
       {
          //Décompilation abandonné
       }
@@ -61,7 +61,7 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      public function equals(param1:SelectionFormat) : Boolean
+      public function equals(selectionFormat:SelectionFormat) : Boolean
       {
          //Décompilation abandonné
       }

@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.spells
       
       public static const MODULE:String = "SpellTypes";
       
-      public static function getSpellTypeById(param1:int) : SpellType
+      public static function getSpellTypeById(id:int) : SpellType
       {
          //Décompilation abandonné
       }

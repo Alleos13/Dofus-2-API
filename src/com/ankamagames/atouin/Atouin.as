@@ -121,7 +121,7 @@ package com.ankamagames.atouin
          //Décompilation abandonné
       }
       
-      public function set handler(param1:MessageHandler) : void
+      public function set handler(value:MessageHandler) : void
       {
          //Décompilation abandonné
       }
@@ -136,7 +136,7 @@ package com.ankamagames.atouin
          //Décompilation abandonné
       }
       
-      public function set currentZoom(param1:Number) : void
+      public function set currentZoom(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -146,7 +146,7 @@ package com.ankamagames.atouin
          //Décompilation abandonné
       }
       
-      public function set cellOverEnabled(param1:Boolean) : void
+      public function set cellOverEnabled(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -161,17 +161,17 @@ package com.ankamagames.atouin
          //Décompilation abandonné
       }
       
-      public function setDisplayOptions(param1:AtouinOptions) : void
+      public function setDisplayOptions(ao:AtouinOptions) : void
       {
          //Décompilation abandonné
       }
       
-      public function onRollOverMapContainer(param1:Event) : void
+      public function onRollOverMapContainer(event:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onRollOutMapContainer(param1:Event) : void
+      private function onRollOutMapContainer(event:Event) : void
       {
          //Décompilation abandonné
       }
@@ -181,32 +181,32 @@ package com.ankamagames.atouin
          //Décompilation abandonné
       }
       
-      public function showWorld(param1:Boolean) : void
+      public function showWorld(b:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function setFrustrum(param1:Frustum) : void
+      public function setFrustrum(f:Frustum) : void
       {
          //Décompilation abandonné
       }
       
-      public function initPreDisplay(param1:WorldPoint) : void
+      public function initPreDisplay(wp:WorldPoint) : void
       {
          //Décompilation abandonné
       }
       
-      public function display(param1:WorldPoint, param2:ByteArray = null) : uint
+      public function display(wpMap:WorldPoint, decryptionKey:ByteArray = null) : uint
       {
          //Décompilation abandonné
       }
       
-      public function getEntity(param1:int) : IEntity
+      public function getEntity(id:int) : IEntity
       {
          //Décompilation abandonné
       }
       
-      public function getEntityOnCell(param1:uint, param2:* = null) : IEntity
+      public function getEntityOnCell(cellId:uint, oClass:* = null) : IEntity
       {
          //Décompilation abandonné
       }
@@ -221,32 +221,32 @@ package com.ankamagames.atouin
          //Décompilation abandonné
       }
       
-      public function displayGrid(param1:Boolean, param2:Boolean = false) : void
+      public function displayGrid(b:Boolean, pIsInFight:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function getIdentifiedElement(param1:uint) : InteractiveObject
+      public function getIdentifiedElement(id:uint) : InteractiveObject
       {
          //Décompilation abandonné
       }
       
-      public function getIdentifiedElementPosition(param1:uint) : MapPoint
+      public function getIdentifiedElementPosition(id:uint) : MapPoint
       {
          //Décompilation abandonné
       }
       
-      public function addListener(param1:ISoundPositionListener) : void
+      public function addListener(pListener:ISoundPositionListener) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeListener(param1:ISoundPositionListener) : void
+      public function removeListener(pListener:ISoundPositionListener) : void
       {
          //Décompilation abandonné
       }
       
-      public function zoom(param1:Number, param2:int = 0, param3:int = 0) : void
+      public function zoom(value:Number, posX:int = 0, posY:int = 0) : void
       {
          //Décompilation abandonné
       }
@@ -256,7 +256,7 @@ package com.ankamagames.atouin
          //Décompilation abandonné
       }
       
-      private function removeUpdateCursorSprite(param1:Event) : void
+      private function removeUpdateCursorSprite(e:Event) : void
       {
          //Décompilation abandonné
       }
@@ -266,7 +266,7 @@ package com.ankamagames.atouin
          //Décompilation abandonné
       }
       
-      private function onElementsError(param1:ResourceErrorEvent) : void
+      private function onElementsError(ree:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }

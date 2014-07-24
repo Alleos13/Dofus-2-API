@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.craft
          //Décompilation abandonné
       }
       
-      public static function create(param1:Boolean) : JobAllowMultiCraftRequestSetAction
+      public static function create(pIsPublic:Boolean) : JobAllowMultiCraftRequestSetAction
       {
          //Décompilation abandonné
       }

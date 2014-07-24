@@ -10,7 +10,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
       //Décompilation abandonné
       }
       
-      public function AdvancedSignedFileAdapter(param1:SignatureKey = null)
+      public function AdvancedSignedFileAdapter(signatureKey:SignatureKey = null)
       {
          //Décompilation abandonné
       }

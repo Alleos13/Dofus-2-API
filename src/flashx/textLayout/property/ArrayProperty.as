@@ -10,7 +10,7 @@ package flashx.textLayout.property
       //Décompilation abandonné
       }
       
-      public function ArrayProperty(param1:String, param2:Array, param3:Boolean, param4:Vector.<String>, param5:Class)
+      public function ArrayProperty(nameValue:String, defaultValue:Array, inherited:Boolean, categories:Vector.<String>, mType:Class)
       {
          //Décompilation abandonné
       }
@@ -22,7 +22,7 @@ package flashx.textLayout.property
          //Décompilation abandonné
       }
       
-      protected function checkArrayTypes(param1:Object) : Boolean
+      protected function checkArrayTypes(val:Object) : Boolean
       {
          //Décompilation abandonné
       }
@@ -32,32 +32,32 @@ package flashx.textLayout.property
          //Décompilation abandonné
       }
       
-      override public function setHelper(param1:*, param2:*) : *
+      override public function setHelper(currVal:*, newVal:*) : *
       {
          //Décompilation abandonné
       }
       
-      override public function concatInheritOnlyHelper(param1:*, param2:*) : *
+      override public function concatInheritOnlyHelper(currVal:*, concatVal:*) : *
       {
          //Décompilation abandonné
       }
       
-      override public function concatHelper(param1:*, param2:*) : *
+      override public function concatHelper(currVal:*, concatVal:*) : *
       {
          //Décompilation abandonné
       }
       
-      override public function equalHelper(param1:*, param2:*) : Boolean
+      override public function equalHelper(v1:*, v2:*) : Boolean
       {
          //Décompilation abandonné
       }
       
-      override public function toXMLString(param1:Object) : String
+      override public function toXMLString(val:Object) : String
       {
          //Décompilation abandonné
       }
       
-      private function valueFromString(param1:String) : *
+      private function valueFromString(str:String) : *
       {
          //Décompilation abandonné
       }

@@ -41,22 +41,22 @@ package com.ankamagames.dofus.logic.game.fight.types
       
       protected static const _log:Logger;
       
-      public static function fromCurrentPlayer(param1:Object, param2:int) : SpellDamageInfo
+      public static function fromCurrentPlayer(pSpell:Object, pTargetId:int) : SpellDamageInfo
       {
          //Décompilation abandonné
       }
       
-      private static function applyBuffModification(param1:SpellDamageInfo, param2:int, param3:int) : void
+      private static function applyBuffModification(pSpellInfo:SpellDamageInfo, pBuffActionId:int, pModif:int) : void
       {
          //Décompilation abandonné
       }
       
-      private static function groupBuffsBySpell(param1:Array) : Dictionary
+      private static function groupBuffsBySpell(pBuffs:Array) : Dictionary
       {
          //Décompilation abandonné
       }
       
-      private static function getMinimumDamageEffectOrder(param1:int, param2:int, param3:Vector.<EffectInstance>) : int
+      private static function getMinimumDamageEffectOrder(pCasterId:int, pTargetId:int, pEffects:Vector.<EffectInstance>) : int
       {
          //Décompilation abandonné
       }
@@ -255,7 +255,7 @@ package com.ankamagames.dofus.logic.game.fight.types
       
       public var damageSharingTargets:Vector.<int>;
       
-      public function getEffectModification(param1:int, param2:int, param3:Boolean) : EffectModification
+      public function getEffectModification(pEffectId:int, pEffectOrder:int, pHasCritical:Boolean) : EffectModification
       {
          //Décompilation abandonné
       }
@@ -265,7 +265,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function set targetId(param1:int) : void
+      public function set targetId(pTargetId:int) : void
       {
          //Décompilation abandonné
       }
@@ -290,7 +290,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function addTriggeredSpellsEffects(param1:Vector.<TriggeredSpell>) : Boolean
+      public function addTriggeredSpellsEffects(pTriggeredSpells:Vector.<TriggeredSpell>) : Boolean
       {
          //Décompilation abandonné
       }

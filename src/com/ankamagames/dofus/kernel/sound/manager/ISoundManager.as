@@ -15,7 +15,7 @@ package com.ankamagames.dofus.kernel.sound.manager
       //Décompilation abandonné
       }
       
-      function set soundDirectoryExist(param1:Boolean) : void;
+      function set soundDirectoryExist(pExists:Boolean) : void;
       
       function get soundDirectoryExist() : Boolean;
       
@@ -25,9 +25,9 @@ package com.ankamagames.dofus.kernel.sound.manager
       
       function retriveRollOffPresets() : void;
       
-      function setSubArea(param1:Map = null) : void;
+      function setSubArea(pMap:Map = null) : void;
       
-      function playSound(param1:ISound, param2:Boolean = false, param3:int = -1) : ISound;
+      function playSound(pSound:ISound, pLoop:Boolean = false, pLoops:int = -1) : ISound;
       
       function playFightMusic() : void;
       
@@ -35,33 +35,33 @@ package com.ankamagames.dofus.kernel.sound.manager
       
       function stopFightMusic() : void;
       
-      function applyDynamicMix(param1:VolumeFadeEffect, param2:uint, param3:VolumeFadeEffect) : void;
+      function applyDynamicMix(pFadeIn:VolumeFadeEffect, pWaitingTime:uint, pFadeOut:VolumeFadeEffect) : void;
       
-      function playIntroMusic(param1:Boolean = true) : void;
+      function playIntroMusic(pFirstHarmonic:Boolean = true) : void;
       
-      function switchIntroMusic(param1:Boolean) : void;
+      function switchIntroMusic(pFirstHarmonic:Boolean) : void;
       
-      function stopIntroMusic(param1:Boolean = false) : void;
+      function stopIntroMusic(pImmediatly:Boolean = false) : void;
       
-      function removeAllSounds(param1:Number = 0, param2:Number = 0) : void;
+      function removeAllSounds(pFade:Number = 0, pFadeTime:Number = 0) : void;
       
       function reset() : void;
       
-      function fadeBusVolume(param1:int, param2:Number, param3:Number) : void;
+      function fadeBusVolume(pBusID:int, pFade:Number, pFadeTime:Number) : void;
       
-      function setBusVolume(param1:int, param2:Number) : void;
+      function setBusVolume(pBusID:int, pNewVolume:Number) : void;
       
       function activateSound() : void;
       
       function deactivateSound() : void;
       
-      function playAdminSound(param1:String, param2:Number, param3:Boolean, param4:uint) : void;
+      function playAdminSound(pSoundId:String, pVolume:Number, pLoop:Boolean, pType:uint) : void;
       
-      function stopAdminSound(param1:uint) : void;
+      function stopAdminSound(pType:uint) : void;
       
-      function addSoundInPlaylist(param1:String, param2:Number, param3:uint, param4:uint) : Boolean;
+      function addSoundInPlaylist(pSoundId:String, pVolume:Number, pSilenceMin:uint, pSilenceMax:uint) : Boolean;
       
-      function removeSoundInPLaylist(param1:String) : Boolean;
+      function removeSoundInPLaylist(pSoundId:String) : Boolean;
       
       function playPlaylist() : void;
       

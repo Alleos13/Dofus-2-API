@@ -7,17 +7,17 @@ package com.ankamagames.berilia.types.data
       //Décompilation abandonné
       }
       
-      public function TreeData(param1:*, param2:String, param3:Boolean = false, param4:Vector.<TreeData> = null, param5:TreeData = null)
+      public function TreeData(value:*, label:String, expend:Boolean = false, childs:Vector.<TreeData> = null, parent:TreeData = null)
       {
          //Décompilation abandonné
       }
       
-      public static function fromArray(param1:Object) : Vector.<TreeData>
+      public static function fromArray(a:Object) : Vector.<TreeData>
       {
          //Décompilation abandonné
       }
       
-      private static function _fromArray(param1:Object, param2:TreeData) : Vector.<TreeData>
+      private static function _fromArray(a:Object, parent:TreeData) : Vector.<TreeData>
       {
          //Décompilation abandonné
       }

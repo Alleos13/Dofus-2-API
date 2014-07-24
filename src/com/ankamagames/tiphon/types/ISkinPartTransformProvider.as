@@ -7,6 +7,6 @@ package com.ankamagames.tiphon.types
       //Décompilation abandonné
       }
       
-      function init(param1:Skin) : void;
+      function init(skin:Skin) : void;
    }
 }

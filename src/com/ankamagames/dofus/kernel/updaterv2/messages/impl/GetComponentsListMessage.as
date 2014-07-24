@@ -11,7 +11,7 @@ package com.ankamagames.dofus.kernel.updaterv2.messages.impl
       //Décompilation abandonné
       }
       
-      public function GetComponentsListMessage(param1:String = "game")
+      public function GetComponentsListMessage(project:String = "game")
       {
          //Décompilation abandonné
       }

@@ -107,7 +107,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function set untargetableEntities(param1:Boolean) : void
+      public function set untargetableEntities(enabled:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -147,7 +147,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -157,7 +157,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function getEntityInfos(param1:int) : GameContextActorInformations
+      public function getEntityInfos(entityId:int) : GameContextActorInformations
       {
          //Décompilation abandonné
       }
@@ -172,37 +172,37 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function registerActor(param1:GameContextActorInformations) : void
+      public function registerActor(infos:GameContextActorInformations) : void
       {
          //Décompilation abandonné
       }
       
-      public function addOrUpdateActor(param1:GameContextActorInformations, param2:IAnimationModifier = null) : AnimatedCharacter
+      public function addOrUpdateActor(infos:GameContextActorInformations, animationModifier:IAnimationModifier = null) : AnimatedCharacter
       {
          //Décompilation abandonné
       }
       
-      protected function updateActorLook(param1:int, param2:EntityLook, param3:Boolean = false) : AnimatedCharacter
+      protected function updateActorLook(actorId:int, newLook:EntityLook, smoke:Boolean = false) : AnimatedCharacter
       {
          //Décompilation abandonné
       }
       
-      protected function updateActorDisposition(param1:int, param2:EntityDispositionInformations) : void
+      protected function updateActorDisposition(actorId:int, newDisposition:EntityDispositionInformations) : void
       {
          //Décompilation abandonné
       }
       
-      protected function updateActorOrientation(param1:int, param2:uint) : void
+      protected function updateActorOrientation(actorId:int, newOrientation:uint) : void
       {
          //Décompilation abandonné
       }
       
-      protected function hideActor(param1:int) : void
+      protected function hideActor(actorId:int) : void
       {
          //Décompilation abandonné
       }
       
-      protected function removeActor(param1:int) : void
+      protected function removeActor(actorId:int) : void
       {
          //Décompilation abandonné
       }
@@ -217,12 +217,12 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function onPlayAnim(param1:TiphonEvent) : void
+      public function onPlayAnim(e:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAtouinOptionChange(param1:PropertyChangeEvent) : void
+      private function onAtouinOptionChange(e:PropertyChangeEvent) : void
       {
          //Décompilation abandonné
       }
@@ -232,22 +232,22 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      private function onUpdateEntitySuccess(param1:TiphonEvent) : void
+      private function onUpdateEntitySuccess(e:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onUpdateEntityFail(param1:TiphonEvent) : void
+      private function onUpdateEntityFail(e:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function isIncarnation(param1:String) : Boolean
+      private function isIncarnation(entity:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      protected function onPropertyChanged(param1:PropertyChangeEvent) : void
+      protected function onPropertyChanged(e:PropertyChangeEvent) : void
       {
          //Décompilation abandonné
       }

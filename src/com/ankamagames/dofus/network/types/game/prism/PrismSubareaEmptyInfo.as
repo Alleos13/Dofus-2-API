@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.prism
          //Décompilation abandonné
       }
       
-      public function initPrismSubareaEmptyInfo(param1:uint = 0, param2:uint = 0) : PrismSubareaEmptyInfo
+      public function initPrismSubareaEmptyInfo(subAreaId:uint = 0, allianceId:uint = 0) : PrismSubareaEmptyInfo
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.prism
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PrismSubareaEmptyInfo(param1:IDataOutput) : void
+      public function serializeAs_PrismSubareaEmptyInfo(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PrismSubareaEmptyInfo(param1:IDataInput) : void
+      public function deserializeAs_PrismSubareaEmptyInfo(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

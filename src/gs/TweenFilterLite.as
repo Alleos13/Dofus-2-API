@@ -10,7 +10,7 @@ package gs
       //Décompilation abandonné
       }
       
-      public function TweenFilterLite(param1:Object, param2:Number, param3:Object)
+      public function TweenFilterLite($target:Object, $duration:Number, $vars:Object)
       {
          //Décompilation abandonné
       }
@@ -35,62 +35,62 @@ package gs
       
       private static var _lumB:Number = 0.072169;
       
-      public static function to(param1:Object, param2:Number, param3:Object) : TweenFilterLite
+      public static function to($target:Object, $duration:Number, $vars:Object) : TweenFilterLite
       {
          //Décompilation abandonné
       }
       
-      public static function from(param1:Object, param2:Number, param3:Object) : TweenFilterLite
+      public static function from($target:Object, $duration:Number, $vars:Object) : TweenFilterLite
       {
          //Décompilation abandonné
       }
       
-      public static function setGlobalTimeScale(param1:Number) : void
+      public static function setGlobalTimeScale($scale:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public static function HEXtoRGB(param1:Number) : Object
+      public static function HEXtoRGB($n:Number) : Object
       {
          //Décompilation abandonné
       }
       
-      public static function colorize(param1:Array, param2:Number, param3:Number = 1) : Array
+      public static function colorize($m:Array, $color:Number, $amount:Number = 1) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function setThreshold(param1:Array, param2:Number) : Array
+      public static function setThreshold($m:Array, $n:Number) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function setHue(param1:Array, param2:Number) : Array
+      public static function setHue($m:Array, $n:Number) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function setBrightness(param1:Array, param2:Number) : Array
+      public static function setBrightness($m:Array, $n:Number) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function setSaturation(param1:Array, param2:Number) : Array
+      public static function setSaturation($m:Array, $n:Number) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function setContrast(param1:Array, param2:Number) : Array
+      public static function setContrast($m:Array, $n:Number) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function applyMatrix(param1:Array, param2:Array) : Array
+      public static function applyMatrix($m:Array, $m2:Array) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function set globalTimeScale(param1:Number) : void
+      public static function set globalTimeScale($n:Number) : void
       {
          //Décompilation abandonné
       }
@@ -116,22 +116,22 @@ package gs
       
       protected var _roundProps:Boolean;
       
-      override public function initTweenVals(param1:Boolean = false, param2:String = "") : void
+      override public function initTweenVals($hrp:Boolean = false, $reservedProps:String = "") : void
       {
          //Décompilation abandonné
       }
       
-      private function addFilter(param1:String, param2:Object, param3:Class, param4:Array, param5:BitmapFilter) : Object
+      private function addFilter($name:String, $fv:Object, $filterType:Class, $props:Array, $defaultFilter:BitmapFilter) : Object
       {
          //Décompilation abandonné
       }
       
-      override public function render(param1:uint) : void
+      override public function render($t:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function killVars(param1:Object) : void
+      override public function killVars($vars:Object) : void
       {
          //Décompilation abandonné
       }
@@ -141,12 +141,12 @@ package gs
          //Décompilation abandonné
       }
       
-      public function set timeScale(param1:Number) : void
+      public function set timeScale($n:Number) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set enabled(param1:Boolean) : void
+      override public function set enabled($b:Boolean) : void
       {
          //Décompilation abandonné
       }

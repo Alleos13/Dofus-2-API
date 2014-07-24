@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.chat
          //Décompilation abandonné
       }
       
-      public static function create(param1:Array = null, param2:Array = null) : TabsUpdateAction
+      public static function create(tabs:Array = null, tabsNames:Array = null) : TabsUpdateAction
       {
          //Décompilation abandonné
       }

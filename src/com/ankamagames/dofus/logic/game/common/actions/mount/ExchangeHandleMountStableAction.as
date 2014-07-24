@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.mount
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:uint) : ExchangeHandleMountStableAction
+      public static function create(actionType:uint, mountId:uint) : ExchangeHandleMountStableAction
       {
          //Décompilation abandonné
       }

@@ -9,7 +9,7 @@ package flashx.textLayout.events
       //Décompilation abandonné
       }
       
-      public function TextLayoutEvent(param1:String, param2:Boolean = false, param3:Boolean = false)
+      public function TextLayoutEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
       {
          //Décompilation abandonné
       }

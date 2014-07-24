@@ -30,7 +30,7 @@ package com.ankamagames.atouin.types
       //Décompilation abandonné
       }
       
-      public function ZoneClipTile(param1:Uri, param2:String = "Bloc", param3:Boolean = false)
+      public function ZoneClipTile(pUri:Uri, pClipName:String = "Bloc", pNeedBorders:Boolean = false)
       {
          //Décompilation abandonné
       }
@@ -43,12 +43,12 @@ package com.ankamagames.atouin.types
       
       private static const BORDER_CLIP:String = "BlocageMvt";
       
-      private static function getRessource(param1:String) : LoadedTile
+      private static function getRessource(pFileName:String) : LoadedTile
       {
          //Décompilation abandonné
       }
       
-      public static function getTile(param1:String, param2:String) : Sprite
+      public static function getTile(pUriName:String, pClipName:String) : Sprite
       {
          //Décompilation abandonné
       }
@@ -79,12 +79,12 @@ package com.ankamagames.atouin.types
       
       protected var _cellInstance:Sprite;
       
-      private function onClipLoaded(param1:ResourceLoadedEvent) : void
+      private function onClipLoaded(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function display(param1:uint = 0) : void
+      public function display(wishedStrata:uint = 0) : void
       {
          //Décompilation abandonné
       }
@@ -94,7 +94,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set displayBehaviors(param1:IDisplayBehavior) : void
+      public function set displayBehaviors(oValue:IDisplayBehavior) : void
       {
          //Décompilation abandonné
       }
@@ -104,7 +104,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set currentCellPosition(param1:Point) : void
+      public function set currentCellPosition(pValue:Point) : void
       {
          //Décompilation abandonné
       }
@@ -124,7 +124,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set cellId(param1:uint) : void
+      public function set cellId(nValue:uint) : void
       {
          //Décompilation abandonné
       }
@@ -164,7 +164,7 @@ class LoadedTile extends Object
    //Décompilation abandonné
    }
    
-   function LoadedTile(param1:String)
+   function LoadedTile(pName:String)
    {
       //Décompilation abandonné
    }
@@ -175,12 +175,12 @@ class LoadedTile extends Object
    
    private var _clips:Array;
    
-   public function addClip(param1:String, param2:Object = null) : void
+   public function addClip(pName:String, pClip:Object = null) : void
    {
       //Décompilation abandonné
    }
    
-   public function getClip(param1:String) : Object
+   public function getClip(pName:String) : Object
    {
       //Décompilation abandonné
    }

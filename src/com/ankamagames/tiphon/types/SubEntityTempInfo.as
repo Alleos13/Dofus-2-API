@@ -9,7 +9,7 @@ package com.ankamagames.tiphon.types
       //Décompilation abandonné
       }
       
-      public function SubEntityTempInfo(param1:DisplayObject, param2:int, param3:int)
+      public function SubEntityTempInfo(entity:DisplayObject, category:int, slot:int)
       {
          //Décompilation abandonné
       }

@@ -11,7 +11,7 @@ package flashx.textLayout.compose
       //Décompilation abandonné
       }
       
-      public function FloatCompositionData(param1:int, param2:DisplayObject, param3:String, param4:Number, param5:Number, param6:Number, param7:Matrix, param8:Number, param9:Number, param10:int, param11:DisplayObjectContainer)
+      public function FloatCompositionData(absolutePosition:int, graphic:DisplayObject, floatType:String, x:Number, y:Number, alpha:Number, matrix:Matrix, depth:Number, knockOutWidth:Number, columnIndex:int, parent:DisplayObjectContainer)
       {
          //Décompilation abandonné
       }

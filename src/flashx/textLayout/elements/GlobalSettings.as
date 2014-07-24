@@ -19,7 +19,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public static function set fontMapperFunction(param1:Function) : void
+      public static function set fontMapperFunction(val:Function) : void
       {
          //Décompilation abandonné
       }
@@ -31,7 +31,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public static function set enableSearch(param1:Boolean) : void
+      public static function set enableSearch(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -43,7 +43,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public static function set resolveFontLookupFunction(param1:Function) : void
+      public static function set resolveFontLookupFunction(val:Function) : void
       {
          //Décompilation abandonné
       }
@@ -55,7 +55,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public static function set resourceStringFunction(param1:Function) : void
+      public static function set resourceStringFunction(val:Function) : void
       {
          //Décompilation abandonné
       }
@@ -64,12 +64,12 @@ package flashx.textLayout.elements
       
       private static const resourceDict:Object;
       
-      tlf_internal  static function defaultResourceStringFunction(param1:String, param2:Array = null) : String
+      tlf_internal  static function defaultResourceStringFunction(resourceName:String, parameters:Array = null) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function substitute(param1:String, ... rest) : String
+      tlf_internal  static function substitute(str:String, ... rest) : String
       {
          //Décompilation abandonné
       }
@@ -81,7 +81,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      tlf_internal  static function set enableDefaultTabStops(param1:Boolean) : void
+      tlf_internal  static function set enableDefaultTabStops(val:Boolean) : void
       {
          //Décompilation abandonné
       }

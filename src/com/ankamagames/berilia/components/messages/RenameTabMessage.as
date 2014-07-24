@@ -9,7 +9,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function RenameTabMessage(param1:InteractiveObject, param2:int, param3:String)
+      public function RenameTabMessage(target:InteractiveObject, index:int, name:String)
       {
          //Décompilation abandonné
       }

@@ -18,14 +18,14 @@ package com.ankamagames.dofus.datacenter.misc
       
       public static const MODULE:String = "OptionalFeatures";
       
-      public static function getOptionalFeatureById(param1:int) : OptionalFeature
+      public static function getOptionalFeatureById(id:int) : OptionalFeature
       {
          //Décompilation abandonné
       }
       
       private static var _keywords:Dictionary;
       
-      public static function getOptionalFeatureByKeyword(param1:String) : OptionalFeature
+      public static function getOptionalFeatureByKeyword(key:String) : OptionalFeature
       {
          //Décompilation abandonné
       }

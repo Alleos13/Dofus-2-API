@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.sequencer
       //Décompilation abandonné
       }
       
-      public function CallbackStep(param1:Callback)
+      public function CallbackStep(callback:Callback)
       {
          //Décompilation abandonné
       }

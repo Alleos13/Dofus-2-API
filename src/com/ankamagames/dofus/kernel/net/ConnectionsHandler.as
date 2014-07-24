@@ -58,7 +58,7 @@ package com.ankamagames.dofus.kernel.net
          //Décompilation abandonné
       }
       
-      public static function set useSniffer(param1:Boolean) : void
+      public static function set useSniffer(sniffer:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -73,7 +73,7 @@ package com.ankamagames.dofus.kernel.net
          //Décompilation abandonné
       }
       
-      public static function set hasReceivedMsg(param1:Boolean) : void
+      public static function set hasReceivedMsg(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -88,17 +88,17 @@ package com.ankamagames.dofus.kernel.net
          //Décompilation abandonné
       }
       
-      public static function connectToLoginServer(param1:String, param2:uint) : void
+      public static function connectToLoginServer(host:String, port:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public static function connectToGameServer(param1:String, param2:uint) : void
+      public static function connectToGameServer(gameServerHost:String, gameServerPort:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public static function connectToKoliServer(param1:String, param2:uint) : void
+      public static function connectToKoliServer(gameServerHost:String, gameServerPort:uint) : void
       {
          //Décompilation abandonné
       }
@@ -108,7 +108,7 @@ package com.ankamagames.dofus.kernel.net
          //Décompilation abandonné
       }
       
-      public static function onConnectionTimeout(param1:TimerEvent) : void
+      public static function onConnectionTimeout(e:TimerEvent) : void
       {
          //Décompilation abandonné
       }
@@ -123,7 +123,7 @@ package com.ankamagames.dofus.kernel.net
          //Décompilation abandonné
       }
       
-      public static function connectionGonnaBeClosed(param1:uint) : void
+      public static function connectionGonnaBeClosed(expectedReason:uint) : void
       {
          //Décompilation abandonné
       }
@@ -138,7 +138,7 @@ package com.ankamagames.dofus.kernel.net
          //Décompilation abandonné
       }
       
-      private static function etablishConnection(param1:String, param2:int, param3:String, param4:Boolean = false, param5:IConnectionProxy = null) : void
+      private static function etablishConnection(host:String, port:int, id:String, useSniffer:Boolean = false, proxy:IConnectionProxy = null) : void
       {
          //Décompilation abandonné
       }

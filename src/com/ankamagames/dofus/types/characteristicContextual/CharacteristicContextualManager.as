@@ -49,22 +49,22 @@ package com.ankamagames.dofus.types.characteristicContextual
       
       private var _type:uint = 1;
       
-      public function addStatContextual(param1:String, param2:IEntity, param3:TextFormat, param4:uint, param5:Number = 1, param6:uint = 2500) : CharacteristicContextual
+      public function addStatContextual(sText:String, oEntity:IEntity, format:TextFormat, type:uint, pScrollSpeed:Number = 1, pScrollDuration:uint = 2500) : CharacteristicContextual
       {
          //Décompilation abandonné
       }
       
-      private function removeStatContextual(param1:Number) : void
+      private function removeStatContextual(nIndex:Number) : void
       {
          //Décompilation abandonné
       }
       
-      private function beginTween(param1:CharacteristicContextual) : void
+      private function beginTween(oEntity:CharacteristicContextual) : void
       {
          //Décompilation abandonné
       }
       
-      private function onScroll(param1:Event) : void
+      private function onScroll(e:Event) : void
       {
          //Décompilation abandonné
       }
@@ -81,7 +81,7 @@ class TweenData extends Object
    //Décompilation abandonné
    }
    
-   function TweenData(param1:CharacteristicContextual, param2:IEntity, param3:Number, param4:uint)
+   function TweenData(oEntity:CharacteristicContextual, entity:IEntity, pScrollSpeed:Number, pScrollDuration:uint)
    {
       //Décompilation abandonné
    }

@@ -19,12 +19,12 @@ package flashx.textLayout.property
          //Décompilation abandonné
       }
       
-      override public function toXMLString(param1:Object) : String
+      override public function toXMLString(val:Object) : String
       {
          //Décompilation abandonné
       }
       
-      override public function owningHandlerCheck(param1:*) : *
+      override public function owningHandlerCheck(newVal:*) : *
       {
          //Décompilation abandonné
       }

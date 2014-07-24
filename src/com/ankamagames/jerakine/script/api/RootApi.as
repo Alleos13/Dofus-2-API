@@ -17,47 +17,47 @@ package com.ankamagames.jerakine.script.api
          //Décompilation abandonné
       }
       
-      public static function Random(param1:int) : int
+      public static function Random(max:int) : int
       {
          //Décompilation abandonné
       }
       
-      public static function CreatePoint(param1:Number = 0, param2:Number = 0) : Point
+      public static function CreatePoint(x:Number = 0, y:Number = 0) : Point
       {
          //Décompilation abandonné
       }
       
-      public static function GetPointX(param1:Point) : Number
+      public static function GetPointX(point:Point) : Number
       {
          //Décompilation abandonné
       }
       
-      public static function GetPointY(param1:Point) : Number
+      public static function GetPointY(point:Point) : Number
       {
          //Décompilation abandonné
       }
       
-      public static function CreateRectangle(param1:Number = 0, param2:Number = 0, param3:Number = 0, param4:Number = 0) : Rectangle
+      public static function CreateRectangle(x:Number = 0, y:Number = 0, width:Number = 0, height:Number = 0) : Rectangle
       {
          //Décompilation abandonné
       }
       
-      public static function GetRectangleX(param1:Rectangle) : Number
+      public static function GetRectangleX(rect:Rectangle) : Number
       {
          //Décompilation abandonné
       }
       
-      public static function GetRectangleY(param1:Rectangle) : Number
+      public static function GetRectangleY(rect:Rectangle) : Number
       {
          //Décompilation abandonné
       }
       
-      public static function GetRectangleHeight(param1:Rectangle) : Number
+      public static function GetRectangleHeight(rect:Rectangle) : Number
       {
          //Décompilation abandonné
       }
       
-      public static function GetRectangleWidth(param1:Rectangle) : Number
+      public static function GetRectangleWidth(rect:Rectangle) : Number
       {
          //Décompilation abandonné
       }

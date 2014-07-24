@@ -10,14 +10,14 @@ package com.ankamagames.jerakine.newCache.impl
       //Décompilation abandonné
       }
       
-      public function Cache(param1:uint, param2:ICacheGarbageCollector)
+      public function Cache(bounds:uint, gc:ICacheGarbageCollector)
       {
          //Décompilation abandonné
       }
       
       private static var _namedCacheIndex:Array;
       
-      public static function create(param1:uint, param2:ICacheGarbageCollector, param3:String) : Cache
+      public static function create(bounds:uint, gc:ICacheGarbageCollector, name:String) : Cache
       {
          //Décompilation abandonné
       }
@@ -33,17 +33,17 @@ package com.ankamagames.jerakine.newCache.impl
          //Décompilation abandonné
       }
       
-      override public function extract(param1:*) : *
+      override public function extract(ref:*) : *
       {
          //Décompilation abandonné
       }
       
-      override public function peek(param1:*) : *
+      override public function peek(ref:*) : *
       {
          //Décompilation abandonné
       }
       
-      override public function store(param1:*, param2:*) : Boolean
+      override public function store(ref:*, obj:*) : Boolean
       {
          //Décompilation abandonné
       }

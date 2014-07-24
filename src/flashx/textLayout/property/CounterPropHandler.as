@@ -7,7 +7,7 @@ package flashx.textLayout.property
       //Décompilation abandonné
       }
       
-      public function CounterPropHandler(param1:int)
+      public function CounterPropHandler(defaultNumber:int)
       {
          //Décompilation abandonné
       }
@@ -28,17 +28,17 @@ package flashx.textLayout.property
          //Décompilation abandonné
       }
       
-      override public function toXMLString(param1:Object) : String
+      override public function toXMLString(val:Object) : String
       {
          //Décompilation abandonné
       }
       
-      override public function owningHandlerCheck(param1:*) : *
+      override public function owningHandlerCheck(newVal:*) : *
       {
          //Décompilation abandonné
       }
       
-      override public function setHelper(param1:*) : *
+      override public function setHelper(newVal:*) : *
       {
          //Décompilation abandonné
       }

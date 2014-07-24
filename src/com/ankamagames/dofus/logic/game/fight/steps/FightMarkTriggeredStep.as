@@ -19,7 +19,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightMarkTriggeredStep(param1:int, param2:int, param3:int)
+      public function FightMarkTriggeredStep(fighterId:int, casterId:int, markId:int)
       {
          //Décompilation abandonné
       }
@@ -40,12 +40,12 @@ package com.ankamagames.dofus.logic.game.fight.steps
          //Décompilation abandonné
       }
       
-      private function addProjectile(param1:int) : void
+      private function addProjectile(gfxId:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function removeProjectile(param1:TiphonEvent) : void
+      private function removeProjectile(event:TiphonEvent) : void
       {
          //Décompilation abandonné
       }

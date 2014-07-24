@@ -53,12 +53,12 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private static var _console3:ConsoleIcon;
       
-      public static function display(param1:Boolean) : void
+      public static function display(yes:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      private static function loop(param1:Event) : void
+      private static function loop(e:Event) : void
       {
          //Décompilation abandonné
       }
@@ -68,32 +68,32 @@ package com.ankamagames.dofus.console.moduleLogger
          //Décompilation abandonné
       }
       
-      private static function onOpenLogConsole(param1:Event) : void
+      private static function onOpenLogConsole(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onOpenConsole(param1:Event) : void
+      private static function onOpenConsole(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onOpenLuaConsole(param1:Event) : void
+      private static function onOpenLuaConsole(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onMouseDown(param1:Event) : void
+      private static function onMouseDown(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onMouseUp(param1:Event) : void
+      private static function onMouseUp(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onMouseMove(param1:MouseEvent) : void
+      private static function onMouseMove(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }

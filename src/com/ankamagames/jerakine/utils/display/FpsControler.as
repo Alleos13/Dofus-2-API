@@ -31,32 +31,32 @@ package com.ankamagames.jerakine.utils.display
       
       private static var _groupId:int = 0;
       
-      public static function Init(param1:Class) : void
+      public static function Init(scriptedAnimation:Class) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onGarbageTimer(param1:Event) : void
+      private static function onGarbageTimer(E:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public static function controlFps(param1:MovieClip, param2:uint, param3:Boolean = false) : MovieClip
+      public static function controlFps(clip:MovieClip, framerate:uint, forbidRecursivity:Boolean = false) : MovieClip
       {
          //Décompilation abandonné
       }
       
-      public static function uncontrolFps(param1:DisplayObjectContainer, param2:Boolean = true) : void
+      public static function uncontrolFps(displayObject:DisplayObjectContainer, group:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      private static function removeClip(param1:MovieClip) : void
+      private static function removeClip(mc:MovieClip) : void
       {
          //Décompilation abandonné
       }
       
-      private static function controlSingleClip(param1:DisplayObjectContainer, param2:int, param3:uint, param4:Boolean = false, param5:Boolean = false) : void
+      private static function controlSingleClip(clip:DisplayObjectContainer, id:int, framerate:uint, forbidRecursivity:Boolean = false, recursive:Boolean = false) : void
       {
          //Décompilation abandonné
       }

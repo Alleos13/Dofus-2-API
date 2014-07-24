@@ -7,14 +7,14 @@ package com.ankamagames.jerakine.utils.prng
       //Décompilation abandonné
       }
       
-      function seed(param1:uint) : void;
+      function seed(value:uint) : void;
       
       function nextInt() : uint;
       
       function nextDouble() : Number;
       
-      function nextIntR(param1:Number, param2:Number) : uint;
+      function nextIntR(min:Number, max:Number) : uint;
       
-      function nextDoubleR(param1:Number, param2:Number) : Number;
+      function nextDoubleR(min:Number, max:Number) : Number;
    }
 }

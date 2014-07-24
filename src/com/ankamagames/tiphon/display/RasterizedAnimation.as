@@ -11,7 +11,7 @@ package com.ankamagames.tiphon.display
       //Décompilation abandonné
       }
       
-      public function RasterizedAnimation(param1:MovieClip, param2:String)
+      public function RasterizedAnimation(target:MovieClip, lookCode:String)
       {
          //Décompilation abandonné
       }
@@ -23,7 +23,7 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      public static function optimize(param1:int = 1) : void
+      public static function optimize(val:int = 1) : void
       {
          //Décompilation abandonné
       }
@@ -55,17 +55,17 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      public function set smoothing(param1:Boolean) : void
+      public function set smoothing(value:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override public function gotoAndStop(param1:Object, param2:String = null) : void
+      override public function gotoAndStop(frame:Object, scene:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      override public function gotoAndPlay(param1:Object, param2:String = null) : void
+      override public function gotoAndPlay(frame:Object, scene:String = null) : void
       {
          //Décompilation abandonné
       }
@@ -90,7 +90,7 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      protected function displayFrame(param1:uint) : Boolean
+      protected function displayFrame(frameIndex:uint) : Boolean
       {
          //Décompilation abandonné
       }

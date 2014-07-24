@@ -21,7 +21,7 @@ package com.ankamagames.dofus.logic.game.common.actions.mount
       
       public static const EFFECT_ID_VALIDITY:int = 998;
       
-      public static function create(param1:ItemWrapper) : MountInfoRequestAction
+      public static function create(item:ItemWrapper) : MountInfoRequestAction
       {
          //Décompilation abandonné
       }

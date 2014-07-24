@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.connection
          //Décompilation abandonné
       }
       
-      public function initHelloConnectMessage(param1:String = "", param2:Vector.<int> = null) : HelloConnectMessage
+      public function initHelloConnectMessage(salt:String = "", key:Vector.<int> = null) : HelloConnectMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.connection
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_HelloConnectMessage(param1:IDataOutput) : void
+      public function serializeAs_HelloConnectMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_HelloConnectMessage(param1:IDataInput) : void
+      public function deserializeAs_HelloConnectMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

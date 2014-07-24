@@ -41,7 +41,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.job
          //Décompilation abandonné
       }
       
-      public function initJobCrafterDirectoryEntryMessage(param1:JobCrafterDirectoryEntryPlayerInfo = null, param2:Vector.<JobCrafterDirectoryEntryJobInfo> = null, param3:EntityLook = null) : JobCrafterDirectoryEntryMessage
+      public function initJobCrafterDirectoryEntryMessage(playerInfo:JobCrafterDirectoryEntryPlayerInfo = null, jobInfoList:Vector.<JobCrafterDirectoryEntryJobInfo> = null, playerLook:EntityLook = null) : JobCrafterDirectoryEntryMessage
       {
          //Décompilation abandonné
       }
@@ -51,32 +51,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.job
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_JobCrafterDirectoryEntryMessage(param1:IDataOutput) : void
+      public function serializeAs_JobCrafterDirectoryEntryMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_JobCrafterDirectoryEntryMessage(param1:IDataInput) : void
+      public function deserializeAs_JobCrafterDirectoryEntryMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

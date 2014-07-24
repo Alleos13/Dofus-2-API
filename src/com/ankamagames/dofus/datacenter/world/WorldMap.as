@@ -17,7 +17,7 @@ package com.ankamagames.dofus.datacenter.world
       
       public static const MODULE:String = "WorldMaps";
       
-      public static function getWorldMapById(param1:int) : WorldMap
+      public static function getWorldMapById(id:int) : WorldMap
       {
          //Décompilation abandonné
       }

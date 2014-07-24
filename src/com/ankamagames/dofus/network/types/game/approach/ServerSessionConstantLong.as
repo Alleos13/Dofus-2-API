@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.approach
          //Décompilation abandonné
       }
       
-      public function initServerSessionConstantLong(param1:uint = 0, param2:Number = 0) : ServerSessionConstantLong
+      public function initServerSessionConstantLong(id:uint = 0, value:Number = 0) : ServerSessionConstantLong
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.approach
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ServerSessionConstantLong(param1:IDataOutput) : void
+      public function serializeAs_ServerSessionConstantLong(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ServerSessionConstantLong(param1:IDataInput) : void
+      public function deserializeAs_ServerSessionConstantLong(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

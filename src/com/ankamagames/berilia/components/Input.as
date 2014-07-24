@@ -70,12 +70,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set maxChars(param1:uint) : void
+      public function set maxChars(nValue:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function set numberMax(param1:uint) : void
+      public function set numberMax(nValue:uint) : void
       {
          //Décompilation abandonné
       }
@@ -85,7 +85,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set password(param1:Boolean) : void
+      public function set password(bValue:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -95,7 +95,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set numberAutoFormat(param1:Boolean) : void
+      public function set numberAutoFormat(bValue:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -105,7 +105,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set numberSeparator(param1:String) : void
+      public function set numberSeparator(bValue:String) : void
       {
          //Décompilation abandonné
       }
@@ -115,7 +115,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set restrictChars(param1:String) : void
+      public function set restrictChars(sValue:String) : void
       {
          //Décompilation abandonné
       }
@@ -125,7 +125,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function set text(param1:String) : void
+      override public function set text(sValue:String) : void
       {
          //Décompilation abandonné
       }
@@ -150,27 +150,27 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function process(param1:Message) : Boolean
+      override public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function setSelection(param1:int, param2:int) : void
+      public function setSelection(start:int, end:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTextChange(param1:Event) : void
+      private function onTextChange(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeSpace(param1:String) : String
+      public function removeSpace(spaced:String) : String
       {
          //Décompilation abandonné
       }
       
-      private function onTimerFormatDelay(param1:TimerEvent) : void
+      private function onTimerFormatDelay(e:TimerEvent) : void
       {
          //Décompilation abandonné
       }

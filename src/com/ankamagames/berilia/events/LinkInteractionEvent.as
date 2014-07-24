@@ -9,7 +9,7 @@ package com.ankamagames.berilia.events
       //Décompilation abandonné
       }
       
-      public function LinkInteractionEvent(param1:String, param2:String = "")
+      public function LinkInteractionEvent(type:String, pText:String = "")
       {
          //Décompilation abandonné
       }

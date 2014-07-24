@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.interactives
       
       public static const MODULE:String = "Interactives";
       
-      public static function getInteractiveById(param1:int) : Interactive
+      public static function getInteractiveById(id:int) : Interactive
       {
          //Décompilation abandonné
       }

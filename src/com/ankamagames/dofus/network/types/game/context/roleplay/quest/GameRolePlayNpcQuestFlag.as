@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.quest
          //Décompilation abandonné
       }
       
-      public function initGameRolePlayNpcQuestFlag(param1:Vector.<uint> = null, param2:Vector.<uint> = null) : GameRolePlayNpcQuestFlag
+      public function initGameRolePlayNpcQuestFlag(questsToValidId:Vector.<uint> = null, questsToStartId:Vector.<uint> = null) : GameRolePlayNpcQuestFlag
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.quest
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayNpcQuestFlag(param1:IDataOutput) : void
+      public function serializeAs_GameRolePlayNpcQuestFlag(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayNpcQuestFlag(param1:IDataInput) : void
+      public function deserializeAs_GameRolePlayNpcQuestFlag(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

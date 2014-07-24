@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.json
       //Décompilation abandonné
       }
       
-      public function JSONToken(param1:int = -1, param2:Object = null)
+      public function JSONToken(type:int = -1, value:Object = null)
       {
          //Décompilation abandonné
       }
@@ -21,7 +21,7 @@ package com.ankamagames.jerakine.json
          //Décompilation abandonné
       }
       
-      public function set type(param1:int) : void
+      public function set type(value:int) : void
       {
          //Décompilation abandonné
       }
@@ -31,7 +31,7 @@ package com.ankamagames.jerakine.json
          //Décompilation abandonné
       }
       
-      public function set value(param1:Object) : void
+      public function set value(v:Object) : void
       {
          //Décompilation abandonné
       }

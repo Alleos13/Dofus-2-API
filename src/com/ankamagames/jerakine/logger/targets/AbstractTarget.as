@@ -23,7 +23,7 @@ package com.ankamagames.jerakine.logger.targets
       
       private var _filters:Array;
       
-      public function set filters(param1:Array) : void
+      public function set filters(value:Array) : void
       {
          //Décompilation abandonné
       }
@@ -33,32 +33,32 @@ package com.ankamagames.jerakine.logger.targets
          //Décompilation abandonné
       }
       
-      public function logEvent(param1:LogEvent) : void
+      public function logEvent(event:LogEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function addLogger(param1:Logger) : void
+      public function addLogger(logger:Logger) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeLogger(param1:Logger) : void
+      public function removeLogger(logger:Logger) : void
       {
          //Décompilation abandonné
       }
       
-      private function checkIsFiltersValid(param1:Array) : Boolean
+      private function checkIsFiltersValid(filters:Array) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function checkIsFilterValid(param1:String) : Boolean
+      private function checkIsFilterValid(filter:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function onLog(param1:LogEvent) : void
+      public function onLog(e:LogEvent) : void
       {
          //Décompilation abandonné
       }

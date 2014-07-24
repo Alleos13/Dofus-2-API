@@ -143,7 +143,7 @@ package com.ankamagames.berilia.components
       
       public var refuseDragTexture:Uri;
       
-      public function set data(param1:*) : void
+      public function set data(o:*) : void
       {
          //Décompilation abandonné
       }
@@ -158,12 +158,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function set finalized(param1:Boolean) : void
+      override public function set finalized(b:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set selected(param1:Boolean) : void
+      override public function set selected(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -173,22 +173,22 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set allowDrag(param1:Boolean) : void
+      public function set allowDrag(bool:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function set css(param1:Uri) : void
+      public function set css(uri:Uri) : void
       {
          //Décompilation abandonné
       }
       
-      public function set cssClass(param1:String) : void
+      public function set cssClass(cssclass:String) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set dropValidator(param1:Function) : void
+      override public function set dropValidator(dv:Function) : void
       {
          //Décompilation abandonné
       }
@@ -198,7 +198,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function set removeDropSource(param1:Function) : void
+      override public function set removeDropSource(rds:Function) : void
       {
          //Décompilation abandonné
       }
@@ -208,7 +208,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function set processDrop(param1:Function) : void
+      override public function set processDrop(pd:Function) : void
       {
          //Décompilation abandonné
       }
@@ -223,7 +223,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set emptyTexture(param1:Uri) : void
+      public function set emptyTexture(uri:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -233,7 +233,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set customTexture(param1:Uri) : void
+      public function set customTexture(uri:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -243,7 +243,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set forcedBackGroundIconUri(param1:Uri) : void
+      public function set forcedBackGroundIconUri(uri:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -253,7 +253,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set hideTopLabel(param1:Boolean) : void
+      public function set hideTopLabel(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -263,12 +263,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set displayBackgroundIcon(param1:Boolean) : void
+      public function set displayBackgroundIcon(visible:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function set isButton(param1:Boolean) : void
+      public function set isButton(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -289,17 +289,17 @@ package com.ankamagames.berilia.components
       
       private const _quantityTextFormat:TextFormat;
       
-      public function updateQuantity(param1:int) : void
+      public function updateQuantity(num:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateTimer(param1:int) : void
+      private function updateTimer(t:int) : void
       {
          //Décompilation abandonné
       }
       
-      override public function process(param1:Message) : Boolean
+      override public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -314,37 +314,37 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function emptyFunction(... rest) : *
+      private function emptyFunction(... args) : *
       {
          //Décompilation abandonné
       }
       
-      private function onEnterFrame(param1:Event) : void
+      private function onEnterFrame(pEvt:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function loadTargetUri(param1:Event) : void
+      private function loadTargetUri(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTweenEnd(param1:TweenEvent) : void
+      private function onTweenEnd(e:TweenEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSlotTextureFailed(param1:TextureLoadFailedEvent) : void
+      private function onSlotTextureFailed(e:TextureLoadFailedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onDragAndDropStart(param1:Event) : void
+      private function onDragAndDropStart(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAddedToStage(param1:Event) : void
+      private function onAddedToStage(e:Event) : void
       {
          //Décompilation abandonné
       }
@@ -361,7 +361,7 @@ class DragSprite extends Sprite
    //Décompilation abandonné
    }
    
-   function DragSprite(param1:BitmapData)
+   function DragSprite(bitmapData:BitmapData)
    {
       //Décompilation abandonné
    }

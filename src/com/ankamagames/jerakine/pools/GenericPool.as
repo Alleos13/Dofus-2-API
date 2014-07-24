@@ -16,12 +16,12 @@ package com.ankamagames.jerakine.pools
       
       private static var _pools:Dictionary;
       
-      public static function get(param1:Class, ... rest) : *
+      public static function name_1(type:Class, ... args) : *
       {
          //Décompilation abandonné
       }
       
-      public static function free(param1:Poolable) : void
+      public static function free(target:Poolable) : void
       {
          //Décompilation abandonné
       }

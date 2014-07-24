@@ -41,7 +41,7 @@ package org.flintparticles.twoD.emitters
          //Décompilation abandonné
       }
       
-      public function set x(param1:Number) : void
+      public function set x(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -51,7 +51,7 @@ package org.flintparticles.twoD.emitters
          //Décompilation abandonné
       }
       
-      public function set y(param1:Number) : void
+      public function set y(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -61,7 +61,7 @@ package org.flintparticles.twoD.emitters
          //Décompilation abandonné
       }
       
-      public function set rotation(param1:Number) : void
+      public function set rotation(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -71,12 +71,12 @@ package org.flintparticles.twoD.emitters
          //Décompilation abandonné
       }
       
-      public function set rotRadians(param1:Number) : void
+      public function set rotRadians(value:Number) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function initParticle(param1:Particle) : void
+      override protected function initParticle(particle:Particle) : void
       {
          //Décompilation abandonné
       }

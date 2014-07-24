@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.quest
       
       public static const MODULE:String = "QuestObjectiveTypes";
       
-      public static function getQuestObjectiveTypeById(param1:int) : QuestObjectiveType
+      public static function getQuestObjectiveTypeById(id:int) : QuestObjectiveType
       {
          //Décompilation abandonné
       }

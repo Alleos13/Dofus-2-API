@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.appearance
       
       public static const MODULE:String = "Ornaments";
       
-      public static function getOrnamentById(param1:int) : Ornament
+      public static function getOrnamentById(id:int) : Ornament
       {
          //Décompilation abandonné
       }

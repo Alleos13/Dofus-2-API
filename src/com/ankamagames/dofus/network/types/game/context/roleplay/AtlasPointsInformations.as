@@ -28,7 +28,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initAtlasPointsInformations(param1:uint = 0, param2:Vector.<MapCoordinatesExtended> = null) : AtlasPointsInformations
+      public function initAtlasPointsInformations(type:uint = 0, coords:Vector.<MapCoordinatesExtended> = null) : AtlasPointsInformations
       {
          //Décompilation abandonné
       }
@@ -38,22 +38,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AtlasPointsInformations(param1:IDataOutput) : void
+      public function serializeAs_AtlasPointsInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AtlasPointsInformations(param1:IDataInput) : void
+      public function deserializeAs_AtlasPointsInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -7,7 +7,7 @@ package com.ankamagames.dofus.logic.game.fight.types
       //Décompilation abandonné
       }
       
-      public function SplashDamage(param1:int, param2:int, param3:Vector.<int>, param4:SpellDamage, param5:int, param6:int, param7:uint, param8:Object, param9:Object, param10:Object, param11:Object, param12:Boolean)
+      public function SplashDamage(pSpellId:int, pCasterId:int, pTargets:Vector.<int>, pSourceSpellDamage:SpellDamage, pSplashPercent:int, pSplashElement:int, pSpellShape:uint, pSpellShapeSize:Object, pSpellShapeMinSize:Object, pSpellShapeEfficiencyPercent:Object, pSpellShapeMaxEfficiency:Object, pHasCritical:Boolean)
       {
          //Décompilation abandonné
       }

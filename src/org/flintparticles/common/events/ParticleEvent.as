@@ -10,7 +10,7 @@ package org.flintparticles.common.events
       //Décompilation abandonné
       }
       
-      public function ParticleEvent(param1:String, param2:Particle = null, param3:Boolean = false, param4:Boolean = false)
+      public function ParticleEvent(type:String, particle:Particle = null, bubbles:Boolean = false, cancelable:Boolean = false)
       {
          //Décompilation abandonné
       }

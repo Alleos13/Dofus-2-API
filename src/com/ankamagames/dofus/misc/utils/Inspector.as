@@ -51,7 +51,7 @@ package com.ankamagames.dofus.misc.utils
       
       private var _berilaChangedInteraction:Dictionary;
       
-      public function set enable(param1:Boolean) : void
+      public function set enable(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -61,17 +61,17 @@ package com.ankamagames.dofus.misc.utils
          //Décompilation abandonné
       }
       
-      private function onRollout(param1:*) : void
+      private function onRollout(arg:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function onRollover(param1:MouseEvent) : void
+      private function onRollover(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function findElements(param1:DisplayObject) : Vector.<InteractiveItem>
+      private function findElements(target:DisplayObject) : Vector.<InteractiveItem>
       {
          //Décompilation abandonné
       }
@@ -81,12 +81,12 @@ package com.ankamagames.dofus.misc.utils
          //Décompilation abandonné
       }
       
-      private function changeInteraction(param1:DisplayObjectContainer) : void
+      private function changeInteraction(target:DisplayObjectContainer) : void
       {
          //Décompilation abandonné
       }
       
-      private function onKeyUp(param1:KeyboardEvent) : void
+      private function onKeyUp(e:KeyboardEvent) : void
       {
          //Décompilation abandonné
       }
@@ -99,7 +99,7 @@ class ShortcutItem extends Object
    //Décompilation abandonné
    }
    
-   function ShortcutItem(param1:String, param2:uint, param3:Function, param4:Boolean, param5:Boolean, param6:Boolean)
+   function ShortcutItem(legend:String, key:uint, callback:Function, ctrl:Boolean, shift:Boolean, alt:Boolean)
    {
       //Décompilation abandonné
    }
@@ -151,7 +151,7 @@ class InteractiveItem extends Object
    
    public var target:DisplayObject;
    
-   public function highlight(param1:uint, param2:Vector.<InteractiveItem>) : void
+   public function highlight(index:uint, elements:Vector.<InteractiveItem>) : void
    {
       //Décompilation abandonné
    }
@@ -166,7 +166,7 @@ class InteractiveItem extends Object
       //Décompilation abandonné
    }
    
-   protected function toClipboard(param1:String) : void
+   protected function toClipboard(txt:String) : void
    {
       //Décompilation abandonné
    }
@@ -194,7 +194,7 @@ class InteractiveItemUi extends InteractiveItem
       //Décompilation abandonné
    }
    
-   override public function highlight(param1:uint, param2:Vector.<InteractiveItem>) : void
+   override public function highlight(index:uint, elements:Vector.<InteractiveItem>) : void
    {
       //Décompilation abandonné
    }
@@ -246,7 +246,7 @@ class InteractiveItemCell extends InteractiveItem
       //Décompilation abandonné
    }
    
-   override public function highlight(param1:uint, param2:Vector.<InteractiveItem>) : void
+   override public function highlight(index:uint, elements:Vector.<InteractiveItem>) : void
    {
       //Décompilation abandonné
    }

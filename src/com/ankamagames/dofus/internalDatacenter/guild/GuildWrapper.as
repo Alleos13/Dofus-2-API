@@ -63,7 +63,7 @@ package com.ankamagames.dofus.internalDatacenter.guild
       
       public static var _rightDictionnary:Dictionary;
       
-      public static function getGuildById(param1:int) : GuildWrapper
+      public static function getGuildById(id:int) : GuildWrapper
       {
          //Décompilation abandonné
       }
@@ -73,22 +73,22 @@ package com.ankamagames.dofus.internalDatacenter.guild
          //Décompilation abandonné
       }
       
-      public static function getFromNetwork(param1:Object) : GuildWrapper
+      public static function getFromNetwork(msg:Object) : GuildWrapper
       {
          //Décompilation abandonné
       }
       
-      public static function updateRef(param1:uint, param2:GuildWrapper) : void
+      public static function updateRef(pGuildId:uint, pGuildWrapper:GuildWrapper) : void
       {
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:String, param3:GuildEmblem, param4:Number, param5:Boolean) : GuildWrapper
+      public static function create(pGuildId:uint, pGuildName:String, pGuildEmblem:GuildEmblem, pMemberRights:Number, pEnabled:Boolean) : GuildWrapper
       {
          //Décompilation abandonné
       }
       
-      public static function getRightsNumber(param1:Array) : Number
+      public static function getRightsNumber(pRightsIDs:Array) : Number
       {
          //Décompilation abandonné
       }
@@ -135,7 +135,7 @@ package com.ankamagames.dofus.internalDatacenter.guild
          //Décompilation abandonné
       }
       
-      public function set memberRightsNumber(param1:uint) : void
+      public function set memberRightsNumber(value:uint) : void
       {
          //Décompilation abandonné
       }
@@ -245,12 +245,12 @@ package com.ankamagames.dofus.internalDatacenter.guild
          //Décompilation abandonné
       }
       
-      public function update(param1:uint, param2:String, param3:GuildEmblem, param4:Number, param5:Boolean) : void
+      public function update(pGuildId:uint, pGuildName:String, pGuildEmblem:GuildEmblem, pMemberRights:Number, pEnabled:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function hasRight(param1:String) : Boolean
+      public function hasRight(pRightId:String) : Boolean
       {
          //Décompilation abandonné
       }

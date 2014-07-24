@@ -39,17 +39,17 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring.ui
          //Décompilation abandonné
       }
       
-      public function watchObject(param1:Object, param2:uint, param3:Boolean = false) : void
+      public function watchObject(o:Object, pColor:uint, incrementParents:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateParents(param1:List, param2:Object) : void
+      private function updateParents(pList:List, o:Object) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateParent(param1:String, param2:Object, param3:List) : void
+      private function updateParent(pName:String, pValue:Object, pList:List) : void
       {
          //Décompilation abandonné
       }
@@ -59,7 +59,7 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring.ui
          //Décompilation abandonné
       }
       
-      private function linkHandler(param1:TextEvent) : void
+      private function linkHandler(pEvt:TextEvent) : void
       {
          //Décompilation abandonné
       }

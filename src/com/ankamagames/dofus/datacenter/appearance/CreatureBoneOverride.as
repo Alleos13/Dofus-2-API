@@ -17,7 +17,7 @@ package com.ankamagames.dofus.datacenter.appearance
       
       public static const MODULE:String = "CreatureBonesOverrides";
       
-      public static function getCreatureBones(param1:int) : int
+      public static function getCreatureBones(pBoneId:int) : int
       {
          //Décompilation abandonné
       }

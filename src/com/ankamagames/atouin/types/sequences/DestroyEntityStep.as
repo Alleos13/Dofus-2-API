@@ -12,7 +12,7 @@ package com.ankamagames.atouin.types.sequences
       //Décompilation abandonné
       }
       
-      public function DestroyEntityStep(param1:IEntity)
+      public function DestroyEntityStep(entity:IEntity)
       {
          //Décompilation abandonné
       }

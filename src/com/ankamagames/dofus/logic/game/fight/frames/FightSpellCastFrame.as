@@ -73,7 +73,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
       //Décompilation abandonné
       }
       
-      public function FightSpellCastFrame(param1:uint)
+      public function FightSpellCastFrame(spellId:uint)
       {
          //Décompilation abandonné
       }
@@ -153,7 +153,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -163,7 +163,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      public function refreshTarget(param1:Boolean = false) : void
+      public function refreshTarget(force:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -178,7 +178,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      private function showTargetsTooltips(param1:Selection) : void
+      private function showTargetsTooltips(pSelection:Selection) : void
       {
          //Décompilation abandonné
       }
@@ -193,22 +193,22 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      private function onClearTarget(param1:TimerEvent) : void
+      private function onClearTarget(event:TimerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function castSpell(param1:uint, param2:int = 0) : void
+      private function castSpell(cell:uint, targetId:int = 0) : void
       {
          //Décompilation abandonné
       }
       
-      private function cancelCast(... rest) : void
+      private function cancelCast(... args) : void
       {
          //Décompilation abandonné
       }
       
-      private function drawLos(param1:uint) : void
+      private function drawLos(origin:uint) : void
       {
          //Décompilation abandonné
       }
@@ -223,7 +223,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      private function isValidCell(param1:uint) : Boolean
+      private function isValidCell(cell:uint) : Boolean
       {
          //Décompilation abandonné
       }

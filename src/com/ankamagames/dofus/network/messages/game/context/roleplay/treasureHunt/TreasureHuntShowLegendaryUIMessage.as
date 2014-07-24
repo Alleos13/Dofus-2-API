@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.treasureHun
          //Décompilation abandonné
       }
       
-      public function initTreasureHuntShowLegendaryUIMessage(param1:Vector.<uint> = null) : TreasureHuntShowLegendaryUIMessage
+      public function initTreasureHuntShowLegendaryUIMessage(availableLegendaryIds:Vector.<uint> = null) : TreasureHuntShowLegendaryUIMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.treasureHun
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_TreasureHuntShowLegendaryUIMessage(param1:IDataOutput) : void
+      public function serializeAs_TreasureHuntShowLegendaryUIMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_TreasureHuntShowLegendaryUIMessage(param1:IDataInput) : void
+      public function deserializeAs_TreasureHuntShowLegendaryUIMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

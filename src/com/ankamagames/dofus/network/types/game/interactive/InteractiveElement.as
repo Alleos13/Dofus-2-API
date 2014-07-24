@@ -32,7 +32,7 @@ package com.ankamagames.dofus.network.types.game.interactive
          //Décompilation abandonné
       }
       
-      public function initInteractiveElement(param1:uint = 0, param2:int = 0, param3:Vector.<InteractiveElementSkill> = null, param4:Vector.<InteractiveElementSkill> = null) : InteractiveElement
+      public function initInteractiveElement(elementId:uint = 0, elementTypeId:int = 0, enabledSkills:Vector.<InteractiveElementSkill> = null, disabledSkills:Vector.<InteractiveElementSkill> = null) : InteractiveElement
       {
          //Décompilation abandonné
       }
@@ -42,22 +42,22 @@ package com.ankamagames.dofus.network.types.game.interactive
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_InteractiveElement(param1:IDataOutput) : void
+      public function serializeAs_InteractiveElement(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_InteractiveElement(param1:IDataInput) : void
+      public function deserializeAs_InteractiveElement(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

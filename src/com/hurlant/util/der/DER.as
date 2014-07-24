@@ -16,22 +16,22 @@ package com.hurlant.util.der
       
       public static var indent:String = "";
       
-      public static function parse(param1:ByteArray, param2:* = null) : IAsn1Type
+      public static function parse(der:ByteArray, structure:* = null) : IAsn1Type
       {
          //Décompilation abandonné
       }
       
-      private static function getLengthOfNextElement(param1:ByteArray) : int
+      private static function getLengthOfNextElement(b:ByteArray) : int
       {
          //Décompilation abandonné
       }
       
-      private static function isConstructedType(param1:ByteArray) : Boolean
+      private static function isConstructedType(b:ByteArray) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function wrapDER(param1:int, param2:ByteArray) : ByteArray
+      public static function wrapDER(type:int, data:ByteArray) : ByteArray
       {
          //Décompilation abandonné
       }

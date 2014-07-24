@@ -23,85 +23,85 @@ package flashx.textLayout.edit
       
       function get undoManager() : IUndoManager;
       
-      function applyFormat(param1:ITextLayoutFormat, param2:ITextLayoutFormat, param3:ITextLayoutFormat, param4:SelectionState = null) : void;
+      function applyFormat(leafFormat:ITextLayoutFormat, paragraphFormat:ITextLayoutFormat, containerFormat:ITextLayoutFormat, operationState:SelectionState = null) : void;
       
-      function clearFormat(param1:ITextLayoutFormat, param2:ITextLayoutFormat, param3:ITextLayoutFormat, param4:SelectionState = null) : void;
+      function clearFormat(leafFormat:ITextLayoutFormat, paragraphFormat:ITextLayoutFormat, containerFormat:ITextLayoutFormat, operationState:SelectionState = null) : void;
       
-      function applyLeafFormat(param1:ITextLayoutFormat, param2:SelectionState = null) : void;
+      function applyLeafFormat(format:ITextLayoutFormat, operationState:SelectionState = null) : void;
       
-      function applyTCY(param1:Boolean, param2:SelectionState = null) : TCYElement;
+      function applyTCY(tcyOn:Boolean, operationState:SelectionState = null) : TCYElement;
       
-      function applyLink(param1:String, param2:String = null, param3:Boolean = false, param4:SelectionState = null) : LinkElement;
+      function applyLink(href:String, target:String = null, extendToLinkBoundary:Boolean = false, operationState:SelectionState = null) : LinkElement;
       
-      function changeElementID(param1:String, param2:FlowElement, param3:int = 0, param4:int = -1, param5:SelectionState = null) : void;
+      function changeElementID(newID:String, targetElement:FlowElement, relativeStart:int = 0, relativeEnd:int = -1, operationState:SelectionState = null) : void;
       
-      function changeStyleName(param1:String, param2:FlowElement, param3:int = 0, param4:int = -1, param5:SelectionState = null) : void;
+      function changeStyleName(newName:String, targetElement:FlowElement, relativeStart:int = 0, relativeEnd:int = -1, operationState:SelectionState = null) : void;
       
-      function changeTypeName(param1:String, param2:FlowElement, param3:int = 0, param4:int = -1, param5:SelectionState = null) : void;
+      function changeTypeName(newName:String, targetElement:FlowElement, relativeStart:int = 0, relativeEnd:int = -1, operationState:SelectionState = null) : void;
       
-      function deleteNextCharacter(param1:SelectionState = null) : void;
+      function deleteNextCharacter(operationState:SelectionState = null) : void;
       
-      function deletePreviousCharacter(param1:SelectionState = null) : void;
+      function deletePreviousCharacter(operationState:SelectionState = null) : void;
       
-      function deleteNextWord(param1:SelectionState = null) : void;
+      function deleteNextWord(operationState:SelectionState = null) : void;
       
-      function deletePreviousWord(param1:SelectionState = null) : void;
+      function deletePreviousWord(operationState:SelectionState = null) : void;
       
-      function deleteText(param1:SelectionState = null) : void;
+      function deleteText(operationState:SelectionState = null) : void;
       
-      function insertInlineGraphic(param1:Object, param2:Object, param3:Object, param4:Object = null, param5:SelectionState = null) : InlineGraphicElement;
+      function insertInlineGraphic(source:Object, width:Object, height:Object, options:Object = null, operationState:SelectionState = null) : InlineGraphicElement;
       
-      function modifyInlineGraphic(param1:Object, param2:Object, param3:Object, param4:Object = null, param5:SelectionState = null) : void;
+      function modifyInlineGraphic(source:Object, width:Object, height:Object, options:Object = null, operationState:SelectionState = null) : void;
       
-      function insertText(param1:String, param2:SelectionState = null) : void;
+      function insertText(text:String, operationState:SelectionState = null) : void;
       
-      function overwriteText(param1:String, param2:SelectionState = null) : void;
+      function overwriteText(text:String, operationState:SelectionState = null) : void;
       
-      function applyParagraphFormat(param1:ITextLayoutFormat, param2:SelectionState = null) : void;
+      function applyParagraphFormat(format:ITextLayoutFormat, operationState:SelectionState = null) : void;
       
-      function applyContainerFormat(param1:ITextLayoutFormat, param2:SelectionState = null) : void;
+      function applyContainerFormat(format:ITextLayoutFormat, operationState:SelectionState = null) : void;
       
-      function applyFormatToElement(param1:FlowElement, param2:ITextLayoutFormat, param3:int = 0, param4:int = -1, param5:SelectionState = null) : void;
+      function applyFormatToElement(targetElement:FlowElement, format:ITextLayoutFormat, relativeStart:int = 0, relativeEnd:int = -1, operationState:SelectionState = null) : void;
       
-      function clearFormatOnElement(param1:FlowElement, param2:ITextLayoutFormat, param3:SelectionState = null) : void;
+      function clearFormatOnElement(targetElement:FlowElement, format:ITextLayoutFormat, operationState:SelectionState = null) : void;
       
-      function splitParagraph(param1:SelectionState = null) : ParagraphElement;
+      function splitParagraph(operationState:SelectionState = null) : ParagraphElement;
       
-      function splitElement(param1:FlowGroupElement, param2:SelectionState = null) : FlowGroupElement;
+      function splitElement(target:FlowGroupElement, operationState:SelectionState = null) : FlowGroupElement;
       
-      function createDiv(param1:FlowGroupElement = null, param2:ITextLayoutFormat = null, param3:SelectionState = null) : DivElement;
+      function createDiv(parent:FlowGroupElement = null, format:ITextLayoutFormat = null, operationState:SelectionState = null) : DivElement;
       
-      function createList(param1:FlowGroupElement = null, param2:ITextLayoutFormat = null, param3:SelectionState = null) : ListElement;
+      function createList(parent:FlowGroupElement = null, format:ITextLayoutFormat = null, operationState:SelectionState = null) : ListElement;
       
-      function moveChildren(param1:FlowGroupElement, param2:int, param3:int, param4:FlowGroupElement, param5:int, param6:SelectionState = null) : void;
+      function moveChildren(source:FlowGroupElement, sourceIndex:int, numChildren:int, destination:FlowGroupElement, destinationIndex:int, operationState:SelectionState = null) : void;
       
-      function createSubParagraphGroup(param1:FlowGroupElement = null, param2:ITextLayoutFormat = null, param3:SelectionState = null) : SubParagraphGroupElement;
+      function createSubParagraphGroup(parent:FlowGroupElement = null, format:ITextLayoutFormat = null, operationState:SelectionState = null) : SubParagraphGroupElement;
       
-      function cutTextScrap(param1:SelectionState = null) : TextScrap;
+      function cutTextScrap(operationState:SelectionState = null) : TextScrap;
       
-      function pasteTextScrap(param1:TextScrap, param2:SelectionState = null) : void;
+      function pasteTextScrap(scrapToPaste:TextScrap, operationState:SelectionState = null) : void;
       
       function beginCompositeOperation() : void;
       
       function endCompositeOperation() : void;
       
-      function doOperation(param1:FlowOperation) : void;
+      function doOperation(operation:FlowOperation) : void;
       
       function undo() : void;
       
       function redo() : void;
       
-      function performUndo(param1:IOperation) : void;
+      function performUndo(operation:IOperation) : void;
       
-      function performRedo(param1:IOperation) : void;
+      function performRedo(operation:IOperation) : void;
       
       function get delayUpdates() : Boolean;
       
-      function set delayUpdates(param1:Boolean) : void;
+      function set delayUpdates(value:Boolean) : void;
       
       function get allowDelayedOperations() : Boolean;
       
-      function set allowDelayedOperations(param1:Boolean) : void;
+      function set allowDelayedOperations(value:Boolean) : void;
       
       function updateAllControllers() : void;
    }

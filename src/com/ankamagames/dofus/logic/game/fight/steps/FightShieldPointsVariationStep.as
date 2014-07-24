@@ -13,7 +13,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightShieldPointsVariationStep(param1:int, param2:int, param3:int)
+      public function FightShieldPointsVariationStep(entityId:int, value:int, actionId:int)
       {
          //Décompilation abandonné
       }

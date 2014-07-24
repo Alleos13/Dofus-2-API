@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.chat
          //Décompilation abandonné
       }
       
-      public static function create(param1:String) : ChatCommandAction
+      public static function create(command:String) : ChatCommandAction
       {
          //Décompilation abandonné
       }

@@ -11,7 +11,7 @@ package com.ankamagames.berilia.types.event
       //Décompilation abandonné
       }
       
-      public function HookLogEvent(param1:String, param2:Array)
+      public function HookLogEvent(hookName:String, params:Array)
       {
          //Décompilation abandonné
       }

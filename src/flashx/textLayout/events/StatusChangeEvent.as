@@ -11,7 +11,7 @@ package flashx.textLayout.events
       //Décompilation abandonné
       }
       
-      public function StatusChangeEvent(param1:String, param2:Boolean = false, param3:Boolean = false, param4:FlowElement = null, param5:String = null, param6:ErrorEvent = null)
+      public function StatusChangeEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, element:FlowElement = null, status:String = null, errorEvent:ErrorEvent = null)
       {
          //Décompilation abandonné
       }
@@ -34,7 +34,7 @@ package flashx.textLayout.events
          //Décompilation abandonné
       }
       
-      public function set element(param1:FlowElement) : void
+      public function set element(value:FlowElement) : void
       {
          //Décompilation abandonné
       }
@@ -44,7 +44,7 @@ package flashx.textLayout.events
          //Décompilation abandonné
       }
       
-      public function set status(param1:String) : void
+      public function set status(value:String) : void
       {
          //Décompilation abandonné
       }
@@ -54,7 +54,7 @@ package flashx.textLayout.events
          //Décompilation abandonné
       }
       
-      public function set errorEvent(param1:ErrorEvent) : void
+      public function set errorEvent(value:ErrorEvent) : void
       {
          //Décompilation abandonné
       }

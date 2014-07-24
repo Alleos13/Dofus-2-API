@@ -283,7 +283,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function set priority(param1:int) : void
+      public function set priority(p:int) : void
       {
          //Décompilation abandonné
       }
@@ -323,7 +323,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -333,17 +333,17 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function getActorName(param1:int) : String
+      public function getActorName(actorId:int) : String
       {
          //Décompilation abandonné
       }
       
-      private function getActorInfos(param1:int) : GameRolePlayActorInformations
+      private function getActorInfos(actorId:int) : GameRolePlayActorInformations
       {
          //Décompilation abandonné
       }
       
-      private function executeSpellBuffer(param1:Function, param2:Boolean, param3:Boolean = false, param4:RoleplaySpellCastProvider = null) : void
+      private function executeSpellBuffer(callback:Function, hadScript:Boolean, scriptSuccess:Boolean = false, castProvider:RoleplaySpellCastProvider = null) : void
       {
          //Décompilation abandonné
       }
@@ -353,22 +353,22 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      private function addCommonExchangeFrame(param1:uint) : void
+      private function addCommonExchangeFrame(pExchangeType:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function onListenOrientation(param1:MouseEvent) : void
+      private function onListenOrientation(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onClickOrientation(param1:MouseEvent) : void
+      private function onClickOrientation(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function getMultiCraftSkills(param1:uint) : Vector.<uint>
+      public function getMultiCraftSkills(pPlayerId:uint) : Vector.<uint>
       {
          //Décompilation abandonné
       }

@@ -7,14 +7,14 @@ package com.ankamagames.jerakine.utils.prng
       //Décompilation abandonné
       }
       
-      public function ParkMillerCarta(param1:uint = 0)
+      public function ParkMillerCarta(seedValue:uint = 0)
       {
          //Décompilation abandonné
       }
       
       private var _seed:uint;
       
-      public function seed(param1:uint) : void
+      public function seed(value:uint) : void
       {
          //Décompilation abandonné
       }
@@ -29,12 +29,12 @@ package com.ankamagames.jerakine.utils.prng
          //Décompilation abandonné
       }
       
-      public function nextIntR(param1:Number, param2:Number) : uint
+      public function nextIntR(min:Number, max:Number) : uint
       {
          //Décompilation abandonné
       }
       
-      public function nextDoubleR(param1:Number, param2:Number) : Number
+      public function nextDoubleR(min:Number, max:Number) : Number
       {
          //Décompilation abandonné
       }

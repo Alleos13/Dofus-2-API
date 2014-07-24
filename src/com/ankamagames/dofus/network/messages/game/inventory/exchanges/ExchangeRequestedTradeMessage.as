@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      public function initExchangeRequestedTradeMessage(param1:int = 0, param2:uint = 0, param3:uint = 0) : ExchangeRequestedTradeMessage
+      public function initExchangeRequestedTradeMessage(exchangeType:int = 0, source:uint = 0, target:uint = 0) : ExchangeRequestedTradeMessage
       {
          //Décompilation abandonné
       }
@@ -45,32 +45,32 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeRequestedTradeMessage(param1:IDataOutput) : void
+      public function serializeAs_ExchangeRequestedTradeMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeRequestedTradeMessage(param1:IDataInput) : void
+      public function deserializeAs_ExchangeRequestedTradeMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

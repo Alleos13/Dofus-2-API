@@ -18,7 +18,7 @@ package com.ankamagames.dofus.kernel.updaterv2.messages
          //Décompilation abandonné
       }
       
-      public static function getUpdaterMessage(param1:Object) : IUpdaterInputMessage
+      public static function getUpdaterMessage(msg:Object) : IUpdaterInputMessage
       {
          //Décompilation abandonné
       }

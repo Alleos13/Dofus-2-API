@@ -31,7 +31,7 @@ package com.ankamagames.dofus.network.types.game.guild.tax
          //Décompilation abandonné
       }
       
-      public function initTaxCollectorFightersInformation(param1:int = 0, param2:Vector.<CharacterMinimalPlusLookInformations> = null, param3:Vector.<CharacterMinimalPlusLookInformations> = null) : TaxCollectorFightersInformation
+      public function initTaxCollectorFightersInformation(collectorId:int = 0, allyCharactersInformations:Vector.<CharacterMinimalPlusLookInformations> = null, enemyCharactersInformations:Vector.<CharacterMinimalPlusLookInformations> = null) : TaxCollectorFightersInformation
       {
          //Décompilation abandonné
       }
@@ -41,22 +41,22 @@ package com.ankamagames.dofus.network.types.game.guild.tax
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_TaxCollectorFightersInformation(param1:IDataOutput) : void
+      public function serializeAs_TaxCollectorFightersInformation(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_TaxCollectorFightersInformation(param1:IDataInput) : void
+      public function deserializeAs_TaxCollectorFightersInformation(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

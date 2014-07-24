@@ -7,6 +7,6 @@ package com.ankamagames.berilia.interfaces
       //Décompilation abandonné
       }
       
-      function createTooltip(param1:*, param2:Object) : Object;
+      function createTooltip(data:*, param:Object) : Object;
    }
 }

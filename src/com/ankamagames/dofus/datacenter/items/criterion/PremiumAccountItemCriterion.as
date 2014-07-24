@@ -10,7 +10,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function PremiumAccountItemCriterion(param1:String)
+      public function PremiumAccountItemCriterion(pCriterion:String)
       {
          //Décompilation abandonné
       }

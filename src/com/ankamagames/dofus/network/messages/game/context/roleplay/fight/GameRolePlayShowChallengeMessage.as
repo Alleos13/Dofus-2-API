@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.fight
          //Décompilation abandonné
       }
       
-      public function initGameRolePlayShowChallengeMessage(param1:FightCommonInformations = null) : GameRolePlayShowChallengeMessage
+      public function initGameRolePlayShowChallengeMessage(commonsInfos:FightCommonInformations = null) : GameRolePlayShowChallengeMessage
       {
          //Décompilation abandonné
       }
@@ -45,32 +45,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.fight
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayShowChallengeMessage(param1:IDataOutput) : void
+      public function serializeAs_GameRolePlayShowChallengeMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayShowChallengeMessage(param1:IDataInput) : void
+      public function deserializeAs_GameRolePlayShowChallengeMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -7,6 +7,6 @@ package com.ankamagames.berilia.interfaces
       //Décompilation abandonné
       }
       
-      function createMenu(param1:*, param2:Object) : Array;
+      function createMenu(data:*, param:Object) : Array;
    }
 }

@@ -9,22 +9,22 @@ package com.hurlant.crypto.symmetric
       //Décompilation abandonné
       }
       
-      public function OFBMode(param1:ISymmetricKey, param2:IPad = null)
+      public function OFBMode(key:ISymmetricKey, padding:IPad = null)
       {
          //Décompilation abandonné
       }
       
-      public function encrypt(param1:ByteArray) : void
+      public function encrypt(src:ByteArray) : void
       {
          //Décompilation abandonné
       }
       
-      public function decrypt(param1:ByteArray) : void
+      public function decrypt(src:ByteArray) : void
       {
          //Décompilation abandonné
       }
       
-      private function core(param1:ByteArray, param2:ByteArray) : void
+      private function core(src:ByteArray, iv:ByteArray) : void
       {
          //Décompilation abandonné
       }

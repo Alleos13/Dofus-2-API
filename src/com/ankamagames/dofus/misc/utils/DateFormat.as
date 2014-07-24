@@ -16,22 +16,22 @@ package com.ankamagames.dofus.misc.utils
       
       public static var DAYS:Array;
       
-      public static function formatDate(param1:String, param2:Date) : String
+      public static function formatDate(formatStyle:String, date:Date) : String
       {
          //Décompilation abandonné
       }
       
-      public static function dayOfYear(param1:uint, param2:uint, param3:uint) : uint
+      public static function dayOfYear(year:uint, month:uint, day:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      public static function leapYear(param1:uint) : Boolean
+      public static function leapYear(year:uint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function numberOfDaysInMonth(param1:uint, param2:Boolean = false) : uint
+      public static function numberOfDaysInMonth(month:uint, isLeapYear:Boolean = false) : uint
       {
          //Décompilation abandonné
       }

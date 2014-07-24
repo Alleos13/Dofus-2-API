@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      public function initExchangeHandleMountStableMessage(param1:int = 0, param2:uint = 0) : ExchangeHandleMountStableMessage
+      public function initExchangeHandleMountStableMessage(actionType:int = 0, rideId:uint = 0) : ExchangeHandleMountStableMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeHandleMountStableMessage(param1:IDataOutput) : void
+      public function serializeAs_ExchangeHandleMountStableMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeHandleMountStableMessage(param1:IDataInput) : void
+      public function deserializeAs_ExchangeHandleMountStableMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -47,37 +47,37 @@ package com.ankamagames.dofus.logic.game.fight.miscs
          //Décompilation abandonné
       }
       
-      public static function getPushedEntities(param1:SpellWrapper, param2:int, param3:int) : Vector.<PushedEntity>
+      public static function getPushedEntities(pSpell:SpellWrapper, pCasterCell:int, pSpellImpactCell:int) : Vector.<PushedEntity>
       {
          //Décompilation abandonné
       }
       
-      private static function getPushedEntitiesInLine(param1:SpellWrapper, param2:Boolean, param3:EffectInstance, param4:int, param5:int, param6:int, param7:int) : Vector.<PushedEntity>
+      private static function getPushedEntitiesInLine(pSpell:SpellWrapper, pNewSpell:Boolean, pPushEffect:EffectInstance, pSpellImpactCell:int, pStartCell:int, pPushForce:int, pDirection:int) : Vector.<PushedEntity>
       {
          //Décompilation abandonné
       }
       
-      public static function isBlockingCell(param1:int) : Boolean
+      public static function isBlockingCell(pCell:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function isPathBlocked(param1:int, param2:int, param3:int) : Boolean
+      public static function isPathBlocked(pStartCell:int, pEndCell:int, pDirection:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function getCellIdInDirection(param1:int, param2:int, param3:int) : int
+      public static function getCellIdInDirection(pStartCell:int, pLength:int, pDirection:int) : int
       {
          //Décompilation abandonné
       }
       
-      public static function getEntitiesInDirection(param1:int, param2:int, param3:int) : Vector.<IEntity>
+      public static function getEntitiesInDirection(pStartCell:int, pLength:int, pDirection:int) : Vector.<IEntity>
       {
          //Décompilation abandonné
       }
       
-      public static function isPushableEntity(param1:GameFightFighterInformations) : Boolean
+      public static function isPushableEntity(pEntityInfo:GameFightFighterInformations) : Boolean
       {
          //Décompilation abandonné
       }

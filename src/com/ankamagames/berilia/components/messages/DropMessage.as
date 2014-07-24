@@ -10,7 +10,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function DropMessage(param1:InteractiveObject, param2:ISlotDataHolder)
+      public function DropMessage(target:InteractiveObject, source:ISlotDataHolder)
       {
          //Décompilation abandonné
       }

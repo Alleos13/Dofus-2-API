@@ -11,7 +11,7 @@ package com.ankamagames.dofus.kernel.updaterv2
       
       function handleConnectionOpened() : void;
       
-      function handleMessage(param1:IUpdaterInputMessage) : void;
+      function handleMessage(msg:IUpdaterInputMessage) : void;
       
       function handleConnectionClosed() : void;
    }

@@ -32,8 +32,8 @@ package com.ankamagames.berilia.managers
    import com.ankamagames.berilia.types.messages.AllModulesLoadedMessage;
    import com.ankamagames.jerakine.resources.adapters.impl.TxtAdapter;
    import com.ankamagames.jerakine.newCache.ICache;
-   import com.ankamagames.jerakine.utils.files.FileUtils;
    import com.ankamagames.berilia.utils.UriCacheFactory;
+   import com.ankamagames.jerakine.utils.files.FileUtils;
    import com.ankamagames.jerakine.newCache.impl.Cache;
    import com.ankamagames.jerakine.newCache.garbage.LruGarbageCollector;
    import com.ankamagames.jerakine.resources.events.ResourceErrorEvent;
@@ -76,7 +76,7 @@ package com.ankamagames.berilia.managers
       //Décompilation abandonné
       }
       
-      public function UiModuleManager(param1:Boolean = false)
+      public function UiModuleManager(dontUseLocalServer:Boolean = false)
       {
          //Décompilation abandonné
       }
@@ -85,7 +85,7 @@ package com.ankamagames.berilia.managers
       
       private static var _self:UiModuleManager;
       
-      public static function getInstance(param1:Boolean = false) : UiModuleManager
+      public static function getInstance(dontUseLocalServer:Boolean = false) : UiModuleManager
       {
          //Décompilation abandonné
       }
@@ -180,7 +180,7 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      public function set sharedDefinitionContainer(param1:Uri) : void
+      public function set sharedDefinitionContainer(path:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -205,12 +205,12 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      public function init(param1:Array, param2:Boolean) : void
+      public function init(filter:Array, filterInclude:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function lightInit(param1:Vector.<UiModule>) : void
+      public function lightInit(moduleList:Vector.<UiModule>) : void
       {
          //Décompilation abandonné
       }
@@ -220,7 +220,7 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      public function getModule(param1:String, param2:Boolean = false) : UiModule
+      public function getModule(name:String, includeUnInitialized:Boolean = false) : UiModule
       {
          //Décompilation abandonné
       }
@@ -235,22 +235,22 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      public function getModulePath(param1:String) : String
+      public function getModulePath(moduleName:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function loadModule(param1:String) : void
+      public function loadModule(id:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function unloadModule(param1:String) : void
+      public function unloadModule(id:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function checkSharedDefinitionHash(param1:String) : void
+      public function checkSharedDefinitionHash(hashUrl:String) : void
       {
          //Décompilation abandonné
       }
@@ -260,7 +260,7 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      private function timeOutFrameCount(param1:Event) : void
+      private function timeOutFrameCount(e:Event) : void
       {
          //Décompilation abandonné
       }
@@ -275,12 +275,12 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      private function processCachedFiles(param1:Array) : void
+      private function processCachedFiles(files:Array) : void
       {
          //Décompilation abandonné
       }
       
-      private function onLoadError(param1:ResourceErrorEvent) : void
+      private function onLoadError(e:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }
@@ -290,49 +290,49 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      private function onUiLoadError(param1:ResourceErrorEvent) : void
+      private function onUiLoadError(e:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onLoad(param1:ResourceLoadedEvent) : void
+      private function onLoad(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onDMLoad(param1:ResourceLoadedEvent) : void
+      private function onDMLoad(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onScriptLoadFail(param1:IOErrorEvent, param2:UiModule) : void
+      private function onScriptLoadFail(e:IOErrorEvent, uiModule:UiModule) : void
       {
          //Décompilation abandonné
       }
       
       private var _moduleScriptLoadedRef:Dictionary;
       
-      private function onScriptLoad(param1:ResourceLoadedEvent) : void
+      private function onScriptLoad(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onModuleScriptLoaded(param1:Event, param2:UiModule = null) : void
+      private function onModuleScriptLoaded(e:Event, uiModule:UiModule = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function onShortcutLoad(param1:ResourceLoadedEvent) : void
+      private function onShortcutLoad(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onHashLoaded(param1:ResourceLoadedEvent) : void
+      private function onHashLoaded(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAllUiChecked(param1:ResourceLoaderProgressEvent) : void
+      private function onAllUiChecked(e:ResourceLoaderProgressEvent) : void
       {
          //Décompilation abandonné
       }
@@ -342,29 +342,29 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      private function onXmlParsed(param1:ParsorEvent) : void
+      private function onXmlParsed(e:ParsorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onXmlParsingError(param1:ParsingErrorEvent) : void
+      private function onXmlParsingError(e:ParsingErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onUiLoaded(param1:ResourceLoadedEvent) : void
+      private function onUiLoaded(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
       private var _uiLoaded:Dictionary;
       
-      private function searchDmFile(param1:File) : File
+      private function searchDmFile(rootPath:File) : File
       {
          //Décompilation abandonné
       }
       
-      private function onSharedDefinitionLoad(param1:ResourceLoadedEvent) : void
+      private function onSharedDefinitionLoad(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }

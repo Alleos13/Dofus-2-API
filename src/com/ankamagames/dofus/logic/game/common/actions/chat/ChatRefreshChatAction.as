@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.chat
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint) : ChatRefreshChatAction
+      public static function create(currentTab:uint) : ChatRefreshChatAction
       {
          //Décompilation abandonné
       }

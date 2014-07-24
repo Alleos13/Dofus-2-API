@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initHumanOptionOrnament(param1:uint = 0) : HumanOptionOrnament
+      public function initHumanOptionOrnament(ornamentId:uint = 0) : HumanOptionOrnament
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_HumanOptionOrnament(param1:IDataOutput) : void
+      public function serializeAs_HumanOptionOrnament(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_HumanOptionOrnament(param1:IDataInput) : void
+      public function deserializeAs_HumanOptionOrnament(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

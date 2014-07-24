@@ -46,7 +46,7 @@ package flashx.textLayout.factory
          //Décompilation abandonné
       }
       
-      tlf_internal  static function endFactoryCompose(param1:SimpleCompose) : void
+      tlf_internal  static function endFactoryCompose(prevComposer:SimpleCompose) : void
       {
          //Décompilation abandonné
       }
@@ -77,7 +77,7 @@ package flashx.textLayout.factory
          //Décompilation abandonné
       }
       
-      public function set compositionBounds(param1:Rectangle) : void
+      public function set compositionBounds(value:Rectangle) : void
       {
          //Décompilation abandonné
       }
@@ -87,7 +87,7 @@ package flashx.textLayout.factory
          //Décompilation abandonné
       }
       
-      protected function setContentBounds(param1:Rectangle) : void
+      protected function setContentBounds(controllerBounds:Rectangle) : void
       {
          //Décompilation abandonné
       }
@@ -97,7 +97,7 @@ package flashx.textLayout.factory
          //Décompilation abandonné
       }
       
-      public function set swfContext(param1:ISWFContext) : void
+      public function set swfContext(value:ISWFContext) : void
       {
          //Décompilation abandonné
       }
@@ -107,7 +107,7 @@ package flashx.textLayout.factory
          //Décompilation abandonné
       }
       
-      public function set truncationOptions(param1:TruncationOptions) : void
+      public function set truncationOptions(value:TruncationOptions) : void
       {
          //Décompilation abandonné
       }
@@ -122,7 +122,7 @@ package flashx.textLayout.factory
          //Décompilation abandonné
       }
       
-      public function set horizontalScrollPolicy(param1:String) : void
+      public function set horizontalScrollPolicy(scrollPolicy:String) : void
       {
          //Décompilation abandonné
       }
@@ -132,7 +132,7 @@ package flashx.textLayout.factory
          //Décompilation abandonné
       }
       
-      public function set verticalScrollPolicy(param1:String) : void
+      public function set verticalScrollPolicy(scrollPolicy:String) : void
       {
          //Décompilation abandonné
       }
@@ -142,17 +142,17 @@ package flashx.textLayout.factory
          //Décompilation abandonné
       }
       
-      protected function callbackWithTextLines(param1:Function, param2:Number, param3:Number) : void
+      protected function callbackWithTextLines(callback:Function, delx:Number, dely:Number) : void
       {
          //Décompilation abandonné
       }
       
-      protected function doesComposedTextFit(param1:int, param2:uint, param3:String) : Boolean
+      protected function doesComposedTextFit(lineCountLimit:int, textLength:uint, blockProgression:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      protected function getNextTruncationPosition(param1:int, param2:Boolean = false) : int
+      protected function getNextTruncationPosition(truncateAtCharPosition:int, multiPara:Boolean = false) : int
       {
          //Décompilation abandonné
       }
@@ -162,12 +162,12 @@ package flashx.textLayout.factory
          //Décompilation abandonné
       }
       
-      tlf_internal function computeLastAllowedLineIndex(param1:int) : void
+      tlf_internal function computeLastAllowedLineIndex(lineCountLimit:int) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function processBackgroundColors(param1:TextFlow, param2:Function, param3:Number, param4:Number, param5:Number, param6:Number) : *
+      tlf_internal function processBackgroundColors(textFlow:TextFlow, callback:Function, x:Number, y:Number, constrainWidth:Number, constrainHeight:Number) : *
       {
          //Décompilation abandonné
       }

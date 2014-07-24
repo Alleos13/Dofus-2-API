@@ -34,22 +34,22 @@ package com.ankamagames.jerakine.managers
       
       public static var lastTryFunctionParams:Array;
       
-      public static function tryFunction(param1:Function, param2:Array = null, param3:String = null, param4:Object = null) : *
+      public static function tryFunction(fct:Function, params:Array = null, complementaryInformations:String = null, context:Object = null) : *
       {
          //Décompilation abandonné
       }
       
-      public static function addError(param1:String = null, param2:* = null, param3:Boolean = true) : void
+      public static function addError(txt:String = null, error:* = null, show:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public static function registerLoaderInfo(param1:LoaderInfo) : void
+      public static function registerLoaderInfo(loaderInfo:LoaderInfo) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onUncaughtError(param1:Object) : void
+      private static function onUncaughtError(event:Object) : void
       {
          //Décompilation abandonné
       }

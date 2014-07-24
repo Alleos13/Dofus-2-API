@@ -33,17 +33,17 @@ package com.ankamagames.dofus.internalDatacenter.guild
       
       public static const BACK:uint = 2;
       
-      public static function fromNetwork(param1:GuildEmblem, param2:Boolean) : EmblemWrapper
+      public static function fromNetwork(msg:GuildEmblem, background:Boolean) : EmblemWrapper
       {
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:uint, param3:uint = 0, param4:Boolean = false) : EmblemWrapper
+      public static function create(pIdEmblem:uint, pType:uint, pColor:uint = 0, useCache:Boolean = false) : EmblemWrapper
       {
          //Décompilation abandonné
       }
       
-      public static function getEmblemFromId(param1:uint) : EmblemWrapper
+      public static function getEmblemFromId(emblemId:uint) : EmblemWrapper
       {
          //Décompilation abandonné
       }
@@ -89,7 +89,7 @@ package com.ankamagames.dofus.internalDatacenter.guild
          //Décompilation abandonné
       }
       
-      public function set backGroundIconUri(param1:Uri) : void
+      public function set backGroundIconUri(bgUri:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -109,7 +109,7 @@ package com.ankamagames.dofus.internalDatacenter.guild
          //Décompilation abandonné
       }
       
-      public function set endTime(param1:int) : void
+      public function set endTime(t:int) : void
       {
          //Décompilation abandonné
       }
@@ -139,17 +139,17 @@ package com.ankamagames.dofus.internalDatacenter.guild
          //Décompilation abandonné
       }
       
-      public function update(param1:uint, param2:uint, param3:uint = 0) : void
+      public function update(pIdEmblem:uint, pType:uint, pColor:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function addHolder(param1:ISlotDataHolder) : void
+      public function addHolder(h:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeHolder(param1:ISlotDataHolder) : void
+      public function removeHolder(h:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }

@@ -64,7 +64,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      private function setDefaultData(param1:Object) : void
+      private function setDefaultData(pAlmanaxElement:Object) : void
       {
          //Décompilation abandonné
       }
@@ -74,17 +74,17 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      private function isValidImageUrl(param1:String) : Boolean
+      private function isValidImageUrl(pUrl:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onData(param1:Event) : void
+      private function onData(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onError(param1:Event) : void
+      private function onError(e:Event) : void
       {
          //Décompilation abandonné
       }

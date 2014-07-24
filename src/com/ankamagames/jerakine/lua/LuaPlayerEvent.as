@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.lua
       //Décompilation abandonné
       }
       
-      public function LuaPlayerEvent(param1:String, param2:Boolean = false, param3:Boolean = false)
+      public function LuaPlayerEvent(pType:String, pBubbles:Boolean = false, pCancelable:Boolean = false)
       {
          //Décompilation abandonné
       }

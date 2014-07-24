@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.prism
          //Décompilation abandonné
       }
       
-      public function initPrismInfoInValidMessage(param1:uint = 0) : PrismInfoInValidMessage
+      public function initPrismInfoInValidMessage(reason:uint = 0) : PrismInfoInValidMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.prism
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PrismInfoInValidMessage(param1:IDataOutput) : void
+      public function serializeAs_PrismInfoInValidMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PrismInfoInValidMessage(param1:IDataInput) : void
+      public function deserializeAs_PrismInfoInValidMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

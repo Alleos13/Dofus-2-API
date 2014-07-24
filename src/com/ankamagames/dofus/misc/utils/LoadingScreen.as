@@ -43,7 +43,7 @@ package com.ankamagames.dofus.misc.utils
       //Décompilation abandonné
       }
       
-      public function LoadingScreen(param1:Boolean = false, param2:Boolean = false)
+      public function LoadingScreen(showBigVersion:Boolean = false, beforeLogin:Boolean = false)
       {
          //Décompilation abandonné
       }
@@ -137,12 +137,12 @@ package com.ankamagames.dofus.misc.utils
          //Décompilation abandonné
       }
       
-      public function set finalized(param1:Boolean) : void
+      public function set finalized(b:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function set value(param1:Number) : void
+      public function set value(v:Number) : void
       {
          //Décompilation abandonné
       }
@@ -162,17 +162,17 @@ package com.ankamagames.dofus.misc.utils
          //Décompilation abandonné
       }
       
-      private function displayAchievmentProgressBar(param1:AchievementListMessage) : void
+      private function displayAchievmentProgressBar(achievmentsInfo:AchievementListMessage) : void
       {
          //Décompilation abandonné
       }
       
-      public function log(param1:String, param2:uint) : void
+      public function log(text:String, level:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function showLog(param1:Boolean) : void
+      public function showLog(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -182,57 +182,57 @@ package com.ankamagames.dofus.misc.utils
          //Décompilation abandonné
       }
       
-      public function set useEmbedFont(param1:Boolean) : void
+      public function set useEmbedFont(b:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function set tip(param1:String) : void
+      public function set tip(txt:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function set continueCallbak(param1:Function) : void
+      public function set continueCallbak(cb:Function) : void
       {
          //Décompilation abandonné
       }
       
-      private function onLogClick(param1:Event) : void
+      private function onLogClick(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onContinueClick(param1:Event) : void
+      private function onContinueClick(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function onLoaded(param1:Uri, param2:uint, param3:*) : void
+      public function onLoaded(uri:Uri, resourceType:uint, resource:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function onClick(param1:MouseEvent) : void
+      public function onClick(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function onFailed(param1:Uri, param2:String, param3:uint) : void
+      public function onFailed(uri:Uri, errorMsg:String, errorCode:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function onProgress(param1:Uri, param2:uint, param3:uint) : void
+      public function onProgress(uri:Uri, bytesLoaded:uint, bytesTotal:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function onEnterFrame(param1:Event) : void
+      public function onEnterFrame(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onRemoveFromStage(param1:Event) : void
+      private function onRemoveFromStage(e:Event) : void
       {
          //Décompilation abandonné
       }

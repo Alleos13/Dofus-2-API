@@ -9,7 +9,7 @@ package org.flintparticles.twoD.zones
       //Décompilation abandonné
       }
       
-      public function LineZone(param1:Point, param2:Point)
+      public function LineZone(point1:Point, point2:Point)
       {
          //Décompilation abandonné
       }
@@ -25,7 +25,7 @@ package org.flintparticles.twoD.zones
          //Décompilation abandonné
       }
       
-      public function set point1(param1:Point) : void
+      public function set point1(value:Point) : void
       {
          //Décompilation abandonné
       }
@@ -35,12 +35,12 @@ package org.flintparticles.twoD.zones
          //Décompilation abandonné
       }
       
-      public function set point2(param1:Point) : void
+      public function set point2(value:Point) : void
       {
          //Décompilation abandonné
       }
       
-      public function contains(param1:Number, param2:Number) : Boolean
+      public function contains(x:Number, y:Number) : Boolean
       {
          //Décompilation abandonné
       }

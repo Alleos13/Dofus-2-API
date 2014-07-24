@@ -11,7 +11,7 @@ package flashx.textLayout.events
       //Décompilation abandonné
       }
       
-      public function FlowElementMouseEvent(param1:String, param2:Boolean = false, param3:Boolean = true, param4:FlowElement = null, param5:MouseEvent = null)
+      public function FlowElementMouseEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = true, flowElement:FlowElement = null, originalEvent:MouseEvent = null)
       {
          //Décompilation abandonné
       }
@@ -37,7 +37,7 @@ package flashx.textLayout.events
          //Décompilation abandonné
       }
       
-      public function set flowElement(param1:FlowElement) : void
+      public function set flowElement(value:FlowElement) : void
       {
          //Décompilation abandonné
       }
@@ -47,7 +47,7 @@ package flashx.textLayout.events
          //Décompilation abandonné
       }
       
-      public function set originalEvent(param1:MouseEvent) : void
+      public function set originalEvent(value:MouseEvent) : void
       {
          //Décompilation abandonné
       }

@@ -38,7 +38,7 @@ package com.ankamagames.dofus.network.messages.game.approach
          //Décompilation abandonné
       }
       
-      public function initServerSettingsMessage(param1:String = "", param2:uint = 0, param3:uint = 0) : ServerSettingsMessage
+      public function initServerSettingsMessage(lang:String = "", community:uint = 0, gameType:uint = 0) : ServerSettingsMessage
       {
          //Décompilation abandonné
       }
@@ -48,32 +48,32 @@ package com.ankamagames.dofus.network.messages.game.approach
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ServerSettingsMessage(param1:IDataOutput) : void
+      public function serializeAs_ServerSettingsMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ServerSettingsMessage(param1:IDataInput) : void
+      public function deserializeAs_ServerSettingsMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

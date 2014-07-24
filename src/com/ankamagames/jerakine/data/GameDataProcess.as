@@ -12,7 +12,7 @@ package com.ankamagames.jerakine.data
       //Décompilation abandonné
       }
       
-      public function GameDataProcess(param1:IDataInput)
+      public function GameDataProcess(stream:IDataInput)
       {
          //Décompilation abandonné
       }
@@ -36,37 +36,37 @@ package com.ankamagames.jerakine.data
          //Décompilation abandonné
       }
       
-      public function getFieldType(param1:String) : int
+      public function getFieldType(fieldName:String) : int
       {
          //Décompilation abandonné
       }
       
-      public function query(param1:String, param2:Function) : Vector.<uint>
+      public function query(fieldName:String, match:Function) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public function queryEquals(param1:String, param2:*) : Vector.<uint>
+      public function queryEquals(fieldName:String, value:*) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public function sort(param1:*, param2:Vector.<uint>, param3:* = true) : Vector.<uint>
+      public function sort(fieldNames:*, ids:Vector.<uint>, ascending:* = true) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      private function getSortFunction(param1:*, param2:*) : Function
+      private function getSortFunction(fieldNames:*, ascending:*) : Function
       {
          //Décompilation abandonné
       }
       
-      private function buildSortIndex(param1:String) : void
+      private function buildSortIndex(fieldName:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function buildI18nSortIndex(param1:String) : void
+      private function buildI18nSortIndex(fieldName:String) : void
       {
          //Décompilation abandonné
       }
@@ -76,7 +76,7 @@ package com.ankamagames.jerakine.data
          //Décompilation abandonné
       }
       
-      private function getReadFunction(param1:int) : Function
+      private function getReadFunction(type:int) : Function
       {
          //Décompilation abandonné
       }

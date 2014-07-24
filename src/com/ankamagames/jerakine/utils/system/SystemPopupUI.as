@@ -20,14 +20,14 @@ package com.ankamagames.jerakine.utils.system
       //Décompilation abandonné
       }
       
-      public function SystemPopupUI(param1:String)
+      public function SystemPopupUI(id:String)
       {
          //Décompilation abandonné
       }
       
       private static const _popupRef:Dictionary;
       
-      public static function get(param1:String) : SystemPopupUI
+      public static function name_1(id:String) : SystemPopupUI
       {
          //Décompilation abandonné
       }
@@ -77,7 +77,7 @@ package com.ankamagames.jerakine.utils.system
          //Décompilation abandonné
       }
       
-      public function set modal(param1:Boolean) : void
+      public function set modal(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -87,7 +87,7 @@ package com.ankamagames.jerakine.utils.system
          //Décompilation abandonné
       }
       
-      public function set buttons(param1:Array) : void
+      public function set buttons(value:Array) : void
       {
          //Décompilation abandonné
       }
@@ -97,7 +97,7 @@ package com.ankamagames.jerakine.utils.system
          //Décompilation abandonné
       }
       
-      public function set content(param1:String) : void
+      public function set content(value:String) : void
       {
          //Décompilation abandonné
       }
@@ -107,17 +107,17 @@ package com.ankamagames.jerakine.utils.system
          //Décompilation abandonné
       }
       
-      public function set title(param1:String) : void
+      public function set title(value:String) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set width(param1:Number) : void
+      override public function set width(value:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function set centerContent(param1:Boolean) : void
+      public function set centerContent(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -127,27 +127,27 @@ package com.ankamagames.jerakine.utils.system
          //Décompilation abandonné
       }
       
-      private function buildUI(param1:Boolean = false) : void
+      private function buildUI(destroy:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private function createButton(param1:String) : DisplayObject
+      private function createButton(text:String) : DisplayObject
       {
          //Décompilation abandonné
       }
       
-      private function onBtnMouseOver(param1:Event) : void
+      private function onBtnMouseOver(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onBtnMouseOut(param1:Event) : void
+      private function onBtnMouseOut(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onBtnClick(param1:Event) : void
+      private function onBtnClick(e:Event) : void
       {
          //Décompilation abandonné
       }

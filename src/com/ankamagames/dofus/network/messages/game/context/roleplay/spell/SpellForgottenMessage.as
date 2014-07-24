@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.spell
          //Décompilation abandonné
       }
       
-      public function initSpellForgottenMessage(param1:Vector.<uint> = null, param2:uint = 0) : SpellForgottenMessage
+      public function initSpellForgottenMessage(spellsId:Vector.<uint> = null, boostPoint:uint = 0) : SpellForgottenMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.spell
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_SpellForgottenMessage(param1:IDataOutput) : void
+      public function serializeAs_SpellForgottenMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_SpellForgottenMessage(param1:IDataInput) : void
+      public function deserializeAs_SpellForgottenMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -30,7 +30,7 @@ package com.ankamagames.jerakine.replay
       //Décompilation abandonné
       }
       
-      public function LogFrame(param1:Boolean)
+      public function LogFrame(allowLogUpload:Boolean)
       {
          //Décompilation abandonné
       }
@@ -51,7 +51,7 @@ package com.ankamagames.jerakine.replay
       
       public static const REPLAY_LC_NAME:String = "_Dofus2ReplayInfo";
       
-      public static function set sendReplayInfo(param1:Boolean) : void
+      public static function set sendReplayInfo(v:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -65,12 +65,12 @@ package com.ankamagames.jerakine.replay
          //Décompilation abandonné
       }
       
-      public static function getInstance(param1:Boolean = false) : LogFrame
+      public static function getInstance(allowLogUpload:Boolean = false) : LogFrame
       {
          //Décompilation abandonné
       }
       
-      public static function log(param1:uint, param2:*) : void
+      public static function log(logType:uint, o:*) : void
       {
          //Décompilation abandonné
       }
@@ -121,7 +121,7 @@ package com.ankamagames.jerakine.replay
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -131,32 +131,32 @@ package com.ankamagames.jerakine.replay
          //Décompilation abandonné
       }
       
-      private function _log(param1:uint, param2:*) : void
+      private function _log(logType:uint, o:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function writeObject(param1:ByteArray, param2:*) : uint
+      private function writeObject(output:ByteArray, o:*) : uint
       {
          //Décompilation abandonné
       }
       
-      private function getClassField(param1:*) : Array
+      private function getClassField(o:*) : Array
       {
          //Décompilation abandonné
       }
       
-      private function getClassIndex(param1:String) : int
+      private function getClassIndex(className:String) : int
       {
          //Décompilation abandonné
       }
       
-      private function writeClassDefinition(param1:int, param2:String, param3:uint, param4:Array) : void
+      private function writeClassDefinition(classId:int, className:String, varCount:uint, fieldList:Array) : void
       {
          //Décompilation abandonné
       }
       
-      private function getStringIndex(param1:String) : uint
+      private function getStringIndex(str:String) : uint
       {
          //Décompilation abandonné
       }

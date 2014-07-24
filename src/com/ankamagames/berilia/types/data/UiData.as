@@ -12,7 +12,7 @@ package com.ankamagames.berilia.types.data
       //Décompilation abandonné
       }
       
-      public function UiData(param1:UiModule, param2:String, param3:String, param4:String, param5:String = null)
+      public function UiData(module:UiModule, name:String, file:String, uiClassName:String, uiGroupName:String = null)
       {
          //Décompilation abandonné
       }
@@ -61,7 +61,7 @@ package com.ankamagames.berilia.types.data
          //Décompilation abandonné
       }
       
-      public function set xml(param1:String) : void
+      public function set xml(v:String) : void
       {
          //Décompilation abandonné
       }
@@ -71,12 +71,12 @@ package com.ankamagames.berilia.types.data
          //Décompilation abandonné
       }
       
-      public function set uiClass(param1:Class) : void
+      public function set uiClass(c:Class) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateXml(param1:XML, param2:Object) : void
+      public function updateXml(xml:XML, accessKey:Object) : void
       {
          //Décompilation abandonné
       }

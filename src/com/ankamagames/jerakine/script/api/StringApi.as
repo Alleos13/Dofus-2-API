@@ -12,37 +12,37 @@ package com.ankamagames.jerakine.script.api
          //Décompilation abandonné
       }
       
-      public static function Substr(param1:String, param2:int, param3:int) : String
+      public static function Substr(str:String, startIndex:int, length:int) : String
       {
          //Décompilation abandonné
       }
       
-      public static function Substring(param1:String, param2:int, param3:int) : String
+      public static function Substring(str:String, startIndex:int, endIndex:int) : String
       {
          //Décompilation abandonné
       }
       
-      public static function ToLowerCase(param1:String) : String
+      public static function ToLowerCase(str:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function ToUpperCase(param1:String) : String
+      public static function ToUpperCase(str:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function GetIndexOf(param1:String, param2:String, param3:int = 0) : int
+      public static function GetIndexOf(haystack:String, needle:String, startIndex:int = 0) : int
       {
          //Décompilation abandonné
       }
       
-      public static function GetLastIndexOf(param1:String, param2:String, param3:int = 2147483647) : int
+      public static function GetLastIndexOf(haystack:String, needle:String, startIndex:int = 2147483647) : int
       {
          //Décompilation abandonné
       }
       
-      public static function GetLength(param1:String) : int
+      public static function GetLength(str:String) : int
       {
          //Décompilation abandonné
       }

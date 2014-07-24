@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:String) : PlaySoundAction
+      public static function create(pSoundId:String) : PlaySoundAction
       {
          //Décompilation abandonné
       }

@@ -9,7 +9,7 @@ package com.ankamagames.berilia.types.shortcut
       //Décompilation abandonné
       }
       
-      public function LocalizedKeyboard(param1:Uri, param2:String, param3:String)
+      public function LocalizedKeyboard(uri:Uri, locale:String, description:String)
       {
          //Décompilation abandonné
       }

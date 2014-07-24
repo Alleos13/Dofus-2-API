@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      public function initExchangePlayerMultiCraftRequestMessage(param1:int = 0, param2:uint = 0, param3:uint = 0) : ExchangePlayerMultiCraftRequestMessage
+      public function initExchangePlayerMultiCraftRequestMessage(exchangeType:int = 0, target:uint = 0, skillId:uint = 0) : ExchangePlayerMultiCraftRequestMessage
       {
          //Décompilation abandonné
       }
@@ -45,32 +45,32 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangePlayerMultiCraftRequestMessage(param1:IDataOutput) : void
+      public function serializeAs_ExchangePlayerMultiCraftRequestMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangePlayerMultiCraftRequestMessage(param1:IDataInput) : void
+      public function deserializeAs_ExchangePlayerMultiCraftRequestMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

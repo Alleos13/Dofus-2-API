@@ -17,12 +17,12 @@ package com.ankamagames.dofus.datacenter.misc
       
       public static const MODULE:String = "Pack";
       
-      public static function getPackById(param1:int) : Pack
+      public static function getPackById(id:int) : Pack
       {
          //Décompilation abandonné
       }
       
-      public static function getPackByName(param1:String) : Pack
+      public static function getPackByName(name:String) : Pack
       {
          //Décompilation abandonné
       }

@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.connection
          //Décompilation abandonné
       }
       
-      public function initIdentificationFailedForBadVersionMessage(param1:uint = 99, param2:Version = null) : IdentificationFailedForBadVersionMessage
+      public function initIdentificationFailedForBadVersionMessage(reason:uint = 99, requiredVersion:Version = null) : IdentificationFailedForBadVersionMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.connection
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_IdentificationFailedForBadVersionMessage(param1:IDataOutput) : void
+      public function serializeAs_IdentificationFailedForBadVersionMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_IdentificationFailedForBadVersionMessage(param1:IDataInput) : void
+      public function deserializeAs_IdentificationFailedForBadVersionMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

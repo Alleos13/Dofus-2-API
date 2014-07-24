@@ -12,7 +12,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function RideItemCriterion(param1:String)
+      public function RideItemCriterion(pCriterion:String)
       {
          //Décompilation abandonné
       }

@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.context
          //Décompilation abandonné
       }
       
-      public function initGameContextCreateMessage(param1:uint = 1) : GameContextCreateMessage
+      public function initGameContextCreateMessage(context:uint = 1) : GameContextCreateMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.context
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameContextCreateMessage(param1:IDataOutput) : void
+      public function serializeAs_GameContextCreateMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameContextCreateMessage(param1:IDataInput) : void
+      public function deserializeAs_GameContextCreateMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

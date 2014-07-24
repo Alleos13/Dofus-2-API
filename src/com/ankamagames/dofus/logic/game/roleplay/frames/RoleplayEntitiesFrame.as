@@ -261,7 +261,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function set currentEmoticon(param1:uint) : void
+      public function set currentEmoticon(emoteId:uint) : void
       {
          //Décompilation abandonné
       }
@@ -271,7 +271,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function set dispatchPlayerNewLook(param1:Boolean) : void
+      public function set dispatchPlayerNewLook(pValue:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -321,7 +321,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      override public function process(param1:Message) : Boolean
+      override public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -341,32 +341,32 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function isFight(param1:int) : Boolean
+      public function isFight(entityId:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function isPaddockItem(param1:int) : Boolean
+      public function isPaddockItem(entityId:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getFightTeam(param1:int) : FightTeam
+      public function getFightTeam(entityId:int) : FightTeam
       {
          //Décompilation abandonné
       }
       
-      public function getFightId(param1:int) : uint
+      public function getFightId(entityId:int) : uint
       {
          //Décompilation abandonné
       }
       
-      public function getFightLeaderId(param1:int) : uint
+      public function getFightLeaderId(entityId:int) : uint
       {
          //Décompilation abandonné
       }
       
-      public function getFightTeamType(param1:int) : uint
+      public function getFightTeamType(entityId:int) : uint
       {
          //Décompilation abandonné
       }
@@ -376,177 +376,177 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      private function updateMonstersGroup(param1:GameRolePlayGroupMonsterInformations) : void
+      private function updateMonstersGroup(pMonstersInfo:GameRolePlayGroupMonsterInformations) : void
       {
          //Décompilation abandonné
       }
       
-      private function getMonsterGroup(param1:GroupMonsterStaticInformations) : Vector.<MonsterInGroupLightInformations>
+      private function getMonsterGroup(pStaticMonsterInfos:GroupMonsterStaticInformations) : Vector.<MonsterInGroupLightInformations>
       {
          //Décompilation abandonné
       }
       
-      override public function addOrUpdateActor(param1:GameContextActorInformations, param2:IAnimationModifier = null) : AnimatedCharacter
+      override public function addOrUpdateActor(infos:GameContextActorInformations, animationModifier:IAnimationModifier = null) : AnimatedCharacter
       {
          //Décompilation abandonné
       }
       
-      override protected function updateActorLook(param1:int, param2:EntityLook, param3:Boolean = false) : AnimatedCharacter
+      override protected function updateActorLook(actorId:int, newLook:EntityLook, smoke:Boolean = false) : AnimatedCharacter
       {
          //Décompilation abandonné
       }
       
-      private function onEntityRendered(param1:TiphonEvent) : void
+      private function onEntityRendered(pEvent:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function removeBackground(param1:TiphonSprite) : void
+      private function removeBackground(ac:TiphonSprite) : void
       {
          //Décompilation abandonné
       }
       
-      private function manageFollowers(param1:AnimatedCharacter, param2:Vector.<EntityLook>, param3:Vector.<Number> = null) : void
+      private function manageFollowers(char:AnimatedCharacter, followers:Vector.<EntityLook>, speedAdjust:Vector.<Number> = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function addFight(param1:FightCommonInformations) : void
+      private function addFight(infos:FightCommonInformations) : void
       {
          //Décompilation abandonné
       }
       
-      private function addObject(param1:uint, param2:uint) : void
+      private function addObject(pObjectUID:uint, pCellId:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function removeObject(param1:uint) : void
+      private function removeObject(pCellId:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateFight(param1:uint, param2:FightTeamInformations) : void
+      private function updateFight(fightId:uint, team:FightTeamInformations) : void
       {
          //Décompilation abandonné
       }
       
-      private function removeFighter(param1:uint, param2:uint, param3:int) : void
+      private function removeFighter(fightId:uint, teamId:uint, charId:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function removeFight(param1:uint) : void
+      private function removeFight(fightId:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function addPaddockItem(param1:PaddockItem) : void
+      private function addPaddockItem(item:PaddockItem) : void
       {
          //Décompilation abandonné
       }
       
-      private function removePaddockItem(param1:uint) : void
+      private function removePaddockItem(cellId:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function activatePaddockItem(param1:uint) : void
+      private function activatePaddockItem(cellId:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function onFightEntityRendered(param1:TiphonEvent) : void
+      private function onFightEntityRendered(event:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateSwordOptions(param1:uint, param2:uint, param3:int = -1, param4:Boolean = false) : void
+      private function updateSwordOptions(fightId:uint, teamId:uint, option:int = -1, state:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private function paddockCellValidator(param1:int) : Boolean
+      private function paddockCellValidator(cellId:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function removeEntityListeners(param1:int) : void
+      private function removeEntityListeners(pEntityId:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateUsableEmotesListInit(param1:TiphonEntityLook) : void
+      private function updateUsableEmotesListInit(pLook:TiphonEntityLook) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateUsableEmotesList(param1:TiphonEntityLook) : void
+      private function updateUsableEmotesList(pLook:TiphonEntityLook) : void
       {
          //Décompilation abandonné
       }
       
-      private function onEntityReadyForEmote(param1:TiphonEvent) : void
+      private function onEntityReadyForEmote(pEvent:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAnimationAdded(param1:TiphonEvent) : void
+      private function onAnimationAdded(e:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onGroundObjectLoaded(param1:ResourceLoadedEvent) : void
+      private function onGroundObjectLoaded(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onGroundObjectLoadFailed(param1:ResourceErrorEvent) : void
+      private function onGroundObjectLoadFailed(e:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function timeoutStop(param1:AnimatedCharacter) : void
+      public function timeoutStop(character:AnimatedCharacter) : void
       {
          //Décompilation abandonné
       }
       
-      override public function onPlayAnim(param1:TiphonEvent) : void
+      override public function onPlayAnim(e:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAnimationEnd(param1:TiphonEvent) : void
+      private function onAnimationEnd(e:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onPlayerSpriteInit(param1:TiphonEvent) : void
+      private function onPlayerSpriteInit(pEvent:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onCellPointed(param1:Boolean, param2:uint, param3:int) : void
+      private function onCellPointed(success:Boolean, cellId:uint, entityId:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateConquestIcons(param1:*) : void
+      private function updateConquestIcons(pPlayersIds:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function addConquestIcon(param1:int, param2:HumanOptionAlliance) : void
+      private function addConquestIcon(pEntityId:int, pHumanOptionAlliance:HumanOptionAlliance) : void
       {
          //Décompilation abandonné
       }
       
-      private function getPlayerConquestStatus(param1:int, param2:int, param3:int) : String
+      private function getPlayerConquestStatus(pPlayerId:int, pPlayerAllianceId:int, pPrismAllianceId:int) : String
       {
          //Décompilation abandonné
       }
       
-      public function addEntityIcon(param1:int, param2:String, param3:int = 0) : void
+      public function addEntityIcon(pEntityId:int, pIconName:String, pIconCategory:int = 0) : void
       {
          //Décompilation abandonné
       }
@@ -556,7 +556,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function forceIconUpdate(param1:int) : void
+      public function forceIconUpdate(pEntityId:int) : void
       {
          //Décompilation abandonné
       }
@@ -566,57 +566,52 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function removeIcon(param1:int, param2:String = null) : void
+      public function removeIcon(pEntityId:int, pIconName:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function getIconNamesByCategory(param1:int, param2:int) : Vector.<String>
+      public function getIconNamesByCategory(pEntityId:int, pIconCategory:int) : Vector.<String>
       {
          //Décompilation abandonné
       }
       
-      public function removeIconsCategory(param1:int, param2:int) : void
+      public function removeIconsCategory(pEntityId:int, pIconCategory:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function hasIcon(param1:int, param2:String = null) : Boolean
+      public function hasIcon(pEntityId:int, pIconName:String = null) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function showIcons(param1:Event = null) : void
+      private function showIcons(pEvent:Event = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateIconAfterRender(param1:TiphonEvent) : void
+      private function updateIconAfterRender(pEvent:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTiphonPropertyChanged(param1:PropertyChangeEvent) : void
+      private function onTiphonPropertyChanged(event:PropertyChangeEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAuraCycleTimer(param1:TimerEvent) : void
+      private function onAuraCycleTimer(event:TimerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function setEntitiesAura(param1:Boolean) : void
+      private function setEntitiesAura(visible:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function onPropertyChanged(param1:PropertyChangeEvent) : void
-      {
-         //Décompilation abandonné
-      }
-      
-      private function onAtouinPropertyChanged(param1:PropertyChangeEvent) : void
+      private function onAtouinPropertyChanged(e:PropertyChangeEvent) : void
       {
          //Décompilation abandonné
       }

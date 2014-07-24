@@ -92,7 +92,7 @@ package com.ankamagames.dofus.logic.game.common.managers
       
       private var _newSort:Boolean;
       
-      public function set category(param1:int) : void
+      public function set category(cat:int) : void
       {
          //Décompilation abandonné
       }
@@ -102,7 +102,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function set bankCategory(param1:int) : void
+      public function set bankCategory(cat:int) : void
       {
          //Décompilation abandonné
       }
@@ -112,7 +112,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function set filter(param1:int) : void
+      public function set filter(filterType:int) : void
       {
          //Décompilation abandonné
       }
@@ -127,7 +127,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function set bankFilter(param1:int) : void
+      public function set bankFilter(bankFilterType:int) : void
       {
          //Décompilation abandonné
       }
@@ -147,7 +147,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function set sortField(param1:int) : void
+      public function set sortField(fieldName:int) : void
       {
          //Décompilation abandonné
       }
@@ -167,7 +167,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function set sortRevert(param1:Boolean) : void
+      public function set sortRevert(revert:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -177,7 +177,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function set sortBankField(param1:int) : void
+      public function set sortBankField(fieldName:int) : void
       {
          //Décompilation abandonné
       }
@@ -197,7 +197,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function set sortBankRevert(param1:Boolean) : void
+      public function set sortBankRevert(revert:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -222,7 +222,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function enableBidHouseFilter(param1:Vector.<uint>, param2:uint) : void
+      public function enableBidHouseFilter(allowedTypes:Vector.<uint>, maxItemLevel:uint) : void
       {
          //Décompilation abandonné
       }
@@ -237,7 +237,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function enableSmithMagicFilter(param1:Skill) : void
+      public function enableSmithMagicFilter(skill:Skill) : void
       {
          //Décompilation abandonné
       }
@@ -247,7 +247,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function enableCraftFilter(param1:Skill, param2:int) : void
+      public function enableCraftFilter(skill:Skill, slotCount:int) : void
       {
          //Décompilation abandonné
       }
@@ -267,22 +267,22 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function getStorageView(param1:int) : IStorageView
+      public function getStorageView(category:int) : IStorageView
       {
          //Décompilation abandonné
       }
       
-      public function getBankView(param1:int) : IStorageView
+      public function getBankView(category:int) : IStorageView
       {
          //Décompilation abandonné
       }
       
-      public function getCategoryTypes(param1:uint) : Dictionary
+      public function getCategoryTypes(category:uint) : Dictionary
       {
          //Décompilation abandonné
       }
       
-      public function getBankCategoryTypes(param1:uint) : Dictionary
+      public function getBankCategoryTypes(category:uint) : Dictionary
       {
          //Décompilation abandonné
       }
@@ -307,7 +307,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      private function refreshView(param1:String) : void
+      private function refreshView(viewName:String) : void
       {
          //Décompilation abandonné
       }

@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.alliance
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint) : AllianceInvitationAction
+      public static function create(pTargetId:uint) : AllianceInvitationAction
       {
          //Décompilation abandonné
       }

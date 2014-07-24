@@ -9,7 +9,7 @@ package com.ankamagames.atouin.types
       //Décompilation abandonné
       }
       
-      public function InteractiveCell(param1:uint, param2:DisplayObjectContainer, param3:Number, param4:Number)
+      public function InteractiveCell(_cellId:uint, _sprite:DisplayObjectContainer, _x:Number, _y:Number)
       {
          //Décompilation abandonné
       }

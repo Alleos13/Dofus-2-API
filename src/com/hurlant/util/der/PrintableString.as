@@ -9,7 +9,7 @@ package com.hurlant.util.der
       //Décompilation abandonné
       }
       
-      public function PrintableString(param1:uint, param2:uint)
+      public function PrintableString(type:uint, length:uint)
       {
          //Décompilation abandonné
       }
@@ -30,7 +30,7 @@ package com.hurlant.util.der
          //Décompilation abandonné
       }
       
-      public function setString(param1:String) : void
+      public function setString(s:String) : void
       {
          //Décompilation abandonné
       }

@@ -20,27 +20,27 @@ package com.ankamagames.dofus.console.debug
          //Décompilation abandonné
       }
       
-      public function handle(param1:ConsoleHandler, param2:String, param3:Array) : void
+      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void
       {
          //Décompilation abandonné
       }
       
-      public function getHelp(param1:String) : String
+      public function getHelp(cmd:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function getParamPossibilities(param1:String, param2:uint = 0, param3:Array = null) : Array
+      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array
       {
          //Décompilation abandonné
       }
       
-      private function onScriptSuccess(param1:LuaPlayerEvent) : void
+      private function onScriptSuccess(pEvent:LuaPlayerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onScriptError(param1:LuaPlayerEvent) : void
+      private function onScriptError(pEvent:LuaPlayerEvent) : void
       {
          //Décompilation abandonné
       }

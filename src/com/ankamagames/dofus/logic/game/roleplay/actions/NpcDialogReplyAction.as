@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:int) : NpcDialogReplyAction
+      public static function create(replyId:int) : NpcDialogReplyAction
       {
          //Décompilation abandonné
       }

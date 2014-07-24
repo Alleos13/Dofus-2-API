@@ -133,7 +133,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function getQuestInformations(param1:uint) : Object
+      public function getQuestInformations(questId:uint) : Object
       {
          //Décompilation abandonné
       }
@@ -143,7 +143,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function getTreasureHuntById(param1:uint) : Object
+      public function getTreasureHuntById(typeId:uint) : Object
       {
          //Décompilation abandonné
       }
@@ -153,7 +153,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }

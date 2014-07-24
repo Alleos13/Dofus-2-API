@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.messages.updater.parts
          //Décompilation abandonné
       }
       
-      public function initPartsListMessage(param1:Vector.<ContentPart> = null) : PartsListMessage
+      public function initPartsListMessage(parts:Vector.<ContentPart> = null) : PartsListMessage
       {
          //Décompilation abandonné
       }
@@ -45,32 +45,32 @@ package com.ankamagames.dofus.network.messages.updater.parts
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PartsListMessage(param1:IDataOutput) : void
+      public function serializeAs_PartsListMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PartsListMessage(param1:IDataInput) : void
+      public function deserializeAs_PartsListMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

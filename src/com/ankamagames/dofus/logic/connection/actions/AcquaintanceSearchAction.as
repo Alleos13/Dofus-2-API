@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.connection.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:String) : AcquaintanceSearchAction
+      public static function create(friendName:String) : AcquaintanceSearchAction
       {
          //Décompilation abandonné
       }

@@ -14,7 +14,7 @@ package com.ankamagames.dofus.internalDatacenter.spells
       //Décompilation abandonné
       }
       
-      public function EffectsListWrapper(param1:Array)
+      public function EffectsListWrapper(buffs:Array)
       {
          //Décompilation abandonné
       }
@@ -42,7 +42,7 @@ package com.ankamagames.dofus.internalDatacenter.spells
          //Décompilation abandonné
       }
       
-      public function getBuffs(param1:int) : Array
+      public function getBuffs(category:int) : Array
       {
          //Décompilation abandonné
       }
@@ -52,12 +52,12 @@ package com.ankamagames.dofus.internalDatacenter.spells
          //Décompilation abandonné
       }
       
-      private function addBuff(param1:int, param2:BasicBuff) : void
+      private function addBuff(category:int, buff:BasicBuff) : void
       {
          //Décompilation abandonné
       }
       
-      private function getCategory(param1:Effect) : int
+      private function getCategory(effect:Effect) : int
       {
          //Décompilation abandonné
       }

@@ -16,7 +16,7 @@ package com.ankamagames.jerakine.utils.crypto
          //Décompilation abandonné
       }
       
-      public static function publicEncrypt(param1:String, param2:ByteArray) : ByteArray
+      public static function publicEncrypt(key:String, baIn:ByteArray) : ByteArray
       {
          //Décompilation abandonné
       }

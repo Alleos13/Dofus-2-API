@@ -71,7 +71,7 @@ package com.ankamagames.dofus.logic.connection.managers
          //Décompilation abandonné
       }
       
-      public function set gameServerTicket(param1:String) : void
+      public function set gameServerTicket(value:String) : void
       {
          //Décompilation abandonné
       }
@@ -81,17 +81,17 @@ package com.ankamagames.dofus.logic.connection.managers
          //Décompilation abandonné
       }
       
-      public function setSalt(param1:String) : void
+      public function setSalt(salt:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function setPublicKey(param1:Vector.<int>) : void
+      public function setPublicKey(publicKey:Vector.<int>) : void
       {
          //Décompilation abandonné
       }
       
-      public function setValidationAction(param1:LoginValidationAction) : void
+      public function setValidationAction(lva:LoginValidationAction) : void
       {
          //Décompilation abandonné
       }
@@ -116,12 +116,12 @@ package com.ankamagames.dofus.logic.connection.managers
          //Décompilation abandonné
       }
       
-      private function cipherMd5String(param1:String) : String
+      private function cipherMd5String(pwd:String) : String
       {
          //Décompilation abandonné
       }
       
-      private function cipherRsa(param1:String, param2:String, param3:TrustCertificate) : Vector.<int>
+      private function cipherRsa(login:String, pwd:String, certificate:TrustCertificate) : Vector.<int>
       {
          //Décompilation abandonné
       }

@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
          //Décompilation abandonné
       }
       
-      public function initObjectModifiedMessage(param1:ObjectItem = null) : ObjectModifiedMessage
+      public function initObjectModifiedMessage(object:ObjectItem = null) : ObjectModifiedMessage
       {
          //Décompilation abandonné
       }
@@ -45,32 +45,32 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectModifiedMessage(param1:IDataOutput) : void
+      public function serializeAs_ObjectModifiedMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectModifiedMessage(param1:IDataInput) : void
+      public function deserializeAs_ObjectModifiedMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

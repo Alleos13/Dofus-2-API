@@ -12,15 +12,15 @@ package com.ankamagames.tiphon.types
       //Décompilation abandonné
       }
       
-      function registerColoredSprite(param1:ColoredSprite, param2:uint) : void;
+      function registerColoredSprite(sprite:ColoredSprite, nColorIndex:uint) : void;
       
-      function registerInfoSprite(param1:DisplayInfoSprite, param2:String) : void;
+      function registerInfoSprite(sprite:DisplayInfoSprite, nViewIndex:String) : void;
       
-      function getSkinSprite(param1:EquipmentSprite) : Sprite;
+      function getSkinSprite(sprite:EquipmentSprite) : Sprite;
       
-      function onAnimationEvent(param1:String, param2:String = "") : void;
+      function onAnimationEvent(eventName:String, params:String = "") : void;
       
-      function getColorTransform(param1:uint) : ColorTransform;
+      function getColorTransform(index:uint) : ColorTransform;
       
       function get tiphonEventManager() : TiphonEventsManager;
       

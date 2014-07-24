@@ -24,27 +24,27 @@ package com.ankamagames.dofus.scripts.api
          //Décompilation abandonné
       }
       
-      public function set currentZoom(param1:Number) : void
+      public function set currentZoom(pZoom:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function setZoom(param1:Number) : ISequencable
+      public function setZoom(pZoom:Number) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public function zoom(... rest) : ISequencable
+      public function zoom(... pArgs) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public function moveTo(... rest) : ISequencable
+      public function moveTo(... pArgs) : ISequencable
       {
          //Décompilation abandonné
       }
       
-      public function follow(param1:ScriptEntity) : ISequencable
+      public function follow(pEntity:ScriptEntity) : ISequencable
       {
          //Décompilation abandonné
       }

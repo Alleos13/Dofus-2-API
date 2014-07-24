@@ -11,12 +11,12 @@ package com.ankamagames.tubul.types.bus
       //Décompilation abandonné
       }
       
-      public function LocalizedBus(param1:int, param2:String)
+      public function LocalizedBus(id:int, name:String)
       {
          //Décompilation abandonné
       }
       
-      public function updateObserverPosition(param1:Point) : void
+      public function updateObserverPosition(pEarPosition:Point) : void
       {
          //Décompilation abandonné
       }

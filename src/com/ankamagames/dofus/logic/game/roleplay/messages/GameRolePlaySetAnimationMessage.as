@@ -10,7 +10,7 @@ package com.ankamagames.dofus.logic.game.roleplay.messages
       //Décompilation abandonné
       }
       
-      public function GameRolePlaySetAnimationMessage(param1:GameContextActorInformations, param2:String, param3:uint = 0, param4:Boolean = true, param5:Boolean = true, param6:Boolean = false)
+      public function GameRolePlaySetAnimationMessage(informations:GameContextActorInformations, animation:String, duration:uint = 0, instant:Boolean = true, directions8:Boolean = true, playStaticOnly:Boolean = false)
       {
          //Décompilation abandonné
       }

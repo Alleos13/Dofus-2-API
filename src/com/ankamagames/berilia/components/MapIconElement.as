@@ -11,7 +11,7 @@ package com.ankamagames.berilia.components
       //Décompilation abandonné
       }
       
-      public function MapIconElement(param1:String, param2:int, param3:int, param4:String, param5:Texture, param6:String, param7:*)
+      public function MapIconElement(id:String, x:int, y:int, layer:String, texture:Texture, legend:String, owner:*)
       {
          //Décompilation abandonné
       }
@@ -33,7 +33,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set boundsRef(param1:Texture) : void
+      public function set boundsRef(v:Texture) : void
       {
          //Décompilation abandonné
       }

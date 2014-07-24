@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.messages.game.context
          //Décompilation abandonné
       }
       
-      public function initGameContextRemoveMultipleElementsWithEventsMessage(param1:Vector.<int> = null, param2:Vector.<uint> = null) : GameContextRemoveMultipleElementsWithEventsMessage
+      public function initGameContextRemoveMultipleElementsWithEventsMessage(id:Vector.<int> = null, elementEventIds:Vector.<uint> = null) : GameContextRemoveMultipleElementsWithEventsMessage
       {
          //Décompilation abandonné
       }
@@ -43,32 +43,32 @@ package com.ankamagames.dofus.network.messages.game.context
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameContextRemoveMultipleElementsWithEventsMessage(param1:IDataOutput) : void
+      public function serializeAs_GameContextRemoveMultipleElementsWithEventsMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameContextRemoveMultipleElementsWithEventsMessage(param1:IDataInput) : void
+      public function deserializeAs_GameContextRemoveMultipleElementsWithEventsMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

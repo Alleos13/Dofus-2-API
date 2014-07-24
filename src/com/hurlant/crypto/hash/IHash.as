@@ -13,7 +13,7 @@ package com.hurlant.crypto.hash
       
       function getHashSize() : uint;
       
-      function hash(param1:ByteArray) : ByteArray;
+      function hash(src:ByteArray) : ByteArray;
       
       function toString() : String;
       

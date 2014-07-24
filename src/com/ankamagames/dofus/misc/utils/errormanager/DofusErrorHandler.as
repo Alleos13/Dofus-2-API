@@ -58,7 +58,7 @@ package com.ankamagames.dofus.misc.utils.errormanager
       //Décompilation abandonné
       }
       
-      public function DofusErrorHandler(param1:Boolean = true)
+      public function DofusErrorHandler(pAutoInit:Boolean = true)
       {
          //Décompilation abandonné
       }
@@ -82,7 +82,7 @@ package com.ankamagames.dofus.misc.utils.errormanager
          //Décompilation abandonné
       }
       
-      public static function set manualActivation(param1:Boolean) : void
+      public static function set manualActivation(v:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -118,7 +118,7 @@ package com.ankamagames.dofus.misc.utils.errormanager
          //Décompilation abandonné
       }
       
-      private function onKeyUp(param1:KeyboardEvent) : void
+      private function onKeyUp(e:KeyboardEvent) : void
       {
          //Décompilation abandonné
       }
@@ -148,12 +148,12 @@ package com.ankamagames.dofus.misc.utils.errormanager
          //Décompilation abandonné
       }
       
-      public function activeShortcut(param1:Event = null) : void
+      public function activeShortcut(e:Event = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function activeGlobalExceptionCatch(param1:Boolean) : void
+      public function activeGlobalExceptionCatch(pShowPopup:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -163,12 +163,12 @@ package com.ankamagames.dofus.misc.utils.errormanager
          //Décompilation abandonné
       }
       
-      private function onError(param1:ErrorReportedEvent) : void
+      private function onError(e:ErrorReportedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function getReportInfo(param1:Error, param2:String) : Object
+      public function getReportInfo(error:Error, txt:String) : Object
       {
          //Décompilation abandonné
       }

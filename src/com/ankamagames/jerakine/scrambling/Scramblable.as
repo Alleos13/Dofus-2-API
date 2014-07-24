@@ -9,8 +9,8 @@ package com.ankamagames.jerakine.scrambling
       //Décompilation abandonné
       }
       
-      function scramble(param1:ByteArray) : void;
+      function scramble(data:ByteArray) : void;
       
-      function unscramble(param1:ByteArray) : void;
+      function unscramble(data:ByteArray) : void;
    }
 }

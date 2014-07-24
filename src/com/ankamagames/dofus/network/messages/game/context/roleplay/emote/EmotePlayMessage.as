@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.emote
          //Décompilation abandonné
       }
       
-      public function initEmotePlayMessage(param1:uint = 0, param2:Number = 0, param3:int = 0, param4:int = 0) : EmotePlayMessage
+      public function initEmotePlayMessage(emoteId:uint = 0, emoteStartTime:Number = 0, actorId:int = 0, accountId:int = 0) : EmotePlayMessage
       {
          //Décompilation abandonné
       }
@@ -45,32 +45,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.emote
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_EmotePlayMessage(param1:IDataOutput) : void
+      public function serializeAs_EmotePlayMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_EmotePlayMessage(param1:IDataInput) : void
+      public function deserializeAs_EmotePlayMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

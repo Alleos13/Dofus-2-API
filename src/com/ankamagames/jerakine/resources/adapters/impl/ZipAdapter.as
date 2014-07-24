@@ -19,7 +19,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          //Décompilation abandonné
       }
       
-      override protected function getResource(param1:String, param2:*) : *
+      override protected function getResource(dataFormat:String, data:*) : *
       {
          //Décompilation abandonné
       }

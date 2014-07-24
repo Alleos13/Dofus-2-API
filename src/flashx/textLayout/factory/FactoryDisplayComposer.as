@@ -18,7 +18,7 @@ package flashx.textLayout.factory
          //Décompilation abandonné
       }
       
-      override tlf_internal function callTheComposer(param1:int, param2:int) : ContainerController
+      override tlf_internal function callTheComposer(absoluteEndPosition:int, controllerEndIndex:int) : ContainerController
       {
          //Décompilation abandonné
       }
@@ -50,7 +50,7 @@ class FactoryBackgroundManager extends BackgroundManager
       //Décompilation abandonné
    }
    
-   override public function finalizeLine(param1:TextFlowLine) : void
+   override public function finalizeLine(line:TextFlowLine) : void
    {
       //Décompilation abandonné
    }

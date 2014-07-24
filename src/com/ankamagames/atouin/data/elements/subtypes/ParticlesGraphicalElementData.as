@@ -14,7 +14,7 @@ package com.ankamagames.atouin.data.elements.subtypes
       //Décompilation abandonné
       }
       
-      public function ParticlesGraphicalElementData(param1:int, param2:int)
+      public function ParticlesGraphicalElementData(elementId:int, elementType:int)
       {
          //Décompilation abandonné
       }
@@ -23,7 +23,7 @@ package com.ankamagames.atouin.data.elements.subtypes
       
       public var scriptId:int;
       
-      override public function fromRaw(param1:IDataInput, param2:int) : void
+      override public function fromRaw(raw:IDataInput, version:int) : void
       {
          //Décompilation abandonné
       }

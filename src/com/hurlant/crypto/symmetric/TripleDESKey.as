@@ -10,7 +10,7 @@ package com.hurlant.crypto.symmetric
       //Décompilation abandonné
       }
       
-      public function TripleDESKey(param1:ByteArray)
+      public function TripleDESKey(key:ByteArray)
       {
          //Décompilation abandonné
       }
@@ -28,12 +28,12 @@ package com.hurlant.crypto.symmetric
          //Décompilation abandonné
       }
       
-      override public function encrypt(param1:ByteArray, param2:uint = 0) : void
+      override public function encrypt(block:ByteArray, index:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      override public function decrypt(param1:ByteArray, param2:uint = 0) : void
+      override public function decrypt(block:ByteArray, index:uint = 0) : void
       {
          //Décompilation abandonné
       }

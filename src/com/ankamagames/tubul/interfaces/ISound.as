@@ -15,7 +15,7 @@ package com.ankamagames.tubul.interfaces
       
       function get silence() : SoundSilence;
       
-      function set silence(param1:SoundSilence) : void;
+      function set silence(pSilence:SoundSilence) : void;
       
       function get duration() : Number;
       
@@ -29,11 +29,11 @@ package com.ankamagames.tubul.interfaces
       
       function get sound() : Sound;
       
-      function set sound(param1:*) : void;
+      function set sound(sound:*) : void;
       
       function get busId() : int;
       
-      function set busId(param1:int) : void;
+      function set busId(pBus:int) : void;
       
       function get bus() : IAudioBus;
       
@@ -41,19 +41,19 @@ package com.ankamagames.tubul.interfaces
       
       function get noCutSilence() : Boolean;
       
-      function set noCutSilence(param1:Boolean) : void;
+      function set noCutSilence(pNoCutSilence:Boolean) : void;
       
       function get isPlaying() : Boolean;
       
-      function play(param1:Boolean = false, param2:int = 0, param3:VolumeFadeEffect = null, param4:VolumeFadeEffect = null) : void;
+      function play(pLoop:Boolean = false, pLoops:int = 0, pFadeIn:VolumeFadeEffect = null, pFadeOut:VolumeFadeEffect = null) : void;
       
-      function stop(param1:VolumeFadeEffect = null) : void;
+      function stop(pFadeOut:VolumeFadeEffect = null) : void;
       
-      function loadSound(param1:ICache) : void;
+      function loadSound(pCache:ICache) : void;
       
-      function setLoops(param1:int) : void;
+      function setLoops(pLoops:int) : void;
       
-      function setCurrentLoop(param1:uint) : void;
+      function setCurrentLoop(pLoop:uint) : void;
       
       function clone() : ISound;
    }

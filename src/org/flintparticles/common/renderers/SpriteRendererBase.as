@@ -21,52 +21,52 @@ package org.flintparticles.common.renderers
       
       protected var _emitters:Array;
       
-      public function addEmitter(param1:Emitter) : void
+      public function addEmitter(emitter:Emitter) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeEmitter(param1:Emitter) : void
+      public function removeEmitter(emitter:Emitter) : void
       {
          //Décompilation abandonné
       }
       
-      private function addedToStage(param1:Event) : void
+      private function addedToStage(ev:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function particleAdded(param1:ParticleEvent) : void
+      private function particleAdded(ev:ParticleEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function particleRemoved(param1:ParticleEvent) : void
+      private function particleRemoved(ev:ParticleEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function emitterUpdated(param1:EmitterEvent) : void
+      private function emitterUpdated(ev:EmitterEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateParticles(param1:Event) : void
+      private function updateParticles(ev:Event) : void
       {
          //Décompilation abandonné
       }
       
-      protected function addParticle(param1:Particle) : void
+      protected function addParticle(particle:Particle) : void
       {
          //Décompilation abandonné
       }
       
-      protected function removeParticle(param1:Particle) : void
+      protected function removeParticle(particle:Particle) : void
       {
          //Décompilation abandonné
       }
       
-      protected function renderParticles(param1:Array) : void
+      protected function renderParticles(particles:Array) : void
       {
          //Décompilation abandonné
       }

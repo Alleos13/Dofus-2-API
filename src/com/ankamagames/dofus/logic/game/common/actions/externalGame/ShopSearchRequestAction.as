@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.externalGame
          //Décompilation abandonné
       }
       
-      public static function create(param1:String, param2:int = 1) : ShopSearchRequestAction
+      public static function create(text:String, pageId:int = 1) : ShopSearchRequestAction
       {
          //Décompilation abandonné
       }

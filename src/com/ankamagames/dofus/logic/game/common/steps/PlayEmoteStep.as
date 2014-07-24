@@ -15,7 +15,7 @@ package com.ankamagames.dofus.logic.game.common.steps
       //Décompilation abandonné
       }
       
-      public function PlayEmoteStep(param1:AnimatedCharacter, param2:int, param3:Boolean)
+      public function PlayEmoteStep(pEntity:AnimatedCharacter, pEmoteId:int, pWaitForEnd:Boolean)
       {
          //Décompilation abandonné
       }
@@ -31,7 +31,7 @@ package com.ankamagames.dofus.logic.game.common.steps
          //Décompilation abandonné
       }
       
-      private function onAnimationEnd(param1:TiphonEvent) : void
+      private function onAnimationEnd(pEvent:TiphonEvent) : void
       {
          //Décompilation abandonné
       }

@@ -32,27 +32,27 @@ package com.ankamagames.dofus.logic.common.managers
       
       private static var _zoneTimer:Timer;
       
-      public static function showSpell(param1:int, param2:int) : void
+      public static function showSpell(spellId:int, spellLevel:int) : void
       {
          //Décompilation abandonné
       }
       
-      public static function getSpellName(param1:int, param2:int) : String
+      public static function getSpellName(spellId:int, spellLevel:int) : String
       {
          //Décompilation abandonné
       }
       
-      public static function showSpellArea(param1:int, param2:int, param3:int, param4:int, param5:int) : void
+      public static function showSpellArea(casterId:int, targetCellId:int, sourceCellId:int, spellId:int, spellLevelId:int) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onStopZoneTimer(param1:Event) : void
+      private static function onStopZoneTimer(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public static function rollOver(param1:int, param2:int, param3:int, param4:int, param5:int, param6:int, param7:int) : void
+      public static function rollOver(pX:int, pY:int, casterId:int, targetCellId:int, sourceCellId:int, spellId:int, spellLevelId:int) : void
       {
          //Décompilation abandonné
       }

@@ -12,27 +12,27 @@ package com.ankamagames.jerakine.data
          //Décompilation abandonné
       }
       
-      public static function addOverride(param1:uint, param2:uint) : void
+      public static function addOverride(id:uint, newId:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public static function getText(param1:uint, param2:Array = null, param3:String = "%") : String
+      public static function getText(id:uint, params:Array = null, replace:String = "%") : String
       {
          //Décompilation abandonné
       }
       
-      public static function getUiText(param1:String, param2:Array = null, param3:String = "%") : String
+      public static function getUiText(textId:String, params:Array = null, replace:String = "%") : String
       {
          //Décompilation abandonné
       }
       
-      public static function hasUiText(param1:String) : Boolean
+      public static function hasUiText(textId:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function replaceParams(param1:String, param2:Array, param3:String) : String
+      public static function replaceParams(text:String, params:Array, replace:String) : String
       {
          //Décompilation abandonné
       }

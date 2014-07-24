@@ -30,7 +30,7 @@ package com.ankamagames.berilia.components.gridRenderer
       //Décompilation abandonné
       }
       
-      public function XmlUiGridRenderer(param1:String)
+      public function XmlUiGridRenderer(args:String)
       {
          //Décompilation abandonné
       }
@@ -57,27 +57,27 @@ package com.ankamagames.berilia.components.gridRenderer
       
       private var _dWaitingUpdate:Dictionary;
       
-      public function set grid(param1:Grid) : void
+      public function set grid(g:Grid) : void
       {
          //Décompilation abandonné
       }
       
-      public function render(param1:*, param2:uint, param3:Boolean, param4:uint = 0) : DisplayObject
+      public function render(data:*, index:uint, selected:Boolean, subIndex:uint = 0) : DisplayObject
       {
          //Décompilation abandonné
       }
       
-      public function update(param1:*, param2:uint, param3:DisplayObject, param4:Boolean, param5:uint = 0) : void
+      public function update(data:*, index:uint, dispObj:DisplayObject, selected:Boolean, subIndex:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function getDataLength(param1:*, param2:Boolean) : uint
+      public function getDataLength(data:*, selected:Boolean) : uint
       {
          //Décompilation abandonné
       }
       
-      public function remove(param1:DisplayObject) : void
+      public function remove(dispObj:DisplayObject) : void
       {
          //Décompilation abandonné
       }
@@ -87,22 +87,22 @@ package com.ankamagames.berilia.components.gridRenderer
          //Décompilation abandonné
       }
       
-      public function renderModificator(param1:Array) : Array
+      public function renderModificator(childs:Array) : Array
       {
          //Décompilation abandonné
       }
       
-      public function eventModificator(param1:Message, param2:String, param3:Array, param4:UIComponent) : String
+      public function eventModificator(msg:Message, functionName:String, args:Array, target:UIComponent) : String
       {
          //Décompilation abandonné
       }
       
-      private function onItemUiLoaded(param1:UiRenderEvent) : void
+      private function onItemUiLoaded(e:UiRenderEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateBackground(param1:UiRootContainer, param2:uint) : void
+      private function updateBackground(uiContainer:UiRootContainer, index:uint) : void
       {
          //Décompilation abandonné
       }
@@ -117,7 +117,7 @@ class WaitingUpdate extends Object
    //Décompilation abandonné
    }
    
-   function WaitingUpdate(param1:*, param2:uint, param3:DisplayObject, param4:Boolean, param5:Boolean)
+   function WaitingUpdate(data:*, index:uint, dispObj:DisplayObject, selected:Boolean, drawBackground:Boolean)
    {
       //Décompilation abandonné
    }

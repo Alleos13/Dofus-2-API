@@ -87,37 +87,37 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      public function getTheme(param1:String) : Theme
+      public function getTheme(name:String) : Theme
       {
          //Décompilation abandonné
       }
       
-      public function applyTheme(param1:String) : void
+      public function applyTheme(name:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function onLoadError(param1:ResourceErrorEvent) : void
+      private function onLoadError(e:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onLoad(param1:ResourceLoadedEvent) : void
+      private function onLoad(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onDTLoad(param1:ResourceLoadedEvent) : void
+      private function onDTLoad(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function loadDT(param1:XML, param2:String, param3:String) : void
+      private function loadDT(dt:XML, dtFileName:String, folderName:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function searchDtFile(param1:File) : File
+      private function searchDtFile(rootPath:File) : File
       {
          //Décompilation abandonné
       }

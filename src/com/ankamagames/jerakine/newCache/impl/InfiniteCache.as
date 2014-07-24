@@ -24,22 +24,22 @@ package com.ankamagames.jerakine.newCache.impl
          //Décompilation abandonné
       }
       
-      public function contains(param1:*) : Boolean
+      public function contains(ref:*) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function extract(param1:*) : *
+      public function extract(ref:*) : *
       {
          //Décompilation abandonné
       }
       
-      public function peek(param1:*) : *
+      public function peek(ref:*) : *
       {
          //Décompilation abandonné
       }
       
-      public function store(param1:*, param2:*) : Boolean
+      public function store(ref:*, obj:*) : Boolean
       {
          //Décompilation abandonné
       }

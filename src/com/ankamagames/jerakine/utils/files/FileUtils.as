@@ -12,27 +12,27 @@ package com.ankamagames.jerakine.utils.files
          //Décompilation abandonné
       }
       
-      public static function getExtension(param1:String) : String
+      public static function getExtension(sUrl:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function getFileName(param1:String) : String
+      public static function getFileName(sUrl:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function getFilePath(param1:String) : String
+      public static function getFilePath(sUrl:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function getFilePathStartName(param1:String) : String
+      public static function getFilePathStartName(sUrl:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function getFileStartName(param1:String) : String
+      public static function getFileStartName(sUrl:String) : String
       {
          //Décompilation abandonné
       }

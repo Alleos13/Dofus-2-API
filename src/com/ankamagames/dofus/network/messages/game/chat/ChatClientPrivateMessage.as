@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.messages.game.chat
          //Décompilation abandonné
       }
       
-      public function initChatClientPrivateMessage(param1:String = "", param2:String = "") : ChatClientPrivateMessage
+      public function initChatClientPrivateMessage(content:String = "", receiver:String = "") : ChatClientPrivateMessage
       {
          //Décompilation abandonné
       }
@@ -43,32 +43,32 @@ package com.ankamagames.dofus.network.messages.game.chat
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ChatClientPrivateMessage(param1:IDataOutput) : void
+      public function serializeAs_ChatClientPrivateMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ChatClientPrivateMessage(param1:IDataInput) : void
+      public function deserializeAs_ChatClientPrivateMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

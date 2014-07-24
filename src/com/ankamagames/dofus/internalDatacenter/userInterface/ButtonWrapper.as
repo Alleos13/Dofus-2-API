@@ -25,12 +25,12 @@ package com.ankamagames.dofus.internalDatacenter.userInterface
       
       protected static const _log:Logger;
       
-      public static function create(param1:uint, param2:int, param3:String, param4:Function, param5:String, param6:String = "") : ButtonWrapper
+      public static function create(buttonId:uint, position:int, uriName:String, callback:Function, name:String, shortcut:String = "") : ButtonWrapper
       {
          //Décompilation abandonné
       }
       
-      public static function getButtonWrapperById(param1:uint) : ButtonWrapper
+      public static function getButtonWrapperById(id:uint) : ButtonWrapper
       {
          //Décompilation abandonné
       }
@@ -86,7 +86,7 @@ package com.ankamagames.dofus.internalDatacenter.userInterface
          //Décompilation abandonné
       }
       
-      public function set endTime(param1:int) : void
+      public function set endTime(t:int) : void
       {
          //Décompilation abandonné
       }
@@ -101,17 +101,17 @@ package com.ankamagames.dofus.internalDatacenter.userInterface
          //Décompilation abandonné
       }
       
-      public function set active(param1:Boolean) : void
+      public function set active(active:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function getProperty(param1:*) : *
+      override flash_proxy function getProperty(name:*) : *
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function hasProperty(param1:*) : Boolean
+      override flash_proxy function hasProperty(name:*) : Boolean
       {
          //Décompilation abandonné
       }
@@ -121,22 +121,22 @@ package com.ankamagames.dofus.internalDatacenter.userInterface
          //Décompilation abandonné
       }
       
-      public function setPosition(param1:int) : void
+      public function setPosition(value:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function addHolder(param1:ISlotDataHolder) : void
+      public function addHolder(h:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeHolder(param1:ISlotDataHolder) : void
+      public function removeHolder(h:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      public function getIconUri(param1:Boolean = true) : Uri
+      public function getIconUri(pngMode:Boolean = true) : Uri
       {
          //Décompilation abandonné
       }

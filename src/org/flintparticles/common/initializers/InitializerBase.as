@@ -20,17 +20,17 @@ package org.flintparticles.common.initializers
          //Décompilation abandonné
       }
       
-      public function addedToEmitter(param1:Emitter) : void
+      public function addedToEmitter(emitter:Emitter) : void
       {
          //Décompilation abandonné
       }
       
-      public function removedFromEmitter(param1:Emitter) : void
+      public function removedFromEmitter(emitter:Emitter) : void
       {
          //Décompilation abandonné
       }
       
-      public function initialize(param1:Emitter, param2:Particle) : void
+      public function initialize(emitter:Emitter, particle:Particle) : void
       {
          //Décompilation abandonné
       }

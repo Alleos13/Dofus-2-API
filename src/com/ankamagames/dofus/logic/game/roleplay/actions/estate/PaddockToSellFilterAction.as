@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.roleplay.actions.estate
          //Décompilation abandonné
       }
       
-      public static function create(param1:int, param2:uint, param3:uint, param4:uint) : PaddockToSellFilterAction
+      public static function create(areaId:int, atLeastNbMount:uint, atLeastNbMachine:uint, maxPrice:uint) : PaddockToSellFilterAction
       {
          //Décompilation abandonné
       }

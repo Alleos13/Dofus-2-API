@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.spells
       
       public static const MODULE:String = "SpellPairs";
       
-      public static function getSpellPairById(param1:int) : SpellPair
+      public static function getSpellPairById(id:int) : SpellPair
       {
          //Décompilation abandonné
       }

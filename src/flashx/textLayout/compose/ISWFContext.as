@@ -7,6 +7,6 @@ package flashx.textLayout.compose
       //Décompilation abandonné
       }
       
-      function callInContext(param1:Function, param2:Object, param3:Array, param4:Boolean = true) : *;
+      function callInContext(fn:Function, thisArg:Object, argArray:Array, returns:Boolean = true) : *;
    }
 }

@@ -11,7 +11,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function WeightItemCriterion(param1:String)
+      public function WeightItemCriterion(pCriterion:String)
       {
          //Décompilation abandonné
       }

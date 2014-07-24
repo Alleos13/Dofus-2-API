@@ -9,12 +9,12 @@ package com.ankamagames.jerakine.pools
       //Décompilation abandonné
       }
       
-      public function PoolableRectangle(param1:Number = 0, param2:Number = 0, param3:Number = 0, param4:Number = 0)
+      public function PoolableRectangle(x:Number = 0, y:Number = 0, width:Number = 0, height:Number = 0)
       {
          //Décompilation abandonné
       }
       
-      public function renew(param1:Number = 0, param2:Number = 0, param3:Number = 0, param4:Number = 0) : PoolableRectangle
+      public function renew(x:Number = 0, y:Number = 0, width:Number = 0, height:Number = 0) : PoolableRectangle
       {
          //Décompilation abandonné
       }
@@ -24,7 +24,7 @@ package com.ankamagames.jerakine.pools
          //Décompilation abandonné
       }
       
-      public function extend(param1:Rectangle) : void
+      public function extend(toUnion:Rectangle) : void
       {
          //Décompilation abandonné
       }

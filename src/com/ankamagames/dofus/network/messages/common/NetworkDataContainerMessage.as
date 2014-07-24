@@ -30,7 +30,7 @@ package com.ankamagames.dofus.network.messages.common
          //Décompilation abandonné
       }
       
-      public function set content(param1:ByteArray) : void
+      public function set content(value:ByteArray) : void
       {
          //Décompilation abandonné
       }
@@ -45,7 +45,7 @@ package com.ankamagames.dofus.network.messages.common
          //Décompilation abandonné
       }
       
-      public function initNetworkDataContainerMessage(param1:ByteArray = null) : NetworkDataContainerMessage
+      public function initNetworkDataContainerMessage(content:ByteArray = null) : NetworkDataContainerMessage
       {
          //Décompilation abandonné
       }
@@ -55,32 +55,32 @@ package com.ankamagames.dofus.network.messages.common
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_NetworkDataContainerMessage(param1:IDataOutput) : void
+      public function serializeAs_NetworkDataContainerMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_NetworkDataContainerMessage(param1:IDataInput) : void
+      public function deserializeAs_NetworkDataContainerMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

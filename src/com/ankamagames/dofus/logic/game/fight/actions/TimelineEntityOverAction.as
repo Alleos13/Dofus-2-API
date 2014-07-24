@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.fight.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:int, param2:Boolean) : TimelineEntityOverAction
+      public static function create(target:int, showRange:Boolean) : TimelineEntityOverAction
       {
          //Décompilation abandonné
       }

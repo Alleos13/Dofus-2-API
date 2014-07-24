@@ -38,12 +38,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getRiderEntityLook(param1:*) : TiphonEntityLook
+      public function getRiderEntityLook(look:*) : TiphonEntityLook
       {
          //Décompilation abandonné
       }
       
-      public function getMount(param1:uint) : Mount
+      public function getMount(modelId:uint) : Mount
       {
          //Décompilation abandonné
       }
@@ -68,7 +68,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function isCertificateValid(param1:ItemWrapper) : Boolean
+      public function isCertificateValid(certificate:ItemWrapper) : Boolean
       {
          //Décompilation abandonné
       }

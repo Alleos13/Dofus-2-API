@@ -20,7 +20,7 @@ package com.ankamagames.dofus.datacenter.misc
       
       private static var _actionByName:Array;
       
-      public static function getActionDescriptionByName(param1:String) : ActionDescription
+      public static function getActionDescriptionByName(name:String) : ActionDescription
       {
          //Décompilation abandonné
       }

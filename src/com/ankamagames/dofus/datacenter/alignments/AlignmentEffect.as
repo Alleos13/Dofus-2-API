@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.alignments
       
       protected static const _log:Logger;
       
-      public static function getAlignmentEffectById(param1:int) : AlignmentEffect
+      public static function getAlignmentEffectById(id:int) : AlignmentEffect
       {
          //Décompilation abandonné
       }

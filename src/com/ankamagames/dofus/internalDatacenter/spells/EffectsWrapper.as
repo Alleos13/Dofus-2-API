@@ -10,7 +10,7 @@ package com.ankamagames.dofus.internalDatacenter.spells
       //Décompilation abandonné
       }
       
-      public function EffectsWrapper(param1:Array, param2:Spell, param3:String)
+      public function EffectsWrapper(effect:Array, spell:Spell, name:String)
       {
          //Décompilation abandonné
       }

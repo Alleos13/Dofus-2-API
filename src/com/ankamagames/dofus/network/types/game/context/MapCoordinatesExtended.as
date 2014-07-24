@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.context
          //Décompilation abandonné
       }
       
-      public function initMapCoordinatesExtended(param1:int = 0, param2:int = 0, param3:int = 0, param4:uint = 0) : MapCoordinatesExtended
+      public function initMapCoordinatesExtended(worldX:int = 0, worldY:int = 0, mapId:int = 0, subAreaId:uint = 0) : MapCoordinatesExtended
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.context
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_MapCoordinatesExtended(param1:IDataOutput) : void
+      public function serializeAs_MapCoordinatesExtended(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_MapCoordinatesExtended(param1:IDataInput) : void
+      public function deserializeAs_MapCoordinatesExtended(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

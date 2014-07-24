@@ -11,7 +11,7 @@ package com.ankamagames.jerakine.types.events
       //Décompilation abandonné
       }
       
-      public function SequencerEvent(param1:String, param2:ISequencer = null, param3:ISequencable = null)
+      public function SequencerEvent(type:String, sequencer:ISequencer = null, step:ISequencable = null)
       {
          //Décompilation abandonné
       }

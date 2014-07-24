@@ -103,7 +103,7 @@ package com.ankamagames.berilia.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -118,7 +118,7 @@ package com.ankamagames.berilia.frames
          //Décompilation abandonné
       }
       
-      private function processRegisteredUiEvent(param1:Message, param2:Grid) : void
+      private function processRegisteredUiEvent(msg:Message, gridInstance:Grid) : void
       {
          //Décompilation abandonné
       }
@@ -129,12 +129,12 @@ package com.ankamagames.berilia.frames
       
       private var _lastH:uint;
       
-      private function onStageResize(param1:Event = null) : void
+      private function onStageResize(e:Event = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function onWindowDeactivate(param1:Event) : void
+      private function onWindowDeactivate(pEvent:Event) : void
       {
          //Décompilation abandonné
       }

@@ -10,7 +10,7 @@ package com.ankamagames.berilia.types.event
       //Décompilation abandonné
       }
       
-      public function ParsorEvent(param1:UiDefinition, param2:Boolean)
+      public function ParsorEvent(uiDef:UiDefinition, error:Boolean)
       {
          //Décompilation abandonné
       }

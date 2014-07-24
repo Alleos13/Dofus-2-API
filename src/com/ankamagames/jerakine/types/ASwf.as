@@ -10,7 +10,7 @@ package com.ankamagames.jerakine.types
       //Décompilation abandonné
       }
       
-      public function ASwf(param1:DisplayObject, param2:ApplicationDomain, param3:Number, param4:Number)
+      public function ASwf(content:DisplayObject, appDomain:ApplicationDomain, loaderWidth:Number, loaderHeight:Number)
       {
          //Décompilation abandonné
       }

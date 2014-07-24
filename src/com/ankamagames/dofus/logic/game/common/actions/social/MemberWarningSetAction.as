@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.social
          //Décompilation abandonné
       }
       
-      public static function create(param1:Boolean) : MemberWarningSetAction
+      public static function create(enable:Boolean) : MemberWarningSetAction
       {
          //Décompilation abandonné
       }

@@ -12,47 +12,47 @@ package com.ankamagames.jerakine.utils.pattern
          //Décompilation abandonné
       }
       
-      public static function getDescription(param1:String, param2:Array) : String
+      public static function getDescription(sText:String, aParams:Array) : String
       {
          //Décompilation abandonné
       }
       
-      public static function combine(param1:String, param2:String, param3:Boolean) : String
+      public static function combine(str:String, gender:String, singular:Boolean) : String
       {
          //Décompilation abandonné
       }
       
-      public static function decode(param1:String, param2:Array) : String
+      public static function decode(str:String, params:Array) : String
       {
          //Décompilation abandonné
       }
       
-      public static function replace(param1:String, param2:String) : String
+      public static function replace(sSrc:String, sPattern:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function replaceStr(param1:String, param2:String, param3:String) : String
+      public static function replaceStr(sSrc:String, sSearchPattern:String, sReplaceStr:String) : String
       {
          //Décompilation abandonné
       }
       
-      private static function findOptionnalDices(param1:Array, param2:Array) : Array
+      private static function findOptionnalDices(aStr:Array, aParams:Array) : Array
       {
          //Décompilation abandonné
       }
       
-      private static function decodeDescription(param1:Array, param2:Array) : Array
+      private static function decodeDescription(aStr:Array, aParams:Array) : Array
       {
          //Décompilation abandonné
       }
       
-      private static function decodeCombine(param1:Array, param2:Object) : Array
+      private static function decodeCombine(aStr:Array, oParams:Object) : Array
       {
          //Décompilation abandonné
       }
       
-      private static function find(param1:Array, param2:Object) : Number
+      private static function find(a:Array, f:Object) : Number
       {
          //Décompilation abandonné
       }

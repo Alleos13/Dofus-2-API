@@ -15,7 +15,7 @@ package com.ankamagames.dofus.scripts
       //Décompilation abandonné
       }
       
-      public function FxRunner(param1:IEntity, param2:MapPoint)
+      public function FxRunner(fxCaster:IEntity, fxTarget:MapPoint)
       {
          //Décompilation abandonné
       }
@@ -36,7 +36,7 @@ package com.ankamagames.dofus.scripts
          //Décompilation abandonné
       }
       
-      public function run(param1:Class) : uint
+      public function run(script:Class) : uint
       {
          //Décompilation abandonné
       }

@@ -16,7 +16,7 @@ package com.ankamagames.dofus.scripts
       //Décompilation abandonné
       }
       
-      public function SpellFxRunner(param1:ISpellCastProvider)
+      public function SpellFxRunner(spellCastProvider:ISpellCastProvider)
       {
          //Décompilation abandonné
       }

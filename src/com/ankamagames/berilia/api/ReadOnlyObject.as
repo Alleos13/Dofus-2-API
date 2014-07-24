@@ -21,7 +21,7 @@ package com.ankamagames.berilia.api
       //Décompilation abandonné
       }
       
-      public function ReadOnlyObject(param1:Object, param2:Object)
+      public function ReadOnlyObject(o:Object, accessKey:Object)
       {
          //Décompilation abandonné
       }
@@ -36,7 +36,7 @@ package com.ankamagames.berilia.api
       
       private static const _readOnlyObjectExist:Dictionary;
       
-      public static function create(param1:Object) : ReadOnlyObject
+      public static function create(o:Object) : ReadOnlyObject
       {
          //Décompilation abandonné
       }
@@ -54,44 +54,44 @@ package com.ankamagames.berilia.api
          //Décompilation abandonné
       }
       
-      public function getObject(param1:Object) : *
+      public function getObject(accessKey:Object) : *
       {
          //Décompilation abandonné
       }
       
       private var _testHaveOP:Boolean = true;
       
-      override flash_proxy function callProperty(param1:*, ... rest) : *
+      override flash_proxy function callProperty(name:*, ... rest) : *
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function getProperty(param1:*) : *
+      override flash_proxy function getProperty(name:*) : *
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function nextNameIndex(param1:int) : int
+      override flash_proxy function nextNameIndex(index:int) : int
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function nextValue(param1:int) : *
+      override flash_proxy function nextValue(index:int) : *
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function nextName(param1:int) : String
+      override flash_proxy function nextName(index:int) : String
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function setProperty(param1:*, param2:*) : void
+      override flash_proxy function setProperty(name:*, value:*) : void
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function hasProperty(param1:*) : Boolean
+      override flash_proxy function hasProperty(name:*) : Boolean
       {
          //Décompilation abandonné
       }

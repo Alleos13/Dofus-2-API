@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.monsters
       
       public static const MODULE:String = "Monsters";
       
-      public static function getMonsterById(param1:uint) : Monster
+      public static function getMonsterById(id:uint) : Monster
       {
          //Décompilation abandonné
       }
@@ -86,7 +86,7 @@ package com.ankamagames.dofus.datacenter.monsters
          //Décompilation abandonné
       }
       
-      public function getMonsterGrade(param1:uint) : MonsterGrade
+      public function getMonsterGrade(grade:uint) : MonsterGrade
       {
          //Décompilation abandonné
       }

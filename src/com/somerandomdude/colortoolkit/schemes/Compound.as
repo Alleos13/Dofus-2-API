@@ -10,7 +10,7 @@ package com.somerandomdude.colortoolkit.schemes
       //Décompilation abandonné
       }
       
-      public function Compound(param1:int)
+      public function Compound(primaryColor:int)
       {
          //Décompilation abandonné
       }

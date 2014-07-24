@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.npcs
       
       public static const MODULE:String = "NpcMessages";
       
-      public static function getNpcMessageById(param1:int) : NpcMessage
+      public static function getNpcMessageById(id:int) : NpcMessage
       {
          //Décompilation abandonné
       }

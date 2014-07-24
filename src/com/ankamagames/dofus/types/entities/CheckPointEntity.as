@@ -14,7 +14,7 @@ package com.ankamagames.dofus.types.entities
       //Décompilation abandonné
       }
       
-      public function CheckPointEntity(param1:Sprite = null, param2:MapPoint = null)
+      public function CheckPointEntity(spr:Sprite = null, pos:MapPoint = null)
       {
          //Décompilation abandonné
       }
@@ -32,7 +32,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set id(param1:int) : void
+      public function set id(nValue:int) : void
       {
          //Décompilation abandonné
       }
@@ -42,7 +42,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set position(param1:MapPoint) : void
+      public function set position(oValue:MapPoint) : void
       {
          //Décompilation abandonné
       }
@@ -52,7 +52,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set displayBehaviors(param1:IDisplayBehavior) : void
+      public function set displayBehaviors(oValue:IDisplayBehavior) : void
       {
          //Décompilation abandonné
       }
@@ -67,7 +67,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function display(param1:uint = 0) : void
+      public function display(strata:uint = 0) : void
       {
          //Décompilation abandonné
       }

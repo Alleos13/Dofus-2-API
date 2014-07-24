@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.common.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint) : ChangeCharacterAction
+      public static function create(serverId:uint) : ChangeCharacterAction
       {
          //Décompilation abandonné
       }

@@ -29,7 +29,7 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      public function initSpellItem(param1:uint = 0, param2:int = 0, param3:int = 0) : SpellItem
+      public function initSpellItem(position:uint = 0, spellId:int = 0, spellLevel:int = 0) : SpellItem
       {
          //Décompilation abandonné
       }
@@ -39,22 +39,22 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_SpellItem(param1:IDataOutput) : void
+      public function serializeAs_SpellItem(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_SpellItem(param1:IDataInput) : void
+      public function deserializeAs_SpellItem(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

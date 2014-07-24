@@ -7,6 +7,6 @@ package com.ankamagames.jerakine.logger.targets
       //Décompilation abandonné
       }
       
-      function configure(param1:XML) : void;
+      function configure(config:XML) : void;
    }
 }

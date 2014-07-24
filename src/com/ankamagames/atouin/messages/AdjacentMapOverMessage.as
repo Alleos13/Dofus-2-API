@@ -11,7 +11,7 @@ package com.ankamagames.atouin.messages
       //Décompilation abandonné
       }
       
-      public function AdjacentMapOverMessage(param1:uint, param2:DisplayObject, param3:int, param4:CellData)
+      public function AdjacentMapOverMessage(nDirection:uint, zone:DisplayObject, cellId:int, cellData:CellData)
       {
          //Décompilation abandonné
       }

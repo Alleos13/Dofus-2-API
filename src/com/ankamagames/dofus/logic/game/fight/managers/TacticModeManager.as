@@ -44,7 +44,7 @@ package com.ankamagames.dofus.logic.game.fight.managers
       //Décompilation abandonné
       }
       
-      public function TacticModeManager(param1:PrivateClass)
+      public function TacticModeManager(pvt:PrivateClass)
       {
          //Décompilation abandonné
       }
@@ -132,27 +132,27 @@ package com.ankamagames.dofus.logic.game.fight.managers
       
       private var _background:Sprite;
       
-      public function show(param1:WorldPointWrapper, param2:Boolean = false) : void
+      public function show(pPoint:WorldPointWrapper, openByTerminal:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private function canMoveOnThisCell(param1:Boolean, param2:Boolean, param3:Boolean) : Boolean
+      private function canMoveOnThisCell(canMov:Boolean, nonWalkableDuringFight:Boolean, nonWalkableDuringRp:Boolean) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function hide(param1:Boolean = false) : void
+      public function hide(force:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateEntitiesOnCell(param1:uint) : void
+      private function updateEntitiesOnCell(cellId:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function clearUnneededCells(param1:int, param2:int, param3:int, param4:int) : void
+      private function clearUnneededCells(zonesMaxX:int, zonesMaxY:int, zonesMinX:int, zonesMinY:int) : void
       {
          //Décompilation abandonné
       }
@@ -162,17 +162,17 @@ package com.ankamagames.dofus.logic.game.fight.managers
          //Décompilation abandonné
       }
       
-      private function containZone(param1:Array, param2:int, param3:int) : Boolean
+      private function containZone(zones:Array, z1:int, z2:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function getCellZone(param1:int) : int
+      private function getCellZone(cellId:int) : int
       {
          //Décompilation abandonné
       }
       
-      private function getInformations(param1:int) : Array
+      private function getInformations(cellId:int) : Array
       {
          //Décompilation abandonné
       }
@@ -192,12 +192,12 @@ package com.ankamagames.dofus.logic.game.fight.managers
          //Décompilation abandonné
       }
       
-      private function onBackgroundLoaded(param1:ResourceLoadedEvent = null) : void
+      private function onBackgroundLoaded(pEvt:ResourceLoadedEvent = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function setDebugMode(param1:Boolean = false, param2:Boolean = false, param3:int = 0, param4:Boolean = false, param5:Boolean = false, param6:Boolean = true, param7:Boolean = true) : void
+      public function setDebugMode(pShowFightZone:Boolean = false, pUseCache:Boolean = false, pDebugType:int = 0, pShowInteractiveCells:Boolean = false, pShowScaleZone:Boolean = false, pFlattenCells:Boolean = true, pShowBlockMvt:Boolean = true) : void
       {
          //Décompilation abandonné
       }

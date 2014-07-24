@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.interactive
          //Décompilation abandonné
       }
       
-      public function initInteractiveElementSkill(param1:uint = 0, param2:uint = 0) : InteractiveElementSkill
+      public function initInteractiveElementSkill(skillId:uint = 0, skillInstanceUid:uint = 0) : InteractiveElementSkill
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.interactive
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_InteractiveElementSkill(param1:IDataOutput) : void
+      public function serializeAs_InteractiveElementSkill(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_InteractiveElementSkill(param1:IDataInput) : void
+      public function deserializeAs_InteractiveElementSkill(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

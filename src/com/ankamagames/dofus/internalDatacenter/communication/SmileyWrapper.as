@@ -27,12 +27,12 @@ package com.ankamagames.dofus.internalDatacenter.communication
       
       protected static const _log:Logger;
       
-      public static function create(param1:uint, param2:String, param3:int, param4:Boolean = true) : SmileyWrapper
+      public static function create(smileyId:uint, iconId:String, order:int, useCache:Boolean = true) : SmileyWrapper
       {
          //Décompilation abandonné
       }
       
-      public static function getSmileyWrapperById(param1:uint) : SmileyWrapper
+      public static function getSmileyWrapperById(id:uint) : SmileyWrapper
       {
          //Décompilation abandonné
       }
@@ -84,7 +84,7 @@ package com.ankamagames.dofus.internalDatacenter.communication
          //Décompilation abandonné
       }
       
-      public function set endTime(param1:int) : void
+      public function set endTime(t:int) : void
       {
          //Décompilation abandonné
       }
@@ -109,12 +109,12 @@ package com.ankamagames.dofus.internalDatacenter.communication
          //Décompilation abandonné
       }
       
-      override flash_proxy function getProperty(param1:*) : *
+      override flash_proxy function getProperty(name:*) : *
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function hasProperty(param1:*) : Boolean
+      override flash_proxy function hasProperty(name:*) : Boolean
       {
          //Décompilation abandonné
       }
@@ -124,17 +124,17 @@ package com.ankamagames.dofus.internalDatacenter.communication
          //Décompilation abandonné
       }
       
-      public function addHolder(param1:ISlotDataHolder) : void
+      public function addHolder(h:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeHolder(param1:ISlotDataHolder) : void
+      public function removeHolder(h:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      public function getIconUri(param1:Boolean = true) : Uri
+      public function getIconUri(pngMode:Boolean = true) : Uri
       {
          //Décompilation abandonné
       }

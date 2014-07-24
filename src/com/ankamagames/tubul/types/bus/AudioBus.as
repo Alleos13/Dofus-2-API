@@ -29,7 +29,7 @@ package com.ankamagames.tubul.types.bus
       //Décompilation abandonné
       }
       
-      public function AudioBus(param1:int, param2:String)
+      public function AudioBus(id:int, name:String)
       {
          //Décompilation abandonné
       }
@@ -65,7 +65,7 @@ package com.ankamagames.tubul.types.bus
          //Décompilation abandonné
       }
       
-      public function set volumeMax(param1:Number) : void
+      public function set volumeMax(pVolMax:Number) : void
       {
          //Décompilation abandonné
       }
@@ -80,7 +80,7 @@ package com.ankamagames.tubul.types.bus
          //Décompilation abandonné
       }
       
-      public function set numberSoundsLimitation(param1:int) : void
+      public function set numberSoundsLimitation(pLimit:int) : void
       {
          //Décompilation abandonné
       }
@@ -105,7 +105,7 @@ package com.ankamagames.tubul.types.bus
          //Décompilation abandonné
       }
       
-      public function set volume(param1:Number) : void
+      public function set volume(pVolume:Number) : void
       {
          //Décompilation abandonné
       }
@@ -120,7 +120,7 @@ package com.ankamagames.tubul.types.bus
          //Décompilation abandonné
       }
       
-      public function set currentFadeVolume(param1:Number) : void
+      public function set currentFadeVolume(pFadeVolume:Number) : void
       {
          //Décompilation abandonné
       }
@@ -130,32 +130,32 @@ package com.ankamagames.tubul.types.bus
          //Décompilation abandonné
       }
       
-      public function clear(param1:VolumeFadeEffect = null) : void
+      public function clear(pFade:VolumeFadeEffect = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function playISound(param1:ISound, param2:Boolean = false, param3:int = -1) : void
+      public function playISound(newSound:ISound, pLoop:Boolean = false, pLoops:int = -1) : void
       {
          //Décompilation abandonné
       }
       
-      public function addISound(param1:ISound) : void
+      public function addISound(pISound:ISound) : void
       {
          //Décompilation abandonné
       }
       
-      private function cleanBus(param1:Vector.<ISound>) : Boolean
+      private function cleanBus(sList:Vector.<ISound>) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function addEffect(param1:IEffect) : void
+      public function addEffect(pEffect:IEffect) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeEffect(param1:IEffect) : void
+      public function removeEffect(pEffect:IEffect) : void
       {
          //Décompilation abandonné
       }
@@ -170,12 +170,12 @@ package com.ankamagames.tubul.types.bus
          //Décompilation abandonné
       }
       
-      public function applyDynamicMix(param1:VolumeFadeEffect, param2:uint, param3:VolumeFadeEffect) : void
+      public function applyDynamicMix(pFadeIn:VolumeFadeEffect, pWaitingTime:uint, pFadeOut:VolumeFadeEffect) : void
       {
          //Décompilation abandonné
       }
       
-      public function contains(param1:ISound) : Boolean
+      public function contains(pISound:ISound) : Boolean
       {
          //Décompilation abandonné
       }
@@ -185,12 +185,12 @@ package com.ankamagames.tubul.types.bus
          //Décompilation abandonné
       }
       
-      private function init(param1:int, param2:String) : void
+      private function init(id:int, name:String) : void
       {
          //Décompilation abandonné
       }
       
-      protected function removeSound(param1:ISound, param2:VolumeFadeEffect = null) : uint
+      protected function removeSound(pISound:ISound, pFade:VolumeFadeEffect = null) : uint
       {
          //Décompilation abandonné
       }
@@ -205,32 +205,32 @@ package com.ankamagames.tubul.types.bus
          //Décompilation abandonné
       }
       
-      private function onLoadComplete(param1:LoadingSoundEvent) : void
+      private function onLoadComplete(event:LoadingSoundEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onLoadFail(param1:LoadingSoundEvent) : void
+      private function onLoadFail(event:LoadingSoundEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function onSoundComplete(param1:SoundCompleteEvent) : void
+      protected function onSoundComplete(pEvent:SoundCompleteEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function onFadeBeforeDeleteComplete(param1:FadeEvent) : void
+      protected function onFadeBeforeDeleteComplete(e:FadeEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onRemoveSound(param1:ISound) : void
+      private function onRemoveSound(sound:ISound) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAddSound(param1:ISound) : void
+      private function onAddSound(sound:ISound) : void
       {
          //Décompilation abandonné
       }

@@ -10,7 +10,7 @@ package com.ankamagames.jerakine.entities.messages
       //Décompilation abandonné
       }
       
-      public function EntityInteractionMessage(param1:IInteractive)
+      public function EntityInteractionMessage(entity:IInteractive)
       {
          //Décompilation abandonné
       }

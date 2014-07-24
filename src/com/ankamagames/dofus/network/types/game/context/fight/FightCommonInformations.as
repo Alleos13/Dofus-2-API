@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      public function initFightCommonInformations(param1:int = 0, param2:uint = 0, param3:Vector.<FightTeamInformations> = null, param4:Vector.<uint> = null, param5:Vector.<FightOptionsInformations> = null) : FightCommonInformations
+      public function initFightCommonInformations(fightId:int = 0, fightType:uint = 0, fightTeams:Vector.<FightTeamInformations> = null, fightTeamsPositions:Vector.<uint> = null, fightTeamsOptions:Vector.<FightOptionsInformations> = null) : FightCommonInformations
       {
          //Décompilation abandonné
       }
@@ -44,22 +44,22 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_FightCommonInformations(param1:IDataOutput) : void
+      public function serializeAs_FightCommonInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_FightCommonInformations(param1:IDataInput) : void
+      public function deserializeAs_FightCommonInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

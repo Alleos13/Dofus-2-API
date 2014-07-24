@@ -38,7 +38,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightCarryCharacterStep(param1:int, param2:int, param3:int = -1, param4:Boolean = false)
+      public function FightCarryCharacterStep(fighterId:int, carriedId:int, cellId:int = -1, noAnimation:Boolean = false)
       {
          //Décompilation abandonné
       }
@@ -69,17 +69,17 @@ package com.ankamagames.dofus.logic.game.fight.steps
          //Décompilation abandonné
       }
       
-      private function updateCarriedEntityPosition(param1:IMovable, param2:IMovable) : void
+      private function updateCarriedEntityPosition(pCarryingEntity:IMovable, pCarriedEntity:IMovable) : void
       {
          //Décompilation abandonné
       }
       
-      private function carryFinished(param1:Event = null) : void
+      private function carryFinished(e:Event = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function restart(param1:Event = null) : void
+      private function restart(pEvt:Event = null) : void
       {
          //Décompilation abandonné
       }

@@ -20,7 +20,7 @@ package com.ankamagames.berilia.utils
       
       private static var _themePath:String;
       
-      override protected function loadDirectly(param1:Uri, param2:IResourceObserver, param3:Boolean, param4:Class) : void
+      override protected function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void
       {
          //Décompilation abandonné
       }

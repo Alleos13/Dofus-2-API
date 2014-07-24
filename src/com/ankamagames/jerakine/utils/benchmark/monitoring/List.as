@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring
       //Décompilation abandonné
       }
       
-      public function List(param1:Object, param2:List = null)
+      public function List(pValue:Object, pNext:List = null)
       {
          //Décompilation abandonné
       }

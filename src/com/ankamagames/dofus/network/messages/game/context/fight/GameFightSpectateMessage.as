@@ -42,7 +42,7 @@ package com.ankamagames.dofus.network.messages.game.context.fight
          //Décompilation abandonné
       }
       
-      public function initGameFightSpectateMessage(param1:Vector.<FightDispellableEffectExtendedInformations> = null, param2:Vector.<GameActionMark> = null, param3:uint = 0, param4:uint = 0) : GameFightSpectateMessage
+      public function initGameFightSpectateMessage(effects:Vector.<FightDispellableEffectExtendedInformations> = null, marks:Vector.<GameActionMark> = null, gameTurn:uint = 0, fightStart:uint = 0) : GameFightSpectateMessage
       {
          //Décompilation abandonné
       }
@@ -52,32 +52,32 @@ package com.ankamagames.dofus.network.messages.game.context.fight
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightSpectateMessage(param1:IDataOutput) : void
+      public function serializeAs_GameFightSpectateMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightSpectateMessage(param1:IDataInput) : void
+      public function deserializeAs_GameFightSpectateMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -11,7 +11,7 @@ package com.ankamagames.dofus.logic.game.fight.types
       //Décompilation abandonné
       }
       
-      public function CastingSpell(param1:Boolean = true)
+      public function CastingSpell(updateCastingId:Boolean = true)
       {
          //Décompilation abandonné
       }

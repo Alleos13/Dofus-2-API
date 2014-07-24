@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.context
          //Décompilation abandonné
       }
       
-      public function initMapCoordinates(param1:int = 0, param2:int = 0) : MapCoordinates
+      public function initMapCoordinates(worldX:int = 0, worldY:int = 0) : MapCoordinates
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.context
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_MapCoordinates(param1:IDataOutput) : void
+      public function serializeAs_MapCoordinates(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_MapCoordinates(param1:IDataInput) : void
+      public function deserializeAs_MapCoordinates(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

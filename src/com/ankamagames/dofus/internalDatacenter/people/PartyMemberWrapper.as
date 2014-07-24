@@ -10,7 +10,7 @@ package com.ankamagames.dofus.internalDatacenter.people
       //Décompilation abandonné
       }
       
-      public function PartyMemberWrapper(param1:int, param2:String, param3:uint, param4:Boolean, param5:Boolean = false, param6:int = 0, param7:EntityLook = null, param8:int = 0, param9:int = 0, param10:int = 0, param11:int = 0, param12:int = 0, param13:int = 0, param14:int = 0, param15:int = 0, param16:int = 0, param17:int = 0, param18:int = 0, param19:int = 0, param20:Array = null)
+      public function PartyMemberWrapper(id:int, name:String, status:uint, isMember:Boolean, isLeader:Boolean = false, level:int = 0, entityLook:EntityLook = null, lifePoints:int = 0, maxLifePoints:int = 0, maxInitiative:int = 0, prospecting:int = 0, alignmentSide:int = 0, regenRate:int = 0, rank:int = 0, worldX:int = 0, worldY:int = 0, mapId:int = 0, subAreaId:int = 0, breedId:int = 0, companions:Array = null)
       {
          //Décompilation abandonné
       }

@@ -12,7 +12,7 @@ package org.flintparticles.twoD.actions
       //Décompilation abandonné
       }
       
-      public function Accelerate(param1:Number, param2:Number)
+      public function Accelerate(accelerationX:Number, accelerationY:Number)
       {
          //Décompilation abandonné
       }
@@ -26,7 +26,7 @@ package org.flintparticles.twoD.actions
          //Décompilation abandonné
       }
       
-      public function set x(param1:Number) : void
+      public function set x(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -36,12 +36,12 @@ package org.flintparticles.twoD.actions
          //Décompilation abandonné
       }
       
-      public function set y(param1:Number) : void
+      public function set y(value:Number) : void
       {
          //Décompilation abandonné
       }
       
-      override public function update(param1:Emitter, param2:Particle, param3:Number) : void
+      override public function update(emitter:Emitter, particle:Particle, time:Number) : void
       {
          //Décompilation abandonné
       }

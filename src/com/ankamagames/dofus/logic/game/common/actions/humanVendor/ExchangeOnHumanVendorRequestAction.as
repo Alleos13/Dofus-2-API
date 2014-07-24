@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.humanVendor
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:uint) : ExchangeOnHumanVendorRequestAction
+      public static function create(pHumanVendorId:uint, pHumanVendorCell:uint) : ExchangeOnHumanVendorRequestAction
       {
          //Décompilation abandonné
       }

@@ -31,7 +31,7 @@ package com.ankamagames.dofus.network.types.game.guild.tax
          //Décompilation abandonné
       }
       
-      public function initTaxCollectorLootInformations(param1:uint = 0, param2:Number = 0, param3:uint = 0, param4:uint = 0) : TaxCollectorLootInformations
+      public function initTaxCollectorLootInformations(kamas:uint = 0, experience:Number = 0, pods:uint = 0, itemsValue:uint = 0) : TaxCollectorLootInformations
       {
          //Décompilation abandonné
       }
@@ -41,22 +41,22 @@ package com.ankamagames.dofus.network.types.game.guild.tax
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_TaxCollectorLootInformations(param1:IDataOutput) : void
+      public function serializeAs_TaxCollectorLootInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_TaxCollectorLootInformations(param1:IDataInput) : void
+      public function deserializeAs_TaxCollectorLootInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

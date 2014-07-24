@@ -22,7 +22,7 @@ package com.ankamagames.atouin.resources.adapters
          //Décompilation abandonné
       }
       
-      override protected function getResource(param1:String, param2:*) : *
+      override protected function getResource(dataFormat:String, data:*) : *
       {
          //Décompilation abandonné
       }

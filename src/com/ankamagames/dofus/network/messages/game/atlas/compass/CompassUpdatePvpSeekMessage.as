@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.game.atlas.compass
          //Décompilation abandonné
       }
       
-      public function initCompassUpdatePvpSeekMessage(param1:uint = 0, param2:MapCoordinates = null, param3:uint = 0, param4:String = "") : CompassUpdatePvpSeekMessage
+      public function initCompassUpdatePvpSeekMessage(type:uint = 0, coords:MapCoordinates = null, memberId:uint = 0, memberName:String = "") : CompassUpdatePvpSeekMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.game.atlas.compass
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_CompassUpdatePvpSeekMessage(param1:IDataOutput) : void
+      public function serializeAs_CompassUpdatePvpSeekMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_CompassUpdatePvpSeekMessage(param1:IDataInput) : void
+      public function deserializeAs_CompassUpdatePvpSeekMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

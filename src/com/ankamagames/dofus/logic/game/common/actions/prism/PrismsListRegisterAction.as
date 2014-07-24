@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.prism
          //Décompilation abandonné
       }
       
-      public static function create(param1:String, param2:uint) : PrismsListRegisterAction
+      public static function create(uiName:String, listen:uint) : PrismsListRegisterAction
       {
          //Décompilation abandonné
       }

@@ -19,7 +19,7 @@ package com.ankamagames.tiphon.engine
       //Décompilation abandonné
       }
       
-      public function TiphonEventsManager(param1:TiphonSprite)
+      public function TiphonEventsManager(pTiphonSprite:TiphonSprite)
       {
          //Décompilation abandonné
       }
@@ -59,12 +59,12 @@ package com.ankamagames.tiphon.engine
          //Décompilation abandonné
       }
       
-      public static function addListener(param1:IFLAEventHandler, param2:String) : void
+      public static function addListener(pListener:IFLAEventHandler, pTypes:String) : void
       {
          //Décompilation abandonné
       }
       
-      public static function removeListener(param1:IFLAEventHandler) : void
+      public static function removeListener(pListener:IFLAEventHandler) : void
       {
          //Décompilation abandonné
       }
@@ -73,12 +73,12 @@ package com.ankamagames.tiphon.engine
       
       private var _events:Array;
       
-      public function parseLabels(param1:Scene, param2:String) : void
+      public function parseLabels(pScene:Scene, pAnimationName:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function dispatchEvents(param1:*) : void
+      public function dispatchEvents(pFrame:*) : void
       {
          //Décompilation abandonné
       }
@@ -88,22 +88,22 @@ package com.ankamagames.tiphon.engine
          //Décompilation abandonné
       }
       
-      public function addEvent(param1:String, param2:int, param3:String) : void
+      public function addEvent(pLabelName:String, pFrame:int, pAnimationName:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeEvents(param1:String, param2:String) : void
+      public function removeEvents(pTypeName:String, pAnimation:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function parseLabel(param1:String) : TiphonEventInfo
+      private function parseLabel(pLabelName:String) : TiphonEventInfo
       {
          //Décompilation abandonné
       }
       
-      private function convertOldLabel(param1:String) : TiphonEventInfo
+      private function convertOldLabel(pLabelName:String) : TiphonEventInfo
       {
          //Décompilation abandonné
       }

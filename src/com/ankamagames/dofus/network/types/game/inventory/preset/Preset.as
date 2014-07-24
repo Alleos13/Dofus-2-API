@@ -31,7 +31,7 @@ package com.ankamagames.dofus.network.types.game.inventory.preset
          //Décompilation abandonné
       }
       
-      public function initPreset(param1:uint = 0, param2:uint = 0, param3:Boolean = false, param4:Vector.<PresetItem> = null) : Preset
+      public function initPreset(presetId:uint = 0, symbolId:uint = 0, mount:Boolean = false, objects:Vector.<PresetItem> = null) : Preset
       {
          //Décompilation abandonné
       }
@@ -41,22 +41,22 @@ package com.ankamagames.dofus.network.types.game.inventory.preset
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_Preset(param1:IDataOutput) : void
+      public function serializeAs_Preset(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_Preset(param1:IDataInput) : void
+      public function deserializeAs_Preset(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

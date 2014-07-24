@@ -52,7 +52,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      public function initPartyMemberInformations(param1:uint = 0, param2:uint = 0, param3:String = "", param4:EntityLook = null, param5:int = 0, param6:Boolean = false, param7:uint = 0, param8:uint = 0, param9:uint = 0, param10:uint = 0, param11:uint = 0, param12:int = 0, param13:int = 0, param14:int = 0, param15:int = 0, param16:uint = 0, param17:PlayerStatus = null, param18:Vector.<PartyCompanionMemberInformations> = null) : PartyMemberInformations
+      public function initPartyMemberInformations(id:uint = 0, level:uint = 0, name:String = "", entityLook:EntityLook = null, breed:int = 0, sex:Boolean = false, lifePoints:uint = 0, maxLifePoints:uint = 0, prospecting:uint = 0, regenRate:uint = 0, initiative:uint = 0, alignmentSide:int = 0, worldX:int = 0, worldY:int = 0, mapId:int = 0, subAreaId:uint = 0, status:PlayerStatus = null, companions:Vector.<PartyCompanionMemberInformations> = null) : PartyMemberInformations
       {
          //Décompilation abandonné
       }
@@ -62,22 +62,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PartyMemberInformations(param1:IDataOutput) : void
+      public function serializeAs_PartyMemberInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PartyMemberInformations(param1:IDataInput) : void
+      public function deserializeAs_PartyMemberInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

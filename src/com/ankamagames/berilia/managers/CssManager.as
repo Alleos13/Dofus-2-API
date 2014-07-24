@@ -43,7 +43,7 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      public static function set useCache(param1:Boolean) : void
+      public static function set useCache(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -73,37 +73,37 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      public function load(param1:*) : void
+      public function load(oFile:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function exists(param1:String) : Boolean
+      public function exists(sUrl:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function inQueue(param1:String) : Boolean
+      public function inQueue(sUrl:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function askCss(param1:String, param2:Callback) : void
+      public function askCss(sUrl:String, callback:Callback) : void
       {
          //Décompilation abandonné
       }
       
-      public function preloadCss(param1:String) : void
+      public function preloadCss(sUrl:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function getCss(param1:String) : ExtendedStyleSheet
+      public function getCss(sUrl:String) : ExtendedStyleSheet
       {
          //Décompilation abandonné
       }
       
-      public function merge(param1:Array) : ExtendedStyleSheet
+      public function merge(aStyleSheet:Array) : ExtendedStyleSheet
       {
          //Décompilation abandonné
       }
@@ -113,32 +113,32 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      private function parseCss(param1:String, param2:String) : void
+      private function parseCss(sUrl:String, content:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateWaitingMultiUrl(param1:String) : void
+      private function updateWaitingMultiUrl(loadedUrl:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function dispatchWaitingCallbabk(param1:String) : void
+      private function dispatchWaitingCallbabk(url:String) : void
       {
          //Décompilation abandonné
       }
       
-      protected function complete(param1:ResourceLoadedEvent) : void
+      protected function complete(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function error(param1:ResourceErrorEvent) : void
+      protected function error(e:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onCssParsed(param1:CssEvent) : void
+      private function onCssParsed(e:CssEvent) : void
       {
          //Décompilation abandonné
       }

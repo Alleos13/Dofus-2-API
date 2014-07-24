@@ -54,27 +54,27 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      private static function computeSelectionIndexInContainer(param1:TextFlow, param2:ContainerController, param3:Number, param4:Number) : int
+      private static function computeSelectionIndexInContainer(textFlow:TextFlow, controller:ContainerController, localX:Number, localY:Number) : int
       {
          //Décompilation abandonné
       }
       
-      private static function locateNearestColumn(param1:ContainerController, param2:Number, param3:Number, param4:String, param5:String) : int
+      private static function locateNearestColumn(container:ContainerController, localX:Number, localY:Number, wm:String, direction:String) : int
       {
          //Décompilation abandonné
       }
       
-      private static function computeSelectionIndexInLine(param1:TextFlow, param2:TextLine, param3:Number, param4:Number) : int
+      private static function computeSelectionIndexInLine(textFlow:TextFlow, textLine:TextLine, localX:Number, localY:Number) : int
       {
          //Décompilation abandonné
       }
       
-      private static function checkForDisplayed(param1:DisplayObject) : Boolean
+      private static function checkForDisplayed(container:DisplayObject) : Boolean
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function computeSelectionIndex(param1:TextFlow, param2:Object, param3:Object, param4:Number, param5:Number) : int
+      tlf_internal  static function computeSelectionIndex(textFlow:TextFlow, target:Object, currentTarget:Object, localX:Number, localY:Number) : int
       {
          //Décompilation abandonné
       }
@@ -113,7 +113,7 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      public function setSelectionState(param1:SelectionState) : void
+      public function setSelectionState(sel:SelectionState) : void
       {
          //Décompilation abandonné
       }
@@ -133,7 +133,7 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      public function set textFlow(param1:TextFlow) : void
+      public function set textFlow(value:TextFlow) : void
       {
          //Décompilation abandonné
       }
@@ -158,7 +158,7 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      public function set focusedSelectionFormat(param1:SelectionFormat) : void
+      public function set focusedSelectionFormat(val:SelectionFormat) : void
       {
          //Décompilation abandonné
       }
@@ -168,7 +168,7 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      public function set unfocusedSelectionFormat(param1:SelectionFormat) : void
+      public function set unfocusedSelectionFormat(val:SelectionFormat) : void
       {
          //Décompilation abandonné
       }
@@ -178,7 +178,7 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      public function set inactiveSelectionFormat(param1:SelectionFormat) : void
+      public function set inactiveSelectionFormat(val:SelectionFormat) : void
       {
          //Décompilation abandonné
       }
@@ -193,17 +193,17 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      tlf_internal function setSelectionFormatState(param1:String) : void
+      tlf_internal function setSelectionFormatState(selFormatState:String) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function cloneSelectionFormatState(param1:ISelectionManager) : void
+      tlf_internal function cloneSelectionFormatState(oldISelectionManager:ISelectionManager) : void
       {
          //Décompilation abandonné
       }
       
-      private function selectionPoint(param1:Object, param2:InteractiveObject, param3:Number, param4:Number, param5:Boolean = false) : SelectionState
+      private function selectionPoint(currentTarget:Object, target:InteractiveObject, localX:Number, localY:Number, extendSelection:Boolean = false) : SelectionState
       {
          //Décompilation abandonné
       }
@@ -213,7 +213,7 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      protected function setMouseCursor(param1:String) : void
+      protected function setMouseCursor(cursor:String) : void
       {
          //Décompilation abandonné
       }
@@ -243,12 +243,12 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      public function selectRange(param1:int, param2:int) : void
+      public function selectRange(anchorPosition:int, activePosition:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function internalSetSelection(param1:TextFlow, param2:int, param3:int, param4:ITextLayoutFormat = null) : void
+      private function internalSetSelection(root:TextFlow, anchorPosition:int, activePosition:int, format:ITextLayoutFormat = null) : void
       {
          //Décompilation abandonné
       }
@@ -273,177 +273,177 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      tlf_internal function selectionChanged(param1:Boolean = true, param2:Boolean = true) : void
+      tlf_internal function selectionChanged(doDispatchEvent:Boolean = true, resetPointFormat:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function setNewSelectionPoint(param1:Object, param2:InteractiveObject, param3:Number, param4:Number, param5:Boolean = false) : Boolean
+      tlf_internal function setNewSelectionPoint(currentTarget:Object, target:InteractiveObject, localX:Number, localY:Number, extendSelection:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function mouseDownHandler(param1:MouseEvent) : void
+      public function mouseDownHandler(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function mouseMoveHandler(param1:MouseEvent) : void
+      public function mouseMoveHandler(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function handleMouseEventForSelection(param1:MouseEvent, param2:Boolean) : void
+      tlf_internal function handleMouseEventForSelection(event:MouseEvent, allowExtend:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function mouseUpHandler(param1:MouseEvent) : void
+      public function mouseUpHandler(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function atBeginningWordPos(param1:ParagraphElement, param2:int) : Boolean
+      private function atBeginningWordPos(activePara:ParagraphElement, pos:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function mouseDoubleClickHandler(param1:MouseEvent) : void
+      public function mouseDoubleClickHandler(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function mouseOverHandler(param1:MouseEvent) : void
+      public function mouseOverHandler(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function mouseOutHandler(param1:MouseEvent) : void
+      public function mouseOutHandler(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function focusInHandler(param1:FocusEvent) : void
+      public function focusInHandler(event:FocusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function focusOutHandler(param1:FocusEvent) : void
+      public function focusOutHandler(event:FocusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function activateHandler(param1:Event) : void
+      public function activateHandler(event:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function deactivateHandler(param1:Event) : void
+      public function deactivateHandler(event:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function doOperation(param1:FlowOperation) : void
+      public function doOperation(op:FlowOperation) : void
       {
          //Décompilation abandonné
       }
       
-      public function editHandler(param1:Event) : void
+      public function editHandler(event:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function handleLeftArrow(param1:KeyboardEvent) : SelectionState
+      private function handleLeftArrow(event:KeyboardEvent) : SelectionState
       {
          //Décompilation abandonné
       }
       
-      private function handleUpArrow(param1:KeyboardEvent) : SelectionState
+      private function handleUpArrow(event:KeyboardEvent) : SelectionState
       {
          //Décompilation abandonné
       }
       
-      private function handleRightArrow(param1:KeyboardEvent) : SelectionState
+      private function handleRightArrow(event:KeyboardEvent) : SelectionState
       {
          //Décompilation abandonné
       }
       
-      private function handleDownArrow(param1:KeyboardEvent) : SelectionState
+      private function handleDownArrow(event:KeyboardEvent) : SelectionState
       {
          //Décompilation abandonné
       }
       
-      private function handleHomeKey(param1:KeyboardEvent) : SelectionState
+      private function handleHomeKey(event:KeyboardEvent) : SelectionState
       {
          //Décompilation abandonné
       }
       
-      private function handleEndKey(param1:KeyboardEvent) : SelectionState
+      private function handleEndKey(event:KeyboardEvent) : SelectionState
       {
          //Décompilation abandonné
       }
       
-      private function handlePageUpKey(param1:KeyboardEvent) : SelectionState
+      private function handlePageUpKey(event:KeyboardEvent) : SelectionState
       {
          //Décompilation abandonné
       }
       
-      private function handlePageDownKey(param1:KeyboardEvent) : SelectionState
+      private function handlePageDownKey(event:KeyboardEvent) : SelectionState
       {
          //Décompilation abandonné
       }
       
-      private function handleKeyEvent(param1:KeyboardEvent) : void
+      private function handleKeyEvent(event:KeyboardEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function keyDownHandler(param1:KeyboardEvent) : void
+      public function keyDownHandler(event:KeyboardEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function keyUpHandler(param1:KeyboardEvent) : void
+      public function keyUpHandler(event:KeyboardEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function keyFocusChangeHandler(param1:FocusEvent) : void
+      public function keyFocusChangeHandler(event:FocusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function textInputHandler(param1:TextEvent) : void
+      public function textInputHandler(event:TextEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function imeStartCompositionHandler(param1:IMEEvent) : void
+      public function imeStartCompositionHandler(event:IMEEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function softKeyboardActivatingHandler(param1:Event) : void
+      public function softKeyboardActivatingHandler(event:Event) : void
       {
          //Décompilation abandonné
       }
       
-      protected function enterFrameHandler(param1:Event) : void
+      protected function enterFrameHandler(event:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function focusChangeHandler(param1:FocusEvent) : void
+      public function focusChangeHandler(event:FocusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function menuSelectHandler(param1:ContextMenuEvent) : void
+      public function menuSelectHandler(event:ContextMenuEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function mouseWheelHandler(param1:MouseEvent) : void
+      public function mouseWheelHandler(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
@@ -453,22 +453,22 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      public function getCommonCharacterFormat(param1:TextRange = null) : TextLayoutFormat
+      public function getCommonCharacterFormat(range:TextRange = null) : TextLayoutFormat
       {
          //Décompilation abandonné
       }
       
-      public function getCommonParagraphFormat(param1:TextRange = null) : TextLayoutFormat
+      public function getCommonParagraphFormat(range:TextRange = null) : TextLayoutFormat
       {
          //Décompilation abandonné
       }
       
-      public function getCommonContainerFormat(param1:TextRange = null) : TextLayoutFormat
+      public function getCommonContainerFormat(range:TextRange = null) : TextLayoutFormat
       {
          //Décompilation abandonné
       }
       
-      private function updateSelectionAndShapes(param1:TextFlow, param2:int, param3:int) : void
+      private function updateSelectionAndShapes(tf:TextFlow, begIdx:int, endIdx:int) : void
       {
          //Décompilation abandonné
       }
@@ -480,12 +480,12 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      tlf_internal function removeMark(param1:Mark) : void
+      tlf_internal function removeMark(mark:Mark) : void
       {
          //Décompilation abandonné
       }
       
-      public function notifyInsertOrDelete(param1:int, param2:int) : void
+      public function notifyInsertOrDelete(absolutePosition:int, length:int) : void
       {
          //Décompilation abandonné
       }

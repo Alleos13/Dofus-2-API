@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
          //Décompilation abandonné
       }
       
-      public function initObjectUseOnCellMessage(param1:uint = 0, param2:uint = 0) : ObjectUseOnCellMessage
+      public function initObjectUseOnCellMessage(objectUID:uint = 0, cells:uint = 0) : ObjectUseOnCellMessage
       {
          //Décompilation abandonné
       }
@@ -43,32 +43,32 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectUseOnCellMessage(param1:IDataOutput) : void
+      public function serializeAs_ObjectUseOnCellMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectUseOnCellMessage(param1:IDataInput) : void
+      public function deserializeAs_ObjectUseOnCellMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

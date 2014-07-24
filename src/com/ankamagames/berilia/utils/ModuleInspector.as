@@ -34,32 +34,32 @@ package com.ankamagames.berilia.utils
       
       public static const whiteList:Array;
       
-      public static function checkArchiveValidity(param1:ZipFile) : Boolean
+      public static function checkArchiveValidity(archive:ZipFile) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function getDmFile(param1:File) : XML
+      public static function getDmFile(targetFile:File) : XML
       {
          //Décompilation abandonné
       }
       
-      public static function getZipDmFile(param1:ZipFile) : XML
+      public static function getZipDmFile(targetFile:ZipFile) : XML
       {
          //Décompilation abandonné
       }
       
-      public static function isModuleEnabled(param1:String, param2:Boolean) : Boolean
+      public static function isModuleEnabled(moduleId:String, trusted:Boolean) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function checkIfModuleTrusted(param1:String) : Boolean
+      public static function checkIfModuleTrusted(filePath:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function getScriptHookAndAction(param1:ByteArray) : Object
+      public static function getScriptHookAndAction(swfContent:ByteArray) : Object
       {
          //Décompilation abandonné
       }

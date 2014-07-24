@@ -12,12 +12,12 @@ package com.ankamagames.jerakine.json
          //Décompilation abandonné
       }
       
-      public static function encode(param1:Object, param2:uint = 0, param3:Boolean = false) : String
+      public static function encode(o:Object, pMaxDepth:uint = 0, pShowObjectType:Boolean = false) : String
       {
          //Décompilation abandonné
       }
       
-      public static function decode(param1:String, param2:Boolean = true) : *
+      public static function decode(s:String, strict:Boolean = true) : *
       {
          //Décompilation abandonné
       }

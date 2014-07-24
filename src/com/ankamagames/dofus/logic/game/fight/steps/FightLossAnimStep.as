@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightLossAnimStep(param1:IEntity, param2:int, param3:uint)
+      public function FightLossAnimStep(pTarget:IEntity, pValue:int, pColor:uint)
       {
          //Décompilation abandonné
       }

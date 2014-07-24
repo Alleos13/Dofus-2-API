@@ -48,7 +48,7 @@ package com.ankamagames.dofus.uiApi
       
       private var _module:UiModule;
       
-      public function set module(param1:UiModule) : void
+      public function set module(value:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -58,17 +58,17 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getFighterInformations(param1:int) : FighterInformations
+      public function getFighterInformations(fighterId:int) : FighterInformations
       {
          //Décompilation abandonné
       }
       
-      public function getFighterName(param1:int) : String
+      public function getFighterName(fighterId:int) : String
       {
          //Décompilation abandonné
       }
       
-      public function getFighterLevel(param1:int) : uint
+      public function getFighterLevel(fighterId:int) : uint
       {
          //Décompilation abandonné
       }
@@ -78,7 +78,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getMonsterId(param1:int) : int
+      public function getMonsterId(id:int) : int
       {
          //Décompilation abandonné
       }
@@ -93,27 +93,27 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getBuffList(param1:int) : Array
+      public function getBuffList(targetId:int) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getBuffById(param1:uint, param2:int) : BasicBuff
+      public function getBuffById(buffId:uint, playerId:int) : BasicBuff
       {
          //Décompilation abandonné
       }
       
-      public function createEffectsWrapper(param1:Spell, param2:Array, param3:String) : EffectsWrapper
+      public function createEffectsWrapper(spell:Spell, effects:Array, name:String) : EffectsWrapper
       {
          //Décompilation abandonné
       }
       
-      public function getCastingSpellBuffEffects(param1:int, param2:uint) : EffectsWrapper
+      public function getCastingSpellBuffEffects(targetId:int, castingSpellId:uint) : EffectsWrapper
       {
          //Décompilation abandonné
       }
       
-      public function getAllBuffEffects(param1:int) : EffectsListWrapper
+      public function getAllBuffEffects(targetId:int) : EffectsListWrapper
       {
          //Décompilation abandonné
       }
@@ -173,17 +173,17 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getFighterStatus(param1:uint) : int
+      public function getFighterStatus(fighterId:uint) : int
       {
          //Décompilation abandonné
       }
       
-      public function isMouseOverFighter(param1:int) : Boolean
+      public function isMouseOverFighter(fighterId:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function getFighterInfos(param1:int) : GameFightFighterInformations
+      private function getFighterInfos(fighterId:int) : GameFightFighterInformations
       {
          //Décompilation abandonné
       }
@@ -193,7 +193,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      private function getFighterTeam(param1:GameFightFighterInformations) : String
+      private function getFighterTeam(fighterInfos:GameFightFighterInformations) : String
       {
          //Décompilation abandonné
       }

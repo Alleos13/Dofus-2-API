@@ -13,7 +13,7 @@ package com.ankamagames.dofus.logic.game.roleplay.types
       //Décompilation abandonné
       }
       
-      public function GroundObject(param1:Item)
+      public function GroundObject(pObject:Item)
       {
          //Décompilation abandonné
       }

@@ -27,7 +27,7 @@ package com.ankamagames.jerakine.messages
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -47,7 +47,7 @@ package com.ankamagames.jerakine.messages
          //Décompilation abandonné
       }
       
-      protected function register(param1:Class, param2:Function) : void
+      protected function register(type:Class, handler:Function) : void
       {
          //Décompilation abandonné
       }

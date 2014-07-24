@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initHumanOptionGuild(param1:GuildInformations = null) : HumanOptionGuild
+      public function initHumanOptionGuild(guildInformations:GuildInformations = null) : HumanOptionGuild
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_HumanOptionGuild(param1:IDataOutput) : void
+      public function serializeAs_HumanOptionGuild(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_HumanOptionGuild(param1:IDataInput) : void
+      public function deserializeAs_HumanOptionGuild(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

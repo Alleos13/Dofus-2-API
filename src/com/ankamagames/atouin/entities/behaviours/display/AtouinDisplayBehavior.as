@@ -32,17 +32,17 @@ package com.ankamagames.atouin.entities.behaviours.display
          //Décompilation abandonné
       }
       
-      public function display(param1:IDisplayable, param2:uint = 0) : void
+      public function display(displayable:IDisplayable, strata:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function remove(param1:IDisplayable) : void
+      public function remove(entity:IDisplayable) : void
       {
          //Décompilation abandonné
       }
       
-      public function getAbsoluteBounds(param1:IDisplayable) : IRectangle
+      public function getAbsoluteBounds(entity:IDisplayable) : IRectangle
       {
          //Décompilation abandonné
       }

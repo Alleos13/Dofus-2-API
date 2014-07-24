@@ -11,7 +11,7 @@ package com.ankamagames.jerakine.logger.targets
       //Décompilation abandonné
       }
       
-      public function LimitedBufferTarget(param1:int = 50)
+      public function LimitedBufferTarget(pLimit:int = 50)
       {
          //Décompilation abandonné
       }
@@ -20,7 +20,7 @@ package com.ankamagames.jerakine.logger.targets
       
       private var _limit:int;
       
-      override public function logEvent(param1:LogEvent) : void
+      override public function logEvent(event:LogEvent) : void
       {
          //Décompilation abandonné
       }

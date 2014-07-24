@@ -19,7 +19,7 @@ package com.ankamagames.dofus.types.sequences
       //Décompilation abandonné
       }
       
-      public function AddGfxInLineStep(param1:uint, param2:MapPoint, param3:MapPoint, param4:int, param5:uint = 0, param6:Number = 0, param7:Boolean = false, param8:Boolean = false, param9:Vector.<uint> = null, param10:Boolean = false, param11:Boolean = false)
+      public function AddGfxInLineStep(gfxId:uint, startCell:MapPoint, endCell:MapPoint, yOffset:int, mode:uint = 0, scale:Number = 0, addOnStartCell:Boolean = false, addOnEndCell:Boolean = false, addedCells:Vector.<uint> = null, useOnlyAddedCells:Boolean = false, showUnder:Boolean = false)
       {
          //Décompilation abandonné
       }
@@ -60,17 +60,17 @@ package com.ankamagames.dofus.types.sequences
          //Décompilation abandonné
       }
       
-      private function startDisplay(param1:TiphonEvent) : void
+      private function startDisplay(e:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function remove(param1:TiphonEvent) : void
+      private function remove(e:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function shot(param1:TiphonEvent) : void
+      private function shot(e:TiphonEvent) : void
       {
          //Décompilation abandonné
       }

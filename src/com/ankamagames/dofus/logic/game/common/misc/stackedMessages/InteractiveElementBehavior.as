@@ -67,17 +67,17 @@ package com.ankamagames.dofus.logic.game.common.misc.stackedMessages
       
       private var _isFreeMovement:Boolean = false;
       
-      override public function processInputMessage(param1:Message, param2:String) : Boolean
+      override public function processInputMessage(pMsgToProcess:Message, pMode:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      override public function checkAvailability(param1:Message) : void
+      override public function checkAvailability(pMsgToProcess:Message) : void
       {
          //Décompilation abandonné
       }
       
-      override public function processOutputMessage(param1:Message, param2:String) : Boolean
+      override public function processOutputMessage(pMsgToProcess:Message, pMode:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -87,7 +87,7 @@ package com.ankamagames.dofus.logic.game.common.misc.stackedMessages
          //Décompilation abandonné
       }
       
-      override public function isAvailableToProcess(param1:Message) : Boolean
+      override public function isAvailableToProcess(pMsg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -112,7 +112,7 @@ package com.ankamagames.dofus.logic.game.common.misc.stackedMessages
          //Décompilation abandonné
       }
       
-      override public function isMessageCatchable(param1:Message) : Boolean
+      override public function isMessageCatchable(pMsg:Message) : Boolean
       {
          //Décompilation abandonné
       }

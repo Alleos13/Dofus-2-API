@@ -16,12 +16,12 @@ package org.flintparticles.common.utils
       
       private static const DEGTORAD:Number = 0.017453292519943295;
       
-      public static function asDegrees(param1:Number) : Number
+      public static function asDegrees(radians:Number) : Number
       {
          //Décompilation abandonné
       }
       
-      public static function asRadians(param1:Number) : Number
+      public static function asRadians(degrees:Number) : Number
       {
          //Décompilation abandonné
       }

@@ -28,7 +28,7 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      public function initGameFightMutantInformations(param1:int = 0, param2:EntityLook = null, param3:EntityDispositionInformations = null, param4:uint = 2, param5:uint = 0, param6:Boolean = false, param7:GameFightMinimalStats = null, param8:String = "", param9:PlayerStatus = null, param10:uint = 0) : GameFightMutantInformations
+      public function initGameFightMutantInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, teamId:uint = 2, wave:uint = 0, alive:Boolean = false, stats:GameFightMinimalStats = null, name:String = "", status:PlayerStatus = null, powerLevel:uint = 0) : GameFightMutantInformations
       {
          //Décompilation abandonné
       }
@@ -38,22 +38,22 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightMutantInformations(param1:IDataOutput) : void
+      public function serializeAs_GameFightMutantInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightMutantInformations(param1:IDataInput) : void
+      public function deserializeAs_GameFightMutantInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

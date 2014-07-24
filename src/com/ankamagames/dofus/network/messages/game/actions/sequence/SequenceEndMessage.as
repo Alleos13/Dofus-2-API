@@ -38,7 +38,7 @@ package com.ankamagames.dofus.network.messages.game.actions.sequence
          //Décompilation abandonné
       }
       
-      public function initSequenceEndMessage(param1:uint = 0, param2:int = 0, param3:int = 0) : SequenceEndMessage
+      public function initSequenceEndMessage(actionId:uint = 0, authorId:int = 0, sequenceType:int = 0) : SequenceEndMessage
       {
          //Décompilation abandonné
       }
@@ -48,32 +48,32 @@ package com.ankamagames.dofus.network.messages.game.actions.sequence
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_SequenceEndMessage(param1:IDataOutput) : void
+      public function serializeAs_SequenceEndMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_SequenceEndMessage(param1:IDataInput) : void
+      public function deserializeAs_SequenceEndMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

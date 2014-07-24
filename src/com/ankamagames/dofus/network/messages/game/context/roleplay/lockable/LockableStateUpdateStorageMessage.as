@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.lockable
          //Décompilation abandonné
       }
       
-      public function initLockableStateUpdateStorageMessage(param1:Boolean = false, param2:int = 0, param3:uint = 0) : LockableStateUpdateStorageMessage
+      public function initLockableStateUpdateStorageMessage(locked:Boolean = false, mapId:int = 0, elementId:uint = 0) : LockableStateUpdateStorageMessage
       {
          //Décompilation abandonné
       }
@@ -45,32 +45,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.lockable
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_LockableStateUpdateStorageMessage(param1:IDataOutput) : void
+      public function serializeAs_LockableStateUpdateStorageMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_LockableStateUpdateStorageMessage(param1:IDataInput) : void
+      public function deserializeAs_LockableStateUpdateStorageMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

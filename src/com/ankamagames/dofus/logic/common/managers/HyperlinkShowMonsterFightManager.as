@@ -24,12 +24,12 @@ package com.ankamagames.dofus.logic.common.managers
          //Décompilation abandonné
       }
       
-      public static function showEntity(param1:int) : void
+      public static function showEntity(entityId:int) : void
       {
          //Décompilation abandonné
       }
       
-      public static function rollOver(param1:int, param2:int, param3:int) : void
+      public static function rollOver(pX:int, pY:int, entityId:int) : void
       {
          //Décompilation abandonné
       }

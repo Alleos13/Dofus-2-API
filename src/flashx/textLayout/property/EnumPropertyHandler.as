@@ -7,7 +7,7 @@ package flashx.textLayout.property
       //Décompilation abandonné
       }
       
-      public function EnumPropertyHandler(param1:Array)
+      public function EnumPropertyHandler(propArray:Array)
       {
          //Décompilation abandonné
       }
@@ -19,7 +19,7 @@ package flashx.textLayout.property
          //Décompilation abandonné
       }
       
-      override public function owningHandlerCheck(param1:*) : *
+      override public function owningHandlerCheck(newVal:*) : *
       {
          //Décompilation abandonné
       }

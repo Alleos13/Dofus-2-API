@@ -11,12 +11,12 @@ package com.ankamagames.jerakine.newCache
       
       function destroy() : void;
       
-      function contains(param1:*) : Boolean;
+      function contains(ref:*) : Boolean;
       
-      function extract(param1:*) : *;
+      function extract(ref:*) : *;
       
-      function peek(param1:*) : *;
+      function peek(ref:*) : *;
       
-      function store(param1:*, param2:*) : Boolean;
+      function store(ref:*, obj:*) : Boolean;
    }
 }

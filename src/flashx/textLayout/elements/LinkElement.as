@@ -39,27 +39,27 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function addEventListener(param1:String, param2:Function, param3:Boolean = false, param4:int = 0, param5:Boolean = false) : void
+      public function addEventListener(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function dispatchEvent(param1:Event) : Boolean
+      public function dispatchEvent(evt:Event) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function hasEventListener(param1:String) : Boolean
+      public function hasEventListener(type:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function removeEventListener(param1:String, param2:Function, param3:Boolean = false) : void
+      public function removeEventListener(type:String, listener:Function, useCapture:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function willTrigger(param1:String) : Boolean
+      public function willTrigger(type:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -79,7 +79,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set href(param1:String) : void
+      public function set href(newUriString:String) : void
       {
          //Décompilation abandonné
       }
@@ -89,7 +89,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set target(param1:String) : void
+      public function set target(newTargetString:String) : void
       {
          //Décompilation abandonné
       }
@@ -99,7 +99,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override public function shallowCopy(param1:int = 0, param2:int = -1) : FlowElement
+      override public function shallowCopy(startPos:int = 0, endPos:int = -1) : FlowElement
       {
          //Décompilation abandonné
       }
@@ -109,7 +109,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      private function computeLinkFormat(param1:String) : ITextLayoutFormat
+      private function computeLinkFormat(formatName:String) : ITextLayoutFormat
       {
          //Décompilation abandonné
       }
@@ -124,42 +124,42 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      private function setToState(param1:String) : void
+      private function setToState(linkState:String) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function chgLinkState(param1:String) : void
+      tlf_internal function chgLinkState(linkState:String) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function mouseDownHandler(param1:FlowElementMouseEventManager, param2:MouseEvent) : void
+      tlf_internal function mouseDownHandler(mgr:FlowElementMouseEventManager, evt:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function mouseMoveHandler(param1:FlowElementMouseEventManager, param2:MouseEvent) : void
+      tlf_internal function mouseMoveHandler(mgr:FlowElementMouseEventManager, evt:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function mouseOutHandler(param1:FlowElementMouseEventManager, param2:MouseEvent) : void
+      tlf_internal function mouseOutHandler(mgr:FlowElementMouseEventManager, evt:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function mouseOverHandler(param1:FlowElementMouseEventManager, param2:MouseEvent) : void
+      tlf_internal function mouseOverHandler(mgr:FlowElementMouseEventManager, evt:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function mouseUpHandler(param1:FlowElementMouseEventManager, param2:MouseEvent) : void
+      tlf_internal function mouseUpHandler(mgr:FlowElementMouseEventManager, evt:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function mouseClickHandler(param1:FlowElementMouseEventManager, param2:MouseEvent) : void
+      tlf_internal function mouseClickHandler(mgr:FlowElementMouseEventManager, evt:MouseEvent) : void
       {
          //Décompilation abandonné
       }
@@ -174,12 +174,12 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override tlf_internal function appendElementsForDelayedUpdate(param1:TextFlow, param2:String) : void
+      override tlf_internal function appendElementsForDelayedUpdate(tf:TextFlow, changeType:String) : void
       {
          //Décompilation abandonné
       }
       
-      override tlf_internal function updateForMustUseComposer(param1:TextFlow) : Boolean
+      override tlf_internal function updateForMustUseComposer(textFlow:TextFlow) : Boolean
       {
          //Décompilation abandonné
       }

@@ -16,8 +16,8 @@ package com.ankamagames.dofus.logic.shield
    import com.ankamagames.jerakine.data.I18n;
    import flash.filesystem.File;
    import flash.filesystem.FileStream;
-   import by.blooddy.crypto.MD5;
    import flash.filesystem.FileMode;
+   import by.blooddy.crypto.MD5;
    import com.ankamagames.jerakine.managers.ErrorManager;
    import com.ankamagames.jerakine.managers.StoreDataManager;
    import com.ankamagames.dofus.Constants;
@@ -83,7 +83,7 @@ package com.ankamagames.dofus.logic.shield
          //Décompilation abandonné
       }
       
-      public function set active(param1:Boolean) : void
+      public function set active(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -93,7 +93,7 @@ package com.ankamagames.dofus.logic.shield
          //Décompilation abandonné
       }
       
-      public function set computerName(param1:String) : void
+      public function set computerName(name:String) : void
       {
          //Décompilation abandonné
       }
@@ -105,12 +105,12 @@ package com.ankamagames.dofus.logic.shield
       
       public var shieldLevel:uint;
       
-      public function askCode(param1:Function) : void
+      public function askCode(callback:Function) : void
       {
          //Décompilation abandonné
       }
       
-      public function sendCode(param1:String, param2:Function) : void
+      public function sendCode(code:String, callback:Function) : void
       {
          //Décompilation abandonné
       }
@@ -125,22 +125,22 @@ package com.ankamagames.dofus.logic.shield
          //Décompilation abandonné
       }
       
-      private function parseRpcValidateResponse(param1:Object, param2:String) : Object
+      private function parseRpcValidateResponse(response:Object, method:String) : Object
       {
          //Décompilation abandonné
       }
       
-      private function parseRpcASkCodeResponse(param1:Object, param2:String) : Object
+      private function parseRpcASkCodeResponse(response:Object, method:String) : Object
       {
          //Décompilation abandonné
       }
       
-      private function getCertifFolder(param1:uint) : File
+      private function getCertifFolder(version:uint) : File
       {
          //Décompilation abandonné
       }
       
-      private function addCertificate(param1:uint, param2:String, param3:uint = 2) : Boolean
+      private function addCertificate(id:uint, content:String, secureLevel:uint = 2) : Boolean
       {
          //Décompilation abandonné
       }
@@ -160,17 +160,17 @@ package com.ankamagames.dofus.logic.shield
          //Décompilation abandonné
       }
       
-      private function onRpcData(param1:RpcEvent) : void
+      private function onRpcData(e:RpcEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function migrate(param1:uint, param2:String) : void
+      private function migrate(iCertificateId:uint, oldCertif:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function migrationSuccess(param1:Object) : void
+      private function migrationSuccess(result:Object) : void
       {
          //Décompilation abandonné
       }

@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.types.game.actions.fight
          //Décompilation abandonné
       }
       
-      public function initAbstractFightDispellableEffect(param1:uint = 0, param2:int = 0, param3:int = 0, param4:uint = 1, param5:uint = 0, param6:uint = 0) : AbstractFightDispellableEffect
+      public function initAbstractFightDispellableEffect(uid:uint = 0, targetId:int = 0, turnDuration:int = 0, dispelable:uint = 1, spellId:uint = 0, parentBoostUid:uint = 0) : AbstractFightDispellableEffect
       {
          //Décompilation abandonné
       }
@@ -45,22 +45,22 @@ package com.ankamagames.dofus.network.types.game.actions.fight
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AbstractFightDispellableEffect(param1:IDataOutput) : void
+      public function serializeAs_AbstractFightDispellableEffect(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AbstractFightDispellableEffect(param1:IDataInput) : void
+      public function deserializeAs_AbstractFightDispellableEffect(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

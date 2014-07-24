@@ -31,7 +31,7 @@ package com.ankamagames.dofus.network.types.game.guild
          //Décompilation abandonné
       }
       
-      public function initGuildEmblem(param1:int = 0, param2:int = 0, param3:int = 0, param4:int = 0) : GuildEmblem
+      public function initGuildEmblem(symbolShape:int = 0, symbolColor:int = 0, backgroundShape:int = 0, backgroundColor:int = 0) : GuildEmblem
       {
          //Décompilation abandonné
       }
@@ -41,22 +41,22 @@ package com.ankamagames.dofus.network.types.game.guild
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GuildEmblem(param1:IDataOutput) : void
+      public function serializeAs_GuildEmblem(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildEmblem(param1:IDataInput) : void
+      public function deserializeAs_GuildEmblem(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

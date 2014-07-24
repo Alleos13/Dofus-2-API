@@ -30,12 +30,12 @@ package com.ankamagames.dofus.logic.game.common.managers
       
       private var _subStringCache:String = "";
       
-      public function addEntry(param1:String, param2:int) : void
+      public function addEntry(name:String, priority:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function autocomplete(param1:String, param2:uint) : String
+      public function autocomplete(subString:String, count:uint) : String
       {
          //Décompilation abandonné
       }
@@ -45,22 +45,22 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      private function generateNameList(param1:String) : Vector.<String>
+      private function generateNameList(subString:String) : Vector.<String>
       {
          //Décompilation abandonné
       }
       
-      private function getListByName(param1:String) : Vector.<Object>
+      private function getListByName(name:String) : Vector.<Object>
       {
          //Décompilation abandonné
       }
       
-      private function indexOf(param1:Vector.<Object>, param2:String) : int
+      private function indexOf(list:Vector.<Object>, name:String) : int
       {
          //Décompilation abandonné
       }
       
-      private function insertEntry(param1:Object) : void
+      private function insertEntry(entry:Object) : void
       {
          //Décompilation abandonné
       }

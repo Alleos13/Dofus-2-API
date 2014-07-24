@@ -11,19 +11,19 @@ package flashx.textLayout.property
       //Décompilation abandonné
       }
       
-      public function Property(param1:String, param2:*, param3:Boolean, param4:Vector.<String>)
+      public function Property(nameValue:String, defaultValue:*, inherited:Boolean, categories:Vector.<String>)
       {
          //Décompilation abandonné
       }
       
       public static var errorHandler:Function;
       
-      public static function defaultErrorHandler(param1:Property, param2:Object) : void
+      public static function defaultErrorHandler(p:Property, value:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public static function createErrorString(param1:Property, param2:Object) : String
+      public static function createErrorString(p:Property, value:Object) : String
       {
          //Décompilation abandonné
       }
@@ -42,74 +42,74 @@ package flashx.textLayout.property
       
       tlf_internal  static const sharedListMarkerFormatHandler:FormatPropertyHandler;
       
-      public static function NewBooleanProperty(param1:String, param2:Boolean, param3:Boolean, param4:Vector.<String>) : Property
+      public static function NewBooleanProperty(nameValue:String, defaultValue:Boolean, inherited:Boolean, categories:Vector.<String>) : Property
       {
          //Décompilation abandonné
       }
       
-      public static function NewStringProperty(param1:String, param2:String, param3:Boolean, param4:Vector.<String>) : Property
+      public static function NewStringProperty(nameValue:String, defaultValue:String, inherited:Boolean, categories:Vector.<String>) : Property
       {
          //Décompilation abandonné
       }
       
-      public static function NewUintProperty(param1:String, param2:uint, param3:Boolean, param4:Vector.<String>) : Property
+      public static function NewUintProperty(nameValue:String, defaultValue:uint, inherited:Boolean, categories:Vector.<String>) : Property
       {
          //Décompilation abandonné
       }
       
-      public static function NewEnumStringProperty(param1:String, param2:String, param3:Boolean, param4:Vector.<String>, ... rest) : Property
+      public static function NewEnumStringProperty(nameValue:String, defaultValue:String, inherited:Boolean, categories:Vector.<String>, ... rest) : Property
       {
          //Décompilation abandonné
       }
       
-      public static function NewIntOrEnumProperty(param1:String, param2:Object, param3:Boolean, param4:Vector.<String>, param5:int, param6:int, ... rest) : Property
+      public static function NewIntOrEnumProperty(nameValue:String, defaultValue:Object, inherited:Boolean, categories:Vector.<String>, minValue:int, maxValue:int, ... rest) : Property
       {
          //Décompilation abandonné
       }
       
-      public static function NewUintOrEnumProperty(param1:String, param2:Object, param3:Boolean, param4:Vector.<String>, ... rest) : Property
+      public static function NewUintOrEnumProperty(nameValue:String, defaultValue:Object, inherited:Boolean, categories:Vector.<String>, ... rest) : Property
       {
          //Décompilation abandonné
       }
       
-      public static function NewNumberProperty(param1:String, param2:Number, param3:Boolean, param4:Vector.<String>, param5:Number, param6:Number) : Property
+      public static function NewNumberProperty(nameValue:String, defaultValue:Number, inherited:Boolean, categories:Vector.<String>, minValue:Number, maxValue:Number) : Property
       {
          //Décompilation abandonné
       }
       
-      public static function NewNumberOrPercentOrEnumProperty(param1:String, param2:Object, param3:Boolean, param4:Vector.<String>, param5:Number, param6:Number, param7:String, param8:String, ... rest) : Property
+      public static function NewNumberOrPercentOrEnumProperty(nameValue:String, defaultValue:Object, inherited:Boolean, categories:Vector.<String>, minValue:Number, maxValue:Number, minPercentValue:String, maxPercentValue:String, ... rest) : Property
       {
          //Décompilation abandonné
       }
       
-      public static function NewNumberOrPercentProperty(param1:String, param2:Object, param3:Boolean, param4:Vector.<String>, param5:Number, param6:Number, param7:String, param8:String) : Property
+      public static function NewNumberOrPercentProperty(nameValue:String, defaultValue:Object, inherited:Boolean, categories:Vector.<String>, minValue:Number, maxValue:Number, minPercentValue:String, maxPercentValue:String) : Property
       {
          //Décompilation abandonné
       }
       
-      public static function NewNumberOrEnumProperty(param1:String, param2:Object, param3:Boolean, param4:Vector.<String>, param5:Number, param6:Number, ... rest) : Property
+      public static function NewNumberOrEnumProperty(nameValue:String, defaultValue:Object, inherited:Boolean, categories:Vector.<String>, minValue:Number, maxValue:Number, ... rest) : Property
       {
          //Décompilation abandonné
       }
       
-      public static function NewTabStopsProperty(param1:String, param2:Array, param3:Boolean, param4:Vector.<String>) : Property
+      public static function NewTabStopsProperty(nameValue:String, defaultValue:Array, inherited:Boolean, categories:Vector.<String>) : Property
       {
          //Décompilation abandonné
       }
       
-      public static function NewSpacingLimitProperty(param1:String, param2:Object, param3:Boolean, param4:Vector.<String>, param5:String, param6:String) : Property
+      public static function NewSpacingLimitProperty(nameValue:String, defaultValue:Object, inherited:Boolean, categories:Vector.<String>, minPercentValue:String, maxPercentValue:String) : Property
       {
          //Décompilation abandonné
       }
       
       private static const undefinedValue;
       
-      public static function NewTextLayoutFormatProperty(param1:String, param2:Object, param3:Boolean, param4:Vector.<String>) : Property
+      public static function NewTextLayoutFormatProperty(nameValue:String, defaultValue:Object, inherited:Boolean, categories:Vector.<String>) : Property
       {
          //Décompilation abandonné
       }
       
-      public static function NewListMarkerFormatProperty(param1:String, param2:Object, param3:Boolean, param4:Vector.<String>) : Property
+      public static function NewListMarkerFormatProperty(nameValue:String, defaultValue:Object, inherited:Boolean, categories:Vector.<String>) : Property
       {
          //Décompilation abandonné
       }
@@ -122,61 +122,61 @@ package flashx.textLayout.property
       
       public static const ALL_LIMITS:String = "allLimits";
       
-      public static function defaultConcatHelper(param1:*, param2:*) : *
+      public static function defaultConcatHelper(currVal:*, concatVal:*) : *
       {
          //Décompilation abandonné
       }
       
-      public static function defaultsAllHelper(param1:Object, param2:Object) : void
+      public static function defaultsAllHelper(description:Object, current:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public static function equalAllHelper(param1:Object, param2:Object, param3:Object) : Boolean
+      public static function equalAllHelper(description:Object, p1:Object, p2:Object) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function extractInCategory(param1:Class, param2:Object, param3:Object, param4:String, param5:Boolean = true) : Object
+      public static function extractInCategory(formatClass:Class, description:Object, props:Object, category:String, legacy:Boolean = true) : Object
       {
          //Décompilation abandonné
       }
       
-      public static function shallowCopy(param1:Object) : Object
+      public static function shallowCopy(src:Object) : Object
       {
          //Décompilation abandonné
       }
       
-      public static function shallowCopyInFilter(param1:Object, param2:Object) : Object
+      public static function shallowCopyInFilter(src:Object, filter:Object) : Object
       {
          //Décompilation abandonné
       }
       
-      public static function shallowCopyNotInFilter(param1:Object, param2:Object) : Object
+      public static function shallowCopyNotInFilter(src:Object, filter:Object) : Object
       {
          //Décompilation abandonné
       }
       
-      private static function compareStylesLoop(param1:Object, param2:Object, param3:Object) : Boolean
+      private static function compareStylesLoop(o1:Object, o2:Object, description:Object) : Boolean
       {
          //Décompilation abandonné
       }
       
       tlf_internal  static const nullStyleObject:Object;
       
-      public static function equalStyles(param1:Object, param2:Object, param3:Object) : Boolean
+      public static function equalStyles(o1:Object, o2:Object, description:Object) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function toNumberIfPercent(param1:Object) : Number
+      public static function toNumberIfPercent(o:Object) : Number
       {
          //Décompilation abandonné
       }
       
       private static var prototypeFactory:Function;
       
-      public static function createObjectWithPrototype(param1:Object) : Object
+      public static function createObjectWithPrototype(parent:Object) : Object
       {
          //Décompilation abandonné
       }
@@ -225,32 +225,32 @@ package flashx.textLayout.property
          //Décompilation abandonné
       }
       
-      public function findHandler(param1:Class) : PropertyHandler
+      public function findHandler(handlerClass:Class) : PropertyHandler
       {
          //Décompilation abandonné
       }
       
-      public function setHelper(param1:*, param2:*) : *
+      public function setHelper(currVal:*, newVal:*) : *
       {
          //Décompilation abandonné
       }
       
-      public function concatInheritOnlyHelper(param1:*, param2:*) : *
+      public function concatInheritOnlyHelper(currVal:*, concatVal:*) : *
       {
          //Décompilation abandonné
       }
       
-      public function concatHelper(param1:*, param2:*) : *
+      public function concatHelper(currVal:*, concatVal:*) : *
       {
          //Décompilation abandonné
       }
       
-      public function equalHelper(param1:*, param2:*) : Boolean
+      public function equalHelper(v1:*, v2:*) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function toXMLString(param1:Object) : String
+      public function toXMLString(val:Object) : String
       {
          //Décompilation abandonné
       }
@@ -275,7 +275,7 @@ package flashx.textLayout.property
          //Décompilation abandonné
       }
       
-      public function computeActualPropertyValue(param1:Object, param2:Number) : Number
+      public function computeActualPropertyValue(propertyValue:Object, percentInput:Number) : Number
       {
          //Décompilation abandonné
       }

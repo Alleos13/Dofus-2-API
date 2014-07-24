@@ -10,7 +10,7 @@ package com.ankamagames.tubul.types.sounds
       //Décompilation abandonné
       }
       
-      public function UnlocalizedSound(param1:uint, param2:Uri, param3:Boolean)
+      public function UnlocalizedSound(id:uint, uri:Uri, isStereo:Boolean)
       {
          //Décompilation abandonné
       }

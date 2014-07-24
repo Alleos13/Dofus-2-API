@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.almanax
       
       protected static const _log:Logger;
       
-      public static function getAlmanaxCalendarById(param1:int) : AlmanaxCalendar
+      public static function getAlmanaxCalendarById(id:int) : AlmanaxCalendar
       {
          //Décompilation abandonné
       }

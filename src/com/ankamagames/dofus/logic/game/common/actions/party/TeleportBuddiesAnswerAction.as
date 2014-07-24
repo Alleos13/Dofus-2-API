@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.party
          //Décompilation abandonné
       }
       
-      public static function create(param1:Boolean) : TeleportBuddiesAnswerAction
+      public static function create(accept:Boolean) : TeleportBuddiesAnswerAction
       {
          //Décompilation abandonné
       }

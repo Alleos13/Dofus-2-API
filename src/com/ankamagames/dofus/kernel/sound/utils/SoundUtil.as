@@ -15,12 +15,12 @@ package com.ankamagames.dofus.kernel.sound.utils
          //Décompilation abandonné
       }
       
-      public static function getBusIdBySoundId(param1:String) : uint
+      public static function getBusIdBySoundId(pSoundId:String) : uint
       {
          //Décompilation abandonné
       }
       
-      public static function getConfigEntryByBusId(param1:uint) : String
+      public static function getConfigEntryByBusId(pBusId:uint) : String
       {
          //Décompilation abandonné
       }

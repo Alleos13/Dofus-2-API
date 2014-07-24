@@ -11,7 +11,7 @@ package com.ankamagames.atouin.messages
       //Décompilation abandonné
       }
       
-      public function EntityMovementStartMessage(param1:IEntity = null)
+      public function EntityMovementStartMessage(entity:IEntity = null)
       {
          //Décompilation abandonné
       }

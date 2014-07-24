@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.quest
          //Décompilation abandonné
       }
       
-      public static function create(param1:int) : AchievementRewardRequestAction
+      public static function create(achievementId:int) : AchievementRewardRequestAction
       {
          //Décompilation abandonné
       }

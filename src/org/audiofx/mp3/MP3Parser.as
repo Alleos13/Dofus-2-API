@@ -17,7 +17,7 @@ package org.audiofx.mp3
       //Décompilation abandonné
       }
       
-      function MP3Parser(param1:MP3FileReferenceLoader)
+      function MP3Parser(parent:MP3FileReferenceLoader)
       {
          //Décompilation abandonné
       }
@@ -42,7 +42,7 @@ package org.audiofx.mp3
       
       private var m_parent:MP3FileReferenceLoader;
       
-      public function loadMP3ByteArray(param1:ByteArray) : void
+      public function loadMP3ByteArray(bytes:ByteArray) : void
       {
          //Décompilation abandonné
       }
@@ -52,22 +52,22 @@ package org.audiofx.mp3
          //Décompilation abandonné
       }
       
-      function load(param1:String) : void
+      function load(url:String) : void
       {
          //Décompilation abandonné
       }
       
-      function loadFileRef(param1:FileReference) : void
+      function loadFileRef(fileRef:FileReference) : void
       {
          //Décompilation abandonné
       }
       
-      private function errorHandler(param1:IOErrorEvent) : void
+      private function errorHandler(ev:IOErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function loaderCompleteHandler(param1:Event) : void
+      private function loaderCompleteHandler(ev:Event) : void
       {
          //Décompilation abandonné
       }
@@ -82,62 +82,62 @@ package org.audiofx.mp3
          //Décompilation abandonné
       }
       
-      function writeSwfFormatByte(param1:ByteArray) : void
+      function writeSwfFormatByte(byteArray:ByteArray) : void
       {
          //Décompilation abandonné
       }
       
-      private function parseHeader(param1:uint) : void
+      private function parseHeader(headerBytes:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function getFrameSize(param1:uint) : uint
+      private function getFrameSize(headerBytes:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function isValidHeader(param1:uint) : Boolean
+      private function isValidHeader(headerBits:uint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function getFrameSync(param1:uint) : uint
+      private function getFrameSync(headerBits:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function getVersionIndex(param1:uint) : uint
+      private function getVersionIndex(headerBits:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function getLayerIndex(param1:uint) : uint
+      private function getLayerIndex(headerBits:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function getBitrateIndex(param1:uint) : uint
+      private function getBitrateIndex(headerBits:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function getFrequencyIndex(param1:uint) : uint
+      private function getFrequencyIndex(headerBits:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function getPaddingBit(param1:uint) : uint
+      private function getPaddingBit(headerBits:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function getModeIndex(param1:uint) : uint
+      private function getModeIndex(headerBits:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function getEmphasisIndex(param1:uint) : uint
+      private function getEmphasisIndex(headerBits:uint) : uint
       {
          //Décompilation abandonné
       }

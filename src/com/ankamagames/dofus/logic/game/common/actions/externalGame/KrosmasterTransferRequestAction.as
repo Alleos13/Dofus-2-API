@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.externalGame
          //Décompilation abandonné
       }
       
-      public static function create(param1:String) : KrosmasterTransferRequestAction
+      public static function create(figureId:String) : KrosmasterTransferRequestAction
       {
          //Décompilation abandonné
       }

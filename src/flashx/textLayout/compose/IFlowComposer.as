@@ -13,60 +13,60 @@ package flashx.textLayout.compose
       
       function get rootElement() : ContainerFormattedElement;
       
-      function setRootElement(param1:ContainerFormattedElement) : void;
+      function setRootElement(newRootElement:ContainerFormattedElement) : void;
       
       function get damageAbsoluteStart() : int;
       
       function updateAllControllers() : Boolean;
       
-      function updateToController(param1:int = 2.147483647E9) : Boolean;
+      function updateToController(index:int = 2.147483647E9) : Boolean;
       
-      function setFocus(param1:int, param2:Boolean = false) : void;
+      function setFocus(absolutePosition:int, preferPrevious:Boolean = false) : void;
       
       function compose() : Boolean;
       
-      function composeToPosition(param1:int = 2.147483647E9) : Boolean;
+      function composeToPosition(absolutePosition:int = 2.147483647E9) : Boolean;
       
-      function composeToController(param1:int = 2.147483647E9) : Boolean;
+      function composeToController(index:int = 2.147483647E9) : Boolean;
       
       function get numControllers() : int;
       
-      function addController(param1:ContainerController) : void;
+      function addController(controller:ContainerController) : void;
       
-      function addControllerAt(param1:ContainerController, param2:int) : void;
+      function addControllerAt(controller:ContainerController, index:int) : void;
       
-      function removeController(param1:ContainerController) : void;
+      function removeController(controller:ContainerController) : void;
       
-      function removeControllerAt(param1:int) : void;
+      function removeControllerAt(index:int) : void;
       
       function removeAllControllers() : void;
       
-      function getControllerAt(param1:int) : ContainerController;
+      function getControllerAt(index:int) : ContainerController;
       
-      function getControllerIndex(param1:ContainerController) : int;
+      function getControllerIndex(controller:ContainerController) : int;
       
-      function findControllerIndexAtPosition(param1:int, param2:Boolean = false) : int;
+      function findControllerIndexAtPosition(absolutePosition:int, preferPrevious:Boolean = false) : int;
       
-      function findLineIndexAtPosition(param1:int, param2:Boolean = false) : int;
+      function findLineIndexAtPosition(absolutePosition:int, preferPrevious:Boolean = false) : int;
       
-      function findLineAtPosition(param1:int, param2:Boolean = false) : TextFlowLine;
+      function findLineAtPosition(absolutePosition:int, preferPrevious:Boolean = false) : TextFlowLine;
       
-      function getLineAt(param1:int) : TextFlowLine;
+      function getLineAt(index:int) : TextFlowLine;
       
       function get numLines() : int;
       
-      function isDamaged(param1:int) : Boolean;
+      function isDamaged(absolutePosition:int) : Boolean;
       
       function get composing() : Boolean;
       
       function get swfContext() : ISWFContext;
       
-      function set swfContext(param1:ISWFContext) : void;
+      function set swfContext(creator:ISWFContext) : void;
       
-      function interactionManagerChanged(param1:ISelectionManager) : void;
+      function interactionManagerChanged(newInteractionManager:ISelectionManager) : void;
       
-      function updateLengths(param1:int, param2:int) : void;
+      function updateLengths(startPosition:int, deltaLength:int) : void;
       
-      function damage(param1:int, param2:int, param3:String) : void;
+      function damage(startPosition:int, damageLength:int, damageType:String) : void;
    }
 }

@@ -22,7 +22,7 @@ package com.ankamagames.dofus.datacenter.breeds
       
       protected static const _log:Logger;
       
-      public static function getHeadById(param1:int) : Head
+      public static function getHeadById(id:int) : Head
       {
          //Décompilation abandonné
       }
@@ -32,7 +32,7 @@ package com.ankamagames.dofus.datacenter.breeds
          //Décompilation abandonné
       }
       
-      public static function getHead(param1:uint, param2:uint) : Array
+      public static function getHead(breed:uint, gender:uint) : Array
       {
          //Décompilation abandonné
       }

@@ -10,7 +10,7 @@ package com.ankamagames.tiphon.sequence
       //Décompilation abandonné
       }
       
-      public function SetDirectionStep(param1:TiphonSprite, param2:uint)
+      public function SetDirectionStep(target:TiphonSprite, nDirection:uint)
       {
          //Décompilation abandonné
       }

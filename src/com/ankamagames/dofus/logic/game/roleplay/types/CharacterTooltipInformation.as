@@ -21,7 +21,7 @@ package com.ankamagames.dofus.logic.game.roleplay.types
       //Décompilation abandonné
       }
       
-      public function CharacterTooltipInformation(param1:GameRolePlayHumanoidInformations, param2:int)
+      public function CharacterTooltipInformation(pInfos:GameRolePlayHumanoidInformations, pWingsEffect:int)
       {
          //Décompilation abandonné
       }

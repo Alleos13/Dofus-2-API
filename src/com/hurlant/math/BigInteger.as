@@ -12,7 +12,7 @@ package com.hurlant.math
       //Décompilation abandonné
       }
       
-      public function BigInteger(param1:* = null, param2:int = 0, param3:Boolean = false)
+      public function BigInteger(value:* = null, radix:int = 0, unsigned:Boolean = false)
       {
          //Décompilation abandonné
       }
@@ -35,7 +35,7 @@ package com.hurlant.math
       
       public static const ONE:BigInteger;
       
-      public static function nbv(param1:int) : BigInteger
+      public static function nbv(value:int) : BigInteger
       {
          //Décompilation abandonné
       }
@@ -55,12 +55,12 @@ package com.hurlant.math
          //Décompilation abandonné
       }
       
-      public function toString(param1:Number = 16) : String
+      public function toString(radix:Number = 16) : String
       {
          //Décompilation abandonné
       }
       
-      public function toArray(param1:ByteArray) : uint
+      public function toArray(array:ByteArray) : uint
       {
          //Décompilation abandonné
       }
@@ -80,12 +80,12 @@ package com.hurlant.math
          //Décompilation abandonné
       }
       
-      public function compareTo(param1:BigInteger) : int
+      public function compareTo(v:BigInteger) : int
       {
          //Décompilation abandonné
       }
       
-      bi_internal function nbits(param1:int) : int
+      bi_internal function nbits(x:int) : int
       {
          //Décompilation abandonné
       }
@@ -95,27 +95,27 @@ package com.hurlant.math
          //Décompilation abandonné
       }
       
-      public function mod(param1:BigInteger) : BigInteger
+      public function mod(v:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      public function modPowInt(param1:int, param2:BigInteger) : BigInteger
+      public function modPowInt(e:int, m:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      bi_internal function copyTo(param1:BigInteger) : void
+      bi_internal function copyTo(r:BigInteger) : void
       {
          //Décompilation abandonné
       }
       
-      bi_internal function fromInt(param1:int) : void
+      bi_internal function fromInt(value:int) : void
       {
          //Décompilation abandonné
       }
       
-      bi_internal function fromArray(param1:ByteArray, param2:int, param3:Boolean = false) : void
+      bi_internal function fromArray(value:ByteArray, length:int, unsigned:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -125,47 +125,47 @@ package com.hurlant.math
          //Décompilation abandonné
       }
       
-      bi_internal function dlShiftTo(param1:int, param2:BigInteger) : void
+      bi_internal function dlShiftTo(n:int, r:BigInteger) : void
       {
          //Décompilation abandonné
       }
       
-      bi_internal function drShiftTo(param1:int, param2:BigInteger) : void
+      bi_internal function drShiftTo(n:int, r:BigInteger) : void
       {
          //Décompilation abandonné
       }
       
-      bi_internal function lShiftTo(param1:int, param2:BigInteger) : void
+      bi_internal function lShiftTo(n:int, r:BigInteger) : void
       {
          //Décompilation abandonné
       }
       
-      bi_internal function rShiftTo(param1:int, param2:BigInteger) : void
+      bi_internal function rShiftTo(n:int, r:BigInteger) : void
       {
          //Décompilation abandonné
       }
       
-      bi_internal function subTo(param1:BigInteger, param2:BigInteger) : void
+      bi_internal function subTo(v:BigInteger, r:BigInteger) : void
       {
          //Décompilation abandonné
       }
       
-      bi_internal function am(param1:int, param2:int, param3:BigInteger, param4:int, param5:int, param6:int) : int
+      bi_internal function am(i:int, x:int, w:BigInteger, j:int, c:int, n:int) : int
       {
          //Décompilation abandonné
       }
       
-      bi_internal function multiplyTo(param1:BigInteger, param2:BigInteger) : void
+      bi_internal function multiplyTo(v:BigInteger, r:BigInteger) : void
       {
          //Décompilation abandonné
       }
       
-      bi_internal function squareTo(param1:BigInteger) : void
+      bi_internal function squareTo(r:BigInteger) : void
       {
          //Décompilation abandonné
       }
       
-      bi_internal function divRemTo(param1:BigInteger, param2:BigInteger = null, param3:BigInteger = null) : void
+      bi_internal function divRemTo(m:BigInteger, q:BigInteger = null, r:BigInteger = null) : void
       {
          //Décompilation abandonné
       }
@@ -180,12 +180,12 @@ package com.hurlant.math
          //Décompilation abandonné
       }
       
-      bi_internal function exp(param1:int, param2:IReduction) : BigInteger
+      bi_internal function exp(e:int, z:IReduction) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      bi_internal function intAt(param1:String, param2:int) : int
+      bi_internal function intAt(str:String, index:int) : int
       {
          //Décompilation abandonné
       }
@@ -215,7 +215,7 @@ package com.hurlant.math
          //Décompilation abandonné
       }
       
-      protected function chunkSize(param1:Number) : int
+      protected function chunkSize(r:Number) : int
       {
          //Décompilation abandonné
       }
@@ -225,12 +225,12 @@ package com.hurlant.math
          //Décompilation abandonné
       }
       
-      protected function toRadix(param1:uint = 10) : String
+      protected function toRadix(b:uint = 10) : String
       {
          //Décompilation abandonné
       }
       
-      protected function fromRadix(param1:String, param2:int = 10) : void
+      protected function fromRadix(s:String, b:int = 10) : void
       {
          //Décompilation abandonné
       }
@@ -240,62 +240,62 @@ package com.hurlant.math
          //Décompilation abandonné
       }
       
-      public function equals(param1:BigInteger) : Boolean
+      public function equals(a:BigInteger) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function min(param1:BigInteger) : BigInteger
+      public function min(a:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      public function max(param1:BigInteger) : BigInteger
+      public function max(a:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      protected function bitwiseTo(param1:BigInteger, param2:Function, param3:BigInteger) : void
+      protected function bitwiseTo(a:BigInteger, op:Function, r:BigInteger) : void
       {
          //Décompilation abandonné
       }
       
-      private function op_and(param1:int, param2:int) : int
+      private function op_and(x:int, y:int) : int
       {
          //Décompilation abandonné
       }
       
-      public function and(param1:BigInteger) : BigInteger
+      public function and(a:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      private function op_or(param1:int, param2:int) : int
+      private function op_or(x:int, y:int) : int
       {
          //Décompilation abandonné
       }
       
-      public function or(param1:BigInteger) : BigInteger
+      public function or(a:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      private function op_xor(param1:int, param2:int) : int
+      private function op_xor(x:int, y:int) : int
       {
          //Décompilation abandonné
       }
       
-      public function xor(param1:BigInteger) : BigInteger
+      public function xor(a:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      private function op_andnot(param1:int, param2:int) : int
+      private function op_andnot(x:int, y:int) : int
       {
          //Décompilation abandonné
       }
       
-      public function andNot(param1:BigInteger) : BigInteger
+      public function andNot(a:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
@@ -305,17 +305,17 @@ package com.hurlant.math
          //Décompilation abandonné
       }
       
-      public function shiftLeft(param1:int) : BigInteger
+      public function shiftLeft(n:int) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      public function shiftRight(param1:int) : BigInteger
+      public function shiftRight(n:int) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      private function lbit(param1:int) : int
+      private function lbit(x:int) : int
       {
          //Décompilation abandonné
       }
@@ -325,7 +325,7 @@ package com.hurlant.math
          //Décompilation abandonné
       }
       
-      private function cbit(param1:int) : int
+      private function cbit(x:int) : int
       {
          //Décompilation abandonné
       }
@@ -335,122 +335,122 @@ package com.hurlant.math
          //Décompilation abandonné
       }
       
-      public function testBit(param1:int) : Boolean
+      public function testBit(n:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      protected function changeBit(param1:int, param2:Function) : BigInteger
+      protected function changeBit(n:int, op:Function) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      public function setBit(param1:int) : BigInteger
+      public function setBit(n:int) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      public function clearBit(param1:int) : BigInteger
+      public function clearBit(n:int) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      public function flipBit(param1:int) : BigInteger
+      public function flipBit(n:int) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      protected function addTo(param1:BigInteger, param2:BigInteger) : void
+      protected function addTo(a:BigInteger, r:BigInteger) : void
       {
          //Décompilation abandonné
       }
       
-      public function add(param1:BigInteger) : BigInteger
+      public function add(a:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      public function subtract(param1:BigInteger) : BigInteger
+      public function subtract(a:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      public function multiply(param1:BigInteger) : BigInteger
+      public function multiply(a:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      public function divide(param1:BigInteger) : BigInteger
+      public function divide(a:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      public function remainder(param1:BigInteger) : BigInteger
+      public function remainder(a:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      public function divideAndRemainder(param1:BigInteger) : Array
+      public function divideAndRemainder(a:BigInteger) : Array
       {
          //Décompilation abandonné
       }
       
-      bi_internal function dMultiply(param1:int) : void
+      bi_internal function dMultiply(n:int) : void
       {
          //Décompilation abandonné
       }
       
-      bi_internal function dAddOffset(param1:int, param2:int) : void
+      bi_internal function dAddOffset(n:int, w:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function pow(param1:int) : BigInteger
+      public function pow(e:int) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      bi_internal function multiplyLowerTo(param1:BigInteger, param2:int, param3:BigInteger) : void
+      bi_internal function multiplyLowerTo(a:BigInteger, n:int, r:BigInteger) : void
       {
          //Décompilation abandonné
       }
       
-      bi_internal function multiplyUpperTo(param1:BigInteger, param2:int, param3:BigInteger) : void
+      bi_internal function multiplyUpperTo(a:BigInteger, n:int, r:BigInteger) : void
       {
          //Décompilation abandonné
       }
       
-      public function modPow(param1:BigInteger, param2:BigInteger) : BigInteger
+      public function modPow(e:BigInteger, m:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      public function gcd(param1:BigInteger) : BigInteger
+      public function gcd(a:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      protected function modInt(param1:int) : int
+      protected function modInt(n:int) : int
       {
          //Décompilation abandonné
       }
       
-      public function modInverse(param1:BigInteger) : BigInteger
+      public function modInverse(m:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      public function isProbablePrime(param1:int) : Boolean
+      public function isProbablePrime(t:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      protected function millerRabin(param1:int) : Boolean
+      protected function millerRabin(t:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function primify(param1:int, param2:int) : void
+      public function primify(bits:int, t:int) : void
       {
          //Décompilation abandonné
       }

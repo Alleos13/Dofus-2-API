@@ -7,6 +7,6 @@ package com.ankamagames.berilia.eventInterface
       //Décompilation abandonné
       }
       
-      function eventOnShortcut(param1:String) : Boolean;
+      function eventOnShortcut(sShortcut:String) : Boolean;
    }
 }

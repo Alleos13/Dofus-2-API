@@ -18,7 +18,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightExchangePositionsStep(param1:int, param2:int, param3:int, param4:int)
+      public function FightExchangePositionsStep(fighterOne:int, fighterOneNewCell:int, fighterTwo:int, fighterTwoNewCell:int)
       {
          //Décompilation abandonné
       }
@@ -43,7 +43,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
          //Décompilation abandonné
       }
       
-      private function doJump(param1:int, param2:int) : Boolean
+      private function doJump(fighterId:int, newCell:int) : Boolean
       {
          //Décompilation abandonné
       }

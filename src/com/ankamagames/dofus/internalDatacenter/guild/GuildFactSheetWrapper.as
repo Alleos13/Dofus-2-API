@@ -22,7 +22,7 @@ package com.ankamagames.dofus.internalDatacenter.guild
       
       protected static const _log:Logger;
       
-      public static function create(param1:uint, param2:String, param3:GuildEmblem, param4:uint, param5:String, param6:uint, param7:uint, param8:Number, param9:Vector.<CharacterMinimalInformations>, param10:uint = 0, param11:uint = 0, param12:Number = 0, param13:Boolean = true, param14:uint = 0, param15:String = "", param16:String = "", param17:Boolean = false) : GuildFactSheetWrapper
+      public static function create(guildId:uint, guildName:String, guildEmblem:GuildEmblem, leaderId:uint, leaderName:String, guildLevel:uint, nbMembers:uint, creationDate:Number, members:Vector.<CharacterMinimalInformations>, nbConnectedMembers:uint = 0, nbTaxCollectors:uint = 0, lastActivity:Number = 0, enabled:Boolean = true, allianceId:uint = 0, allianceName:String = "", allianceTag:String = "", allianceLeader:Boolean = false) : GuildFactSheetWrapper
       {
          //Décompilation abandonné
       }
@@ -90,7 +90,7 @@ package com.ankamagames.dofus.internalDatacenter.guild
          //Décompilation abandonné
       }
       
-      public function update(param1:uint, param2:String, param3:GuildEmblem, param4:uint, param5:String, param6:uint, param7:uint, param8:Number, param9:Vector.<CharacterMinimalInformations>, param10:uint = 0, param11:uint = 0, param12:Number = 0, param13:Boolean = true, param14:uint = 0, param15:String = "", param16:String = "", param17:Boolean = false) : void
+      public function update(guildId:uint, guildName:String, guildEmblem:GuildEmblem, leaderId:uint, leaderName:String, guildLevel:uint, nbMembers:uint, creationDate:Number, members:Vector.<CharacterMinimalInformations>, nbConnectedMembers:uint = 0, nbTaxCollectors:uint = 0, lastActivity:Number = 0, enabled:Boolean = true, allianceId:uint = 0, allianceName:String = "", allianceTag:String = "", allianceLeader:Boolean = false) : void
       {
          //Décompilation abandonné
       }

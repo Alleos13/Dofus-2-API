@@ -9,7 +9,7 @@ package com.ankamagames.berilia.types.data
       //Décompilation abandonné
       }
       
-      public function ChunkData(param1:String, param2:Uri)
+      public function ChunkData(name:String, uri:Uri)
       {
          //Décompilation abandonné
       }

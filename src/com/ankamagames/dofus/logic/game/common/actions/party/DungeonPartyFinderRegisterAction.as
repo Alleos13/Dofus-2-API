@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.party
          //Décompilation abandonné
       }
       
-      public static function create(param1:Array) : DungeonPartyFinderRegisterAction
+      public static function create(dungeons:Array) : DungeonPartyFinderRegisterAction
       {
          //Décompilation abandonné
       }

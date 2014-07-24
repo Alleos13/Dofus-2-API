@@ -12,7 +12,7 @@ package flashx.textLayout.edit
       //Décompilation abandonné
       }
       
-      public function SelectionState(param1:TextFlow, param2:int, param3:int, param4:ITextLayoutFormat = null)
+      public function SelectionState(root:TextFlow, anchorPosition:int, activePosition:int, format:ITextLayoutFormat = null)
       {
          //Décompilation abandonné
       }
@@ -21,7 +21,7 @@ package flashx.textLayout.edit
       
       private var _selectionManagerOperationState:Boolean;
       
-      override public function updateRange(param1:int, param2:int) : Boolean
+      override public function updateRange(newAnchorPosition:int, newActivePosition:int) : Boolean
       {
          //Décompilation abandonné
       }
@@ -31,7 +31,7 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      public function set pointFormat(param1:ITextLayoutFormat) : void
+      public function set pointFormat(format:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
@@ -41,7 +41,7 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      tlf_internal function set selectionManagerOperationState(param1:Boolean) : void
+      tlf_internal function set selectionManagerOperationState(val:Boolean) : void
       {
          //Décompilation abandonné
       }

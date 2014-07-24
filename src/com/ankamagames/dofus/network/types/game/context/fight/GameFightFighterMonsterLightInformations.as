@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      public function initGameFightFighterMonsterLightInformations(param1:int = 0, param2:int = 0, param3:uint = 0, param4:int = 0, param5:Boolean = false, param6:Boolean = false, param7:uint = 0) : GameFightFighterMonsterLightInformations
+      public function initGameFightFighterMonsterLightInformations(id:int = 0, wave:int = 0, level:uint = 0, breed:int = 0, sex:Boolean = false, alive:Boolean = false, creatureGenericId:uint = 0) : GameFightFighterMonsterLightInformations
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightFighterMonsterLightInformations(param1:IDataOutput) : void
+      public function serializeAs_GameFightFighterMonsterLightInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightFighterMonsterLightInformations(param1:IDataInput) : void
+      public function deserializeAs_GameFightFighterMonsterLightInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

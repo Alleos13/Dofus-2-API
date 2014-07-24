@@ -23,22 +23,22 @@ package com.ankamagames.dofus.console.debug
       
       private var length:int;
       
-      public function handle(param1:ConsoleHandler, param2:String, param3:Array) : void
+      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void
       {
          //Décompilation abandonné
       }
       
-      private function testCharacter(param1:TimerEvent) : void
+      private function testCharacter(event:TimerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function getHelp(param1:String) : String
+      public function getHelp(cmd:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function getParamPossibilities(param1:String, param2:uint = 0, param3:Array = null) : Array
+      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array
       {
          //Décompilation abandonné
       }

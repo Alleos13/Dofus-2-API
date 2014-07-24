@@ -15,32 +15,32 @@ package com.ankamagames.jerakine.types
       //Décompilation abandonné
       }
       
-      public function Color(param1:uint = 0)
+      public function Color(color:uint = 0)
       {
          //Décompilation abandonné
       }
       
-      public static function toHsl(param1:uint) : HSL
+      public static function toHsl(hex:uint) : HSL
       {
          //Décompilation abandonné
       }
       
-      public static function toHex(param1:HSL) : uint
+      public static function toHex(hsl:HSL) : uint
       {
          //Décompilation abandonné
       }
       
-      public static function setHSLlightness(param1:uint, param2:Number) : uint
+      public static function setHSLlightness(color:uint, lightness:Number) : uint
       {
          //Décompilation abandonné
       }
       
-      public static function setHSVSaturation(param1:uint, param2:Number) : uint
+      public static function setHSVSaturation(color:uint, saturation:Number) : uint
       {
          //Décompilation abandonné
       }
       
-      public static function generateColorList(param1:int) : Array
+      public static function generateColorList(methode:int) : Array
       {
          //Décompilation abandonné
       }
@@ -56,17 +56,17 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public function set color(param1:uint) : void
+      public function set color(value:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function readExternal(param1:IDataInput) : void
+      public function readExternal(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function writeExternal(param1:IDataOutput) : void
+      public function writeExternal(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
@@ -81,17 +81,17 @@ package com.ankamagames.jerakine.types
          //Décompilation abandonné
       }
       
-      public function adjustDarkness(param1:Number) : void
+      public function adjustDarkness(nValue:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function adjustLight(param1:Number) : void
+      public function adjustLight(nValue:Number) : void
       {
          //Décompilation abandonné
       }
       
-      private function parseColor(param1:uint) : void
+      private function parseColor(color:uint) : void
       {
          //Décompilation abandonné
       }

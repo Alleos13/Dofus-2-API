@@ -9,7 +9,7 @@ package com.ankamagames.berilia.types.data
       //Décompilation abandonné
       }
       
-      public function ContextMenuData(param1:*, param2:String, param3:Array)
+      public function ContextMenuData(data:*, makerName:String, content:Array)
       {
          //Décompilation abandonné
       }

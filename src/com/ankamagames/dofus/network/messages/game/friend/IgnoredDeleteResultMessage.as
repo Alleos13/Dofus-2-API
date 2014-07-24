@@ -39,7 +39,7 @@ package com.ankamagames.dofus.network.messages.game.friend
          //Décompilation abandonné
       }
       
-      public function initIgnoredDeleteResultMessage(param1:Boolean = false, param2:String = "", param3:Boolean = false) : IgnoredDeleteResultMessage
+      public function initIgnoredDeleteResultMessage(success:Boolean = false, name:String = "", session:Boolean = false) : IgnoredDeleteResultMessage
       {
          //Décompilation abandonné
       }
@@ -49,32 +49,32 @@ package com.ankamagames.dofus.network.messages.game.friend
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_IgnoredDeleteResultMessage(param1:IDataOutput) : void
+      public function serializeAs_IgnoredDeleteResultMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_IgnoredDeleteResultMessage(param1:IDataInput) : void
+      public function deserializeAs_IgnoredDeleteResultMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

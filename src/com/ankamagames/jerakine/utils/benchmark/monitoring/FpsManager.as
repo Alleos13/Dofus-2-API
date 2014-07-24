@@ -55,7 +55,7 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring
       
       private var _last:uint;
       
-      public function display(param1:Boolean = false) : void
+      public function display(pExternal:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -65,37 +65,37 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring
          //Décompilation abandonné
       }
       
-      private function onMouseDown(param1:MouseEvent) : void
+      private function onMouseDown(pEvt:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseUp(param1:MouseEvent) : void
+      private function onMouseUp(pEvt:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseMove(param1:MouseEvent) : void
+      private function onMouseMove(pEvt:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onStatus(param1:StatusEvent) : void
+      private function onStatus(event:StatusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function redrawRegionHandler(param1:MouseEvent) : void
+      private function redrawRegionHandler(pEvt:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function changeStateHandler(param1:MouseEvent) : void
+      private function changeStateHandler(pEvt:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function loop(param1:Event) : void
+      private function loop(pEvt:Event) : void
       {
          //Décompilation abandonné
       }
@@ -105,17 +105,17 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring
          //Décompilation abandonné
       }
       
-      public function startTracking(param1:String, param2:uint = 16777215) : void
+      public function startTracking(pIndice:String, pColor:uint = 16777215) : void
       {
          //Décompilation abandonné
       }
       
-      public function stopTracking(param1:String) : void
+      public function stopTracking(pIndice:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function watchObject(param1:Object, param2:Boolean = false) : void
+      public function watchObject(o:Object, incrementParents:Boolean = false) : void
       {
          //Décompilation abandonné
       }

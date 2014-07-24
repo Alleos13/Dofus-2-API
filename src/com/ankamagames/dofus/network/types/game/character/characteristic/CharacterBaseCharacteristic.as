@@ -31,7 +31,7 @@ package com.ankamagames.dofus.network.types.game.character.characteristic
          //Décompilation abandonné
       }
       
-      public function initCharacterBaseCharacteristic(param1:int = 0, param2:int = 0, param3:int = 0, param4:int = 0) : CharacterBaseCharacteristic
+      public function initCharacterBaseCharacteristic(base:int = 0, objectsAndMountBonus:int = 0, alignGiftBonus:int = 0, contextModif:int = 0) : CharacterBaseCharacteristic
       {
          //Décompilation abandonné
       }
@@ -41,22 +41,22 @@ package com.ankamagames.dofus.network.types.game.character.characteristic
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterBaseCharacteristic(param1:IDataOutput) : void
+      public function serializeAs_CharacterBaseCharacteristic(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterBaseCharacteristic(param1:IDataInput) : void
+      public function deserializeAs_CharacterBaseCharacteristic(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

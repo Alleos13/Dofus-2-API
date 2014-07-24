@@ -9,9 +9,9 @@ package org.flintparticles.common.counters
       //Décompilation abandonné
       }
       
-      function startEmitter(param1:Emitter) : uint;
+      function startEmitter(emitter:Emitter) : uint;
       
-      function updateEmitter(param1:Emitter, param2:Number) : uint;
+      function updateEmitter(emitter:Emitter, time:Number) : uint;
       
       function stop() : void;
       

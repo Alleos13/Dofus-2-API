@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.chat
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:Boolean = true) : ChannelEnablingAction
+      public static function create(channel:uint, enable:Boolean = true) : ChannelEnablingAction
       {
          //Décompilation abandonné
       }

@@ -55,7 +55,7 @@ package com.ankamagames.dofus.externalnotification
       //Décompilation abandonné
       }
       
-      public function ExternalNotificationManager(param1:PrivateClass)
+      public function ExternalNotificationManager(pc:PrivateClass)
       {
          //Décompilation abandonné
       }
@@ -137,42 +137,42 @@ package com.ankamagames.dofus.externalnotification
       
       private var _broadCasting:Boolean = false;
       
-      private function log(param1:Object) : void
+      private function log(pMsg:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function canAddExternalNotification(param1:int) : Boolean
+      public function canAddExternalNotification(pExternalNotificationType:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getNotificationOptions(param1:int) : Object
+      public function getNotificationOptions(pNotificationType:int) : Object
       {
          //Décompilation abandonné
       }
       
-      public function setNotificationOptions(param1:int, param2:Object) : void
+      public function setNotificationOptions(pNotificationType:int, pOptions:Object) : void
       {
          //Décompilation abandonné
       }
       
-      private function getOptionValue(param1:String) : *
+      private function getOptionValue(pOptionName:String) : *
       {
          //Décompilation abandonné
       }
       
-      private function setOptionValue(param1:String, param2:*) : void
+      private function setOptionValue(pOptionName:String, pOptionValue:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function isTopPosition(param1:int) : Boolean
+      private function isTopPosition(pPosition:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function isNotificationDuplicated(param1:String, param2:int) : Boolean
+      private function isNotificationDuplicated(pClientId:String, pNotificationType:int) : Boolean
       {
          //Décompilation abandonné
       }
@@ -202,12 +202,12 @@ package com.ankamagames.dofus.externalnotification
          //Décompilation abandonné
       }
       
-      private function onWindowActivate(param1:Event) : void
+      private function onWindowActivate(pEvent:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onWindowDeactivate(param1:Event) : void
+      private function onWindowDeactivate(pEvent:Event) : void
       {
          //Décompilation abandonné
       }
@@ -217,37 +217,37 @@ package com.ankamagames.dofus.externalnotification
          //Décompilation abandonné
       }
       
-      private function onDisplayStateChange(param1:NativeWindowDisplayStateEvent) : void
+      private function onDisplayStateChange(pEvent:NativeWindowDisplayStateEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onClientClosing(param1:Event) : void
+      private function onClientClosing(pEvent:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onClientClose(param1:Event) : void
+      private function onClientClose(pEvent:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onKeyDown(param1:KeyboardEvent) : void
+      private function onKeyDown(pEvent:KeyboardEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onClick(param1:MouseEvent) : void
+      private function onClick(pEvent:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseOver(param1:MouseEvent) : void
+      private function onMouseOver(pEvent:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateDofusFocus(param1:String, param2:Boolean) : void
+      public function updateDofusFocus(pClientId:String, pHasFocus:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -262,7 +262,7 @@ package com.ankamagames.dofus.externalnotification
          //Décompilation abandonné
       }
       
-      public function notifyUser(param1:Boolean = true) : void
+      public function notifyUser(pAlways:Boolean = true) : void
       {
          //Décompilation abandonné
       }
@@ -292,27 +292,27 @@ package com.ankamagames.dofus.externalnotification
          //Décompilation abandonné
       }
       
-      private function getExternalNotification(param1:String, param2:String) : ExternalNotificationWindow
+      private function getExternalNotification(pClientId:String, pExternalNotificationId:String) : ExternalNotificationWindow
       {
          //Décompilation abandonné
       }
       
-      private function getExternalNotifications(param1:String) : Vector.<ExternalNotificationWindow>
+      private function getExternalNotifications(pClientId:String) : Vector.<ExternalNotificationWindow>
       {
          //Décompilation abandonné
       }
       
-      private function hasNotificationData(param1:int) : Boolean
+      private function hasNotificationData(pNotificationType:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function updateProperty(param1:String, param2:*) : void
+      public function updateProperty(pPropertyName:String, pPropertyNewValue:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function onPropertyChanged(param1:PropertyChangeEvent) : void
+      private function onPropertyChanged(pEvent:PropertyChangeEvent) : void
       {
          //Décompilation abandonné
       }
@@ -322,82 +322,82 @@ package com.ankamagames.dofus.externalnotification
          //Décompilation abandonné
       }
       
-      public function updateAllMultiAccountOptions(param1:Array) : void
+      public function updateAllMultiAccountOptions(pValues:Array) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateMultiAccountOption(param1:int, param2:Boolean) : void
+      private function updateMultiAccountOption(pNotificationType:int, pEnabled:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateNotificationOptions(param1:int, param2:Object) : void
+      public function updateNotificationOptions(pNotificationType:int, pOptions:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function setNotificationsPosition(param1:int) : void
+      public function setNotificationsPosition(pValue:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function setMaxNotifications(param1:int) : void
+      public function setMaxNotifications(pValue:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function setNotificationsMode(param1:int) : void
+      public function setNotificationsMode(pValue:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function setDisplayDuration(param1:Number) : void
+      public function setDisplayDuration(pSeconds:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function isExternalNotificationTypeIgnored(param1:int) : Boolean
+      public function isExternalNotificationTypeIgnored(pNotificationType:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function ignoreExternalNotificationType(param1:int) : void
+      private function ignoreExternalNotificationType(pNotificationType:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function notificationPlaySound(param1:int) : Boolean
+      public function notificationPlaySound(pNotificationType:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function notificationNotify(param1:int) : Boolean
+      public function notificationNotify(pNotificationType:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function initLocalConnection(param1:LocalConnection) : void
+      private function initLocalConnection(pLc:LocalConnection) : void
       {
          //Décompilation abandonné
       }
       
-      private function destroyLocalConnection(param1:LocalConnection) : void
+      private function destroyLocalConnection(pLc:LocalConnection) : void
       {
          //Décompilation abandonné
       }
       
-      private function onConnectionError(param1:AsyncErrorEvent) : void
+      private function onConnectionError(pEvent:AsyncErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onConnectionStatus(param1:StatusEvent) : void
+      private function onConnectionStatus(pEvent:StatusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onConnectionSecurityError(param1:SecurityErrorEvent) : void
+      private function onConnectionSecurityError(pEvent:SecurityErrorEvent) : void
       {
          //Décompilation abandonné
       }
@@ -412,22 +412,22 @@ package com.ankamagames.dofus.externalnotification
          //Décompilation abandonné
       }
       
-      private function sendToMaster(param1:String, ... rest) : void
+      private function sendToMaster(pMethodName:String, ... pArgs) : void
       {
          //Décompilation abandonné
       }
       
-      private function sendToSlave(param1:String, param2:String, ... rest) : void
+      private function sendToSlave(pSlaveId:String, pMethodName:String, ... pArgs) : void
       {
          //Décompilation abandonné
       }
       
-      private function sendToSlaves(param1:String, ... rest) : void
+      private function sendToSlaves(pMethodName:String, ... pArgs) : void
       {
          //Décompilation abandonné
       }
       
-      private function becomeMaster(param1:Array = null) : void
+      private function becomeMaster(pSlavesIds:Array = null) : void
       {
          //Décompilation abandonné
       }
@@ -437,67 +437,67 @@ package com.ankamagames.dofus.externalnotification
          //Décompilation abandonné
       }
       
-      public function unregisterSlave(param1:String) : void
+      public function unregisterSlave(pSlaveId:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateClientsIds(param1:Array) : void
+      public function updateClientsIds(pClientsIds:Array) : void
       {
          //Décompilation abandonné
       }
       
-      public function handleNotificationRequest(param1:Object) : void
+      public function handleNotificationRequest(pExtNotifRequest:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function processRequest(param1:ExternalNotificationRequest) : void
+      public function processRequest(pExtNotifRequest:ExternalNotificationRequest) : void
       {
          //Décompilation abandonné
       }
       
-      private function processRequests(param1:TimerEvent) : void
+      private function processRequests(pEvent:TimerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function handleFocusRequest(param1:String, param2:String = null, param3:Array = null) : void
+      public function handleFocusRequest(pClientId:String, pHookName:String = null, pHookParams:Array = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function showExternalNotification(param1:ExternalNotificationWindow) : void
+      private function showExternalNotification(pExtNotifWin:ExternalNotificationWindow) : void
       {
          //Décompilation abandonné
       }
       
-      public function closeExternalNotification(param1:String, param2:String, param3:Boolean = false) : void
+      public function closeExternalNotification(pClientId:String, pExternalNotificationId:String, pSendFocusRequestOnClose:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private function onExternalNotificationWindowClose(param1:Event) : void
+      private function onExternalNotificationWindowClose(pEvent:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function resetNotificationDisplayTimeout(param1:String, param2:String) : void
+      public function resetNotificationDisplayTimeout(pClientId:String, pExternalNotificationId:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function setNotificationCoordinates(param1:ExternalNotificationWindow) : void
+      private function setNotificationCoordinates(pExtNotifWin:ExternalNotificationWindow) : void
       {
          //Décompilation abandonné
       }
       
-      private function changeNotificationsPosition(param1:int) : void
+      private function changeNotificationsPosition(pNewPosition:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function destroyExternalNotification(param1:ExternalNotificationWindow, param2:Boolean = true) : void
+      private function destroyExternalNotification(pExtNotifWin:ExternalNotificationWindow, pReplaceOthers:Boolean = true) : void
       {
          //Décompilation abandonné
       }

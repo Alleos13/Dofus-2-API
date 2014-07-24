@@ -127,12 +127,12 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function initializeMountLists(param1:Vector.<MountClientData>, param2:Vector.<MountClientData>) : void
+      public function initializeMountLists(stables:Vector.<MountClientData>, paddocks:Vector.<MountClientData>) : void
       {
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }

@@ -29,7 +29,7 @@ package com.ankamagames.berilia.components
       
       private var _app:DisplayObject;
       
-      public function set uri(param1:Uri) : void
+      public function set uri(v:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -45,12 +45,12 @@ package com.ankamagames.berilia.components
       
       public var loadProgressHandler:Function;
       
-      override public function set width(param1:Number) : void
+      override public function set width(nW:Number) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set height(param1:Number) : void
+      override public function set height(nH:Number) : void
       {
          //Décompilation abandonné
       }
@@ -60,7 +60,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function bindApi(param1:String, param2:*) : Boolean
+      public function bindApi(propertyName:String, value:*) : Boolean
       {
          //Décompilation abandonné
       }
@@ -75,22 +75,22 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function onInit(param1:Event) : void
+      private function onInit(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseMouse(param1:MouseEvent) : void
+      private function onMouseMouse(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onProgress(param1:ProgressEvent) : void
+      private function onProgress(e:ProgressEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onError(param1:Event) : void
+      private function onError(e:Event) : void
       {
          //Décompilation abandonné
       }

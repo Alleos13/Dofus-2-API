@@ -19,7 +19,7 @@ package com.ankamagames.dofus.datacenter.appearance
       
       public static const MODULE:String = "Titles";
       
-      public static function getTitleById(param1:int) : Title
+      public static function getTitleById(id:int) : Title
       {
          //Décompilation abandonné
       }

@@ -10,7 +10,7 @@ package com.ankamagames.berilia.types.data
       //Décompilation abandonné
       }
       
-      public function ApiAction(param1:String, param2:Class, param3:Boolean, param4:Boolean, param5:uint, param6:uint, param7:Boolean)
+      public function ApiAction(name:String, actionClass:Class, trusted:Boolean, needInteraction:Boolean, maxUsePerFrame:uint, minimalUseInterval:uint, needConfirmation:Boolean)
       {
          //Décompilation abandonné
       }
@@ -19,7 +19,7 @@ package com.ankamagames.berilia.types.data
       
       protected static var _apiActionNameList:Array;
       
-      public static function getApiActionByName(param1:String) : ApiAction
+      public static function getApiActionByName(name:String) : ApiAction
       {
          //Décompilation abandonné
       }

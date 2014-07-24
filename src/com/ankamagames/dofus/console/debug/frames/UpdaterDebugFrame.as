@@ -45,7 +45,7 @@ package com.ankamagames.dofus.console.debug.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -55,27 +55,27 @@ package com.ankamagames.dofus.console.debug.frames
          //Décompilation abandonné
       }
       
-      public function partListRequest(param1:Function) : void
+      public function partListRequest(partInfoCallback:Function) : void
       {
          //Décompilation abandonné
       }
       
-      public function partInfoRequest(param1:String, param2:Function) : void
+      public function partInfoRequest(id:String, partInfoCallback:Function) : void
       {
          //Décompilation abandonné
       }
       
-      public function setUpdaterSpeedRequest(param1:int, param2:Function) : void
+      public function setUpdaterSpeedRequest(speed:int, updaterSpeedCallback:Function) : void
       {
          //Décompilation abandonné
       }
       
-      public function getUpdaterSpeedRequest(param1:Function) : void
+      public function getUpdaterSpeedRequest(updaterSpeedCallback:Function) : void
       {
          //Décompilation abandonné
       }
       
-      public function downloadPartRequest(param1:String, param2:Function) : void
+      public function downloadPartRequest(id:String, partInfoCallback:Function) : void
       {
          //Décompilation abandonné
       }

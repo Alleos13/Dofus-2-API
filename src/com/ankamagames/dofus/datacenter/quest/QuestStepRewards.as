@@ -17,7 +17,7 @@ package com.ankamagames.dofus.datacenter.quest
       
       public static const MODULE:String = "QuestStepRewards";
       
-      public static function getQuestStepRewardsById(param1:int) : QuestStepRewards
+      public static function getQuestStepRewardsById(id:int) : QuestStepRewards
       {
          //Décompilation abandonné
       }

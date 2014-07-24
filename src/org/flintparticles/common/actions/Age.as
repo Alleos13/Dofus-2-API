@@ -11,7 +11,7 @@ package org.flintparticles.common.actions
       //Décompilation abandonné
       }
       
-      public function Age(param1:Function = null)
+      public function Age(easing:Function = null)
       {
          //Décompilation abandonné
       }
@@ -23,12 +23,12 @@ package org.flintparticles.common.actions
          //Décompilation abandonné
       }
       
-      public function set easing(param1:Function) : void
+      public function set easing(value:Function) : void
       {
          //Décompilation abandonné
       }
       
-      override public function update(param1:Emitter, param2:Particle, param3:Number) : void
+      override public function update(emitter:Emitter, particle:Particle, time:Number) : void
       {
          //Décompilation abandonné
       }

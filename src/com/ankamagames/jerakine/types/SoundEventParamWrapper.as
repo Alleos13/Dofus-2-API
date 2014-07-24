@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.types
       //Décompilation abandonné
       }
       
-      public function SoundEventParamWrapper(param1:String, param2:uint, param3:uint, param4:int = -1, param5:int = -1, param6:int = -1, param7:int = -1, param8:Boolean = false)
+      public function SoundEventParamWrapper(pId:String, pVolume:uint, pRollOff:uint, pBerceauDuree:int = -1, pBerceauVol:int = -1, pBerceauFadeIn:int = -1, pBerceauFadeOut:int = -1, pNoCutSilence:Boolean = false)
       {
          //Décompilation abandonné
       }

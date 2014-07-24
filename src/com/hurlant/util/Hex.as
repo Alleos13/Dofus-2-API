@@ -14,22 +14,22 @@ package com.hurlant.util
          //Décompilation abandonné
       }
       
-      public static function toArray(param1:String) : ByteArray
+      public static function toArray(hex:String) : ByteArray
       {
          //Décompilation abandonné
       }
       
-      public static function fromArray(param1:ByteArray, param2:Boolean = false) : String
+      public static function fromArray(array:ByteArray, colons:Boolean = false) : String
       {
          //Décompilation abandonné
       }
       
-      public static function toString(param1:String) : String
+      public static function toString(hex:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function fromString(param1:String, param2:Boolean = false) : String
+      public static function fromString(str:String, colons:Boolean = false) : String
       {
          //Décompilation abandonné
       }

@@ -32,7 +32,7 @@ package com.ankamagames.dofus.misc.options
          //Décompilation abandonné
       }
       
-      private function color0x(param1:String) : String
+      private function color0x(color:String) : String
       {
          //Décompilation abandonné
       }

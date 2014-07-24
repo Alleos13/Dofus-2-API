@@ -12,7 +12,7 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
       //Décompilation abandonné
       }
       
-      public function StorageView(param1:HookLock)
+      public function StorageView(hookLock:HookLock)
       {
          //Décompilation abandonné
       }

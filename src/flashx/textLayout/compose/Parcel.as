@@ -13,7 +13,7 @@ package flashx.textLayout.compose
       //Décompilation abandonné
       }
       
-      public function Parcel(param1:Boolean, param2:Number, param3:Number, param4:Number, param5:Number, param6:ContainerController, param7:int)
+      public function Parcel(verticalText:Boolean, x:Number, y:Number, width:Number, height:Number, controller:ContainerController, columnIndex:int)
       {
          //Décompilation abandonné
       }
@@ -44,7 +44,7 @@ package flashx.textLayout.compose
       
       private var _verticalText:Boolean;
       
-      public function initialize(param1:Boolean, param2:Number, param3:Number, param4:Number, param5:Number, param6:ContainerController, param7:int) : Parcel
+      public function initialize(verticalText:Boolean, x:Number, y:Number, width:Number, height:Number, controller:ContainerController, columnIndex:int) : Parcel
       {
          //Décompilation abandonné
       }
@@ -79,7 +79,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function set fitAny(param1:Boolean) : void
+      public function set fitAny(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -89,7 +89,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function set composeToPosition(param1:Boolean) : void
+      public function set composeToPosition(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -99,27 +99,27 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function applyClear(param1:String, param2:Number, param3:String) : Number
+      public function applyClear(clear:String, depth:Number, direction:String) : Number
       {
          //Décompilation abandonné
       }
       
-      public function fitsInHeight(param1:Number, param2:Number) : Boolean
+      public function fitsInHeight(depth:Number, minimumHeight:Number) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getLineSlug(param1:Slug, param2:Number, param3:Number, param4:Number, param5:Number, param6:Number, param7:Number, param8:Number, param9:Boolean, param10:Boolean) : Boolean
+      public function getLineSlug(slug:Slug, depth:Number, lineHeight:Number, minimumWidth:Number, minimumHeight:Number, leftMargin:Number, rightMargin:Number, textIndent:Number, directionLTR:Boolean, useExplicitLineBreaks:Boolean) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function knockOut(param1:Number, param2:Number, param3:Number, param4:Boolean) : void
+      public function knockOut(knockOutWidth:Number, yMin:Number, yMax:Number, onLeft:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeKnockOut(param1:Number, param2:Number, param3:Number, param4:Boolean) : void
+      public function removeKnockOut(knockOutWidth:Number, yMin:Number, yMax:Number, onLeft:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -129,7 +129,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function findNextTransition(param1:Number) : Number
+      public function findNextTransition(y:Number) : Number
       {
          //Décompilation abandonné
       }
@@ -142,7 +142,7 @@ class Span extends Object
    //Décompilation abandonné
    }
    
-   function Span(param1:Number, param2:Number, param3:Number)
+   function Span(x:Number, ymin:Number, ymax:Number)
    {
       //Décompilation abandonné
    }
@@ -153,12 +153,12 @@ class Span extends Object
    
    public var ymax:Number;
    
-   public function overlapsInY(param1:Number, param2:Number) : Boolean
+   public function overlapsInY(ymin:Number, ymax:Number) : Boolean
    {
       //Décompilation abandonné
    }
    
-   public function equals(param1:Number, param2:Number, param3:Number) : Boolean
+   public function equals(x:Number, ymin:Number, ymax:Number) : Boolean
    {
       //Décompilation abandonné
    }
@@ -170,7 +170,7 @@ class Edge extends Object
    //Décompilation abandonné
    }
    
-   function Edge(param1:Number)
+   function Edge(xbase:Number)
    {
       //Décompilation abandonné
    }
@@ -184,12 +184,12 @@ class Edge extends Object
       //Décompilation abandonné
    }
    
-   public function addSpan(param1:Number, param2:Number, param3:Number) : void
+   public function addSpan(x:Number, ymin:Number, ymax:Number) : void
    {
       //Décompilation abandonné
    }
    
-   public function removeSpan(param1:Number, param2:Number, param3:Number) : void
+   public function removeSpan(x:Number, ymin:Number, ymax:Number) : void
    {
       //Décompilation abandonné
    }
@@ -199,12 +199,12 @@ class Edge extends Object
       //Décompilation abandonné
    }
    
-   public function getMaxForSpan(param1:Number, param2:Number) : Number
+   public function getMaxForSpan(ymin:Number, ymax:Number) : Number
    {
       //Décompilation abandonné
    }
    
-   public function findNextTransition(param1:Number) : Number
+   public function findNextTransition(y:Number) : Number
    {
       //Décompilation abandonné
    }

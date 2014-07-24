@@ -7,7 +7,7 @@ package com.ankamagames.tiphon.error
       //Décompilation abandonné
       }
       
-      public function TiphonError(param1:String, param2:uint = 0)
+      public function TiphonError(message:String, id:uint = 0)
       {
          //Décompilation abandonné
       }

@@ -37,12 +37,12 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override tlf_internal function normalizeRange(param1:uint, param2:uint) : void
+      override tlf_internal function normalizeRange(normalizeStart:uint, normalizeEnd:uint) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function getListItemNumber(param1:IListMarkerFormat = null) : int
+      tlf_internal function getListItemNumber(listMarkerFormat:IListMarkerFormat = null) : int
       {
          //Décompilation abandonné
       }

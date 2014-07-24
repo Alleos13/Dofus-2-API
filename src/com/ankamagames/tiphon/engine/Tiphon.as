@@ -58,12 +58,12 @@ package com.ankamagames.tiphon.engine
       
       private var _waitForInit:Boolean;
       
-      public function addRasterizeAnimation(param1:String) : void
+      public function addRasterizeAnimation(animName:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function isRasterizeAnimation(param1:String) : Boolean
+      public function isRasterizeAnimation(animName:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -73,27 +73,27 @@ package com.ankamagames.tiphon.engine
          //Décompilation abandonné
       }
       
-      public function init(param1:String, param2:String, param3:String = null) : void
+      public function init(sSwfSkullPath:String, sSwfSkinPath:String, animIndexPath:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function setDisplayOptions(param1:*) : void
+      public function setDisplayOptions(topt:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function handleFLAEvent(param1:String, param2:String, param3:String, param4:Object = null) : void
+      public function handleFLAEvent(pAnimationName:String, pType:String, pParams:String, pSprite:Object = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeEntitySound(param1:IEntity) : void
+      public function removeEntitySound(pEntityId:IEntity) : void
       {
          //Décompilation abandonné
       }
       
-      private function onBoneIndexManagerInit(param1:Event) : void
+      private function onBoneIndexManagerInit(e:Event) : void
       {
          //Décompilation abandonné
       }

@@ -97,97 +97,97 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      public static function parseListItem(param1:TextFieldHtmlImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseListItem(importer:TextFieldHtmlImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parsePara(param1:TextFieldHtmlImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parsePara(importer:TextFieldHtmlImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseDiv(param1:TextFieldHtmlImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseDiv(importer:TextFieldHtmlImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseHtmlElement(param1:TextFieldHtmlImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseHtmlElement(importer:TextFieldHtmlImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseBody(param1:TextFieldHtmlImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseBody(importer:TextFieldHtmlImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      private static function getSingleFontChild(param1:XML) : XML
+      private static function getSingleFontChild(xmlToParse:XML) : XML
       {
          //Décompilation abandonné
       }
       
-      public static function parseLink(param1:TextFieldHtmlImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseLink(importer:TextFieldHtmlImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function extractSimpleSpanText(param1:XML) : String
+      tlf_internal  static function extractSimpleSpanText(xmlToParse:XML) : String
       {
          //Décompilation abandonné
       }
       
-      public static function parseSpan(param1:TextFieldHtmlImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseSpan(importer:TextFieldHtmlImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseInlineGraphic(param1:TextFieldHtmlImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseInlineGraphic(importer:TextFieldHtmlImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseFont(param1:TextFieldHtmlImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseFont(importer:TextFieldHtmlImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseTextFormat(param1:TextFieldHtmlImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseTextFormat(importer:TextFieldHtmlImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseBold(param1:TextFieldHtmlImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseBold(importer:TextFieldHtmlImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseItalic(param1:TextFieldHtmlImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseItalic(importer:TextFieldHtmlImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseStrikeThrough(param1:TextFieldHtmlImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseStrikeThrough(importer:TextFieldHtmlImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseUnderline(param1:TextFieldHtmlImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseUnderline(importer:TextFieldHtmlImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      protected static function parseChildrenUnderNewActiveFormatWithImpliedParaFormat(param1:TextFieldHtmlImporter, param2:XML, param3:FlowGroupElement, param4:ITextLayoutFormat) : void
+      protected static function parseChildrenUnderNewActiveFormatWithImpliedParaFormat(importer:TextFieldHtmlImporter, xmlToParse:XML, parent:FlowGroupElement, newFormat:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
       
-      protected static function parseChildrenUnderNewActiveFormat(param1:TextFieldHtmlImporter, param2:XML, param3:FlowGroupElement, param4:TextLayoutFormat, param5:ITextLayoutFormat, param6:Boolean = false) : void
+      protected static function parseChildrenUnderNewActiveFormat(importer:TextFieldHtmlImporter, xmlToParse:XML, parent:FlowGroupElement, currFormat:TextLayoutFormat, newFormat:ITextLayoutFormat, chainedParent:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      protected static function replaceBreakElementsWithParaSplits(param1:ParagraphElement) : void
+      protected static function replaceBreakElementsWithParaSplits(para:ParagraphElement) : void
       {
          //Décompilation abandonné
       }
@@ -213,7 +213,7 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      public function set imageSourceResolveFunction(param1:Function) : void
+      public function set imageSourceResolveFunction(resolver:Function) : void
       {
          //Décompilation abandonné
       }
@@ -223,7 +223,7 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      public function set preserveBodyElement(param1:Boolean) : void
+      public function set preserveBodyElement(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -233,17 +233,17 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      public function set preserveHTMLElement(param1:Boolean) : void
+      public function set preserveHTMLElement(value:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function importFromString(param1:String) : TextFlow
+      override protected function importFromString(source:String) : TextFlow
       {
          //Décompilation abandonné
       }
       
-      override protected function importFromXML(param1:XML) : TextFlow
+      override protected function importFromXML(xmlSource:XML) : TextFlow
       {
          //Décompilation abandonné
       }
@@ -258,97 +258,97 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      override public function createParagraphFromXML(param1:XML) : ParagraphElement
+      override public function createParagraphFromXML(xmlToParse:XML) : ParagraphElement
       {
          //Décompilation abandonné
       }
       
-      override public function createListFromXML(param1:XML) : ListElement
+      override public function createListFromXML(xmlToParse:XML) : ListElement
       {
          //Décompilation abandonné
       }
       
-      override public function createListItemFromXML(param1:XML) : ListItemElement
+      override public function createListItemFromXML(xmlToParse:XML) : ListItemElement
       {
          //Décompilation abandonné
       }
       
-      public function createDivFromXML(param1:XML) : DivElement
+      public function createDivFromXML(xmlToParse:XML) : DivElement
       {
          //Décompilation abandonné
       }
       
-      public function createSPGEFromXML(param1:XML) : SubParagraphGroupElement
+      public function createSPGEFromXML(xmlToParse:XML) : SubParagraphGroupElement
       {
          //Décompilation abandonné
       }
       
-      override protected function onResetImpliedPara(param1:ParagraphElement) : void
+      override protected function onResetImpliedPara(para:ParagraphElement) : void
       {
          //Décompilation abandonné
       }
       
-      private function createLinkFromXML(param1:XML) : LinkElement
+      private function createLinkFromXML(xmlToParse:XML) : LinkElement
       {
          //Décompilation abandonné
       }
       
-      override public function createImpliedSpan(param1:String) : SpanElement
+      override public function createImpliedSpan(text:String) : SpanElement
       {
          //Décompilation abandonné
       }
       
-      protected function createInlineGraphicFromXML(param1:XML) : InlineGraphicElement
+      protected function createInlineGraphicFromXML(xmlToParse:XML) : InlineGraphicElement
       {
          //Décompilation abandonné
       }
       
-      override public function createTabFromXML(param1:XML) : TabElement
+      override public function createTabFromXML(xmlToParse:XML) : TabElement
       {
          //Décompilation abandonné
       }
       
-      protected function parseFontAttributes(param1:XML) : ITextLayoutFormat
+      protected function parseFontAttributes(xmlToParse:XML) : ITextLayoutFormat
       {
          //Décompilation abandonné
       }
       
-      override protected function handleUnknownAttribute(param1:String, param2:String) : void
+      override protected function handleUnknownAttribute(elementName:String, propertyName:String) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function handleUnknownElement(param1:String, param2:XML, param3:FlowGroupElement) : void
+      override protected function handleUnknownElement(name:String, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      override tlf_internal function parseObject(param1:String, param2:XML, param3:FlowGroupElement, param4:Object = null) : void
+      override tlf_internal function parseObject(name:String, xmlToParse:XML, parent:FlowGroupElement, exceptionElements:Object = null) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function checkNamespace(param1:XML) : Boolean
+      override protected function checkNamespace(xmlToParse:XML) : Boolean
       {
          //Décompilation abandonné
       }
       
-      protected function toXML(param1:String) : XML
+      protected function toXML(source:String) : XML
       {
          //Décompilation abandonné
       }
       
-      protected function toXMLInternal(param1:String) : XML
+      protected function toXMLInternal(source:String) : XML
       {
          //Décompilation abandonné
       }
       
-      protected function doesStartTagCloseElement(param1:String) : Boolean
+      protected function doesStartTagCloseElement(tagName:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      protected function appendTextChild(param1:XML, param2:String) : void
+      protected function appendTextChild(parent:XML, text:String) : void
       {
          //Décompilation abandonné
       }
@@ -363,19 +363,19 @@ class CaseInsensitiveTLFFormatImporter extends TLFormatImporter
    //Décompilation abandonné
    }
    
-   function CaseInsensitiveTLFFormatImporter(param1:Class, param2:Object, param3:Boolean = true)
+   function CaseInsensitiveTLFFormatImporter(classType:Class, description:Object, convertValuesToLowerCase:Boolean = true)
    {
       //Décompilation abandonné
    }
    
    private var _convertValuesToLowerCase:Boolean;
    
-   override public function importOneFormat(param1:String, param2:String) : Boolean
+   override public function importOneFormat(key:String, val:String) : Boolean
    {
       //Décompilation abandonné
    }
    
-   public function getFormatValue(param1:String) : *
+   public function getFormatValue(key:String) : *
    {
       //Décompilation abandonné
    }
@@ -389,12 +389,12 @@ class HtmlCustomParaFormatImporter extends TLFormatImporter
    //Décompilation abandonné
    }
    
-   function HtmlCustomParaFormatImporter(param1:Class, param2:Object)
+   function HtmlCustomParaFormatImporter(classType:Class, description:Object)
    {
       //Décompilation abandonné
    }
    
-   override public function importOneFormat(param1:String, param2:String) : Boolean
+   override public function importOneFormat(key:String, val:String) : Boolean
    {
       //Décompilation abandonné
    }
@@ -408,12 +408,12 @@ class TextFormatImporter extends TLFormatImporter
    //Décompilation abandonné
    }
    
-   function TextFormatImporter(param1:Class, param2:Object)
+   function TextFormatImporter(classType:Class, description:Object)
    {
       //Décompilation abandonné
    }
    
-   override public function importOneFormat(param1:String, param2:String) : Boolean
+   override public function importOneFormat(key:String, val:String) : Boolean
    {
       //Décompilation abandonné
    }
@@ -427,12 +427,12 @@ class FontImporter extends TLFormatImporter
    //Décompilation abandonné
    }
    
-   function FontImporter(param1:Class, param2:Object)
+   function FontImporter(classType:Class, description:Object)
    {
       //Décompilation abandonné
    }
    
-   override public function importOneFormat(param1:String, param2:String) : Boolean
+   override public function importOneFormat(key:String, val:String) : Boolean
    {
       //Décompilation abandonné
    }

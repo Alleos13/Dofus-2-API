@@ -26,17 +26,17 @@ package com.ankamagames.dofus.logic.game.roleplay.types
       
       public var rendering:Boolean;
       
-      public function addIcon(param1:String, param2:String) : void
+      public function addIcon(pIconUri:String, pIconName:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeIcon(param1:String) : void
+      public function removeIcon(pIconName:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function hasIcon(param1:String) : Boolean
+      public function hasIcon(pIconName:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -51,7 +51,7 @@ package com.ankamagames.dofus.logic.game.roleplay.types
          //Décompilation abandonné
       }
       
-      private function iconRendered(param1:Event) : void
+      private function iconRendered(pEvent:Event) : void
       {
          //Décompilation abandonné
       }

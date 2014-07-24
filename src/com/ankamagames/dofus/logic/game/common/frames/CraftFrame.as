@@ -162,12 +162,12 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function processExchangeOkMultiCraftMessage(param1:ExchangeOkMultiCraftMessage) : void
+      public function processExchangeOkMultiCraftMessage(msg:ExchangeOkMultiCraftMessage) : void
       {
          //Décompilation abandonné
       }
       
-      public function processExchangeStartOkCraftWithInformationMessage(param1:ExchangeStartOkCraftWithInformationMessage) : void
+      public function processExchangeStartOkCraftWithInformationMessage(msg:ExchangeStartOkCraftWithInformationMessage) : void
       {
          //Décompilation abandonné
       }
@@ -182,7 +182,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -192,32 +192,32 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function addCraftComponent(param1:Boolean, param2:ItemWrapper) : void
+      public function addCraftComponent(pRemote:Boolean, pItemWrapper:ItemWrapper) : void
       {
          //Décompilation abandonné
       }
       
-      public function modifyCraftComponent(param1:Boolean, param2:ItemWrapper) : void
+      public function modifyCraftComponent(pRemote:Boolean, pItemWrapper:ItemWrapper) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeCraftComponent(param1:Boolean, param2:uint) : void
+      public function removeCraftComponent(pRemote:Boolean, pUID:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function addObjetPayment(param1:Boolean, param2:ItemWrapper) : void
+      public function addObjetPayment(pOnlySuccess:Boolean, pItemWrapper:ItemWrapper) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeObjetPayment(param1:uint, param2:Boolean) : void
+      public function removeObjetPayment(pUID:uint, pOnlySuccess:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      private function sendUpdateHook(param1:PlayerExchangeCraftList) : void
+      private function sendUpdateHook(pPlayerExchangeCraftList:PlayerExchangeCraftList) : void
       {
          //Décompilation abandonné
       }

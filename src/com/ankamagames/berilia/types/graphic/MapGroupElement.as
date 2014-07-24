@@ -15,7 +15,7 @@ package com.ankamagames.berilia.types.graphic
       //Décompilation abandonné
       }
       
-      public function MapGroupElement(param1:uint, param2:uint)
+      public function MapGroupElement(mapWidth:uint, mapHeight:uint)
       {
          //Décompilation abandonné
       }
@@ -44,7 +44,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      private function getInitialPos(param1:Object) : Object
+      private function getInitialPos(pIcon:Object) : Object
       {
          //Décompilation abandonné
       }
@@ -54,7 +54,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      override public function addChild(param1:DisplayObject) : DisplayObject
+      override public function addChild(child:DisplayObject) : DisplayObject
       {
          //Décompilation abandonné
       }
@@ -69,7 +69,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      private function shapeTweenFinished(param1:TweenEvent) : void
+      private function shapeTweenFinished(e:TweenEvent) : void
       {
          //Décompilation abandonné
       }

@@ -22,7 +22,7 @@ package com.ankamagames.berilia.types.data
       //Décompilation abandonné
       }
       
-      public function UiModule(param1:String = null, param2:String = null, param3:String = null, param4:String = null, param5:String = null, param6:String = null, param7:String = null, param8:String = null, param9:String = null, param10:String = null, param11:Array = null, param12:Array = null, param13:Boolean = false)
+      public function UiModule(id:String = null, name:String = null, version:String = null, gameVersion:String = null, author:String = null, shortDescription:String = null, description:String = null, iconUri:String = null, script:String = null, shortcuts:String = null, uis:Array = null, cachedFiles:Array = null, activated:Boolean = false)
       {
          //Décompilation abandonné
       }
@@ -33,7 +33,7 @@ package com.ankamagames.berilia.types.data
       
       protected static const _log:Logger;
       
-      public static function createFromXml(param1:XML, param2:String, param3:String) : UiModule
+      public static function createFromXml(xml:XML, nativePath:String, id:String) : UiModule
       {
          //Décompilation abandonné
       }
@@ -96,7 +96,7 @@ package com.ankamagames.berilia.types.data
       
       private var _actionScriptAnalyserCallback:Dictionary;
       
-      public function set loader(param1:Loader) : void
+      public function set loader(l:Loader) : void
       {
          //Décompilation abandonné
       }
@@ -166,7 +166,7 @@ package com.ankamagames.berilia.types.data
          //Décompilation abandonné
       }
       
-      public function set trusted(param1:Boolean) : void
+      public function set trusted(v:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -176,7 +176,7 @@ package com.ankamagames.berilia.types.data
          //Décompilation abandonné
       }
       
-      public function set enable(param1:Boolean) : void
+      public function set enable(v:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -201,7 +201,7 @@ package com.ankamagames.berilia.types.data
          //Décompilation abandonné
       }
       
-      public function set applicationDomain(param1:ApplicationDomain) : void
+      public function set applicationDomain(appDomain:ApplicationDomain) : void
       {
          //Décompilation abandonné
       }
@@ -216,7 +216,7 @@ package com.ankamagames.berilia.types.data
          //Décompilation abandonné
       }
       
-      public function set mainClass(param1:Object) : void
+      public function set mainClass(instance:Object) : void
       {
          //Décompilation abandonné
       }
@@ -231,12 +231,12 @@ package com.ankamagames.berilia.types.data
          //Décompilation abandonné
       }
       
-      public function addUiGroup(param1:String, param2:Boolean, param3:Boolean) : void
+      public function addUiGroup(groupName:String, exclusive:Boolean, permanent:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function getUi(param1:String) : UiData
+      public function getUi(name:String) : UiData
       {
          //Décompilation abandonné
       }
@@ -251,17 +251,17 @@ package com.ankamagames.berilia.types.data
          //Décompilation abandonné
       }
       
-      public function usedApiList(param1:Function) : void
+      public function usedApiList(callBack:Function) : void
       {
          //Décompilation abandonné
       }
       
-      public function usedHookList(param1:Function) : void
+      public function usedHookList(callBack:Function) : void
       {
          //Décompilation abandonné
       }
       
-      public function usedActionList(param1:Function) : void
+      public function usedActionList(callBack:Function) : void
       {
          //Décompilation abandonné
       }
@@ -276,12 +276,12 @@ package com.ankamagames.berilia.types.data
          //Décompilation abandonné
       }
       
-      protected function fillFromXml(param1:XML, param2:String, param3:String) : void
+      protected function fillFromXml(xml:XML, nativePath:String, id:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function setProperty(param1:String, param2:String) : void
+      private function setProperty(key:String, value:String) : void
       {
          //Décompilation abandonné
       }

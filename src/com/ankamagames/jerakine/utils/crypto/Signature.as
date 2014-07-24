@@ -13,7 +13,7 @@ package com.ankamagames.jerakine.utils.crypto
       //Décompilation abandonné
       }
       
-      public function Signature(param1:SignatureKey)
+      public function Signature(key:SignatureKey)
       {
          //Décompilation abandonné
       }
@@ -22,17 +22,17 @@ package com.ankamagames.jerakine.utils.crypto
       
       private var _key:SignatureKey;
       
-      public function sign(param1:IDataInput, param2:Boolean = true) : ByteArray
+      public function sign(data:IDataInput, includeData:Boolean = true) : ByteArray
       {
          //Décompilation abandonné
       }
       
-      public function verify(param1:IDataInput, param2:ByteArray) : Boolean
+      public function verify(input:IDataInput, output:ByteArray) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function traceData(param1:ByteArray) : void
+      private function traceData(d:ByteArray) : void
       {
          //Décompilation abandonné
       }

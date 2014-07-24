@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.pathfinding
       //Décompilation abandonné
       }
       
-      public function CellInfo(param1:Number, param2:Array, param3:Boolean, param4:Boolean)
+      public function CellInfo(pHeuristic:Number, pParent:Array, pOpened:Boolean, pClosed:Boolean)
       {
          //Décompilation abandonné
       }

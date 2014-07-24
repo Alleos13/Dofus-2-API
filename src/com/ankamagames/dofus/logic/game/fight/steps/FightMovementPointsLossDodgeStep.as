@@ -11,7 +11,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightMovementPointsLossDodgeStep(param1:int, param2:int)
+      public function FightMovementPointsLossDodgeStep(fighterId:int, amount:int)
       {
          //Décompilation abandonné
       }

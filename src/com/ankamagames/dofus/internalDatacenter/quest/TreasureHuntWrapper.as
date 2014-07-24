@@ -19,7 +19,7 @@ package com.ankamagames.dofus.internalDatacenter.quest
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:uint, param3:uint, param4:uint, param5:int, param6:Vector.<TreasureHuntStep>) : TreasureHuntWrapper
+      public static function create(questType:uint, startMapId:uint, checkPointCurrent:uint, checkPointTotal:uint, availableRetryCount:int, stepList:Vector.<TreasureHuntStep>) : TreasureHuntWrapper
       {
          //Décompilation abandonné
       }
@@ -34,7 +34,7 @@ package com.ankamagames.dofus.internalDatacenter.quest
       
       public var stepList:Vector.<TreasureHuntStepWrapper>;
       
-      public function update(param1:uint, param2:uint, param3:uint, param4:uint, param5:int, param6:Vector.<TreasureHuntStep>) : void
+      public function update(questType:uint, startMapId:uint, checkPointCurrent:uint, checkPointTotal:uint, availableRetryCount:int, stepList:Vector.<TreasureHuntStep>) : void
       {
          //Décompilation abandonné
       }

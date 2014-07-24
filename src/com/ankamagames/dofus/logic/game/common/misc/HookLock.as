@@ -16,7 +16,7 @@ package com.ankamagames.dofus.logic.game.common.misc
       
       private var _hooks:Vector.<HookDef>;
       
-      public function addHook(param1:Hook, param2:Array) : void
+      public function addHook(hook:Hook, args:Array) : void
       {
          //Décompilation abandonné
       }
@@ -37,7 +37,7 @@ class HookDef extends Object
    //Décompilation abandonné
    }
    
-   function HookDef(param1:Hook, param2:Array)
+   function HookDef(hook:Hook, args:Array)
    {
       //Décompilation abandonné
    }
@@ -56,7 +56,7 @@ class HookDef extends Object
       //Décompilation abandonné
    }
    
-   public function isEqual(param1:HookDef) : Boolean
+   public function isEqual(compareTo:HookDef) : Boolean
    {
       //Décompilation abandonné
    }

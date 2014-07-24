@@ -19,12 +19,12 @@ package by.blooddy.crypto.serialization
          //Décompilation abandonné
       }
       
-      public static function encode(param1:*) : String
+      public static function encode(value:*) : String
       {
          //Décompilation abandonné
       }
       
-      public static function decode(param1:String) : *
+      public static function decode(value:String) : *
       {
          //Décompilation abandonné
       }

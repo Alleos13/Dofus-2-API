@@ -17,7 +17,7 @@ package com.ankamagames.dofus.internalDatacenter.world
       //Décompilation abandonné
       }
       
-      public function WorldPointWrapper(param1:uint, param2:Boolean = false, param3:int = 0, param4:int = 0)
+      public function WorldPointWrapper(mapid:uint, fixedOutdoor:Boolean = false, outx:int = 0, outy:int = 0)
       {
          //Décompilation abandonné
       }
@@ -68,7 +68,7 @@ package com.ankamagames.dofus.internalDatacenter.world
          //Décompilation abandonné
       }
       
-      public function setOutdoorCoords(param1:int, param2:int) : void
+      public function setOutdoorCoords(x:int, y:int) : void
       {
          //Décompilation abandonné
       }

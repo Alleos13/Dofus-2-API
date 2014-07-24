@@ -9,7 +9,7 @@ package com.ankamagames.tiphon.types
       //Décompilation abandonné
       }
       
-      function updateFromParentEntity(param1:TiphonSprite, param2:BehaviorData) : void;
+      function updateFromParentEntity(target:TiphonSprite, parentData:BehaviorData) : void;
       
       function remove() : void;
    }

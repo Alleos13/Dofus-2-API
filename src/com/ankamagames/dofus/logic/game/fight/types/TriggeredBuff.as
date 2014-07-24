@@ -10,7 +10,7 @@ package com.ankamagames.dofus.logic.game.fight.types
       //Décompilation abandonné
       }
       
-      public function TriggeredBuff(param1:FightTriggeredEffect = null, param2:CastingSpell = null, param3:uint = 0)
+      public function TriggeredBuff(effect:FightTriggeredEffect = null, castingSpell:CastingSpell = null, actionId:uint = 0)
       {
          //Décompilation abandonné
       }
@@ -22,7 +22,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      override public function clone(param1:int = 0) : BasicBuff
+      override public function clone(id:int = 0) : BasicBuff
       {
          //Décompilation abandonné
       }
@@ -37,7 +37,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      override public function incrementDuration(param1:int, param2:Boolean = false) : Boolean
+      override public function incrementDuration(delta:int, dispellEffect:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }

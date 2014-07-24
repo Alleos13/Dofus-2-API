@@ -52,32 +52,32 @@ package com.ankamagames.dofus.logic.game.fight.managers
       
       private var _markUid:uint;
       
-      public function addMark(param1:int, param2:int, param3:Spell, param4:Vector.<GameActionMarkedCell>) : void
+      public function addMark(markId:int, markType:int, associatedSpell:Spell, cells:Vector.<GameActionMarkedCell>) : void
       {
          //Décompilation abandonné
       }
       
-      public function getMarkDatas(param1:int) : MarkInstance
+      public function getMarkDatas(markId:int) : MarkInstance
       {
          //Décompilation abandonné
       }
       
-      public function removeMark(param1:int) : void
+      public function removeMark(markId:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function addGlyph(param1:Glyph, param2:int) : void
+      public function addGlyph(glyph:Glyph, markId:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function getGlyph(param1:int) : Glyph
+      public function getGlyph(markId:int) : Glyph
       {
          //Décompilation abandonné
       }
       
-      public function removeGlyph(param1:int) : void
+      public function removeGlyph(markId:int) : void
       {
          //Décompilation abandonné
       }

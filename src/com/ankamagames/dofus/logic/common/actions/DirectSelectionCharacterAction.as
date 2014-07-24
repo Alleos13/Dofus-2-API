@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.common.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:uint) : DirectSelectionCharacterAction
+      public static function create(serverId:uint, characterId:uint) : DirectSelectionCharacterAction
       {
          //Décompilation abandonné
       }

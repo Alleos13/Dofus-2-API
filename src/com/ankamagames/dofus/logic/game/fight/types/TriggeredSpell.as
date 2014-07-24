@@ -18,12 +18,12 @@ package com.ankamagames.dofus.logic.game.fight.types
       //Décompilation abandonné
       }
       
-      public function TriggeredSpell(param1:int, param2:int, param3:SpellWrapper, param4:String, param5:Vector.<int>, param6:Boolean)
+      public function TriggeredSpell(pCasterId:int, pTargetId:int, pSpell:SpellWrapper, pTriggers:String, pTargets:Vector.<int>, pHasCritical:Boolean)
       {
          //Décompilation abandonné
       }
       
-      public static function create(param1:String, param2:uint, param3:int, param4:int, param5:int, param6:int, param7:Boolean = true) : TriggeredSpell
+      public static function create(pTriggers:String, pSpellID:uint, pSpellLevel:int, pCriticalSpellLevel:int, pCasterId:int, pTargetId:int, pUseCache:Boolean = true) : TriggeredSpell
       {
          //Décompilation abandonné
       }

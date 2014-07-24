@@ -17,24 +17,24 @@ package com.ankamagames.atouin.renderers
       //Décompilation abandonné
       }
       
-      public function ZoneClipRenderer(param1:uint, param2:String, param3:Array, param4:int = -1, param5:Boolean = false)
+      public function ZoneClipRenderer(nStrata:uint, pClipUri:String, pClipName:Array, pCurrentMap:int = -1, pNeedBorders:Boolean = false)
       {
          //Décompilation abandonné
       }
       
       private static var zoneTile:Array;
       
-      private static function getZoneTile(param1:Uri, param2:String, param3:Boolean) : ZoneClipTile
+      private static function getZoneTile(pUri:Uri, pClipName:String, pNeedBorders:Boolean) : ZoneClipTile
       {
          //Décompilation abandonné
       }
       
-      private static function destroyZoneTile(param1:ZoneClipTile) : void
+      private static function destroyZoneTile(zt:ZoneClipTile) : void
       {
          //Décompilation abandonné
       }
       
-      private static function getData(param1:String, param2:String) : CachedTile
+      private static function getData(uri:String, clip:String) : CachedTile
       {
          //Décompilation abandonné
       }
@@ -55,17 +55,17 @@ package com.ankamagames.atouin.renderers
       
       protected var _cells:Vector.<uint>;
       
-      public function render(param1:Vector.<uint>, param2:Color, param3:DataMapContainer, param4:Boolean = false, param5:Boolean = false) : void
+      public function render(cells:Vector.<uint>, oColor:Color, mapContainer:DataMapContainer, bAlpha:Boolean = false, updateStrata:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function remove(param1:Vector.<uint>, param2:DataMapContainer) : void
+      public function remove(cells:Vector.<uint>, mapContainer:DataMapContainer) : void
       {
          //Décompilation abandonné
       }
       
-      private function onPropertyChanged(param1:PropertyChangeEvent) : void
+      private function onPropertyChanged(e:PropertyChangeEvent) : void
       {
          //Décompilation abandonné
       }
@@ -80,7 +80,7 @@ class CachedTile extends Object
    //Décompilation abandonné
    }
    
-   function CachedTile(param1:String, param2:String)
+   function CachedTile(pName:String, pClip:String)
    {
       //Décompilation abandonné
    }
@@ -91,7 +91,7 @@ class CachedTile extends Object
    
    private var _list:Vector.<ZoneClipTile>;
    
-   public function push(param1:ZoneClipTile) : void
+   public function push(value:ZoneClipTile) : void
    {
       //Décompilation abandonné
    }

@@ -17,7 +17,7 @@ package org.flintparticles.twoD.renderers
       //Décompilation abandonné
       }
       
-      public function BitmapRenderer(param1:Rectangle, param2:Boolean = false)
+      public function BitmapRenderer(canvas:Rectangle, smoothing:Boolean = false)
       {
          //Décompilation abandonné
       }
@@ -38,17 +38,17 @@ package org.flintparticles.twoD.renderers
       
       protected var _canvas:Rectangle;
       
-      public function addFilter(param1:BitmapFilter, param2:Boolean = false) : void
+      public function addFilter(filter:BitmapFilter, postRender:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeFilter(param1:BitmapFilter) : void
+      public function removeFilter(filter:BitmapFilter) : void
       {
          //Décompilation abandonné
       }
       
-      public function setPaletteMap(param1:Array = null, param2:Array = null, param3:Array = null, param4:Array = null) : void
+      public function setPaletteMap(red:Array = null, green:Array = null, blue:Array = null, alpha:Array = null) : void
       {
          //Décompilation abandonné
       }
@@ -68,17 +68,17 @@ package org.flintparticles.twoD.renderers
          //Décompilation abandonné
       }
       
-      public function set canvas(param1:Rectangle) : void
+      public function set canvas(value:Rectangle) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function renderParticles(param1:Array) : void
+      override protected function renderParticles(particles:Array) : void
       {
          //Décompilation abandonné
       }
       
-      protected function drawParticle(param1:Particle2D) : void
+      protected function drawParticle(particle:Particle2D) : void
       {
          //Décompilation abandonné
       }

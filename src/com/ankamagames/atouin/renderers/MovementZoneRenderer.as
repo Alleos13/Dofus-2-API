@@ -10,7 +10,7 @@ package com.ankamagames.atouin.renderers
       //Décompilation abandonné
       }
       
-      public function MovementZoneRenderer(param1:Boolean, param2:int = 1)
+      public function MovementZoneRenderer(showText:Boolean, startAt:int = 1)
       {
          //Décompilation abandonné
       }
@@ -19,7 +19,7 @@ package com.ankamagames.atouin.renderers
       
       private var _startAt:int;
       
-      override protected function getText(param1:int) : String
+      override protected function getText(count:int) : String
       {
          //Décompilation abandonné
       }

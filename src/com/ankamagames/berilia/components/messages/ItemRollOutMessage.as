@@ -10,7 +10,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function ItemRollOutMessage(param1:GraphicContainer, param2:GridItem)
+      public function ItemRollOutMessage(target:GraphicContainer, gridItem:GridItem)
       {
          //Décompilation abandonné
       }

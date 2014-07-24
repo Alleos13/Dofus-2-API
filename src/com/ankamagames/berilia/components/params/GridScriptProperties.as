@@ -11,7 +11,7 @@ package com.ankamagames.berilia.components.params
       //Décompilation abandonné
       }
       
-      public function GridScriptProperties(param1:*, param2:Boolean = false, param3:Grid = null)
+      public function GridScriptProperties(d:*, b:Boolean = false, grid:Grid = null)
       {
          //Décompilation abandonné
       }

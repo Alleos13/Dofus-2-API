@@ -45,7 +45,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          //Décompilation abandonné
       }
       
-      public function setMap(param1:Map) : void
+      public function setMap(pMap:Map) : void
       {
          //Décompilation abandonné
       }

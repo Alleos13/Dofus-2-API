@@ -9,14 +9,14 @@ package com.ankamagames.berilia.types.tooltip
       //Décompilation abandonné
       }
       
-      public function TooltipChunk(param1:String)
+      public function TooltipChunk(content:String)
       {
          //Décompilation abandonné
       }
       
       private var _content:String;
       
-      public function processContent(param1:Object) : String
+      public function processContent(params:Object) : String
       {
          //Décompilation abandonné
       }

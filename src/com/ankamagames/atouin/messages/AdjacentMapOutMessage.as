@@ -10,7 +10,7 @@ package com.ankamagames.atouin.messages
       //Décompilation abandonné
       }
       
-      public function AdjacentMapOutMessage(param1:uint, param2:DisplayObject)
+      public function AdjacentMapOutMessage(nDirection:uint, zone:DisplayObject)
       {
          //Décompilation abandonné
       }

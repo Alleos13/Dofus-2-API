@@ -22,32 +22,32 @@ package com.ankamagames.berilia.factories
       
       private static var _makerAssoc:Array;
       
-      public static function registerMaker(param1:String, param2:Class, param3:Class = null) : void
+      public static function registerMaker(makerName:String, maker:Class, scriptClass:Class = null) : void
       {
          //Décompilation abandonné
       }
       
-      public static function registerAssoc(param1:*, param2:String) : void
+      public static function registerAssoc(dataClass:*, makerName:String) : void
       {
          //Décompilation abandonné
       }
       
-      public static function existRegisterMaker(param1:String) : Boolean
+      public static function existRegisterMaker(makerName:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function existMakerAssoc(param1:*) : Boolean
+      public static function existMakerAssoc(dataClass:*) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function unregister(param1:Class, param2:Class) : void
+      public static function unregister(dataType:Class, maker:Class) : void
       {
          //Décompilation abandonné
       }
       
-      public static function create(param1:*, param2:String = null, param3:Class = null, param4:Object = null) : Tooltip
+      public static function create(data:*, makerName:String = null, script:Class = null, makerParam:Object = null) : Tooltip
       {
          //Décompilation abandonné
       }
@@ -60,7 +60,7 @@ class TooltipData extends Object
    //Décompilation abandonné
    }
    
-   function TooltipData(param1:Class, param2:Class)
+   function TooltipData(maker:Class, scriptClass:Class)
    {
       //Décompilation abandonné
    }

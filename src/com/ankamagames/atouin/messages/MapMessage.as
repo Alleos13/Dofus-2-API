@@ -25,7 +25,7 @@ package com.ankamagames.atouin.messages
          //Décompilation abandonné
       }
       
-      public function set id(param1:uint) : void
+      public function set id(nValue:uint) : void
       {
          //Décompilation abandonné
       }
@@ -35,7 +35,7 @@ package com.ankamagames.atouin.messages
          //Décompilation abandonné
       }
       
-      public function set transitionType(param1:String) : void
+      public function set transitionType(sValue:String) : void
       {
          //Décompilation abandonné
       }

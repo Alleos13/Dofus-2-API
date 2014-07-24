@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.character.status
          //Décompilation abandonné
       }
       
-      public function initPlayerStatusExtended(param1:uint = 1, param2:String = "") : PlayerStatusExtended
+      public function initPlayerStatusExtended(statusId:uint = 1, message:String = "") : PlayerStatusExtended
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.character.status
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PlayerStatusExtended(param1:IDataOutput) : void
+      public function serializeAs_PlayerStatusExtended(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PlayerStatusExtended(param1:IDataInput) : void
+      public function deserializeAs_PlayerStatusExtended(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

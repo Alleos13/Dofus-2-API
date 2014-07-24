@@ -24,12 +24,12 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      public static function createElementRange(param1:TextFlow, param2:int, param3:int) : ElementRange
+      public static function createElementRange(textFlow:TextFlow, absoluteStart:int, absoluteEnd:int) : ElementRange
       {
          //Décompilation abandonné
       }
       
-      private static function adjustForLeanLeft(param1:ElementRange) : void
+      private static function adjustForLeanLeft(rslt:ElementRange) : void
       {
          //Décompilation abandonné
       }
@@ -53,7 +53,7 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      public function set absoluteStart(param1:int) : void
+      public function set absoluteStart(value:int) : void
       {
          //Décompilation abandonné
       }
@@ -63,7 +63,7 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      public function set absoluteEnd(param1:int) : void
+      public function set absoluteEnd(value:int) : void
       {
          //Décompilation abandonné
       }
@@ -73,7 +73,7 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      public function set firstLeaf(param1:FlowLeafElement) : void
+      public function set firstLeaf(value:FlowLeafElement) : void
       {
          //Décompilation abandonné
       }
@@ -83,7 +83,7 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      public function set lastLeaf(param1:FlowLeafElement) : void
+      public function set lastLeaf(value:FlowLeafElement) : void
       {
          //Décompilation abandonné
       }
@@ -93,7 +93,7 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      public function set firstParagraph(param1:ParagraphElement) : void
+      public function set firstParagraph(value:ParagraphElement) : void
       {
          //Décompilation abandonné
       }
@@ -103,7 +103,7 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      public function set lastParagraph(param1:ParagraphElement) : void
+      public function set lastParagraph(value:ParagraphElement) : void
       {
          //Décompilation abandonné
       }
@@ -113,7 +113,7 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      public function set textFlow(param1:TextFlow) : void
+      public function set textFlow(value:TextFlow) : void
       {
          //Décompilation abandonné
       }

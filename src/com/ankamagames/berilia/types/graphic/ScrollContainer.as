@@ -46,7 +46,7 @@ package com.ankamagames.berilia.types.graphic
       
       private var _scrollBarSize:uint = 16;
       
-      public function set finalized(param1:Boolean) : void
+      public function set finalized(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -56,17 +56,17 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      override public function set width(param1:Number) : void
+      override public function set width(n:Number) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set height(param1:Number) : void
+      override public function set height(n:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function set scrollbarCss(param1:Uri) : void
+      public function set scrollbarCss(sValue:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -76,12 +76,12 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set verticalScrollSpeed(param1:Number) : void
+      public function set verticalScrollSpeed(speed:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function set verticalScrollbarValue(param1:int) : void
+      public function set verticalScrollbarValue(value:int) : void
       {
          //Décompilation abandonné
       }
@@ -96,7 +96,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set useHorizontalScroll(param1:Boolean) : void
+      public function set useHorizontalScroll(yes:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -106,12 +106,12 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function set horizontalScrollSpeed(param1:Number) : void
+      public function set horizontalScrollSpeed(speed:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function set horizontalScrollbarValue(param1:int) : void
+      public function set horizontalScrollbarValue(value:int) : void
       {
          //Décompilation abandonné
       }
@@ -121,12 +121,12 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      override public function addChild(param1:DisplayObject) : DisplayObject
+      override public function addChild(child:DisplayObject) : DisplayObject
       {
          //Décompilation abandonné
       }
       
-      override public function addContent(param1:GraphicContainer, param2:int = -1) : GraphicContainer
+      override public function addContent(child:GraphicContainer, index:int = -1) : GraphicContainer
       {
          //Décompilation abandonné
       }
@@ -136,32 +136,32 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      override public function process(param1:Message) : Boolean
+      override public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      override public function getStrata(param1:uint) : Sprite
+      override public function getStrata(nStrata:uint) : Sprite
       {
          //Décompilation abandonné
       }
       
-      private function onVerticalScroll(param1:Event) : void
+      private function onVerticalScroll(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onHorizontalScroll(param1:Event) : void
+      private function onHorizontalScroll(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onChildFinalized(param1:Event) : void
+      private function onChildFinalized(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onChildRemoved(param1:Event) : void
+      private function onChildRemoved(e:Event) : void
       {
          //Décompilation abandonné
       }

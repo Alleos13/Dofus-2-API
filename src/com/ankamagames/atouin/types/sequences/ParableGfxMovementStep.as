@@ -18,7 +18,7 @@ package com.ankamagames.atouin.types.sequences
       //Décompilation abandonné
       }
       
-      public function ParableGfxMovementStep(param1:IMovable, param2:MapPoint, param3:uint, param4:Number = 0.5, param5:int = 0, param6:Boolean = true, param7:int = 0)
+      public function ParableGfxMovementStep(gfxEntity:IMovable, targetPoint:MapPoint, speed:uint, curvePrc:Number = 0.5, yOffset:int = 0, waitEnd:Boolean = true, yOffsetOnHit:int = 0)
       {
          //Décompilation abandonné
       }
@@ -42,7 +42,7 @@ package com.ankamagames.atouin.types.sequences
          //Décompilation abandonné
       }
       
-      private function onTweenEnd(param1:TweenEvent) : void
+      private function onTweenEnd(e:TweenEvent) : void
       {
          //Décompilation abandonné
       }

@@ -19,7 +19,7 @@ package com.ankamagames.dofus.datacenter.items
       
       private static var _incarnationsList:Array;
       
-      public static function getIncarnationById(param1:uint) : Incarnation
+      public static function getIncarnationById(id:uint) : Incarnation
       {
          //Décompilation abandonné
       }

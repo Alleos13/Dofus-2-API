@@ -33,17 +33,17 @@ package com.ankamagames.jerakine.data
       
       private static var _overrides:Dictionary;
       
-      public static function addOverride(param1:String, param2:int, param3:uint) : void
+      public static function addOverride(moduleId:String, keyId:int, newKeyId:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public static function getObject(param1:String, param2:int) : Object
+      public static function getObject(moduleId:String, keyId:int) : Object
       {
          //Décompilation abandonné
       }
       
-      public static function getObjects(param1:String) : Array
+      public static function getObjects(moduleId:String) : Array
       {
          //Décompilation abandonné
       }

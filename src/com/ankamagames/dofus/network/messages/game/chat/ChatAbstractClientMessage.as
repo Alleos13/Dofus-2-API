@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.chat
          //Décompilation abandonné
       }
       
-      public function initChatAbstractClientMessage(param1:String = "") : ChatAbstractClientMessage
+      public function initChatAbstractClientMessage(content:String = "") : ChatAbstractClientMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.chat
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ChatAbstractClientMessage(param1:IDataOutput) : void
+      public function serializeAs_ChatAbstractClientMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ChatAbstractClientMessage(param1:IDataInput) : void
+      public function deserializeAs_ChatAbstractClientMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

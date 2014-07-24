@@ -11,7 +11,7 @@ package org.flintparticles.common.initializers
       //Décompilation abandonné
       }
       
-      public function ImageClass(param1:Class, ... rest)
+      public function ImageClass(imageClass:Class, ... parameters)
       {
          //Décompilation abandonné
       }
@@ -25,7 +25,7 @@ package org.flintparticles.common.initializers
          //Décompilation abandonné
       }
       
-      public function set imageClass(param1:Class) : void
+      public function set imageClass(value:Class) : void
       {
          //Décompilation abandonné
       }
@@ -35,12 +35,12 @@ package org.flintparticles.common.initializers
          //Décompilation abandonné
       }
       
-      public function set parameters(param1:Array) : void
+      public function set parameters(value:Array) : void
       {
          //Décompilation abandonné
       }
       
-      override public function initialize(param1:Emitter, param2:Particle) : void
+      override public function initialize(emitter:Emitter, particle:Particle) : void
       {
          //Décompilation abandonné
       }

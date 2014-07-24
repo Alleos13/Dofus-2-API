@@ -14,17 +14,17 @@ package com.hurlant.crypto.symmetric
          //Décompilation abandonné
       }
       
-      public function unpad(param1:ByteArray) : void
+      public function unpad(a:ByteArray) : void
       {
          //Décompilation abandonné
       }
       
-      public function pad(param1:ByteArray) : void
+      public function pad(a:ByteArray) : void
       {
          //Décompilation abandonné
       }
       
-      public function setBlockSize(param1:uint) : void
+      public function setBlockSize(bs:uint) : void
       {
          //Décompilation abandonné
       }

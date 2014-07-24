@@ -7,7 +7,7 @@ package haxe.ds
       //Décompilation abandonné
       }
       
-      public function GenericCell_Int(param1:int, param2:GenericCell_Int)
+      public function GenericCell_Int(elt:int, next:GenericCell_Int)
       {
          //Décompilation abandonné
       }

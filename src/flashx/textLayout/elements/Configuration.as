@@ -20,12 +20,12 @@ package flashx.textLayout.elements
       //Décompilation abandonné
       }
       
-      public function Configuration(param1:Boolean = true)
+      public function Configuration(initializeWithDefaults:Boolean = true)
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function versionIsAtLeast(param1:int, param2:int) : Boolean
+      tlf_internal  static function versionIsAtLeast(major:int, minor:int) : Boolean
       {
          //Décompilation abandonné
       }
@@ -101,7 +101,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set manageTabKey(param1:Boolean) : void
+      public function set manageTabKey(val:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -111,7 +111,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set manageEnterKey(param1:Boolean) : void
+      public function set manageEnterKey(val:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -121,7 +121,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set overflowPolicy(param1:String) : void
+      public function set overflowPolicy(value:String) : void
       {
          //Décompilation abandonné
       }
@@ -131,7 +131,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set defaultLinkNormalFormat(param1:ITextLayoutFormat) : void
+      public function set defaultLinkNormalFormat(val:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
@@ -141,7 +141,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set defaultListMarkerFormat(param1:IListMarkerFormat) : void
+      public function set defaultListMarkerFormat(val:IListMarkerFormat) : void
       {
          //Décompilation abandonné
       }
@@ -151,7 +151,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set defaultLinkHoverFormat(param1:ITextLayoutFormat) : void
+      public function set defaultLinkHoverFormat(val:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
@@ -161,7 +161,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set defaultLinkActiveFormat(param1:ITextLayoutFormat) : void
+      public function set defaultLinkActiveFormat(val:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
@@ -171,7 +171,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set textFlowInitialFormat(param1:ITextLayoutFormat) : void
+      public function set textFlowInitialFormat(val:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
@@ -181,7 +181,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set focusedSelectionFormat(param1:SelectionFormat) : void
+      public function set focusedSelectionFormat(val:SelectionFormat) : void
       {
          //Décompilation abandonné
       }
@@ -191,7 +191,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set unfocusedSelectionFormat(param1:SelectionFormat) : void
+      public function set unfocusedSelectionFormat(val:SelectionFormat) : void
       {
          //Décompilation abandonné
       }
@@ -201,7 +201,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set inactiveSelectionFormat(param1:SelectionFormat) : void
+      public function set inactiveSelectionFormat(val:SelectionFormat) : void
       {
          //Décompilation abandonné
       }
@@ -211,7 +211,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set scrollDragDelay(param1:Number) : void
+      public function set scrollDragDelay(val:Number) : void
       {
          //Décompilation abandonné
       }
@@ -221,7 +221,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set scrollDragPixels(param1:Number) : void
+      public function set scrollDragPixels(val:Number) : void
       {
          //Décompilation abandonné
       }
@@ -231,7 +231,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set scrollPagePercentage(param1:Number) : void
+      public function set scrollPagePercentage(val:Number) : void
       {
          //Décompilation abandonné
       }
@@ -241,7 +241,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set scrollMouseWheelMultiplier(param1:Number) : void
+      public function set scrollMouseWheelMultiplier(val:Number) : void
       {
          //Décompilation abandonné
       }
@@ -251,7 +251,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set flowComposerClass(param1:Class) : void
+      public function set flowComposerClass(val:Class) : void
       {
          //Décompilation abandonné
       }
@@ -261,7 +261,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set enableAccessibility(param1:Boolean) : void
+      public function set enableAccessibility(val:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -271,7 +271,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set releaseLineCreationData(param1:Boolean) : void
+      public function set releaseLineCreationData(val:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -281,7 +281,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set inlineGraphicResolverFunction(param1:Function) : void
+      public function set inlineGraphicResolverFunction(val:Function) : void
       {
          //Décompilation abandonné
       }

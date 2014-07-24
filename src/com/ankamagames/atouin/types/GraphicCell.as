@@ -10,7 +10,7 @@ package com.ankamagames.atouin.types
       //Décompilation abandonné
       }
       
-      public function GraphicCell(param1:uint)
+      public function GraphicCell(cellId:uint)
       {
          //Décompilation abandonné
       }
@@ -30,7 +30,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set dropValidator(param1:Function) : void
+      public function set dropValidator(dv:Function) : void
       {
          //Décompilation abandonné
       }
@@ -40,7 +40,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set removeDropSource(param1:Function) : void
+      public function set removeDropSource(rds:Function) : void
       {
          //Décompilation abandonné
       }
@@ -50,7 +50,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set processDrop(param1:Function) : void
+      public function set processDrop(pd:Function) : void
       {
          //Décompilation abandonné
       }
@@ -60,7 +60,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      private function returnTrueFunction(... rest) : Boolean
+      private function returnTrueFunction(... args) : Boolean
       {
          //Décompilation abandonné
       }

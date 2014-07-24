@@ -18,7 +18,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightTackledStep(param1:int)
+      public function FightTackledStep(fighterId:int)
       {
          //Décompilation abandonné
       }
@@ -37,7 +37,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
          //Décompilation abandonné
       }
       
-      public function stepFinished(param1:ISequencable, param2:Boolean = false) : void
+      public function stepFinished(step:ISequencable, withTimout:Boolean = false) : void
       {
          //Décompilation abandonné
       }

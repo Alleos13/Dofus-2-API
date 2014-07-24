@@ -9,7 +9,7 @@ package com.ankamagames.tiphon.events
       //Décompilation abandonné
       }
       
-      public function SwlEvent(param1:String, param2:String, param3:Boolean = false, param4:Boolean = false)
+      public function SwlEvent(type:String, pUrl:String, bubbles:Boolean = false, cancelable:Boolean = false)
       {
          //Décompilation abandonné
       }

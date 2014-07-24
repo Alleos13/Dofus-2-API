@@ -89,7 +89,7 @@ package com.ankamagames.dofus.network.types.game.mount
          //Décompilation abandonné
       }
       
-      public function initMountClientData(param1:Number = 0, param2:uint = 0, param3:Vector.<uint> = null, param4:Vector.<uint> = null, param5:String = "", param6:Boolean = false, param7:uint = 0, param8:Number = 0, param9:Number = 0, param10:Number = 0, param11:uint = 0, param12:Boolean = false, param13:uint = 0, param14:Boolean = false, param15:uint = 0, param16:uint = 0, param17:uint = 0, param18:uint = 0, param19:uint = 0, param20:uint = 0, param21:int = 0, param22:int = 0, param23:uint = 0, param24:uint = 0, param25:uint = 0, param26:int = 0, param27:Boolean = false, param28:uint = 0, param29:Number = 0, param30:int = 0, param31:uint = 0, param32:Vector.<ObjectEffectInteger> = null) : MountClientData
+      public function initMountClientData(id:Number = 0, model:uint = 0, ancestor:Vector.<uint> = null, behaviors:Vector.<uint> = null, name:String = "", sex:Boolean = false, ownerId:uint = 0, experience:Number = 0, experienceForLevel:Number = 0, experienceForNextLevel:Number = 0, level:uint = 0, isRideable:Boolean = false, maxPods:uint = 0, isWild:Boolean = false, stamina:uint = 0, staminaMax:uint = 0, maturity:uint = 0, maturityForAdult:uint = 0, energy:uint = 0, energyMax:uint = 0, serenity:int = 0, aggressivityMax:int = 0, serenityMax:uint = 0, love:uint = 0, loveMax:uint = 0, fecondationTime:int = 0, isFecondationReady:Boolean = false, boostLimiter:uint = 0, boostMax:Number = 0, reproductionCount:int = 0, reproductionCountMax:uint = 0, effectList:Vector.<ObjectEffectInteger> = null) : MountClientData
       {
          //Décompilation abandonné
       }
@@ -99,22 +99,22 @@ package com.ankamagames.dofus.network.types.game.mount
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_MountClientData(param1:IDataOutput) : void
+      public function serializeAs_MountClientData(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_MountClientData(param1:IDataInput) : void
+      public function deserializeAs_MountClientData(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

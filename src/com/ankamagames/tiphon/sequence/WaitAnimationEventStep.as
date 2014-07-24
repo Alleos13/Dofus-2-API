@@ -10,7 +10,7 @@ package com.ankamagames.tiphon.sequence
       //Décompilation abandonné
       }
       
-      public function WaitAnimationEventStep(param1:PlayAnimationStep, param2:String = "animation_event_end")
+      public function WaitAnimationEventStep(animStep:PlayAnimationStep, waitedEvent:String = "animation_event_end")
       {
          //Décompilation abandonné
       }
@@ -30,7 +30,7 @@ package com.ankamagames.tiphon.sequence
          //Décompilation abandonné
       }
       
-      private function onEvent(param1:TiphonEvent) : void
+      private function onEvent(e:TiphonEvent) : void
       {
          //Décompilation abandonné
       }

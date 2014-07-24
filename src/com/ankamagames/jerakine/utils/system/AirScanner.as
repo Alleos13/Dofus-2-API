@@ -21,7 +21,7 @@ package com.ankamagames.jerakine.utils.system
       
       private static var _isStreaming:Boolean;
       
-      public static function init(param1:Boolean = false) : void
+      public static function init(pIsStreaming:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -41,7 +41,7 @@ package com.ankamagames.jerakine.utils.system
          //Décompilation abandonné
       }
       
-      public static function allowByteCodeExecution(param1:LoaderContext, param2:Boolean) : void
+      public static function allowByteCodeExecution(pContext:LoaderContext, pVal:Boolean) : void
       {
          //Décompilation abandonné
       }

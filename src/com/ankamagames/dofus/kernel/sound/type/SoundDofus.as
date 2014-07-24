@@ -26,7 +26,7 @@ package com.ankamagames.dofus.kernel.sound.type
       //Décompilation abandonné
       }
       
-      public function SoundDofus(param1:String, param2:Boolean = false)
+      public function SoundDofus(pSoundID:String, useCache:Boolean = false)
       {
          //Décompilation abandonné
       }
@@ -96,7 +96,7 @@ package com.ankamagames.dofus.kernel.sound.type
          //Décompilation abandonné
       }
       
-      public function set pan(param1:Number) : void
+      public function set pan(pan:Number) : void
       {
          //Décompilation abandonné
       }
@@ -106,7 +106,7 @@ package com.ankamagames.dofus.kernel.sound.type
          //Décompilation abandonné
       }
       
-      public function set range(param1:Number) : void
+      public function set range(range:Number) : void
       {
          //Décompilation abandonné
       }
@@ -116,7 +116,7 @@ package com.ankamagames.dofus.kernel.sound.type
          //Décompilation abandonné
       }
       
-      public function set saturationRange(param1:Number) : void
+      public function set saturationRange(saturationRange:Number) : void
       {
          //Décompilation abandonné
       }
@@ -126,7 +126,7 @@ package com.ankamagames.dofus.kernel.sound.type
          //Décompilation abandonné
       }
       
-      public function set position(param1:Point) : void
+      public function set position(position:Point) : void
       {
          //Décompilation abandonné
       }
@@ -136,7 +136,7 @@ package com.ankamagames.dofus.kernel.sound.type
          //Décompilation abandonné
       }
       
-      public function set volumeMax(param1:Number) : void
+      public function set volumeMax(pVolumeMax:Number) : void
       {
          //Décompilation abandonné
       }
@@ -151,7 +151,7 @@ package com.ankamagames.dofus.kernel.sound.type
          //Décompilation abandonné
       }
       
-      public function set volume(param1:Number) : void
+      public function set volume(pVolume:Number) : void
       {
          //Décompilation abandonné
       }
@@ -161,7 +161,7 @@ package com.ankamagames.dofus.kernel.sound.type
          //Décompilation abandonné
       }
       
-      public function set currentFadeVolume(param1:Number) : void
+      public function set currentFadeVolume(pFadeVolume:Number) : void
       {
          //Décompilation abandonné
       }
@@ -186,7 +186,7 @@ package com.ankamagames.dofus.kernel.sound.type
          //Décompilation abandonné
       }
       
-      public function set sound(param1:*) : void
+      public function set sound(sound:*) : void
       {
          //Décompilation abandonné
       }
@@ -196,7 +196,7 @@ package com.ankamagames.dofus.kernel.sound.type
          //Décompilation abandonné
       }
       
-      public function set busId(param1:int) : void
+      public function set busId(pBus:int) : void
       {
          //Décompilation abandonné
       }
@@ -216,7 +216,7 @@ package com.ankamagames.dofus.kernel.sound.type
          //Décompilation abandonné
       }
       
-      public function set noCutSilence(param1:Boolean) : void
+      public function set noCutSilence(pNoCutSilence:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -231,47 +231,47 @@ package com.ankamagames.dofus.kernel.sound.type
          //Décompilation abandonné
       }
       
-      public function set silence(param1:SoundSilence) : void
+      public function set silence(pSilence:SoundSilence) : void
       {
          //Décompilation abandonné
       }
       
-      public function setCurrentLoop(param1:uint) : void
+      public function setCurrentLoop(pLoop:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function addEffect(param1:IEffect) : void
+      public function addEffect(pEffect:IEffect) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeEffect(param1:IEffect) : void
+      public function removeEffect(pEffect:IEffect) : void
       {
          //Décompilation abandonné
       }
       
-      public function applyDynamicMix(param1:VolumeFadeEffect, param2:uint, param3:VolumeFadeEffect) : void
+      public function applyDynamicMix(pFadeIn:VolumeFadeEffect, pWaitingTime:uint, pFadeOut:VolumeFadeEffect) : void
       {
          //Décompilation abandonné
       }
       
-      public function play(param1:Boolean = false, param2:int = 0, param3:VolumeFadeEffect = null, param4:VolumeFadeEffect = null) : void
+      public function play(pLoop:Boolean = false, pLoops:int = 0, pFadeIn:VolumeFadeEffect = null, pFadeOut:VolumeFadeEffect = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function stop(param1:VolumeFadeEffect = null) : void
+      public function stop(pFadeOut:VolumeFadeEffect = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function loadSound(param1:ICache) : void
+      public function loadSound(cache:ICache) : void
       {
          //Décompilation abandonné
       }
       
-      public function setLoops(param1:int) : void
+      public function setLoops(pLoops:int) : void
       {
          //Décompilation abandonné
       }

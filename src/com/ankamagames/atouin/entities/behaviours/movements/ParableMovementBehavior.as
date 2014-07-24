@@ -65,17 +65,17 @@ package com.ankamagames.atouin.entities.behaviours.movements
          //Décompilation abandonné
       }
       
-      override public function move(param1:IMovable, param2:MovementPath, param3:Function = null) : void
+      override public function move(entity:IMovable, path:MovementPath, callback:Function = null) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function processMovement(param1:TweenEntityData, param2:uint) : void
+      override protected function processMovement(tweenData:TweenEntityData, currentTime:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function checkAngle(param1:Point, param2:Point) : Number
+      private function checkAngle(initPoint:Point, finalPoint:Point) : Number
       {
          //Décompilation abandonné
       }

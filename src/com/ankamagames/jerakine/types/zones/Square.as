@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.types.zones
       //Décompilation abandonné
       }
       
-      public function Square(param1:uint, param2:uint, param3:IDataMapProvider)
+      public function Square(nMinRadius:uint, nRadius:uint, dataMapProvider:IDataMapProvider)
       {
          //Décompilation abandonné
       }

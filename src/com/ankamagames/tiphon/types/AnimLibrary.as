@@ -10,12 +10,12 @@ package com.ankamagames.tiphon.types
       //Décompilation abandonné
       }
       
-      public function AnimLibrary(param1:uint, param2:Boolean = false)
+      public function AnimLibrary(pGfxId:uint, isBone:Boolean = false)
       {
          //Décompilation abandonné
       }
       
-      override public function addSwl(param1:Swl, param2:String) : void
+      override public function addSwl(swl:Swl, url:String) : void
       {
          //Décompilation abandonné
       }

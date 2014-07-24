@@ -122,7 +122,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function set module(param1:UiModule) : void
+      public function set module(value:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -137,17 +137,17 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getServer(param1:int) : Server
+      public function getServer(id:int) : Server
       {
          //Décompilation abandonné
       }
       
-      public function getServerPopulation(param1:int) : ServerPopulation
+      public function getServerPopulation(id:int) : ServerPopulation
       {
          //Décompilation abandonné
       }
       
-      public function getBreed(param1:int) : Breed
+      public function getBreed(id:int) : Breed
       {
          //Décompilation abandonné
       }
@@ -157,7 +157,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getHead(param1:int) : Head
+      public function getHead(id:int) : Head
       {
          //Décompilation abandonné
       }
@@ -167,7 +167,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getSpell(param1:int) : Spell
+      public function getSpell(id:int) : Spell
       {
          //Décompilation abandonné
       }
@@ -177,17 +177,17 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getSpellWrapper(param1:uint, param2:uint = 1) : SpellWrapper
+      public function getSpellWrapper(id:uint, level:uint = 1) : SpellWrapper
       {
          //Décompilation abandonné
       }
       
-      public function getEmoteWrapper(param1:uint, param2:uint = 0) : EmoteWrapper
+      public function getEmoteWrapper(id:uint, position:uint = 0) : EmoteWrapper
       {
          //Décompilation abandonné
       }
       
-      public function getButtonWrapper(param1:uint, param2:int, param3:String, param4:Function, param5:String, param6:String = "") : ButtonWrapper
+      public function getButtonWrapper(buttonId:uint, position:int, uriName:String, callback:Function, name:String, shortcut:String = "") : ButtonWrapper
       {
          //Décompilation abandonné
       }
@@ -197,42 +197,42 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getJobWrapper(param1:uint) : JobWrapper
+      public function getJobWrapper(id:uint) : JobWrapper
       {
          //Décompilation abandonné
       }
       
-      public function getTitleWrapper(param1:uint) : TitleWrapper
+      public function getTitleWrapper(id:uint) : TitleWrapper
       {
          //Décompilation abandonné
       }
       
-      public function getOrnamentWrapper(param1:uint) : OrnamentWrapper
+      public function getOrnamentWrapper(id:uint) : OrnamentWrapper
       {
          //Décompilation abandonné
       }
       
-      public function getSpellLevel(param1:int) : SpellLevel
+      public function getSpellLevel(id:int) : SpellLevel
       {
          //Décompilation abandonné
       }
       
-      public function getSpellLevelBySpell(param1:Spell, param2:int) : SpellLevel
+      public function getSpellLevelBySpell(spell:Spell, level:int) : SpellLevel
       {
          //Décompilation abandonné
       }
       
-      public function getSpellType(param1:int) : SpellType
+      public function getSpellType(id:int) : SpellType
       {
          //Décompilation abandonné
       }
       
-      public function getSpellState(param1:int) : SpellState
+      public function getSpellState(id:int) : SpellState
       {
          //Décompilation abandonné
       }
       
-      public function getChatChannel(param1:int) : ChatChannel
+      public function getChatChannel(id:int) : ChatChannel
       {
          //Décompilation abandonné
       }
@@ -242,12 +242,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getSubArea(param1:int) : SubArea
+      public function getSubArea(id:int) : SubArea
       {
          //Décompilation abandonné
       }
       
-      public function getSubAreaFromMap(param1:int) : SubArea
+      public function getSubAreaFromMap(mapId:int) : SubArea
       {
          //Décompilation abandonné
       }
@@ -257,27 +257,27 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getArea(param1:int) : Area
+      public function getArea(id:int) : Area
       {
          //Décompilation abandonné
       }
       
-      public function getSuperArea(param1:int) : SuperArea
+      public function getSuperArea(id:int) : SuperArea
       {
          //Décompilation abandonné
       }
       
-      public function getAllArea(param1:Boolean = false, param2:Boolean = false) : Array
+      public function getAllArea(withHouses:Boolean = false, withPaddocks:Boolean = false) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getWorldPoint(param1:int) : WorldPoint
+      public function getWorldPoint(id:int) : WorldPoint
       {
          //Décompilation abandonné
       }
       
-      public function getItem(param1:int, param2:Boolean = true) : Item
+      public function getItem(id:int, returnDefaultItemIfNull:Boolean = true) : Item
       {
          //Décompilation abandonné
       }
@@ -287,7 +287,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getIncarnationLevel(param1:int, param2:int) : IncarnationLevel
+      public function getIncarnationLevel(incarnationId:int, level:int) : IncarnationLevel
       {
          //Décompilation abandonné
       }
@@ -297,37 +297,37 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getItemIconUri(param1:uint) : Uri
+      public function getItemIconUri(iconId:uint) : Uri
       {
          //Décompilation abandonné
       }
       
-      public function getItemName(param1:int) : String
+      public function getItemName(id:int) : String
       {
          //Décompilation abandonné
       }
       
-      public function getItemType(param1:int) : String
+      public function getItemType(id:int) : String
       {
          //Décompilation abandonné
       }
       
-      public function getItemSet(param1:int) : ItemSet
+      public function getItemSet(id:int) : ItemSet
       {
          //Décompilation abandonné
       }
       
-      public function getPet(param1:int) : Pet
+      public function getPet(id:int) : Pet
       {
          //Décompilation abandonné
       }
       
-      public function getSetEffects(param1:Array, param2:Array = null) : Array
+      public function getSetEffects(GIDList:Array, setBonus:Array = null) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getMonsterFromId(param1:uint) : Monster
+      public function getMonsterFromId(monsterId:uint) : Monster
       {
          //Décompilation abandonné
       }
@@ -337,12 +337,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getMonsterMiniBossFromId(param1:uint) : MonsterMiniBoss
+      public function getMonsterMiniBossFromId(monsterId:uint) : MonsterMiniBoss
       {
          //Décompilation abandonné
       }
       
-      public function getMonsterRaceFromId(param1:uint) : MonsterRace
+      public function getMonsterRaceFromId(raceId:uint) : MonsterRace
       {
          //Décompilation abandonné
       }
@@ -352,7 +352,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getMonsterSuperRaceFromId(param1:uint) : MonsterSuperRace
+      public function getMonsterSuperRaceFromId(raceId:uint) : MonsterSuperRace
       {
          //Décompilation abandonné
       }
@@ -362,7 +362,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getCompanion(param1:uint) : Companion
+      public function getCompanion(companionId:uint) : Companion
       {
          //Décompilation abandonné
       }
@@ -372,37 +372,37 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getCompanionCharacteristic(param1:uint) : CompanionCharacteristic
+      public function getCompanionCharacteristic(companionCharacteristicId:uint) : CompanionCharacteristic
       {
          //Décompilation abandonné
       }
       
-      public function getCompanionSpell(param1:uint) : CompanionSpell
+      public function getCompanionSpell(companionSpellId:uint) : CompanionSpell
       {
          //Décompilation abandonné
       }
       
-      public function getNpc(param1:uint) : Npc
+      public function getNpc(npcId:uint) : Npc
       {
          //Décompilation abandonné
       }
       
-      public function getNpcAction(param1:uint) : NpcAction
+      public function getNpcAction(actionId:uint) : NpcAction
       {
          //Décompilation abandonné
       }
       
-      public function getAlignmentSide(param1:uint) : AlignmentSide
+      public function getAlignmentSide(sideId:uint) : AlignmentSide
       {
          //Décompilation abandonné
       }
       
-      public function getAlignmentBalance(param1:uint) : AlignmentBalance
+      public function getAlignmentBalance(percent:uint) : AlignmentBalance
       {
          //Décompilation abandonné
       }
       
-      public function getRankName(param1:uint) : RankName
+      public function getRankName(rankId:uint) : RankName
       {
          //Décompilation abandonné
       }
@@ -412,17 +412,17 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getItemWrapper(param1:uint, param2:int = 0, param3:uint = 0, param4:uint = 0, param5:* = null) : ItemWrapper
+      public function getItemWrapper(itemGID:uint, itemPosition:int = 0, itemUID:uint = 0, itemQuantity:uint = 0, itemEffects:* = null) : ItemWrapper
       {
          //Décompilation abandonné
       }
       
-      public function getItemFromUId(param1:uint) : ItemWrapper
+      public function getItemFromUId(objectUID:uint) : ItemWrapper
       {
          //Décompilation abandonné
       }
       
-      public function getSkill(param1:uint) : Skill
+      public function getSkill(skillId:uint) : Skill
       {
          //Décompilation abandonné
       }
@@ -432,7 +432,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getInfoMessage(param1:uint) : InfoMessage
+      public function getInfoMessage(infoMsgId:uint) : InfoMessage
       {
          //Décompilation abandonné
       }
@@ -447,7 +447,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getSmiley(param1:uint) : Smiley
+      public function getSmiley(id:uint) : Smiley
       {
          //Décompilation abandonné
       }
@@ -457,12 +457,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getTaxCollectorName(param1:uint) : TaxCollectorName
+      public function getTaxCollectorName(id:uint) : TaxCollectorName
       {
          //Décompilation abandonné
       }
       
-      public function getTaxCollectorFirstname(param1:uint) : TaxCollectorFirstname
+      public function getTaxCollectorFirstname(id:uint) : TaxCollectorFirstname
       {
          //Décompilation abandonné
       }
@@ -472,7 +472,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getEmblemSymbol(param1:int) : EmblemSymbol
+      public function getEmblemSymbol(symbolId:int) : EmblemSymbol
       {
          //Décompilation abandonné
       }
@@ -482,27 +482,27 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getQuest(param1:int) : Quest
+      public function getQuest(questId:int) : Quest
       {
          //Décompilation abandonné
       }
       
-      public function getQuestCategory(param1:int) : QuestCategory
+      public function getQuestCategory(questCatId:int) : QuestCategory
       {
          //Décompilation abandonné
       }
       
-      public function getQuestObjective(param1:int) : QuestObjective
+      public function getQuestObjective(questObjectiveId:int) : QuestObjective
       {
          //Décompilation abandonné
       }
       
-      public function getQuestStep(param1:int) : QuestStep
+      public function getQuestStep(questStepId:int) : QuestStep
       {
          //Décompilation abandonné
       }
       
-      public function getAchievement(param1:int) : Achievement
+      public function getAchievement(achievementId:int) : Achievement
       {
          //Décompilation abandonné
       }
@@ -512,7 +512,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getAchievementCategory(param1:int) : AchievementCategory
+      public function getAchievementCategory(achievementCatId:int) : AchievementCategory
       {
          //Décompilation abandonné
       }
@@ -522,7 +522,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getAchievementReward(param1:int) : AchievementReward
+      public function getAchievementReward(rewardId:int) : AchievementReward
       {
          //Décompilation abandonné
       }
@@ -532,7 +532,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getAchievementObjective(param1:int) : AchievementObjective
+      public function getAchievementObjective(objectiveId:int) : AchievementObjective
       {
          //Décompilation abandonné
       }
@@ -542,17 +542,17 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getHouse(param1:int) : House
+      public function getHouse(houseId:int) : House
       {
          //Décompilation abandonné
       }
       
-      public function getLivingObjectSkins(param1:ItemWrapper) : Array
+      public function getLivingObjectSkins(item:ItemWrapper) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getAbuseReasonName(param1:uint) : AbuseReasons
+      public function getAbuseReasonName(abuseReasonId:uint) : AbuseReasons
       {
          //Décompilation abandonné
       }
@@ -567,7 +567,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getPresetIcon(param1:uint) : PresetIcon
+      public function getPresetIcon(iconId:uint) : PresetIcon
       {
          //Décompilation abandonné
       }
@@ -577,17 +577,17 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getDungeon(param1:uint) : Dungeon
+      public function getDungeon(dungeonId:uint) : Dungeon
       {
          //Décompilation abandonné
       }
       
-      public function getMapInfo(param1:uint) : MapPosition
+      public function getMapInfo(mapId:uint) : MapPosition
       {
          //Décompilation abandonné
       }
       
-      public function getWorldMap(param1:uint) : WorldMap
+      public function getWorldMap(mapId:uint) : WorldMap
       {
          //Décompilation abandonné
       }
@@ -597,7 +597,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getHintCategory(param1:uint) : HintCategory
+      public function getHintCategory(hintId:uint) : HintCategory
       {
          //Décompilation abandonné
       }
@@ -612,27 +612,27 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getHouseInformations(param1:uint) : HouseWrapper
+      public function getHouseInformations(doorId:uint) : HouseWrapper
       {
          //Décompilation abandonné
       }
       
-      public function getSpellPair(param1:uint) : SpellPair
+      public function getSpellPair(pairId:uint) : SpellPair
       {
          //Décompilation abandonné
       }
       
-      public function getBomb(param1:uint) : SpellBomb
+      public function getBomb(bombId:uint) : SpellBomb
       {
          //Décompilation abandonné
       }
       
-      public function getPack(param1:uint) : Pack
+      public function getPack(packId:uint) : Pack
       {
          //Décompilation abandonné
       }
       
-      public function getLegendaryTreasureHunt(param1:uint) : LegendaryTreasureHunt
+      public function getLegendaryTreasureHunt(huntId:uint) : LegendaryTreasureHunt
       {
          //Décompilation abandonné
       }
@@ -642,7 +642,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getTitle(param1:uint) : Title
+      public function getTitle(titleId:uint) : Title
       {
          //Décompilation abandonné
       }
@@ -652,7 +652,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getTitleCategory(param1:uint) : TitleCategory
+      public function getTitleCategory(titleCatId:uint) : TitleCategory
       {
          //Décompilation abandonné
       }
@@ -662,7 +662,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getOrnament(param1:uint) : Ornament
+      public function getOrnament(oId:uint) : Ornament
       {
          //Décompilation abandonné
       }
@@ -672,12 +672,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getOptionalFeatureByKeyword(param1:String) : OptionalFeature
+      public function getOptionalFeatureByKeyword(key:String) : OptionalFeature
       {
          //Décompilation abandonné
       }
       
-      public function getEffect(param1:uint) : Effect
+      public function getEffect(effectId:uint) : Effect
       {
          //Décompilation abandonné
       }
@@ -697,12 +697,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getAlmanaxCalendar(param1:uint) : AlmanaxCalendar
+      public function getAlmanaxCalendar(calendarId:uint) : AlmanaxCalendar
       {
          //Décompilation abandonné
       }
       
-      public function getExternalNotification(param1:int) : ExternalNotification
+      public function getExternalNotification(pExtNotifId:int) : ExternalNotification
       {
          //Décompilation abandonné
       }
@@ -712,52 +712,52 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getActionDescriptionByName(param1:String) : ActionDescription
+      public function getActionDescriptionByName(name:String) : ActionDescription
       {
          //Décompilation abandonné
       }
       
-      public function queryString(param1:Class, param2:String, param3:String) : Vector.<uint>
+      public function queryString(dataClass:Class, field:String, pattern:String) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public function queryEquals(param1:Class, param2:String, param3:*) : Vector.<uint>
+      public function queryEquals(dataClass:Class, field:String, value:*) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public function queryUnion(... rest) : Vector.<uint>
+      public function queryUnion(... ids) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public function queryIntersection(... rest) : Vector.<uint>
+      public function queryIntersection(... ids) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public function queryGreaterThan(param1:Class, param2:String, param3:*) : Vector.<uint>
+      public function queryGreaterThan(dataClass:Class, field:String, value:*) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public function querySmallerThan(param1:Class, param2:String, param3:*) : Vector.<uint>
+      public function querySmallerThan(dataClass:Class, field:String, value:*) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public function queryReturnInstance(param1:Class, param2:Vector.<uint>) : Vector.<Object>
+      public function queryReturnInstance(dataClass:Class, ids:Vector.<uint>) : Vector.<Object>
       {
          //Décompilation abandonné
       }
       
-      public function querySort(param1:Class, param2:Vector.<uint>, param3:*, param4:* = true) : Vector.<uint>
+      public function querySort(dataClass:Class, ids:Vector.<uint>, fields:*, ascending:* = true) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public function querySortI18nId(param1:*, param2:*, param3:* = true) : *
+      public function querySortI18nId(data:*, fields:*, ascending:* = true) : *
       {
          //Décompilation abandonné
       }
@@ -767,7 +767,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getUnknowZaaps(param1:Array) : Array
+      public function getUnknowZaaps(knwonZaapList:Array) : Array
       {
          //Décompilation abandonné
       }

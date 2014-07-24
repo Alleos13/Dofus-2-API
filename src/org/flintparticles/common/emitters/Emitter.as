@@ -53,67 +53,67 @@ package org.flintparticles.common.emitters
          //Décompilation abandonné
       }
       
-      public function set maximumFrameTime(param1:Number) : void
+      public function set maximumFrameTime(value:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function addInitializer(param1:Initializer, param2:Number = NaN) : void
+      public function addInitializer(initializer:Initializer, priority:Number = NaN) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeInitializer(param1:Initializer) : void
+      public function removeInitializer(initializer:Initializer) : void
       {
          //Décompilation abandonné
       }
       
-      public function hasInitializer(param1:Initializer) : Boolean
+      public function hasInitializer(initializer:Initializer) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function hasInitializerOfType(param1:Class) : Boolean
+      public function hasInitializerOfType(initializerClass:Class) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function addAction(param1:Action, param2:Number = NaN) : void
+      public function addAction(action:Action, priority:Number = NaN) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeAction(param1:Action) : void
+      public function removeAction(action:Action) : void
       {
          //Décompilation abandonné
       }
       
-      public function hasAction(param1:Action) : Boolean
+      public function hasAction(action:Action) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function hasActionOfType(param1:Class) : Boolean
+      public function hasActionOfType(actionClass:Class) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function addActivity(param1:Activity, param2:Number = NaN) : void
+      public function addActivity(activity:Activity, priority:Number = NaN) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeActivity(param1:Activity) : void
+      public function removeActivity(activity:Activity) : void
       {
          //Décompilation abandonné
       }
       
-      public function hasActivity(param1:Activity) : Boolean
+      public function hasActivity(activity:Activity) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function hasActivityOfType(param1:Class) : Boolean
+      public function hasActivityOfType(activityClass:Class) : Boolean
       {
          //Décompilation abandonné
       }
@@ -123,7 +123,7 @@ package org.flintparticles.common.emitters
          //Décompilation abandonné
       }
       
-      public function set counter(param1:Counter) : void
+      public function set counter(value:Counter) : void
       {
          //Décompilation abandonné
       }
@@ -133,7 +133,7 @@ package org.flintparticles.common.emitters
          //Décompilation abandonné
       }
       
-      public function set useInternalTick(param1:Boolean) : void
+      public function set useInternalTick(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -143,7 +143,7 @@ package org.flintparticles.common.emitters
          //Décompilation abandonné
       }
       
-      public function set fixedFrameTime(param1:Number) : void
+      public function set fixedFrameTime(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -158,7 +158,7 @@ package org.flintparticles.common.emitters
          //Décompilation abandonné
       }
       
-      public function set particleFactory(param1:ParticleFactory) : void
+      public function set particleFactory(value:ParticleFactory) : void
       {
          //Décompilation abandonné
       }
@@ -173,12 +173,12 @@ package org.flintparticles.common.emitters
          //Décompilation abandonné
       }
       
-      protected function initParticle(param1:Particle) : void
+      protected function initParticle(particle:Particle) : void
       {
          //Décompilation abandonné
       }
       
-      public function addExistingParticles(param1:Array, param2:Boolean = false) : void
+      public function addExistingParticles(particles:Array, applyInitializers:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -193,12 +193,12 @@ package org.flintparticles.common.emitters
          //Décompilation abandonné
       }
       
-      private function updateEventListener(param1:UpdateEvent) : void
+      private function updateEventListener(ev:UpdateEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function update(param1:Number) : void
+      public function update(time:Number) : void
       {
          //Décompilation abandonné
       }
@@ -223,7 +223,7 @@ package org.flintparticles.common.emitters
          //Décompilation abandonné
       }
       
-      public function runAhead(param1:Number, param2:Number = 10) : void
+      public function runAhead(time:Number, frameRate:Number = 10) : void
       {
          //Décompilation abandonné
       }

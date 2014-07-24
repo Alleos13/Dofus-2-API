@@ -44,7 +44,7 @@ package com.ankamagames.jerakine.resources.protocols.impl
       
       private var _dispatchProgress:Boolean;
       
-      public function load(param1:Uri, param2:IResourceObserver, param3:Boolean, param4:ICache, param5:Class, param6:Boolean) : void
+      public function load(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, cache:ICache, forcedAdapter:Class, uniqueFile:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -69,17 +69,17 @@ package com.ankamagames.jerakine.resources.protocols.impl
          //Décompilation abandonné
       }
       
-      private function onComplete(param1:Event) : void
+      private function onComplete(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onError(param1:ErrorEvent) : void
+      private function onError(ee:ErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onProgress(param1:ProgressEvent) : void
+      private function onProgress(pe:ProgressEvent) : void
       {
          //Décompilation abandonné
       }

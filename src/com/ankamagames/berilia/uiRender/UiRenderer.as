@@ -101,7 +101,7 @@ package com.ankamagames.berilia.uiRender
       
       public var scriptTime:uint = 0;
       
-      public function set script(param1:Class) : void
+      public function set script(scriptClass:Class) : void
       {
          //Décompilation abandonné
       }
@@ -111,37 +111,37 @@ package com.ankamagames.berilia.uiRender
          //Décompilation abandonné
       }
       
-      public function fileRender(param1:String, param2:String, param3:UiRootContainer, param4:* = null) : void
+      public function fileRender(sUrl:String, sName:String, scUi:UiRootContainer, oProperties:* = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function xmlRender(param1:String, param2:String, param3:UiRootContainer, param4:* = null) : void
+      public function xmlRender(sXml:String, sName:String, scUi:UiRootContainer, oProperties:* = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function uiRender(param1:UiDefinition, param2:String, param3:UiRootContainer, param4:* = null) : void
+      public function uiRender(uiDef:UiDefinition, sName:String, scUi:UiRootContainer, oProperties:* = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function postInit(param1:UiRootContainer) : void
+      public function postInit(ui:UiRootContainer) : void
       {
          //Décompilation abandonné
       }
       
-      public function makeChilds(param1:Array, param2:GraphicContainer, param3:Boolean = false) : void
+      public function makeChilds(aChild:Array, gcContainer:GraphicContainer, preprocessLocation:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private function makeContainer(param1:ContainerElement) : Sprite
+      private function makeContainer(ce:ContainerElement) : Sprite
       {
          //Décompilation abandonné
       }
       
-      private function makeComponent(param1:ComponentElement) : Sprite
+      private function makeComponent(ce:ComponentElement) : Sprite
       {
          //Décompilation abandonné
       }
@@ -171,7 +171,7 @@ package com.ankamagames.berilia.uiRender
          //Décompilation abandonné
       }
       
-      private function onParseComplete(param1:ParsorEvent) : void
+      private function onParseComplete(e:ParsorEvent) : void
       {
          //Décompilation abandonné
       }

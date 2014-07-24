@@ -9,7 +9,7 @@ package com.ankamagames.dofus.misc.utils.mapeditor
       //Décompilation abandonné
       }
       
-      public function MapEditorDataEvent(param1:String, param2:MapEditorMessage)
+      public function MapEditorDataEvent(type:String, data:MapEditorMessage)
       {
          //Décompilation abandonné
       }

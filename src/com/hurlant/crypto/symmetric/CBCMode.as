@@ -9,17 +9,17 @@ package com.hurlant.crypto.symmetric
       //Décompilation abandonné
       }
       
-      public function CBCMode(param1:ISymmetricKey, param2:IPad = null)
+      public function CBCMode(key:ISymmetricKey, padding:IPad = null)
       {
          //Décompilation abandonné
       }
       
-      public function encrypt(param1:ByteArray) : void
+      public function encrypt(src:ByteArray) : void
       {
          //Décompilation abandonné
       }
       
-      public function decrypt(param1:ByteArray) : void
+      public function decrypt(src:ByteArray) : void
       {
          //Décompilation abandonné
       }

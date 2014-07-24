@@ -17,32 +17,32 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring
          //Décompilation abandonné
       }
       
-      public static function countKeys(param1:Dictionary) : int
+      public static function countKeys(myDictionary:Dictionary) : int
       {
          //Décompilation abandonné
       }
       
-      public static function calculateMB(param1:uint) : Number
+      public static function calculateMB(value:uint) : Number
       {
          //Décompilation abandonné
       }
       
-      public static function getTimeFromNow(param1:int) : String
+      public static function getTimeFromNow(value:int) : String
       {
          //Décompilation abandonné
       }
       
-      public static function isSpecialGraph(param1:String) : Boolean
+      public static function isSpecialGraph(pIndice:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function numberOfSpecialGraphDisplayed(param1:Dictionary) : int
+      public static function numberOfSpecialGraphDisplayed(graphList:Dictionary) : int
       {
          //Décompilation abandonné
       }
       
-      public static function getVectorMaxValue(param1:Vector.<Number>) : Number
+      public static function getVectorMaxValue(vector:Vector.<Number>) : Number
       {
          //Décompilation abandonné
       }
@@ -62,7 +62,7 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring
          //Décompilation abandonné
       }
       
-      public static function addAlphaToColor(param1:uint, param2:uint) : uint
+      public static function addAlphaToColor(rgb:uint, alpha:uint) : uint
       {
          //Décompilation abandonné
       }

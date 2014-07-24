@@ -27,32 +27,32 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public static function getScreen(param1:Rectangle = null, param2:Number = 1.0) : BitmapData
+      public static function getScreen(rect:Rectangle = null, scale:Number = 1.0) : BitmapData
       {
          //Décompilation abandonné
       }
       
-      public static function getBattleField(param1:Rectangle = null, param2:Number = 1.0) : BitmapData
+      public static function getBattleField(rect:Rectangle = null, scale:Number = 1.0) : BitmapData
       {
          //Décompilation abandonné
       }
       
-      public static function getFromTarget(param1:Object, param2:Rectangle = null, param3:Number = 1.0, param4:Boolean = false) : BitmapData
+      public static function getFromTarget(target:Object, rect:Rectangle = null, scale:Number = 1.0, transparent:Boolean = false) : BitmapData
       {
          //Décompilation abandonné
       }
       
-      public static function jpegEncode(param1:BitmapData, param2:uint = 80, param3:Boolean = true, param4:String = "image.jpg") : ByteArray
+      public static function jpegEncode(img:BitmapData, quality:uint = 80, askForSave:Boolean = true, fileName:String = "image.jpg") : ByteArray
       {
          //Décompilation abandonné
       }
       
-      public static function pngEncode(param1:BitmapData, param2:Boolean = true, param3:String = "image.png") : ByteArray
+      public static function pngEncode(img:BitmapData, askForSave:Boolean = true, fileName:String = "image.png") : ByteArray
       {
          //Décompilation abandonné
       }
       
-      private static function capture(param1:DisplayObject, param2:Rectangle, param3:Rectangle, param4:Number = 1.0, param5:Boolean = false) : BitmapData
+      private static function capture(target:DisplayObject, rect:Rectangle, maxRect:Rectangle, scale:Number = 1.0, transparent:Boolean = false) : BitmapData
       {
          //Décompilation abandonné
       }

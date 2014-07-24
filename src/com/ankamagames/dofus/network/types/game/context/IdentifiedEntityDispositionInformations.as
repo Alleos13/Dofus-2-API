@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.context
          //Décompilation abandonné
       }
       
-      public function initIdentifiedEntityDispositionInformations(param1:int = 0, param2:uint = 1, param3:int = 0) : IdentifiedEntityDispositionInformations
+      public function initIdentifiedEntityDispositionInformations(cellId:int = 0, direction:uint = 1, id:int = 0) : IdentifiedEntityDispositionInformations
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.context
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_IdentifiedEntityDispositionInformations(param1:IDataOutput) : void
+      public function serializeAs_IdentifiedEntityDispositionInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_IdentifiedEntityDispositionInformations(param1:IDataInput) : void
+      public function deserializeAs_IdentifiedEntityDispositionInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -9,7 +9,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function BrowserSessionTimeout(param1:InteractiveObject)
+      public function BrowserSessionTimeout(target:InteractiveObject)
       {
          //Décompilation abandonné
       }

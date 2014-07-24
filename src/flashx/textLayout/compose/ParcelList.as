@@ -33,7 +33,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      tlf_internal  static function releaseParcelList(param1:ParcelList) : void
+      tlf_internal  static function releaseParcelList(list:ParcelList) : void
       {
          //Décompilation abandonné
       }
@@ -69,7 +69,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function getParcelAt(param1:int) : Parcel
+      public function getParcelAt(idx:int) : Parcel
       {
          //Décompilation abandonné
       }
@@ -99,7 +99,7 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function addTotalDepth(param1:Number) : Number
+      public function addTotalDepth(value:Number) : Number
       {
          //Décompilation abandonné
       }
@@ -109,22 +109,22 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      private function addParcel(param1:Rectangle, param2:ContainerController, param3:int) : void
+      private function addParcel(column:Rectangle, controller:ContainerController, columnIndex:int) : void
       {
          //Décompilation abandonné
       }
       
-      protected function addOneControllerToParcelList(param1:ContainerController) : void
+      protected function addOneControllerToParcelList(controllerToInitialize:ContainerController) : void
       {
          //Décompilation abandonné
       }
       
-      public function beginCompose(param1:IFlowComposer, param2:int, param3:int, param4:Boolean) : void
+      public function beginCompose(composer:IFlowComposer, controllerStartIndex:int, controllerEndIndex:int, composeToPosition:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      private function adjustForScroll(param1:ContainerController, param2:Boolean) : void
+      private function adjustForScroll(containerToInitialize:ContainerController, composeToPosition:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -134,12 +134,12 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function pushLeftMargin(param1:Number) : void
+      public function pushLeftMargin(leftMargin:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function popLeftMargin(param1:Number) : void
+      public function popLeftMargin(leftMargin:Number) : void
       {
          //Décompilation abandonné
       }
@@ -149,22 +149,22 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function pushRightMargin(param1:Number) : void
+      public function pushRightMargin(rightMargin:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function popRightMargin(param1:Number) : void
+      public function popRightMargin(rightMargin:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function pushInsideListItemMargin(param1:Number) : void
+      public function pushInsideListItemMargin(margin:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function popInsideListItemMargin(param1:Number) : void
+      public function popInsideListItemMargin(margin:Number) : void
       {
          //Décompilation abandonné
       }
@@ -174,22 +174,22 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function getComposeXCoord(param1:Rectangle) : Number
+      public function getComposeXCoord(o:Rectangle) : Number
       {
          //Décompilation abandonné
       }
       
-      public function getComposeYCoord(param1:Rectangle) : Number
+      public function getComposeYCoord(o:Rectangle) : Number
       {
          //Décompilation abandonné
       }
       
-      public function getComposeWidth(param1:Rectangle) : Number
+      public function getComposeWidth(o:Rectangle) : Number
       {
          //Décompilation abandonné
       }
       
-      public function getComposeHeight(param1:Rectangle) : Number
+      public function getComposeHeight(o:Rectangle) : Number
       {
          //Décompilation abandonné
       }
@@ -214,12 +214,12 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public function getLineSlug(param1:Slug, param2:Number, param3:Number, param4:Number, param5:Boolean) : Boolean
+      public function getLineSlug(slug:Slug, height:Number, minWidth:Number, textIndent:Number, directionLTR:Boolean) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function fitFloat(param1:Slug, param2:Number, param3:Number, param4:Number) : Boolean
+      public function fitFloat(slug:Slug, totalDepth:Number, width:Number, height:Number) : Boolean
       {
          //Décompilation abandonné
       }

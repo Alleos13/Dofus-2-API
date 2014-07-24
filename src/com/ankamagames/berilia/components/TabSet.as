@@ -101,7 +101,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set widthTab(param1:int) : void
+      public function set widthTab(i:int) : void
       {
          //Décompilation abandonné
       }
@@ -111,7 +111,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set widthLabel(param1:int) : void
+      public function set widthLabel(i:int) : void
       {
          //Décompilation abandonné
       }
@@ -121,7 +121,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set heightLabel(param1:int) : void
+      public function set heightLabel(i:int) : void
       {
          //Décompilation abandonné
       }
@@ -131,7 +131,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set widthPlusTab(param1:int) : void
+      public function set widthPlusTab(i:int) : void
       {
          //Décompilation abandonné
       }
@@ -141,7 +141,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set tabUri(param1:Uri) : void
+      public function set tabUri(s:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -151,7 +151,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set closeUri(param1:Uri) : void
+      public function set closeUri(s:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -161,7 +161,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set plusUri(param1:Uri) : void
+      public function set plusUri(s:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -171,7 +171,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set cssUri(param1:Uri) : void
+      public function set cssUri(s:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -181,7 +181,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set xClose(param1:int) : void
+      public function set xClose(i:int) : void
       {
          //Décompilation abandonné
       }
@@ -191,7 +191,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set yClose(param1:int) : void
+      public function set yClose(i:int) : void
       {
          //Décompilation abandonné
       }
@@ -201,7 +201,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set xLabel(param1:int) : void
+      public function set xLabel(i:int) : void
       {
          //Décompilation abandonné
       }
@@ -211,7 +211,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set yLabel(param1:int) : void
+      public function set yLabel(i:int) : void
       {
          //Décompilation abandonné
       }
@@ -221,7 +221,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set xPlus(param1:int) : void
+      public function set xPlus(i:int) : void
       {
          //Décompilation abandonné
       }
@@ -231,7 +231,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set yPlus(param1:int) : void
+      public function set yPlus(i:int) : void
       {
          //Décompilation abandonné
       }
@@ -241,7 +241,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set length(param1:int) : void
+      public function set length(i:int) : void
       {
          //Décompilation abandonné
       }
@@ -251,7 +251,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set tabCtr(param1:GraphicContainer) : void
+      public function set tabCtr(ctr:GraphicContainer) : void
       {
          //Décompilation abandonné
       }
@@ -261,7 +261,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set selectedTab(param1:int) : void
+      public function set selectedTab(i:int) : void
       {
          //Décompilation abandonné
       }
@@ -271,7 +271,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set dataProvider(param1:*) : void
+      public function set dataProvider(data:*) : void
       {
          //Décompilation abandonné
       }
@@ -286,7 +286,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set finalized(param1:Boolean) : void
+      public function set finalized(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -301,12 +301,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function highlight(param1:uint, param2:Boolean = true) : void
+      public function highlight(tabId:uint, show:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function renameTab(param1:uint, param2:String = null) : void
+      public function renameTab(tabId:uint, name:String = null) : void
       {
          //Décompilation abandonné
       }
@@ -336,22 +336,22 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function isIterable(param1:*) : Boolean
+      private function isIterable(obj:*) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function removeContainerContent(param1:GraphicContainer) : void
+      private function removeContainerContent(target:GraphicContainer) : void
       {
          //Décompilation abandonné
       }
       
-      private function switchToEdition(param1:Boolean) : void
+      private function switchToEdition(value:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override public function process(param1:Message) : Boolean
+      override public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }

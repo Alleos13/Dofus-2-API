@@ -56,17 +56,17 @@ package com.ankamagames.berilia.components
       
       private static const _subEntitiesBehaviors:Dictionary;
       
-      public static function setSubEntityDefaultBehavior(param1:uint, param2:ISubEntityBehavior) : void
+      public static function setSubEntityDefaultBehavior(category:uint, behavior:ISubEntityBehavior) : void
       {
          //Décompilation abandonné
       }
       
-      public static function setAnimationModifier(param1:uint, param2:IAnimationModifier) : void
+      public static function setAnimationModifier(boneId:uint, am:IAnimationModifier) : void
       {
          //Décompilation abandonné
       }
       
-      public static function setSkinModifier(param1:uint, param2:ISkinModifier) : void
+      public static function setSkinModifier(boneId:uint, sm:ISkinModifier) : void
       {
          //Décompilation abandonné
       }
@@ -122,7 +122,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set widthEllipsis(param1:int) : void
+      public function set widthEllipsis(i:int) : void
       {
          //Décompilation abandonné
       }
@@ -132,7 +132,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set heightEllipsis(param1:int) : void
+      public function set heightEllipsis(i:int) : void
       {
          //Décompilation abandonné
       }
@@ -142,7 +142,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set xEllipsis(param1:int) : void
+      public function set xEllipsis(i:int) : void
       {
          //Décompilation abandonné
       }
@@ -152,7 +152,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set yEllipsis(param1:int) : void
+      public function set yEllipsis(i:int) : void
       {
          //Décompilation abandonné
       }
@@ -162,7 +162,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set charaCtr(param1:Object) : void
+      public function set charaCtr(ctr:Object) : void
       {
          //Décompilation abandonné
       }
@@ -172,7 +172,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set frontCtr(param1:Object) : void
+      public function set frontCtr(ctr:Object) : void
       {
          //Décompilation abandonné
       }
@@ -182,7 +182,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set midCtr(param1:Object) : void
+      public function set midCtr(ctr:Object) : void
       {
          //Décompilation abandonné
       }
@@ -192,7 +192,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set mountainUri(param1:String) : void
+      public function set mountainUri(s:String) : void
       {
          //Décompilation abandonné
       }
@@ -202,7 +202,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set selectedChara(param1:int) : void
+      public function set selectedChara(i:int) : void
       {
          //Décompilation abandonné
       }
@@ -212,7 +212,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set entities(param1:*) : void
+      public function set entities(data:*) : void
       {
          //Décompilation abandonné
       }
@@ -222,7 +222,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set dataProvider(param1:*) : void
+      public function set dataProvider(data:*) : void
       {
          //Décompilation abandonné
       }
@@ -237,7 +237,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set finalized(param1:Boolean) : void
+      public function set finalized(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -252,27 +252,27 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function wheel(param1:int) : void
+      public function wheel(sens:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function wheelChara(param1:int) : void
+      public function wheelChara(sens:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function setAnimation(param1:String, param2:int = 0) : void
+      public function setAnimation(animationName:String, direction:int = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function equipCharacter(param1:Array, param2:int = 0) : void
+      public function equipCharacter(list:Array, numDelete:int = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function getMountainCtr(param1:int) : Object
+      public function getMountainCtr(i:int) : Object
       {
          //Décompilation abandonné
       }
@@ -282,12 +282,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function onMoutainPartRendered(param1:Event) : void
+      private function onMoutainPartRendered(event:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function createMountainsCtrBitmap(param1:GraphicContainer, param2:int) : void
+      private function createMountainsCtrBitmap(ctr:GraphicContainer, charWheelID:int) : void
       {
          //Décompilation abandonné
       }
@@ -297,47 +297,47 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function rotateMountains(param1:int) : void
+      private function rotateMountains(sens:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function isIterable(param1:*) : Boolean
+      private function isIterable(obj:*) : Boolean
       {
          //Décompilation abandonné
       }
       
-      override public function process(param1:Message) : Boolean
+      override public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function eventOnRelease(param1:DisplayObject) : void
+      public function eventOnRelease(target:DisplayObject) : void
       {
          //Décompilation abandonné
       }
       
-      public function eventOnDoubleClick(param1:DisplayObject) : void
+      public function eventOnDoubleClick(target:DisplayObject) : void
       {
          //Décompilation abandonné
       }
       
-      public function eventOnRollOver(param1:DisplayObject) : void
+      public function eventOnRollOver(target:DisplayObject) : void
       {
          //Décompilation abandonné
       }
       
-      public function eventOnRollOut(param1:DisplayObject) : void
+      public function eventOnRollOut(target:DisplayObject) : void
       {
          //Décompilation abandonné
       }
       
-      public function eventOnShortcut(param1:String) : Boolean
+      public function eventOnShortcut(s:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onRotateMountains(param1:Event) : void
+      private function onRotateMountains(e:Event) : void
       {
          //Décompilation abandonné
       }
@@ -355,7 +355,7 @@ class TiphonEntity extends TiphonSprite implements IEntity
    //Décompilation abandonné
    }
    
-   function TiphonEntity(param1:uint, param2:TiphonEntityLook)
+   function TiphonEntity(id:uint, look:TiphonEntityLook)
    {
       //Décompilation abandonné
    }
@@ -367,7 +367,7 @@ class TiphonEntity extends TiphonSprite implements IEntity
       //Décompilation abandonné
    }
    
-   public function set id(param1:int) : void
+   public function set id(nValue:int) : void
    {
       //Décompilation abandonné
    }
@@ -377,7 +377,7 @@ class TiphonEntity extends TiphonSprite implements IEntity
       //Décompilation abandonné
    }
    
-   public function set position(param1:MapPoint) : void
+   public function set position(oValue:MapPoint) : void
    {
       //Décompilation abandonné
    }
@@ -389,7 +389,7 @@ class CBI extends Object
    //Décompilation abandonné
    }
    
-   function CBI(param1:uint, param2:int, param3:Array)
+   function CBI(id:uint, breed:int, colors:Array)
    {
       //Décompilation abandonné
    }

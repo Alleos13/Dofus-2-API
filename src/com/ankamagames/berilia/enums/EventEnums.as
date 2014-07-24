@@ -160,7 +160,7 @@ package com.ankamagames.berilia.enums
       
       public static const EVENT_ONVIDEOBUFFERCHANGE_MSG:String;
       
-      public static function convertMsgToFct(param1:String) : String
+      public static function convertMsgToFct(msgName:String) : String
       {
          //Décompilation abandonné
       }

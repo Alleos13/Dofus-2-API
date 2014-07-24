@@ -18,7 +18,7 @@ package com.ankamagames.dofus.logic.game.fight.types
       //Décompilation abandonné
       }
       
-      public function StateBuff(param1:FightTemporaryBoostStateEffect = null, param2:CastingSpell = null, param3:uint = 0)
+      public function StateBuff(effect:FightTemporaryBoostStateEffect = null, castingSpell:CastingSpell = null, actionId:uint = 0)
       {
          //Décompilation abandonné
       }
@@ -49,7 +49,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      override public function clone(param1:int = 0) : BasicBuff
+      override public function clone(id:int = 0) : BasicBuff
       {
          //Décompilation abandonné
       }

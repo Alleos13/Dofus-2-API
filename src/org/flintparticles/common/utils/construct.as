@@ -1,6 +1,6 @@
 package org.flintparticles.common.utils
 {
-   public function construct(param1:Class, param2:Array) : *
+   public function construct(type:Class, parameters:Array) : *
    {
       //Décompilation abandonné
    }

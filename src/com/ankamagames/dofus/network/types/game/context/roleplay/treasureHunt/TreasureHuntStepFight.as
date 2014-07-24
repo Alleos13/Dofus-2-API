@@ -33,22 +33,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.treasureHunt
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_TreasureHuntStepFight(param1:IDataOutput) : void
+      public function serializeAs_TreasureHuntStepFight(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_TreasureHuntStepFight(param1:IDataInput) : void
+      public function deserializeAs_TreasureHuntStepFight(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -28,7 +28,7 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      public function set stripDiscretionaryHyphens(param1:Boolean) : void
+      public function set stripDiscretionaryHyphens(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -38,17 +38,17 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      public function set paragraphSeparator(param1:String) : void
+      public function set paragraphSeparator(value:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function export(param1:TextFlow, param2:String) : Object
+      public function export(source:TextFlow, conversionType:String) : Object
       {
          //Décompilation abandonné
       }
       
-      protected function exportToString(param1:TextFlow) : String
+      protected function exportToString(source:TextFlow) : String
       {
          //Décompilation abandonné
       }

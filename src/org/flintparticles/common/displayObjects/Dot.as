@@ -9,7 +9,7 @@ package org.flintparticles.common.displayObjects
       //Décompilation abandonné
       }
       
-      public function Dot(param1:Number, param2:uint = 16777215, param3:String = "normal")
+      public function Dot(radius:Number, color:uint = 16777215, bm:String = "normal")
       {
          //Décompilation abandonné
       }

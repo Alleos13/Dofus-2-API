@@ -16,17 +16,17 @@ package com.ankamagames.tiphon.types
          //Décompilation abandonné
       }
       
-      public static function getLookWithoutMount(param1:TiphonEntityLook) : TiphonEntityLook
+      public static function getLookWithoutMount(look:TiphonEntityLook) : TiphonEntityLook
       {
          //Décompilation abandonné
       }
       
-      public static function getEntityWithoutMount(param1:TiphonSprite) : DisplayObjectContainer
+      public static function getEntityWithoutMount(ent:TiphonSprite) : DisplayObjectContainer
       {
          //Décompilation abandonné
       }
       
-      public static function getFlipDirection(param1:int) : uint
+      public static function getFlipDirection(direction:int) : uint
       {
          //Décompilation abandonné
       }

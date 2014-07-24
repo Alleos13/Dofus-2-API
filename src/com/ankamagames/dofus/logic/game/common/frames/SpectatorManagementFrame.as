@@ -41,7 +41,7 @@ package com.ankamagames.dofus.logic.game.common.frames
       
       protected static const _log:Logger;
       
-      private static function sortFights(param1:FightExternalInformations, param2:FightExternalInformations) : int
+      private static function sortFights(a:FightExternalInformations, b:FightExternalInformations) : int
       {
          //Décompilation abandonné
       }
@@ -56,7 +56,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }

@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.network.messages
       //Décompilation abandonné
       }
       
-      public function WrongSocketClosureReasonMessage(param1:uint, param2:uint)
+      public function WrongSocketClosureReasonMessage(expectedReason:uint, gotReason:uint)
       {
          //Décompilation abandonné
       }

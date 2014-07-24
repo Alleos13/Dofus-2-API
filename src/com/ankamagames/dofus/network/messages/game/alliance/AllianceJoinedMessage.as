@@ -37,7 +37,7 @@ package com.ankamagames.dofus.network.messages.game.alliance
          //Décompilation abandonné
       }
       
-      public function initAllianceJoinedMessage(param1:AllianceInformations = null, param2:Boolean = false) : AllianceJoinedMessage
+      public function initAllianceJoinedMessage(allianceInfo:AllianceInformations = null, enabled:Boolean = false) : AllianceJoinedMessage
       {
          //Décompilation abandonné
       }
@@ -47,32 +47,32 @@ package com.ankamagames.dofus.network.messages.game.alliance
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AllianceJoinedMessage(param1:IDataOutput) : void
+      public function serializeAs_AllianceJoinedMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AllianceJoinedMessage(param1:IDataInput) : void
+      public function deserializeAs_AllianceJoinedMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

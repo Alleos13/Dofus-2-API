@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.context
          //Décompilation abandonné
       }
       
-      public function initGameContextRemoveMultipleElementsMessage(param1:Vector.<int> = null) : GameContextRemoveMultipleElementsMessage
+      public function initGameContextRemoveMultipleElementsMessage(id:Vector.<int> = null) : GameContextRemoveMultipleElementsMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.context
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameContextRemoveMultipleElementsMessage(param1:IDataOutput) : void
+      public function serializeAs_GameContextRemoveMultipleElementsMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameContextRemoveMultipleElementsMessage(param1:IDataInput) : void
+      public function deserializeAs_GameContextRemoveMultipleElementsMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

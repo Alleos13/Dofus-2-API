@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.types.game.prism
          //Décompilation abandonné
       }
       
-      public function initAllianceInsiderPrismInformation(param1:uint = 0, param2:uint = 1, param3:uint = 0, param4:uint = 0, param5:uint = 0, param6:uint = 0, param7:uint = 0, param8:uint = 0, param9:String = "", param10:Boolean = false) : AllianceInsiderPrismInformation
+      public function initAllianceInsiderPrismInformation(typeId:uint = 0, state:uint = 1, nextVulnerabilityDate:uint = 0, placementDate:uint = 0, rewardTokenCount:uint = 0, lastTimeSlotModificationDate:uint = 0, lastTimeSlotModificationAuthorGuildId:uint = 0, lastTimeSlotModificationAuthorId:uint = 0, lastTimeSlotModificationAuthorName:String = "", hasTeleporterModule:Boolean = false) : AllianceInsiderPrismInformation
       {
          //Décompilation abandonné
       }
@@ -43,22 +43,22 @@ package com.ankamagames.dofus.network.types.game.prism
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AllianceInsiderPrismInformation(param1:IDataOutput) : void
+      public function serializeAs_AllianceInsiderPrismInformation(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AllianceInsiderPrismInformation(param1:IDataInput) : void
+      public function deserializeAs_AllianceInsiderPrismInformation(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

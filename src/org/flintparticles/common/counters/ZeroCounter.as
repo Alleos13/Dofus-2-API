@@ -14,12 +14,12 @@ package org.flintparticles.common.counters
          //Décompilation abandonné
       }
       
-      public function startEmitter(param1:Emitter) : uint
+      public function startEmitter(emitter:Emitter) : uint
       {
          //Décompilation abandonné
       }
       
-      public function updateEmitter(param1:Emitter, param2:Number) : uint
+      public function updateEmitter(emitter:Emitter, time:Number) : uint
       {
          //Décompilation abandonné
       }

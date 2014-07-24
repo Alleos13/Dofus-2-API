@@ -183,7 +183,6 @@ package com.ankamagames.dofus.logic.connection.frames
    import com.ankamagames.dofus.logic.common.managers.HyperlinkShowMonsterChatManager;
    import com.ankamagames.dofus.logic.common.managers.HyperlinkShowSubArea;
    import com.ankamagames.dofus.datacenter.appearance.SkinMapping;
-   import com.ankamagames.performance.Benchmark;
    import flash.utils.describeType;
    import com.ankamagames.dofus.misc.lists.GameDataList;
    import flash.utils.getDefinitionByName;
@@ -237,7 +236,7 @@ package com.ankamagames.dofus.logic.connection.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -287,37 +286,37 @@ package com.ankamagames.dofus.logic.connection.frames
          //Décompilation abandonné
       }
       
-      private function setModulePercent(param1:String, param2:Number, param3:Boolean = false) : void
+      private function setModulePercent(moduleName:String, prc:Number, add:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private function onFontsManagerInit(param1:Event) : void
+      private function onFontsManagerInit(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onI18nReady(param1:Event) : void
+      private function onI18nReady(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onGameDataReady(param1:Event) : void
+      private function onGameDataReady(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onGameDataPartialDataReady(param1:LangFileEvent) : void
+      private function onGameDataPartialDataReady(e:LangFileEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onI18nPartialDataReady(param1:LangFileEvent) : void
+      private function onI18nPartialDataReady(e:LangFileEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onDataFileError(param1:FileEvent) : void
+      private function onDataFileError(e:FileEvent) : void
       {
          //Décompilation abandonné
       }

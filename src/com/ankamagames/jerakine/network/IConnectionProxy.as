@@ -10,8 +10,8 @@ package com.ankamagames.jerakine.network
       //Décompilation abandonné
       }
       
-      function processAndSend(param1:INetworkMessage, param2:IDataOutput) : void;
+      function processAndSend(msg:INetworkMessage, output:IDataOutput) : void;
       
-      function processAndReceive(param1:IDataInput) : INetworkMessage;
+      function processAndReceive(input:IDataInput) : INetworkMessage;
    }
 }

@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.context.mount
          //Décompilation abandonné
       }
       
-      public function initPaddockRemoveItemRequestMessage(param1:uint = 0) : PaddockRemoveItemRequestMessage
+      public function initPaddockRemoveItemRequestMessage(cellId:uint = 0) : PaddockRemoveItemRequestMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.context.mount
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PaddockRemoveItemRequestMessage(param1:IDataOutput) : void
+      public function serializeAs_PaddockRemoveItemRequestMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PaddockRemoveItemRequestMessage(param1:IDataInput) : void
+      public function deserializeAs_PaddockRemoveItemRequestMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

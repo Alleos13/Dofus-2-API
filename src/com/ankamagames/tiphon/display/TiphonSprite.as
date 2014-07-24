@@ -65,7 +65,7 @@ package com.ankamagames.tiphon.display
       //Décompilation abandonné
       }
       
-      public function TiphonSprite(param1:TiphonEntityLook)
+      public function TiphonSprite(look:TiphonEntityLook)
       {
          //Décompilation abandonné
       }
@@ -173,17 +173,17 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      override public function set visible(param1:Boolean) : void
+      override public function set visible(v:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set alpha(param1:Number) : void
+      override public function set alpha(a:Number) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set mouseEnabled(param1:Boolean) : void
+      override public function set mouseEnabled(enabled:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -198,12 +198,12 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      public function set carriedEntity(param1:TiphonSprite) : void
+      public function set carriedEntity(pTs:TiphonSprite) : void
       {
          //Décompilation abandonné
       }
       
-      public function set isCarrying(param1:Boolean) : void
+      public function set isCarrying(pIsCarrying:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -223,7 +223,7 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      public function set rasterize(param1:Boolean) : void
+      public function set rasterize(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -268,7 +268,7 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      public function set skinModifier(param1:ISkinModifier) : void
+      public function set skinModifier(sm:ISkinModifier) : void
       {
          //Décompilation abandonné
       }
@@ -288,7 +288,7 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      public function stopAnimation(param1:int = 0) : void
+      public function stopAnimation(frame:int = 0) : void
       {
          //Décompilation abandonné
       }
@@ -298,12 +298,12 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      protected function onLoadComplete(param1:TiphonEvent) : void
+      protected function onLoadComplete(pEvt:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function restartAnimation(param1:int = -1) : void
+      public function restartAnimation(frame:int = -1) : void
       {
          //Décompilation abandonné
       }
@@ -313,7 +313,7 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      public function setDirection(param1:uint) : void
+      public function setDirection(newDirection:uint) : void
       {
          //Décompilation abandonné
       }
@@ -323,7 +323,7 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      public function setAnimation(param1:String, param2:int = -1) : void
+      public function setAnimation(newAnimation:String, startFrame:int = -1) : void
       {
          //Décompilation abandonné
       }
@@ -333,42 +333,42 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      public function addAnimationModifier(param1:IAnimationModifier, param2:Boolean = true) : void
+      public function addAnimationModifier(modifier:IAnimationModifier, noDuplicate:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeAnimationModifier(param1:IAnimationModifier) : void
+      public function removeAnimationModifier(modifier:IAnimationModifier) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeAnimationModifierByClass(param1:Class) : void
+      public function removeAnimationModifierByClass(modifier:Class) : void
       {
          //Décompilation abandonné
       }
       
-      public function setAnimationAndDirection(param1:String, param2:uint, param3:Boolean = false) : void
+      public function setAnimationAndDirection(animation:String, direction:uint, pDisableAnimModifier:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function setView(param1:String) : void
+      public function setView(view:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function getSubEntityBehavior(param1:int) : ISubEntityBehavior
+      public function getSubEntityBehavior(pCategory:int) : ISubEntityBehavior
       {
          //Décompilation abandonné
       }
       
-      public function setSubEntityBehaviour(param1:int, param2:ISubEntityBehavior) : void
+      public function setSubEntityBehaviour(category:int, behaviour:ISubEntityBehavior) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateFromParentEntity(param1:TiphonSprite, param2:BehaviorData) : void
+      public function updateFromParentEntity(subEntity:TiphonSprite, parentData:BehaviorData) : void
       {
          //Décompilation abandonné
       }
@@ -378,47 +378,47 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      public function getAvaibleDirection(param1:String = null, param2:Boolean = false) : Array
+      public function getAvaibleDirection(anim:String = null, flipped:Boolean = false) : Array
       {
          //Décompilation abandonné
       }
       
-      public function hasAnimation(param1:String, param2:int = -1) : Boolean
+      public function hasAnimation(anim:String, direction:int = -1) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getSlot(param1:String = "") : DisplayObject
+      public function getSlot(name:String = "") : DisplayObject
       {
          //Décompilation abandonné
       }
       
-      public function getColorTransform(param1:uint) : ColorTransform
+      public function getColorTransform(index:uint) : ColorTransform
       {
          //Décompilation abandonné
       }
       
-      public function getSkinSprite(param1:EquipmentSprite) : Sprite
+      public function getSkinSprite(sprite:EquipmentSprite) : Sprite
       {
          //Décompilation abandonné
       }
       
-      public function getPartTransformData(param1:String) : TransformData
+      public function getPartTransformData(part:String) : TransformData
       {
          //Décompilation abandonné
       }
       
-      public function addSubEntity(param1:DisplayObject, param2:uint, param3:uint) : void
+      public function addSubEntity(entity:DisplayObject, category:uint, slot:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeSubEntity(param1:DisplayObject) : void
+      public function removeSubEntity(entity:DisplayObject) : void
       {
          //Décompilation abandonné
       }
       
-      public function getSubEntitySlot(param1:uint, param2:uint) : DisplayObjectContainer
+      public function getSubEntitySlot(category:uint, slot:uint) : DisplayObjectContainer
       {
          //Décompilation abandonné
       }
@@ -433,32 +433,32 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      public function registerColoredSprite(param1:ColoredSprite, param2:uint) : void
+      public function registerColoredSprite(sprite:ColoredSprite, nColorIndex:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function registerInfoSprite(param1:DisplayInfoSprite, param2:String) : void
+      public function registerInfoSprite(sprite:DisplayInfoSprite, nViewIndex:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function getDisplayInfoSprite(param1:String) : DisplayInfoSprite
+      public function getDisplayInfoSprite(nViewIndex:String) : DisplayInfoSprite
       {
          //Décompilation abandonné
       }
       
-      public function addBackground(param1:String, param2:DisplayObject, param3:Boolean = false) : void
+      public function addBackground(name:String, sprite:DisplayObject, posAuto:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeBackground(param1:String) : void
+      public function removeBackground(name:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function showOnlyBackground(param1:Boolean) : void
+      public function showOnlyBackground(pOnlyBackground:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -468,7 +468,7 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      public function setAlternativeSkinIndex(param1:int = -1, param2:Boolean = false) : void
+      public function setAlternativeSkinIndex(index:int = -1, recursiveAlternativeSkinIndex:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -488,12 +488,12 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      private function initializeLibrary(param1:uint, param2:Uri = null) : void
+      private function initializeLibrary(gfxId:uint, file:Uri = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function applyColor(param1:uint) : void
+      private function applyColor(index:uint) : void
       {
          //Décompilation abandonné
       }
@@ -515,7 +515,7 @@ package com.ankamagames.tiphon.display
       
       private var _lastRenderRequest:uint;
       
-      private function checkRessourceState(param1:Event = null) : void
+      private function checkRessourceState(e:Event = null) : void
       {
          //Décompilation abandonné
       }
@@ -535,17 +535,17 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      private function animEventHandler(param1:AnimationEvent) : void
+      private function animEventHandler(event:AnimationEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function animSwitchHandler(param1:AnimationEvent) : void
+      private function animSwitchHandler(event:AnimationEvent) : void
       {
          //Décompilation abandonné
       }
       
-      override public function dispatchEvent(param1:Event) : Boolean
+      override public function dispatchEvent(event:Event) : Boolean
       {
          //Décompilation abandonné
       }
@@ -560,12 +560,12 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      private function dispatchWaitingEvents(param1:Event) : void
+      private function dispatchWaitingEvents(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function onAnimationEvent(param1:String, param2:String = "") : void
+      public function onAnimationEvent(eventName:String, params:String = "") : void
       {
          //Décompilation abandonné
       }
@@ -575,12 +575,12 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      private function onSubEntityRendered(param1:Event) : void
+      private function onSubEntityRendered(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSkullLibraryReady(param1:uint) : void
+      private function onSkullLibraryReady(pBoneId:uint) : void
       {
          //Décompilation abandonné
       }
@@ -590,37 +590,37 @@ package com.ankamagames.tiphon.display
          //Décompilation abandonné
       }
       
-      protected function onAdded(param1:Event) : void
+      protected function onAdded(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function boneChanged(param1:TiphonEntityLook) : void
+      public function boneChanged(look:TiphonEntityLook) : void
       {
          //Décompilation abandonné
       }
       
-      public function skinsChanged(param1:TiphonEntityLook) : void
+      public function skinsChanged(look:TiphonEntityLook) : void
       {
          //Décompilation abandonné
       }
       
-      public function colorsChanged(param1:TiphonEntityLook) : void
+      public function colorsChanged(look:TiphonEntityLook) : void
       {
          //Décompilation abandonné
       }
       
-      public function scalesChanged(param1:TiphonEntityLook) : void
+      public function scalesChanged(look:TiphonEntityLook) : void
       {
          //Décompilation abandonné
       }
       
-      public function subEntitiesChanged(param1:TiphonEntityLook) : void
+      public function subEntitiesChanged(look:TiphonEntityLook) : void
       {
          //Décompilation abandonné
       }
       
-      public function enableSubCategory(param1:int, param2:Boolean = true) : void
+      public function enableSubCategory(catId:int, isEnabled:Boolean = true) : void
       {
          //Décompilation abandonné
       }

@@ -24,12 +24,12 @@ package com.ankamagames.atouin.utils
          //Décompilation abandonné
       }
       
-      public static function coordToCellId(param1:int, param2:int) : uint
+      public static function coordToCellId(x:int, y:int) : uint
       {
          //Décompilation abandonné
       }
       
-      public static function cellIdToCoord(param1:uint) : Point
+      public static function cellIdToCoord(cellId:uint) : Point
       {
          //Décompilation abandonné
       }

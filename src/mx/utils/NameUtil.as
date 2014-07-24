@@ -21,17 +21,17 @@ package mx.utils
       
       private static var counter:int = 0;
       
-      public static function createUniqueName(param1:Object) : String
+      public static function createUniqueName(object:Object) : String
       {
          //Décompilation abandonné
       }
       
-      public static function displayObjectToString(param1:DisplayObject) : String
+      public static function displayObjectToString(displayObject:DisplayObject) : String
       {
          //Décompilation abandonné
       }
       
-      public static function getUnqualifiedClassName(param1:Object) : String
+      public static function getUnqualifiedClassName(object:Object) : String
       {
          //Décompilation abandonné
       }

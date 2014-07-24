@@ -48,12 +48,12 @@ package com.ankamagames.dofus.logic.connection.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function onTimeOut(param1:TimerEvent) : void
+      public function onTimeOut(e:TimerEvent) : void
       {
          //Décompilation abandonné
       }

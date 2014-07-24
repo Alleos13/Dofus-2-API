@@ -26,7 +26,7 @@ package com.ankamagames.dofus.internalDatacenter.guild
          //Décompilation abandonné
       }
       
-      public static function create(param1:TaxCollectorInformations, param2:TaxCollectorFightersInformation = null) : TaxCollectorWrapper
+      public static function create(pInformations:TaxCollectorInformations, pFightersInformations:TaxCollectorFightersInformation = null) : TaxCollectorWrapper
       {
          //Décompilation abandonné
       }
@@ -65,7 +65,7 @@ package com.ankamagames.dofus.internalDatacenter.guild
       
       public var itemsValue:int;
       
-      public function update(param1:TaxCollectorInformations, param2:TaxCollectorFightersInformation = null) : void
+      public function update(pInformations:TaxCollectorInformations, pFightersInformations:TaxCollectorFightersInformation = null) : void
       {
          //Décompilation abandonné
       }

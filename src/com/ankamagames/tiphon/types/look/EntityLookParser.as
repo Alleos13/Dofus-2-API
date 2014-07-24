@@ -16,17 +16,17 @@ package com.ankamagames.tiphon.types.look
       
       public static const DEFAULT_NUMBER_BASE:uint = 10;
       
-      public static function fromString(param1:String, param2:uint = 0, param3:uint = 10, param4:TiphonEntityLook = null) : TiphonEntityLook
+      public static function fromString(str:String, pFormatVersion:uint = 0, pNumberBase:uint = 10, tiphonInstance:TiphonEntityLook = null) : TiphonEntityLook
       {
          //Décompilation abandonné
       }
       
-      public static function toString(param1:TiphonEntityLook) : String
+      public static function toString(el:TiphonEntityLook) : String
       {
          //Décompilation abandonné
       }
       
-      private static function getNumberBase(param1:String) : uint
+      private static function getNumberBase(l:String) : uint
       {
          //Décompilation abandonné
       }

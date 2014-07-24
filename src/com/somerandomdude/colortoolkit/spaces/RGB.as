@@ -9,7 +9,7 @@ package com.somerandomdude.colortoolkit.spaces
       //Décompilation abandonné
       }
       
-      public function RGB(param1:Number = 0, param2:Number = 0, param3:Number = 0)
+      public function RGB(r:Number = 0, g:Number = 0, b:Number = 0)
       {
          //Décompilation abandonné
       }
@@ -25,7 +25,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set red(param1:Number) : void
+      public function set red(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -35,7 +35,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set green(param1:Number) : void
+      public function set green(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -45,7 +45,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set blue(param1:Number) : void
+      public function set blue(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -55,7 +55,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set color(param1:int) : void
+      public function set color(value:int) : void
       {
          //Décompilation abandonné
       }
@@ -65,12 +65,12 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      private function hexToRGB(param1:int) : RGB
+      private function hexToRGB(color:int) : RGB
       {
          //Décompilation abandonné
       }
       
-      private function RGBToHex(param1:int, param2:int, param3:int) : int
+      private function RGBToHex(r:int, g:int, b:int) : int
       {
          //Décompilation abandonné
       }

@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.friend
          //Décompilation abandonné
       }
       
-      public function initFriendAddFailureMessage(param1:uint = 0) : FriendAddFailureMessage
+      public function initFriendAddFailureMessage(reason:uint = 0) : FriendAddFailureMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.friend
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_FriendAddFailureMessage(param1:IDataOutput) : void
+      public function serializeAs_FriendAddFailureMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_FriendAddFailureMessage(param1:IDataInput) : void
+      public function deserializeAs_FriendAddFailureMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

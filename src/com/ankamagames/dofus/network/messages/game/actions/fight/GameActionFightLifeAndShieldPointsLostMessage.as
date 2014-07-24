@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.messages.game.actions.fight
          //Décompilation abandonné
       }
       
-      public function initGameActionFightLifeAndShieldPointsLostMessage(param1:uint = 0, param2:int = 0, param3:int = 0, param4:uint = 0, param5:uint = 0, param6:uint = 0) : GameActionFightLifeAndShieldPointsLostMessage
+      public function initGameActionFightLifeAndShieldPointsLostMessage(actionId:uint = 0, sourceId:int = 0, targetId:int = 0, loss:uint = 0, permanentDamages:uint = 0, shieldLoss:uint = 0) : GameActionFightLifeAndShieldPointsLostMessage
       {
          //Décompilation abandonné
       }
@@ -43,32 +43,32 @@ package com.ankamagames.dofus.network.messages.game.actions.fight
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameActionFightLifeAndShieldPointsLostMessage(param1:IDataOutput) : void
+      public function serializeAs_GameActionFightLifeAndShieldPointsLostMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameActionFightLifeAndShieldPointsLostMessage(param1:IDataInput) : void
+      public function deserializeAs_GameActionFightLifeAndShieldPointsLostMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

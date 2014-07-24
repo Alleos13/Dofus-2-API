@@ -40,17 +40,17 @@ package nochump.util.zip
          //Décompilation abandonné
       }
       
-      public function set comment(param1:String) : void
+      public function set comment(value:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function putNextEntry(param1:ZipEntry) : void
+      public function putNextEntry(e:ZipEntry) : void
       {
          //Décompilation abandonné
       }
       
-      public function write(param1:ByteArray) : void
+      public function write(b:ByteArray) : void
       {
          //Décompilation abandonné
       }
@@ -65,22 +65,22 @@ package nochump.util.zip
          //Décompilation abandonné
       }
       
-      private function writeLOC(param1:ZipEntry) : void
+      private function writeLOC(e:ZipEntry) : void
       {
          //Décompilation abandonné
       }
       
-      private function writeEXT(param1:ZipEntry) : void
+      private function writeEXT(e:ZipEntry) : void
       {
          //Décompilation abandonné
       }
       
-      private function writeCEN(param1:ZipEntry) : void
+      private function writeCEN(e:ZipEntry) : void
       {
          //Décompilation abandonné
       }
       
-      private function writeEND(param1:uint, param2:uint) : void
+      private function writeEND(off:uint, len:uint) : void
       {
          //Décompilation abandonné
       }

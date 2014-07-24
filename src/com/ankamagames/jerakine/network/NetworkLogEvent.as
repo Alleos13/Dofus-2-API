@@ -10,7 +10,7 @@ package com.ankamagames.jerakine.network
       //Décompilation abandonné
       }
       
-      public function NetworkLogEvent(param1:INetworkMessage, param2:Boolean)
+      public function NetworkLogEvent(msg:INetworkMessage, isServerMsg:Boolean)
       {
          //Décompilation abandonné
       }

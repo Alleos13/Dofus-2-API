@@ -13,7 +13,7 @@ package com.ankamagames.dofus.misc.utils
       //Décompilation abandonné
       }
       
-      public function DofusApiAction(param1:String, param2:Class)
+      public function DofusApiAction(name:String, actionClass:Class)
       {
          //Décompilation abandonné
       }
@@ -27,7 +27,7 @@ package com.ankamagames.dofus.misc.utils
          //Décompilation abandonné
       }
       
-      public static function getApiActionByName(param1:String) : DofusApiAction
+      public static function getApiActionByName(name:String) : DofusApiAction
       {
          //Décompilation abandonné
       }

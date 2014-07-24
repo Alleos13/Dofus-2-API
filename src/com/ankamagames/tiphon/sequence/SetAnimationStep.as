@@ -10,7 +10,7 @@ package com.ankamagames.tiphon.sequence
       //Décompilation abandonné
       }
       
-      public function SetAnimationStep(param1:TiphonSprite, param2:String)
+      public function SetAnimationStep(target:TiphonSprite, animation:String)
       {
          //Décompilation abandonné
       }

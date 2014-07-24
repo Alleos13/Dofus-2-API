@@ -11,7 +11,7 @@ package com.hurlant.crypto.hash
       
       function getHashSize() : uint;
       
-      function compute(param1:ByteArray, param2:ByteArray) : ByteArray;
+      function compute(key:ByteArray, data:ByteArray) : ByteArray;
       
       function dispose() : void;
       

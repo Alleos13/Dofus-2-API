@@ -9,7 +9,7 @@ package com.ankamagames.dofus.logic.game.common.types
       //Décompilation abandonné
       }
       
-      public function DofusShopObject(param1:Object)
+      public function DofusShopObject(data:Object)
       {
          //Décompilation abandonné
       }
@@ -20,7 +20,7 @@ package com.ankamagames.dofus.logic.game.common.types
       
       private var _description:String;
       
-      public function init(param1:Object) : void
+      public function init(data:Object) : void
       {
          //Décompilation abandonné
       }

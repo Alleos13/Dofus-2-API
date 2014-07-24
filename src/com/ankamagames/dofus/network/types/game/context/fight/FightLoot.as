@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      public function initFightLoot(param1:Vector.<uint> = null, param2:uint = 0) : FightLoot
+      public function initFightLoot(objects:Vector.<uint> = null, kamas:uint = 0) : FightLoot
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_FightLoot(param1:IDataOutput) : void
+      public function serializeAs_FightLoot(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_FightLoot(param1:IDataInput) : void
+      public function deserializeAs_FightLoot(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

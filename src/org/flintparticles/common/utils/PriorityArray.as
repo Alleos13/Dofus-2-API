@@ -17,47 +17,47 @@ package org.flintparticles.common.utils
       
       private var _values:Array;
       
-      override flash_proxy function getProperty(param1:*) : *
+      override flash_proxy function getProperty(name:*) : *
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function setProperty(param1:*, param2:*) : void
+      override flash_proxy function setProperty(name:*, value:*) : void
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function nextNameIndex(param1:int) : int
+      override flash_proxy function nextNameIndex(index:int) : int
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function nextName(param1:int) : String
+      override flash_proxy function nextName(index:int) : String
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function nextValue(param1:int) : *
+      override flash_proxy function nextValue(index:int) : *
       {
          //Décompilation abandonné
       }
       
-      public function add(param1:*, param2:Number) : uint
+      public function add(value:*, priority:Number) : uint
       {
          //Décompilation abandonné
       }
       
-      public function remove(param1:*) : Boolean
+      public function remove(value:*) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function contains(param1:*) : Boolean
+      public function contains(value:*) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function removeAt(param1:uint) : *
+      public function removeAt(index:uint) : *
       {
          //Décompilation abandonné
       }
@@ -80,7 +80,7 @@ class Pair extends Object
    //Décompilation abandonné
    }
    
-   function Pair(param1:Number, param2:*)
+   function Pair(priority:Number, value:*)
    {
       //Décompilation abandonné
    }

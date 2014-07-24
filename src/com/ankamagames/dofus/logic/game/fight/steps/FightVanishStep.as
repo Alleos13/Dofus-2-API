@@ -28,7 +28,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightVanishStep(param1:int, param2:int)
+      public function FightVanishStep(entityId:int, sourceId:int)
       {
          //Décompilation abandonné
       }
@@ -59,17 +59,17 @@ package com.ankamagames.dofus.logic.game.fight.steps
          //Décompilation abandonné
       }
       
-      private function manualRollOut(param1:int) : void
+      private function manualRollOut(fighterId:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAnimEnd(param1:TiphonSprite) : void
+      private function onAnimEnd(vanishingEntity:TiphonSprite) : void
       {
          //Décompilation abandonné
       }
       
-      private function vanishFinished(param1:Event = null) : void
+      private function vanishFinished(e:Event = null) : void
       {
          //Décompilation abandonné
       }

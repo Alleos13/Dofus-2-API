@@ -1,6 +1,6 @@
 package com.ankamagames.atouin.utils.map
 {
-   public function getMapUriFromId(param1:int) : String
+   public function getMapUriFromId(mapId:int) : String
    {
       //Décompilation abandonné
    }

@@ -31,22 +31,22 @@ package com.ankamagames.dofus.logic.common.managers
       
       private static var _achId:uint = 0;
       
-      public static function showAchievement(param1:uint) : void
+      public static function showAchievement(achId:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public static function addAchievement(param1:uint) : String
+      public static function addAchievement(achId:uint) : String
       {
          //Décompilation abandonné
       }
       
-      public static function getAchievementName(param1:uint) : String
+      public static function getAchievementName(achId:uint) : String
       {
          //Décompilation abandonné
       }
       
-      public static function rollOver(param1:int, param2:int, param3:uint, param4:uint = 0) : void
+      public static function rollOver(pX:int, pY:int, objectGID:uint, achId:uint = 0) : void
       {
          //Décompilation abandonné
       }

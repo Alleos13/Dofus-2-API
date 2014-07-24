@@ -22,7 +22,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightTeleportStep(param1:int, param2:MapPoint)
+      public function FightTeleportStep(fighterId:int, destinationCell:MapPoint)
       {
          //Décompilation abandonné
       }

@@ -13,6 +13,6 @@ package com.ankamagames.dofus.logic.game.fight.steps
       
       function get castingSpellId() : int;
       
-      function set castingSpellId(param1:int) : void;
+      function set castingSpellId(val:int) : void;
    }
 }

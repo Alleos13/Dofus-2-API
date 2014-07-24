@@ -17,7 +17,7 @@ package com.ankamagames.berilia.types.data
       //Décompilation abandonné
       }
       
-      public function MapArea(param1:Uri, param2:Number, param3:Number, param4:Number, param5:Number, param6:Map)
+      public function MapArea(src:Uri, x:Number, y:Number, width:Number, height:Number, parent:Map)
       {
          //Décompilation abandonné
       }
@@ -53,17 +53,17 @@ package com.ankamagames.berilia.types.data
          //Décompilation abandonné
       }
       
-      public function free(param1:Boolean = false) : void
+      public function free(force:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private function onDeathCountDown(param1:Event) : void
+      private function onDeathCountDown(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onLoad(param1:ResourceLoadedEvent) : void
+      private function onLoad(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }

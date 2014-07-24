@@ -30,12 +30,12 @@ package com.ankamagames.dofus.logic.common.utils
       
       protected var _lagging:Boolean = false;
       
-      public function ping(param1:INetworkMessage = null) : void
+      public function ping(msg:INetworkMessage = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function pong(param1:INetworkMessage = null) : void
+      public function pong(msg:INetworkMessage = null) : void
       {
          //Décompilation abandonné
       }
@@ -45,7 +45,7 @@ package com.ankamagames.dofus.logic.common.utils
          //Décompilation abandonné
       }
       
-      protected function onTimerComplete(param1:TimerEvent) : void
+      protected function onTimerComplete(e:TimerEvent) : void
       {
          //Décompilation abandonné
       }

@@ -12,7 +12,7 @@ package com.ankamagames.atouin.types
       //Décompilation abandonné
       }
       
-      public function LayerContainer(param1:int)
+      public function LayerContainer(nId:int)
       {
          //Décompilation abandonné
       }
@@ -28,7 +28,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function addCell(param1:CellContainer) : void
+      public function addCell(cellCtr:CellContainer) : void
       {
          //Décompilation abandonné
       }

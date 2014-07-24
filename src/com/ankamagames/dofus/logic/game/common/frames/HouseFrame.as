@@ -70,7 +70,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -80,7 +80,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      private function getHouseInformations(param1:uint) : HouseWrapper
+      private function getHouseInformations(houseID:uint) : HouseWrapper
       {
          //Décompilation abandonné
       }

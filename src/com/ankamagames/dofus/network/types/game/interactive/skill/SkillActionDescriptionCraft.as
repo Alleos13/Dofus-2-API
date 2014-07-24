@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.interactive.skill
          //Décompilation abandonné
       }
       
-      public function initSkillActionDescriptionCraft(param1:uint = 0, param2:uint = 0, param3:uint = 0) : SkillActionDescriptionCraft
+      public function initSkillActionDescriptionCraft(skillId:uint = 0, maxSlots:uint = 0, probability:uint = 0) : SkillActionDescriptionCraft
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.interactive.skill
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_SkillActionDescriptionCraft(param1:IDataOutput) : void
+      public function serializeAs_SkillActionDescriptionCraft(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_SkillActionDescriptionCraft(param1:IDataInput) : void
+      public function deserializeAs_SkillActionDescriptionCraft(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

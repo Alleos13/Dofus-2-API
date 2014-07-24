@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.exchange
          //Décompilation abandonné
       }
       
-      public static function create(param1:int) : ExchangeRequestOnTaxCollectorAction
+      public static function create(taxCollectorId:int) : ExchangeRequestOnTaxCollectorAction
       {
          //Décompilation abandonné
       }

@@ -40,7 +40,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.quest
          //Décompilation abandonné
       }
       
-      public function initQuestListMessage(param1:Vector.<uint> = null, param2:Vector.<uint> = null, param3:Vector.<QuestActiveInformations> = null) : QuestListMessage
+      public function initQuestListMessage(finishedQuestsIds:Vector.<uint> = null, finishedQuestsCounts:Vector.<uint> = null, activeQuests:Vector.<QuestActiveInformations> = null) : QuestListMessage
       {
          //Décompilation abandonné
       }
@@ -50,32 +50,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.quest
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_QuestListMessage(param1:IDataOutput) : void
+      public function serializeAs_QuestListMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_QuestListMessage(param1:IDataInput) : void
+      public function deserializeAs_QuestListMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -124,7 +124,6 @@ package com.ankamagames.dofus.logic.game.common.frames
    import com.ankamagames.dofus.network.types.game.context.roleplay.BasicAllianceInformations;
    import com.ankamagames.dofus.logic.common.managers.HyperlinkShowAllianceManager;
    import com.ankamagames.dofus.logic.game.common.managers.SpeakingItemManager;
-   import com.ankamagames.dofus.types.enums.NotificationTypeEnum;
    import com.ankamagames.dofus.logic.common.managers.NotificationManager;
    import com.ankamagames.dofus.datacenter.npcs.TaxCollectorFirstname;
    import com.ankamagames.dofus.datacenter.npcs.TaxCollectorName;
@@ -238,7 +237,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function set maxMessagesStored(param1:int) : void
+      public function set maxMessagesStored(val:int) : void
       {
          //Décompilation abandonné
       }
@@ -258,7 +257,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -288,7 +287,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function setDisplayOptions(param1:ChatOptions) : void
+      public function setDisplayOptions(opt:ChatOptions) : void
       {
          //Décompilation abandonné
       }
@@ -298,32 +297,32 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      private function color0x(param1:String) : String
+      private function color0x(color:String) : String
       {
          //Décompilation abandonné
       }
       
-      private function displayCarac(param1:CharacterBaseCharacteristic) : String
+      private function displayCarac(pCarac:CharacterBaseCharacteristic) : String
       {
          //Décompilation abandonné
       }
       
-      private function playAlertSound(param1:uint) : void
+      private function playAlertSound(pType:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function saveMessage(param1:int = 0, param2:String = "", param3:String = "", param4:Number = 0, param5:String = "", param6:uint = 0, param7:String = "", param8:Vector.<ItemWrapper> = null, param9:String = "", param10:uint = 0, param11:uint = 0, param12:Array = null, param13:Boolean = false) : void
+      private function saveMessage(channel:int = 0, baseContent:String = "", content:String = "", timestamp:Number = 0, fingerprint:String = "", senderId:uint = 0, senderName:String = "", objects:Vector.<ItemWrapper> = null, receiverName:String = "", receiverId:uint = 0, textKey:uint = 0, params:Array = null, admin:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function addParagraphToHistory(param1:int, param2:Object) : void
+      public function addParagraphToHistory(channel:int, p:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeLinesFromHistory(param1:int, param2:int) : void
+      public function removeLinesFromHistory(value:int, channel:int) : void
       {
          //Décompilation abandonné
       }
@@ -333,22 +332,22 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      private function getRealTimestamp(param1:Number) : Number
+      private function getRealTimestamp(time:Number) : Number
       {
          //Décompilation abandonné
       }
       
-      public function getTimestampServerByRealTimestamp(param1:Number) : Number
+      public function getTimestampServerByRealTimestamp(realTimeStamp:Number) : Number
       {
          //Décompilation abandonné
       }
       
-      public function checkCensored(param1:String, param2:uint, param3:uint, param4:String) : Array
+      public function checkCensored(word:String, channel:uint, senderId:uint, senderName:String) : Array
       {
          //Décompilation abandonné
       }
       
-      public function needToFormateUrl(param1:String) : Object
+      public function needToFormateUrl(inStr:String) : Object
       {
          //Décompilation abandonné
       }

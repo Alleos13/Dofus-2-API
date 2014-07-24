@@ -14,7 +14,7 @@ package com.ankamagames.tiphon.types
          //Décompilation abandonné
       }
       
-      override public function init(param1:IAnimationSpriteHandler) : void
+      override public function init(handler:IAnimationSpriteHandler) : void
       {
          //Décompilation abandonné
       }

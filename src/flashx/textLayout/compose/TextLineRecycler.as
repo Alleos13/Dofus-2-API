@@ -26,14 +26,14 @@ package flashx.textLayout.compose
          //Décompilation abandonné
       }
       
-      public static function set textLineRecyclerEnabled(param1:Boolean) : void
+      public static function set textLineRecyclerEnabled(value:Boolean) : void
       {
          //Décompilation abandonné
       }
       
       private static var reusableLineCache:Dictionary;
       
-      public static function addLineForReuse(param1:TextLine) : void
+      public static function addLineForReuse(textLine:TextLine) : void
       {
          //Décompilation abandonné
       }

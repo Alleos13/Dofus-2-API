@@ -17,7 +17,7 @@ package com.ankamagames.tubul.types
       //Décompilation abandonné
       }
       
-      public function SoundWrapper(param1:Sound, param2:int = 1)
+      public function SoundWrapper(snd:Sound, loops:int = 1)
       {
          //Décompilation abandonné
       }
@@ -57,7 +57,7 @@ package com.ankamagames.tubul.types
          //Décompilation abandonné
       }
       
-      public function set currentLoop(param1:uint) : void
+      public function set currentLoop(pLoop:uint) : void
       {
          //Décompilation abandonné
       }
@@ -82,7 +82,7 @@ package com.ankamagames.tubul.types
          //Décompilation abandonné
       }
       
-      public function set loops(param1:int) : void
+      public function set loops(pLoops:int) : void
       {
          //Décompilation abandonné
       }
@@ -97,7 +97,7 @@ package com.ankamagames.tubul.types
          //Décompilation abandonné
       }
       
-      public function set volume(param1:Number) : void
+      public function set volume(v:Number) : void
       {
          //Décompilation abandonné
       }
@@ -107,7 +107,7 @@ package com.ankamagames.tubul.types
          //Décompilation abandonné
       }
       
-      public function set leftToLeft(param1:Number) : void
+      public function set leftToLeft(v:Number) : void
       {
          //Décompilation abandonné
       }
@@ -117,7 +117,7 @@ package com.ankamagames.tubul.types
          //Décompilation abandonné
       }
       
-      public function set rightToLeft(param1:Number) : void
+      public function set rightToLeft(v:Number) : void
       {
          //Décompilation abandonné
       }
@@ -127,7 +127,7 @@ package com.ankamagames.tubul.types
          //Décompilation abandonné
       }
       
-      public function set rightToRight(param1:Number) : void
+      public function set rightToRight(v:Number) : void
       {
          //Décompilation abandonné
       }
@@ -137,7 +137,7 @@ package com.ankamagames.tubul.types
          //Décompilation abandonné
       }
       
-      public function set leftToRight(param1:Number) : void
+      public function set leftToRight(v:Number) : void
       {
          //Décompilation abandonné
       }
@@ -147,7 +147,7 @@ package com.ankamagames.tubul.types
          //Décompilation abandonné
       }
       
-      public function set pan(param1:Number) : void
+      public function set pan(v:Number) : void
       {
          //Décompilation abandonné
       }
@@ -173,12 +173,12 @@ package com.ankamagames.tubul.types
          //Décompilation abandonné
       }
       
-      public function notifyWhenEndOfFile(param1:Boolean = false, param2:Number = -1) : void
+      public function notifyWhenEndOfFile(pNotify:Boolean = false, pTime:Number = -1) : void
       {
          //Décompilation abandonné
       }
       
-      private function applySoundTransform(param1:SoundTransform) : void
+      private function applySoundTransform(st:SoundTransform) : void
       {
          //Décompilation abandonné
       }

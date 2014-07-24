@@ -821,12 +821,12 @@ package com.ankamagames.dofus.logic.game.fight.miscs
          //Décompilation abandonné
       }
       
-      public static function getActionStatName(param1:int) : String
+      public static function getActionStatName(actionId:int) : String
       {
          //Décompilation abandonné
       }
       
-      public static function getIsABoost(param1:int) : Boolean
+      public static function getIsABoost(actionId:int) : Boolean
       {
          //Décompilation abandonné
       }

@@ -7,10 +7,10 @@ package com.ankamagames.jerakine.newCache
       //Décompilation abandonné
       }
       
-      function set cache(param1:ICache) : void;
+      function set cache(cache:ICache) : void;
       
-      function used(param1:*) : void;
+      function used(ref:*) : void;
       
-      function purge(param1:uint) : void;
+      function purge(bounds:uint) : void;
    }
 }

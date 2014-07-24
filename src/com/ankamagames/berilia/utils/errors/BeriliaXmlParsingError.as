@@ -7,7 +7,7 @@ package com.ankamagames.berilia.utils.errors
       //Décompilation abandonné
       }
       
-      public function BeriliaXmlParsingError(param1:String = "", param2:uint = 0)
+      public function BeriliaXmlParsingError(message:String = "", id:uint = 0)
       {
          //Décompilation abandonné
       }

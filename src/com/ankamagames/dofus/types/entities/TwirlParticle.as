@@ -9,7 +9,7 @@ package com.ankamagames.dofus.types.entities
       //Décompilation abandonné
       }
       
-      public function TwirlParticle(param1:DisplayObject, param2:uint, param3:Boolean, param4:Function, param5:int, param6:uint = 10)
+      public function TwirlParticle(sprite:DisplayObject, life:uint, subExplosion:Boolean, deathCallback:Function, yLimitTop:int, maxRotationRay:uint = 10)
       {
          //Décompilation abandonné
       }

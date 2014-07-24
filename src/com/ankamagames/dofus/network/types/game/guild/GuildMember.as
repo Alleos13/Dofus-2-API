@@ -52,7 +52,7 @@ package com.ankamagames.dofus.network.types.game.guild
          //Décompilation abandonné
       }
       
-      public function initGuildMember(param1:uint = 0, param2:uint = 0, param3:String = "", param4:int = 0, param5:Boolean = false, param6:uint = 0, param7:Number = 0, param8:uint = 0, param9:uint = 0, param10:uint = 99, param11:int = 0, param12:uint = 0, param13:int = 0, param14:uint = 0, param15:int = 0, param16:PlayerStatus = null) : GuildMember
+      public function initGuildMember(id:uint = 0, level:uint = 0, name:String = "", breed:int = 0, sex:Boolean = false, rank:uint = 0, givenExperience:Number = 0, experienceGivenPercent:uint = 0, rights:uint = 0, connected:uint = 99, alignmentSide:int = 0, hoursSinceLastConnection:uint = 0, moodSmileyId:int = 0, accountId:uint = 0, achievementPoints:int = 0, status:PlayerStatus = null) : GuildMember
       {
          //Décompilation abandonné
       }
@@ -62,22 +62,22 @@ package com.ankamagames.dofus.network.types.game.guild
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GuildMember(param1:IDataOutput) : void
+      public function serializeAs_GuildMember(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildMember(param1:IDataInput) : void
+      public function deserializeAs_GuildMember(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

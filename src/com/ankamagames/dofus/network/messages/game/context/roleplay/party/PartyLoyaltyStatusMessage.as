@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      public function initPartyLoyaltyStatusMessage(param1:uint = 0, param2:Boolean = false) : PartyLoyaltyStatusMessage
+      public function initPartyLoyaltyStatusMessage(partyId:uint = 0, loyal:Boolean = false) : PartyLoyaltyStatusMessage
       {
          //Décompilation abandonné
       }
@@ -43,32 +43,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PartyLoyaltyStatusMessage(param1:IDataOutput) : void
+      public function serializeAs_PartyLoyaltyStatusMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PartyLoyaltyStatusMessage(param1:IDataInput) : void
+      public function deserializeAs_PartyLoyaltyStatusMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -29,7 +29,7 @@ package com.ankamagames.jerakine.utils.misc
       
       public static var show_total_time:Boolean = true;
       
-      public static function start(param1:String = "") : void
+      public static function start(label:String = "") : void
       {
          //Décompilation abandonné
       }
@@ -39,7 +39,7 @@ package com.ankamagames.jerakine.utils.misc
          //Décompilation abandonné
       }
       
-      public static function display(param1:String) : void
+      public static function display(str:String) : void
       {
          //Décompilation abandonné
       }

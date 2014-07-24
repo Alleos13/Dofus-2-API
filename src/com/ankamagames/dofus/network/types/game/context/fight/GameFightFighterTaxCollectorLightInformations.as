@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      public function initGameFightFighterTaxCollectorLightInformations(param1:int = 0, param2:int = 0, param3:uint = 0, param4:int = 0, param5:Boolean = false, param6:Boolean = false, param7:uint = 0, param8:uint = 0) : GameFightFighterTaxCollectorLightInformations
+      public function initGameFightFighterTaxCollectorLightInformations(id:int = 0, wave:int = 0, level:uint = 0, breed:int = 0, sex:Boolean = false, alive:Boolean = false, firstNameId:uint = 0, lastNameId:uint = 0) : GameFightFighterTaxCollectorLightInformations
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightFighterTaxCollectorLightInformations(param1:IDataOutput) : void
+      public function serializeAs_GameFightFighterTaxCollectorLightInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightFighterTaxCollectorLightInformations(param1:IDataInput) : void
+      public function deserializeAs_GameFightFighterTaxCollectorLightInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

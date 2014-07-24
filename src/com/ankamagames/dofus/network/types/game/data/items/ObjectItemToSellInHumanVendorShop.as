@@ -37,7 +37,7 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      public function initObjectItemToSellInHumanVendorShop(param1:uint = 0, param2:Vector.<ObjectEffect> = null, param3:uint = 0, param4:uint = 0, param5:uint = 0, param6:uint = 0) : ObjectItemToSellInHumanVendorShop
+      public function initObjectItemToSellInHumanVendorShop(objectGID:uint = 0, effects:Vector.<ObjectEffect> = null, objectUID:uint = 0, quantity:uint = 0, objectPrice:uint = 0, publicPrice:uint = 0) : ObjectItemToSellInHumanVendorShop
       {
          //Décompilation abandonné
       }
@@ -47,22 +47,22 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectItemToSellInHumanVendorShop(param1:IDataOutput) : void
+      public function serializeAs_ObjectItemToSellInHumanVendorShop(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectItemToSellInHumanVendorShop(param1:IDataInput) : void
+      public function deserializeAs_ObjectItemToSellInHumanVendorShop(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

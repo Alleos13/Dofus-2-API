@@ -9,7 +9,7 @@ package com.ankamagames.atouin.messages
       //Décompilation abandonné
       }
       
-      public function MapZoomMessage(param1:Number, param2:int, param3:int)
+      public function MapZoomMessage(value:Number, posX:int, posY:int)
       {
          //Décompilation abandonné
       }

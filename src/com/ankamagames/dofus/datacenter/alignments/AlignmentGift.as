@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.alignments
       
       protected static const _log:Logger;
       
-      public static function getAlignmentGiftById(param1:int) : AlignmentGift
+      public static function getAlignmentGiftById(id:int) : AlignmentGift
       {
          //Décompilation abandonné
       }

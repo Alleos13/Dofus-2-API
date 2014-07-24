@@ -10,7 +10,7 @@ package com.ankamagames.jerakine.network.messages
       //Décompilation abandonné
       }
       
-      public function ServerConnectionFailedMessage(param1:ServerConnection, param2:String)
+      public function ServerConnectionFailedMessage(failedConnection:ServerConnection, errorMessage:String)
       {
          //Décompilation abandonné
       }

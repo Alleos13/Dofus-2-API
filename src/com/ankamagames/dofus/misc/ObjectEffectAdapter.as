@@ -39,7 +39,7 @@ package com.ankamagames.dofus.misc
       
       protected static const _log:Logger;
       
-      public static function fromNetwork(param1:ObjectEffect) : EffectInstance
+      public static function fromNetwork(oe:ObjectEffect) : EffectInstance
       {
          //Décompilation abandonné
       }

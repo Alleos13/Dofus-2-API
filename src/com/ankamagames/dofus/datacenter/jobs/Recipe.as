@@ -23,12 +23,12 @@ package com.ankamagames.dofus.datacenter.jobs
       
       private static var _jobRecipes:Array;
       
-      public static function getRecipeByResultId(param1:int) : Recipe
+      public static function getRecipeByResultId(resultId:int) : Recipe
       {
          //Décompilation abandonné
       }
       
-      public static function getAllRecipesForSkillId(param1:uint, param2:uint) : Array
+      public static function getAllRecipesForSkillId(pSkillId:uint, pMaxCase:uint) : Array
       {
          //Décompilation abandonné
       }
@@ -38,12 +38,12 @@ package com.ankamagames.dofus.datacenter.jobs
          //Décompilation abandonné
       }
       
-      public static function getRecipesByJobId(param1:uint) : Array
+      public static function getRecipesByJobId(jobId:uint) : Array
       {
          //Décompilation abandonné
       }
       
-      private static function skillSortFunction(param1:RecipeWithSkill, param2:RecipeWithSkill) : Number
+      private static function skillSortFunction(a:RecipeWithSkill, b:RecipeWithSkill) : Number
       {
          //Décompilation abandonné
       }

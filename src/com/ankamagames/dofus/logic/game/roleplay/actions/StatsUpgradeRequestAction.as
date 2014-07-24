@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:uint) : StatsUpgradeRequestAction
+      public static function create(statId:uint, boostPoint:uint) : StatsUpgradeRequestAction
       {
          //Décompilation abandonné
       }

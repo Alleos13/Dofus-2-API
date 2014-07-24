@@ -13,7 +13,7 @@ package com.ankamagames.atouin.data.elements
       //Décompilation abandonné
       }
       
-      public function GraphicalElementData(param1:int, param2:int)
+      public function GraphicalElementData(elementId:int, elementType:int)
       {
          //Décompilation abandonné
       }
@@ -24,7 +24,7 @@ package com.ankamagames.atouin.data.elements
       
       public var type:int;
       
-      public function fromRaw(param1:IDataInput, param2:int) : void
+      public function fromRaw(raw:IDataInput, version:int) : void
       {
          //Décompilation abandonné
       }

@@ -9,11 +9,11 @@ package com.ankamagames.berilia.interfaces
       
       function get id() : String;
       
-      function set value(param1:*) : void;
+      function set value(v:*) : void;
       
       function get value() : *;
       
-      function set selected(param1:Boolean) : void;
+      function set selected(b:Boolean) : void;
       
       function get selected() : Boolean;
    }

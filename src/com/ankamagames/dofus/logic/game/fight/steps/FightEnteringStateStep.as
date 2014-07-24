@@ -11,7 +11,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightEnteringStateStep(param1:int, param2:int, param3:String)
+      public function FightEnteringStateStep(fighterId:int, stateId:int, durationString:String)
       {
          //Décompilation abandonné
       }

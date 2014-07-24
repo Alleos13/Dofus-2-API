@@ -38,37 +38,37 @@ package com.ankamagames.berilia.managers
       
       public var playSound:Function;
       
-      public function registerUi(param1:String, param2:String = null, param3:String = null) : void
+      public function registerUi(uiName:String, openFile:String = null, closeFile:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function getUi(param1:String) : BeriliaUiSound
+      public function getUi(uiName:String) : BeriliaUiSound
       {
          //Décompilation abandonné
       }
       
-      public function registerUiElement(param1:String, param2:String, param3:String, param4:String) : void
+      public function registerUiElement(uiName:String, instanceName:String, hookFct:String, file:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function fromHook(param1:Hook, param2:Array = null) : Boolean
+      public function fromHook(target:Hook, params:Array = null) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getAllSoundUiElement(param1:GraphicContainer) : Vector.<BeriliaUiElementSound>
+      public function getAllSoundUiElement(target:GraphicContainer) : Vector.<BeriliaUiElementSound>
       {
          //Décompilation abandonné
       }
       
-      public function fromUiElement(param1:GraphicContainer, param2:String) : Boolean
+      public function fromUiElement(target:GraphicContainer, hookFct:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function fromUi(param1:UiRootContainer, param2:uint) : Boolean
+      public function fromUi(target:UiRootContainer, eventType:uint) : Boolean
       {
          //Décompilation abandonné
       }

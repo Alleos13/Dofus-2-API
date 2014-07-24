@@ -32,7 +32,7 @@ package com.ankamagames.dofus.network.types.game.context
          //Décompilation abandonné
       }
       
-      public function initGameRolePlayTaxCollectorInformations(param1:int = 0, param2:EntityLook = null, param3:EntityDispositionInformations = null, param4:TaxCollectorStaticInformations = null, param5:uint = 0, param6:int = 0) : GameRolePlayTaxCollectorInformations
+      public function initGameRolePlayTaxCollectorInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null, identification:TaxCollectorStaticInformations = null, guildLevel:uint = 0, taxCollectorAttack:int = 0) : GameRolePlayTaxCollectorInformations
       {
          //Décompilation abandonné
       }
@@ -42,22 +42,22 @@ package com.ankamagames.dofus.network.types.game.context
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayTaxCollectorInformations(param1:IDataOutput) : void
+      public function serializeAs_GameRolePlayTaxCollectorInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayTaxCollectorInformations(param1:IDataInput) : void
+      public function deserializeAs_GameRolePlayTaxCollectorInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

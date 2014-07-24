@@ -11,19 +11,19 @@ package com.ankamagames.jerakine.types
       //Décompilation abandonné
       }
       
-      public function DefaultableColor(param1:uint = 0)
+      public function DefaultableColor(c:uint = 0)
       {
          //Décompilation abandonné
       }
       
       public var isDefault:Boolean = false;
       
-      override public function writeExternal(param1:IDataOutput) : void
+      override public function writeExternal(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function readExternal(param1:IDataInput) : void
+      override public function readExternal(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

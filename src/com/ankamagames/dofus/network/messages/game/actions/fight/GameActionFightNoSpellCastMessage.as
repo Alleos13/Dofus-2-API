@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.actions.fight
          //Décompilation abandonné
       }
       
-      public function initGameActionFightNoSpellCastMessage(param1:uint = 0) : GameActionFightNoSpellCastMessage
+      public function initGameActionFightNoSpellCastMessage(spellLevelId:uint = 0) : GameActionFightNoSpellCastMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.actions.fight
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameActionFightNoSpellCastMessage(param1:IDataOutput) : void
+      public function serializeAs_GameActionFightNoSpellCastMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameActionFightNoSpellCastMessage(param1:IDataInput) : void
+      public function deserializeAs_GameActionFightNoSpellCastMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

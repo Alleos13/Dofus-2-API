@@ -10,7 +10,7 @@ package com.ankamagames.tiphon.types.cache
       //Décompilation abandonné
       }
       
-      public function SpriteCacheInfo(param1:TiphonSprite, param2:TiphonEntityLook)
+      public function SpriteCacheInfo(tiphonSprite:TiphonSprite, tiphonEntityLook:TiphonEntityLook)
       {
          //Décompilation abandonné
       }

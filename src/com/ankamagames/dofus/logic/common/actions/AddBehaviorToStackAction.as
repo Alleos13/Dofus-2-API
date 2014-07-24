@@ -9,7 +9,7 @@ package com.ankamagames.dofus.logic.common.actions
       //Décompilation abandonné
       }
       
-      public function AddBehaviorToStackAction(param1:Array = null)
+      public function AddBehaviorToStackAction(data:Array = null)
       {
          //Décompilation abandonné
       }

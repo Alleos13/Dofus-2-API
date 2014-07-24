@@ -36,7 +36,7 @@ package com.ankamagames.jerakine.resources
       
       public static const RESOURCE_NONE:uint = 255;
       
-      public static function getName(param1:uint) : String
+      public static function getName(type:uint) : String
       {
          //Décompilation abandonné
       }

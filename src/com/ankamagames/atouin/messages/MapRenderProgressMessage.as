@@ -7,7 +7,7 @@ package com.ankamagames.atouin.messages
       //Décompilation abandonné
       }
       
-      public function MapRenderProgressMessage(param1:Number)
+      public function MapRenderProgressMessage(percent:Number)
       {
          //Décompilation abandonné
       }

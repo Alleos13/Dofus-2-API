@@ -14,12 +14,12 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public static function getProperty(param1:UIComponent, param2:String) : *
+      public static function getProperty(target:UIComponent, property:String) : *
       {
          //Décompilation abandonné
       }
       
-      public static function setProperty(param1:UIComponent, param2:String, param3:*) : void
+      public static function setProperty(target:UIComponent, property:String, value:*) : void
       {
          //Décompilation abandonné
       }

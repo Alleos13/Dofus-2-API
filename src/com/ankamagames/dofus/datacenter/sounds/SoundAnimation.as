@@ -17,7 +17,7 @@ package com.ankamagames.dofus.datacenter.sounds
       
       public static var MODULE:String = "SoundAnimations";
       
-      public static function getSoundAnimationById(param1:uint) : SoundAnimation
+      public static function getSoundAnimationById(id:uint) : SoundAnimation
       {
          //Décompilation abandonné
       }

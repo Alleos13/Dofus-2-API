@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.network
       //Décompilation abandonné
       }
       
-      public function NetworkSentEvent(param1:String, param2:INetworkMessage)
+      public function NetworkSentEvent(type:String, msg:INetworkMessage)
       {
          //Décompilation abandonné
       }

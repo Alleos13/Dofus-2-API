@@ -22,17 +22,17 @@ package com.ankamagames.dofus.logic.common.managers
          //Décompilation abandonné
       }
       
-      public static function substitute(param1:String, param2:int) : String
+      public static function substitute(messageType:String, accountId:int) : String
       {
          //Décompilation abandonné
       }
       
-      public static function openAnkabox(param1:String, param2:int = 0) : void
+      public static function openAnkabox(messageType:String, accountId:int = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public static function rollOver(param1:int, param2:int, param3:uint, param4:uint = 0) : void
+      public static function rollOver(pX:int, pY:int, objectGID:uint, ornId:uint = 0) : void
       {
          //Décompilation abandonné
       }

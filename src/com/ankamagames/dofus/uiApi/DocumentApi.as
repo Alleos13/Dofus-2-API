@@ -23,7 +23,7 @@ package com.ankamagames.dofus.uiApi
       
       private var _module:UiModule;
       
-      public function set module(param1:UiModule) : void
+      public function set module(value:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -33,12 +33,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getDocument(param1:uint) : Object
+      public function getDocument(pDocId:uint) : Object
       {
          //Décompilation abandonné
       }
       
-      public function getType(param1:uint) : uint
+      public function getType(pDocId:uint) : uint
       {
          //Décompilation abandonné
       }

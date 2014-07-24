@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
          //Décompilation abandonné
       }
       
-      public function initGuildFightTakePlaceRequestMessage(param1:int = 0, param2:int = 0) : GuildFightTakePlaceRequestMessage
+      public function initGuildFightTakePlaceRequestMessage(taxCollectorId:int = 0, replacedCharacterId:int = 0) : GuildFightTakePlaceRequestMessage
       {
          //Décompilation abandonné
       }
@@ -43,32 +43,32 @@ package com.ankamagames.dofus.network.messages.game.guild.tax
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GuildFightTakePlaceRequestMessage(param1:IDataOutput) : void
+      public function serializeAs_GuildFightTakePlaceRequestMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildFightTakePlaceRequestMessage(param1:IDataInput) : void
+      public function deserializeAs_GuildFightTakePlaceRequestMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

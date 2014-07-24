@@ -12,7 +12,7 @@ package com.ankamagames.dofus.console.moduleLogger
       //Décompilation abandonné
       }
       
-      public function TextFieldOldScrollBarH(param1:TextField, param2:int, param3:uint, param4:uint)
+      public function TextFieldOldScrollBarH(textField:TextField, power:int, backgroundColor:uint, color:uint)
       {
          //Décompilation abandonné
       }
@@ -53,17 +53,17 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private var offsetX:int;
       
-      private function onScrollBarMouseDown(param1:MouseEvent) : void
+      private function onScrollBarMouseDown(mouseEvent:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseUp(param1:MouseEvent) : void
+      private function onMouseUp(mouseEvent:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onMouseMove(param1:MouseEvent) : void
+      private function onMouseMove(mouseEvent:MouseEvent) : void
       {
          //Décompilation abandonné
       }

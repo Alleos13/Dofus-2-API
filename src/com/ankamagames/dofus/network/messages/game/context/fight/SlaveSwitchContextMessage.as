@@ -46,7 +46,7 @@ package com.ankamagames.dofus.network.messages.game.context.fight
          //Décompilation abandonné
       }
       
-      public function initSlaveSwitchContextMessage(param1:int = 0, param2:int = 0, param3:Vector.<SpellItem> = null, param4:CharacterCharacteristicsInformations = null, param5:Vector.<Shortcut> = null) : SlaveSwitchContextMessage
+      public function initSlaveSwitchContextMessage(masterId:int = 0, slaveId:int = 0, slaveSpells:Vector.<SpellItem> = null, slaveStats:CharacterCharacteristicsInformations = null, shortcuts:Vector.<Shortcut> = null) : SlaveSwitchContextMessage
       {
          //Décompilation abandonné
       }
@@ -56,32 +56,32 @@ package com.ankamagames.dofus.network.messages.game.context.fight
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_SlaveSwitchContextMessage(param1:IDataOutput) : void
+      public function serializeAs_SlaveSwitchContextMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_SlaveSwitchContextMessage(param1:IDataInput) : void
+      public function deserializeAs_SlaveSwitchContextMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

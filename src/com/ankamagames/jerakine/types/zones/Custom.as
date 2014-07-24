@@ -11,7 +11,7 @@ package com.ankamagames.jerakine.types.zones
       //Décompilation abandonné
       }
       
-      public function Custom(param1:Vector.<uint>)
+      public function Custom(cells:Vector.<uint>)
       {
          //Décompilation abandonné
       }
@@ -25,7 +25,7 @@ package com.ankamagames.jerakine.types.zones
          //Décompilation abandonné
       }
       
-      public function set radius(param1:uint) : void
+      public function set radius(n:uint) : void
       {
          //Décompilation abandonné
       }
@@ -35,7 +35,7 @@ package com.ankamagames.jerakine.types.zones
          //Décompilation abandonné
       }
       
-      public function set minRadius(param1:uint) : void
+      public function set minRadius(r:uint) : void
       {
          //Décompilation abandonné
       }
@@ -45,7 +45,7 @@ package com.ankamagames.jerakine.types.zones
          //Décompilation abandonné
       }
       
-      public function set direction(param1:uint) : void
+      public function set direction(d:uint) : void
       {
          //Décompilation abandonné
       }
@@ -55,7 +55,7 @@ package com.ankamagames.jerakine.types.zones
          //Décompilation abandonné
       }
       
-      public function getCells(param1:uint = 0) : Vector.<uint>
+      public function getCells(cellId:uint = 0) : Vector.<uint>
       {
          //Décompilation abandonné
       }

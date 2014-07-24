@@ -28,7 +28,7 @@ package com.ankamagames.jerakine.utils.display
          //Décompilation abandonné
       }
       
-      private static function onEnterFrame(param1:Event) : void
+      private static function onEnterFrame(e:Event) : void
       {
          //Décompilation abandonné
       }

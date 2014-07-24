@@ -15,7 +15,7 @@ package com.ankamagames.berilia.types.graphic
       //Décompilation abandonné
       }
       
-      public function GraphicLocation(param1:Number = NaN, param2:Number = NaN, param3:String = null)
+      public function GraphicLocation(nPoint:Number = NaN, nRelativePoint:Number = NaN, sRelativeTo:String = null)
       {
          //Décompilation abandonné
       }
@@ -30,12 +30,12 @@ package com.ankamagames.berilia.types.graphic
       
       public static const REF_LAST:String = "$LAST";
       
-      public static function convertPointStringToInt(param1:String) : uint
+      public static function convertPointStringToInt(sPoint:String) : uint
       {
          //Décompilation abandonné
       }
       
-      public static function convertPointIntToString(param1:uint) : String
+      public static function convertPointIntToString(nPoint:uint) : String
       {
          //Décompilation abandonné
       }
@@ -54,7 +54,7 @@ package com.ankamagames.berilia.types.graphic
       
       public var offsetYType:uint;
       
-      public function setPoint(param1:String) : void
+      public function setPoint(sPoint:String) : void
       {
          //Décompilation abandonné
       }
@@ -64,7 +64,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function setRelativePoint(param1:String) : void
+      public function setRelativePoint(sPoint:String) : void
       {
          //Décompilation abandonné
       }
@@ -74,7 +74,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function setRelativeTo(param1:String) : void
+      public function setRelativeTo(sPoint:String) : void
       {
          //Décompilation abandonné
       }
@@ -84,7 +84,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function setOffsetX(param1:Number) : void
+      public function setOffsetX(nOffset:Number) : void
       {
          //Décompilation abandonné
       }
@@ -94,7 +94,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function setOffsetY(param1:Number) : void
+      public function setOffsetY(nOffset:Number) : void
       {
          //Décompilation abandonné
       }

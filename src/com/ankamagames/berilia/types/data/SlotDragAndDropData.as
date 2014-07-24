@@ -10,7 +10,7 @@ package com.ankamagames.berilia.types.data
       //Décompilation abandonné
       }
       
-      public function SlotDragAndDropData(param1:ISlotDataHolder, param2:ISlotData)
+      public function SlotDragAndDropData(currentHolder:ISlotDataHolder, slotData:ISlotData)
       {
          //Décompilation abandonné
       }

@@ -14,7 +14,7 @@ package com.ankamagames.tiphon.types.look
       //Décompilation abandonné
       }
       
-      public function TiphonEntityLook(param1:String = null)
+      public function TiphonEntityLook(sLook:String = null)
       {
          //Décompilation abandonné
       }
@@ -23,7 +23,7 @@ package com.ankamagames.tiphon.types.look
       
       protected static const _log:Logger;
       
-      public static function fromString(param1:String, param2:TiphonEntityLook = null) : TiphonEntityLook
+      public static function fromString(str:String, tiphonInstance:TiphonEntityLook = null) : TiphonEntityLook
       {
          //Décompilation abandonné
       }
@@ -61,7 +61,7 @@ package com.ankamagames.tiphon.types.look
          //Décompilation abandonné
       }
       
-      public function set defaultSkin(param1:int) : void
+      public function set defaultSkin(id:int) : void
       {
          //Décompilation abandonné
       }
@@ -81,12 +81,12 @@ package com.ankamagames.tiphon.types.look
          //Décompilation abandonné
       }
       
-      public function setBone(param1:uint) : void
+      public function setBone(bone:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function getSkins(param1:Boolean = false, param2:Boolean = true) : Vector.<uint>
+      public function getSkins(byRef:Boolean = false, keepDefaultSkin:Boolean = true) : Vector.<uint>
       {
          //Décompilation abandonné
       }
@@ -96,32 +96,32 @@ package com.ankamagames.tiphon.types.look
          //Décompilation abandonné
       }
       
-      public function addSkin(param1:uint, param2:Boolean = false) : void
+      public function addSkin(skin:uint, addInFirstPosition:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeSkin(param1:uint) : void
+      public function removeSkin(skin:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function getColors(param1:Boolean = false) : Array
+      public function getColors(byRef:Boolean = false) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getColor(param1:uint) : DefaultableColor
+      public function getColor(index:uint) : DefaultableColor
       {
          //Décompilation abandonné
       }
       
-      public function hasColor(param1:uint) : Boolean
+      public function hasColor(index:uint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function resetColor(param1:uint) : void
+      public function resetColor(index:uint) : void
       {
          //Décompilation abandonné
       }
@@ -131,7 +131,7 @@ package com.ankamagames.tiphon.types.look
          //Décompilation abandonné
       }
       
-      public function setColor(param1:uint, param2:uint) : void
+      public function setColor(index:uint, color:uint) : void
       {
          //Décompilation abandonné
       }
@@ -141,7 +141,7 @@ package com.ankamagames.tiphon.types.look
          //Décompilation abandonné
       }
       
-      public function setScaleX(param1:Number) : void
+      public function setScaleX(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -151,27 +151,27 @@ package com.ankamagames.tiphon.types.look
          //Décompilation abandonné
       }
       
-      public function setScaleY(param1:Number) : void
+      public function setScaleY(value:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function setScales(param1:Number, param2:Number) : void
+      public function setScales(x:Number, y:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function getSubEntities(param1:Boolean = false) : Array
+      public function getSubEntities(byRef:Boolean = false) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getSubEntitiesFromCategory(param1:uint) : Array
+      public function getSubEntitiesFromCategory(category:uint) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getSubEntity(param1:uint, param2:uint) : TiphonEntityLook
+      public function getSubEntity(category:uint, index:uint) : TiphonEntityLook
       {
          //Décompilation abandonné
       }
@@ -181,12 +181,12 @@ package com.ankamagames.tiphon.types.look
          //Décompilation abandonné
       }
       
-      public function addSubEntity(param1:uint, param2:uint, param3:TiphonEntityLook) : void
+      public function addSubEntity(category:uint, index:uint, subEntity:TiphonEntityLook) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeSubEntity(param1:uint, param2:uint = 0) : void
+      public function removeSubEntity(category:uint, index:uint = 0) : void
       {
          //Décompilation abandonné
       }
@@ -196,17 +196,17 @@ package com.ankamagames.tiphon.types.look
          //Décompilation abandonné
       }
       
-      public function unlock(param1:Boolean = false) : void
+      public function unlock(silentUnlock:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function addObserver(param1:EntityLookObserver) : void
+      public function addObserver(elo:EntityLookObserver) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeObserver(param1:EntityLookObserver) : void
+      public function removeObserver(elo:EntityLookObserver) : void
       {
          //Décompilation abandonné
       }
@@ -216,37 +216,37 @@ package com.ankamagames.tiphon.types.look
          //Décompilation abandonné
       }
       
-      public function equals(param1:TiphonEntityLook) : Boolean
+      public function equals(el:TiphonEntityLook) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function updateFrom(param1:TiphonEntityLook) : void
+      public function updateFrom(el:TiphonEntityLook) : void
       {
          //Décompilation abandonné
       }
       
-      public function boneChanged(param1:TiphonEntityLook) : void
+      public function boneChanged(look:TiphonEntityLook) : void
       {
          //Décompilation abandonné
       }
       
-      public function skinsChanged(param1:TiphonEntityLook) : void
+      public function skinsChanged(look:TiphonEntityLook) : void
       {
          //Décompilation abandonné
       }
       
-      public function colorsChanged(param1:TiphonEntityLook) : void
+      public function colorsChanged(look:TiphonEntityLook) : void
       {
          //Décompilation abandonné
       }
       
-      public function scalesChanged(param1:TiphonEntityLook) : void
+      public function scalesChanged(look:TiphonEntityLook) : void
       {
          //Décompilation abandonné
       }
       
-      public function subEntitiesChanged(param1:TiphonEntityLook) : void
+      public function subEntitiesChanged(look:TiphonEntityLook) : void
       {
          //Décompilation abandonné
       }

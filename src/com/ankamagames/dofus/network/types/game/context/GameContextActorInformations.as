@@ -31,7 +31,7 @@ package com.ankamagames.dofus.network.types.game.context
          //Décompilation abandonné
       }
       
-      public function initGameContextActorInformations(param1:int = 0, param2:EntityLook = null, param3:EntityDispositionInformations = null) : GameContextActorInformations
+      public function initGameContextActorInformations(contextualId:int = 0, look:EntityLook = null, disposition:EntityDispositionInformations = null) : GameContextActorInformations
       {
          //Décompilation abandonné
       }
@@ -41,22 +41,22 @@ package com.ankamagames.dofus.network.types.game.context
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameContextActorInformations(param1:IDataOutput) : void
+      public function serializeAs_GameContextActorInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameContextActorInformations(param1:IDataInput) : void
+      public function deserializeAs_GameContextActorInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

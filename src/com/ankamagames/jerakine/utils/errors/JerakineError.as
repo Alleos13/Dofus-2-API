@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.utils.errors
       //Décompilation abandonné
       }
       
-      public function JerakineError(param1:String = "", param2:uint = 0)
+      public function JerakineError(message:String = "", id:uint = 0)
       {
          //Décompilation abandonné
       }

@@ -27,181 +27,181 @@ package flashx.textLayout.elements
       
       private static const romanDigitFunction:Vector.<Function>;
       
-      tlf_internal  static function createRomanString(param1:int, param2:Vector.<String>) : String
+      tlf_internal  static function createRomanString(n:int, data:Vector.<String>) : String
       {
          //Décompilation abandonné
       }
       
       private static const upperRomanData:Vector.<String>;
       
-      tlf_internal  static function upperRomanString(param1:int) : String
+      tlf_internal  static function upperRomanString(n:int) : String
       {
          //Décompilation abandonné
       }
       
       private static const lowerRomanData:Vector.<String>;
       
-      tlf_internal  static function lowerRomanString(param1:int) : String
+      tlf_internal  static function lowerRomanString(n:int) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function decimalString(param1:int) : String
+      tlf_internal  static function decimalString(n:int) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function decimalLeadingZeroString(param1:int) : String
+      tlf_internal  static function decimalLeadingZeroString(n:int) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function createNumericBaseTenString(param1:int, param2:int) : String
+      tlf_internal  static function createNumericBaseTenString(n:int, zero:int) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function arabicIndicString(param1:int) : String
+      tlf_internal  static function arabicIndicString(n:int) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function bengaliString(param1:int) : String
+      tlf_internal  static function bengaliString(n:int) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function devanagariString(param1:int) : String
+      tlf_internal  static function devanagariString(n:int) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function gujaratiString(param1:int) : String
+      tlf_internal  static function gujaratiString(n:int) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function gurmukhiString(param1:int) : String
+      tlf_internal  static function gurmukhiString(n:int) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function kannadaString(param1:int) : String
+      tlf_internal  static function kannadaString(n:int) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function persianString(param1:int) : String
+      tlf_internal  static function persianString(n:int) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function thaiString(param1:int) : String
+      tlf_internal  static function thaiString(n:int) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function urduString(param1:int) : String
+      tlf_internal  static function urduString(n:int) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function createContinuousAlphaString(param1:int, param2:int, param3:int) : String
+      tlf_internal  static function createContinuousAlphaString(n:int, first:int, base:int) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function lowerAlphaString(param1:int) : String
+      tlf_internal  static function lowerAlphaString(n:int) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function upperAlphaString(param1:int) : String
+      tlf_internal  static function upperAlphaString(n:int) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function lowerLatinString(param1:int) : String
+      tlf_internal  static function lowerLatinString(n:int) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function upperLatinString(param1:int) : String
+      tlf_internal  static function upperLatinString(n:int) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function createTableAlphaString(param1:int, param2:Vector.<int>) : String
+      tlf_internal  static function createTableAlphaString(n:int, table:Vector.<int>) : String
       {
          //Décompilation abandonné
       }
       
       tlf_internal  static const cjkEarthlyBranchData:Vector.<int>;
       
-      tlf_internal  static function cjkEarthlyBranchString(param1:int) : String
+      tlf_internal  static function cjkEarthlyBranchString(n:int) : String
       {
          //Décompilation abandonné
       }
       
       tlf_internal  static const cjkHeavenlyStemData:Vector.<int>;
       
-      tlf_internal  static function cjkHeavenlyStemString(param1:int) : String
+      tlf_internal  static function cjkHeavenlyStemString(n:int) : String
       {
          //Décompilation abandonné
       }
       
       tlf_internal  static const hangulData:Vector.<int>;
       
-      tlf_internal  static function hangulString(param1:int) : String
+      tlf_internal  static function hangulString(n:int) : String
       {
          //Décompilation abandonné
       }
       
       tlf_internal  static const hangulConstantData:Vector.<int>;
       
-      tlf_internal  static function hangulConstantString(param1:int) : String
+      tlf_internal  static function hangulConstantString(n:int) : String
       {
          //Décompilation abandonné
       }
       
       tlf_internal  static const hiraganaData:Vector.<int>;
       
-      tlf_internal  static function hiraganaString(param1:int) : String
+      tlf_internal  static function hiraganaString(n:int) : String
       {
          //Décompilation abandonné
       }
       
       tlf_internal  static const hiraganaIrohaData:Vector.<int>;
       
-      tlf_internal  static function hiraganaIrohaString(param1:int) : String
+      tlf_internal  static function hiraganaIrohaString(n:int) : String
       {
          //Décompilation abandonné
       }
       
       tlf_internal  static const katakanaData:Vector.<int>;
       
-      tlf_internal  static function katakanaString(param1:int) : String
+      tlf_internal  static function katakanaString(n:int) : String
       {
          //Décompilation abandonné
       }
       
       tlf_internal  static const katakanaIrohaData:Vector.<int>;
       
-      tlf_internal  static function katakanaIrohaString(param1:int) : String
+      tlf_internal  static function katakanaIrohaString(n:int) : String
       {
          //Décompilation abandonné
       }
       
       tlf_internal  static const lowerGreekData:Vector.<int>;
       
-      tlf_internal  static function lowerGreekString(param1:int) : String
+      tlf_internal  static function lowerGreekString(n:int) : String
       {
          //Décompilation abandonné
       }
       
       tlf_internal  static const upperGreekData:Vector.<int>;
       
-      tlf_internal  static function upperGreekString(param1:int) : String
+      tlf_internal  static function upperGreekString(n:int) : String
       {
          //Décompilation abandonné
       }
@@ -224,12 +224,12 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override tlf_internal function canOwnFlowElement(param1:FlowElement) : Boolean
+      override tlf_internal function canOwnFlowElement(elem:FlowElement) : Boolean
       {
          //Décompilation abandonné
       }
       
-      override tlf_internal function modelChanged(param1:String, param2:FlowElement, param3:int, param4:int, param5:Boolean = true, param6:Boolean = true) : void
+      override tlf_internal function modelChanged(changeType:String, elem:FlowElement, changeStart:int, changeLen:int, needNormalize:Boolean = true, bumpGeneration:Boolean = true) : void
       {
          //Décompilation abandonné
       }
@@ -254,12 +254,12 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      tlf_internal function computeListItemText(param1:ListItemElement, param2:IListMarkerFormat) : String
+      tlf_internal function computeListItemText(child:ListItemElement, listMarkerFormat:IListMarkerFormat) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function computeListItemTextSpecified(param1:ListItemElement, param2:IListMarkerFormat, param3:String, param4:String) : String
+      tlf_internal function computeListItemTextSpecified(child:ListItemElement, listMarkerFormat:IListMarkerFormat, listStyleType:String, suffixOverride:String) : String
       {
          //Décompilation abandonné
       }

@@ -17,7 +17,7 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
       //Décompilation abandonné
       }
       
-      public function StorageCraftFilterView(param1:HookLock, param2:IStorageView, param3:int, param4:int)
+      public function StorageCraftFilterView(hookLock:HookLock, parentView:IStorageView, skillId:int, slotCount:int)
       {
          //Décompilation abandonné
       }
@@ -35,7 +35,7 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
          //Décompilation abandonné
       }
       
-      override public function isListening(param1:ItemWrapper) : Boolean
+      override public function isListening(item:ItemWrapper) : Boolean
       {
          //Décompilation abandonné
       }
@@ -45,7 +45,7 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
          //Décompilation abandonné
       }
       
-      public function set parent(param1:IStorageView) : void
+      public function set parent(view:IStorageView) : void
       {
          //Décompilation abandonné
       }

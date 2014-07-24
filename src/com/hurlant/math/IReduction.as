@@ -7,14 +7,14 @@ package com.hurlant.math
       //Décompilation abandonné
       }
       
-      function convert(param1:BigInteger) : BigInteger;
+      function convert(x:BigInteger) : BigInteger;
       
-      function revert(param1:BigInteger) : BigInteger;
+      function revert(x:BigInteger) : BigInteger;
       
-      function reduce(param1:BigInteger) : void;
+      function reduce(x:BigInteger) : void;
       
-      function mulTo(param1:BigInteger, param2:BigInteger, param3:BigInteger) : void;
+      function mulTo(x:BigInteger, y:BigInteger, r:BigInteger) : void;
       
-      function sqrTo(param1:BigInteger, param2:BigInteger) : void;
+      function sqrTo(x:BigInteger, r:BigInteger) : void;
    }
 }

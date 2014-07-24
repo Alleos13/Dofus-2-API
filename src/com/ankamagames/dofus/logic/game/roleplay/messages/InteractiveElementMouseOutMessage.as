@@ -10,7 +10,7 @@ package com.ankamagames.dofus.logic.game.roleplay.messages
       //Décompilation abandonné
       }
       
-      public function InteractiveElementMouseOutMessage(param1:InteractiveElement)
+      public function InteractiveElementMouseOutMessage(ie:InteractiveElement)
       {
          //Décompilation abandonné
       }

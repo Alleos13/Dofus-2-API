@@ -7,7 +7,7 @@ package com.hurlant.math
       //Décompilation abandonné
       }
       
-      function BarrettReduction(param1:BigInteger)
+      function BarrettReduction(m:BigInteger)
       {
          //Décompilation abandonné
       }
@@ -20,27 +20,27 @@ package com.hurlant.math
       
       private var mu:BigInteger;
       
-      public function revert(param1:BigInteger) : BigInteger
+      public function revert(x:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      public function mulTo(param1:BigInteger, param2:BigInteger, param3:BigInteger) : void
+      public function mulTo(x:BigInteger, y:BigInteger, r:BigInteger) : void
       {
          //Décompilation abandonné
       }
       
-      public function sqrTo(param1:BigInteger, param2:BigInteger) : void
+      public function sqrTo(x:BigInteger, r:BigInteger) : void
       {
          //Décompilation abandonné
       }
       
-      public function convert(param1:BigInteger) : BigInteger
+      public function convert(x:BigInteger) : BigInteger
       {
          //Décompilation abandonné
       }
       
-      public function reduce(param1:BigInteger) : void
+      public function reduce(lx:BigInteger) : void
       {
          //Décompilation abandonné
       }

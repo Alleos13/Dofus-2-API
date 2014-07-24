@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.social
          //Décompilation abandonné
       }
       
-      public function initGuildInAllianceVersatileInformations(param1:uint = 0, param2:uint = 0, param3:uint = 0, param4:uint = 0, param5:uint = 0) : GuildInAllianceVersatileInformations
+      public function initGuildInAllianceVersatileInformations(guildId:uint = 0, leaderId:uint = 0, guildLevel:uint = 0, nbMembers:uint = 0, allianceId:uint = 0) : GuildInAllianceVersatileInformations
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.social
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GuildInAllianceVersatileInformations(param1:IDataOutput) : void
+      public function serializeAs_GuildInAllianceVersatileInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildInAllianceVersatileInformations(param1:IDataInput) : void
+      public function deserializeAs_GuildInAllianceVersatileInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

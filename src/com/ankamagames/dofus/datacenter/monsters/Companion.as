@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.monsters
       
       public static const MODULE:String = "Companions";
       
-      public static function getCompanionById(param1:uint) : Companion
+      public static function getCompanionById(id:uint) : Companion
       {
          //Décompilation abandonné
       }

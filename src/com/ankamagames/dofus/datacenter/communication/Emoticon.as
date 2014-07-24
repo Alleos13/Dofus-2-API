@@ -24,7 +24,7 @@ package com.ankamagames.dofus.datacenter.communication
       
       protected static const _log:Logger;
       
-      public static function getEmoticonById(param1:int) : Emoticon
+      public static function getEmoticonById(id:int) : Emoticon
       {
          //Décompilation abandonné
       }
@@ -72,7 +72,7 @@ package com.ankamagames.dofus.datacenter.communication
          //Décompilation abandonné
       }
       
-      public function getAnimName(param1:TiphonEntityLook) : String
+      public function getAnimName(look:TiphonEntityLook) : String
       {
          //Décompilation abandonné
       }

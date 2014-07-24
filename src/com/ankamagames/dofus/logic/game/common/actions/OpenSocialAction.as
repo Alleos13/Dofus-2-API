@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:String = null) : OpenSocialAction
+      public static function create(name:String = null) : OpenSocialAction
       {
          //Décompilation abandonné
       }

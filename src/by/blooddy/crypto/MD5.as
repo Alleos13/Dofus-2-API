@@ -15,12 +15,12 @@ package by.blooddy.crypto
          //Décompilation abandonné
       }
       
-      public static function hash(param1:String) : String
+      public static function hash(s:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function hashBytes(param1:ByteArray) : String
+      public static function hashBytes(bytes:ByteArray) : String
       {
          //Décompilation abandonné
       }

@@ -74,32 +74,32 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function formatClock(param1:Number, param2:Boolean = false, param3:Boolean = false) : String
+      public function formatClock(time:Number, unchanged:Boolean = false, useTimezoneOffset:Boolean = false) : String
       {
          //Décompilation abandonné
       }
       
-      public function formatDateIRL(param1:Number, param2:Boolean = false) : String
+      public function formatDateIRL(time:Number, useTimezoneOffset:Boolean = false) : String
       {
          //Décompilation abandonné
       }
       
-      public function formatDateIG(param1:Number) : String
+      public function formatDateIG(time:Number) : String
       {
          //Décompilation abandonné
       }
       
-      public function getDateIG(param1:Number) : Array
+      public function getDateIG(time:Number) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getDuration(param1:Number, param2:Boolean = false, param3:Boolean = false) : String
+      public function getDuration(time:Number, short:Boolean = false, addSeconds:Boolean = false) : String
       {
          //Décompilation abandonné
       }
       
-      public function getDateFromTime(param1:Number, param2:Boolean = false) : Array
+      public function getDateFromTime(timeUTC:Number, useTimezoneOffset:Boolean = false) : Array
       {
          //Décompilation abandonné
       }

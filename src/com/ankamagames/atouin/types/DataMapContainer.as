@@ -22,7 +22,7 @@ package com.ankamagames.atouin.types
       //Décompilation abandonné
       }
       
-      public function DataMapContainer(param1:Map)
+      public function DataMapContainer(mapData:Map)
       {
          //Décompilation abandonné
       }
@@ -61,12 +61,12 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function getCellReference(param1:uint) : CellReference
+      public function getCellReference(nId:uint) : CellReference
       {
          //Décompilation abandonné
       }
       
-      public function isRegisteredCell(param1:uint) : Boolean
+      public function isRegisteredCell(nId:uint) : Boolean
       {
          //Décompilation abandonné
       }
@@ -76,12 +76,12 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function getLayer(param1:int) : LayerContainer
+      public function getLayer(nId:int) : LayerContainer
       {
          //Décompilation abandonné
       }
       
-      public function clean(param1:Boolean = false) : Boolean
+      public function clean(bForceCleaning:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
@@ -96,12 +96,12 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function addAnimatedElement(param1:WorldEntitySprite, param2:EntityGraphicalElementData) : void
+      public function addAnimatedElement(element:WorldEntitySprite, data:EntityGraphicalElementData) : void
       {
          //Décompilation abandonné
       }
       
-      public function setTemporaryAnimatedElementState(param1:Boolean) : void
+      public function setTemporaryAnimatedElementState(active:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -116,12 +116,12 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set x(param1:Number) : void
+      public function set x(nValue:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function set y(param1:Number) : void
+      public function set y(nValue:Number) : void
       {
          //Décompilation abandonné
       }
@@ -136,57 +136,57 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set scaleX(param1:Number) : void
+      public function set scaleX(nValue:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function set scaleY(param1:Number) : void
+      public function set scaleY(nValue:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function addChild(param1:DisplayObject) : DisplayObject
+      public function addChild(item:DisplayObject) : DisplayObject
       {
          //Décompilation abandonné
       }
       
-      public function addChildAt(param1:DisplayObject, param2:int) : DisplayObject
+      public function addChildAt(item:DisplayObject, index:int) : DisplayObject
       {
          //Décompilation abandonné
       }
       
-      public function getChildIndex(param1:DisplayObject) : int
+      public function getChildIndex(item:DisplayObject) : int
       {
          //Décompilation abandonné
       }
       
-      public function contains(param1:DisplayObject) : Boolean
+      public function contains(item:DisplayObject) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getChildByName(param1:String) : DisplayObject
+      public function getChildByName(name:String) : DisplayObject
       {
          //Décompilation abandonné
       }
       
-      public function removeChild(param1:DisplayObject) : DisplayObject
+      public function removeChild(item:DisplayObject) : DisplayObject
       {
          //Décompilation abandonné
       }
       
-      private function updateAnimatedElement(param1:Object) : void
+      private function updateAnimatedElement(target:Object) : void
       {
          //Décompilation abandonné
       }
       
-      private function onEntityRendered(param1:TiphonEvent) : void
+      private function onEntityRendered(e:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onOptionChange(param1:PropertyChangeEvent) : void
+      private function onOptionChange(e:PropertyChangeEvent) : void
       {
          //Décompilation abandonné
       }

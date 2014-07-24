@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.game.prism
          //Décompilation abandonné
       }
       
-      public function initPrismsListMessage(param1:Vector.<PrismSubareaEmptyInfo> = null) : PrismsListMessage
+      public function initPrismsListMessage(prisms:Vector.<PrismSubareaEmptyInfo> = null) : PrismsListMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.game.prism
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PrismsListMessage(param1:IDataOutput) : void
+      public function serializeAs_PrismsListMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PrismsListMessage(param1:IDataInput) : void
+      public function deserializeAs_PrismsListMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

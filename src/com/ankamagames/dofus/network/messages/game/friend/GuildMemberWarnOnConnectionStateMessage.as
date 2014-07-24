@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.friend
          //Décompilation abandonné
       }
       
-      public function initGuildMemberWarnOnConnectionStateMessage(param1:Boolean = false) : GuildMemberWarnOnConnectionStateMessage
+      public function initGuildMemberWarnOnConnectionStateMessage(enable:Boolean = false) : GuildMemberWarnOnConnectionStateMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.friend
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GuildMemberWarnOnConnectionStateMessage(param1:IDataOutput) : void
+      public function serializeAs_GuildMemberWarnOnConnectionStateMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildMemberWarnOnConnectionStateMessage(param1:IDataInput) : void
+      public function deserializeAs_GuildMemberWarnOnConnectionStateMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

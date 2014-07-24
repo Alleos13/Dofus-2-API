@@ -9,7 +9,7 @@ package com.ankamagames.dofus.internalDatacenter.communication
       //Décompilation abandonné
       }
       
-      public function DelayedActionItem(param1:uint, param2:uint, param3:int, param4:Number)
+      public function DelayedActionItem(pPlayerId:uint, type:uint, dataId:int, endTime:Number)
       {
          //Décompilation abandonné
       }

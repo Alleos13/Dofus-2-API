@@ -53,7 +53,7 @@ package com.ankamagames.dofus.logic.game.common.managers
       
       private var _entitiesFrame:AbstractEntitiesFrame;
       
-      public function set entitiesFrame(param1:AbstractEntitiesFrame) : void
+      public function set entitiesFrame(pFrame:AbstractEntitiesFrame) : void
       {
          //Décompilation abandonné
       }
@@ -63,52 +63,52 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function isCreature(param1:int) : Boolean
+      public function isCreature(pEntityId:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function isCreatureFromLook(param1:TiphonEntityLook) : Boolean
+      public function isCreatureFromLook(pLook:TiphonEntityLook) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function isIncarnation(param1:int) : Boolean
+      public function isIncarnation(pEntityId:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function isIncarnationFromLook(param1:TiphonEntityLook) : Boolean
+      public function isIncarnationFromLook(pLook:TiphonEntityLook) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getTiphonEntityLook(param1:int) : TiphonEntityLook
+      public function getTiphonEntityLook(pEntityId:int) : TiphonEntityLook
       {
          //Décompilation abandonné
       }
       
-      public function getRealTiphonEntityLook(param1:int, param2:Boolean = false) : TiphonEntityLook
+      public function getRealTiphonEntityLook(pEntityId:int, pWithoutMount:Boolean = false) : TiphonEntityLook
       {
          //Décompilation abandonné
       }
       
-      public function getCreatureLook(param1:int) : TiphonEntityLook
+      public function getCreatureLook(pEntityId:int) : TiphonEntityLook
       {
          //Décompilation abandonné
       }
       
-      public function getLookFromContext(param1:int, param2:Boolean = false) : TiphonEntityLook
+      public function getLookFromContext(pEntityId:int, pForceCreature:Boolean = false) : TiphonEntityLook
       {
          //Décompilation abandonné
       }
       
-      public function getLookFromContextInfos(param1:GameContextActorInformations, param2:Boolean = false) : TiphonEntityLook
+      public function getLookFromContextInfos(pInfos:GameContextActorInformations, pForceCreature:Boolean = false) : TiphonEntityLook
       {
          //Décompilation abandonné
       }
       
-      private function isBoneCorrect(param1:int) : Boolean
+      private function isBoneCorrect(boneId:int) : Boolean
       {
          //Décompilation abandonné
       }

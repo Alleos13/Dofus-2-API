@@ -15,7 +15,7 @@ package nochump.util.zip
       //Décompilation abandonné
       }
       
-      public function ZipFile(param1:IDataInput)
+      public function ZipFile(data:IDataInput)
       {
          //Décompilation abandonné
       }
@@ -38,17 +38,17 @@ package nochump.util.zip
          //Décompilation abandonné
       }
       
-      public function getEntry(param1:String) : ZipEntry
+      public function getEntry(name:String) : ZipEntry
       {
          //Décompilation abandonné
       }
       
-      public function getInput(param1:ZipEntry, param2:Function = null) : ByteArray
+      public function getInput(entry:ZipEntry, asynCallback:Function = null) : ByteArray
       {
          //Décompilation abandonné
       }
       
-      private function onProgress(param1:Event) : void
+      private function onProgress(e:Event) : void
       {
          //Décompilation abandonné
       }

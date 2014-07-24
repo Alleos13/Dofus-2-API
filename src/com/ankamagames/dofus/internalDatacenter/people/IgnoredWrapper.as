@@ -9,7 +9,7 @@ package com.ankamagames.dofus.internalDatacenter.people
       //Décompilation abandonné
       }
       
-      public function IgnoredWrapper(param1:String, param2:uint)
+      public function IgnoredWrapper(name:String, accountId:uint)
       {
          //Décompilation abandonné
       }

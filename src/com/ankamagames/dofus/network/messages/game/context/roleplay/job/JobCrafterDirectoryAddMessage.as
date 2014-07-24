@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.job
          //Décompilation abandonné
       }
       
-      public function initJobCrafterDirectoryAddMessage(param1:JobCrafterDirectoryListEntry = null) : JobCrafterDirectoryAddMessage
+      public function initJobCrafterDirectoryAddMessage(listEntry:JobCrafterDirectoryListEntry = null) : JobCrafterDirectoryAddMessage
       {
          //Décompilation abandonné
       }
@@ -45,32 +45,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.job
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_JobCrafterDirectoryAddMessage(param1:IDataOutput) : void
+      public function serializeAs_JobCrafterDirectoryAddMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_JobCrafterDirectoryAddMessage(param1:IDataInput) : void
+      public function deserializeAs_JobCrafterDirectoryAddMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

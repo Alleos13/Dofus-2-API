@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.context.mount
          //Décompilation abandonné
       }
       
-      public function initMountSterilizedMessage(param1:Number = 0) : MountSterilizedMessage
+      public function initMountSterilizedMessage(mountId:Number = 0) : MountSterilizedMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.context.mount
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_MountSterilizedMessage(param1:IDataOutput) : void
+      public function serializeAs_MountSterilizedMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_MountSterilizedMessage(param1:IDataInput) : void
+      public function deserializeAs_MountSterilizedMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

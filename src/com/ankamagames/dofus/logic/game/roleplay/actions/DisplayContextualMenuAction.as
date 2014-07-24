@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint) : DisplayContextualMenuAction
+      public static function create(playerId:uint) : DisplayContextualMenuAction
       {
          //Décompilation abandonné
       }

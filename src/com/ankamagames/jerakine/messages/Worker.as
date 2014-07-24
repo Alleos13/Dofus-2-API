@@ -75,42 +75,42 @@ package com.ankamagames.jerakine.messages
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function processImmediately(param1:Message) : Boolean
+      public function processImmediately(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function addFrame(param1:Frame, param2:Boolean = false) : void
+      public function addFrame(frame:Frame, allowDuplicateFrame:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeFrame(param1:Frame) : void
+      public function removeFrame(frame:Frame) : void
       {
          //Décompilation abandonné
       }
       
-      private function isBeingDeleted(param1:Frame) : Boolean
+      private function isBeingDeleted(frame:Frame) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function contains(param1:Class) : Boolean
+      public function contains(frameClass:Class) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getFrame(param1:Class) : Frame
+      public function getFrame(frameClass:Class) : Frame
       {
          //Décompilation abandonné
       }
       
-      public function pause(param1:Class = null, param2:Array = null) : void
+      public function pause(targetClass:Class = null, unstoppableMsgClassList:Array = null) : void
       {
          //Décompilation abandonné
       }
@@ -120,7 +120,7 @@ package com.ankamagames.jerakine.messages
          //Décompilation abandonné
       }
       
-      private function msgIsUnstoppable(param1:Message) : Boolean
+      private function msgIsUnstoppable(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -135,7 +135,7 @@ package com.ankamagames.jerakine.messages
          //Décompilation abandonné
       }
       
-      private function onEnterFrame(param1:Event) : void
+      private function onEnterFrame(e:Event) : void
       {
          //Décompilation abandonné
       }
@@ -145,12 +145,12 @@ package com.ankamagames.jerakine.messages
          //Décompilation abandonné
       }
       
-      private function pushFrame(param1:Frame) : void
+      private function pushFrame(frame:Frame) : void
       {
          //Décompilation abandonné
       }
       
-      private function pullFrame(param1:Frame) : void
+      private function pullFrame(frame:Frame) : void
       {
          //Décompilation abandonné
       }
@@ -160,7 +160,7 @@ package com.ankamagames.jerakine.messages
          //Décompilation abandonné
       }
       
-      private function processMessage(param1:Message) : void
+      private function processMessage(msg:Message) : void
       {
          //Décompilation abandonné
       }

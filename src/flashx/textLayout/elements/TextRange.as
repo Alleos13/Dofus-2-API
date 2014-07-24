@@ -7,7 +7,7 @@ package flashx.textLayout.elements
       //Décompilation abandonné
       }
       
-      public function TextRange(param1:TextFlow, param2:int, param3:int)
+      public function TextRange(root:TextFlow, anchorIndex:int, activeIndex:int)
       {
          //Décompilation abandonné
       }
@@ -18,12 +18,12 @@ package flashx.textLayout.elements
       
       private var _activePosition:int;
       
-      private function clampToRange(param1:int) : int
+      private function clampToRange(index:int) : int
       {
          //Décompilation abandonné
       }
       
-      public function updateRange(param1:int, param2:int) : Boolean
+      public function updateRange(newAnchorPosition:int, newActivePosition:int) : Boolean
       {
          //Décompilation abandonné
       }
@@ -33,7 +33,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set textFlow(param1:TextFlow) : void
+      public function set textFlow(value:TextFlow) : void
       {
          //Décompilation abandonné
       }
@@ -43,7 +43,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set anchorPosition(param1:int) : void
+      public function set anchorPosition(value:int) : void
       {
          //Décompilation abandonné
       }
@@ -53,7 +53,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set activePosition(param1:int) : void
+      public function set activePosition(value:int) : void
       {
          //Décompilation abandonné
       }
@@ -63,7 +63,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set absoluteStart(param1:int) : void
+      public function set absoluteStart(value:int) : void
       {
          //Décompilation abandonné
       }
@@ -73,7 +73,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set absoluteEnd(param1:int) : void
+      public function set absoluteEnd(value:int) : void
       {
          //Décompilation abandonné
       }

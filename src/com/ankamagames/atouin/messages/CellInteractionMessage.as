@@ -28,7 +28,7 @@ package com.ankamagames.atouin.messages
          //Décompilation abandonné
       }
       
-      public function set cellId(param1:uint) : void
+      public function set cellId(nValue:uint) : void
       {
          //Décompilation abandonné
       }
@@ -38,7 +38,7 @@ package com.ankamagames.atouin.messages
          //Décompilation abandonné
       }
       
-      public function set cellContainer(param1:Sprite) : void
+      public function set cellContainer(sSprite:Sprite) : void
       {
          //Décompilation abandonné
       }
@@ -48,7 +48,7 @@ package com.ankamagames.atouin.messages
          //Décompilation abandonné
       }
       
-      public function set cellDepth(param1:uint) : void
+      public function set cellDepth(nValue:uint) : void
       {
          //Décompilation abandonné
       }
@@ -58,7 +58,7 @@ package com.ankamagames.atouin.messages
          //Décompilation abandonné
       }
       
-      public function set cell(param1:MapPoint) : void
+      public function set cell(pValue:MapPoint) : void
       {
          //Décompilation abandonné
       }

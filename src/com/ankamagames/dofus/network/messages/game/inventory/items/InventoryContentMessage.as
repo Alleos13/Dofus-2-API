@@ -37,7 +37,7 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
          //Décompilation abandonné
       }
       
-      public function initInventoryContentMessage(param1:Vector.<ObjectItem> = null, param2:uint = 0) : InventoryContentMessage
+      public function initInventoryContentMessage(objects:Vector.<ObjectItem> = null, kamas:uint = 0) : InventoryContentMessage
       {
          //Décompilation abandonné
       }
@@ -47,32 +47,32 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_InventoryContentMessage(param1:IDataOutput) : void
+      public function serializeAs_InventoryContentMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_InventoryContentMessage(param1:IDataInput) : void
+      public function deserializeAs_InventoryContentMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

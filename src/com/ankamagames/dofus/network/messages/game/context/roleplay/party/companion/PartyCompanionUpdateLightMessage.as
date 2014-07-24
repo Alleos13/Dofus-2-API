@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party.compa
          //Décompilation abandonné
       }
       
-      public function initPartyCompanionUpdateLightMessage(param1:uint = 0, param2:uint = 0, param3:uint = 0, param4:uint = 0, param5:uint = 0, param6:uint = 0, param7:uint = 0) : PartyCompanionUpdateLightMessage
+      public function initPartyCompanionUpdateLightMessage(partyId:uint = 0, id:uint = 0, lifePoints:uint = 0, maxLifePoints:uint = 0, prospecting:uint = 0, regenRate:uint = 0, indexId:uint = 0) : PartyCompanionUpdateLightMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party.compa
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PartyCompanionUpdateLightMessage(param1:IDataOutput) : void
+      public function serializeAs_PartyCompanionUpdateLightMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PartyCompanionUpdateLightMessage(param1:IDataInput) : void
+      public function deserializeAs_PartyCompanionUpdateLightMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

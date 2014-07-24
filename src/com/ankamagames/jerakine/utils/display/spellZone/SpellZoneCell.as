@@ -12,7 +12,7 @@ package com.ankamagames.jerakine.utils.display.spellZone
       //Décompilation abandonné
       }
       
-      public function SpellZoneCell(param1:uint, param2:uint, param3:uint)
+      public function SpellZoneCell(pWidth:uint, pHeight:uint, pId:uint)
       {
          //Décompilation abandonné
       }
@@ -35,7 +35,7 @@ package com.ankamagames.jerakine.utils.display.spellZone
       
       public var isRangedCell:Boolean = false;
       
-      public function set defaultColor(param1:uint) : void
+      public function set defaultColor(pColor:uint) : void
       {
          //Décompilation abandonné
       }
@@ -60,22 +60,22 @@ package com.ankamagames.jerakine.utils.display.spellZone
          //Décompilation abandonné
       }
       
-      private function onRollOver(param1:MouseEvent) : void
+      private function onRollOver(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onRollOut(param1:MouseEvent) : void
+      private function onRollOut(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onClick(param1:MouseEvent) : void
+      private function onClick(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function colorCell(param1:uint, param2:Boolean = false) : void
+      public function colorCell(color:uint, setDefault:Boolean = false) : void
       {
          //Décompilation abandonné
       }

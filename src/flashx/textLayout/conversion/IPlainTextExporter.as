@@ -9,10 +9,10 @@ package flashx.textLayout.conversion
       
       function get paragraphSeparator() : String;
       
-      function set paragraphSeparator(param1:String) : void;
+      function set paragraphSeparator(value:String) : void;
       
       function get stripDiscretionaryHyphens() : Boolean;
       
-      function set stripDiscretionaryHyphens(param1:Boolean) : void;
+      function set stripDiscretionaryHyphens(value:Boolean) : void;
    }
 }

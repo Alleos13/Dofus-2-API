@@ -9,7 +9,7 @@ package com.ankamagames.berilia.types.messages
       //Décompilation abandonné
       }
       
-      public function ModuleExecErrorMessage(param1:String, param2:String)
+      public function ModuleExecErrorMessage(moduleName:String, stackTrace:String)
       {
          //Décompilation abandonné
       }

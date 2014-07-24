@@ -22,7 +22,7 @@ package com.ankamagames.berilia.types.graphic
       
       public static const TIMEOUT:String = "TimeoutHTMLLoader_timeout";
       
-      public static function getLoader(param1:String = null) : TimeoutHTMLLoader
+      public static function getLoader(uid:String = null) : TimeoutHTMLLoader
       {
          //Décompilation abandonné
       }
@@ -38,7 +38,7 @@ package com.ankamagames.berilia.types.graphic
       
       private var _uid:String;
       
-      public function set life(param1:Number) : void
+      public function set life(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -48,12 +48,12 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      private function onLocationChange(param1:Event) : void
+      private function onLocationChange(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTimeOut(param1:Event) : void
+      private function onTimeOut(e:Event) : void
       {
          //Décompilation abandonné
       }

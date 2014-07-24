@@ -7,7 +7,7 @@ package com.ankamagames.tubul.utils.error
       //Décompilation abandonné
       }
       
-      public function TubulError(param1:String = "", param2:uint = 0)
+      public function TubulError(message:String = "", id:uint = 0)
       {
          //Décompilation abandonné
       }

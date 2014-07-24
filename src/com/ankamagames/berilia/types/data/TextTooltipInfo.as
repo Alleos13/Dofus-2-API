@@ -7,7 +7,7 @@ package com.ankamagames.berilia.types.data
       //Décompilation abandonné
       }
       
-      public function TextTooltipInfo(param1:String, param2:String = null, param3:String = null, param4:int = 400)
+      public function TextTooltipInfo(content:String, css:String = null, cssClass:String = null, maxWidth:int = 400)
       {
          //Décompilation abandonné
       }

@@ -12,7 +12,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightRemoveSubEntityStep(param1:int, param2:uint, param3:uint)
+      public function FightRemoveSubEntityStep(fighterId:int, category:uint, slot:uint)
       {
          //Décompilation abandonné
       }

@@ -76,17 +76,17 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function onNetStatus(param1:NetStatusEvent) : void
+      private function onNetStatus(event:NetStatusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSecurityError(param1:SecurityErrorEvent) : void
+      private function onSecurityError(event:SecurityErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onASyncError(param1:AsyncErrorEvent) : void
+      private function onASyncError(event:AsyncErrorEvent) : void
       {
          //Décompilation abandonné
       }
@@ -96,17 +96,17 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function onMetaData(param1:Object) : void
+      private function onMetaData(info:Object) : void
       {
          //Décompilation abandonné
       }
       
-      private function onPropertyChange(param1:PropertyChangeEvent) : void
+      private function onPropertyChange(event:PropertyChangeEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function set flv(param1:String) : void
+      public function set flv(value:String) : void
       {
          //Décompilation abandonné
       }
@@ -116,7 +116,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set fms(param1:String) : void
+      public function set fms(value:String) : void
       {
          //Décompilation abandonné
       }
@@ -131,12 +131,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set autoPlay(param1:Boolean) : void
+      public function set autoPlay(value:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function set finalized(param1:Boolean) : void
+      public function set finalized(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -146,7 +146,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set mute(param1:Boolean) : void
+      public function set mute(mute:Boolean) : void
       {
          //Décompilation abandonné
       }

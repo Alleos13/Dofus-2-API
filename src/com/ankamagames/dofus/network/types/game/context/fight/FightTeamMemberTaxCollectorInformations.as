@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      public function initFightTeamMemberTaxCollectorInformations(param1:int = 0, param2:uint = 0, param3:uint = 0, param4:uint = 0, param5:uint = 0, param6:uint = 0) : FightTeamMemberTaxCollectorInformations
+      public function initFightTeamMemberTaxCollectorInformations(id:int = 0, firstNameId:uint = 0, lastNameId:uint = 0, level:uint = 0, guildId:uint = 0, uid:uint = 0) : FightTeamMemberTaxCollectorInformations
       {
          //Décompilation abandonné
       }
@@ -43,22 +43,22 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_FightTeamMemberTaxCollectorInformations(param1:IDataOutput) : void
+      public function serializeAs_FightTeamMemberTaxCollectorInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_FightTeamMemberTaxCollectorInformations(param1:IDataInput) : void
+      public function deserializeAs_FightTeamMemberTaxCollectorInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -25,12 +25,12 @@ package com.ankamagames.jerakine.types.enums
       
       public static const OUT:uint;
       
-      public static function getEvents(param1:uint) : Array
+      public static function getEvents(interactionType:uint) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function getMessage(param1:String) : Class
+      public static function getMessage(eventType:String) : Class
       {
          //Décompilation abandonné
       }

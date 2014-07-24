@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.game.basic
          //Décompilation abandonné
       }
       
-      public function initBasicTimeMessage(param1:Number = 0, param2:int = 0) : BasicTimeMessage
+      public function initBasicTimeMessage(timestamp:Number = 0, timezoneOffset:int = 0) : BasicTimeMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.game.basic
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_BasicTimeMessage(param1:IDataOutput) : void
+      public function serializeAs_BasicTimeMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_BasicTimeMessage(param1:IDataInput) : void
+      public function deserializeAs_BasicTimeMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

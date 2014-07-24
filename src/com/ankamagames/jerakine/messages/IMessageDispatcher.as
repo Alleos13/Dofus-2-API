@@ -7,6 +7,6 @@ package com.ankamagames.jerakine.messages
       //Décompilation abandonné
       }
       
-      function dispatchMessage(param1:MessageHandler, param2:Message) : void;
+      function dispatchMessage(handler:MessageHandler, message:Message) : void;
    }
 }

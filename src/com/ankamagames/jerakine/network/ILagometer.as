@@ -7,9 +7,9 @@ package com.ankamagames.jerakine.network
       //Décompilation abandonné
       }
       
-      function ping(param1:INetworkMessage = null) : void;
+      function ping(msg:INetworkMessage = null) : void;
       
-      function pong(param1:INetworkMessage = null) : void;
+      function pong(msg:INetworkMessage = null) : void;
       
       function stop() : void;
    }

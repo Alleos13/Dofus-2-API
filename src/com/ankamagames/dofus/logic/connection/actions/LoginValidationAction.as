@@ -15,7 +15,7 @@ package com.ankamagames.dofus.logic.connection.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:String, param2:String, param3:Boolean, param4:uint = 0) : LoginValidationAction
+      public static function create(username:String, password:String, autoSelectServer:Boolean, serverId:uint = 0) : LoginValidationAction
       {
          //Décompilation abandonné
       }

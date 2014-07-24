@@ -53,47 +53,47 @@ package com.ankamagames.dofus.logic.game.fight.fightEvents
          //Décompilation abandonné
       }
       
-      public static function sendFightEvent(param1:String, param2:Array, param3:int, param4:int, param5:Boolean = false, param6:int = 0, param7:int = 1) : void
+      public static function sendFightEvent(name:String, params:Array, fighterId:int, pCastingSpellId:int, sendNow:Boolean = false, checkParams:int = 0, pFirstParamToCheck:int = 1) : void
       {
          //Décompilation abandonné
       }
       
-      private static function addFightText(param1:com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent) : void
+      private static function addFightText(fightEvent:com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public static function sendAllFightEvent(param1:Boolean = false) : void
+      public static function sendAllFightEvent(now:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private static function sendEvents(param1:Event = null) : void
+      private static function sendEvents(pEvt:Event = null) : void
       {
          //Décompilation abandonné
       }
       
-      public static function groupAllEventsForDisplay(param1:Dictionary) : void
+      public static function groupAllEventsForDisplay(entitiesList:Dictionary) : void
       {
          //Décompilation abandonné
       }
       
-      public static function extractTargetsId(param1:Vector.<com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent>) : Vector.<int>
+      public static function extractTargetsId(eventList:Vector.<com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent>) : Vector.<int>
       {
          //Décompilation abandonné
       }
       
-      public static function extractGroupableTargets(param1:Vector.<com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent>) : Vector.<com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent>
+      public static function extractGroupableTargets(eventList:Vector.<com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent>) : Vector.<com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent>
       {
          //Décompilation abandonné
       }
       
-      public static function groupFightEventsByTarget(param1:Vector.<com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent>) : Dictionary
+      public static function groupFightEventsByTarget(eventList:Vector.<com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent>) : Dictionary
       {
          //Décompilation abandonné
       }
       
-      public static function groupSameFightEvents(param1:Array, param2:com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent) : void
+      public static function groupSameFightEvents(pEventsList:Array, pFightEvent:com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent) : void
       {
          //Décompilation abandonné
       }
@@ -103,37 +103,37 @@ package com.ankamagames.dofus.logic.game.fight.fightEvents
          //Décompilation abandonné
       }
       
-      private static function groupByElements(param1:Array, param2:int, param3:Boolean = true, param4:Boolean = false, param5:int = -1) : void
+      private static function groupByElements(pvgroup:Array, pType:int, activeDetails:Boolean = true, pAddDeathInTheSameMsg:Boolean = false, pCastingSpellId:int = -1) : void
       {
          //Décompilation abandonné
       }
       
-      private static function groupByTeam(param1:int, param2:Vector.<int>, param3:Vector.<com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent>, param4:Dictionary, param5:Vector.<int>) : Boolean
+      private static function groupByTeam(playerTeamId:int, targets:Vector.<int>, pEventList:Vector.<com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent>, pEntitiesList:Dictionary, groupPvLostAndDeath:Vector.<int>) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function getGroupedListEvent(param1:Vector.<com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent>) : Vector.<com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent>
+      public static function getGroupedListEvent(pInEventList:Vector.<com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent>) : Vector.<com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent>
       {
          //Décompilation abandonné
       }
       
-      public static function removeEventFromEventsList(param1:Vector.<com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent>, param2:Vector.<com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent>) : void
+      public static function removeEventFromEventsList(pEventList:Vector.<com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent>, pListToRemove:Vector.<com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent>) : void
       {
          //Décompilation abandonné
       }
       
-      public static function groupEntitiesByTeam(param1:int, param2:Vector.<int>, param3:Dictionary, param4:Boolean = true) : String
+      public static function groupEntitiesByTeam(playerTeamId:int, targetList:Vector.<int>, entitiesList:Dictionary, checkAlive:Boolean = true) : String
       {
          //Décompilation abandonné
       }
       
-      private static function getNumberOfParametersToCheck(param1:com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent) : int
+      private static function getNumberOfParametersToCheck(baseEvent:com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent) : int
       {
          //Décompilation abandonné
       }
       
-      private static function needToGroupFightEventsData(param1:int, param2:com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent, param3:com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent) : Boolean
+      private static function needToGroupFightEventsData(pNbParams:int, pFightEvent:com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent, pBaseEvent:com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent) : Boolean
       {
          //Décompilation abandonné
       }
@@ -148,12 +148,12 @@ package com.ankamagames.dofus.logic.game.fight.fightEvents
          //Décompilation abandonné
       }
       
-      private static function sendFightLogToChat(param1:com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent, param2:String = "", param3:Vector.<int> = null, param4:Boolean = true, param5:Boolean = false) : void
+      private static function sendFightLogToChat(pFightEvent:com.ankamagames.dofus.logic.game.fight.fightEvents.FightEvent, pTargetsTeam:String = "", pTargetsList:Vector.<int> = null, pActiveColoration:Boolean = true, pAddDeathInTheSameMsg:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private static function formateColorsForFightDamages(param1:String, param2:int) : String
+      private static function formateColorsForFightDamages(inText:String, actionId:int) : String
       {
          //Décompilation abandonné
       }

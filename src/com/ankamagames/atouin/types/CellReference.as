@@ -17,7 +17,7 @@ package com.ankamagames.atouin.types
       //Décompilation abandonné
       }
       
-      public function CellReference(param1:uint)
+      public function CellReference(nId:uint)
       {
          //Décompilation abandonné
       }
@@ -52,12 +52,12 @@ package com.ankamagames.atouin.types
       
       public var gfxId:Array;
       
-      public function addSprite(param1:DisplayObject) : void
+      public function addSprite(d:DisplayObject) : void
       {
          //Décompilation abandonné
       }
       
-      public function addGfx(param1:int) : void
+      public function addGfx(nGfxId:int) : void
       {
          //Décompilation abandonné
       }
@@ -77,7 +77,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set visible(param1:Boolean) : void
+      public function set visible(bValue:Boolean) : void
       {
          //Décompilation abandonné
       }

@@ -9,7 +9,7 @@ package com.hurlant.crypto.hash
       //Décompilation abandonné
       }
       
-      public function MAC(param1:IHash, param2:uint = 0)
+      public function MAC(hash:IHash, bits:uint = 0)
       {
          //Décompilation abandonné
       }
@@ -30,7 +30,7 @@ package com.hurlant.crypto.hash
       
       private var innerKey:ByteArray;
       
-      public function setPadSize(param1:int) : void
+      public function setPadSize(pad_size:int) : void
       {
          //Décompilation abandonné
       }
@@ -40,7 +40,7 @@ package com.hurlant.crypto.hash
          //Décompilation abandonné
       }
       
-      public function compute(param1:ByteArray, param2:ByteArray) : ByteArray
+      public function compute(key:ByteArray, data:ByteArray) : ByteArray
       {
          //Décompilation abandonné
       }

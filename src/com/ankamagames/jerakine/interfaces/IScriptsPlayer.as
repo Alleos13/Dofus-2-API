@@ -7,10 +7,10 @@ package com.ankamagames.jerakine.interfaces
       //Décompilation abandonné
       }
       
-      function playScript(param1:String) : void;
+      function playScript(pScript:String) : void;
       
-      function playFile(param1:String) : void;
+      function playFile(pUri:String) : void;
       
-      function addApi(param1:String, param2:*) : void;
+      function addApi(pApiId:String, pApi:*) : void;
    }
 }

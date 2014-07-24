@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.shortcut
          //Décompilation abandonné
       }
       
-      public function initShortcutSpell(param1:uint = 0, param2:uint = 0) : ShortcutSpell
+      public function initShortcutSpell(slot:uint = 0, spellId:uint = 0) : ShortcutSpell
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.shortcut
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ShortcutSpell(param1:IDataOutput) : void
+      public function serializeAs_ShortcutSpell(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ShortcutSpell(param1:IDataInput) : void
+      public function deserializeAs_ShortcutSpell(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

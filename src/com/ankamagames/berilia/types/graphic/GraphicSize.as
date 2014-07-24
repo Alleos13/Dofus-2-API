@@ -23,12 +23,12 @@ package com.ankamagames.berilia.types.graphic
       
       private var _nYUnit:uint;
       
-      public function setX(param1:Number, param2:uint) : void
+      public function setX(nX:Number, nType:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function setY(param1:Number, param2:uint) : void
+      public function setY(nY:Number, nType:uint) : void
       {
          //Décompilation abandonné
       }

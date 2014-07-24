@@ -16,7 +16,7 @@ package com.ankamagames.jerakine.resources.loaders
          //Décompilation abandonné
       }
       
-      public static function getLoader(param1:uint) : IResourceLoader
+      public static function getLoader(type:uint) : IResourceLoader
       {
          //Décompilation abandonné
       }

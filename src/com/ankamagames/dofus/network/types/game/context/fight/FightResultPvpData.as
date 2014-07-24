@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      public function initFightResultPvpData(param1:uint = 0, param2:uint = 0, param3:uint = 0, param4:uint = 0, param5:int = 0) : FightResultPvpData
+      public function initFightResultPvpData(grade:uint = 0, minHonorForGrade:uint = 0, maxHonorForGrade:uint = 0, honor:uint = 0, honorDelta:int = 0) : FightResultPvpData
       {
          //Décompilation abandonné
       }
@@ -43,22 +43,22 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_FightResultPvpData(param1:IDataOutput) : void
+      public function serializeAs_FightResultPvpData(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_FightResultPvpData(param1:IDataInput) : void
+      public function deserializeAs_FightResultPvpData(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -36,12 +36,12 @@ package com.ankamagames.jerakine.utils.parser
       
       private static var PARAM_NO_CUT_SILENCE:String = "noCutSilence";
       
-      public static function parseSoundLabel(param1:String) : Array
+      public static function parseSoundLabel(pParams:String) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function buildSoundLabel(param1:Vector.<SoundEventParamWrapper>) : String
+      public static function buildSoundLabel(soundEvents:Vector.<SoundEventParamWrapper>) : String
       {
          //Décompilation abandonné
       }

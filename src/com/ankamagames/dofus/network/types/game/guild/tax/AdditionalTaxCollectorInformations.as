@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.guild.tax
          //Décompilation abandonné
       }
       
-      public function initAdditionalTaxCollectorInformations(param1:String = "", param2:uint = 0) : AdditionalTaxCollectorInformations
+      public function initAdditionalTaxCollectorInformations(collectorCallerName:String = "", date:uint = 0) : AdditionalTaxCollectorInformations
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.guild.tax
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AdditionalTaxCollectorInformations(param1:IDataOutput) : void
+      public function serializeAs_AdditionalTaxCollectorInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AdditionalTaxCollectorInformations(param1:IDataInput) : void
+      public function deserializeAs_AdditionalTaxCollectorInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

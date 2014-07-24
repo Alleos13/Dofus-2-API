@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.types.events
       //Décompilation abandonné
       }
       
-      public function ErrorReportedEvent(param1:Error, param2:String, param3:Boolean = true)
+      public function ErrorReportedEvent(error:Error, text:String, pShowPopup:Boolean = true)
       {
          //Décompilation abandonné
       }

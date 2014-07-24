@@ -40,17 +40,17 @@ package com.ankamagames.jerakine.resources.loaders
       
       protected var _filesTotal:uint = 0;
       
-      protected function checkCache(param1:Uri) : Boolean
+      protected function checkCache(uri:Uri) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function getCachedValue(param1:Uri) : CacheableResource
+      private function getCachedValue(uri:Uri) : CacheableResource
       {
          //Décompilation abandonné
       }
       
-      public function isInCache(param1:Uri) : Boolean
+      public function isInCache(uri:Uri) : Boolean
       {
          //Décompilation abandonné
       }
@@ -60,12 +60,12 @@ package com.ankamagames.jerakine.resources.loaders
          //Décompilation abandonné
       }
       
-      protected function dispatchSuccess(param1:Uri, param2:uint, param3:*) : void
+      protected function dispatchSuccess(uri:Uri, resourceType:uint, resource:*) : void
       {
          //Décompilation abandonné
       }
       
-      protected function dispatchFailure(param1:Uri, param2:String, param3:uint) : void
+      protected function dispatchFailure(uri:Uri, errorMsg:String, errorCode:uint) : void
       {
          //Décompilation abandonné
       }
@@ -75,17 +75,17 @@ package com.ankamagames.jerakine.resources.loaders
          //Décompilation abandonné
       }
       
-      public function onLoaded(param1:Uri, param2:uint, param3:*) : void
+      public function onLoaded(uri:Uri, resourceType:uint, resource:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function onFailed(param1:Uri, param2:String, param3:uint) : void
+      public function onFailed(uri:Uri, errorMsg:String, errorCode:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function onProgress(param1:Uri, param2:uint, param3:uint) : void
+      public function onProgress(uri:Uri, bytesLoaded:uint, bytesTotal:uint) : void
       {
          //Décompilation abandonné
       }

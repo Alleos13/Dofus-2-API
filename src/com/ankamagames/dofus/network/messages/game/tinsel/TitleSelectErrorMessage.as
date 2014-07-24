@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.tinsel
          //Décompilation abandonné
       }
       
-      public function initTitleSelectErrorMessage(param1:uint = 0) : TitleSelectErrorMessage
+      public function initTitleSelectErrorMessage(reason:uint = 0) : TitleSelectErrorMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.tinsel
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_TitleSelectErrorMessage(param1:IDataOutput) : void
+      public function serializeAs_TitleSelectErrorMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_TitleSelectErrorMessage(param1:IDataInput) : void
+      public function deserializeAs_TitleSelectErrorMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

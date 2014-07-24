@@ -27,7 +27,7 @@ package com.ankamagames.dofus.datacenter.spells
       
       private static const MODULE:String = "SpellLevels";
       
-      public static function getLevelById(param1:int) : SpellLevel
+      public static function getLevelById(id:int) : SpellLevel
       {
          //Décompilation abandonné
       }
@@ -106,7 +106,7 @@ package com.ankamagames.dofus.datacenter.spells
          //Décompilation abandonné
       }
       
-      public function set minimalRange(param1:uint) : void
+      public function set minimalRange(pMinRange:uint) : void
       {
          //Décompilation abandonné
       }
@@ -116,7 +116,7 @@ package com.ankamagames.dofus.datacenter.spells
          //Décompilation abandonné
       }
       
-      public function set maximalRange(param1:uint) : void
+      public function set maximalRange(pRange:uint) : void
       {
          //Décompilation abandonné
       }
@@ -126,7 +126,7 @@ package com.ankamagames.dofus.datacenter.spells
          //Décompilation abandonné
       }
       
-      public function set castZoneInLine(param1:Boolean) : void
+      public function set castZoneInLine(pCastInLine:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -136,7 +136,7 @@ package com.ankamagames.dofus.datacenter.spells
          //Décompilation abandonné
       }
       
-      public function set castZoneInDiagonal(param1:Boolean) : void
+      public function set castZoneInDiagonal(pCastInDiagonal:Boolean) : void
       {
          //Décompilation abandonné
       }

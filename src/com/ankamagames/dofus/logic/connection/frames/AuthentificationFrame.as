@@ -73,7 +73,7 @@ package com.ankamagames.dofus.logic.connection.frames
       //Décompilation abandonné
       }
       
-      public function AuthentificationFrame(param1:Boolean = true)
+      public function AuthentificationFrame(dispatchModuleHook:Boolean = true)
       {
          //Décompilation abandonné
       }
@@ -108,12 +108,12 @@ package com.ankamagames.dofus.logic.connection.frames
       
       private var _streamingBetaAccess:Boolean = false;
       
-      private function onStreamingBetaAuthentification(param1:Event) : void
+      private function onStreamingBetaAuthentification(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -128,12 +128,12 @@ package com.ankamagames.dofus.logic.connection.frames
          //Décompilation abandonné
       }
       
-      private function onLoad(param1:ResourceLoadedEvent) : void
+      private function onLoad(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onLoadError(param1:ResourceErrorEvent) : void
+      private function onLoadError(e:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }

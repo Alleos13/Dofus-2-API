@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.exchange
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:int, param3:int) : ExchangeObjectModifyPricedAction
+      public static function create(pObjectUID:uint, pQuantity:int, pPrice:int) : ExchangeObjectModifyPricedAction
       {
          //Décompilation abandonné
       }

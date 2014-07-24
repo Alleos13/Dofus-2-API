@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.exchange
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint) : ExchangeObjectMoveKamaAction
+      public static function create(pKamas:uint) : ExchangeObjectMoveKamaAction
       {
          //Décompilation abandonné
       }

@@ -9,10 +9,10 @@ package com.hurlant.crypto.symmetric
       //Décompilation abandonné
       }
       
-      function pad(param1:ByteArray) : void;
+      function pad(a:ByteArray) : void;
       
-      function unpad(param1:ByteArray) : void;
+      function unpad(a:ByteArray) : void;
       
-      function setBlockSize(param1:uint) : void;
+      function setBlockSize(bs:uint) : void;
    }
 }

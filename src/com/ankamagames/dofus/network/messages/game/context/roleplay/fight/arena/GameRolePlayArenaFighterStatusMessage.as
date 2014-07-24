@@ -38,7 +38,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.fight.arena
          //Décompilation abandonné
       }
       
-      public function initGameRolePlayArenaFighterStatusMessage(param1:int = 0, param2:uint = 0, param3:Boolean = false) : GameRolePlayArenaFighterStatusMessage
+      public function initGameRolePlayArenaFighterStatusMessage(fightId:int = 0, playerId:uint = 0, accepted:Boolean = false) : GameRolePlayArenaFighterStatusMessage
       {
          //Décompilation abandonné
       }
@@ -48,32 +48,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.fight.arena
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayArenaFighterStatusMessage(param1:IDataOutput) : void
+      public function serializeAs_GameRolePlayArenaFighterStatusMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayArenaFighterStatusMessage(param1:IDataInput) : void
+      public function deserializeAs_GameRolePlayArenaFighterStatusMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

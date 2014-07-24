@@ -10,7 +10,7 @@ package com.somerandomdude.colortoolkit.schemes
       //Décompilation abandonné
       }
       
-      public function Complementary(param1:int)
+      public function Complementary(primaryColor:int)
       {
          //Décompilation abandonné
       }

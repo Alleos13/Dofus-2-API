@@ -24,7 +24,7 @@ package com.ankamagames.dofus.datacenter.quest
       
       public static const MODULE:String = "Achievements";
       
-      public static function getAchievementById(param1:int) : Achievement
+      public static function getAchievementById(id:int) : Achievement
       {
          //Décompilation abandonné
       }
@@ -81,12 +81,12 @@ package com.ankamagames.dofus.datacenter.quest
          //Décompilation abandonné
       }
       
-      public function getKamasReward(param1:int) : Number
+      public function getKamasReward(pPlayerLevel:int) : Number
       {
          //Décompilation abandonné
       }
       
-      public function getExperienceReward(param1:int, param2:int) : Number
+      public function getExperienceReward(pPlayerLevel:int, pXpBonus:int) : Number
       {
          //Décompilation abandonné
       }

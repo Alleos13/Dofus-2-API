@@ -10,7 +10,7 @@ package com.ankamagames.jerakine.data
       //Décompilation abandonné
       }
       
-      public function GameDataClassDefinition(param1:String, param2:String)
+      public function GameDataClassDefinition(packageName:String, className:String)
       {
          //Décompilation abandonné
       }
@@ -24,12 +24,12 @@ package com.ankamagames.jerakine.data
          //Décompilation abandonné
       }
       
-      public function read(param1:String, param2:IDataInput) : *
+      public function read(module:String, stream:IDataInput) : *
       {
          //Décompilation abandonné
       }
       
-      public function addField(param1:String, param2:IDataInput) : void
+      public function addField(fieldName:String, stream:IDataInput) : void
       {
          //Décompilation abandonné
       }

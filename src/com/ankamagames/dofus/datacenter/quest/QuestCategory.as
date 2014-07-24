@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.quest
       
       public static const MODULE:String = "QuestCategory";
       
-      public static function getQuestCategoryById(param1:int) : QuestCategory
+      public static function getQuestCategoryById(id:int) : QuestCategory
       {
          //Décompilation abandonné
       }

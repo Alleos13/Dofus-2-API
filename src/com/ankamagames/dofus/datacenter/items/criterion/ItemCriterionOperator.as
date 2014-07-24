@@ -9,7 +9,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function ItemCriterionOperator(param1:String)
+      public function ItemCriterionOperator(pStringOperator:String)
       {
          //Décompilation abandonné
       }
@@ -31,7 +31,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
          //Décompilation abandonné
       }
       
-      public function compare(param1:int, param2:int) : Boolean
+      public function compare(pLeftMember:int, pRightMember:int) : Boolean
       {
          //Décompilation abandonné
       }

@@ -13,7 +13,7 @@ package com.ankamagames.atouin.types
       //Décompilation abandonné
       }
       
-      public function CellContainer(param1:uint)
+      public function CellContainer(id:uint)
       {
          //Décompilation abandonné
       }
@@ -29,7 +29,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set cellId(param1:uint) : void
+      public function set cellId(val:uint) : void
       {
          //Décompilation abandonné
       }
@@ -41,7 +41,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set layerId(param1:int) : void
+      public function set layerId(val:int) : void
       {
          //Décompilation abandonné
       }
@@ -53,7 +53,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set startX(param1:int) : void
+      public function set startX(val:int) : void
       {
          //Décompilation abandonné
       }
@@ -65,7 +65,7 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set startY(param1:int) : void
+      public function set startY(val:int) : void
       {
          //Décompilation abandonné
       }
@@ -77,12 +77,12 @@ package com.ankamagames.atouin.types
          //Décompilation abandonné
       }
       
-      public function set depth(param1:int) : void
+      public function set depth(val:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function addFakeChild(param1:Object, param2:Object, param3:Object) : void
+      public function addFakeChild(pChild:Object, pData:Object, colors:Object) : void
       {
          //Décompilation abandonné
       }

@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.updater
          //Décompilation abandonné
       }
       
-      public function initContentPart(param1:String = "", param2:uint = 0) : ContentPart
+      public function initContentPart(id:String = "", state:uint = 0) : ContentPart
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.updater
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ContentPart(param1:IDataOutput) : void
+      public function serializeAs_ContentPart(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ContentPart(param1:IDataInput) : void
+      public function deserializeAs_ContentPart(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -57,7 +57,7 @@ package com.ankamagames.dofus.logic.game.fight.managers
          //Décompilation abandonné
       }
       
-      public function displaySpellZone(param1:int, param2:int, param3:int, param4:uint, param5:uint) : void
+      public function displaySpellZone(casterId:int, targetCellId:int, sourceCellId:int, spellId:uint, spellLevelId:uint) : void
       {
          //Décompilation abandonné
       }
@@ -72,12 +72,12 @@ package com.ankamagames.dofus.logic.game.fight.managers
          //Décompilation abandonné
       }
       
-      public function getSpellZone(param1:*, param2:Boolean = false) : IZone
+      public function getSpellZone(spell:*, ignoreShapeA:Boolean = false) : IZone
       {
          //Décompilation abandonné
       }
       
-      public function getZone(param1:uint, param2:uint, param3:uint, param4:Boolean = false) : IZone
+      public function getZone(pShape:uint, pZoneSize:uint, pMinZoneSize:uint, pIgnoreShapeA:Boolean = false) : IZone
       {
          //Décompilation abandonné
       }

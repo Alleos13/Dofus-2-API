@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.mounts
       
       public static const MODULE:String = "MountBehaviors";
       
-      public static function getMountBehaviorById(param1:uint) : MountBehavior
+      public static function getMountBehaviorById(id:uint) : MountBehavior
       {
          //Décompilation abandonné
       }

@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      public function initPartyUpdateMessage(param1:uint = 0, param2:PartyMemberInformations = null) : PartyUpdateMessage
+      public function initPartyUpdateMessage(partyId:uint = 0, memberInformations:PartyMemberInformations = null) : PartyUpdateMessage
       {
          //Décompilation abandonné
       }
@@ -45,32 +45,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PartyUpdateMessage(param1:IDataOutput) : void
+      public function serializeAs_PartyUpdateMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PartyUpdateMessage(param1:IDataInput) : void
+      public function deserializeAs_PartyUpdateMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -17,12 +17,12 @@ package com.ankamagames.tiphon.types
          //Décompilation abandonné
       }
       
-      public function init(param1:IAnimationSpriteHandler) : void
+      public function init(handler:IAnimationSpriteHandler) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAdded(param1:Event) : void
+      private function onAdded(e:Event) : void
       {
          //Décompilation abandonné
       }

@@ -37,7 +37,7 @@ package com.ankamagames.dofus.network.types.game.paddock
          //Décompilation abandonné
       }
       
-      public function initPaddockInformationsForSell(param1:String = "", param2:int = 0, param3:int = 0, param4:uint = 0, param5:int = 0, param6:int = 0, param7:uint = 0) : PaddockInformationsForSell
+      public function initPaddockInformationsForSell(guildOwner:String = "", worldX:int = 0, worldY:int = 0, subAreaId:uint = 0, nbMount:int = 0, nbObject:int = 0, price:uint = 0) : PaddockInformationsForSell
       {
          //Décompilation abandonné
       }
@@ -47,22 +47,22 @@ package com.ankamagames.dofus.network.types.game.paddock
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PaddockInformationsForSell(param1:IDataOutput) : void
+      public function serializeAs_PaddockInformationsForSell(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PaddockInformationsForSell(param1:IDataInput) : void
+      public function deserializeAs_PaddockInformationsForSell(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

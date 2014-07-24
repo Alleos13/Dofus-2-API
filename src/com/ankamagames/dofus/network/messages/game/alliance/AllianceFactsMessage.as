@@ -45,7 +45,7 @@ package com.ankamagames.dofus.network.messages.game.alliance
          //Décompilation abandonné
       }
       
-      public function initAllianceFactsMessage(param1:AllianceFactSheetInformations = null, param2:Vector.<GuildInAllianceInformations> = null, param3:Vector.<uint> = null, param4:uint = 0, param5:String = "") : AllianceFactsMessage
+      public function initAllianceFactsMessage(infos:AllianceFactSheetInformations = null, guilds:Vector.<GuildInAllianceInformations> = null, controlledSubareaIds:Vector.<uint> = null, leaderCharacterId:uint = 0, leaderCharacterName:String = "") : AllianceFactsMessage
       {
          //Décompilation abandonné
       }
@@ -55,32 +55,32 @@ package com.ankamagames.dofus.network.messages.game.alliance
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AllianceFactsMessage(param1:IDataOutput) : void
+      public function serializeAs_AllianceFactsMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AllianceFactsMessage(param1:IDataInput) : void
+      public function deserializeAs_AllianceFactsMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

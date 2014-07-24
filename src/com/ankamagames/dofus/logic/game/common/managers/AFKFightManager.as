@@ -48,12 +48,12 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function set enabled(param1:Boolean) : void
+      public function set enabled(e:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function set confirm(param1:Boolean) : void
+      public function set confirm(confirmed:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -68,12 +68,12 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      private function onActivity(param1:Event) : void
+      private function onActivity(event:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTimer(param1:Event) : void
+      private function onTimer(event:Event) : void
       {
          //Décompilation abandonné
       }

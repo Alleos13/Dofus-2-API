@@ -18,17 +18,17 @@ package com.ankamagames.jerakine.utils.misc
       
       private static var _cache:Dictionary;
       
-      public static function isCompatible(param1:Class, param2:*, param3:Boolean = false, param4:Boolean = true) : Boolean
+      public static function isCompatible(reference:Class, target:*, strict:Boolean = false, throwError:Boolean = true) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function getIncompatibility(param1:Class, param2:*, param3:Boolean = false) : String
+      public static function getIncompatibility(reference:Class, target:*, strict:Boolean = false) : String
       {
          //Décompilation abandonné
       }
       
-      private static function throwErrorMsg(param1:Class, param2:*, param3:Boolean = false) : void
+      private static function throwErrorMsg(reference:Class, target:*, strict:Boolean = false) : void
       {
          //Décompilation abandonné
       }

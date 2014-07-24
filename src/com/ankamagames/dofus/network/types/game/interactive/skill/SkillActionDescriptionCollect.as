@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.interactive.skill
          //Décompilation abandonné
       }
       
-      public function initSkillActionDescriptionCollect(param1:uint = 0, param2:uint = 0, param3:uint = 0, param4:uint = 0) : SkillActionDescriptionCollect
+      public function initSkillActionDescriptionCollect(skillId:uint = 0, time:uint = 0, min:uint = 0, max:uint = 0) : SkillActionDescriptionCollect
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.interactive.skill
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_SkillActionDescriptionCollect(param1:IDataOutput) : void
+      public function serializeAs_SkillActionDescriptionCollect(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_SkillActionDescriptionCollect(param1:IDataInput) : void
+      public function deserializeAs_SkillActionDescriptionCollect(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

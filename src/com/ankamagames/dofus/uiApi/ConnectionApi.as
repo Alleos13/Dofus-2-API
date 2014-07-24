@@ -37,12 +37,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function isCharacterWaitingForChange(param1:int) : Boolean
+      public function isCharacterWaitingForChange(id:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function allowAutoConnectCharacter(param1:Boolean) : void
+      public function allowAutoConnectCharacter(allow:Boolean) : void
       {
          //Décompilation abandonné
       }

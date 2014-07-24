@@ -52,7 +52,7 @@ package com.ankamagames.dofus.network.messages.game.guild
          //Décompilation abandonné
       }
       
-      public function initGuildInfosUpgradeMessage(param1:uint = 0, param2:uint = 0, param3:uint = 0, param4:uint = 0, param5:uint = 0, param6:uint = 0, param7:uint = 0, param8:uint = 0, param9:Vector.<uint> = null, param10:Vector.<uint> = null) : GuildInfosUpgradeMessage
+      public function initGuildInfosUpgradeMessage(maxTaxCollectorsCount:uint = 0, taxCollectorsCount:uint = 0, taxCollectorLifePoints:uint = 0, taxCollectorDamagesBonuses:uint = 0, taxCollectorPods:uint = 0, taxCollectorProspecting:uint = 0, taxCollectorWisdom:uint = 0, boostPoints:uint = 0, spellId:Vector.<uint> = null, spellLevel:Vector.<uint> = null) : GuildInfosUpgradeMessage
       {
          //Décompilation abandonné
       }
@@ -62,32 +62,32 @@ package com.ankamagames.dofus.network.messages.game.guild
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GuildInfosUpgradeMessage(param1:IDataOutput) : void
+      public function serializeAs_GuildInfosUpgradeMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildInfosUpgradeMessage(param1:IDataInput) : void
+      public function deserializeAs_GuildInfosUpgradeMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

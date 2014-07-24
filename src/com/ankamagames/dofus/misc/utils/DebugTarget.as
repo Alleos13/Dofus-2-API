@@ -25,12 +25,12 @@ package com.ankamagames.dofus.misc.utils
       
       public static var logLevels:Array;
       
-      override public function logEvent(param1:LogEvent) : void
+      override public function logEvent(event:LogEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function configure(param1:XML) : void
+      public function configure(config:XML) : void
       {
          //Décompilation abandonné
       }

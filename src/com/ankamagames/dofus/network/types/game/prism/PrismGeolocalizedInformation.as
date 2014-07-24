@@ -32,7 +32,7 @@ package com.ankamagames.dofus.network.types.game.prism
          //Décompilation abandonné
       }
       
-      public function initPrismGeolocalizedInformation(param1:uint = 0, param2:uint = 0, param3:int = 0, param4:int = 0, param5:int = 0, param6:PrismInformation = null) : PrismGeolocalizedInformation
+      public function initPrismGeolocalizedInformation(subAreaId:uint = 0, allianceId:uint = 0, worldX:int = 0, worldY:int = 0, mapId:int = 0, prism:PrismInformation = null) : PrismGeolocalizedInformation
       {
          //Décompilation abandonné
       }
@@ -42,22 +42,22 @@ package com.ankamagames.dofus.network.types.game.prism
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PrismGeolocalizedInformation(param1:IDataOutput) : void
+      public function serializeAs_PrismGeolocalizedInformation(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PrismGeolocalizedInformation(param1:IDataInput) : void
+      public function deserializeAs_PrismGeolocalizedInformation(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

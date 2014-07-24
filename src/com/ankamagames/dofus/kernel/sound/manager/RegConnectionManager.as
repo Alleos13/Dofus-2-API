@@ -24,7 +24,7 @@ package com.ankamagames.dofus.kernel.sound.manager
       //Décompilation abandonné
       }
       
-      public function RegConnectionManager(param1:SingletonEnforcer)
+      public function RegConnectionManager(pSingletonEnforcer:SingletonEnforcer)
       {
          //Décompilation abandonné
       }
@@ -63,7 +63,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          //Décompilation abandonné
       }
       
-      public function send(param1:String, ... rest) : void
+      public function send(pMethodName:String, ... params) : void
       {
          //Décompilation abandonné
       }
@@ -78,32 +78,32 @@ package com.ankamagames.dofus.kernel.sound.manager
          //Décompilation abandonné
       }
       
-      private function setAsMain(param1:Boolean) : void
+      private function setAsMain(pMain:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSocketClose(param1:Event) : void
+      private function onSocketClose(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onData(param1:ProgressEvent) : void
+      private function onData(pEvent:ProgressEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSocketError(param1:Event) : void
+      private function onSocketError(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSocketSecurityError(param1:Event) : void
+      private function onSocketSecurityError(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSocketConnect(param1:Event) : void
+      private function onSocketConnect(e:Event) : void
       {
          //Décompilation abandonné
       }

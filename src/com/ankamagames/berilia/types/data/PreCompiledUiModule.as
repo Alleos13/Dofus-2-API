@@ -22,12 +22,12 @@ package com.ankamagames.berilia.types.data
       
       private static const HEADER_STR:String = "D2UI";
       
-      public static function fromRaw(param1:IDataInput, param2:String, param3:String) : PreCompiledUiModule
+      public static function fromRaw(input:IDataInput, nativePath:String, id:String) : PreCompiledUiModule
       {
          //Décompilation abandonné
       }
       
-      public static function create(param1:UiModule) : PreCompiledUiModule
+      public static function create(uiModule:UiModule) : PreCompiledUiModule
       {
          //Décompilation abandonné
       }
@@ -46,22 +46,22 @@ package com.ankamagames.berilia.types.data
       
       private var _cacheDefinition:Dictionary;
       
-      public function hasDefinition(param1:UiData) : Boolean
+      public function hasDefinition(ui:UiData) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getDefinition(param1:UiData) : UiDefinition
+      public function getDefinition(ui:UiData) : UiDefinition
       {
          //Décompilation abandonné
       }
       
-      public function addUiDefinition(param1:UiDefinition, param2:UiData) : void
+      public function addUiDefinition(definition:UiDefinition, ui:UiData) : void
       {
          //Décompilation abandonné
       }
       
-      public function flush(param1:IDataOutput) : void
+      public function flush(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
@@ -71,17 +71,17 @@ package com.ankamagames.berilia.types.data
          //Décompilation abandonné
       }
       
-      private function makeHeader(param1:UiModule) : void
+      private function makeHeader(uiModule:UiModule) : void
       {
          //Décompilation abandonné
       }
       
-      private function readUidefinition(param1:String) : UiDefinition
+      private function readUidefinition(id:String) : UiDefinition
       {
          //Décompilation abandonné
       }
       
-      private function writeUiDefinition(param1:UiDefinition, param2:UiData) : void
+      private function writeUiDefinition(definition:UiDefinition, ui:UiData) : void
       {
          //Décompilation abandonné
       }

@@ -10,7 +10,7 @@ package com.somerandomdude.colortoolkit.schemes
       //Décompilation abandonné
       }
       
-      public function FlippedCompound(param1:int)
+      public function FlippedCompound(primaryColor:int)
       {
          //Décompilation abandonné
       }

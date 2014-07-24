@@ -25,7 +25,7 @@ package com.ankamagames.dofus.types.entities
       //Décompilation abandonné
       }
       
-      public function Projectile(param1:int, param2:TiphonEntityLook, param3:Boolean = false, param4:Boolean = true)
+      public function Projectile(nId:int, look:TiphonEntityLook, postInit:Boolean = false, startPlayingOnlyWhenDisplayed:Boolean = true)
       {
          //Décompilation abandonné
       }
@@ -47,7 +47,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set displayBehaviors(param1:IDisplayBehavior) : void
+      public function set displayBehaviors(oValue:IDisplayBehavior) : void
       {
          //Décompilation abandonné
       }
@@ -57,7 +57,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set movementBehavior(param1:IMovementBehavior) : void
+      public function set movementBehavior(oValue:IMovementBehavior) : void
       {
          //Décompilation abandonné
       }
@@ -67,7 +67,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set id(param1:int) : void
+      public function set id(nValue:int) : void
       {
          //Décompilation abandonné
       }
@@ -77,7 +77,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set position(param1:MapPoint) : void
+      public function set position(oValue:MapPoint) : void
       {
          //Décompilation abandonné
       }
@@ -99,12 +99,12 @@ package com.ankamagames.dofus.types.entities
       
       public var startPlayingOnlyWhenDisplayed:Boolean;
       
-      public function init(param1:int = -1) : void
+      public function init(direction:int = -1) : void
       {
          //Décompilation abandonné
       }
       
-      public function display(param1:uint = 0) : void
+      public function display(strata:uint = 0) : void
       {
          //Décompilation abandonné
       }
@@ -119,17 +119,17 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function move(param1:MovementPath, param2:Function = null) : void
+      public function move(path:MovementPath, callback:Function = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function jump(param1:MapPoint) : void
+      public function jump(newPosition:MapPoint) : void
       {
          //Décompilation abandonné
       }
       
-      public function stop(param1:Boolean = false) : void
+      public function stop(forceStop:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -139,7 +139,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      private function onProjectileAdded(param1:Event) : void
+      private function onProjectileAdded(e:Event) : void
       {
          //Décompilation abandonné
       }

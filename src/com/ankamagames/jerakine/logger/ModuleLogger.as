@@ -16,12 +16,12 @@ package com.ankamagames.jerakine.logger
       
       private static var _callBack:Function;
       
-      public static function log(... rest) : void
+      public static function log(... args) : void
       {
          //Décompilation abandonné
       }
       
-      public static function init(param1:Function) : void
+      public static function init(callBack:Function) : void
       {
          //Décompilation abandonné
       }

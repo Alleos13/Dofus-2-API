@@ -17,7 +17,7 @@ package com.ankamagames.dofus.datacenter.monsters
       
       public static const MODULE:String = "MonsterMiniBoss";
       
-      public static function getMonsterById(param1:uint) : MonsterMiniBoss
+      public static function getMonsterById(id:uint) : MonsterMiniBoss
       {
          //Décompilation abandonné
       }

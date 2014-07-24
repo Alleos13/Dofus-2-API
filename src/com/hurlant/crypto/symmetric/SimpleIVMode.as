@@ -10,7 +10,7 @@ package com.hurlant.crypto.symmetric
       //Décompilation abandonné
       }
       
-      public function SimpleIVMode(param1:IVMode)
+      public function SimpleIVMode(mode:IVMode)
       {
          //Décompilation abandonné
       }
@@ -29,12 +29,12 @@ package com.hurlant.crypto.symmetric
          //Décompilation abandonné
       }
       
-      public function encrypt(param1:ByteArray) : void
+      public function encrypt(src:ByteArray) : void
       {
          //Décompilation abandonné
       }
       
-      public function decrypt(param1:ByteArray) : void
+      public function decrypt(src:ByteArray) : void
       {
          //Décompilation abandonné
       }

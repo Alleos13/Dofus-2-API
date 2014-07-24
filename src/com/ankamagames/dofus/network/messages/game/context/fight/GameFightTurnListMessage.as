@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.game.context.fight
          //Décompilation abandonné
       }
       
-      public function initGameFightTurnListMessage(param1:Vector.<int> = null, param2:Vector.<int> = null) : GameFightTurnListMessage
+      public function initGameFightTurnListMessage(ids:Vector.<int> = null, deadsIds:Vector.<int> = null) : GameFightTurnListMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.game.context.fight
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameFightTurnListMessage(param1:IDataOutput) : void
+      public function serializeAs_GameFightTurnListMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameFightTurnListMessage(param1:IDataInput) : void
+      public function deserializeAs_GameFightTurnListMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

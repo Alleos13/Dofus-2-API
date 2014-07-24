@@ -31,134 +31,134 @@ package flashx.textLayout.conversion
       
       tlf_internal  static var _config:ImportExportConfiguration;
       
-      tlf_internal  static function makeTaggedTypeName(param1:FlowElement, param2:String) : XML
+      tlf_internal  static function makeTaggedTypeName(elem:FlowElement, defaultTag:String) : XML
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function exportStyling(param1:FlowElement, param2:XML) : void
+      tlf_internal  static function exportStyling(elem:FlowElement, xml:XML) : void
       {
          //Décompilation abandonné
       }
       
       tlf_internal  static const brRegEx:RegExp;
       
-      tlf_internal  static function getSpanTextReplacementXML(param1:String) : XML
+      tlf_internal  static function getSpanTextReplacementXML(ch:String) : XML
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function nest(param1:XML, param2:Object) : XML
+      tlf_internal  static function nest(parent:XML, children:Object) : XML
       {
          //Décompilation abandonné
       }
       
-      public function export(param1:TextFlow, param2:String) : Object
+      public function export(source:TextFlow, conversionType:String) : Object
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportToXML(param1:TextFlow) : XML
+      tlf_internal function exportToXML(textFlow:TextFlow) : XML
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportChildren(param1:FlowGroupElement, param2:XML) : void
+      tlf_internal function exportChildren(elem:FlowGroupElement, parentXML:XML) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportList(param1:ListElement, param2:XML) : void
+      tlf_internal function exportList(list:ListElement, parentXML:XML) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportListItem(param1:ListItemElement, param2:XML) : void
+      tlf_internal function exportListItem(li:ListItemElement, parentXML:XML) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportDiv(param1:DivElement, param2:XML) : void
+      tlf_internal function exportDiv(div:DivElement, parentXML:XML) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportParagraph(param1:ParagraphElement, param2:XML) : void
+      tlf_internal function exportParagraph(para:ParagraphElement, parentXML:XML) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportLink(param1:LinkElement, param2:XML) : void
+      tlf_internal function exportLink(link:LinkElement, parentXML:XML) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportTCY(param1:TCYElement, param2:XML) : void
+      tlf_internal function exportTCY(tcy:TCYElement, parentXML:XML) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportSPGE(param1:SubParagraphGroupElement, param2:XML) : void
+      tlf_internal function exportSPGE(spge:SubParagraphGroupElement, parentXML:XML) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportSubParagraphElement(param1:SubParagraphGroupElementBase, param2:XML, param3:XML, param4:Boolean = true) : void
+      tlf_internal function exportSubParagraphElement(elem:SubParagraphGroupElementBase, xml:XML, parentXML:XML, checkTypeName:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportSpan(param1:SpanElement, param2:XML) : void
+      tlf_internal function exportSpan(span:SpanElement, parentXML:XML) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportImage(param1:InlineGraphicElement, param2:XML) : void
+      tlf_internal function exportImage(image:InlineGraphicElement, parentXML:XML) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportBreak(param1:BreakElement, param2:XML) : void
+      tlf_internal function exportBreak(breakElement:BreakElement, parentXML:XML) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportTab(param1:TabElement, param2:XML) : void
+      tlf_internal function exportTab(tabElement:TabElement, parentXML:XML) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportTextFormatAttribute(param1:XML, param2:String, param3:*) : XML
+      tlf_internal function exportTextFormatAttribute(textFormatXML:XML, attrName:String, attrVal:*) : XML
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportParagraphFormat(param1:XML, param2:ParagraphElement) : XML
+      tlf_internal function exportParagraphFormat(xml:XML, para:ParagraphElement) : XML
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportSpanFormat(param1:Object, param2:SpanElement) : Object
+      tlf_internal function exportSpanFormat(xml:Object, span:SpanElement) : Object
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportFontAttribute(param1:XML, param2:String, param3:*) : XML
+      tlf_internal function exportFontAttribute(fontXML:XML, attrName:String, attrVal:*) : XML
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportFont(param1:ITextLayoutFormat, param2:ITextLayoutFormat = null) : XML
+      tlf_internal function exportFont(format:ITextLayoutFormat, ifDifferentFromFormat:ITextLayoutFormat = null) : XML
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportElement(param1:FlowElement, param2:XML) : void
+      tlf_internal function exportElement(flowElement:FlowElement, parentXML:XML) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function exportSubParagraphChildren(param1:FlowGroupElement, param2:XML) : void
+      tlf_internal function exportSubParagraphChildren(flowGroupElement:FlowGroupElement, parentXML:XML) : void
       {
          //Décompilation abandonné
       }

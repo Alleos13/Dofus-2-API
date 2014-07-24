@@ -26,7 +26,7 @@ package com.ankamagames.dofus.kernel.updaterv2.messages.impl
       
       private var _project:String;
       
-      public function deserialize(param1:Object) : void
+      public function deserialize(data:Object) : void
       {
          //Décompilation abandonné
       }

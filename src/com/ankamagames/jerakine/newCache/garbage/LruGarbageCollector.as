@@ -26,17 +26,17 @@ package com.ankamagames.jerakine.newCache.garbage
       
       private var _cache:ICache;
       
-      public function set cache(param1:ICache) : void
+      public function set cache(cache:ICache) : void
       {
          //Décompilation abandonné
       }
       
-      public function used(param1:*) : void
+      public function used(ref:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function purge(param1:uint) : void
+      public function purge(bounds:uint) : void
       {
          //Décompilation abandonné
       }
@@ -60,7 +60,7 @@ class UsageCountHelper extends Object implements Poolable
    
    public var count:uint;
    
-   public function init(param1:Object, param2:uint) : UsageCountHelper
+   public function init(ref:Object, count:uint) : UsageCountHelper
    {
       //Décompilation abandonné
    }

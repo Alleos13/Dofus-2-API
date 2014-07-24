@@ -11,9 +11,9 @@ package com.ankamagames.jerakine.sequencer
       
       function start() : void;
       
-      function addListener(param1:ISequencableListener) : void;
+      function addListener(listener:ISequencableListener) : void;
       
-      function removeListener(param1:ISequencableListener) : void;
+      function removeListener(listener:ISequencableListener) : void;
       
       function toString() : String;
       
@@ -21,7 +21,7 @@ package com.ankamagames.jerakine.sequencer
       
       function get isTimeout() : Boolean;
       
-      function set timeout(param1:int) : void;
+      function set timeout(v:int) : void;
       
       function get timeout() : int;
       

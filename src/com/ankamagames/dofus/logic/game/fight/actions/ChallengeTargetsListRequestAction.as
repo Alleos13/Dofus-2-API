@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.fight.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint) : ChallengeTargetsListRequestAction
+      public static function create(challengeId:uint) : ChallengeTargetsListRequestAction
       {
          //Décompilation abandonné
       }

@@ -31,7 +31,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      public function initPartyLeaveRequestMessage(param1:uint = 0) : PartyLeaveRequestMessage
+      public function initPartyLeaveRequestMessage(partyId:uint = 0) : PartyLeaveRequestMessage
       {
          //Décompilation abandonné
       }
@@ -41,32 +41,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PartyLeaveRequestMessage(param1:IDataOutput) : void
+      public function serializeAs_PartyLeaveRequestMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PartyLeaveRequestMessage(param1:IDataInput) : void
+      public function deserializeAs_PartyLeaveRequestMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.quest
          //Décompilation abandonné
       }
       
-      public function initQuestActiveInformations(param1:uint = 0) : QuestActiveInformations
+      public function initQuestActiveInformations(questId:uint = 0) : QuestActiveInformations
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.quest
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_QuestActiveInformations(param1:IDataOutput) : void
+      public function serializeAs_QuestActiveInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_QuestActiveInformations(param1:IDataInput) : void
+      public function deserializeAs_QuestActiveInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

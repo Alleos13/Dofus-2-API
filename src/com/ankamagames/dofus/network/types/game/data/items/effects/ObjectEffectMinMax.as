@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.data.items.effects
          //Décompilation abandonné
       }
       
-      public function initObjectEffectMinMax(param1:uint = 0, param2:uint = 0, param3:uint = 0) : ObjectEffectMinMax
+      public function initObjectEffectMinMax(actionId:uint = 0, min:uint = 0, max:uint = 0) : ObjectEffectMinMax
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.data.items.effects
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectEffectMinMax(param1:IDataOutput) : void
+      public function serializeAs_ObjectEffectMinMax(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectEffectMinMax(param1:IDataInput) : void
+      public function deserializeAs_ObjectEffectMinMax(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

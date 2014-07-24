@@ -56,22 +56,22 @@ package com.ankamagames.dofus.logic.game.approach.managers
          //Décompilation abandonné
       }
       
-      public function hasComponent(param1:String) : Boolean
+      public function hasComponent(name:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function activateComponent(param1:String, param2:Boolean = true, param3:String = "game") : void
+      public function activateComponent(name:String, activate:Boolean = true, project:String = "game") : void
       {
          //Décompilation abandonné
       }
       
-      public function set installedModules(param1:Dictionary) : void
+      public function set installedModules(m:Dictionary) : void
       {
          //Décompilation abandonné
       }
       
-      public function handleMessage(param1:IUpdaterInputMessage) : void
+      public function handleMessage(msg:IUpdaterInputMessage) : void
       {
          //Décompilation abandonné
       }

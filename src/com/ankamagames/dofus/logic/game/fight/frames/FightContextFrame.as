@@ -255,7 +255,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      public function set fightType(param1:uint) : void
+      public function set fightType(t:uint) : void
       {
          //Décompilation abandonné
       }
@@ -280,32 +280,32 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      private function onUiUnloaded(param1:UiUnloadEvent) : void
+      private function onUiUnloaded(pEvent:UiUnloadEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function getFighterName(param1:int) : String
+      public function getFighterName(fighterId:int) : String
       {
          //Décompilation abandonné
       }
       
-      public function getFighterStatus(param1:int) : uint
+      public function getFighterStatus(fighterId:int) : uint
       {
          //Décompilation abandonné
       }
       
-      public function getFighterLevel(param1:int) : uint
+      public function getFighterLevel(fighterId:int) : uint
       {
          //Décompilation abandonné
       }
       
-      public function getChallengeById(param1:uint) : ChallengeWrapper
+      public function getChallengeById(challengeId:uint) : ChallengeWrapper
       {
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -315,7 +315,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      public function outEntity(param1:int) : void
+      public function outEntity(id:int) : void
       {
          //Décompilation abandonné
       }
@@ -325,32 +325,32 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      public function displayEntityTooltip(param1:int, param2:Object = null, param3:SpellDamageInfo = null, param4:Boolean = false, param5:int = -1) : void
+      public function displayEntityTooltip(pEntityId:int, pSpell:Object = null, pSpellInfo:SpellDamageInfo = null, pForceRefresh:Boolean = false, pSpellImpactCell:int = -1) : void
       {
          //Décompilation abandonné
       }
       
-      public function hideEntityTooltip(param1:int, param2:uint) : void
+      public function hideEntityTooltip(pEntityId:int, pDelay:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function hidePermanentTooltips(param1:uint) : void
+      public function hidePermanentTooltips(pDelay:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function getFighterInfos(param1:int) : GameFightFighterInformations
+      private function getFighterInfos(fighterId:int) : GameFightFighterInformations
       {
          //Décompilation abandonné
       }
       
-      private function showFighterInfo(param1:TimerEvent) : void
+      private function showFighterInfo(event:TimerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function showMovementRange(param1:TimerEvent) : void
+      private function showMovementRange(event:TimerEvent) : void
       {
          //Décompilation abandonné
       }
@@ -365,32 +365,32 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      private function highlightAsLinkedEntity(param1:int, param2:Boolean) : void
+      private function highlightAsLinkedEntity(id:int, isMainEntity:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      private function overEntity(param1:int, param2:Boolean = true) : void
+      private function overEntity(id:int, showRange:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      private function tacticModeHandler(param1:Boolean = false) : void
+      private function tacticModeHandler(forceOpen:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private function onPropertyChanged(param1:PropertyChangeEvent) : void
+      private function onPropertyChanged(pEvent:PropertyChangeEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onShowPermanentTooltips(param1:TimerEvent) : void
+      private function onShowPermanentTooltips(pEvent:TimerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onShowTooltip(param1:TimerEvent) : void
+      private function onShowTooltip(pEvent:TimerEvent) : void
       {
          //Décompilation abandonné
       }

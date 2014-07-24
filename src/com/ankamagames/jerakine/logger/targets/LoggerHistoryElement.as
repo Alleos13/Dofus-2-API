@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.logger.targets
       //Décompilation abandonné
       }
       
-      function LoggerHistoryElement(param1:int, param2:String)
+      function LoggerHistoryElement(level:int, message:String)
       {
          //Décompilation abandonné
       }

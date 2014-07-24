@@ -24,14 +24,14 @@ package com.ankamagames.atouin.utils
       //Décompilation abandonné
       }
       
-      public function GroundMapLoader(param1:Map, param2:File, param3:Function, param4:Function)
+      public function GroundMapLoader(map:Map, file:File, callBack:Function, errorCallBack:Function)
       {
          //Décompilation abandonné
       }
       
       private static const _log:Logger;
       
-      public static function loadGroundMap(param1:Map, param2:File, param3:Function, param4:Function) : void
+      public static function loadGroundMap(map:Map, file:File, callBack:Function, errorCallBack:Function) : void
       {
          //Décompilation abandonné
       }
@@ -48,22 +48,22 @@ package com.ankamagames.atouin.utils
       
       private var _time:int = 0;
       
-      private function onJPGReady(param1:Event) : void
+      private function onJPGReady(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onError(param1:Event) : void
+      private function onError(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onProgress(param1:ProgressEvent) : void
+      private function onProgress(e:ProgressEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function check(param1:Event) : void
+      private function check(e:Event) : void
       {
          //Décompilation abandonné
       }

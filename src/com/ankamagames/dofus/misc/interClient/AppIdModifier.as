@@ -48,12 +48,12 @@ package com.ankamagames.dofus.misc.interClient
          //Décompilation abandonné
       }
       
-      private function log(param1:String) : void
+      private function log(txt:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateTs(param1:* = null) : void
+      private function updateTs(e:* = null) : void
       {
          //Décompilation abandonné
       }

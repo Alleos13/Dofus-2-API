@@ -72,7 +72,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          //Décompilation abandonné
       }
       
-      public function set criterionID(param1:uint) : void
+      public function set criterionID(pCriterionID:uint) : void
       {
          //Décompilation abandonné
       }
@@ -82,7 +82,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          //Décompilation abandonné
       }
       
-      public function setAmbientSounds(param1:Vector.<AmbientSound>, param2:Vector.<AmbientSound>) : void
+      public function setAmbientSounds(pAmbiant:Vector.<AmbientSound>, pMusic:Vector.<AmbientSound>) : void
       {
          //Décompilation abandonné
       }
@@ -102,12 +102,12 @@ package com.ankamagames.dofus.kernel.sound.manager
          //Décompilation abandonné
       }
       
-      public function mergeSoundsArea(param1:Vector.<AmbientSound>) : void
+      public function mergeSoundsArea(pAmbientSounds:Vector.<AmbientSound>) : void
       {
          //Décompilation abandonné
       }
       
-      public function clear(param1:Number = 0, param2:Number = 0) : void
+      public function clear(pFade:Number = 0, pFadeTime:Number = 0) : void
       {
          //Décompilation abandonné
       }
@@ -117,7 +117,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          //Décompilation abandonné
       }
       
-      private function onPropertyChanged(param1:PropertyChangeEvent) : void
+      private function onPropertyChanged(pEvent:PropertyChangeEvent) : void
       {
          //Décompilation abandonné
       }

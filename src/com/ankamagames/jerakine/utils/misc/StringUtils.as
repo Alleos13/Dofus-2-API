@@ -20,42 +20,42 @@ package com.ankamagames.jerakine.utils.misc
       
       protected static const _log:Logger;
       
-      public static function cleanString(param1:String) : String
+      public static function cleanString(s:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function convertLatinToUtf(param1:String) : String
+      public static function convertLatinToUtf(str:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function fill(param1:String, param2:uint, param3:String, param4:Boolean = true) : String
+      public static function fill(str:String, len:uint, char:String, before:Boolean = true) : String
       {
          //Décompilation abandonné
       }
       
-      public static function formatArray(param1:Array, param2:Array = null) : String
+      public static function formatArray(data:Array, header:Array = null) : String
       {
          //Décompilation abandonné
       }
       
-      public static function replace(param1:String, param2:* = null, param3:* = null) : String
+      public static function replace(src:String, pFrom:* = null, pTo:* = null) : String
       {
          //Décompilation abandonné
       }
       
-      public static function concatSameString(param1:String, param2:String) : String
+      public static function concatSameString(pString:String, pStringToConcat:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function getDelimitedText(param1:String, param2:String, param3:String, param4:Boolean = false) : Vector.<String>
+      public static function getDelimitedText(pText:String, pFirstDelimiter:String, pSecondDelimiter:String, pIncludeDelimiter:Boolean = false) : Vector.<String>
       {
          //Décompilation abandonné
       }
       
-      public static function getAllIndexOf(param1:String, param2:String) : Array
+      public static function getAllIndexOf(pStringLookFor:String, pWholeString:String) : Array
       {
          //Décompilation abandonné
       }
@@ -64,7 +64,7 @@ package com.ankamagames.jerakine.utils.misc
       
       private static var patternReplace:Vector.<String>;
       
-      public static function noAccent(param1:String) : String
+      public static function noAccent(source:String) : String
       {
          //Décompilation abandonné
       }
@@ -76,27 +76,27 @@ package com.ankamagames.jerakine.utils.misc
       
       private static var accents:String = "ŠŒŽšœžÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜŸÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýÿþ";
       
-      private static function decomposeUnicode(param1:String) : String
+      private static function decomposeUnicode(str:String) : String
       {
          //Décompilation abandonné
       }
       
-      private static function getSingleDelimitedText(param1:String, param2:String, param3:String, param4:Boolean = false) : String
+      private static function getSingleDelimitedText(pStringEntry:String, pFirstDelimiter:String, pSecondDelimiter:String, pIncludeDelimiter:Boolean = false) : String
       {
          //Décompilation abandonné
       }
       
-      public static function kamasToString(param1:Number, param2:String = "-") : String
+      public static function kamasToString(kamas:Number, unit:String = "-") : String
       {
          //Décompilation abandonné
       }
       
-      public static function stringToKamas(param1:String, param2:String = "-") : int
+      public static function stringToKamas(string:String, unit:String = "-") : int
       {
          //Décompilation abandonné
       }
       
-      public static function formateIntToString(param1:Number) : String
+      public static function formateIntToString(val:Number) : String
       {
          //Décompilation abandonné
       }

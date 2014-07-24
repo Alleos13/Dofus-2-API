@@ -153,67 +153,67 @@ package com.ankamagames.dofus.console.moduleLUA
          //Décompilation abandonné
       }
       
-      protected function toggleRecord(param1:MouseEvent) : void
+      protected function toggleRecord(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function setAutoTimer(param1:MouseEvent) : void
+      protected function setAutoTimer(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function toggleTimer(param1:MouseEvent) : void
+      protected function toggleTimer(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function toggleMoveType(param1:MouseEvent) : void
+      protected function toggleMoveType(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function toggleCameraAutoFollow(param1:MouseEvent) : void
+      protected function toggleCameraAutoFollow(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function setZoom(param1:MouseEvent) : void
+      protected function setZoom(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function playScript(param1:MouseEvent) : void
+      protected function playScript(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function stopRecord(param1:MouseEvent) : void
+      protected function stopRecord(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function loadScript(param1:MouseEvent) : void
+      protected function loadScript(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function export(param1:MouseEvent) : void
+      protected function export(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function resetWorld(param1:MouseEvent) : void
+      protected function resetWorld(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function toggleAutoReset(param1:MouseEvent) : void
+      protected function toggleAutoReset(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function unlockBtns(param1:MouseEvent) : void
+      protected function unlockBtns(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
@@ -223,7 +223,7 @@ package com.ankamagames.dofus.console.moduleLUA
          //Décompilation abandonné
       }
       
-      public function display(param1:Boolean = false) : void
+      public function display(quietMode:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -233,7 +233,7 @@ package com.ankamagames.dofus.console.moduleLUA
          //Décompilation abandonné
       }
       
-      public function printLine(param1:String, param2:Boolean = true) : void
+      public function printLine(text:String, needHighlight:Boolean = true) : void
       {
          //Décompilation abandonné
       }
@@ -243,32 +243,32 @@ package com.ankamagames.dofus.console.moduleLUA
          //Décompilation abandonné
       }
       
-      private function onScriptCompleted(param1:LuaPlayerEvent) : void
+      private function onScriptCompleted(event:LuaPlayerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onScriptError(param1:LuaPlayerEvent) : void
+      private function onScriptError(event:LuaPlayerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onResize(param1:Event = null) : void
+      private function onResize(event:Event = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function onScrollVChange(param1:Event) : void
+      private function onScrollVChange(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onClosing(param1:Event) : void
+      private function onClosing(event:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function enableButtons(param1:Boolean, param2:Array) : void
+      private function enableButtons(enabled:Boolean, buttonIDs:Array) : void
       {
          //Décompilation abandonné
       }

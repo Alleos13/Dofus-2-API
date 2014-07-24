@@ -12,7 +12,7 @@ package com.ankamagames.berilia.types.data
       //Décompilation abandonné
       }
       
-      public function RadioGroup(param1:String)
+      public function RadioGroup(name:String)
       {
          //Décompilation abandonné
       }
@@ -25,12 +25,12 @@ package com.ankamagames.berilia.types.data
       
       public var name:String;
       
-      public function addItem(param1:IRadioItem) : void
+      public function addItem(item:IRadioItem) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeItem(param1:IRadioItem) : void
+      public function removeItem(item:IRadioItem) : void
       {
          //Décompilation abandonné
       }
@@ -45,12 +45,12 @@ package com.ankamagames.berilia.types.data
          //Décompilation abandonné
       }
       
-      public function set value(param1:*) : void
+      public function set value(v:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function set selectedItem(param1:IRadioItem) : void
+      public function set selectedItem(item:IRadioItem) : void
       {
          //Décompilation abandonné
       }

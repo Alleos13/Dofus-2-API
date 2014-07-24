@@ -11,7 +11,7 @@ package com.ankamagames.berilia.types.event
       //Décompilation abandonné
       }
       
-      public function UiRenderEvent(param1:String, param2:Boolean = false, param3:Boolean = false, param4:UiRootContainer = null, param5:UiRenderer = null)
+      public function UiRenderEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, uiTarget:UiRootContainer = null, uiRenderer:UiRenderer = null)
       {
          //Décompilation abandonné
       }

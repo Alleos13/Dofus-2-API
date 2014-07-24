@@ -7,6 +7,6 @@ package com.ankamagames.jerakine.messages
       //Décompilation abandonné
       }
       
-      function process(param1:Message) : Boolean;
+      function process(msg:Message) : Boolean;
    }
 }

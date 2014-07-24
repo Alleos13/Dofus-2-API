@@ -22,7 +22,7 @@ package com.ankamagames.dofus.datacenter.livingObjects
       
       protected static const _log:Logger;
       
-      public static function getLivingObjectSkin(param1:int, param2:int, param3:int) : int
+      public static function getLivingObjectSkin(objectId:int, moodId:int, skinId:int) : int
       {
          //Décompilation abandonné
       }

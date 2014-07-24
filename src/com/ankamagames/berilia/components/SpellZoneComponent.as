@@ -49,12 +49,12 @@ package com.ankamagames.berilia.components
       
       private var _finalized:Boolean;
       
-      public function setSpellLevel(param1:ICellZoneProvider) : void
+      public function setSpellLevel(pSpellLevel:ICellZoneProvider) : void
       {
          //Décompilation abandonné
       }
       
-      private function setRange(param1:uint, param2:uint) : void
+      private function setRange(minRange:uint, maxRange:uint) : void
       {
          //Décompilation abandonné
       }
@@ -69,7 +69,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set finalized(param1:Boolean) : void
+      public function set finalized(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -84,7 +84,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function getCenterCellId(param1:uint) : uint
+      private function getCenterCellId(spellRange:uint) : uint
       {
          //Décompilation abandonné
       }

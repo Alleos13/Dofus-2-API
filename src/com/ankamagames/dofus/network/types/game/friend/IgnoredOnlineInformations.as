@@ -32,7 +32,7 @@ package com.ankamagames.dofus.network.types.game.friend
          //Décompilation abandonné
       }
       
-      public function initIgnoredOnlineInformations(param1:uint = 0, param2:String = "", param3:uint = 0, param4:String = "", param5:int = 0, param6:Boolean = false) : IgnoredOnlineInformations
+      public function initIgnoredOnlineInformations(accountId:uint = 0, accountName:String = "", playerId:uint = 0, playerName:String = "", breed:int = 0, sex:Boolean = false) : IgnoredOnlineInformations
       {
          //Décompilation abandonné
       }
@@ -42,22 +42,22 @@ package com.ankamagames.dofus.network.types.game.friend
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_IgnoredOnlineInformations(param1:IDataOutput) : void
+      public function serializeAs_IgnoredOnlineInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_IgnoredOnlineInformations(param1:IDataInput) : void
+      public function deserializeAs_IgnoredOnlineInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

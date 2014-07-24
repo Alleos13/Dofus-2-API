@@ -18,7 +18,7 @@ package com.ankamagames.dofus.internalDatacenter.connection
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:String, param3:uint, param4:EntityLook, param5:uint, param6:Boolean, param7:uint = 0, param8:uint = 0, param9:uint = 0, param10:Boolean = false) : BasicCharacterWrapper
+      public static function create(id:uint, name:String, level:uint, entityLook:EntityLook, breed:uint, sex:Boolean, deathState:uint = 0, deathCount:uint = 0, bonusXp:uint = 0, unusable:Boolean = false) : BasicCharacterWrapper
       {
          //Décompilation abandonné
       }

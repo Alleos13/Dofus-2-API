@@ -37,39 +37,39 @@ package com.ankamagames.dofus.console.debug
       
       private const _validArgs0:Dictionary;
       
-      public function handle(param1:ConsoleHandler, param2:String, param3:Array) : void
+      public function handle(console:ConsoleHandler, cmd:String, args:Array) : void
       {
          //Décompilation abandonné
       }
       
       private var _reccordPacketFrame:ReccordNetworkPacketFrame;
       
-      public function getHelp(param1:String) : String
+      public function getHelp(cmd:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function getParamPossibilities(param1:String, param2:uint = 0, param3:Array = null) : Array
+      public function getParamPossibilities(cmd:String, paramIndex:uint = 0, currentParams:Array = null) : Array
       {
          //Décompilation abandonné
       }
       
-      private function enablereport(param1:ConsoleHandler, param2:String, param3:Array) : void
+      private function enablereport(console:ConsoleHandler, cmd:String, args:Array) : void
       {
          //Décompilation abandonné
       }
       
-      private function enableLogs(param1:ConsoleHandler, param2:String, param3:Array) : void
+      private function enableLogs(console:ConsoleHandler, cmd:String, args:Array) : void
       {
          //Décompilation abandonné
       }
       
-      private function info(param1:ConsoleHandler, param2:String, param3:Array) : void
+      private function info(console:ConsoleHandler, cmd:String, args:Array) : void
       {
          //Décompilation abandonné
       }
       
-      private function search(param1:ConsoleHandler, param2:String, param3:Array) : void
+      private function search(console:ConsoleHandler, cmd:String, args:Array) : void
       {
          //Décompilation abandonné
       }
@@ -79,17 +79,17 @@ package com.ankamagames.dofus.console.debug
          //Décompilation abandonné
       }
       
-      private function getSimpleVariablesAndAccessors(param1:String, param2:Boolean = false) : Array
+      private function getSimpleVariablesAndAccessors(clazz:String, addVectors:Boolean = false) : Array
       {
          //Décompilation abandonné
       }
       
-      private function getIdFunction(param1:String) : String
+      private function getIdFunction(clazz:String) : String
       {
          //Décompilation abandonné
       }
       
-      private function getListingFunction(param1:String) : String
+      private function getListingFunction(clazz:String) : String
       {
          //Décompilation abandonné
       }

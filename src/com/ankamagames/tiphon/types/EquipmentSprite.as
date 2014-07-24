@@ -28,12 +28,12 @@ package com.ankamagames.tiphon.types
          //Décompilation abandonné
       }
       
-      override public function init(param1:IAnimationSpriteHandler) : void
+      override public function init(handler:IAnimationSpriteHandler) : void
       {
          //Décompilation abandonné
       }
       
-      private function makeChild(param1:IAnimationSpriteHandler) : DisplayObject
+      private function makeChild(handler:IAnimationSpriteHandler) : DisplayObject
       {
          //Décompilation abandonné
       }

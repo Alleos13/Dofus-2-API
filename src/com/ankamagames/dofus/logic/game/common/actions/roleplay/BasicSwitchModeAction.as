@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.roleplay
          //Décompilation abandonné
       }
       
-      public static function create(param1:int) : BasicSwitchModeAction
+      public static function create(pType:int) : BasicSwitchModeAction
       {
          //Décompilation abandonné
       }

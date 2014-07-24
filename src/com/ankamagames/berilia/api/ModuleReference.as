@@ -15,39 +15,39 @@ package com.ankamagames.berilia.api
       //Décompilation abandonné
       }
       
-      public function ModuleReference(param1:Object, param2:Object)
+      public function ModuleReference(o:Object, accessKey:Object)
       {
          //Décompilation abandonné
       }
       
       private var _object:WeakReference;
       
-      public function getObject(param1:Object) : *
+      public function getObject(accessKey:Object) : *
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function callProperty(param1:*, ... rest) : *
+      override flash_proxy function callProperty(name:*, ... rest) : *
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function getProperty(param1:*) : *
+      override flash_proxy function getProperty(name:*) : *
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function setProperty(param1:*, param2:*) : void
+      override flash_proxy function setProperty(name:*, value:*) : void
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function hasProperty(param1:*) : Boolean
+      override flash_proxy function hasProperty(name:*) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function verify(param1:*) : void
+      private function verify(o:*) : void
       {
          //Décompilation abandonné
       }

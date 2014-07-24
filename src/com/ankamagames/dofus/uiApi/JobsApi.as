@@ -50,7 +50,7 @@ package com.ankamagames.dofus.uiApi
       
       private var _stringSorter:Collator;
       
-      public function set module(param1:UiModule) : void
+      public function set module(value:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -75,127 +75,127 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getJobSkills(param1:Job) : Array
+      public function getJobSkills(job:Job) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getJobSkillType(param1:Job, param2:Skill) : String
+      public function getJobSkillType(job:Job, skill:Skill) : String
       {
          //Décompilation abandonné
       }
       
-      public function getJobCollectSkillInfos(param1:Job, param2:Skill) : Object
+      public function getJobCollectSkillInfos(job:Job, skill:Skill) : Object
       {
          //Décompilation abandonné
       }
       
-      public function getMaxSlotsByJobId(param1:int) : int
+      public function getMaxSlotsByJobId(jobId:int) : int
       {
          //Décompilation abandonné
       }
       
-      public function getJobCraftSkillInfos(param1:Job, param2:Skill) : Object
+      public function getJobCraftSkillInfos(job:Job, skill:Skill) : Object
       {
          //Décompilation abandonné
       }
       
-      public function getJobExperience(param1:Job) : Object
+      public function getJobExperience(job:Job) : Object
       {
          //Décompilation abandonné
       }
       
-      public function getSkillFromId(param1:int) : Object
+      public function getSkillFromId(skillId:int) : Object
       {
          //Décompilation abandonné
       }
       
-      public function getJobRecipes(param1:Job, param2:Array = null, param3:Skill = null, param4:String = null) : Array
+      public function getJobRecipes(job:Job, validSlotsCount:Array = null, skill:Skill = null, search:String = null) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getRecipe(param1:uint) : Recipe
+      public function getRecipe(objectId:uint) : Recipe
       {
          //Décompilation abandonné
       }
       
-      public function getRecipesList(param1:uint) : Array
+      public function getRecipesList(objectId:uint) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getJobName(param1:uint) : String
+      public function getJobName(pJobId:uint) : String
       {
          //Décompilation abandonné
       }
       
-      public function getJob(param1:uint) : Object
+      public function getJob(pJobId:uint) : Object
       {
          //Décompilation abandonné
       }
       
-      public function getJobCrafterDirectorySettingsById(param1:uint) : Object
+      public function getJobCrafterDirectorySettingsById(jobId:uint) : Object
       {
          //Décompilation abandonné
       }
       
-      public function getJobCrafterDirectorySettingsByIndex(param1:uint) : Object
+      public function getJobCrafterDirectorySettingsByIndex(jobIndex:uint) : Object
       {
          //Décompilation abandonné
       }
       
-      public function getUsableSkillsInMap(param1:int) : Array
+      public function getUsableSkillsInMap(playerId:int) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getKnownJob(param1:uint) : KnownJob
+      public function getKnownJob(jobId:uint) : KnownJob
       {
          //Décompilation abandonné
       }
       
-      public function getRecipesByJob(param1:Array, param2:Array, param3:int = 0, param4:Boolean = false, param5:Boolean = false, param6:Boolean = false, param7:int = 0, param8:String = "level", param9:Boolean = true, param10:Array = null) : Vector.<Recipe>
+      public function getRecipesByJob(details:Array, jobMaxSlots:Array, jobId:int = 0, fromBank:Boolean = false, onlyRecipeWithXP:Boolean = false, onlyKnownJobs:Boolean = false, missingIngredientsTolerance:int = 0, sortCriteria:String = "level", sortDescending:Boolean = true, filterTypes:Array = null) : Vector.<Recipe>
       {
          //Décompilation abandonné
       }
       
-      public function sortRecipesByCriteria(param1:Object, param2:String, param3:Boolean) : Object
+      public function sortRecipesByCriteria(recipes:Object, sortCriteria:String, sortDescending:Boolean) : Object
       {
          //Décompilation abandonné
       }
       
-      private function sortRecipes(param1:Object, param2:String, param3:int = 1) : void
+      private function sortRecipes(recipes:Object, criteria:String, way:int = 1) : void
       {
          //Décompilation abandonné
       }
       
-      private function compareIngredients(param1:int = 1) : Function
+      private function compareIngredients(way:int = 1) : Function
       {
          //Décompilation abandonné
       }
       
-      private function compareLevel(param1:int = 1) : Function
+      private function compareLevel(way:int = 1) : Function
       {
          //Décompilation abandonné
       }
       
-      private function comparePrice(param1:int = 1) : Function
+      private function comparePrice(way:int = 1) : Function
       {
          //Décompilation abandonné
       }
       
-      private function getJobDescription(param1:uint) : JobDescription
+      private function getJobDescription(jobId:uint) : JobDescription
       {
          //Décompilation abandonné
       }
       
-      private function getJobExp(param1:uint) : JobExperience
+      private function getJobExp(jobId:uint) : JobExperience
       {
          //Décompilation abandonné
       }
       
-      private function getSkillActionDescription(param1:JobDescription, param2:uint) : SkillActionDescription
+      private function getSkillActionDescription(jd:JobDescription, skillId:uint) : SkillActionDescription
       {
          //Décompilation abandonné
       }

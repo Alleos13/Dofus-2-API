@@ -39,32 +39,32 @@ package com.ankamagames.atouin.managers
          //Décompilation abandonné
       }
       
-      public function addSelection(param1:Selection, param2:String, param3:uint = 561.0) : void
+      public function addSelection(s:Selection, name:String, cellId:uint = 561.0) : void
       {
          //Décompilation abandonné
       }
       
-      public function getSelection(param1:String) : Selection
+      public function getSelection(name:String) : Selection
       {
          //Décompilation abandonné
       }
       
-      public function update(param1:String, param2:uint = 0, param3:Boolean = false) : void
+      public function update(name:String, cellId:uint = 0, updateStrata:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function isInside(param1:uint, param2:String) : Boolean
+      public function isInside(cellId:uint, selectionName:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onPropertyChanged(param1:PropertyChangeEvent) : void
+      private function onPropertyChanged(pEvent:PropertyChangeEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function diff(param1:Vector.<uint>, param2:Vector.<uint>) : Vector.<uint>
+      private function diff(a1:Vector.<uint>, a2:Vector.<uint>) : Vector.<uint>
       {
          //Décompilation abandonné
       }

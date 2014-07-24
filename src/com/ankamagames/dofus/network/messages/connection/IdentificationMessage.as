@@ -50,7 +50,7 @@ package com.ankamagames.dofus.network.messages.connection
          //Décompilation abandonné
       }
       
-      public function initIdentificationMessage(param1:VersionExtended = null, param2:String = "", param3:Vector.<int> = null, param4:int = 0, param5:Boolean = false, param6:Boolean = false, param7:Boolean = false, param8:Number = 0) : IdentificationMessage
+      public function initIdentificationMessage(version:VersionExtended = null, lang:String = "", credentials:Vector.<int> = null, serverId:int = 0, autoconnect:Boolean = false, useCertificate:Boolean = false, useLoginToken:Boolean = false, sessionOptionalSalt:Number = 0) : IdentificationMessage
       {
          //Décompilation abandonné
       }
@@ -60,32 +60,32 @@ package com.ankamagames.dofus.network.messages.connection
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_IdentificationMessage(param1:IDataOutput) : void
+      public function serializeAs_IdentificationMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_IdentificationMessage(param1:IDataInput) : void
+      public function deserializeAs_IdentificationMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

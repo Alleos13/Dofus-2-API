@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.tinsel
          //Décompilation abandonné
       }
       
-      public static function create(param1:int) : OrnamentSelectRequestAction
+      public static function create(ornamentId:int) : OrnamentSelectRequestAction
       {
          //Décompilation abandonné
       }

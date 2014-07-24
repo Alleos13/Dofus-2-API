@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.logger
       //Décompilation abandonné
       }
       
-      public function LogTargetFilter(param1:String, param2:Boolean = true)
+      public function LogTargetFilter(pTarget:String, pAllow:Boolean = true)
       {
          //Décompilation abandonné
       }

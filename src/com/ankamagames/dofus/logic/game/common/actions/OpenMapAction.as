@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:Boolean = false, param2:Boolean = true, param3:Boolean = false) : OpenMapAction
+      public static function create(ignoreSetting:Boolean = false, pocket:Boolean = true, conquest:Boolean = false) : OpenMapAction
       {
          //Décompilation abandonné
       }

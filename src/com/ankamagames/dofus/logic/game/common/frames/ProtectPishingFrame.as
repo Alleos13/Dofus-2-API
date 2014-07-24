@@ -31,7 +31,7 @@ package com.ankamagames.dofus.logic.game.common.frames
       
       private static var _passwordLength:uint;
       
-      public static function setPasswordHash(param1:String, param2:uint) : void
+      public static function setPasswordHash(hash:String, len:uint) : void
       {
          //Décompilation abandonné
       }
@@ -56,7 +56,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -66,17 +66,17 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      private function onTextInput(param1:TextEvent) : void
+      private function onTextInput(te:TextEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function detectHash(param1:String, param2:String, param3:uint) : Boolean
+      private function detectHash(input:String, hash:String, originalLength:uint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      protected function onChange(param1:Event) : void
+      protected function onChange(e:Event) : void
       {
          //Décompilation abandonné
       }

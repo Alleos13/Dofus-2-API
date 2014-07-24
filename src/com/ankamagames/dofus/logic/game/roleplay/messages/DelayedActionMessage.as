@@ -9,7 +9,7 @@ package com.ankamagames.dofus.logic.game.roleplay.messages
       //Décompilation abandonné
       }
       
-      public function DelayedActionMessage(param1:int, param2:uint, param3:Number)
+      public function DelayedActionMessage(playerId:int, itemId:uint, endTime:Number)
       {
          //Décompilation abandonné
       }

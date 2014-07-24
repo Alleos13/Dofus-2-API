@@ -9,7 +9,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function BrowserDomReady(param1:InteractiveObject)
+      public function BrowserDomReady(target:InteractiveObject)
       {
          //Décompilation abandonné
       }

@@ -20,7 +20,7 @@ package com.ankamagames.dofus.datacenter.world
       
       private static var _allHints:Array;
       
-      public static function getHintById(param1:int) : Hint
+      public static function getHintById(id:int) : Hint
       {
          //Décompilation abandonné
       }

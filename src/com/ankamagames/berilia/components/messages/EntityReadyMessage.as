@@ -9,7 +9,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function EntityReadyMessage(param1:InteractiveObject)
+      public function EntityReadyMessage(target:InteractiveObject)
       {
          //Décompilation abandonné
       }

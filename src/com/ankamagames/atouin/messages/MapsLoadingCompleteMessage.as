@@ -10,7 +10,7 @@ package com.ankamagames.atouin.messages
       //Décompilation abandonné
       }
       
-      public function MapsLoadingCompleteMessage(param1:WorldPoint, param2:Map)
+      public function MapsLoadingCompleteMessage(mapPoint:WorldPoint, mapData:Map)
       {
          //Décompilation abandonné
       }

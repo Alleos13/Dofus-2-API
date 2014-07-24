@@ -10,7 +10,7 @@ package com.hurlant.util.der
       //Décompilation abandonné
       }
       
-      public function ObjectIdentifier(param1:uint = 0, param2:uint = 0, param3:* = null)
+      public function ObjectIdentifier(type:uint = 0, length:uint = 0, b:* = null)
       {
          //Décompilation abandonné
       }
@@ -21,12 +21,12 @@ package com.hurlant.util.der
       
       private var oid:Array;
       
-      private function generate(param1:String) : void
+      private function generate(s:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function parse(param1:ByteArray) : void
+      private function parse(b:ByteArray) : void
       {
          //Décompilation abandonné
       }

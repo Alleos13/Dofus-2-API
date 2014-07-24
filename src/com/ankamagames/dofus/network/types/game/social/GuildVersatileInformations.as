@@ -31,7 +31,7 @@ package com.ankamagames.dofus.network.types.game.social
          //Décompilation abandonné
       }
       
-      public function initGuildVersatileInformations(param1:uint = 0, param2:uint = 0, param3:uint = 0, param4:uint = 0) : GuildVersatileInformations
+      public function initGuildVersatileInformations(guildId:uint = 0, leaderId:uint = 0, guildLevel:uint = 0, nbMembers:uint = 0) : GuildVersatileInformations
       {
          //Décompilation abandonné
       }
@@ -41,22 +41,22 @@ package com.ankamagames.dofus.network.types.game.social
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GuildVersatileInformations(param1:IDataOutput) : void
+      public function serializeAs_GuildVersatileInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildVersatileInformations(param1:IDataInput) : void
+      public function deserializeAs_GuildVersatileInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

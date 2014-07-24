@@ -56,22 +56,22 @@ package com.ankamagames.atouin.data.elements
          //Décompilation abandonné
       }
       
-      public function getElementData(param1:int) : GraphicalElementData
+      public function getElementData(elementId:int) : GraphicalElementData
       {
          //Décompilation abandonné
       }
       
-      public function isJpg(param1:uint) : Boolean
+      public function isJpg(gfxId:uint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function fromRaw(param1:IDataInput) : void
+      public function fromRaw(raw:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      private function readElement(param1:uint) : GraphicalElementData
+      private function readElement(edId:uint) : GraphicalElementData
       {
          //Décompilation abandonné
       }

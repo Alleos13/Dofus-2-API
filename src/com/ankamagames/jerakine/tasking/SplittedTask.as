@@ -34,7 +34,7 @@ package com.ankamagames.jerakine.tasking
          //Décompilation abandonné
       }
       
-      public function set priority(param1:int) : void
+      public function set priority(p:int) : void
       {
          //Décompilation abandonné
       }

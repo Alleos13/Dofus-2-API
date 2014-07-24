@@ -12,7 +12,7 @@ package com.ankamagames.jerakine.utils.misc
          //Décompilation abandonné
       }
       
-      public static function compare(param1:Prioritizable, param2:Prioritizable) : Number
+      public static function compare(x:Prioritizable, y:Prioritizable) : Number
       {
          //Décompilation abandonné
       }

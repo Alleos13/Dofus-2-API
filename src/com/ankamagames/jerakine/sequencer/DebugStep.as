@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.sequencer
       //Décompilation abandonné
       }
       
-      public function DebugStep(param1:String, param2:ISequencable = null)
+      public function DebugStep(message:String, subStep:ISequencable = null)
       {
          //Décompilation abandonné
       }
@@ -21,7 +21,7 @@ package com.ankamagames.jerakine.sequencer
          //Décompilation abandonné
       }
       
-      public function stepFinished(param1:ISequencable, param2:Boolean = false) : void
+      public function stepFinished(step:ISequencable, withTimout:Boolean = false) : void
       {
          //Décompilation abandonné
       }

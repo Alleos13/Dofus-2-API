@@ -21,7 +21,7 @@ package com.ankamagames.jerakine.map
       
       protected static const _log:Logger;
       
-      public static function getCell(param1:IDataMapProvider, param2:Vector.<uint>, param3:MapPoint) : Vector.<uint>
+      public static function getCell(mapData:IDataMapProvider, range:Vector.<uint>, refPosition:MapPoint) : Vector.<uint>
       {
          //Décompilation abandonné
       }

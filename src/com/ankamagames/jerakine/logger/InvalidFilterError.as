@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.logger
       //Décompilation abandonné
       }
       
-      public function InvalidFilterError(param1:String = "", param2:uint = 0)
+      public function InvalidFilterError(message:String = "", id:uint = 0)
       {
          //Décompilation abandonné
       }

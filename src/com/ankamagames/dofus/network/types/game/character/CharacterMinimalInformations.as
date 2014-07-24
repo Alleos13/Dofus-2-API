@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.character
          //Décompilation abandonné
       }
       
-      public function initCharacterMinimalInformations(param1:uint = 0, param2:uint = 0, param3:String = "") : CharacterMinimalInformations
+      public function initCharacterMinimalInformations(id:uint = 0, level:uint = 0, name:String = "") : CharacterMinimalInformations
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.character
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterMinimalInformations(param1:IDataOutput) : void
+      public function serializeAs_CharacterMinimalInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterMinimalInformations(param1:IDataInput) : void
+      public function deserializeAs_CharacterMinimalInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

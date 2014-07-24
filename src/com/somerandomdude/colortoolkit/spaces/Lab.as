@@ -9,7 +9,7 @@ package com.somerandomdude.colortoolkit.spaces
       //Décompilation abandonné
       }
       
-      public function Lab(param1:Number = 0, param2:Number = 0, param3:Number = 0)
+      public function Lab(lightness:Number = 0, a:Number = 0, b:Number = 0)
       {
          //Décompilation abandonné
       }
@@ -25,7 +25,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set color(param1:int) : void
+      public function set color(value:int) : void
       {
          //Décompilation abandonné
       }
@@ -35,7 +35,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set lightness(param1:Number) : void
+      public function set lightness(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -45,7 +45,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set a(param1:Number) : void
+      public function set a(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -55,7 +55,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set b(param1:Number) : void
+      public function set b(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -65,12 +65,12 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      private function generateColorFromLab(param1:Number, param2:Number, param3:Number) : int
+      private function generateColorFromLab(lightness:Number, a:Number, b:Number) : int
       {
          //Décompilation abandonné
       }
       
-      private function generateLabFromHex(param1:int) : Lab
+      private function generateLabFromHex(color:int) : Lab
       {
          //Décompilation abandonné
       }

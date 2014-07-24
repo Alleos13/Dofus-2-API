@@ -91,42 +91,42 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function setTaxCollectors(param1:Vector.<TaxCollectorInformations>) : void
+      public function setTaxCollectors(tcList:Vector.<TaxCollectorInformations>) : void
       {
          //Décompilation abandonné
       }
       
-      public function setTaxCollectorsFighters(param1:Vector.<TaxCollectorFightersInformation>) : void
+      public function setTaxCollectorsFighters(tcList:Vector.<TaxCollectorFightersInformation>) : void
       {
          //Décompilation abandonné
       }
       
-      public function setPrismsInFight(param1:Vector.<PrismFightersInformation>) : void
+      public function setPrismsInFight(pList:Vector.<PrismFightersInformation>) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateGuild(param1:int, param2:int, param3:int, param4:int, param5:int, param6:int, param7:int) : void
+      public function updateGuild(pMaxTaxCollectorsCount:int, pTaxCollectorsCount:int, pTaxCollectorLifePoints:int, pTaxCollectorDamagesBonuses:int, pTaxCollectorPods:int, pTaxCollectorProspecting:int, pTaxCollectorWisdom:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function addTaxCollector(param1:TaxCollectorInformations) : Boolean
+      public function addTaxCollector(taxCollector:TaxCollectorInformations) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function addPrism(param1:PrismFightersInformation) : void
+      public function addPrism(prism:PrismFightersInformation) : void
       {
          //Décompilation abandonné
       }
       
-      public function addFighter(param1:int, param2:int, param3:CharacterMinimalPlusLookInformations, param4:Boolean, param5:Boolean = true) : void
+      public function addFighter(pType:int, pFightId:int, pPlayerInfo:CharacterMinimalPlusLookInformations, ally:Boolean, pDispatchHook:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeFighter(param1:int, param2:int, param3:int, param4:Boolean, param5:Boolean = true) : void
+      public function removeFighter(pType:int, pFightId:int, pPlayerId:int, ally:Boolean, pDispatchHook:Boolean = true) : void
       {
          //Décompilation abandonné
       }

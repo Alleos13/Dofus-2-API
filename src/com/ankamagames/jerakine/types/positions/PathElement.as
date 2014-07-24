@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.types.positions
       //Décompilation abandonné
       }
       
-      public function PathElement(param1:MapPoint = null, param2:uint = 0)
+      public function PathElement(step:MapPoint = null, orientation:uint = 0)
       {
          //Décompilation abandonné
       }
@@ -21,7 +21,7 @@ package com.ankamagames.jerakine.types.positions
          //Décompilation abandonné
       }
       
-      public function set orientation(param1:uint) : void
+      public function set orientation(nValue:uint) : void
       {
          //Décompilation abandonné
       }
@@ -31,7 +31,7 @@ package com.ankamagames.jerakine.types.positions
          //Décompilation abandonné
       }
       
-      public function set step(param1:MapPoint) : void
+      public function set step(nValue:MapPoint) : void
       {
          //Décompilation abandonné
       }

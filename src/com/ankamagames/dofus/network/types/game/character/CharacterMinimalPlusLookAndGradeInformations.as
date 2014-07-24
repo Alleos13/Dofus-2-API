@@ -26,7 +26,7 @@ package com.ankamagames.dofus.network.types.game.character
          //Décompilation abandonné
       }
       
-      public function initCharacterMinimalPlusLookAndGradeInformations(param1:uint = 0, param2:uint = 0, param3:String = "", param4:EntityLook = null, param5:uint = 0) : CharacterMinimalPlusLookAndGradeInformations
+      public function initCharacterMinimalPlusLookAndGradeInformations(id:uint = 0, level:uint = 0, name:String = "", entityLook:EntityLook = null, grade:uint = 0) : CharacterMinimalPlusLookAndGradeInformations
       {
          //Décompilation abandonné
       }
@@ -36,22 +36,22 @@ package com.ankamagames.dofus.network.types.game.character
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterMinimalPlusLookAndGradeInformations(param1:IDataOutput) : void
+      public function serializeAs_CharacterMinimalPlusLookAndGradeInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterMinimalPlusLookAndGradeInformations(param1:IDataInput) : void
+      public function deserializeAs_CharacterMinimalPlusLookAndGradeInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

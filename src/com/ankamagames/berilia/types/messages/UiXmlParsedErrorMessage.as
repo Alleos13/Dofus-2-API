@@ -9,7 +9,7 @@ package com.ankamagames.berilia.types.messages
       //Décompilation abandonné
       }
       
-      public function UiXmlParsedErrorMessage(param1:String, param2:String)
+      public function UiXmlParsedErrorMessage(url:String, msg:String)
       {
          //Décompilation abandonné
       }

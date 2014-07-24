@@ -9,6 +9,6 @@ package org.flintparticles.common.particles
       
       function createParticle() : Particle;
       
-      function disposeParticle(param1:Particle) : void;
+      function disposeParticle(particle:Particle) : void;
    }
 }

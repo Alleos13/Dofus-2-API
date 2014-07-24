@@ -41,17 +41,17 @@ package com.ankamagames.jerakine.resources.protocols
          //Décompilation abandonné
       }
       
-      protected function loadDirectly(param1:Uri, param2:IResourceObserver, param3:Boolean, param4:Class) : void
+      protected function loadDirectly(uri:Uri, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void
       {
          //Décompilation abandonné
       }
       
-      protected function loadFromData(param1:Uri, param2:ByteArray, param3:IResourceObserver, param4:Boolean, param5:Class) : void
+      protected function loadFromData(uri:Uri, data:ByteArray, observer:IResourceObserver, dispatchProgress:Boolean, forcedAdapter:Class) : void
       {
          //Décompilation abandonné
       }
       
-      protected function getAdapter(param1:Uri, param2:Class) : void
+      protected function getAdapter(uri:Uri, forcedAdapter:Class) : void
       {
          //Décompilation abandonné
       }

@@ -22,7 +22,7 @@ package org.flintparticles.twoD.particles
          //Décompilation abandonné
       }
       
-      public function disposeParticle(param1:Particle) : void
+      public function disposeParticle(particle:Particle) : void
       {
          //Décompilation abandonné
       }

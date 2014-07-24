@@ -78,7 +78,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(pMsg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -88,52 +88,52 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function update(param1:Boolean = false) : void
+      public function update(pForceRefresh:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function getCacheName(param1:int) : String
+      public function getCacheName(pEntityId:int) : String
       {
          //Décompilation abandonné
       }
       
-      private function onLoadUi(param1:UiRenderEvent) : void
+      private function onLoadUi(pEvent:UiRenderEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onUnLoadUi(param1:UiUnloadEvent) : void
+      private function onUnLoadUi(pEvent:UiUnloadEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onEntityAnimationRendered(param1:TiphonEvent) : void
+      private function onEntityAnimationRendered(pEvent:TiphonEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateMouseOverMonstersIds(param1:int) : void
+      private function updateMouseOverMonstersIds(pEntityId:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function displayMouseOverEntityTooltip(param1:Boolean) : void
+      private function displayMouseOverEntityTooltip(pDisplay:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateTooltipPos(param1:Event) : void
+      private function updateTooltipPos(pEvent:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function removeTooltips(param1:Boolean = true) : void
+      private function removeTooltips(pDeleteCache:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      private function showToolTip(param1:int, param2:String = null) : void
+      private function showToolTip(pMonsterId:int, pCacheName:String = null) : void
       {
          //Décompilation abandonné
       }

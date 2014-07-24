@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      public function initObjectItem(param1:uint = 63, param2:uint = 0, param3:Vector.<ObjectEffect> = null, param4:uint = 0, param5:uint = 0) : ObjectItem
+      public function initObjectItem(position:uint = 63, objectGID:uint = 0, effects:Vector.<ObjectEffect> = null, objectUID:uint = 0, quantity:uint = 0) : ObjectItem
       {
          //Décompilation abandonné
       }
@@ -45,22 +45,22 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectItem(param1:IDataOutput) : void
+      public function serializeAs_ObjectItem(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectItem(param1:IDataInput) : void
+      public function deserializeAs_ObjectItem(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

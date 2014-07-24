@@ -27,27 +27,27 @@ package com.ankamagames.jerakine.utils.misc
       
       private static var _consts:Dictionary;
       
-      public static function typeDescription(param1:Object, param2:Boolean = true) : XML
+      public static function typeDescription(o:Object, useCache:Boolean = true) : XML
       {
          //Décompilation abandonné
       }
       
-      public static function getVariables(param1:Object, param2:Boolean = false, param3:Boolean = true, param4:Boolean = false) : Array
+      public static function getVariables(o:Object, onlyVar:Boolean = false, useCache:Boolean = true, skipUselessVars:Boolean = false) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function getTags(param1:Object) : Dictionary
+      public static function getTags(o:Object) : Dictionary
       {
          //Décompilation abandonné
       }
       
-      public static function getConstants(param1:Object) : Dictionary
+      public static function getConstants(o:Object) : Dictionary
       {
          //Décompilation abandonné
       }
       
-      public static function getConstantName(param1:Class, param2:*) : String
+      public static function getConstantName(type:Class, value:*) : String
       {
          //Décompilation abandonné
       }

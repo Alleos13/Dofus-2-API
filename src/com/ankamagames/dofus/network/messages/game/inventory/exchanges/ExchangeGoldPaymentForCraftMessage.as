@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      public function initExchangeGoldPaymentForCraftMessage(param1:Boolean = false, param2:uint = 0) : ExchangeGoldPaymentForCraftMessage
+      public function initExchangeGoldPaymentForCraftMessage(onlySuccess:Boolean = false, goldSum:uint = 0) : ExchangeGoldPaymentForCraftMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeGoldPaymentForCraftMessage(param1:IDataOutput) : void
+      public function serializeAs_ExchangeGoldPaymentForCraftMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeGoldPaymentForCraftMessage(param1:IDataInput) : void
+      public function deserializeAs_ExchangeGoldPaymentForCraftMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

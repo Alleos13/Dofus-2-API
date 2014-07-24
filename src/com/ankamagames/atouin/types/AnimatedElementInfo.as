@@ -10,7 +10,7 @@ package com.ankamagames.atouin.types
       //Décompilation abandonné
       }
       
-      public function AnimatedElementInfo(param1:TiphonSprite, param2:int, param3:int)
+      public function AnimatedElementInfo(tiphonSprite:TiphonSprite, min:int, max:int)
       {
          //Décompilation abandonné
       }

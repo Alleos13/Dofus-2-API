@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.party
          //Décompilation abandonné
       }
       
-      public static function create(param1:int) : PartyLeaveRequestAction
+      public static function create(partyId:int) : PartyLeaveRequestAction
       {
          //Décompilation abandonné
       }

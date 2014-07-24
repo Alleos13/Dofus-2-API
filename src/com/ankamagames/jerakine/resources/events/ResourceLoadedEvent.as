@@ -10,7 +10,7 @@ package com.ankamagames.jerakine.resources.events
       //Décompilation abandonné
       }
       
-      public function ResourceLoadedEvent(param1:String, param2:Boolean = false, param3:Boolean = false)
+      public function ResourceLoadedEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false)
       {
          //Décompilation abandonné
       }

@@ -18,7 +18,7 @@ package com.ankamagames.dofus.internalDatacenter.guild
          //Décompilation abandonné
       }
       
-      public static function create(param1:PaddockInformations) : PaddockWrapper
+      public static function create(paddockInformations:PaddockInformations) : PaddockWrapper
       {
          //Décompilation abandonné
       }

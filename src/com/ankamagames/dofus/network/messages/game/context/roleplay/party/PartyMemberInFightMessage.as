@@ -46,7 +46,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      public function initPartyMemberInFightMessage(param1:uint = 0, param2:uint = 0, param3:int = 0, param4:uint = 0, param5:String = "", param6:int = 0, param7:MapCoordinatesExtended = null, param8:int = 0) : PartyMemberInFightMessage
+      public function initPartyMemberInFightMessage(partyId:uint = 0, reason:uint = 0, memberId:int = 0, memberAccountId:uint = 0, memberName:String = "", fightId:int = 0, fightMap:MapCoordinatesExtended = null, secondsBeforeFightStart:int = 0) : PartyMemberInFightMessage
       {
          //Décompilation abandonné
       }
@@ -56,32 +56,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PartyMemberInFightMessage(param1:IDataOutput) : void
+      public function serializeAs_PartyMemberInFightMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PartyMemberInFightMessage(param1:IDataInput) : void
+      public function deserializeAs_PartyMemberInFightMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -19,17 +19,17 @@ package flashx.textLayout.property
          //Décompilation abandonné
       }
       
-      public function set converter(param1:Function) : void
+      public function set converter(val:Function) : void
       {
          //Décompilation abandonné
       }
       
-      override public function owningHandlerCheck(param1:*) : *
+      override public function owningHandlerCheck(newVal:*) : *
       {
          //Décompilation abandonné
       }
       
-      override public function setHelper(param1:*) : *
+      override public function setHelper(newVal:*) : *
       {
          //Décompilation abandonné
       }

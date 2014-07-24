@@ -93,7 +93,7 @@ package com.ankamagames.dofus.internalDatacenter.items
       
       private static var _properties:Array;
       
-      public static function create(param1:uint, param2:uint, param3:uint, param4:uint, param5:Vector.<ObjectEffect>, param6:Boolean = true) : ItemWrapper
+      public static function create(position:uint, objectUID:uint, objectGID:uint, quantity:uint, newEffects:Vector.<ObjectEffect>, useCache:Boolean = true) : ItemWrapper
       {
          //Décompilation abandonné
       }
@@ -103,7 +103,7 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      public static function getItemFromUId(param1:uint) : ItemWrapper
+      public static function getItemFromUId(objectUID:uint) : ItemWrapper
       {
          //Décompilation abandonné
       }
@@ -180,7 +180,7 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      public function set backGroundIconUri(param1:Uri) : void
+      public function set backGroundIconUri(bgUri:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -225,7 +225,7 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      public function set endTime(param1:int) : void
+      public function set endTime(t:int) : void
       {
          //Décompilation abandonné
       }
@@ -240,12 +240,12 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      public function set active(param1:Boolean) : void
+      public function set active(b:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function set minimalRange(param1:uint) : void
+      public function set minimalRange(pMinRange:uint) : void
       {
          //Décompilation abandonné
       }
@@ -255,7 +255,7 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      public function set maximalRange(param1:uint) : void
+      public function set maximalRange(pRange:uint) : void
       {
          //Décompilation abandonné
       }
@@ -265,7 +265,7 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      public function set castZoneInLine(param1:Boolean) : void
+      public function set castZoneInLine(pCastInLine:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -275,7 +275,7 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      public function set castZoneInDiagonal(param1:Boolean) : void
+      public function set castZoneInDiagonal(pCastInDiagonal:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -345,47 +345,47 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      public function update(param1:uint, param2:uint, param3:uint, param4:uint, param5:Vector.<ObjectEffect>) : void
+      public function update(position:uint, objectUID:uint, objectGID:uint, quantity:uint, newEffects:Vector.<ObjectEffect>) : void
       {
          //Décompilation abandonné
       }
       
-      public function getIconUri(param1:Boolean = true) : Uri
+      public function getIconUri(pngMode:Boolean = true) : Uri
       {
          //Décompilation abandonné
       }
       
-      public function clone(param1:Class = null) : ItemWrapper
+      public function clone(baseClass:Class = null) : ItemWrapper
       {
          //Décompilation abandonné
       }
       
-      public function addHolder(param1:ISlotDataHolder) : void
+      public function addHolder(h:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeHolder(param1:ISlotDataHolder) : void
+      public function removeHolder(h:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateLivingObjects(param1:EffectInstance) : void
+      private function updateLivingObjects(effect:EffectInstance) : void
       {
          //Décompilation abandonné
       }
       
-      private function updatePresets(param1:EffectInstance) : void
+      private function updatePresets(effect:EffectInstance) : void
       {
          //Décompilation abandonné
       }
       
-      private function getLivingObjectLevel(param1:int) : uint
+      private function getLivingObjectLevel(xp:int) : uint
       {
          //Décompilation abandonné
       }
       
-      private function updateEffects(param1:Vector.<ObjectEffect>) : void
+      private function updateEffects(updateEffects:Vector.<ObjectEffect>) : void
       {
          //Décompilation abandonné
       }

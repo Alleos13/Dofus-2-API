@@ -26,7 +26,7 @@ package com.ankamagames.dofus.misc.utils.errormanager
       //Décompilation abandonné
       }
       
-      public function ErrorReport(param1:Object, param2:TemporaryBufferTarget)
+      public function ErrorReport(reportInfo:Object, logBuffer:TemporaryBufferTarget)
       {
          //Décompilation abandonné
       }
@@ -55,7 +55,7 @@ package com.ankamagames.dofus.misc.utils.errormanager
          //Décompilation abandonné
       }
       
-      private function onFileSelected(param1:Event) : void
+      private function onFileSelected(e:Event) : void
       {
          //Décompilation abandonné
       }
@@ -65,7 +65,7 @@ package com.ankamagames.dofus.misc.utils.errormanager
          //Décompilation abandonné
       }
       
-      private function sendReportComplete(param1:Event) : void
+      private function sendReportComplete(e:Event) : void
       {
          //Décompilation abandonné
       }

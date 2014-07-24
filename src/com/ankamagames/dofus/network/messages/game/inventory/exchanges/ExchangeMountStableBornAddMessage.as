@@ -32,7 +32,7 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      public function initExchangeMountStableBornAddMessage(param1:MountClientData = null) : ExchangeMountStableBornAddMessage
+      public function initExchangeMountStableBornAddMessage(mountDescription:MountClientData = null) : ExchangeMountStableBornAddMessage
       {
          //Décompilation abandonné
       }
@@ -42,32 +42,32 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeMountStableBornAddMessage(param1:IDataOutput) : void
+      public function serializeAs_ExchangeMountStableBornAddMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeMountStableBornAddMessage(param1:IDataInput) : void
+      public function deserializeAs_ExchangeMountStableBornAddMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

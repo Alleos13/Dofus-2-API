@@ -7,14 +7,14 @@ package com.ankamagames.berilia.types.shortcut
       //Décompilation abandonné
       }
       
-      public function ShortcutCategory(param1:String, param2:String)
+      public function ShortcutCategory(name:String, description:String)
       {
          //Décompilation abandonné
       }
       
       private static var _caterogies:Array;
       
-      public static function create(param1:String, param2:String) : ShortcutCategory
+      public static function create(name:String, description:String) : ShortcutCategory
       {
          //Décompilation abandonné
       }

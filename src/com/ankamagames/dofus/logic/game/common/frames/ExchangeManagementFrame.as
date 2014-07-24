@@ -100,7 +100,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function set priority(param1:int) : void
+      public function set priority(p:int) : void
       {
          //Décompilation abandonné
       }
@@ -120,22 +120,22 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function initMountStock(param1:Vector.<ObjectItem>) : void
+      public function initMountStock(objectsInfos:Vector.<ObjectItem>) : void
       {
          //Décompilation abandonné
       }
       
-      public function processExchangeRequestedTradeMessage(param1:ExchangeRequestedTradeMessage) : void
+      public function processExchangeRequestedTradeMessage(msg:ExchangeRequestedTradeMessage) : void
       {
          //Décompilation abandonné
       }
       
-      public function processExchangeStartOkNpcTradeMessage(param1:ExchangeStartOkNpcTradeMessage) : void
+      public function processExchangeStartOkNpcTradeMessage(msg:ExchangeStartOkNpcTradeMessage) : void
       {
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }

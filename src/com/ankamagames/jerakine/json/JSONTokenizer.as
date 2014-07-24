@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.json
       //Décompilation abandonné
       }
       
-      public function JSONTokenizer(param1:String, param2:Boolean)
+      public function JSONTokenizer(s:String, strict:Boolean)
       {
          //Décompilation abandonné
       }
@@ -34,7 +34,7 @@ package com.ankamagames.jerakine.json
          //Décompilation abandonné
       }
       
-      public function unescapeString(param1:String) : String
+      public function unescapeString(input:String) : String
       {
          //Décompilation abandonné
       }
@@ -64,22 +64,22 @@ package com.ankamagames.jerakine.json
          //Décompilation abandonné
       }
       
-      private function isWhiteSpace(param1:String) : Boolean
+      private function isWhiteSpace(ch:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function isDigit(param1:String) : Boolean
+      private function isDigit(ch:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function isHexDigit(param1:String) : Boolean
+      private function isHexDigit(ch:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function parseError(param1:String) : void
+      public function parseError(message:String) : void
       {
          //Décompilation abandonné
       }

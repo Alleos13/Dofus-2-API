@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.utils.memory
       //Décompilation abandonné
       }
       
-      public function WeakReference(param1:*)
+      public function WeakReference(obj:*)
       {
          //Décompilation abandonné
       }

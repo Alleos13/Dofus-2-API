@@ -9,7 +9,7 @@ package flashx.textLayout.factory
       //Décompilation abandonné
       }
       
-      public function TruncationOptions(param1:String = "…", param2:int = -1, param3:ITextLayoutFormat = null)
+      public function TruncationOptions(truncationIndicator:String = "…", lineCountLimit:int = -1, truncationIndicatorFormat:ITextLayoutFormat = null)
       {
          //Décompilation abandonné
       }
@@ -23,7 +23,7 @@ package flashx.textLayout.factory
          //Décompilation abandonné
       }
       
-      public function set truncationIndicator(param1:String) : void
+      public function set truncationIndicator(val:String) : void
       {
          //Décompilation abandonné
       }
@@ -33,7 +33,7 @@ package flashx.textLayout.factory
          //Décompilation abandonné
       }
       
-      public function set truncationIndicatorFormat(param1:ITextLayoutFormat) : void
+      public function set truncationIndicatorFormat(val:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
@@ -43,7 +43,7 @@ package flashx.textLayout.factory
          //Décompilation abandonné
       }
       
-      public function set lineCountLimit(param1:int) : void
+      public function set lineCountLimit(val:int) : void
       {
          //Décompilation abandonné
       }

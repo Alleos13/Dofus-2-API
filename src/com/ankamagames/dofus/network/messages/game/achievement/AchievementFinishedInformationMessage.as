@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.messages.game.achievement
          //Décompilation abandonné
       }
       
-      public function initAchievementFinishedInformationMessage(param1:uint = 0, param2:uint = 0, param3:String = "", param4:uint = 0) : AchievementFinishedInformationMessage
+      public function initAchievementFinishedInformationMessage(id:uint = 0, finishedlevel:uint = 0, name:String = "", playerId:uint = 0) : AchievementFinishedInformationMessage
       {
          //Décompilation abandonné
       }
@@ -45,32 +45,32 @@ package com.ankamagames.dofus.network.messages.game.achievement
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AchievementFinishedInformationMessage(param1:IDataOutput) : void
+      public function serializeAs_AchievementFinishedInformationMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AchievementFinishedInformationMessage(param1:IDataInput) : void
+      public function deserializeAs_AchievementFinishedInformationMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

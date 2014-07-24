@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.atlas.compass
          //Décompilation abandonné
       }
       
-      public function initCompassUpdatePartyMemberMessage(param1:uint = 0, param2:MapCoordinates = null, param3:uint = 0) : CompassUpdatePartyMemberMessage
+      public function initCompassUpdatePartyMemberMessage(type:uint = 0, coords:MapCoordinates = null, memberId:uint = 0) : CompassUpdatePartyMemberMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.atlas.compass
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_CompassUpdatePartyMemberMessage(param1:IDataOutput) : void
+      public function serializeAs_CompassUpdatePartyMemberMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_CompassUpdatePartyMemberMessage(param1:IDataInput) : void
+      public function deserializeAs_CompassUpdatePartyMemberMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

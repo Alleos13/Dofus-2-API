@@ -9,7 +9,7 @@ package mx.core
       
       function get layoutDirection() : String;
       
-      function set layoutDirection(param1:String) : void;
+      function set layoutDirection(value:String) : void;
       
       function invalidateLayoutDirection() : void;
    }

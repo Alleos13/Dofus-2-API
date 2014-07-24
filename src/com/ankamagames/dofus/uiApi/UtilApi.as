@@ -36,7 +36,7 @@ package com.ankamagames.dofus.uiApi
       
       private var _stringSorter:Collator;
       
-      public function set module(param1:UiModule) : void
+      public function set module(value:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -46,107 +46,107 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function callWithParameters(param1:Function, param2:Array) : void
+      public function callWithParameters(method:Function, parameters:Array) : void
       {
          //Décompilation abandonné
       }
       
-      public function callConstructorWithParameters(param1:Class, param2:Array) : *
+      public function callConstructorWithParameters(callClass:Class, parameters:Array) : *
       {
          //Décompilation abandonné
       }
       
-      public function callRWithParameters(param1:Function, param2:Array) : *
+      public function callRWithParameters(method:Function, parameters:Array) : *
       {
          //Décompilation abandonné
       }
       
-      public function kamasToString(param1:Number, param2:String = "-") : String
+      public function kamasToString(kamas:Number, unit:String = "-") : String
       {
          //Décompilation abandonné
       }
       
-      public function formateIntToString(param1:Number) : String
+      public function formateIntToString(val:Number) : String
       {
          //Décompilation abandonné
       }
       
-      public function stringToKamas(param1:String, param2:String = "-") : int
+      public function stringToKamas(string:String, unit:String = "-") : int
       {
          //Décompilation abandonné
       }
       
-      public function getTextWithParams(param1:int, param2:Array, param3:String = "%") : String
+      public function getTextWithParams(textId:int, params:Array, replace:String = "%") : String
       {
          //Décompilation abandonné
       }
       
-      public function applyTextParams(param1:String, param2:Array, param3:String = "%") : String
+      public function applyTextParams(pText:String, pParams:Array, pReplace:String = "%") : String
       {
          //Décompilation abandonné
       }
       
-      public function noAccent(param1:String) : String
+      public function noAccent(str:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function changeColor(param1:Object, param2:Number, param3:int, param4:Boolean = false) : void
+      public function changeColor(obj:Object, color:Number, depth:int, unColor:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function sortOnString(param1:*, param2:String = "") : void
+      public function sortOnString(list:*, field:String = "") : void
       {
          //Décompilation abandonné
       }
       
-      public function sort(param1:*, param2:String, param3:Boolean = true, param4:Boolean = false) : *
+      public function sort(target:*, field:String, ascendand:Boolean = true, isNumeric:Boolean = false) : *
       {
          //Décompilation abandonné
       }
       
-      public function filter(param1:*, param2:*, param3:String) : *
+      public function filter(target:*, pattern:*, field:String) : *
       {
          //Décompilation abandonné
       }
       
-      public function getTiphonEntityLook(param1:int) : TiphonEntityLook
+      public function getTiphonEntityLook(pEntityId:int) : TiphonEntityLook
       {
          //Décompilation abandonné
       }
       
-      public function getRealTiphonEntityLook(param1:int, param2:Boolean = false) : TiphonEntityLook
+      public function getRealTiphonEntityLook(pEntityId:int, pWithoutMount:Boolean = false) : TiphonEntityLook
       {
          //Décompilation abandonné
       }
       
-      public function getLookFromContext(param1:int, param2:Boolean = false) : TiphonEntityLook
+      public function getLookFromContext(pEntityId:int, pForceCreature:Boolean = false) : TiphonEntityLook
       {
          //Décompilation abandonné
       }
       
-      public function getLookFromContextInfos(param1:GameContextActorInformations, param2:Boolean = false) : TiphonEntityLook
+      public function getLookFromContextInfos(pInfos:GameContextActorInformations, pForceCreature:Boolean = false) : TiphonEntityLook
       {
          //Décompilation abandonné
       }
       
-      public function isCreature(param1:int) : Boolean
+      public function isCreature(pEntityId:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function isCreatureFromLook(param1:TiphonEntityLook) : Boolean
+      public function isCreatureFromLook(pLook:TiphonEntityLook) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function isIncarnation(param1:int) : Boolean
+      public function isIncarnation(pEntityId:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function isIncarnationFromLook(param1:TiphonEntityLook) : Boolean
+      public function isIncarnationFromLook(pLook:TiphonEntityLook) : Boolean
       {
          //Décompilation abandonné
       }
@@ -156,7 +156,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getCreatureLook(param1:int) : TiphonEntityLook
+      public function getCreatureLook(pEntityId:int) : TiphonEntityLook
       {
          //Décompilation abandonné
       }

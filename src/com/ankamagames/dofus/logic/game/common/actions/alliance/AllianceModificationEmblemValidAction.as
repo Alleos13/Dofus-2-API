@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.alliance
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:uint, param3:uint, param4:uint) : AllianceModificationEmblemValidAction
+      public static function create(pUpEmblemId:uint, pUpColorEmblem:uint, pBackEmblemId:uint, pBackColorEmblem:uint) : AllianceModificationEmblemValidAction
       {
          //Décompilation abandonné
       }

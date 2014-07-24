@@ -14,7 +14,7 @@ package com.ankamagames.dofus.modules.utils.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:Boolean = false) : ModuleInstallConfirmAction
+      public static function create(update:Boolean = false) : ModuleInstallConfirmAction
       {
          //Décompilation abandonné
       }

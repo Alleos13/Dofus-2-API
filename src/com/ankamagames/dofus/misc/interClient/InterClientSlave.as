@@ -41,7 +41,7 @@ package com.ankamagames.dofus.misc.interClient
          //Décompilation abandonné
       }
       
-      public function gainFocus(param1:Number) : void
+      public function gainFocus(time:Number) : void
       {
          //Décompilation abandonné
       }
@@ -51,12 +51,12 @@ package com.ankamagames.dofus.misc.interClient
          //Décompilation abandonné
       }
       
-      public function updateFocusMessage(param1:String) : void
+      public function updateFocusMessage(focusList:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function setUId(param1:String) : void
+      private function setUId(uid:String) : void
       {
          //Décompilation abandonné
       }
@@ -66,27 +66,27 @@ package com.ankamagames.dofus.misc.interClient
          //Décompilation abandonné
       }
       
-      private function onError(param1:AsyncErrorEvent) : void
+      private function onError(e:AsyncErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onStatusEvent(param1:StatusEvent) : void
+      private function onStatusEvent(e:StatusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTick(param1:Event) : void
+      private function onTick(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onStatusChange(param1:StatusEvent) : void
+      private function onStatusChange(e:StatusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSecurityError(param1:Error) : void
+      private function onSecurityError(e:Error) : void
       {
          //Décompilation abandonné
       }

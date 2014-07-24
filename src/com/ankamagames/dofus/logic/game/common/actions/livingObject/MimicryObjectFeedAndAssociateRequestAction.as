@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.livingObject
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:uint, param3:uint, param4:uint, param5:uint, param6:uint, param7:Boolean) : MimicryObjectFeedAndAssociateRequestAction
+      public static function create(mimicryUID:uint, mimicryPos:uint, foodUID:uint, foodPos:uint, hostUID:uint, hostPos:uint, preview:Boolean) : MimicryObjectFeedAndAssociateRequestAction
       {
          //Décompilation abandonné
       }

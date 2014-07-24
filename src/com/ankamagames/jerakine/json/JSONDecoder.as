@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.json
       //Décompilation abandonné
       }
       
-      public function JSONDecoder(param1:String, param2:Boolean)
+      public function JSONDecoder(s:String, strict:Boolean)
       {
          //Décompilation abandonné
       }

@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.data.items.effects
          //Décompilation abandonné
       }
       
-      public function initObjectEffect(param1:uint = 0) : ObjectEffect
+      public function initObjectEffect(actionId:uint = 0) : ObjectEffect
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.data.items.effects
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectEffect(param1:IDataOutput) : void
+      public function serializeAs_ObjectEffect(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectEffect(param1:IDataInput) : void
+      public function deserializeAs_ObjectEffect(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

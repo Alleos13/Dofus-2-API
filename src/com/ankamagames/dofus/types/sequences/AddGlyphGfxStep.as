@@ -15,7 +15,7 @@ package com.ankamagames.dofus.types.sequences
       //Décompilation abandonné
       }
       
-      public function AddGlyphGfxStep(param1:uint, param2:uint, param3:int, param4:uint)
+      public function AddGlyphGfxStep(gfxId:uint, cellId:uint, markId:int, makType:uint)
       {
          //Décompilation abandonné
       }

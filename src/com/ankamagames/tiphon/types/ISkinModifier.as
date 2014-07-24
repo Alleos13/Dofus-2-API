@@ -9,6 +9,6 @@ package com.ankamagames.tiphon.types
       //Décompilation abandonné
       }
       
-      function getModifiedSkin(param1:Skin, param2:String, param3:TiphonEntityLook) : String;
+      function getModifiedSkin(skin:Skin, requestedPart:String, look:TiphonEntityLook) : String;
    }
 }

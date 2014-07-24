@@ -11,7 +11,7 @@ package org.flintparticles.common.initializers
       //Décompilation abandonné
       }
       
-      public function ColorInit(param1:uint, param2:uint)
+      public function ColorInit(color1:uint, color2:uint)
       {
          //Décompilation abandonné
       }
@@ -25,7 +25,7 @@ package org.flintparticles.common.initializers
          //Décompilation abandonné
       }
       
-      public function set minColor(param1:uint) : void
+      public function set minColor(value:uint) : void
       {
          //Décompilation abandonné
       }
@@ -35,7 +35,7 @@ package org.flintparticles.common.initializers
          //Décompilation abandonné
       }
       
-      public function set maxColor(param1:uint) : void
+      public function set maxColor(value:uint) : void
       {
          //Décompilation abandonné
       }
@@ -45,12 +45,12 @@ package org.flintparticles.common.initializers
          //Décompilation abandonné
       }
       
-      public function set color(param1:uint) : void
+      public function set color(value:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function initialize(param1:Emitter, param2:Particle) : void
+      override public function initialize(emitter:Emitter, particle:Particle) : void
       {
          //Décompilation abandonné
       }

@@ -24,7 +24,7 @@ package com.ankamagames.dofus.logic.game.fight.miscs
       
       private var _animation:String;
       
-      public function updateFromParentEntity(param1:TiphonSprite, param2:BehaviorData) : void
+      public function updateFromParentEntity(target:TiphonSprite, parentData:BehaviorData) : void
       {
          //Décompilation abandonné
       }
@@ -34,7 +34,7 @@ package com.ankamagames.dofus.logic.game.fight.miscs
          //Décompilation abandonné
       }
       
-      private function onFatherRendered(param1:TiphonEvent) : void
+      private function onFatherRendered(e:TiphonEvent) : void
       {
          //Décompilation abandonné
       }

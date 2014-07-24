@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.npcs
       
       public static const MODULE:String = "NpcActions";
       
-      public static function getNpcActionById(param1:int) : NpcAction
+      public static function getNpcActionById(id:int) : NpcAction
       {
          //Décompilation abandonné
       }

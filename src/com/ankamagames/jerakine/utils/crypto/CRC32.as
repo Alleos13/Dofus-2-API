@@ -23,7 +23,7 @@ package com.ankamagames.jerakine.utils.crypto
       
       private var _crc32:uint;
       
-      public function update(param1:ByteArray, param2:int = 0, param3:int = 0) : void
+      public function update(buffer:ByteArray, offset:int = 0, length:int = 0) : void
       {
          //Décompilation abandonné
       }

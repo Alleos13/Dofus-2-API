@@ -15,7 +15,7 @@ package com.ankamagames.berilia.types.shortcut
       //Décompilation abandonné
       }
       
-      public function Shortcut(param1:String, param2:Boolean = false, param3:String = null, param4:ShortcutCategory = null, param5:Boolean = true, param6:Boolean = true, param7:Boolean = false, param8:Boolean = false, param9:String = null)
+      public function Shortcut(name:String, textfieldEnabled:Boolean = false, description:String = null, category:ShortcutCategory = null, bindable:Boolean = true, pVisible:Boolean = true, pRequired:Boolean = false, pHoldKeys:Boolean = false, tooltipContent:String = null)
       {
          //Décompilation abandonné
       }
@@ -36,7 +36,7 @@ package com.ankamagames.berilia.types.shortcut
          //Décompilation abandonné
       }
       
-      public static function getShortcutByName(param1:String) : Shortcut
+      public static function getShortcutByName(name:String) : Shortcut
       {
          //Décompilation abandonné
       }
@@ -110,7 +110,7 @@ package com.ankamagames.berilia.types.shortcut
          //Décompilation abandonné
       }
       
-      public function set visible(param1:Boolean) : void
+      public function set visible(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -130,7 +130,7 @@ package com.ankamagames.berilia.types.shortcut
          //Décompilation abandonné
       }
       
-      public function set disable(param1:Boolean) : void
+      public function set disable(value:Boolean) : void
       {
          //Décompilation abandonné
       }

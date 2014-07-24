@@ -160,7 +160,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set finalized(param1:Boolean) : void
+      public function set finalized(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -170,7 +170,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set showGrid(param1:Boolean) : void
+      public function set showGrid(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -200,7 +200,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set mapAlpha(param1:Number) : void
+      public function set mapAlpha(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -215,12 +215,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function set width(param1:Number) : void
+      override public function set width(nW:Number) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set height(param1:Number) : void
+      override public function set height(nH:Number) : void
       {
          //Décompilation abandonné
       }
@@ -240,37 +240,37 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function addLayer(param1:String) : void
+      public function addLayer(name:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function addIcon(param1:String, param2:String, param3:*, param4:int, param5:int, param6:Number = 1, param7:String = null, param8:Boolean = false, param9:int = -1, param10:Boolean = true) : MapIconElement
+      public function addIcon(layer:String, id:String, uri:*, x:int, y:int, scale:Number = 1, legend:String = null, follow:Boolean = false, color:int = -1, canBeGrouped:Boolean = true) : MapIconElement
       {
          //Décompilation abandonné
       }
       
-      public function addAreaShape(param1:String, param2:String, param3:Vector.<int>, param4:uint = 0, param5:Number = 1, param6:uint = 0, param7:Number = 0.4, param8:int = 4) : MapAreaShape
+      public function addAreaShape(layer:String, id:String, coordList:Vector.<int>, lineColor:uint = 0, lineAlpha:Number = 1, fillColor:uint = 0, fillAlpha:Number = 0.4, thickness:int = 4) : MapAreaShape
       {
          //Décompilation abandonné
       }
       
-      public function areaShapeColorTransform(param1:MapAreaShape, param2:int, param3:Number = 1, param4:Number = 1, param5:Number = 1, param6:Number = 1, param7:Number = 0, param8:Number = 0, param9:Number = 0, param10:Number = 0) : void
+      public function areaShapeColorTransform(me:MapAreaShape, duration:int, rM:Number = 1, gM:Number = 1, bM:Number = 1, aM:Number = 1, rO:Number = 0, gO:Number = 0, bO:Number = 0, aO:Number = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function getMapElement(param1:String) : MapElement
+      public function getMapElement(id:String) : MapElement
       {
          //Décompilation abandonné
       }
       
-      public function getMapElementsByLayer(param1:String) : Array
+      public function getMapElementsByLayer(layerId:String) : Array
       {
          //Décompilation abandonné
       }
       
-      public function removeMapElement(param1:MapElement) : void
+      public function removeMapElement(me:MapElement) : void
       {
          //Décompilation abandonné
       }
@@ -280,27 +280,27 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function showLayer(param1:String, param2:Boolean = true) : void
+      public function showLayer(name:String, display:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function moveToPixel(param1:int, param2:int, param3:Number) : void
+      public function moveToPixel(x:int, y:int, zoomFactor:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function moveTo(param1:Number, param2:Number, param3:uint = 1, param4:uint = 1, param5:Boolean = true, param6:Boolean = true) : void
+      public function moveTo(x:Number, y:Number, width:uint = 1, height:uint = 1, center:Boolean = true, autoZoom:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function zoom(param1:Number, param2:Point = null) : void
+      public function zoom(scale:Number, coord:Point = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function addMap(param1:Number, param2:String, param3:uint, param4:uint, param5:uint, param6:uint) : void
+      public function addMap(zoom:Number, src:String, unscaleWitdh:uint, unscaleHeight:uint, chunckWidth:uint, chunckHeight:uint) : void
       {
          //Décompilation abandonné
       }
@@ -310,12 +310,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function getOrigineFromPos(param1:int, param2:int) : Point
+      public function getOrigineFromPos(x:int, y:int) : Point
       {
          //Décompilation abandonné
       }
       
-      public function set useFlagCursor(param1:Boolean) : void
+      public function set useFlagCursor(pValue:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -340,7 +340,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function getIconTextureGlobalCoords(param1:MapIconElement) : Point
+      private function getIconTextureGlobalCoords(pMapIconElement:MapIconElement) : Point
       {
          //Décompilation abandonné
       }
@@ -350,7 +350,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function getIconArrow(param1:Texture) : Texture
+      private function getIconArrow(icon:Texture) : Texture
       {
          //Décompilation abandonné
       }
@@ -382,7 +382,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function clearLayer(param1:DisplayObjectContainer = null) : void
+      private function clearLayer(target:DisplayObjectContainer = null) : void
       {
          //Décompilation abandonné
       }
@@ -407,12 +407,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function clearMap(param1:Map) : void
+      private function clearMap(map:Map) : void
       {
          //Décompilation abandonné
       }
       
-      override public function process(param1:Message) : Boolean
+      override public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -421,12 +421,12 @@ package com.ankamagames.berilia.components
       
       private var _lastMouseY:int = 0;
       
-      private function onMapEnterFrame(param1:Event) : void
+      private function onMapEnterFrame(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onWindowDeactivate(param1:Event) : void
+      private function onWindowDeactivate(pEvent:Event) : void
       {
          //Décompilation abandonné
       }

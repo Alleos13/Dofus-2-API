@@ -11,7 +11,7 @@ package com.ankamagames.jerakine.utils.crypto
       //Décompilation abandonné
       }
       
-      public function SignatureKey(param1:BigInteger, param2:int, param3:BigInteger = null, param4:BigInteger = null, param5:BigInteger = null, param6:BigInteger = null, param7:BigInteger = null, param8:BigInteger = null)
+      public function SignatureKey(N:BigInteger, E:int, D:BigInteger = null, P:BigInteger = null, Q:BigInteger = null, DP:BigInteger = null, DQ:BigInteger = null, C:BigInteger = null)
       {
          //Décompilation abandonné
       }
@@ -20,7 +20,7 @@ package com.ankamagames.jerakine.utils.crypto
       
       private static const PRIVATE_KEY_HEADER:String = "DofusPrivateKey";
       
-      public static function fromByte(param1:IDataInput) : SignatureKey
+      public static function fromByte(input:IDataInput) : SignatureKey
       {
          //Décompilation abandonné
       }

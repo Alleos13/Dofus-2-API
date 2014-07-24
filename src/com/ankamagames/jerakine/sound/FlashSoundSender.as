@@ -16,24 +16,24 @@ package com.ankamagames.jerakine.sound
       //Décompilation abandonné
       }
       
-      public function FlashSoundSender(param1:uint = 0)
+      public function FlashSoundSender(lcid:uint = 0)
       {
          //Décompilation abandonné
       }
       
       private static const _log:Logger;
       
-      private function dispatchError(param1:ErrorEvent) : void
+      private function dispatchError(pEvt:ErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onStatus(param1:StatusEvent) : void
+      private function onStatus(pEvt:StatusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      override public function connect(param1:String, param2:int) : void
+      override public function connect(host:String, port:int) : void
       {
          //Décompilation abandonné
       }

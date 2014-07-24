@@ -52,52 +52,52 @@ package com.ankamagames.jerakine.data
       
       private var _directBuffer:ByteArray;
       
-      public function init(param1:Uri) : void
+      public function init(fileUri:Uri) : void
       {
          //Décompilation abandonné
       }
       
-      public function overrideId(param1:uint, param2:uint) : void
+      public function overrideId(oldId:uint, newId:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function addOverrideFile(param1:Uri) : void
+      public function addOverrideFile(file:Uri) : void
       {
          //Décompilation abandonné
       }
       
-      public function getOrderIndex(param1:int) : int
+      public function getOrderIndex(key:int) : int
       {
          //Décompilation abandonné
       }
       
-      public function getText(param1:int) : String
+      public function getText(key:int) : String
       {
          //Décompilation abandonné
       }
       
-      public function getUnDiacriticalText(param1:int) : String
+      public function getUnDiacriticalText(key:int) : String
       {
          //Décompilation abandonné
       }
       
-      public function hasText(param1:int) : Boolean
+      public function hasText(key:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getNamedText(param1:String) : String
+      public function getNamedText(textKey:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function hasNamedText(param1:String) : Boolean
+      public function hasNamedText(textKey:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function useDirectBuffer(param1:Boolean) : void
+      public function useDirectBuffer(bool:Boolean) : void
       {
          //Décompilation abandonné
       }

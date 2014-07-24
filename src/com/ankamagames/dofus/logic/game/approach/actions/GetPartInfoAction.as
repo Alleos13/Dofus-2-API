@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.approach.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:String) : GetPartInfoAction
+      public static function create(id:String) : GetPartInfoAction
       {
          //Décompilation abandonné
       }

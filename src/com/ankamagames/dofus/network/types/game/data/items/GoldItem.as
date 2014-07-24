@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      public function initGoldItem(param1:uint = 0) : GoldItem
+      public function initGoldItem(sum:uint = 0) : GoldItem
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GoldItem(param1:IDataOutput) : void
+      public function serializeAs_GoldItem(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GoldItem(param1:IDataInput) : void
+      public function deserializeAs_GoldItem(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

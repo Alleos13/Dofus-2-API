@@ -55,97 +55,97 @@ package com.ankamagames.dofus.logic.game.common.misc
          //Décompilation abandonné
       }
       
-      public function set kamas(param1:int) : void
+      public function set kamas(value:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function set hiddedKamas(param1:int) : void
+      public function set hiddedKamas(kamas:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function addView(param1:IInventoryView) : void
+      public function addView(view:IInventoryView) : void
       {
          //Décompilation abandonné
       }
       
-      public function getView(param1:String) : IInventoryView
+      public function getView(name:String) : IInventoryView
       {
          //Décompilation abandonné
       }
       
-      public function removeView(param1:String) : void
+      public function removeView(name:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function getItem(param1:int) : ItemWrapper
+      public function getItem(uid:int) : ItemWrapper
       {
          //Décompilation abandonné
       }
       
-      public function getItemMaskCount(param1:int, param2:String) : int
+      public function getItemMaskCount(uid:int, mask:String) : int
       {
          //Décompilation abandonné
       }
       
-      public function initialize(param1:Vector.<ItemWrapper>) : void
+      public function initialize(items:Vector.<ItemWrapper>) : void
       {
          //Décompilation abandonné
       }
       
-      public function initializeFromObjectItems(param1:Vector.<ObjectItem>) : void
+      public function initializeFromObjectItems(items:Vector.<ObjectItem>) : void
       {
          //Décompilation abandonné
       }
       
-      public function addObjectItem(param1:ObjectItem) : void
+      public function addObjectItem(item:ObjectItem) : void
       {
          //Décompilation abandonné
       }
       
-      public function addItem(param1:ItemWrapper) : void
+      public function addItem(item:ItemWrapper) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeItem(param1:int, param2:int = -1) : void
+      public function removeItem(itemUID:int, quantity:int = -1) : void
       {
          //Décompilation abandonné
       }
       
-      public function modifyItemQuantity(param1:int, param2:int) : void
+      public function modifyItemQuantity(itemUID:int, quantity:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function modifyItemPosition(param1:int, param2:int) : void
+      public function modifyItemPosition(itemUID:int, position:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function modifyObjectItem(param1:ObjectItem) : void
+      public function modifyObjectItem(item:ObjectItem) : void
       {
          //Décompilation abandonné
       }
       
-      public function modifyItem(param1:ItemWrapper) : void
+      public function modifyItem(item:ItemWrapper) : void
       {
          //Décompilation abandonné
       }
       
-      public function addItemMask(param1:int, param2:String, param3:int) : void
+      public function addItemMask(objectUID:int, name:String, size:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeItemMask(param1:int, param2:String) : void
+      public function removeItemMask(objectUID:int, name:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeAllItemMasks(param1:String) : void
+      public function removeAllItemMasks(name:String) : void
       {
          //Décompilation abandonné
       }
@@ -160,32 +160,32 @@ package com.ankamagames.dofus.logic.game.common.misc
          //Décompilation abandonné
       }
       
-      public function refillView(param1:String, param2:String) : void
+      public function refillView(from:String, to:String) : void
       {
          //Décompilation abandonné
       }
       
-      protected function addItemToViews(param1:ItemSet) : void
+      protected function addItemToViews(itemSet:ItemSet) : void
       {
          //Décompilation abandonné
       }
       
-      protected function modifyItemFromViews(param1:ItemSet, param2:ItemWrapper) : void
+      protected function modifyItemFromViews(itemSet:ItemSet, oldItem:ItemWrapper) : void
       {
          //Décompilation abandonné
       }
       
-      protected function removeItemFromViews(param1:ItemSet) : void
+      protected function removeItemFromViews(itemSet:ItemSet) : void
       {
          //Décompilation abandonné
       }
       
-      protected function initializeViews(param1:Vector.<ItemWrapper>) : void
+      protected function initializeViews(items:Vector.<ItemWrapper>) : void
       {
          //Décompilation abandonné
       }
       
-      protected function copyItem(param1:ItemWrapper, param2:ItemWrapper) : void
+      protected function copyItem(target:ItemWrapper, source:ItemWrapper) : void
       {
          //Décompilation abandonné
       }
@@ -201,7 +201,7 @@ class ItemSet extends Object
    //Décompilation abandonné
    }
    
-   function ItemSet(param1:ItemWrapper)
+   function ItemSet(iw:ItemWrapper)
    {
       //Décompilation abandonné
    }
@@ -215,7 +215,7 @@ class ItemSet extends Object
       //Décompilation abandonné
    }
    
-   public function set masks(param1:Dictionary) : void
+   public function set masks(value:Dictionary) : void
    {
       //Décompilation abandonné
    }

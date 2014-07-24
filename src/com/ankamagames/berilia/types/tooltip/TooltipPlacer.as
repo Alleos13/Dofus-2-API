@@ -50,37 +50,37 @@ package com.ankamagames.berilia.types.tooltip
          //Décompilation abandonné
       }
       
-      public static function place(param1:DisplayObject, param2:IRectangle, param3:uint = 6, param4:uint = 0, param5:int = 3, param6:Boolean = true) : void
+      public static function place(tooltip:DisplayObject, target:IRectangle, point:uint = 6, relativePoint:uint = 0, offset:int = 3, alwaysDisplayed:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public static function placeWithArrow(param1:DisplayObject, param2:IRectangle) : Object
+      public static function placeWithArrow(tooltip:DisplayObject, target:IRectangle) : Object
       {
          //Décompilation abandonné
       }
       
-      public static function waitBeforeOrder(param1:String) : void
+      public static function waitBeforeOrder(pTooltipId:String) : void
       {
          //Décompilation abandonné
       }
       
-      public static function addTooltipPosition(param1:UiRootContainer, param2:IRectangle, param3:uint) : void
+      public static function addTooltipPosition(pTooltip:UiRootContainer, pTarget:IRectangle, pCellId:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public static function checkRender(param1:Event = null) : void
+      public static function checkRender(pEvent:Event = null) : void
       {
          //Décompilation abandonné
       }
       
-      public static function removeTooltipPosition(param1:UiRootContainer) : void
+      public static function removeTooltipPosition(pTooltip:UiRootContainer) : void
       {
          //Décompilation abandonné
       }
       
-      public static function removeTooltipPositionByName(param1:String) : void
+      public static function removeTooltipPositionByName(pTooltipName:String) : void
       {
          //Décompilation abandonné
       }
@@ -90,32 +90,32 @@ package com.ankamagames.berilia.types.tooltip
          //Décompilation abandonné
       }
       
-      private static function isTooltipSuperposed(param1:TooltipPosition) : Vector.<TooltipPosition>
+      private static function isTooltipSuperposed(pTooltipPosition:TooltipPosition) : Vector.<TooltipPosition>
       {
          //Décompilation abandonné
       }
       
-      private static function compareVerticalPos(param1:TooltipPosition, param2:TooltipPosition) : int
+      private static function compareVerticalPos(pTooltipPosA:TooltipPosition, pTooltipPosB:TooltipPosition) : int
       {
          //Décompilation abandonné
       }
       
-      private static function compareHorizontalPos(param1:TooltipPosition, param2:TooltipPosition) : int
+      private static function compareHorizontalPos(pTooltipPosA:TooltipPosition, pTooltipPosB:TooltipPosition) : int
       {
          //Décompilation abandonné
       }
       
-      private static function hitTest(param1:IRectangle, param2:IRectangle) : int
+      private static function hitTest(item:IRectangle, zone:IRectangle) : int
       {
          //Décompilation abandonné
       }
       
-      private static function processAnchor(param1:Point, param2:IRectangle, param3:uint) : Point
+      private static function processAnchor(p:Point, target:IRectangle, location:uint) : Point
       {
          //Décompilation abandonné
       }
       
-      private static function makeOffset(param1:uint, param2:uint) : Point
+      private static function makeOffset(point:uint, offset:uint) : Point
       {
          //Décompilation abandonné
       }

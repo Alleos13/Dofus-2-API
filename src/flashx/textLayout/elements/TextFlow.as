@@ -23,7 +23,7 @@ package flashx.textLayout.elements
       //Décompilation abandonné
       }
       
-      public function TextFlow(param1:IConfiguration = null)
+      public function TextFlow(config:IConfiguration = null)
       {
          //Décompilation abandonné
       }
@@ -54,12 +54,12 @@ package flashx.textLayout.elements
       
       private var _graphicObjectCount:int;
       
-      private function initializeForConstructor(param1:IConfiguration) : void
+      private function initializeForConstructor(config:IConfiguration) : void
       {
          //Décompilation abandonné
       }
       
-      override public function shallowCopy(param1:int = 0, param2:int = -1) : FlowElement
+      override public function shallowCopy(startPos:int = 0, endPos:int = -1) : FlowElement
       {
          //Décompilation abandonné
       }
@@ -104,7 +104,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set interactionManager(param1:ISelectionManager) : void
+      public function set interactionManager(newInteractionManager:ISelectionManager) : void
       {
          //Décompilation abandonné
       }
@@ -114,12 +114,12 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set flowComposer(param1:IFlowComposer) : void
+      public function set flowComposer(composer:IFlowComposer) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function changeFlowComposer(param1:IFlowComposer, param2:Boolean) : void
+      tlf_internal function changeFlowComposer(newComposer:IFlowComposer, okToUnloadGraphics:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -134,17 +134,17 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function getElementByID(param1:String) : FlowElement
+      public function getElementByID(idName:String) : FlowElement
       {
          //Décompilation abandonné
       }
       
-      public function getElementsByStyleName(param1:String) : Array
+      public function getElementsByStyleName(styleNameValue:String) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getElementsByTypeName(param1:String) : Array
+      public function getElementsByTypeName(typeNameValue:String) : Array
       {
          //Décompilation abandonné
       }
@@ -159,17 +159,17 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override tlf_internal function updateLengths(param1:int, param2:int, param3:Boolean) : void
+      override tlf_internal function updateLengths(startIdx:int, len:int, updateLines:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set mxmlChildren(param1:Array) : void
+      override public function set mxmlChildren(array:Array) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function applyUpdateElements(param1:Boolean) : Boolean
+      tlf_internal function applyUpdateElements(okToUnloadGraphics:Boolean) : Boolean
       {
          //Décompilation abandonné
       }
@@ -179,49 +179,49 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      tlf_internal function damage(param1:int, param2:int, param3:String, param4:Boolean = true) : void
+      tlf_internal function damage(damageStart:int, damageLen:int, damageType:String, needNormalize:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function findAbsoluteParagraph(param1:int) : ParagraphElement
+      tlf_internal function findAbsoluteParagraph(pos:int) : ParagraphElement
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function findAbsoluteFlowGroupElement(param1:int) : FlowGroupElement
+      tlf_internal function findAbsoluteFlowGroupElement(pos:int) : FlowGroupElement
       {
          //Décompilation abandonné
       }
       
-      public function addEventListener(param1:String, param2:Function, param3:Boolean = false, param4:int = 0, param5:Boolean = false) : void
+      public function addEventListener(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function dispatchEvent(param1:Event) : Boolean
+      public function dispatchEvent(event:Event) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function hasEventListener(param1:String) : Boolean
+      public function hasEventListener(type:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function removeEventListener(param1:String, param2:Function, param3:Boolean = false) : void
+      public function removeEventListener(type:String, listener:Function, useCapture:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function willTrigger(param1:String) : Boolean
+      public function willTrigger(type:String) : Boolean
       {
          //Décompilation abandonné
       }
       
       private var _elemsToUpdate:Dictionary;
       
-      tlf_internal function appendOneElementForUpdate(param1:FlowElement) : void
+      tlf_internal function appendOneElementForUpdate(elem:FlowElement) : void
       {
          //Décompilation abandonné
       }
@@ -231,7 +231,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      tlf_internal function processModelChanged(param1:String, param2:Object, param3:int, param4:int, param5:Boolean, param6:Boolean) : void
+      tlf_internal function processModelChanged(changeType:String, elem:Object, changeStart:int, changeLen:int, needNormalize:Boolean, bumpGeneration:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -241,12 +241,12 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      tlf_internal function setGeneration(param1:uint) : void
+      tlf_internal function setGeneration(num:uint) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function processAutoSizeImageLoaded(param1:InlineGraphicElement) : void
+      tlf_internal function processAutoSizeImageLoaded(elem:InlineGraphicElement) : void
       {
          //Décompilation abandonné
       }
@@ -263,7 +263,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set hostFormat(param1:ITextLayoutFormat) : void
+      public function set hostFormat(value:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
@@ -273,7 +273,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      tlf_internal function getTextLayoutFormatStyle(param1:Object) : TextLayoutFormat
+      tlf_internal function getTextLayoutFormatStyle(elem:Object) : TextLayoutFormat
       {
          //Décompilation abandonné
       }
@@ -298,7 +298,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set formatResolver(param1:IFormatResolver) : void
+      public function set formatResolver(val:IFormatResolver) : void
       {
          //Décompilation abandonné
       }
@@ -335,7 +335,7 @@ class HostFormatHelper extends Object
       //Décompilation abandonné
    }
    
-   public function set format(param1:ITextLayoutFormat) : void
+   public function set format(value:ITextLayoutFormat) : void
    {
       //Décompilation abandonné
    }

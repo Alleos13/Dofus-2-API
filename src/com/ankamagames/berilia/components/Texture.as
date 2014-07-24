@@ -106,7 +106,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set finalized(param1:Boolean) : void
+      public function set finalized(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -116,7 +116,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set uri(param1:Uri) : void
+      public function set uri(value:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -126,17 +126,17 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set useCache(param1:Boolean) : void
+      public function set useCache(value:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function set showLoadingError(param1:Boolean) : void
+      public function set showLoadingError(value:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function set disableAnimation(param1:Boolean) : void
+      public function set disableAnimation(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -146,7 +146,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function set height(param1:Number) : void
+      override public function set height(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -156,7 +156,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function set width(param1:Number) : void
+      override public function set width(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -166,7 +166,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set keepRatio(param1:Boolean) : void
+      public function set keepRatio(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -176,7 +176,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function set scale9Grid(param1:Rectangle) : void
+      override public function set scale9Grid(value:Rectangle) : void
       {
          //Décompilation abandonné
       }
@@ -196,12 +196,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set autoGrid(param1:Boolean) : void
+      public function set autoGrid(value:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function set gotoAndStop(param1:*) : void
+      public function set gotoAndStop(value:*) : void
       {
          //Décompilation abandonné
       }
@@ -211,12 +211,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function hasLabel(param1:MovieClip, param2:String) : Boolean
+      private function hasLabel(mv:MovieClip, lbl:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function set gotoAndPlay(param1:*) : void
+      public function set gotoAndPlay(value:*) : void
       {
          //Décompilation abandonné
       }
@@ -236,7 +236,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set dispatchMessages(param1:Boolean) : void
+      public function set dispatchMessages(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -246,7 +246,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set forceReload(param1:Boolean) : void
+      public function set forceReload(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -261,7 +261,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function loadBitmapData(param1:BitmapData) : void
+      public function loadBitmapData(bmpdt:BitmapData) : void
       {
          //Décompilation abandonné
       }
@@ -281,12 +281,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function gotoAndPayChild(param1:uint) : void
+      public function gotoAndPayChild(frameNumber:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function colorTransform(param1:ColorTransform, param2:int = 0) : void
+      public function colorTransform(colorTransform:ColorTransform, depth:int = 0) : void
       {
          //Décompilation abandonné
       }
@@ -296,7 +296,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set roundCornerRadius(param1:uint) : void
+      public function set roundCornerRadius(v:uint) : void
       {
          //Décompilation abandonné
       }
@@ -306,7 +306,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set playOnce(param1:Boolean) : void
+      public function set playOnce(v:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -321,7 +321,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function getChildByName(param1:String) : DisplayObject
+      override public function getChildByName(name:String) : DisplayObject
       {
          //Décompilation abandonné
       }
@@ -348,12 +348,12 @@ package com.ankamagames.berilia.components
       
       private var rle_uri_path;
       
-      private function onLoaded(param1:ResourceLoadedEvent) : void
+      private function onLoaded(rle:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onFailed(param1:ResourceErrorEvent) : void
+      private function onFailed(ree:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }

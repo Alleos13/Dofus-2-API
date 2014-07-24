@@ -12,7 +12,7 @@ package com.ankamagames.atouin.types
       //Décompilation abandonné
       }
       
-      public function AtouinOptions(param1:DisplayObjectContainer, param2:MessageHandler)
+      public function AtouinOptions(docContainer:DisplayObjectContainer, mhHandler:MessageHandler)
       {
          //Décompilation abandonné
       }

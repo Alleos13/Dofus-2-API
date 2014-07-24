@@ -83,12 +83,12 @@ package com.ankamagames.atouin.managers
       
       private static var _m:Matrix;
       
-      public static function saveGroundMap(param1:BitmapData, param2:Map) : void
+      public static function saveGroundMap(ground:BitmapData, map:Map) : void
       {
          //Décompilation abandonné
       }
       
-      public static function loadGroundMap(param1:Map, param2:Function, param3:Function) : int
+      public static function loadGroundMap(map:Map, callBack:Function, errorCallBack:Function) : int
       {
          //Décompilation abandonné
       }
@@ -98,12 +98,12 @@ package com.ankamagames.atouin.managers
          //Décompilation abandonné
       }
       
-      private static function initEncoder(param1:uint) : void
+      private static function initEncoder(qualityEnum:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private static function jpgGenerated(param1:ByteArray, param2:Map) : void
+      private static function jpgGenerated(rawJPG:ByteArray, map:Map) : void
       {
          //Décompilation abandonné
       }

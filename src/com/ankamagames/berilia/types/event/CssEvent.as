@@ -10,7 +10,7 @@ package com.ankamagames.berilia.types.event
       //Décompilation abandonné
       }
       
-      public function CssEvent(param1:String, param2:Boolean = false, param3:Boolean = false, param4:ExtendedStyleSheet = null)
+      public function CssEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, stylesheet:ExtendedStyleSheet = null)
       {
          //Décompilation abandonné
       }

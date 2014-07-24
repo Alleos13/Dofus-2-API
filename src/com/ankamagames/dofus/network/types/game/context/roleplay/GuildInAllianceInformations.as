@@ -30,7 +30,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initGuildInAllianceInformations(param1:uint = 0, param2:String = "", param3:GuildEmblem = null, param4:uint = 0, param5:uint = 0, param6:Boolean = false) : GuildInAllianceInformations
+      public function initGuildInAllianceInformations(guildId:uint = 0, guildName:String = "", guildEmblem:GuildEmblem = null, guildLevel:uint = 0, nbMembers:uint = 0, enabled:Boolean = false) : GuildInAllianceInformations
       {
          //Décompilation abandonné
       }
@@ -40,22 +40,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GuildInAllianceInformations(param1:IDataOutput) : void
+      public function serializeAs_GuildInAllianceInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildInAllianceInformations(param1:IDataInput) : void
+      public function deserializeAs_GuildInAllianceInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

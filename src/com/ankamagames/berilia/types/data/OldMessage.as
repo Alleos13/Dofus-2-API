@@ -9,7 +9,7 @@ package com.ankamagames.berilia.types.data
       //Décompilation abandonné
       }
       
-      public function OldMessage(param1:Hook, param2:Array)
+      public function OldMessage(pHook:Hook, pArgs:Array)
       {
          //Décompilation abandonné
       }

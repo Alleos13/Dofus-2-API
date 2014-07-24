@@ -52,7 +52,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function set id(param1:int) : void
+      public function set id(id:int) : void
       {
          //Décompilation abandonné
       }
@@ -243,7 +243,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function set isPartyLeader(param1:Boolean) : void
+      public function set isPartyLeader(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -268,7 +268,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function set followingPlayerId(param1:int) : void
+      public function set followingPlayerId(pPlayerId:int) : void
       {
          //Décompilation abandonné
       }
@@ -338,7 +338,7 @@ package com.ankamagames.dofus.logic.game.common.managers
          //Décompilation abandonné
       }
       
-      public function levelDiff(param1:uint) : int
+      public function levelDiff(targetLevel:uint) : int
       {
          //Décompilation abandonné
       }

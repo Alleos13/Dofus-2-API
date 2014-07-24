@@ -56,7 +56,7 @@ package com.ankamagames.jerakine.utils.system
          //Décompilation abandonné
       }
       
-      public function notifyUser(param1:Boolean = false) : void
+      public function notifyUser(always:Boolean = false) : void
       {
          //Décompilation abandonné
       }

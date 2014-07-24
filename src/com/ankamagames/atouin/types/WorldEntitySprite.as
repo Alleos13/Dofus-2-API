@@ -11,7 +11,7 @@ package com.ankamagames.atouin.types
       //Décompilation abandonné
       }
       
-      public function WorldEntitySprite(param1:TiphonEntityLook, param2:int, param3:int)
+      public function WorldEntitySprite(look:TiphonEntityLook, cellId:int, identifier:int)
       {
          //Décompilation abandonné
       }

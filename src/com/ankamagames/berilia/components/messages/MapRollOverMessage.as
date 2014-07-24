@@ -9,7 +9,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function MapRollOverMessage(param1:InteractiveObject, param2:int, param3:int)
+      public function MapRollOverMessage(target:InteractiveObject, x:int, y:int)
       {
          //Décompilation abandonné
       }

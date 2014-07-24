@@ -10,7 +10,7 @@ package com.somerandomdude.colortoolkit.schemes
       //Décompilation abandonné
       }
       
-      public function Analogous(param1:int, param2:Number = 10, param3:Number = 25)
+      public function Analogous(primaryColor:int, angle:Number = 10, contrast:Number = 25)
       {
          //Décompilation abandonné
       }
@@ -24,7 +24,7 @@ package com.somerandomdude.colortoolkit.schemes
          //Décompilation abandonné
       }
       
-      public function set angle(param1:Number) : void
+      public function set angle(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -34,7 +34,7 @@ package com.somerandomdude.colortoolkit.schemes
          //Décompilation abandonné
       }
       
-      public function set contrast(param1:Number) : void
+      public function set contrast(value:Number) : void
       {
          //Décompilation abandonné
       }

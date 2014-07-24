@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.game.context.mount
          //Décompilation abandonné
       }
       
-      public function initMountInformationRequestMessage(param1:Number = 0, param2:Number = 0) : MountInformationRequestMessage
+      public function initMountInformationRequestMessage(id:Number = 0, time:Number = 0) : MountInformationRequestMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.game.context.mount
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_MountInformationRequestMessage(param1:IDataOutput) : void
+      public function serializeAs_MountInformationRequestMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_MountInformationRequestMessage(param1:IDataInput) : void
+      public function deserializeAs_MountInformationRequestMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

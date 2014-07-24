@@ -47,7 +47,7 @@ package com.ankamagames.jerakine.sequencer
          //Décompilation abandonné
       }
       
-      public function set timeout(param1:int) : void
+      public function set timeout(value:int) : void
       {
          //Décompilation abandonné
       }
@@ -72,7 +72,7 @@ package com.ankamagames.jerakine.sequencer
          //Décompilation abandonné
       }
       
-      public function addListener(param1:ISequencableListener) : void
+      public function addListener(listener:ISequencableListener) : void
       {
          //Décompilation abandonné
       }
@@ -82,7 +82,7 @@ package com.ankamagames.jerakine.sequencer
          //Décompilation abandonné
       }
       
-      public function removeListener(param1:ISequencableListener) : void
+      public function removeListener(listener:ISequencableListener) : void
       {
          //Décompilation abandonné
       }
@@ -102,7 +102,7 @@ package com.ankamagames.jerakine.sequencer
          //Décompilation abandonné
       }
       
-      public function set castingSpellId(param1:int) : void
+      public function set castingSpellId(val:int) : void
       {
          //Décompilation abandonné
       }
@@ -112,7 +112,7 @@ package com.ankamagames.jerakine.sequencer
          //Décompilation abandonné
       }
       
-      protected function onTimeOut(param1:TimerEvent) : void
+      protected function onTimeOut(e:TimerEvent) : void
       {
          //Décompilation abandonné
       }

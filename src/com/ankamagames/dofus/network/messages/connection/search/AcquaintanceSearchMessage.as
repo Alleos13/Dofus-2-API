@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.connection.search
          //Décompilation abandonné
       }
       
-      public function initAcquaintanceSearchMessage(param1:String = "") : AcquaintanceSearchMessage
+      public function initAcquaintanceSearchMessage(nickname:String = "") : AcquaintanceSearchMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.connection.search
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AcquaintanceSearchMessage(param1:IDataOutput) : void
+      public function serializeAs_AcquaintanceSearchMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AcquaintanceSearchMessage(param1:IDataInput) : void
+      public function deserializeAs_AcquaintanceSearchMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

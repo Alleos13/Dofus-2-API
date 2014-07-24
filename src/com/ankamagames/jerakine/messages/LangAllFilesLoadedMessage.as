@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.messages
       //Décompilation abandonné
       }
       
-      public function LangAllFilesLoadedMessage(param1:String, param2:Boolean)
+      public function LangAllFilesLoadedMessage(sFile:String, bSucces:Boolean)
       {
          //Décompilation abandonné
       }

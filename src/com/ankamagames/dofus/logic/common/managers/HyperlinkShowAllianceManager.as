@@ -21,22 +21,22 @@ package com.ankamagames.dofus.logic.common.managers
          //Décompilation abandonné
       }
       
-      public static function getLink(param1:*, param2:String = null, param3:String = null, param4:String = null) : String
+      public static function getLink(pAlliance:*, pText:String = null, pLinkColor:String = null, pHoverColor:String = null) : String
       {
          //Décompilation abandonné
       }
       
-      public static function showAlliance(... rest) : void
+      public static function showAlliance(... params) : void
       {
          //Décompilation abandonné
       }
       
-      public static function getAllianceName(param1:uint, param2:String) : String
+      public static function getAllianceName(allianceId:uint, allianceTag:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function rollOver(param1:int, param2:int, param3:uint) : void
+      public static function rollOver(pX:int, pY:int, allianceId:uint) : void
       {
          //Décompilation abandonné
       }

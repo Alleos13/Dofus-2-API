@@ -9,12 +9,12 @@ package com.ankamagames.jerakine.pools
       //Décompilation abandonné
       }
       
-      public function PoolablePoint(param1:Number = 0, param2:Number = 0)
+      public function PoolablePoint(x:Number = 0, y:Number = 0)
       {
          //Décompilation abandonné
       }
       
-      public function renew(param1:Number = 0, param2:Number = 0) : Point
+      public function renew(x:Number = 0, y:Number = 0) : Point
       {
          //Décompilation abandonné
       }

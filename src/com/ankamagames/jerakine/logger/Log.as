@@ -41,32 +41,32 @@ package com.ankamagames.jerakine.logger
       
       public static var exitIfNoConfigFile:Boolean = true;
       
-      public static function initFromString(param1:String) : void
+      public static function initFromString(xml:String) : void
       {
          //Décompilation abandonné
       }
       
-      public static function getLogger(param1:String) : Logger
+      public static function getLogger(category:String) : Logger
       {
          //Décompilation abandonné
       }
       
-      public static function addTarget(param1:LoggingTarget) : void
+      public static function addTarget(target:LoggingTarget) : void
       {
          //Décompilation abandonné
       }
       
-      private static function removeTarget(param1:LoggingTarget) : void
+      private static function removeTarget(target:LoggingTarget) : void
       {
          //Décompilation abandonné
       }
       
-      private static function containsTarget(param1:LoggingTarget) : Boolean
+      private static function containsTarget(target:LoggingTarget) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private static function parseConfiguration(param1:XML) : void
+      private static function parseConfiguration(config:XML) : void
       {
          //Décompilation abandonné
       }
@@ -81,22 +81,22 @@ package com.ankamagames.jerakine.logger
          //Décompilation abandonné
       }
       
-      static function broadcastToTargets(param1:LogEvent) : void
+      static function broadcastToTargets(event:LogEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private static function completeHandler(param1:Event) : void
+      private static function completeHandler(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private static function ioErrorHandler(param1:IOErrorEvent) : void
+      private static function ioErrorHandler(ioe:IOErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private static function securityErrorHandler(param1:SecurityErrorEvent) : void
+      private static function securityErrorHandler(se:SecurityErrorEvent) : void
       {
          //Décompilation abandonné
       }

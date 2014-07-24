@@ -9,7 +9,7 @@ package com.ankamagames.dofus.internalDatacenter.communication
       //Décompilation abandonné
       }
       
-      public function BasicChatSentence(param1:uint, param2:String, param3:String, param4:uint = 0, param5:Number = 0, param6:String = "")
+      public function BasicChatSentence(id:uint, baseMsg:String, msg:String, channel:uint = 0, time:Number = 0, finger:String = "")
       {
          //Décompilation abandonné
       }

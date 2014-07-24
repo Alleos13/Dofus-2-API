@@ -134,7 +134,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set text(param1:String) : void
+      public function set text(sValue:String) : void
       {
          //Décompilation abandonné
       }
@@ -144,7 +144,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set htmlText(param1:String) : void
+      public function set htmlText(val:String) : void
       {
          //Décompilation abandonné
       }
@@ -154,7 +154,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set hyperlinkEnabled(param1:Boolean) : void
+      public function set hyperlinkEnabled(bValue:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -164,7 +164,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set useStyleSheet(param1:Boolean) : void
+      public function set useStyleSheet(bValue:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -174,7 +174,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set useCustomFormat(param1:Boolean) : void
+      public function set useCustomFormat(bValue:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -184,7 +184,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set neverIndent(param1:Boolean) : void
+      public function set neverIndent(bValue:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -194,7 +194,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set autoResize(param1:Boolean) : void
+      public function set autoResize(bValue:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -204,7 +204,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set caretIndex(param1:int) : void
+      public function set caretIndex(pos:int) : void
       {
          //Décompilation abandonné
       }
@@ -219,7 +219,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set type(param1:String) : void
+      public function set type(sValue:String) : void
       {
          //Décompilation abandonné
       }
@@ -229,12 +229,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set css(param1:Uri) : void
+      public function set css(sFile:Uri) : void
       {
          //Décompilation abandonné
       }
       
-      public function set cssClass(param1:String) : void
+      public function set cssClass(c:String) : void
       {
          //Décompilation abandonné
       }
@@ -249,7 +249,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set antialias(param1:String) : void
+      public function set antialias(s:String) : void
       {
          //Décompilation abandonné
       }
@@ -259,12 +259,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set thickness(param1:int) : void
+      public function set thickness(value:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function set aStyleObj(param1:Object) : void
+      public function set aStyleObj(value:Object) : void
       {
          //Décompilation abandonné
       }
@@ -279,7 +279,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function set width(param1:Number) : void
+      override public function set width(nValue:Number) : void
       {
          //Décompilation abandonné
       }
@@ -289,7 +289,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      override public function set height(param1:Number) : void
+      override public function set height(nValue:Number) : void
       {
          //Décompilation abandonné
       }
@@ -309,7 +309,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set finalized(param1:Boolean) : void
+      public function set finalized(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -319,12 +319,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set html(param1:Boolean) : void
+      public function set html(bValue:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function set wordWrap(param1:Boolean) : void
+      public function set wordWrap(bWordWrap:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -334,7 +334,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set multiline(param1:Boolean) : void
+      public function set multiline(bMultiline:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -349,7 +349,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set border(param1:Boolean) : void
+      public function set border(bValue:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -359,7 +359,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set fixedWidth(param1:Boolean) : void
+      public function set fixedWidth(bValue:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -369,7 +369,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set useExtendWidth(param1:Boolean) : void
+      public function set useExtendWidth(v:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -379,22 +379,22 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set fixedHeight(param1:Boolean) : void
+      public function set fixedHeight(bValue:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set bgColor(param1:int) : void
+      override public function set bgColor(nColor:int) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set borderColor(param1:int) : void
+      override public function set borderColor(nColor:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function set selectable(param1:Boolean) : void
+      public function set selectable(bValue:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -404,7 +404,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set scrollV(param1:int) : void
+      public function set scrollV(nVal:int) : void
       {
          //Décompilation abandonné
       }
@@ -429,12 +429,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set useEmbedFonts(param1:Boolean) : void
+      public function set useEmbedFonts(b:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set disabled(param1:Boolean) : void
+      override public function set disabled(bool:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -444,7 +444,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set verticalAlign(param1:String) : void
+      public function set verticalAlign(s:String) : void
       {
          //Décompilation abandonné
       }
@@ -454,12 +454,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set textFormat(param1:TextFormat) : void
+      public function set textFormat(tf:TextFormat) : void
       {
          //Décompilation abandonné
       }
       
-      public function set restrict(param1:String) : void
+      public function set restrict(restrictTo:String) : void
       {
          //Décompilation abandonné
       }
@@ -469,37 +469,37 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set colorText(param1:uint) : void
+      public function set colorText(color:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function setCssColor(param1:String, param2:String = null) : void
+      public function setCssColor(color:String, style:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function setCssSize(param1:uint, param2:String = null) : void
+      public function setCssSize(size:uint, style:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function setStyleSheet(param1:StyleSheet) : void
+      public function setStyleSheet(styles:StyleSheet) : void
       {
          //Décompilation abandonné
       }
       
-      public function applyCSS(param1:Uri) : void
+      public function applyCSS(sFile:Uri) : void
       {
          //Décompilation abandonné
       }
       
-      public function setBorderColor(param1:int) : void
+      public function setBorderColor(nColor:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function allowTextMouse(param1:Boolean) : void
+      public function allowTextMouse(bValue:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -519,17 +519,17 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function changeCssClassColor(param1:String, param2:String = null) : void
+      private function changeCssClassColor(color:String, style:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function changeCssClassSize(param1:uint, param2:String = null) : void
+      private function changeCssClassSize(size:uint, style:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function appendText(param1:String, param2:String = null) : void
+      public function appendText(sTxt:String, style:String = null) : void
       {
          //Décompilation abandonné
       }
@@ -549,17 +549,17 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function fullSize(param1:int) : void
+      public function fullSize(width:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function fullWidth(param1:uint = 0) : void
+      public function fullWidth(maxWidth:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function resizeText(param1:Boolean = true) : void
+      public function resizeText(useSizeMin:Boolean = true) : void
       {
          //Décompilation abandonné
       }
@@ -579,7 +579,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function onTextClick(param1:TextEvent) : void
+      private function onTextClick(e:TextEvent) : void
       {
          //Décompilation abandonné
       }
@@ -589,12 +589,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function onTooltipExtensionOver(param1:MouseEvent) : void
+      private function onTooltipExtensionOver(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTooltipExtensionOut(param1:MouseEvent = null) : void
+      private function onTooltipExtensionOut(e:MouseEvent = null) : void
       {
          //Décompilation abandonné
       }

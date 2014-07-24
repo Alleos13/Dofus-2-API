@@ -16,7 +16,7 @@ package com.ankamagames.jerakine.sequencer
       //Décompilation abandonné
       }
       
-      public function SerialSequencer(param1:String = "SerialSequencerDefault")
+      public function SerialSequencer(type:String = "SerialSequencerDefault")
       {
          //Décompilation abandonné
       }
@@ -27,7 +27,7 @@ package com.ankamagames.jerakine.sequencer
       
       private static var SEQUENCERS:Array;
       
-      public static function clearByType(param1:String) : void
+      public static function clearByType(type:String) : void
       {
          //Décompilation abandonné
       }
@@ -73,7 +73,7 @@ package com.ankamagames.jerakine.sequencer
          //Décompilation abandonné
       }
       
-      public function set defaultStepTimeout(param1:int) : void
+      public function set defaultStepTimeout(v:int) : void
       {
          //Décompilation abandonné
       }
@@ -93,12 +93,12 @@ package com.ankamagames.jerakine.sequencer
          //Décompilation abandonné
       }
       
-      public function add(param1:ISequencable) : void
+      public function add(item:ISequencable) : void
       {
          //Décompilation abandonné
       }
       
-      public function addStep(param1:ISequencable) : void
+      public function addStep(item:ISequencable) : void
       {
          //Décompilation abandonné
       }
@@ -123,12 +123,12 @@ package com.ankamagames.jerakine.sequencer
          //Décompilation abandonné
       }
       
-      public function stepFinished(param1:ISequencable, param2:Boolean = false) : void
+      public function stepFinished(step:ISequencable, withTimout:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSubSequenceEnd(param1:SequencerEvent) : void
+      private function onSubSequenceEnd(e:SequencerEvent) : void
       {
          //Décompilation abandonné
       }

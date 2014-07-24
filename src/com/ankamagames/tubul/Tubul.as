@@ -91,7 +91,7 @@ package com.ankamagames.tubul
          //Décompilation abandonné
       }
       
-      public function set earPosition(param1:Point) : void
+      public function set earPosition(pPosition:Point) : void
       {
          //Décompilation abandonné
       }
@@ -111,22 +111,22 @@ package com.ankamagames.tubul
          //Décompilation abandonné
       }
       
-      public function getSoundById(param1:int) : ISound
+      public function getSoundById(pSoundID:int) : ISound
       {
          //Décompilation abandonné
       }
       
-      public function activate(param1:Boolean = true) : void
+      public function activate(bValue:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function setDisplayOptions(param1:TubulOptions) : void
+      public function setDisplayOptions(topt:TubulOptions) : void
       {
          //Décompilation abandonné
       }
       
-      public function addBus(param1:IAudioBus) : void
+      public function addBus(pBus:IAudioBus) : void
       {
          //Décompilation abandonné
       }
@@ -136,12 +136,12 @@ package com.ankamagames.tubul
          //Décompilation abandonné
       }
       
-      public function getBus(param1:uint) : IAudioBus
+      public function getBus(pBusID:uint) : IAudioBus
       {
          //Décompilation abandonné
       }
       
-      public function removeBus(param1:uint) : void
+      public function removeBus(pBusID:uint) : void
       {
          //Décompilation abandonné
       }
@@ -151,27 +151,27 @@ package com.ankamagames.tubul
          //Décompilation abandonné
       }
       
-      public function contains(param1:uint) : Boolean
+      public function contains(pBusID:uint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getLoadedSoundInformations(param1:Uri) : LoadedSoundInformations
+      public function getLoadedSoundInformations(pSoundUri:Uri) : LoadedSoundInformations
       {
          //Décompilation abandonné
       }
       
-      public function setLoadedSoundInformations(param1:Uri, param2:LoadedSoundInformations) : void
+      public function setLoadedSoundInformations(pSoundUri:Uri, pInfo:LoadedSoundInformations) : void
       {
          //Décompilation abandonné
       }
       
-      public function addListener(param1:ILocalizedSoundListener) : void
+      public function addListener(pListener:ILocalizedSoundListener) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeListener(param1:ILocalizedSoundListener) : void
+      public function removeListener(pListener:ILocalizedSoundListener) : void
       {
          //Décompilation abandonné
       }
@@ -186,7 +186,7 @@ package com.ankamagames.tubul
          //Décompilation abandonné
       }
       
-      private function retriveRollOffPresets(param1:XML) : void
+      private function retriveRollOffPresets(pXMLPreset:XML) : void
       {
          //Décompilation abandonné
       }
@@ -196,32 +196,32 @@ package com.ankamagames.tubul
          //Décompilation abandonné
       }
       
-      private function setVolumeToBus(param1:int, param2:uint) : void
+      private function setVolumeToBus(pBusId:int, pVolume:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTimerEnd(param1:TimerEvent) : void
+      private function onTimerEnd(pEvent:TimerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onXMLSoundsLoaded(param1:ResourceLoadedEvent) : void
+      private function onXMLSoundsLoaded(pEvent:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onXMLSoundsFailed(param1:ResourceErrorEvent) : void
+      private function onXMLSoundsFailed(pEvent:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onRemoveSoundInBus(param1:AudioBusEvent) : void
+      private function onRemoveSoundInBus(pEvent:AudioBusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onPropertyChanged(param1:PropertyChangeEvent) : void
+      private function onPropertyChanged(e:PropertyChangeEvent) : void
       {
          //Décompilation abandonné
       }

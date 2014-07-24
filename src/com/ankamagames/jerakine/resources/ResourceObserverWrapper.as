@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.resources
       //Décompilation abandonné
       }
       
-      public function ResourceObserverWrapper(param1:Function = null, param2:Function = null, param3:Function = null)
+      public function ResourceObserverWrapper(onLoadedCallback:Function = null, onFailedCallback:Function = null, onProgressCallback:Function = null)
       {
          //Décompilation abandonné
       }
@@ -20,17 +20,17 @@ package com.ankamagames.jerakine.resources
       
       private var _onProgressCallback:Function;
       
-      public function onLoaded(param1:Uri, param2:uint, param3:*) : void
+      public function onLoaded(uri:Uri, resourceType:uint, resource:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function onFailed(param1:Uri, param2:String, param3:uint) : void
+      public function onFailed(uri:Uri, errorMsg:String, errorCode:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function onProgress(param1:Uri, param2:uint, param3:uint) : void
+      public function onProgress(uri:Uri, bytesLoaded:uint, bytesTotal:uint) : void
       {
          //Décompilation abandonné
       }

@@ -14,7 +14,7 @@ package org.flintparticles.twoD.initializers
       //Décompilation abandonné
       }
       
-      public function Position(param1:Zone2D)
+      public function Position(zone:Zone2D)
       {
          //Décompilation abandonné
       }
@@ -26,12 +26,12 @@ package org.flintparticles.twoD.initializers
          //Décompilation abandonné
       }
       
-      public function set zone(param1:Zone2D) : void
+      public function set zone(value:Zone2D) : void
       {
          //Décompilation abandonné
       }
       
-      override public function initialize(param1:Emitter, param2:Particle) : void
+      override public function initialize(emitter:Emitter, particle:Particle) : void
       {
          //Décompilation abandonné
       }

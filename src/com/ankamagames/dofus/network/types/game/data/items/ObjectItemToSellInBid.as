@@ -26,7 +26,7 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      public function initObjectItemToSellInBid(param1:uint = 0, param2:Vector.<ObjectEffect> = null, param3:uint = 0, param4:uint = 0, param5:uint = 0, param6:uint = 0) : ObjectItemToSellInBid
+      public function initObjectItemToSellInBid(objectGID:uint = 0, effects:Vector.<ObjectEffect> = null, objectUID:uint = 0, quantity:uint = 0, objectPrice:uint = 0, unsoldDelay:uint = 0) : ObjectItemToSellInBid
       {
          //Décompilation abandonné
       }
@@ -36,22 +36,22 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectItemToSellInBid(param1:IDataOutput) : void
+      public function serializeAs_ObjectItemToSellInBid(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectItemToSellInBid(param1:IDataInput) : void
+      public function deserializeAs_ObjectItemToSellInBid(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -16,7 +16,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function getModifiedSkin(param1:Skin, param2:String, param3:TiphonEntityLook) : String
+      public function getModifiedSkin(skin:Skin, requestedPart:String, look:TiphonEntityLook) : String
       {
          //Décompilation abandonné
       }

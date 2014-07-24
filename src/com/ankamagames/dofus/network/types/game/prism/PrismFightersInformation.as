@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.types.game.prism
          //Décompilation abandonné
       }
       
-      public function initPrismFightersInformation(param1:uint = 0, param2:ProtectedEntityWaitingForHelpInfo = null, param3:Vector.<CharacterMinimalPlusLookInformations> = null, param4:Vector.<CharacterMinimalPlusLookInformations> = null) : PrismFightersInformation
+      public function initPrismFightersInformation(subAreaId:uint = 0, waitingForHelpInfo:ProtectedEntityWaitingForHelpInfo = null, allyCharactersInformations:Vector.<CharacterMinimalPlusLookInformations> = null, enemyCharactersInformations:Vector.<CharacterMinimalPlusLookInformations> = null) : PrismFightersInformation
       {
          //Décompilation abandonné
       }
@@ -44,22 +44,22 @@ package com.ankamagames.dofus.network.types.game.prism
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PrismFightersInformation(param1:IDataOutput) : void
+      public function serializeAs_PrismFightersInformation(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PrismFightersInformation(param1:IDataInput) : void
+      public function deserializeAs_PrismFightersInformation(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

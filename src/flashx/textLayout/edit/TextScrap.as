@@ -15,14 +15,14 @@ package flashx.textLayout.edit
       //Décompilation abandonné
       }
       
-      public function TextScrap(param1:TextFlow = null)
+      public function TextScrap(textFlow:TextFlow = null)
       {
          //Décompilation abandonné
       }
       
       tlf_internal  static const MERGE_TO_NEXT_ON_PASTE:String = "mergeToNextOnPaste";
       
-      public static function createTextScrap(param1:TextRange) : TextScrap
+      public static function createTextScrap(range:TextRange) : TextScrap
       {
          //Décompilation abandonné
       }
@@ -41,7 +41,7 @@ package flashx.textLayout.edit
          //Décompilation abandonné
       }
       
-      tlf_internal function setPlainText(param1:Boolean) : void
+      tlf_internal function setPlainText(plainText:Boolean) : void
       {
          //Décompilation abandonné
       }

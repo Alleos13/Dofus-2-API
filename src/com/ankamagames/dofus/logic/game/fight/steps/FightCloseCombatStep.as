@@ -16,7 +16,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightCloseCombatStep(param1:int, param2:uint, param3:uint)
+      public function FightCloseCombatStep(fighterId:int, weaponId:uint, critical:uint)
       {
          //Décompilation abandonné
       }

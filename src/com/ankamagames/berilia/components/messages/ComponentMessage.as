@@ -16,7 +16,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function ComponentMessage(param1:InteractiveObject)
+      public function ComponentMessage(target:InteractiveObject)
       {
          //Décompilation abandonné
       }
@@ -41,7 +41,7 @@ package com.ankamagames.berilia.components.messages
          //Décompilation abandonné
       }
       
-      public function set canceled(param1:Boolean) : void
+      public function set canceled(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -51,7 +51,7 @@ package com.ankamagames.berilia.components.messages
          //Décompilation abandonné
       }
       
-      public function addAction(param1:Action) : void
+      public function addAction(action:Action) : void
       {
          //Décompilation abandonné
       }

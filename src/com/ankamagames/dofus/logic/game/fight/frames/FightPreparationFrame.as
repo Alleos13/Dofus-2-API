@@ -58,7 +58,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
       //Décompilation abandonné
       }
       
-      public function FightPreparationFrame(param1:FightContextFrame)
+      public function FightPreparationFrame(fightContextFrame:FightContextFrame)
       {
          //Décompilation abandonné
       }
@@ -91,7 +91,7 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -106,12 +106,12 @@ package com.ankamagames.dofus.logic.game.fight.frames
          //Décompilation abandonné
       }
       
-      private function displayZone(param1:String, param2:Vector.<uint>, param3:Color) : void
+      private function displayZone(name:String, cells:Vector.<uint>, color:Color) : void
       {
          //Décompilation abandonné
       }
       
-      private function isValidPlacementCell(param1:uint, param2:uint) : Boolean
+      private function isValidPlacementCell(cellId:uint, team:uint) : Boolean
       {
          //Décompilation abandonné
       }

@@ -26,7 +26,7 @@ package com.ankamagames.dofus.datacenter.world
       
       private static var _allAreas:Array;
       
-      public static function getAreaById(param1:int) : Area
+      public static function getAreaById(id:int) : Area
       {
          //Décompilation abandonné
       }

@@ -92,67 +92,67 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      public function getShortcutString(param1:uint, param2:uint) : String
+      public function getShortcutString(nKeyCode:uint, nCharCode:uint) : String
       {
          //Décompilation abandonné
       }
       
-      public function getBind(param1:Bind, param2:Boolean = false) : Bind
+      public function getBind(s:Bind, returnDisabled:Boolean = false) : Bind
       {
          //Décompilation abandonné
       }
       
-      public function isRegister(param1:Bind) : Boolean
+      public function isRegister(s:Bind) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function isPermanent(param1:Bind) : Boolean
+      public function isPermanent(s:Bind) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function isDisabled(param1:Bind) : Boolean
+      public function isDisabled(s:Bind) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function setDisabled(param1:Bind, param2:Boolean) : void
+      public function setDisabled(s:Bind, disabled:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function isRegisteredName(param1:String) : Boolean
+      public function isRegisteredName(s:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function canBind(param1:Bind) : Boolean
+      public function canBind(s:Bind) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function removeBind(param1:Bind) : void
+      public function removeBind(b:Bind) : void
       {
          //Décompilation abandonné
       }
       
-      public function addBind(param1:Bind) : void
+      public function addBind(bind:Bind) : void
       {
          //Décompilation abandonné
       }
       
-      public function isRegisteredShortcut(param1:Bind, param2:Boolean = false) : Boolean
+      public function isRegisteredShortcut(s:Bind, disableGenericBind:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getBindFromShortcut(param1:String, param2:Boolean = false) : Bind
+      public function getBindFromShortcut(shorcutName:String, returnDisabled:Boolean = false) : Bind
       {
          //Décompilation abandonné
       }
       
-      public function processCallback(param1:*, ... rest) : void
+      public function processCallback(o:*, ... args) : void
       {
          //Décompilation abandonné
       }
@@ -162,17 +162,17 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      public function changeKeyboard(param1:String, param2:Boolean = false) : void
+      public function changeKeyboard(locale:String, removeOldBind:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function getRegisteredBind(param1:Bind) : Bind
+      public function getRegisteredBind(s:Bind) : Bind
       {
          //Décompilation abandonné
       }
       
-      public function newShortcut(param1:Shortcut) : void
+      public function newShortcut(shortcut:Shortcut) : void
       {
          //Décompilation abandonné
       }
@@ -187,27 +187,27 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      private function parseBindsXml(param1:String, param2:Boolean) : void
+      private function parseBindsXml(sXml:String, removeOldbinds:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function objectLoaded(param1:ResourceLoadedEvent) : void
+      public function objectLoaded(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function keyboardFileLoaded(param1:ResourceLoadedEvent) : void
+      public function keyboardFileLoaded(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function keyboardFileAllLoaded(param1:ResourceLoaderProgressEvent) : void
+      public function keyboardFileAllLoaded(e:ResourceLoaderProgressEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function objectLoadedFailed(param1:ResourceErrorEvent) : void
+      public function objectLoadedFailed(e:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }

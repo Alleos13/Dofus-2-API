@@ -1,8 +1,8 @@
 package flashx.textLayout.elements
 {
    import flash.text.engine.TabStop;
-   import flashx.textLayout.formats.TextAlign;
    import flashx.textLayout.tlf_internal;
+   import flashx.textLayout.formats.TextAlign;
    import flash.text.engine.TextBaseline;
    import flashx.textLayout.formats.LeadingModel;
    import flash.text.engine.TextBlock;
@@ -53,12 +53,12 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      tlf_internal  static function getLeadingBasis(param1:String) : String
+      tlf_internal  static function getLeadingBasis(leadingModel:String) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function useUpLeadingDirection(param1:String) : Boolean
+      tlf_internal  static function useUpLeadingDirection(leadingModel:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -97,7 +97,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override tlf_internal function removeBlockElement(param1:FlowElement, param2:ContentElement) : void
+      override tlf_internal function removeBlockElement(child:FlowElement, block:ContentElement) : void
       {
          //Décompilation abandonné
       }
@@ -112,7 +112,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override tlf_internal function insertBlockElement(param1:FlowElement, param2:ContentElement) : void
+      override tlf_internal function insertBlockElement(child:FlowElement, block:ContentElement) : void
       {
          //Décompilation abandonné
       }
@@ -127,7 +127,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override public function replaceChildren(param1:int, param2:int, ... rest) : void
+      override public function replaceChildren(beginChildIndex:int, endChildIndex:int, ... rest) : void
       {
          //Décompilation abandonné
       }
@@ -137,17 +137,17 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      tlf_internal function updateTerminatorSpan(param1:SpanElement, param2:SpanElement) : void
+      tlf_internal function updateTerminatorSpan(splitSpan:SpanElement, followingSpan:SpanElement) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set mxmlChildren(param1:Array) : void
+      override public function set mxmlChildren(array:Array) : void
       {
          //Décompilation abandonné
       }
       
-      override public function getText(param1:int = 0, param2:int = -1, param3:String = "\n") : String
+      override public function getText(relativeStart:int = 0, relativeEnd:int = -1, paragraphSeparator:String = "\n") : String
       {
          //Décompilation abandonné
       }
@@ -162,27 +162,27 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function findPreviousAtomBoundary(param1:int) : int
+      public function findPreviousAtomBoundary(relativePosition:int) : int
       {
          //Décompilation abandonné
       }
       
-      public function findNextAtomBoundary(param1:int) : int
+      public function findNextAtomBoundary(relativePosition:int) : int
       {
          //Décompilation abandonné
       }
       
-      override public function getCharAtPosition(param1:int) : String
+      override public function getCharAtPosition(relativePosition:int) : String
       {
          //Décompilation abandonné
       }
       
-      public function findPreviousWordBoundary(param1:int) : int
+      public function findPreviousWordBoundary(relativePosition:int) : int
       {
          //Décompilation abandonné
       }
       
-      public function findNextWordBoundary(param1:int) : int
+      public function findNextWordBoundary(relativePosition:int) : int
       {
          //Décompilation abandonné
       }
@@ -197,12 +197,12 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override tlf_internal function canOwnFlowElement(param1:FlowElement) : Boolean
+      override tlf_internal function canOwnFlowElement(elem:FlowElement) : Boolean
       {
          //Décompilation abandonné
       }
       
-      override tlf_internal function normalizeRange(param1:uint, param2:uint) : void
+      override tlf_internal function normalizeRange(normalizeStart:uint, normalizeEnd:uint) : void
       {
          //Décompilation abandonné
       }

@@ -7,6 +7,6 @@ package com.ankamagames.jerakine.interfaces
       //Décompilation abandonné
       }
       
-      function getObject(param1:Object) : *;
+      function getObject(accessKey:Object) : *;
    }
 }

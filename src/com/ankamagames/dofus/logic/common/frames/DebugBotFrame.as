@@ -90,7 +90,7 @@ package com.ankamagames.dofus.logic.common.frames
       
       private var _changeMap:Boolean = true;
       
-      public function enableChatMessagesBot(param1:Boolean, param2:int = 500) : void
+      public function enableChatMessagesBot(val:Boolean, time:int = 500) : void
       {
          //Décompilation abandonné
       }
@@ -115,7 +115,7 @@ package com.ankamagames.dofus.logic.common.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -125,12 +125,12 @@ package com.ankamagames.dofus.logic.common.frames
          //Décompilation abandonné
       }
       
-      private function onAction(param1:Event) : void
+      private function onAction(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function join(param1:String) : void
+      private function join(name:String) : void
       {
          //Décompilation abandonné
       }
@@ -150,7 +150,7 @@ package com.ankamagames.dofus.logic.common.frames
          //Décompilation abandonné
       }
       
-      private function randomOver(... rest) : void
+      private function randomOver(... foo) : void
       {
          //Décompilation abandonné
       }
@@ -159,7 +159,7 @@ package com.ankamagames.dofus.logic.common.frames
       
       private var limit:int = 100;
       
-      private function sendChatMessage(param1:TimerEvent) : void
+      private function sendChatMessage(pEvt:TimerEvent) : void
       {
          //Décompilation abandonné
       }

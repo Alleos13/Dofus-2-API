@@ -10,7 +10,7 @@ package com.ankamagames.jerakine.network.messages
       //Décompilation abandonné
       }
       
-      public function ExpectedSocketClosureMessage(param1:uint = 0)
+      public function ExpectedSocketClosureMessage(reason:uint = 0)
       {
          //Décompilation abandonné
       }

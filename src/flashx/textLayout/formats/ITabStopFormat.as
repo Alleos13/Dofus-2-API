@@ -7,7 +7,7 @@ package flashx.textLayout.formats
       //Décompilation abandonné
       }
       
-      function getStyle(param1:String) : *;
+      function getStyle(styleName:String) : *;
       
       function get position() : *;
       

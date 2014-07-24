@@ -23,17 +23,17 @@ package com.ankamagames.dofus.internalDatacenter.mount
       
       private static var _dictionary_cache:Dictionary;
       
-      public static function makeMountData(param1:MountClientData, param2:Boolean = true, param3:uint = 0) : MountData
+      public static function makeMountData(o:MountClientData, cache:Boolean = true, xpRatio:uint = 0) : MountData
       {
          //Décompilation abandonné
       }
       
-      public static function getMountFromCache(param1:uint) : MountData
+      public static function getMountFromCache(id:uint) : MountData
       {
          //Décompilation abandonné
       }
       
-      private static function makeParent(param1:Vector.<uint>, param2:uint, param3:int, param4:uint) : Object
+      private static function makeParent(ancestor:Vector.<uint>, generation:uint, start:int, index:uint) : Object
       {
          //Décompilation abandonné
       }

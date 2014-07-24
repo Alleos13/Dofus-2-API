@@ -34,27 +34,27 @@ package com.ankamagames.tiphon.engine
          //Décompilation abandonné
       }
       
-      public static function addOldScriptedAnimation(param1:ScriptedAnimation, param2:Boolean = false) : void
+      public static function addOldScriptedAnimation(scriptedAnimation:ScriptedAnimation, destroyNow:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private static function onTiphonGarbageCollector(param1:Event) : void
+      private static function onTiphonGarbageCollector(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private static function destroyScriptedAnimation(param1:ScriptedAnimation) : void
+      private static function destroyScriptedAnimation(scriptedAnimation:ScriptedAnimation) : void
       {
          //Décompilation abandonné
       }
       
-      private static function eraseMovieClip(param1:MovieClip) : void
+      private static function eraseMovieClip(clip:MovieClip) : void
       {
          //Décompilation abandonné
       }
       
-      private static function eraseFrame(param1:DisplayObjectContainer) : void
+      private static function eraseFrame(clip:DisplayObjectContainer) : void
       {
          //Décompilation abandonné
       }

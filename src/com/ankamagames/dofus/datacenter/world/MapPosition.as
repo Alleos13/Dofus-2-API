@@ -57,7 +57,7 @@ package com.ankamagames.dofus.datacenter.world
       
       private static var _mapPositions:Dictionary;
       
-      public static function getMapPositionById(param1:int) : MapPosition
+      public static function getMapPositionById(id:int) : MapPosition
       {
          //Décompilation abandonné
       }
@@ -67,7 +67,7 @@ package com.ankamagames.dofus.datacenter.world
          //Décompilation abandonné
       }
       
-      public static function getMapIdByCoord(param1:int, param2:int) : Vector.<int>
+      public static function getMapIdByCoord(x:int, y:int) : Vector.<int>
       {
          //Décompilation abandonné
       }

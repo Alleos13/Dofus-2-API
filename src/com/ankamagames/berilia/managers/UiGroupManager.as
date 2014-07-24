@@ -33,17 +33,17 @@ package com.ankamagames.berilia.managers
       
       private var _uis:Array;
       
-      public function registerGroup(param1:UiGroup) : void
+      public function registerGroup(g:UiGroup) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeGroup(param1:String) : void
+      public function removeGroup(name:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function getGroup(param1:String) : UiGroup
+      public function getGroup(name:String) : UiGroup
       {
          //Décompilation abandonné
       }
@@ -53,7 +53,7 @@ package com.ankamagames.berilia.managers
          //Décompilation abandonné
       }
       
-      private function onUiRenderAsk(param1:UiRenderAskEvent) : void
+      private function onUiRenderAsk(e:UiRenderAskEvent) : void
       {
          //Décompilation abandonné
       }

@@ -36,7 +36,7 @@ package com.ankamagames.dofus.network.messages.game.alliance
          //Décompilation abandonné
       }
       
-      public function initAllianceModificationNameAndTagValidMessage(param1:String = "", param2:String = "") : AllianceModificationNameAndTagValidMessage
+      public function initAllianceModificationNameAndTagValidMessage(allianceName:String = "", allianceTag:String = "") : AllianceModificationNameAndTagValidMessage
       {
          //Décompilation abandonné
       }
@@ -46,32 +46,32 @@ package com.ankamagames.dofus.network.messages.game.alliance
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AllianceModificationNameAndTagValidMessage(param1:IDataOutput) : void
+      public function serializeAs_AllianceModificationNameAndTagValidMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AllianceModificationNameAndTagValidMessage(param1:IDataInput) : void
+      public function deserializeAs_AllianceModificationNameAndTagValidMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

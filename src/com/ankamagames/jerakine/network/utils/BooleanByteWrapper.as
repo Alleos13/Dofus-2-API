@@ -12,12 +12,12 @@ package com.ankamagames.jerakine.network.utils
          //Décompilation abandonné
       }
       
-      public static function setFlag(param1:uint, param2:uint, param3:Boolean) : uint
+      public static function setFlag(a:uint, pos:uint, b:Boolean) : uint
       {
          //Décompilation abandonné
       }
       
-      public static function getFlag(param1:uint, param2:uint) : Boolean
+      public static function getFlag(a:uint, pos:uint) : Boolean
       {
          //Décompilation abandonné
       }

@@ -43,7 +43,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      public function initPartyGuestInformations(param1:uint = 0, param2:uint = 0, param3:String = "", param4:EntityLook = null, param5:int = 0, param6:Boolean = false, param7:PlayerStatus = null, param8:Vector.<PartyCompanionBaseInformations> = null) : PartyGuestInformations
+      public function initPartyGuestInformations(guestId:uint = 0, hostId:uint = 0, name:String = "", guestLook:EntityLook = null, breed:int = 0, sex:Boolean = false, status:PlayerStatus = null, companions:Vector.<PartyCompanionBaseInformations> = null) : PartyGuestInformations
       {
          //Décompilation abandonné
       }
@@ -53,22 +53,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.party
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PartyGuestInformations(param1:IDataOutput) : void
+      public function serializeAs_PartyGuestInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PartyGuestInformations(param1:IDataInput) : void
+      public function deserializeAs_PartyGuestInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

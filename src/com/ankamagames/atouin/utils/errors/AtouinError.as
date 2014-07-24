@@ -7,7 +7,7 @@ package com.ankamagames.atouin.utils.errors
       //Décompilation abandonné
       }
       
-      public function AtouinError(param1:String = "", param2:uint = 0)
+      public function AtouinError(message:String = "", id:uint = 0)
       {
          //Décompilation abandonné
       }

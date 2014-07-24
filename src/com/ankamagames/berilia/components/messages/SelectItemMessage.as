@@ -9,7 +9,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function SelectItemMessage(param1:InteractiveObject, param2:uint = 7, param3:Boolean = true)
+      public function SelectItemMessage(target:InteractiveObject, selectMethod:uint = 7, isNewSelection:Boolean = true)
       {
          //Décompilation abandonné
       }

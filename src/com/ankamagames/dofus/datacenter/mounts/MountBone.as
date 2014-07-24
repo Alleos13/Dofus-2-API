@@ -24,7 +24,7 @@ package com.ankamagames.dofus.datacenter.mounts
          //Décompilation abandonné
       }
       
-      public static function getMountBoneById(param1:uint) : MountBone
+      public static function getMountBoneById(id:uint) : MountBone
       {
          //Décompilation abandonné
       }

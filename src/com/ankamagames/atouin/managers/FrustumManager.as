@@ -64,12 +64,12 @@ package com.ankamagames.atouin.managers
       
       private var _enable:Boolean;
       
-      public function init(param1:DisplayObjectContainer) : void
+      public function init(frustumContainer:DisplayObjectContainer) : void
       {
          //Décompilation abandonné
       }
       
-      public function setBorderInteraction(param1:Boolean) : void
+      public function setBorderInteraction(enable:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -79,52 +79,52 @@ package com.ankamagames.atouin.managers
          //Décompilation abandonné
       }
       
-      public function getShape(param1:int) : Sprite
+      public function getShape(direction:int) : Sprite
       {
          //Décompilation abandonné
       }
       
-      public function set frustum(param1:Frustum) : void
+      public function set frustum(rFrustum:Frustum) : void
       {
          //Décompilation abandonné
       }
       
-      private function drawShape(param1:uint, param2:Vector.<int>, param3:Vector.<Number>) : Bitmap
+      private function drawShape(pColor:uint, pCommands:Vector.<int>, pCoords:Vector.<Number>) : Bitmap
       {
          //Décompilation abandonné
       }
       
-      private function click(param1:MouseEvent) : void
+      private function click(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function findCustomNearestCell(param1:Sprite, param2:Point = null) : Object
+      private function findCustomNearestCell(target:Sprite, localMousePosition:Point = null) : Object
       {
          //Décompilation abandonné
       }
       
-      private function findNearestCell(param1:Sprite, param2:Point = null) : Object
+      private function findNearestCell(target:Sprite, localMousePosition:Point = null) : Object
       {
          //Décompilation abandonné
       }
       
-      private function sendClickAdjacentMsg(param1:uint, param2:uint) : void
+      private function sendClickAdjacentMsg(mapId:uint, cellId:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function sendCellClickMsg(param1:uint, param2:uint) : void
+      private function sendCellClickMsg(mapId:uint, cellId:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function out(param1:MouseEvent) : void
+      private function out(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function mouseMove(param1:MouseEvent) : void
+      private function mouseMove(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }

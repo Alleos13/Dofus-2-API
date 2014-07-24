@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.paddock
          //Décompilation abandonné
       }
       
-      public function initPaddockItem(param1:uint = 0, param2:uint = 0, param3:ItemDurability = null) : PaddockItem
+      public function initPaddockItem(cellId:uint = 0, objectGID:uint = 0, durability:ItemDurability = null) : PaddockItem
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.paddock
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PaddockItem(param1:IDataOutput) : void
+      public function serializeAs_PaddockItem(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PaddockItem(param1:IDataInput) : void
+      public function deserializeAs_PaddockItem(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -10,7 +10,7 @@ package com.hurlant.util.der
       //Décompilation abandonné
       }
       
-      public function ByteString(param1:uint = 4, param2:uint = 0)
+      public function ByteString(type:uint = 4, length:uint = 0)
       {
          //Décompilation abandonné
       }

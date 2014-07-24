@@ -43,17 +43,17 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      tlf_internal  static function resolveDomBaseline(param1:ITextLayoutFormat, param2:ParagraphElement) : String
+      tlf_internal  static function resolveDomBaseline(computedFormat:ITextLayoutFormat, para:ParagraphElement) : String
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function computeElementFormatHelper(param1:ITextLayoutFormat, param2:ParagraphElement, param3:ISWFContext) : ElementFormat
+      tlf_internal  static function computeElementFormatHelper(computedFormat:ITextLayoutFormat, para:ParagraphElement, swfContext:ISWFContext) : ElementFormat
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function getCSSInlineBoxHelper(param1:ITextLayoutFormat, param2:FontMetrics, param3:TextLine, param4:ParagraphElement = null) : Rectangle
+      tlf_internal  static function getCSSInlineBoxHelper(computedFormat:ITextLayoutFormat, metrics:FontMetrics, textLine:TextLine, para:ParagraphElement = null) : Rectangle
       {
          //Décompilation abandonné
       }
@@ -96,7 +96,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override tlf_internal function appendElementsForDelayedUpdate(param1:TextFlow, param2:String) : void
+      override tlf_internal function appendElementsForDelayedUpdate(tf:TextFlow, changeType:String) : void
       {
          //Décompilation abandonné
       }
@@ -111,32 +111,32 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override tlf_internal function setParentAndRelativeStart(param1:FlowGroupElement, param2:int) : void
+      override tlf_internal function setParentAndRelativeStart(newParent:FlowGroupElement, newStart:int) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function quickInitializeForSplit(param1:FlowLeafElement, param2:int, param3:TextElement) : void
+      tlf_internal function quickInitializeForSplit(sibling:FlowLeafElement, newSpanLength:int, newSpanTextElement:TextElement) : void
       {
          //Décompilation abandonné
       }
       
-      public function getNextLeaf(param1:FlowGroupElement = null) : FlowLeafElement
+      public function getNextLeaf(limitElement:FlowGroupElement = null) : FlowLeafElement
       {
          //Décompilation abandonné
       }
       
-      public function getPreviousLeaf(param1:FlowGroupElement = null) : FlowLeafElement
+      public function getPreviousLeaf(limitElement:FlowGroupElement = null) : FlowLeafElement
       {
          //Décompilation abandonné
       }
       
-      override public function getCharAtPosition(param1:int) : String
+      override public function getCharAtPosition(relativePosition:int) : String
       {
          //Décompilation abandonné
       }
       
-      override tlf_internal function normalizeRange(param1:uint, param2:uint) : void
+      override tlf_internal function normalizeRange(normalizeStart:uint, normalizeEnd:uint) : void
       {
          //Décompilation abandonné
       }
@@ -156,12 +156,12 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      tlf_internal function getEffectiveLineHeight(param1:String) : Number
+      tlf_internal function getEffectiveLineHeight(blockProgression:String) : Number
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function getCSSInlineBox(param1:String, param2:TextLine, param3:ParagraphElement = null, param4:ISWFContext = null) : Rectangle
+      tlf_internal function getCSSInlineBox(blockProgression:String, textLine:TextLine, para:ParagraphElement = null, swfContext:ISWFContext = null) : Rectangle
       {
          //Décompilation abandonné
       }
@@ -171,37 +171,37 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      tlf_internal function getSpanBoundsOnLine(param1:TextLine, param2:String) : Array
+      tlf_internal function getSpanBoundsOnLine(textLine:TextLine, blockProgression:String) : Array
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function updateIMEAdornments(param1:TextLine, param2:String, param3:String) : void
+      tlf_internal function updateIMEAdornments(tLine:TextLine, blockProgression:String, imeStatus:String) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function updateAdornments(param1:TextLine, param2:String) : int
+      tlf_internal function updateAdornments(tLine:TextLine, blockProgression:String) : int
       {
          //Décompilation abandonné
       }
       
-      private function updateAdornmentsOnBounds(param1:TextLine, param2:String, param3:Rectangle) : void
+      private function updateAdornmentsOnBounds(tLine:TextLine, blockProgression:String, spanBounds:Rectangle) : void
       {
          //Décompilation abandonné
       }
       
-      private function addBackgroundRect(param1:TextLine, param2:FontMetrics, param3:Rectangle, param4:Boolean, param5:Boolean = false) : void
+      private function addBackgroundRect(tLine:TextLine, metrics:FontMetrics, spanBounds:Rectangle, horizontalText:Boolean, isTCY:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function calculateStrikeThrough(param1:TextLine, param2:String, param3:FontMetrics) : Number
+      tlf_internal function calculateStrikeThrough(textLine:TextLine, blockProgression:String, metrics:FontMetrics) : Number
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function calculateUnderlineOffset(param1:Number, param2:String, param3:FontMetrics, param4:TextLine) : Number
+      tlf_internal function calculateUnderlineOffset(stOffset:Number, blockProgression:String, metrics:FontMetrics, textLine:TextLine) : Number
       {
          //Décompilation abandonné
       }

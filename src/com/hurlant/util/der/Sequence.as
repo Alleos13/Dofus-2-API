@@ -9,7 +9,7 @@ package com.hurlant.util.der
       //Décompilation abandonné
       }
       
-      public function Sequence(param1:uint = 48, param2:uint = 0)
+      public function Sequence(type:uint = 48, length:uint = 0)
       {
          //Décompilation abandonné
       }
@@ -38,7 +38,7 @@ package com.hurlant.util.der
          //Décompilation abandonné
       }
       
-      public function findAttributeValue(param1:String) : IAsn1Type
+      public function findAttributeValue(oid:String) : IAsn1Type
       {
          //Décompilation abandonné
       }

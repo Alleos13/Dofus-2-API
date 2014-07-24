@@ -24,7 +24,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightChangeVisibilityStep(param1:int, param2:int)
+      public function FightChangeVisibilityStep(entityId:int, visibilityState:int)
       {
          //Décompilation abandonné
       }

@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.quest
          //Décompilation abandonné
       }
       
-      public static function create(param1:int, param2:int) : QuestObjectiveValidationAction
+      public static function create(questId:int, objectiveId:int) : QuestObjectiveValidationAction
       {
          //Décompilation abandonné
       }

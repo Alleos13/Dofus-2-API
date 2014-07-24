@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
          //Décompilation abandonné
       }
       
-      public function initExchangeObjectModifiedInBagMessage(param1:Boolean = false, param2:ObjectItem = null) : ExchangeObjectModifiedInBagMessage
+      public function initExchangeObjectModifiedInBagMessage(remote:Boolean = false, object:ObjectItem = null) : ExchangeObjectModifiedInBagMessage
       {
          //Décompilation abandonné
       }
@@ -45,32 +45,32 @@ package com.ankamagames.dofus.network.messages.game.inventory.items
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeObjectModifiedInBagMessage(param1:IDataOutput) : void
+      public function serializeAs_ExchangeObjectModifiedInBagMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeObjectModifiedInBagMessage(param1:IDataInput) : void
+      public function deserializeAs_ExchangeObjectModifiedInBagMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

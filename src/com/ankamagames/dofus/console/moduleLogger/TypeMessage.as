@@ -16,7 +16,7 @@ package com.ankamagames.dofus.console.moduleLogger
       //Décompilation abandonné
       }
       
-      public function TypeMessage(... rest)
+      public function TypeMessage(... args)
       {
          //Décompilation abandonné
       }
@@ -49,29 +49,29 @@ package com.ankamagames.dofus.console.moduleLogger
       
       private var search2:RegExp;
       
-      private function displayBind(param1:Bind, param2:Object) : void
+      private function displayBind(bind:Bind, ui:Object) : void
       {
          //Décompilation abandonné
       }
       
-      private function displayInteractionMessage(param1:Message, param2:DisplayObject) : void
+      private function displayInteractionMessage(msg:Message, ui:DisplayObject) : void
       {
          //Décompilation abandonné
       }
       
       private var vectorExp:RegExp;
       
-      private function displayHookInformations(param1:Hook, param2:Array) : void
+      private function displayHookInformations(hook:Hook, args:Array) : void
       {
          //Décompilation abandonné
       }
       
-      private function displayLog(param1:String, param2:int) : void
+      private function displayLog(text:String, level:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function displayActionInformations(param1:Action) : void
+      private function displayActionInformations(action:Action) : void
       {
          //Décompilation abandonné
       }

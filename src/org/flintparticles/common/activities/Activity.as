@@ -11,12 +11,12 @@ package org.flintparticles.common.activities
       
       function getDefaultPriority() : Number;
       
-      function addedToEmitter(param1:Emitter) : void;
+      function addedToEmitter(emitter:Emitter) : void;
       
-      function removedFromEmitter(param1:Emitter) : void;
+      function removedFromEmitter(emitter:Emitter) : void;
       
-      function initialize(param1:Emitter) : void;
+      function initialize(emitter:Emitter) : void;
       
-      function update(param1:Emitter, param2:Number) : void;
+      function update(emitter:Emitter, time:Number) : void;
    }
 }

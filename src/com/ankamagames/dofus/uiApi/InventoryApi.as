@@ -36,7 +36,7 @@ package com.ankamagames.dofus.uiApi
       
       private var _module:UiModule;
       
-      public function set module(param1:UiModule) : void
+      public function set module(value:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -46,37 +46,37 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getStorageObjectGID(param1:uint, param2:uint = 1) : Object
+      public function getStorageObjectGID(pObjectGID:uint, quantity:uint = 1) : Object
       {
          //Décompilation abandonné
       }
       
-      public function getStorageObjectsByType(param1:uint) : Array
+      public function getStorageObjectsByType(objectType:uint) : Array
       {
          //Décompilation abandonné
       }
       
-      public function getItemQty(param1:uint, param2:uint = 0) : uint
+      public function getItemQty(pObjectGID:uint, pObjectUID:uint = 0) : uint
       {
          //Décompilation abandonné
       }
       
-      public function getItemByGID(param1:uint) : ItemWrapper
+      public function getItemByGID(objectGID:uint) : ItemWrapper
       {
          //Décompilation abandonné
       }
       
-      public function getQuantifiedItemByGIDInInventoryOrMakeUpOne(param1:uint) : QuantifiedItemWrapper
+      public function getQuantifiedItemByGIDInInventoryOrMakeUpOne(objectGID:uint) : QuantifiedItemWrapper
       {
          //Décompilation abandonné
       }
       
-      public function getItem(param1:uint) : ItemWrapper
+      public function getItem(objectUID:uint) : ItemWrapper
       {
          //Décompilation abandonné
       }
       
-      public function getEquipementItemByPosition(param1:uint) : ItemWrapper
+      public function getEquipementItemByPosition(pPosition:uint) : ItemWrapper
       {
          //Décompilation abandonné
       }
@@ -91,7 +91,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getVoidItemForPreset(param1:int) : SimpleTextureWrapper
+      public function getVoidItemForPreset(index:int) : SimpleTextureWrapper
       {
          //Décompilation abandonné
       }

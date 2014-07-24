@@ -51,17 +51,17 @@ package com.ankamagames.jerakine.managers
       
       private var _fonts:Dictionary;
       
-      public function set handler(param1:MessageHandler) : void
+      public function set handler(value:MessageHandler) : void
       {
          //Décompilation abandonné
       }
       
-      public function loadFile(param1:String) : void
+      public function loadFile(sUrl:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function getRealFontName(param1:String) : String
+      public function getRealFontName(font:String) : String
       {
          //Décompilation abandonné
       }
@@ -71,27 +71,27 @@ package com.ankamagames.jerakine.managers
          //Décompilation abandonné
       }
       
-      public function getSizeMultipicator(param1:String) : Number
+      public function getSizeMultipicator(fontName:String) : Number
       {
          //Décompilation abandonné
       }
       
-      public function getFontClassName(param1:String) : String
+      public function getFontClassName(cssName:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function getFontClassRenderingMode(param1:String) : String
+      public function getFontClassRenderingMode(fontName:String) : String
       {
          //Décompilation abandonné
       }
       
-      private function onFileLoaded(param1:ResourceLoadedEvent) : void
+      private function onFileLoaded(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onLoadError(param1:ResourceErrorEvent) : void
+      private function onLoadError(e:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }

@@ -9,7 +9,7 @@ package com.ankamagames.atouin.types
       //Décompilation abandonné
       }
       
-      public function FrustumShape(param1:uint)
+      public function FrustumShape(direction:uint)
       {
          //Décompilation abandonné
       }

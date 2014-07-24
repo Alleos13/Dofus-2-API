@@ -27,82 +27,82 @@ package com.ankamagames.dofus.misc.utils
       
       protected static const _log:Logger;
       
-      public static function getQueryableFields(param1:Class) : Vector.<String>
+      public static function getQueryableFields(target:Class) : Vector.<String>
       {
          //Décompilation abandonné
       }
       
-      public static function union(... rest) : Vector.<uint>
+      public static function union(... idsVectors) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public static function intersection(... rest) : Vector.<uint>
+      public static function intersection(... idsVectors) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public static function queryEquals(param1:Class, param2:String, param3:*) : Vector.<uint>
+      public static function queryEquals(target:Class, fieldName:String, value:*) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public static function queryString(param1:Class, param2:String, param3:String) : Vector.<uint>
+      public static function queryString(target:Class, fieldName:String, value:String) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public static function queryGreaterThan(param1:Class, param2:String, param3:*) : Vector.<uint>
+      public static function queryGreaterThan(target:Class, fieldName:String, value:*) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public static function querySmallerThan(param1:Class, param2:String, param3:*) : Vector.<uint>
+      public static function querySmallerThan(target:Class, fieldName:String, value:*) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public static function returnInstance(param1:Class, param2:Vector.<uint>) : Vector.<Object>
+      public static function returnInstance(target:Class, ids:Vector.<uint>) : Vector.<Object>
       {
          //Décompilation abandonné
       }
       
-      public static function sort(param1:Class, param2:Vector.<uint>, param3:*, param4:* = true) : Vector.<uint>
+      public static function sort(target:Class, ids:Vector.<uint>, fieldNames:*, ascending:* = true) : Vector.<uint>
       {
          //Décompilation abandonné
       }
       
-      public static function sortI18n(param1:*, param2:*, param3:*) : *
+      public static function sortI18n(datas:*, fields:*, ascending:*) : *
       {
          //Décompilation abandonné
       }
       
-      private static function getSortFunction(param1:*, param2:*, param3:*) : Function
+      private static function getSortFunction(datas:*, fieldNames:*, ascending:*) : Function
       {
          //Décompilation abandonné
       }
       
-      private static function getMatchStringFct(param1:String) : Function
+      private static function getMatchStringFct(pattern:String) : Function
       {
          //Décompilation abandonné
       }
       
-      private static function getGreaterThanFct(param1:*) : Function
+      private static function getGreaterThanFct(cmpValue:*) : Function
       {
          //Décompilation abandonné
       }
       
-      private static function getSmallerThanFct(param1:*) : Function
+      private static function getSmallerThanFct(cmpValue:*) : Function
       {
          //Décompilation abandonné
       }
       
-      private static function checkField(param1:Class, param2:String) : String
+      private static function checkField(target:Class, name:String) : String
       {
          //Décompilation abandonné
       }
       
-      private static function checkPackage(param1:Class) : Class
+      private static function checkPackage(target:Class) : Class
       {
          //Décompilation abandonné
       }

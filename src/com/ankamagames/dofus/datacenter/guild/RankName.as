@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.guild
       
       protected static const _log:Logger;
       
-      public static function getRankNameById(param1:int) : RankName
+      public static function getRankNameById(id:int) : RankName
       {
          //Décompilation abandonné
       }

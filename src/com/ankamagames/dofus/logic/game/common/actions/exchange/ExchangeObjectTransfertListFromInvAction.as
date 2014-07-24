@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.exchange
          //Décompilation abandonné
       }
       
-      public static function create(param1:Vector.<uint>) : ExchangeObjectTransfertListFromInvAction
+      public static function create(pIds:Vector.<uint>) : ExchangeObjectTransfertListFromInvAction
       {
          //Décompilation abandonné
       }

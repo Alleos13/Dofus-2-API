@@ -40,7 +40,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.fight
          //Décompilation abandonné
       }
       
-      public function initGameRolePlayPlayerFightFriendlyAnsweredMessage(param1:int = 0, param2:uint = 0, param3:uint = 0, param4:Boolean = false) : GameRolePlayPlayerFightFriendlyAnsweredMessage
+      public function initGameRolePlayPlayerFightFriendlyAnsweredMessage(fightId:int = 0, sourceId:uint = 0, targetId:uint = 0, accept:Boolean = false) : GameRolePlayPlayerFightFriendlyAnsweredMessage
       {
          //Décompilation abandonné
       }
@@ -50,32 +50,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.fight
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameRolePlayPlayerFightFriendlyAnsweredMessage(param1:IDataOutput) : void
+      public function serializeAs_GameRolePlayPlayerFightFriendlyAnsweredMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameRolePlayPlayerFightFriendlyAnsweredMessage(param1:IDataInput) : void
+      public function deserializeAs_GameRolePlayPlayerFightFriendlyAnsweredMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

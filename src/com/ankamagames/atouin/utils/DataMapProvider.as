@@ -40,7 +40,7 @@ package com.ankamagames.atouin.utils
          //Décompilation abandonné
       }
       
-      public static function init(param1:Class) : void
+      public static function init(playerClass:Class) : void
       {
          //Décompilation abandonné
       }
@@ -51,42 +51,42 @@ package com.ankamagames.atouin.utils
       
       private var _specialEffects:Dictionary;
       
-      public function pointLos(param1:int, param2:int, param3:Boolean = true) : Boolean
+      public function pointLos(x:int, y:int, bAllowTroughEntity:Boolean = true) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function farmCell(param1:int, param2:int) : Boolean
+      public function farmCell(x:int, y:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function isChangeZone(param1:uint, param2:uint) : Boolean
+      public function isChangeZone(cell1:uint, cell2:uint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function pointMov(param1:int, param2:int, param3:Boolean = true, param4:int = -1) : Boolean
+      public function pointMov(x:int, y:int, bAllowTroughEntity:Boolean = true, previousCellId:int = -1) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function pointCanStop(param1:int, param2:int, param3:Boolean = true) : Boolean
+      public function pointCanStop(x:int, y:int, bAllowTroughEntity:Boolean = true) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function pointWeight(param1:int, param2:int, param3:Boolean = true) : Number
+      public function pointWeight(x:int, y:int, bAllowTroughEntity:Boolean = true) : Number
       {
          //Décompilation abandonné
       }
       
-      public function getCellSpeed(param1:uint) : int
+      public function getCellSpeed(cellId:uint) : int
       {
          //Décompilation abandonné
       }
       
-      public function pointSpecialEffects(param1:int, param2:int) : uint
+      public function pointSpecialEffects(x:int, y:int) : uint
       {
          //Décompilation abandonné
       }
@@ -101,12 +101,12 @@ package com.ankamagames.atouin.utils
          //Décompilation abandonné
       }
       
-      public function hasEntity(param1:int, param2:int) : Boolean
+      public function hasEntity(x:int, y:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function updateCellMovLov(param1:uint, param2:Boolean) : void
+      public function updateCellMovLov(cellId:uint, canMove:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -116,7 +116,7 @@ package com.ankamagames.atouin.utils
          //Décompilation abandonné
       }
       
-      public function setSpecialEffects(param1:uint, param2:uint) : void
+      public function setSpecialEffects(cellId:uint, value:uint) : void
       {
          //Décompilation abandonné
       }

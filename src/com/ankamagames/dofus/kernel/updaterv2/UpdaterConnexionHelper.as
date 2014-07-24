@@ -24,7 +24,7 @@ package com.ankamagames.dofus.kernel.updaterv2
       //Décompilation abandonné
       }
       
-      public function UpdaterConnexionHelper(param1:Boolean = true)
+      public function UpdaterConnexionHelper(autoConnect:Boolean = true)
       {
          //Décompilation abandonné
       }
@@ -41,12 +41,12 @@ package com.ankamagames.dofus.kernel.updaterv2
       
       private var _buffer:Vector.<IUpdaterOutputMessage>;
       
-      public function addObserver(param1:IUpdaterMessageHandler) : void
+      public function addObserver(handler:IUpdaterMessageHandler) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeObserver(param1:IUpdaterMessageHandler) : void
+      public function removeObserver(handler:IUpdaterMessageHandler) : void
       {
          //Décompilation abandonné
       }
@@ -66,7 +66,7 @@ package com.ankamagames.dofus.kernel.updaterv2
          //Décompilation abandonné
       }
       
-      public function sendMessage(param1:IUpdaterOutputMessage) : Boolean
+      public function sendMessage(msg:IUpdaterOutputMessage) : Boolean
       {
          //Décompilation abandonné
       }
@@ -81,32 +81,32 @@ package com.ankamagames.dofus.kernel.updaterv2
          //Décompilation abandonné
       }
       
-      private function dispatchMessage(param1:IUpdaterInputMessage) : void
+      private function dispatchMessage(msg:IUpdaterInputMessage) : void
       {
          //Décompilation abandonné
       }
       
-      private function onConnectionOpened(param1:Event) : void
+      private function onConnectionOpened(event:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onConnectionClosed(param1:Event) : void
+      private function onConnectionClosed(event:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onIOError(param1:IOErrorEvent) : void
+      private function onIOError(event:IOErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSocketData(param1:ProgressEvent) : void
+      private function onSocketData(event:ProgressEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function splitPacket(param1:String) : Vector.<String>
+      private function splitPacket(raw:String) : Vector.<String>
       {
          //Décompilation abandonné
       }

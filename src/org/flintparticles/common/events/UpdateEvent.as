@@ -9,7 +9,7 @@ package org.flintparticles.common.events
       //Décompilation abandonné
       }
       
-      public function UpdateEvent(param1:String, param2:Number = NaN, param3:Boolean = false, param4:Boolean = false)
+      public function UpdateEvent(type:String, time:Number = NaN, bubbles:Boolean = false, cancelable:Boolean = false)
       {
          //Décompilation abandonné
       }

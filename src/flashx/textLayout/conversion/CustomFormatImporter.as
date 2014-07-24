@@ -26,7 +26,7 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      public function importOneFormat(param1:String, param2:String) : Boolean
+      public function importOneFormat(key:String, val:String) : Boolean
       {
          //Décompilation abandonné
       }

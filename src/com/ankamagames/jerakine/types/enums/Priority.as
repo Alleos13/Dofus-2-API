@@ -26,12 +26,12 @@ package com.ankamagames.jerakine.types.enums
       
       public static const LOWEST:int = -2;
       
-      public static function toString(param1:int) : String
+      public static function toString(priority:int) : String
       {
          //Décompilation abandonné
       }
       
-      public static function fromString(param1:String) : int
+      public static function fromString(priority:String) : int
       {
          //Décompilation abandonné
       }

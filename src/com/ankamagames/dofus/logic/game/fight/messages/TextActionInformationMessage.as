@@ -9,7 +9,7 @@ package com.ankamagames.dofus.logic.game.fight.messages
       //Décompilation abandonné
       }
       
-      public function TextActionInformationMessage(param1:uint, param2:Array = null)
+      public function TextActionInformationMessage(textKey:uint, params:Array = null)
       {
          //Décompilation abandonné
       }

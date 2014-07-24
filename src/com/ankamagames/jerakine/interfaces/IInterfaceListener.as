@@ -7,6 +7,6 @@ package com.ankamagames.jerakine.interfaces
       //Décompilation abandonné
       }
       
-      function playUISound(param1:String, param2:Boolean = false) : void;
+      function playUISound(pSoundId:String, pLoop:Boolean = false) : void;
    }
 }

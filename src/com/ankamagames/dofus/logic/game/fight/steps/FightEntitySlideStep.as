@@ -20,7 +20,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightEntitySlideStep(param1:int, param2:MapPoint, param3:MapPoint)
+      public function FightEntitySlideStep(fighterId:int, startCell:MapPoint, endCell:MapPoint)
       {
          //Décompilation abandonné
       }

@@ -29,7 +29,7 @@ package com.ankamagames.berilia.components.gridRenderer
       //Décompilation abandonné
       }
       
-      public function TreeGridRenderer(param1:String)
+      public function TreeGridRenderer(strParams:String)
       {
          //Décompilation abandonné
       }
@@ -60,27 +60,27 @@ package com.ankamagames.berilia.components.gridRenderer
       
       private var _uriRef:Array;
       
-      public function set grid(param1:Grid) : void
+      public function set grid(g:Grid) : void
       {
          //Décompilation abandonné
       }
       
-      public function render(param1:*, param2:uint, param3:Boolean, param4:uint = 0) : DisplayObject
+      public function render(data:*, index:uint, selected:Boolean, subIndex:uint = 0) : DisplayObject
       {
          //Décompilation abandonné
       }
       
-      public function getDataLength(param1:*, param2:Boolean) : uint
+      public function getDataLength(data:*, selected:Boolean) : uint
       {
          //Décompilation abandonné
       }
       
-      public function update(param1:*, param2:uint, param3:DisplayObject, param4:Boolean, param5:uint = 0) : void
+      public function update(data:*, index:uint, dispObj:DisplayObject, selected:Boolean, subIndex:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function remove(param1:DisplayObject) : void
+      public function remove(dispObj:DisplayObject) : void
       {
          //Décompilation abandonné
       }
@@ -90,32 +90,32 @@ package com.ankamagames.berilia.components.gridRenderer
          //Décompilation abandonné
       }
       
-      public function renderModificator(param1:Array) : Array
+      public function renderModificator(childs:Array) : Array
       {
          //Décompilation abandonné
       }
       
-      public function eventModificator(param1:Message, param2:String, param3:Array, param4:UIComponent) : String
+      public function eventModificator(msg:Message, functionName:String, args:Array, target:UIComponent) : String
       {
          //Décompilation abandonné
       }
       
-      private function updateBackground(param1:Sprite, param2:uint, param3:Boolean) : void
+      private function updateBackground(raw:Sprite, index:uint, selected:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      private function onRollOver(param1:MouseEvent) : void
+      private function onRollOver(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onRollOut(param1:MouseEvent) : void
+      private function onRollOut(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onRelease(param1:MouseEvent) : void
+      private function onRelease(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }

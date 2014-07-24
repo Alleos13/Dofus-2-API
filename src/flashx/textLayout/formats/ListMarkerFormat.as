@@ -13,22 +13,22 @@ package flashx.textLayout.formats
       //Décompilation abandonné
       }
       
-      public function ListMarkerFormat(param1:IListMarkerFormat = null)
+      public function ListMarkerFormat(initialValues:IListMarkerFormat = null)
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function createCounterResetProperty(param1:String, param2:String, param3:Boolean, param4:Vector.<String>) : Property
+      tlf_internal  static function createCounterResetProperty(nameValue:String, defaultValue:String, inherited:Boolean, categories:Vector.<String>) : Property
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function createCounterIncrementProperty(param1:String, param2:String, param3:Boolean, param4:Vector.<String>) : Property
+      tlf_internal  static function createCounterIncrementProperty(nameValue:String, defaultValue:String, inherited:Boolean, categories:Vector.<String>) : Property
       {
          //Décompilation abandonné
       }
       
-      tlf_internal  static function createCounterContentProperty(param1:String, param2:String, param3:Boolean, param4:Vector.<String>) : Property
+      tlf_internal  static function createCounterContentProperty(nameValue:String, defaultValue:String, inherited:Boolean, categories:Vector.<String>) : Property
       {
          //Décompilation abandonné
       }
@@ -54,17 +54,17 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public static function createListMarkerFormat(param1:Object) : ListMarkerFormat
+      public static function createListMarkerFormat(initialValues:Object) : ListMarkerFormat
       {
          //Décompilation abandonné
       }
       
-      private function setLMFStyle(param1:Property, param2:*) : void
+      private function setLMFStyle(styleProp:Property, newValue:*) : void
       {
          //Décompilation abandonné
       }
       
-      override public function setStyle(param1:String, param2:*) : void
+      override public function setStyle(styleProp:String, newValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -74,7 +74,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set counterReset(param1:*) : *
+      public function set counterReset(value:*) : *
       {
          //Décompilation abandonné
       }
@@ -84,7 +84,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set counterIncrement(param1:*) : *
+      public function set counterIncrement(value:*) : *
       {
          //Décompilation abandonné
       }
@@ -94,7 +94,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set content(param1:*) : *
+      public function set content(value:*) : *
       {
          //Décompilation abandonné
       }
@@ -104,7 +104,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set beforeContent(param1:*) : void
+      public function set beforeContent(value:*) : void
       {
          //Décompilation abandonné
       }
@@ -114,7 +114,7 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set afterContent(param1:*) : void
+      public function set afterContent(value:*) : void
       {
          //Décompilation abandonné
       }
@@ -124,37 +124,37 @@ package flashx.textLayout.formats
          //Décompilation abandonné
       }
       
-      public function set suffix(param1:*) : void
+      public function set suffix(value:*) : void
       {
          //Décompilation abandonné
       }
       
-      override public function copy(param1:ITextLayoutFormat) : void
+      override public function copy(incoming:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
       
-      override public function concat(param1:ITextLayoutFormat) : void
+      override public function concat(incoming:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
       
-      override public function concatInheritOnly(param1:ITextLayoutFormat) : void
+      override public function concatInheritOnly(incoming:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
       
-      override public function apply(param1:ITextLayoutFormat) : void
+      override public function apply(incoming:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
       
-      override public function removeMatching(param1:ITextLayoutFormat) : void
+      override public function removeMatching(incoming:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
       
-      override public function removeClashing(param1:ITextLayoutFormat) : void
+      override public function removeClashing(incoming:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }

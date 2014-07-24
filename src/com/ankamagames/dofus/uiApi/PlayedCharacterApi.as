@@ -287,22 +287,22 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public static function getSpell(param1:uint) : SpellWrapper
+      public static function getSpell(spellId:uint) : SpellWrapper
       {
          //Décompilation abandonné
       }
       
-      public static function canCastThisSpell(param1:uint, param2:uint) : Boolean
+      public static function canCastThisSpell(spellId:uint, lvl:uint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function canCastThisSpellOnTarget(param1:uint, param2:uint, param3:int) : Boolean
+      public static function canCastThisSpellOnTarget(spellId:uint, lvl:uint, pTargetId:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function getSpellModification(param1:uint, param2:int) : int
+      public static function getSpellModification(spellId:uint, carac:int) : int
       {
          //Décompilation abandonné
       }
@@ -342,7 +342,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public static function getPlayerSet(param1:uint) : PlayerSetInfo
+      public static function getPlayerSet(objectGID:uint) : PlayerSetInfo
       {
          //Décompilation abandonné
       }
@@ -357,7 +357,7 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public static function knowSpell(param1:uint) : int
+      public static function knowSpell(pSpellId:uint) : int
       {
          //Décompilation abandonné
       }

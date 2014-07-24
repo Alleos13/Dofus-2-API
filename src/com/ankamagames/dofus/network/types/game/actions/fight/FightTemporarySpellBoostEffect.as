@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.actions.fight
          //Décompilation abandonné
       }
       
-      public function initFightTemporarySpellBoostEffect(param1:uint = 0, param2:int = 0, param3:int = 0, param4:uint = 1, param5:uint = 0, param6:uint = 0, param7:int = 0, param8:uint = 0) : FightTemporarySpellBoostEffect
+      public function initFightTemporarySpellBoostEffect(uid:uint = 0, targetId:int = 0, turnDuration:int = 0, dispelable:uint = 1, spellId:uint = 0, parentBoostUid:uint = 0, delta:int = 0, boostedSpellId:uint = 0) : FightTemporarySpellBoostEffect
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.actions.fight
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_FightTemporarySpellBoostEffect(param1:IDataOutput) : void
+      public function serializeAs_FightTemporarySpellBoostEffect(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_FightTemporarySpellBoostEffect(param1:IDataInput) : void
+      public function deserializeAs_FightTemporarySpellBoostEffect(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

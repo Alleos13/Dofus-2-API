@@ -13,7 +13,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function ObjectItemCriterion(param1:String)
+      public function ObjectItemCriterion(pCriterion:String)
       {
          //Décompilation abandonné
       }

@@ -9,19 +9,19 @@ package com.ankamagames.berilia.types.data
       //Décompilation abandonné
       }
       
-      public function Hook(param1:String, param2:Boolean, param3:Boolean = true)
+      public function Hook(name:String, trusted:Boolean, nativeHook:Boolean = true)
       {
          //Décompilation abandonné
       }
       
       private static var _hookNameList:Array;
       
-      public static function create(param1:String, param2:Boolean, param3:Boolean = true) : Hook
+      public static function create(name:String, trusted:Boolean, nativeHook:Boolean = true) : Hook
       {
          //Décompilation abandonné
       }
       
-      public static function getHookByName(param1:String) : Hook
+      public static function getHookByName(name:String) : Hook
       {
          //Décompilation abandonné
       }

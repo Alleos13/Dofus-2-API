@@ -33,7 +33,7 @@ package com.ankamagames.dofus.internalDatacenter.guild
       
       private static var _ref:Dictionary;
       
-      public static function getAllianceById(param1:int) : AllianceWrapper
+      public static function getAllianceById(id:int) : AllianceWrapper
       {
          //Décompilation abandonné
       }
@@ -43,37 +43,37 @@ package com.ankamagames.dofus.internalDatacenter.guild
          //Décompilation abandonné
       }
       
-      public static function getFromNetwork(param1:*) : AllianceWrapper
+      public static function getFromNetwork(o:*) : AllianceWrapper
       {
          //Décompilation abandonné
       }
       
-      public static function updateRef(param1:uint, param2:AllianceWrapper) : void
+      public static function updateRef(pAllianceId:uint, pAllianceWrapper:AllianceWrapper) : void
       {
          //Décompilation abandonné
       }
       
-      private static function getFromAllianceFactsMessage(param1:AllianceFactsMessage) : AllianceWrapper
+      private static function getFromAllianceFactsMessage(o:AllianceFactsMessage) : AllianceWrapper
       {
          //Décompilation abandonné
       }
       
-      private static function getFromAllianceVersatileInformations(param1:AllianceVersatileInformations) : AllianceWrapper
+      private static function getFromAllianceVersatileInformations(o:AllianceVersatileInformations) : AllianceWrapper
       {
          //Décompilation abandonné
       }
       
-      private static function getFromBasicAllianceInformations(param1:BasicAllianceInformations) : AllianceWrapper
+      private static function getFromBasicAllianceInformations(o:BasicAllianceInformations) : AllianceWrapper
       {
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:String, param3:String, param4:GuildEmblem, param5:Number = 0, param6:uint = 0, param7:uint = 0, param8:Vector.<GuildFactSheetWrapper> = null, param9:Vector.<uint> = null, param10:int = 0, param11:String = "") : AllianceWrapper
+      public static function create(pAllianceId:uint, pAllianceTag:String, pAllianceName:String, pAllianceEmblem:GuildEmblem, creationDate:Number = 0, nbGuilds:uint = 0, nbMembers:uint = 0, guilds:Vector.<GuildFactSheetWrapper> = null, prismIds:Vector.<uint> = null, pAllianceLeaderId:int = 0, pAllianceLeaderName:String = "") : AllianceWrapper
       {
          //Décompilation abandonné
       }
       
-      public static function getRightsNumber(param1:Array) : Number
+      public static function getRightsNumber(pRightsIDs:Array) : Number
       {
          //Décompilation abandonné
       }
@@ -130,7 +130,7 @@ package com.ankamagames.dofus.internalDatacenter.guild
          //Décompilation abandonné
       }
       
-      public function set memberRightsNumber(param1:uint) : void
+      public function set memberRightsNumber(value:uint) : void
       {
          //Décompilation abandonné
       }
@@ -155,12 +155,12 @@ package com.ankamagames.dofus.internalDatacenter.guild
          //Décompilation abandonné
       }
       
-      public function update(param1:uint, param2:String, param3:String, param4:GuildEmblem, param5:Number = 0, param6:uint = 0, param7:uint = 0, param8:Vector.<GuildFactSheetWrapper> = null, param9:Vector.<uint> = null, param10:int = 0, param11:String = "") : void
+      public function update(pAllianceId:uint, pAllianceTag:String, pAllianceName:String, pAllianceEmblem:GuildEmblem, creationDate:Number = 0, nbGuilds:uint = 0, nbMembers:uint = 0, guilds:Vector.<GuildFactSheetWrapper> = null, prismIds:Vector.<uint> = null, pAllianceLeaderId:int = 0, pAllianceLeaderName:String = "") : void
       {
          //Décompilation abandonné
       }
       
-      public function hasRight(param1:String) : Boolean
+      public function hasRight(pRightId:String) : Boolean
       {
          //Décompilation abandonné
       }

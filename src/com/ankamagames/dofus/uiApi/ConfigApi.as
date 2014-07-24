@@ -41,7 +41,7 @@ package com.ankamagames.dofus.uiApi
       
       private var _module:UiModule;
       
-      public function set module(param1:UiModule) : void
+      public function set module(value:UiModule) : void
       {
          //Décompilation abandonné
       }
@@ -51,22 +51,22 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function getConfigProperty(param1:String, param2:String) : *
+      public function getConfigProperty(configModuleName:String, propertyName:String) : *
       {
          //Décompilation abandonné
       }
       
-      public function setConfigProperty(param1:String, param2:String, param3:*) : void
+      public function setConfigProperty(configModuleName:String, propertyName:String, value:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function resetConfigProperty(param1:String, param2:String) : void
+      public function resetConfigProperty(configModuleName:String, propertyName:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function createOptionManager(param1:String) : OptionManager
+      public function createOptionManager(name:String) : OptionManager
       {
          //Décompilation abandonné
       }
@@ -81,27 +81,27 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      public function isOptionalFeatureActive(param1:int) : Boolean
+      public function isOptionalFeatureActive(id:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getServerConstant(param1:int) : Object
+      public function getServerConstant(id:int) : Object
       {
          //Décompilation abandonné
       }
       
-      public function getExternalNotificationOptions(param1:int) : Object
+      public function getExternalNotificationOptions(pNotificationType:int) : Object
       {
          //Décompilation abandonné
       }
       
-      public function setExternalNotificationOptions(param1:int, param2:Object) : void
+      public function setExternalNotificationOptions(pNotificationType:int, pOptions:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function setDebugMode(param1:Boolean) : void
+      public function setDebugMode(activate:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -121,12 +121,12 @@ package com.ankamagames.dofus.uiApi
          //Décompilation abandonné
       }
       
-      private function isSimpleConfigType(param1:*) : Boolean
+      private function isSimpleConfigType(value:*) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onPropertyChanged(param1:PropertyChangeEvent) : void
+      private function onPropertyChanged(e:PropertyChangeEvent) : void
       {
          //Décompilation abandonné
       }

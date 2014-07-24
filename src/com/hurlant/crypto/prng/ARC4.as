@@ -11,7 +11,7 @@ package com.hurlant.crypto.prng
       //Décompilation abandonné
       }
       
-      public function ARC4(param1:ByteArray = null)
+      public function ARC4(key:ByteArray = null)
       {
          //Décompilation abandonné
       }
@@ -29,7 +29,7 @@ package com.hurlant.crypto.prng
          //Décompilation abandonné
       }
       
-      public function init(param1:ByteArray) : void
+      public function init(key:ByteArray) : void
       {
          //Décompilation abandonné
       }
@@ -44,12 +44,12 @@ package com.hurlant.crypto.prng
          //Décompilation abandonné
       }
       
-      public function encrypt(param1:ByteArray) : void
+      public function encrypt(block:ByteArray) : void
       {
          //Décompilation abandonné
       }
       
-      public function decrypt(param1:ByteArray) : void
+      public function decrypt(block:ByteArray) : void
       {
          //Décompilation abandonné
       }

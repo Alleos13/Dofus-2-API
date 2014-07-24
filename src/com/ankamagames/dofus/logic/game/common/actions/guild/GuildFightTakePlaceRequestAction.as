@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.guild
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:uint) : GuildFightTakePlaceRequestAction
+      public static function create(pTaxCollectorId:uint, replacedCharacterId:uint) : GuildFightTakePlaceRequestAction
       {
          //Décompilation abandonné
       }

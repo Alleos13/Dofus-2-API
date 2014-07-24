@@ -11,7 +11,7 @@ package com.ankamagames.atouin.types
       //Décompilation abandonné
       }
       
-      public function MapGfxBitmap(param1:BitmapData, param2:String = "auto", param3:Boolean = false, param4:uint = 0)
+      public function MapGfxBitmap(bitmapdata:BitmapData, pixelSnapping:String = "auto", smoothing:Boolean = false, identifier:uint = 0)
       {
          //Décompilation abandonné
       }

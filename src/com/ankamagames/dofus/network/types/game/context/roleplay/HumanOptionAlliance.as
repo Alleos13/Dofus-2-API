@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initHumanOptionAlliance(param1:AllianceInformations = null, param2:uint = 0) : HumanOptionAlliance
+      public function initHumanOptionAlliance(allianceInformations:AllianceInformations = null, aggressable:uint = 0) : HumanOptionAlliance
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_HumanOptionAlliance(param1:IDataOutput) : void
+      public function serializeAs_HumanOptionAlliance(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_HumanOptionAlliance(param1:IDataInput) : void
+      public function deserializeAs_HumanOptionAlliance(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

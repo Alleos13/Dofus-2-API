@@ -76,12 +76,12 @@ package com.ankamagames.berilia.api
       
       private var _currentUi:UiRootContainer;
       
-      public function set module(param1:UiModule) : void
+      public function set module(value:UiModule) : void
       {
          //Décompilation abandonné
       }
       
-      public function set currentUi(param1:UiRootContainer) : void
+      public function set currentUi(value:UiRootContainer) : void
       {
          //Décompilation abandonné
       }
@@ -91,22 +91,22 @@ package com.ankamagames.berilia.api
          //Décompilation abandonné
       }
       
-      public function loadUi(param1:String, param2:String = null, param3:* = null, param4:uint = 1, param5:String = null, param6:Boolean = false) : Object
+      public function loadUi(name:String, instanceName:String = null, params:* = null, strata:uint = 1, cacheName:String = null, replace:Boolean = false) : Object
       {
          //Décompilation abandonné
       }
       
-      public function loadUiInside(param1:String, param2:GraphicContainer, param3:String = null, param4:* = null) : Object
+      public function loadUiInside(name:String, container:GraphicContainer, instanceName:String = null, params:* = null) : Object
       {
          //Décompilation abandonné
       }
       
-      public function unloadUi(param1:String = null) : void
+      public function unloadUi(instanceName:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function getUi(param1:String) : *
+      public function getUi(instanceName:String) : *
       {
          //Décompilation abandonné
       }
@@ -121,17 +121,17 @@ package com.ankamagames.berilia.api
          //Décompilation abandonné
       }
       
-      public function getModule(param1:String, param2:Boolean = false) : UiModule
+      public function getModule(moduleName:String, includeUnInitialized:Boolean = false) : UiModule
       {
          //Décompilation abandonné
       }
       
-      public function setModuleEnable(param1:String, param2:Boolean) : void
+      public function setModuleEnable(id:String, b:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function addChild(param1:Object, param2:Object) : void
+      public function addChild(target:Object, child:Object) : void
       {
          //Décompilation abandonné
       }
@@ -146,92 +146,92 @@ package com.ankamagames.berilia.api
          //Décompilation abandonné
       }
       
-      public function addShortcutHook(param1:String, param2:Function, param3:Boolean = false) : void
+      public function addShortcutHook(shortcutName:String, hook:Function, lowPriority:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function addComponentHook(param1:GraphicContainer, param2:String) : void
+      public function addComponentHook(target:GraphicContainer, hookName:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function bindApi(param1:Texture, param2:String, param3:*) : Boolean
+      public function bindApi(targetTexture:Texture, propertyName:String, value:*) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function createComponent(param1:String, ... rest) : GraphicContainer
+      public function createComponent(type:String, ... params) : GraphicContainer
       {
          //Décompilation abandonné
       }
       
-      public function createContainer(param1:String, ... rest) : *
+      public function createContainer(type:String, ... params) : *
       {
          //Décompilation abandonné
       }
       
-      public function createInstanceEvent(param1:DisplayObject, param2:*) : InstanceEvent
+      public function createInstanceEvent(target:DisplayObject, instance:*) : InstanceEvent
       {
          //Décompilation abandonné
       }
       
-      public function getEventClassName(param1:String) : String
+      public function getEventClassName(event:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function addInstanceEvent(param1:InstanceEvent) : void
+      public function addInstanceEvent(event:InstanceEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function createUri(param1:String) : Uri
+      public function createUri(uri:String) : Uri
       {
          //Décompilation abandonné
       }
       
-      public function showTooltip(param1:*, param2:*, param3:Boolean = false, param4:String = "standard", param5:uint = 0, param6:uint = 2, param7:int = 3, param8:String = null, param9:Class = null, param10:Object = null, param11:String = null, param12:Boolean = false, param13:int = 4, param14:Number = 1, param15:String = "") : void
+      public function showTooltip(data:*, target:*, autoHide:Boolean = false, name:String = "standard", point:uint = 0, relativePoint:uint = 2, offset:int = 3, tooltipMaker:String = null, script:Class = null, makerParam:Object = null, cacheName:String = null, mouseEnabled:Boolean = false, strata:int = 4, zoom:Number = 1, uiModuleName:String = "") : void
       {
          //Décompilation abandonné
       }
       
-      public function hideTooltip(param1:String = null) : void
+      public function hideTooltip(name:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function textTooltipInfo(param1:String, param2:String = null, param3:String = null, param4:int = 400) : Object
+      public function textTooltipInfo(content:String, css:String = null, cssClass:String = null, maxWidth:int = 400) : Object
       {
          //Décompilation abandonné
       }
       
-      public function getRadioGroupSelectedItem(param1:String, param2:UiRootContainer) : IRadioItem
+      public function getRadioGroupSelectedItem(rgName:String, me:UiRootContainer) : IRadioItem
       {
          //Décompilation abandonné
       }
       
-      public function setRadioGroupSelectedItem(param1:String, param2:IRadioItem, param3:UiRootContainer) : void
+      public function setRadioGroupSelectedItem(rgName:String, item:IRadioItem, me:UiRootContainer) : void
       {
          //Décompilation abandonné
       }
       
-      public function keyIsDown(param1:uint) : Boolean
+      public function keyIsDown(keyCode:uint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function keyIsUp(param1:uint) : Boolean
+      public function keyIsUp(keyCode:uint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function convertToTreeData(param1:*) : Vector.<TreeData>
+      public function convertToTreeData(array:*) : Vector.<TreeData>
       {
          //Décompilation abandonné
       }
       
-      public function setFollowCursorUri(param1:*, param2:Boolean = false, param3:Boolean = false, param4:int = 0, param5:int = 0, param6:Number = 1) : void
+      public function setFollowCursorUri(uri:*, lockX:Boolean = false, lockY:Boolean = false, xOffset:int = 0, yOffset:int = 0, scale:Number = 1) : void
       {
          //Décompilation abandonné
       }
@@ -246,7 +246,7 @@ package com.ankamagames.berilia.api
          //Décompilation abandonné
       }
       
-      public function preloadCss(param1:String) : void
+      public function preloadCss(url:String) : void
       {
          //Décompilation abandonné
       }
@@ -286,7 +286,7 @@ package com.ankamagames.berilia.api
          //Décompilation abandonné
       }
       
-      public function setFullScreen(param1:Boolean, param2:Boolean = false) : void
+      public function setFullScreen(enabled:Boolean, onlyMaximize:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -305,57 +305,57 @@ package com.ankamagames.berilia.api
       
       private var oldTextureBounds:Rectangle;
       
-      private function getInitBounds(param1:Texture) : Rectangle
+      private function getInitBounds(pTx:Texture) : Rectangle
       {
          //Décompilation abandonné
       }
       
-      public function buildOrnamentTooltipFrom(param1:Texture, param2:Rectangle) : void
+      public function buildOrnamentTooltipFrom(pTexture:Texture, pTarget:Rectangle) : void
       {
          //Décompilation abandonné
       }
       
-      private function addPart(param1:String, param2:DisplayObjectContainer, param3:Rectangle, param4:int, param5:int) : DisplayObject
+      private function addPart(name:String, source:DisplayObjectContainer, target:Rectangle, x:int, y:int) : DisplayObject
       {
          //Décompilation abandonné
       }
       
-      public function getTextSize(param1:String, param2:Uri, param3:String) : Rectangle
+      public function getTextSize(pText:String, pCss:Uri, pCssClass:String) : Rectangle
       {
          //Décompilation abandonné
       }
       
-      public function setComponentMinMaxSize(param1:GraphicContainer, param2:Point, param3:Point) : void
+      public function setComponentMinMaxSize(component:GraphicContainer, minSize:Point, maxSize:Point) : void
       {
          //Décompilation abandonné
       }
       
-      public function replaceParams(param1:String, param2:Array, param3:String = "%") : String
+      public function replaceParams(text:String, params:Array, replace:String = "%") : String
       {
          //Décompilation abandonné
       }
       
-      public function replaceKey(param1:String) : String
+      public function replaceKey(text:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function getText(param1:String, ... rest) : String
+      public function getText(key:String, ... params) : String
       {
          //Décompilation abandonné
       }
       
-      public function getTextFromKey(param1:uint, param2:String = "%", ... rest) : String
+      public function getTextFromKey(key:uint, replace:String = "%", ... params) : String
       {
          //Décompilation abandonné
       }
       
-      public function processText(param1:String, param2:String, param3:Boolean = true) : String
+      public function processText(str:String, gender:String, singular:Boolean = true) : String
       {
          //Décompilation abandonné
       }
       
-      public function decodeText(param1:String, param2:Array) : String
+      public function decodeText(str:String, params:Array) : String
       {
          //Décompilation abandonné
       }

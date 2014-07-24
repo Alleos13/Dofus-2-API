@@ -10,7 +10,7 @@ package com.ankamagames.berilia.types.messages
       //Décompilation abandonné
       }
       
-      public function ModuleRessourceLoadFailedMessage(param1:String, param2:Uri, param3:Boolean = true)
+      public function ModuleRessourceLoadFailedMessage(moduleName:String, uri:Uri, isImportant:Boolean = true)
       {
          //Décompilation abandonné
       }

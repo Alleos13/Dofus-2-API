@@ -23,12 +23,12 @@ package com.ankamagames.dofus.logic.common.managers
          //Décompilation abandonné
       }
       
-      public static function openURL(param1:String) : void
+      public static function openURL(url:String) : void
       {
          //Décompilation abandonné
       }
       
-      public static function chatLinkRelease(param1:String, param2:uint, param3:String) : void
+      public static function chatLinkRelease(link:String, sender:uint, senderName:String) : void
       {
          //Décompilation abandonné
       }
@@ -38,7 +38,7 @@ package com.ankamagames.dofus.logic.common.managers
          //Décompilation abandonné
       }
       
-      public static function rollOver(param1:int, param2:int, param3:String, param4:uint, param5:String) : void
+      public static function rollOver(pX:int, pY:int, link:String, sender:uint, senderName:String) : void
       {
          //Décompilation abandonné
       }

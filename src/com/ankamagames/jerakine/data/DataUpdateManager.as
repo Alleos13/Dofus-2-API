@@ -52,7 +52,7 @@ package com.ankamagames.jerakine.data
       
       private var _datastoreList:Array;
       
-      public function init(param1:Uri, param2:Boolean = false) : void
+      public function init(metaFileListe:Uri, clearAll:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -72,27 +72,27 @@ package com.ankamagames.jerakine.data
          //Décompilation abandonné
       }
       
-      protected function checkFileVersion(param1:String, param2:String) : Boolean
+      protected function checkFileVersion(sFileName:String, sVersion:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      protected function onLoaded(param1:ResourceLoadedEvent) : void
+      protected function onLoaded(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function processFileData(param1:Object, param2:Uri) : void
+      protected function processFileData(container:Object, uri:Uri) : void
       {
          //Décompilation abandonné
       }
       
-      private function onLoadFailed(param1:ResourceErrorEvent) : void
+      private function onLoadFailed(e:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onComplete(param1:ResourceLoaderProgressEvent) : void
+      private function onComplete(e:ResourceLoaderProgressEvent) : void
       {
          //Décompilation abandonné
       }

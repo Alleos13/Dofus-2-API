@@ -37,7 +37,7 @@ package com.ankamagames.dofus.network.messages.updater.parts
          //Décompilation abandonné
       }
       
-      public function initPartInfoMessage(param1:ContentPart = null, param2:Number = 0) : PartInfoMessage
+      public function initPartInfoMessage(part:ContentPart = null, installationPercent:Number = 0) : PartInfoMessage
       {
          //Décompilation abandonné
       }
@@ -47,32 +47,32 @@ package com.ankamagames.dofus.network.messages.updater.parts
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PartInfoMessage(param1:IDataOutput) : void
+      public function serializeAs_PartInfoMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PartInfoMessage(param1:IDataInput) : void
+      public function deserializeAs_PartInfoMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

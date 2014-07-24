@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.approach.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:uint) : GiftAssignRequestAction
+      public static function create(giftId:uint, characterId:uint) : GiftAssignRequestAction
       {
          //Décompilation abandonné
       }

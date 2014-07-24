@@ -43,12 +43,12 @@ package com.ankamagames.dofus.kernel.updater
          //Décompilation abandonné
       }
       
-      public function onConnect(param1:Event) : void
+      public function onConnect(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function onIoError(param1:IOErrorEvent) : void
+      public function onIoError(e:IOErrorEvent) : void
       {
          //Décompilation abandonné
       }

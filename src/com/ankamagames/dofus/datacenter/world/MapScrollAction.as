@@ -17,7 +17,7 @@ package com.ankamagames.dofus.datacenter.world
       
       public static const MODULE:String = "MapScrollActions";
       
-      public static function getMapScrollActionById(param1:int) : MapScrollAction
+      public static function getMapScrollActionById(id:int) : MapScrollAction
       {
          //Décompilation abandonné
       }

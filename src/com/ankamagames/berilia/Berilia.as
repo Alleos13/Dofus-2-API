@@ -120,7 +120,7 @@ package com.ankamagames.berilia
          //Décompilation abandonné
       }
       
-      public function set handler(param1:MessageHandler) : void
+      public function set handler(value:MessageHandler) : void
       {
          //Décompilation abandonné
       }
@@ -185,7 +185,7 @@ package com.ankamagames.berilia
          //Décompilation abandonné
       }
       
-      public function set scale(param1:Number) : void
+      public function set scale(nScale:Number) : void
       {
          //Décompilation abandonné
       }
@@ -200,7 +200,7 @@ package com.ankamagames.berilia
          //Décompilation abandonné
       }
       
-      public function set verboseException(param1:Boolean) : void
+      public function set verboseException(v:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -225,22 +225,22 @@ package com.ankamagames.berilia
          //Décompilation abandonné
       }
       
-      public function setDisplayOptions(param1:BeriliaOptions) : void
+      public function setDisplayOptions(bopt:BeriliaOptions) : void
       {
          //Décompilation abandonné
       }
       
-      public function addUIListener(param1:IInterfaceListener) : void
+      public function addUIListener(pListener:IInterfaceListener) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeUIListener(param1:IInterfaceListener) : void
+      public function removeUIListener(pListener:IInterfaceListener) : void
       {
          //Décompilation abandonné
       }
       
-      public function init(param1:Sprite, param2:Boolean, param3:uint, param4:Boolean = true) : void
+      public function init(docContainer:Sprite, verboseException:Boolean, applicationVersion:uint, checkModuleAuthority:Boolean = true) : void
       {
          //Décompilation abandonné
       }
@@ -250,37 +250,37 @@ package com.ankamagames.berilia
          //Décompilation abandonné
       }
       
-      public function loadUi(param1:UiModule, param2:UiData, param3:String, param4:* = null, param5:Boolean = false, param6:int = 1, param7:Boolean = false, param8:String = null) : UiRootContainer
+      public function loadUi(uiModule:UiModule, uiData:UiData, sName:String, properties:* = null, bReplace:Boolean = false, nStrata:int = 1, hide:Boolean = false, cacheName:String = null) : UiRootContainer
       {
          //Décompilation abandonné
       }
       
-      public function giveFocus(param1:UiRootContainer) : void
+      public function giveFocus(container:UiRootContainer) : void
       {
          //Décompilation abandonné
       }
       
-      public function loadUiInside(param1:UiData, param2:String, param3:UiRootContainer, param4:* = null, param5:Boolean = false) : UiRootContainer
+      public function loadUiInside(uiData:UiData, sName:String, suiContainer:UiRootContainer, properties:* = null, bReplace:Boolean = false) : UiRootContainer
       {
          //Décompilation abandonné
       }
       
-      public function unloadUi(param1:String, param2:Boolean = false) : Boolean
+      public function unloadUi(sName:String, forceUnload:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function unloadUiEvents(param1:String, param2:Boolean = false) : void
+      public function unloadUiEvents(sName:String, useCache:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function getUi(param1:String) : UiRootContainer
+      public function getUi(sName:String) : UiRootContainer
       {
          //Décompilation abandonné
       }
       
-      public function isUiDisplayed(param1:String) : Boolean
+      public function isUiDisplayed(sName:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -295,17 +295,17 @@ package com.ankamagames.berilia
          //Décompilation abandonné
       }
       
-      public function isRegisteredContainerId(param1:String) : Boolean
+      public function isRegisteredContainerId(sName:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function registerContainerId(param1:String, param2:DisplayObjectContainer) : Boolean
+      public function registerContainerId(sName:String, doc:DisplayObjectContainer) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onUiLoaded(param1:UiRenderEvent) : void
+      private function onUiLoaded(ure:UiRenderEvent) : void
       {
          //Décompilation abandonné
       }
@@ -315,7 +315,7 @@ package com.ankamagames.berilia
          //Décompilation abandonné
       }
       
-      private function isRegisteredUiName(param1:String) : Boolean
+      private function isRegisteredUiName(sName:String) : Boolean
       {
          //Décompilation abandonné
       }

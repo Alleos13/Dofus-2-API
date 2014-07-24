@@ -48,22 +48,22 @@ package com.ankamagames.dofus.misc.utils
       
       private static var matrix:Matrix;
       
-      public static function getBitmap(param1:String, param2:Boolean = false, param3:Boolean = true) : Bitmap
+      public static function getBitmap(className:String, unique:Boolean = false, useCache:Boolean = true) : Bitmap
       {
          //Décompilation abandonné
       }
       
-      public static function getSprite(param1:String) : Sprite
+      public static function getSprite(className:String) : Sprite
       {
          //Décompilation abandonné
       }
       
-      public static function getClass(param1:String) : Class
+      public static function getClass(className:String) : Class
       {
          //Décompilation abandonné
       }
       
-      private static function saveCache(param1:String, param2:*) : void
+      private static function saveCache(className:String, data:*) : void
       {
          //Décompilation abandonné
       }

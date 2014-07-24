@@ -20,7 +20,7 @@ package com.ankamagames.atouin.entities.behaviours.movements
       
       private static const RUN_ANIMATION:String = "AnimCourse";
       
-      public static function getInstance(param1:Number = 0.0) : RunningMovementBehavior
+      public static function getInstance(speedAdjust:Number = 0.0) : RunningMovementBehavior
       {
          //Décompilation abandonné
       }

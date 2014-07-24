@@ -17,7 +17,7 @@ package com.ankamagames.dofus.datacenter.items
       
       public static const MODULE:String = "PresetIcons";
       
-      public static function getPresetIconById(param1:int) : PresetIcon
+      public static function getPresetIconById(id:int) : PresetIcon
       {
          //Décompilation abandonné
       }

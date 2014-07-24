@@ -47,22 +47,22 @@ package com.ankamagames.atouin.managers
          //Décompilation abandonné
       }
       
-      public function addAnimatedEntity(param1:int, param2:IEntity, param3:uint) : void
+      public function addAnimatedEntity(entityID:int, entity:IEntity, strata:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function getEntity(param1:int) : IEntity
+      public function getEntity(entityID:int) : IEntity
       {
          //Décompilation abandonné
       }
       
-      public function getEntityID(param1:IEntity) : int
+      public function getEntityID(entity:IEntity) : int
       {
          //Décompilation abandonné
       }
       
-      public function removeEntity(param1:int) : void
+      public function removeEntity(entityID:int) : void
       {
          //Décompilation abandonné
       }
@@ -87,32 +87,32 @@ package com.ankamagames.atouin.managers
          //Décompilation abandonné
       }
       
-      private function registerInteractions(param1:IInteractive, param2:Boolean) : void
+      private function registerInteractions(entity:IInteractive, register:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function registerInteraction(param1:IInteractive, param2:uint, param3:Boolean) : void
+      public function registerInteraction(entity:IInteractive, interactionType:uint, enabled:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function getEntityOnCell(param1:uint, param2:* = null) : IEntity
+      public function getEntityOnCell(cellId:uint, oClass:* = null) : IEntity
       {
          //Décompilation abandonné
       }
       
-      public function getEntitiesOnCell(param1:uint, param2:* = null) : Array
+      public function getEntitiesOnCell(cellId:uint, oClass:* = null) : Array
       {
          //Décompilation abandonné
       }
       
-      private function onInteraction(param1:Event) : void
+      private function onInteraction(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onPropertyChanged(param1:PropertyChangeEvent) : void
+      private function onPropertyChanged(e:PropertyChangeEvent) : void
       {
          //Décompilation abandonné
       }

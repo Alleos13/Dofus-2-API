@@ -31,7 +31,7 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      public function initBidExchangerObjectInfo(param1:uint = 0, param2:Vector.<ObjectEffect> = null, param3:Vector.<uint> = null) : BidExchangerObjectInfo
+      public function initBidExchangerObjectInfo(objectUID:uint = 0, effects:Vector.<ObjectEffect> = null, prices:Vector.<uint> = null) : BidExchangerObjectInfo
       {
          //Décompilation abandonné
       }
@@ -41,22 +41,22 @@ package com.ankamagames.dofus.network.types.game.data.items
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_BidExchangerObjectInfo(param1:IDataOutput) : void
+      public function serializeAs_BidExchangerObjectInfo(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_BidExchangerObjectInfo(param1:IDataInput) : void
+      public function deserializeAs_BidExchangerObjectInfo(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

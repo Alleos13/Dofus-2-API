@@ -12,7 +12,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightDispellStep(param1:int)
+      public function FightDispellStep(fighterId:int)
       {
          //Décompilation abandonné
       }

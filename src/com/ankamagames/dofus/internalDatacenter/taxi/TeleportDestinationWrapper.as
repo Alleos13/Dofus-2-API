@@ -14,7 +14,7 @@ package com.ankamagames.dofus.internalDatacenter.taxi
       //Décompilation abandonné
       }
       
-      public function TeleportDestinationWrapper(param1:uint, param2:uint, param3:uint, param4:uint, param5:uint, param6:Boolean = false, param7:Hint = null, param8:Boolean = true)
+      public function TeleportDestinationWrapper(teleporterGenericType:uint, mapId:uint, subareaId:uint, destType:uint, cost:uint, spawn:Boolean = false, hint:Hint = null, known:Boolean = true)
       {
          //Décompilation abandonné
       }
@@ -23,7 +23,7 @@ package com.ankamagames.dofus.internalDatacenter.taxi
       
       private static var _hintsRealMap:Dictionary;
       
-      public static function getHintsFromMapId(param1:uint) : Vector.<Hint>
+      public static function getHintsFromMapId(mapId:uint) : Vector.<Hint>
       {
          //Décompilation abandonné
       }

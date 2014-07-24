@@ -40,7 +40,7 @@ package com.ankamagames.dofus.network.messages.game.prism
          //Décompilation abandonné
       }
       
-      public function initPrismFightAttackerAddMessage(param1:uint = 0, param2:Number = 0, param3:CharacterMinimalPlusLookInformations = null) : PrismFightAttackerAddMessage
+      public function initPrismFightAttackerAddMessage(subAreaId:uint = 0, fightId:Number = 0, attacker:CharacterMinimalPlusLookInformations = null) : PrismFightAttackerAddMessage
       {
          //Décompilation abandonné
       }
@@ -50,32 +50,32 @@ package com.ankamagames.dofus.network.messages.game.prism
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PrismFightAttackerAddMessage(param1:IDataOutput) : void
+      public function serializeAs_PrismFightAttackerAddMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PrismFightAttackerAddMessage(param1:IDataInput) : void
+      public function deserializeAs_PrismFightAttackerAddMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

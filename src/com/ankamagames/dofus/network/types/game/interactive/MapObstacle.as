@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.interactive
          //Décompilation abandonné
       }
       
-      public function initMapObstacle(param1:uint = 0, param2:uint = 0) : MapObstacle
+      public function initMapObstacle(obstacleCellId:uint = 0, state:uint = 0) : MapObstacle
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.interactive
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_MapObstacle(param1:IDataOutput) : void
+      public function serializeAs_MapObstacle(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_MapObstacle(param1:IDataInput) : void
+      public function deserializeAs_MapObstacle(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

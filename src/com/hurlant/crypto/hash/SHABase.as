@@ -32,12 +32,12 @@ package com.hurlant.crypto.hash
          //Décompilation abandonné
       }
       
-      public function hash(param1:ByteArray) : ByteArray
+      public function hash(src:ByteArray) : ByteArray
       {
          //Décompilation abandonné
       }
       
-      protected function core(param1:Array, param2:uint) : Array
+      protected function core(x:Array, len:uint) : Array
       {
          //Décompilation abandonné
       }

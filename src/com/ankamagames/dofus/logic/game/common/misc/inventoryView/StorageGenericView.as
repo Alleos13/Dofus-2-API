@@ -20,7 +20,7 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
       //Décompilation abandonné
       }
       
-      public function StorageGenericView(param1:HookLock)
+      public function StorageGenericView(hookLock:HookLock)
       {
          //Décompilation abandonné
       }
@@ -43,7 +43,7 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
       
       protected var _types:Dictionary;
       
-      public function initialize(param1:Vector.<ItemWrapper>) : void
+      public function initialize(items:Vector.<ItemWrapper>) : void
       {
          //Décompilation abandonné
       }
@@ -63,22 +63,22 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
          //Décompilation abandonné
       }
       
-      public function addItem(param1:ItemWrapper, param2:int) : void
+      public function addItem(item:ItemWrapper, invisible:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeItem(param1:ItemWrapper, param2:int) : void
+      public function removeItem(item:ItemWrapper, invisible:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function modifyItem(param1:ItemWrapper, param2:ItemWrapper, param3:int) : void
+      public function modifyItem(item:ItemWrapper, oldItem:ItemWrapper, invisible:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function isListening(param1:ItemWrapper) : Boolean
+      public function isListening(item:ItemWrapper) : Boolean
       {
          //Décompilation abandonné
       }
@@ -88,22 +88,22 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
          //Décompilation abandonné
       }
       
-      protected function getItemIndex(param1:ItemWrapper, param2:Vector.<ItemWrapper> = null) : int
+      protected function getItemIndex(item:ItemWrapper, list:Vector.<ItemWrapper> = null) : int
       {
          //Décompilation abandonné
       }
       
-      private function sortItemsByIndex(param1:ItemWrapper, param2:ItemWrapper) : int
+      private function sortItemsByIndex(a:ItemWrapper, b:ItemWrapper) : int
       {
          //Décompilation abandonné
       }
       
-      private function compareFunction(param1:ItemWrapper, param2:ItemWrapper, param3:uint = 0) : int
+      private function compareFunction(a:ItemWrapper, b:ItemWrapper, sortDepth:uint = 0) : int
       {
          //Décompilation abandonné
       }
       
-      private function getItemAveragePrice(param1:uint) : int
+      private function getItemAveragePrice(pItemGID:uint) : int
       {
          //Décompilation abandonné
       }

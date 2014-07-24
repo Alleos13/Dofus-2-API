@@ -7,7 +7,7 @@ package flashx.textLayout.property
       //Décompilation abandonné
       }
       
-      public function PercentPropertyHandler(param1:String, param2:String, param3:String = "allLimits")
+      public function PercentPropertyHandler(minValue:String, maxValue:String, limits:String = "allLimits")
       {
          //Décompilation abandonné
       }
@@ -38,7 +38,7 @@ package flashx.textLayout.property
          //Décompilation abandonné
       }
       
-      override public function owningHandlerCheck(param1:*) : *
+      override public function owningHandlerCheck(newVal:*) : *
       {
          //Décompilation abandonné
       }

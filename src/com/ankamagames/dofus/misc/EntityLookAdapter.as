@@ -18,22 +18,22 @@ package com.ankamagames.dofus.misc
          //Décompilation abandonné
       }
       
-      public static function fromNetwork(param1:EntityLook) : TiphonEntityLook
+      public static function fromNetwork(n:EntityLook) : TiphonEntityLook
       {
          //Décompilation abandonné
       }
       
-      public static function toNetwork(param1:TiphonEntityLook) : EntityLook
+      public static function toNetwork(o:TiphonEntityLook) : EntityLook
       {
          //Décompilation abandonné
       }
       
-      public static function tiphonizeLook(param1:*) : TiphonEntityLook
+      public static function tiphonizeLook(rawLook:*) : TiphonEntityLook
       {
          //Décompilation abandonné
       }
       
-      public static function getRiderLook(param1:*) : TiphonEntityLook
+      public static function getRiderLook(rawLook:*) : TiphonEntityLook
       {
          //Décompilation abandonné
       }

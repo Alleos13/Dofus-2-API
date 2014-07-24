@@ -34,7 +34,7 @@ package com.ankamagames.dofus.misc.utils.errormanager
       //Décompilation abandonné
       }
       
-      public function WebServiceDataHandler(param1:PrivateClass)
+      public function WebServiceDataHandler(pPrivate:PrivateClass)
       {
          //Décompilation abandonné
       }
@@ -72,22 +72,22 @@ package com.ankamagames.dofus.misc.utils.errormanager
       
       private var _previousErrorType:String = "";
       
-      public function createNewException(param1:Object, param2:String) : DataExceptionModel
+      public function createNewException(reportInfo:Object, errorType:String) : DataExceptionModel
       {
          //Décompilation abandonné
       }
       
-      public function cleanStacktrace(param1:String) : String
+      public function cleanStacktrace(inStack:String) : String
       {
          //Décompilation abandonné
       }
       
-      private function sendDataToWebservice(param1:DataExceptionModel) : void
+      private function sendDataToWebservice(exception:DataExceptionModel) : void
       {
          //Décompilation abandonné
       }
       
-      private function onDataSavedComplete(param1:Event) : void
+      private function onDataSavedComplete(pEvt:Event) : void
       {
          //Décompilation abandonné
       }
@@ -97,7 +97,7 @@ package com.ankamagames.dofus.misc.utils.errormanager
          //Décompilation abandonné
       }
       
-      private function onDataSavedError(param1:Event) : void
+      private function onDataSavedError(pEvt:Event) : void
       {
          //Décompilation abandonné
       }
@@ -107,12 +107,12 @@ package com.ankamagames.dofus.misc.utils.errormanager
          //Décompilation abandonné
       }
       
-      public function clearService(param1:RpcServiceManager = null) : void
+      public function clearService(rpcService:RpcServiceManager = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function saveException(param1:DataExceptionModel, param2:Boolean = false) : void
+      public function saveException(exception:DataExceptionModel, forceSend:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -132,7 +132,7 @@ package com.ankamagames.dofus.misc.utils.errormanager
          //Décompilation abandonné
       }
       
-      public function getSendingType(param1:String) : String
+      public function getSendingType(pType:String) : String
       {
          //Décompilation abandonné
       }

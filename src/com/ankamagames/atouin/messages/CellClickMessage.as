@@ -7,7 +7,7 @@ package com.ankamagames.atouin.messages
       //Décompilation abandonné
       }
       
-      public function CellClickMessage(param1:uint = 0, param2:uint = 0)
+      public function CellClickMessage(cellId:uint = 0, mapId:uint = 0)
       {
          //Décompilation abandonné
       }

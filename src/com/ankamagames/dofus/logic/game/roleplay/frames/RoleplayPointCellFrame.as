@@ -43,7 +43,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
       //Décompilation abandonné
       }
       
-      public function RoleplayPointCellFrame(param1:Function = null, param2:Sprite = null, param3:Boolean = false, param4:Function = null, param5:Boolean = false)
+      public function RoleplayPointCellFrame(callBack:Function = null, cursorIcon:Sprite = null, freeCellOnly:Boolean = false, customCellValidatorFct:Function = null, untargetableEntities:Boolean = false)
       {
          //Décompilation abandonné
       }
@@ -86,7 +86,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -96,7 +96,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      private function refreshTarget(param1:int) : void
+      private function refreshTarget(target:int) : void
       {
          //Décompilation abandonné
       }
@@ -106,7 +106,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      private function showCell(param1:uint, param2:int = -1) : void
+      private function showCell(cell:uint, entityId:int = -1) : void
       {
          //Décompilation abandonné
       }
@@ -116,7 +116,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      private function isValidCell(param1:uint) : Boolean
+      private function isValidCell(cell:uint) : Boolean
       {
          //Décompilation abandonné
       }

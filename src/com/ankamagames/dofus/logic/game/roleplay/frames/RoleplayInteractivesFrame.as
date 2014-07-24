@@ -141,7 +141,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
       
       protected static const _log:Logger;
       
-      public static function getCursor(param1:int, param2:Boolean = true, param3:Boolean = true) : Sprite
+      public static function getCursor(id:int, pEnabled:Boolean = true, pCache:Boolean = true) : Sprite
       {
          //Décompilation abandonné
       }
@@ -194,7 +194,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function set currentRequestedElementId(param1:int) : void
+      public function set currentRequestedElementId(pElementId:int) : void
       {
          //Décompilation abandonné
       }
@@ -209,7 +209,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function set nextInteractiveUsed(param1:Object) : void
+      public function set nextInteractiveUsed(object:Object) : void
       {
          //Décompilation abandonné
       }
@@ -224,7 +224,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -236,7 +236,7 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function enableWorldInteraction(param1:Boolean) : void
+      public function enableWorldInteraction(pEnable:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -251,92 +251,92 @@ package com.ankamagames.dofus.logic.game.roleplay.frames
          //Décompilation abandonné
       }
       
-      public function getInteractiveActionTimer(param1:*) : Timer
+      public function getInteractiveActionTimer(pUser:*) : Timer
       {
          //Décompilation abandonné
       }
       
-      public function isElementChangingState(param1:int) : Boolean
+      public function isElementChangingState(pElementId:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getUseDirection(param1:TiphonSprite, param2:String, param3:MapPoint) : uint
+      public function getUseDirection(user:TiphonSprite, useAnimation:String, worldPos:MapPoint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function registerInteractive(param1:InteractiveElement, param2:int) : void
+      private function registerInteractive(ie:InteractiveElement, firstSkill:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function removeInteractive(param1:InteractiveElement) : void
+      private function removeInteractive(ie:InteractiveElement) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateStatedElement(param1:StatedElement, param2:Boolean = false) : void
+      private function updateStatedElement(se:StatedElement, global:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      private function findTiphonSprite(param1:DisplayObjectContainer) : TiphonSprite
+      private function findTiphonSprite(doc:DisplayObjectContainer) : TiphonSprite
       {
          //Décompilation abandonné
       }
       
-      private function highlightInteractiveApparence(param1:Sprite, param2:int, param3:Boolean = true) : void
+      private function highlightInteractiveApparence(ie:Sprite, firstSkill:int, pSkillIsEnabled:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      private function resetInteractiveApparence(param1:Boolean = true) : void
+      private function resetInteractiveApparence(removeIcon:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      private function over(param1:MouseEvent) : void
+      private function over(me:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function out(param1:Object) : void
+      private function out(me:Object) : void
       {
          //Décompilation abandonné
       }
       
-      private function click(param1:MouseEvent) : void
+      private function click(me:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function showInteractiveElementNotification(param1:Array) : void
+      private function showInteractiveElementNotification(dataTab:Array) : void
       {
          //Décompilation abandonné
       }
       
-      private function getJobKnown(param1:Array) : Array
+      private function getJobKnown(data:Array) : Array
       {
          //Décompilation abandonné
       }
       
-      private function formateInteractiveElementProblem(param1:String, param2:Array) : String
+      private function formateInteractiveElementProblem(type:String, data:Array) : String
       {
          //Décompilation abandonné
       }
       
-      private function skillClicked(param1:Object, param2:int) : void
+      private function skillClicked(ie:Object, skillInstanceId:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function interactiveUsageFinished(param1:int, param2:uint, param3:uint) : void
+      private function interactiveUsageFinished(entityId:int, elementId:uint, skillId:uint) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAnimRendered(param1:TiphonEvent) : void
+      private function onAnimRendered(pEvent:TiphonEvent) : void
       {
          //Décompilation abandonné
       }

@@ -112,7 +112,7 @@ package com.ankamagames.dofus.logic.common.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -122,12 +122,12 @@ package com.ankamagames.dofus.logic.common.frames
          //Décompilation abandonné
       }
       
-      private function sendAdminCmd(param1:String) : void
+      private function sendAdminCmd(cmd:String) : void
       {
          //Décompilation abandonné
       }
       
-      private function onAction(param1:Event) : void
+      private function onAction(e:Event) : void
       {
          //Décompilation abandonné
       }
@@ -139,7 +139,7 @@ package com.ankamagames.dofus.logic.common.frames
          //Décompilation abandonné
       }
       
-      private function addTurnAction(param1:Function, param2:Array) : void
+      private function addTurnAction(fct:Function, args:Array) : void
       {
          //Décompilation abandonné
       }
@@ -149,7 +149,7 @@ package com.ankamagames.dofus.logic.common.frames
          //Décompilation abandonné
       }
       
-      private function join(param1:String) : void
+      private function join(name:String) : void
       {
          //Décompilation abandonné
       }
@@ -174,12 +174,12 @@ package com.ankamagames.dofus.logic.common.frames
          //Décompilation abandonné
       }
       
-      private function randomOver(... rest) : void
+      private function randomOver(... foo) : void
       {
          //Décompilation abandonné
       }
       
-      private function castSpell(param1:uint, param2:Boolean) : void
+      private function castSpell(spellId:uint, onMySelf:Boolean) : void
       {
          //Décompilation abandonné
       }

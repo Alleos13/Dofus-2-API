@@ -39,7 +39,7 @@ package flashx.textLayout.elements
       //Décompilation abandonné
       }
       
-      public function InlineGraphicElement(param1:String = "")
+      public function InlineGraphicElement(pAltText:String = "")
       {
          //Décompilation abandonné
       }
@@ -68,7 +68,7 @@ package flashx.textLayout.elements
       
       tlf_internal  static const floatPropertyDefinition:Property;
       
-      private static function recursiveShutDownGraphic(param1:DisplayObject) : void
+      private static function recursiveShutDownGraphic(graphic:DisplayObject) : void
       {
          //Décompilation abandonné
       }
@@ -127,7 +127,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      private function setGraphic(param1:DisplayObject) : void
+      private function setGraphic(value:DisplayObject) : void
       {
          //Décompilation abandonné
       }
@@ -142,7 +142,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      tlf_internal function set elementWidth(param1:Number) : void
+      tlf_internal function set elementWidth(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -152,7 +152,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      tlf_internal function set elementHeight(param1:Number) : void
+      tlf_internal function set elementHeight(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -162,7 +162,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      private function changeGraphicStatus(param1:Object) : void
+      private function changeGraphicStatus(stat:Object) : void
       {
          //Décompilation abandonné
       }
@@ -172,7 +172,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set width(param1:*) : void
+      public function set width(w:*) : void
       {
          //Décompilation abandonné
       }
@@ -202,7 +202,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      private function internalSetWidth(param1:*) : void
+      private function internalSetWidth(w:*) : void
       {
          //Décompilation abandonné
       }
@@ -212,7 +212,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set height(param1:*) : void
+      public function set height(h:*) : void
       {
          //Décompilation abandonné
       }
@@ -234,7 +234,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      tlf_internal function setEffectiveFloat(param1:String) : void
+      tlf_internal function setEffectiveFloat(floatValue:String) : void
       {
          //Décompilation abandonné
       }
@@ -244,7 +244,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set float(param1:*) : *
+      public function set float(value:*) : *
       {
          //Décompilation abandonné
       }
@@ -269,27 +269,27 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      private function internalSetHeight(param1:*) : void
+      private function internalSetHeight(h:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function loadCompleteHandler(param1:Event) : void
+      private function loadCompleteHandler(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function openHandler(param1:Event) : void
+      private function openHandler(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function addDefaultLoadHandlers(param1:Loader) : void
+      private function addDefaultLoadHandlers(loader:Loader) : void
       {
          //Décompilation abandonné
       }
       
-      private function removeDefaultLoadHandlers(param1:Loader) : void
+      private function removeDefaultLoadHandlers(loader:Loader) : void
       {
          //Décompilation abandonné
       }
@@ -299,17 +299,17 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      public function set source(param1:Object) : void
+      public function set source(value:Object) : void
       {
          //Décompilation abandonné
       }
       
-      override tlf_internal function applyDelayedElementUpdate(param1:TextFlow, param2:Boolean, param3:Boolean) : void
+      override tlf_internal function applyDelayedElementUpdate(textFlow:TextFlow, okToUnloadGraphics:Boolean, hasController:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      override tlf_internal function updateForMustUseComposer(param1:TextFlow) : Boolean
+      override tlf_internal function updateForMustUseComposer(textFlow:TextFlow) : Boolean
       {
          //Décompilation abandonné
       }
@@ -319,7 +319,7 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      tlf_internal function stop(param1:Boolean) : Boolean
+      tlf_internal function stop(okToUnloadGraphics:Boolean) : Boolean
       {
          //Décompilation abandonné
       }
@@ -329,32 +329,32 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override tlf_internal function getEffectiveLineHeight(param1:String) : Number
+      override tlf_internal function getEffectiveLineHeight(blockProgression:String) : Number
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function getTypographicAscent(param1:TextLine) : Number
+      tlf_internal function getTypographicAscent(textLine:TextLine) : Number
       {
          //Décompilation abandonné
       }
       
-      override tlf_internal function getCSSInlineBox(param1:String, param2:TextLine, param3:ParagraphElement = null, param4:ISWFContext = null) : Rectangle
+      override tlf_internal function getCSSInlineBox(blockProgression:String, textLine:TextLine, para:ParagraphElement = null, swfContext:ISWFContext = null) : Rectangle
       {
          //Décompilation abandonné
       }
       
-      override tlf_internal function updateIMEAdornments(param1:TextLine, param2:String, param3:String) : void
+      override tlf_internal function updateIMEAdornments(tLine:TextLine, blockProgression:String, imeStatus:String) : void
       {
          //Décompilation abandonné
       }
       
-      override tlf_internal function updateAdornments(param1:TextLine, param2:String) : int
+      override tlf_internal function updateAdornments(tLine:TextLine, blockProgression:String) : int
       {
          //Décompilation abandonné
       }
       
-      override public function shallowCopy(param1:int = 0, param2:int = -1) : FlowElement
+      override public function shallowCopy(startPos:int = 0, endPos:int = -1) : FlowElement
       {
          //Décompilation abandonné
       }
@@ -369,17 +369,17 @@ package flashx.textLayout.elements
          //Décompilation abandonné
       }
       
-      override tlf_internal function appendElementsForDelayedUpdate(param1:TextFlow, param2:String) : void
+      override tlf_internal function appendElementsForDelayedUpdate(tf:TextFlow, changeType:String) : void
       {
          //Décompilation abandonné
       }
       
-      override tlf_internal function calculateStrikeThrough(param1:TextLine, param2:String, param3:FontMetrics) : Number
+      override tlf_internal function calculateStrikeThrough(tLine:TextLine, blockProgression:String, metrics:FontMetrics) : Number
       {
          //Décompilation abandonné
       }
       
-      override tlf_internal function calculateUnderlineOffset(param1:Number, param2:String, param3:FontMetrics, param4:TextLine) : Number
+      override tlf_internal function calculateUnderlineOffset(stOffset:Number, blockProgression:String, metrics:FontMetrics, tLine:TextLine) : Number
       {
          //Décompilation abandonné
       }

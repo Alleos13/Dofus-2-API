@@ -19,7 +19,7 @@ package com.ankamagames.dofus.datacenter.jobs
       
       public static const MODULE:String = "Jobs";
       
-      public static function getJobById(param1:int) : Job
+      public static function getJobById(id:int) : Job
       {
          //Décompilation abandonné
       }

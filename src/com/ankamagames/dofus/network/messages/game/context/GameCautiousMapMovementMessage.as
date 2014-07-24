@@ -31,7 +31,7 @@ package com.ankamagames.dofus.network.messages.game.context
          //Décompilation abandonné
       }
       
-      public function initGameCautiousMapMovementMessage(param1:Vector.<uint> = null, param2:int = 0) : GameCautiousMapMovementMessage
+      public function initGameCautiousMapMovementMessage(keyMovements:Vector.<uint> = null, actorId:int = 0) : GameCautiousMapMovementMessage
       {
          //Décompilation abandonné
       }
@@ -41,32 +41,32 @@ package com.ankamagames.dofus.network.messages.game.context
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameCautiousMapMovementMessage(param1:IDataOutput) : void
+      public function serializeAs_GameCautiousMapMovementMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameCautiousMapMovementMessage(param1:IDataInput) : void
+      public function deserializeAs_GameCautiousMapMovementMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

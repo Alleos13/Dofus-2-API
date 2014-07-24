@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.sequencer
       //Décompilation abandonné
       }
       
-      public function StartSequenceStep(param1:ISequencer)
+      public function StartSequenceStep(sequence:ISequencer)
       {
          //Décompilation abandonné
       }

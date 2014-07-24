@@ -23,7 +23,7 @@ package com.ankamagames.dofus.datacenter.misc
       
       private static var _log:Logger;
       
-      public static function getMonthById(param1:int) : Month
+      public static function getMonthById(id:int) : Month
       {
          //Décompilation abandonné
       }

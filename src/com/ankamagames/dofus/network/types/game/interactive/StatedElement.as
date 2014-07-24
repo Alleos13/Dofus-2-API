@@ -29,7 +29,7 @@ package com.ankamagames.dofus.network.types.game.interactive
          //Décompilation abandonné
       }
       
-      public function initStatedElement(param1:uint = 0, param2:uint = 0, param3:uint = 0) : StatedElement
+      public function initStatedElement(elementId:uint = 0, elementCellId:uint = 0, elementState:uint = 0) : StatedElement
       {
          //Décompilation abandonné
       }
@@ -39,22 +39,22 @@ package com.ankamagames.dofus.network.types.game.interactive
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_StatedElement(param1:IDataOutput) : void
+      public function serializeAs_StatedElement(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_StatedElement(param1:IDataInput) : void
+      public function deserializeAs_StatedElement(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

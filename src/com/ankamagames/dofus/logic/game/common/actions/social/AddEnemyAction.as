@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.social
          //Décompilation abandonné
       }
       
-      public static function create(param1:String) : AddEnemyAction
+      public static function create(name:String) : AddEnemyAction
       {
          //Décompilation abandonné
       }

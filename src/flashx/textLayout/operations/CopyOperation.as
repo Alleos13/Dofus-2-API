@@ -11,7 +11,7 @@ package flashx.textLayout.operations
       //Décompilation abandonné
       }
       
-      public function CopyOperation(param1:SelectionState)
+      public function CopyOperation(operationState:SelectionState)
       {
          //Décompilation abandonné
       }

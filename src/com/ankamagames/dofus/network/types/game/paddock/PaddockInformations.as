@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.paddock
          //Décompilation abandonné
       }
       
-      public function initPaddockInformations(param1:uint = 0, param2:uint = 0) : PaddockInformations
+      public function initPaddockInformations(maxOutdoorMount:uint = 0, maxItems:uint = 0) : PaddockInformations
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.paddock
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PaddockInformations(param1:IDataOutput) : void
+      public function serializeAs_PaddockInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PaddockInformations(param1:IDataInput) : void
+      public function deserializeAs_PaddockInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

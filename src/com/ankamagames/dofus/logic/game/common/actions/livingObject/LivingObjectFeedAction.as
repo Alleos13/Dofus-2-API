@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.livingObject
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:uint, param3:uint) : LivingObjectFeedAction
+      public static function create(objectUID:uint, foodUID:uint, foodQuantity:uint) : LivingObjectFeedAction
       {
          //Décompilation abandonné
       }

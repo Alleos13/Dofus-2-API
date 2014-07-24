@@ -29,7 +29,7 @@ package org.flintparticles.common.utils
       
       private var _time:Number;
       
-      private function frameUpdate(param1:Event) : void
+      private function frameUpdate(ev:Event) : void
       {
          //Décompilation abandonné
       }

@@ -67,47 +67,47 @@ package flashx.textLayout.conversion
       
       private static const _ilgElementFormatImporters:Array;
       
-      public static function parseSPGE(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseSPGE(importFilter:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseTCY(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseTCY(importFilter:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseLink(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseLink(importFilter:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseLinkNormalFormat(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseLinkNormalFormat(importFilter:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseLinkActiveFormat(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseLinkActiveFormat(importFilter:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseLinkHoverFormat(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseLinkHoverFormat(importFilter:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseListMarkerFormat(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseListMarkerFormat(importFilter:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseDivElement(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseDivElement(importFilter:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
       
-      public static function parseInlineGraphic(param1:BaseTextLayoutImporter, param2:XML, param3:FlowGroupElement) : void
+      public static function parseInlineGraphic(importFilter:BaseTextLayoutImporter, xmlToParse:XML, parent:FlowGroupElement) : void
       {
          //Décompilation abandonné
       }
@@ -119,82 +119,82 @@ package flashx.textLayout.conversion
          //Décompilation abandonné
       }
       
-      public function set imageSourceResolveFunction(param1:Function) : void
+      public function set imageSourceResolveFunction(resolver:Function) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function parseContent(param1:XML) : TextFlow
+      override protected function parseContent(rootStory:XML) : TextFlow
       {
          //Décompilation abandonné
       }
       
-      private function parseStandardFlowElementAttributes(param1:FlowElement, param2:XML, param3:Array = null) : void
+      private function parseStandardFlowElementAttributes(flowElem:FlowElement, xmlToParse:XML, importers:Array = null) : void
       {
          //Décompilation abandonné
       }
       
-      override public function createTextFlowFromXML(param1:XML, param2:TextFlow = null) : TextFlow
+      override public function createTextFlowFromXML(xmlToParse:XML, textFlow:TextFlow = null) : TextFlow
       {
          //Décompilation abandonné
       }
       
-      public function createDivFromXML(param1:XML) : DivElement
+      public function createDivFromXML(xmlToParse:XML) : DivElement
       {
          //Décompilation abandonné
       }
       
-      override public function createParagraphFromXML(param1:XML) : ParagraphElement
+      override public function createParagraphFromXML(xmlToParse:XML) : ParagraphElement
       {
          //Décompilation abandonné
       }
       
-      public function createSubParagraphGroupFromXML(param1:XML) : SubParagraphGroupElement
+      public function createSubParagraphGroupFromXML(xmlToParse:XML) : SubParagraphGroupElement
       {
          //Décompilation abandonné
       }
       
-      public function createTCYFromXML(param1:XML) : TCYElement
+      public function createTCYFromXML(xmlToParse:XML) : TCYElement
       {
          //Décompilation abandonné
       }
       
-      public function createLinkFromXML(param1:XML) : LinkElement
+      public function createLinkFromXML(xmlToParse:XML) : LinkElement
       {
          //Décompilation abandonné
       }
       
-      override public function createSpanFromXML(param1:XML) : SpanElement
+      override public function createSpanFromXML(xmlToParse:XML) : SpanElement
       {
          //Décompilation abandonné
       }
       
-      public function createInlineGraphicFromXML(param1:XML) : InlineGraphicElement
+      public function createInlineGraphicFromXML(xmlToParse:XML) : InlineGraphicElement
       {
          //Décompilation abandonné
       }
       
-      override public function createListFromXML(param1:XML) : ListElement
+      override public function createListFromXML(xmlToParse:XML) : ListElement
       {
          //Décompilation abandonné
       }
       
-      override public function createListItemFromXML(param1:XML) : ListItemElement
+      override public function createListItemFromXML(xmlToParse:XML) : ListItemElement
       {
          //Décompilation abandonné
       }
       
-      public function extractTextFormatAttributesHelper(param1:Object, param2:TLFormatImporter) : Object
+      public function extractTextFormatAttributesHelper(curAttrs:Object, importer:TLFormatImporter) : Object
       {
          //Décompilation abandonné
       }
       
-      public function createDictionaryFromXML(param1:XML) : Dictionary
+      public function createDictionaryFromXML(xmlToParse:XML) : Dictionary
       {
          //Décompilation abandonné
       }
       
-      public function createListMarkerFormatDictionaryFromXML(param1:XML) : Dictionary
+      public function createListMarkerFormatDictionaryFromXML(xmlToParse:XML) : Dictionary
       {
          //Décompilation abandonné
       }

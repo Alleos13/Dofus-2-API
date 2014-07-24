@@ -10,7 +10,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function MariedItemCriterion(param1:String)
+      public function MariedItemCriterion(pCriterion:String)
       {
          //Décompilation abandonné
       }

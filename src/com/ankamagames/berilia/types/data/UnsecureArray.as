@@ -14,7 +14,7 @@ package com.ankamagames.berilia.types.data
          //Décompilation abandonné
       }
       
-      public function getObject(param1:Object) : *
+      public function getObject(accessKey:Object) : *
       {
          //Décompilation abandonné
       }

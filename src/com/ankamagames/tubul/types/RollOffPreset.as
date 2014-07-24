@@ -7,7 +7,7 @@ package com.ankamagames.tubul.types
       //Décompilation abandonné
       }
       
-      public function RollOffPreset(param1:uint, param2:uint, param3:uint)
+      public function RollOffPreset(pMaxVolume:uint, pRange:uint, pMaxSaturationRange:uint)
       {
          //Décompilation abandonné
       }

@@ -9,7 +9,7 @@ package com.somerandomdude.colortoolkit.spaces
       //Décompilation abandonné
       }
       
-      public function HSL(param1:Number = 0, param2:Number = 0, param3:Number = 0)
+      public function HSL(hue:Number = 0, saturation:Number = 0, lightness:Number = 0)
       {
          //Décompilation abandonné
       }
@@ -25,7 +25,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set hue(param1:Number) : void
+      public function set hue(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -35,7 +35,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set saturation(param1:Number) : void
+      public function set saturation(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -45,7 +45,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set lightness(param1:Number) : void
+      public function set lightness(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -55,7 +55,7 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      public function set color(param1:Number) : void
+      public function set color(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -65,12 +65,12 @@ package com.somerandomdude.colortoolkit.spaces
          //Décompilation abandonné
       }
       
-      private function generateColorFromHex(param1:int) : HSL
+      private function generateColorFromHex(color:int) : HSL
       {
          //Décompilation abandonné
       }
       
-      private function generateColorFromHSL(param1:Number, param2:Number, param3:Number) : int
+      private function generateColorFromHSL(hue:Number, saturation:Number, lightness:Number) : int
       {
          //Décompilation abandonné
       }

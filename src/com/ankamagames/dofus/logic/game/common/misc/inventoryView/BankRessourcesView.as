@@ -13,7 +13,7 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
       //Décompilation abandonné
       }
       
-      public function BankRessourcesView(param1:HookLock)
+      public function BankRessourcesView(hookLock:HookLock)
       {
          //Décompilation abandonné
       }
@@ -23,7 +23,7 @@ package com.ankamagames.dofus.logic.game.common.misc.inventoryView
          //Décompilation abandonné
       }
       
-      override public function isListening(param1:ItemWrapper) : Boolean
+      override public function isListening(item:ItemWrapper) : Boolean
       {
          //Décompilation abandonné
       }

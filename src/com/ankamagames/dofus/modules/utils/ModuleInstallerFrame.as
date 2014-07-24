@@ -73,7 +73,7 @@ package com.ankamagames.dofus.modules.utils
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -83,17 +83,17 @@ package com.ankamagames.dofus.modules.utils
          //Décompilation abandonné
       }
       
-      private function onLoad(param1:ResourceLoadedEvent) : void
+      private function onLoad(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function processJsonList(param1:*) : void
+      private function processJsonList(jsonArray:*) : void
       {
          //Décompilation abandonné
       }
       
-      private function getZippedModuleInformations(param1:ZipFile) : void
+      private function getZippedModuleInformations(zipFile:ZipFile) : void
       {
          //Décompilation abandonné
       }
@@ -108,12 +108,12 @@ package com.ankamagames.dofus.modules.utils
          //Décompilation abandonné
       }
       
-      private function writeZipEntry(param1:ByteArray, param2:ZipEntry, param3:FileStream, param4:File, param5:ZipFile) : void
+      private function writeZipEntry(unzipedData:ByteArray, entry:ZipEntry, writeStream:FileStream, unzipedFile:File, zipFile:ZipFile) : void
       {
          //Décompilation abandonné
       }
       
-      private function deleteModule(param1:String) : void
+      private function deleteModule(directoryName:String) : void
       {
          //Décompilation abandonné
       }
@@ -123,7 +123,7 @@ package com.ankamagames.dofus.modules.utils
          //Décompilation abandonné
       }
       
-      private function onLoadError(param1:ResourceErrorEvent) : void
+      private function onLoadError(e:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }

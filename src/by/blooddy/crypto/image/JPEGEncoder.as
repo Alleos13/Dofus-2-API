@@ -16,7 +16,7 @@ package by.blooddy.crypto.image
          //Décompilation abandonné
       }
       
-      public static function encode(param1:BitmapData, param2:uint = 60) : ByteArray
+      public static function encode(image:BitmapData, quality:uint = 60) : ByteArray
       {
          //Décompilation abandonné
       }

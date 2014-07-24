@@ -25,7 +25,7 @@ package com.ankamagames.dofus.internalDatacenter.items
       
       private static const _log:Logger;
       
-      public static function create(param1:int, param2:int, param3:Vector.<PresetItem>, param4:Boolean = false) : PresetWrapper
+      public static function create(id:int, gfxId:int, objects:Vector.<PresetItem>, mount:Boolean = false) : PresetWrapper
       {
          //Décompilation abandonné
       }
@@ -45,7 +45,7 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      public function set objects(param1:Array) : void
+      public function set objects(a:Array) : void
       {
          //Décompilation abandonné
       }
@@ -70,7 +70,7 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      override public function getIconUri(param1:Boolean = true) : Uri
+      override public function getIconUri(pngMode:Boolean = true) : Uri
       {
          //Décompilation abandonné
       }
@@ -90,17 +90,17 @@ package com.ankamagames.dofus.internalDatacenter.items
          //Décompilation abandonné
       }
       
-      public function updateObject(param1:PresetItem) : void
+      public function updateObject(object:PresetItem) : void
       {
          //Décompilation abandonné
       }
       
-      override public function addHolder(param1:ISlotDataHolder) : void
+      override public function addHolder(h:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      override public function removeHolder(param1:ISlotDataHolder) : void
+      override public function removeHolder(h:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }

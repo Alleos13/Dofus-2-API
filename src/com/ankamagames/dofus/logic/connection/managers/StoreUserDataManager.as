@@ -4,15 +4,13 @@ package com.ankamagames.dofus.logic.connection.managers
    import com.ankamagames.jerakine.logger.Log;
    import flash.utils.getQualifiedClassName;
    import com.ankamagames.jerakine.types.CustomSharedObject;
+   import com.ankamagames.dofus.misc.utils.RpcServiceManager;
    import com.ankamagames.jerakine.utils.system.CommandLineArguments;
    import com.hurlant.util.Base64;
    import com.ankamagames.dofus.logic.common.managers.PlayerManager;
    import com.ankamagames.dofus.misc.interClient.InterClientManager;
    import flash.system.Capabilities;
-   import com.ankamagames.jerakine.utils.system.SystemManager;
-   import com.ankamagames.dofus.misc.utils.RpcServiceManager;
    import by.blooddy.crypto.MD5;
-   import com.ankamagames.performance.Benchmark;
    import flash.events.Event;
    import flash.events.IOErrorEvent;
    import com.ankamagames.jerakine.utils.errors.SingletonError;
@@ -49,27 +47,17 @@ package com.ankamagames.dofus.logic.connection.managers
          //Décompilation abandonné
       }
       
-      public function savePlayerStreamingData() : void
+      private function onDataSavedComplete(pEvt:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function submitData(param1:String) : void
+      private function onDataSavedError(pEvt:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onDataSavedComplete(param1:Event) : void
-      {
-         //Décompilation abandonné
-      }
-      
-      private function onDataSavedError(param1:Event) : void
-      {
-         //Décompilation abandonné
-      }
-      
-      private function clearService(param1:RpcServiceManager) : void
+      private function clearService(rpcService:RpcServiceManager) : void
       {
          //Décompilation abandonné
       }

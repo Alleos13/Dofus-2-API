@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.game.achievement
          //Décompilation abandonné
       }
       
-      public function initAchievementRewardSuccessMessage(param1:int = 0) : AchievementRewardSuccessMessage
+      public function initAchievementRewardSuccessMessage(achievementId:int = 0) : AchievementRewardSuccessMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.game.achievement
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AchievementRewardSuccessMessage(param1:IDataOutput) : void
+      public function serializeAs_AchievementRewardSuccessMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AchievementRewardSuccessMessage(param1:IDataInput) : void
+      public function deserializeAs_AchievementRewardSuccessMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

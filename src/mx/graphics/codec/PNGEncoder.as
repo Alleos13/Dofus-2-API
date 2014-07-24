@@ -27,12 +27,12 @@ package mx.graphics.codec
          //Décompilation abandonné
       }
       
-      public function encode(param1:BitmapData) : ByteArray
+      public function encode(bitmapData:BitmapData) : ByteArray
       {
          //Décompilation abandonné
       }
       
-      public function encodeByteArray(param1:ByteArray, param2:int, param3:int, param4:Boolean = true) : ByteArray
+      public function encodeByteArray(byteArray:ByteArray, width:int, height:int, transparent:Boolean = true) : ByteArray
       {
          //Décompilation abandonné
       }
@@ -42,12 +42,12 @@ package mx.graphics.codec
          //Décompilation abandonné
       }
       
-      private function internalEncode(param1:Object, param2:int, param3:int, param4:Boolean = true) : ByteArray
+      private function internalEncode(source:Object, width:int, height:int, transparent:Boolean = true) : ByteArray
       {
          //Décompilation abandonné
       }
       
-      private function writeChunk(param1:ByteArray, param2:uint, param3:ByteArray) : void
+      private function writeChunk(png:ByteArray, type:uint, data:ByteArray) : void
       {
          //Décompilation abandonné
       }

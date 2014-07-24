@@ -14,7 +14,7 @@ package com.ankamagames.berilia.types.graphic
       //Décompilation abandonné
       }
       
-      public function MapAreaShape(param1:String, param2:String, param3:Texture, param4:int, param5:int, param6:uint, param7:uint, param8:*)
+      public function MapAreaShape(id:String, layer:String, shape:Texture, x:int, y:int, lineColor:uint, fillColor:uint, owner:*)
       {
          //Décompilation abandonné
       }
@@ -71,7 +71,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      public function colorTransform(param1:int, param2:Number = 1, param3:Number = 1, param4:Number = 1, param5:Number = 1, param6:Number = 0, param7:Number = 0, param8:Number = 0, param9:Number = 0) : void
+      public function colorTransform(duration:int, rM:Number = 1, gM:Number = 1, bM:Number = 1, aM:Number = 1, rO:Number = 0, gO:Number = 0, bO:Number = 0, aO:Number = 0) : void
       {
          //Décompilation abandonné
       }
@@ -81,7 +81,7 @@ package com.ankamagames.berilia.types.graphic
          //Décompilation abandonné
       }
       
-      private function onEnterFrame(param1:Event) : void
+      private function onEnterFrame(e:Event) : void
       {
          //Décompilation abandonné
       }

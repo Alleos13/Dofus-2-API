@@ -15,7 +15,7 @@ package by.blooddy.crypto.image
          //Décompilation abandonné
       }
       
-      public static function createQuantTable(param1:uint) : ByteArray
+      public static function createQuantTable(quality:uint) : ByteArray
       {
          //Décompilation abandonné
       }

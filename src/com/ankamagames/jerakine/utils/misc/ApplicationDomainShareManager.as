@@ -16,7 +16,7 @@ package com.ankamagames.jerakine.utils.misc
       
       private static var _applicationDomain:ApplicationDomain;
       
-      public static function set currentApplicationDomain(param1:ApplicationDomain) : void
+      public static function set currentApplicationDomain(a:ApplicationDomain) : void
       {
          //Décompilation abandonné
       }

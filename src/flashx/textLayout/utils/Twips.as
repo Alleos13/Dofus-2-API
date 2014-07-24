@@ -20,32 +20,32 @@ package flashx.textLayout.utils
       
       public static const MIN_VALUE:int = -2.147483648E9;
       
-      public static function to(param1:Number) : int
+      public static function to(n:Number) : int
       {
          //Décompilation abandonné
       }
       
-      public static function roundTo(param1:Number) : int
+      public static function roundTo(n:Number) : int
       {
          //Décompilation abandonné
       }
       
-      public static function from(param1:int) : Number
+      public static function from(t:int) : Number
       {
          //Décompilation abandonné
       }
       
-      public static function ceil(param1:Number) : Number
+      public static function ceil(n:Number) : Number
       {
          //Décompilation abandonné
       }
       
-      public static function floor(param1:Number) : Number
+      public static function floor(n:Number) : Number
       {
          //Décompilation abandonné
       }
       
-      public static function round(param1:Number) : Number
+      public static function round(n:Number) : Number
       {
          //Décompilation abandonné
       }

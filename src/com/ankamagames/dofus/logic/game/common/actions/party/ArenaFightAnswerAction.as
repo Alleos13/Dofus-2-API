@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.party
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:Boolean) : ArenaFightAnswerAction
+      public static function create(fightId:uint, accept:Boolean) : ArenaFightAnswerAction
       {
          //Décompilation abandonné
       }

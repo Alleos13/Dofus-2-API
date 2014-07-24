@@ -45,7 +45,7 @@ package com.ankamagames.dofus.network.types.game.house
          //Décompilation abandonné
       }
       
-      public function initHouseInformationsForSell(param1:uint = 0, param2:String = "", param3:Boolean = false, param4:int = 0, param5:int = 0, param6:uint = 0, param7:int = 0, param8:int = 0, param9:Vector.<int> = null, param10:Boolean = false, param11:uint = 0) : HouseInformationsForSell
+      public function initHouseInformationsForSell(modelId:uint = 0, ownerName:String = "", ownerConnected:Boolean = false, worldX:int = 0, worldY:int = 0, subAreaId:uint = 0, nbRoom:int = 0, nbChest:int = 0, skillListIds:Vector.<int> = null, isLocked:Boolean = false, price:uint = 0) : HouseInformationsForSell
       {
          //Décompilation abandonné
       }
@@ -55,22 +55,22 @@ package com.ankamagames.dofus.network.types.game.house
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_HouseInformationsForSell(param1:IDataOutput) : void
+      public function serializeAs_HouseInformationsForSell(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_HouseInformationsForSell(param1:IDataInput) : void
+      public function deserializeAs_HouseInformationsForSell(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

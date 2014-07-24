@@ -17,7 +17,7 @@ package com.ankamagames.jerakine.resources.loaders.impl
       //Décompilation abandonné
       }
       
-      public function ParallelRessourceLoader(param1:uint)
+      public function ParallelRessourceLoader(maxParallel:uint)
       {
          //Décompilation abandonné
       }
@@ -32,7 +32,7 @@ package com.ankamagames.jerakine.resources.loaders.impl
       
       private var _loadDictionnary:Dictionary;
       
-      public function load(param1:*, param2:ICache = null, param3:Class = null, param4:Boolean = false) : void
+      public function load(uris:*, cache:ICache = null, forcedAdapter:Class = null, singleFile:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -52,12 +52,12 @@ package com.ankamagames.jerakine.resources.loaders.impl
          //Décompilation abandonné
       }
       
-      override public function onLoaded(param1:Uri, param2:uint, param3:*) : void
+      override public function onLoaded(uri:Uri, resourceType:uint, resource:*) : void
       {
          //Décompilation abandonné
       }
       
-      override public function onFailed(param1:Uri, param2:String, param3:uint) : void
+      override public function onFailed(uri:Uri, errorMsg:String, errorCode:uint) : void
       {
          //Décompilation abandonné
       }

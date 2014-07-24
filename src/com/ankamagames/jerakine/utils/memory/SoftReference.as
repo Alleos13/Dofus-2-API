@@ -10,7 +10,7 @@ package com.ankamagames.jerakine.utils.memory
       //Décompilation abandonné
       }
       
-      public function SoftReference(param1:*, param2:uint = 10000)
+      public function SoftReference(obj:*, keptTime:uint = 10000)
       {
          //Décompilation abandonné
       }

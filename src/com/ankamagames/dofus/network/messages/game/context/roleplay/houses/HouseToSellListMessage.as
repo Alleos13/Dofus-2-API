@@ -39,7 +39,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.houses
          //Décompilation abandonné
       }
       
-      public function initHouseToSellListMessage(param1:uint = 0, param2:uint = 0, param3:Vector.<HouseInformationsForSell> = null) : HouseToSellListMessage
+      public function initHouseToSellListMessage(pageIndex:uint = 0, totalPage:uint = 0, houseList:Vector.<HouseInformationsForSell> = null) : HouseToSellListMessage
       {
          //Décompilation abandonné
       }
@@ -49,32 +49,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.houses
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_HouseToSellListMessage(param1:IDataOutput) : void
+      public function serializeAs_HouseToSellListMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_HouseToSellListMessage(param1:IDataInput) : void
+      public function deserializeAs_HouseToSellListMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

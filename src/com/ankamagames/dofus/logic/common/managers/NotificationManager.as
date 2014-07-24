@@ -13,7 +13,7 @@ package com.ankamagames.dofus.logic.common.managers
       //Décompilation abandonné
       }
       
-      public function NotificationManager(param1:PrivateClass)
+      public function NotificationManager(pvt:PrivateClass)
       {
          //Décompilation abandonné
       }
@@ -27,37 +27,37 @@ package com.ankamagames.dofus.logic.common.managers
       
       private var _notificationList:Vector.<Notification>;
       
-      public function showNotification(param1:String, param2:String, param3:uint = 0) : void
+      public function showNotification(pTitle:String, pContent:String, pType:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function prepareNotification(param1:String, param2:String, param3:uint = 0, param4:String = "", param5:Boolean = false) : uint
+      public function prepareNotification(pTitle:String, pContent:String, pType:uint = 0, pNotificationName:String = "", pNotifyUser:Boolean = false) : uint
       {
          //Décompilation abandonné
       }
       
-      public function addButtonToNotification(param1:uint, param2:String, param3:String, param4:Object = null, param5:Boolean = false, param6:Number = 0, param7:Number = 0, param8:String = "action") : void
+      public function addButtonToNotification(pId:uint, pTitle:String, pAction:String, pParams:Object = null, pForceClose:Boolean = false, pWidth:Number = 0, pHeight:Number = 0, pType:String = "action") : void
       {
          //Décompilation abandonné
       }
       
-      public function addCallbackToNotification(param1:uint, param2:String, param3:Object = null, param4:String = "action") : void
+      public function addCallbackToNotification(pId:uint, pAction:String, pParams:Object = null, pType:String = "action") : void
       {
          //Décompilation abandonné
       }
       
-      public function addImageToNotification(param1:uint, param2:Uri, param3:Number = 0, param4:Number = 0, param5:Number = -1, param6:Number = -1, param7:String = "", param8:String = "") : void
+      public function addImageToNotification(pId:uint, pClip:Uri, pX:Number = 0, pY:Number = 0, pWidth:Number = -1, pHeight:Number = -1, pLabel:String = "", pTips:String = "") : void
       {
          //Décompilation abandonné
       }
       
-      public function addTimerToNotification(param1:uint, param2:uint, param3:Boolean = false, param4:Boolean = false, param5:Boolean = true) : void
+      public function addTimerToNotification(pId:uint, pTime:uint, pPauseOnOver:Boolean = false, pBlockCallbackOnClose:Boolean = false, pNotify:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function sendNotification(param1:int = -1) : void
+      public function sendNotification(notificationId:int = -1) : void
       {
          //Décompilation abandonné
       }
@@ -67,22 +67,22 @@ package com.ankamagames.dofus.logic.common.managers
          //Décompilation abandonné
       }
       
-      private function getNotification(param1:uint) : Notification
+      private function getNotification(pId:uint) : Notification
       {
          //Décompilation abandonné
       }
       
-      private function openNotification(param1:Object) : void
+      private function openNotification(pNotif:Object) : void
       {
          //Décompilation abandonné
       }
       
-      public function closeNotification(param1:String, param2:Boolean = false) : void
+      public function closeNotification(pName:String, pBlockCallback:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function hideNotification(param1:String) : void
+      public function hideNotification(pName:String) : void
       {
          //Décompilation abandonné
       }
@@ -168,17 +168,17 @@ class Notification extends Object
       //Décompilation abandonné
    }
    
-   public function addButton(param1:String, param2:String, param3:Object = null, param4:Boolean = false, param5:Number = 0, param6:Number = 0, param7:String = "action") : void
+   public function addButton(pTitle:String, pAction:String, pParams:Object = null, pForceClose:Boolean = false, pWidth:Number = 0, pHeight:Number = 0, pType:String = "action") : void
    {
       //Décompilation abandonné
    }
    
-   public function addImage(param1:Uri, param2:String = "", param3:String = "", param4:Number = -1, param5:Number = -1, param6:Number = -1, param7:Number = -1) : void
+   public function addImage(pClip:Uri, pLabel:String = "", pTips:String = "", pX:Number = -1, pY:Number = -1, pWidth:Number = -1, pHeight:Number = -1) : void
    {
       //Décompilation abandonné
    }
    
-   public function setTimer(param1:uint, param2:Boolean = false, param3:Boolean = false, param4:Boolean = true) : void
+   public function setTimer(val:uint, pause:Boolean = false, pBlockCallbackOnClose:Boolean = false, pNotify:Boolean = true) : void
    {
       //Décompilation abandonné
    }

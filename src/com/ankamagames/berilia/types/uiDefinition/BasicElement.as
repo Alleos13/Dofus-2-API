@@ -40,12 +40,12 @@ package com.ankamagames.berilia.types.uiDefinition
       
       public var cachedY:int = 2147483647;
       
-      public function setName(param1:String) : void
+      public function setName(sName:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function copy(param1:BasicElement) : void
+      public function copy(target:BasicElement) : void
       {
          //Décompilation abandonné
       }

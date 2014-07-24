@@ -33,27 +33,27 @@ package com.ankamagames.dofus.logic.common.managers
       
       private var _accounts:Dictionary;
       
-      public function getIsKnowAccount(param1:String) : Boolean
+      public function getIsKnowAccount(playerName:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getAccountId(param1:String) : int
+      public function getAccountId(playerName:String) : int
       {
          //Décompilation abandonné
       }
       
-      public function getAccountName(param1:String) : String
+      public function getAccountName(playerName:String) : String
       {
          //Décompilation abandonné
       }
       
-      public function setAccount(param1:String, param2:int, param3:String = null) : void
+      public function setAccount(playerName:String, accountId:int, accountName:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function setAccountFromId(param1:int, param2:int, param3:String = null) : void
+      public function setAccountFromId(playerId:int, accountId:int, accountName:String = null) : void
       {
          //Décompilation abandonné
       }

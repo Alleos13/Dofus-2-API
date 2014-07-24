@@ -91,22 +91,22 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function set switching(param1:Boolean) : void
+      public function set switching(switching:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      public function processExchangeStartedBidSellerMessage(param1:ExchangeStartedBidSellerMessage) : void
+      public function processExchangeStartedBidSellerMessage(msg:ExchangeStartedBidSellerMessage) : void
       {
          //Décompilation abandonné
       }
       
-      public function processExchangeStartedBidBuyerMessage(param1:ExchangeStartedBidBuyerMessage) : void
+      public function processExchangeStartedBidBuyerMessage(msg:ExchangeStartedBidBuyerMessage) : void
       {
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -126,22 +126,22 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      private function getTypeObject(param1:uint) : TypeObjectData
+      private function getTypeObject(pType:uint) : TypeObjectData
       {
          //Décompilation abandonné
       }
       
-      private function getGIDObject(param1:uint, param2:uint) : GIDObjectData
+      private function getGIDObject(pType:uint, pGID:uint) : GIDObjectData
       {
          //Décompilation abandonné
       }
       
-      private function getGIDObjectIndex(param1:uint, param2:uint) : int
+      private function getGIDObjectIndex(pType:uint, pGID:uint) : int
       {
          //Décompilation abandonné
       }
       
-      private function initSearchMode(param1:Vector.<uint>) : void
+      private function initSearchMode(types:Vector.<uint>) : void
       {
          //Décompilation abandonné
       }
@@ -156,7 +156,7 @@ class ItemSellByPlayer extends Object
    //Décompilation abandonné
    }
    
-   function ItemSellByPlayer(param1:ItemWrapper, param2:int, param3:uint)
+   function ItemSellByPlayer(pItemWrapper:ItemWrapper, pPrice:int, pUnsoldDelay:uint)
    {
       //Décompilation abandonné
    }
@@ -176,7 +176,7 @@ class ItemSellByBid extends Object
    //Décompilation abandonné
    }
    
-   function ItemSellByBid(param1:ItemWrapper, param2:Vector.<int>)
+   function ItemSellByBid(pItemWrapper:ItemWrapper, pPrices:Vector.<int>)
    {
       //Décompilation abandonné
    }
@@ -192,7 +192,7 @@ class TypeObjectData extends Object
    //Décompilation abandonné
    }
    
-   function TypeObjectData(param1:uint, param2:Array)
+   function TypeObjectData(pTypeObject:uint, pObjects:Array)
    {
       //Décompilation abandonné
    }
@@ -208,7 +208,7 @@ class GIDObjectData extends Object
    //Décompilation abandonné
    }
    
-   function GIDObjectData(param1:uint, param2:Array)
+   function GIDObjectData(pGIDObject:uint, pObjects:Array)
    {
       //Décompilation abandonné
    }

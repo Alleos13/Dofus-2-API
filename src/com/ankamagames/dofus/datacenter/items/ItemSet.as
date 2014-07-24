@@ -19,7 +19,7 @@ package com.ankamagames.dofus.datacenter.items
       
       public static const MODULE:String = "ItemSets";
       
-      public static function getItemSetById(param1:uint) : ItemSet
+      public static function getItemSetById(id:uint) : ItemSet
       {
          //Décompilation abandonné
       }

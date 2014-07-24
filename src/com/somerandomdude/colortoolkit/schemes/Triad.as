@@ -10,7 +10,7 @@ package com.somerandomdude.colortoolkit.schemes
       //Décompilation abandonné
       }
       
-      public function Triad(param1:int, param2:Number = 120)
+      public function Triad(primaryColor:int, angle:Number = 120)
       {
          //Décompilation abandonné
       }
@@ -22,7 +22,7 @@ package com.somerandomdude.colortoolkit.schemes
          //Décompilation abandonné
       }
       
-      public function set angle(param1:Number) : void
+      public function set angle(value:Number) : void
       {
          //Décompilation abandonné
       }

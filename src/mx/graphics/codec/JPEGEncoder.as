@@ -11,7 +11,7 @@ package mx.graphics.codec
       //Décompilation abandonné
       }
       
-      public function JPEGEncoder(param1:Number = 50.0)
+      public function JPEGEncoder(quality:Number = 50.0)
       {
          //Décompilation abandonné
       }
@@ -77,12 +77,12 @@ package mx.graphics.codec
          //Décompilation abandonné
       }
       
-      public function encode(param1:BitmapData) : ByteArray
+      public function encode(bitmapData:BitmapData) : ByteArray
       {
          //Décompilation abandonné
       }
       
-      public function encodeByteArray(param1:ByteArray, param2:int, param3:int, param4:Boolean = true) : ByteArray
+      public function encodeByteArray(byteArray:ByteArray, width:int, height:int, transparent:Boolean = true) : ByteArray
       {
          //Décompilation abandonné
       }
@@ -92,7 +92,7 @@ package mx.graphics.codec
          //Décompilation abandonné
       }
       
-      private function computeHuffmanTbl(param1:Array, param2:Array) : Array
+      private function computeHuffmanTbl(nrcodes:Array, std_table:Array) : Array
       {
          //Décompilation abandonné
       }
@@ -102,42 +102,42 @@ package mx.graphics.codec
          //Décompilation abandonné
       }
       
-      private function initQuantTables(param1:int) : void
+      private function initQuantTables(sf:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function internalEncode(param1:Object, param2:int, param3:int, param4:Boolean = true) : ByteArray
+      private function internalEncode(source:Object, width:int, height:int, transparent:Boolean = true) : ByteArray
       {
          //Décompilation abandonné
       }
       
-      private function RGB2YUV(param1:BitmapData, param2:ByteArray, param3:int, param4:int, param5:int, param6:int) : void
+      private function RGB2YUV(sourceBitmapData:BitmapData, sourceByteArray:ByteArray, xpos:int, ypos:int, width:int, height:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function processDU(param1:Array, param2:Array, param3:Number, param4:Array, param5:Array) : Number
+      private function processDU(CDU:Array, fdtbl:Array, DC:Number, HTDC:Array, HTAC:Array) : Number
       {
          //Décompilation abandonné
       }
       
-      private function fDCTQuant(param1:Array, param2:Array) : Array
+      private function fDCTQuant(data:Array, fdtbl:Array) : Array
       {
          //Décompilation abandonné
       }
       
-      private function writeBits(param1:BitString) : void
+      private function writeBits(bs:BitString) : void
       {
          //Décompilation abandonné
       }
       
-      private function writeByte(param1:int) : void
+      private function writeByte(value:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function writeWord(param1:int) : void
+      private function writeWord(value:int) : void
       {
          //Décompilation abandonné
       }
@@ -152,7 +152,7 @@ package mx.graphics.codec
          //Décompilation abandonné
       }
       
-      private function writeSOF0(param1:int, param2:int) : void
+      private function writeSOF0(width:int, height:int) : void
       {
          //Décompilation abandonné
       }

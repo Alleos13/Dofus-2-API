@@ -39,7 +39,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.houses.guil
          //Décompilation abandonné
       }
       
-      public function initHouseGuildRightsMessage(param1:uint = 0, param2:GuildInformations = null, param3:uint = 0) : HouseGuildRightsMessage
+      public function initHouseGuildRightsMessage(houseId:uint = 0, guildInfo:GuildInformations = null, rights:uint = 0) : HouseGuildRightsMessage
       {
          //Décompilation abandonné
       }
@@ -49,32 +49,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.houses.guil
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_HouseGuildRightsMessage(param1:IDataOutput) : void
+      public function serializeAs_HouseGuildRightsMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_HouseGuildRightsMessage(param1:IDataInput) : void
+      public function deserializeAs_HouseGuildRightsMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

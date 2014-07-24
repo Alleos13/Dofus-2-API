@@ -16,12 +16,12 @@ package com.ankamagames.dofus.logic.common.managers
          //Décompilation abandonné
       }
       
-      public static function showSubArea(param1:int) : void
+      public static function showSubArea(pSubAreaId:int) : void
       {
          //Décompilation abandonné
       }
       
-      public static function getSubAreaName(param1:int) : String
+      public static function getSubAreaName(pSubAreaId:int) : String
       {
          //Décompilation abandonné
       }

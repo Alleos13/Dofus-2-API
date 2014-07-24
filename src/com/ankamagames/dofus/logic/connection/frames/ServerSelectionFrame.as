@@ -46,7 +46,7 @@ package com.ankamagames.dofus.logic.connection.frames
       
       protected static const _log:Logger;
       
-      private static function serverDateSortFunction(param1:GameServerInformations, param2:GameServerInformations) : Number
+      private static function serverDateSortFunction(a:GameServerInformations, b:GameServerInformations) : Number
       {
          //Décompilation abandonné
       }
@@ -81,7 +81,7 @@ package com.ankamagames.dofus.logic.connection.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -101,12 +101,12 @@ package com.ankamagames.dofus.logic.connection.frames
          //Décompilation abandonné
       }
       
-      private function getUpdateServerFunction(param1:GameServerInformations) : Function
+      private function getUpdateServerFunction(serverToUpdate:GameServerInformations) : Function
       {
          //Décompilation abandonné
       }
       
-      private function getUpdateServerStatusFunction(param1:uint, param2:uint) : Function
+      private function getUpdateServerStatusFunction(serverId:uint, newStatus:uint) : Function
       {
          //Décompilation abandonné
       }

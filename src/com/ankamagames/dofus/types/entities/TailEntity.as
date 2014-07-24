@@ -49,7 +49,7 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set id(param1:int) : void
+      public function set id(nValue:int) : void
       {
          //Décompilation abandonné
       }
@@ -59,22 +59,22 @@ package com.ankamagames.dofus.types.entities
          //Décompilation abandonné
       }
       
-      public function set position(param1:MapPoint) : void
+      public function set position(oValue:MapPoint) : void
       {
          //Décompilation abandonné
       }
       
-      private function onTailAdded(param1:Event) : void
+      private function onTailAdded(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onRemove(param1:Event) : void
+      private function onRemove(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onNewFrame(param1:Event) : void
+      private function onNewFrame(e:Event) : void
       {
          //Décompilation abandonné
       }

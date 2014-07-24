@@ -44,12 +44,12 @@ package com.ankamagames.jerakine.network
       
       public var handler:MessageHandler;
       
-      public function resetTime(param1:Uri) : void
+      public function resetTime(uri:Uri) : void
       {
          //Décompilation abandonné
       }
       
-      public function request(param1:Uri, param2:Function = null, param3:uint = 0) : Boolean
+      public function request(uri:Uri, errorCallback:Function = null, cacheLife:uint = 0) : Boolean
       {
          //Décompilation abandonné
       }
@@ -59,12 +59,12 @@ package com.ankamagames.jerakine.network
          //Décompilation abandonné
       }
       
-      public function addToWhiteList(param1:Class) : void
+      public function addToWhiteList(classRef:Class) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeFromWhiteList(param1:Class) : void
+      public function removeFromWhiteList(classRef:Class) : void
       {
          //Décompilation abandonné
       }
@@ -79,32 +79,32 @@ package com.ankamagames.jerakine.network
          //Décompilation abandonné
       }
       
-      private function getMessageId(param1:uint) : uint
+      private function getMessageId(firstOctet:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function readMessageLength(param1:uint, param2:IDataInput) : uint
+      private function readMessageLength(staticHeader:uint, src:IDataInput) : uint
       {
          //Décompilation abandonné
       }
       
-      protected function lowReceive(param1:IDataInput) : INetworkMessage
+      protected function lowReceive(src:IDataInput) : INetworkMessage
       {
          //Décompilation abandonné
       }
       
-      protected function receive(param1:IDataInput, param2:Uri) : void
+      protected function receive(src:IDataInput, uri:Uri) : void
       {
          //Décompilation abandonné
       }
       
-      private function onReceive(param1:ResourceLoadedEvent) : void
+      private function onReceive(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onError(param1:ResourceErrorEvent) : void
+      private function onError(e:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }

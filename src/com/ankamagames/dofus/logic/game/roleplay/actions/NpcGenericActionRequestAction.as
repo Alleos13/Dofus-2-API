@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:int, param2:int) : NpcGenericActionRequestAction
+      public static function create(npcId:int, actionId:int) : NpcGenericActionRequestAction
       {
          //Décompilation abandonné
       }

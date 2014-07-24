@@ -11,7 +11,7 @@ package com.ankamagames.dofus.logic.game.roleplay.messages
       //Décompilation abandonné
       }
       
-      public function InteractiveElementActivationMessage(param1:InteractiveElement, param2:MapPoint, param3:uint)
+      public function InteractiveElementActivationMessage(ie:InteractiveElement, position:MapPoint, skillInstanceId:uint)
       {
          //Décompilation abandonné
       }

@@ -40,7 +40,7 @@ package com.ankamagames.jerakine.network
          //Décompilation abandonné
       }
       
-      public function set mainConnection(param1:IServerConnection) : void
+      public function set mainConnection(conn:IServerConnection) : void
       {
          //Décompilation abandonné
       }
@@ -50,7 +50,7 @@ package com.ankamagames.jerakine.network
          //Décompilation abandonné
       }
       
-      public function set messageRouter(param1:IMessageRouter) : void
+      public function set messageRouter(mr:IMessageRouter) : void
       {
          //Décompilation abandonné
       }
@@ -65,57 +65,57 @@ package com.ankamagames.jerakine.network
          //Décompilation abandonné
       }
       
-      public function addConnection(param1:IServerConnection, param2:String) : void
+      public function addConnection(conn:IServerConnection, id:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeConnection(param1:*) : Boolean
+      public function removeConnection(idOrConnection:*) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getSubConnection(param1:* = null) : IServerConnection
+      public function getSubConnection(idOrMessageOrEvent:* = null) : IServerConnection
       {
          //Décompilation abandonné
       }
       
-      public function getConnectionId(param1:* = null) : String
+      public function getConnectionId(idOrMessageOrEvent:* = null) : String
       {
          //Décompilation abandonné
       }
       
-      public function getPauseBuffer(param1:String = null) : Array
+      public function getPauseBuffer(id:String = null) : Array
       {
          //Décompilation abandonné
       }
       
-      public function close(param1:String = null) : void
+      public function close(id:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function pause(param1:String = null) : void
+      public function pause(id:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function resume(param1:String = null) : void
+      public function resume(id:String = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function send(param1:INetworkMessage) : void
+      public function send(msg:INetworkMessage) : void
       {
          //Décompilation abandonné
       }
       
-      private function proccessMsg(param1:Message, param2:IServerConnection) : void
+      private function proccessMsg(msg:Message, conn:IServerConnection) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSubConnectionEvent(param1:Event) : void
+      private function onSubConnectionEvent(e:Event) : void
       {
          //Décompilation abandonné
       }
@@ -132,7 +132,7 @@ class MessageWatcher extends Object implements MessageHandler
    //Décompilation abandonné
    }
    
-   function MessageWatcher(param1:Function, param2:MessageHandler, param3:IServerConnection)
+   function MessageWatcher(watchFunction:Function, handler:MessageHandler, conn:IServerConnection)
    {
       //Décompilation abandonné
    }
@@ -143,7 +143,7 @@ class MessageWatcher extends Object implements MessageHandler
    
    public var conn:IServerConnection;
    
-   public function process(param1:Message) : Boolean
+   public function process(msg:Message) : Boolean
    {
       //Décompilation abandonné
    }

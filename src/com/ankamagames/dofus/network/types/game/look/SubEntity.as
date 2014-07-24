@@ -29,7 +29,7 @@ package com.ankamagames.dofus.network.types.game.look
          //Décompilation abandonné
       }
       
-      public function initSubEntity(param1:uint = 0, param2:uint = 0, param3:EntityLook = null) : SubEntity
+      public function initSubEntity(bindingPointCategory:uint = 0, bindingPointIndex:uint = 0, subEntityLook:EntityLook = null) : SubEntity
       {
          //Décompilation abandonné
       }
@@ -39,22 +39,22 @@ package com.ankamagames.dofus.network.types.game.look
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_SubEntity(param1:IDataOutput) : void
+      public function serializeAs_SubEntity(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_SubEntity(param1:IDataInput) : void
+      public function deserializeAs_SubEntity(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

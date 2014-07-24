@@ -51,7 +51,7 @@ package com.ankamagames.dofus.misc.utils
          //Décompilation abandonné
       }
       
-      public function set currentLoadingScreen(param1:CustomLoadingScreen) : void
+      public function set currentLoadingScreen(loadingScreen:CustomLoadingScreen) : void
       {
          //Décompilation abandonné
       }
@@ -61,12 +61,12 @@ package com.ankamagames.dofus.misc.utils
          //Décompilation abandonné
       }
       
-      private function onLoad(param1:ResourceLoadedEvent) : void
+      private function onLoad(e:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onLoadError(param1:ResourceErrorEvent) : void
+      private function onLoadError(e:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }

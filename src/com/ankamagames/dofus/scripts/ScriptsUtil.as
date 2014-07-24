@@ -14,7 +14,7 @@ package com.ankamagames.dofus.scripts
          //Décompilation abandonné
       }
       
-      public static function getMapPoint(param1:Array) : MapPoint
+      public static function getMapPoint(pArgs:Array) : MapPoint
       {
          //Décompilation abandonné
       }

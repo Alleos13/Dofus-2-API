@@ -28,7 +28,7 @@ package com.ankamagames.tiphon.engine
       //Décompilation abandonné
       }
       
-      public function LibrariesManager(param1:String, param2:uint)
+      public function LibrariesManager(n:String, type:uint)
       {
          //Décompilation abandonné
       }
@@ -71,57 +71,57 @@ package com.ankamagames.tiphon.engine
       
       public var name:String;
       
-      public function addResource(param1:uint, param2:Uri) : void
+      public function addResource(id:uint, uri:Uri) : void
       {
          //Décompilation abandonné
       }
       
-      public function askResource(param1:uint, param2:String = null, param3:Callback = null, param4:Callback = null) : void
+      public function askResource(id:uint, className:String = null, callback:Callback = null, errorCallback:Callback = null) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeResource(param1:uint) : void
+      public function removeResource(id:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function isLoaded(param1:uint, param2:String = null) : Boolean
+      public function isLoaded(id:uint, animClass:String = null) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function hasError(param1:uint) : Boolean
+      public function hasError(id:uint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function hasResource(param1:uint, param2:String = null) : Boolean
+      public function hasResource(id:uint, animClass:String = null) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function getResourceById(param1:uint, param2:String = null, param3:Boolean = false) : Swl
+      public function getResourceById(resName:uint, animClass:String = null, waitForIt:Boolean = false) : Swl
       {
          //Décompilation abandonné
       }
       
-      private function onSwfLoaded(param1:Event) : void
+      private function onSwfLoaded(pEvt:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function hasAnim(param1:int, param2:String, param3:int = -1) : Boolean
+      public function hasAnim(bonesId:int, animName:String, direction:int = -1) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function onLoadResource(param1:ResourceLoadedEvent) : void
+      private function onLoadResource(re:ResourceLoadedEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onLoadFailedResource(param1:ResourceErrorEvent) : void
+      private function onLoadFailedResource(re:ResourceErrorEvent) : void
       {
          //Décompilation abandonné
       }

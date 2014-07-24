@@ -45,7 +45,7 @@ package com.ankamagames.dofus.network.types.game.guild.tax
          //Décompilation abandonné
       }
       
-      public function initTaxCollectorInformations(param1:int = 0, param2:uint = 0, param3:uint = 0, param4:AdditionalTaxCollectorInformations = null, param5:int = 0, param6:int = 0, param7:uint = 0, param8:uint = 0, param9:EntityLook = null, param10:Vector.<TaxCollectorComplementaryInformations> = null) : TaxCollectorInformations
+      public function initTaxCollectorInformations(uniqueId:int = 0, firtNameId:uint = 0, lastNameId:uint = 0, additionalInfos:AdditionalTaxCollectorInformations = null, worldX:int = 0, worldY:int = 0, subAreaId:uint = 0, state:uint = 0, look:EntityLook = null, complements:Vector.<TaxCollectorComplementaryInformations> = null) : TaxCollectorInformations
       {
          //Décompilation abandonné
       }
@@ -55,22 +55,22 @@ package com.ankamagames.dofus.network.types.game.guild.tax
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_TaxCollectorInformations(param1:IDataOutput) : void
+      public function serializeAs_TaxCollectorInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_TaxCollectorInformations(param1:IDataInput) : void
+      public function deserializeAs_TaxCollectorInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

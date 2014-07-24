@@ -12,7 +12,7 @@ package com.ankamagames.jerakine.utils.display
          //Décompilation abandonné
       }
       
-      public static function rgb2hsl(param1:uint) : Object
+      public static function rgb2hsl(color:uint) : Object
       {
          //Décompilation abandonné
       }

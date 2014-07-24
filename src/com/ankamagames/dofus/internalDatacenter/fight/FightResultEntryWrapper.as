@@ -26,7 +26,7 @@ package com.ankamagames.dofus.internalDatacenter.fight
       //Décompilation abandonné
       }
       
-      public function FightResultEntryWrapper(param1:FightResultListEntry, param2:GameFightFighterInformations = null)
+      public function FightResultEntryWrapper(o:FightResultListEntry, infos:GameFightFighterInformations = null)
       {
          //Décompilation abandonné
       }

@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:uint) : IncreaseSpellLevelAction
+      public static function create(pSpellId:uint, pSpellLevel:uint) : IncreaseSpellLevelAction
       {
          //Décompilation abandonné
       }

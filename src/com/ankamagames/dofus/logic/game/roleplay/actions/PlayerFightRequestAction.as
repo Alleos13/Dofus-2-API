@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.roleplay.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint, param2:Boolean, param3:Boolean = true, param4:Boolean = false, param5:int = -1) : PlayerFightRequestAction
+      public static function create(targetedPlayerId:uint, ava:Boolean, friendly:Boolean = true, launch:Boolean = false, cellId:int = -1) : PlayerFightRequestAction
       {
          //Décompilation abandonné
       }

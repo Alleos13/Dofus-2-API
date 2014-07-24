@@ -29,7 +29,7 @@ package com.ankamagames.dofus.network.types.game.fight
          //Décompilation abandonné
       }
       
-      public function initProtectedEntityWaitingForHelpInfo(param1:int = 0, param2:int = 0, param3:uint = 0) : ProtectedEntityWaitingForHelpInfo
+      public function initProtectedEntityWaitingForHelpInfo(timeLeftBeforeFight:int = 0, waitTimeForPlacement:int = 0, nbPositionForDefensors:uint = 0) : ProtectedEntityWaitingForHelpInfo
       {
          //Décompilation abandonné
       }
@@ -39,22 +39,22 @@ package com.ankamagames.dofus.network.types.game.fight
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ProtectedEntityWaitingForHelpInfo(param1:IDataOutput) : void
+      public function serializeAs_ProtectedEntityWaitingForHelpInfo(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ProtectedEntityWaitingForHelpInfo(param1:IDataInput) : void
+      public function deserializeAs_ProtectedEntityWaitingForHelpInfo(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

@@ -33,7 +33,7 @@ package com.ankamagames.jerakine.data
       
       protected const _log:Logger;
       
-      public function getObject(param1:uint) : Object
+      public function getObject(key:uint) : Object
       {
          //Décompilation abandonné
       }
@@ -43,7 +43,7 @@ package com.ankamagames.jerakine.data
          //Décompilation abandonné
       }
       
-      function init(param1:uint, param2:uint, param3:String = "") : void
+      function init(soCacheSize:uint, keyCacheSize:uint, soPrefix:String = "") : void
       {
          //Décompilation abandonné
       }

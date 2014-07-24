@@ -9,6 +9,6 @@ package com.ankamagames.jerakine.network
       //Décompilation abandonné
       }
       
-      function parse(param1:IDataInput, param2:uint, param3:uint) : INetworkMessage;
+      function parse(raw:IDataInput, messageId:uint, messageLength:uint) : INetworkMessage;
    }
 }

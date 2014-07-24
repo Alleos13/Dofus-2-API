@@ -48,7 +48,7 @@ package com.ankamagames.dofus.misc
          //Décompilation abandonné
       }
       
-      public static function getRandomPath(param1:IMovable) : MovementPath
+      public static function getRandomPath(entity:IMovable) : MovementPath
       {
          //Décompilation abandonné
       }
@@ -73,7 +73,7 @@ package com.ankamagames.dofus.misc
          //Décompilation abandonné
       }
       
-      override protected function stopMovement(param1:IMovable) : void
+      override protected function stopMovement(entity:IMovable) : void
       {
          //Décompilation abandonné
       }

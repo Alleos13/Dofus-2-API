@@ -11,12 +11,12 @@ package com.hurlant.crypto.symmetric
       //Décompilation abandonné
       }
       
-      public function XTeaKey(param1:ByteArray)
+      public function XTeaKey(a:ByteArray)
       {
          //Décompilation abandonné
       }
       
-      public static function parseKey(param1:String) : XTeaKey
+      public static function parseKey(K:String) : XTeaKey
       {
          //Décompilation abandonné
       }
@@ -30,12 +30,12 @@ package com.hurlant.crypto.symmetric
          //Décompilation abandonné
       }
       
-      public function encrypt(param1:ByteArray, param2:uint = 0) : void
+      public function encrypt(block:ByteArray, index:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function decrypt(param1:ByteArray, param2:uint = 0) : void
+      public function decrypt(block:ByteArray, index:uint = 0) : void
       {
          //Décompilation abandonné
       }

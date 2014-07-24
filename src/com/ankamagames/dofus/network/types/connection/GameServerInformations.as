@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.types.connection
          //Décompilation abandonné
       }
       
-      public function initGameServerInformations(param1:uint = 0, param2:uint = 1, param3:uint = 0, param4:Boolean = false, param5:uint = 0, param6:Number = 0) : GameServerInformations
+      public function initGameServerInformations(id:uint = 0, status:uint = 1, completion:uint = 0, isSelectable:Boolean = false, charactersCount:uint = 0, date:Number = 0) : GameServerInformations
       {
          //Décompilation abandonné
       }
@@ -45,22 +45,22 @@ package com.ankamagames.dofus.network.types.connection
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GameServerInformations(param1:IDataOutput) : void
+      public function serializeAs_GameServerInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GameServerInformations(param1:IDataInput) : void
+      public function deserializeAs_GameServerInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

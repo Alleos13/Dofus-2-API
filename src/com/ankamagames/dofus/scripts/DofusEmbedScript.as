@@ -41,7 +41,7 @@ package com.ankamagames.dofus.scripts
       
       private static const _cache:Dictionary;
       
-      public static function getScript(param1:uint) : BinaryScript
+      public static function getScript(id:uint) : BinaryScript
       {
          //Décompilation abandonné
       }

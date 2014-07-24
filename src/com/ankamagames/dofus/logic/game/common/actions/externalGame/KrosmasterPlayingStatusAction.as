@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.externalGame
          //Décompilation abandonné
       }
       
-      public static function create(param1:Boolean) : KrosmasterPlayingStatusAction
+      public static function create(playing:Boolean) : KrosmasterPlayingStatusAction
       {
          //Décompilation abandonné
       }

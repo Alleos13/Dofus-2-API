@@ -40,7 +40,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay
          //Décompilation abandonné
       }
       
-      public function initMapRunningFightDetailsMessage(param1:uint = 0, param2:Vector.<GameFightFighterLightInformations> = null, param3:Vector.<GameFightFighterLightInformations> = null) : MapRunningFightDetailsMessage
+      public function initMapRunningFightDetailsMessage(fightId:uint = 0, attackers:Vector.<GameFightFighterLightInformations> = null, defenders:Vector.<GameFightFighterLightInformations> = null) : MapRunningFightDetailsMessage
       {
          //Décompilation abandonné
       }
@@ -50,32 +50,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_MapRunningFightDetailsMessage(param1:IDataOutput) : void
+      public function serializeAs_MapRunningFightDetailsMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_MapRunningFightDetailsMessage(param1:IDataInput) : void
+      public function deserializeAs_MapRunningFightDetailsMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

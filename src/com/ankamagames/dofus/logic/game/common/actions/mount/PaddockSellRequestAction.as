@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.mount
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint) : PaddockSellRequestAction
+      public static function create(price:uint) : PaddockSellRequestAction
       {
          //Décompilation abandonné
       }

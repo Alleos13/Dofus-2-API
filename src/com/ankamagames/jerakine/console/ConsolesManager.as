@@ -21,17 +21,17 @@ package com.ankamagames.jerakine.console
       
       private static var _consoles:Dictionary;
       
-      public static function getConsole(param1:String) : ConsoleHandler
+      public static function getConsole(id:String) : ConsoleHandler
       {
          //Décompilation abandonné
       }
       
-      public static function registerConsole(param1:String, param2:ConsoleHandler, param3:ConsoleInstructionRegistar) : void
+      public static function registerConsole(id:String, console:ConsoleHandler, instructionsRegistar:ConsoleInstructionRegistar) : void
       {
          //Décompilation abandonné
       }
       
-      public static function getMessage(param1:String) : ConsoleInstructionMessage
+      public static function getMessage(input:String) : ConsoleInstructionMessage
       {
          //Décompilation abandonné
       }

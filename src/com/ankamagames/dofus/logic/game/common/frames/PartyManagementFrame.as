@@ -301,7 +301,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function set lastFightType(param1:int) : void
+      public function set lastFightType(n:int) : void
       {
          //Décompilation abandonné
       }
@@ -311,7 +311,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -321,7 +321,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      private function createPartyFightNotification(param1:uint, param2:PartyFightInformationsData, param3:int) : void
+      private function createPartyFightNotification(mapId:uint, currentFight:PartyFightInformationsData, fightTeamLeaderId:int) : void
       {
          //Décompilation abandonné
       }
@@ -336,32 +336,32 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function getGroupMemberById(param1:int) : PartyMemberWrapper
+      public function getGroupMemberById(id:int) : PartyMemberWrapper
       {
          //Décompilation abandonné
       }
       
-      private function deleteParty(param1:int) : void
+      private function deleteParty(partyId:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function createPartyPlayerContextMenu(param1:uint, param2:int) : Object
+      private function createPartyPlayerContextMenu(pPlayerId:uint, pPartyId:int) : Object
       {
          //Décompilation abandonné
       }
       
-      private function onTimerTick(param1:TimerEvent) : void
+      private function onTimerTick(pEvent:TimerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onFightStartTimerComplete(param1:TimerEvent) : void
+      private function onFightStartTimerComplete(pEvent:TimerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function deletePartyFightInformation(param1:Object, param2:PartyFightInformationsData) : void
+      private function deletePartyFightInformation(key:Object, fight:PartyFightInformationsData) : void
       {
          //Décompilation abandonné
       }

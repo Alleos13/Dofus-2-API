@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.types.game.social
          //Décompilation abandonné
       }
       
-      public function initGuildInsiderFactSheetInformations(param1:uint = 0, param2:String = "", param3:GuildEmblem = null, param4:uint = 0, param5:uint = 0, param6:uint = 0, param7:String = "", param8:uint = 0, param9:uint = 0, param10:uint = 0, param11:Boolean = false) : GuildInsiderFactSheetInformations
+      public function initGuildInsiderFactSheetInformations(guildId:uint = 0, guildName:String = "", guildEmblem:GuildEmblem = null, leaderId:uint = 0, guildLevel:uint = 0, nbMembers:uint = 0, leaderName:String = "", nbConnectedMembers:uint = 0, nbTaxCollectors:uint = 0, lastActivity:uint = 0, enabled:Boolean = false) : GuildInsiderFactSheetInformations
       {
          //Décompilation abandonné
       }
@@ -44,22 +44,22 @@ package com.ankamagames.dofus.network.types.game.social
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_GuildInsiderFactSheetInformations(param1:IDataOutput) : void
+      public function serializeAs_GuildInsiderFactSheetInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_GuildInsiderFactSheetInformations(param1:IDataInput) : void
+      public function deserializeAs_GuildInsiderFactSheetInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

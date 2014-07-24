@@ -15,7 +15,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightDisplayBuffStep(param1:BasicBuff)
+      public function FightDisplayBuffStep(buff:BasicBuff)
       {
          //Décompilation abandonné
       }
@@ -34,7 +34,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
          //Décompilation abandonné
       }
       
-      public function stepFinished(param1:ISequencable, param2:Boolean = false) : void
+      public function stepFinished(step:ISequencable, withTimout:Boolean = false) : void
       {
          //Décompilation abandonné
       }

@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.resources
       //Décompilation abandonné
       }
       
-      public function CacheableResource(param1:uint, param2:*)
+      public function CacheableResource(type:uint, resource:*)
       {
          //Décompilation abandonné
       }

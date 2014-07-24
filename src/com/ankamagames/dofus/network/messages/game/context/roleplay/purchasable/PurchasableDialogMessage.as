@@ -38,7 +38,7 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.purchasable
          //Décompilation abandonné
       }
       
-      public function initPurchasableDialogMessage(param1:Boolean = false, param2:uint = 0, param3:uint = 0) : PurchasableDialogMessage
+      public function initPurchasableDialogMessage(buyOrSell:Boolean = false, purchasableId:uint = 0, price:uint = 0) : PurchasableDialogMessage
       {
          //Décompilation abandonné
       }
@@ -48,32 +48,32 @@ package com.ankamagames.dofus.network.messages.game.context.roleplay.purchasable
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PurchasableDialogMessage(param1:IDataOutput) : void
+      public function serializeAs_PurchasableDialogMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PurchasableDialogMessage(param1:IDataInput) : void
+      public function deserializeAs_PurchasableDialogMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

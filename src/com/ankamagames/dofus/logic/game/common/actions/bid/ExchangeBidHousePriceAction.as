@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.game.common.actions.bid
          //Décompilation abandonné
       }
       
-      public static function create(param1:uint) : ExchangeBidHousePriceAction
+      public static function create(pGid:uint) : ExchangeBidHousePriceAction
       {
          //Décompilation abandonné
       }

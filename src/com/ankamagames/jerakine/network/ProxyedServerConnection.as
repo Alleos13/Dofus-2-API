@@ -9,7 +9,7 @@ package com.ankamagames.jerakine.network
       //Décompilation abandonné
       }
       
-      public function ProxyedServerConnection(param1:IConnectionProxy, param2:String = null, param3:int = 0)
+      public function ProxyedServerConnection(proxy:IConnectionProxy, host:String = null, port:int = 0)
       {
          //Décompilation abandonné
       }
@@ -21,17 +21,17 @@ package com.ankamagames.jerakine.network
          //Décompilation abandonné
       }
       
-      public function set proxy(param1:IConnectionProxy) : void
+      public function set proxy(value:IConnectionProxy) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function lowSend(param1:INetworkMessage, param2:Boolean = true) : void
+      override protected function lowSend(msg:INetworkMessage, autoFlush:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      override protected function lowReceive(param1:IDataInput) : INetworkMessage
+      override protected function lowReceive(src:IDataInput) : INetworkMessage
       {
          //Décompilation abandonné
       }

@@ -55,7 +55,7 @@ package com.ankamagames.tiphon.types
       
       public var inCache:Boolean = false;
       
-      public function playEventAtFrame(param1:int) : void
+      public function playEventAtFrame(frame:int) : void
       {
          //Décompilation abandonné
       }
@@ -65,12 +65,12 @@ package com.ankamagames.tiphon.types
          //Décompilation abandonné
       }
       
-      public function setAnimation(... rest) : void
+      public function setAnimation(... args) : void
       {
          //Décompilation abandonné
       }
       
-      public function event(... rest) : void
+      public function event(... args) : void
       {
          //Décompilation abandonné
       }

@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.achievement
          //Décompilation abandonné
       }
       
-      public function initAchievementStartedObjective(param1:uint = 0, param2:uint = 0, param3:uint = 0) : AchievementStartedObjective
+      public function initAchievementStartedObjective(id:uint = 0, maxValue:uint = 0, value:uint = 0) : AchievementStartedObjective
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.achievement
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_AchievementStartedObjective(param1:IDataOutput) : void
+      public function serializeAs_AchievementStartedObjective(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_AchievementStartedObjective(param1:IDataInput) : void
+      public function deserializeAs_AchievementStartedObjective(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

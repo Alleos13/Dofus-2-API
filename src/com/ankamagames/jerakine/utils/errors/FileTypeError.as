@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.utils.errors
       //Décompilation abandonné
       }
       
-      public function FileTypeError(param1:String = "", param2:int = 0)
+      public function FileTypeError(message:String = "", id:int = 0)
       {
          //Décompilation abandonné
       }

@@ -74,7 +74,7 @@ package com.ankamagames.atouin.managers
          //Décompilation abandonné
       }
       
-      public function set cellOverEnabled(param1:Boolean) : void
+      public function set cellOverEnabled(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -94,27 +94,27 @@ package com.ankamagames.atouin.managers
          //Décompilation abandonné
       }
       
-      public function setInteraction(param1:Boolean = true, param2:Boolean = false, param3:Boolean = false) : void
+      public function setInteraction(click:Boolean = true, over:Boolean = false, out:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function getCell(param1:uint) : GraphicCell
+      public function getCell(cellId:uint) : GraphicCell
       {
          //Décompilation abandonné
       }
       
-      public function updateInteractiveCell(param1:DataMapContainer) : void
+      public function updateInteractiveCell(container:DataMapContainer) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateCell(param1:uint, param2:Boolean) : Boolean
+      public function updateCell(cellId:uint, enabled:Boolean) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function show(param1:Boolean, param2:Boolean = false) : void
+      public function show(b:Boolean, pIsInFight:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -129,32 +129,32 @@ package com.ankamagames.atouin.managers
          //Décompilation abandonné
       }
       
-      private function overStateChanged(param1:Boolean, param2:Boolean) : void
+      private function overStateChanged(oldValue:Boolean, newValue:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      private function registerOver(param1:Boolean) : void
+      private function registerOver(enabled:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      private function mouseClick(param1:MouseEvent) : void
+      private function mouseClick(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function mouseOver(param1:MouseEvent) : void
+      private function mouseOver(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function mouseOut(param1:MouseEvent) : void
+      private function mouseOut(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onPropertyChanged(param1:PropertyChangeEvent) : void
+      private function onPropertyChanged(e:PropertyChangeEvent) : void
       {
          //Décompilation abandonné
       }

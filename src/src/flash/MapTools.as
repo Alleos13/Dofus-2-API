@@ -48,12 +48,12 @@ package src.flash
       
       public static var _POSCELL:Array;
       
-      public static function _getCellNumFromXYCoordinates(param1:int, param2:int) : int
+      public static function _getCellNumFromXYCoordinates(x:int, y:int) : int
       {
          //Décompilation abandonné
       }
       
-      public static function _getCellNumFromArrayCoordinates(param1:Array) : int
+      public static function _getCellNumFromArrayCoordinates(pos:Array) : int
       {
          //Décompilation abandonné
       }
@@ -63,42 +63,42 @@ package src.flash
          //Décompilation abandonné
       }
       
-      public static function _listToArray(param1:GenericStack_Int) : Array
+      public static function _listToArray(list:GenericStack_Int) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function _createCellsListForCells(param1:int, param2:int) : GenericStack_Int
+      public static function _createCellsListForCells(firstCell:int, secondCell:int) : GenericStack_Int
       {
          //Décompilation abandonné
       }
       
-      public static function _getCoordinatesByRef(param1:int) : Array
+      public static function _getCoordinatesByRef(cellNum:int) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function _isCellNumValid(param1:int) : Boolean
+      public static function _isCellNumValid(cellNum:int) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public static function _getCoordinatesByRefUnsafe(param1:int) : Array
+      public static function _getCoordinatesByRefUnsafe(cellNum:int) : Array
       {
          //Décompilation abandonné
       }
       
-      public static function getLOSCellsVector(param1:int, param2:int) : Vector.<Point>
+      public static function getLOSCellsVector(firstCell:int, secondCell:int) : Vector.<Point>
       {
          //Décompilation abandonné
       }
       
-      public static function _cellsListToPointsVector(param1:GenericStack_Int) : Vector.<Point>
+      public static function _cellsListToPointsVector(list:GenericStack_Int) : Vector.<Point>
       {
          //Décompilation abandonné
       }
       
-      public static function _cellToPoint(param1:int) : Point
+      public static function _cellToPoint(cell:int) : Point
       {
          //Décompilation abandonné
       }

@@ -76,7 +76,7 @@ package com.ankamagames.dofus.misc.utils.mapeditor
          //Décompilation abandonné
       }
       
-      private function onSecurityError(param1:Event) : void
+      private function onSecurityError(e:Event) : void
       {
          //Décompilation abandonné
       }
@@ -86,22 +86,22 @@ package com.ankamagames.dofus.misc.utils.mapeditor
          //Décompilation abandonné
       }
       
-      private function onConnect(param1:Event) : void
+      private function onConnect(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onClose(param1:Event) : void
+      private function onClose(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onData(param1:ProgressEvent) : void
+      private function onData(e:ProgressEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onError(param1:IOErrorEvent) : void
+      private function onError(e:IOErrorEvent) : void
       {
          //Décompilation abandonné
       }

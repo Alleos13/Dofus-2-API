@@ -40,7 +40,7 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      public function initExchangeItemObjectAddAsPaymentMessage(param1:int = 0, param2:Boolean = false, param3:uint = 0, param4:uint = 0) : ExchangeItemObjectAddAsPaymentMessage
+      public function initExchangeItemObjectAddAsPaymentMessage(paymentType:int = 0, bAdd:Boolean = false, objectToMoveId:uint = 0, quantity:uint = 0) : ExchangeItemObjectAddAsPaymentMessage
       {
          //Décompilation abandonné
       }
@@ -50,32 +50,32 @@ package com.ankamagames.dofus.network.messages.game.inventory.exchanges
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ExchangeItemObjectAddAsPaymentMessage(param1:IDataOutput) : void
+      public function serializeAs_ExchangeItemObjectAddAsPaymentMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ExchangeItemObjectAddAsPaymentMessage(param1:IDataInput) : void
+      public function deserializeAs_ExchangeItemObjectAddAsPaymentMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

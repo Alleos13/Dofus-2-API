@@ -10,7 +10,7 @@ package com.ankamagames.dofus.misc.utils.mapeditor
       //Décompilation abandonné
       }
       
-      public function MapEditorMessage(param1:uint)
+      public function MapEditorMessage(type:uint)
       {
          //Décompilation abandonné
       }
@@ -27,7 +27,7 @@ package com.ankamagames.dofus.misc.utils.mapeditor
       
       public var data:ByteArray;
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(target:IDataOutput) : void
       {
          //Décompilation abandonné
       }

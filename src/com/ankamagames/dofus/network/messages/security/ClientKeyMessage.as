@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.messages.security
          //Décompilation abandonné
       }
       
-      public function initClientKeyMessage(param1:String = "") : ClientKeyMessage
+      public function initClientKeyMessage(key:String = "") : ClientKeyMessage
       {
          //Décompilation abandonné
       }
@@ -44,32 +44,32 @@ package com.ankamagames.dofus.network.messages.security
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ClientKeyMessage(param1:IDataOutput) : void
+      public function serializeAs_ClientKeyMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ClientKeyMessage(param1:IDataInput) : void
+      public function deserializeAs_ClientKeyMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

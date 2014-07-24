@@ -34,7 +34,7 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.party.companio
          //Décompilation abandonné
       }
       
-      public function initPartyCompanionMemberInformations(param1:uint = 0, param2:uint = 0, param3:EntityLook = null, param4:uint = 0, param5:uint = 0, param6:uint = 0, param7:uint = 0, param8:uint = 0) : PartyCompanionMemberInformations
+      public function initPartyCompanionMemberInformations(indexId:uint = 0, companionGenericId:uint = 0, entityLook:EntityLook = null, initiative:uint = 0, lifePoints:uint = 0, maxLifePoints:uint = 0, prospecting:uint = 0, regenRate:uint = 0) : PartyCompanionMemberInformations
       {
          //Décompilation abandonné
       }
@@ -44,22 +44,22 @@ package com.ankamagames.dofus.network.types.game.context.roleplay.party.companio
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PartyCompanionMemberInformations(param1:IDataOutput) : void
+      public function serializeAs_PartyCompanionMemberInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PartyCompanionMemberInformations(param1:IDataInput) : void
+      public function deserializeAs_PartyCompanionMemberInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

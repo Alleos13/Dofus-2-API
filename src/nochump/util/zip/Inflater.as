@@ -49,39 +49,39 @@ package nochump.util.zip
       
       private var distcode:Object;
       
-      public function setInput(param1:ByteArray) : void
+      public function setInput(buf:ByteArray) : void
       {
          //Décompilation abandonné
       }
       
       private var _running:Boolean;
       
-      public function inflate(param1:ByteArray, param2:Function) : uint
+      public function inflate(buf:ByteArray, asynCallback:Function) : uint
       {
          //Décompilation abandonné
       }
       
-      private function bits(param1:int) : int
+      private function bits(need:int) : int
       {
          //Décompilation abandonné
       }
       
-      private function construct(param1:Object, param2:Array, param3:int) : int
+      private function construct(h:Object, length:Array, n:int) : int
       {
          //Décompilation abandonné
       }
       
-      private function decode(param1:Object) : int
+      private function decode(h:Object) : int
       {
          //Décompilation abandonné
       }
       
-      private function codes(param1:ByteArray) : int
+      private function codes(buf:ByteArray) : int
       {
          //Décompilation abandonné
       }
       
-      private function stored(param1:ByteArray) : void
+      private function stored(buf:ByteArray) : void
       {
          //Décompilation abandonné
       }

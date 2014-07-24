@@ -11,7 +11,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightLeavingStateStep(param1:int, param2:int)
+      public function FightLeavingStateStep(fighterId:int, stateId:int)
       {
          //Décompilation abandonné
       }

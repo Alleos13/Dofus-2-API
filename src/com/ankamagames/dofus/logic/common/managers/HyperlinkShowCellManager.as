@@ -15,7 +15,7 @@ package com.ankamagames.dofus.logic.common.managers
          //Décompilation abandonné
       }
       
-      public static function showCell(... rest) : void
+      public static function showCell(... args) : void
       {
          //Décompilation abandonné
       }

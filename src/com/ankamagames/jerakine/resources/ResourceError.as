@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.resources
       //Décompilation abandonné
       }
       
-      public function ResourceError(param1:String = "", param2:int = 0)
+      public function ResourceError(message:String = "", id:int = 0)
       {
          //Décompilation abandonné
       }

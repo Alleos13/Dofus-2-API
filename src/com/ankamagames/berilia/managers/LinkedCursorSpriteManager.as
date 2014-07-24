@@ -37,27 +37,27 @@ package com.ankamagames.berilia.managers
       
       private var _mustClean:Boolean;
       
-      public function getItem(param1:String) : LinkedCursorData
+      public function getItem(name:String) : LinkedCursorData
       {
          //Décompilation abandonné
       }
       
-      public function addItem(param1:String, param2:LinkedCursorData, param3:Boolean = false) : void
+      public function addItem(name:String, item:LinkedCursorData, overAll:Boolean = false) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeItem(param1:String, param2:Boolean = false) : Boolean
+      public function removeItem(name:String, asynch:Boolean = false) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function updateCursors(param1:* = null) : void
+      private function updateCursors(e:* = null) : void
       {
          //Décompilation abandonné
       }
       
-      private function remove(param1:String) : void
+      private function remove(name:String) : void
       {
          //Décompilation abandonné
       }

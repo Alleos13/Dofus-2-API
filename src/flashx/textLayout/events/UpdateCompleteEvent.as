@@ -11,7 +11,7 @@ package flashx.textLayout.events
       //Décompilation abandonné
       }
       
-      public function UpdateCompleteEvent(param1:String, param2:Boolean = false, param3:Boolean = false, param4:TextFlow = null, param5:ContainerController = null)
+      public function UpdateCompleteEvent(type:String, bubbles:Boolean = false, cancelable:Boolean = false, textFlow:TextFlow = null, controller:ContainerController = null)
       {
          //Décompilation abandonné
       }
@@ -32,7 +32,7 @@ package flashx.textLayout.events
          //Décompilation abandonné
       }
       
-      public function set controller(param1:ContainerController) : void
+      public function set controller(c:ContainerController) : void
       {
          //Décompilation abandonné
       }
@@ -42,7 +42,7 @@ package flashx.textLayout.events
          //Décompilation abandonné
       }
       
-      public function set textFlow(param1:TextFlow) : void
+      public function set textFlow(value:TextFlow) : void
       {
          //Décompilation abandonné
       }

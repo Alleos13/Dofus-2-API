@@ -11,7 +11,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightStealingKamasStep(param1:int, param2:int, param3:uint)
+      public function FightStealingKamasStep(robberId:int, victimId:int, amount:uint)
       {
          //Décompilation abandonné
       }

@@ -31,17 +31,17 @@ package com.ankamagames.dofus.logic.game.common.misc.stackedMessages
       
       private var _fakepos:int = -1;
       
-      override public function processInputMessage(param1:Message, param2:String) : Boolean
+      override public function processInputMessage(pMsgToProcess:Message, pMode:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      override public function processOutputMessage(param1:Message, param2:String) : Boolean
+      override public function processOutputMessage(pMsgToProcess:Message, pMode:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      override public function checkAvailability(param1:Message) : void
+      override public function checkAvailability(pMsgToProcess:Message) : void
       {
          //Décompilation abandonné
       }

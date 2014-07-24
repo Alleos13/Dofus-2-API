@@ -41,7 +41,7 @@ package com.ankamagames.jerakine.utils.display
          //Décompilation abandonné
       }
       
-      public static function set refreshRate(param1:uint) : void
+      public static function set refreshRate(value:uint) : void
       {
          //Décompilation abandonné
       }
@@ -56,12 +56,12 @@ package com.ankamagames.jerakine.utils.display
          //Décompilation abandonné
       }
       
-      public static function addListener(param1:IFramerateListener) : void
+      public static function addListener(listener:IFramerateListener) : void
       {
          //Décompilation abandonné
       }
       
-      public static function removeListener(param1:IFramerateListener) : void
+      public static function removeListener(listener:IFramerateListener) : void
       {
          //Décompilation abandonné
       }
@@ -71,7 +71,7 @@ package com.ankamagames.jerakine.utils.display
          //Décompilation abandonné
       }
       
-      private static function onEnterFrame(param1:Event) : void
+      private static function onEnterFrame(e:Event) : void
       {
          //Décompilation abandonné
       }

@@ -17,7 +17,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
       //Décompilation abandonné
       }
       
-      public function FightAddSubEntityStep(param1:int, param2:int, param3:uint, param4:uint, param5:ISubEntityBehavior = null)
+      public function FightAddSubEntityStep(fighterId:int, carriedEntityId:int, category:uint, slot:uint, subEntityBehaviour:ISubEntityBehavior = null)
       {
          //Décompilation abandonné
       }
@@ -42,7 +42,7 @@ package com.ankamagames.dofus.logic.game.fight.steps
          //Décompilation abandonné
       }
       
-      private function forceRender(param1:TiphonEvent) : void
+      private function forceRender(pEvt:TiphonEvent) : void
       {
          //Décompilation abandonné
       }

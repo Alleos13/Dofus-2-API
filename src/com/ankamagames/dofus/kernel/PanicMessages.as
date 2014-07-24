@@ -22,7 +22,7 @@ package com.ankamagames.dofus.kernel
       
       public static const PROTOCOL_TOO_NEW:uint = 5;
       
-      public static function getMessage(param1:uint, param2:Array) : String
+      public static function getMessage(errorId:uint, args:Array) : String
       {
          //Décompilation abandonné
       }

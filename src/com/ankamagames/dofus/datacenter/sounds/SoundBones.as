@@ -18,7 +18,7 @@ package com.ankamagames.dofus.datacenter.sounds
       
       public static var MODULE:String = "SoundBones";
       
-      public static function getSoundBonesById(param1:uint) : SoundBones
+      public static function getSoundBonesById(id:uint) : SoundBones
       {
          //Décompilation abandonné
       }
@@ -36,22 +36,22 @@ package com.ankamagames.dofus.datacenter.sounds
       
       private var _cacheDictionary:Dictionary;
       
-      public function getSoundAnimations(param1:String) : Vector.<SoundAnimation>
+      public function getSoundAnimations(animationName:String) : Vector.<SoundAnimation>
       {
          //Décompilation abandonné
       }
       
-      public function getSoundAnimationByFrame(param1:String, param2:String, param3:uint) : Vector.<SoundAnimation>
+      public function getSoundAnimationByFrame(animationName:String, label:String, frame:uint) : Vector.<SoundAnimation>
       {
          //Décompilation abandonné
       }
       
-      public function getSoundAnimationByLabel(param1:String, param2:String = null) : Vector.<SoundAnimation>
+      public function getSoundAnimationByLabel(animationName:String, label:String = null) : Vector.<SoundAnimation>
       {
          //Décompilation abandonné
       }
       
-      public function getRandomSoundAnimation(param1:String, param2:String = null) : SoundAnimation
+      public function getRandomSoundAnimation(animationName:String, label:String = null) : SoundAnimation
       {
          //Décompilation abandonné
       }

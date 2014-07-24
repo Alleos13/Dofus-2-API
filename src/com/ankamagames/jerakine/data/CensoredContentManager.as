@@ -26,12 +26,12 @@ package com.ankamagames.jerakine.data
       
       private var _emtptyData:Dictionary;
       
-      public function init(param1:Array, param2:String) : void
+      public function init(content:Array, lang:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function getCensoredIndex(param1:int) : Dictionary
+      public function getCensoredIndex(type:int) : Dictionary
       {
          //Décompilation abandonné
       }

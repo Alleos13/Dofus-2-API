@@ -23,7 +23,7 @@ package com.ankamagames.dofus.internalDatacenter.jobs
       
       private static var _cache:Array;
       
-      public static function create(param1:uint, param2:Boolean = true) : JobWrapper
+      public static function create(jobID:uint, useCache:Boolean = true) : JobWrapper
       {
          //Décompilation abandonné
       }
@@ -64,7 +64,7 @@ package com.ankamagames.dofus.internalDatacenter.jobs
          //Décompilation abandonné
       }
       
-      public function set endTime(param1:int) : void
+      public function set endTime(t:int) : void
       {
          //Décompilation abandonné
       }
@@ -79,17 +79,17 @@ package com.ankamagames.dofus.internalDatacenter.jobs
          //Décompilation abandonné
       }
       
-      public function addHolder(param1:ISlotDataHolder) : void
+      public function addHolder(h:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      public function removeHolder(param1:ISlotDataHolder) : void
+      public function removeHolder(h:ISlotDataHolder) : void
       {
          //Décompilation abandonné
       }
       
-      public function set jobId(param1:uint) : void
+      public function set jobId(val:uint) : void
       {
          //Décompilation abandonné
       }
@@ -99,7 +99,7 @@ package com.ankamagames.dofus.internalDatacenter.jobs
          //Décompilation abandonné
       }
       
-      public function set gfxId(param1:uint) : void
+      public function set gfxId(val:uint) : void
       {
          //Décompilation abandonné
       }
@@ -114,12 +114,12 @@ package com.ankamagames.dofus.internalDatacenter.jobs
          //Décompilation abandonné
       }
       
-      override flash_proxy function getProperty(param1:*) : *
+      override flash_proxy function getProperty(name:*) : *
       {
          //Décompilation abandonné
       }
       
-      override flash_proxy function hasProperty(param1:*) : Boolean
+      override flash_proxy function hasProperty(name:*) : Boolean
       {
          //Décompilation abandonné
       }

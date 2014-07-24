@@ -13,7 +13,7 @@ package flashx.textLayout.operations
       //Décompilation abandonné
       }
       
-      public function FlowOperation(param1:TextFlow)
+      public function FlowOperation(textFlow:TextFlow)
       {
          //Décompilation abandonné
       }
@@ -31,7 +31,7 @@ package flashx.textLayout.operations
          //Décompilation abandonné
       }
       
-      public function set textFlow(param1:TextFlow) : void
+      public function set textFlow(value:TextFlow) : void
       {
          //Décompilation abandonné
       }
@@ -76,12 +76,12 @@ package flashx.textLayout.operations
          //Décompilation abandonné
       }
       
-      tlf_internal function setGenerations(param1:uint, param2:uint) : void
+      tlf_internal function setGenerations(beginGeneration:uint, endGeneration:uint) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function merge(param1:FlowOperation) : FlowOperation
+      tlf_internal function merge(operation:FlowOperation) : FlowOperation
       {
          //Décompilation abandonné
       }

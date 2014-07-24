@@ -50,7 +50,7 @@ package com.ankamagames.dofus.network.messages.game.alliance
          //Décompilation abandonné
       }
       
-      public function initKohUpdateMessage(param1:Vector.<AllianceInformations> = null, param2:Vector.<uint> = null, param3:Vector.<uint> = null, param4:Vector.<uint> = null, param5:BasicAllianceInformations = null, param6:uint = 0, param7:uint = 0, param8:Number = 0) : KohUpdateMessage
+      public function initKohUpdateMessage(alliances:Vector.<AllianceInformations> = null, allianceNbMembers:Vector.<uint> = null, allianceRoundWeigth:Vector.<uint> = null, allianceMatchScore:Vector.<uint> = null, allianceMapWinner:BasicAllianceInformations = null, allianceMapWinnerScore:uint = 0, allianceMapMyAllianceScore:uint = 0, nextTickTime:Number = 0) : KohUpdateMessage
       {
          //Décompilation abandonné
       }
@@ -60,32 +60,32 @@ package com.ankamagames.dofus.network.messages.game.alliance
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_KohUpdateMessage(param1:IDataOutput) : void
+      public function serializeAs_KohUpdateMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_KohUpdateMessage(param1:IDataInput) : void
+      public function deserializeAs_KohUpdateMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

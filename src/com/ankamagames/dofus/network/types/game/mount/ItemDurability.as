@@ -27,7 +27,7 @@ package com.ankamagames.dofus.network.types.game.mount
          //Décompilation abandonné
       }
       
-      public function initItemDurability(param1:int = 0, param2:int = 0) : ItemDurability
+      public function initItemDurability(durability:int = 0, durabilityMax:int = 0) : ItemDurability
       {
          //Décompilation abandonné
       }
@@ -37,22 +37,22 @@ package com.ankamagames.dofus.network.types.game.mount
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ItemDurability(param1:IDataOutput) : void
+      public function serializeAs_ItemDurability(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ItemDurability(param1:IDataInput) : void
+      public function deserializeAs_ItemDurability(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

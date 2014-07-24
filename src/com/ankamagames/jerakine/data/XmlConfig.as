@@ -23,27 +23,27 @@ package com.ankamagames.jerakine.data
       
       private var _constants:Array;
       
-      public function init(param1:Array) : void
+      public function init(constants:Array) : void
       {
          //Décompilation abandonné
       }
       
-      public function addCategory(param1:Array) : void
+      public function addCategory(constants:Array) : void
       {
          //Décompilation abandonné
       }
       
-      public function getEntry(param1:String) : *
+      public function getEntry(name:String) : *
       {
          //Décompilation abandonné
       }
       
-      public function getBooleanEntry(param1:String) : Boolean
+      public function getBooleanEntry(name:String) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function setEntry(param1:String, param2:*) : void
+      public function setEntry(sKey:String, sValue:*) : void
       {
          //Décompilation abandonné
       }

@@ -35,7 +35,7 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      public function initFightExternalInformations(param1:int = 0, param2:uint = 0, param3:uint = 0, param4:Boolean = false, param5:Vector.<FightTeamLightInformations> = null, param6:Vector.<FightOptionsInformations> = null) : FightExternalInformations
+      public function initFightExternalInformations(fightId:int = 0, fightType:uint = 0, fightStart:uint = 0, fightSpectatorLocked:Boolean = false, fightTeams:Vector.<FightTeamLightInformations> = null, fightTeamsOptions:Vector.<FightOptionsInformations> = null) : FightExternalInformations
       {
          //Décompilation abandonné
       }
@@ -45,22 +45,22 @@ package com.ankamagames.dofus.network.types.game.context.fight
          //Décompilation abandonné
       }
       
-      public function serialize(param1:IDataOutput) : void
+      public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_FightExternalInformations(param1:IDataOutput) : void
+      public function serializeAs_FightExternalInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserialize(param1:IDataInput) : void
+      public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_FightExternalInformations(param1:IDataInput) : void
+      public function deserializeAs_FightExternalInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

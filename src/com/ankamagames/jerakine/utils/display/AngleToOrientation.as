@@ -12,7 +12,7 @@ package com.ankamagames.jerakine.utils.display
          //Décompilation abandonné
       }
       
-      public static function angleToOrientation(param1:Number) : uint
+      public static function angleToOrientation(radianAngle:Number) : uint
       {
          //Décompilation abandonné
       }

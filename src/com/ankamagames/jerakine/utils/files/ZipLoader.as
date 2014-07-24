@@ -21,7 +21,7 @@ package com.ankamagames.jerakine.utils.files
       //Décompilation abandonné
       }
       
-      public function ZipLoader(param1:URLRequest = null, param2:* = null)
+      public function ZipLoader(fileRequest:URLRequest = null, oExtraData:* = null)
       {
          //Décompilation abandonné
       }
@@ -49,7 +49,7 @@ package com.ankamagames.jerakine.utils.files
          //Décompilation abandonné
       }
       
-      public function set inUse(param1:Boolean) : void
+      public function set inUse(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -59,7 +59,7 @@ package com.ankamagames.jerakine.utils.files
          //Décompilation abandonné
       }
       
-      public function set name(param1:String) : void
+      public function set name(value:String) : void
       {
          //Décompilation abandonné
       }
@@ -69,7 +69,7 @@ package com.ankamagames.jerakine.utils.files
          //Décompilation abandonné
       }
       
-      public function load(param1:URLRequest) : void
+      public function load(request:URLRequest) : void
       {
          //Décompilation abandonné
       }
@@ -79,12 +79,12 @@ package com.ankamagames.jerakine.utils.files
          //Décompilation abandonné
       }
       
-      public function getFileDatas(param1:String) : ByteArray
+      public function getFileDatas(fileName:String) : ByteArray
       {
          //Décompilation abandonné
       }
       
-      public function fileExists(param1:String) : Boolean
+      public function fileExists(fileName:String) : Boolean
       {
          //Décompilation abandonné
       }
@@ -94,32 +94,32 @@ package com.ankamagames.jerakine.utils.files
          //Décompilation abandonné
       }
       
-      private function onLoadComplete(param1:Event) : void
+      private function onLoadComplete(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onHttpStatus(param1:HTTPStatusEvent) : void
+      private function onHttpStatus(httpse:HTTPStatusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onIOError(param1:IOErrorEvent) : void
+      private function onIOError(ioe:IOErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onOpen(param1:Event) : void
+      private function onOpen(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSecurityError(param1:SecurityErrorEvent) : void
+      private function onSecurityError(se:SecurityErrorEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onProgress(param1:ProgressEvent) : void
+      private function onProgress(pe:ProgressEvent) : void
       {
          //Décompilation abandonné
       }

@@ -30,14 +30,14 @@ package com.ankamagames.jerakine.resources.adapters.impl
          //Décompilation abandonné
       }
       
-      private static function decipherSwf(param1:ByteArray, param2:ByteArray, param3:ByteArray) : void
+      private static function decipherSwf(output:ByteArray, input:ByteArray, key:ByteArray) : void
       {
          //Décompilation abandonné
       }
       
       private var _scriptClass:Class;
       
-      override protected function getResource(param1:String, param2:*) : *
+      override protected function getResource(dataFormat:String, data:*) : *
       {
          //Décompilation abandonné
       }
@@ -47,7 +47,7 @@ package com.ankamagames.jerakine.resources.adapters.impl
          //Décompilation abandonné
       }
       
-      override protected function process(param1:String, param2:*) : void
+      override protected function process(dataFormat:String, data:*) : void
       {
          //Décompilation abandonné
       }
@@ -57,12 +57,12 @@ package com.ankamagames.jerakine.resources.adapters.impl
          //Décompilation abandonné
       }
       
-      private function onScriptInit(param1:Event) : void
+      private function onScriptInit(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onScriptError(param1:ErrorEvent) : void
+      private function onScriptError(ee:ErrorEvent) : void
       {
          //Décompilation abandonné
       }

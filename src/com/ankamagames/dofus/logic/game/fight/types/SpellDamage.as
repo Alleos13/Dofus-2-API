@@ -41,7 +41,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function set minDamage(param1:int) : void
+      public function set minDamage(pMinDamage:int) : void
       {
          //Décompilation abandonné
       }
@@ -53,7 +53,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function set maxDamage(param1:int) : void
+      public function set maxDamage(pMaxDamage:int) : void
       {
          //Décompilation abandonné
       }
@@ -65,7 +65,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function set minCriticalDamage(param1:int) : void
+      public function set minCriticalDamage(pMinCriticalDamage:int) : void
       {
          //Décompilation abandonné
       }
@@ -77,7 +77,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function set maxCriticalDamage(param1:int) : void
+      public function set maxCriticalDamage(pMaxCriticalDamage:int) : void
       {
          //Décompilation abandonné
       }
@@ -109,7 +109,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function set minShieldPointsRemoved(param1:int) : void
+      public function set minShieldPointsRemoved(pMinShieldPointsRemoved:int) : void
       {
          //Décompilation abandonné
       }
@@ -121,7 +121,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function set maxShieldPointsRemoved(param1:int) : void
+      public function set maxShieldPointsRemoved(pMaxShieldPointsRemoved:int) : void
       {
          //Décompilation abandonné
       }
@@ -133,7 +133,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function set minCriticalShieldPointsRemoved(param1:int) : void
+      public function set minCriticalShieldPointsRemoved(pMinCriticalShieldPointsRemoved:int) : void
       {
          //Décompilation abandonné
       }
@@ -145,7 +145,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function set maxCriticalShieldPointsRemoved(param1:int) : void
+      public function set maxCriticalShieldPointsRemoved(pMaxCriticalShieldPointsRemoved:int) : void
       {
          //Décompilation abandonné
       }
@@ -185,7 +185,7 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      public function addEffectDamage(param1:EffectDamage) : void
+      public function addEffectDamage(pEffectDamage:EffectDamage) : void
       {
          //Décompilation abandonné
       }
@@ -215,12 +215,12 @@ package com.ankamagames.dofus.logic.game.fight.types
          //Décompilation abandonné
       }
       
-      private function getElementTextColor(param1:int) : String
+      private function getElementTextColor(pElementId:int) : String
       {
          //Décompilation abandonné
       }
       
-      private function getEffectString(param1:int, param2:int, param3:int, param4:int, param5:Boolean, param6:int = 0) : String
+      private function getEffectString(pMin:int, pMax:int, pMinCritical:int, pMaxCritical:int, pHasCritical:Boolean, pRandom:int = 0) : String
       {
          //Décompilation abandonné
       }

@@ -22,7 +22,7 @@ package com.ankamagames.dofus.logic.common.managers
          //Décompilation abandonné
       }
       
-      public static function showNpc(param1:int, param2:int = 0) : MovieClip
+      public static function showNpc(npcId:int, loop:int = 0) : MovieClip
       {
          //Décompilation abandonné
       }

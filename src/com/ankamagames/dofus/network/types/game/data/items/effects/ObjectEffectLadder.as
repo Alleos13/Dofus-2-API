@@ -25,7 +25,7 @@ package com.ankamagames.dofus.network.types.game.data.items.effects
          //Décompilation abandonné
       }
       
-      public function initObjectEffectLadder(param1:uint = 0, param2:uint = 0, param3:uint = 0) : ObjectEffectLadder
+      public function initObjectEffectLadder(actionId:uint = 0, monsterFamilyId:uint = 0, monsterCount:uint = 0) : ObjectEffectLadder
       {
          //Décompilation abandonné
       }
@@ -35,22 +35,22 @@ package com.ankamagames.dofus.network.types.game.data.items.effects
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_ObjectEffectLadder(param1:IDataOutput) : void
+      public function serializeAs_ObjectEffectLadder(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_ObjectEffectLadder(param1:IDataInput) : void
+      public function deserializeAs_ObjectEffectLadder(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

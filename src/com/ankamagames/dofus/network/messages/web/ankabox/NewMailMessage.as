@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.messages.web.ankabox
          //Décompilation abandonné
       }
       
-      public function initNewMailMessage(param1:uint = 0, param2:uint = 0, param3:Vector.<uint> = null) : NewMailMessage
+      public function initNewMailMessage(unread:uint = 0, total:uint = 0, sendersAccountId:Vector.<uint> = null) : NewMailMessage
       {
          //Décompilation abandonné
       }
@@ -43,32 +43,32 @@ package com.ankamagames.dofus.network.messages.web.ankabox
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_NewMailMessage(param1:IDataOutput) : void
+      public function serializeAs_NewMailMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_NewMailMessage(param1:IDataInput) : void
+      public function deserializeAs_NewMailMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

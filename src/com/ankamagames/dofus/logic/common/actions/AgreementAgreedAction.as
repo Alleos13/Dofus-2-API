@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.common.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:String) : AgreementAgreedAction
+      public static function create(fileName:String) : AgreementAgreedAction
       {
          //Décompilation abandonné
       }

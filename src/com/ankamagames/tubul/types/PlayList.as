@@ -20,7 +20,7 @@ package com.ankamagames.tubul.types
       //Décompilation abandonné
       }
       
-      public function PlayList(param1:Boolean = false, param2:Boolean = false, param3:SoundSilence = null, param4:VolumeFadeEffect = null, param5:VolumeFadeEffect = null)
+      public function PlayList(pShuffle:Boolean = false, pLoop:Boolean = false, pSilence:SoundSilence = null, pFadeIn:VolumeFadeEffect = null, pFadeOut:VolumeFadeEffect = null)
       {
          //Décompilation abandonné
       }
@@ -74,17 +74,17 @@ package com.ankamagames.tubul.types
          //Décompilation abandonné
       }
       
-      public function addSound(param1:ISound) : uint
+      public function addSound(pSound:ISound) : uint
       {
          //Décompilation abandonné
       }
       
-      public function removeSound(param1:ISound) : uint
+      public function removeSound(pSound:ISound) : uint
       {
          //Décompilation abandonné
       }
       
-      public function removeSoundBySoundId(param1:String, param2:Boolean = true) : uint
+      public function removeSoundBySoundId(pSoundId:String, pRemoveAll:Boolean = true) : uint
       {
          //Décompilation abandonné
       }
@@ -94,7 +94,7 @@ package com.ankamagames.tubul.types
          //Décompilation abandonné
       }
       
-      public function nextSound(param1:VolumeFadeEffect = null, param2:Boolean = false) : void
+      public function nextSound(pFadeOutCurrentSound:VolumeFadeEffect = null, pPlaySilenceBefore:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -104,7 +104,7 @@ package com.ankamagames.tubul.types
          //Décompilation abandonné
       }
       
-      public function stop(param1:VolumeFadeEffect = null) : void
+      public function stop(pFadeOut:VolumeFadeEffect = null) : void
       {
          //Décompilation abandonné
       }
@@ -114,7 +114,7 @@ package com.ankamagames.tubul.types
          //Décompilation abandonné
       }
       
-      public function playSilenceBetweenTwoSounds(param1:Boolean = false, param2:SoundSilence = null) : void
+      public function playSilenceBetweenTwoSounds(pPlay:Boolean = false, pSilence:SoundSilence = null) : void
       {
          //Décompilation abandonné
       }
@@ -124,22 +124,22 @@ package com.ankamagames.tubul.types
          //Décompilation abandonné
       }
       
-      private function playSound(param1:ISound) : void
+      private function playSound(pSound:ISound) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSoundComplete(param1:SoundCompleteEvent) : void
+      private function onSoundComplete(pEvent:SoundCompleteEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onSilenceComplete(param1:SoundSilenceEvent) : void
+      private function onSilenceComplete(pEvent:SoundSilenceEvent) : void
       {
          //Décompilation abandonné
       }
       
-      private function onFadeOutStopPlaylistComplete(param1:FadeEvent) : void
+      private function onFadeOutStopPlaylistComplete(pEvent:FadeEvent) : void
       {
          //Décompilation abandonné
       }

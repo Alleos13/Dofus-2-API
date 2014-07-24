@@ -25,7 +25,7 @@ package com.ankamagames.dofus.datacenter.quest
       
       public static const MODULE:String = "Quests";
       
-      public static function getQuestById(param1:int) : Quest
+      public static function getQuestById(id:int) : Quest
       {
          //Décompilation abandonné
       }
@@ -35,7 +35,7 @@ package com.ankamagames.dofus.datacenter.quest
          //Décompilation abandonné
       }
       
-      public static function getFirstValidQuest(param1:GameRolePlayNpcQuestFlag) : Quest
+      public static function getFirstValidQuest(questFlag:GameRolePlayNpcQuestFlag) : Quest
       {
          //Décompilation abandonné
       }

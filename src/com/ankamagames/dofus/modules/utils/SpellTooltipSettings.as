@@ -27,7 +27,7 @@ package com.ankamagames.dofus.modules.utils
          //Décompilation abandonné
       }
       
-      public function set header(param1:Boolean) : void
+      public function set header(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -37,7 +37,7 @@ package com.ankamagames.dofus.modules.utils
          //Décompilation abandonné
       }
       
-      public function set effects(param1:Boolean) : void
+      public function set effects(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -47,7 +47,7 @@ package com.ankamagames.dofus.modules.utils
          //Décompilation abandonné
       }
       
-      public function set description(param1:Boolean) : void
+      public function set description(value:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -57,7 +57,7 @@ package com.ankamagames.dofus.modules.utils
          //Décompilation abandonné
       }
       
-      public function set CC_EC(param1:Boolean) : void
+      public function set CC_EC(value:Boolean) : void
       {
          //Décompilation abandonné
       }

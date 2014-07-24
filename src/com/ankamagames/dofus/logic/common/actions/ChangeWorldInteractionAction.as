@@ -14,7 +14,7 @@ package com.ankamagames.dofus.logic.common.actions
          //Décompilation abandonné
       }
       
-      public static function create(param1:Boolean, param2:Boolean = true) : ChangeWorldInteractionAction
+      public static function create(enabled:Boolean, total:Boolean = true) : ChangeWorldInteractionAction
       {
          //Décompilation abandonné
       }

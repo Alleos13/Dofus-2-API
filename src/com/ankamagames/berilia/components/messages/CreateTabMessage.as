@@ -9,7 +9,7 @@ package com.ankamagames.berilia.components.messages
       //Décompilation abandonné
       }
       
-      public function CreateTabMessage(param1:InteractiveObject)
+      public function CreateTabMessage(target:InteractiveObject)
       {
          //Décompilation abandonné
       }

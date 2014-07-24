@@ -34,42 +34,42 @@ package com.hurlant.crypto.hash
          //Décompilation abandonné
       }
       
-      public function hash(param1:ByteArray) : ByteArray
+      public function hash(src:ByteArray) : ByteArray
       {
          //Décompilation abandonné
       }
       
-      private function core_md5(param1:Array, param2:uint) : Array
+      private function core_md5(x:Array, len:uint) : Array
       {
          //Décompilation abandonné
       }
       
-      private function rol(param1:uint, param2:uint) : uint
+      private function rol(num:uint, cnt:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function cmn(param1:uint, param2:uint, param3:uint, param4:uint, param5:uint, param6:uint) : uint
+      private function cmn(q:uint, a:uint, b:uint, x:uint, s:uint, t:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function ff(param1:uint, param2:uint, param3:uint, param4:uint, param5:uint, param6:uint, param7:uint) : uint
+      private function ff(a:uint, b:uint, c:uint, d:uint, x:uint, s:uint, t:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function gg(param1:uint, param2:uint, param3:uint, param4:uint, param5:uint, param6:uint, param7:uint) : uint
+      private function gg(a:uint, b:uint, c:uint, d:uint, x:uint, s:uint, t:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function hh(param1:uint, param2:uint, param3:uint, param4:uint, param5:uint, param6:uint, param7:uint) : uint
+      private function hh(a:uint, b:uint, c:uint, d:uint, x:uint, s:uint, t:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function ii(param1:uint, param2:uint, param3:uint, param4:uint, param5:uint, param6:uint, param7:uint) : uint
+      private function ii(a:uint, b:uint, c:uint, d:uint, x:uint, s:uint, t:uint) : uint
       {
          //Décompilation abandonné
       }

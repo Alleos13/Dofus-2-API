@@ -7,7 +7,7 @@ package com.ankamagames.tiphon.display
       //Décompilation abandonné
       }
       
-      public function RasterizedFrameList(param1:String, param2:int, param3:int = 40)
+      public function RasterizedFrameList(key:String, life:int, maxLife:int = 40)
       {
          //Décompilation abandonné
       }

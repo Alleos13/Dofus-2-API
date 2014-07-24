@@ -20,32 +20,32 @@ package com.ankamagames.berilia.factories
       
       private static var _makerAssoc:Array;
       
-      public static function registerMaker(param1:String, param2:Class, param3:Class = null) : void
+      public static function registerMaker(makerName:String, maker:Class, scriptClass:Class = null) : void
       {
          //Décompilation abandonné
       }
       
-      public static function registerAssoc(param1:*, param2:String) : void
+      public static function registerAssoc(dataClass:*, makerName:String) : void
       {
          //Décompilation abandonné
       }
       
-      public static function unregister(param1:Class, param2:Class) : void
+      public static function unregister(dataType:Class, maker:Class) : void
       {
          //Décompilation abandonné
       }
       
-      public static function create(param1:*, param2:String = null, param3:Object = null) : ContextMenuData
+      public static function create(data:*, makerName:String = null, makerParam:Object = null) : ContextMenuData
       {
          //Décompilation abandonné
       }
       
-      public static function getMenuMaker(param1:String) : Object
+      public static function getMenuMaker(makerName:String) : Object
       {
          //Décompilation abandonné
       }
       
-      public static function existMakerAssoc(param1:*) : Boolean
+      public static function existMakerAssoc(dataClass:*) : Boolean
       {
          //Décompilation abandonné
       }
@@ -58,7 +58,7 @@ class MenuData extends Object
    //Décompilation abandonné
    }
    
-   function MenuData(param1:Class, param2:Class)
+   function MenuData(maker:Class, scriptClass:Class)
    {
       //Décompilation abandonné
    }

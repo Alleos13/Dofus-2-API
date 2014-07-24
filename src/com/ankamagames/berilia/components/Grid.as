@@ -148,17 +148,17 @@ package com.ankamagames.berilia.components
       
       protected var _mask:Shape;
       
-      override public function set width(param1:Number) : void
+      override public function set width(nW:Number) : void
       {
          //Décompilation abandonné
       }
       
-      override public function set height(param1:Number) : void
+      override public function set height(nH:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function set rendererName(param1:String) : void
+      public function set rendererName(value:String) : void
       {
          //Décompilation abandonné
       }
@@ -168,7 +168,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set rendererArgs(param1:String) : void
+      public function set rendererArgs(value:String) : void
       {
          //Décompilation abandonné
       }
@@ -183,7 +183,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set dataProvider(param1:*) : void
+      public function set dataProvider(data:*) : void
       {
          //Décompilation abandonné
       }
@@ -198,7 +198,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set horizontalScrollbarCss(param1:Uri) : void
+      public function set horizontalScrollbarCss(sValue:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -208,7 +208,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set verticalScrollbarCss(param1:Uri) : void
+      public function set verticalScrollbarCss(sValue:Uri) : void
       {
          //Décompilation abandonné
       }
@@ -223,12 +223,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set selectedIndex(param1:int) : void
+      public function set selectedIndex(i:int) : void
       {
          //Décompilation abandonné
       }
       
-      public function set vertical(param1:Boolean) : void
+      public function set vertical(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -238,7 +238,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set autoSelect(param1:Boolean) : void
+      public function set autoSelect(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -248,7 +248,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set autoSelectMode(param1:int) : void
+      public function set autoSelectMode(mode:int) : void
       {
          //Décompilation abandonné
       }
@@ -263,7 +263,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set scrollDisplay(param1:String) : void
+      public function set scrollDisplay(sValue:String) : void
       {
          //Décompilation abandonné
       }
@@ -278,7 +278,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set selectedItem(param1:*) : void
+      public function set selectedItem(o:*) : void
       {
          //Décompilation abandonné
       }
@@ -288,7 +288,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set slotWidth(param1:uint) : void
+      public function set slotWidth(value:uint) : void
       {
          //Décompilation abandonné
       }
@@ -298,12 +298,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set slotHeight(param1:uint) : void
+      public function set slotHeight(value:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function set finalized(param1:Boolean) : void
+      public function set finalized(b:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -328,7 +328,7 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set verticalScrollValue(param1:int) : void
+      public function set verticalScrollValue(value:int) : void
       {
          //Décompilation abandonné
       }
@@ -343,12 +343,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set verticalScrollSpeed(param1:Number) : void
+      public function set verticalScrollSpeed(speed:Number) : void
       {
          //Décompilation abandonné
       }
       
-      public function set horizontalScrollSpeed(param1:Number) : void
+      public function set horizontalScrollSpeed(speed:Number) : void
       {
          //Décompilation abandonné
       }
@@ -363,12 +363,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function set hiddenRow(param1:uint) : void
+      public function set hiddenRow(v:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function set hiddenCol(param1:uint) : void
+      public function set hiddenCol(v:uint) : void
       {
          //Décompilation abandonné
       }
@@ -377,7 +377,7 @@ package com.ankamagames.berilia.components
       
       public var silent:Boolean;
       
-      public function renderModificator(param1:Array, param2:Object) : Array
+      public function renderModificator(childs:Array, accessKey:Object) : Array
       {
          //Décompilation abandonné
       }
@@ -387,12 +387,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function moveToPage(param1:uint) : void
+      public function moveToPage(page:uint) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateItem(param1:uint) : void
+      public function updateItem(index:uint) : void
       {
          //Décompilation abandonné
       }
@@ -417,12 +417,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function indexIsInvisibleSlot(param1:uint) : Boolean
+      public function indexIsInvisibleSlot(index:uint) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function moveTo(param1:uint, param2:Boolean = false) : void
+      public function moveTo(index:uint, force:Boolean = false) : void
       {
          //Décompilation abandonné
       }
@@ -432,22 +432,22 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      public function sortOn(param1:String, param2:int = 0) : void
+      public function sortOn(col:String, options:int = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public function getItemIndex(param1:*) : int
+      public function getItemIndex(item:*) : int
       {
          //Décompilation abandonné
       }
       
-      private function sortFunction(param1:*, param2:*) : Number
+      private function sortFunction(a:*, b:*) : Number
       {
          //Décompilation abandonné
       }
       
-      private function itemExists(param1:*) : Boolean
+      private function itemExists(o:*) : Boolean
       {
          //Décompilation abandonné
       }
@@ -457,12 +457,12 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function updateFromIndex(param1:uint) : void
+      private function updateFromIndex(newIndex:uint) : void
       {
          //Décompilation abandonné
       }
       
-      function setSelectedIndex(param1:int, param2:uint) : void
+      function setSelectedIndex(index:int, method:uint) : void
       {
          //Décompilation abandonné
       }
@@ -472,37 +472,37 @@ package com.ankamagames.berilia.components
          //Décompilation abandonné
       }
       
-      private function isIterable(param1:*) : Boolean
+      private function isIterable(obj:*) : Boolean
       {
          //Décompilation abandonné
       }
       
-      protected function getGridItem(param1:DisplayObject) : GridItem
+      protected function getGridItem(item:DisplayObject) : GridItem
       {
          //Décompilation abandonné
       }
       
-      private function getNearestSlot(param1:MouseEvent) : Slot
+      private function getNearestSlot(mouseEvent:MouseEvent) : Slot
       {
          //Décompilation abandonné
       }
       
-      private function onScroll(param1:Event) : void
+      private function onScroll(e:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function onListWheel(param1:MouseEvent) : void
+      private function onListWheel(e:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      override public function process(param1:Message) : Boolean
+      override public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
       
-      protected function dispatchMessage(param1:Message, param2:MessageHandler = null) : void
+      protected function dispatchMessage(msg:Message, handler:MessageHandler = null) : void
       {
          //Décompilation abandonné
       }

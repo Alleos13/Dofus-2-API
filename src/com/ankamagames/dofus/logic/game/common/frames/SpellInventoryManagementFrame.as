@@ -54,7 +54,7 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function process(param1:Message) : Boolean
+      public function process(msg:Message) : Boolean
       {
          //Décompilation abandonné
       }
@@ -64,12 +64,12 @@ package com.ankamagames.dofus.logic.game.common.frames
          //Décompilation abandonné
       }
       
-      public function getFullSpellListByOwnerId(param1:int) : Array
+      public function getFullSpellListByOwnerId(ownerId:int) : Array
       {
          //Décompilation abandonné
       }
       
-      public function addSpellGlobalCoolDownInfo(param1:int, param2:GameFightSpellCooldown) : void
+      public function addSpellGlobalCoolDownInfo(pEntityId:int, pGameFightSpellCooldown:GameFightSpellCooldown) : void
       {
          //Décompilation abandonné
       }

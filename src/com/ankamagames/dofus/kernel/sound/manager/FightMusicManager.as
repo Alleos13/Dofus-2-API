@@ -72,7 +72,7 @@ package com.ankamagames.dofus.kernel.sound.manager
          //Décompilation abandonné
       }
       
-      public function setFightSounds(param1:Vector.<AmbientSound>, param2:Vector.<AmbientSound>) : void
+      public function setFightSounds(pFightMusic:Vector.<AmbientSound>, pBossMusic:Vector.<AmbientSound>) : void
       {
          //Décompilation abandonné
       }

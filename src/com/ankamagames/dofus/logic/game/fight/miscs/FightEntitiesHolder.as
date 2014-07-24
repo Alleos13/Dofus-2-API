@@ -28,17 +28,17 @@ package com.ankamagames.dofus.logic.game.fight.miscs
       
       private var _holdedEntities:Dictionary;
       
-      public function getEntity(param1:int) : IEntity
+      public function getEntity(entityId:int) : IEntity
       {
          //Décompilation abandonné
       }
       
-      public function holdEntity(param1:IEntity) : void
+      public function holdEntity(entity:IEntity) : void
       {
          //Décompilation abandonné
       }
       
-      public function unholdEntity(param1:int) : void
+      public function unholdEntity(entityId:int) : void
       {
          //Décompilation abandonné
       }

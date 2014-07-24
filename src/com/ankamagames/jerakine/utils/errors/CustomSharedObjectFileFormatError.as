@@ -7,7 +7,7 @@ package com.ankamagames.jerakine.utils.errors
       //Décompilation abandonné
       }
       
-      public function CustomSharedObjectFileFormatError(param1:* = "", param2:* = 0)
+      public function CustomSharedObjectFileFormatError(message:* = "", id:* = 0)
       {
          //Décompilation abandonné
       }

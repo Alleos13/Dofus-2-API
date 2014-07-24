@@ -62,12 +62,12 @@ package flashx.textLayout.container
       //Décompilation abandonné
       }
       
-      public function ContainerController(param1:Sprite, param2:Number = 100, param3:Number = 100)
+      public function ContainerController(container:Sprite, compositionWidth:Number = 100, compositionHeight:Number = 100)
       {
          //Décompilation abandonné
       }
       
-      private static function pinValue(param1:Number, param2:Number, param3:Number) : Number
+      private static function pinValue(value:Number, minimum:Number, maximum:Number) : Number
       {
          //Décompilation abandonné
       }
@@ -89,7 +89,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public static function set containerControllerInitialFormat(param1:ITextLayoutFormat) : void
+      public static function set containerControllerInitialFormat(val:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
@@ -180,7 +180,7 @@ package flashx.textLayout.container
       
       private var _containerRoot:DisplayObject;
       
-      private function initialize(param1:Sprite, param2:Number, param3:Number) : void
+      private function initialize(container:Sprite, compositionWidth:Number, compositionHeight:Number) : void
       {
          //Décompilation abandonné
       }
@@ -205,7 +205,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      tlf_internal function set shapesInvalid(param1:Boolean) : void
+      tlf_internal function set shapesInvalid(val:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -240,7 +240,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function setCompositionSize(param1:Number, param2:Number) : void
+      public function setCompositionSize(w:Number, h:Number) : void
       {
          //Décompilation abandonné
       }
@@ -255,7 +255,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      tlf_internal function setRootElement(param1:ContainerFormattedElement) : void
+      tlf_internal function setRootElement(value:ContainerFormattedElement) : void
       {
          //Décompilation abandonné
       }
@@ -275,7 +275,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      tlf_internal function set finalParcelStart(param1:int) : void
+      tlf_internal function set finalParcelStart(val:int) : void
       {
          //Décompilation abandonné
       }
@@ -290,17 +290,17 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      tlf_internal function setTextLengthOnly(param1:int) : void
+      tlf_internal function setTextLengthOnly(numChars:int) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function setTextLength(param1:int) : void
+      tlf_internal function setTextLength(numChars:int) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function updateLength(param1:int, param2:int) : void
+      tlf_internal function updateLength(pos:int, lengthToAdd:int) : void
       {
          //Décompilation abandonné
       }
@@ -320,12 +320,12 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      tlf_internal function modelChanged(param1:String, param2:ContainerController, param3:int, param4:int, param5:Boolean = true, param6:Boolean = true) : void
+      tlf_internal function modelChanged(changeType:String, element:ContainerController, changeStart:int, changeLen:int, needNormalize:Boolean = true, bumpGeneration:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      private function gatherVisibleLines(param1:String, param2:Boolean) : void
+      private function gatherVisibleLines(wmode:String, createShape:Boolean) : void
       {
          //Décompilation abandonné
       }
@@ -340,7 +340,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set horizontalScrollPolicy(param1:String) : void
+      public function set horizontalScrollPolicy(scrollPolicy:String) : void
       {
          //Décompilation abandonné
       }
@@ -355,7 +355,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set verticalScrollPolicy(param1:String) : void
+      public function set verticalScrollPolicy(scrollPolicy:String) : void
       {
          //Décompilation abandonné
       }
@@ -365,12 +365,12 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set horizontalScrollPosition(param1:Number) : void
+      public function set horizontalScrollPosition(x:Number) : void
       {
          //Décompilation abandonné
       }
       
-      private function computeHorizontalScrollPosition(param1:Number, param2:Boolean) : Number
+      private function computeHorizontalScrollPosition(x:Number, okToCompose:Boolean) : Number
       {
          //Décompilation abandonné
       }
@@ -380,12 +380,12 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set verticalScrollPosition(param1:Number) : void
+      public function set verticalScrollPosition(y:Number) : void
       {
          //Décompilation abandonné
       }
       
-      private function computeVerticalScrollPosition(param1:Number, param2:Boolean) : Number
+      private function computeVerticalScrollPosition(y:Number, okToCompose:Boolean) : Number
       {
          //Décompilation abandonné
       }
@@ -405,7 +405,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      tlf_internal function computeScaledContentMeasure(param1:Number) : Number
+      tlf_internal function computeScaledContentMeasure(measure:Number) : Number
       {
          //Décompilation abandonné
       }
@@ -420,12 +420,12 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      tlf_internal function setContentBounds(param1:Number, param2:Number, param3:Number, param4:Number) : void
+      tlf_internal function setContentBounds(contentLeft:Number, contentTop:Number, contentWidth:Number, contentHeight:Number) : void
       {
          //Décompilation abandonné
       }
       
-      private function updateForScroll(param1:String, param2:Number) : void
+      private function updateForScroll(direction:String, delta:Number) : void
       {
          //Décompilation abandonné
       }
@@ -450,17 +450,17 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function scrollToRange(param1:int, param2:int) : void
+      public function scrollToRange(activePosition:int, anchorPosition:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function rangeToRectangle(param1:int, param2:int, param3:int, param4:int) : Rectangle
+      private function rangeToRectangle(start:int, end:int, startLineIndex:int, endLineIndex:int) : Rectangle
       {
          //Décompilation abandonné
       }
       
-      private function atomToRectangle(param1:int, param2:TextFlowLine, param3:TextLine, param4:String, param5:Boolean) : Rectangle
+      private function atomToRectangle(atomIdx:int, line:TextFlowLine, textLine:TextLine, blockProgression:String, isTCY:Boolean) : Rectangle
       {
          //Décompilation abandonné
       }
@@ -483,12 +483,12 @@ package flashx.textLayout.container
       
       private var _transparentBGHeight:Number;
       
-      tlf_internal function attachTransparentBackgroundForHit(param1:Boolean) : void
+      tlf_internal function attachTransparentBackgroundForHit(justClear:Boolean) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function interactionManagerChanged(param1:ISelectionManager) : void
+      tlf_internal function interactionManagerChanged(newInteractionManager:ISelectionManager) : void
       {
          //Décompilation abandonné
       }
@@ -543,17 +543,17 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      tlf_internal function scrollTimerHandler(param1:Event) : void
+      tlf_internal function scrollTimerHandler(event:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function autoScrollIfNecessary(param1:int, param2:int) : void
+      public function autoScrollIfNecessary(mouseX:int, mouseY:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function autoScrollIfNecessaryInternal(param1:Point) : int
+      private function autoScrollIfNecessaryInternal(extreme:Point) : int
       {
          //Décompilation abandonné
       }
@@ -568,47 +568,47 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function getScrollDelta(param1:int) : Number
+      public function getScrollDelta(numLines:int) : Number
       {
          //Décompilation abandonné
       }
       
-      public function mouseOverHandler(param1:MouseEvent) : void
+      public function mouseOverHandler(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function requiredMouseOverHandler(param1:MouseEvent) : void
+      tlf_internal function requiredMouseOverHandler(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function mouseOutHandler(param1:MouseEvent) : void
+      public function mouseOutHandler(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function mouseWheelHandler(param1:MouseEvent) : void
+      public function mouseWheelHandler(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function mouseDownHandler(param1:MouseEvent) : void
+      public function mouseDownHandler(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function requiredMouseDownHandler(param1:MouseEvent) : void
+      tlf_internal function requiredMouseDownHandler(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function mouseUpHandler(param1:MouseEvent) : void
+      public function mouseUpHandler(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function rootMouseUpHandler(param1:MouseEvent) : void
+      tlf_internal function rootMouseUpHandler(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
@@ -628,32 +628,32 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function mouseUpSomewhere(param1:Event) : void
+      public function mouseUpSomewhere(event:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function mouseMoveSomewhere(param1:Event) : void
+      public function mouseMoveSomewhere(event:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function hitOnMyFlowExceptLastContainer(param1:MouseEvent) : Boolean
+      private function hitOnMyFlowExceptLastContainer(event:MouseEvent) : Boolean
       {
          //Décompilation abandonné
       }
       
-      public function mouseMoveHandler(param1:MouseEvent) : void
+      public function mouseMoveHandler(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function rootMouseMoveHandler(param1:MouseEvent) : void
+      tlf_internal function rootMouseMoveHandler(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function mouseDoubleClickHandler(param1:MouseEvent) : void
+      public function mouseDoubleClickHandler(event:MouseEvent) : void
       {
          //Décompilation abandonné
       }
@@ -663,87 +663,87 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      tlf_internal function getContainerController(param1:DisplayObject) : ContainerController
+      tlf_internal function getContainerController(container:DisplayObject) : ContainerController
       {
          //Décompilation abandonné
       }
       
-      public function focusChangeHandler(param1:FocusEvent) : void
+      public function focusChangeHandler(event:FocusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function focusInHandler(param1:FocusEvent) : void
+      public function focusInHandler(event:FocusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function requiredFocusInHandler(param1:FocusEvent) : void
+      tlf_internal function requiredFocusInHandler(event:FocusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function focusOutHandler(param1:FocusEvent) : void
+      public function focusOutHandler(event:FocusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function requiredFocusOutHandler(param1:FocusEvent) : void
+      tlf_internal function requiredFocusOutHandler(event:FocusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function activateHandler(param1:Event) : void
+      public function activateHandler(event:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function deactivateHandler(param1:Event) : void
+      public function deactivateHandler(event:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function keyDownHandler(param1:KeyboardEvent) : void
+      public function keyDownHandler(event:KeyboardEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function keyUpHandler(param1:KeyboardEvent) : void
+      public function keyUpHandler(event:KeyboardEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function keyFocusChangeHandler(param1:FocusEvent) : void
+      public function keyFocusChangeHandler(event:FocusEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function textInputHandler(param1:TextEvent) : void
+      public function textInputHandler(event:TextEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function softKeyboardActivatingHandler(param1:Event) : void
+      public function softKeyboardActivatingHandler(event:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function imeStartCompositionHandler(param1:IMEEvent) : void
+      public function imeStartCompositionHandler(event:IMEEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function menuSelectHandler(param1:ContextMenuEvent) : void
+      public function menuSelectHandler(event:ContextMenuEvent) : void
       {
          //Décompilation abandonné
       }
       
-      public function editHandler(param1:Event) : void
+      public function editHandler(event:Event) : void
       {
          //Décompilation abandonné
       }
       
-      public function selectRange(param1:int, param2:int) : void
+      public function selectRange(anchorIndex:int, activeIndex:int) : void
       {
          //Décompilation abandonné
       }
@@ -752,7 +752,7 @@ package flashx.textLayout.container
       
       private var blinkObject:DisplayObject;
       
-      private function startBlinkingCursor(param1:DisplayObject, param2:int) : void
+      private function startBlinkingCursor(obj:DisplayObject, blinkInterval:int) : void
       {
          //Décompilation abandonné
       }
@@ -762,22 +762,22 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      private function blinkTimerHandler(param1:TimerEvent) : void
+      private function blinkTimerHandler(event:TimerEvent) : void
       {
          //Décompilation abandonné
       }
       
-      protected function setBlinkInterval(param1:int) : void
+      protected function setBlinkInterval(intervalMS:int) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function drawPointSelection(param1:SelectionFormat, param2:Number, param3:Number, param4:Number, param5:Number) : void
+      tlf_internal function drawPointSelection(selFormat:SelectionFormat, x:Number, y:Number, w:Number, h:Number) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function addSelectionShapes(param1:SelectionFormat, param2:int, param3:int) : void
+      tlf_internal function addSelectionShapes(selFormat:SelectionFormat, selectionAbsoluteStart:int, selectionAbsoluteEnd:int) : void
       {
          //Décompilation abandonné
       }
@@ -787,12 +787,12 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      tlf_internal function addSelectionChild(param1:DisplayObject) : void
+      tlf_internal function addSelectionChild(child:DisplayObject) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function containsSelectionChild(param1:DisplayObject) : Boolean
+      tlf_internal function containsSelectionChild(child:DisplayObject) : Boolean
       {
          //Décompilation abandonné
       }
@@ -844,7 +844,7 @@ package flashx.textLayout.container
       
       private var _selectionSprite:Sprite;
       
-      tlf_internal function getSelectionSprite(param1:Boolean) : DisplayObjectContainer
+      tlf_internal function getSelectionSprite(createForDrawing:Boolean) : DisplayObjectContainer
       {
          //Décompilation abandonné
       }
@@ -864,22 +864,22 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      tlf_internal function updateGraphics(param1:int) : void
+      tlf_internal function updateGraphics(updateStart:int) : void
       {
          //Décompilation abandonné
       }
       
-      private function floatIsVisible(param1:String, param2:Number, param3:Number, param4:Number, param5:Number, param6:FloatCompositionData) : Boolean
+      private function floatIsVisible(wmode:String, scrollX:Number, scrollY:Number, scrollWidth:Number, scrollHeight:Number, floatInfo:FloatCompositionData) : Boolean
       {
          //Décompilation abandonné
       }
       
-      private function releaseLinesInBlock(param1:TextBlock) : void
+      private function releaseLinesInBlock(textBlock:TextBlock) : void
       {
          //Décompilation abandonné
       }
       
-      private function removeAndRecycleTextLines(param1:int, param2:int) : void
+      private function removeAndRecycleTextLines(beginIndex:int, endIndex:int) : void
       {
          //Décompilation abandonné
       }
@@ -889,42 +889,42 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      protected function addTextLine(param1:TextLine, param2:int) : void
+      protected function addTextLine(textLine:TextLine, index:int) : void
       {
          //Décompilation abandonné
       }
       
-      protected function removeTextLine(param1:TextLine) : void
+      protected function removeTextLine(textLine:TextLine) : void
       {
          //Décompilation abandonné
       }
       
-      protected function addBackgroundShape(param1:Shape) : void
+      protected function addBackgroundShape(shape:Shape) : void
       {
          //Décompilation abandonné
       }
       
-      protected function removeBackgroundShape(param1:Shape) : void
+      protected function removeBackgroundShape(shape:Shape) : void
       {
          //Décompilation abandonné
       }
       
-      protected function addSelectionContainer(param1:DisplayObjectContainer) : void
+      protected function addSelectionContainer(selectionContainer:DisplayObjectContainer) : void
       {
          //Décompilation abandonné
       }
       
-      protected function removeSelectionContainer(param1:DisplayObjectContainer) : void
+      protected function removeSelectionContainer(selectionContainer:DisplayObjectContainer) : void
       {
          //Décompilation abandonné
       }
       
-      protected function addInlineGraphicElement(param1:DisplayObjectContainer, param2:DisplayObject, param3:int) : void
+      protected function addInlineGraphicElement(parent:DisplayObjectContainer, inlineGraphicElement:DisplayObject, index:int) : void
       {
          //Décompilation abandonné
       }
       
-      protected function removeInlineGraphicElement(param1:DisplayObjectContainer, param2:DisplayObject) : void
+      protected function removeInlineGraphicElement(parent:DisplayObjectContainer, inlineGraphicElement:DisplayObject) : void
       {
          //Décompilation abandonné
       }
@@ -944,7 +944,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set color(param1:*) : void
+      public function set color(colorValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -954,7 +954,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set backgroundColor(param1:*) : void
+      public function set backgroundColor(backgroundColorValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -964,7 +964,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set lineThrough(param1:*) : void
+      public function set lineThrough(lineThroughValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -974,7 +974,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set textAlpha(param1:*) : void
+      public function set textAlpha(textAlphaValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -984,7 +984,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set backgroundAlpha(param1:*) : void
+      public function set backgroundAlpha(backgroundAlphaValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -994,7 +994,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set fontSize(param1:*) : void
+      public function set fontSize(fontSizeValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1004,7 +1004,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set baselineShift(param1:*) : void
+      public function set baselineShift(baselineShiftValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1014,7 +1014,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set trackingLeft(param1:*) : void
+      public function set trackingLeft(trackingLeftValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1024,7 +1024,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set trackingRight(param1:*) : void
+      public function set trackingRight(trackingRightValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1034,7 +1034,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set lineHeight(param1:*) : void
+      public function set lineHeight(lineHeightValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1044,7 +1044,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set breakOpportunity(param1:*) : void
+      public function set breakOpportunity(breakOpportunityValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1054,7 +1054,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set digitCase(param1:*) : void
+      public function set digitCase(digitCaseValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1064,7 +1064,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set digitWidth(param1:*) : void
+      public function set digitWidth(digitWidthValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1074,7 +1074,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set dominantBaseline(param1:*) : void
+      public function set dominantBaseline(dominantBaselineValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1084,7 +1084,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set kerning(param1:*) : void
+      public function set kerning(kerningValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1094,7 +1094,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set ligatureLevel(param1:*) : void
+      public function set ligatureLevel(ligatureLevelValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1104,7 +1104,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set alignmentBaseline(param1:*) : void
+      public function set alignmentBaseline(alignmentBaselineValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1114,7 +1114,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set locale(param1:*) : void
+      public function set locale(localeValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1124,7 +1124,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set typographicCase(param1:*) : void
+      public function set typographicCase(typographicCaseValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1134,7 +1134,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set fontFamily(param1:*) : void
+      public function set fontFamily(fontFamilyValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1144,7 +1144,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set textDecoration(param1:*) : void
+      public function set textDecoration(textDecorationValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1154,7 +1154,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set fontWeight(param1:*) : void
+      public function set fontWeight(fontWeightValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1164,7 +1164,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set fontStyle(param1:*) : void
+      public function set fontStyle(fontStyleValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1174,7 +1174,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set whiteSpaceCollapse(param1:*) : void
+      public function set whiteSpaceCollapse(whiteSpaceCollapseValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1184,7 +1184,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set renderingMode(param1:*) : void
+      public function set renderingMode(renderingModeValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1194,7 +1194,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set cffHinting(param1:*) : void
+      public function set cffHinting(cffHintingValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1204,7 +1204,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set fontLookup(param1:*) : void
+      public function set fontLookup(fontLookupValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1214,7 +1214,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set textRotation(param1:*) : void
+      public function set textRotation(textRotationValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1224,7 +1224,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set textIndent(param1:*) : void
+      public function set textIndent(textIndentValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1234,7 +1234,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set paragraphStartIndent(param1:*) : void
+      public function set paragraphStartIndent(paragraphStartIndentValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1244,7 +1244,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set paragraphEndIndent(param1:*) : void
+      public function set paragraphEndIndent(paragraphEndIndentValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1254,7 +1254,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set paragraphSpaceBefore(param1:*) : void
+      public function set paragraphSpaceBefore(paragraphSpaceBeforeValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1264,7 +1264,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set paragraphSpaceAfter(param1:*) : void
+      public function set paragraphSpaceAfter(paragraphSpaceAfterValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1274,7 +1274,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set textAlign(param1:*) : void
+      public function set textAlign(textAlignValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1284,7 +1284,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set textAlignLast(param1:*) : void
+      public function set textAlignLast(textAlignLastValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1294,7 +1294,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set textJustify(param1:*) : void
+      public function set textJustify(textJustifyValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1304,7 +1304,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set justificationRule(param1:*) : void
+      public function set justificationRule(justificationRuleValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1314,7 +1314,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set justificationStyle(param1:*) : void
+      public function set justificationStyle(justificationStyleValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1324,7 +1324,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set direction(param1:*) : void
+      public function set direction(directionValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1334,7 +1334,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set wordSpacing(param1:*) : void
+      public function set wordSpacing(wordSpacingValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1344,7 +1344,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set tabStops(param1:*) : void
+      public function set tabStops(tabStopsValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1354,7 +1354,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set leadingModel(param1:*) : void
+      public function set leadingModel(leadingModelValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1364,7 +1364,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set columnGap(param1:*) : void
+      public function set columnGap(columnGapValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1374,7 +1374,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set paddingLeft(param1:*) : void
+      public function set paddingLeft(paddingLeftValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1384,7 +1384,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set paddingTop(param1:*) : void
+      public function set paddingTop(paddingTopValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1394,7 +1394,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set paddingRight(param1:*) : void
+      public function set paddingRight(paddingRightValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1404,7 +1404,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set paddingBottom(param1:*) : void
+      public function set paddingBottom(paddingBottomValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1414,7 +1414,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set columnCount(param1:*) : void
+      public function set columnCount(columnCountValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1424,7 +1424,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set columnWidth(param1:*) : void
+      public function set columnWidth(columnWidthValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1434,7 +1434,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set firstBaselineOffset(param1:*) : void
+      public function set firstBaselineOffset(firstBaselineOffsetValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1444,7 +1444,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set verticalAlign(param1:*) : void
+      public function set verticalAlign(verticalAlignValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1454,7 +1454,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set blockProgression(param1:*) : void
+      public function set blockProgression(blockProgressionValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1464,7 +1464,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set lineBreak(param1:*) : void
+      public function set lineBreak(lineBreakValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1474,7 +1474,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set listStyleType(param1:*) : void
+      public function set listStyleType(listStyleTypeValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1484,7 +1484,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set listStylePosition(param1:*) : void
+      public function set listStylePosition(listStylePositionValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1494,7 +1494,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set listAutoPadding(param1:*) : void
+      public function set listAutoPadding(listAutoPaddingValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1504,7 +1504,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set clearFloats(param1:*) : void
+      public function set clearFloats(clearFloatsValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1514,7 +1514,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set styleName(param1:*) : void
+      public function set styleName(styleNameValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1524,7 +1524,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set linkNormalFormat(param1:*) : void
+      public function set linkNormalFormat(linkNormalFormatValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1534,7 +1534,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set linkActiveFormat(param1:*) : void
+      public function set linkActiveFormat(linkActiveFormatValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1544,7 +1544,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set linkHoverFormat(param1:*) : void
+      public function set linkHoverFormat(linkHoverFormatValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1554,7 +1554,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set listMarkerFormat(param1:*) : void
+      public function set listMarkerFormat(listMarkerFormatValue:*) : void
       {
          //Décompilation abandonné
       }
@@ -1564,7 +1564,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set userStyles(param1:Object) : void
+      public function set userStyles(styles:Object) : void
       {
          //Décompilation abandonné
       }
@@ -1584,7 +1584,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function set format(param1:ITextLayoutFormat) : void
+      public function set format(value:ITextLayoutFormat) : void
       {
          //Décompilation abandonné
       }
@@ -1594,22 +1594,22 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      public function getStyle(param1:String) : *
+      public function getStyle(styleProp:String) : *
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function getUserStyleWorker(param1:String) : *
+      tlf_internal function getUserStyleWorker(styleProp:String) : *
       {
          //Décompilation abandonné
       }
       
-      public function setStyle(param1:String, param2:*) : void
+      public function setStyle(styleProp:String, newValue:*) : void
       {
          //Décompilation abandonné
       }
       
-      public function clearStyle(param1:String) : void
+      public function clearStyle(styleProp:String) : void
       {
          //Décompilation abandonné
       }
@@ -1624,22 +1624,22 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      tlf_internal function isLineVisible(param1:String, param2:int, param3:int, param4:int, param5:int, param6:TextFlowLine, param7:TextLine) : TextLine
+      tlf_internal function isLineVisible(wmode:String, scrollXTW:int, scrollYTW:int, scrollWidthTW:int, scrollHeightTW:int, textFlowLine:TextFlowLine, textLine:TextLine) : TextLine
       {
          //Décompilation abandonné
       }
       
-      private function computeLineBoundsWithGraphics(param1:TextFlowLine, param2:TextLine, param3:Rectangle) : Rectangle
+      private function computeLineBoundsWithGraphics(line:TextFlowLine, textLine:TextLine, boundsRect:Rectangle) : Rectangle
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function getPlacedTextLineBounds(param1:TextLine) : Rectangle
+      tlf_internal function getPlacedTextLineBounds(textLine:TextLine) : Rectangle
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function addComposedLine(param1:TextLine) : void
+      tlf_internal function addComposedLine(textLine:TextLine) : void
       {
          //Décompilation abandonné
       }
@@ -1649,7 +1649,7 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      tlf_internal function clearComposedLines(param1:int) : void
+      tlf_internal function clearComposedLines(pos:int) : void
       {
          //Décompilation abandonné
       }
@@ -1659,32 +1659,32 @@ package flashx.textLayout.container
          //Décompilation abandonné
       }
       
-      tlf_internal function getFloatAt(param1:int) : FloatCompositionData
+      tlf_internal function getFloatAt(index:int) : FloatCompositionData
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function getFloatAtPosition(param1:int) : FloatCompositionData
+      tlf_internal function getFloatAtPosition(absolutePosition:int) : FloatCompositionData
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function addFloatAt(param1:int, param2:DisplayObject, param3:String, param4:Number, param5:Number, param6:Number, param7:Matrix, param8:Number, param9:Number, param10:int, param11:DisplayObjectContainer) : void
+      tlf_internal function addFloatAt(absolutePosition:int, float:DisplayObject, floatType:String, x:Number, y:Number, alpha:Number, matrix:Matrix, depth:Number, knockOutWidth:Number, columnIndex:int, parent:DisplayObjectContainer) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function clearFloatsAt(param1:int) : void
+      tlf_internal function clearFloatsAt(absolutePosition:int) : void
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function findFloatIndexAfter(param1:int) : int
+      tlf_internal function findFloatIndexAfter(absolutePosition:int) : int
       {
          //Décompilation abandonné
       }
       
-      tlf_internal function findFloatIndexAtOrAfter(param1:int) : int
+      tlf_internal function findFloatIndexAtOrAfter(absolutePosition:int) : int
       {
          //Décompilation abandonné
       }
@@ -1705,7 +1705,7 @@ class PsuedoMouseEvent extends MouseEvent
    //Décompilation abandonné
    }
    
-   function PsuedoMouseEvent(param1:String, param2:Boolean = true, param3:Boolean = false, param4:Number = NaN, param5:Number = NaN, param6:InteractiveObject = null, param7:Boolean = false, param8:Boolean = false, param9:Boolean = false, param10:Boolean = false)
+   function PsuedoMouseEvent(type:String, bubbles:Boolean = true, cancelable:Boolean = false, localX:Number = NaN, localY:Number = NaN, relatedObject:InteractiveObject = null, ctrlKey:Boolean = false, altKey:Boolean = false, shiftKey:Boolean = false, buttonDown:Boolean = false)
    {
       //Décompilation abandonné
    }

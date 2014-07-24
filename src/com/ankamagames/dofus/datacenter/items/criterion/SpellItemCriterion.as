@@ -13,7 +13,7 @@ package com.ankamagames.dofus.datacenter.items.criterion
       //Décompilation abandonné
       }
       
-      public function SpellItemCriterion(param1:String)
+      public function SpellItemCriterion(pCriterion:String)
       {
          //Décompilation abandonné
       }

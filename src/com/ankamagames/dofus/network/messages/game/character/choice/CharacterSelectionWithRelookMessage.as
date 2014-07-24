@@ -33,7 +33,7 @@ package com.ankamagames.dofus.network.messages.game.character.choice
          //Décompilation abandonné
       }
       
-      public function initCharacterSelectionWithRelookMessage(param1:int = 0, param2:uint = 0) : CharacterSelectionWithRelookMessage
+      public function initCharacterSelectionWithRelookMessage(id:int = 0, cosmeticId:uint = 0) : CharacterSelectionWithRelookMessage
       {
          //Décompilation abandonné
       }
@@ -43,32 +43,32 @@ package com.ankamagames.dofus.network.messages.game.character.choice
          //Décompilation abandonné
       }
       
-      override public function pack(param1:IDataOutput) : void
+      override public function pack(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function unpack(param1:IDataInput, param2:uint) : void
+      override public function unpack(input:IDataInput, length:uint) : void
       {
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_CharacterSelectionWithRelookMessage(param1:IDataOutput) : void
+      public function serializeAs_CharacterSelectionWithRelookMessage(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_CharacterSelectionWithRelookMessage(param1:IDataInput) : void
+      public function deserializeAs_CharacterSelectionWithRelookMessage(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

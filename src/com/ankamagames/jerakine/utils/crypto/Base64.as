@@ -15,22 +15,22 @@ package com.ankamagames.jerakine.utils.crypto
          //Décompilation abandonné
       }
       
-      public static function encode(param1:String) : String
+      public static function encode(data:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function encodeByteArray(param1:ByteArray) : String
+      public static function encodeByteArray(data:ByteArray) : String
       {
          //Décompilation abandonné
       }
       
-      public static function decode(param1:String) : String
+      public static function decode(data:String) : String
       {
          //Décompilation abandonné
       }
       
-      public static function decodeToByteArray(param1:String) : ByteArray
+      public static function decodeToByteArray(data:String) : ByteArray
       {
          //Décompilation abandonné
       }

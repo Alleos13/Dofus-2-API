@@ -26,12 +26,12 @@ package com.ankamagames.dofus.logic.game.common.misc
       
       private static var _localizers:Vector.<IEntityLocalizer>;
       
-      public static function getEntity(param1:int) : IEntity
+      public static function getEntity(entityId:int) : IEntity
       {
          //Décompilation abandonné
       }
       
-      public static function registerLocalizer(param1:IEntityLocalizer) : void
+      public static function registerLocalizer(localizer:IEntityLocalizer) : void
       {
          //Décompilation abandonné
       }

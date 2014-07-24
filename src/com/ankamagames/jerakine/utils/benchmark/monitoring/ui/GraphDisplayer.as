@@ -56,12 +56,12 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring.ui
          //Décompilation abandonné
       }
       
-      public function update(param1:Boolean = true) : void
+      public function update(graphicalUpdate:Boolean = true) : void
       {
          //Décompilation abandonné
       }
       
-      public function updateFpsValue(param1:Number) : void
+      public function updateFpsValue(fpsValue:Number) : void
       {
          //Décompilation abandonné
       }
@@ -71,42 +71,42 @@ package com.ankamagames.jerakine.utils.benchmark.monitoring.ui
          //Décompilation abandonné
       }
       
-      public function set memory(param1:String) : void
+      public function set memory(val:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function startTracking(param1:String, param2:uint = 16777215) : void
+      public function startTracking(pIndice:String, pColor:uint = 16777215) : void
       {
          //Décompilation abandonné
       }
       
-      public function stopTracking(param1:String) : void
+      public function stopTracking(pIndice:String) : void
       {
          //Décompilation abandonné
       }
       
-      public function addConstValue(param1:String, param2:int = 0) : void
+      public function addConstValue(pIndice:String, cst:int = 0) : void
       {
          //Décompilation abandonné
       }
       
-      private function showGraph(param1:Event) : void
+      private function showGraph(pEvt:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function hideGraph(param1:Event) : void
+      private function hideGraph(pEvt:Event) : void
       {
          //Décompilation abandonné
       }
       
-      private function formateValue(param1:int) : int
+      private function formateValue(py:int) : int
       {
          //Décompilation abandonné
       }
       
-      private function linkGraphValues(param1:int, param2:int, param3:int, param4:uint) : void
+      private function linkGraphValues(px:int, py1:int, py2:int, pColor:uint) : void
       {
          //Décompilation abandonné
       }

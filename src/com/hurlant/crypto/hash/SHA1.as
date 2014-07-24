@@ -19,22 +19,22 @@ package com.hurlant.crypto.hash
          //Décompilation abandonné
       }
       
-      override protected function core(param1:Array, param2:uint) : Array
+      override protected function core(x:Array, len:uint) : Array
       {
          //Décompilation abandonné
       }
       
-      private function rol(param1:uint, param2:uint) : uint
+      private function rol(num:uint, cnt:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function ft(param1:uint, param2:uint, param3:uint, param4:uint) : uint
+      private function ft(t:uint, b:uint, c:uint, d:uint) : uint
       {
          //Décompilation abandonné
       }
       
-      private function kt(param1:uint) : uint
+      private function kt(t:uint) : uint
       {
          //Décompilation abandonné
       }

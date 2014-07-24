@@ -37,7 +37,7 @@ package com.ankamagames.dofus.network.types.game.paddock
          //Décompilation abandonné
       }
       
-      public function initPaddockContentInformations(param1:uint = 0, param2:uint = 0, param3:int = 0, param4:int = 0, param5:int = 0, param6:int = 0, param7:uint = 0, param8:Boolean = false, param9:Vector.<MountInformationsForPaddock> = null) : PaddockContentInformations
+      public function initPaddockContentInformations(maxOutdoorMount:uint = 0, maxItems:uint = 0, paddockId:int = 0, worldX:int = 0, worldY:int = 0, mapId:int = 0, subAreaId:uint = 0, abandonned:Boolean = false, mountsInformations:Vector.<MountInformationsForPaddock> = null) : PaddockContentInformations
       {
          //Décompilation abandonné
       }
@@ -47,22 +47,22 @@ package com.ankamagames.dofus.network.types.game.paddock
          //Décompilation abandonné
       }
       
-      override public function serialize(param1:IDataOutput) : void
+      override public function serialize(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      public function serializeAs_PaddockContentInformations(param1:IDataOutput) : void
+      public function serializeAs_PaddockContentInformations(output:IDataOutput) : void
       {
          //Décompilation abandonné
       }
       
-      override public function deserialize(param1:IDataInput) : void
+      override public function deserialize(input:IDataInput) : void
       {
          //Décompilation abandonné
       }
       
-      public function deserializeAs_PaddockContentInformations(param1:IDataInput) : void
+      public function deserializeAs_PaddockContentInformations(input:IDataInput) : void
       {
          //Décompilation abandonné
       }

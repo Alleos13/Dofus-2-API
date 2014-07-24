@@ -10,7 +10,7 @@ package com.ankamagames.berilia.types.data
       //Décompilation abandonné
       }
       
-      public function GridItem(param1:uint, param2:DisplayObject, param3:*)
+      public function GridItem(id:uint, c:DisplayObject, d:*)
       {
          //Décompilation abandonné
       }

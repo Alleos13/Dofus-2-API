@@ -10,7 +10,7 @@ package org.flintparticles.common.counters
       //Décompilation abandonné
       }
       
-      public function PerformanceAdjusted(param1:Number, param2:Number, param3:Number)
+      public function PerformanceAdjusted(rateMin:Number, rateMax:Number, targetFrameRate:Number)
       {
          //Décompilation abandonné
       }
@@ -36,7 +36,7 @@ package org.flintparticles.common.counters
          //Décompilation abandonné
       }
       
-      public function set rateMin(param1:Number) : void
+      public function set rateMin(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -46,7 +46,7 @@ package org.flintparticles.common.counters
          //Décompilation abandonné
       }
       
-      public function set rateMax(param1:Number) : void
+      public function set rateMax(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -56,7 +56,7 @@ package org.flintparticles.common.counters
          //Décompilation abandonné
       }
       
-      public function set targetFrameRate(param1:Number) : void
+      public function set targetFrameRate(value:Number) : void
       {
          //Décompilation abandonné
       }
@@ -71,7 +71,7 @@ package org.flintparticles.common.counters
          //Décompilation abandonné
       }
       
-      public function startEmitter(param1:Emitter) : uint
+      public function startEmitter(emitter:Emitter) : uint
       {
          //Décompilation abandonné
       }
@@ -81,7 +81,7 @@ package org.flintparticles.common.counters
          //Décompilation abandonné
       }
       
-      public function updateEmitter(param1:Emitter, param2:Number) : uint
+      public function updateEmitter(emitter:Emitter, time:Number) : uint
       {
          //Décompilation abandonné
       }

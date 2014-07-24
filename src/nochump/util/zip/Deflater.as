@@ -27,12 +27,12 @@ package nochump.util.zip
          //Décompilation abandonné
       }
       
-      public function setInput(param1:ByteArray) : void
+      public function setInput(input:ByteArray) : void
       {
          //Décompilation abandonné
       }
       
-      public function deflate(param1:ByteArray) : uint
+      public function deflate(output:ByteArray) : uint
       {
          //Décompilation abandonné
       }

@@ -36,7 +36,7 @@ package com.ankamagames.atouin.utils
       
       protected static const _log:Logger;
       
-      public static function detectCell(param1:Boolean, param2:Map, param3:WorldPoint, param4:Frustum, param5:WorldPoint) : PartialDataMap
+      public static function detectCell(visible:Boolean, map:Map, pMap:WorldPoint, frustum:Frustum, currentMapPoint:WorldPoint) : PartialDataMap
       {
          //Décompilation abandonné
       }

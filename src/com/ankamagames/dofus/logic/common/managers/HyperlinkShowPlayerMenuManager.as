@@ -30,17 +30,17 @@ package com.ankamagames.dofus.logic.common.managers
       
       protected static const _log:Logger;
       
-      public static function showPlayerMenu(param1:String, param2:int = 0, param3:Number = 0, param4:String = null, param5:uint = 0) : void
+      public static function showPlayerMenu(playerName:String, playerId:int = 0, timestamp:Number = 0, fingerprint:String = null, chan:uint = 0) : void
       {
          //Décompilation abandonné
       }
       
-      public static function getPlayerName(param1:String, param2:int = 0, param3:Number = 0, param4:String = null, param5:uint = 0) : String
+      public static function getPlayerName(playerName:String, playerId:int = 0, timestamp:Number = 0, fingerprint:String = null, chan:uint = 0) : String
       {
          //Décompilation abandonné
       }
       
-      public static function rollOverPlayer(param1:int, param2:int, param3:String, param4:int = 0, param5:Number = 0, param6:String = null, param7:uint = 0) : void
+      public static function rollOverPlayer(pX:int, pY:int, playerName:String, playerId:int = 0, timestamp:Number = 0, fingerprint:String = null, chan:uint = 0) : void
       {
          //Décompilation abandonné
       }
