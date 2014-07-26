@@ -1,7 +1,7 @@
 Dofus-2-API
 ==============
 
->>API Library generated to develop easily modules or dynamic codes for Dofus 2
+>>API Library generated to develop dynamic codes and code injection for Dofus 2 
 
 Generated from [Dofus 2.0 decomp SRCS](https://github.com/Emudofus/Dofus/tree/master2) with FlashBuilder as Flex/Air AS3 library project.
 
