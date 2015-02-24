@@ -1,24 +1,24 @@
 package com.ankamagames.dofus.logic.game.common.actions.craft
 {
-   import com.ankamagames.jerakine.handlers.messages.Action;
-   
-   public class ExchangeSetCraftRecipeAction extends Object implements Action
-   {
-      
-      {
-      //Décompilation abandonné
-      }
-      
-      public function ExchangeSetCraftRecipeAction()
-      {
-         //Décompilation abandonné
-      }
-      
-      public static function create(recipeId:uint) : ExchangeSetCraftRecipeAction
-      {
-         //Décompilation abandonné
-      }
-      
-      public var recipeId:uint;
-   }
+			import com.ankamagames.jerakine.handlers.messages.Action;
+			
+			public class ExchangeSetCraftRecipeAction extends Object implements Action
+			{
+						
+						{
+									// Décompilation abandonné
+						}
+						
+						public function ExchangeSetCraftRecipeAction()
+						{
+									// Décompilation abandonné
+						}
+						
+						public static function create(recipeId:uint) : ExchangeSetCraftRecipeAction
+						{
+									// Décompilation abandonné
+						}
+						
+						public var recipeId:uint;
+			}
 }

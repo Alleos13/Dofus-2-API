@@ -1,77 +1,78 @@
 package com.ankamagames.dofus.network.messages.game.character.stats
 {
-   import com.ankamagames.jerakine.network.NetworkMessage;
-   import com.ankamagames.jerakine.network.INetworkMessage;
-   import flash.utils.IDataOutput;
-   import flash.utils.ByteArray;
-   import flash.utils.IDataInput;
-   
-   public class CharacterLevelUpMessage extends NetworkMessage implements INetworkMessage
-   {
-      
-      {
-      //Décompilation abandonné
-      }
-      
-      public function CharacterLevelUpMessage()
-      {
-         //Décompilation abandonné
-      }
-      
-      public static const protocolId:uint = 5670;
-      
-      private var _isInitialized:Boolean = false;
-      
-      override public function get isInitialized() : Boolean
-      {
-         //Décompilation abandonné
-      }
-      
-      public var newLevel:uint = 0;
-      
-      override public function getMessageId() : uint
-      {
-         //Décompilation abandonné
-      }
-      
-      public function initCharacterLevelUpMessage(newLevel:uint = 0) : CharacterLevelUpMessage
-      {
-         //Décompilation abandonné
-      }
-      
-      override public function reset() : void
-      {
-         //Décompilation abandonné
-      }
-      
-      override public function pack(output:IDataOutput) : void
-      {
-         //Décompilation abandonné
-      }
-      
-      override public function unpack(input:IDataInput, length:uint) : void
-      {
-         //Décompilation abandonné
-      }
-      
-      public function serialize(output:IDataOutput) : void
-      {
-         //Décompilation abandonné
-      }
-      
-      public function serializeAs_CharacterLevelUpMessage(output:IDataOutput) : void
-      {
-         //Décompilation abandonné
-      }
-      
-      public function deserialize(input:IDataInput) : void
-      {
-         //Décompilation abandonné
-      }
-      
-      public function deserializeAs_CharacterLevelUpMessage(input:IDataInput) : void
-      {
-         //Décompilation abandonné
-      }
-   }
+			import com.ankamagames.jerakine.network.NetworkMessage;
+			import com.ankamagames.jerakine.network.INetworkMessage;
+			import com.ankamagames.jerakine.network.ICustomDataOutput;
+			import flash.utils.ByteArray;
+			import com.ankamagames.jerakine.network.CustomDataWrapper;
+			import com.ankamagames.jerakine.network.ICustomDataInput;
+			
+			public class CharacterLevelUpMessage extends NetworkMessage implements INetworkMessage
+			{
+						
+						{
+									// Décompilation abandonné
+						}
+						
+						public function CharacterLevelUpMessage()
+						{
+									// Décompilation abandonné
+						}
+						
+						public static const protocolId:uint = 5670;
+						
+						private var _isInitialized:Boolean = false;
+						
+						override public function get isInitialized() : Boolean
+						{
+									// Décompilation abandonné
+						}
+						
+						public var newLevel:uint = 0;
+						
+						override public function getMessageId() : uint
+						{
+									// Décompilation abandonné
+						}
+						
+						public function initCharacterLevelUpMessage(newLevel:uint = 0) : CharacterLevelUpMessage
+						{
+									// Décompilation abandonné
+						}
+						
+						override public function reset() : void
+						{
+									// Décompilation abandonné
+						}
+						
+						override public function pack(output:ICustomDataOutput) : void
+						{
+									// Décompilation abandonné
+						}
+						
+						override public function unpack(input:ICustomDataInput, length:uint) : void
+						{
+									// Décompilation abandonné
+						}
+						
+						public function serialize(output:ICustomDataOutput) : void
+						{
+									// Décompilation abandonné
+						}
+						
+						public function serializeAs_CharacterLevelUpMessage(output:ICustomDataOutput) : void
+						{
+									// Décompilation abandonné
+						}
+						
+						public function deserialize(input:ICustomDataInput) : void
+						{
+									// Décompilation abandonné
+						}
+						
+						public function deserializeAs_CharacterLevelUpMessage(input:ICustomDataInput) : void
+						{
+									// Décompilation abandonné
+						}
+			}
 }

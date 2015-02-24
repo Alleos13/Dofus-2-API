@@ -1,24 +1,24 @@
 package com.ankamagames.dofus.logic.game.common.actions.guild
 {
-   import com.ankamagames.jerakine.handlers.messages.Action;
-   
-   public class GuildCharacsUpgradeRequestAction extends Object implements Action
-   {
-      
-      {
-      //Décompilation abandonné
-      }
-      
-      public function GuildCharacsUpgradeRequestAction()
-      {
-         //Décompilation abandonné
-      }
-      
-      public static function create(pCharaTypeTarget:uint) : GuildCharacsUpgradeRequestAction
-      {
-         //Décompilation abandonné
-      }
-      
-      public var charaTypeTarget:uint;
-   }
+			import com.ankamagames.jerakine.handlers.messages.Action;
+			
+			public class GuildCharacsUpgradeRequestAction extends Object implements Action
+			{
+						
+						{
+									// Décompilation abandonné
+						}
+						
+						public function GuildCharacsUpgradeRequestAction()
+						{
+									// Décompilation abandonné
+						}
+						
+						public static function create(pCharaTypeTarget:uint) : GuildCharacsUpgradeRequestAction
+						{
+									// Décompilation abandonné
+						}
+						
+						public var charaTypeTarget:uint;
+			}
 }

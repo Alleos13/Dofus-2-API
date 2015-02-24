@@ -1,10 +1,10 @@
 package mx.core
 {
-   public interface IFlexAsset
-   {
-      
-      {
-      //Décompilation abandonné
-      }
-   }
+			public interface IFlexAsset
+			{
+						
+						{
+									// Décompilation abandonné
+						}
+			}
 }

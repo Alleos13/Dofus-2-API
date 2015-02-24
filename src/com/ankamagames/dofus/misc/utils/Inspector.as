@@ -1,125 +1,125 @@
 package com.ankamagames.dofus.misc.utils
 {
-   import flash.text.TextField;
-   import flash.display.Sprite;
-   import flash.utils.Dictionary;
-   import com.ankamagames.jerakine.utils.display.StageShareManager;
-   import flash.events.MouseEvent;
-   import flash.events.KeyboardEvent;
-   import flash.display.DisplayObject;
-   import flash.ui.Keyboard;
-   import flash.desktop.Clipboard;
-   import flash.desktop.ClipboardFormats;
-   import com.ankamagames.atouin.managers.InteractiveCellManager;
-   import com.ankamagames.dofus.types.entities.AnimatedCharacter;
-   import com.ankamagames.berilia.types.graphic.UiRootContainer;
-   import com.ankamagames.berilia.types.graphic.GraphicContainer;
-   import com.ankamagames.atouin.types.GraphicCell;
-   import com.ankamagames.atouin.types.CellContainer;
-   import com.ankamagames.atouin.types.SpriteWrapper;
-   import com.ankamagames.atouin.types.FrustumShape;
-   import flash.display.Stage;
-   import com.ankamagames.berilia.Berilia;
-   import flash.display.InteractiveObject;
-   import flash.display.DisplayObjectContainer;
-   import flash.text.TextFormat;
-   import flash.text.TextFieldAutoSize;
-   
-   public class Inspector extends Object
-   {
-      
-      {
-      //Décompilation abandonné
-      }
-      
-      public function Inspector()
-      {
-         //Décompilation abandonné
-      }
-      
-      private var _tooltipTf:TextField;
-      
-      private var _tooltip:Sprite;
-      
-      private var _enable:Boolean;
-      
-      private var _lastTarget:Vector.<InteractiveItem>;
-      
-      private var _currentShortCut:Vector.<ShortcutItem>;
-      
-      private var _berilaAllInteraction:Boolean;
-      
-      private var _berilaChangedInteraction:Dictionary;
-      
-      public function set enable(b:Boolean) : void
-      {
-         //Décompilation abandonné
-      }
-      
-      public function get enable() : Boolean
-      {
-         //Décompilation abandonné
-      }
-      
-      private function onRollout(arg:*) : void
-      {
-         //Décompilation abandonné
-      }
-      
-      private function onRollover(e:MouseEvent) : void
-      {
-         //Décompilation abandonné
-      }
-      
-      private function findElements(target:DisplayObject) : Vector.<InteractiveItem>
-      {
-         //Décompilation abandonné
-      }
-      
-      private function changeBeriliaInteraction() : void
-      {
-         //Décompilation abandonné
-      }
-      
-      private function changeInteraction(target:DisplayObjectContainer) : void
-      {
-         //Décompilation abandonné
-      }
-      
-      private function onKeyUp(e:KeyboardEvent) : void
-      {
-         //Décompilation abandonné
-      }
-   }
+			import flash.text.TextField;
+			import flash.display.Sprite;
+			import flash.utils.Dictionary;
+			import com.ankamagames.jerakine.utils.display.StageShareManager;
+			import flash.events.MouseEvent;
+			import flash.events.KeyboardEvent;
+			import flash.display.DisplayObject;
+			import flash.ui.Keyboard;
+			import flash.desktop.Clipboard;
+			import flash.desktop.ClipboardFormats;
+			import com.ankamagames.atouin.managers.InteractiveCellManager;
+			import com.ankamagames.dofus.types.entities.AnimatedCharacter;
+			import com.ankamagames.berilia.types.graphic.UiRootContainer;
+			import com.ankamagames.berilia.types.graphic.GraphicContainer;
+			import com.ankamagames.atouin.types.GraphicCell;
+			import com.ankamagames.atouin.types.CellContainer;
+			import com.ankamagames.atouin.types.SpriteWrapper;
+			import com.ankamagames.atouin.types.FrustumShape;
+			import flash.display.Stage;
+			import com.ankamagames.berilia.Berilia;
+			import flash.display.InteractiveObject;
+			import flash.display.DisplayObjectContainer;
+			import flash.text.TextFormat;
+			import flash.text.TextFieldAutoSize;
+			
+			public class Inspector extends Object
+			{
+						
+						{
+									// Décompilation abandonné
+						}
+						
+						public function Inspector()
+						{
+									// Décompilation abandonné
+						}
+						
+						private var _tooltipTf:TextField;
+						
+						private var _tooltip:Sprite;
+						
+						private var _enable:Boolean;
+						
+						private var _lastTarget:Vector.<InteractiveItem>;
+						
+						private var _currentShortCut:Vector.<ShortcutItem>;
+						
+						private var _berilaAllInteraction:Boolean;
+						
+						private var _berilaChangedInteraction:Dictionary;
+						
+						public function set enable(b:Boolean) : void
+						{
+									// Décompilation abandonné
+						}
+						
+						public function get enable() : Boolean
+						{
+									// Décompilation abandonné
+						}
+						
+						private function onRollout(arg:*) : void
+						{
+									// Décompilation abandonné
+						}
+						
+						private function onRollover(e:MouseEvent) : void
+						{
+									// Décompilation abandonné
+						}
+						
+						private function findElements(target:DisplayObject) : Vector.<InteractiveItem>
+						{
+									// Décompilation abandonné
+						}
+						
+						private function changeBeriliaInteraction() : void
+						{
+									// Décompilation abandonné
+						}
+						
+						private function changeInteraction(target:DisplayObjectContainer) : void
+						{
+									// Décompilation abandonné
+						}
+						
+						private function onKeyUp(e:KeyboardEvent) : void
+						{
+									// Décompilation abandonné
+						}
+			}
 }
 class ShortcutItem extends Object
 {
-   
-   {
-   //Décompilation abandonné
-   }
-   
-   function ShortcutItem(legend:String, key:uint, callback:Function, ctrl:Boolean, shift:Boolean, alt:Boolean)
-   {
-      //Décompilation abandonné
-   }
-   
-   public var legend:String;
-   
-   public var callback:Function;
-   
-   public var key:uint;
-   
-   public var ctrl:Boolean;
-   
-   public var shift:Boolean;
-   
-   public var alt:Boolean;
-   
-   public function toString() : String
-   {
-      //Décompilation abandonné
-   }
+			
+			{
+						// Décompilation abandonné
+			}
+			
+			function ShortcutItem(legend:String, key:uint, callback:Function, ctrl:Boolean, shift:Boolean, alt:Boolean)
+			{
+						// Décompilation abandonné
+			}
+			
+			public var legend:String;
+			
+			public var callback:Function;
+			
+			public var key:uint;
+			
+			public var ctrl:Boolean;
+			
+			public var shift:Boolean;
+			
+			public var alt:Boolean;
+			
+			public function toString() : String
+			{
+						// Décompilation abandonné
+			}
 }
 import flash.display.Shape;
 import flash.geom.ColorTransform;
@@ -129,47 +129,47 @@ import flash.desktop.ClipboardFormats;
 
 class InteractiveItem extends Object
 {
-   
-   {
-   //Décompilation abandonné
-   }
-   
-   function InteractiveItem()
-   {
-      //Décompilation abandonné
-   }
-   
-   protected static var _highlightShape:Shape;
-   
-   protected static var _highlightShape2:Shape;
-   
-   protected static var _highlightEffect:ColorTransform;
-   
-   protected static var _normalEffect:ColorTransform;
-   
-   public var shortcuts:Vector.<ShortcutItem>;
-   
-   public var target:DisplayObject;
-   
-   public function highlight(index:uint, elements:Vector.<InteractiveItem>) : void
-   {
-      //Décompilation abandonné
-   }
-   
-   public function cleanHighlight() : void
-   {
-      //Décompilation abandonné
-   }
-   
-   public function tooltip() : String
-   {
-      //Décompilation abandonné
-   }
-   
-   protected function toClipboard(txt:String) : void
-   {
-      //Décompilation abandonné
-   }
+			
+			{
+						// Décompilation abandonné
+			}
+			
+			function InteractiveItem()
+			{
+						// Décompilation abandonné
+			}
+			
+			protected static var _highlightShape:Shape;
+			
+			protected static var _highlightShape2:Shape;
+			
+			protected static var _highlightEffect:ColorTransform;
+			
+			protected static var _normalEffect:ColorTransform;
+			
+			public var shortcuts:Vector.<ShortcutItem>;
+			
+			public var target:DisplayObject;
+			
+			public function highlight(index:uint, elements:Vector.<InteractiveItem>) : void
+			{
+						// Décompilation abandonné
+			}
+			
+			public function cleanHighlight() : void
+			{
+						// Décompilation abandonné
+			}
+			
+			public function tooltip() : String
+			{
+						// Décompilation abandonné
+			}
+			
+			protected function toClipboard(txt:String) : void
+			{
+						// Décompilation abandonné
+			}
 }
 import flash.geom.Rectangle;
 import com.ankamagames.berilia.types.graphic.UiRootContainer;
@@ -184,30 +184,30 @@ import flash.ui.Keyboard;
 
 class InteractiveItemUi extends InteractiveItem
 {
-   
-   {
-   //Décompilation abandonné
-   }
-   
-   function InteractiveItemUi()
-   {
-      //Décompilation abandonné
-   }
-   
-   override public function highlight(index:uint, elements:Vector.<InteractiveItem>) : void
-   {
-      //Décompilation abandonné
-   }
-   
-   override public function cleanHighlight() : void
-   {
-      //Décompilation abandonné
-   }
-   
-   override public function tooltip() : String
-   {
-      //Décompilation abandonné
-   }
+			
+			{
+						// Décompilation abandonné
+			}
+			
+			function InteractiveItemUi()
+			{
+						// Décompilation abandonné
+			}
+			
+			override public function highlight(index:uint, elements:Vector.<InteractiveItem>) : void
+			{
+						// Décompilation abandonné
+			}
+			
+			override public function cleanHighlight() : void
+			{
+						// Décompilation abandonné
+			}
+			
+			override public function tooltip() : String
+			{
+						// Décompilation abandonné
+			}
 }
 import com.ankamagames.atouin.types.Selection;
 import com.ankamagames.atouin.renderers.ZoneDARenderer;
@@ -222,34 +222,34 @@ import flash.ui.Keyboard;
 
 class InteractiveItemCell extends InteractiveItem
 {
-   
-   {
-   //Décompilation abandonné
-   }
-   
-   function InteractiveItemCell()
-   {
-      //Décompilation abandonné
-   }
-   
-   private static var SELECTION_NAME:String = "InteractiveItemCellHighlight";
-   
-   private static var _selection:Selection;
-   
-   override public function tooltip() : String
-   {
-      //Décompilation abandonné
-   }
-   
-   override public function cleanHighlight() : void
-   {
-      //Décompilation abandonné
-   }
-   
-   override public function highlight(index:uint, elements:Vector.<InteractiveItem>) : void
-   {
-      //Décompilation abandonné
-   }
+			
+			{
+						// Décompilation abandonné
+			}
+			
+			function InteractiveItemCell()
+			{
+						// Décompilation abandonné
+			}
+			
+			private static var SELECTION_NAME:String = "InteractiveItemCellHighlight";
+			
+			private static var _selection:Selection;
+			
+			override public function tooltip() : String
+			{
+						// Décompilation abandonné
+			}
+			
+			override public function cleanHighlight() : void
+			{
+						// Décompilation abandonné
+			}
+			
+			override public function highlight(index:uint, elements:Vector.<InteractiveItem>) : void
+			{
+						// Décompilation abandonné
+			}
 }
 import com.ankamagames.jerakine.entities.interfaces.IEntity;
 import com.ankamagames.dofus.logic.game.common.frames.AbstractEntitiesFrame;
@@ -270,22 +270,22 @@ import flash.net.URLRequest;
 
 class InteractiveItemEntity extends InteractiveItem
 {
-   
-   {
-   //Décompilation abandonné
-   }
-   
-   function InteractiveItemEntity()
-   {
-      //Décompilation abandonné
-   }
-   
-   private var _cmd:String;
-   
-   override public function tooltip() : String
-   {
-      //Décompilation abandonné
-   }
+			
+			{
+						// Décompilation abandonné
+			}
+			
+			function InteractiveItemEntity()
+			{
+						// Décompilation abandonné
+			}
+			
+			private var _cmd:String;
+			
+			override public function tooltip() : String
+			{
+						// Décompilation abandonné
+			}
 }
 import com.ankamagames.dofus.network.types.game.interactive.InteractiveElement;
 import com.ankamagames.dofus.network.types.game.interactive.InteractiveElementSkill;
@@ -297,22 +297,22 @@ import flash.ui.Keyboard;
 
 class InteractiveItemElement extends InteractiveItem
 {
-   
-   {
-   //Décompilation abandonné
-   }
-   
-   function InteractiveItemElement()
-   {
-      //Décompilation abandonné
-   }
-   
-   private var _cmd:String;
-   
-   override public function tooltip() : String
-   {
-      //Décompilation abandonné
-   }
+			
+			{
+						// Décompilation abandonné
+			}
+			
+			function InteractiveItemElement()
+			{
+						// Décompilation abandonné
+			}
+			
+			private var _cmd:String;
+			
+			override public function tooltip() : String
+			{
+						// Décompilation abandonné
+			}
 }
 import com.ankamagames.atouin.types.FrustumShape;
 import com.ankamagames.atouin.managers.FrustumManager;
@@ -322,20 +322,20 @@ import flash.ui.Keyboard;
 
 class InteractiveItemMapBorder extends InteractiveItem
 {
-   
-   {
-   //Décompilation abandonné
-   }
-   
-   function InteractiveItemMapBorder()
-   {
-      //Décompilation abandonné
-   }
-   
-   private var _cmd:String;
-   
-   override public function tooltip() : String
-   {
-      //Décompilation abandonné
-   }
+			
+			{
+						// Décompilation abandonné
+			}
+			
+			function InteractiveItemMapBorder()
+			{
+						// Décompilation abandonné
+			}
+			
+			private var _cmd:String;
+			
+			override public function tooltip() : String
+			{
+						// Décompilation abandonné
+			}
 }

@@ -1,10 +1,10 @@
 package com.ankamagames.jerakine.interfaces
 {
-   public interface ICustomSecureObject
-   {
-      
-      {
-      //Décompilation abandonné
-      }
-   }
+			public interface ICustomSecureObject
+			{
+						
+						{
+									// Décompilation abandonné
+						}
+			}
 }

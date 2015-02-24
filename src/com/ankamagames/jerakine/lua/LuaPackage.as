@@ -1,10 +1,10 @@
 package com.ankamagames.jerakine.lua
 {
-   public interface LuaPackage
-   {
-      
-      {
-      //Décompilation abandonné
-      }
-   }
+			public interface LuaPackage
+			{
+						
+						{
+									// Décompilation abandonné
+						}
+			}
 }

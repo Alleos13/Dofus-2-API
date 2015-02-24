@@ -1,15 +1,15 @@
 package com.ankamagames.atouin.utils.errors
 {
-   public class AtouinError extends Error
-   {
-      
-      {
-      //Décompilation abandonné
-      }
-      
-      public function AtouinError(message:String = "", id:uint = 0)
-      {
-         //Décompilation abandonné
-      }
-   }
+			public class AtouinError extends Error
+			{
+						
+						{
+									// Décompilation abandonné
+						}
+						
+						public function AtouinError(message:String = "", id:uint = 0)
+						{
+									// Décompilation abandonné
+						}
+			}
 }

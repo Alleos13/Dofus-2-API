@@ -1,10 +1,10 @@
 package com.ankamagames.jerakine.interfaces
 {
-   public interface IDataCenter
-   {
-      
-      {
-      //Décompilation abandonné
-      }
-   }
+			public interface IDataCenter
+			{
+						
+						{
+									// Décompilation abandonné
+						}
+			}
 }

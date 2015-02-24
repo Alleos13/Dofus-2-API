@@ -1,73 +1,74 @@
 package com.ankamagames.dofus.network.messages.game.friend
 {
-   import com.ankamagames.jerakine.network.NetworkMessage;
-   import com.ankamagames.jerakine.network.INetworkMessage;
-   import flash.utils.IDataOutput;
-   import flash.utils.ByteArray;
-   import flash.utils.IDataInput;
-   
-   public class FriendSpouseJoinRequestMessage extends NetworkMessage implements INetworkMessage
-   {
-      
-      {
-      //Décompilation abandonné
-      }
-      
-      public function FriendSpouseJoinRequestMessage()
-      {
-         //Décompilation abandonné
-      }
-      
-      public static const protocolId:uint = 5604;
-      
-      override public function get isInitialized() : Boolean
-      {
-         //Décompilation abandonné
-      }
-      
-      override public function getMessageId() : uint
-      {
-         //Décompilation abandonné
-      }
-      
-      public function initFriendSpouseJoinRequestMessage() : FriendSpouseJoinRequestMessage
-      {
-         //Décompilation abandonné
-      }
-      
-      override public function reset() : void
-      {
-         //Décompilation abandonné
-      }
-      
-      override public function pack(output:IDataOutput) : void
-      {
-         //Décompilation abandonné
-      }
-      
-      override public function unpack(input:IDataInput, length:uint) : void
-      {
-         //Décompilation abandonné
-      }
-      
-      public function serialize(output:IDataOutput) : void
-      {
-         //Décompilation abandonné
-      }
-      
-      public function serializeAs_FriendSpouseJoinRequestMessage(output:IDataOutput) : void
-      {
-         //Décompilation abandonné
-      }
-      
-      public function deserialize(input:IDataInput) : void
-      {
-         //Décompilation abandonné
-      }
-      
-      public function deserializeAs_FriendSpouseJoinRequestMessage(input:IDataInput) : void
-      {
-         //Décompilation abandonné
-      }
-   }
+			import com.ankamagames.jerakine.network.NetworkMessage;
+			import com.ankamagames.jerakine.network.INetworkMessage;
+			import com.ankamagames.jerakine.network.ICustomDataOutput;
+			import flash.utils.ByteArray;
+			import com.ankamagames.jerakine.network.CustomDataWrapper;
+			import com.ankamagames.jerakine.network.ICustomDataInput;
+			
+			public class FriendSpouseJoinRequestMessage extends NetworkMessage implements INetworkMessage
+			{
+						
+						{
+									// Décompilation abandonné
+						}
+						
+						public function FriendSpouseJoinRequestMessage()
+						{
+									// Décompilation abandonné
+						}
+						
+						public static const protocolId:uint = 5604;
+						
+						override public function get isInitialized() : Boolean
+						{
+									// Décompilation abandonné
+						}
+						
+						override public function getMessageId() : uint
+						{
+									// Décompilation abandonné
+						}
+						
+						public function initFriendSpouseJoinRequestMessage() : FriendSpouseJoinRequestMessage
+						{
+									// Décompilation abandonné
+						}
+						
+						override public function reset() : void
+						{
+									// Décompilation abandonné
+						}
+						
+						override public function pack(output:ICustomDataOutput) : void
+						{
+									// Décompilation abandonné
+						}
+						
+						override public function unpack(input:ICustomDataInput, length:uint) : void
+						{
+									// Décompilation abandonné
+						}
+						
+						public function serialize(output:ICustomDataOutput) : void
+						{
+									// Décompilation abandonné
+						}
+						
+						public function serializeAs_FriendSpouseJoinRequestMessage(output:ICustomDataOutput) : void
+						{
+									// Décompilation abandonné
+						}
+						
+						public function deserialize(input:ICustomDataInput) : void
+						{
+									// Décompilation abandonné
+						}
+						
+						public function deserializeAs_FriendSpouseJoinRequestMessage(input:ICustomDataInput) : void
+						{
+									// Décompilation abandonné
+						}
+			}
 }

@@ -1,10 +1,10 @@
 package com.ankamagames.jerakine.messages
 {
-   public interface DiscardableMessage extends Message
-   {
-      
-      {
-      //Décompilation abandonné
-      }
-   }
+			public interface DiscardableMessage extends Message
+			{
+						
+						{
+									// Décompilation abandonné
+						}
+			}
 }

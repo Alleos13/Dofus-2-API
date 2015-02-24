@@ -1,12 +1,12 @@
 package com.ankamagames.berilia.interfaces
 {
-   public interface IClonable
-   {
-      
-      {
-      //Décompilation abandonné
-      }
-      
-      function clone() : *;
-   }
+			public interface IClonable
+			{
+						
+						{
+									// Décompilation abandonné
+						}
+						
+						function clone() : *;
+			}
 }

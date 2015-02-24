@@ -1,23 +1,23 @@
 package com.ankamagames.jerakine.resources.adapters.impl
 {
-   import com.ankamagames.jerakine.resources.ResourceType;
-   import com.ankamagames.jerakine.utils.crypto.SignatureKey;
-   
-   public class AdvancedSignedFileAdapter extends SignedFileAdapter
-   {
-      
-      {
-      //Décompilation abandonné
-      }
-      
-      public function AdvancedSignedFileAdapter(signatureKey:SignatureKey = null)
-      {
-         //Décompilation abandonné
-      }
-      
-      override public function getResourceType() : uint
-      {
-         //Décompilation abandonné
-      }
-   }
+			import com.ankamagames.jerakine.resources.ResourceType;
+			import com.ankamagames.jerakine.utils.crypto.SignatureKey;
+			
+			public class AdvancedSignedFileAdapter extends SignedFileAdapter
+			{
+						
+						{
+									// Décompilation abandonné
+						}
+						
+						public function AdvancedSignedFileAdapter(signatureKey:SignatureKey = null)
+						{
+									// Décompilation abandonné
+						}
+						
+						override public function getResourceType() : uint
+						{
+									// Décompilation abandonné
+						}
+			}
 }
